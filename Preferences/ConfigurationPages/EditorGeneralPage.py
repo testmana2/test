@@ -95,6 +95,7 @@ def create(dlg):
     Module function to create the configuration page.
     
     @param dlg reference to the configuration dialog
+    @return reference to the instantiated page (ConfigurationPageBase)
     """
     page = EditorGeneralPage()
     return page

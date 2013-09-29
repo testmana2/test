@@ -103,7 +103,8 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
     @pyqtSlot()
     def on_deleteLexerButton_clicked(self):
         """
-        Private slot to delete the currently selected lexer association of the list.
+        Private slot to delete the currently selected lexer association of the
+        list.
         """
         itmList = self.editorLexerList.selectedItems()
         if itmList:
@@ -117,10 +118,12 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         
     def on_editorLexerList_itemClicked(self, itm, column):
         """
-        Private slot to handle the clicked signal of the lexer association list.
+        Private slot to handle the clicked signal of the lexer association
+        list.
         
         @param itm reference to the selecte item (QTreeWidgetItem)
-        @param column column the item was clicked or activated (integer) (ignored)
+        @param column column the item was clicked or activated (integer)
+            (ignored)
         """
         if itm is None:
             self.editorFileExtEdit.clear()
@@ -141,10 +144,12 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         
     def on_editorLexerList_itemActivated(self, itm, column):
         """
-        Private slot to handle the activated signal of the lexer association list.
+        Private slot to handle the activated signal of the lexer association
+        list.
         
         @param itm reference to the selecte item (QTreeWidgetItem)
-        @param column column the item was clicked or activated (integer) (ignored)
+        @param column column the item was clicked or activated (integer)
+            (ignored)
         """
         self.on_editorLexerList_itemClicked(itm, column)
     
@@ -152,6 +157,8 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
     def on_editorLexerCombo_currentIndexChanged(self, text):
         """
         Private slot to handle the selection of a lexer.
+        
+        @param text text of the lexer combo (string)
         """
         if text in self.extras:
             self.pygmentsLexerCombo.setEnabled(True)
@@ -166,6 +173,7 @@ def create(dlg):
     Module function to create the configuration page.
     
     @param dlg reference to the configuration dialog
+    @return reference to the instantiated page (ConfigurationPageBase)
     """
     page = EditorHighlightersPage(dlg.getLexers())
     return page

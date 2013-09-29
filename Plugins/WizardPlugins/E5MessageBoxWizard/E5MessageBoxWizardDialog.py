@@ -132,7 +132,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.eMessage.setEnabled(not self.rAboutQt.isChecked())
     
     @pyqtSlot(bool)
-    def on_rInformation_toggled(self, checked):
+    def on_rInformation_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rInformation
         radio button.
@@ -142,7 +142,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rQuestion_toggled(self, checked):
+    def on_rQuestion_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rQuestion
         radio button.
@@ -152,7 +152,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rWarning_toggled(self, checked):
+    def on_rWarning_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rWarning
         radio button.
@@ -162,7 +162,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rCritical_toggled(self, checked):
+    def on_rCritical_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rCritical
         radio button.
@@ -172,7 +172,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rYesNo_toggled(self, checked):
+    def on_rYesNo_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rYesNo
         radio button.
@@ -182,7 +182,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rRetryAbort_toggled(self, checked):
+    def on_rRetryAbort_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rRetryAbort
         radio button.
@@ -192,7 +192,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rOkToClearData_toggled(self, checked):
+    def on_rOkToClearData_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rOkToClearData
         radio button.
@@ -202,7 +202,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rAbout_toggled(self, checked):
+    def on_rAbout_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rAbout
         radio button.
@@ -212,7 +212,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rAboutQt_toggled(self, checked):
+    def on_rAboutQt_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rAboutQt
         radio button.
@@ -222,7 +222,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.__enabledGroups()
     
     @pyqtSlot(bool)
-    def on_rStandard_toggled(self, checked):
+    def on_rStandard_toggled(self, on):
         """
         Private slot to handle the toggled signal of the rStandard
         radio button.
@@ -429,7 +429,6 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         Private method to generate the button code for the default button.
         
         @param istring indentation string (string)
-        @param indString string used for indentation (space or tab) (string)
         @return the button code (string)
         """
         btnCode = ""

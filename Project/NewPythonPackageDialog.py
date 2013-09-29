@@ -21,7 +21,9 @@ class NewPythonPackageDialog(QDialog, Ui_NewPythonPackageDialog):
         """
         Constructor
         
-        @param relPath initial package path relative to the project root (string)
+        @param relPath initial package path relative to the project root
+            (string)
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)

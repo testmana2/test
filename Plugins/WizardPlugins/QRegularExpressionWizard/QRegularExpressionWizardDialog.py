@@ -137,6 +137,7 @@ class QRegularExpressionWizardWidget(QWidget,
         
         @param commandDict dictionary with command string and related
             data (dict)
+        @keyparam kw parameters for the command
         @return flag indicating a successful transmission (boolean)
         """
         result = False

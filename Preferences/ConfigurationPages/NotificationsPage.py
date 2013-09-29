@@ -24,8 +24,6 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
     def __init__(self):
         """
         Constructor
-        
-        @param parent reference to the parent widget (QWidget)
         """
         super().__init__()
         self.setupUi(self)
@@ -93,6 +91,7 @@ def create(dlg):
     Module function to create the configuration page.
     
     @param dlg reference to the configuration dialog
+    @return reference to the instantiated page (ConfigurationPageBase)
     """
     page = NotificationsPage()
     return page

@@ -33,7 +33,7 @@ class ConfigurationPageBase(QWidget):
         """
         Public method to save the current state of the widget.
         """
-        return None
+        return
         
     def setState(self, state):
         """

@@ -84,6 +84,7 @@ class ConfigurationWidget(QWidget):
             eric5 ide (boolean)
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
+        @exception RuntimeError raised to indicate an invalid dialog mode
         """
         assert displayMode in (
             ConfigurationWidget.DefaultMode,
@@ -631,7 +632,7 @@ class ConfigurationWidget(QWidget):
         """
         Public method to get the page name of the current page.
         
-        @param page name of the current page (string)
+        @return page name of the current page (string)
         """
         return self.__currentConfigurationPageName
         
@@ -788,7 +789,7 @@ class ConfigurationDialog(QDialog):
         """
         Public method to get the page name of the current page.
         
-        @param page name of the current page (string)
+        @return page name of the current page (string)
         """
         return self.cw.getConfigurationPageName()
         
@@ -799,6 +800,9 @@ class ConfigurationDialog(QDialog):
         self.cw.setPreferences()
     
     def accept(self):
+        """
+        Public method to accept the dialog.
+        """
         super().accept()
 
 

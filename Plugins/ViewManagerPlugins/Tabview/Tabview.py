@@ -721,8 +721,6 @@ class Tabview(QSplitter, ViewManager):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param ui reference to the main user interface
-        @param dbs reference to the debug server object
         """
         self.tabWidgets = []
         
@@ -780,14 +778,14 @@ class Tabview(QSplitter, ViewManager):
         
     def _removeAllViews(self):
         """
-        Protected method to remove all views (i.e. windows)
+        Protected method to remove all views (i.e. windows).
         """
         for win in self.editors:
             self._removeView(win)
         
     def _removeView(self, win):
         """
-        Protected method to remove a view (i.e. window)
+        Protected method to remove a view (i.e. window).
         
         @param win editor window to be removed
         """
@@ -822,7 +820,7 @@ class Tabview(QSplitter, ViewManager):
         
     def _addView(self, win, fn=None, noName=""):
         """
-        Protected method to add a view (i.e. window)
+        Protected method to add a view (i.e. window).
         
         @param win editor assembly to be added
         @param fn filename of this editor (string)
@@ -860,7 +858,7 @@ class Tabview(QSplitter, ViewManager):
         
     def insertView(self, win, tabWidget, index, fn=None, noName=""):
         """
-        Protected method to add a view (i.e. window)
+        Protected method to add a view (i.e. window).
         
         @param win editor assembly to be inserted
         @param tabWidget reference to the tab widget to insert the editor into (TabWidget)
@@ -902,7 +900,7 @@ class Tabview(QSplitter, ViewManager):
         
     def _showView(self, win, fn=None):
         """
-        Protected method to show a view (i.e. window)
+        Protected method to show a view (i.e. window).
         
         @param win editor assembly to be shown
         @param fn filename of this editor (string)

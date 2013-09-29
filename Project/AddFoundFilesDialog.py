@@ -17,12 +17,10 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
     """
     Class implementing a dialog to show the found files to the user.
     
-    The found files are displayed in a listview.
-    Pressing the 'Add All' button adds all files to the current project,
-    the 'Add Selected' button adds only the selected files and the 'Cancel'
-    button cancels the operation.
+    The found files are displayed in a listview. Pressing the 'Add All' button
+    adds all files to the current project, the 'Add Selected' button adds only
+    the selected files and the 'Cancel' button cancels the operation.
     """
-    
     def __init__(self, files, parent=None, name=None):
         """
         Constructor
@@ -61,7 +59,7 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
         """
         Private slot to handle the 'Add All' button press.
         
-        @return always 1 (int)
+        Always returns the value 1 (integer).
         """
         self.done(1)
         
@@ -70,7 +68,7 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
         """
         Private slot to handle the 'Add Selected' button press.
         
-        @return always 2 (int)
+        Always returns the value 2 (integer).
         """
         self.done(2)
         

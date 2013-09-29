@@ -184,8 +184,6 @@ class Listspace(QSplitter, ViewManager):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param ui reference to the main user interface
-        @param dbs reference to the debug server object
         """
         self.stacks = []
         
@@ -250,7 +248,10 @@ class Listspace(QSplitter, ViewManager):
         
     def __showMenu(self, point):
         """
-        Private slot to handle the customContextMenuRequested signal of the viewlist.
+        Private slot to handle the customContextMenuRequested signal of
+        the viewlist.
+        
+        @param point position to open the menu at (QPoint)
         """
         if self.editors:
             itm = self.viewlist.itemAt(point)
@@ -310,7 +311,7 @@ class Listspace(QSplitter, ViewManager):
         
     def _removeAllViews(self):
         """
-        Protected method to remove all views (i.e. windows)
+        Protected method to remove all views (i.e. windows).
         """
         self.viewlist.clear()
         for win in self.editors:
@@ -322,7 +323,7 @@ class Listspace(QSplitter, ViewManager):
         
     def _removeView(self, win):
         """
-        Protected method to remove a view (i.e. window)
+        Protected method to remove a view (i.e. window).
         
         @param win editor window to be removed
         """
@@ -359,7 +360,7 @@ class Listspace(QSplitter, ViewManager):
         
     def _addView(self, win, fn=None, noName=""):
         """
-        Protected method to add a view (i.e. window)
+        Protected method to add a view (i.e. window).
         
         @param win editor assembly to be added
         @param fn filename of this editor (string)
@@ -422,7 +423,7 @@ class Listspace(QSplitter, ViewManager):
         
     def _showView(self, win, fn=None):
         """
-        Protected method to show a view (i.e. window)
+        Protected method to show a view (i.e. window).
         
         @param win editor assembly to be shown
         @param fn filename of this editor (string)

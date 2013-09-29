@@ -97,11 +97,15 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
     def getMasterPassword(self):
         """
         Public method to get the new master password.
+        
+        @return new master password (string)
         """
         return self.newPasswordEdit.text()
     
     def getCurrentPassword(self):
         """
         Public method to get the current master password.
+        
+        @return current master password (string)
         """
         return self.currentPasswordEdit.text()

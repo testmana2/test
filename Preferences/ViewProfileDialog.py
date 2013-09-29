@@ -27,6 +27,7 @@ class ViewProfileDialog(QDialog):
         @param debugVisibilities list  of flags giving the visibilities
             of the various parts for the 'debug' view profile (list of boolean)
         @param parent parent widget of this dialog (QWidget)
+        @exception ValueError raised to indicate an invalid layout
         """
         super().__init__(parent)
         

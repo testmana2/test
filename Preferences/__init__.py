@@ -1214,7 +1214,7 @@ def getVarFilters(prefClass=Prefs):
     Module function to retrieve the variables filter settings.
     
     @param prefClass preferences class used as the storage area
-    @return a tuple defing the variables filter
+    @return a tuple defining the variables filter
     """
     localsFilter = eval(prefClass.settings.value("Variables/LocalsFilter",
         prefClass.varDefaults["LocalsFilter"]))
@@ -1227,6 +1227,7 @@ def setVarFilters(filters, prefClass=Prefs):
     """
     Module function to store the variables filter settings.
     
+    qparam filters variable filters to set 
     @param prefClass preferences class used as the storage area
     """
     prefClass.settings.setValue("Variables/LocalsFilter", str(filters[0]))
@@ -2768,6 +2769,8 @@ def shouldResetLayout(prefClass=Prefs):
 def saveResetLayout(prefClass=Prefs):
     """
     Module function to save the reset layout.
+    
+    @param prefClass preferences class used as the storage area
     """
     if prefClass.resetLayout:
         for key in list(prefClass.geometryDefaults.keys()):

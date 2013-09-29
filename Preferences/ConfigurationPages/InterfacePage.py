@@ -255,7 +255,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
     @pyqtSlot()
     def on_resetLayoutButton_clicked(self):
         """
-        Private method to reset layout to factory defaults
+        Private method to reset layout to factory defaults.
         """
         Preferences.resetLayout()
     
@@ -265,6 +265,7 @@ def create(dlg):
     Module function to create the configuration page.
     
     @param dlg reference to the configuration dialog
+    @return reference to the instantiated page (ConfigurationPageBase)
     """
     page = InterfacePage()
     return page

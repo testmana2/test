@@ -50,6 +50,8 @@ class PreferencesLexerLanguageError(PreferencesLexerError):
     def __init__(self, language):
         """
         Constructor
+        
+        @param language lexer language (string)
         """
         PreferencesLexerError.__init__(self)
         self._errorMessage = \
@@ -67,6 +69,8 @@ class PreferencesLexer(QsciLexer):
         
         @param language The lexer language. (string)
         @param parent The parent widget of this lexer. (QextScintilla)
+        @exception PreferencesLexerLanguageError raised to indicate an invalid
+            lexer language
         """
         super().__init__(parent)
         

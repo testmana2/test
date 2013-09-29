@@ -755,7 +755,7 @@ class Project(QObject):
         
     def __readUserProperties(self):
         """
-        Private method to read in the user specific project file (.e4q)
+        Private method to read in the user specific project file (.e4q).
         """
         if self.pfile is None:
             return
@@ -813,7 +813,7 @@ class Project(QObject):
         
     def __readSession(self, quiet=False, indicator=""):
         """
-        Private method to read in the project session file (.e4s)
+        Private method to read in the project session file (.e4s).
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -898,7 +898,7 @@ class Project(QObject):
         
     def __readTasks(self):
         """
-        Private method to read in the project tasks file (.e4t)
+        Private method to read in the project tasks file (.e4t).
         """
         if self.pfile is None:
             E5MessageBox.critical(self.ui,
@@ -964,7 +964,7 @@ class Project(QObject):
         
     def __readDebugProperties(self, quiet=False):
         """
-        Private method to read in the project debugger properties file (.e4d)
+        Private method to read in the project debugger properties file (.e4d).
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -994,7 +994,7 @@ class Project(QObject):
         
     def __writeDebugProperties(self, quiet=False):
         """
-        Private method to write the project debugger properties file (.e4d)
+        Private method to write the project debugger properties file (.e4d).
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -1025,7 +1025,7 @@ class Project(QObject):
         
     def __deleteDebugProperties(self):
         """
-        Private method to delete the project debugger properties file (.e4d)
+        Private method to delete the project debugger properties file (.e4d).
         """
         if self.pfile is None:
             E5MessageBox.critical(self.ui,
@@ -1684,6 +1684,7 @@ class Project(QObject):
         Public method to get all files starting with a common prefix.
         
         @param start prefix (string)
+        @return list of files starting with a common prefix (list of strings)
         """
         filelist = []
         start = self.getRelativePath(start)
@@ -2859,6 +2860,8 @@ class Project(QObject):
         Public method to check, if a path starts with the project path.
         
         @param path path to be checked (string)
+        @return flag indicating that the path starts with the project path
+            (boolean)
         """
         if self.ppath:
             if path == self.ppath:
