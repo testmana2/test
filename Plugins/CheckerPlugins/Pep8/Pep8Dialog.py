@@ -842,7 +842,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     continue
                 
                 deferredFixes = {}
-                # TODO: add docstring type
                 fixer = Pep8Fixer(self.__project, file, source,
                                   fixCodes, noFixCodes, maxLineLength,
                                   True)  # always fix in place

@@ -152,10 +152,12 @@ if __name__ == "__main__":
                 for a in args:
                     print a
             print "PEP8_STATISTICS"
-            # TODO: add statistics for D
             for key in report.counters:
                 if key.startswith(("E", "N", "W")):
                     print key, report.counters[key]
+            for key in pep257Checker.counters:
+                if key.startswith("D"):
+                    print key, pep257Checker.counters[key]
         else:
             print "NO_PEP8"
             print filename
