@@ -14,12 +14,12 @@ from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
 from .DocStyleChecker import DocStyleChecker
 
-from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
+from .Ui_CodeStyleCodeSelectionDialog import Ui_CodeStyleCodeSelectionDialog
 
 import UI.PixmapCache
 
 
-class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
+class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
     """
     Class implementing a dialog to select PEP 8 message codes.
     """

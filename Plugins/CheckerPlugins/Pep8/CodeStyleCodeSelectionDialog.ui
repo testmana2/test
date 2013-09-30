@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Pep8CodeSelectionDialog</class>
- <widget class="QDialog" name="Pep8CodeSelectionDialog">
+ <class>CodeStyleCodeSelectionDialog</class>
+ <widget class="QDialog" name="CodeStyleCodeSelectionDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -83,7 +83,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Pep8CodeSelectionDialog</receiver>
+   <receiver>CodeStyleCodeSelectionDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -99,7 +99,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Pep8CodeSelectionDialog</receiver>
+   <receiver>CodeStyleCodeSelectionDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

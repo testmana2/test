@@ -1110,6 +1110,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UtilitiesPython2/Pep8NamingCheckerPy2.py</Source>
     <Source>UtilitiesPython2/Pep257CheckerPy2.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/DocStyleChecker.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleChecker.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1338,8 +1341,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Download/DownloadManager.ui</Form>
     <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui</Form>
-    <Form>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui</Form>
-    <Form>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpVirusTotalPage.ui</Form>
     <Form>Helpviewer/Download/DownloadAskActionDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui</Form>
@@ -1430,6 +1431,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

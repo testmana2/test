@@ -15,12 +15,12 @@ from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
 from .DocStyleChecker import DocStyleChecker
 
-from .Ui_Pep8StatisticsDialog import Ui_Pep8StatisticsDialog
+from .Ui_CodeStyleStatisticsDialog import Ui_CodeStyleStatisticsDialog
 
 import UI.PixmapCache
 
 
-class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
+class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
     """
     Class implementing a dialog showing statistical data for the last
     code style checker run.

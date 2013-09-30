@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Pep8StatisticsDialog</class>
- <widget class="QDialog" name="Pep8StatisticsDialog">
+ <class>CodeStyleStatisticsDialog</class>
+ <widget class="QDialog" name="CodeStyleStatisticsDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Code Styel Checker Statistics</string>
+   <string>Code Style Checker Statistics</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -95,7 +95,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Pep8StatisticsDialog</receiver>
+   <receiver>CodeStyleStatisticsDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -111,7 +111,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Pep8StatisticsDialog</receiver>
+   <receiver>CodeStyleStatisticsDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

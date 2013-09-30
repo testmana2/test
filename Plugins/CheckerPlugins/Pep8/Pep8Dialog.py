@@ -420,8 +420,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.__project.isProjectFile(file) and \
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
-                        from .Pep8Checker import Pep8Py2Checker
-                        report = Pep8Py2Checker(file, [],
+                        from .CodeStyleChecker import CodeStyleCheckerPy2
+                        report = CodeStyleCheckerPy2(file, [],
                             repeat=repeatMessages,
                             select=includeMessages,
                             ignore=excludeMessages,
@@ -581,8 +581,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param showFixCodes flag indicating to show a list of fixable
             issues (boolean)
         """
-        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
-        dlg = Pep8CodeSelectionDialog(edit.text(), showFixCodes, self)
+        from .CodeStyleCodeSelectionDialog import CodeStyleCodeSelectionDialog
+        dlg = CodeStyleCodeSelectionDialog(edit.text(), showFixCodes, self)
         if dlg.exec_() == QDialog.Accepted:
             edit.setText(dlg.getSelectedCodes())
     
@@ -696,8 +696,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         """
         Private slot to show the statistics dialog.
         """
-        from .Pep8StatisticsDialog import Pep8StatisticsDialog
-        dlg = Pep8StatisticsDialog(self.__statistics, self)
+        from .CodeStyleStatisticsDialog import CodeStyleStatisticsDialog
+        dlg = CodeStyleStatisticsDialog(self.__statistics, self)
         dlg.exec_()
     
     @pyqtSlot()

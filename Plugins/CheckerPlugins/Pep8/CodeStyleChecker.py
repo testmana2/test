@@ -21,7 +21,7 @@ import Utilities
 from eric5config import getConfig
 
 
-class Pep8Py2Checker(object):
+class CodeStyleCheckerPy2(object):
     """
     Class implementing the PEP 8 checker interface for Python 2.
     """
@@ -52,7 +52,7 @@ class Pep8Py2Checker(object):
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
             self.errors.append((filename, 1, 1,
-                QCoreApplication.translate("Pep8Py2Checker",
+                QCoreApplication.translate("CodeStyleCheckerPy2",
                     "Python2 interpreter not configured.")))
             return
         
@@ -124,5 +124,5 @@ class Pep8Py2Checker(object):
                 index += 1
         else:
             self.errors.append((filename, 1, 1,
-                QCoreApplication.translate("Pep8Py2Checker",
+                QCoreApplication.translate("CodeStyleCheckerPy2",
                     "Python2 interpreter did not finish within 15s.")))
