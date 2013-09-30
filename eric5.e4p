@@ -806,13 +806,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/__init__.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/pep8.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8Dialog.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8Checker.py</Source>
     <Source>Plugins/PluginPep8Checker.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.py</Source>
     <Source>UtilitiesPython2/pep8.py</Source>
     <Source>UtilitiesPython2/Pep8Checker.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Fixer.py</Source>
     <Source>eric5_compare.py</Source>
     <Source>eric5_compare.pyw</Source>
@@ -1113,6 +1109,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleChecker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCheckerDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1340,7 +1337,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Download/DownloadItem.ui</Form>
     <Form>Helpviewer/Download/DownloadManager.ui</Form>
     <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
-    <Form>Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpVirusTotalPage.ui</Form>
     <Form>Helpviewer/Download/DownloadAskActionDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui</Form>
@@ -1433,6 +1429,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/Pep8/CodeStyleCheckerDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

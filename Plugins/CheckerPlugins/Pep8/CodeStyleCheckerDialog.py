@@ -16,7 +16,7 @@ from PyQt4.QtGui import QDialog, QTreeWidgetItem, QAbstractButton, \
 
 from E5Gui.E5Application import e5App
 
-from .Ui_Pep8Dialog import Ui_Pep8Dialog
+from .Ui_CodeStyleCheckerDialog import Ui_CodeStyleCheckerDialog
 
 import UI.PixmapCache
 import Preferences
@@ -31,7 +31,7 @@ pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
 from .DocStyleChecker import DocStyleChecker
 
 
-class Pep8Report(pep8.BaseReport):
+class CodeStyleCheckerReport(pep8.BaseReport):
     """
     Class implementing a special report to be used with our dialog.
     """
@@ -69,7 +69,7 @@ class Pep8Report(pep8.BaseReport):
         return code
 
 
-class Pep8Dialog(QDialog, Ui_Pep8Dialog):
+class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     """
     Class implementing a dialog to show the results of the PEP 8 check.
     """
@@ -445,7 +445,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         
                         # check PEP-8
                         styleGuide = pep8.StyleGuide(
-                            reporter=Pep8Report,
+                            reporter=CodeStyleCheckerReport,
                             repeat=repeatMessages,
                             select=select,
                             ignore=ignore,
