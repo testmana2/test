@@ -12,7 +12,7 @@ from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
-from .Pep257Checker import Pep257Checker
+from .DocStyleChecker import DocStyleChecker
 
 from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
 
@@ -43,7 +43,7 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
         else:
             selectableCodes = list(pep8.pep8_messages.keys())
             selectableCodes.extend(Pep8NamingChecker.Messages.keys())
-            selectableCodes.extend(Pep257Checker.Messages.keys())
+            selectableCodes.extend(DocStyleChecker.Messages.keys())
         for code in sorted(selectableCodes):
             if code in pep8.pep8_messages_sample_args:
                 message = QCoreApplication.translate(
@@ -56,9 +56,9 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
                 message = QCoreApplication.translate(
                     "Pep8NamingChecker",
                     Pep8NamingChecker.Messages[code])
-            elif code in Pep257Checker.Messages:
+            elif code in DocStyleChecker.Messages:
                 message = QCoreApplication.translate(
-                    "Pep257Checker", Pep257Checker.Messages[code])
+                    "DocStyleChecker", DocStyleChecker.Messages[code])
             else:
                 continue
             itm = QTreeWidgetItem(self.codeTable, [code, message])

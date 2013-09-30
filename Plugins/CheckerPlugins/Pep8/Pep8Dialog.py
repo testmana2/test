@@ -28,7 +28,7 @@ from .Pep8NamingChecker import Pep8NamingChecker
 # register the name checker
 pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
 
-from .Pep257Checker import Pep257Checker
+from .DocStyleChecker import DocStyleChecker
 
 
 class Pep8Report(pep8.BaseReport):
@@ -456,7 +456,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         stats.update(report.counters)
                         
                         # check PEP-257
-                        pep257Checker = Pep257Checker(
+                        pep257Checker = DocStyleChecker(
                             source, file, select, ignore, [], repeatMessages,
                             maxLineLength=maxLineLength, docType=docType)
                         pep257Checker.run()

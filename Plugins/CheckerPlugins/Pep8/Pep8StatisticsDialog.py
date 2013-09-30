@@ -13,7 +13,7 @@ from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
-from .Pep257Checker import Pep257Checker
+from .DocStyleChecker import DocStyleChecker
 
 from .Ui_Pep8StatisticsDialog import Ui_Pep8StatisticsDialog
 
@@ -56,9 +56,9 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
             elif code in Pep8NamingChecker.Messages:
                 message = QCoreApplication.translate(
                     "Pep8NamingChecker", Pep8NamingChecker.Messages[code])
-            elif code in Pep257Checker.Messages:
+            elif code in DocStyleChecker.Messages:
                 message = QCoreApplication.translate(
-                    "Pep257Checker", Pep257Checker.Messages[code])
+                    "DocStyleChecker", DocStyleChecker.Messages[code])
             else:
                 continue
             self.__createItem(stats[code], code, message)
