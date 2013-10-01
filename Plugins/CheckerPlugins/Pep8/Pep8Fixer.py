@@ -1493,8 +1493,9 @@ class Pep8Fixer(QObject):
             a message for the fix (string) and an ID for a deferred
             fix (integer)
         """
-        multilineStringLines, docStringLines = self.__multilineStringLines()
         if apply:
+            multilineStringLines, docStringLines = \
+                self.__multilineStringLines()
             isDocString = line in docStringLines
             line = line - 1
             text = self.__source[line]
