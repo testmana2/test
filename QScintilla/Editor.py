@@ -5262,7 +5262,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to toggle a flakes warning indicator.
         
-        Note: This method is used to set PEP 8 warnings as well.
+        Note: This method is used to set code style warnings as well.
         
         @param line line number of the flakes warning
         @param warning flag indicating if the warning marker should be

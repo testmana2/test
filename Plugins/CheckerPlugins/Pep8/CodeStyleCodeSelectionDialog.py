@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to select PEP 8 message codes.
+Module implementing a dialog to select code style message codes.
 """
 
 from PyQt4.QtCore import QCoreApplication
@@ -21,7 +21,7 @@ import UI.PixmapCache
 
 class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
     """
-    Class implementing a dialog to select PEP 8 message codes.
+    Class implementing a dialog to select code style message codes.
     """
     def __init__(self, codes, showFixCodes, parent=None):
         """

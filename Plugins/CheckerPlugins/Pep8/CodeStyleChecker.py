@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the PEP 8 checker.
+Module implementing the code style checker.
 """
 
 import os
@@ -23,7 +23,7 @@ from eric5config import getConfig
 
 class CodeStyleCheckerPy2(object):
     """
-    Class implementing the PEP 8 checker interface for Python 2.
+    Class implementing the code style checker interface for Python 2.
     """
     def __init__(self, filename, lines, repeat=False,
                  select="", ignore="", max_line_length=79,

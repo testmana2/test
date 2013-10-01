@@ -81,8 +81,8 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         Private method to create an entry in the result list.
         
         @param count occurrences of the issue (integer)
-        @param code of a PEP 8 message (string)
-        @param message PEP 8 message to be shown (string)
+        @param code of a code style issue message (string)
+        @param message code style issue message to be shown (string)
         """
         itm = QTreeWidgetItem(self.statisticsList)
         itm.setData(0, Qt.DisplayRole, count)

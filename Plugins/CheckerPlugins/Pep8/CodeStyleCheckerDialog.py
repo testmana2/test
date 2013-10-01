@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to show the results of the PEP 8 check.
+Module implementing a dialog to show the results of the code style check.
 """
 
 import os
@@ -71,7 +71,7 @@ class CodeStyleCheckerReport(pep8.BaseReport):
 
 class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     """
-    Class implementing a dialog to show the results of the PEP 8 check.
+    Class implementing a dialog to show the results of the code style check.
     """
     filenameRole = Qt.UserRole + 1
     lineRole = Qt.UserRole + 2
@@ -213,7 +213,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         @param statistics dictionary of statistical data with
             message code as key and message count as value
-        @param fixer reference to the PEP 8 fixer (CodeStyleFixer)
+        @param fixer reference to the code style fixer (CodeStyleFixer)
         """
         self.__statistics["_FilesCount"] += 1
         stats = {v: k for v, k in statistics.items() if v[0].isupper()}
@@ -231,7 +231,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         Private method to update the collected fixer related statistics.
         
-        @param fixer reference to the PEP 8 fixer (CodeStyleFixer)
+        @param fixer reference to the code style fixer (CodeStyleFixer)
         """
         self.__statistics["_IssuesFixed"] += fixer.fixed
     
@@ -294,7 +294,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     
     def start(self, fn, save=False, repeat=None):
         """
-        Public slot to start the PEP 8 check.
+        Public slot to start the code style check.
         
         @param fn file or list of files or directory to be checked
                 (string or list of strings)
@@ -518,7 +518,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     
     def __finish(self):
         """
-        Private slot called when the PEP 8 check finished or the user
+        Private slot called when the code style check finished or the user
         pressed the cancel button.
         """
         self.cancelled = True
@@ -547,7 +547,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     @pyqtSlot()
     def on_startButton_clicked(self):
         """
-        Private slot to start a PEP 8 check run.
+        Private slot to start a code style check run.
         """
         if self.__forProject:
             data = {

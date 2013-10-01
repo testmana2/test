@@ -4,5 +4,5 @@
 #
 
 """
-Package containing the PEP 8 plugin.
+Package containing the code style checker and fixer plug-in.
 """

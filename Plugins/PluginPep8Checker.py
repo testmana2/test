@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the PEP 8 Checker plugin.
+Module implementing the code style checker plug-in.
 """
 
 import os
@@ -18,7 +18,7 @@ from E5Gui.E5Action import E5Action
 import Preferences
 
 # Start-Of-Header
-name = "PEP 8 Checker Plugin"
+name = "Code Style Checker Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
@@ -40,7 +40,7 @@ error = ""
 
 class Pep8CheckerPlugin(QObject):
     """
-    Class implementing the PEP 8 Checker plugin.
+    Class implementing the code style checker plug-in.
     """
     def __init__(self, ui):
         """
@@ -80,7 +80,7 @@ class Pep8CheckerPlugin(QObject):
                 self.trUtf8('&Code Style...'), 0, 0,
                 self, 'project_check_pep8')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Check PEP 8 compliance.'))
+                self.trUtf8('Check code style.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Check Code Style...</b>"""
                 """<p>This checks Python files for compliance to the"""
@@ -186,7 +186,7 @@ class Pep8CheckerPlugin(QObject):
     
     def __projectPep8Check(self):
         """
-        Public slot used to check the project files for PEP 8 compliance.
+        Public slot used to check the project files for code style.
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()
@@ -205,7 +205,7 @@ class Pep8CheckerPlugin(QObject):
     
     def __projectBrowserPep8Check(self):
         """
-        Private method to handle the PEP 8 check context menu action of
+        Private method to handle the code style check context menu action of
         the project sources browser.
         """
         browser = e5App().getObject("ProjectBrowser")\
@@ -269,7 +269,7 @@ class Pep8CheckerPlugin(QObject):
     
     def __editorPep8Check(self):
         """
-        Private slot to handle the PEP 8 check context menu action
+        Private slot to handle the code style check context menu action
         of the editors.
         """
         editor = e5App().getObject("ViewManager").activeWindow()
