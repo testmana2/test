@@ -729,7 +729,6 @@ class Hg(VersionControl):
                     return False
             
             if noDialog:
-                res = self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
                 if self.__client is None:
                     res = self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
                 else:
