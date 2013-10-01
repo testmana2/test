@@ -145,7 +145,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             automatically (boolean)
         @return reference to the created item (QTreeWidgetItem)
         """
-        from .Pep8Fixer import Pep8FixableIssues
+        from .CodeStyleFixer import FixableCodeStyleIssues
         
         if self.__lastFileItem is None:
             # It's a new file
@@ -168,7 +168,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         if fixed:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
-        elif code in Pep8FixableIssues and not autofixing:
+        elif code in FixableCodeStyleIssues and not autofixing:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixable.png"))
             fixable = True
         
@@ -213,7 +213,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         @param statistics dictionary of statistical data with
             message code as key and message count as value
-        @param fixer reference to the PEP 8 fixer (Pep8Fixer)
+        @param fixer reference to the PEP 8 fixer (CodeStyleFixer)
         """
         self.__statistics["_FilesCount"] += 1
         stats = {v: k for v, k in statistics.items() if v[0].isupper()}
@@ -231,7 +231,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         Private method to update the collected fixer related statistics.
         
-        @param fixer reference to the PEP 8 fixer (Pep8Fixer)
+        @param fixer reference to the PEP 8 fixer (CodeStyleFixer)
         """
         self.__statistics["_IssuesFixed"] += fixer.fixed
     
@@ -405,8 +405,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     flags = Utilities.extractFlags(source)
                     ext = os.path.splitext(file)[1]
                     if fixIssues:
-                        from .Pep8Fixer import Pep8Fixer
-                        fixer = Pep8Fixer(self.__project, file, source,
+                        from .CodeStyleFixer import CodeStyleFixer
+                        fixer = CodeStyleFixer(self.__project, file, source,
                                           fixCodes, noFixCodes, maxLineLength,
                                           True)  # always fix in place
                     else:
@@ -803,7 +803,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         Private slot to fix selected issues.
         """
-        from .Pep8Fixer import Pep8Fixer
+        from .CodeStyleFixer import CodeStyleFixer
         
         # build a dictionary of issues to fix
         fixableItems = self.__getSelectedFixableItems()
@@ -843,7 +843,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     continue
                 
                 deferredFixes = {}
-                fixer = Pep8Fixer(self.__project, file, source,
+                fixer = CodeStyleFixer(self.__project, file, source,
                                   fixCodes, noFixCodes, maxLineLength,
                                   True)  # always fix in place
                 errors = fixesDict[file]

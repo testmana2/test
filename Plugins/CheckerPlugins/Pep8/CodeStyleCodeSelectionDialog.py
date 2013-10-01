@@ -38,8 +38,8 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
         codeList = [code.strip() for code in codes.split(",") if code.strip()]
         
         if showFixCodes:
-            from .Pep8Fixer import Pep8FixableIssues
-            selectableCodes = Pep8FixableIssues
+            from .CodeStyleFixer import FixableCodeStyleIssues
+            selectableCodes = FixableCodeStyleIssues
         else:
             selectableCodes = list(pep8.pep8_messages.keys())
             selectableCodes.extend(Pep8NamingChecker.Messages.keys())

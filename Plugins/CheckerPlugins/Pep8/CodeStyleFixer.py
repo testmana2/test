@@ -20,24 +20,25 @@ from . import pep8
 
 import Utilities
 
-Pep8FixableIssues = ["D111", "D112", "D113", "D121", "D131", "D141",
-                     "D142", "D143", "D144", "D145",
-                     "D221", "D222", "D231", "D242", "D243", "D244",
-                     "D245", "D246", "D247",
-                     "E101", "E111", "E121", "E122", "E123", "E124",
-                     "E125", "E126", "E127", "E128", "E133", "E201",
-                     "E202", "E203", "E211", "E221", "E222", "E223",
-                     "E224", "E225", "E226", "E227", "E228", "E231",
-                     "E241", "E242", "E251", "E261", "E262", "E271",
-                     "E272", "E273", "E274", "E301", "E302", "E303",
-                     "E304", "E401", "E501", "E502", "E701", "E702",
-                     "E703", "E711", "E712",
-                     "N804", "N805", "N806",
-                     "W191", "W291", "W292", "W293", "W391", "W603",
-                     ]
+FixableCodeStyleIssues = [
+    "D111", "D112", "D113", "D121", "D131", "D141",
+    "D142", "D143", "D144", "D145",
+    "D221", "D222", "D231", "D242", "D243", "D244",
+    "D245", "D246", "D247",
+    "E101", "E111", "E121", "E122", "E123", "E124",
+    "E125", "E126", "E127", "E128", "E133", "E201",
+    "E202", "E203", "E211", "E221", "E222", "E223",
+    "E224", "E225", "E226", "E227", "E228", "E231",
+    "E241", "E242", "E251", "E261", "E262", "E271",
+    "E272", "E273", "E274", "E301", "E302", "E303",
+    "E304", "E401", "E501", "E502", "E701", "E702",
+    "E703", "E711", "E712",
+    "N804", "N805", "N806",
+    "W191", "W291", "W292", "W293", "W391", "W603",
+]
 
 
-class Pep8Fixer(QObject):
+class CodeStyleFixer(QObject):
     """
     Class implementing a fixer for certain code style issues.
     """
@@ -440,7 +441,7 @@ class Pep8Fixer(QObject):
         assert logical
         ls, _, original = logical
 
-        rewrapper = Pep8IndentationWrapper(original)
+        rewrapper = IndentationWrapper(original)
         valid_indents = rewrapper.pep8Expected()
         if not rewrapper.rel_indent:
             return False
@@ -910,7 +911,7 @@ class Pep8Fixer(QObject):
             fix (integer)
         """
         if self.__reindenter is None:
-            self.__reindenter = Pep8Reindenter(self.__source)
+            self.__reindenter = Reindenter(self.__source)
             self.__reindenter.run()
         fixedLine = self.__reindenter.fixedLine(line - 1)
         if fixedLine is not None and fixedLine != self.__source[line - 1]:
@@ -1507,7 +1508,7 @@ class Pep8Fixer(QObject):
                 nextText = self.__source[line + 1]
             else:
                 nextText = ""
-            shortener = Pep8LineShortener(
+            shortener = LineShortener(
                 text, prevText, nextText,
                 maxLength=self.__maxLineLength, eol=self.__getEol(),
                 indentWord=self.__indentWord, isDocString=isDocString)
@@ -1820,7 +1821,7 @@ class Pep8Fixer(QObject):
         return (1, self.trUtf8("'<>' replaced by '!='."), 0)
 
 
-class Pep8Reindenter(object):
+class Reindenter(object):
     """
     Class to reindent badly-indented code to uniformly use four-space
     indentation.
@@ -2017,7 +2018,7 @@ class Pep8Reindenter(object):
         return i
 
 
-class Pep8IndentationWrapper(object):
+class IndentationWrapper(object):
     """
     Class used by fixers dealing with indentation.
 
@@ -2245,7 +2246,7 @@ class Pep8IndentationWrapper(object):
         return valid_indents
 
 
-class Pep8LineShortener(object):
+class LineShortener(object):
     """
     Class used to shorten lines to a given maximum of characters.
     """
@@ -2686,7 +2687,7 @@ class Pep8LineShortener(object):
         @param line line to determine the indentation string from (string)
         @return indentation string (string)
         """
-        # copied from Pep8Fixer
+        # copied from CodeStyleFixer
         return line.replace(line.lstrip(), "")
     
     def __checkSyntax(self, code):

@@ -809,7 +809,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/PluginPep8Checker.py</Source>
     <Source>UtilitiesPython2/pep8.py</Source>
     <Source>UtilitiesPython2/Pep8Checker.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8Fixer.py</Source>
     <Source>eric5_compare.py</Source>
     <Source>eric5_compare.pyw</Source>
     <Source>eric5_configure.py</Source>
@@ -1110,6 +1109,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCheckerDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleFixer.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
