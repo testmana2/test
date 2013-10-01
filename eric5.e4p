@@ -1101,7 +1101,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py</Source>
     <Source>UtilitiesPython2/Pep8NamingCheckerPy2.py</Source>
     <Source>UtilitiesPython2/Pep257CheckerPy2.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/DocStyleChecker.py</Source>
@@ -1110,6 +1109,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCheckerDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/CodeStyleFixer.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/NamingStyleChecker.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

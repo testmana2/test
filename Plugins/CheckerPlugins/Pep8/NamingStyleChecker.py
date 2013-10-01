@@ -15,7 +15,7 @@ import os
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
 
-class Pep8NamingChecker(object):
+class NamingStyleChecker(object):
     """
     Class implementing a checker for PEP-8 naming conventions.
     """
@@ -29,34 +29,34 @@ class Pep8NamingChecker(object):
         "N811", "N812", "N813", "N814", "N821", "N831"
     ]
     Messages = {
-        "N801": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N801": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "class names should use CapWords convention"),
-        "N802": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N802": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "function name should be lowercase"),
-        "N803": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N803": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "argument name should be lowercase"),
-        "N804": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N804": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "first argument of a class method should be named 'cls'"),
-        "N805": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N805": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "first argument of a method should be named 'self'"),
-        "N806": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N806": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "first argument of a static method should not be named"
             " 'self' or 'cls"),
-        "N807": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N807": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "module names should be lowercase"),
-        "N808": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N808": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "package names should be lowercase"),
-        "N811": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N811": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "constant imported as non constant"),
-        "N812": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N812": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "lowercase imported as non lowercase"),
-        "N813": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N813": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "camelcase imported as lowercase"),
-        "N814": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N814": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "camelcase imported as constant"),
-        "N821": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N821": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "variable in function should be lowercase"),
-        "N831": QT_TRANSLATE_NOOP("Pep8NamingChecker",
+        "N831": QT_TRANSLATE_NOOP("NamingStyleChecker",
             "names 'l', 'O' and 'I' should be avoided"),
     }
     
@@ -127,10 +127,10 @@ class Pep8NamingChecker(object):
         @return translated and formatted message (string)
         """
         if code in cls.Messages:
-            return code + " " + QCoreApplication.translate("Pep8NamingChecker",
+            return code + " " + QCoreApplication.translate("NamingStyleChecker",
                 cls.Messages[code]).format(*args)
         else:
-            return code + " " + QCoreApplication.translate("Pep8NamingChecker",
+            return code + " " + QCoreApplication.translate("NamingStyleChecker",
                 "no message for this code defined")
     
     def __visitTree(self, node):

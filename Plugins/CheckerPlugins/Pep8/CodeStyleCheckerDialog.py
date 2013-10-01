@@ -23,10 +23,10 @@ import Preferences
 import Utilities
 
 from . import pep8
-from .Pep8NamingChecker import Pep8NamingChecker
+from .NamingStyleChecker import NamingStyleChecker
 
 # register the name checker
-pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
+pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
 
 from .DocStyleChecker import DocStyleChecker
 
@@ -59,8 +59,8 @@ class CodeStyleCheckerReport(pep8.BaseReport):
         """
         code = super().error_args(line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
-            if code in Pep8NamingChecker.Codes:
-                text = Pep8NamingChecker.getMessage(code, *args)
+            if code in NamingStyleChecker.Codes:
+                text = NamingStyleChecker.getMessage(code, *args)
             else:
                 text = pep8.getMessage(code, *args)
             self.errors.append(

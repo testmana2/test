@@ -12,7 +12,7 @@ from PyQt4.QtCore import Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
-from .Pep8NamingChecker import Pep8NamingChecker
+from .NamingStyleChecker import NamingStyleChecker
 from .DocStyleChecker import DocStyleChecker
 
 from .Ui_CodeStyleStatisticsDialog import Ui_CodeStyleStatisticsDialog
@@ -53,9 +53,9 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
             elif code in pep8.pep8_messages:
                 message = QCoreApplication.translate(
                     "pep8", pep8.pep8_messages[code])
-            elif code in Pep8NamingChecker.Messages:
+            elif code in NamingStyleChecker.Messages:
                 message = QCoreApplication.translate(
-                    "Pep8NamingChecker", Pep8NamingChecker.Messages[code])
+                    "NamingStyleChecker", NamingStyleChecker.Messages[code])
             elif code in DocStyleChecker.Messages:
                 message = QCoreApplication.translate(
                     "DocStyleChecker", DocStyleChecker.Messages[code])

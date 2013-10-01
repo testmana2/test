@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import QProcess, QCoreApplication
 
 from . import pep8
-from .Pep8NamingChecker import Pep8NamingChecker
+from .NamingStyleChecker import NamingStyleChecker
 from .DocStyleChecker import DocStyleChecker
 
 import Preferences
@@ -111,8 +111,8 @@ class CodeStyleCheckerPy2(object):
                     argindex += 1
                 index += 6 + arglen
                 
-                if code in Pep8NamingChecker.Codes:
-                    text = Pep8NamingChecker.getMessage(code, *args)
+                if code in NamingStyleChecker.Codes:
+                    text = NamingStyleChecker.getMessage(code, *args)
                 elif code in DocStyleChecker.Codes:
                     text = DocStyleChecker.getMessage(code, *args)
                 else:

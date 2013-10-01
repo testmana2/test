@@ -11,7 +11,7 @@ from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
-from .Pep8NamingChecker import Pep8NamingChecker
+from .NamingStyleChecker import NamingStyleChecker
 from .DocStyleChecker import DocStyleChecker
 
 from .Ui_CodeStyleCodeSelectionDialog import Ui_CodeStyleCodeSelectionDialog
@@ -42,7 +42,7 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
             selectableCodes = FixableCodeStyleIssues
         else:
             selectableCodes = list(pep8.pep8_messages.keys())
-            selectableCodes.extend(Pep8NamingChecker.Messages.keys())
+            selectableCodes.extend(NamingStyleChecker.Messages.keys())
             selectableCodes.extend(DocStyleChecker.Messages.keys())
         for code in sorted(selectableCodes):
             if code in pep8.pep8_messages_sample_args:
@@ -52,10 +52,10 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
             elif code in pep8.pep8_messages:
                 message = QCoreApplication.translate(
                     "pep8", pep8.pep8_messages[code])
-            elif code in Pep8NamingChecker.Messages:
+            elif code in NamingStyleChecker.Messages:
                 message = QCoreApplication.translate(
-                    "Pep8NamingChecker",
-                    Pep8NamingChecker.Messages[code])
+                    "NamingStyleChecker",
+                    NamingStyleChecker.Messages[code])
             elif code in DocStyleChecker.Messages:
                 message = QCoreApplication.translate(
                     "DocStyleChecker", DocStyleChecker.Messages[code])
