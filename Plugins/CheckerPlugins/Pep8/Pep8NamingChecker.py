@@ -111,7 +111,7 @@ class Pep8NamingChecker(object):
         @return tuple giving line number, offset within line, code and
             checker function
         """
-        if self.__tree:
+        if self.__tree and self.__checkers:
             return self.__visitTree(self.__tree)
         else:
             return ()
