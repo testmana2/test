@@ -1517,6 +1517,8 @@ class CodeStyleFixer(QObject):
                 if newText != text:
                     self.__source[line] = newText
                 if newNextText and newNextText != nextText:
+                    if newNextText == " ":
+                        newNextText = ""
                     self.__source[line + 1] = newNextText
                 return (1, self.trUtf8("Long lines have been shortened."), 0)
             else:
@@ -2483,14 +2485,21 @@ class LineShortener(object):
             second = self.__text[blank:].strip()
             if newNext.strip():
                 newText = first + self.__eol
-                newNext = self.__getIndent(newNext) + \
-                    second + " " + newNext.lstrip()
+                if second.endswith(")"):
+                    # don't merge with next line
+                    newText += self.__getIndent(newText) + second + self.__eol
+                    newNext = ""
+                else:
+                    newNext = self.__getIndent(newNext) + \
+                        second + " " + newNext.lstrip()
             else:
                 # empty line, add a new line
                 newText = first + self.__eol
                 newNext = self.__getIndent(newNext) + \
                     second + self.__eol + newNext.lstrip()
-        return newText, newNext
+            return newText, newNext
+        else:
+            return None
     
     def __isProbablyInsideStringOrComment(self, line, index):
         """
@@ -2570,7 +2579,7 @@ class LineShortener(object):
                 if first.rstrip().endswith('.'):
                     continue
                 
-                if tokenString in '+-*/':
+                if tokenString in '+-*/,':
                     newText = first + ' \\' + self.__eol + second
                 else:
                     newText = first + self.__eol + second
