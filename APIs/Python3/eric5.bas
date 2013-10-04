@@ -73,6 +73,13 @@ ClickToFlashPlugin WebPluginInterface
 ClickToFlashWhitelistDialog QDialog Ui_ClickToFlashWhitelistDialog
 ClosedTabsManager QObject
 CodeMetricsDialog QDialog Ui_CodeMetricsDialog
+CodeStyleCheckerDialog QDialog Ui_CodeStyleCheckerDialog
+CodeStyleCheckerPlugin QObject
+CodeStyleCheckerReport pep8.BaseReport
+CodeStyleCodeSelectionDialog QDialog Ui_CodeStyleCodeSelectionDialog
+CodeStyleFixer QObject
+CodeStyleReport pep8.BaseReport
+CodeStyleStatisticsDialog QDialog Ui_CodeStyleStatisticsDialog
 Coding ClbrBase
 CodingError Exception
 ColorDialogWizard QObject
@@ -474,12 +481,6 @@ PasswordModel QAbstractTableModel
 PasswordReader QXmlStreamReader
 PasswordWriter QXmlStreamWriter
 PasswordsDialog QDialog Ui_PasswordsDialog
-Pep8CheckerPlugin QObject
-Pep8CodeSelectionDialog QDialog Ui_Pep8CodeSelectionDialog
-Pep8Dialog QDialog Ui_Pep8Dialog
-Pep8Fixer QObject
-Pep8Report pep8.BaseReport
-Pep8StatisticsDialog QDialog Ui_Pep8StatisticsDialog
 PersonalDataDialog QDialog Ui_PersonalDataDialog
 PersonalInformationManager QObject
 PixmapDiagram E5MainWindow

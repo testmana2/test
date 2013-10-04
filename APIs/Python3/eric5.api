@@ -3716,187 +3716,187 @@ eric5.Plugins.AboutPlugin.AboutDialog.authorsText?7
 eric5.Plugins.AboutPlugin.AboutDialog.licenseText?7
 eric5.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.Codes?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.Messages?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.getMessage?4(code, *args)
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.run?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.unpackArgs?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.contextType?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.end?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.indent?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.source?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.ssource?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.start?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context?1(source, startLine, contextType)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Py2Checker?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False, docType="pep257")
-eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog.getSelectedCodes?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, showFixCodes, parent=None)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.codeRole?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.filenameRole?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.fixableRole?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.lineRole?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.messageRole?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_buttonBox_clicked?4(button)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_excludeMessagesSelectButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_fixButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_fixIssuesSelectButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_includeMessagesSelectButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_loadDefaultButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_noFixIssuesSelectButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resetDefaultButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemActivated?4(item, column)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemSelectionChanged?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_showButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_startButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_statisticsButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_storeDefaultButton_clicked?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.positionRole?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.prepare?4(fileList, project)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.start?4(fn, save=False, repeat=None)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent=None)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report.error_args?4(line_number, offset, code, check, *args)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report?1(options)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.finalize?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.mutualStartswith?4(b)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.SKIP_TOKENS?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.pep8Expected?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper?1(physical_lines)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8LineShortener.shorten?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8LineShortener?1(curLine, prevLine, nextLine, maxLength=79, eol="\n", indentWord="    ", isDocString=False)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.fixedLine?4(line)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.getline?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.run?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter?1(sourceLines)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.CamelcaseRegexp?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.Codes?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.LowercaseRegex?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.Messages?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.MixedcaseRegexp?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.UppercaseRegexp?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.getMessage?4(code, *args)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.run?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker?1(tree, filename, options)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent=None)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.ARITHMETIC_OP?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.error?4(line_number, offset, text, check)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.error_args?4(line_number, offset, code, check, *args)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.get_count?4(prefix='')
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.get_file_results?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.get_statistics?4(prefix='')
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.increment_logical_line?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.init_file?4(filename, lines, expected, line_offset)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.print_benchmark?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.print_filename?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.print_statistics?4(prefix='')
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.start?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport.stop?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.BaseReport?1(options)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.COMMENT_WITH_NL?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.COMPARE_SINGLETON_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.COMPARE_TYPE_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.build_tokens_line?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_all?4(expected=None, line_offset=0)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_ast?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_logical?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_physical?4(line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.generate_tokens?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.readline?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.readline_check_physical?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.report_invalid_syntax?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.run_check?4(check, argument_names)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker?1(filename=None, lines=None, options=None, report=None, **kwargs)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.DEFAULT_EXCLUDE?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.DEFAULT_IGNORE?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.DOCSTRING_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.DiffReport.error?4(line_number, offset, text, check)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.DiffReport?1(options)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.ERRORCODE_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.EXTRANEOUS_WHITESPACE_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.FileReport.print_filename?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.HUNK_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.INDENT_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.KEYWORDS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.KEYWORD_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.LAMBDA_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.MAX_LINE_LENGTH?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.OPERATOR_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.PROJECT_CONFIG?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.PyCF_ONLY_AST?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.RAISE_COMMA_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.REPORT_FORMAT?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.RERAISE_COMMA_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.SINGLETONS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.SKIP_TOKENS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StandardReport.error?4(line_number, offset, text, check)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StandardReport.error_args?4(line_number, offset, code, check, *args)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StandardReport.get_file_results?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StandardReport.init_file?4(filename, lines, expected, line_offset)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StandardReport?1(options)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.check_files?4(paths=None)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.excluded?4(filename, parent=None)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.get_checks?4(argument_name)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.ignore_code?4(code)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.init_report?4(reporter=None)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.input_dir?4(dirname)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide.input_file?4(filename, lines=None, expected=None, line_offset=0)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.StyleGuide?1(*args, **kwargs)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.TESTSUITE_PATH?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.UNARY_OPERATORS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.WHITESPACE?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.WHITESPACE_AFTER_COMMA_REGEX?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.WS_NEEDED_OPERATORS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.WS_OPTIONAL_OPERATORS?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8._add_check?5(check, kind, codes, args)
-eric5.Plugins.CheckerPlugins.Pep8.pep8._checks?8
-eric5.Plugins.CheckerPlugins.Pep8.pep8._main?5()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.comparison_to_singleton?4(logical_line, noqa)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.comparison_type?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.compound_statements?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.continued_indentation?4(logical_line, tokens, indent_level, hang_closing, noqa, verbose)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.expand_indent?4(line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.explicit_line_join?4(logical_line, tokens)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.extraneous_whitespace?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.filename_match?4(filename, patterns, default=True)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.getMessage?4(code, *args)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.get_parser?4(prog='pep8', version=__version__)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.imports_on_separate_lines?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.init_checks_registry?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.maximum_line_length?4(physical_line, max_line_length)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.missing_newline?4(physical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.missing_whitespace?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.missing_whitespace_around_operator?4(logical_line, tokens)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.mute_string?4(text)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.noqa?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.parse_udiff?4(diff, patterns=None, parent='.')
-eric5.Plugins.CheckerPlugins.Pep8.pep8.pep8_messages?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.pep8_messages_sample_args?7
-eric5.Plugins.CheckerPlugins.Pep8.pep8.process_options?4(arglist=None, parse_argv=False, config_file=None, parser=None)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_backticks?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_has_key?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_not_equal?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_raise_comma?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.read_config?4(options, args, arglist, parser)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.readlines?4(filename)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.register_check?4(check, codes=None)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.stdin_get_value?4()
-eric5.Plugins.CheckerPlugins.Pep8.pep8.tabs_obsolete?4(physical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.tabs_or_spaces?4(physical_line, indent_char)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.trailing_blank_lines?4(physical_line, lines, line_number)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.trailing_whitespace?4(physical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_comma?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_keywords?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_named_parameter_equals?4(logical_line, tokens)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_operator?4(logical_line)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
-eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_before_parameters?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerPy2?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False, docType="pep257")
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.filenameRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.fixableRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.lineRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.messageRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_buttonBox_clicked?4(button)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_excludeMessagesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_fixButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_fixIssuesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_includeMessagesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_loadDefaultButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_noFixIssuesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_resetDefaultButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_resultList_itemActivated?4(item, column)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_resultList_itemSelectionChanged?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_showButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_startButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_statisticsButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_storeDefaultButton_clicked?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.positionRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.prepare?4(fileList, project)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.start?4(fn, save=False, repeat=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog?1(parent=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerReport.error_args?4(line_number, offset, code, check, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerReport?1(options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCodeSelectionDialog.CodeStyleCodeSelectionDialog.getSelectedCodes?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCodeSelectionDialog.CodeStyleCodeSelectionDialog?1(codes, showFixCodes, parent=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.finalize?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.fixIssue?4(line, pos, message)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.mutualStartswith?4(b)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.saveFile?4(encoding)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer?1(project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.FixableCodeStyleIssues?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper.SKIP_TOKENS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper.pep8Expected?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper?1(physical_lines)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.LineShortener.shorten?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.LineShortener?1(curLine, prevLine, nextLine, maxLength=79, eol="\n", indentWord="    ", isDocString=False)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter.fixedLine?4(line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter.getline?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter.run?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter?1(sourceLines)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.CodeStyleStatisticsDialog?1(statistics, parent=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Codes?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Messages?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.run?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.unpackArgs?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.contextType?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.end?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.indent?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.source?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.ssource?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.start?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext?1(source, startLine, contextType)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.CamelcaseRegexp?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Codes?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.LowercaseRegex?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Messages?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.MixedcaseRegexp?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.UppercaseRegexp?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.run?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker?1(tree, filename, options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.ARITHMETIC_OP?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BENCHMARK_KEYS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.error?4(line_number, offset, text, check)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.error_args?4(line_number, offset, code, check, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.get_count?4(prefix='')
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.get_file_results?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.get_statistics?4(prefix='')
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.increment_logical_line?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.init_file?4(filename, lines, expected, line_offset)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.print_benchmark?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.print_filename?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.print_statistics?4(prefix='')
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.start?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.stop?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport?1(options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMMENT_WITH_NL?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMPARE_SINGLETON_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMPARE_TYPE_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.build_tokens_line?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_all?4(expected=None, line_offset=0)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_ast?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_logical?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_physical?4(line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.generate_tokens?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.readline?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.readline_check_physical?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.report_invalid_syntax?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.run_check?4(check, argument_names)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker?1(filename=None, lines=None, options=None, report=None, **kwargs)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.DEFAULT_EXCLUDE?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.DEFAULT_IGNORE?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.DOCSTRING_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.DiffReport.error?4(line_number, offset, text, check)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.DiffReport?1(options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.ERRORCODE_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.EXTRANEOUS_WHITESPACE_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.FileReport.print_filename?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.HUNK_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.INDENT_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.KEYWORDS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.KEYWORD_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.LAMBDA_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.MAX_LINE_LENGTH?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.OPERATOR_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.PROJECT_CONFIG?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.PyCF_ONLY_AST?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.RAISE_COMMA_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.REPORT_FORMAT?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.RERAISE_COMMA_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.SINGLETONS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.SKIP_TOKENS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport.error?4(line_number, offset, text, check)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport.error_args?4(line_number, offset, code, check, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport.get_file_results?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport.init_file?4(filename, lines, expected, line_offset)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport?1(options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.check_files?4(paths=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.excluded?4(filename, parent=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.get_checks?4(argument_name)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.ignore_code?4(code)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.init_report?4(reporter=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.input_dir?4(dirname)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide.input_file?4(filename, lines=None, expected=None, line_offset=0)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StyleGuide?1(*args, **kwargs)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.TESTSUITE_PATH?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.UNARY_OPERATORS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.WHITESPACE?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.WHITESPACE_AFTER_COMMA_REGEX?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.WS_NEEDED_OPERATORS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.WS_OPTIONAL_OPERATORS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._add_check?5(check, kind, codes, args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._checks?8
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._main?5()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.comparison_to_singleton?4(logical_line, noqa)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.comparison_type?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.compound_statements?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.continued_indentation?4(logical_line, tokens, indent_level, hang_closing, noqa, verbose)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.expand_indent?4(line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.explicit_line_join?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.extraneous_whitespace?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.filename_match?4(filename, patterns, default=True)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.get_parser?4(prog='pep8', version=__version__)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.imports_on_separate_lines?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.init_checks_registry?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.maximum_line_length?4(physical_line, max_line_length)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_newline?4(physical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_whitespace?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_whitespace_around_operator?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.mute_string?4(text)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.noqa?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.parse_udiff?4(diff, patterns=None, parent='.')
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.pep8_messages?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.pep8_messages_sample_args?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.process_options?4(arglist=None, parse_argv=False, config_file=None, parser=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_backticks?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_has_key?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_not_equal?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_raise_comma?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.read_config?4(options, args, arglist, parser)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.readlines?4(filename)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.register_check?4(check, codes=None)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.stdin_get_value?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.tabs_obsolete?4(physical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.tabs_or_spaces?4(physical_line, indent_char)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.trailing_blank_lines?4(physical_line, lines, line_number)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.trailing_whitespace?4(physical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_comma?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_keywords?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_named_parameter_equals?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_operator?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_parameters?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.errorRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.indexRole?7
@@ -3979,6 +3979,20 @@ eric5.Plugins.PluginAbout.packageName?7
 eric5.Plugins.PluginAbout.pyqtApi?7
 eric5.Plugins.PluginAbout.shortDescription?7
 eric5.Plugins.PluginAbout.version?7
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.activate?4()
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.deactivate?4()
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin?1(ui)
+eric5.Plugins.PluginCodeStyleChecker.author?7
+eric5.Plugins.PluginCodeStyleChecker.autoactivate?7
+eric5.Plugins.PluginCodeStyleChecker.className?7
+eric5.Plugins.PluginCodeStyleChecker.deactivateable?7
+eric5.Plugins.PluginCodeStyleChecker.error?7
+eric5.Plugins.PluginCodeStyleChecker.longDescription?7
+eric5.Plugins.PluginCodeStyleChecker.name?7
+eric5.Plugins.PluginCodeStyleChecker.packageName?7
+eric5.Plugins.PluginCodeStyleChecker.pyqtApi?7
+eric5.Plugins.PluginCodeStyleChecker.shortDescription?7
+eric5.Plugins.PluginCodeStyleChecker.version?7
 eric5.Plugins.PluginEricapi.EricapiPlugin.activate?4()
 eric5.Plugins.PluginEricapi.EricapiPlugin.deactivate?4()
 eric5.Plugins.PluginEricapi.EricapiPlugin?1(ui)
@@ -4009,20 +4023,6 @@ eric5.Plugins.PluginEricdoc.packageName?7
 eric5.Plugins.PluginEricdoc.pyqtApi?7
 eric5.Plugins.PluginEricdoc.shortDescription?7
 eric5.Plugins.PluginEricdoc.version?7
-eric5.Plugins.PluginPep8Checker.Pep8CheckerPlugin.activate?4()
-eric5.Plugins.PluginPep8Checker.Pep8CheckerPlugin.deactivate?4()
-eric5.Plugins.PluginPep8Checker.Pep8CheckerPlugin?1(ui)
-eric5.Plugins.PluginPep8Checker.author?7
-eric5.Plugins.PluginPep8Checker.autoactivate?7
-eric5.Plugins.PluginPep8Checker.className?7
-eric5.Plugins.PluginPep8Checker.deactivateable?7
-eric5.Plugins.PluginPep8Checker.error?7
-eric5.Plugins.PluginPep8Checker.longDescription?7
-eric5.Plugins.PluginPep8Checker.name?7
-eric5.Plugins.PluginPep8Checker.packageName?7
-eric5.Plugins.PluginPep8Checker.pyqtApi?7
-eric5.Plugins.PluginPep8Checker.shortDescription?7
-eric5.Plugins.PluginPep8Checker.version?7
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.activate?4()
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.deactivate?4()
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin?1(ui)
@@ -8389,34 +8389,34 @@ eric5.Utilities.win32_GetUserName?4()
 eric5.Utilities.win32_Kill?4(pid)
 eric5.Utilities.win32_getRealName?4()
 eric5.Utilities.writeEncodedFile?4(filename, text, orig_coding)
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker.Codes?7
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker.run?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker.unpackArgs?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.contextType?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.end?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.indent?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.source?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.ssource?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.start?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context?1(source, startLine, contextType)
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.docType?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.error_args?4(line_number, offset, code, check, *args)
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.filename?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.hang_closing?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.ignore?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.max_line_length?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.repeat?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report.select?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Report?1(options)
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.CamelcaseRegexp?7
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.Codes?7
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.LowercaseRegex?7
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.MixedcaseRegexp?7
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.UppercaseRegexp?7
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.run?4()
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.unpackArgs?4()
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker?1(tree, filename, options)
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.docType?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.error_args?4(line_number, offset, code, check, *args)
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.filename?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.hang_closing?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.ignore?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.max_line_length?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.repeat?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.select?7
+eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport?1(options)
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker.Codes?7
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker.run?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker.unpackArgs?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.contextType?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.end?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.indent?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.source?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.ssource?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.start?4()
+eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext?1(source, startLine, contextType)
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.CamelcaseRegexp?7
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.Codes?7
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.LowercaseRegex?7
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.MixedcaseRegexp?7
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.UppercaseRegexp?7
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.run?4()
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.unpackArgs?4()
+eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker?1(tree, filename, options)
 eric5.UtilitiesPython2.Py2SyntaxChecker.compile?4(file, codestring)
 eric5.UtilitiesPython2.Py2SyntaxChecker.flakesCheck?4(fileName, codestring, ignoreStarImportWarnings)
 eric5.UtilitiesPython2.Tabnanny.NannyNag.get_line?4()
