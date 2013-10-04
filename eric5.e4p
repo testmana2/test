@@ -804,9 +804,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UtilitiesPython2/Tabnanny.py</Source>
     <Source>UtilitiesPython2/TabnannyChecker.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/__init__.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/pep8.py</Source>
-    <Source>Plugins/PluginPep8Checker.py</Source>
     <Source>UtilitiesPython2/pep8.py</Source>
     <Source>UtilitiesPython2/Pep8Checker.py</Source>
     <Source>eric5_compare.py</Source>
@@ -1103,13 +1100,16 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
     <Source>UtilitiesPython2/Pep8NamingCheckerPy2.py</Source>
     <Source>UtilitiesPython2/Pep257CheckerPy2.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/DocStyleChecker.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleChecker.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleCheckerDialog.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/CodeStyleFixer.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/NamingStyleChecker.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/__init__.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/pep8.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleChecker.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/NamingStyleChecker.py</Source>
+    <Source>Plugins/PluginCodeStyleChecker.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1427,9 +1427,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui</Form>
-    <Form>Plugins/CheckerPlugins/Pep8/CodeStyleStatisticsDialog.ui</Form>
-    <Form>Plugins/CheckerPlugins/Pep8/CodeStyleCodeSelectionDialog.ui</Form>
-    <Form>Plugins/CheckerPlugins/Pep8/CodeStyleCheckerDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
@@ -1908,7 +1908,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>E24, E501, W293, N, E, W</string>
+              <string>E24, W293, N, E, W, D</string>
             </value>
             <key>
               <string>FixCodes</string>
@@ -1932,7 +1932,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>IncludeMessages</string>
             </key>
             <value>
-              <string></string>
+              <string>E501</string>
             </value>
             <key>
               <string>MaxLineLength</string>

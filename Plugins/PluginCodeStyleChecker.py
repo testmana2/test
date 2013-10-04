@@ -23,14 +23,15 @@ author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
 version = "5.4.0"
-className = "Pep8CheckerPlugin"
+className = "CodeStyleCheckerPlugin"
 packageName = "__core__"
 shortDescription = "Show the Python Code Style Checker dialog."
 longDescription = """This plugin implements the Python Code Style""" \
-    """ Checker dialog. PEP-8 checker is used to check Python source""" \
+    """ Checker dialog. A PEP-8 checker is used to check Python source""" \
     """ files for compliance to the code style conventions given in PEP-8.""" \
-    """ PEP-257 checker is used to check Python source files for""" \
-    """ compliance to docstring conventions given in PEP-257."""
+    """ A PEP-257 checker is used to check Python source files for""" \
+    """ compliance to docstring conventions given in PEP-257 and an""" \
+    """ eric5 variant is used to check against eric conventions."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -38,7 +39,7 @@ pyqtApi = 2
 error = ""
 
 
-class Pep8CheckerPlugin(QObject):
+class CodeStyleCheckerPlugin(QObject):
     """
     Class implementing the code style checker plug-in.
     """
@@ -57,15 +58,15 @@ class Pep8CheckerPlugin(QObject):
         Private slot to (re)initialize the plugin.
         """
         self.__projectAct = None
-        self.__projectPep8CheckerDialog = None
+        self.__projectCodeStyleCheckerDialog = None
         
         self.__projectBrowserAct = None
         self.__projectBrowserMenu = None
-        self.__projectBrowserPep8CheckerDialog = None
+        self.__projectBrowserCodeStyleCheckerDialog = None
         
         self.__editors = []
         self.__editorAct = None
-        self.__editorPep8CheckerDialog = None
+        self.__editorCodeStyleCheckerDialog = None
 
     def activate(self):
         """
@@ -86,7 +87,7 @@ class Pep8CheckerPlugin(QObject):
                 """<p>This checks Python files for compliance to the"""
                 """ code style conventions given in various PEPs.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__projectPep8Check)
+            self.__projectAct.triggered[()].connect(self.__projectCodeStyleCheck)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
@@ -99,7 +100,7 @@ class Pep8CheckerPlugin(QObject):
             """<p>This checks Python files for compliance to the"""
             """ code style conventions given in various PEPs.</p>"""
         ))
-        self.__editorAct.triggered[()].connect(self.__editorPep8Check)
+        self.__editorAct.triggered[()].connect(self.__editorCodeStyleCheck)
         
         e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
@@ -180,11 +181,11 @@ class Pep8CheckerPlugin(QObject):
                     """ code style conventions given in various PEPs.</p>"""
                 ))
                 self.__projectBrowserAct.triggered[()].connect(
-                    self.__projectBrowserPep8Check)
+                    self.__projectBrowserCodeStyleCheck)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     
-    def __projectPep8Check(self):
+    def __projectCodeStyleCheck(self):
         """
         Public slot used to check the project files for code style.
         """
@@ -197,13 +198,13 @@ class Pep8CheckerPlugin(QObject):
                      tuple(Preferences.getPython("Python3Extensions")) +
                      tuple(Preferences.getPython("PythonExtensions")))]
         
-        from CheckerPlugins.Pep8.CodeStyleCheckerDialog import \
+        from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
             CodeStyleCheckerDialog
-        self.__projectPep8CheckerDialog = CodeStyleCheckerDialog()
-        self.__projectPep8CheckerDialog.show()
-        self.__projectPep8CheckerDialog.prepare(files, project)
+        self.__projectCodeStyleCheckerDialog = CodeStyleCheckerDialog()
+        self.__projectCodeStyleCheckerDialog.show()
+        self.__projectCodeStyleCheckerDialog.prepare(files, project)
     
-    def __projectBrowserPep8Check(self):
+    def __projectBrowserCodeStyleCheck(self):
         """
         Private method to handle the code style check context menu action of
         the project sources browser.
@@ -218,15 +219,15 @@ class Pep8CheckerPlugin(QObject):
             fn = itm.dirName()
             isDir = True
         
-        from CheckerPlugins.Pep8.CodeStyleCheckerDialog import \
+        from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
             CodeStyleCheckerDialog
-        self.__projectBrowserPep8CheckerDialog = CodeStyleCheckerDialog()
-        self.__projectBrowserPep8CheckerDialog.show()
+        self.__projectBrowserCodeStyleCheckerDialog = CodeStyleCheckerDialog()
+        self.__projectBrowserCodeStyleCheckerDialog.show()
         if isDir:
-            self.__projectBrowserPep8CheckerDialog.start(
+            self.__projectBrowserCodeStyleCheckerDialog.start(
                 fn, save=True)
         else:
-            self.__projectBrowserPep8CheckerDialog.start(
+            self.__projectBrowserCodeStyleCheckerDialog.start(
                 fn, save=True, repeat=True)
     
     def __editorOpened(self, editor):
@@ -267,7 +268,7 @@ class Pep8CheckerPlugin(QObject):
             self.__editorAct.setEnabled(
                 editor.isPy3File() or editor.isPy2File())
     
-    def __editorPep8Check(self):
+    def __editorCodeStyleCheck(self):
         """
         Private slot to handle the code style check context menu action
         of the editors.
@@ -275,11 +276,11 @@ class Pep8CheckerPlugin(QObject):
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
             if editor.checkDirty() and editor.getFileName() is not None:
-                from CheckerPlugins.Pep8.CodeStyleCheckerDialog import \
+                from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
                     CodeStyleCheckerDialog
-                self.__editorPep8CheckerDialog = CodeStyleCheckerDialog()
-                self.__editorPep8CheckerDialog.show()
-                self.__editorPep8CheckerDialog.start(
+                self.__editorCodeStyleCheckerDialog = CodeStyleCheckerDialog()
+                self.__editorCodeStyleCheckerDialog.show()
+                self.__editorCodeStyleCheckerDialog.start(
                     editor.getFileName(),
                     save=True,
                     repeat=True)
