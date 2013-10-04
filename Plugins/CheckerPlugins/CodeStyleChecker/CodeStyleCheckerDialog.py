@@ -443,7 +443,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         else:
                             ignore = []
                         
-                        # check PEP-8
+                        # check coding style
                         styleGuide = pep8.StyleGuide(
                             reporter=CodeStyleCheckerReport,
                             repeat=repeatMessages,
@@ -455,14 +455,14 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         report = styleGuide.check_files([file])
                         stats.update(report.counters)
                         
-                        # check PEP-257
-                        pep257Checker = DocStyleChecker(
+                        # check documentation style
+                        docStyleChecker = DocStyleChecker(
                             source, file, select, ignore, [], repeatMessages,
                             maxLineLength=maxLineLength, docType=docType)
-                        pep257Checker.run()
-                        stats.update(pep257Checker.counters)
+                        docStyleChecker.run()
+                        stats.update(docStyleChecker.counters)
                         
-                        errors = report.errors + pep257Checker.errors
+                        errors = report.errors + docStyleChecker.errors
                     
                     deferredFixes = {}
                     for error in errors:

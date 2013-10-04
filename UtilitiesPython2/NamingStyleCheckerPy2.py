@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a checker for PEP-8 naming conventions for Python2.
+Module implementing a checker for naming conventions for Python2.
 """
 
 import collections
@@ -15,7 +15,7 @@ import os
 
 class NamingStyleChecker(object):
     """
-    Class implementing a checker for PEP-8 naming conventions for Python2.
+    Class implementing a checker for naming conventions for Python2.
     """
     LowercaseRegex = re.compile(r"[_a-z][_a-z0-9]*$")
     UppercaseRegexp = re.compile(r"[_A-Z][_A-Z0-9]*$")

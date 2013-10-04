@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a checker for PEP-8 naming conventions.
+Module implementing a checker for naming conventions.
 """
 
 import collections
@@ -17,7 +17,7 @@ from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
 class NamingStyleChecker(object):
     """
-    Class implementing a checker for PEP-8 naming conventions.
+    Class implementing a checker for naming conventions.
     """
     LowercaseRegex = re.compile(r"[_a-z][_a-z0-9]*$")
     UppercaseRegexp = re.compile(r"[_A-Z][_A-Z0-9]*$")

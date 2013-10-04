@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a checker for PEP-257 documentation string conventions.
+Module implementing a checker for documentation string conventions.
 """
 
 #
@@ -100,7 +100,7 @@ class DocStyleContext(object):
 
 class DocStyleChecker(object):
     """
-    Class implementing a checker for PEP-257 and eric documentation string conventions.
+    Class implementing a checker for documentation string conventions.
     """
     Codes = [
         "D101", "D102", "D103", "D104", "D105",
@@ -294,7 +294,7 @@ class DocStyleChecker(object):
     def run(self):
         """
         Public method to check the given source for violations of doc string
-        conventions according to PEP-257.
+        conventions.
         """
         if not self.__source or not self.__filename:
             # don't do anything, if essential data is missing

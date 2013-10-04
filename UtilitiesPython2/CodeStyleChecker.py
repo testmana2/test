@@ -120,7 +120,7 @@ if __name__ == "__main__":
         else:
             ignore = []
         
-        # check PEP-8
+        # check coding style
         styleGuide = pep8.StyleGuide(
             reporter=CodeStyleReport,
             repeat=repeat,
@@ -131,14 +131,14 @@ if __name__ == "__main__":
         )
         report = styleGuide.check_files([filename])
         
-        # check PEP-257
-        pep257Checker = DocStyleChecker(
+        # check documentation style
+        docStyleChecker = DocStyleChecker(
             source, filename, select, ignore, [], repeat,
             maxLineLength=max_line_length, docType=docType)
-        pep257Checker.run()
+        docStyleChecker.run()
         
         
-        errors = report.errors + pep257Checker.errors
+        errors = report.errors + docStyleChecker.errors
         
         if len(errors) > 0:
             errors.sort(key=lambda a: a[1])
@@ -156,9 +156,9 @@ if __name__ == "__main__":
             for key in report.counters:
                 if key.startswith(("E", "N", "W")):
                     print key, report.counters[key]
-            for key in pep257Checker.counters:
+            for key in docStyleChecker.counters:
                 if key.startswith("D"):
-                    print key, pep257Checker.counters[key]
+                    print key, docStyleChecker.counters[key]
         else:
             print "NO_PEP8"
             print filename
