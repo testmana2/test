@@ -13,7 +13,7 @@ import re
 import os
 
 
-class Pep8NamingChecker(object):
+class NamingStyleChecker(object):
     """
     Class implementing a checker for PEP-8 naming conventions for Python2.
     """

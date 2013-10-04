@@ -13,15 +13,15 @@ import getopt
 from Tools import readEncodedFile, normalizeCode
 
 import pep8
-from Pep8NamingCheckerPy2 import Pep8NamingChecker
+from NamingStyleCheckerPy2 import NamingStyleChecker
 
 # register the name checker
-pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
+pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
 
-from Pep257CheckerPy2 import Pep257Checker
+from DocStyleCheckerPy2 import DocStyleChecker
 
 
-class Pep8Report(pep8.BaseReport):
+class CodeStyleReport(pep8.BaseReport):
     """
     Class implementing a special report to be used with our dialog.
     """
@@ -31,7 +31,7 @@ class Pep8Report(pep8.BaseReport):
         
         @param options options for the report (optparse.Values)
         """
-        super(Pep8Report, self).__init__(options)
+        super(CodeStyleReport, self).__init__(options)
         
         self.__repeat = options.repeat
         self.errors = []
@@ -47,7 +47,7 @@ class Pep8Report(pep8.BaseReport):
         @param args arguments for the message (list)
         @return error code (string)
         """
-        code = super(Pep8Report, self).error_args(
+        code = super(CodeStyleReport, self).error_args(
             line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
             self.errors.append(
@@ -122,7 +122,7 @@ if __name__ == "__main__":
         
         # check PEP-8
         styleGuide = pep8.StyleGuide(
-            reporter=Pep8Report,
+            reporter=CodeStyleReport,
             repeat=repeat,
             select=select,
             ignore=ignore,
@@ -132,7 +132,7 @@ if __name__ == "__main__":
         report = styleGuide.check_files([filename])
         
         # check PEP-257
-        pep257Checker = Pep257Checker(
+        pep257Checker = DocStyleChecker(
             source, filename, select, ignore, [], repeat,
             maxLineLength=max_line_length, docType=docType)
         pep257Checker.run()

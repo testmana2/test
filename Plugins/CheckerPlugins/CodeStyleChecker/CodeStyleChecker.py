@@ -57,7 +57,7 @@ class CodeStyleCheckerPy2(object):
             return
         
         checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "Pep8Checker.py")
+                               "UtilitiesPython2", "CodeStyleChecker.py")
         
         args = [checker]
         if repeat:

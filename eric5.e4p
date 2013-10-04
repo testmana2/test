@@ -805,7 +805,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UtilitiesPython2/TabnannyChecker.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
     <Source>UtilitiesPython2/pep8.py</Source>
-    <Source>UtilitiesPython2/Pep8Checker.py</Source>
     <Source>eric5_compare.py</Source>
     <Source>eric5_compare.pyw</Source>
     <Source>eric5_configure.py</Source>
@@ -1098,8 +1097,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
-    <Source>UtilitiesPython2/Pep8NamingCheckerPy2.py</Source>
-    <Source>UtilitiesPython2/Pep257CheckerPy2.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/__init__.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/pep8.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py</Source>
@@ -1110,6 +1107,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/NamingStyleChecker.py</Source>
     <Source>Plugins/PluginCodeStyleChecker.py</Source>
+    <Source>UtilitiesPython2/CodeStyleChecker.py</Source>
+    <Source>UtilitiesPython2/DocStyleCheckerPy2.py</Source>
+    <Source>UtilitiesPython2/NamingStyleCheckerPy2.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

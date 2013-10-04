@@ -23,7 +23,7 @@ import ast
 import sys
 
 
-class Pep257Context(object):
+class DocStyleContext(object):
     """
     Class implementing the source context.
     """
@@ -98,9 +98,9 @@ class Pep257Context(object):
         return self.__type
 
 
-class Pep257Checker(object):
+class DocStyleChecker(object):
     """
-    Class implementing a checker for PEP-257 documentation string conventions.
+    Class implementing a checker for PEP-257 and eric documentation string conventions.
     """
     Codes = [
         "D101", "D102", "D103", "D104", "D105",
@@ -315,7 +315,7 @@ class Pep257Checker(object):
         """
         Private method to extract the summary line.
         
-        @param docstringContext docstring context (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
         @return summary line (string) and the line it was found on (integer)
         """
         lines = docstringContext.source()
@@ -337,7 +337,7 @@ class Pep257Checker(object):
         """
         Private method to extract the summary lines.
         
-        @param docstringContext docstring context (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
         @return summary lines (list of string) and the line it was found on
             (integer)
         """
@@ -437,14 +437,14 @@ class Pep257Checker(object):
         Private method to extract a docstring given a module source.
         
         @param source source to parse (list of string)
-        @return context of extracted docstring (Pep257Context)
+        @return context of extracted docstring (DocStyleContext)
         """
         for kind, value, (line, char), _, _ in tokenize.generate_tokens(
                 StringIO("".join(source)).readline):
             if kind in [tokenize.COMMENT, tokenize.NEWLINE, tokenize.NL]:
                 continue
             elif kind == tokenize.STRING:  # first STRING should be docstring
-                return Pep257Context(value, line - 1, "docstring")
+                return DocStyleContext(value, line - 1, "docstring")
             else:
                 return None
 
@@ -452,9 +452,9 @@ class Pep257Checker(object):
         """
         Private method to extract a docstring given `def` or `class` source.
         
-        @param context context data to get the docstring from (Pep257Context)
+        @param context context data to get the docstring from (DocStyleContext)
         @param what string denoting what is being parsed (string)
-        @return context of extracted docstring (Pep257Context)
+        @return context of extracted docstring (DocStyleContext)
         """
         moduleDocstring = self.__parseModuleDocstring(context.source())
         if what.startswith('module') or context.contextType() == "module":
@@ -470,7 +470,7 @@ class Pep257Checker(object):
                 kind, _, _, _, _ = next(tokenGenerator)
             kind, value, (line, char), _, _ = next(tokenGenerator)
             if kind == tokenize.STRING:  # STRING after INDENT is a docstring
-                return Pep257Context(
+                return DocStyleContext(
                     value, context.start() + line - 1, "docstring")
         except StopIteration:
             pass
@@ -482,7 +482,7 @@ class Pep257Checker(object):
         Private method to extract top-level functions or classes.
         
         @param keyword keyword signaling what to extract (string)
-        @return extracted function or class contexts (list of Pep257Context)
+        @return extracted function or class contexts (list of DocStyleContext)
         """
         self.__resetReadline()
         tokenGenerator = tokenize.generate_tokens(self.__readline)
@@ -501,7 +501,7 @@ class Pep257Checker(object):
                            char == 0):
                     kind, value, (line, char), _, _ = next(tokenGenerator)
                 end = line - 1, char
-                contexts.append(Pep257Context(
+                contexts.append(DocStyleContext(
                     self.__source[start[0]:end[0]], start[0], keyword))
         except StopIteration:
             return contexts
@@ -510,7 +510,7 @@ class Pep257Checker(object):
         """
         Private method to extract top-level functions.
         
-        @return extracted function contexts (list of Pep257Context)
+        @return extracted function contexts (list of DocStyleContext)
         """
         if not self.__functionsCache:
             self.__functionsCache = self.__parseTopLevel('def')
@@ -520,7 +520,7 @@ class Pep257Checker(object):
         """
         Private method to extract top-level classes.
         
-        @return extracted class contexts (list of Pep257Context)
+        @return extracted class contexts (list of DocStyleContext)
         """
         if not self.__classesCache:
             self.__classesCache = self.__parseTopLevel('class')
@@ -549,7 +549,7 @@ class Pep257Checker(object):
         """
         Private method to extract methods of all classes.
         
-        @return extracted method contexts (list of Pep257Context)
+        @return extracted method contexts (list of DocStyleContext)
         """
         if not self.__methodsCache:
             contexts = []
@@ -570,7 +570,7 @@ class Pep257Checker(object):
                         startLine = classContext.start() + start[0]
                         endLine = classContext.start() + end[0]
                         contexts.append(
-                            Pep257Context(self.__source[startLine:endLine],
+                            DocStyleContext(self.__source[startLine:endLine],
                                           startLine, "def"))
                 except StopIteration:
                     pass
@@ -583,10 +583,10 @@ class Pep257Checker(object):
         Private method to extract a context from the source.
         
         @param kind kind of context to extract (string)
-        @return requested contexts (list of Pep257Context)
+        @return requested contexts (list of DocStyleContext)
         """
         if kind == 'moduleDocstring':
-            return [Pep257Context(self.__source, 0, "module")]
+            return [DocStyleContext(self.__source, 0, "module")]
         if kind == 'functionDocstring':
             return self.__parseFunctions()
         if kind == 'classDocstring':
@@ -596,7 +596,7 @@ class Pep257Checker(object):
         if kind == 'defDocstring':
             return self.__parseFunctions() + self.__parseMethods()
         if kind == 'docstring':
-            return ([Pep257Context(self.__source, 0, "module")] +
+            return ([DocStyleContext(self.__source, 0, "module")] +
                     self.__parseFunctions() +
                     self.__parseClasses() +
                     self.__parseMethods())
@@ -610,8 +610,8 @@ class Pep257Checker(object):
         """
         Private method to check, if the module has a docstring.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             self.__error(context.start(), 0, "D101")
@@ -627,8 +627,8 @@ class Pep257Checker(object):
         Private method to check, that all public functions and methods
         have a docstring.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         functionName = context.source()[0].lstrip().split()[1].split("(")[0]
         if functionName.startswith('_') and not functionName.endswith('__'):
@@ -653,8 +653,8 @@ class Pep257Checker(object):
         Private method to check, that all public functions and methods
         have a docstring.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         className = context.source()[0].lstrip().split()[1].split("(")[0]
         if className.startswith('_'):
@@ -679,8 +679,8 @@ class Pep257Checker(object):
         Private method to check, that all docstrings are surrounded
         by triple double quotes.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -694,8 +694,8 @@ class Pep257Checker(object):
         Private method to check, that all docstrings containing
         backslashes are surrounded by raw triple double quotes.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -709,8 +709,8 @@ class Pep257Checker(object):
         Private method to check, that all docstrings containing unicode
         characters are surrounded by unicode triple double quotes.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -725,8 +725,8 @@ class Pep257Checker(object):
         Private method to check, that one-liner docstrings fit on
         one line with quotes.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -749,8 +749,8 @@ class Pep257Checker(object):
         """
         Private method to check, that docstrings are properly indented.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -775,8 +775,8 @@ class Pep257Checker(object):
         """
         Private method to check, that docstring summaries end with a period.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -790,8 +790,8 @@ class Pep257Checker(object):
         Private method to check, that docstring summaries are in
         imperative mood.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -806,8 +806,8 @@ class Pep257Checker(object):
         Private method to check, that docstring summaries don't repeat
         the function's signature.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -823,8 +823,8 @@ class Pep257Checker(object):
         """
         Private method to check, that docstrings mention the return value type.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -844,8 +844,8 @@ class Pep257Checker(object):
         Private method to check, that function/method docstrings are not
         preceded by a blank line.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -867,8 +867,8 @@ class Pep257Checker(object):
         Private method to check, that class docstrings have one
         blank line around them.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -905,8 +905,8 @@ class Pep257Checker(object):
         Private method to check, that docstring summaries are followed
         by a blank line.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -926,8 +926,8 @@ class Pep257Checker(object):
         Private method to check, that the last paragraph of docstrings is
         followed by a blank line.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -949,8 +949,8 @@ class Pep257Checker(object):
         Private method to check, that leading and trailing quotes are on
         a line by themselves.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -965,8 +965,8 @@ class Pep257Checker(object):
         """
         Private method to check, that docstring summaries end with a period.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -986,8 +986,8 @@ class Pep257Checker(object):
         Private method to check, that docstrings contain an &#64;return line
         if they return anything and don't otherwise.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -1012,8 +1012,8 @@ class Pep257Checker(object):
         Private method to check, that docstrings contain an &#64;param and/or
         &#64;keyparam line for each argument.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -1062,8 +1062,8 @@ class Pep257Checker(object):
         Private method to check, that docstrings contain an &#64;exception line
         if they raise an exception and don't otherwise.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -1090,8 +1090,8 @@ class Pep257Checker(object):
         Private method to check, that docstring summaries are followed
         by a blank line.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -1112,8 +1112,8 @@ class Pep257Checker(object):
         Private method to check, that class and function/method docstrings
         have no blank line around them.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
@@ -1157,8 +1157,8 @@ class Pep257Checker(object):
         Private method to check, that the last paragraph of docstrings is
         not followed by a blank line.
         
-        @param docstringContext docstring context (Pep257Context)
-        @param context context of the docstring (Pep257Context)
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
         """
         if docstringContext is None:
             return
