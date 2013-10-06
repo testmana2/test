@@ -35,7 +35,8 @@ def _debugclient_start_new_thread(target, args, kwargs={}):
     @return The identifier of the created thread
     """
     if DebugClientBase.DebugClientInstance is not None:
-        return DebugClientBase.DebugClientInstance.attachThread(target, args, kwargs)
+        return DebugClientBase.DebugClientInstance.attachThread(
+            target, args, kwargs)
     else:
         return _original_start_thread(target, args, kwargs)
     
@@ -66,7 +67,8 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
         # protection lock for synchronization
         self.clientLock = RLock()
         
-        # the "current" thread, basically the thread we are at a breakpoint for.
+        # the "current" thread, basically the thread we are at a breakpoint
+        # for.
         self.currentThread = None
         
         # special objects representing the main scripts thread and frame
@@ -82,7 +84,8 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
         If mainThread is non-zero, then we are attaching to the already
         started mainthread of the app and the rest of the args are ignored.
         
-        @param target the start function of the target thread (i.e. the user code)
+        @param target the start function of the target thread (i.e. the
+            user code)
         @param args arguments to pass to target
         @param kwargs keyword arguments to pass to target
         @param mainThread non-zero, if we are attaching to the already

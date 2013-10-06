@@ -29,7 +29,7 @@ from FlexCompleter import Completer
 
 DebugClientInstance = None
 
-################################################################################
+###############################################################################
 
 
 def DebugClientInput(prompt="", echo=True):
@@ -56,7 +56,7 @@ except (AttributeError, KeyError):
     DebugClientOrigInput = __main__.__builtins__.__dict__['input']
     __main__.__builtins__.__dict__['input'] = DebugClientInput
 
-################################################################################
+###############################################################################
 
 
 def DebugClientFork():
@@ -75,7 +75,7 @@ if 'fork' in dir(os):
     DebugClientOrigFork = os.fork
     os.fork = DebugClientFork
 
-################################################################################
+###############################################################################
 
 
 def DebugClientClose(fd):
@@ -94,7 +94,7 @@ if 'close' in dir(os):
     DebugClientOrigClose = os.close
     os.close = DebugClientClose
 
-################################################################################
+###############################################################################
 
 
 def DebugClientSetRecursionLimit(limit):
@@ -113,15 +113,15 @@ if 'setrecursionlimit' in dir(sys):
     sys.setrecursionlimit = DebugClientSetRecursionLimit
     DebugClientSetRecursionLimit(sys.getrecursionlimit())
 
-################################################################################
+###############################################################################
 
 
 class DebugClientBase(object):
     """
     Class implementing the client side of the debugger.
 
-    It provides access to the Python interpeter from a debugger running in another
-    process whether or not the Qt event loop is running.
+    It provides access to the Python interpeter from a debugger running in
+    another process whether or not the Qt event loop is running.
 
     The protocol between the debugger and the client assumes that there will be
     a single source of debugger commands and a single source of Python
@@ -134,12 +134,11 @@ class DebugClientBase(object):
     See DebugProtocol.py for a listing of valid protocol tokens.
 
     A Python statement consists of the statement to execute, followed (in a
-    separate line) by &gt;OK?&lt;.  If the statement was incomplete then the response
-    is &gt;Continue&lt;.  If there was an exception then the response is
-    &gt;Exception&lt;.
-    Otherwise the response is &gt;OK&lt;.  The reason for the &gt;OK?&lt; part is to
-    provide a sentinal (ie. the responding &gt;OK&lt;) after any possible output as a
-    result of executing the command.
+    separate line) by &gt;OK?&lt;. If the statement was incomplete then the
+    response is &gt;Continue&lt;. If there was an exception then the response
+    is &gt;Exception&lt;. Otherwise the response is &gt;OK&lt;.  The reason
+    for the &gt;OK?&lt; part is to provide a sentinal (ie. the responding
+    &gt;OK&lt;) after any possible output as a result of executing the command.
 
     The client may send any other lines at any other time which should be
     interpreted as program output.
@@ -148,8 +147,8 @@ class DebugClientBase(object):
     The client may close the session at any time as a result of the script
     being debugged closing or crashing.
     
-    <b>Note</b>: This class is meant to be subclassed by individual DebugClient classes.
-    Do not instantiate it directly.
+    <b>Note</b>: This class is meant to be subclassed by individual
+    DebugClient classes. Do not instantiate it directly.
     """
     clientCapabilities = DebugClientCapabilities.HasAll
     
@@ -167,7 +166,8 @@ class DebugClientBase(object):
         # dictionary of all threads running
         self.threads = {}
         
-        # the "current" thread, basically the thread we are at a breakpoint for.
+        # the "current" thread, basically the thread we are at a breakpoint
+        # for.
         self.currentThread = self
         
         # special objects representing the main scripts thread and frame
@@ -256,14 +256,16 @@ class DebugClientBase(object):
                     return
             self.__coding = default
 
-    def attachThread(self, target=None, args=None, kwargs=None, mainThread=False):
+    def attachThread(self, target=None, args=None, kwargs=None,
+                     mainThread=False):
         """
         Public method to setup a thread for DebugClient to debug.
         
         If mainThread is non-zero, then we are attaching to the already
         started mainthread of the app and the rest of the args are ignored.
         
-        @param target the start function of the target thread (i.e. the user code)
+        @param target the start function of the target thread (i.e. the
+            user code)
         @param args arguments to pass to target
         @param kwargs keyword arguments to pass to target
         @param mainThread True, if we are attaching to the already
@@ -277,7 +279,8 @@ class DebugClientBase(object):
         Public method to send the list of threads.
         """
         threadList = []
-        if self.threads and self.currentThread:    # indication for the threaded debugger
+        if self.threads and self.currentThread:
+            # indication for the threaded debugger
             currentId = self.currentThread.get_ident()
             for t in self.threads.values():
                 d = {}
@@ -304,7 +307,8 @@ class DebugClientBase(object):
         @param echo Flag indicating echoing of the input (boolean)
         @return the entered string
         """
-        self.write("{0}{1!r}\n".format(DebugProtocol.ResponseRaw, (prompt, echo)))
+        self.write("{0}{1!r}\n".format(
+            DebugProtocol.ResponseRaw, (prompt, echo)))
         self.inRawMode = True
         self.eventLoop(True)
         return self.rawLine
@@ -319,7 +323,8 @@ class DebugClientBase(object):
     
     def sessionClose(self, exit=True):
         """
-        Public method to close the session with the debugger and optionally terminate.
+        Public method to close the session with the debugger and optionally
+        terminate.
         
         @param exit flag indicating to terminate (boolean)
         """
@@ -359,13 +364,15 @@ class DebugClientBase(object):
         except SyntaxError:
             exctype, excval, exctb = sys.exc_info()
             try:
-                message, (filename, linenr, charnr, text) = excval[0], excval[1]
+                message, (filename, linenr, charnr, text) = \
+                    excval[0], excval[1]
             except ValueError:
                 exclist = []
             else:
                 exclist = [message, [filename, linenr, charnr]]
             
-            self.write("{0}{1}\n".format(DebugProtocol.ResponseSyntax, str(exclist)))
+            self.write("{0}{1}\n".format(
+                DebugProtocol.ResponseSyntax, str(exclist)))
             return None
         
         return code
@@ -374,8 +381,8 @@ class DebugClientBase(object):
         """
         Public method to handle the receipt of a complete line.
 
-        It first looks for a valid protocol token at the start of the line. Thereafter
-        it trys to execute the lines accumulated so far.
+        It first looks for a valid protocol token at the start of the line.
+        Thereafter it trys to execute the lines accumulated so far.
         
         @param line the received line
         """
@@ -412,7 +419,8 @@ class DebugClientBase(object):
                     self.setCurrentThread(tid)
                     self.write(DebugProtocol.ResponseThreadSet + '\n')
                     stack = self.currentThread.getStack()
-                    self.write('{0}{1!r}\n'.format(DebugProtocol.ResponseStack, stack))
+                    self.write('{0}{1!r}\n'.format(
+                        DebugProtocol.ResponseStack, stack))
                 return
             
             if cmd == DebugProtocol.RequestStep:
@@ -457,7 +465,8 @@ class DebugClientBase(object):
                 if self.debugging:
                     self.callTraceEnabled = callTraceEnabled
                 else:
-                    self.__newCallTraceEnabled = callTraceEnabled   # remember for later
+                    self.__newCallTraceEnabled = callTraceEnabled
+                    # remember for later
                 return
             
             if cmd == DebugProtocol.RequestEnv:
@@ -498,16 +507,18 @@ class DebugClientBase(object):
                 # we report on all unhandled exceptions
                 sys.excepthook = self.__unhandled_exception
                 
-                # clear all old breakpoints, they'll get set after we have started
+                # clear all old breakpoints, they'll get set after we have
+                # started
                 self.mainThread.clear_all_breaks()
                 
                 self.mainThread.tracePython = tracePython
                 
                 # This will eventually enter a local event loop.
-                # Note the use of backquotes to cause a repr of self.running. The
-                # need for this is on Windows os where backslash is the path separator.
-                # They will get inadvertantly stripped away during the eval causing
-                # IOErrors, if self.running is passed as a normal str.
+                # Note the use of backquotes to cause a repr of self.running.
+                # The need for this is on Windows os where backslash is the
+                # path separator. They will get inadvertantly stripped away
+                # during the eval causing IOErrors, if self.running is passed
+                # as a normal str.
                 self.debugMod.__dict__['__file__'] = self.running
                 sys.modules['__main__'] = self.debugMod
                 code = self.__compileFileSource(self.running)
@@ -620,7 +631,8 @@ class DebugClientBase(object):
                 
                 # generate a coverage object
                 self.cover = coverage(auto_data=True,
-                    data_file="{0}.coverage".format(os.path.splitext(sys.argv[0])[0]))
+                    data_file="{0}.coverage".format(
+                        os.path.splitext(sys.argv[0])[0]))
                 self.cover.use_cache(True)
                 
                 if int(erase):
@@ -668,7 +680,8 @@ class DebugClientBase(object):
                             compile(cond, '<string>', 'eval')
                         except SyntaxError:
                             self.write('{0}{1},{2:d}\n'.format(
-                                       DebugProtocol.ResponseBPConditionError, fn, line))
+                                       DebugProtocol.ResponseBPConditionError,
+                                       fn, line))
                             return
                     self.mainThread.set_break(fn, line, temporary, cond)
                 else:
@@ -746,8 +759,10 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestEval:
                 try:
-                    value = eval(arg, self.currentThread.getCurrentFrame().f_globals,
-                                      self.currentThread.getCurrentFrameLocals())
+                    value = eval(
+                        arg,
+                        self.currentThread.getCurrentFrame().f_globals,
+                        self.currentThread.getCurrentFrameLocals())
                 except:
                     # Report the exception and the traceback
                     try:
@@ -852,7 +867,8 @@ class DebugClientBase(object):
                                     .loadTestsFromModule(utModule)
                 except:
                     exc_type, exc_value, exc_tb = sys.exc_info()
-                    self.write('{0}{1}\n'.format(DebugProtocol.ResponseUTPrepared,
+                    self.write('{0}{1}\n'.format(
+                        DebugProtocol.ResponseUTPrepared,
                         str((0, str(exc_type), str(exc_value)))))
                     self.__exceptionRaised()
                     return
@@ -861,7 +877,8 @@ class DebugClientBase(object):
                 if int(cov):
                     from coverage import coverage
                     self.cover = coverage(auto_data=True,
-                        data_file="{0}.coverage".format(os.path.splitext(covname)[0]))
+                        data_file="{0}.coverage".format(
+                            os.path.splitext(covname)[0]))
                     self.cover.use_cache(True)
                     if int(erase):
                         self.cover.erase()
@@ -916,7 +933,8 @@ class DebugClientBase(object):
         except (OverflowError, SyntaxError, ValueError):
             # Report the exception
             sys.last_type, sys.last_value, sys.last_traceback = sys.exc_info()
-            for l in traceback.format_exception_only(sys.last_type, sys.last_value):
+            for l in traceback.format_exception_only(
+                    sys.last_type, sys.last_value):
                 self.write(l)
             self.buffer = ''
         else:
@@ -947,7 +965,8 @@ class DebugClientBase(object):
                                     cf = cf.f_back
                                     frmnr -= 1
                                 _globals = cf.f_globals
-                                _locals = self.currentThread.getCurrentFrameLocals()
+                                _locals = \
+                                    self.currentThread.getCurrentFrameLocals()
                         # reset sys.stdout to our redirector (unconditionally)
                         if "sys" in _globals:
                             __stdout = _globals["sys"].stdout
@@ -975,8 +994,8 @@ class DebugClientBase(object):
                         list = traceback.format_list(tblist)
                         if list:
                             list.insert(0, "Traceback (innermost last):\n")
-                            list[len(list):] = \
-                                traceback.format_exception_only(exc_type, exc_value)
+                            list[len(list):] = traceback.format_exception_only(
+                                exc_type, exc_value)
                     finally:
                         tblist = exc_tb = None
 
@@ -997,7 +1016,8 @@ class DebugClientBase(object):
                 pass
             return self.clientCapabilities
         except ImportError:
-            return self.clientCapabilities & ~DebugClientCapabilities.HasProfiler
+            return (self.clientCapabilities & 
+                    ~DebugClientCapabilities.HasProfiler)
     
     def write(self, s):
         """
@@ -1105,10 +1125,12 @@ class DebugClientBase(object):
         being debugged redirects them itself.
         
         @param port the port number to connect to (int)
-        @param remoteAddress the network address of the debug server host (string)
-        @param redirect flag indicating redirection of stdin, stdout and stderr (boolean)
+        @param remoteAddress the network address of the debug server host
+            (string)
+        @param redirect flag indicating redirection of stdin, stdout and
+            stderr (boolean)
         """
-        if remoteAddress is None:                               # default: 127.0.0.1
+        if remoteAddress is None:                       # default: 127.0.0.1
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.connect((DebugProtocol.DebugAddress, port))
         else:
@@ -1116,13 +1138,13 @@ class DebugClientBase(object):
                 remoteAddress, index = remoteAddress.split("@@i")
             else:
                 index = 0
-            if ":" in remoteAddress:                              # IPv6
+            if ":" in remoteAddress:                    # IPv6
                 sockaddr = socket.getaddrinfo(
                     remoteAddress, port, 0, 0, socket.SOL_TCP)[0][-1]
                 sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
                 sockaddr = sockaddr[:-1] + (int(index),)
                 sock.connect(sockaddr)
-            else:                                                   # IPv4
+            else:                                       # IPv4
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sock.connect((remoteAddress, port))
 
@@ -1195,7 +1217,8 @@ class DebugClientBase(object):
         Public method to check if a file should be skipped.
         
         @param fn filename to be checked
-        @return non-zero if fn represents a file we are 'skipping', zero otherwise.
+        @return non-zero if fn represents a file we are 'skipping',
+            zero otherwise.
         """
         if self.mainThread.tracePython:     # trace into Python library
             return False
@@ -1247,9 +1270,11 @@ class DebugClientBase(object):
         """
         Private method to return the variables of a frame to the debug server.
         
-        @param frmnr distance of frame reported on. 0 is the current frame (int)
+        @param frmnr distance of frame reported on. 0 is the current frame
+            (int)
         @param scope 1 to report global variables, 0 for local variables (int)
-        @param filter the indices of variable types to be filtered (list of int)
+        @param filter the indices of variable types to be filtered
+            (list of int)
         """
         if self.currentThread is None:
             return
@@ -1282,16 +1307,20 @@ class DebugClientBase(object):
             vlist = self.__formatVariablesList(keylist, dict, scope, filter)
             varlist.extend(vlist)
         
-        self.write('{0}{1}\n'.format(DebugProtocol.ResponseVariables, str(varlist)))
+        self.write('{0}{1}\n'.format(
+            DebugProtocol.ResponseVariables, str(varlist)))
     
     def __dumpVariable(self, var, frmnr, scope, filter):
         """
         Private method to return the variables of a frame to the debug server.
         
-        @param var list encoded name of the requested variable (list of strings)
-        @param frmnr distance of frame reported on. 0 is the current frame (int)
+        @param var list encoded name of the requested variable
+            (list of strings)
+        @param frmnr distance of frame reported on. 0 is the current frame
+            (int)
         @param scope 1 to report global variables, 0 for local variables (int)
-        @param filter the indices of variable types to be filtered (list of int)
+        @param filter the indices of variable types to be filtered
+            (list of int)
         """
         if self.currentThread is None:
             return
@@ -1354,14 +1383,17 @@ class DebugClientBase(object):
                                 if oaccess:
                                     access = oaccess
                                 else:
-                                    access = '{0!s}[{1!s}]'.format(access, var[i - 1])
+                                    access = '{0!s}[{1!s}]'.format(
+                                        access, var[i - 1])
                                 dict = odict
                             else:
                                 if oaccess:
-                                    access = '{0!s}[{1!s}]'.format(oaccess, var[i][:-2])
+                                    access = '{0!s}[{1!s}]'.format(
+                                        oaccess, var[i][:-2])
                                     oaccess = ''
                                 else:
-                                    access = '{0!s}[{1!s}]'.format(access, var[i][:-2])
+                                    access = '{0!s}[{1!s}]'.format(
+                                        access, var[i][:-2])
                         if var[i][-2:] == "{}":
                             isDict = True
                         break
@@ -1374,14 +1406,17 @@ class DebugClientBase(object):
                                 access = '["{0!s}"]'.format(var[i][:-2])
                         else:
                             if var[i][:-2] == '...':
-                                access = '{0!s}[{1!s}]'.format(access, var[i - 1])
+                                access = '{0!s}[{1!s}]'.format(
+                                    access, var[i - 1])
                                 dict = odict
                             else:
                                 if oaccess:
-                                    access = '{0!s}[{1!s}]'.format(oaccess, var[i][:-2])
+                                    access = '{0!s}[{1!s}]'.format(
+                                        oaccess, var[i][:-2])
                                     oaccess = ''
                                 else:
-                                    access = '{0!s}[{1!s}]'.format(access, var[i][:-2])
+                                    access = '{0!s}[{1!s}]'.format(
+                                        access, var[i][:-2])
                 else:
                     if access:
                         if oaccess:
@@ -1422,12 +1457,14 @@ class DebugClientBase(object):
                             for v in loc["slv"]:
                                 try:
                                     loc["v"] = v
-                                    exec('cdict[v] = dict{0!s}.{1!s}'.format(access, v),
+                                    exec('cdict[v] = dict{0!s}.{1!s}'.format(
+                                            access, v),
                                          globals, loc)
                                 except:
                                     pass
                             ndict.update(loc["cdict"])
-                            exec('obj = dict{0!s}'.format(access), globals(), loc)
+                            exec('obj = dict{0!s}'.format(access),
+                                 globals(), loc)
                             obj = loc["obj"]
                             access = ""
                             if "PyQt4." in str(type(obj)):
@@ -1450,11 +1487,13 @@ class DebugClientBase(object):
                             pass
                         try:
                             slv = dict[var[i]].__slots__
-                            loc = {"cdict": {}, "dict": dict, "var": var, "i": i}
+                            loc = {"cdict": {}, "dict": dict,
+                                   "var": var, "i": i}
                             for v in slv:
                                 try:
                                     loc["v"] = v
-                                    exec('cdict[v] = dict[var[i]].{0!s}'.format(v),
+                                    exec('cdict[v] = dict[var[i]].{0!s}'
+                                            .format(v),
                                          globals(), loc)
                                 except:
                                     pass
@@ -1481,7 +1520,8 @@ class DebugClientBase(object):
                 # this has to be in line with VariablesViewer.indicators
                 elif rvar and rvar[0][-2:] in ["[]", "()", "{}"]:
                     loc = {"udict": udict}
-                    exec('qvar = udict["{0!s}"][{1!s}]'.format(rvar[0][:-2], rvar[1]),
+                    exec('qvar = udict["{0!s}"][{1!s}]'.format(rvar[0][:-2],
+                         rvar[1]),
                          globals(), loc)
                     qvar = loc["qvar"]
                 else:
@@ -1501,8 +1541,8 @@ class DebugClientBase(object):
                     # this has to be in line with VariablesViewer.indicators
                     elif rvar and rvar[0][-2:] in ["[]", "()", "{}"]:
                         loc = {"udict": udict}
-                        exec('qvar = udict["{0!s}"][{1!s}]'.format(rvar[0][:-2], rvar[1]),
-                             globals(), loc)
+                        exec('qvar = udict["{0!s}"][{1!s}]'.format(
+                             rvar[0][:-2], rvar[1]), globals(), loc)
                         qvar = loc["qvar"]
                     else:
                         qvar = udict[var[-1]]
@@ -1520,7 +1560,8 @@ class DebugClientBase(object):
                         # treatment for sequences and dictionaries
                         if access:
                             loc = {"dict": dict}
-                            exec("dict = dict{0!s}".format(access), globals(), loc)
+                            exec("dict = dict{0!s}".format(access), globals(),
+                                 loc)
                             dict = loc["dict"]
                         else:
                             dict = dict[dictkeys[0]]
@@ -1528,22 +1569,26 @@ class DebugClientBase(object):
                             dictkeys = dict.keys()
                         else:
                             dictkeys = range(len(dict))
-                    vlist = self.__formatVariablesList(dictkeys, dict, scope, filter,
-                                                     formatSequences)
+                    vlist = self.__formatVariablesList(
+                        dictkeys, dict, scope, filter, formatSequences)
             varlist.extend(vlist)
         
             if obj is not None and not formatSequences:
                 try:
                     if repr(obj).startswith('{'):
-                        varlist.append(('...', 'dict', "{0:d}".format(len(obj.keys()))))
+                        varlist.append(
+                            ('...', 'dict', "{0:d}".format(len(obj.keys()))))
                     elif repr(obj).startswith('['):
-                        varlist.append(('...', 'list', "{0:d}".format(len(obj))))
+                        varlist.append(
+                            ('...', 'list', "{0:d}".format(len(obj))))
                     elif repr(obj).startswith('('):
-                        varlist.append(('...', 'tuple', "{0:d}".format(len(obj))))
+                        varlist.append(
+                            ('...', 'tuple', "{0:d}".format(len(obj))))
                 except:
                     pass
         
-        self.write('{0}{1}\n'.format(DebugProtocol.ResponseVariable, str(varlist)))
+        self.write('{0}{1}\n'.format(
+            DebugProtocol.ResponseVariable, str(varlist)))
         
     def __formatQt4Variable(self, value, vtype):
         """
@@ -1561,9 +1606,12 @@ class DebugClientBase(object):
             varlist.append(("", "QChar", "{0}".format(chr(value.unicode()))))
             varlist.append(("", "int", "{0:d}".format(value.unicode())))
         elif qttype == 'QByteArray':
-            varlist.append(("bytes", "QByteArray", "{0}".format(bytes(value))[2:-1]))
-            varlist.append(("hex", "QByteArray", "{0}".format(value.toHex())[2:-1]))
-            varlist.append(("base64", "QByteArray", "{0}".format(value.toBase64())[2:-1]))
+            varlist.append(
+                ("bytes", "QByteArray", "{0}".format(bytes(value))[2:-1]))
+            varlist.append(
+                ("hex", "QByteArray", "{0}".format(value.toHex())[2:-1]))
+            varlist.append(
+                ("base64", "QByteArray", "{0}".format(value.toBase64())[2:-1]))
             varlist.append(("percent encoding", "QByteArray",
                             "{0}".format(value.toPercentEncoding())[2:-1]))
         elif qttype == 'QPoint':
@@ -1591,14 +1639,17 @@ class DebugClientBase(object):
         elif qttype == 'QColor':
             varlist.append(("name", "str", "{0}".format(value.name())))
             r, g, b, a = value.getRgb()
-            varlist.append(("rgb", "int",
-                            "{0:d}, {1:d}, {2:d}, {3:d}".format(r, g, b, a)))
+            varlist.append(
+                ("rgb", "int",
+                 "{0:d}, {1:d}, {2:d}, {3:d}".format(r, g, b, a)))
             h, s, v, a = value.getHsv()
-            varlist.append(("hsv", "int",
-                            "{0:d}, {1:d}, {2:d}, {3:d}".format(h, s, v, a)))
+            varlist.append(
+                ("hsv", "int",
+                 "{0:d}, {1:d}, {2:d}, {3:d}".format(h, s, v, a)))
             c, m, y, k, a = value.getCmyk()
-            varlist.append(("cmyk", "int",
-                            "{0:d}, {1:d}, {2:d}, {3:d}, {4:d}".format(c, m, y, k, a)))
+            varlist.append(
+                ("cmyk", "int",
+                 "{0:d}, {1:d}, {2:d}, {3:d}, {4:d}".format(c, m, y, k, a)))
         elif qttype == 'QDate':
             varlist.append(("", "QDate", "{0}".format(value.toString())))
         elif qttype == 'QTime':
@@ -1615,7 +1666,8 @@ class DebugClientBase(object):
             varlist.append(("fileName", "str", "{0}".format(value.fileName())))
         elif qttype == 'QFont':
             varlist.append(("family", "str", "{0}".format(value.family())))
-            varlist.append(("pointSize", "int", "{0:d}".format(value.pointSize())))
+            varlist.append(
+                ("pointSize", "int", "{0:d}".format(value.pointSize())))
             varlist.append(("weight", "int", "{0:d}".format(value.weight())))
             varlist.append(("bold", "bool", "{0}".format(value.bold())))
             varlist.append(("italic", "bool", "{0}".format(value.italic())))
@@ -1632,7 +1684,8 @@ class DebugClientBase(object):
             if value.isValid():
                 varlist.append(("row", "int", "{0}".format(value.row())))
                 varlist.append(("column", "int", "{0}".format(value.column())))
-                varlist.append(("internalId", "int", "{0}".format(value.internalId())))
+                varlist.append(
+                    ("internalId", "int", "{0}".format(value.internalId())))
                 varlist.append(("internalPointer", "void *",
                                 "{0}".format(value.internalPointer())))
         elif qttype == 'QRegExp':
@@ -1642,11 +1695,14 @@ class DebugClientBase(object):
         elif qttype == 'QAction':
             varlist.append(("name", "str", "{0}".format(value.objectName())))
             varlist.append(("text", "str", "{0}".format(value.text())))
-            varlist.append(("icon text", "str", "{0}".format(value.iconText())))
+            varlist.append(
+                ("icon text", "str", "{0}".format(value.iconText())))
             varlist.append(("tooltip", "str", "{0}".format(value.toolTip())))
-            varlist.append(("whatsthis", "str", "{0}".format(value.whatsThis())))
-            varlist.append(("shortcut", "str",
-                            "{0}".format(value.shortcut().toString())))
+            varlist.append(
+                ("whatsthis", "str", "{0}".format(value.whatsThis())))
+            varlist.append(
+                ("shortcut", "str",
+                 "{0}".format(value.shortcut().toString())))
         elif qttype == 'QKeySequence':
             varlist.append(("value", "", "{0}".format(value.toString())))
             
@@ -1668,7 +1724,8 @@ class DebugClientBase(object):
             
         # Networking stuff
         elif qttype == 'QHostAddress':
-            varlist.append(("address", "QHostAddress", "{0}".format(value.toString())))
+            varlist.append(
+                ("address", "QHostAddress", "{0}".format(value.toString())))
             
         return varlist
     
@@ -1679,24 +1736,25 @@ class DebugClientBase(object):
         
         The dictionary passed in to it is scanned. Variables are
         only added to the list, if their type is not contained
-        in the filter list and their name doesn't match any of the filter expressions.
-        The formated variables list (a list of tuples of 3 values) is returned.
+        in the filter list and their name doesn't match any of the filter
+        expressions. The formated variables list (a list of tuples of 3
+        values) is returned.
         
         @param keylist keys of the dictionary
         @param dict the dictionary to be scanned
         @param scope 1 to filter using the globals filter, 0 using the locals
             filter (int).
-            Variables are only added to the list, if their name do not match any of the
-            filter expressions.
-        @param filter the indices of variable types to be filtered. Variables are
-            only added to the list, if their type is not contained in the filter
-            list.
-        @param formatSequences flag indicating, that sequence or dictionary variables
-            should be formatted. If it is 0 (or false), just the number of items contained
-            in these variables is returned. (boolean)
-        @return A tuple consisting of a list of formatted variables. Each variable
-            entry is a tuple of three elements, the variable name, its type and
-            value.
+            Variables are only added to the list, if their name do not match
+            any of the filter expressions.
+        @param filter the indices of variable types to be filtered. Variables
+            are only added to the list, if their type is not contained in the
+            filter list.
+        @param formatSequences flag indicating, that sequence or dictionary
+            variables should be formatted. If it is 0 (or false), just the
+            number of items contained in these variables is returned. (boolean)
+        @return A tuple consisting of a list of formatted variables. Each
+            variable entry is a tuple of three elements, the variable name,
+            its type and value.
         """
         varlist = []
         if scope:
@@ -1731,7 +1789,8 @@ class DebugClientBase(object):
                     if ConfigVarTypeStrings.index('instance') in filter:
                         continue
                     elif valtype == "sip.methoddescriptor":
-                        if ConfigVarTypeStrings.index('instance method') in filter:
+                        if ConfigVarTypeStrings.index(
+                                'instance method') in filter:
                             continue
                     elif valtype == "sip.enumtype":
                         if ConfigVarTypeStrings.index('class') in filter:
@@ -1743,10 +1802,12 @@ class DebugClientBase(object):
                             continue
                     except ValueError:
                         if valtype == "classobj":
-                            if ConfigVarTypeStrings.index('instance') in filter:
+                            if ConfigVarTypeStrings.index(
+                                    'instance') in filter:
                                 continue
                         elif valtype == "sip.methoddescriptor":
-                            if ConfigVarTypeStrings.index('instance method') in filter:
+                            if ConfigVarTypeStrings.index(
+                                    'instance method') in filter:
                                 continue
                         elif valtype == "sip.enumtype":
                             if ConfigVarTypeStrings.index('class') in filter:
@@ -1831,7 +1892,8 @@ class DebugClientBase(object):
                                           str(completions), text))
 
     def startDebugger(self, filename=None, host=None, port=None,
-            enableTrace=True, exceptions=True, tracePython=False, redirect=True):
+            enableTrace=True, exceptions=True, tracePython=False,
+            redirect=True):
         """
         Public method used to start the remote debugger.
         
@@ -1839,9 +1901,12 @@ class DebugClientBase(object):
         @param host hostname of the debug server (string)
         @param port portnumber of the debug server (int)
         @param enableTrace flag to enable the tracing function (boolean)
-        @param exceptions flag to enable exception reporting of the IDE (boolean)
-        @param tracePython flag to enable tracing into the Python library (boolean)
-        @param redirect flag indicating redirection of stdin, stdout and stderr (boolean)
+        @param exceptions flag to enable exception reporting of the IDE
+            (boolean)
+        @param tracePython flag to enable tracing into the Python library
+            (boolean)
+        @param redirect flag indicating redirection of stdin, stdout and
+            stderr (boolean)
         """
         global debugClient
         if host is None:
@@ -1893,9 +1958,12 @@ class DebugClientBase(object):
         @param wd working directory for the program execution (string)
         @param host hostname of the debug server (string)
         @param port portnumber of the debug server (int)
-        @param exceptions flag to enable exception reporting of the IDE (boolean)
-        @param tracePython flag to enable tracing into the Python library (boolean)
-        @param redirect flag indicating redirection of stdin, stdout and stderr (boolean)
+        @param exceptions flag to enable exception reporting of the IDE
+            (boolean)
+        @param tracePython flag to enable tracing into the Python library
+            (boolean)
+        @param redirect flag indicating redirection of stdin, stdout and
+            stderr (boolean)
         """
         if host is None:
             host = os.getenv('ERICHOST', 'localhost')
@@ -1935,12 +2003,13 @@ class DebugClientBase(object):
         # This will eventually enter a local event loop.
         # Note the use of backquotes to cause a repr of self.running. The
         # need for this is on Windows os where backslash is the path separator.
-        # They will get inadvertantly stripped away during the eval causing IOErrors
-        # if self.running is passed as a normal str.
+        # They will get inadvertantly stripped away during the eval causing
+        # IOErrors if self.running is passed as a normal str.
         self.debugMod.__dict__['__file__'] = self.running
         sys.modules['__main__'] = self.debugMod
-        res = self.mainThread.run('exec(open(' + repr(self.running) + ').read())',
-                                  self.debugMod.__dict__)
+        res = self.mainThread.run(
+            'exec(open(' + repr(self.running) + ').read())',
+            self.debugMod.__dict__)
         self.progTerminated(res)
 
     def run_call(self, scriptname, func, *args):
@@ -1972,7 +2041,8 @@ class DebugClientBase(object):
             family = socket.AF_INET
         else:
             family = socket.AF_INET6
-        return socket.getaddrinfo(host, None, family, socket.SOCK_STREAM)[0][4][0]
+        return socket.getaddrinfo(host, None,
+                                  family, socket.SOCK_STREAM)[0][4][0]
     
     def main(self):
         """
@@ -2095,7 +2165,8 @@ class DebugClientBase(object):
         
     def close(self, fd):
         """
-        Private method implementing a close method as a replacement for os.close().
+        Private method implementing a close method as a replacement for
+        os.close().
         
         It prevents the debugger connections from being closed.
         
@@ -2115,7 +2186,8 @@ class DebugClientBase(object):
         @param firstEntry entry to be put first in sys.path (string)
         @return path list for use as sys.path (list of strings)
         """
-        sysPath = [path for path in os.environ.get("PYTHONPATH", "").split(os.pathsep)
+        sysPath = [path for path in os.environ.get("PYTHONPATH", "")
+                   .split(os.pathsep)
                    if path not in sys.path] + sys.path[:]
         if "" in sysPath:
             sysPath.remove("")

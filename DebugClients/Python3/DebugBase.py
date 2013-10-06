@@ -13,8 +13,8 @@ import os
 import atexit
 import inspect
 
-from DebugProtocol import ResponseClearWatch, ResponseClearBreak, ResponseLine, \
-    ResponseSyntax, ResponseException, CallTrace
+from DebugProtocol import ResponseClearWatch, ResponseClearBreak, \
+    ResponseLine, ResponseSyntax, ResponseException, CallTrace
 
 gRecursionLimit = 64
 
@@ -405,8 +405,8 @@ class DebugBase(bdb.Bdb):
         Private method to determine, if a watch expression is effective.
         
         @param frame the current execution frame
-        @return tuple of watch expression and a flag to indicate, that a temporary
-            watch expression may be deleted (bdb.Breakpoint, boolean)
+        @return tuple of watch expression and a flag to indicate, that a
+            temporary watch expression may be deleted (bdb.Breakpoint, boolean)
         """
         possibles = bdb.Breakpoint.bplist["Watch", 0]
         for i in range(0, len(possibles)):
@@ -414,7 +414,8 @@ class DebugBase(bdb.Bdb):
             if not b.enabled:
                 continue
             if not b.cond:
-                # watch expression without expression shouldn't occur, just ignore it
+                # watch expression without expression shouldn't occur,
+                # just ignore it
                 continue
             try:
                 val = eval(b.condition, frame.f_globals, frame.f_locals)
@@ -471,7 +472,8 @@ class DebugBase(bdb.Bdb):
             lineno = frame.f_lineno
             if lineno not in self.breaks[filename]:
                 # The line itself has no breakpoint, but maybe the line is the
-                # first line of a function with breakpoint set by function name.
+                # first line of a function with breakpoint set by function
+                # name.
                 lineno = frame.f_code.co_firstlineno
             if lineno in self.breaks[filename]:
                 # flag says ok to delete temp. bp
@@ -509,7 +511,8 @@ class DebugBase(bdb.Bdb):
 
     def get_break(self, filename, lineno):
         """
-        Reimplemented from bdb.py to get the first breakpoint of a particular line.
+        Reimplemented from bdb.py to get the first breakpoint of a particular
+        line.
         
         Because eric5 supports only one breakpoint per line, this overwritten
         method will return this one and only breakpoint.
@@ -554,8 +557,9 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
-                                                    argInfo.keywords, argInfo.locals)
+                    fargs = inspect.formatargvalues(
+                        argInfo.args, argInfo.varargs,
+                        argInfo.keywords, argInfo.locals)
                 else:
                     fargs = ""
                 
@@ -611,8 +615,9 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
-                                                    argInfo.keywords, argInfo.locals)
+                    fargs = inspect.formatargvalues(
+                        argInfo.args, argInfo.varargs,
+                        argInfo.keywords, argInfo.locals)
                 else:
                     fargs = ""
                 
@@ -655,7 +660,8 @@ class DebugBase(bdb.Bdb):
         
         if exctype in [SyntaxError, IndentationError]:
             try:
-                message, (filename, linenr, charnr, text) = excval[0], excval[1]
+                message, (filename, linenr, charnr, text) = \
+                    excval[0], excval[1]
             except ValueError:
                 exclist = []
                 realSyntaxError = True
@@ -664,7 +670,8 @@ class DebugBase(bdb.Bdb):
                 realSyntaxError = os.path.exists(filename)
             
             if realSyntaxError:
-                self._dbgClient.write("{0}{1}\n".format(ResponseSyntax, str(exclist)))
+                self._dbgClient.write("{0}{1}\n".format(
+                    ResponseSyntax, str(exclist)))
                 self._dbgClient.eventLoop()
                 return
         
@@ -705,14 +712,16 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
-                                                    argInfo.keywords, argInfo.locals)
+                    fargs = inspect.formatargvalues(
+                        argInfo.args, argInfo.varargs,
+                        argInfo.keywords, argInfo.locals)
                 else:
                     fargs = ""
                 
                 exclist.append([filename, linenr, ffunc, fargs])
         
-        self._dbgClient.write("{0}{1}\n".format(ResponseException, str(exclist)))
+        self._dbgClient.write("{0}{1}\n".format(
+            ResponseException, str(exclist)))
         
         if exctb is None:
             return

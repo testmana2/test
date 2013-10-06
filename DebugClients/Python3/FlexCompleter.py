@@ -187,7 +187,8 @@ class Completer(object):
             try:
                 if word[:n] == attr and hasattr(thisobject, word):
                     val = getattr(thisobject, word)
-                    word = self._callable_postfix(val, "{0}.{1}".format(expr, word))
+                    word = self._callable_postfix(
+                        val, "{0}.{1}".format(expr, word))
                     matches.append(word)
             except:
                 # some badly behaved objects pollute dir() with non-strings,

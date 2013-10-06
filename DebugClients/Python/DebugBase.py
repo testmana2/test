@@ -14,8 +14,8 @@ import types
 import atexit
 import inspect
 
-from DebugProtocol import ResponseClearWatch, ResponseClearBreak, ResponseLine, \
-    ResponseSyntax, ResponseException, CallTrace
+from DebugProtocol import ResponseClearWatch, ResponseClearBreak, \
+    ResponseLine, ResponseSyntax, ResponseException, CallTrace
 
 gRecursionLimit = 64
 
@@ -402,8 +402,8 @@ class DebugBase(bdb.Bdb):
         Private method to determine, if a watch expression is effective.
         
         @param frame the current execution frame
-        @return tuple of watch expression and a flag to indicate, that a temporary
-            watch expression may be deleted (bdb.Breakpoint, boolean)
+        @return tuple of watch expression and a flag to indicate, that a
+            temporary watch expression may be deleted (bdb.Breakpoint, boolean)
         """
         possibles = bdb.Breakpoint.bplist["Watch", 0]
         for i in range(0, len(possibles)):
@@ -411,7 +411,8 @@ class DebugBase(bdb.Bdb):
             if b.enabled == 0:
                 continue
             if not b.cond:
-                # watch expression without expression shouldn't occur, just ignore it
+                # watch expression without expression shouldn't occur,
+                # just ignore it
                 continue
             try:
                 val = eval(b.condition, frame.f_globals, frame.f_locals)
@@ -501,7 +502,8 @@ class DebugBase(bdb.Bdb):
 
     def get_break(self, filename, lineno):
         """
-        Reimplemented from bdb.py to get the first breakpoint of a particular line.
+        Reimplemented from bdb.py to get the first breakpoint of a particular
+        line.
         
         Because eric5 supports only one breakpoint per line, this overwritten
         method will return this one and only breakpoint.
@@ -523,7 +525,8 @@ class DebugBase(bdb.Bdb):
         @param lineno linenumber of the bp
         """
         self.clear_break(filename, lineno)
-        self._dbgClient.write('%s%s,%d\n' % (ResponseClearBreak, filename, lineno))
+        self._dbgClient.write('%s%s,%d\n' % (ResponseClearBreak, filename,
+                                             lineno))
 
     def getStack(self):
         """
@@ -653,7 +656,8 @@ class DebugBase(bdb.Bdb):
                 realSyntaxError = os.path.exists(filename)
             
             if realSyntaxError:
-                self._dbgClient.write("%s%s\n" % (ResponseSyntax, unicode(exclist)))
+                self._dbgClient.write("%s%s\n" % (ResponseSyntax,
+                                                  unicode(exclist)))
                 self._dbgClient.eventLoop()
                 return
         

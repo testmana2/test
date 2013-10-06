@@ -84,7 +84,8 @@ Private method to write a specific number of pending bytes.
             rescue IOError
                 @nWriteErrors += 1
                 if @nWriteErrors > self.maxtries
-                    raise   # assume that an error that occurs 10 times wont go away
+                    raise
+                    # assume that an error that occurs 10 times wont go away
                 end
             end
         end
@@ -283,8 +284,8 @@ Public method to write a string to the file.
         elsif @wpending.length + s.length > @@maxbuffersize
             # flush wpending if too big
             while @wpending.length > 0
-                # if we have a persistent error in sending the data, an exception
-                # will be raised in nWrite
+                # if we have a persistent error in sending the data, an
+                # exception will be raised in nWrite
                 flush
                 tries += 1
                 if tries > @@maxtries

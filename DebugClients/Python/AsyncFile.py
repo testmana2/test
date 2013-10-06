@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing an asynchronous file like socket interface for the debugger.
+Module implementing an asynchronous file like socket interface for the
+debugger.
 """
 
 import socket
@@ -98,7 +99,8 @@ class AsyncFile(object):
         """
         Public method to close the file.
         
-        @param closeit flag to indicate a close ordered by the debugger code (boolean)
+        @param closeit flag to indicate a close ordered by the debugger code
+            (boolean)
         """
         if closeit and not self.closed:
             self.flush()
@@ -275,10 +277,11 @@ class AsyncFile(object):
             self.wpending = s
         elif type(self.wpending) != type(s) or \
              len(self.wpending) + len(s) > self.maxbuffersize:
-            # flush wpending so that different string types are not concatenated
+            # flush wpending so that different string types are not
+            # concatenated
             while self.wpending:
-                # if we have a persistent error in sending the data, an exception
-                # will be raised in __nWrite
+                # if we have a persistent error in sending the data, an
+                # exception will be raised in __nWrite
                 self.flush()
                 tries += 1
                 if tries > self.maxtries:

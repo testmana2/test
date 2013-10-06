@@ -24,12 +24,12 @@ Word completion for the eric5 shell.
     selectable namespace.
 
     The problem with rlcompleter is that it's hardwired to work with
-    __main__.__dict__, and in some cases one may have 'sandboxed' namespaces. So
-    this class is a ripoff of rlcompleter, with the namespace to work in as an
-    optional parameter.
+    __main__.__dict__, and in some cases one may have 'sandboxed' namespaces.
+    So this class is a ripoff of rlcompleter, with the namespace to work in as
+    an optional parameter.
     
-    This class can be used just like rlcompleter, but the Completer class now has
-    a constructor with the optional 'namespace' parameter.
+    This class can be used just like rlcompleter, but the Completer class now
+    has a constructor with the optional 'namespace' parameter.
     
     A patch has been submitted to Python@sourceforge for these changes to go in
     the standard Python distribution.
@@ -177,7 +177,9 @@ class Completer(object):
                      __builtin__.__dict__.keys(),
                      self.namespace.keys()]:
             for word in list:
-                if word[:n] == text and word != "__builtins__" and not word in matches:
+                if word[:n] == text and \
+                   word != "__builtins__" and \
+                   not word in matches:
                     matches.append(word)
         return matches
 

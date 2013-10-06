@@ -78,9 +78,12 @@ def startDebugger(enableTrace=True, exceptions=True,
     Module function used to start the remote debugger.
     
     @keyparam enableTrace flag to enable the tracing function (boolean)
-    @keyparam exceptions flag to enable exception reporting of the IDE (boolean)
-    @keyparam tracePython flag to enable tracing into the Python library (boolean)
-    @keyparam redirect flag indicating redirection of stdin, stdout and stderr (boolean)
+    @keyparam exceptions flag to enable exception reporting of the IDE
+        (boolean)
+    @keyparam tracePython flag to enable tracing into the Python library
+        (boolean)
+    @keyparam redirect flag indicating redirection of stdin, stdout and
+        stderr (boolean)
     """
     global debugger
     if debugger:

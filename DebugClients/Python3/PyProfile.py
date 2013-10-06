@@ -168,6 +168,7 @@ class PyProfile(profile.Profile):
         "exception": profile.Profile.trace_dispatch_exception,
         "return": profile.Profile.trace_dispatch_return,
         "c_call": profile.Profile.trace_dispatch_c_call,
-        "c_exception": profile.Profile.trace_dispatch_return,  # the C function returned
+        "c_exception": profile.Profile.trace_dispatch_return,
+        # the C function returned
         "c_return": profile.Profile.trace_dispatch_return,
         }
