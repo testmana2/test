@@ -18,8 +18,8 @@ class BreakPointViewer(QTreeView):
     """
     Class implementing the Breakpoint viewer widget.
     
-    Breakpoints will be shown with all their details. They can be modified through
-    the context menu of this widget.
+    Breakpoints will be shown with all their details. They can be modified
+    through the context menu of this widget.
     
     @signal sourceFile(str, int) emitted to show the source of a breakpoint
     """
@@ -88,7 +88,8 @@ class BreakPointViewer(QTreeView):
         
     def __resizeColumns(self):
         """
-        Private slot to resize the view when items get added, edited or deleted.
+        Private slot to resize the view when items get added, edited or
+        deleted.
         """
         self.header().resizeSections(QHeaderView.ResizeToContents)
         self.header().setStretchLastSection(True)
@@ -148,7 +149,8 @@ class BreakPointViewer(QTreeView):
         self.menu.addAction(self.trUtf8("Enable all"), self.__enableAllBreaks)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8("Disable"), self.__disableBreak)
-        self.menu.addAction(self.trUtf8("Disable all"), self.__disableAllBreaks)
+        self.menu.addAction(self.trUtf8("Disable all"),
+                            self.__disableAllBreaks)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8("Delete"), self.__deleteBreak)
         self.menu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
@@ -161,11 +163,14 @@ class BreakPointViewer(QTreeView):
         self.backMenu = QMenu()
         self.backMenu.addAction(self.trUtf8("Add"), self.__addBreak)
         self.backMenuActions["EnableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Enable all"), self.__enableAllBreaks)
+            self.backMenu.addAction(self.trUtf8("Enable all"),
+                                    self.__enableAllBreaks)
         self.backMenuActions["DisableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Disable all"), self.__disableAllBreaks)
+            self.backMenu.addAction(self.trUtf8("Disable all"),
+                                    self.__disableAllBreaks)
         self.backMenuActions["DeleteAll"] = \
-            self.backMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
+            self.backMenu.addAction(self.trUtf8("Delete all"),
+                                    self.__deleteAllBreaks)
         self.backMenu.aboutToShow.connect(self.__showBackMenu)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
@@ -175,15 +180,18 @@ class BreakPointViewer(QTreeView):
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Enable selected"),
             self.__enableSelectedBreaks)
-        self.multiMenu.addAction(self.trUtf8("Enable all"), self.__enableAllBreaks)
+        self.multiMenu.addAction(self.trUtf8("Enable all"),
+                                 self.__enableAllBreaks)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Disable selected"),
-            self.__disableSelectedBreaks)
-        self.multiMenu.addAction(self.trUtf8("Disable all"), self.__disableAllBreaks)
+                                 self.__disableSelectedBreaks)
+        self.multiMenu.addAction(self.trUtf8("Disable all"),
+                                 self.__disableAllBreaks)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Delete selected"),
-            self.__deleteSelectedBreaks)
-        self.multiMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
+                                 self.__deleteSelectedBreaks)
+        self.multiMenu.addAction(self.trUtf8("Delete all"),
+                                 self.__deleteAllBreaks)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Configure..."), self.__configure)
     
@@ -271,7 +279,8 @@ class BreakPointViewer(QTreeView):
             fn, line, cond, temp, enabled, count = bp[:6]
             
             from .EditBreakpointDialog import EditBreakpointDialog
-            dlg = EditBreakpointDialog((fn, line), (cond, temp, enabled, count),
+            dlg = EditBreakpointDialog(
+                (fn, line), (cond, temp, enabled, count),
                 self.condHistory, self, modal=True)
             if dlg.exec_() == QDialog.Accepted:
                 cond, temp, enabled, count = dlg.getData()
@@ -318,7 +327,8 @@ class BreakPointViewer(QTreeView):
 
     def __enableSelectedBreaks(self):
         """
-        Private slot to handle the enable selected breakpoints context menu entry.
+        Private slot to handle the enable selected breakpoints context menu
+        entry.
         """
         for index in self.selectedIndexes():
             if index.column() == 0:
@@ -348,7 +358,8 @@ class BreakPointViewer(QTreeView):
 
     def __disableSelectedBreaks(self):
         """
-        Private slot to handle the disable selected breakpoints context menu entry.
+        Private slot to handle the disable selected breakpoints context menu
+        entry.
         """
         for index in self.selectedIndexes():
             if index.column() == 0:
@@ -373,7 +384,8 @@ class BreakPointViewer(QTreeView):
 
     def __deleteSelectedBreaks(self):
         """
-        Private slot to handle the delete selected breakpoints context menu entry.
+        Private slot to handle the delete selected breakpoints context menu
+        entry.
         """
         idxList = []
         for index in self.selectedIndexes():
@@ -444,4 +456,5 @@ class BreakPointViewer(QTreeView):
         """
         Private method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+        e5App().getObject("UserInterface").showPreferences(
+            "debuggerGeneralPage")

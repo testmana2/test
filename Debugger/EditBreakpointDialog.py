@@ -151,7 +151,8 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         Public method to retrieve the entered data for an add.
         
         @return a tuple containing the new breakpoints properties
-            (filename, lineno, condition, temporary flag, enabled flag, ignore count)
+            (filename, lineno, condition, temporary flag, enabled flag,
+            ignore count)
         """
         fn = self.filenameCombo.currentText()
         if not fn:
@@ -161,5 +162,6 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         
         return (fn, self.linenoSpinBox.value(),
                 self.conditionCombo.currentText(),
-                self.temporaryCheckBox.isChecked(), self.enabledCheckBox.isChecked(),
+                self.temporaryCheckBox.isChecked(),
+                self.enabledCheckBox.isChecked(),
                 self.ignoreSpinBox.value())

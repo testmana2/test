@@ -47,10 +47,11 @@ class ExceptionLogger(QTreeWidget):
         self.setWhatsThis(self.trUtf8(
             """<b>Exceptions Logger</b>"""
             """<p>This windows shows a trace of all exceptions, that have"""
-            """ occured during the last debugging session. Initially only the"""
-            """ exception type and exception message are shown. After"""
-            """ the expansion of this entry, the complete call stack as reported"""
-            """ by the client is show with the most recent call first.</p>"""
+            """ occured during the last debugging session. Initially only"""
+            """ the exception type and exception message are shown. After"""
+            """ the expansion of this entry, the complete call stack as"""
+            """ reported by the client is show with the most recent call"""
+            """ first.</p>"""
         ))
         
         self.menu = QMenu(self)
@@ -112,7 +113,8 @@ class ExceptionLogger(QTreeWidget):
             
     def debuggingStarted(self):
         """
-        Public slot to clear the listview upon starting a new debugging session.
+        Public slot to clear the listview upon starting a new debugging
+        session.
         """
         self.clear()
         
@@ -136,4 +138,5 @@ class ExceptionLogger(QTreeWidget):
         """
         Private method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+        e5App().getObject("UserInterface")\
+            .showPreferences("debuggerGeneralPage")

@@ -51,7 +51,7 @@ except ImportError:
             'Hidden Attributes', 'None', 'Type', 'Boolean', 'Integer',
             'Long Integer', 'Float', 'Complex', 'String', 'Unicode String',
             'Tuple', 'List/Array', 'Dictionary/Hash/Map', 'Dictionary Proxy',
-            'Set', 'File', 'X Range', 'Slice', 'Buffer', 'Class', 'Class Instance',
-            'Class Method', 'Class Property', 'Generator', 'Function',
-            'Builtin Function', 'Code', 'Module', 'Ellipsis',
+            'Set', 'File', 'X Range', 'Slice', 'Buffer', 'Class',
+            'Class Instance', 'Class Method', 'Class Property', 'Generator',
+            'Function', 'Builtin Function', 'Code', 'Module', 'Ellipsis',
             'Traceback', 'Frame', 'Other']

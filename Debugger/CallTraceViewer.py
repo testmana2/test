@@ -24,7 +24,8 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
     """
     Class implementing the Call Trace viewer widget.
     
-    @signal sourceFile(str, int) emitted to show the source of a call/return point
+    @signal sourceFile(str, int) emitted to show the source of a call/return
+        point
     """
     sourceFile = pyqtSignal(str, int)
     
@@ -40,13 +41,16 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         
         self.__dbs = debugServer
         
-        self.startTraceButton.setIcon(UI.PixmapCache.getIcon("callTraceStart.png"))
-        self.stopTraceButton.setIcon(UI.PixmapCache.getIcon("callTraceStop.png"))
+        self.startTraceButton.setIcon(
+            UI.PixmapCache.getIcon("callTraceStart.png"))
+        self.stopTraceButton.setIcon(
+            UI.PixmapCache.getIcon("callTraceStop.png"))
         self.resizeButton.setIcon(UI.PixmapCache.getIcon("resizeColumns.png"))
         self.clearButton.setIcon(UI.PixmapCache.getIcon("editDelete.png"))
         self.saveButton.setIcon(UI.PixmapCache.getIcon("fileSave.png"))
         
-        self.__headerItem = QTreeWidgetItem(["", self.trUtf8("From"), self.trUtf8("To")])
+        self.__headerItem = QTreeWidgetItem(
+            ["", self.trUtf8("From"), self.trUtf8("To")])
         self.__headerItem.setIcon(0, UI.PixmapCache.getIcon("callReturn.png"))
         self.callTrace.setHeaderItem(self.__headerItem)
         
@@ -153,8 +157,9 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
                 except IOError as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Error saving Call Trace Info"),
-                        self.trUtf8("""<p>The call trace info could not be written"""
-                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                        self.trUtf8("""<p>The call trace info could not"""
+                                    """ be written to <b>{0}</b></p>"""
+                                    """<p>Reason: {1}</p>""")\
                             .format(fname, str(err)))
     
     @pyqtSlot(QTreeWidgetItem, int)
@@ -215,7 +220,8 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
             icon = UI.PixmapCache.getIcon("forward.png")
         else:
             icon = UI.PixmapCache.getIcon("back.png")
-        parentItem = self.__callStack[-1] if self.__callStack else self.callTrace
+        parentItem = \
+            self.__callStack[-1] if self.__callStack else self.callTrace
         
         if self.__projectMode:
             fromFile = self.__project.getRelativePath(fromFile)

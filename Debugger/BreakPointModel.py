@@ -178,7 +178,7 @@ class BreakPointModel(QAbstractItemModel):
         else:
             return False
     
-    ############################################################################
+    ###########################################################################
     
     def addBreakPoint(self, fn, line, properties):
         """
@@ -283,7 +283,8 @@ class BreakPointModel(QAbstractItemModel):
 
     def getBreakPointIndex(self, fn, lineno):
         """
-        Public method to get the index of a breakpoint given by filename and line number.
+        Public method to get the index of a breakpoint given by filename and
+        line number.
         
         @param fn filename of the breakpoint (string)
         @param lineno line number of the breakpoint (integer)

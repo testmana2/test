@@ -23,8 +23,9 @@ The views avaliable are:
 import os
 
 from PyQt4.QtCore import pyqtSignal
-from PyQt4.QtGui import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QSizePolicy, \
-    QPushButton, QComboBox, QLabel, QTreeWidget, QTreeWidgetItem, QHeaderView
+from PyQt4.QtGui import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, \
+    QSizePolicy, QPushButton, QComboBox, QLabel, QTreeWidget, \
+    QTreeWidgetItem, QHeaderView
 
 import UI.PixmapCache
 import Preferences
@@ -37,9 +38,9 @@ class DebugViewer(QWidget):
     Class implementing a widget conatining various debug related views.
     
     The individual tabs contain the interpreter shell (optional),
-    the filesystem browser (optional), the two variables viewers (global and local),
-    a breakpoint viewer, a watch expression viewer and the exception logger. Additionally
-    a list of all threads is shown.
+    the filesystem browser (optional), the two variables viewers
+    (global and local), a breakpoint viewer, a watch expression viewer and
+    the exception logger. Additionally a list of all threads is shown.
     
     @signal sourceFile(string, int) emitted to open a source file at a line
     """
@@ -54,13 +55,13 @@ class DebugViewer(QWidget):
         @param docked flag indicating a dock window
         @param vm reference to the viewmanager object
         @param parent parent widget (QWidget)
-        @param embeddedShell flag indicating whether the shell should be included.
-                This flag is set to False by those layouts, that have the interpreter
-                shell in a separate window.
+        @param embeddedShell flag indicating whether the shell should be
+            included. This flag is set to False by those layouts, that have
+            the interpreter shell in a separate window.
         @param embeddedBrowser flag indicating whether the file browser should
-                be included. This flag is set to False by those layouts, that
-                have the file browser in a separate window or embedded
-                in the project browser instead.
+            be included. This flag is set to False by those layouts, that
+            have the file browser in a separate window or embedded
+            in the project browser instead.
         """
         super().__init__(parent)
         
@@ -110,17 +111,20 @@ class DebugViewer(QWidget):
         self.glvWidgetHLayout.setContentsMargins(3, 3, 3, 3)
         
         self.globalsFilterEdit = QLineEdit(self.glvWidget)
-        self.globalsFilterEdit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        self.globalsFilterEdit.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.glvWidgetHLayout.addWidget(self.globalsFilterEdit)
         self.globalsFilterEdit.setToolTip(
-            self.trUtf8("Enter regular expression patterns separated by ';' to define "
-                "variable filters. "))
+            self.trUtf8("Enter regular expression patterns separated by ';'"
+                        " to define variable filters. "))
         self.globalsFilterEdit.setWhatsThis(
-            self.trUtf8("Enter regular expression patterns separated by ';' to define "
-                "variable filters. All variables and class attributes matched by one of "
-                "the expressions are not shown in the list above."))
+            self.trUtf8("Enter regular expression patterns separated by ';'"
+                        " to define variable filters. All variables and"
+                        " class attributes matched by one of the expressions"
+                        " are not shown in the list above."))
         
-        self.setGlobalsFilterButton = QPushButton(self.trUtf8('Set'), self.glvWidget)
+        self.setGlobalsFilterButton = QPushButton(
+            self.trUtf8('Set'), self.glvWidget)
         self.glvWidgetHLayout.addWidget(self.setGlobalsFilterButton)
         self.glvWidgetVLayout.addLayout(self.glvWidgetHLayout)
         
@@ -128,7 +132,8 @@ class DebugViewer(QWidget):
             UI.PixmapCache.getIcon("globalVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.globalsViewer.windowTitle())
         
-        self.setGlobalsFilterButton.clicked[()].connect(self.__setGlobalsFilter)
+        self.setGlobalsFilterButton.clicked[()].connect(
+            self.__setGlobalsFilter)
         self.globalsFilterEdit.returnPressed.connect(self.__setGlobalsFilter)
         
         # add the local variables viewer
@@ -142,7 +147,8 @@ class DebugViewer(QWidget):
         self.lvWidgetHLayout1.setContentsMargins(3, 3, 3, 3)
         
         self.stackComboBox = QComboBox(self.lvWidget)
-        self.stackComboBox.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        self.stackComboBox.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.lvWidgetHLayout1.addWidget(self.stackComboBox)
 
         self.sourceButton = QPushButton(self.trUtf8('Source'), self.lvWidget)
@@ -157,17 +163,21 @@ class DebugViewer(QWidget):
         self.lvWidgetHLayout2.setContentsMargins(3, 3, 3, 3)
         
         self.localsFilterEdit = QLineEdit(self.lvWidget)
-        self.localsFilterEdit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        self.localsFilterEdit.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.lvWidgetHLayout2.addWidget(self.localsFilterEdit)
         self.localsFilterEdit.setToolTip(
-            self.trUtf8("Enter regular expression patterns separated by ';' to define "
+            self.trUtf8(
+                "Enter regular expression patterns separated by ';' to define "
                 "variable filters. "))
         self.localsFilterEdit.setWhatsThis(
-            self.trUtf8("Enter regular expression patterns separated by ';' to define "
-                "variable filters. All variables and class attributes matched by one of "
-                "the expressions are not shown in the list above."))
+            self.trUtf8(
+                "Enter regular expression patterns separated by ';' to define "
+                "variable filters. All variables and class attributes matched"
+                " by one of the expressions are not shown in the list above."))
         
-        self.setLocalsFilterButton = QPushButton(self.trUtf8('Set'), self.lvWidget)
+        self.setLocalsFilterButton = QPushButton(
+            self.trUtf8('Set'), self.lvWidget)
         self.lvWidgetHLayout2.addWidget(self.setLocalsFilterButton)
         self.lvWidgetVLayout.addLayout(self.lvWidgetHLayout2)
         
@@ -176,7 +186,8 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.localsViewer.windowTitle())
         
         self.sourceButton.clicked[()].connect(self.__showSource)
-        self.stackComboBox.currentIndexChanged[int].connect(self.__frameSelected)
+        self.stackComboBox.currentIndexChanged[int].connect(
+            self.__frameSelected)
         self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
         self.localsFilterEdit.returnPressed.connect(self.__setLocalsFilter)
         
@@ -185,16 +196,19 @@ class DebugViewer(QWidget):
         self.callStackViewer = CallStackViewer(self.debugServer)
         index = self.__tabWidget.addTab(self.callStackViewer,
             UI.PixmapCache.getIcon("step.png"), "")
-        self.__tabWidget.setTabToolTip(index, self.callStackViewer.windowTitle())
+        self.__tabWidget.setTabToolTip(
+            index, self.callStackViewer.windowTitle())
         self.callStackViewer.sourceFile.connect(self.sourceFile)
-        self.callStackViewer.frameSelected.connect(self.__callStackFrameSelected)
+        self.callStackViewer.frameSelected.connect(
+            self.__callStackFrameSelected)
         
         from .CallTraceViewer import CallTraceViewer
         # add the call trace viewer
         self.callTraceViewer = CallTraceViewer(self.debugServer)
         index = self.__tabWidget.addTab(self.callTraceViewer,
             UI.PixmapCache.getIcon("callTrace.png"), "")
-        self.__tabWidget.setTabToolTip(index, self.callTraceViewer.windowTitle())
+        self.__tabWidget.setTabToolTip(
+            index, self.callTraceViewer.windowTitle())
         self.callTraceViewer.sourceFile.connect(self.sourceFile)
         
         from .BreakPointViewer import BreakPointViewer
@@ -203,7 +217,8 @@ class DebugViewer(QWidget):
         self.breakpointViewer.setModel(self.debugServer.getBreakPointModel())
         index = self.__tabWidget.addTab(self.breakpointViewer,
             UI.PixmapCache.getIcon("breakpoints.png"), '')
-        self.__tabWidget.setTabToolTip(index, self.breakpointViewer.windowTitle())
+        self.__tabWidget.setTabToolTip(
+            index, self.breakpointViewer.windowTitle())
         self.breakpointViewer.sourceFile.connect(self.sourceFile)
         
         from .WatchPointViewer import WatchPointViewer
@@ -212,14 +227,16 @@ class DebugViewer(QWidget):
         self.watchpointViewer.setModel(self.debugServer.getWatchPointModel())
         index = self.__tabWidget.addTab(self.watchpointViewer,
             UI.PixmapCache.getIcon("watchpoints.png"), '')
-        self.__tabWidget.setTabToolTip(index, self.watchpointViewer.windowTitle())
+        self.__tabWidget.setTabToolTip(
+            index, self.watchpointViewer.windowTitle())
         
         from .ExceptionLogger import ExceptionLogger
         # add the exception logger
         self.exceptionLogger = ExceptionLogger()
         index = self.__tabWidget.addTab(self.exceptionLogger,
             UI.PixmapCache.getIcon("exceptions.png"), '')
-        self.__tabWidget.setTabToolTip(index, self.exceptionLogger.windowTitle())
+        self.__tabWidget.setTabToolTip(
+            index, self.exceptionLogger.windowTitle())
         
         if self.embeddedShell:
             self.__tabWidget.setCurrentWidget(self.shellAssembly)
@@ -232,8 +249,9 @@ class DebugViewer(QWidget):
         # add the threads viewer
         self.__mainLayout.addWidget(QLabel(self.trUtf8("Threads:")))
         self.__threadList = QTreeWidget()
-        self.__threadList.setHeaderLabels([self.trUtf8("ID"), self.trUtf8("Name"),
-                                           self.trUtf8("State"), ""])
+        self.__threadList.setHeaderLabels(
+            [self.trUtf8("ID"), self.trUtf8("Name"),
+             self.trUtf8("State"), ""])
         self.__threadList.setSortingEnabled(True)
         self.__mainLayout.addWidget(self.__threadList)
         
@@ -383,8 +401,8 @@ class DebugViewer(QWidget):
         """
         Public slot to show the call stack of the program being debugged.
         
-        @param stack list of tuples with call stack data (file name, line number,
-            function name, formatted argument/values list)
+        @param stack list of tuples with call stack data (file name,
+            line number, function name, formatted argument/values list)
         """
         block = self.stackComboBox.blockSignals(True)
         self.framenr = 0
@@ -401,7 +419,8 @@ class DebugViewer(QWidget):
         """
         Public slot to set the local variables filter.
         
-        @param globalsFilter filter list for global variable types (list of int)
+        @param globalsFilter filter list for global variable types
+            (list of int)
         @param localsFilter filter list for local variable types (list of int)
         """
         self.globalsFilter = globalsFilter
@@ -409,7 +428,8 @@ class DebugViewer(QWidget):
         
     def __showSource(self):
         """
-        Private slot to handle the source button press to show the selected file.
+        Private slot to handle the source button press to show the selected
+        file.
         """
         index = self.stackComboBox.currentIndex()
         if index > -1 and self.currentStack:
@@ -444,7 +464,8 @@ class DebugViewer(QWidget):
         filter = self.localsFilterEdit.text()
         self.debugServer.remoteClientSetFilter(0, filter)
         if self.currentStack:
-            self.debugServer.remoteClientVariables(0, self.localsFilter, self.framenr)
+            self.debugServer.remoteClientVariables(
+                0, self.localsFilter, self.framenr)
         
     def handleDebuggingStarted(self):
         """
@@ -488,7 +509,8 @@ class DebugViewer(QWidget):
             else:
                 state = self.trUtf8("running")
             itm = QTreeWidgetItem(self.__threadList,
-                                  ["{0:d}".format(thread['id']), thread['name'], state])
+                                  ["{0:d}".format(thread['id']),
+                                   thread['name'], state])
             if thread['id'] == currentID:
                 citm = itm
         
@@ -505,7 +527,8 @@ class DebugViewer(QWidget):
         Private slot to handle the selection of a thread in the thread list.
         
         @param current reference to the new current item (QTreeWidgetItem)
-        @param previous reference to the previous current item (QTreeWidgetItem)
+        @param previous reference to the previous current item
+            (QTreeWidgetItem)
         """
         if current is not None and self.__doThreadListUpdate:
             tid = int(current.text(0))

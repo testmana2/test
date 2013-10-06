@@ -156,7 +156,7 @@ class WatchPointModel(QAbstractItemModel):
         else:
             return False
     
-    ############################################################################
+    ###########################################################################
     
     def addWatchPoint(self, cond, special, properties):
         """
@@ -165,7 +165,8 @@ class WatchPointModel(QAbstractItemModel):
         @param cond expression of the watch expression (string)
         @param special special condition of the watch expression (string)
         @param properties properties of the watch expression
-            (tuple of temporary flag (bool), enabled flag (bool), ignore count (integer))
+            (tuple of temporary flag (bool), enabled flag (bool),
+            ignore count (integer))
         """
         wp = [cond, special] + list(properties)
         cnt = len(self.watchpoints)
@@ -181,7 +182,8 @@ class WatchPointModel(QAbstractItemModel):
         @param cond expression of the watch expression (string)
         @param special special condition of the watch expression (string)
         @param properties properties of the watch expression
-            (tuple of temporary flag (bool), enabled flag (bool), ignore count (integer))
+            (tuple of temporary flag (bool), enabled flag (bool),
+            ignore count (integer))
         """
         if index.isValid():
             row = index.row()
@@ -197,7 +199,8 @@ class WatchPointModel(QAbstractItemModel):
 
     def setWatchPointEnabledByIndex(self, index, enabled):
         """
-        Public method to set the enabled state of a watch expression given by index.
+        Public method to set the enabled state of a watch expression given by
+        index.
         
         @param index index of the watch expression (QModelIndex)
         @param enabled flag giving the enabled state (boolean)
@@ -224,7 +227,8 @@ class WatchPointModel(QAbstractItemModel):
 
     def deleteWatchPoints(self, idxList):
         """
-        Public method to delete a list of watch expressions given by their indexes.
+        Public method to delete a list of watch expressions given by their
+        indexes.
         
         @param idxList list of watch expression indexes (list of QModelIndex)
         """
@@ -252,8 +256,9 @@ class WatchPointModel(QAbstractItemModel):
         Public method to get the values of a watch expression given by index.
         
         @param index index of the watch expression (QModelIndex)
-        @return watch expression (list of six values (expression, special condition,
-            temporary flag, enabled flag, ignore count, index))
+        @return watch expression (list of six values (expression,
+            special condition, temporary flag, enabled flag, ignore count,
+            index))
         """
         if index.isValid():
             return self.watchpoints[index.row()][:]  # return a copy
@@ -262,7 +267,8 @@ class WatchPointModel(QAbstractItemModel):
 
     def getWatchPointIndex(self, cond, special=""):
         """
-        Public method to get the index of a watch expression given by expression.
+        Public method to get the index of a watch expression given by
+        expression.
         
         @param cond expression of the watch expression (string)
         @param special special condition of the watch expression (string)

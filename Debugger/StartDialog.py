@@ -26,9 +26,10 @@ class StartDialog(QDialog):
     the commandline parameters, the working directory and
     whether exception reporting should be disabled.
     """
-    def __init__(self, caption, argvList, wdList, envList, exceptions, parent=None,
-        type=0, modfuncList=None, tracePython=False, autoClearShell=True,
-        autoContinue=True, autoFork=False, forkChild=False):
+    def __init__(self, caption, argvList, wdList, envList, exceptions,
+        parent=None, type=0, modfuncList=None, tracePython=False,
+        autoClearShell=True, autoContinue=True, autoFork=False,
+        forkChild=False):
         """
         Constructor
         
@@ -45,15 +46,17 @@ class StartDialog(QDialog):
                 <li>2 = start coverage dialog</li>
                 <li>3 = start profile dialog</li>
                 </ul>
-        @keyparam modfuncList history list of module functions (list of strings)
+        @keyparam modfuncList history list of module functions
+            (list of strings)
         @keyparam tracePython flag indicating if the Python library should
             be traced as well (boolean)
-        @keyparam autoClearShell flag indicating, that the interpreter window should
-            be cleared automatically (boolean)
-        @keyparam autoContinue flag indicating, that the debugger should not stop at
-            the first executable line (boolean)
+        @keyparam autoClearShell flag indicating, that the interpreter window
+            should be cleared automatically (boolean)
+        @keyparam autoContinue flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
-        @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking
+            (boolean)
         """
         super().__init__(parent)
         self.setModal(True)
@@ -137,9 +140,10 @@ class StartDialog(QDialog):
         """
         Public method to retrieve the data entered into this dialog.
         
-        @return a tuple of argv (string), workdir (string), environment (string),
-            exceptions flag (boolean), clear interpreter flag (boolean),
-            clear histories flag (boolean) and run in console flag (boolean)
+        @return a tuple of argv (string), workdir (string), environment
+            (string), exceptions flag (boolean), clear interpreter flag
+            (boolean), clear histories flag (boolean) and run in console
+            flag (boolean)
         """
         cmdLine = self.ui.cmdlineCombo.currentText()
         workdir = self.ui.workdirCombo.currentText()
@@ -155,13 +159,15 @@ class StartDialog(QDialog):
         
     def getDebugData(self):
         """
-        Public method to retrieve the debug related data entered into this dialog.
+        Public method to retrieve the debug related data entered into this
+        dialog.
         
-        @return a tuple of a flag indicating, if the Python library should be traced
-            as well, a flag indicating, that the debugger should not stop at the
-            first executable line (boolean), a flag indicating, that the debugger
-            should fork automatically (boolean) and a flag indicating, that the
-            debugger should debug the child process after forking automatically (boolean)
+        @return a tuple of a flag indicating, if the Python library should be
+            traced as well, a flag indicating, that the debugger should not
+            stop at the first executable line (boolean), a flag indicating,
+            that the debugger should fork automatically (boolean) and a flag
+            indicating, that the debugger should debug the child process after
+            forking automatically (boolean)
         """
         if self.type == 0:
             return (self.ui.tracePythonCheckBox.isChecked(),
@@ -171,11 +177,13 @@ class StartDialog(QDialog):
         
     def getRunData(self):
         """
-        Public method to retrieve the debug related data entered into this dialog.
+        Public method to retrieve the debug related data entered into this
+        dialog.
         
-        @return a tuple of a flag indicating, that the debugger should fork automatically
-            (boolean) and a flag indicating, that the debugger should debug the child
-            process after forking automatically (boolean)
+        @return a tuple of a flag indicating, that the debugger should fork
+            automatically (boolean) and a flag indicating, that the debugger
+            should debug the child process after forking automatically
+            (boolean)
         """
         if self.type == 1:
             return (self.ui.forkModeCheckBox.isChecked(),
@@ -183,7 +191,8 @@ class StartDialog(QDialog):
         
     def getCoverageData(self):
         """
-        Public method to retrieve the coverage related data entered into this dialog.
+        Public method to retrieve the coverage related data entered into this
+        dialog.
         
         @return flag indicating erasure of coverage info (boolean)
         """
@@ -192,7 +201,8 @@ class StartDialog(QDialog):
         
     def getProfilingData(self):
         """
-        Public method to retrieve the profiling related data entered into this dialog.
+        Public method to retrieve the profiling related data entered into this
+        dialog.
         
         @return flag indicating erasure of profiling info (boolean)
         """

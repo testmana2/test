@@ -119,20 +119,21 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteLoad(self, fn, argv, wd, traceInterpreter=False, autoContinue=True,
-                   autoFork=False, forkChild=False):
+    def remoteLoad(self, fn, argv, wd, traceInterpreter=False,
+                   autoContinue=True, autoFork=False, forkChild=False):
         """
         Public method to load a new program to debug.
         
         @param fn the filename to debug (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
-        @keyparam traceInterpreter flag indicating if the interpreter library should be
-            traced as well (boolean)
-        @keyparam autoContinue flag indicating, that the debugger should not stop
-            at the first executable line (boolean)
+        @keyparam traceInterpreter flag indicating if the interpreter library
+            should be traced as well (boolean)
+        @keyparam autoContinue flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
-        @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking
+            (boolean)
         """
         return
         
@@ -144,7 +145,8 @@ class DebuggerInterfaceNone(QObject):
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
-        @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking
+            (boolean)
         """
         return
         
@@ -167,7 +169,8 @@ class DebuggerInterfaceNone(QObject):
         @param fn the filename to run (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
-        @keyparam erase flag indicating that timing info should be cleared first (boolean)
+        @keyparam erase flag indicating that timing info should be cleared
+            first (boolean)
         """
         return
 
@@ -231,7 +234,8 @@ class DebuggerInterfaceNone(QObject):
         
         @param fn filename the breakpoint belongs to (string)
         @param line linenumber of the breakpoint (int)
-        @param enable flag indicating enabling or disabling a breakpoint (boolean)
+        @param enable flag indicating enabling or disabling a breakpoint
+            (boolean)
         """
         return
         
@@ -250,7 +254,8 @@ class DebuggerInterfaceNone(QObject):
         Public method to set or clear a watch expression.
         
         @param cond expression of the watch expression (string)
-        @param set flag indicating setting or resetting a watch expression (boolean)
+        @param set flag indicating setting or resetting a watch expression
+            (boolean)
         @param temp flag indicating a temporary watch expression (boolean)
         """
         return
@@ -260,13 +265,15 @@ class DebuggerInterfaceNone(QObject):
         Public method to enable or disable a watch expression.
         
         @param cond expression of the watch expression (string)
-        @param enable flag indicating enabling or disabling a watch expression (boolean)
+        @param enable flag indicating enabling or disabling a watch
+            expression (boolean)
         """
         return
     
     def remoteWatchpointIgnore(self, cond, count):
         """
-        Public method to ignore a watch expression the next couple of occurrences.
+        Public method to ignore a watch expression the next couple of
+        occurrences.
         
         @param cond expression of the watch expression (string)
         @param count number of occurrences to ignore (int)
@@ -335,7 +342,8 @@ class DebuggerInterfaceNone(QObject):
     
     def remoteEval(self, arg):
         """
-        Public method to evaluate arg in the current context of the debugged program.
+        Public method to evaluate arg in the current context of the debugged
+        program.
         
         @param arg the arguments to evaluate (string)
         """
@@ -343,7 +351,8 @@ class DebuggerInterfaceNone(QObject):
         
     def remoteExec(self, stmt):
         """
-        Public method to execute stmt in the current context of the debugged program.
+        Public method to execute stmt in the current context of the debugged
+        program.
         
         @param stmt statement to execute (string)
         """
@@ -379,11 +388,13 @@ class DebuggerInterfaceNone(QObject):
         @param tn the testname to load (string)
         @param tfn the test function name to load tests from (string)
         @param failed list of failed test, if only failed test should be run
-                (list of strings)
-        @param cov flag indicating collection of coverage data is requested (boolean)
+            (list of strings)
+        @param cov flag indicating collection of coverage data is requested
+            (boolean)
         @param covname filename to be used to assemble the coverage caches
-                filename (string)
-        @param coverase flag indicating erasure of coverage data is requested (boolean)
+            filename (string)
+        @param coverase flag indicating erasure of coverage data is requested
+            (boolean)
         """
         return
         

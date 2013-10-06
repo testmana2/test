@@ -8,8 +8,8 @@ Module implementing the variables viewer widget.
 """
 
 from PyQt4.QtCore import Qt, QRegExp, qVersion
-from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, QAbstractItemView, \
-    QMenu
+from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, \
+    QAbstractItemView, QMenu
 from PyQt4.QtGui import QTextDocument   # __IGNORE_WARNING__
 
 from E5Gui.E5Application import e5App
@@ -76,8 +76,8 @@ class VariableItem(QTreeWidgetItem):
         """
         Public method to return the data for the requested role.
         
-        This implementation changes the original behavior in a way, that the display
-        data is returned as the tooltip for column 1.
+        This implementation changes the original behavior in a way, that the
+        display data is returned as the tooltip for column 1.
         
         @param column column number (integer)
         @param role data role (Qt.ItemDataRole)
@@ -221,7 +221,8 @@ class ArrayElementVarItem(VariableItem):
 
 class SpecialArrayElementVarItem(SpecialVarItem):
     """
-    Class implementing a QTreeWidgetItem that represents a special array variable node.
+    Class implementing a QTreeWidgetItem that represents a special array
+    variable node.
     """
     def __init__(self, parent, dvar, dvalue, dtype, frmnr, scope):
         """
@@ -234,7 +235,8 @@ class SpecialArrayElementVarItem(SpecialVarItem):
         @param frmnr frame number (0 is the current frame) (int)
         @param scope flag indicating global (1) or local (0) variables
         """
-        SpecialVarItem.__init__(self, parent, dvar, dvalue, dtype, frmnr, scope)
+        SpecialVarItem.__init__(self, parent, dvar, dvalue, dtype, frmnr,
+                                scope)
         
         """
         Array elements have numbers as names, but the key must be
@@ -281,13 +283,16 @@ class VariablesViewer(QTreeWidget):
         """
         super().__init__(parent)
         
-        self.indicators = {'list': '[]', 'tuple': '()', 'dict': '{}',   # Python types
-                           'Array': '[]', 'Hash': '{}'}                # Ruby types
+        self.indicators = {'list': '[]', 'tuple': '()', 'dict': '{}',
+                           # Python types
+                           'Array': '[]', 'Hash': '{}'}
+                           # Ruby types
         
         self.rx_class = QRegExp('<.*(instance|object) at 0x.*>')
         self.rx_class2 = QRegExp('class .*')
         self.rx_class3 = QRegExp('<class .* at 0x.*>')
-        self.dvar_rx_class1 = QRegExp(r'<.*(instance|object) at 0x.*>(\[\]|\{\}|\(\))')
+        self.dvar_rx_class1 = QRegExp(
+            r'<.*(instance|object) at 0x.*>(\[\]|\{\}|\(\))')
         self.dvar_rx_class2 = QRegExp(r'<class .* at 0x.*>(\[\]|\{\}|\(\))')
         self.dvar_rx_array_element = QRegExp(r'^\d+$')
         self.dvar_rx_special_array_element = QRegExp(r'^\d+(\[\]|\{\}|\(\))$')
@@ -498,7 +503,8 @@ class VariablesViewer(QTreeWidget):
                     self.scrollToItem(citm, QAbstractItemView.PositionAtTop)
                 self.current = None
         elif self.__scrollToItem:
-            self.scrollToItem(self.__scrollToItem, QAbstractItemView.PositionAtTop)
+            self.scrollToItem(self.__scrollToItem,
+                              QAbstractItemView.PositionAtTop)
         
         self.resortEnabled = resortEnabled
         self.__resort()
@@ -511,7 +517,8 @@ class VariablesViewer(QTreeWidget):
         @param dvar variable name (string)
         @param dvalue value string (string)
         @param dtype type string (string)
-        @param isSpecial flag indicating that a special node should be generated (boolean)
+        @param isSpecial flag indicating that a special node should be
+            generated (boolean)
         @return The item that was generated (VariableItem).
         """
         if isSpecial and \
@@ -593,9 +600,8 @@ class VariablesViewer(QTreeWidget):
             dvtype = self.trUtf8(ConfigVarTypeDispStrings[i])
         except ValueError:
             if vtype == 'classobj':
-                dvtype = self.trUtf8(
-                    ConfigVarTypeDispStrings[ConfigVarTypeStrings.index('instance')]\
-                )
+                dvtype = self.trUtf8(ConfigVarTypeDispStrings[
+                    ConfigVarTypeStrings.index('instance')])
             else:
                 dvtype = vtype
         return dvtype
@@ -604,8 +610,8 @@ class VariablesViewer(QTreeWidget):
         """
         Protected method of QAbstractItemView.
         
-        Reimplemented to disable expanding/collapsing
-        of items when double-clicking. Instead the double-clicked entry is opened.
+        Reimplemented to disable expanding/collapsing of items when
+        double-clicking. Instead the double-clicked entry is opened.
         
         @param mouseEvent the mouse event object (QMouseEvent)
         """
@@ -682,7 +688,8 @@ class VariablesViewer(QTreeWidget):
         """
         Private slot to handle the expanded signal.
         
-        @param parentItem reference to the item being expanded (QTreeWidgetItem)
+        @param parentItem reference to the item being expanded
+            (QTreeWidgetItem)
         """
         self.expandItem(parentItem)
         self.__scrollToItem = parentItem
@@ -691,7 +698,8 @@ class VariablesViewer(QTreeWidget):
         """
         Public slot to handle the expanded signal.
         
-        @param parentItem reference to the item being expanded (QTreeWidgetItem)
+        @param parentItem reference to the item being expanded
+            (QTreeWidgetItem)
         """
         pathlist = self.__buildTreePath(parentItem)
         self.openItems.append(pathlist)
@@ -708,7 +716,8 @@ class VariablesViewer(QTreeWidget):
         """
         Public slot to handle the collapsed signal.
         
-        @param parentItem reference to the item being collapsed (QTreeWidgetItem)
+        @param parentItem reference to the item being collapsed
+            (QTreeWidgetItem)
         """
         pathlist = self.__buildTreePath(parentItem)
         self.openItems.remove(pathlist)
@@ -723,7 +732,8 @@ class VariablesViewer(QTreeWidget):
         Private method to resort the tree.
         """
         if self.resortEnabled:
-            self.sortItems(self.sortColumn(), self.header().sortIndicatorOrder())
+            self.sortItems(self.sortColumn(),
+                           self.header().sortIndicatorOrder())
     
     def handleResetUI(self):
         """
@@ -736,4 +746,5 @@ class VariablesViewer(QTreeWidget):
         """
         Private method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+        e5App().getObject("UserInterface")\
+            .showPreferences("debuggerGeneralPage")

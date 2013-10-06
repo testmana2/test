@@ -102,8 +102,8 @@ class CallStackViewer(QTreeWidget):
         """
         Public slot to show the call stack of the program being debugged.
         
-        @param stack list of tuples with call stack data (file name, line number,
-            function name, formatted argument/values list)
+        @param stack list of tuples with call stack data (file name,
+            line number, function name, formatted argument/values list)
         """
         self.clear()
         for fname, fline, ffunc, fargs in stack:
@@ -186,6 +186,7 @@ class CallStackViewer(QTreeWidget):
                 except IOError as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Error saving Call Stack Info"),
-                        self.trUtf8("""<p>The call stack info could not be written"""
-                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                        self.trUtf8("""<p>The call stack info could not be"""
+                                    """ written to <b>{0}</b></p>"""
+                                    """<p>Reason: {1}</p>""")\
                             .format(fname, str(err)))

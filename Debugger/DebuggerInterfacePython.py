@@ -74,7 +74,8 @@ class DebuggerInterfacePython(QObject):
         # set default values for capabilities of clients
         self.clientCapabilities = ClientDefaultCapabilities
         
-        self.codec = QTextCodec.codecForName(Preferences.getSystem("StringEncoding"))
+        self.codec = QTextCodec.codecForName(
+            Preferences.getSystem("StringEncoding"))
         
         self.__unicodeRe = re.compile(r"""\bu(["'])""")
         
@@ -123,7 +124,8 @@ class DebuggerInterfacePython(QObject):
         
         @param program name of the executable to start (string)
         @param arguments arguments to be passed to the program (list of string)
-        @param environment dictionary of environment settings to pass (dict of string)
+        @param environment dictionary of environment settings to pass
+            (dict of string)
         @return the process object (QProcess) or None
         """
         proc = QProcess()
@@ -162,19 +164,22 @@ class DebuggerInterfacePython(QObject):
         debugClientType = Preferences.getDebugger("DebugClientType")
         if debugClientType == "standard":
             debugClient = os.path.join(getConfig('ericDir'),
-                                       "DebugClients", "Python", "DebugClient.py")
+                                       "DebugClients", "Python",
+                                       "DebugClient.py")
         elif debugClientType == "threaded":
             debugClient = os.path.join(getConfig('ericDir'),
-                                       "DebugClients", "Python", "DebugClientThreads.py")
+                                       "DebugClients", "Python",
+                                       "DebugClientThreads.py")
         else:
             debugClient = Preferences.getDebugger("DebugClient")
             if debugClient == "":
                 debugClient = os.path.join(sys.path[0],
-                                           "DebugClients", "Python", "DebugClient.py")
+                                           "DebugClients", "Python",
+                                           "DebugClient.py")
         
         redirect = str(Preferences.getDebugger("PythonRedirect"))
-        noencoding = \
-            Preferences.getDebugger("PythonNoEncoding") and '--no-encoding' or ''
+        noencoding = Preferences.getDebugger("PythonNoEncoding") and \
+            '--no-encoding' or ''
         
         if Preferences.getDebugger("RemoteDbgEnabled"):
             ipaddr = self.debugServer.getHostAddress(False)
@@ -192,7 +197,8 @@ class DebuggerInterfacePython(QObject):
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
-                            """<p>The debugger backend could not be started.</p>"""))
+                            """<p>The debugger backend could not be"""
+                            """ started.</p>"""))
                 
                 # set translation function
                 if Preferences.getDebugger("PathTranslation"):
@@ -237,7 +243,8 @@ class DebuggerInterfacePython(QObject):
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
-                            """<p>The debugger backend could not be started.</p>"""))
+                            """<p>The debugger backend could not be"""
+                            """ started.</p>"""))
                 return process, self.__isNetworked
         
         process = self.__startProcess(interpreter,
@@ -246,7 +253,8 @@ class DebuggerInterfacePython(QObject):
         if process is None:
             E5MessageBox.critical(None,
                 self.trUtf8("Start Debugger"),
-                self.trUtf8("""<p>The debugger backend could not be started.</p>"""))
+                self.trUtf8(
+                    """<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
 
     def startRemoteForProject(self, port, runInConsole):
@@ -287,11 +295,14 @@ class DebuggerInterfacePython(QObject):
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
-                            """<p>The debugger backend could not be started.</p>"""))
+                            """<p>The debugger backend could not be"""
+                            """ started.</p>"""))
                 # set translation function
                 if project.getDebugProperty("PATHTRANSLATION"):
-                    self.translateRemote = project.getDebugProperty("REMOTEPATH")
-                    self.translateLocal = project.getDebugProperty("LOCALPATH")
+                    self.translateRemote = \
+                        project.getDebugProperty("REMOTEPATH")
+                    self.translateLocal = \
+                        project.getDebugProperty("LOCALPATH")
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
@@ -330,7 +341,8 @@ class DebuggerInterfacePython(QObject):
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
-                            """<p>The debugger backend could not be started.</p>"""))
+                            """<p>The debugger backend could not be"""
+                            """ started.</p>"""))
                 return process, self.__isNetworked
         
         process = self.__startProcess(interpreter,
@@ -339,7 +351,8 @@ class DebuggerInterfacePython(QObject):
         if process is None:
             E5MessageBox.critical(None,
                 self.trUtf8("Start Debugger"),
-                self.trUtf8("""<p>The debugger backend could not be started.</p>"""))
+                self.trUtf8(
+                    """<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
 
     def getClientCapabilities(self):
@@ -419,7 +432,8 @@ class DebuggerInterfacePython(QObject):
         
         @param env environment settings (dictionary)
         """
-        self.__sendCommand('{0}{1}\n'.format(DebugProtocol.RequestEnv, str(env)))
+        self.__sendCommand('{0}{1}\n'.format(
+            DebugProtocol.RequestEnv, str(env)))
         
     def remoteLoad(self, fn, argv, wd, traceInterpreter=False, autoContinue=True,
                    autoFork=False, forkChild=False):
@@ -429,12 +443,13 @@ class DebuggerInterfacePython(QObject):
         @param fn the filename to debug (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
-        @keyparam traceInterpreter flag indicating if the interpreter library should be
-            traced as well (boolean)
-        @keyparam autoContinue flag indicating, that the debugger should not stop
-            at the first executable line (boolean)
+        @keyparam traceInterpreter flag indicating if the interpreter library
+            should be traced as well (boolean)
+        @keyparam autoContinue flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
-        @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking
+            (boolean)
         """
         self.__autoContinue = autoContinue
         self.__scriptName = os.path.abspath(fn)
@@ -444,8 +459,9 @@ class DebuggerInterfacePython(QObject):
         self.__sendCommand('{0}{1}\n'.format(
             DebugProtocol.RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
-            DebugProtocol.RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)),
-             traceInterpreter))
+            DebugProtocol.RequestLoad, wd, fn,
+            str(Utilities.parseOptionString(argv)),
+            traceInterpreter))
         
     def remoteRun(self, fn, argv, wd, autoFork=False, forkChild=False):
         """
@@ -455,7 +471,8 @@ class DebuggerInterfacePython(QObject):
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
-        @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking
+            (boolean)
         """
         self.__scriptName = os.path.abspath(fn)
         
@@ -464,7 +481,8 @@ class DebuggerInterfacePython(QObject):
         self.__sendCommand('{0}{1}\n'.format(
             DebugProtocol.RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('{0}{1}|{2}|{3}\n'.format(
-            DebugProtocol.RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
+            DebugProtocol.RequestRun, wd, fn,
+            str(Utilities.parseOptionString(argv))))
         
     def remoteCoverage(self, fn, argv, wd, erase=False):
         """
@@ -481,8 +499,8 @@ class DebuggerInterfacePython(QObject):
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}@@{2}@@{3}@@{4:d}\n'.format(
-            DebugProtocol.RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
-             erase))
+            DebugProtocol.RequestCoverage, wd, fn,
+            str(Utilities.parseOptionString(argv)), erase))
 
     def remoteProfile(self, fn, argv, wd, erase=False):
         """
@@ -491,7 +509,8 @@ class DebuggerInterfacePython(QObject):
         @param fn the filename to run (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
-        @keyparam erase flag indicating that timing info should be cleared first (boolean)
+        @keyparam erase flag indicating that timing info should be cleared
+            first (boolean)
         """
         self.__scriptName = os.path.abspath(fn)
         
@@ -541,7 +560,8 @@ class DebuggerInterfacePython(QObject):
         
         @param special flag indicating a special continue operation (boolean)
         """
-        self.__sendCommand('{0}{1:d}\n'.format(DebugProtocol.RequestContinue, special))
+        self.__sendCommand('{0}{1:d}\n'.format(
+            DebugProtocol.RequestContinue, special))
 
     def remoteBreakpoint(self, fn, line, set, cond=None, temp=False):
         """
@@ -555,7 +575,8 @@ class DebuggerInterfacePython(QObject):
         """
         fn = self.translate(fn, False)
         self.__sendCommand('{0}{1}@@{2:d}@@{3:d}@@{4:d}@@{5}\n'.format(
-                           DebugProtocol.RequestBreak, fn, line, temp, set, cond))
+                           DebugProtocol.RequestBreak, fn, line, temp, set,
+                           cond))
         
     def remoteBreakpointEnable(self, fn, line, enable):
         """
@@ -563,7 +584,8 @@ class DebuggerInterfacePython(QObject):
         
         @param fn filename the breakpoint belongs to (string)
         @param line linenumber of the breakpoint (int)
-        @param enable flag indicating enabling or disabling a breakpoint (boolean)
+        @param enable flag indicating enabling or disabling a breakpoint
+            (boolean)
         """
         fn = self.translate(fn, False)
         self.__sendCommand('{0}{1},{2:d},{3:d}\n'.format(
@@ -586,7 +608,8 @@ class DebuggerInterfacePython(QObject):
         Public method to set or clear a watch expression.
         
         @param cond expression of the watch expression (string)
-        @param set flag indicating setting or resetting a watch expression (boolean)
+        @param set flag indicating setting or resetting a watch expression
+            (boolean)
         @param temp flag indicating a temporary watch expression (boolean)
         """
         # cond is combination of cond and special (s. watch expression viewer)
@@ -598,7 +621,8 @@ class DebuggerInterfacePython(QObject):
         Public method to enable or disable a watch expression.
         
         @param cond expression of the watch expression (string)
-        @param enable flag indicating enabling or disabling a watch expression (boolean)
+        @param enable flag indicating enabling or disabling a watch expression
+            (boolean)
         """
         # cond is combination of cond and special (s. watch expression viewer)
         self.__sendCommand('{0}{1},{2:d}\n'.format(
@@ -606,7 +630,8 @@ class DebuggerInterfacePython(QObject):
     
     def remoteWatchpointIgnore(self, cond, count):
         """
-        Public method to ignore a watch expression the next couple of occurrences.
+        Public method to ignore a watch expression the next couple of
+        occurrences.
         
         @param cond expression of the watch expression (string)
         @param count number of occurrences to ignore (int)
@@ -635,7 +660,8 @@ class DebuggerInterfacePython(QObject):
         
         @param tid id of the thread (integer)
         """
-        self.__sendCommand('{0}{1:d}\n'.format(DebugProtocol.RequestThreadSet, tid))
+        self.__sendCommand('{0}{1:d}\n'.format(
+            DebugProtocol.RequestThreadSet, tid))
         
     def remoteClientVariables(self, scope, filter, framenr=0):
         """
@@ -658,7 +684,8 @@ class DebuggerInterfacePython(QObject):
         @param framenr framenumber of the variables to retrieve (int)
         """
         self.__sendCommand('{0}{1}, {2:d}, {3:d}, {4}\n'.format(
-            DebugProtocol.RequestVariable, str(var), framenr, scope, str(filter)))
+            DebugProtocol.RequestVariable, str(var), framenr, scope,
+            str(filter)))
         
     def remoteClientSetFilter(self, scope, filter):
         """
@@ -680,11 +707,13 @@ class DebuggerInterfacePython(QObject):
             cmd = "on"
         else:
             cmd = "off"
-        self.__sendCommand('{0}{1}\n'.format(DebugProtocol.RequestCallTrace, cmd))
+        self.__sendCommand('{0}{1}\n'.format(
+            DebugProtocol.RequestCallTrace, cmd))
     
     def remoteEval(self, arg):
         """
-        Public method to evaluate arg in the current context of the debugged program.
+        Public method to evaluate arg in the current context of the debugged
+        program.
         
         @param arg the arguments to evaluate (string)
         """
@@ -692,7 +721,8 @@ class DebuggerInterfacePython(QObject):
         
     def remoteExec(self, stmt):
         """
-        Public method to execute stmt in the current context of the debugged program.
+        Public method to execute stmt in the current context of the debugged
+        program.
         
         @param stmt statement to execute (string)
         """
@@ -717,7 +747,8 @@ class DebuggerInterfacePython(QObject):
         
         @param text the text to be completed (string)
         """
-        self.__sendCommand("{0}{1}\n".format(DebugProtocol.RequestCompletion, text))
+        self.__sendCommand("{0}{1}\n".format(
+            DebugProtocol.RequestCompletion, text))
         
     def remoteUTPrepare(self, fn, tn, tfn, failed, cov, covname, coverase):
         """
@@ -727,11 +758,13 @@ class DebuggerInterfacePython(QObject):
         @param tn the testname to load (string)
         @param tfn the test function name to load tests from (string)
         @param failed list of failed test, if only failed test should be run
-                (list of strings)
-        @param cov flag indicating collection of coverage data is requested (boolean)
+            (list of strings)
+        @param cov flag indicating collection of coverage data is requested
+            (boolean)
         @param covname filename to be used to assemble the coverage caches
-                filename (string)
-        @param coverase flag indicating erasure of coverage data is requested (boolean)
+            filename (string)
+        @param coverase flag indicating erasure of coverage data is requested
+            (boolean)
         """
         self.__scriptName = os.path.abspath(fn)
         
@@ -756,7 +789,8 @@ class DebuggerInterfacePython(QObject):
         """
         Private method to ask the user which branch of a fork to follow.
         """
-        selections = [self.trUtf8("Parent Process"), self.trUtf8("Child process")]
+        selections = [self.trUtf8("Parent Process"),
+                      self.trUtf8("Child process")]
         res, ok = QInputDialog.getItem(
             None,
             self.trUtf8("Client forking"),
@@ -812,8 +846,9 @@ class DebuggerInterfacePython(QObject):
                         self.__autoContinue = False
                         QTimer.singleShot(0, self.remoteContinue)
                     else:
-                        self.debugServer.signalClientLine(cf[0], int(cf[1]),
-                                                    resp == DebugProtocol.ResponseStack)
+                        self.debugServer.signalClientLine(
+                            cf[0], int(cf[1]),
+                            resp == DebugProtocol.ResponseStack)
                         self.debugServer.signalClientStack(stack)
                     continue
                 
@@ -829,7 +864,8 @@ class DebuggerInterfacePython(QObject):
                 
                 if resp == DebugProtocol.ResponseThreadList:
                     currentId, threadList = eval(evalArg)
-                    self.debugServer.signalClientThreadList(currentId, threadList)
+                    self.debugServer.signalClientThreadList(
+                        currentId, threadList)
                     continue
                 
                 if resp == DebugProtocol.ResponseThreadSet:
@@ -881,7 +917,8 @@ class DebuggerInterfacePython(QObject):
                         exctype = None
                         excmessage = ''
                         stack = []
-                    self.debugServer.signalClientException(exctype, excmessage, stack)
+                    self.debugServer.signalClientException(
+                        exctype, excmessage, stack)
                     continue
                 
                 if resp == DebugProtocol.ResponseSyntax:
@@ -897,7 +934,8 @@ class DebuggerInterfacePython(QObject):
                         cn = 0
                     if cn is None:
                         cn = 0
-                    self.debugServer.signalClientSyntaxError(message, fn, ln, cn)
+                    self.debugServer.signalClientSyntaxError(
+                        message, fn, ln, cn)
                     continue
                 
                 if resp == DebugProtocol.ResponseExit:
@@ -916,7 +954,8 @@ class DebuggerInterfacePython(QObject):
                     fn, lineno = evalArg.split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
-                    self.debugServer.signalClientBreakConditionError(fn, lineno)
+                    self.debugServer.signalClientBreakConditionError(
+                        fn, lineno)
                     continue
                 
                 if resp == DebugProtocol.ResponseClearWatch:
@@ -934,7 +973,8 @@ class DebuggerInterfacePython(QObject):
                 
                 if resp == DebugProtocol.ResponseBanner:
                     version, platform, dbgclient = eval(evalArg)
-                    self.debugServer.signalClientBanner(version, platform, dbgclient)
+                    self.debugServer.signalClientBanner(
+                        version, platform, dbgclient)
                     continue
                 
                 if resp == DebugProtocol.ResponseCapabilities:
@@ -972,12 +1012,14 @@ class DebuggerInterfacePython(QObject):
                 
                 if resp == DebugProtocol.ResponseUTTestFailed:
                     testname, traceback, id = eval(evalArg)
-                    self.debugServer.clientUtTestFailed(testname, traceback, id)
+                    self.debugServer.clientUtTestFailed(
+                        testname, traceback, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestErrored:
                     testname, traceback, id = eval(evalArg)
-                    self.debugServer.clientUtTestErrored(testname, traceback, id)
+                    self.debugServer.clientUtTestErrored(
+                        testname, traceback, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestSkipped:
@@ -987,12 +1029,14 @@ class DebuggerInterfacePython(QObject):
                 
                 if resp == DebugProtocol.ResponseUTTestFailedExpected:
                     testname, traceback, id = eval(line[eoc:-1])
-                    self.debugServer.clientUtTestFailedExpected(testname, traceback, id)
+                    self.debugServer.clientUtTestFailedExpected(
+                        testname, traceback, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestSucceededUnexpected:
                     testname, id = eval(line[eoc:-1])
-                    self.debugServer.clientUtTestSucceededUnexpected(testname, id)
+                    self.debugServer.clientUtTestSucceededUnexpected(
+                        testname, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTFinished:

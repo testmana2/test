@@ -57,8 +57,8 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         """
         Public slot to retrieve the current selections.
         
-        @return A tuple of lists of integer values. The first list is the locals variables
-            filter, the second the globals variables filter.
+        @return A tuple of lists of integer values. The first list is the
+            locals variables filter, the second the globals variables filter.
         """
         lList = []
         gList = []

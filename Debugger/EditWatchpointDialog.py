@@ -21,7 +21,8 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         Constructor
         
         @param properties properties for the watch expression (tuple)
-            (expression, temporary flag, enabled flag, ignore count, special condition)
+            (expression, temporary flag, enabled flag, ignore count,
+            special condition)
         @param parent the parent of this dialog
         @param name the widget name of this dialog
         @param modal flag indicating a modal dialog
@@ -66,7 +67,8 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         
     def __textChanged(self, txt):
         """
-        Private slot to handle the text changed signal of the condition line edit.
+        Private slot to handle the text changed signal of the condition line
+        edit.
         
         @param txt text of the line edit (string)
         """
@@ -85,7 +87,8 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         Public method to retrieve the entered data.
         
         @return a tuple containing the watch expressions new properties
-            (expression, temporary flag, enabled flag, ignore count, special condition)
+            (expression, temporary flag, enabled flag, ignore count,
+            special condition)
         """
         if self.conditionButton.isChecked():
             return (self.conditionEdit.text(),

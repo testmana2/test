@@ -33,7 +33,8 @@ class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
         
         if ignore:
             self.setWindowTitle(self.trUtf8("Ignored Exceptions"))
-            self.exceptionList.setToolTip(self.trUtf8("List of ignored exceptions"))
+            self.exceptionList.setToolTip(
+                self.trUtf8("List of ignored exceptions"))
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
     
@@ -42,7 +43,8 @@ class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
         """
         Private slot to handle the change of the selection.
         """
-        self.deleteButton.setEnabled(len(self.exceptionList.selectedItems()) > 0)
+        self.deleteButton.setEnabled(
+            len(self.exceptionList.selectedItems()) > 0)
     
     @pyqtSlot()
     def on_deleteButton_clicked(self):

@@ -8,8 +8,8 @@ Module implementing the watch expression viewer widget.
 """
 
 from PyQt4.QtCore import Qt, QModelIndex, qVersion
-from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, QSortFilterProxyModel, \
-    QHeaderView, QItemSelectionModel, QDialog
+from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, \
+    QSortFilterProxyModel, QHeaderView, QItemSelectionModel, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -21,8 +21,8 @@ class WatchPointViewer(QTreeView):
     """
     Class implementing the watch expression viewer widget.
     
-    Watch expressions will be shown with all their details. They can be modified through
-    the context menu of this widget.
+    Watch expressions will be shown with all their details. They can be
+    modified through the context menu of this widget.
     """
     def __init__(self, parent=None):
         """
@@ -83,7 +83,8 @@ class WatchPointViewer(QTreeView):
         
     def __resizeColumns(self):
         """
-        Private slot to resize the view when items get added, edited or deleted.
+        Private slot to resize the view when items get added, edited or
+        deleted.
         """
         self.header().resizeSections(QHeaderView.ResizeToContents)
         self.header().setStretchLastSection(True)
@@ -140,13 +141,16 @@ class WatchPointViewer(QTreeView):
         self.menu.addAction(self.trUtf8("Edit..."), self.__editWatchPoint)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8("Enable"), self.__enableWatchPoint)
-        self.menu.addAction(self.trUtf8("Enable all"), self.__enableAllWatchPoints)
+        self.menu.addAction(self.trUtf8("Enable all"),
+                            self.__enableAllWatchPoints)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8("Disable"), self.__disableWatchPoint)
-        self.menu.addAction(self.trUtf8("Disable all"), self.__disableAllWatchPoints)
+        self.menu.addAction(self.trUtf8("Disable all"),
+                            self.__disableAllWatchPoints)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8("Delete"), self.__deleteWatchPoint)
-        self.menu.addAction(self.trUtf8("Delete all"), self.__deleteAllWatchPoints)
+        self.menu.addAction(self.trUtf8("Delete all"),
+                            self.__deleteAllWatchPoints)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8("Configure..."), self.__configure)
 
@@ -155,13 +159,13 @@ class WatchPointViewer(QTreeView):
         self.backMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
         self.backMenuActions["EnableAll"] = \
             self.backMenu.addAction(self.trUtf8("Enable all"),
-                self.__enableAllWatchPoints)
+                                    self.__enableAllWatchPoints)
         self.backMenuActions["DisableAll"] = \
             self.backMenu.addAction(self.trUtf8("Disable all"),
-                self.__disableAllWatchPoints)
+                                    self.__disableAllWatchPoints)
         self.backMenuActions["DeleteAll"] = \
             self.backMenu.addAction(self.trUtf8("Delete all"),
-                self.__deleteAllWatchPoints)
+                                    self.__deleteAllWatchPoints)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
         self.backMenu.aboutToShow.connect(self.__showBackMenu)
@@ -170,16 +174,19 @@ class WatchPointViewer(QTreeView):
         self.multiMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Enable selected"),
-            self.__enableSelectedWatchPoints)
-        self.multiMenu.addAction(self.trUtf8("Enable all"), self.__enableAllWatchPoints)
+                                 self.__enableSelectedWatchPoints)
+        self.multiMenu.addAction(self.trUtf8("Enable all"),
+                                 self.__enableAllWatchPoints)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Disable selected"),
-            self.__disableSelectedWatchPoints)
-        self.multiMenu.addAction(self.trUtf8("Disable all"), self.__disableAllWatchPoints)
+                                 self.__disableSelectedWatchPoints)
+        self.multiMenu.addAction(self.trUtf8("Disable all"),
+                                 self.__disableAllWatchPoints)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Delete selected"),
-            self.__deleteSelectedWatchPoints)
-        self.multiMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllWatchPoints)
+                                 self.__deleteSelectedWatchPoints)
+        self.multiMenu.addAction(self.trUtf8("Delete all"),
+                                 self.__deleteAllWatchPoints)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Configure..."), self.__configure)
     
@@ -210,7 +217,8 @@ class WatchPointViewer(QTreeView):
         for index in self.selectedIndexes():
             self.__setRowSelected(index, False)
     
-    def __findDuplicates(self, cond, special, showMessage=False, index=QModelIndex()):
+    def __findDuplicates(self, cond, special, showMessage=False,
+                         index=QModelIndex()):
         """
         Private method to check, if an entry already exists.
         
@@ -218,20 +226,23 @@ class WatchPointViewer(QTreeView):
         @param special special condition to check (string)
         @param showMessage flag indicating a message should be shown,
             if a duplicate entry is found (boolean)
-        @param index index that should not be considered duplicate (QModelIndex)
+        @param index index that should not be considered duplicate
+            (QModelIndex)
         @return flag indicating a duplicate entry (boolean)
         """
         idx = self.__model.getWatchPointIndex(cond, special)
-        duplicate = idx.isValid() and idx.internalPointer() != index.internalPointer()
+        duplicate = idx.isValid() and \
+            idx.internalPointer() != index.internalPointer()
         if showMessage and duplicate:
             if not special:
                 msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
                                   """ already exists.</p>""")\
                         .format(Utilities.html_encode(cond))
             else:
-                msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
-                                  """ for the variable <b>{1}</b> already exists.</p>""")\
-                        .format(special, Utilities.html_encode(cond))
+                msg = self.trUtf8(
+                    """<p>A watch expression '<b>{0}</b>'"""
+                    """ for the variable <b>{1}</b> already exists.</p>""")\
+                    .format(special, Utilities.html_encode(cond))
             E5MessageBox.warning(self,
                 self.trUtf8("Watch expression already exists"),
                 msg)
@@ -247,7 +258,8 @@ class WatchPointViewer(QTreeView):
         if dlg.exec_() == QDialog.Accepted:
             cond, temp, enabled, ignorecount, special = dlg.getData()
             if not self.__findDuplicates(cond, special, True):
-                self.__model.addWatchPoint(cond, special, (temp, enabled, ignorecount))
+                self.__model.addWatchPoint(cond, special,
+                                           (temp, enabled, ignorecount))
                 self.__resizeColumns()
                 self.__resort()
 
@@ -297,7 +309,8 @@ class WatchPointViewer(QTreeView):
         """
         Private method to set the enabled status of a watch expression.
         
-        @param index index of watch expression to be enabled/disabled (QModelIndex)
+        @param index index of watch expression to be enabled/disabled
+            (QModelIndex)
         @param enabled flag indicating the enabled status to be set (boolean)
         """
         sindex = self.__toSourceIndex(index)
@@ -315,7 +328,8 @@ class WatchPointViewer(QTreeView):
 
     def __enableAllWatchPoints(self):
         """
-        Private slot to handle the enable all watch expressions context menu entry.
+        Private slot to handle the enable all watch expressions context menu
+        entry.
         """
         index = self.model().index(0, 0)
         while index.isValid():
@@ -326,7 +340,8 @@ class WatchPointViewer(QTreeView):
 
     def __enableSelectedWatchPoints(self):
         """
-        Private slot to handle the enable selected watch expressions context menu entry.
+        Private slot to handle the enable selected watch expressions context
+        menu entry.
         """
         for index in self.selectedIndexes():
             if index.column() == 0:
@@ -345,7 +360,8 @@ class WatchPointViewer(QTreeView):
 
     def __disableAllWatchPoints(self):
         """
-        Private slot to handle the disable all watch expressions context menu entry.
+        Private slot to handle the disable all watch expressions context menu
+        entry.
         """
         index = self.model().index(0, 0)
         while index.isValid():
@@ -356,7 +372,8 @@ class WatchPointViewer(QTreeView):
 
     def __disableSelectedWatchPoints(self):
         """
-        Private slot to handle the disable selected watch expressions context menu entry.
+        Private slot to handle the disable selected watch expressions context
+        menu entry.
         """
         for index in self.selectedIndexes():
             if index.column() == 0:
@@ -375,13 +392,15 @@ class WatchPointViewer(QTreeView):
         
     def __deleteAllWatchPoints(self):
         """
-        Private slot to handle the delete all watch expressions context menu entry.
+        Private slot to handle the delete all watch expressions context menu
+        entry.
         """
         self.__model.deleteAll()
 
     def __deleteSelectedWatchPoints(self):
         """
-        Private slot to handle the delete selected watch expressions context menu entry.
+        Private slot to handle the delete selected watch expressions context
+        menu entry.
         """
         idxList = []
         for index in self.selectedIndexes():
@@ -417,4 +436,5 @@ class WatchPointViewer(QTreeView):
         """
         Private method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+        e5App().getObject("UserInterface")\
+            .showPreferences("debuggerGeneralPage")
