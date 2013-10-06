@@ -50,7 +50,8 @@ def sort(nodes, routes, noRecursion=False):
         previousStageChildren = []
         nodelen = len(nodes)
         
-        # second stage are those nodes, which are direct children of the first stage
+        # second stage are those nodes, which are direct children of the
+        # first stage
         for node in stage:
             for child in children.get(node, []):
                 if child not in previousStageChildren and child not in taken:

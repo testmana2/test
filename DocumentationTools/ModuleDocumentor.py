@@ -465,8 +465,9 @@ class ModuleDocument(object):
                                     dict['__init__'].description) and \
                                   self.listEntryDeprecatedTemplate or "",
                 }))
-                self.keywords.append(("{0} (Constructor)".format(className),
-                                      "#{0}.{1}".format(className, '__init__')))
+                self.keywords.append(
+                    ("{0} (Constructor)".format(className),
+                     "#{0}.{1}".format(className, '__init__')))
             except KeyError:
                 pass
         

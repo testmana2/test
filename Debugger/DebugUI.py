@@ -15,8 +15,8 @@ from PyQt4.QtGui import QKeySequence, QMenu, QToolBar, QApplication, QDialog, \
 
 from UI.Info import Program
 
-from .DebugClientCapabilities import HasDebugger, HasInterpreter, HasProfiler, \
-    HasCoverage
+from .DebugClientCapabilities import HasDebugger, HasInterpreter, \
+    HasProfiler, HasCoverage
 import Preferences
 import Utilities
 import UI.PixmapCache

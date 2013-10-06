@@ -28,7 +28,8 @@ class AdBlockExceptionsDialog(QDialog, Ui_AdBlockExceptionsDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlusGreen48.png"))
+        self.iconLabel.setPixmap(
+            UI.PixmapCache.getPixmap("adBlockPlusGreen48.png"))
         
         self.hostEdit.setInactiveText(self.trUtf8("Enter host to be added..."))
         

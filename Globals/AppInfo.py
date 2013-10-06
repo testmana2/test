@@ -19,9 +19,9 @@ def makeAppInfo(argv, name, arg, description, options=[]):
     @param arg commandline arguments (string)
     @param description text describing the application (string)
     @param options list of additional commandline options
-        (list of tuples of two strings (commandline option, option description)).
-        The options --version, --help and -h are always present and must not
-        be repeated in this list.
+        (list of tuples of two strings (commandline option,
+        option description)). The options --version, --help and -h are
+        always present and must not be repeated in this list.
     @return dictionary describing the application
     """
     return {

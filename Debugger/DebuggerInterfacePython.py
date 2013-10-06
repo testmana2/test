@@ -435,8 +435,8 @@ class DebuggerInterfacePython(QObject):
         self.__sendCommand('{0}{1}\n'.format(
             DebugProtocol.RequestEnv, str(env)))
         
-    def remoteLoad(self, fn, argv, wd, traceInterpreter=False, autoContinue=True,
-                   autoFork=False, forkChild=False):
+    def remoteLoad(self, fn, argv, wd, traceInterpreter=False,
+                   autoContinue=True, autoFork=False, forkChild=False):
         """
         Public method to load a new program to debug.
         

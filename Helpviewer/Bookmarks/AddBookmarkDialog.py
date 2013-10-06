@@ -87,7 +87,8 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         
         if self.__bookmarksManager is None:
             import Helpviewer.HelpWindow
-            self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+            self.__bookmarksManager = \
+                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
         
         self.__proxyModel = AddBookmarkProxyModel(self)
         model = self.__bookmarksManager.bookmarksModel()

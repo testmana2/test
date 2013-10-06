@@ -1536,7 +1536,8 @@ class DebugClientBase(object):
                 if len(dict) == 0 and len(udict) > 0:
                     if access:
                         loc = {"udict": udict}
-                        exec('qvar = udict{0!s}'.format(access), globals(), loc)
+                        exec('qvar = udict{0!s}'.format(access),
+                             globals(), loc)
                         qvar = loc["qvar"]
                     # this has to be in line with VariablesViewer.indicators
                     elif rvar and rvar[0][-2:] in ["[]", "()", "{}"]:

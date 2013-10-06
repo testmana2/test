@@ -76,7 +76,8 @@ class AdBlockNetwork(QObject):
         if manager.isHostExcepted(url.host()):
             return False
         for subscription in manager.subscriptions():
-            if subscription.isEnabled() and subscription.adBlockDisabledForUrl(url):
+            if subscription.isEnabled() and \
+                    subscription.adBlockDisabledForUrl(url):
                 return False
         
         return True
