@@ -30,8 +30,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
     
     @signal connected(connected) emitted to signal a change of the connected
             state (bool)
-    @signal editorCommand(hash, filename, message) emitted when an editor command
-            has been received (string, string, string)
+    @signal editorCommand(hash, filename, message) emitted when an editor
+            command has been received (string, string, string)
     @signal shareEditor(share) emitted to signal a share is requested (bool)
     @signal startEdit() emitted to start a shared edit session
     @signal sendEdit() emitted to send a shared edit session
@@ -148,7 +148,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         if text.startswith("/"):
             self.__showErrorMessage(
-                self.trUtf8("! Unknown command: {0}\n").format(text.split()[0]))
+                self.trUtf8("! Unknown command: {0}\n")
+                    .format(text.split()[0]))
         else:
             self.__client.sendMessage(text)
             self.appendMessage(self.__myNickName, text)
@@ -167,7 +168,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         color = self.chatEdit.textColor()
         self.chatEdit.setTextColor(Qt.gray)
         self.chatEdit.append(
-            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
+            ":")
         self.chatEdit.append(self.trUtf8("* {0} has joined.\n").format(nick))
         self.chatEdit.setTextColor(color)
         
@@ -180,9 +182,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.__setConnected(True)
         
         if not self.isVisible():
-            self.__ui.showNotification(UI.PixmapCache.getPixmap("cooperation48.png"),
-                self.trUtf8("New User"), self.trUtf8("{0} has joined.").format(nick))
-    
+            self.__ui.showNotification(
+                UI.PixmapCache.getPixmap("cooperation48.png"),
+                self.trUtf8("New User"), self.trUtf8("{0} has joined.")
+                    .format(nick))
     def __participantLeft(self, nick):
         """
         Private slot handling a participant leaving the session.
@@ -200,7 +203,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             color = self.chatEdit.textColor()
             self.chatEdit.setTextColor(Qt.gray)
             self.chatEdit.append(
-                QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+                QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
+                ":")
             self.chatEdit.append(self.trUtf8("* {0} has left.\n").format(nick))
             self.chatEdit.setTextColor(color)
         
@@ -208,8 +212,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.__setConnected(False)
         
         if not self.isVisible():
-            self.__ui.showNotification(UI.PixmapCache.getPixmap("cooperation48.png"),
-                self.trUtf8("User Left"), self.trUtf8("{0} has left.").format(nick))
+            self.__ui.showNotification(
+                UI.PixmapCache.getPixmap("cooperation48.png"),
+                self.trUtf8("User Left"), self.trUtf8("{0} has left.")
+                    .format(nick))
     
     def appendMessage(self, from_, message):
         """
@@ -229,7 +235,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         bar.setValue(bar.maximum())
         
         if not self.isVisible():
-            self.__ui.showNotification(UI.PixmapCache.getPixmap("cooperation48.png"),
+            self.__ui.showNotification(
+                UI.PixmapCache.getPixmap("cooperation48.png"),
                 self.trUtf8("Message from <{0}>").format(from_), message)
     
     @pyqtSlot(str)
@@ -295,11 +302,14 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.__client.close()
             self.serverButton.setText(self.trUtf8("Start Server"))
             self.serverPortSpin.setEnabled(True)
-            if self.serverPortSpin.value() != Preferences.getCooperation("ServerPort"):
-                self.serverPortSpin.setValue(Preferences.getCooperation("ServerPort"))
+            if (self.serverPortSpin.value() != 
+                    Preferences.getCooperation("ServerPort")):
+                self.serverPortSpin.setValue(
+                    Preferences.getCooperation("ServerPort"))
             self.serverLed.setColor(QColor(Qt.red))
         else:
-            res, port = self.__client.startListening(self.serverPortSpin.value())
+            res, port = self.__client.startListening(
+                self.serverPortSpin.value())
             if res:
                 self.serverButton.setText(self.trUtf8("Stop Server"))
                 self.serverPortSpin.setValue(port)
@@ -348,7 +358,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         color = self.chatEdit.textColor()
         self.chatEdit.setTextColor(Qt.red)
         self.chatEdit.append(
-            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
+            ":")
         self.chatEdit.append(message + "\n")
         self.chatEdit.setTextColor(color)
     
@@ -363,7 +374,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         Public slot to handle a change of preferences.
         """
         if not self.__client.isListening():
-            self.serverPortSpin.setValue(Preferences.getCooperation("ServerPort"))
+            self.serverPortSpin.setValue(
+                Preferences.getCooperation("ServerPort"))
             if Preferences.getCooperation("AutoStartServer"):
                 self.on_serverButton_clicked()
     
@@ -469,7 +481,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.startEditButton.setChecked(editing)
         
         self.shareButton.setEnabled(shareable and not editing)
-        self.startEditButton.setEnabled(sharing and not editing and not remoteEditing)
+        self.startEditButton.setEnabled(
+            sharing and not editing and not remoteEditing)
         self.sendEditButton.setEnabled(editing)
         self.cancelEditButton.setEnabled(editing)
     
@@ -568,9 +581,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                 except IOError as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Error saving Chat"),
-                        self.trUtf8("""<p>The chat contents could not be written"""
-                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
-                            .format(fname, str(err)))
+                        self.trUtf8("""<p>The chat contents could not be"""
+                                    """ written to <b>{0}</b></p>"""
+                                    """<p>Reason: {1}</p>""") .format(
+                                    fname, str(err)))
     
     def __copyChat(self):
         """
@@ -638,7 +652,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         color = self.chatEdit.textColor()
         self.chatEdit.setTextColor(Qt.darkYellow)
         self.chatEdit.append(
-            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
+            ":")
         self.chatEdit.append(self.trUtf8("* {0} has been kicked.\n").format(
             itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)
@@ -653,7 +668,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         color = self.chatEdit.textColor()
         self.chatEdit.setTextColor(Qt.darkYellow)
         self.chatEdit.append(
-            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
+            ":")
         self.chatEdit.append(self.trUtf8("* {0} has been banned.\n").format(
             itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)
@@ -668,9 +684,11 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         color = self.chatEdit.textColor()
         self.chatEdit.setTextColor(Qt.darkYellow)
         self.chatEdit.append(
-            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
-        self.chatEdit.append(self.trUtf8("* {0} has been banned and kicked.\n").format(
-            itm.text().split("@")[0]))
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
+            ":")
+        self.chatEdit.append(
+            self.trUtf8("* {0} has been banned and kicked.\n")
+                .format( itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)
     
     def shutdown(self):

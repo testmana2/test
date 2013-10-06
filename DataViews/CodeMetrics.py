@@ -108,9 +108,12 @@ class SourceStat(object):
         """
         Constructor
         """
-        self.identifiers = []  # list of identifiers in order of appearance
-        self.active = [('TOTAL ', -1, 0)]   # stack of active identifiers and indent levels
-        self.counters = {}  # counters per identifier
+        self.identifiers = []
+        # list of identifiers in order of appearance
+        self.active = [('TOTAL ', -1, 0)]
+        # stack of active identifiers and indent levels
+        self.counters = {}
+        # counters per identifier
         self.indent_level = 0
 
     def indent(self, tok):
@@ -253,7 +256,8 @@ def analyze(filename, total):
     summarize(total, 'bytes', len(text))
     summarize(total, 'comments', stats.getCounter('TOTAL ', 'comments'))
     summarize(total, 'empty lines', stats.getCounter('TOTAL ', 'empty'))
-    summarize(total, 'non-commentary lines', stats.getCounter('TOTAL ', 'nloc'))
+    summarize(total, 'non-commentary lines',
+              stats.getCounter('TOTAL ', 'nloc'))
 
     return stats
     

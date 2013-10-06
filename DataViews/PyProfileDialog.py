@@ -11,8 +11,8 @@ import os
 import pickle
 
 from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
-    QApplication
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
+    QTreeWidgetItem, QApplication
 
 from E5Gui import E5MessageBox
 
@@ -22,7 +22,8 @@ import Utilities
 
 class ProfileTreeWidgetItem(QTreeWidgetItem):
     """
-    Class implementing a custom QTreeWidgetItem to allow sorting on numeric values.
+    Class implementing a custom QTreeWidgetItem to allow sorting on numeric
+    values.
     """
     def __getNC(self, itm):
         """
@@ -38,7 +39,8 @@ class ProfileTreeWidgetItem(QTreeWidgetItem):
         """
         Public method to check, if the item is less than the other one.
         
-        @param other reference to item to compare against (ProfileTreeWidgetItem)
+        @param other reference to item to compare against
+            (ProfileTreeWidgetItem)
         @return true, if this item is less than other (boolean)
         """
         column = self.treeWidget().sortColumn()
@@ -67,29 +69,36 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         self.cancelled = False
         self.exclude = True
-        self.ericpath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.ericpath = os.path.dirname(
+            os.path.dirname(os.path.abspath(__file__)))
         self.pyLibPath = Utilities.getPythonLibPath()
         
-        self.summaryList.headerItem().setText(self.summaryList.columnCount(), "")
+        self.summaryList.headerItem().setText(
+            self.summaryList.columnCount(), "")
         self.resultList.headerItem().setText(self.resultList.columnCount(), "")
         self.resultList.header().setSortIndicator(0, Qt.DescendingOrder)
         
         self.__menu = QMenu(self)
-        self.filterItm = self.__menu.addAction(self.trUtf8('Exclude Python Library'),
+        self.filterItm = self.__menu.addAction(
+            self.trUtf8('Exclude Python Library'),
             self.__filter)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8('Erase Profiling Info'),
             self.__eraseProfile)
-        self.__menu.addAction(self.trUtf8('Erase Timing Info'), self.__eraseTiming)
+        self.__menu.addAction(self.trUtf8('Erase Timing Info'),
+                              self.__eraseTiming)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8('Erase All Infos'), self.__eraseAll)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.resultList.customContextMenuRequested.connect(self.__showContextMenu)
+        self.resultList.customContextMenuRequested.connect(
+            self.__showContextMenu)
         self.summaryList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.summaryList.customContextMenuRequested.connect(self.__showContextMenu)
+        self.summaryList.customContextMenuRequested.connect(
+            self.__showContextMenu)
         
-    def __createResultItem(self, calls, totalTime, totalTimePerCall, cumulativeTime,
-                           cumulativeTimePerCall, file, line, functionName):
+    def __createResultItem(self, calls, totalTime, totalTimePerCall,
+                           cumulativeTime, cumulativeTimePerCall, file, line,
+                           functionName):
         """
         Private method to create an entry in the result list.
         
@@ -130,7 +139,8 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         Private method to resort the tree.
         """
         self.resultList.sortItems(self.resultList.sortColumn(),
-                                  self.resultList.header().sortIndicatorOrder())
+                                  self.resultList.header()
+                                  .sortIndicatorOrder())
         
     def __populateLists(self, exclude=False):
         """
@@ -160,7 +170,8 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                 if self.cancelled:
                     return
                 
-                if not (self.ericpath and func[0].startswith(self.ericpath)) and \
+                if not (self.ericpath and 
+                        func[0].startswith(self.ericpath)) and \
                    not func[0].startswith("DebugClients") and \
                    func[0] != "profile" and \
                    not (exclude and (
@@ -197,10 +208,13 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         self.__resortResultList()
         
         # now do the summary stuff
-        self.__createSummaryItem(self.trUtf8("function calls"), str(total_calls))
+        self.__createSummaryItem(self.trUtf8("function calls"),
+                                 str(total_calls))
         if total_calls != prim_calls:
-            self.__createSummaryItem(self.trUtf8("primitive calls"), str(prim_calls))
-        self.__createSummaryItem(self.trUtf8("CPU seconds"), "{0:.3f}".format(total_tt))
+            self.__createSummaryItem(self.trUtf8("primitive calls"),
+                                     str(prim_calls))
+        self.__createSummaryItem(self.trUtf8("CPU seconds"),
+                                 "{0:.3f}".format(total_tt))
         
     def start(self, pfn, fn=None):
         """
@@ -239,7 +253,8 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
     def __finish(self):
         """
-        Private slot called when the action finished or the user pressed the button.
+        Private slot called when the action finished or the user pressed the
+        button.
         """
         self.cancelled = True
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
@@ -304,7 +319,8 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
     def __filter(self):
         """
-        Private slot to handle the Exclude/Include Python Library context menu action.
+        Private slot to handle the Exclude/Include Python Library context menu
+        action.
         """
         self.__unfinish()
         if self.exclude:

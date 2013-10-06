@@ -11,8 +11,8 @@ import os
 import fnmatch
 
 from PyQt4.QtCore import pyqtSlot, Qt, QLocale, qVersion
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
-    QApplication
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
+    QTreeWidgetItem, QApplication
 
 from .Ui_CodeMetricsDialog import Ui_CodeMetricsDialog
 from . import CodeMetrics
@@ -36,7 +36,8 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.summaryList.headerItem().setText(self.summaryList.columnCount(), "")
+        self.summaryList.headerItem().setText(
+            self.summaryList.columnCount(), "")
         self.summaryList.header().resizeSection(0, 200)
         self.summaryList.header().resizeSection(1, 100)
         
@@ -45,10 +46,12 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.cancelled = False
         
         self.__menu = QMenu(self)
-        self.__menu.addAction(self.trUtf8("Collapse all"), self.__resultCollapse)
+        self.__menu.addAction(self.trUtf8("Collapse all"),
+                              self.__resultCollapse)
         self.__menu.addAction(self.trUtf8("Expand all"), self.__resultExpand)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.resultList.customContextMenuRequested.connect(self.__showContextMenu)
+        self.resultList.customContextMenuRequested.connect(
+            self.__showContextMenu)
         
         self.__fileList = []
         self.__project = None
@@ -182,10 +185,14 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         # now do the summary stuff
         docstrings = total['lines'] - total['comments'] - \
                      total['empty lines'] - total['non-commentary lines']
-        self.__createSummaryItem(self.trUtf8("files"), loc.toString(total['files']))
-        self.__createSummaryItem(self.trUtf8("lines"), loc.toString(total['lines']))
-        self.__createSummaryItem(self.trUtf8("bytes"), loc.toString(total['bytes']))
-        self.__createSummaryItem(self.trUtf8("comments"), loc.toString(total['comments']))
+        self.__createSummaryItem(self.trUtf8("files"),
+                                 loc.toString(total['files']))
+        self.__createSummaryItem(self.trUtf8("lines"),
+                                 loc.toString(total['lines']))
+        self.__createSummaryItem(self.trUtf8("bytes"),
+                                 loc.toString(total['bytes']))
+        self.__createSummaryItem(self.trUtf8("comments"),
+                                 loc.toString(total['comments']))
         self.__createSummaryItem(self.trUtf8("empty lines"),
                                  loc.toString(total['empty lines']))
         self.__createSummaryItem(self.trUtf8("non-commentary lines"),
@@ -215,7 +222,8 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         
     def __finish(self):
         """
-        Private slot called when the action finished or the user pressed the button.
+        Private slot called when the action finished or the user pressed the
+        button.
         """
         self.cancelled = True
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
@@ -223,8 +231,10 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         if qVersion() >= "5.0.0":
-            self.resultList.header().setSectionResizeMode(QHeaderView.Interactive)
-            self.summaryList.header().setSectionResizeMode(QHeaderView.Interactive)
+            self.resultList.header().setSectionResizeMode(
+                QHeaderView.Interactive)
+            self.summaryList.header().setSectionResizeMode(
+                QHeaderView.Interactive)
         else:
             self.resultList.header().setResizeMode(QHeaderView.Interactive)
             self.summaryList.header().setResizeMode(QHeaderView.Interactive)
@@ -251,12 +261,13 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         if "ExcludeFiles" not in self.__data or \
            filterString != self.__data["ExcludeFiles"]:
             self.__data["ExcludeFiles"] = filterString
-            self.__project.setData("OTHERTOOLSPARMS", "CodeMetrics", self.__data)
+            self.__project.setData("OTHERTOOLSPARMS", "CodeMetrics",
+                                   self.__data)
         filterList = filterString.split(",")
         if filterList:
             for filter in filterList:
-                fileList = \
-                    [f for f in fileList if not fnmatch.fnmatch(f, filter.strip())]
+                fileList = [f for f in fileList 
+                            if not fnmatch.fnmatch(f, filter.strip())]
         
         self.resultList.clear()
         self.summaryList.clear()

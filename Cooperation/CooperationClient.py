@@ -10,7 +10,8 @@ Module implementing the client of the cooperation package.
 import collections
 
 from PyQt4.QtCore import QObject, pyqtSignal, QProcess, QRegExp
-from PyQt4.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket, QNetworkInterface
+from PyQt4.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket, \
+    QNetworkInterface
 
 from .CooperationServer import CooperationServer
 from .Connection import Connection
@@ -23,13 +24,15 @@ class CooperationClient(QObject):
     Class implementing the client of the cooperation package.
     
     @signal newMessage(user, message) emitted after a new message has
-            arrived (string, string)
-    @signal newParticipant(nickname) emitted after a new participant joined (string)
+        arrived (string, string)
+    @signal newParticipant(nickname) emitted after a new participant joined
+        (string)
     @signal participantLeft(nickname) emitted after a participant left (string)
-    @signal connectionError(message) emitted when a connection error occurs (string)
+    @signal connectionError(message) emitted when a connection error occurs
+        (string)
     @signal cannotConnect() emitted, if the initial connection fails
-    @signal editorCommand(hash, filename, message) emitted when an editor command
-            has been received (string, string, string)
+    @signal editorCommand(hash, filename, message) emitted when an editor
+        command has been received (string, string, string)
     """
     newMessage = pyqtSignal(str, str)
     newParticipant = pyqtSignal(str)
@@ -154,7 +157,8 @@ class CooperationClient(QObject):
         """
         Public method to remove a connection.
         
-        @param connection reference to the connection to be removed (Connection)
+        @param connection reference to the connection to be removed
+            (Connection)
         """
         if connection.peerAddress() in self.__peers and \
            connection in self.__peers[connection.peerAddress()]:
@@ -202,7 +206,8 @@ class CooperationClient(QObject):
         """
         Private slot to handle a connection error.
         
-        @param socketError reference to the error object (QAbstractSocket.SocketError)
+        @param socketError reference to the error object
+            (QAbstractSocket.SocketError)
         """
         connection = self.sender()
         if socketError != QAbstractSocket.RemoteHostClosedError:
@@ -256,7 +261,8 @@ class CooperationClient(QObject):
         """
         self.__initialConnection = Connection(self)
         self.__newConnection(self.__initialConnection)
-        self.__initialConnection.participants.connect(self.__processParticipants)
+        self.__initialConnection.participants.connect(
+            self.__processParticipants)
         self.__initialConnection.connectToHost(host, port)
     
     def __getParticipants(self):
@@ -269,21 +275,24 @@ class CooperationClient(QObject):
             for connection in connectionList:
                 if connection != reqConnection:
                     participants.append("{0}@{1}".format(
-                        connection.peerAddress().toString(), connection.serverPort()))
+                        connection.peerAddress().toString(),
+                        connection.serverPort()))
         reqConnection.sendParticipants(participants)
     
     def __processParticipants(self, participants):
         """
         Private slot to handle the receipt of a list of participants.
         
-        @param participants list of participants (list of strings of "host:port")
+        @param participants list of participants (list of strings of
+            "host:port")
         """
         for participant in participants:
             host, port = participant.split("@")
             port = int(port)
             
             if port == 0:
-                msg = self.trUtf8("Illegal address: {0}@{1}\n").format(host, port)
+                msg = self.trUtf8("Illegal address: {0}@{1}\n").format(
+                    host, port)
                 self.connectionError.emit(msg)
             else:
                 if not self.hasConnection(QHostAddress(host), port):
@@ -309,7 +318,8 @@ class CooperationClient(QObject):
         Public method to get a list of connection given a nick name.
         
         @param nick nick name in the format of self.nickName() (string)
-        @return list of references to the connection objects (list of Connection)
+        @return list of references to the connection objects (list of
+            Connection)
         """
         if "@" not in nick:
             # nick given in wrong format
@@ -399,8 +409,10 @@ class CooperationClient(QObject):
     
     def errorString(self):
         """
-        Public method to get a human readable error message about the last server error.
+        Public method to get a human readable error message about the last
+        server error.
         
-        @return human readable error message about the last server error (string)
+        @return human readable error message about the last server error
+            (string)
         """
         return self.__serversErrorString

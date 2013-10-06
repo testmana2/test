@@ -19,8 +19,8 @@ class CooperationServer(QTcpServer):
     """
     Class implementing the cooperation server.
     
-    @signal newConnection(connection) emitted after a new connection was received
-            (Connection)
+    @signal newConnection(connection) emitted after a new connection was
+        received (Connection)
     """
     newConnection = pyqtSignal(Connection)
     
@@ -50,8 +50,8 @@ class CooperationServer(QTcpServer):
         Public method to start listening for new connections.
         
         @param port port to listen on (integer)
-        @param findFreePort flag indicating to search for a free port depending on
-            the configuration (boolean)
+        @param findFreePort flag indicating to search for a free port
+            depending on the configuration (boolean)
         @return tuple giving a flag indicating success (boolean) and
             the port the server listens on
         """

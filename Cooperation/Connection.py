@@ -28,10 +28,11 @@ class Connection(QTcpSocket):
     
     @signal readyForUse() emitted when the connection is ready for use
     @signal newMessage(user, message) emitted after a new message has
-            arrived (string, string)
-    @signal getParticipants() emitted after a get participants message has arrived
-    @signal participants(participants) emitted after the list of participants has
-            arrived (list of strings of "host:port")
+        arrived (string, string)
+    @signal getParticipants() emitted after a get participants message has
+        arrived
+    @signal participants(participants) emitted after the list of participants
+        has arrived (list of strings of "host:port")
     """
     WaitingForGreeting = 0
     ReadingGreeting = 1
@@ -163,13 +164,15 @@ class Connection(QTcpSocket):
             if not self.__hasEnoughData():
                 return
             
-            self.__buffer = QByteArray(self.read(self.__numBytesForCurrentDataType))
+            self.__buffer = QByteArray(
+                self.read(self.__numBytesForCurrentDataType))
             if self.__buffer.size() != self.__numBytesForCurrentDataType:
                 self.abort()
                 return
             
             try:
-                user, serverPort = str(self.__buffer, encoding="utf-8").split(":")
+                user, serverPort = \
+                    str(self.__buffer, encoding="utf-8").split(":")
             except ValueError:
                 self.abort()
                 return
@@ -195,9 +198,9 @@ class Connection(QTcpSocket):
             )
             Preferences.syncPreferences()
             if bannedName in Preferences.getCooperation("BannedUsers"):
-                self.rejected.emit(
-                    self.trUtf8("* Connection attempted by banned user '{0}'.")\
-                    .format(bannedName))
+                self.rejected.emit(self.trUtf8(
+                    "* Connection attempted by banned user '{0}'.")
+                        .format(bannedName))
                 self.abort()
                 return
             
@@ -218,7 +221,8 @@ class Connection(QTcpSocket):
             if self.__client is not None:
                 chatWidget = self.__client.chatWidget()
                 if chatWidget is not None and not chatWidget.isVisible():
-                    e5App().getObject("UserInterface").activateCooperationViewer()
+                    e5App().getObject(
+                        "UserInterface").activateCooperationViewer()
             
             if not self.__isGreetingMessageSent:
                 self.__sendGreetingMessage()
@@ -246,7 +250,8 @@ class Connection(QTcpSocket):
             self.abort()
             return
         
-        self.write("{0}{1}1{1}p".format(Connection.ProtocolPing, SeparatorToken))
+        self.write("{0}{1}1{1}p".format(
+            Connection.ProtocolPing, SeparatorToken))
     
     def __sendGreetingMessage(self):
         """
@@ -254,7 +259,8 @@ class Connection(QTcpSocket):
         """
         greeting = QByteArray(self.__greetingMessage.encode("utf-8"))
         data = QByteArray("{0}{1}{2}{1}".format(
-            Connection.ProtocolGreeting, SeparatorToken, greeting.size())) + greeting
+            Connection.ProtocolGreeting, SeparatorToken, greeting.size())) + \
+            greeting
         if self.write(data) == data.size():
             self.__isGreetingMessageSent = True
     
@@ -331,7 +337,8 @@ class Connection(QTcpSocket):
             return False
         
         self.__buffer.clear()
-        self.__numBytesForCurrentDataType = self.__dataLengthForCurrentDataType()
+        self.__numBytesForCurrentDataType = \
+            self.__dataLengthForCurrentDataType()
         return True
     
     def __hasEnoughData(self):
@@ -345,7 +352,8 @@ class Connection(QTcpSocket):
             self.__transferTimerId = 0
         
         if self.__numBytesForCurrentDataType <= 0:
-            self.__numBytesForCurrentDataType = self.__dataLengthForCurrentDataType()
+            self.__numBytesForCurrentDataType = \
+                self.__dataLengthForCurrentDataType()
         
         if self.bytesAvailable() < self.__numBytesForCurrentDataType or \
            self.__numBytesForCurrentDataType <= 0:
@@ -358,15 +366,18 @@ class Connection(QTcpSocket):
         """
         Private method to process the received data.
         """
-        self.__buffer = QByteArray(self.read(self.__numBytesForCurrentDataType))
+        self.__buffer = QByteArray(
+            self.read(self.__numBytesForCurrentDataType))
         if self.__buffer.size() != self.__numBytesForCurrentDataType:
             self.abort()
             return
         
         if self.__currentDataType == Connection.PlainText:
-            self.newMessage.emit(self.__username, str(self.__buffer, encoding="utf-8"))
+            self.newMessage.emit(
+                self.__username, str(self.__buffer, encoding="utf-8"))
         elif self.__currentDataType == Connection.Ping:
-            self.write("{0}{1}1{1}p".format(Connection.ProtocolPong, SeparatorToken))
+            self.write("{0}{1}1{1}p".format(
+                Connection.ProtocolPong, SeparatorToken))
         elif self.__currentDataType == Connection.Pong:
             self.__pongTime.restart()
         elif self.__currentDataType == Connection.GetParticipants:
@@ -379,7 +390,8 @@ class Connection(QTcpSocket):
                 participantsList = msg.split(SeparatorToken)
             self.participants.emit(participantsList[:])
         elif self.__currentDataType == Connection.Editor:
-            hash, fn, msg = str(self.__buffer, encoding="utf-8").split(SeparatorToken)
+            hash, fn, msg = \
+                str(self.__buffer, encoding="utf-8").split(SeparatorToken)
             self.editorCommand.emit(hash, fn, msg)
         
         self.__currentDataType = Connection.Undefined
@@ -391,14 +403,16 @@ class Connection(QTcpSocket):
         Public method to request a list of participants.
         """
         self.write(
-            "{0}{1}1{1}l".format(Connection.ProtocolGetParticipants, SeparatorToken)
+            "{0}{1}1{1}l".format(
+                Connection.ProtocolGetParticipants, SeparatorToken)
         )
     
     def sendParticipants(self, participants):
         """
         Public method to send the list of participants.
         
-        @param participants list of participants (list of strings of "host:port")
+        @param participants list of participants (list of strings of
+            "host:port")
         """
         if participants:
             message = SeparatorToken.join(participants)
@@ -430,5 +444,6 @@ class Connection(QTcpSocket):
         """
         self.__pingTimer.stop()
         if self.__state == Connection.WaitingForGreeting:
-            self.rejected.emit(self.trUtf8("* Connection to {0}:{1} refused.").format(
+            self.rejected.emit(self.trUtf8(
+                "* Connection to {0}:{1} refused.").format(
                 self.peerName(), self.peerPort()))

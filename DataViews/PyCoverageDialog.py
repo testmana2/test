@@ -10,8 +10,8 @@ Module implementing a Python code coverage dialog.
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
-    QApplication, QProgressDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
+    QTreeWidgetItem, QApplication, QProgressDialog
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
@@ -39,7 +39,8 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.summaryList.headerItem().setText(self.summaryList.columnCount(), "")
+        self.summaryList.headerItem().setText(
+            self.summaryList.columnCount(), "")
         self.resultList.headerItem().setText(self.resultList.columnCount(), "")
         
         self.cancelled = False
@@ -61,11 +62,13 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8('Erase Coverage Info'), self.__erase)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.resultList.customContextMenuRequested.connect(self.__showContextMenu)
+        self.resultList.customContextMenuRequested.connect(
+            self.__showContextMenu)
     
     def __format_lines(self, lines):
         """
-        Private method to format a list of integers into string by coalescing groups.
+        Private method to format a list of integers into string by coalescing
+        groups.
         
         @param lines list of integers
         @return string representing the list
@@ -94,7 +97,8 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         def stringify(pair):
             """
-            Private helper function to generate a string representation of a pair
+            Private helper function to generate a string representation of a
+            pair.
             
             @param pair pair of integers
             """
@@ -106,7 +110,8 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         return ", ".join(map(stringify, pairs))
     
-    def __createResultItem(self, file, statements, executed, coverage, excluded, missing):
+    def __createResultItem(self, file, statements, executed, coverage,
+                           excluded, missing):
         """
         Private method to create an entry in the result list.
         
@@ -188,8 +193,10 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
                     return
                 
                 try:
-                    statements, excluded, missing, readable = cover.analysis2(file)[1:]
-                    readableEx = excluded and self.__format_lines(excluded) or ''
+                    statements, excluded, missing, readable = \
+                        cover.analysis2(file)[1:]
+                    readableEx = (excluded and self.__format_lines(excluded) 
+                                  or '')
                     n = len(statements)
                     m = n - len(missing)
                     if n > 0:
@@ -232,14 +239,16 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         if total_exceptions:
             E5MessageBox.warning(self,
                 self.trUtf8("Parse Error"),
-                self.trUtf8("""%n file(s) could not be parsed. Coverage info for"""
-                            """ these is not available.""", "", total_exceptions))
+                self.trUtf8("""%n file(s) could not be parsed. Coverage"""
+                            """ info for these is not available.""", "",
+                            total_exceptions))
         
         self.__finish()
         
     def __finish(self):
         """
-        Private slot called when the action finished or the user pressed the button.
+        Private slot called when the action finished or the user pressed the
+        button.
         """
         self.cancelled = True
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
