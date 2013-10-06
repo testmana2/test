@@ -24,8 +24,8 @@ class APIGenerator(object):
         """
         Public method to generate the API information.
         
-        @param newStyle flag indicating the api generation for QScintilla 1.7 and
-            newer (boolean) (ignored)
+        @param newStyle flag indicating the api generation for QScintilla 1.7
+            and newer (boolean) (ignored)
         @param basePackage name of the base package (string)
         @param includePrivate flag indicating to include
             private methods/functions (boolean)
@@ -48,7 +48,8 @@ class APIGenerator(object):
         """
         Public method to generate the base classes information.
         
-        @param includePrivate flag indicating to include private classes (boolean)
+        @param includePrivate flag indicating to include private classes
+            (boolean)
         @return base classes information (dictionary of list of strings)
         """
         bases = {}
@@ -88,7 +89,8 @@ class APIGenerator(object):
                     id = Editor.AttributeProtectedID
                 else:
                     id = Editor.AttributePrivateID
-                self.api.append("{0}{1}?{2:d}".format(moduleNameStr, globalName, id))
+                self.api.append("{0}{1}?{2:d}".format(
+                    moduleNameStr, globalName, id))
         
     def __addClassesAPI(self):
         """
@@ -139,7 +141,8 @@ class APIGenerator(object):
         """
         Private method to generate class api section for class variables.
         
-        @param className name of the class containing the class variables (string)
+        @param className name of the class containing the class variables
+            (string)
         """
         from QScintilla.Editor import Editor
         
@@ -153,7 +156,8 @@ class APIGenerator(object):
                     id = Editor.AttributeProtectedID
                 else:
                     id = Editor.AttributePrivateID
-                self.api.append('{0}{1}?{2:d}'.format(classNameStr, variable, id))
+                self.api.append('{0}{1}?{2:d}'.format(
+                    classNameStr, variable, id))
         
     def __addFunctionsAPI(self):
         """

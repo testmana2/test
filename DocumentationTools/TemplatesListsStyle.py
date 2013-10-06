@@ -28,27 +28,36 @@ footerTemplate = '''
 
 moduleTemplate = \
 '''<a NAME="top" ID="top"></a>
-<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">{{Module}}</h1>
+<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">
+{{Module}}</h1>
 {{ModuleDescription}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Global Attributes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Global Attributes</h3>
 {{GlobalsList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Classes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Classes</h3>
 {{ClassList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Functions</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Functions</h3>
 {{FunctionList}}
 <hr />'''
 
 rbFileTemplate = \
 '''<a NAME="top" ID="top"></a>
-<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">{{Module}}</h1>
+<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">
+{{Module}}</h1>
 {{ModuleDescription}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Global Attributes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Global Attributes</h3>
 {{GlobalsList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Classes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Classes</h3>
 {{ClassList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Modules</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Modules</h3>
 {{RbModulesList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Functions</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Functions</h3>
 {{FunctionList}}
 <hr />'''
 
@@ -57,15 +66,20 @@ classTemplate = \
 <a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
 <h2 style="background-color:{CFBgColor};color:{CFColor}">{{Class}}</h2>
 {{ClassDescription}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Derived from</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Derived from</h3>
 {{ClassSuper}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Class Attributes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Class Attributes</h3>
 {{GlobalsList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Class Methods</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Class Methods</h3>
 {{ClassMethodList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Methods</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Methods</h3>
 {{MethodList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Static Methods</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Static Methods</h3>
 {{StaticMethodList}}
 {{MethodDetails}}
 <div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
@@ -73,13 +87,15 @@ classTemplate = \
 
 methodTemplate = \
 '''<a NAME="{{Anchor}}.{{Method}}" ID="{{Anchor}}.{{Method}}"></a>
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">{{Class}}.{{Method}}{{MethodClassifier}}</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+{{Class}}.{{Method}}{{MethodClassifier}}</h3>
 <b>{{Method}}</b>(<i>{{Params}}</i>)
 {{MethodDescription}}'''
 
 constructorTemplate = \
 '''<a NAME="{{Anchor}}.{{Method}}" ID="{{Anchor}}.{{Method}}"></a>
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">{{Class}} (Constructor)</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+{{Class}} (Constructor)</h3>
 <b>{{Class}}</b>(<i>{{Params}}</i>)
 {{MethodDescription}}'''
 
@@ -88,11 +104,14 @@ rbModuleTemplate = \
 <a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
 <h2 style="background-color:{CFBgColor};color:{CFColor}">{{Module}}</h2>
 {{ModuleDescription}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Module Attributes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Module Attributes</h3>
 {{GlobalsList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Classes</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Classes</h3>
 {{ClassesList}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Functions</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Functions</h3>
 {{FunctionsList}}
 <hr />
 {{ClassesDetails}}
@@ -104,9 +123,11 @@ rbModulesClassTemplate = \
 '''<a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
 <h2 style="background-color:{CFBgColor};color:{CFColor}">{{Class}}</h2>
 {{ClassDescription}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Derived from</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Derived from</h3>
 {{ClassSuper}}
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Methods</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Methods</h3>
 {{MethodList}}
 {{MethodDetails}}
 <div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
@@ -236,19 +257,22 @@ sinceInfoTemplate = \
 #################################
 
 indexBodyTemplate = '''
-<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">{{Title}}</h1>
+<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">
+{{Title}}</h1>
 {{Description}}
 {{Subpackages}}
 {{Modules}}'''
 
 indexListPackagesTemplate = '''
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Packages</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Packages</h3>
 <table>
 {{Entries}}
 </table>'''
 
 indexListModulesTemplate = '''
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Modules</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">
+Modules</h3>
 <table>
 {{Entries}}
 </table>'''

@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the QtHelp generator for the builtin documentation generator.
+Module implementing the QtHelp generator for the builtin documentation
+generator.
 """
 
 import sys
@@ -54,11 +55,12 @@ HelpCollectionFile = 'collection.qhc'
 
 class QtHelpGenerator(object):
     """
-    Class implementing the QtHelp generator for the builtin documentation generator.
+    Class implementing the QtHelp generator for the builtin documentation
+    generator.
     """
     def __init__(self, htmlDir,
-                 outputDir, namespace, virtualFolder, filterName, filterAttributes,
-                 title, createCollection):
+                 outputDir, namespace, virtualFolder, filterName,
+                 filterAttributes, title, createCollection):
         """
         Constructor
         
@@ -67,17 +69,19 @@ class QtHelpGenerator(object):
         @param namespace namespace to be used (string)
         @param virtualFolder virtual folder to be used (string)
         @param filterName name of the custom filter (string)
-        @param filterAttributes ':' separated list of filter attributes (string)
+        @param filterAttributes ':' separated list of filter attributes
+            (string)
         @param title title to be used for the generated help (string)
-        @param createCollection flag indicating the generation of the collection
-            files (boolean)
+        @param createCollection flag indicating the generation of the
+            collection files (boolean)
         """
         self.htmlDir = htmlDir
         self.outputDir = outputDir
         self.namespace = namespace
         self.virtualFolder = virtualFolder
         self.filterName = filterName
-        self.filterAttributes = filterAttributes and filterAttributes.split(':') or []
+        self.filterAttributes = \
+            filterAttributes and filterAttributes.split(':') or []
         self.relPath = relpath(self.htmlDir, self.outputDir)
         self.title = title
         self.createCollection = createCollection
@@ -141,8 +145,9 @@ class QtHelpGenerator(object):
         elt["modules"][moduleDocument.name()] = moduleDocument.name()
         
         if "__init__" not in file:
-            kwEntry = ("{0} (Module)".format(moduleDocument.name().split('.')[-1]),
-                       joinext(moduleDocument.name(), ".html"))
+            kwEntry = (
+                "{0} (Module)".format(moduleDocument.name().split('.')[-1]),
+                joinext(moduleDocument.name(), ".html"))
             if kwEntry not in self.keywords:
                 self.keywords.append(kwEntry)
         for kw in moduleDocument.getQtHelpKeywords():
@@ -213,13 +218,16 @@ class QtHelpGenerator(object):
                 basename = "{0}.".format(basename)
         
         sections = self.__generateSections("00index", 3)
-        filesList = sorted([e for e in os.listdir(self.htmlDir) if e.endswith('.html')])
-        files = "\n".join(["      <file>{0}</file>".format(f) for f in filesList])
-        filterAttribs = "\n".join(["    <filterAttribute>{0}</filterAttribute>".format(a) \
-                                  for a in sorted(self.filterAttributes)])
+        filesList = sorted(
+            [e for e in os.listdir(self.htmlDir) if e.endswith('.html')])
+        files = "\n".join(
+            ["      <file>{0}</file>".format(f) for f in filesList])
+        filterAttribs = "\n".join(
+            ["    <filterAttribute>{0}</filterAttribute>".format(a)
+             for a in sorted(self.filterAttributes)])
         keywords = "\n".join(
             ['      <keyword name="{0}" id="{1}" ref="{2}" />'.format(
-             html_encode(kw[0]), html_encode(kw[0]), html_encode(kw[1])) \
+             html_encode(kw[0]), html_encode(kw[0]), html_encode(kw[1]))
              for kw in sorted(self.keywords)])
         
         helpAttribs = {
@@ -239,12 +247,14 @@ class QtHelpGenerator(object):
         f.close()
         
         if self.createCollection and \
-           not os.path.exists(os.path.join(self.outputDir, HelpCollectionProjectFile)):
+           not os.path.exists(
+                os.path.join(self.outputDir, HelpCollectionProjectFile)):
             collectionAttribs = {
                 "helpfile": HelpHelpFile,
             }
             
-            txt = self.__convertEol(HelpCollection.format(**collectionAttribs), newline)
+            txt = self.__convertEol(
+                HelpCollection.format(**collectionAttribs), newline)
             f = open(os.path.join(self.outputDir, HelpCollectionProjectFile),
                      "w", encoding="utf-8", newline=newline)
             f.write(txt)
@@ -257,10 +267,12 @@ class QtHelpGenerator(object):
         
         cwd = os.getcwd()
         # generate the compressed files
-        shutil.copy(os.path.join(self.outputDir, HelpProjectFile), self.htmlDir)
+        shutil.copy(
+            os.path.join(self.outputDir, HelpProjectFile), self.htmlDir)
         os.chdir(self.htmlDir)
-        subprocess.call([os.path.join(getQtBinariesPath(), "qhelpgenerator"),
-                         "source.qhp", "-o", os.path.join(self.outputDir, HelpHelpFile)])
+        subprocess.call([
+            os.path.join(getQtBinariesPath(), "qhelpgenerator"),
+            "source.qhp", "-o", os.path.join(self.outputDir, HelpHelpFile)])
         os.remove(HelpProjectFile)
         
         if self.createCollection:
@@ -268,7 +280,8 @@ class QtHelpGenerator(object):
             sys.stdout.flush()
             sys.stderr.flush()
             os.chdir(self.outputDir)
-            subprocess.call([os.path.join(getQtBinariesPath(), "qcollectiongenerator"),
-                             "source.qhcp", "-o", "collection.qhc"])
+            subprocess.call([
+                os.path.join(getQtBinariesPath(), "qcollectiongenerator"),
+                "source.qhcp", "-o", "collection.qhc"])
         
         os.chdir(cwd)

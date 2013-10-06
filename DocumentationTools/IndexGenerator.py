@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the index generator for the builtin documentation generator.
+Module implementing the index generator for the builtin documentation
+generator.
 """
 
 import sys
@@ -15,7 +16,8 @@ from Utilities import joinext
 
 class IndexGenerator(object):
     """
-    Class implementing the index generator for the builtin documentation generator.
+    Class implementing the index generator for the builtin documentation
+    generator.
     """
     def __init__(self, outputDir, colors, stylesheet=None):
         """
@@ -47,11 +49,14 @@ class IndexGenerator(object):
                 TemplatesListsStyleCSS.indexListPackagesTemplate
             self.indexListModulesTemplate = \
                 TemplatesListsStyleCSS.indexListModulesTemplate
-            self.indexListEntryTemplate = TemplatesListsStyleCSS.indexListEntryTemplate
+            self.indexListEntryTemplate = \
+                TemplatesListsStyleCSS.indexListEntryTemplate
         else:
             from . import TemplatesListsStyle
-            self.headerTemplate = TemplatesListsStyle.headerTemplate.format(**colors)
-            self.footerTemplate = TemplatesListsStyle.footerTemplate.format(**colors)
+            self.headerTemplate = \
+                TemplatesListsStyle.headerTemplate.format(**colors)
+            self.footerTemplate = \
+                TemplatesListsStyle.footerTemplate.format(**colors)
             self.indexBodyTemplate = \
                 TemplatesListsStyle.indexBodyTemplate.format(**colors)
             self.indexListPackagesTemplate = \
