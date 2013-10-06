@@ -8,12 +8,14 @@ Module implementing a TabWidget class substituting QTabWidget.
 """
 
 from PyQt4.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
-from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
+from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, \
+    QLabel, QMovie
 
 
 class E5WheelTabBar(QTabBar):
     """
-    Class implementing a tab bar class substituting QTabBar to support wheel events.
+    Class implementing a tab bar class substituting QTabBar to support wheel
+    events.
     """
     def __init__(self, parent=None):
         """
@@ -45,8 +47,8 @@ class E5DnDTabBar(E5WheelTabBar):
     """
     Class implementing a tab bar class substituting QTabBar.
     
-    @signal tabMoveRequested(int, int) emitted to signal a tab move request giving
-        the old and new index position
+    @signal tabMoveRequested(int, int) emitted to signal a tab move request
+        giving the old and new index position
     """
     tabMoveRequested = pyqtSignal(int, int)
     
@@ -126,8 +128,8 @@ class E5TabWidget(QTabWidget):
     It provides slots to show the previous and next tab and give
     them the input focus and it allows to have a context menu for the tabs.
     
-    @signal customTabContextMenuRequested(const QPoint & point, int index) emitted when
-        a context menu for a tab is requested
+    @signal customTabContextMenuRequested(const QPoint & point, int index)
+        emitted when a context menu for a tab is requested
     """
     customTabContextMenuRequested = pyqtSignal(QPoint, int)
     
@@ -186,7 +188,8 @@ class E5TabWidget(QTabWidget):
         
     def switchTab(self):
         """
-        Public slot used to switch between the current and the previous current tab.
+        Public slot used to switch between the current and the previous
+        current tab.
         """
         if self.__lastCurrentIndex == -1 or self.__currentIndex == -1:
             return
@@ -240,7 +243,8 @@ class E5TabWidget(QTabWidget):
         for index in range(_tabbar.count()):
             rect = _tabbar.tabRect(index)
             if rect.contains(point):
-                self.customTabContextMenuRequested.emit(_tabbar.mapToParent(point), index)
+                self.customTabContextMenuRequested.emit(
+                    _tabbar.mapToParent(point), index)
                 return
         
         self.customTabContextMenuRequested.emit(_tabbar.mapToParent(point), -1)
@@ -292,7 +296,8 @@ class E5TabWidget(QTabWidget):
         
         @return free side (QTabBar.ButtonPosition)
         """
-        side = self.__tabBar.style().styleHint(QStyle.SH_TabBar_CloseButtonPosition,
+        side = self.__tabBar.style().styleHint(
+            QStyle.SH_TabBar_CloseButtonPosition,
             None, None, None)
         if side == QTabBar.LeftSide:
             side = QTabBar.RightSide

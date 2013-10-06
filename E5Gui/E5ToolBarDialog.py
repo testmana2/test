@@ -27,7 +27,8 @@ class E5ToolBarItem(object):
         Constructor
         
         @param toolBarId id of the toolbar object (integer)
-        @param actionIDs list of action IDs belonging to the toolbar (list of integer)
+        @param actionIDs list of action IDs belonging to the toolbar
+            (list of integer)
         @param default flag indicating a default toolbar (boolean)
         """
         self.toolBarId = toolBarId
@@ -48,16 +49,19 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         """
         Constructor
         
-        @param toolBarManager reference to a toolbar manager object (E5ToolBarManager)
+        @param toolBarManager reference to a toolbar manager object
+            (E5ToolBarManager)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
         
         self.__manager = toolBarManager
-        self.__toolbarItems = {}    # maps toolbar item IDs to toolbar items
+        self.__toolbarItems = {}
+            # maps toolbar item IDs to toolbar items
         self.__currentToolBarItem = None
-        self.__removedToolBarIDs = []   # remember custom toolbars to be deleted
+        self.__removedToolBarIDs = []
+            # remember custom toolbars to be deleted
         
         self.__widgetActionToToolBarItemID = {}
             # maps widget action IDs to toolbar item IDs
@@ -108,11 +112,13 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                     actionIDs.append(aID)
                     if aID in self.__widgetActionToToolBarItemID:
                         self.__widgetActionToToolBarItemID[aID] = id(tbItem)
-                        self.__toolBarItemToWidgetActionID[id(tbItem)].append(aID)
+                        self.__toolBarItemToWidgetActionID[id(tbItem)]\
+                            .append(aID)
             tbItem.actionIDs = actionIDs
             self.toolbarComboBox.addItem(tb.windowTitle(), int(id(tbItem)))
             if default:
-                self.toolbarComboBox.setItemData(self.toolbarComboBox.count() - 1,
+                self.toolbarComboBox.setItemData(
+                    self.toolbarComboBox.count() - 1,
                     QColor(Qt.darkGreen), Qt.ForegroundRole)
         self.toolbarComboBox.model().sort(0)
         
@@ -135,7 +141,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 # toolbar with this name already exists
                 E5MessageBox.critical(self,
                 self.trUtf8("New Toolbar"),
-                self.trUtf8("""A toolbar with the name <b>{0}</b> already exists.""")\
+                self.trUtf8(
+                    """A toolbar with the name <b>{0}</b> already exists.""")
                     .format(name))
                 return
             
@@ -146,7 +153,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
             self.__toolBarItemToWidgetActionID[id(tbItem)] = []
             self.toolbarComboBox.addItem(name, int(id(tbItem)))
             self.toolbarComboBox.model().sort(0)
-            self.toolbarComboBox.setCurrentIndex(self.toolbarComboBox.findText(name))
+            self.toolbarComboBox.setCurrentIndex(
+                self.toolbarComboBox.findText(name))
     
     @pyqtSlot()
     def on_removeButton_clicked(self):
@@ -156,7 +164,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         name = self.toolbarComboBox.currentText()
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Remove Toolbar"),
-            self.trUtf8("""Should the toolbar <b>{0}</b> really be removed?""")\
+            self.trUtf8(
+                """Should the toolbar <b>{0}</b> really be removed?""")
                 .format(name))
         if res:
             index = self.toolbarComboBox.currentIndex()
@@ -190,7 +199,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 # toolbar with this name already exists
                 E5MessageBox.critical(self,
                 self.trUtf8("Rename Toolbar"),
-                self.trUtf8("""A toolbar with the name <b>{0}</b> already exists.""")\
+                self.trUtf8(
+                    """A toolbar with the name <b>{0}</b> already exists.""")
                     .format(newName))
                 return
             index = self.toolbarComboBox.currentIndex()
@@ -208,10 +218,14 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         if index > -1:
             itemID = self.toolbarComboBox.itemData(index)
             self.__currentToolBarItem = self.__toolbarItems[itemID]
-            self.renameButton.setEnabled(not self.__currentToolBarItem.isDefault)
-            self.removeButton.setEnabled(not self.__currentToolBarItem.isDefault)
-            self.__restoreDefaultsButton.setEnabled(self.__currentToolBarItem.isDefault)
-            self.__resetButton.setEnabled(self.__currentToolBarItem.toolBarId is not None)
+            self.renameButton.setEnabled(
+                not self.__currentToolBarItem.isDefault)
+            self.removeButton.setEnabled(
+                not self.__currentToolBarItem.isDefault)
+            self.__restoreDefaultsButton.setEnabled(
+                self.__currentToolBarItem.isDefault)
+            self.__resetButton.setEnabled(
+                self.__currentToolBarItem.toolBarId is not None)
         
         row = self.toolbarActionsList.currentRow()
         self.upButton.setEnabled(row > 0)
@@ -351,11 +365,12 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 if oldTbItemID is not None:
                     self.__toolbarItems[oldTbItemID].actionIDs.remove(actionID)
                     self.__toolbarItems[oldTbItemID].isChanged = True
-                    self.__toolBarItemToWidgetActionID[oldTbItemID].remove(actionID)
+                    self.__toolBarItemToWidgetActionID[oldTbItemID]\
+                        .remove(actionID)
                 self.__widgetActionToToolBarItemID[actionID] = \
                     id(self.__currentToolBarItem)
-                self.__toolBarItemToWidgetActionID[id(self.__currentToolBarItem)]\
-                    .append(actionID)
+                self.__toolBarItemToWidgetActionID[
+                    id(self.__currentToolBarItem)].append(actionID)
         self.toolbarActionsList.insertItem(row, item)
         self.__currentToolBarItem.actionIDs.insert(row, actionID)
         self.__currentToolBarItem.isChanged = True
@@ -417,16 +432,19 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 else:
                     action = self.__manager.actionById(actionID)
                     if action is None:
-                        raise RuntimeError("No such action, id: 0x{0:x}".format(actionID))
+                        raise RuntimeError(
+                            "No such action, id: 0x{0:x}".format(actionID))
                     actions.append(action)
             self.__manager.setToolBar(tb, actions)
             tbItem.isChanged = False
     
     def __restoreCurrentToolbar(self, actions):
         """
-        Private methdo to restore the current toolbar to the given list of actions.
+        Private methdo to restore the current toolbar to the given list of
+        actions.
         
-        @param actions list of actions to set for the current toolbar (list of QAction)
+        @param actions list of actions to set for the current toolbar
+        (list of QAction)
         """
         tbItemID = id(self.__currentToolBarItem)
         for widgetActionID in self.__toolBarItemToWidgetActionID[tbItemID]:
@@ -443,12 +461,16 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 if actionID in self.__widgetActionToToolBarItemID:
                     oldTbItemID = self.__widgetActionToToolBarItemID[actionID]
                     if oldTbItemID is not None:
-                        self.__toolbarItems[oldTbItemID].actionIDs.remove(actionID)
+                        self.__toolbarItems[oldTbItemID].actionIDs.remove(
+                            actionID)
                         self.__toolbarItems[oldTbItemID].isChanged = True
-                        self.__toolBarItemToWidgetActionID[oldTbItemID].remove(actionID)
+                        self.__toolBarItemToWidgetActionID[oldTbItemID].remove(
+                            actionID)
                     self.__widgetActionToToolBarItemID[actionID] = tbItemID
-                    self.__toolBarItemToWidgetActionID[tbItemID].append(actionID)
-        self.__toolbarComboBox_currentIndexChanged(self.toolbarComboBox.currentIndex())
+                    self.__toolBarItemToWidgetActionID[tbItemID].append(
+                        actionID)
+        self.__toolbarComboBox_currentIndexChanged(
+            self.toolbarComboBox.currentIndex())
     
     def __resetCurrentToolbar(self):
         """

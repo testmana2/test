@@ -7,9 +7,10 @@
 Module implementing a sidebar class.
 """
 
-from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice, QTimer
-from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton, \
-    QSizePolicy
+from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, \
+    QIODevice, QTimer
+from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, \
+    QToolButton, QSizePolicy
 
 from E5Gui.E5Application import e5App
 
@@ -18,8 +19,8 @@ import UI.PixmapCache
 
 class E5SideBar(QWidget):
     """
-    Class implementing a sidebar with a widget area, that is hidden or shown, if the
-    current tab is clicked again.
+    Class implementing a sidebar with a widget area, that is hidden or shown,
+    if the current tab is clicked again.
     """
     Version = 1
     
@@ -32,8 +33,10 @@ class E5SideBar(QWidget):
         """
         Constructor
         
-        @param orientation orientation of the sidebar widget (North, East, South, West)
-        @param delay value for the expand/shrink delay in milliseconds (integer)
+        @param orientation orientation of the sidebar widget (North, East,
+            South, West)
+        @param delay value for the expand/shrink delay in milliseconds
+            (integer)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -47,7 +50,8 @@ class E5SideBar(QWidget):
         self.__stackedWidget.setContentsMargins(0, 0, 0, 0)
         self.__autoHideButton = QToolButton()
         self.__autoHideButton.setCheckable(True)
-        self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOff.png"))
+        self.__autoHideButton.setIcon(
+            UI.PixmapCache.getIcon("autoHideOff.png"))
         self.__autoHideButton.setChecked(True)
         self.__autoHideButton.setToolTip(
             self.trUtf8("Deselect to activate automatic collapsing"))
@@ -77,7 +81,8 @@ class E5SideBar(QWidget):
         self.splitter = None
         self.splitterSizes = []
         
-        self.__hasFocus = False  # flag storing if this widget or any child has the focus
+        self.__hasFocus = False
+        # flag storing if this widget or any child has the focus
         self.__autoHide = False
         
         self.__tabBar.installEventFilter(self)
@@ -87,7 +92,8 @@ class E5SideBar(QWidget):
             orientation = E5SideBar.North
         self.setOrientation(orientation)
         
-        self.__tabBar.currentChanged[int].connect(self.__stackedWidget.setCurrentIndex)
+        self.__tabBar.currentChanged[int].connect(
+            self.__stackedWidget.setCurrentIndex)
         e5App().focusChanged[QWidget, QWidget].connect(self.__appFocusChanged)
         self.__autoHideButton.toggled[bool].connect(self.__autoHideToggled)
     
@@ -122,15 +128,18 @@ class E5SideBar(QWidget):
     
     def setDelay(self, delay):
         """
-        Public method to set the delay value for the expand/shrink delay in milliseconds.
+        Public method to set the delay value for the expand/shrink delay in
+        milliseconds.
         
-        @param delay value for the expand/shrink delay in milliseconds (integer)
+        @param delay value for the expand/shrink delay in milliseconds
+            (integer)
         """
         self.__delayTimer.setInterval(delay)
     
     def delay(self):
         """
-        Public method to get the delay value for the expand/shrink delay in milliseconds.
+        Public method to get the delay value for the expand/shrink delay in
+        milliseconds.
         
         @return value for the expand/shrink delay in milliseconds (integer)
         """
@@ -242,7 +251,8 @@ class E5SideBar(QWidget):
                     return True
                 elif self.isMinimized():
                     self.expand()
-            elif evt.type() == QEvent.Wheel and not self.__stackedWidget.isHidden():
+            elif evt.type() == QEvent.Wheel and \
+                    not self.__stackedWidget.isHidden():
                 if evt.delta() > 0:
                     self.prevTab()
                 else:
@@ -377,7 +387,8 @@ class E5SideBar(QWidget):
         """
         Public slot to set the current widget.
         
-        @param widget reference to the widget to become the current widget (QWidget)
+        @param widget reference to the widget to become the current widget
+            (QWidget)
         """
         self.__stackedWidget.setCurrentWidget(widget)
         self.__tabBar.setCurrentIndex(self.__stackedWidget.currentIndex())
@@ -427,25 +438,29 @@ class E5SideBar(QWidget):
         """
         if orient == E5SideBar.North:
             self.__tabBar.setShape(QTabBar.RoundedNorth)
-            self.__tabBar.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+            self.__tabBar.setSizePolicy(
+                QSizePolicy.Expanding, QSizePolicy.Preferred)
             self.barLayout.setDirection(QBoxLayout.LeftToRight)
             self.layout.setDirection(QBoxLayout.TopToBottom)
             self.layout.setAlignment(self.barLayout, Qt.AlignLeft)
         elif orient == E5SideBar.East:
             self.__tabBar.setShape(QTabBar.RoundedEast)
-            self.__tabBar.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+            self.__tabBar.setSizePolicy(
+                QSizePolicy.Preferred, QSizePolicy.Expanding)
             self.barLayout.setDirection(QBoxLayout.TopToBottom)
             self.layout.setDirection(QBoxLayout.RightToLeft)
             self.layout.setAlignment(self.barLayout, Qt.AlignTop)
         elif orient == E5SideBar.South:
             self.__tabBar.setShape(QTabBar.RoundedSouth)
-            self.__tabBar.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+            self.__tabBar.setSizePolicy(
+                QSizePolicy.Expanding, QSizePolicy.Preferred)
             self.barLayout.setDirection(QBoxLayout.LeftToRight)
             self.layout.setDirection(QBoxLayout.BottomToTop)
             self.layout.setAlignment(self.barLayout, Qt.AlignLeft)
         elif orient == E5SideBar.West:
             self.__tabBar.setShape(QTabBar.RoundedWest)
-            self.__tabBar.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+            self.__tabBar.setSizePolicy(
+                QSizePolicy.Preferred, QSizePolicy.Expanding)
             self.barLayout.setDirection(QBoxLayout.TopToBottom)
             self.layout.setDirection(QBoxLayout.LeftToRight)
             self.layout.setAlignment(self.barLayout, Qt.AlignTop)
@@ -615,13 +630,16 @@ class E5SideBar(QWidget):
         """
         Private slot to handle the toggling of the autohide button.
         
-        @param checked flag indicating the checked state of the button (boolean)
+        @param checked flag indicating the checked state of the button
+            (boolean)
         """
         self.__autoHide = not checked
         if self.__autoHide:
-            self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOn.png"))
+            self.__autoHideButton.setIcon(
+                UI.PixmapCache.getIcon("autoHideOn.png"))
         else:
-            self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOff.png"))
+            self.__autoHideButton.setIcon(
+                UI.PixmapCache.getIcon("autoHideOff.png"))
     
     def __appFocusChanged(self, old, now):
         """
@@ -662,8 +680,9 @@ class E5SideBar(QWidget):
         """
         Public method to shut down the object.
         
-        This method does some preparations so the object can be deleted properly.
-        It disconnects from the focusChanged signal in order to avoid trouble later
-        on.
+        This method does some preparations so the object can be deleted
+        properly. It disconnects from the focusChanged signal in order to
+        avoid trouble later on.
         """
-        e5App().focusChanged[QWidget, QWidget].disconnect(self.__appFocusChanged)
+        e5App().focusChanged[QWidget, QWidget].disconnect(
+            self.__appFocusChanged)

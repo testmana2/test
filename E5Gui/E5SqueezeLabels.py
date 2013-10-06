@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing labels that squeeze their contents to fit the size of the label.
+Module implementing labels that squeeze their contents to fit the size of the
+label.
 """
 
 from PyQt4.QtCore import Qt
@@ -36,7 +37,8 @@ class E5SqueezeLabel(QLabel):
         """
         fm = self.fontMetrics()
         if fm.width(self.__text) > self.contentsRect().width():
-            self.__elided = fm.elidedText(self.text(), Qt.ElideMiddle, self.width())
+            self.__elided = fm.elidedText(
+                self.text(), Qt.ElideMiddle, self.width())
             super().setText(self.__elided)
         else:
             super().setText(self.__text)
@@ -71,7 +73,8 @@ class E5SqueezeLabelPath(QLabel):
         """
         Public method to set the surrounding of the path string.
         
-        @param surrounding the a string containg placeholders for the path (string)
+        @param surrounding the a string containg placeholders for the path
+            (string)
         """
         self.__surrounding = surrounding
         super().setText(self.__surrounding.format(self.__path))
@@ -89,7 +92,8 @@ class E5SqueezeLabelPath(QLabel):
         """
         Public method to set the surrounding and the path of the label.
         
-        @param surrounding the a string containg placeholders for the path (string)
+        @param surrounding the a string containg placeholders for the path
+            (string)
         @param path path to be shown (string)
         """
         self.__surrounding = surrounding
@@ -103,7 +107,8 @@ class E5SqueezeLabelPath(QLabel):
         @param event reference to the paint event (QPaintEvent)
         """
         fm = self.fontMetrics()
-        if fm.width(self.__surrounding.format(self.__path)) > self.contentsRect().width():
+        if (fm.width(self.__surrounding.format(self.__path)) > 
+                self.contentsRect().width()):
             super().setText(
                 self.__surrounding.format(compactPath(self.__path,
                                           self.contentsRect().width(),

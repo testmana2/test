@@ -10,7 +10,8 @@ It was inspired by KLed.
 """
 
 from PyQt4.QtCore import Qt, QSize
-from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, QBrush
+from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, \
+    QBrush
 
 E5LedRectangular = 0
 E5LedCircular = 1
@@ -20,7 +21,8 @@ class E5Led(QWidget):
     """
     Class implementing a LED widget.
     """
-    def __init__(self, parent=None, color=None, shape=E5LedCircular, rectRatio=1):
+    def __init__(self, parent=None, color=None, shape=E5LedCircular,
+                 rectRatio=1):
         """
         Constructor
         

@@ -48,7 +48,8 @@ class E5PassivePopup(QFrame):
         """
         Public method to set the message view.
         
-        @param child reference to the widget to set as the message view (QWidget)
+        @param child reference to the widget to set as the message view
+            (QWidget)
         """
         self.__msgView = child
         self.__topLayout = QVBoxLayout(self)
@@ -103,8 +104,8 @@ class E5PassivePopup(QFrame):
         Public method to set the delay for the popup is removed automatically.
         
         Setting the delay to 0 disables the timeout. If you're doing this, you
-        may want to connect the clicked() signal to the hide() slot. Setting the
-        delay to -1 makes it use the default value.
+        may want to connect the clicked() signal to the hide() slot. Setting
+        the delay to -1 makes it use the default value.
         
         @param delay value for the delay in milliseconds (integer)
         """
@@ -119,7 +120,8 @@ class E5PassivePopup(QFrame):
     
     def timeout(self):
         """
-        Public method to get the delay before the popup is removed automatically.
+        Public method to get the delay before the popup is removed
+        automatically.
         
         @return the delay before the popup is removed automatically (integer)
         """
@@ -159,7 +161,8 @@ class E5PassivePopup(QFrame):
     
     def __moveNear(self, target):
         """
-        Private method to move the popup to be adjacent to the specified rectangle.
+        Private method to move the popup to be adjacent to the specified
+        rectangle.
         
         @param target rectangle to be placed at (QRect)
         """
@@ -180,14 +183,16 @@ class E5PassivePopup(QFrame):
         w = self.minimumSizeHint().width()
         h = self.minimumSizeHint().height()
         
-        r = QApplication.desktop().screenGeometry(QPoint(x + w // 2, y + h // 2))
+        r = QApplication.desktop().screenGeometry(
+            QPoint(x + w // 2, y + h // 2))
         
         if x < r.center().x():
             x += target.width()
         else:
             x -= w
         
-        # It's apparently trying to go off screen, so display it ALL at the bottom.
+        # It's apparently trying to go off screen, so display it ALL at the
+        # bottom.
         if (y + h) > r.bottom():
             y = r.bottom() - h
         

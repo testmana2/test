@@ -49,9 +49,11 @@ class E5ErrorMessage(QErrorMessage):
         Private method to filter messages.
         
         @param message message to be checked (string)
-        @return flag indicating that the message should be filtered out (boolean)
+        @return flag indicating that the message should be filtered out
+            (boolean)
         """
-        for filter in self.settings.value("MessageFilters", self.__defaultFilters):
+        for filter in self.settings.value(
+                "MessageFilters", self.__defaultFilters):
             if filter in message:
                 return True
         
@@ -126,13 +128,17 @@ def messageHandler(msgType, message):
         return
     
     if msgType == QtDebugMsg:
-        messageType = QCoreApplication.translate("E5ErrorMessage", "Debug Message")
+        messageType = QCoreApplication.translate(
+            "E5ErrorMessage", "Debug Message")
     elif msgType == QtWarningMsg:
-        messageType = QCoreApplication.translate("E5ErrorMessage", "Warning")
+        messageType = QCoreApplication.translate(
+            "E5ErrorMessage", "Warning")
     elif msgType == QtCriticalMsg:
-        messageType = QCoreApplication.translate("E5ErrorMessage", "Critical")
+        messageType = QCoreApplication.translate(
+            "E5ErrorMessage", "Critical")
     elif msgType == QtFatalMsg:
-        messageType = QCoreApplication.translate("E5ErrorMessage", "Fatal Error")
+        messageType = QCoreApplication.translate(
+            "E5ErrorMessage", "Fatal Error")
     if isinstance(message, bytes):
         message = message.decode()
     print("{0}: {1}".format(messageType, message))

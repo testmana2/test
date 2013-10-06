@@ -44,7 +44,8 @@ class E5PasswordMeter(QProgressBar):
             " text-align: center; }}" \
             "QProgressBar::chunk:horizontal {{" \
             " background-color: {0}; }}"
-        self.setStyleSheet(self.__styleSheetTemplate.format(self.__noIndicator))
+        self.setStyleSheet(
+            self.__styleSheetTemplate.format(self.__noIndicator))
     
     def checkPasswordStrength(self, password):
         """

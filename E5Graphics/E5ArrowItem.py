@@ -10,12 +10,14 @@ Module implementing a graphics item subclass for an arrow.
 import math
 
 from PyQt4.QtCore import QPointF, QRectF, QSizeF, QLineF, Qt
-from PyQt4.QtGui import QAbstractGraphicsShapeItem, QGraphicsItem, QStyle, QPen, QPolygonF
+from PyQt4.QtGui import QAbstractGraphicsShapeItem, QGraphicsItem, QStyle, \
+    QPen, QPolygonF
 
 NormalArrow = 1
 WideArrow = 2
 
-ArrowheadAngleFactor = 0.26179938779914941  # 0.5 * math.atan(math.sqrt(3.0) / 3.0)
+ArrowheadAngleFactor = 0.26179938779914941
+# 0.5 * math.atan(math.sqrt(3.0) / 3.0)
 
 
 class E5ArrowItem(QAbstractGraphicsShapeItem):
@@ -101,14 +103,16 @@ class E5ArrowItem(QAbstractGraphicsShapeItem):
         @param option style options (QStyleOptionGraphicsItem)
         @param widget optional reference to the widget painted on (QWidget)
         """
-        if (option.state & QStyle.State_Selected) == QStyle.State(QStyle.State_Selected):
+        if (option.state & QStyle.State_Selected) == \
+                QStyle.State(QStyle.State_Selected):
             width = 2
         else:
             width = 1
         
         # draw the line first
         line = QLineF(self._origin, self._end)
-        painter.setPen(QPen(Qt.black, width, Qt.SolidLine, Qt.FlatCap, Qt.MiterJoin))
+        painter.setPen(
+            QPen(Qt.black, width, Qt.SolidLine, Qt.FlatCap, Qt.MiterJoin))
         painter.drawLine(line)
         
         # draw the arrow head

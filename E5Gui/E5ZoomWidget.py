@@ -202,7 +202,8 @@ class E5ZoomWidget(QWidget, Ui_E5ZoomWidget):
         
         @param mapping list of mapping values (list of integer)
         @param default index of the default value (integer)
-        @keyparam percent flag indicating to show zoom value in percent (boolean)
+        @keyparam percent flag indicating to show zoom value in percent
+            (boolean)
         """
         if mapping:
             self.__mapping = mapping[:]
@@ -227,7 +228,8 @@ class E5ZoomWidget(QWidget, Ui_E5ZoomWidget):
         """
         Public method to get the current mapping.
         
-        @return tuple of the mapping and the default index (list of integer, integer)
+        @return tuple of the mapping and the default index
+            (list of integer, integer)
         """
         return self.__mapping[:], self.__default
     

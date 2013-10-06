@@ -8,8 +8,9 @@ Module implementing specialized line edits.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
-from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, QStyleOptionFrameV2, \
-    QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
+from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, \
+    QStyleOptionFrameV2, QWidget, QHBoxLayout, QBoxLayout, QLayout, \
+    QApplication, QSpacerItem, QSizePolicy
 
 import UI.PixmapCache
 
@@ -87,7 +88,8 @@ class E5LineEdit(QLineEdit):
         else:
             self.__rightLayout.setDirection(QBoxLayout.LeftToRight)
         
-        horizontalSpacer = QSpacerItem(0, 0, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        horizontalSpacer = QSpacerItem(
+            0, 0, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.__mainLayout.addWidget(
             self.__leftWidget, 0, Qt.AlignVCenter | Qt.AlignLeft)
         self.__mainLayout.addItem(horizontalSpacer)
@@ -150,8 +152,8 @@ class E5LineEdit(QLineEdit):
                not self.hasFocus():
                 panel = QStyleOptionFrameV2()
                 self.initStyleOption(panel)
-                textRect = \
-                    self.style().subElementRect(QStyle.SE_LineEditContents, panel, self)
+                textRect = self.style().subElementRect(
+                    QStyle.SE_LineEditContents, panel, self)
                 textRect.adjust(2, 0, 0, 0)
                 left = self.textMargin(self.LeftSide)
                 right = self.textMargin(self.RightSide)
@@ -160,7 +162,8 @@ class E5LineEdit(QLineEdit):
                 painter.setPen(self.palette().brush(
                     QPalette.Disabled, QPalette.Text).color())
                 painter.drawText(
-                    textRect, Qt.AlignLeft | Qt.AlignVCenter, self.__inactiveText)
+                    textRect, Qt.AlignLeft | Qt.AlignVCenter,
+                    self.__inactiveText)
     
     def _updateTextMargins(self):
         """
@@ -180,7 +183,8 @@ class E5LineEdit(QLineEdit):
         Public method to add a widget to a side.
         
         @param widget reference to the widget to add (QWidget)
-        @param position position to add to (E5LineEdit.LeftSide, E5LineEdit.RightSide)
+        @param position position to add to (E5LineEdit.LeftSide,
+            E5LineEdit.RightSide)
         """
         if widget is None:
             return
@@ -230,7 +234,8 @@ class E5LineEdit(QLineEdit):
         """
         Public method to get the text margin for a side.
         
-        @param position side to get margin for (E5LineEdit.LeftSide, E5LineEdit.RightSide)
+        @param position side to get margin for (E5LineEdit.LeftSide,
+            E5LineEdit.RightSide)
         @return text margin (integer)
         """
         spacing = self.__rightLayout.spacing()
@@ -269,17 +274,18 @@ class E5LineEdit(QLineEdit):
 
 class E5ClearableLineEdit(E5LineEdit):
     """
-    Class implementing a line edit widget showing some inactive text and a clear button,
-    if it has some contents.
+    Class implementing a line edit widget showing some inactive text and a
+    clear button, if it has some contents.
     """
-    def __init__(self, parent=None, inactiveText="", side=E5LineEdit.RightSide):
+    def __init__(self, parent=None, inactiveText="",
+                 side=E5LineEdit.RightSide):
         """
         Constructor
         
         @param parent reference to the parent widget (QWidget)
         @keyparam inactiveText text to be shown on inactivity (string)
-        @keyparam side side the clear button should be shown at (E5LineEdit.RightSide,
-            E5LineEdit.LeftSide)
+        @keyparam side side the clear button should be shown at
+            (E5LineEdit.RightSide, E5LineEdit.LeftSide)
         """
         assert side in [E5LineEdit.RightSide, E5LineEdit.LeftSide]
         

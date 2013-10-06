@@ -53,8 +53,9 @@ class E5MainWindow(QMainWindow):
             except (IOError, OSError) as msg:
                 E5MessageBox.warning(self,
                     self.trUtf8("Loading Style Sheet"),
-                    self.trUtf8("""<p>The Qt Style Sheet file <b>{0}</b> could"""
-                                """ not be read.<br>Reason: {1}</p>""")
+                    self.trUtf8(
+                        """<p>The Qt Style Sheet file <b>{0}</b> could"""
+                        """ not be read.<br>Reason: {1}</p>""")
                         .format(styleSheetFile, str(msg)))
                 return
         else:

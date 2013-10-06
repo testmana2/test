@@ -11,7 +11,8 @@ import os
 
 from E5Gui.E5Application import e5App
 
-from Toolbox.SingleApplication import SingleApplicationClient, SingleApplicationServer
+from Toolbox.SingleApplication import SingleApplicationClient, \
+    SingleApplicationServer
 
 import Utilities
 

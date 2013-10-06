@@ -42,7 +42,8 @@ class E5ClickableLabel(QLabel):
                 self.middleClicked.emit(evt.globalPos())
             else:
                 self.clicked.emit(evt.globalPos())
-        elif evt.button() == Qt.MiddleButton and self.rect().contains(evt.pos()):
+        elif evt.button() == Qt.MiddleButton and \
+                self.rect().contains(evt.pos()):
             self.middleClicked.emit(evt.globalPos())
         else:
             super().mouseReleaseEvent(evt)

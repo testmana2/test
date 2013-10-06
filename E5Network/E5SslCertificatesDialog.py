@@ -7,11 +7,12 @@
 Module implementing a dialog to show and edit all certificates.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, QIODevice, \
-    qVersion
+from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, \
+    QIODevice, qVersion
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 try:
-    from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration, QSsl
+    from PyQt4.QtNetwork import QSslCertificate, QSslSocket, \
+        QSslConfiguration, QSsl
 except ImportError:
     pass
 
@@ -39,15 +40,23 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.serversViewButton.setIcon(UI.PixmapCache.getIcon("certificates.png"))
-        self.serversDeleteButton.setIcon(UI.PixmapCache.getIcon("certificateDelete.png"))
-        self.serversExportButton.setIcon(UI.PixmapCache.getIcon("certificateExport.png"))
-        self.serversImportButton.setIcon(UI.PixmapCache.getIcon("certificateImport.png"))
+        self.serversViewButton.setIcon(
+            UI.PixmapCache.getIcon("certificates.png"))
+        self.serversDeleteButton.setIcon(
+            UI.PixmapCache.getIcon("certificateDelete.png"))
+        self.serversExportButton.setIcon(
+            UI.PixmapCache.getIcon("certificateExport.png"))
+        self.serversImportButton.setIcon(
+            UI.PixmapCache.getIcon("certificateImport.png"))
         
-        self.caViewButton.setIcon(UI.PixmapCache.getIcon("certificates.png"))
-        self.caDeleteButton.setIcon(UI.PixmapCache.getIcon("certificateDelete.png"))
-        self.caExportButton.setIcon(UI.PixmapCache.getIcon("certificateExport.png"))
-        self.caImportButton.setIcon(UI.PixmapCache.getIcon("certificateImport.png"))
+        self.caViewButton.setIcon(
+            UI.PixmapCache.getIcon("certificates.png"))
+        self.caDeleteButton.setIcon(
+            UI.PixmapCache.getIcon("certificateDelete.png"))
+        self.caExportButton.setIcon(
+            UI.PixmapCache.getIcon("certificateExport.png"))
+        self.caImportButton.setIcon(
+            UI.PixmapCache.getIcon("certificateImport.png"))
         
         self.__populateServerCertificatesTree()
         self.__populateCaCertificatesTree()
@@ -94,7 +103,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         items = self.serversCertificatesTree.findItems(organisation,
             Qt.MatchFixedString | Qt.MatchCaseSensitive)
         if len(items) == 0:
-            parent = QTreeWidgetItem(self.serversCertificatesTree, [organisation])
+            parent = QTreeWidgetItem(
+                self.serversCertificatesTree, [organisation])
         else:
             parent = items[0]
         
@@ -121,9 +131,11 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to show data of the selected server certificate.
         """
         try:
-            from E5Network.E5SslCertificatesInfoDialog import E5SslCertificatesInfoDialog
+            from E5Network.E5SslCertificatesInfoDialog import \
+                E5SslCertificatesInfoDialog
             cert = QSslCertificate.fromData(
-                self.serversCertificatesTree.currentItem().data(0, self.CertRole))
+                self.serversCertificatesTree.currentItem().data(
+                    0, self.CertRole))
             dlg = E5SslCertificatesInfoDialog(cert, self)
             dlg.exec_()
         except ImportError:
@@ -137,17 +149,20 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         itm = self.serversCertificatesTree.currentItem()
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Delete Server Certificate"),
-            self.trUtf8("""<p>Shall the server certificate really be deleted?</p>"""
-                        """<p>{0}</p>"""
-                        """<p>If the server certificate is deleted, the normal security"""
-                        """ checks will be reinstantiated and the server has to"""
-                        """ present a valid certificate.</p>""")\
+            self.trUtf8("""<p>Shall the server certificate really be"""
+                        """ deleted?</p><p>{0}</p>"""
+                        """<p>If the server certificate is deleted, the"""
+                        """ normal security checks will be reinstantiated"""
+                        """ and the server has to present a valid"""
+                        """ certificate.</p>""")\
                 .format(itm.text(0)))
         if res:
             server = itm.text(1)
-            cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
+            cert = self.serversCertificatesTree.currentItem().data(
+                0, self.CertRole)
             
-            # delete the selected entry and its parent entry, if it was the only one
+            # delete the selected entry and its parent entry,
+            # if it was the only one
             parent = itm.parent()
             parent.takeChild(parent.indexOfChild(itm))
             if parent.childCount() == 0:
@@ -196,11 +211,13 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         commonStr = ", ".join(
                             cert.subjectInfo(QSslCertificate.CommonName))
                     else:
-                        commonStr = cert.subjectInfo(QSslCertificate.CommonName)
+                        commonStr = cert.subjectInfo(
+                            QSslCertificate.CommonName)
                     E5MessageBox.warning(self,
                         self.trUtf8("Import Certificate"),
-                        self.trUtf8("""<p>The certificate <b>{0}</b> already exists."""
-                                    """ Skipping.</p>""")
+                        self.trUtf8(
+                            """<p>The certificate <b>{0}</b> already exists."""
+                            """ Skipping.</p>""")
                             .format(Utilities.decodeString(commonStr)))
                 else:
                     pems.append(cert.toPem() + '\n')
@@ -220,7 +237,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         Private slot to export the selected server certificate.
         """
-        cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
+        cert = self.serversCertificatesTree.currentItem().data(
+            0, self.CertRole)
         fname = self.serversCertificatesTree.currentItem().text(0)\
             .replace(" ", "").replace("\t", "")
         self.__exportCertificate(fname, cert)
@@ -318,7 +336,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to show data of the selected CA certificate.
         """
         try:
-            from E5Network.E5SslCertificatesInfoDialog import E5SslCertificatesInfoDialog
+            from E5Network.E5SslCertificatesInfoDialog import \
+                E5SslCertificatesInfoDialog
             cert = QSslCertificate.fromData(
                 self.caCertificatesTree.currentItem().data(0, self.CertRole))
             dlg = E5SslCertificatesInfoDialog(cert, self)
@@ -334,15 +353,17 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         itm = self.caCertificatesTree.currentItem()
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Delete CA Certificate"),
-            self.trUtf8("""<p>Shall the CA certificate really be deleted?</p>"""
-                        """<p>{0}</p>"""
-                        """<p>If the CA certificate is deleted, the browser"""
-                        """ will not trust any certificate issued by this CA.</p>""")\
+            self.trUtf8(
+                """<p>Shall the CA certificate really be deleted?</p>"""
+                """<p>{0}</p>"""
+                """<p>If the CA certificate is deleted, the browser"""
+                """ will not trust any certificate issued by this CA.</p>""")\
                 .format(itm.text(0)))
         if res:
             cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
             
-            # delete the selected entry and its parent entry, if it was the only one
+            # delete the selected entry and its parent entry,
+            # if it was the only one
             parent = itm.parent()
             parent.takeChild(parent.indexOfChild(itm))
             if parent.childCount() == 0:
@@ -356,7 +377,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             pems = QByteArray()
             for cert in caCerts:
                 pems.append(cert.toPem() + '\n')
-            Preferences.Prefs.settings.setValue("Help/SystemCertificates", pems)
+            Preferences.Prefs.settings.setValue(
+                "Help/SystemCertificates", pems)
             
             # delete the certificate from the default certificates
             self.__updateDefaultConfiguration()
@@ -375,11 +397,13 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         commonStr = ", ".join(
                             cert.subjectInfo(QSslCertificate.CommonName))
                     else:
-                        commonStr = cert.subjectInfo(QSslCertificate.CommonName)
+                        commonStr = cert.subjectInfo(
+                            QSslCertificate.CommonName)
                     E5MessageBox.warning(self,
                         self.trUtf8("Import Certificate"),
-                        self.trUtf8("""<p>The certificate <b>{0}</b> already exists."""
-                                    """ Skipping.</p>""")
+                        self.trUtf8(
+                            """<p>The certificate <b>{0}</b> already exists."""
+                            """ Skipping.</p>""")
                             .format(Utilities.decodeString(commonStr)))
                 else:
                     caCerts.append(cert)
@@ -387,7 +411,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             pems = QByteArray()
             for cert in caCerts:
                 pems.append(cert.toPem() + '\n')
-            Preferences.Prefs.settings.setValue("Help/SystemCertificates", pems)
+            Preferences.Prefs.settings.setValue(
+                "Help/SystemCertificates", pems)
             
             self.caCertificatesTree.clear()
             self.__populateCaCertificatesTree()
@@ -440,8 +465,9 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                 if not f.open(QIODevice.WriteOnly):
                     E5MessageBox.critical(self,
                         self.trUtf8("Export Certificate"),
-                        self.trUtf8("""<p>The certificate could not be written to file"""
-                                    """ <b>{0}</b></p><p>Error: {1}</p>""")
+                        self.trUtf8(
+                            """<p>The certificate could not be written"""
+                            """ to file <b>{0}</b></p><p>Error: {1}</p>""")
                             .format(fname, f.errorString()))
                     return
                 
@@ -470,8 +496,9 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             if not f.open(QIODevice.ReadOnly):
                 E5MessageBox.critical(self,
                     self.trUtf8("Export Certificate"),
-                    self.trUtf8("""<p>The certificate could not be read from file"""
-                                """ <b>{0}</b></p><p>Error: {1}</p>""")
+                    self.trUtf8(
+                        """<p>The certificate could not be read from file"""
+                        """ <b>{0}</b></p><p>Error: {1}</p>""")
                         .format(fname, f.errorString()))
                 return []
             

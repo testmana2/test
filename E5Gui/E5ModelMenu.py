@@ -8,7 +8,8 @@ Module implementing a menu populated from a QAbstractItemModel.
 """
 
 from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint
-from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, QPixmap
+from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, \
+    QPixmap
 
 import UI.PixmapCache
 
@@ -182,7 +183,8 @@ class E5ModelMenu(QMenu):
     
     def createMenu(self, parent, max_, parentMenu=None, menu=None):
         """
-        Public method to put all the children of a parent into a menu of a given length.
+        Public method to put all the children of a parent into a menu of a
+        given length.
         
         @param parent index of the parent item (QModelIndex)
         @param max_ maximum number of entries (integer)
@@ -220,7 +222,8 @@ class E5ModelMenu(QMenu):
             if self.__model.hasChildren(idx):
                 self.createMenu(idx, -1, menu)
             else:
-                if self.__separatorRole != 0 and idx.data(self.__separatorRole):
+                if self.__separatorRole != 0 and \
+                        idx.data(self.__separatorRole):
                     self.addSeparator()
                 else:
                     menu.addAction(self.__makeAction(idx))
@@ -360,7 +363,8 @@ class E5ModelMenu(QMenu):
             super().mouseMoveEvent(evt)
             return
         
-        manhattanLength = (evt.pos() - self.__dragStartPosition).manhattanLength()
+        manhattanLength = (evt.pos() - 
+                           self.__dragStartPosition).manhattanLength()
         if manhattanLength <= QApplication.startDragDistance():
             super().mouseMoveEvent(evt)
             return

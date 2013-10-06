@@ -40,7 +40,7 @@ class E5SslErrorHandler(QObject):
         if Preferences.Prefs.settings.contains("Help/CaCertificatesDict"):
             # port old entries stored under 'Help'
             certificateDict = Preferences.toDict(
-                    Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
             Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
                 certificateDict)
             Preferences.Prefs.settings.remove("Help/CaCertificatesDict")
@@ -76,14 +76,15 @@ class E5SslErrorHandler(QObject):
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
         @return tuple indicating to ignore the SSL errors (one of NotIgnored,
-            SystemIgnored or UserIgnored) and indicating a change of the default
-            SSL configuration (boolean)
+            SystemIgnored or UserIgnored) and indicating a change of the
+            default SSL configuration (boolean)
         """
         url = reply.url()
         ignore, defaultChanged = self.sslErrors(errors, url.host(), url.port())
         if ignore:
             if defaultChanged:
-                reply.setSslConfiguration(QSslConfiguration.defaultConfiguration())
+                reply.setSslConfiguration(
+                    QSslConfiguration.defaultConfiguration())
             reply.ignoreSslErrors()
         else:
             reply.abort()
@@ -98,14 +99,15 @@ class E5SslErrorHandler(QObject):
         @param server name of the server (string)
         @keyparam port value of the port (integer)
         @return tuple indicating to ignore the SSL errors (one of NotIgnored,
-            SystemIgnored or UserIgnored) and indicating a change of the default
-            SSL configuration (boolean)
+            SystemIgnored or UserIgnored) and indicating a change of the
+            default SSL configuration (boolean)
         """
         caMerge = {}
         certificateDict = Preferences.toDict(
                 Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for caServer in certificateDict:
-            caMerge[caServer] = QSslCertificate.fromData(certificateDict[caServer])
+            caMerge[caServer] = QSslCertificate.fromData(
+                certificateDict[caServer])
         caNew = []
         
         errorStrings = []
@@ -142,8 +144,10 @@ class E5SslErrorHandler(QObject):
                     certinfos.append(self.__certToString(cert))
                 caRet = E5MessageBox.yesNo(None,
                     self.trUtf8("Certificates"),
-                    self.trUtf8("""<p>Certificates:<br/>{0}<br/>"""
-                                """Do you want to accept all these certificates?</p>""")\
+                    self.trUtf8(
+                        """<p>Certificates:<br/>{0}<br/>"""
+                        """Do you want to accept all these certificates?"""
+                        """</p>""")\
                         .format("".join(certinfos)))
                 if caRet:
                     if server not in caMerge:
@@ -165,7 +169,8 @@ class E5SslErrorHandler(QObject):
                         for cert in caMerge[server]:
                             pems.append(cert.toPem() + '\n')
                         certificateDict[server] = pems
-                    Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
+                    Preferences.Prefs.settings.setValue(
+                        "Ssl/CaCertificatesDict",
                         certificateDict)
             
             return E5SslErrorHandler.UserIgnored, caRet
@@ -189,7 +194,8 @@ class E5SslErrorHandler(QObject):
             
             result += self.trUtf8("<br/>Organization: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
-                    ", ".join(cert.subjectInfo(QSslCertificate.Organization)))))
+                    ", ".join(cert.subjectInfo(
+                        QSslCertificate.Organization)))))
             
             result += self.trUtf8("<br/>Issuer: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
@@ -207,9 +213,12 @@ class E5SslErrorHandler(QObject):
                 .format(Utilities.html_encode(Utilities.decodeString(
                     cert.issuerInfo(QSslCertificate.CommonName))))
         
-        result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
-            .format(Utilities.html_encode(cert.effectiveDate().toString("yyyy-MM-dd")),
-                    Utilities.html_encode(cert.expiryDate().toString("yyyy-MM-dd")))
+        result += self.trUtf8(
+            "<br/>Not valid before: {0}<br/>Valid Until: {1}")\
+            .format(Utilities.html_encode(
+                        cert.effectiveDate().toString("yyyy-MM-dd")),
+                    Utilities.html_encode(
+                        cert.expiryDate().toString("yyyy-MM-dd")))
         
         result += "</p>"
         

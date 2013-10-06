@@ -40,7 +40,8 @@ class E5TreeSortFilterProxyModel(QSortFilterProxyModel):
         if self.sourceModel().hasChildren(idx):
             return True
         
-        return QSortFilterProxyModel.filterAcceptsRow(self, sourceRow, sourceParent)
+        return QSortFilterProxyModel.filterAcceptsRow(
+            self, sourceRow, sourceParent)
     
     def hasChildren(self, parent=QModelIndex()):
         """

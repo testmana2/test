@@ -33,19 +33,30 @@ class E5ToolBarManager(QObject):
         self.__mainWindow = None
         self.__ui = ui
         
-        self.__toolBars = {}            # maps toolbar IDs to actions
-        self.__toolBarsWithSeparators = {}  # maps toolbar IDs to actions incl. separators
-        self.__defaultToolBars = {}     # maps default toolbar IDs to actions
-        self.__customToolBars = []      # list of custom toolbars
-        self.__allToolBars = {}         # maps toolbar IDs to toolbars
+        self.__toolBars = {}
+            # maps toolbar IDs to actions
+        self.__toolBarsWithSeparators = {}
+            # maps toolbar IDs to actions incl. separators
+        self.__defaultToolBars = {}
+            # maps default toolbar IDs to actions
+        self.__customToolBars = []
+            # list of custom toolbars
+        self.__allToolBars = {}
+            # maps toolbar IDs to toolbars
         
-        self.__categoryToActions = {}   # maps categories to actions
-        self.__actionToCategory = {}    # maps action IDs to categories
-        self.__allActions = {}          # maps action IDs to actions
-        self.__actionToToolBars = {}    # maps action IDs to toolbars
+        self.__categoryToActions = {}
+            # maps categories to actions
+        self.__actionToCategory = {}
+            # maps action IDs to categories
+        self.__allActions = {}
+            # maps action IDs to actions
+        self.__actionToToolBars = {}
+            # maps action IDs to toolbars
         
-        self.__widgetActions = {}       # maps widget action IDs to toolbars
-        self.__allWidgetActions = {}    # maps widget action IDs to widget actions
+        self.__widgetActions = {}
+            # maps widget action IDs to toolbars
+        self.__allWidgetActions = {}
+            # maps widget action IDs to widget actions
     
     ######################################################
     ## Private methods
@@ -591,7 +602,8 @@ class E5ToolBarManager(QObject):
             
             removedActions = []
             for action in actions[tbID]:
-                if action in newActions and self.toolBarWidgetAction(action) == toolBar:
+                if action in newActions and \
+                        self.toolBarWidgetAction(action) == toolBar:
                     newActions.remove(action)
                     newActionsWithSeparators.remove(action)
                     removedActions.append(action)

@@ -26,7 +26,8 @@ class E5FileCompleter(QCompleter):
         @param parent parent widget of the completer (QWidget)
         @keyparam completionMode completion mode of the
             completer (QCompleter.CompletionMode)
-        @keyparam showHidden flag indicating to show hidden entries as well (boolean)
+        @keyparam showHidden flag indicating to show hidden entries as well
+            (boolean)
         """
         super().__init__(parent)
         self.__model = QFileSystemModel(self)
@@ -35,8 +36,8 @@ class E5FileCompleter(QCompleter):
                 QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | \
                              QDir.AllDirs | QDir.Hidden))
         else:
-            self.__model.setFilter(
-                QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | QDir.AllDirs))
+            self.__model.setFilter(QDir.Filters(
+                QDir.Dirs | QDir.Files | QDir.Drives | QDir.AllDirs))
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)
         if isWindowsPlatform():
@@ -58,7 +59,8 @@ class E5DirCompleter(QCompleter):
         @param parent parent widget of the completer (QWidget)
         @keyparam completionMode completion mode of the
             completer (QCompleter.CompletionMode)
-        @keyparam showHidden flag indicating to show hidden entries as well (boolean)
+        @keyparam showHidden flag indicating to show hidden entries as well
+            (boolean)
         """
         super().__init__(parent)
         self.__model = QFileSystemModel(self)
@@ -86,7 +88,8 @@ class E5StringListCompleter(QCompleter):
         Constructor
         
         @param parent parent widget of the completer (QWidget)
-        @param strings list of string to load into the completer (list of strings)
+        @param strings list of string to load into the completer
+            (list of strings)
         @keyparam completionMode completion mode of the
             completer (QCompleter.CompletionMode)
         """

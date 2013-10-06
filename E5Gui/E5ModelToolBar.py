@@ -8,7 +8,8 @@ Module implementing a tool bar populated from a QAbstractItemModel.
 """
 
 from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint, QEvent
-from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, QToolButton
+from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, \
+    QToolButton
 
 
 class E5ModelToolBar(QToolBar):
@@ -54,17 +55,23 @@ class E5ModelToolBar(QToolBar):
         """
         if self.__model is not None:
             self.__model.modelReset[()].disconnect(self._build)
-            self.__model.rowsInserted[QModelIndex, int, int].disconnect(self._build)
-            self.__model.rowsRemoved[QModelIndex, int, int].disconnect(self._build)
-            self.__model.dataChanged[QModelIndex, QModelIndex].disconnect(self._build)
+            self.__model.rowsInserted[QModelIndex, int, int].disconnect(
+                self._build)
+            self.__model.rowsRemoved[QModelIndex, int, int].disconnect(
+                self._build)
+            self.__model.dataChanged[QModelIndex, QModelIndex].disconnect(
+                self._build)
         
         self.__model = model
         
         if self.__model is not None:
             self.__model.modelReset[()].connect(self._build)
-            self.__model.rowsInserted[QModelIndex, int, int].connect(self._build)
-            self.__model.rowsRemoved[QModelIndex, int, int].connect(self._build)
-            self.__model.dataChanged[QModelIndex, QModelIndex].connect(self._build)
+            self.__model.rowsInserted[QModelIndex, int, int].connect(
+                self._build)
+            self.__model.rowsRemoved[QModelIndex, int, int].connect(
+                self._build)
+            self.__model.dataChanged[QModelIndex, QModelIndex].connect(
+                self._build)
     
     def model(self):
         """
@@ -225,7 +232,8 @@ class E5ModelToolBar(QToolBar):
             super().mouseMoveEvent(evt)
             return
         
-        manhattanLength = (evt.pos() - self.__dragStartPosition).manhattanLength()
+        manhattanLength = (evt.pos() - 
+                           self.__dragStartPosition).manhattanLength()
         if manhattanLength <= QApplication.startDragDistance():
             super().mouseMoveEvent(evt)
             return

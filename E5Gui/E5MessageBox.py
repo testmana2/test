@@ -10,9 +10,9 @@ Module implementing QMessageBox replacements and more convenience function.
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QMessageBox, QApplication
 
-################################################################################
-##  Mappings to standard QMessageBox                                          ##
-################################################################################
+###############################################################################
+##  Mappings to standard QMessageBox                                         ##
+###############################################################################
 
 # QMessageBox.Icon
 NoIcon = QMessageBox.NoIcon
@@ -56,9 +56,9 @@ RejectRole = QMessageBox.RejectRole
 ResetRole = QMessageBox.ResetRole
 YesRole = QMessageBox.YesRole
 
-################################################################################
-##  Replacement for the QMessageBox class                                     ##
-################################################################################
+###############################################################################
+##  Replacement for the QMessageBox class                                    ##
+###############################################################################
 
 
 class E5MessageBox(QMessageBox):
@@ -96,9 +96,9 @@ class E5MessageBox(QMessageBox):
         self.setText(text)
         self.setStandardButtons(buttons)
 
-################################################################################
-##  Replacements for QMessageBox static methods                               ##
-################################################################################
+###############################################################################
+##  Replacements for QMessageBox static methods                              ##
+###############################################################################
 
 
 def __messageBox(parent, title, text, icon,
@@ -215,21 +215,23 @@ def warning(parent, title, text,
     return __messageBox(parent, title, text, QMessageBox.Warning,
                         buttons, defaultButton)
 
-################################################################################
-##  Additional convenience functions                                          ##
-################################################################################
+###############################################################################
+##  Additional convenience functions                                         ##
+###############################################################################
 
 
-def yesNo(parent, title, text, icon=Question, yesDefault=False, textFormat=Qt.AutoText):
+def yesNo(parent, title, text, icon=Question, yesDefault=False,
+          textFormat=Qt.AutoText):
     """
     Function to show a model yes/no message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @keyparam icon icon for the dialog (Critical, Information, Question or Warning)
-    @keyparam yesDefault flag indicating that the Yes button should be the default
-        button (boolean)
+    @keyparam icon icon for the dialog (Critical, Information, Question or
+        Warning)
+    @keyparam yesDefault flag indicating that the Yes button should be the
+        default button (boolean)
     @param textFormat format of the text (Qt.TextFormat)
     @return flag indicating the selection of the Yes button (boolean)
     """
@@ -249,7 +251,8 @@ def retryAbort(parent, title, text, icon=Question, textFormat=Qt.AutoText):
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @keyparam icon icon for the dialog (Critical, Information, Question or Warning)
+    @keyparam icon icon for the dialog (Critical, Information, Question or
+        Warning)
     @param textFormat format of the text (Qt.TextFormat)
     @return flag indicating the selection of the Retry button (boolean)
     """

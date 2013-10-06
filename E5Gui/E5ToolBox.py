@@ -14,7 +14,8 @@ from .E5TabWidget import E5TabWidget
 
 class E5VerticalToolBox(QToolBox):
     """
-    Class implementing a ToolBox class substituting QToolBox to support wheel events.
+    Class implementing a ToolBox class substituting QToolBox to support wheel
+    events.
     """
     def __init__(self, parent=None):
         """

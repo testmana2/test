@@ -51,7 +51,8 @@ class E5GraphicsView(QGraphicsView):
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.setViewportUpdateMode(QGraphicsView.SmartViewportUpdate)
         
-        self.setWhatsThis(self.trUtf8("<b>Graphics View</b>\n"
+        self.setWhatsThis(self.trUtf8(
+            "<b>Graphics View</b>\n"
             "<p>This graphics view is used to show a diagram. \n"
             "There are various actions available to manipulate the \n"
             "shown items.</p>\n"
@@ -59,7 +60,8 @@ class E5GraphicsView(QGraphicsView):
             "<li>Clicking on an item selects it.</li>\n"
             "<li>Ctrl-clicking adds an item to the selection.</li>\n"
             "<li>Ctrl-clicking a selected item deselects it.</li>\n"
-            "<li>Clicking on an empty spot of the canvas resets the selection.</li>\n"
+            "<li>Clicking on an empty spot of the canvas resets the selection."
+            "</li>\n"
             "<li>Dragging the mouse over the canvas spans a rubberband to \n"
             "select multiple items.</li>\n"
             "<li>Dragging the mouse over a selected item moves the \n"
@@ -102,7 +104,8 @@ class E5GraphicsView(QGraphicsView):
         """
         Public method to handle the reset the zoom value.
         """
-        self.setZoom(E5GraphicsView.ZoomLevels[E5GraphicsView.ZoomLevelDefault])
+        self.setZoom(
+            E5GraphicsView.ZoomLevels[E5GraphicsView.ZoomLevelDefault])
         
     def setZoom(self, value):
         """
@@ -176,7 +179,8 @@ class E5GraphicsView(QGraphicsView):
         
     def _getDiagramRect(self, border=0):
         """
-        Protected method to calculate the minimum rectangle fitting the diagram.
+        Protected method to calculate the minimum rectangle fitting the
+        diagram.
         
         @param border border width to include in the calculation (integer)
         @return the minimum rectangle (QRectF)
@@ -291,7 +295,8 @@ class E5GraphicsView(QGraphicsView):
         """
         Public method to print the diagram.
         
-        @param printer reference to a ready configured printer object (QPrinter)
+        @param printer reference to a ready configured printer object
+            (QPrinter)
         @param diagramName name of the diagram (string)
         """
         painter = QPainter()
@@ -306,17 +311,19 @@ class E5GraphicsView(QGraphicsView):
         fontHeight = fm.lineSpacing()
         marginX = printer.pageRect().x() - printer.paperRect().x()
         marginX = \
-            Preferences.getPrinter("LeftMargin") * int(printer.resolution() / 2.54) \
-            - marginX
+            Preferences.getPrinter("LeftMargin") * int(
+                printer.resolution() / 2.54) - marginX
         marginY = printer.pageRect().y() - printer.paperRect().y()
         marginY = \
-            Preferences.getPrinter("TopMargin") * int(printer.resolution() / 2.54) \
-            - marginY
+            Preferences.getPrinter("TopMargin") * int(
+                printer.resolution() / 2.54) - marginY
         
         width = printer.width() - marginX \
-            - Preferences.getPrinter("RightMargin") * int(printer.resolution() / 2.54)
+            - Preferences.getPrinter("RightMargin") * int(
+            printer.resolution() / 2.54)
         height = printer.height() - fontHeight - 4 - marginY \
-            - Preferences.getPrinter("BottomMargin") * int(printer.resolution() / 2.54)
+            - Preferences.getPrinter("BottomMargin") * int(
+            printer.resolution() / 2.54)
         
         border = self.border == 0 and 5 or self.border
         rect = self._getDiagramRect(border)
@@ -374,10 +381,10 @@ class E5GraphicsView(QGraphicsView):
         
         painter.end()
     
-    ############################################################################
+    ###########################################################################
     ## The methods below should be overridden by subclasses to get special
     ## behavior.
-    ############################################################################
+    ###########################################################################
     
     def filteredItems(self, items):
         """

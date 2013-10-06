@@ -11,7 +11,8 @@ import os
 
 from PyQt4.QtCore import QUrl, QCoreApplication
 from PyQt4.QtGui import QDialog
-from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkProxy, QNetworkProxyQuery
+from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkProxy, \
+    QNetworkProxyQuery
 
 from E5Gui import E5MessageBox
 
@@ -107,8 +108,9 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                                 proxyType = QNetworkProxy.FtpCachingProxy
                             else:
                                 proxyType = QNetworkProxy.HttpProxy
-                            proxy = QNetworkProxy(proxyType, url.host(), url.port(),
-                                                  url.userName(), url.password())
+                            proxy = QNetworkProxy(
+                                proxyType, url.host(), url.port(),
+                                url.userName(), url.password())
                             proxyList = [proxy]
                             break
                 if proxyList:
@@ -119,7 +121,8 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                         proxyList[0].setUser(
                             Preferences.getUI("ProxyUser/{0}".format(scheme)))
                         proxyList[0].setPassword(
-                            Preferences.getUI("ProxyPassword/{0}".format(scheme)))
+                            Preferences.getUI(
+                                "ProxyPassword/{0}".format(scheme)))
                     return proxyList
                 else:
                     return [QNetworkProxy(QNetworkProxy.NoProxy)]

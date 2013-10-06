@@ -48,7 +48,8 @@ class E5TreeWidget(QTreeWidget):
         
         @param mode default mode (ItemsCollapsed, ItemsExpanded)
         """
-        assert mode in [E5TreeWidget.ItemsCollapsed, E5TreeWidget.ItemsExpanded]
+        assert mode in [E5TreeWidget.ItemsCollapsed,
+                        E5TreeWidget.ItemsExpanded]
         
         self.__showMode = mode
     
@@ -136,7 +137,8 @@ class E5TreeWidget(QTreeWidget):
         """
         Public method to add a list of top level items.
         
-        @param items items to be added as top level items (list of QTreeWidgetItem)
+        @param items items to be added as top level items
+            (list of QTreeWidgetItem)
         """
         self.__allTreeItems.extend(items)
         super().addTopLevelItems(items)
@@ -156,7 +158,8 @@ class E5TreeWidget(QTreeWidget):
         Public method to insert a list of top level items.
         
         @param index index for the insertion (integer)
-        @param items items to be inserted as top level items (list of QTreeWidgetItem)
+        @param items items to be inserted as top level items
+            (list of QTreeWidgetItem)
         """
         self.__allTreeItems.extend(items)
         super().insertTopLevelItems(index, items)

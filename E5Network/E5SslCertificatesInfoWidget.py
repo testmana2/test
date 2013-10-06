@@ -35,7 +35,8 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         """
         Public method to show the SSL certificates of a certificate chain.
         
-        @param certificateChain list od SSL certificates (list of QSslCertificate)
+        @param certificateChain list od SSL certificates
+            (list of QSslCertificate)
         """
         self.chainLabel.show()
         self.chainComboBox.show()
@@ -50,7 +51,8 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
                 name = cert.subjectInfo(QSslCertificate.CommonName)
             if not name:
                 if qVersion() >= "5.0.0":
-                    name = ", ".join(cert.subjectInfo(QSslCertificate.Organization))
+                    name = ", ".join(
+                        cert.subjectInfo(QSslCertificate.Organization))
                 else:
                     name = cert.subjectInfo(QSslCertificate.Organization)
             if not name:
@@ -88,45 +90,56 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         
         if qVersion() >= "5.0.0":
             self.subjectCommonNameLabel.setText(self.__certificateString(
-                ", ".join(certificate.subjectInfo(QSslCertificate.CommonName))))
+                ", ".join(certificate.subjectInfo(
+                    QSslCertificate.CommonName))))
             self.subjectOrganizationLabel.setText(self.__certificateString(
-                ", ".join(certificate.subjectInfo(QSslCertificate.Organization))))
-            self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
-                ", ".join(
-                    certificate.subjectInfo(QSslCertificate.OrganizationalUnitName))))
+                ", ".join(certificate.subjectInfo(
+                    QSslCertificate.Organization))))
+            self.subjectOrganizationalUnitLabel.setText(
+                self.__certificateString(", ".join(
+                    certificate.subjectInfo(
+                        QSslCertificate.OrganizationalUnitName))))
             self.issuerCommonNameLabel.setText(self.__certificateString(
                 ", ".join(certificate.issuerInfo(QSslCertificate.CommonName))))
             self.issuerOrganizationLabel.setText(self.__certificateString(
-                ", ".join(certificate.issuerInfo(QSslCertificate.Organization))))
-            self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
-                ", ".join(certificate.issuerInfo(QSslCertificate.OrganizationalUnitName))))
+                ", ".join(certificate.issuerInfo(
+                    QSslCertificate.Organization))))
+            self.issuerOrganizationalUnitLabel.setText(
+                self.__certificateString(", ".join(
+                    certificate.issuerInfo(
+                        QSslCertificate.OrganizationalUnitName))))
         else:
             self.subjectCommonNameLabel.setText(self.__certificateString(
                 certificate.subjectInfo(QSslCertificate.CommonName)))
             self.subjectOrganizationLabel.setText(self.__certificateString(
                 certificate.subjectInfo(QSslCertificate.Organization)))
-            self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
-                certificate.subjectInfo(QSslCertificate.OrganizationalUnitName)))
+            self.subjectOrganizationalUnitLabel.setText(
+                self.__certificateString(certificate.subjectInfo(
+                    QSslCertificate.OrganizationalUnitName)))
             self.issuerCommonNameLabel.setText(self.__certificateString(
                 certificate.issuerInfo(QSslCertificate.CommonName)))
             self.issuerOrganizationLabel.setText(self.__certificateString(
                 certificate.issuerInfo(QSslCertificate.Organization)))
-            self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
-                certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
+            self.issuerOrganizationalUnitLabel.setText(
+                self.__certificateString(certificate.issuerInfo(
+                    QSslCertificate.OrganizationalUnitName)))
         self.serialNumberLabel.setText(self.__serialNumber(certificate))
         self.effectiveLabel.setText(
             certificate.effectiveDate().toString("yyyy-MM-dd"))
         self.expiresLabel.setText(
             certificate.expiryDate().toString("yyyy-MM-dd"))
         self.sha1Label.setText(self.__formatHexString(
-            str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding="ascii")))
+            str(certificate.digest(QCryptographicHash.Sha1).toHex(),
+                encoding="ascii")))
         self.md5Label.setText(self.__formatHexString(
-            str(certificate.digest(QCryptographicHash.Md5).toHex(), encoding="ascii")))
+            str(certificate.digest(QCryptographicHash.Md5).toHex(),
+                encoding="ascii")))
         
         if (qVersion() >= "5.0.0" and certificate.isBlacklisted()) or \
            (qVersion() < "5.0.0" and not certificate.isValid()):
             # something is wrong; indicate it to the user
-            if self.__hasExpired(certificate.effectiveDate(), certificate.expiryDate()):
+            if self.__hasExpired(certificate.effectiveDate(),
+                                 certificate.expiryDate()):
                 self.expiredLabel.setVisible(True)
             else:
                 self.blacklistedLabel.setVisible(True)
@@ -196,6 +209,7 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         """
         Private slot to show the certificate info for the selected entry.
         
-        @param index number of the certificate in the certificate chain (integer)
+        @param index number of the certificate in the certificate chain
+            (integer)
         """
         self.__showCertificate(self.__chain[index])

@@ -63,8 +63,8 @@ class E5SslInfoWidget(QMenu):
         label = QLabel(self)
         label.setWordWrap(True)
         if cert.isNull():
-            label.setText(
-                self.trUtf8("Warning: this site is NOT carrying a certificate."))
+            label.setText(self.trUtf8(
+                "Warning: this site is NOT carrying a certificate."))
             imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
         else:
             if qVersion() >= "5.0.0":
@@ -73,16 +73,21 @@ class E5SslInfoWidget(QMenu):
                 valid = cert.isValid()
             if valid:
                 if qVersion() >= "5.0.0":
-                    txt = ", ".join(cert.issuerInfo(QSslCertificate.CommonName))
+                    txt = ", ".join(
+                        cert.issuerInfo(QSslCertificate.CommonName))
                 else:
                     txt = cert.issuerInfo(QSslCertificate.CommonName)
-                label.setText(self.trUtf8("The certificate for this site is valid"
+                label.setText(self.trUtf8(
+                    "The certificate for this site is valid"
                     " and has been verified by:\n{0}").format(
                     Utilities.decodeString(txt)))
-                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityHigh32.png"))
+                imageLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("securityHigh32.png"))
             else:
-                label.setText(self.trUtf8("The certificate for this site is NOT valid."))
-                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+                label.setText(self.trUtf8(
+                    "The certificate for this site is NOT valid."))
+                imageLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("securityLow32.png"))
             layout.addWidget(label, rows, 1)
             rows += 1
             
@@ -130,21 +135,26 @@ class E5SslInfoWidget(QMenu):
             proto = cipher.protocol()
             if proto == QSsl.SslV3:
                 sslVersion = "SSL 3.0"
-                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityHigh32.png"))
+                imageLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("securityHigh32.png"))
             elif proto == QSsl.TlsV1:
                 sslVersion = "TLS 1.0"
-                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityHigh32.png"))
+                imageLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("securityHigh32.png"))
             elif proto == QSsl.SslV2:
                 sslVersion = "SSL 2.0"
-                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+                imageLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("securityLow32.png"))
             else:
                 sslVersion = self.trUtf8("unknown")
-                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+                imageLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("securityLow32.png"))
             rows += 1
             
             label = QLabel(self)
             label.setWordWrap(True)
-            label.setText(self.trUtf8("It uses protocol: {0}").format(sslVersion))
+            label.setText(self.trUtf8(
+                "It uses protocol: {0}").format(sslVersion))
             layout.addWidget(label, rows, 1)
             rows += 1
             
@@ -180,7 +190,8 @@ class E5SslInfoWidget(QMenu):
         Private slot to show certificate information.
         """
         from .E5SslCertificatesInfoDialog import E5SslCertificatesInfoDialog
-        dlg = E5SslCertificatesInfoDialog(self.__configuration.peerCertificateChain())
+        dlg = E5SslCertificatesInfoDialog(
+            self.__configuration.peerCertificateChain())
         dlg.exec_()
     
     def accept(self):

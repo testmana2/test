@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing an extension to the Python FTP class to support FTP proxies.
+Module implementing an extension to the Python FTP class to support FTP
+proxies.
 """
 
 import ftplib
@@ -18,14 +19,18 @@ class E5FtpProxyError(ftplib.Error):
     The error message starts with a three digit error code followed by a
     space and the error string. Supported error codes are:
     <ul>
-      <li>910: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
-      <li>930: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
-      <li>940: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
-      <li>950: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
+      <li>910: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
+      <li>930: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
+      <li>940: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
+      <li>950: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
       <li>990: proxy usage is enabled but no proxy host given</li>
       <li>991: proxy usage is enabled but no proxy user given</li>
       <li>992: proxy usage is enabled but no proxy password given</li>
@@ -46,18 +51,20 @@ class E5FtpProxyType(object):
     UserAtProxyuserAtServer = 5     # one login for both
     ProxyuserAtServer = 6           # proxy login with remote host given, than
                                     # normal remote login
-    AuthResp = 7                    # authenticate to proxy with AUTH and RESP commands
+    AuthResp = 7                    # authenticate to proxy with AUTH and
+                                    # RESP commands
     Bluecoat = 8                    # bluecoat proxy
 
 
 class E5Ftp(ftplib.FTP):
     """
-    Class implementing an extension to the Python FTP class to support FTP proxies.
+    Class implementing an extension to the Python FTP class to support FTP
+    proxies.
     """
     def __init__(self, host="", user="", password="", acct="",
-        proxyType=E5FtpProxyType.NoProxy, proxyHost="", proxyPort=ftplib.FTP_PORT,
-        proxyUser="", proxyPassword="", proxyAccount="",
-        timeout=_GLOBAL_DEFAULT_TIMEOUT):
+                 proxyType=E5FtpProxyType.NoProxy, proxyHost="",
+                 proxyPort=ftplib.FTP_PORT, proxyUser="", proxyPassword="",
+                 proxyAccount="", timeout=_GLOBAL_DEFAULT_TIMEOUT):
         """
         Constructor
         
@@ -96,7 +103,8 @@ class E5Ftp(ftplib.FTP):
                 self.login(user, password, acct)
     
     def setProxy(self, proxyType=E5FtpProxyType.NoProxy, proxyHost="",
-        proxyPort=ftplib.FTP_PORT, proxyUser="", proxyPassword="", proxyAccount=""):
+                 proxyPort=ftplib.FTP_PORT, proxyUser="", proxyPassword="",
+                 proxyAccount=""):
         """
         Public method to set the proxy configuration.
         
@@ -114,7 +122,8 @@ class E5Ftp(ftplib.FTP):
         self.__proxyPassword = proxyPassword
         self.__proxyAccount = proxyAccount
     
-    def setProxyAuthentication(self, proxyUser="", proxyPassword="", proxyAccount=""):
+    def setProxyAuthentication(self, proxyUser="", proxyPassword="",
+                               proxyAccount=""):
         """
         Public method to set the proxy authentication info.
         
@@ -152,7 +161,8 @@ class E5Ftp(ftplib.FTP):
                 raise E5FtpProxyError(
                     "990 Proxy usage requested, but no proxy host given.")
             
-            return super().connect(self.__proxyHost, self.__proxyPort, self.__timeout)
+            return super().connect(
+                self.__proxyHost, self.__proxyPort, self.__timeout)
         else:
             return super().connect(self.__host, self.__port, self.__timeout)
     
@@ -160,17 +170,18 @@ class E5Ftp(ftplib.FTP):
         """
         Public method to login to the FTP server.
         
-        This extended method respects the FTP proxy configuration. There are many
-        different FTP proxy products available. But unfortunately there is no
-        standard for how o traverse a FTP proxy. The lis below shows the sequence
-        of commands used.
+        This extended method respects the FTP proxy configuration. There are
+        many different FTP proxy products available. But unfortunately there
+        is no standard for how o traverse a FTP proxy. The lis below shows
+        the sequence of commands used.
         
         <table>
           <tr><td>user</td><td>Username for remote host</td></tr>
           <tr><td>pass</td><td>Password for remote host</td></tr>
           <tr><td>pruser</td><td>Username for FTP proxy</td></tr>
           <tr><td>prpass</td><td>Password for FTP proxy</td></tr>
-          <tr><td>remote.host</td><td>Hostname of the remote FTP server</td></tr>
+          <tr><td>remote.host</td><td>Hostname of the remote FTP server</td>
+          </tr>
         </table>
         
         <dl>
@@ -259,7 +270,8 @@ class E5Ftp(ftplib.FTP):
                         "991 Proxy usage requested, but no proxy user given")
                 if not self.__proxyPassword:
                     raise E5FtpProxyError(
-                        "992 Proxy usage requested, but no proxy password given")
+                        "992 Proxy usage requested, but no proxy password"
+                        " given")
             
             if self.__proxyType in [E5FtpProxyType.NonAuthorizing,
                     E5FtpProxyType.AuthResp, E5FtpProxyType.Bluecoat]:
@@ -268,7 +280,8 @@ class E5Ftp(ftplib.FTP):
                     user += " " + self.__proxyUser
                     acct = self.__proxyPassword
             elif self.__proxyType == E5FtpProxyType.UserAtProxyuserAtServer:
-                user = "{0}@{1}@{2}".format(user, self.__proxyUser, self.__host)
+                user = "{0}@{1}@{2}".format(
+                    user, self.__proxyUser, self.__host)
                 password = "{0}@{1}".format(password, self.__proxyPassword)
             else:
                 pruser = self.__proxyUser
@@ -284,7 +297,8 @@ class E5Ftp(ftplib.FTP):
                 if presp[0] == "3" and self.__proxyAccount:
                     presp = self.sendcmd("ACCT " + self.__proxyAccount)
                 if presp[0] != "2":
-                    raise E5FtpProxyError("9{0}0 Error authorizing at proxy\n{1}".format(
+                    raise E5FtpProxyError(
+                        "9{0}0 Error authorizing at proxy\n{1}".format(
                         presp[0], presp))
                 
                 if self.__proxyType == E5FtpProxyType.Site:
@@ -317,7 +331,8 @@ class E5Ftp(ftplib.FTP):
             if presp[0] == "3":
                 presp = self.sendcmd("RESP " + self.__proxyPassword)
             if presp[0] != "2":
-                raise E5FtpProxyError("9{0}0 Error authorizing at proxy\n{1}".format(
+                raise E5FtpProxyError(
+                    "9{0}0 Error authorizing at proxy\n{1}".format(
                     presp[0], presp))
         
         return resp

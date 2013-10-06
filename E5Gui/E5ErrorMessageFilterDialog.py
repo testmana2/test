@@ -22,7 +22,8 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
         """
         Constructor
         
-        @param messageFilters list of message filters to be edited (list of strings)
+        @param messageFilters list of message filters to be edited
+            (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -35,7 +36,8 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
         self.__proxyModel.setSourceModel(self.__model)
         self.filterList.setModel(self.__proxyModel)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.removeButton.clicked[()].connect(self.filterList.removeSelected)
         self.removeAllButton.clicked[()].connect(self.filterList.removeAll)

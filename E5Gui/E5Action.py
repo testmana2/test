@@ -15,8 +15,8 @@ from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence, qApp
 
 class ArgumentsError(RuntimeError):
     """
-    Class implementing an exception, which is raised, if the wrong number of arguments
-    are given.
+    Class implementing an exception, which is raised, if the wrong number of
+    arguments are given.
     """
     def __init__(self, error):
         """
@@ -54,17 +54,19 @@ class E5Action(QAction):
         @param args argument list of the constructor. This list is one of
             <ul>
             <li>text (string), icon (QIcon), menu text (string),
-                accelarator (QKeySequence), alternative accelerator (QKeySequence),
-                parent (QObject), name (string), toggle (boolean)</li>
+                accelarator (QKeySequence), alternative accelerator
+                (QKeySequence), parent (QObject), name (string), toggle
+                (boolean)</li>
             <li>text (string), icon (QIcon), menu text (string),
-                accelarator (QKeySequence), alternative accelerator (QKeySequence),
-                parent (QObject), name (string)</li>
+                accelarator (QKeySequence), alternative accelerator
+                (QKeySequence), parent (QObject), name (string)</li>
             <li>text (string), menu text (string),
-                accelarator (QKeySequence), alternative accelerator (QKeySequence),
-                parent (QObject), name (string), toggle (boolean)</li>
+                accelarator (QKeySequence), alternative accelerator
+                (QKeySequence), parent (QObject), name (string), toggle
+                (boolean)</li>
             <li>text (string), menu text (string),
-                accelarator (QKeySequence), alternative accelerator (QKeySequence),
-                parent (QObject), name (string)</li>
+                accelarator (QKeySequence), alternative accelerator
+                (QKeySequence), parent (QObject), name (string)</li>
             </ul>
         @exception ArgumentsError raised to indicate invalid arguments
         """

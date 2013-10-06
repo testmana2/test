@@ -85,14 +85,16 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
             [self.trUtf8("Name"), self.trUtf8("Value")])
         self.responseHeadersList.setModel(self.__replyHeaders)
         self.responseHeadersList.horizontalHeader().setStretchLastSection(True)
-        self.responseHeadersList.doubleClicked.connect(self.__showHeaderDetails)
+        self.responseHeadersList.doubleClicked.connect(
+            self.__showHeaderDetails)
         
         self.requestsList.horizontalHeader().setStretchLastSection(True)
         self.requestsList.verticalHeader().setMinimumSectionSize(-1)
         
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setFilterKeyColumn(-1)
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.removeButton.clicked[()].connect(self.requestsList.removeSelected)
         self.removeAllButton.clicked[()].connect(self.requestsList.removeAll)
@@ -100,8 +102,10 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         self.__model = E5RequestModel(networkAccessManager, self)
         self.__proxyModel.setSourceModel(self.__model)
         self.requestsList.setModel(self.__proxyModel)
-        self.__proxyModel.rowsInserted.connect(self.requestsList.scrollToBottom)
-        self.requestsList.selectionModel().currentChanged[QModelIndex, QModelIndex]\
+        self.__proxyModel.rowsInserted.connect(
+            self.requestsList.scrollToBottom)
+        self.requestsList.selectionModel()\
+            .currentChanged[QModelIndex, QModelIndex]\
             .connect(self.__currentChanged)
         
         fm = self.fontMetrics()
@@ -189,7 +193,8 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         name = headerList.model().data(headerList.model().index(row, 0))
         value = headerList.model().data(headerList.model().index(row, 1))
         if self.__headersDlg is None:
-            from .E5NetworkHeaderDetailsDialog import E5NetworkHeaderDetailsDialog
+            from .E5NetworkHeaderDetailsDialog import \
+                E5NetworkHeaderDetailsDialog
             self.__headersDlg = E5NetworkHeaderDetailsDialog(self)
         self.__headersDlg.setData(name, value)
         self.__headersDlg.show()
@@ -248,7 +253,8 @@ class E5RequestModel(QAbstractTableModel):
         
         @param req reference to the request object (E5NetworkRequest)
         """
-        self.beginInsertRows(QModelIndex(), len(self.requests), len(self.requests))
+        self.beginInsertRows(
+            QModelIndex(), len(self.requests), len(self.requests))
         self.requests.append(req)
         req.reply.finished[()].connect(self.__addReply)
         self.endInsertRows()
@@ -276,13 +282,17 @@ class E5RequestModel(QAbstractTableModel):
         
         # save reply info to be displayed
         status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute) or 0
-        reason = reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute) or ""
+        reason = \
+            reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute) or ""
         self.requests[offset].response = "{0:d} {1}".format(status, reason)
-        self.requests[offset].length = reply.header(QNetworkRequest.ContentLengthHeader)
-        self.requests[offset].contentType = reply.header(QNetworkRequest.ContentTypeHeader)
+        self.requests[offset].length = \
+            reply.header(QNetworkRequest.ContentLengthHeader)
+        self.requests[offset].contentType = \
+            reply.header(QNetworkRequest.ContentTypeHeader)
         
         if status == 302:
-            target = reply.attribute(QNetworkRequest.RedirectionTargetAttribute) or QUrl()
+            target = reply.attribute(
+                QNetworkRequest.RedirectionTargetAttribute) or QUrl()
             self.requests[offset].info = \
                 self.trUtf8("Redirect: {0}").format(target.toString())
     
