@@ -8,8 +8,8 @@ Module implementing a grabber widget for a rectangular snapshot region.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
-from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, QPainter, \
-    QPalette, QToolTip, QPaintEngine, QPen, QBrush
+from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \
+    QPainter, QPalette, QToolTip, QPaintEngine, QPen, QBrush
 
 
 def drawRect(painter, rect, outline, fill=QColor()):
@@ -92,8 +92,8 @@ class SnapshotRegionGrabber(QWidget):
                           self.__RHandle, self.__BHandle]
         self.__helpTextRect = QRect()
         self.__helpText = self.trUtf8(
-            "Select a region using the mouse. To take the snapshot, press the Enter key"
-            " or double click. Press Esc to quit.")
+            "Select a region using the mouse. To take the snapshot, press"
+            " the Enter key or double click. Press Esc to quit.")
         
         self.__pixmap = QPixmap()
         
@@ -162,11 +162,13 @@ class SnapshotRegionGrabber(QWidget):
         if self.__showHelp:
             painter.setPen(textColor)
             painter.setBrush(textBackgroundColor)
-            self.__helpTextRect = painter.boundingRect(self.rect().adjusted(2, 2, -2, -2),
+            self.__helpTextRect = painter.boundingRect(
+                self.rect().adjusted(2, 2, -2, -2),
                 Qt.TextWordWrap, self.__helpText).translated(
                 -self.__desktop.x(), -self.__desktop.y())
             self.__helpTextRect.adjust(-2, -2, 4, 2)
-            drawRect(painter, self.__helpTextRect, textColor, textBackgroundColor)
+            drawRect(painter, self.__helpTextRect, textColor,
+                     textBackgroundColor)
             painter.drawText(self.__helpTextRect.adjusted(3, 3, -3, -3),
                 Qt.TextWordWrap, self.__helpText)
         
@@ -208,7 +210,8 @@ class SnapshotRegionGrabber(QWidget):
             boundingRect.moveBottomLeft(QPoint(r.right() + 3, r.bottom()))
             textRect.moveBottomLeft(QPoint(r.right() + 5, r.bottom()))
         
-        # If the above didn't catch it, you are running on a very tiny screen...
+        # If the above didn't catch it, you are running on a very
+        # tiny screen...
         drawRect(painter, boundingRect, textColor, textBackgroundColor)
         painter.drawText(textRect, Qt.AlignHCenter, txt)
         
@@ -218,11 +221,13 @@ class SnapshotRegionGrabber(QWidget):
             self.__updateHandles()
             painter.setPen(Qt.NoPen)
             painter.setBrush(handleColor)
-            painter.setClipRegion(self.__handleMask(SnapshotRegionGrabber.StrokeMask))
+            painter.setClipRegion(
+                self.__handleMask(SnapshotRegionGrabber.StrokeMask))
             painter.drawRect(self.rect())
             handleColor.setAlpha(60)
             painter.setBrush(handleColor)
-            painter.setClipRegion(self.__handleMask(SnapshotRegionGrabber.FillMask))
+            painter.setClipRegion(
+                self.__handleMask(SnapshotRegionGrabber.FillMask))
             painter.drawRect(self.rect())
     
     def resizeEvent(self, evt):
@@ -281,14 +286,16 @@ class SnapshotRegionGrabber(QWidget):
                 p = evt.pos()
                 r = self.rect()
                 self.__selection = self.__normalizeSelection(
-                    QRect(self.__dragStartPoint, self.__limitPointToRect(p, r)))
+                    QRect(self.__dragStartPoint,
+                          self.__limitPointToRect(p, r)))
             elif self.__mouseOverHandle is None:
                 # moving the whole selection
                 r = self.rect().normalized()
                 s = self.__selectionBeforeDrag.normalized()
                 p = s.topLeft() + evt.pos() - self.__dragStartPoint
                 r.setBottomRight(
-                    r.bottomRight() - QPoint(s.width(), s.height()) + QPoint(1, 1))
+                    r.bottomRight() - QPoint(s.width(),
+                    s.height()) + QPoint(1, 1))
                 if not r.isNull() and r.isValid():
                     self.__selection.moveTo(self.__limitPointToRect(p, r))
             else:
@@ -313,7 +320,8 @@ class SnapshotRegionGrabber(QWidget):
                     r.setRight(r.right() + offset.x())
                 
                 r.setTopLeft(self.__limitPointToRect(r.topLeft(), self.rect()))
-                r.setBottomRight(self.__limitPointToRect(r.bottomRight(), self.rect()))
+                r.setBottomRight(
+                    self.__limitPointToRect(r.bottomRight(), self.rect()))
                 self.__selection = self.__normalizeSelection(r)
             
             self.update()
@@ -335,13 +343,17 @@ class SnapshotRegionGrabber(QWidget):
                 else:
                     self.setCursor(Qt.CrossCursor)
             else:
-                if self.__mouseOverHandle in [self.__TLHandle, self.__BRHandle]:
+                if self.__mouseOverHandle in [self.__TLHandle,
+                                              self.__BRHandle]:
                     self.setCursor(Qt.SizeFDiagCursor)
-                elif self.__mouseOverHandle in [self.__TRHandle, self.__BLHandle]:
+                elif self.__mouseOverHandle in [self.__TRHandle,
+                                                self.__BLHandle]:
                     self.setCursor(Qt.SizeBDiagCursor)
-                elif self.__mouseOverHandle in [self.__LHandle, self.__RHandle]:
+                elif self.__mouseOverHandle in [self.__LHandle,
+                                                self.__RHandle]:
                     self.setCursor(Qt.SizeHorCursor)
-                elif self.__mouseOverHandle in [self.__THandle, self.__BHandle]:
+                elif self.__mouseOverHandle in [self.__THandle,
+                                                self.__BHandle]:
                     self.setCursor(Qt.SizeVerCursor)
     
     def mouseReleaseEvent(self, evt):
@@ -392,14 +404,17 @@ class SnapshotRegionGrabber(QWidget):
         
         self.__LHandle.moveTopLeft(QPoint(r.x(), r.y() + r.height() // 2 - s2))
         self.__THandle.moveTopLeft(QPoint(r.x() + r.width() // 2 - s2, r.y()))
-        self.__RHandle.moveTopRight(QPoint(r.right(), r.y() + r.height() // 2 - s2))
-        self.__BHandle.moveBottomLeft(QPoint(r.x() + r.width() // 2 - s2, r.bottom()))
+        self.__RHandle.moveTopRight(
+            QPoint(r.right(), r.y() + r.height() // 2 - s2))
+        self.__BHandle.moveBottomLeft(
+            QPoint(r.x() + r.width() // 2 - s2, r.bottom()))
     
     def __handleMask(self, maskType):
         """
         Private method to calculate the handle mask.
         
-        @param maskType type of the mask to be used (SnapshotRegionGrabber.FillMask or
+        @param maskType type of the mask to be used
+            (SnapshotRegionGrabber.FillMask or
             SnapshotRegionGrabber.StrokeMask)
         @return calculated mask (QRegion)
         """
@@ -474,8 +489,10 @@ class SnapshotRegionGrabber(QWidget):
                 pt = QPainter()
                 pt.begin(pixmap2)
                 if pt.paintEngine().hasFeature(QPaintEngine.PorterDuff):
-                    pt.setRenderHints(QPainter.Antialiasing | \
-                        QPainter.HighQualityAntialiasing | QPainter.SmoothPixmapTransform,
+                    pt.setRenderHints(
+                        QPainter.Antialiasing | \
+                        QPainter.HighQualityAntialiasing | \
+                        QPainter.SmoothPixmapTransform,
                         True)
                     pt.setBrush(Qt.black)
                     pt.setPen(QPen(QBrush(Qt.black), 0.5))
@@ -485,7 +502,8 @@ class SnapshotRegionGrabber(QWidget):
                     pt.setClipRegion(translatedEll)
                     pt.setCompositionMode(QPainter.CompositionMode_Source)
                 
-                pt.drawPixmap(pixmap2.rect(), self.__pixmap, ell.boundingRect())
+                pt.drawPixmap(pixmap2.rect(), self.__pixmap,
+                              ell.boundingRect())
                 pt.end()
                 
                 self.grabbed.emit(pixmap2)

@@ -9,7 +9,8 @@ Module implementing the SQL Browser widget.
 
 from PyQt4.QtCore import pyqtSignal, QVariant, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QStandardItemModel, QDialog, QAbstractItemView
-from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, QSqlQueryModel, QSqlQuery
+from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, \
+    QSqlQueryModel, QSqlQuery
 
 from E5Gui import E5MessageBox
 
@@ -41,12 +42,15 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         if len(QSqlDatabase.drivers()) == 0:
             E5MessageBox.information(self,
                 self.trUtf8("No database drivers found"),
-                self.trUtf8("""This tool requires at least one Qt database driver. """
-                """Please check the Qt documentation how to build the """
-                """Qt SQL plugins."""))
+                self.trUtf8(
+                    """This tool requires at least one Qt database driver. """
+                    """Please check the Qt documentation how to build the """
+                    """Qt SQL plugins."""))
         
-        self.connections.tableActivated.connect(self.on_connections_tableActivated)
-        self.connections.schemaRequested.connect(self.on_connections_schemaRequested)
+        self.connections.tableActivated.connect(
+            self.on_connections_tableActivated)
+        self.connections.schemaRequested.connect(
+            self.on_connections_schemaRequested)
         self.connections.cleared.connect(self.on_connections_cleared)
         
         self.statusMessage.emit(self.trUtf8("Ready"))
@@ -125,15 +129,16 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         err = QSqlError()
         
         self.__class__.cCount += 1
-        db = QSqlDatabase.addDatabase(driver.upper(),
-                                      "Browser{0:d}".format(self.__class__.cCount))
+        db = QSqlDatabase.addDatabase(
+            driver.upper(), "Browser{0:d}".format(self.__class__.cCount))
         db.setDatabaseName(dbName)
         db.setHostName(host)
         db.setPort(port)
         if not db.open(user, password):
             err = db.lastError()
             db = QSqlDatabase()
-            QSqlDatabase.removeDatabase("Browser{0:d}".format(self.__class__.cCount))
+            QSqlDatabase.removeDatabase(
+                "Browser{0:d}".format(self.__class__.cCount))
         
         self.connections.refresh()
         
@@ -147,12 +152,14 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         dlg = SqlConnectionDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             driver, dbName, user, password, host, port = dlg.getData()
-            err = self.addConnection(driver, dbName, user, password, host, port)
+            err = self.addConnection(
+                driver, dbName, user, password, host, port)
             
             if err.type() != QSqlError.NoError:
                 E5MessageBox.warning(self,
                     self.trUtf8("Unable to open database"),
-                    self.trUtf8("""An error occurred while opening the connection."""))
+                    self.trUtf8(
+                        """An error occurred while opening the connection."""))
     
     def showTable(self, table):
         """
@@ -172,7 +179,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         
         self.table.resizeColumnsToContents()
         
-        self.table.selectionModel().currentRowChanged.connect(self.updateActions)
+        self.table.selectionModel().currentRowChanged.connect(
+            self.updateActions)
         
         self.updateActions()
     
@@ -203,9 +211,9 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
                 model.setData(model.index(i, 1),
                               QVariant.typeToName(fld.type()))
             else:
-                model.setData(model.index(i, 1), "{0} ({1})".format(
-                                                 QVariant.typeToName(fld.type()),
-                                                 fld.typeID()))
+                model.setData(
+                    model.index(i, 1), "{0} ({1})".format(
+                    QVariant.typeToName(fld.type()), fld.typeID()))
             if fld.length() < 0:
                 model.setData(model.index(i, 2), "?")
             else:
@@ -282,8 +290,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         Public slot to execute the entered query.
         """
         model = QSqlQueryModel(self.table)
-        model.setQuery(
-            QSqlQuery(self.sqlEdit.toPlainText(), self.connections.currentDatabase()))
+        model.setQuery(QSqlQuery(
+            self.sqlEdit.toPlainText(), self.connections.currentDatabase()))
         self.table.setModel(model)
         
         if model.lastError().type() != QSqlError.NoError:

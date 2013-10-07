@@ -17,7 +17,8 @@ class SqlConnectionWidget(QWidget):
     """
     Class implementing a widget showing the SQL connections.
     
-    @signal tableActivated(str) emitted after the entry for a table has been activated
+    @signal tableActivated(str) emitted after the entry for a table has been
+        activated
     @signal schemaRequested(str) emitted when the schema display is requested
     @signal cleared() emitted after the connection tree has been cleared
     """
@@ -40,11 +41,13 @@ class SqlConnectionWidget(QWidget):
         self.__connectionTree.setObjectName("connectionTree")
         self.__connectionTree.setHeaderLabels([self.trUtf8("Database")])
         if qVersion() >= "5.0.0":
-            self.__connectionTree.header().setSectionResizeMode(QHeaderView.Stretch)
+            self.__connectionTree.header().setSectionResizeMode(
+                QHeaderView.Stretch)
         else:
             self.__connectionTree.header().setResizeMode(QHeaderView.Stretch)
         refreshAction = QAction(self.trUtf8("Refresh"), self.__connectionTree)
-        self.__schemaAction = QAction(self.trUtf8("Show Schema"), self.__connectionTree)
+        self.__schemaAction = QAction(
+            self.trUtf8("Show Schema"), self.__connectionTree)
         
         refreshAction.triggered[()].connect(self.refresh)
         self.__schemaAction.triggered[()].connect(self.showSchema)
@@ -58,7 +61,8 @@ class SqlConnectionWidget(QWidget):
         self.__activating = False
         
         self.__connectionTree.itemActivated.connect(self.__itemActivated)
-        self.__connectionTree.currentItemChanged.connect(self.__currentItemChanged)
+        self.__connectionTree.currentItemChanged.connect(
+            self.__currentItemChanged)
         
         self.__activeDb = ""
     
@@ -123,7 +127,8 @@ class SqlConnectionWidget(QWidget):
         Private slot handling a change of the current item.
         
         @param current reference to the new current item (QTreeWidgetItem)
-        @param previous reference to the previous current item (QTreeWidgetItem)
+        @param previous reference to the previous current item
+            (QTreeWidgetItem)
         """
         self.__schemaAction.setEnabled(
             current is not None and current.parent() is not None)
@@ -166,11 +171,13 @@ class SqlConnectionWidget(QWidget):
         """
         Private slot to set an item to active.
         
-        @param itm reference to the item to set as the active item (QTreeWidgetItem)
+        @param itm reference to the item to set as the active item
+            (QTreeWidgetItem)
         """
         for index in range(self.__connectionTree.topLevelItemCount()):
             if self.__connectionTree.topLevelItem(index).font(0).bold():
-                self.__setBold(self.__connectionTree.topLevelItem(index), False)
+                self.__setBold(
+                    self.__connectionTree.topLevelItem(index), False)
         
         if itm is None:
             return

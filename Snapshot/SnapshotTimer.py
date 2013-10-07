@@ -36,8 +36,8 @@ class SnapshotTimer(QWidget):
         
         # text is taken from paintEvent with maximum number plus some margin
         self.resize(
-            self.fontMetrics().width(
-                self.trUtf8("Snapshot will be taken in %n seconds", "", 99)) + 6,
+            self.fontMetrics().width(self.trUtf8(
+                "Snapshot will be taken in %n seconds", "", 99)) + 6,
             self.fontMetrics().height() + 4)
         
         self.__timer.timeout.connect(self.__bell)
@@ -49,7 +49,8 @@ class SnapshotTimer(QWidget):
         @param seconds timeout value (integer)
         """
         screenGeom = QApplication.desktop().screenGeometry()
-        self.move(screenGeom.width() // 2 - self.size().width() // 2, screenGeom.top())
+        self.move(screenGeom.width() // 2 - self.size().width() // 2,
+                  screenGeom.top())
         self.__toggle = True
         self.__time = 0
         self.__length = seconds
@@ -100,7 +101,8 @@ class SnapshotTimer(QWidget):
                                    self.__length - self.__time)
             textRect = painter.boundingRect(self.rect().adjusted(2, 2, -2, -2),
                 Qt.AlignHCenter | Qt.TextSingleLine, helpText)
-            painter.drawText(textRect, Qt.AlignHCenter | Qt.TextSingleLine, helpText)
+            painter.drawText(textRect, Qt.AlignHCenter | Qt.TextSingleLine,
+                             helpText)
     
     def enterEvent(self, evt):
         """
@@ -111,7 +113,8 @@ class SnapshotTimer(QWidget):
         screenGeom = QApplication.desktop().screenGeometry()
         if self.x() == screenGeom.left():
             self.move(
-                screenGeom.x() + (screenGeom.width() // 2 - self.size().width() // 2),
+                screenGeom.x() + (screenGeom.width() // 2 - \
+                    self.size().width() // 2),
                 screenGeom.top())
         else:
             self.move(screenGeom.topLeft())

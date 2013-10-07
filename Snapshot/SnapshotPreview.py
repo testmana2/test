@@ -40,7 +40,8 @@ class SnapshotPreview(QLabel):
         """
         if not preview.isNull():
             pixmap = preview.scaled(
-                self.width(), self.height(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                self.width(), self.height(),
+                Qt.KeepAspectRatio, Qt.SmoothTransformation)
         else:
             pixmap = preview
         self.setPixmap(pixmap)

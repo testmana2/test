@@ -8,8 +8,8 @@ Module implementing a grabber widget for a freehand snapshot region.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
-from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, QPainter, \
-    QPalette, QToolTip, QPolygon, QPen, QBrush, QPaintEngine
+from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \
+    QPainter, QPalette, QToolTip, QPolygon, QPen, QBrush, QPaintEngine
 
 
 def drawPolygon(painter, polygon, outline, fill=QColor()):
@@ -63,8 +63,8 @@ class SnapshotFreehandGrabber(QWidget):
         
         self.__helpTextRect = QRect()
         self.__helpText = self.trUtf8(
-            "Select a region using the mouse. To take the snapshot, press the Enter key"
-            " or double click. Press Esc to quit.")
+            "Select a region using the mouse. To take the snapshot,"
+            " press the Enter key or double click. Press Esc to quit.")
         
         self.__pixmap = QPixmap()
         self.__pBefore = QPoint()
@@ -119,7 +119,8 @@ class SnapshotFreehandGrabber(QWidget):
         pol = QPolygon(self.__selection)
         if not self.__selection.boundingRect().isNull():
             # Draw outline around selection.
-            # Important: the 1px-wide outline is *also* part of the captured free-region
+            # Important: the 1px-wide outline is *also* part of the
+            # captured free-region
             pen = QPen(handleColor, 1, Qt.SolidLine, Qt.SquareCap, Qt.BevelJoin)
             painter.setPen(pen)
             painter.drawPolygon(pol)
@@ -137,11 +138,13 @@ class SnapshotFreehandGrabber(QWidget):
         if self.__showHelp:
             painter.setPen(textColor)
             painter.setBrush(textBackgroundColor)
-            self.__helpTextRect = painter.boundingRect(self.rect().adjusted(2, 2, -2, -2),
+            self.__helpTextRect = painter.boundingRect(
+                self.rect().adjusted(2, 2, -2, -2),
                 Qt.TextWordWrap, self.__helpText).translated(
                 -self.__desktop.x(), -self.__desktop.y())
             self.__helpTextRect.adjust(-2, -2, 4, 2)
-            drawPolygon(painter, self.__helpTextRect, textColor, textBackgroundColor)
+            drawPolygon(painter, self.__helpTextRect, textColor,
+                        textBackgroundColor)
             painter.drawText(self.__helpTextRect.adjusted(3, 3, -3, -3),
                 Qt.TextWordWrap, self.__helpText)
         
@@ -152,14 +155,17 @@ class SnapshotFreehandGrabber(QWidget):
         # rectangles (border included). This means that there is no 0px
         # selection, since a 0px wide rectangle will always be drawn as a line.
         boundingRect = self.__selection.boundingRect()
-        txt = "{0:n}, {1:n} ({2:n} x {3:n})".format(boundingRect.x(), boundingRect.y(),
+        txt = "{0:n}, {1:n} ({2:n} x {3:n})".format(
+            boundingRect.x(), boundingRect.y(),
             boundingRect.width(), boundingRect.height())
         textRect = painter.boundingRect(self.rect(), Qt.AlignLeft, txt)
         boundingRect = textRect.adjusted(-4, 0, 0, 0)
         
         polBoundingRect = pol.boundingRect()
-        if textRect.width() < polBoundingRect.width() - 2 * self.__handleSize and \
-           textRect.height() < polBoundingRect.height() - 2 * self.__handleSize and \
+        if (textRect.width() < 
+            polBoundingRect.width() - 2 * self.__handleSize) and \
+           (textRect.height() < 
+            polBoundingRect.height() - 2 * self.__handleSize) and \
            polBoundingRect.width() > 100 and \
            polBoundingRect.height() > 100:
             # center, unsuitable for small selections
@@ -178,21 +184,25 @@ class SnapshotFreehandGrabber(QWidget):
                 QPoint(polBoundingRect.x() - 3, polBoundingRect.y()))
             textRect.moveTopRight(
                 QPoint(polBoundingRect.x() - 5, polBoundingRect.y()))
-        elif polBoundingRect.bottom() + 3 + textRect.height() < self.rect().bottom() and \
+        elif (polBoundingRect.bottom() + 3 + textRect.height() < 
+              self.rect().bottom()) and \
              polBoundingRect.right() > textRect.width():
             # at bottom, right aligned
             boundingRect.moveTopRight(
                 QPoint(polBoundingRect.right(), polBoundingRect.bottom() + 3))
             textRect.moveTopRight(
-                QPoint(polBoundingRect.right() - 2, polBoundingRect.bottom() + 3))
-        elif polBoundingRect.right() + textRect.width() + 3 < self.rect().width():
+                QPoint(polBoundingRect.right() - 2,
+                       polBoundingRect.bottom() + 3))
+        elif polBoundingRect.right() + textRect.width() + 3 < \
+                self.rect().width():
             # right, bottom aligned
             boundingRect.moveBottomLeft(
                 QPoint(polBoundingRect.right() + 3, polBoundingRect.bottom()))
             textRect.moveBottomLeft(
                 QPoint(polBoundingRect.right() + 5, polBoundingRect.bottom()))
         
-        # If the above didn't catch it, you are running on a very tiny screen...
+        # If the above didn't catch it, you are running on a very
+        # tiny screen...
         drawPolygon(painter, boundingRect, textColor, textBackgroundColor)
         painter.drawText(textRect, Qt.AlignHCenter, txt)
         
@@ -245,7 +255,8 @@ class SnapshotFreehandGrabber(QWidget):
             else:
                 # moving the whole selection
                 p = evt.pos() - self.__pBefore      # Offset
-                self.__pBefore = evt.pos()          # save position for next iteration
+                self.__pBefore = evt.pos()          # save position for
+                                                    # next iteration
                 self.__selection.translate(p)
             
             self.update()
@@ -309,8 +320,10 @@ class SnapshotFreehandGrabber(QWidget):
             pt = QPainter()
             pt.begin(pixmap2)
             if pt.paintEngine().hasFeature(QPaintEngine.PorterDuff):
-                pt.setRenderHints(QPainter.Antialiasing | \
-                    QPainter.HighQualityAntialiasing | QPainter.SmoothPixmapTransform,
+                pt.setRenderHints(
+                    QPainter.Antialiasing | \
+                    QPainter.HighQualityAntialiasing | \
+                    QPainter.SmoothPixmapTransform,
                     True)
                 pt.setBrush(Qt.black)
                 pt.setPen(QPen(QBrush(Qt.black), 0.5))

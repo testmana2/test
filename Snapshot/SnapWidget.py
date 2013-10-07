@@ -13,10 +13,10 @@ Module implementing the snapshot widget.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, QMimeData, Qt, \
-    QEvent, QRegExp, qVersion
-from PyQt4.QtGui import QWidget, QImageWriter, QApplication, QPixmap, QCursor, QDrag, \
-    QShortcut, QKeySequence, QDesktopServices
+from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, \
+    QMimeData, Qt, QEvent, QRegExp, qVersion
+from PyQt4.QtGui import QWidget, QImageWriter, QApplication, QPixmap, \
+    QCursor, QDrag, QShortcut, QKeySequence, QDesktopServices
 
 from E5Gui import E5FileDialog, E5MessageBox
 
@@ -68,12 +68,14 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             index = 0
         self.modeCombo.setCurrentIndex(index)
         
-        self.__delay = int(Preferences.Prefs.settings.value("Snapshot/Delay", 0))
+        self.__delay = int(
+            Preferences.Prefs.settings.value("Snapshot/Delay", 0))
         self.delaySpin.setValue(self.__delay)
         
         self.__filename = Preferences.Prefs.settings.value("Snapshot/Filename",
             os.path.join(
-                QDesktopServices.storageLocation(QDesktopServices.PicturesLocation),
+                QDesktopServices.storageLocation(
+                    QDesktopServices.PicturesLocation),
                 self.trUtf8("snapshot") + "1.png"))
         
         self.__grabber = None
@@ -140,7 +142,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private method to initialize the keyboard shortcuts.
         """
-        self.__quitShortcut = QShortcut(QKeySequence(QKeySequence.Quit), self, self.close)
+        self.__quitShortcut = QShortcut(
+            QKeySequence(QKeySequence.Quit), self, self.close)
         
         self.__copyShortcut = QShortcut(QKeySequence(QKeySequence.Copy), self,
             self.copyButton.animateClick)
@@ -245,9 +248,9 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         name = os.path.basename(self.__filename)
         
         # If the name contains a number, then increment it.
-        numSearch = QRegExp("(^|[^\\d])(\\d+)")     # We want to match as far left as
-                                                    # possible, and when the number is
-                                                    # at the start of the name.
+        numSearch = QRegExp("(^|[^\\d])(\\d+)") 
+        # We want to match as far left as possible, and when the number is
+        # at the start of the name.
         
         # Does it have a number?
         start = numSearch.lastIndexIn(name)
@@ -255,7 +258,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             # It has a number, increment it.
             start = numSearch.pos(2)    # Only the second group is of interest.
             numAsStr = numSearch.capturedTexts()[2]
-            number = "{0:0{width}d}".format(int(numAsStr) + 1, width=len(numAsStr))
+            number = "{0:0{width}d}".format(
+                int(numAsStr) + 1, width=len(numAsStr))
             name = name[:start] + number + name[start + len(numAsStr):]
         else:
             # no number
@@ -321,7 +325,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         Private method to grab a rectangular screen region.
         """
         from .SnapshotRegionGrabber import SnapshotRegionGrabber
-        self.__grabber = SnapshotRegionGrabber(mode=SnapshotRegionGrabber.Rectangle)
+        self.__grabber = SnapshotRegionGrabber(
+            mode=SnapshotRegionGrabber.Rectangle)
         self.__grabber.grabbed.connect(self.__captured)
     
     def __grabEllipse(self):
@@ -329,7 +334,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         Private method to grab an elliptical screen region.
         """
         from .SnapshotRegionGrabber import SnapshotRegionGrabber
-        self.__grabber = SnapshotRegionGrabber(mode=SnapshotRegionGrabber.Ellipse)
+        self.__grabber = SnapshotRegionGrabber(
+            mode=SnapshotRegionGrabber.Ellipse)
         self.__grabber.grabbed.connect(self.__captured)
     
     def __grabFreehand(self):
@@ -351,11 +357,13 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if self.__mode == SnapWidget.ModeFullscreen:
             desktop = QApplication.desktop()
             if qVersion() >= "5.0.0":
-                self.__snapshot = QApplication.screens()[0].grabWindow(desktop.winId(),
-                    desktop.x(), desktop.y(), desktop.width(), desktop.height())
+                self.__snapshot = QApplication.screens()[0].grabWindow(
+                    desktop.winId(), desktop.x(), desktop.y(),
+                    desktop.width(), desktop.height())
             else:
-                self.__snapshot = QPixmap.grabWindow(desktop.winId(),
-                    desktop.x(), desktop.y(), desktop.width(), desktop.height())
+                self.__snapshot = QPixmap.grabWindow(
+                    desktop.winId(), desktop.x(), desktop.y(),
+                    desktop.width(), desktop.height())
         elif self.__mode == SnapWidget.ModeScreen:
             desktop = QApplication.desktop()
             screenId = desktop.screenNumber(QCursor.pos())
@@ -416,8 +424,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private slot to update the preview picture.
         """
-        self.preview.setToolTip(
-            self.trUtf8("Preview of the snapshot image ({0:n} x {1:n})").format(
+        self.preview.setToolTip(self.trUtf8(
+            "Preview of the snapshot image ({0:n} x {1:n})").format(
             self.__snapshot.width(), self.__snapshot.height()))
         self.preview.setPreview(self.__snapshot)
         self.preview.adjustSize()
@@ -449,7 +457,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         @param evt reference to the event (QEvent)
         @return flag indicating that the event should be filtered out (boolean)
         """
-        if obj == self.__grabberWidget and evt.type() == QEvent.MouseButtonPress:
+        if obj == self.__grabberWidget and \
+                evt.type() == QEvent.MouseButtonPress:
             if QWidget.mouseGrabber() != self.__grabberWidget:
                 return False
             if evt.button() == Qt.LeftButton:
@@ -466,7 +475,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if self.__modified:
             res = E5MessageBox.question(self,
                 self.trUtf8("eric5 Snapshot"),
-                self.trUtf8("""The application contains an unsaved snapshot."""),
+                self.trUtf8(
+                    """The application contains an unsaved snapshot."""),
                 E5MessageBox.StandardButtons(
                     E5MessageBox.Abort | \
                     E5MessageBox.Discard | \
@@ -477,10 +487,13 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             elif res == E5MessageBox.Save:
                 self.on_saveButton_clicked()
         
-        Preferences.Prefs.settings.setValue("Snapshot/Delay", self.delaySpin.value())
-        Preferences.Prefs.settings.setValue("Snapshot/Mode",
+        Preferences.Prefs.settings.setValue(
+            "Snapshot/Delay", self.delaySpin.value())
+        Preferences.Prefs.settings.setValue(
+            "Snapshot/Mode",
             self.modeCombo.itemData(self.modeCombo.currentIndex()))
-        Preferences.Prefs.settings.setValue("Snapshot/Filename", self.__filename)
+        Preferences.Prefs.settings.setValue(
+            "Snapshot/Filename", self.__filename)
         Preferences.Prefs.settings.sync()
     
     def __updateCaption(self):

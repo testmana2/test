@@ -29,7 +29,8 @@ class SqlBrowser(E5MainWindow):
         """
         Constructor
         
-        @param connections list of database connections to add (list of strings)
+        @param connections list of database connections to add
+            (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -38,7 +39,8 @@ class SqlBrowser(E5MainWindow):
         self.setWindowTitle(self.trUtf8("SQL Browser"))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         from .SqlBrowserWidget import SqlBrowserWidget
         self.__browser = SqlBrowserWidget(self)
@@ -57,7 +59,8 @@ class SqlBrowser(E5MainWindow):
         for connection in connections:
             url = QUrl(connection, QUrl.TolerantMode)
             if not url.isValid():
-                self.__warnings.append(self.trUtf8("Invalid URL: {0}").format(connection))
+                self.__warnings.append(
+                    self.trUtf8("Invalid URL: {0}").format(connection))
                 continue
             
             err = self.__browser.addConnection(url.scheme(), url.path(),
@@ -65,13 +68,15 @@ class SqlBrowser(E5MainWindow):
                                                url.host(), url.port(-1))
             if err.type() != QSqlError.NoError:
                 self.__warnings.append(
-                    self.trUtf8("Unable to open connection: {0}".format(err.text())))
+                    self.trUtf8("Unable to open connection: {0}".format(
+                        err.text())))
         
         QTimer.singleShot(0, self.__uiStartUp)
     
     def __uiStartUp(self):
         """
-        Private slot to do some actions after the UI has started and the main loop is up.
+        Private slot to do some actions after the UI has started and the main
+        loop is up.
         """
         for warning in self.__warnings:
             E5MessageBox.warning(self,
@@ -96,9 +101,11 @@ class SqlBrowser(E5MainWindow):
                 'Open a dialog to add a new database connection'))
         self.addConnectionAct.setWhatsThis(self.trUtf8(
                 """<b>Add Connection</b>"""
-                """<p>This opens a dialog to add a new database connection.</p>"""
+                """<p>This opens a dialog to add a new database"""
+                """ connection.</p>"""
         ))
-        self.addConnectionAct.triggered[()].connect(self.__browser.addConnectionByDialog)
+        self.addConnectionAct.triggered[()].connect(
+            self.__browser.addConnectionByDialog)
         self.__actions.append(self.addConnectionAct)
         
         self.exitAct = E5Action(self.trUtf8('Quit'),
@@ -116,7 +123,8 @@ class SqlBrowser(E5MainWindow):
         self.aboutAct = E5Action(self.trUtf8('About'),
             self.trUtf8('&About'),
             0, 0, self, 'sql_help_about')
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
                 """<b>About</b>"""
                 """<p>Display some information about this software.</p>"""
