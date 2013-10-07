@@ -41,12 +41,13 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         
         self.__menu = QMenu(self)
         self.__menu.addAction(self.trUtf8('Show details'), self.__showDetails)
-        self.__activateAct = \
-            self.__menu.addAction(self.trUtf8('Activate'), self.__activatePlugin)
-        self.__deactivateAct = \
-            self.__menu.addAction(self.trUtf8('Deactivate'), self.__deactivatePlugin)
+        self.__activateAct = self.__menu.addAction(
+            self.trUtf8('Activate'), self.__activatePlugin)
+        self.__deactivateAct = self.__menu.addAction(
+            self.trUtf8('Deactivate'), self.__deactivatePlugin)
         self.pluginList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.pluginList.customContextMenuRequested.connect(self.__showContextMenu)
+        self.pluginList.customContextMenuRequested.connect(
+            self.__showContextMenu)
     
     def __populateList(self):
         """
@@ -55,8 +56,9 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         self.pluginList.clear()
         for info in self.pm.getPluginInfos():
             self.__createEntry(info)
-        self.pluginList.sortItems(self.pluginList.sortColumn(),
-                                  self.pluginList.header().sortIndicatorOrder())
+        self.pluginList.sortItems(
+            self.pluginList.sortColumn(),
+            self.pluginList.header().sortIndicatorOrder())
         
     def __createEntry(self, info):
         """
@@ -91,7 +93,8 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         """
         itm = self.pluginList.itemAt(coord)
         if itm is not None:
-            autoactivate = itm.text(self.__autoActivateColumn) == self.trUtf8("Yes")
+            autoactivate = (itm.text(self.__autoActivateColumn) == 
+                            self.trUtf8("Yes"))
             if itm.text(self.__activeColumn) == self.trUtf8("Yes"):
                 self.__activateAct.setEnabled(False)
                 self.__deactivateAct.setEnabled(autoactivate)

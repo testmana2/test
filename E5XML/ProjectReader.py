@@ -46,7 +46,8 @@ class ProjectReader(XMLStreamReaderBase):
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "Language":
-                    self.project.pdata["SPELLLANGUAGE"] = [self.readElementText()]
+                    self.project.pdata["SPELLLANGUAGE"] = [
+                        self.readElementText()]
                 elif self.name() == "ProjectWordList":
                     self.project.pdata["SPELLWORDS"] = \
                         [Utilities.toNativeSeparators(self.readElementText())]
@@ -58,14 +59,17 @@ class ProjectReader(XMLStreamReaderBase):
                 elif self.name() == "ProgLanguage":
                     self.project.pdata["MIXEDLANGUAGE"] = \
                         [int(self.attribute("mixed", "0"))]
-                    self.project.pdata["PROGLANGUAGE"] = [self.readElementText()]
+                    self.project.pdata["PROGLANGUAGE"] = [
+                        self.readElementText()]
                     if self.project.pdata["PROGLANGUAGE"][0] == "Python":
                         # convert Python to the more specific Python2
                         self.project.pdata["PROGLANGUAGE"][0] = "Python2"
                 elif self.name() == "ProjectType":
-                    self.project.pdata["PROJECTTYPE"] = [self.readElementText()]
+                    self.project.pdata["PROJECTTYPE"] = [
+                        self.readElementText()]
                 elif self.name() == "Description":
-                    self.project.pdata["DESCRIPTION"] = [self.readElementText()]
+                    self.project.pdata["DESCRIPTION"] = [
+                        self.readElementText()]
                 elif self.name() == "Version":
                     self.project.pdata["VERSION"] = [self.readElementText()]
                 elif self.name() == "Author":
@@ -79,16 +83,19 @@ class ProjectReader(XMLStreamReaderBase):
                     self.project.pdata["TRANSLATIONSBINPATH"] = \
                         [Utilities.toNativeSeparators(self.readElementText())]
                 elif self.name() == "Eol":
-                    self.project.pdata["EOL"] = [int(self.attribute("index", "0"))]
+                    self.project.pdata["EOL"] = [
+                        int(self.attribute("index", "0"))]
                 elif self.name() == "Sources":
                     self.__readFiles("Sources", "Source", "SOURCES")
                 elif self.name() == "Forms":
                     self.__readFiles("Forms", "Form", "FORMS")
                 elif self.name() == "Translations":
-                    self.__readFiles("Translations", "Translation", "TRANSLATIONS")
+                    self.__readFiles(
+                        "Translations", "Translation", "TRANSLATIONS")
                 elif self.name() == "TranslationExceptions":
-                    self.__readFiles("TranslationExceptions", "TranslationException",
-                                     "TRANSLATIONEXCEPTIONS")
+                    self.__readFiles(
+                        "TranslationExceptions", "TranslationException",
+                        "TRANSLATIONEXCEPTIONS")
                 elif self.name() == "Resources":
                     self.__readFiles("Resources", "Resource", "RESOURCES")
                 elif self.name() == "Interfaces":

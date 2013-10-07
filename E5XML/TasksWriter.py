@@ -46,13 +46,15 @@ class TasksWriter(XMLStreamWriterBase):
         
         # add some generation comments
         if self.forProject:
-            self.writeComment(" eric5 tasks file for project {0} ".format(self.name))
+            self.writeComment(
+                " eric5 tasks file for project {0} ".format(self.name))
             if Preferences.getProject("XMLTimestamp"):
                 self.writeComment(" Saved: {0} ".format(
                     time.strftime('%Y-%m-%d, %H:%M:%S')))
         else:
             self.writeComment(" eric5 tasks file ")
-            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(
+                " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
         self.writeStartElement("Tasks")
@@ -75,8 +77,8 @@ class TasksWriter(XMLStreamWriterBase):
             self.writeAttribute("type", str(task.taskType))
             self.writeTextElement("Summary", task.summary.strip())
             self.writeTextElement("Description", task.description.strip())
-            self.writeTextElement("Created",
-                time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
+            self.writeTextElement("Created", time.strftime(
+                "%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
             if task.filename:
                 self.writeStartElement("Resource")
                 self.writeTextElement("Filename",

@@ -7,7 +7,8 @@
 """
 Eric5 Plugin Uninstaller.
 
-This is the main Python script to uninstall eric5 plugins from outside of the IDE.
+This is the main Python script to uninstall eric5 plugins from outside of the
+IDE.
 """
 
 import sys

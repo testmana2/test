@@ -41,15 +41,18 @@ class UserProjectReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "UserProject":
-                    self.version = self.attribute("version", userProjectFileFormatVersion)
+                    self.version = self.attribute(
+                        "version", userProjectFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "VcsType":
-                    self.project.pudata["VCSOVERRIDE"] = [self.readElementText()]
+                    self.project.pudata["VCSOVERRIDE"] = [
+                        self.readElementText()]
                 elif self.name() == "VcsStatusMonitorInterval":
                     interval = int(self.attribute("value",
                         Preferences.getVCS("StatusMonitorInterval")))
-                    self.project.pudata["VCSSTATUSMONITORINTERVAL"] = [interval]
+                    self.project.pudata["VCSSTATUSMONITORINTERVAL"] = [
+                        interval]
                 else:
                     self.raiseUnexpectedStartTag(self.name())
         

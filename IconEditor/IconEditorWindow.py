@@ -9,10 +9,10 @@ Module implementing the icon editor main window.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, QFile, \
-    QEvent
-from PyQt4.QtGui import QScrollArea, QPalette, QImage, QImageReader, QImageWriter, \
-    QKeySequence, QLabel, QDockWidget, QWhatsThis
+from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, \
+    QFile, QEvent
+from PyQt4.QtGui import QScrollArea, QPalette, QImage, QImageReader, \
+    QImageWriter, QKeySequence, QLabel, QDockWidget, QWhatsThis
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog, E5MessageBox
@@ -46,8 +46,8 @@ class IconEditorWindow(E5MainWindow):
         @param parent parent widget of this window (QWidget)
         @keyparam fromEric flag indicating whether it was called from within
             eric5 (boolean)
-        @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
-            shortcuts (boolean)
+        @keyparam initShortcutsOnly flag indicating to just initialize the
+            keyboard shortcuts (boolean)
         @keyparam project reference to the project object (Project)
         """
         super().__init__(parent)
@@ -62,7 +62,8 @@ class IconEditorWindow(E5MainWindow):
             self.__initActions()
         else:
             if not self.fromEric:
-                self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+                self.setStyle(Preferences.getUI("Style"),
+                              Preferences.getUI("StyleSheet"))
             self.__editor = IconEditorGrid()
             self.__scrollArea = QScrollArea()
             self.__scrollArea.setWidget(self.__editor)
@@ -99,7 +100,8 @@ class IconEditorWindow(E5MainWindow):
             self.__editor.previewChanged.connect(self.__palette.previewChanged)
             self.__editor.colorChanged.connect(self.__palette.colorChanged)
             self.__palette.colorSelected.connect(self.__editor.setPenColor)
-            self.__palette.compositingChanged.connect(self.__editor.setCompositingMode)
+            self.__palette.compositingChanged.connect(
+                self.__editor.setCompositingMode)
             
             self.__setCurrentFile("")
             if fileName:
@@ -131,7 +133,8 @@ class IconEditorWindow(E5MainWindow):
             'ppm': self.trUtf8("Portable Pixmap File (*.ppm)"),
             'sgi': self.trUtf8("Silicon Graphics Image File (*.sgi)"),
             'svg': self.trUtf8("Scalable Vector Graphics File (*.svg)"),
-            'svgz': self.trUtf8("Compressed Scalable Vector Graphics File (*.svgz)"),
+            'svgz': self.trUtf8("Compressed Scalable Vector Graphics File"
+                                " (*.svgz)"),
             'tga': self.trUtf8("Targa Graphic File (*.tga)"),
             'tif': self.trUtf8("TIFF File (*.tif)"),
             'tiff': self.trUtf8("TIFF File (*.tiff)"),
@@ -197,7 +200,8 @@ class IconEditorWindow(E5MainWindow):
             UI.PixmapCache.getIcon("newWindow.png"),
             self.trUtf8('New &Window'),
             0, 0, self, 'iconEditor_file_new_window')
-        self.newWindowAct.setStatusTip(self.trUtf8('Open a new icon editor window'))
+        self.newWindowAct.setStatusTip(self.trUtf8(
+            'Open a new icon editor window'))
         self.newWindowAct.setWhatsThis(self.trUtf8(
                 """<b>New Window</b>"""
                 """<p>This opens a new icon editor window.</p>"""
@@ -251,7 +255,8 @@ class IconEditorWindow(E5MainWindow):
             self.trUtf8('&Close'),
             QKeySequence(self.trUtf8("Ctrl+W", "File|Close")),
             0, self, 'iconEditor_file_close')
-        self.closeAct.setStatusTip(self.trUtf8('Close the current icon editor window'))
+        self.closeAct.setStatusTip(self.trUtf8(
+            'Close the current icon editor window'))
         self.closeAct.setWhatsThis(self.trUtf8(
                 """<b>Close</b>"""
                 """<p>Closes the current icon editor window.</p>"""
@@ -262,10 +267,11 @@ class IconEditorWindow(E5MainWindow):
         self.closeAllAct = E5Action(self.trUtf8('Close All'),
             self.trUtf8('Close &All'),
             0, 0, self, 'iconEditor_file_close_all')
-        self.closeAllAct.setStatusTip(self.trUtf8('Close all icon editor windows'))
+        self.closeAllAct.setStatusTip(self.trUtf8(
+            'Close all icon editor windows'))
         self.closeAllAct.setWhatsThis(self.trUtf8(
-                """<b>Close All</b>"""
-                """<p>Closes all icon editor windows except the first one.</p>"""
+            """<b>Close All</b>"""
+            """<p>Closes all icon editor windows except the first one.</p>"""
         ))
         self.closeAllAct.triggered[()].connect(self.__closeAll)
         self.__actions.append(self.closeAllAct)
@@ -378,7 +384,8 @@ class IconEditorWindow(E5MainWindow):
         self.deleteAct.setStatusTip(self.trUtf8('Clear the icon image'))
         self.deleteAct.setWhatsThis(self.trUtf8(
             """<b>Clear</b>"""
-            """<p>Clear the icon image and set it to be completely transparent.</p>"""
+            """<p>Clear the icon image and set it to be completely"""
+            """ transparent.</p>"""
         ))
         self.deleteAct.triggered[()].connect(self.__editor.editClear)
         self.__actions.append(self.deleteAct)
@@ -388,7 +395,8 @@ class IconEditorWindow(E5MainWindow):
                 QKeySequence(self.trUtf8("Ctrl+A", "Edit|Select All")),
                 0,
                 self, 'iconEditor_edit_select_all')
-        self.selectAllAct.setStatusTip(self.trUtf8('Select the complete icon image'))
+        self.selectAllAct.setStatusTip(self.trUtf8(
+            'Select the complete icon image'))
         self.selectAllAct.setWhatsThis(self.trUtf8(
             """<b>Select All</b>"""
             """<p>Selects the complete icon image.</p>"""
@@ -414,7 +422,8 @@ class IconEditorWindow(E5MainWindow):
                 self.trUtf8('&Grayscale'),
                 0, 0,
                 self, 'iconEditor_edit_grayscale')
-        self.grayscaleAct.setStatusTip(self.trUtf8('Change the icon to grayscale'))
+        self.grayscaleAct.setStatusTip(self.trUtf8(
+            'Change the icon to grayscale'))
         self.grayscaleAct.setWhatsThis(self.trUtf8(
             """<b>Grayscale</b>"""
             """<p>Changes the icon to grayscale.</p>"""
@@ -475,7 +484,8 @@ class IconEditorWindow(E5MainWindow):
             self.trUtf8('Zoom &reset'),
             QKeySequence(self.trUtf8("Ctrl+0", "View|Zoom reset")),
             0, self, 'iconEditor_view_zoom_reset')
-        self.zoomResetAct.setStatusTip(self.trUtf8('Reset the zoom of the icon'))
+        self.zoomResetAct.setStatusTip(self.trUtf8(
+            'Reset the zoom of the icon'))
         self.zoomResetAct.setWhatsThis(self.trUtf8(
                 """<b>Zoom reset</b>"""
                 """<p>Reset the zoom of the icon. """
@@ -489,7 +499,8 @@ class IconEditorWindow(E5MainWindow):
             self.trUtf8('Show &Grid'),
             0, 0,
             self, 'iconEditor_view_show_grid')
-        self.showGridAct.setStatusTip(self.trUtf8('Toggle the display of the grid'))
+        self.showGridAct.setStatusTip(self.trUtf8(
+            'Toggle the display of the grid'))
         self.showGridAct.setWhatsThis(self.trUtf8(
                 """<b>Show Grid</b>"""
                 """<p>Toggle the display of the grid.</p>"""
@@ -534,7 +545,8 @@ class IconEditorWindow(E5MainWindow):
                 """the current draw color.</p>"""
         ))
         self.drawColorPickerAct.setCheckable(True)
-        self.esm.setMapping(self.drawColorPickerAct, IconEditorGrid.ColorPicker)
+        self.esm.setMapping(self.drawColorPickerAct,
+                            IconEditorGrid.ColorPicker)
         self.drawColorPickerAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawColorPickerAct)
         
@@ -562,7 +574,8 @@ class IconEditorWindow(E5MainWindow):
                 """<p>Draw a filled rectangle.</p>"""
         ))
         self.drawFilledRectangleAct.setCheckable(True)
-        self.esm.setMapping(self.drawFilledRectangleAct, IconEditorGrid.FilledRectangle)
+        self.esm.setMapping(self.drawFilledRectangleAct,
+                            IconEditorGrid.FilledRectangle)
         self.drawFilledRectangleAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFilledRectangleAct)
         
@@ -590,7 +603,8 @@ class IconEditorWindow(E5MainWindow):
                 """<p>Draw a filled circle.</p>"""
         ))
         self.drawFilledCircleAct.setCheckable(True)
-        self.esm.setMapping(self.drawFilledCircleAct, IconEditorGrid.FilledCircle)
+        self.esm.setMapping(self.drawFilledCircleAct,
+                            IconEditorGrid.FilledCircle)
         self.drawFilledCircleAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFilledCircleAct)
         
@@ -618,7 +632,8 @@ class IconEditorWindow(E5MainWindow):
                 """<p>Draw a filled ellipse.</p>"""
         ))
         self.drawFilledEllipseAct.setCheckable(True)
-        self.esm.setMapping(self.drawFilledEllipseAct, IconEditorGrid.FilledEllipse)
+        self.esm.setMapping(self.drawFilledEllipseAct,
+                            IconEditorGrid.FilledEllipse)
         self.drawFilledEllipseAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFilledEllipseAct)
         
@@ -665,14 +680,16 @@ class IconEditorWindow(E5MainWindow):
         self.drawEraserAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawEraserAct)
         
-        self.drawRectangleSelectionAct = E5Action(self.trUtf8('Rectangular Selection'),
+        self.drawRectangleSelectionAct = E5Action(
+            self.trUtf8('Rectangular Selection'),
             UI.PixmapCache.getIcon("selectRectangle.png"),
             self.trUtf8('Rect&angular Selection'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_selection_rectangle')
         self.drawRectangleSelectionAct.setWhatsThis(self.trUtf8(
-                """<b>Rectangular Selection</b>"""
-                """<p>Select a rectangular section of the icon using the mouse.</p>"""
+            """<b>Rectangular Selection</b>"""
+            """<p>Select a rectangular section of the icon using"""
+            """ the mouse.</p>"""
         ))
         self.drawRectangleSelectionAct.setCheckable(True)
         self.esm.setMapping(self.drawRectangleSelectionAct,
@@ -680,14 +697,16 @@ class IconEditorWindow(E5MainWindow):
         self.drawRectangleSelectionAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawRectangleSelectionAct)
         
-        self.drawCircleSelectionAct = E5Action(self.trUtf8('Circular Selection'),
+        self.drawCircleSelectionAct = E5Action(
+            self.trUtf8('Circular Selection'),
             UI.PixmapCache.getIcon("selectCircle.png"),
             self.trUtf8('Rect&angular Selection'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_selection_circle')
         self.drawCircleSelectionAct.setWhatsThis(self.trUtf8(
-                """<b>Circular Selection</b>"""
-                """<p>Select a circular section of the icon using the mouse.</p>"""
+            """<b>Circular Selection</b>"""
+            """<p>Select a circular section of the icon using"""
+            """ the mouse.</p>"""
         ))
         self.drawCircleSelectionAct.setCheckable(True)
         self.esm.setMapping(self.drawCircleSelectionAct,
@@ -704,7 +723,8 @@ class IconEditorWindow(E5MainWindow):
         self.aboutAct = E5Action(self.trUtf8('About'),
                 self.trUtf8('&About'),
                 0, 0, self, 'iconEditor_help_about')
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
@@ -730,12 +750,12 @@ class IconEditorWindow(E5MainWindow):
             0, self, 'iconEditor_help_whats_this')
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
-                """<b>Display context sensitive help</b>"""
-                """<p>In What's This? mode, the mouse cursor shows an arrow with a"""
-                """ question mark, and you can click on the interface elements to get"""
-                """ a short description of what they do and how to use them. In"""
-                """ dialogs, this feature can be accessed using the context help button"""
-                """ in the titlebar.</p>"""
+            """<b>Display context sensitive help</b>"""
+            """<p>In What's This? mode, the mouse cursor shows an arrow"""
+            """ with a question mark, and you can click on the interface"""
+            """ elements to get a short description of what they do and"""
+            """ how to use them. In dialogs, this feature can be accessed"""
+            """ using the context help button in the titlebar.</p>"""
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
@@ -886,11 +906,13 @@ class IconEditorWindow(E5MainWindow):
         self.__sbPos = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.__sbPos)
         self.__sbPos.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the cursor position.</p>"""
+            """<p>This part of the status bar displays the cursor"""
+            """ position.</p>"""
         ))
         self.__updatePosition(0, 0)
         
-        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+        self.__zoomWidget = E5ZoomWidget(
+            UI.PixmapCache.getPixmap("zoomOut.png"),
             UI.PixmapCache.getPixmap("zoomIn.png"),
             UI.PixmapCache.getPixmap("zoomReset.png"), self)
         self.__zoomWidget.setMinimum(IconEditorGrid.ZoomMinimum)
@@ -938,7 +960,8 @@ class IconEditorWindow(E5MainWindow):
             
             try:
                 if self.fromEric or len(self.__class__.windows) > 1:
-                    del self.__class__.windows[self.__class__.windows.index(self)]
+                    del self.__class__.windows[
+                        self.__class__.windows.index(self)]
             except ValueError:
                 pass
             
@@ -1057,15 +1080,17 @@ class IconEditorWindow(E5MainWindow):
         """
         file = QFile(fileName)
         if not file.exists():
-            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
-                                self.trUtf8("The file '{0}' does not exist.")\
-                                    .format(fileName))
+            E5MessageBox.warning(
+                self, self.trUtf8("eric5 Icon Editor"),
+                self.trUtf8("The file '{0}' does not exist.")
+                    .format(fileName))
             return
         
         if not file.open(QFile.ReadOnly):
-            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
-                                self.trUtf8("Cannot read file '{0}:\n{1}.")\
-                                    .format(fileName, file.errorString()))
+            E5MessageBox.warning(
+                self, self.trUtf8("eric5 Icon Editor"),
+                self.trUtf8("Cannot read file '{0}:\n{1}.")
+                    .format(fileName, file.errorString()))
             return
         file.close()
         
@@ -1082,9 +1107,10 @@ class IconEditorWindow(E5MainWindow):
         """
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
-            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
-                                self.trUtf8("Cannot write file '{0}:\n{1}.")\
-                                    .format(fileName, file.errorString()))
+            E5MessageBox.warning(
+                self, self.trUtf8("eric5 Icon Editor"),
+                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                    .format(fileName, file.errorString()))
         
             self.__checkActions()
             
@@ -1095,9 +1121,10 @@ class IconEditorWindow(E5MainWindow):
         file.close()
         
         if not res:
-            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
-                                self.trUtf8("Cannot write file '{0}:\n{1}.")\
-                                    .format(fileName, file.errorString()))
+            E5MessageBox.warning(
+                self, self.trUtf8("eric5 Icon Editor"),
+                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                    .format(fileName, file.errorString()))
         
             self.__checkActions()
             
@@ -1125,7 +1152,7 @@ class IconEditorWindow(E5MainWindow):
         else:
             shownName = self.__strippedName(self.__fileName)
         
-        self.setWindowTitle(self.trUtf8("{0}[*] - {1}")\
+        self.setWindowTitle(self.trUtf8("{0}[*] - {1}")
                             .format(shownName, self.trUtf8("Icon Editor")))
         
         self.setWindowModified(self.__editor.isDirty())
@@ -1212,14 +1239,16 @@ class IconEditorWindow(E5MainWindow):
         """
         Private slot called to handle the zoom in action.
         """
-        self.__editor.setZoomFactor(self.__editor.zoomFactor() + IconEditorGrid.ZoomStep)
+        self.__editor.setZoomFactor(
+            self.__editor.zoomFactor() + IconEditorGrid.ZoomStep)
         self.__updateZoom()
     
     def __zoomOut(self):
         """
         Private slot called to handle the zoom out action.
         """
-        self.__editor.setZoomFactor(self.__editor.zoomFactor() - IconEditorGrid.ZoomStep)
+        self.__editor.setZoomFactor(
+            self.__editor.zoomFactor() - IconEditorGrid.ZoomStep)
         self.__updateZoom()
     
     def __zoomReset(self):
@@ -1233,7 +1262,8 @@ class IconEditorWindow(E5MainWindow):
         """
         Private slot to show a little About message.
         """
-        E5MessageBox.about(self, self.trUtf8("About eric5 Icon Editor"),
+        E5MessageBox.about(
+            self, self.trUtf8("About eric5 Icon Editor"),
             self.trUtf8("The eric5 Icon Editor is a simple editor component"
                         " to perform icon drawing tasks."))
     

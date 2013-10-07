@@ -9,9 +9,10 @@ Module implementing the IRC channel widget.
 
 import re
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer, QUrl
-from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication, \
-    QInputDialog, QLineEdit, QTextCursor, QDesktopServices
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, \
+    QTimer, QUrl
+from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, \
+    QApplication, QInputDialog, QLineEdit, QTextCursor, QDesktopServices
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
@@ -52,7 +53,8 @@ class IrcUserItem(QListWidgetItem):
         Constructor
         
         @param name string with user name and privilege prefix (string)
-        @param parent reference to the parent widget (QListWidget or QListWidgetItem)
+        @param parent reference to the parent widget (QListWidget or
+            QListWidgetItem)
         """
         super().__init__(name, parent)
         
@@ -180,7 +182,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     @signal sendData(str) emitted to send a message to the channel
     @signal sendCtcpReply(str, str) emitted to send a CTCP reply
     @signal channelClosed(str) emitted after the user has left the channel
-    @signal openPrivateChat(str) emitted to open a "channel" for private messages
+    @signal openPrivateChat(str) emitted to open a "channel" for private
+        messages
     """
     sendData = pyqtSignal(str)
     sendCtcpReply = pyqtSignal(str, str)
@@ -206,7 +209,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__ui = e5App().getObject("UserInterface")
         self.__ircWidget = parent
         
-        self.editTopicButton.setIcon(UI.PixmapCache.getIcon("ircEditTopic.png"))
+        self.editTopicButton.setIcon(
+            UI.PixmapCache.getIcon("ircEditTopic.png"))
         self.editTopicButton.hide()
         
         height = self.usersList.height() + self.messages.height()
@@ -229,9 +233,11 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__patterns = [
             # :foo_!n=foo@foohost.bar.net PRIVMSG #eric-ide :some long message
             # :foo_!n=foo@foohost.bar.net PRIVMSG bar_ :some long message
-            (re.compile(r":([^!]+)!([^ ]+)\sPRIVMSG\s([^ ]+)\s:(.*)"), self.__message),
+            (re.compile(r":([^!]+)!([^ ]+)\sPRIVMSG\s([^ ]+)\s:(.*)"),
+             self.__message),
             # :foo_!n=foo@foohost.bar.net JOIN :#eric-ide
-            (re.compile(r":([^!]+)!([^ ]+)\sJOIN\s:?([^ ]+)"), self.__userJoin),
+            (re.compile(r":([^!]+)!([^ ]+)\sJOIN\s:?([^ ]+)"),
+             self.__userJoin),
             # :foo_!n=foo@foohost.bar.net PART #eric-ide :part message
             (re.compile(r":([^!]+).*\sPART\s([^ ]+)\s:(.*)"), self.__userPart),
             # :foo_!n=foo@foohost.bar.net PART #eric-ide
@@ -246,66 +252,84 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             (re.compile(r":([^!]+).*\sMODE\s([^ ]+)\s([+-][ovO]+)\s([^ ]+).*"),
                 self.__setUserPrivilege),
             # :cameron.freenode.net MODE #eric-ide +ns
-            (re.compile(r":([^ ]+)\sMODE\s([^ ]+)\s(.+)"), self.__updateChannelModes),
-            # :foo_!n=foo@foohost.bar.net TOPIC #eric-ide :eric - The Python IDE
+            (re.compile(r":([^ ]+)\sMODE\s([^ ]+)\s(.+)"),
+             self.__updateChannelModes),
+            # :foo_!n=foo@foohost.bar.net TOPIC #eric-ide :eric - Python IDE
             (re.compile(r":.*\sTOPIC\s([^ ]+)\s:(.*)"), self.__setTopic),
             # :sturgeon.freenode.net 301 foo_ bar :Gone away for now
-            (re.compile(r":.*\s301\s([^ ]+)\s([^ ]+)\s:(.+)"), self.__userAway),
+            (re.compile(r":.*\s301\s([^ ]+)\s([^ ]+)\s:(.+)"),
+             self.__userAway),
             # :sturgeon.freenode.net 315 foo_ #eric-ide :End of /WHO list.
             (re.compile(r":.*\s315\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoEnd),
             # :zelazny.freenode.net 324 foo_ #eric-ide +cnt
             (re.compile(r":.*\s324\s.*\s([^ ]+)\s(.+)"), self.__channelModes),
-            # :zelazny.freenode.net 328 foo_ #eric-ide :http://www.buggeroff.com/
+            # :zelazny.freenode.net 328 foo_ #eric-ide :http://www.bugger.com/
             (re.compile(r":.*\s328\s.*\s([^ ]+)\s:(.+)"), self.__channelUrl),
             # :zelazny.freenode.net 329 foo_ #eric-ide 1353001005
-            (re.compile(r":.*\s329\s.*\s([^ ]+)\s(.+)"), self.__channelCreated),
+            (re.compile(r":.*\s329\s.*\s([^ ]+)\s(.+)"),
+             self.__channelCreated),
             # :zelazny.freenode.net 332 foo_ #eric-ide :eric support channel
             (re.compile(r":.*\s332\s.*\s([^ ]+)\s:(.*)"), self.__setTopic),
             # :zelazny.freenode.net foo_ 333 #eric-ide foo 1353089020
-            (re.compile(r":.*\s333\s.*\s([^ ]+)\s([^ ]+)\s(\d+)"), self.__topicCreated),
-            # :cameron.freenode.net 352 detlev_ #eric-ide ~foo foohost.bar.net cameron.freenode.net foo_ H :0 Foo Bar
-            (re.compile(r":.*\s352\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s[^ ]+\s([^ ]+)"
-                        r"\s([^ ]+)\s:\d+\s(.*)"), self.__whoEntry),
+            (re.compile(r":.*\s333\s.*\s([^ ]+)\s([^ ]+)\s(\d+)"),
+             self.__topicCreated),
+            # :cameron.freenode.net 352 detlev_ #eric-ide ~foo foohost.bar.net
+            # cameron.freenode.net foo_ H :0 Foo Bar
+            (re.compile(
+                r":.*\s352\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s[^ ]+\s([^ ]+)"
+                r"\s([^ ]+)\s:\d+\s(.*)"), self.__whoEntry),
             # :zelazny.freenode.net 353 foo_ @ #eric-ide :@user1 +user2 user3
             (re.compile(r":.*\s353\s.*\s.\s([^ ]+)\s:(.*)"), self.__userList),
             # :sturgeon.freenode.net 354 foo_ 42 ChanServ H@
-            (re.compile(r":.*\s354\s[^ ]+\s42\s([^ ]+)\s(.*)"), self.__autoWhoEntry),
+            (re.compile(r":.*\s354\s[^ ]+\s42\s([^ ]+)\s(.*)"),
+             self.__autoWhoEntry),
             # :zelazny.freenode.net 366 foo_ #eric-ide :End of /NAMES list.
             (re.compile(r":.*\s366\s.*\s([^ ]+)\s:(.*)"), self.__ignore),
-            # :sturgeon.freenode.net 704 foo_ index :Help topics available to users:
+            # :sturgeon.freenode.net 704 foo_ index :Help topics available:
             (re.compile(r":.*\s70[456]\s[^ ]+\s([^ ]+)\s:(.*)"), self.__help),
             
             # WHOIS replies
-            # :sturgeon.freenode.net 311 foo_ bar ~bar barhost.foo.net * :Bar User
-            (re.compile(r":.*\s311\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s\*\s:(.*)"),
-                self.__whoIsUser),
+            # :sturgeon.freenode.net 311 foo_ bar ~bar barhost.foo.net * :Bar
+            (re.compile(
+                r":.*\s311\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s\*\s:(.*)"),
+             self.__whoIsUser),
             # :sturgeon.freenode.net 319 foo_ bar :@#eric-ide
-            (re.compile(r":.*\s319\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsChannels),
-            # :sturgeon.freenode.net 312 foo_ bar sturgeon.freenode.net :London, UK
-            (re.compile(r":.*\s312\s[^ ]+\s([^ ]+)\s([^ ]+)\s:(.*)"), self.__whoIsServer),
+            (re.compile(r":.*\s319\s[^ ]+\s([^ ]+)\s:(.*)"),
+             self.__whoIsChannels),
+            # :sturgeon.freenode.net 312 foo_ bar sturgeon.freenode.net :London
+            (re.compile(r":.*\s312\s[^ ]+\s([^ ]+)\s([^ ]+)\s:(.*)"),
+             self.__whoIsServer),
             # :sturgeon.freenode.net 671 foo_ bar :is using a secure connection
             (re.compile(r":.*\s671\s[^ ]+\s([^ ]+)\s:.*"), self.__whoIsSecure),
-            # :sturgeon.freenode.net 317 foo_ bar 3758 1355046912 :seconds idle, signon time
+            # :sturgeon.freenode.net 317 foo_ bar 3758 1355046912 :seconds
+            # idle, signon time
             (re.compile(r":.*\s317\s[^ ]+\s([^ ]+)\s(\d+)\s(\d+)\s:.*"),
                 self.__whoIsIdle),
             # :sturgeon.freenode.net 330 foo_ bar bar :is logged in as
-            (re.compile(r":.*\s330\s[^ ]+\s([^ ]+)\s([^ ]+)\s:.*"), self.__whoIsAccount),
+            (re.compile(r":.*\s330\s[^ ]+\s([^ ]+)\s([^ ]+)\s:.*"),
+             self.__whoIsAccount),
             # :sturgeon.freenode.net 318 foo_ bar :End of /WHOIS list.
             (re.compile(r":.*\s318\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsEnd),
             # :sturgeon.freenode.net 307 foo_ bar :is an identified user
-            (re.compile(r":.*\s307\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsIdentify),
+            (re.compile(r":.*\s307\s[^ ]+\s([^ ]+)\s:(.*)"),
+             self.__whoIsIdentify),
             # :sturgeon.freenode.net 320 foo_ bar :is an identified user
-            (re.compile(r":.*\s320\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsIdentify),
+            (re.compile(r":.*\s320\s[^ ]+\s([^ ]+)\s:(.*)"),
+             self.__whoIsIdentify),
             # :sturgeon.freenode.net 310 foo_ bar :is available for help
-            (re.compile(r":.*\s310\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsHelper),
-            # :sturgeon.freenode.net 338 foo_ bar real.ident@real.host 12.34.56.78 :Actual user@host, Actual IP
+            (re.compile(r":.*\s310\s[^ ]+\s([^ ]+)\s:(.*)"),
+             self.__whoIsHelper),
+            # :sturgeon.freenode.net 338 foo_ bar real.ident@real.host
+            # 12.34.56.78 :Actual user@host, Actual IP
             (re.compile(r":.*\s338\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s:.*"),
-                self.__whoIsActually),
+             self.__whoIsActually),
             # :sturgeon.freenode.net 313 foo_ bar :is an IRC Operator
-            (re.compile(r":.*\s313\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsOperator),
-            # :sturgeon.freenode.net 378 foo_ bar :is connecting from *@mnch-4d044d5a.pool.mediaWays.net 77.4.77.90
+            (re.compile(r":.*\s313\s[^ ]+\s([^ ]+)\s:(.*)"),
+             self.__whoIsOperator),
+            # :sturgeon.freenode.net 378 foo_ bar :is connecting from
+            # *@mnch-4d044d5a.pool.mediaWays.net 77.4.77.90
             (re.compile(r":.*\s378\s[^ ]+\s([^ ]+)\s:.*\s([^ ]+)\s([^ ]+)"),
-                self.__whoIsConnection),
+             self.__whoIsConnection),
         ]
         
         self.__autoWhoTemplate = "WHO {0} %tnf,42"
@@ -331,8 +355,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 if self.__private:
                     E5MessageBox.information(self,
                         self.trUtf8("Send Message"),
-                        self.trUtf8("""Messages starting with a '/' are not allowed"""
-                                    """ in private chats."""))
+                        self.trUtf8(
+                            """Messages starting with a '/' are not allowed"""
+                            """ in private chats."""))
                 else:
                     msgList = msg.split(None, 1)
                     cmd = msgList[0][1:].upper()
@@ -342,9 +367,11 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                     self.sendData.emit(" ".join(msgList))
             else:
                 if self.__private:
-                    self.sendData.emit("PRIVMSG " + self.__privatePartner + " :" + msg)
+                    self.sendData.emit(
+                        "PRIVMSG " + self.__privatePartner + " :" + msg)
                 else:
-                    self.sendData.emit("PRIVMSG " + self.__name + " :" + msg)
+                    self.sendData.emit(
+                        "PRIVMSG " + self.__name + " :" + msg)
             self.messageEdit.clear()
             self.unsetMarkerLine()
     
@@ -354,11 +381,13 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         ok = E5MessageBox.yesNo(self,
             self.trUtf8("Leave IRC channel"),
-            self.trUtf8("""Do you really want to leave the IRC channel <b>{0}</b>?""")\
+            self.trUtf8(
+                """Do you really want to leave the IRC channel <b>{0}</b>?""")
                 .format(self.__name))
         if ok:
             if not self.__private:
-                self.sendData.emit("PART " + self.__name + " :" + self.__partMessage)
+                self.sendData.emit(
+                    "PART " + self.__name + " :" + self.__partMessage)
             self.channelClosed.emit(self.__name)
     
     def name(self):
@@ -469,7 +498,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             
             self.addMessage(match.group(1), match.group(4))
             if self.__private and not self.topicLabel.text():
-                self.setPrivateInfo("{0} - {1}".format(match.group(1), match.group(2)))
+                self.setPrivateInfo(
+                    "{0} - {1}".format(match.group(1), match.group(2)))
             return True
         
         return False
@@ -489,11 +519,13 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             ircTimestamp(), sender, ircFilter(msg)))
         if Preferences.getIrc("ShowNotifications"):
             if Preferences.getIrc("NotifyMessage"):
-                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                self.__ui.showNotification(
+                    UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Channel Message"), msg)
             elif Preferences.getIrc("NotifyNick") and \
                  self.__userName.lower() in msg.lower():
-                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                self.__ui.showNotification(
+                    UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Nick mentioned"), msg)
     
     def addUsers(self, users):
@@ -517,16 +549,21 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         if match.group(3).lower() == self.__name.lower():
             if self.__userName != match.group(1):
                 IrcUserItem(match.group(1), self.usersList)
-                msg = self.trUtf8("{0} has joined the channel {1} ({2}).").format(
-                    match.group(1), self.__name, match.group(2))
-                self.__addManagementMessage(IrcChannelWidget.JoinIndicator, msg)
+                msg = self.trUtf8(
+                    "{0} has joined the channel {1} ({2}).").format(
+                        match.group(1), self.__name, match.group(2))
+                self.__addManagementMessage(
+                    IrcChannelWidget.JoinIndicator, msg)
             else:
-                msg = self.trUtf8("You have joined the channel {0} ({1}).").format(
-                    self.__name, match.group(2))
-                self.__addManagementMessage(IrcChannelWidget.JoinIndicator, msg)
+                msg = self.trUtf8(
+                    "You have joined the channel {0} ({1}).").format(
+                        self.__name, match.group(2))
+                self.__addManagementMessage(
+                    IrcChannelWidget.JoinIndicator, msg)
             if Preferences.getIrc("ShowNotifications") and \
                Preferences.getIrc("NotifyJoinPart"):
-                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                self.__ui.showNotification(
+                    UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Join Channel"), msg)
             return True
         
@@ -547,16 +584,19 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 msg = self.trUtf8("{0} has left {1}.").format(
                     match.group(1), self.__name)
                 nmsg = msg
-                self.__addManagementMessage(IrcChannelWidget.LeaveIndicator, msg)
+                self.__addManagementMessage(
+                    IrcChannelWidget.LeaveIndicator, msg)
             else:
                 msg = self.trUtf8("{0} has left {1}: {2}.").format(
                     match.group(1), self.__name, ircFilter(match.group(3)))
                 nmsg = self.trUtf8("{0} has left {1}: {2}.").format(
                     match.group(1), self.__name, match.group(3))
-                self.__addManagementMessage(IrcChannelWidget.LeaveIndicator, msg)
+                self.__addManagementMessage(
+                    IrcChannelWidget.LeaveIndicator, msg)
             if Preferences.getIrc("ShowNotifications") and \
                Preferences.getIrc("NotifyJoinPart"):
-                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                self.__ui.showNotification(
+                    UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Leave Channel"), nmsg)
             return True
         
@@ -576,14 +616,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             if match.lastindex == 1:
                 msg = self.trUtf8("{0} has quit {1}.").format(
                     match.group(1), self.__name)
-                self.__addManagementMessage(IrcChannelWidget.MessageIndicator, msg)
+                self.__addManagementMessage(
+                    IrcChannelWidget.MessageIndicator, msg)
             else:
                 msg = self.trUtf8("{0} has quit {1}: {2}.").format(
                     match.group(1), self.__name, ircFilter(match.group(2)))
-                self.__addManagementMessage(IrcChannelWidget.MessageIndicator, msg)
+                self.__addManagementMessage(
+                    IrcChannelWidget.MessageIndicator, msg)
             if Preferences.getIrc("ShowNotifications") and \
                Preferences.getIrc("NotifyJoinPart"):
-                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                self.__ui.showNotification(
+                    UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Quit"), msg)
         
         # always return False for other channels and server to process
@@ -643,7 +686,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         if match.group(1).lower() == self.__name.lower():
             self.__addManagementMessage(self.trUtf8("Away"),
-                self.trUtf8("{0} is away: {1}").format(match.group(2), match.group(3)))
+                self.trUtf8("{0} is away: {1}").format(
+                    match.group(2), match.group(3)))
             return True
         
         return False
@@ -689,7 +733,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         if match.group(1).lower() == self.__name.lower():
             self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
-                ircFilter(self.trUtf8("Channel URL: {0}").format(match.group(2))))
+                ircFilter(self.trUtf8("Channel URL: {0}").format(
+                    match.group(2))))
             return True
         
         return False
@@ -711,12 +756,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                     continue
                 elif modeChar == "k":
                     parameter = modesParameters.pop(0)
-                    modes.append(
-                        self.trUtf8("password protected ({0})").format(parameter))
+                    modes.append(self.trUtf8(
+                        "password protected ({0})").format(parameter))
                 elif modeChar == "l":
                     parameter = modesParameters.pop(0)
-                    modes.append(
-                        self.trUtf8("limited to %n user(s)", "", int(parameter)))
+                    modes.append(self.trUtf8(
+                        "limited to %n user(s)", "", int(parameter)))
                 elif modeChar in modesDict:
                     modes.append(modesDict[modeChar])
                 else:
@@ -771,11 +816,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 elif mode == "a":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'anonymous'.").format(nick)
+                            "{0} sets the channel mode to 'anonymous'.")\
+                            .format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} removes the 'anonymous' mode from the channel.").format(
-                            nick)
+                            "{0} removes the 'anonymous' mode from the"
+                            " channel.").format(nick)
                 elif mode == "b":
                     if isPlus:
                         message = self.trUtf8(
@@ -788,12 +834,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 elif mode == "c":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'no colors allowed'.").format(
-                            nick)
+                            "{0} sets the channel mode to 'no colors"
+                            " allowed'.").format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'allow color codes'.").format(
-                            nick)
+                            "{0} sets the channel mode to 'allow color"
+                            " codes'.").format(nick)
                 elif mode == "e":
                     if isPlus:
                         message = self.trUtf8(
@@ -806,11 +852,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 elif mode == "i":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'invite only'.").format(nick)
+                            "{0} sets the channel mode to 'invite only'.")\
+                            .format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} removes the 'invite only' mode from the channel."
-                            ).format(nick)
+                            "{0} removes the 'invite only' mode from the"
+                            " channel.").format(nick)
                 elif mode == "k":
                     if isPlus:
                         message = self.trUtf8(
@@ -830,50 +877,58 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 elif mode == "m":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'moderated'.").format(nick)
+                            "{0} sets the channel mode to 'moderated'.")\
+                            .format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'unmoderated'.").format(nick)
+                            "{0} sets the channel mode to 'unmoderated'.")\
+                            .format(nick)
                 elif mode == "n":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'no messages from outside'."
-                            ).format(nick)
+                            "{0} sets the channel mode to 'no messages from"
+                            " outside'.").format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'allow messages from outside'."
-                            ).format(nick)
+                            "{0} sets the channel mode to 'allow messages"
+                            " from outside'.").format(nick)
                 elif mode == "p":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'private'.").format(nick)
+                            "{0} sets the channel mode to 'private'.")\
+                            .format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'public'.").format(nick)
+                            "{0} sets the channel mode to 'public'.")\
+                            .format(nick)
                 elif mode == "q":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'quiet'.").format(nick)
+                            "{0} sets the channel mode to 'quiet'.")\
+                            .format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} removes the 'quiet' mode from the channel.").format(
-                            nick)
+                            "{0} removes the 'quiet' mode from the channel.")\
+                            .format(nick)
                 elif mode == "r":
                     continue
                 elif mode == "s":
                     if isPlus:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'secret'.").format(nick)
+                            "{0} sets the channel mode to 'secret'.")\
+                            .format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} sets the channel mode to 'visible'.").format(nick)
+                            "{0} sets the channel mode to 'visible'.")\
+                            .format(nick)
                 elif mode == "t":
                     if isPlus:
                         message = self.trUtf8(
                             "{0} switches on 'topic protection'.").format(nick)
                     else:
                         message = self.trUtf8(
-                            "{0} switches off 'topic protection'.").format(nick)
+                            "{0} switches off 'topic protection'.")\
+                            .format(nick)
                 elif mode == "I":
                     if isPlus:
                         message = self.trUtf8(
@@ -960,7 +1015,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.__addManagementMessage(self.trUtf8("CTCP"),
                     self.trUtf8("Received CTCP-PING request from {0},"
                     " sending answer.").format(match.group(1)))
-                self.sendCtcpReply.emit(match.group(1), "PING {0}".format(ctcpArg))
+                self.sendCtcpReply.emit(
+                    match.group(1), "PING {0}".format(ctcpArg))
             elif ctcpRequest == "clientinfo":
                 self.__addManagementMessage(self.trUtf8("CTCP"),
                     self.trUtf8("Received CTCP-CLIENTINFO request from {0},"
@@ -969,8 +1025,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                     "CLIENTINFO CLIENTINFO PING VERSION")
             else:
                 self.__addManagementMessage(self.trUtf8("CTCP"),
-                    self.trUtf8("Received unknown CTCP-{0} request from {1}.").format(
-                    ctcpRequest, match.group(1)))
+                    self.trUtf8("Received unknown CTCP-{0} request from {1}.")
+                    .format(ctcpRequest, match.group(1)))
             return True
         
         return False
@@ -1052,10 +1108,10 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         self.unsetMarkerLine()
         self.__markerLine = \
-            '<span style=" color:{0}; background-color:{1};">{2}</span>'.format(
-            Preferences.getIrc("MarkerLineForegroundColour"),
-            Preferences.getIrc("MarkerLineBackgroundColour"),
-            self.trUtf8('--- New From Here ---'))
+            '<span style=" color:{0}; background-color:{1};">{2}</span>'\
+            .format(Preferences.getIrc("MarkerLineForegroundColour"),
+                    Preferences.getIrc("MarkerLineBackgroundColour"),
+                    self.trUtf8('--- New From Here ---'))
         self.messages.append(self.__markerLine)
     
     def unsetMarkerLine(self):
@@ -1082,13 +1138,15 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     
     def __copyMessages(self):
         """
-        Private slot to copy the selection of the messages display to the clipboard.
+        Private slot to copy the selection of the messages display to the
+        clipboard.
         """
         self.messages.copy()
     
     def __copyAllMessages(self):
         """
-        Private slot to copy the contents of the messages display to the clipboard.
+        Private slot to copy the contents of the messages display to the
+        clipboard.
         """
         txt = self.messages.toPlainText()
         if txt:
@@ -1097,7 +1155,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     
     def __cutAllMessages(self):
         """
-        Private slot to cut the contents of the messages display to the clipboard.
+        Private slot to cut the contents of the messages display to the
+        clipboard.
         """
         txt = self.messages.toPlainText()
         if txt:
@@ -1120,8 +1179,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.trUtf8("Save Messages"),
                 "",
                 self.trUtf8(
-                    "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)").format(
-                    htmlExtension),
+                    "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)")
+                    .format(htmlExtension),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
@@ -1152,8 +1211,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 except IOError as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Error saving Messages"),
-                        self.trUtf8("""<p>The messages contents could not be written"""
-                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                        self.trUtf8(
+                            """<p>The messages contents could not be written"""
+                            """ to <b>{0}</b></p><p>Reason: {1}</p>""")
                             .format(fname, str(err)))
     
     def __initMessagesMenu(self):
@@ -1189,7 +1249,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.__messagesMenu.addAction(self.trUtf8("Mark Current Position"),
                 self.setMarkerLine)
         self.__unsetMarkerMessagesAct = \
-            self.__messagesMenu.addAction(self.trUtf8("Remove Position Marker"),
+            self.__messagesMenu.addAction(
+                self.trUtf8("Remove Position Marker"),
                 self.unsetMarkerLine)
         
         self.on_messages_copyAvailable(False)
@@ -1197,7 +1258,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     @pyqtSlot(bool)
     def on_messages_copyAvailable(self, yes):
         """
-        Private slot to react to text selection/deselection of the messages edit.
+        Private slot to react to text selection/deselection of the messages
+        edit.
         
         @param yes flag signaling the availability of selected text (boolean)
         """
@@ -1304,8 +1366,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     
     def __autoWhoEntry(self, match):
         """
-        Private method to handle a WHO entry returned by the server as requested
-        automatically.
+        Private method to handle a WHO entry returned by the server as
+        requested automatically.
         
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
@@ -1333,15 +1395,16 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.initAutoWho()
             else:
                 self.__addManagementMessage(self.trUtf8("Who"),
-                    self.trUtf8("End of WHO list for {0}.").format(match.group(1)))
+                    self.trUtf8("End of WHO list for {0}.").format(
+                    match.group(1)))
             return True
         
         return False
     
     def __whoEntry(self, match):
         """
-        Private method to handle a WHO entry returned by the server as requested
-        manually.
+        Private method to handle a WHO entry returned by the server as
+        requested manually.
         
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
@@ -1353,10 +1416,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(5)  user flags
         # group(6)  real name
         if match.group(1).lower() == self.__name.lower():
-            away = self.trUtf8(" (Away)") if match.group(5).startswith("G") else ""
+            away = self.trUtf8(" (Away)") if match.group(5).startswith("G") \
+                else ""
             self.__addManagementMessage(self.trUtf8("Who"),
                 self.trUtf8("{0} is {1}@{2} ({3}){4}").format(
-                    match.group(4), match.group(2), match.group(3), match.group(6), away))
+                    match.group(4), match.group(2), match.group(3),
+                    match.group(6), away))
             return True
         
         return False
@@ -1458,8 +1523,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(3)   server info
         if match.group(1) == self.__whoIsNick:
             self.__addManagementMessage(self.trUtf8("Whois"),
-                self.trUtf8("{0} is online via {1} ({2}).").format(match.group(1),
-                match.group(2), match.group(3)))
+                self.trUtf8("{0} is online via {1} ({2}).").format(
+                    match.group(1), match.group(2), match.group(3)))
             return True
         
         return False
@@ -1476,7 +1541,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         if match.group(1) == self.__whoIsNick:
             if match.group(2).lower().startswith("is an irc operator"):
                 self.__addManagementMessage(self.trUtf8("Whois"),
-                    self.trUtf8("{0} is an IRC Operator.").format(match.group(1)))
+                    self.trUtf8("{0} is an IRC Operator.").format(
+                        match.group(1)))
             else:
                 self.__addManagementMessage(self.trUtf8("Whois"),
                     "{0} {1}".format(match.group(1), match.group(2)))
@@ -1510,11 +1576,13 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 minutesString = self.trUtf8("%n minute(s)", "", minutes)
                 secondsString = self.trUtf8("%n second(s)", "", seconds)
                 self.__addManagementMessage(self.trUtf8("Whois"),
-                    self.trUtf8("{0} has been idle for {1}, {2}, {3}, and {4}.",
-                                "{0} = name of person, {1} = (x days), {2} = (x hours),"
-                                " {3} = (x minutes), {4} = (x seconds)").format(
-                    match.group(1), daysString, hoursString, minutesString,
-                    secondsString))
+                    self.trUtf8(
+                        "{0} has been idle for {1}, {2}, {3}, and {4}.",
+                        "{0} = name of person, {1} = (x days),"
+                        " {2} = (x hours), {3} = (x minutes),"
+                        " {4} = (x seconds)").format(
+                        match.group(1), daysString, hoursString, minutesString,
+                        secondsString))
             elif hours:
                 hoursString = self.trUtf8("%n hour(s)", "", hours)
                 minutesString = self.trUtf8("%n minute(s)", "", minutes)
@@ -1540,7 +1608,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             if not signonTime.isNull():
                 self.__addManagementMessage(self.trUtf8("Whois"),
                     self.trUtf8("{0} has been online since {1}.").format(
-                    match.group(1), signonTime.toString("yyyy-MM-dd, hh:mm:ss")))
+                    match.group(1),
+                    signonTime.toString("yyyy-MM-dd, hh:mm:ss")))
             return True
         
         return False
@@ -1557,7 +1626,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         if match.group(1) == self.__whoIsNick:
             self.__whoIsNick = ""
             self.__addManagementMessage(self.trUtf8("Whois"),
-                self.trUtf8("End of WHOIS list for {0}.").format(match.group(1)))
+                self.trUtf8("End of WHOIS list for {0}.").format(
+                    match.group(1)))
             return True
         
         return False
@@ -1573,7 +1643,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(2)   identified message
         if match.group(1) == self.__whoIsNick:
             self.__addManagementMessage(self.trUtf8("Whois"),
-                self.trUtf8("{0} is an identified user.").format(match.group(1)))
+                self.trUtf8("{0} is an identified user.").format(
+                    match.group(1)))
             return True
         
         return False
@@ -1589,7 +1660,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(2)   helper message
         if match.group(1) == self.__whoIsNick:
             self.__addManagementMessage(self.trUtf8("Whois"),
-                self.trUtf8("{0} is available for help.").format(match.group(1)))
+                self.trUtf8("{0} is available for help.").format(
+                    match.group(1)))
             return True
         
         return False
@@ -1623,8 +1695,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(3)   actual IP
         if match.group(1) == self.__whoIsNick:
             self.__addManagementMessage(self.trUtf8("Whois"),
-                self.trUtf8("{0} is actually using the host {1} (IP: {2}).").format(
-                match.group(1), match.group(2), match.group(3)))
+                self.trUtf8(
+                    "{0} is actually using the host {1} (IP: {2}).").format(
+                    match.group(1), match.group(2), match.group(3)))
             return True
         
         return False
@@ -1639,7 +1712,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(1)   nick
         if match.group(1) == self.__whoIsNick:
             self.__addManagementMessage(self.trUtf8("Whois"),
-                self.trUtf8("{0} is using a secure connection.").format(match.group(1)))
+                self.trUtf8("{0} is using a secure connection.").format(
+                    match.group(1)))
             return True
         
         return False

@@ -51,10 +51,13 @@ class SessionWriter(XMLStreamWriterBase):
         
         # add some generation comments
         if not isGlobal:
-            self.writeComment(" eric5 session file for project {0} ".format(self.name))
-        self.writeComment(" This file was generated automatically, do not edit. ")
+            self.writeComment(
+                " eric5 session file for project {0} ".format(self.name))
+        self.writeComment(
+            " This file was generated automatically, do not edit. ")
         if Preferences.getProject("XMLTimestamp") or isGlobal:
-            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(
+                " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
         self.writeStartElement("Session")
@@ -134,7 +137,8 @@ class SessionWriter(XMLStreamWriterBase):
         wpModel = self.dbs.getWatchPointModel()
         for row in range(wpModel.rowCount()):
             index = wpModel.index(row, 0)
-            cond, temp, enabled, count, special = wpModel.getWatchPointByIndex(index)[:5]
+            cond, temp, enabled, count, special = \
+                wpModel.getWatchPointByIndex(index)[:5]
             self.writeStartElement("Watchexpression")
             self.writeTextElement("Condition", str(cond))
             self.writeEmptyElement("Temporary")
@@ -181,7 +185,7 @@ class SessionWriter(XMLStreamWriterBase):
             self.writeAttribute("value", str(self.dbg.tracePython))
             self.writeEmptyElement("AutoContinue")
             self.writeAttribute("value", str(self.dbg.autoContinue))
-            self.writeEmptyElement("CovexcPattern")     # kept for compatibility
+            self.writeEmptyElement("CovexcPattern")    # kept for compatibility
         else:
             self.writeTextElement("CommandLine", self.project.dbgCmdline)
             self.writeTextElement("WorkingDirectory", self.project.dbgWd)
@@ -202,7 +206,7 @@ class SessionWriter(XMLStreamWriterBase):
             self.writeAttribute("value", str(self.project.dbgTracePython))
             self.writeEmptyElement("AutoContinue")
             self.writeAttribute("value", str(self.project.dbgAutoContinue))
-            self.writeEmptyElement("CovexcPattern")     # kept for compatibility
+            self.writeEmptyElement("CovexcPattern")    # kept for compatibility
         self.writeEndElement()
         
         # step 4: save bookmarks of all open (project) files

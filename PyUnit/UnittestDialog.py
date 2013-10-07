@@ -14,8 +14,8 @@ import re
 import os
 
 from PyQt4.QtCore import pyqtSignal, QEvent, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget, QColor, QDialog, QApplication, QDialogButtonBox, \
-    QListWidgetItem
+from PyQt4.QtGui import QWidget, QColor, QDialog, QApplication, \
+    QDialogButtonBox, QListWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter
@@ -34,14 +34,15 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     """
     Class implementing the UI to the pyunit package.
     
-    @signal unittestFile(str, int, int) emitted to show the source of a unittest file
+    @signal unittestFile(str, int, int) emitted to show the source of a
+        unittest file
     @signal unittestStopped() emitted after a unit test was run
     """
     unittestFile = pyqtSignal(str, int, int)
     unittestStopped = pyqtSignal()
     
-    def __init__(self, prog=None, dbs=None, ui=None, fromEric=False, parent=None,
-                 name=None):
+    def __init__(self, prog=None, dbs=None, ui=None, fromEric=False,
+                 parent=None, name=None):
         """
         Constructor
         
@@ -61,7 +62,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         self.startButton = self.buttonBox.addButton(
             self.trUtf8("Start"), QDialogButtonBox.ActionRole)
-        self.startButton.setToolTip(self.trUtf8("Start the selected testsuite"))
+        self.startButton.setToolTip(self.trUtf8(
+            "Start the selected testsuite"))
         self.startButton.setWhatsThis(self.trUtf8(
             """<b>Start Test</b>"""
             """<p>This button starts the selected testsuite.</p>"""))
@@ -71,7 +73,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.trUtf8("Reruns failed tests of the selected testsuite"))
         self.startFailedButton.setWhatsThis(self.trUtf8(
             """<b>Rerun Failed</b>"""
-            """<p>This button reruns all failed tests of the selected testsuite.</p>"""))
+            """<p>This button reruns all failed tests of the selected"""
+            """ testsuite.</p>"""))
         self.stopButton = self.buttonBox.addButton(
             self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
         self.stopButton.setToolTip(self.trUtf8("Stop the running unittest"))
@@ -86,7 +89,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.__fromEric = fromEric
         
         self.setWindowFlags(
-            self.windowFlags() | Qt.WindowFlags(Qt.WindowContextHelpButtonHint))
+            self.windowFlags() | Qt.WindowFlags(
+                Qt.WindowContextHelpButtonHint))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         self.setWindowTitle(self.trUtf8("Unittest"))
         if dbs:
@@ -124,7 +128,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.dbs.utTestErrored.connect(self.testErrored)
             self.dbs.utTestSkipped.connect(self.testSkipped)
             self.dbs.utTestFailedExpected.connect(self.testFailedExpected)
-            self.dbs.utTestSucceededUnexpected.connect(self.testSucceededUnexpected)
+            self.dbs.utTestSucceededUnexpected.connect(
+                self.testSucceededUnexpected)
     
     def keyPressEvent(self, evt):
         """
@@ -145,7 +150,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
     def insertProg(self, prog):
         """
-        Public slot to insert the filename prog into the testsuiteComboBox object.
+        Public slot to insert the filename prog into the testsuiteComboBox
+        object.
         
         @param prog filename to be inserted (string)
         """
@@ -294,9 +300,11 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 self.coverageEraseCheckBox.isChecked(), clientType=clientType)
         else:
             # we are running as an application or in local mode
-            sys.path = [os.path.dirname(os.path.abspath(prog))] + self.savedSysPath
+            sys.path = [os.path.dirname(os.path.abspath(prog))] + \
+                self.savedSysPath
             
-            # clean up list of imported modules to force a reimport upon running the test
+            # clean up list of imported modules to force a reimport upon
+            # running the test
             if self.savedModulelist:
                 for modname in list(sys.modules.keys()):
                     if modname not in self.savedModulelist:
@@ -316,13 +324,17 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                         test = unittest.defaultTestLoader.loadTestsFromName(
                             testFunctionName, module)
                 except AttributeError:
-                    test = unittest.defaultTestLoader.loadTestsFromModule(module)
+                    test = unittest.defaultTestLoader.loadTestsFromModule(
+                        module)
             except:
                 exc_type, exc_value, exc_tb = sys.exc_info()
                 E5MessageBox.critical(self,
                         self.trUtf8("Unittest"),
-                        self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
-                            .format(self.testName, str(exc_type), str(exc_value)))
+                        self.trUtf8(
+                            "<p>Unable to run test <b>{0}</b>.<br>"
+                            "{1}<br>{2}</p>")
+                            .format(self.testName, str(exc_type),
+                                    str(exc_value)))
                 return
                 
             # now set up the coverage stuff
@@ -341,7 +353,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 
                 from DebugClients.Python3.coverage import coverage
                 cover = coverage(
-                    data_file="{0}.coverage".format(os.path.splitext(mainScript)[0]))
+                    data_file="{0}.coverage".format(
+                    os.path.splitext(mainScript)[0]))
                 cover.use_cache(True)
                 if self.coverageEraseCheckBox.isChecked():
                     cover.erase()
@@ -375,7 +388,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if nrTests == 0:
             E5MessageBox.critical(self,
                     self.trUtf8("Unittest"),
-                    self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
+                    self.trUtf8(
+                        "<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
                         .format(self.testName, exc_type, exc_value))
             return
             
@@ -402,7 +416,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if text:
             for pattern in self.rxPatterns:
                 text = re.sub(pattern, "", text)
-            itm = self.testsListWidget.findItems(text, Qt.MatchFlags(Qt.MatchExactly))[0]
+            itm = self.testsListWidget.findItems(
+                text, Qt.MatchFlags(Qt.MatchExactly))[0]
             self.testsListWidget.setCurrentItem(itm)
             self.testsListWidget.scrollToItem(itm)
         
@@ -427,7 +442,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.progressCounterFailureCount.setText(str(self.failCount))
         self.progressCounterErrorCount.setText(str(self.errorCount))
         self.progressCounterSkippedCount.setText(str(self.skippedCount))
-        self.progressCounterExpectedFailureCount.setText(str(self.expectedFailureCount))
+        self.progressCounterExpectedFailureCount.setText(
+            str(self.expectedFailureCount))
         self.progressCounterUnexpectedSuccessCount.setText(
             str(self.unexpectedSuccessCount))
         self.errorsListWidget.clear()
@@ -524,7 +540,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param id id of the test (string)
         """
         self.expectedFailureCount += 1
-        self.progressCounterExpectedFailureCount.setText(str(self.expectedFailureCount))
+        self.progressCounterExpectedFailureCount.setText(
+            str(self.expectedFailureCount))
         itm = QListWidgetItem(self.trUtf8("    Expected Failure"))
         itm.setForeground(Qt.blue)
         self.testsListWidget.insertItem(1, itm)
@@ -629,7 +646,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         tracebackLines = self.dlg.traceback.toPlainText().splitlines()
         # find the last entry matching the pattern
         for index in range(len(tracebackLines) - 1, -1, -1):
-            fmatch = re.search(r'File "(.*?)", line (\d*?),.*', tracebackLines[index])
+            fmatch = re.search(r'File "(.*?)", line (\d*?),.*',
+                               tracebackLines[index])
             if fmatch:
                 break
         if fmatch:
@@ -749,7 +767,8 @@ class UnittestWindow(E5MainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
     
     def eventFilter(self, obj, event):
         """

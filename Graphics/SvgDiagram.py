@@ -8,8 +8,8 @@ Module implementing a dialog showing a SVG graphic.
 """
 
 from PyQt4.QtCore import Qt, QSize, QEvent
-from PyQt4.QtGui import QPalette, QSizePolicy, QScrollArea, QAction, QMenu, QToolBar, \
-    QPrinter, QPrintDialog, QPainter, QFont, QColor
+from PyQt4.QtGui import QPalette, QSizePolicy, QScrollArea, QAction, QMenu, \
+    QToolBar, QPrinter, QPrintDialog, QPainter, QFont, QColor
 from PyQt4.QtSvg import QSvgWidget
 
 from E5Gui.E5MainWindow import E5MainWindow
@@ -60,7 +60,8 @@ class SvgDiagram(E5MainWindow):
         
         self.setCentralWidget(self.svgView)
         
-        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+        self.__zoomWidget = E5ZoomWidget(
+            UI.PixmapCache.getPixmap("zoomOut.png"),
             UI.PixmapCache.getPixmap("zoomIn.png"),
             UI.PixmapCache.getPixmap("zoomReset.png"), self)
         self.statusBar().addPermanentWidget(self.__zoomWidget)
@@ -189,9 +190,9 @@ class SvgDiagram(E5MainWindow):
                 self.__doZoom(int(pinch.scaleFactor() * 100))
             evt.accept()
     
-    ############################################################################
+    ###########################################################################
     ## Private menu handling methods below.
-    ############################################################################
+    ###########################################################################
     
     def __adjustScrollBar(self, scrollBar, factor):
         """
@@ -262,7 +263,8 @@ class SvgDiagram(E5MainWindow):
         
         @return current zoom factor in percent (integer)
         """
-        return int(self.svgWidget.width() / self.svgWidget.sizeHint().width() * 100.0)
+        return int(self.svgWidget.width() / 
+                   self.svgWidget.sizeHint().width() * 100.0)
         
     def __printDiagram(self):
         """
@@ -328,18 +330,18 @@ class SvgDiagram(E5MainWindow):
         fm = painter.fontMetrics()
         fontHeight = fm.lineSpacing()
         marginX = printer.pageRect().x() - printer.paperRect().x()
-        marginX = \
-            Preferences.getPrinter("LeftMargin") * int(printer.resolution() / 2.54) \
-            - marginX
+        marginX = Preferences.getPrinter("LeftMargin") * \
+            int(printer.resolution() / 2.54) - marginX
         marginY = printer.pageRect().y() - printer.paperRect().y()
-        marginY = \
-            Preferences.getPrinter("TopMargin") * int(printer.resolution() / 2.54) \
-            - marginY
+        marginY = Preferences.getPrinter("TopMargin") * \
+            int(printer.resolution() / 2.54) - marginY
 
-        width = printer.width() - marginX \
-            - Preferences.getPrinter("RightMargin") * int(printer.resolution() / 2.54)
-        height = printer.height() - fontHeight - 4 - marginY \
-            - Preferences.getPrinter("BottomMargin") * int(printer.resolution() / 2.54)
+        width = printer.width() - marginX - \
+            Preferences.getPrinter("RightMargin") * \
+            int(printer.resolution() / 2.54)
+        height = printer.height() - fontHeight - 4 - marginY - \
+            Preferences.getPrinter("BottomMargin") * \
+            int(printer.resolution() / 2.54)
 
         # write a foot note
         s = self.trUtf8("Diagram: {0}").format(self.getDiagramName())

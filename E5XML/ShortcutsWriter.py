@@ -42,7 +42,8 @@ class ShortcutsWriter(XMLStreamWriterBase):
         
         # add some generation comments
         self.writeComment(" Eric5 keyboard shortcuts ")
-        self.writeComment(" Saved: {0}".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+        self.writeComment(
+            " Saved: {0}".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         self.writeComment(" Author: {0} ".format(self.email))
         
         # add the main tag
@@ -99,5 +100,6 @@ class ShortcutsWriter(XMLStreamWriterBase):
                 self.writeAttribute("category", category)
                 self.writeTextElement("Name", act.objectName())
                 self.writeTextElement("Accel", act.shortcut().toString())
-                self.writeTextElement("AltAccel", act.alternateShortcut().toString())
+                self.writeTextElement(
+                    "AltAccel", act.alternateShortcut().toString())
                 self.writeEndElement()

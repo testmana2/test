@@ -34,22 +34,29 @@ class MultiProjectBrowser(QListWidget):
         
         self.__openingProject = False
         
-        self.multiProject.newMultiProject.connect(self.__newMultiProject)
-        self.multiProject.multiProjectOpened.connect(self.__multiProjectOpened)
-        self.multiProject.multiProjectClosed.connect(self.__multiProjectClosed)
-        self.multiProject.projectDataChanged.connect(self.__projectDataChanged)
-        self.multiProject.projectAdded.connect(self.__projectAdded)
-        self.multiProject.projectRemoved.connect(self.__projectRemoved)
-        self.multiProject.projectOpened.connect(self.__projectOpened)
+        self.multiProject.newMultiProject.connect(
+            self.__newMultiProject)
+        self.multiProject.multiProjectOpened.connect(
+            self.__multiProjectOpened)
+        self.multiProject.multiProjectClosed.connect(
+            self.__multiProjectClosed)
+        self.multiProject.projectDataChanged.connect(
+            self.__projectDataChanged)
+        self.multiProject.projectAdded.connect(
+            self.__projectAdded)
+        self.multiProject.projectRemoved.connect(
+            self.__projectRemoved)
+        self.multiProject.projectOpened.connect(
+            self.__projectOpened)
         
         self.__createPopupMenu()
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__contextMenuRequested)
         self.itemActivated.connect(self.__openItem)
     
-    ############################################################################
+    ###########################################################################
     ## Slot handling methods below
-    ############################################################################
+    ###########################################################################
     
     def __newMultiProject(self):
         """
@@ -150,9 +157,9 @@ class MultiProjectBrowser(QListWidget):
                 self.multiProject.openProject(filename)
                 self.__openingProject = False
     
-    ############################################################################
+    ###########################################################################
     ## Private methods below
-    ############################################################################
+    ###########################################################################
     
     def __addProject(self, project):
         """
@@ -240,16 +247,20 @@ class MultiProjectBrowser(QListWidget):
         self.__menu = QMenu(self)
         self.__menu.addAction(self.trUtf8("Open"), self.__openItem)
         self.__menu.addAction(self.trUtf8("Remove"), self.__removeProject)
-        self.__menu.addAction(self.trUtf8("Properties"), self.__showProjectProperties)
+        self.__menu.addAction(self.trUtf8("Properties"),
+                              self.__showProjectProperties)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Add Project..."), self.__addNewProject)
+        self.__menu.addAction(self.trUtf8("Add Project..."),
+                              self.__addNewProject)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
         
         self.__backMenu = QMenu(self)
-        self.__backMenu.addAction(self.trUtf8("Add Project..."), self.__addNewProject)
+        self.__backMenu.addAction(self.trUtf8("Add Project..."),
+                                  self.__addNewProject)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__backMenu.addAction(self.trUtf8("Configure..."),
+                                  self.__configure)
     
     def __configure(self):
         """

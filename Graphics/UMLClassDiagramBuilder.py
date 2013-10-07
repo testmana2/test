@@ -29,7 +29,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         @param view reference to the view object (UMLGraphicsView)
         @param project reference to the project object (Project)
         @param file file name of a python module to be shown (string)
-        @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
+        @keyparam noAttrs flag indicating, that no attributes should be shown
+            (boolean)
         """
         super().__init__(dialog, view, project)
         self.setObjectName("UMLClassDiagramBuilder")
@@ -72,8 +73,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         try:
             extensions = Preferences.getPython("PythonExtensions") + \
                 Preferences.getPython("Python3Extensions") + ['.rb']
-            module = Utilities.ModuleParser.readModule(self.file, extensions=extensions,
-                                                       caching=False)
+            module = Utilities.ModuleParser.readModule(
+                self.file, extensions=extensions, caching=False)
         except ImportError:
             ct = QGraphicsTextItem(None)
             ct.setHtml(
@@ -139,8 +140,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
             self.umlView.autoAdjustSceneSize(limit=True)
         else:
             ct = QGraphicsTextItem(None)
-            ct.setHtml(
-                self.trUtf8("The module <b>'{0}'</b> does not contain any classes.")\
+            ct.setHtml(self.trUtf8(
+                "The module <b>'{0}'</b> does not contain any classes.")
                 .format(self.file))
             self.scene.addItem(ct)
         
@@ -163,7 +164,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         for generation in generations:
             sizes.append([])
             for child in generation:
-                sizes[-1].append(self.__getCurrentShape(child).sceneBoundingRect())
+                sizes[-1].append(
+                    self.__getCurrentShape(child).sceneBoundingRect())
         
         # calculate total width and total height
         width = 0
@@ -212,7 +214,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
                 itertools.zip_longest(widths, heights, generations):
             x = 10.0
             # whiteSpace is the space between any two elements
-            whiteSpace = (width - currentWidth - 20) / (len(generation) - 1.0 or 2.0)
+            whiteSpace = (width - currentWidth - 20) / \
+                (len(generation) - 1.0 or 2.0)
             for className in generation:
                 cw = self.__getCurrentShape(className)
                 cw.setPos(x, y)

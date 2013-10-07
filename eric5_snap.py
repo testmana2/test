@@ -45,11 +45,12 @@ def main():
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
     ]
-    appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 Snap",
-                                  "",
-                                  "Simple utility to do snapshots of the screen.",
-                                  options)
+    appinfo = AppInfo.makeAppInfo(
+        sys.argv,
+        "Eric5 Snap",
+        "",
+        "Simple utility to do snapshots of the screen.",
+        options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,
                                    createMainWidget)

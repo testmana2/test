@@ -38,7 +38,8 @@ def usage():
     """
     print("eric5_doc")
     print()
-    print("Copyright (c) 2003 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>.")
+    print("Copyright (c) 2003 - 2013 Detlev Offenbach"
+          " <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
@@ -91,7 +92,8 @@ def usage():
     print("  --cfheader-color=color")
     print("        Specify the text color of class and function headers.")
     print("  --cfheader-background-color=color")
-    print("        Specify the text background color of class and function headers.")
+    print("        Specify the text background color of class and"
+          " function headers.")
     print("  --link-color=color")
     print("        Specify the text color of hyperlinks.")
     print()
@@ -155,7 +157,8 @@ def main():
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
-                   ".eric5project", "_eric5project", "dist", "build", "doc", "docs"]
+                   ".eric5project", "_eric5project", "dist", "build", "doc",
+                   "docs"]
     excludePatterns = []
     outputDir = "doc"
     recursive = False
@@ -277,7 +280,8 @@ def main():
             sf.close()
         except IOError:
             sys.stderr.write(
-                "The CSS stylesheet '{0}' does not exist\n".format(stylesheetFile))
+                "The CSS stylesheet '{0}' does not exist\n".format(
+                    stylesheetFile))
             sys.stderr.write("Disabling CSS usage.\n")
             stylesheet = None
     else:
@@ -300,17 +304,20 @@ def main():
         qtHelpOutputDir = os.path.abspath(qtHelpOutputDir)
         
         qtHelpGenerator = QtHelpGenerator(outputDir,
-                                          qtHelpOutputDir, qtHelpNamespace, qtHelpFolder,
-                                          qtHelpFilterName, qtHelpFilterAttribs,
-                                          qtHelpTitle, qtHelpCreateCollection)
+                                          qtHelpOutputDir, qtHelpNamespace,
+                                          qtHelpFolder, qtHelpFilterName,
+                                          qtHelpFilterAttribs, qtHelpTitle,
+                                          qtHelpCreateCollection)
     
     for arg in args:
         if os.path.isdir(arg):
-            if os.path.exists(os.path.join(arg, Utilities.joinext("__init__", ".py"))):
+            if os.path.exists(os.path.join(
+                    arg, Utilities.joinext("__init__", ".py"))):
                 basename = os.path.dirname(arg)
                 if arg == '.':
                     sys.stderr.write("The directory '.' is a package.\n")
-                    sys.stderr.write("Please repeat the call giving its real name.\n")
+                    sys.stderr.write(
+                        "Please repeat the call giving its real name.\n")
                     sys.stderr.write("Ignoring the directory.\n")
                     continue
             else:
@@ -331,9 +338,10 @@ def main():
             if os.path.isdir(filename):
                 files = []
                 for ext in supportedExtensions:
-                    files.extend(glob.glob(os.path.join(filename,
-                                                        Utilities.joinext("*", ext))))
-                    initFile = os.path.join(filename, Utilities.joinext("__init__", ext))
+                    files.extend(glob.glob(os.path.join(
+                        filename, Utilities.joinext("*", ext))))
+                    initFile = os.path.join(
+                        filename, Utilities.joinext("__init__", ext))
                     if initFile in files:
                         inpackage = True
                         files.remove(initFile)
@@ -354,8 +362,9 @@ def main():
                     continue
                 
                 try:
-                    module = Utilities.ModuleParser.readModule(file, basename=basename,
-                                inpackage=inpackage, extensions=supportedExtensions)
+                    module = Utilities.ModuleParser.readModule(
+                        file, basename=basename,
+                        inpackage=inpackage, extensions=supportedExtensions)
                     moduleDocument = ModuleDocument(module, colors, stylesheet)
                     doc = moduleDocument.genDocument()
                 except IOError as v:
@@ -367,8 +376,8 @@ def main():
                 
                 input = input + 1
                 
-                f = Utilities.joinext(os.path.join(outputDir, moduleDocument.name()),
-                                      ".html")
+                f = Utilities.joinext(os.path.join(
+                    outputDir, moduleDocument.name()), ".html")
                 
                 # remember for index file generation
                 indexGenerator.remember(file, moduleDocument, basename)

@@ -25,7 +25,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
     Note: Only package internal imports are shown in order to maintain
     some readability.
     """
-    def __init__(self, dialog, view, project, package, showExternalImports=False):
+    def __init__(self, dialog, view, project, package,
+                 showExternalImports=False):
         """
         Constructor
         
@@ -34,8 +35,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         @param project reference to the project object (Project)
         @param package name of a python package to show the import
             relationships (string)
-        @keyparam showExternalImports flag indicating to show exports from outside
-            the package (boolean)
+        @keyparam showExternalImports flag indicating to show exports from
+            outside the package (boolean)
         """
         super().__init__(dialog, view, project)
         self.setObjectName("ImportsDiagram")
@@ -47,25 +48,29 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         """
         Public method to initialize the object.
         """
-        self.package = os.path.splitdrive(self.packagePath)[1].replace(os.sep, '.')[1:]
+        self.package = os.path.splitdrive(self.packagePath)[1].replace(
+            os.sep, '.')[1:]
         hasInit = True
         ppath = self.packagePath
         while hasInit:
             ppath = os.path.dirname(ppath)
             hasInit = len(glob.glob(os.path.join(ppath, '__init__.*'))) > 0
-        self.shortPackage = self.packagePath.replace(ppath, '').replace(os.sep, '.')[1:]
+        self.shortPackage = self.packagePath.replace(ppath, '').replace(
+            os.sep, '.')[1:]
         
         pname = self.project.getProjectName()
         if pname:
             name = self.trUtf8("Imports Diagramm {0}: {1}").format(
                 pname, self.project.getRelativePath(self.packagePath))
         else:
-            name = self.trUtf8("Imports Diagramm: {0}").format(self.packagePath)
+            name = self.trUtf8("Imports Diagramm: {0}").format(
+                self.packagePath)
         self.umlView.setDiagramName(name)
     
     def __buildModulesDict(self):
         """
-        Private method to build a dictionary of modules contained in the package.
+        Private method to build a dictionary of modules contained in the
+        package.
         
         @return dictionary of modules contained in the package.
         """
@@ -76,8 +81,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         modules = []
         for ext in Preferences.getPython("PythonExtensions") + \
                     Preferences.getPython("Python3Extensions"):
-            modules.extend(
-                glob.glob(Utilities.normjoinpath(self.packagePath, '*{0}'.format(ext))))
+            modules.extend(glob.glob(Utilities.normjoinpath(
+                self.packagePath, '*{0}'.format(ext))))
         
         tot = len(modules)
         try:
@@ -91,8 +96,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                 QApplication.processEvents()
                 prog = prog + 1
                 try:
-                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions,
-                                                            caching=False)
+                    mod = Utilities.ModuleParser.readModule(
+                        module, extensions=extensions, caching=False)
                 except ImportError:
                     continue
                 else:
@@ -113,7 +118,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None)
             ct.setHtml(
-                self.trUtf8("The directory <b>'{0}'</b> is not a Python package.")\
+                self.trUtf8(
+                    "The directory <b>'{0}'</b> is not a Python package.")
                     .format(self.package))
             self.scene.addItem(ct)
             return
@@ -151,7 +157,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                     else:
                         if self.showExternalImports:
                             n = '.'.join(
-                                packageList[:packageListLen - dots + 1] + [i[dots:]])
+                                packageList[:packageListLen - dots + 1] +
+                                [i[dots:]])
                         else:
                             n = i
                 elif i.startswith(self.package):
@@ -267,7 +274,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
             return False
         
         self.packagePath = parts[0].split("=", 1)[1].strip()
-        self.showExternalImports = Utilities.toBool(parts[1].split("=", 1)[1].strip())
+        self.showExternalImports = Utilities.toBool(
+            parts[1].split("=", 1)[1].strip())
         
         self.initialize()
         

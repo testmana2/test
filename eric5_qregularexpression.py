@@ -8,8 +8,8 @@
 Eric5 QRegularExpression.
 
 This is the main Python script that performs the necessary initialization
-of the QRegularExpression wizard module and starts the Qt event loop. This is a standalone
-version of the integrated QRegularExpression wizard.
+of the QRegularExpression wizard module and starts the Qt event loop. This is
+a standalone version of the integrated QRegularExpression wizard.
 """
 
 import sys
@@ -34,8 +34,8 @@ def createMainWidget(argv):
     @param argv list of commandline parameters (list of strings)
     @return reference to the main widget (QWidget)
     """
-    from Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog \
-        import QRegularExpressionWizardWindow
+    from Plugins.WizardPlugins.QRegularExpressionWizard\
+        .QRegularExpressionWizardDialog import QRegularExpressionWizardWindow
     return QRegularExpressionWizardWindow()
 
 
@@ -47,11 +47,12 @@ def main():
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
     ]
-    appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 QRegularExpression",
-                                  "",
-                                  "Regexp editor for Qt's QRegularExpression class",
-                                  options)
+    appinfo = AppInfo.makeAppInfo(
+        sys.argv,
+        "Eric5 QRegularExpression",
+        "",
+        "Regexp editor for Qt's QRegularExpression class",
+        options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,
                                    createMainWidget)

@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the writer class for writing an XML user project properties file.
+Module implementing the writer class for writing an XML user project
+properties file.
 """
 
 import time
@@ -19,7 +20,8 @@ import Preferences
 
 class UserProjectWriter(XMLStreamWriterBase):
     """
-    Class implementing the writer class for writing an XML user project properties  file.
+    Class implementing the writer class for writing an XML user project
+    properties  file.
     """
     def __init__(self, device, projectName):
         """
@@ -40,15 +42,19 @@ class UserProjectWriter(XMLStreamWriterBase):
         """
         XMLStreamWriterBase.writeXML(self)
         
-        self.writeDTD('<!DOCTYPE UserProject SYSTEM "UserProject-{0}.dtd">'.format(
+        self.writeDTD(
+            '<!DOCTYPE UserProject SYSTEM "UserProject-{0}.dtd">'.format(
             userProjectFileFormatVersion))
         
         # add some generation comments
-        self.writeComment(" eric5 user project file for project {0} ".format(self.name))
+        self.writeComment(
+            " eric5 user project file for project {0} ".format(self.name))
         if Preferences.getProject("XMLTimestamp"):
-            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(
+                " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
             self.writeComment(" Copyright (C) {0} {1}, {2} ".format(
-                time.strftime('%Y'), self.pdata["AUTHOR"][0], self.pdata["EMAIL"][0]))
+                time.strftime('%Y'), self.pdata["AUTHOR"][0],
+                self.pdata["EMAIL"][0]))
         
         # add the main tag
         self.writeStartElement("UserProject")
@@ -59,7 +65,8 @@ class UserProjectWriter(XMLStreamWriterBase):
             self.writeTextElement("VcsType", self.pudata["VCSOVERRIDE"][0])
         if self.pudata["VCSSTATUSMONITORINTERVAL"]:
             self.writeEmptyElement("VcsStatusMonitorInterval")
-            self.writeAttribute("value", str(self.pudata["VCSSTATUSMONITORINTERVAL"][0]))
+            self.writeAttribute(
+                "value", str(self.pudata["VCSSTATUSMONITORINTERVAL"][0]))
         
         self.writeEndElement()
         self.writeEndDocument()

@@ -136,7 +136,8 @@ class ModuleItem(UMLItem):
         @param widget optional reference to the widget painted on (QWidget)
         """
         pen = self.pen()
-        if (option.state & QStyle.State_Selected) == QStyle.State(QStyle.State_Selected):
+        if (option.state & QStyle.State_Selected) == \
+                QStyle.State(QStyle.State_Selected):
             pen.setWidth(2)
         else:
             pen.setWidth(1)
@@ -161,8 +162,8 @@ class ModuleItem(UMLItem):
         Public method to build a string to persist the specific item data.
         
         This string must start with ", " and should be built like
-        "attribute=value" with pairs separated by ", ". value must not contain ", "
-        or newlines.
+        "attribute=value" with pairs separated by ", ". value must not
+        contain ", " or newlines.
         
         @return persistence data (string)
         """

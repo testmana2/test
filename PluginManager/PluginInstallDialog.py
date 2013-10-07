@@ -16,8 +16,8 @@ import urllib.parse
 import glob
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QApplication, \
-    QDialog, QVBoxLayout
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
+    QApplication, QDialog, QVBoxLayout
 
 from E5Gui import E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
@@ -55,24 +55,26 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.__pluginManager = pluginManager
             self.__external = False
         
-        self.__backButton = \
-            self.buttonBox.addButton(self.trUtf8("< Back"), QDialogButtonBox.ActionRole)
-        self.__nextButton = \
-            self.buttonBox.addButton(self.trUtf8("Next >"), QDialogButtonBox.ActionRole)
-        self.__finishButton = \
-            self.buttonBox.addButton(self.trUtf8("Install"), QDialogButtonBox.ActionRole)
+        self.__backButton = self.buttonBox.addButton(
+            self.trUtf8("< Back"), QDialogButtonBox.ActionRole)
+        self.__nextButton = self.buttonBox.addButton(
+            self.trUtf8("Next >"), QDialogButtonBox.ActionRole)
+        self.__finishButton = self.buttonBox.addButton(
+            self.trUtf8("Install"), QDialogButtonBox.ActionRole)
         
         self.__closeButton = self.buttonBox.button(QDialogButtonBox.Close)
         self.__cancelButton = self.buttonBox.button(QDialogButtonBox.Cancel)
         
         userDir = self.__pluginManager.getPluginDir("user")
         if userDir is not None:
-            self.destinationCombo.addItem(self.trUtf8("User plugins directory"),
+            self.destinationCombo.addItem(
+                self.trUtf8("User plugins directory"),
                 userDir)
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
-            self.destinationCombo.addItem(self.trUtf8("Global plugins directory"),
+            self.destinationCombo.addItem(
+                self.trUtf8("Global plugins directory"),
                 globalDir)
         
         self.__installedDirs = []
@@ -84,7 +86,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         for pluginFileName in pluginFileNames:
             fi = QFileInfo(pluginFileName)
             if fi.isRelative():
-                pluginFileName = QFileInfo(downloadDir, fi.fileName()).absoluteFilePath()
+                pluginFileName = QFileInfo(
+                    downloadDir, fi.fileName()).absoluteFilePath()
             self.archivesList.addItem(pluginFileName)
             self.archivesList.sortItems()
         
@@ -134,7 +137,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.__closeButton.hide()
             self.__cancelButton.show()
             
-            msg = self.trUtf8("Plugin ZIP-Archives:\n{0}\n\nDestination:\n{1} ({2})")\
+            msg = self.trUtf8(
+                "Plugin ZIP-Archives:\n{0}\n\nDestination:\n{1} ({2})")\
                 .format("\n".join(self.__createArchivesList()),
                         self.destinationCombo.currentText(),
                         self.destinationCombo.itemData(
@@ -171,7 +175,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         """
         Private slot called, when the selection of the archives list changes.
         """
-        self.removeArchivesButton.setEnabled(len(self.archivesList.selectedItems()) > 0)
+        self.removeArchivesButton.setEnabled(
+            len(self.archivesList.selectedItems()) > 0)
     
     @pyqtSlot()
     def on_removeArchivesButton_clicked(self):
@@ -179,7 +184,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         Private slot to remove archives from the list.
         """
         for archiveItem in self.archivesList.selectedItems():
-            itm = self.archivesList.takeItem(self.archivesList.row(archiveItem))
+            itm = self.archivesList.takeItem(
+                self.archivesList.row(archiveItem))
             del itm
         
         self.__nextButton.setEnabled(self.archivesList.count() > 0)
@@ -212,7 +218,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         res = True
         self.summaryEdit.clear()
         for archive in self.__createArchivesList():
-            self.summaryEdit.append(self.trUtf8("Installing {0} ...").format(archive))
+            self.summaryEdit.append(
+                self.trUtf8("Installing {0} ...").format(archive))
             ok, msg, restart = self.__installPlugin(archive)
             res = res and ok
             if ok:
@@ -244,8 +251,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         installedPluginName = ""
         
         archive = archiveFilename
-        destination = \
-            self.destinationCombo.itemData(self.destinationCombo.currentIndex())
+        destination = self.destinationCombo.itemData(
+            self.destinationCombo.currentIndex())
         
         # check if archive is a local url
         url = urllib.parse.urlparse(archive)
@@ -255,22 +262,25 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         # check, if the archive exists
         if not os.path.exists(archive):
             return False, \
-                self.trUtf8("""<p>The archive file <b>{0}</b> does not exist. """
-                            """Aborting...</p>""").format(archive), \
+                self.trUtf8(
+                    """<p>The archive file <b>{0}</b> does not exist. """
+                    """Aborting...</p>""").format(archive), \
                 False
         
         # check, if the archive is a valid zip file
         if not zipfile.is_zipfile(archive):
             return False, \
-                self.trUtf8("""<p>The file <b>{0}</b> is not a valid plugin """
-                            """ZIP-archive. Aborting...</p>""").format(archive), \
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> is not a valid plugin """
+                    """ZIP-archive. Aborting...</p>""").format(archive), \
                 False
         
         # check, if the destination is writeable
         if not os.access(destination, os.W_OK):
             return False, \
-                self.trUtf8("""<p>The destination directory <b>{0}</b> is not """
-                            """writeable. Aborting...</p>""").format(destination), \
+                self.trUtf8(
+                    """<p>The destination directory <b>{0}</b> is not """
+                    """writeable. Aborting...</p>""").format(destination), \
                 False
         
         zip = zipfile.ZipFile(archive, "r")
@@ -287,8 +297,9 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if not pluginFound:
             return False, \
-                self.trUtf8("""<p>The file <b>{0}</b> is not a valid plugin """
-                            """ZIP-archive. Aborting...</p>""").format(archive), \
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> is not a valid plugin """
+                    """ZIP-archive. Aborting...</p>""").format(archive), \
                 False
         
         # parse the plugin module's plugin header
@@ -310,7 +321,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                             packageName = "None"
             elif line.startswith("internalPackages"):
                 tokens = line.split("=")
-                token = tokens[1].strip()[1:-1]    # it is a comma separated string
+                token = tokens[1].strip()[1:-1]
+                # it is a comma separated string
                 internalPackages = [p.strip() for p in token.split(",")]
             elif line.startswith("needsRestart"):
                 tokens = line.split("=")
@@ -330,15 +342,17 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if not packageName:
             return False, \
-                self.trUtf8("""<p>The plugin module <b>{0}</b> does not contain """
-                            """a 'packageName' attribute. Aborting...</p>""")\
+                self.trUtf8(
+                    """<p>The plugin module <b>{0}</b> does not contain """
+                    """a 'packageName' attribute. Aborting...</p>""")\
                     .format(pluginFileName), \
                 False
         
         if pyqtApi < 2:
             return False, \
-                self.trUtf8("""<p>The plugin module <b>{0}</b> does not conform"""
-                            """ with the PyQt v2 API. Aborting...</p>""")\
+                self.trUtf8(
+                    """<p>The plugin module <b>{0}</b> does not conform"""
+                    """ with the PyQt v2 API. Aborting...</p>""")\
                     .format(pluginFileName), \
                 False
         
@@ -364,7 +378,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         activatePlugin = False
         if not self.__external:
             activatePlugin = \
-                not self.__pluginManager.isPluginLoaded(installedPluginName) or \
+                not self.__pluginManager.isPluginLoaded(
+                    installedPluginName) or \
                 (self.__pluginManager.isPluginLoaded(installedPluginName) and \
                  self.__pluginManager.isPluginActive(installedPluginName))
             # try to unload a plugin with the same name
@@ -422,17 +437,20 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         except os.error as why:
             self.__rollback()
             return False, \
-                self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
+                self.trUtf8(
+                    "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except IOError as why:
             self.__rollback()
             return False, \
-                self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
+                self.trUtf8(
+                    "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except OSError as why:
             self.__rollback()
             return False, \
-                self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
+                self.trUtf8(
+                    "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except:
             print("Unspecific exception installing plugin.", file=sys.stderr)
@@ -443,12 +461,15 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         # now compile the plugins
         if doCompile:
-            compileall.compile_dir(os.path.join(destination, packageName), quiet=True)
-            compileall.compile_file(os.path.join(destination, pluginFileName), quiet=True)
+            compileall.compile_dir(
+                os.path.join(destination, packageName), quiet=True)
+            compileall.compile_file(
+                os.path.join(destination, pluginFileName), quiet=True)
         
         if not self.__external:
             # now load and activate the plugin
-            self.__pluginManager.loadPlugin(installedPluginName, destination, reload_)
+            self.__pluginManager.loadPlugin(installedPluginName, destination,
+                                            reload_)
             if activatePlugin:
                 self.__pluginManager.activatePlugin(installedPluginName)
         
@@ -480,7 +501,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             head, tail = os.path.split(head)
         if head and tail and not os.path.exists(head):
             self.__makedirs(head, mode)
-            if tail == os.curdir:           # xxx/newdir/. exists if xxx/newdir exists
+            if tail == os.curdir:
+                # xxx/newdir/. exists if xxx/newdir exists
                 return
         os.mkdir(name, mode)
         self.__installedDirs.append(name)
@@ -512,14 +534,18 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             if os.path.exists(fnamec):
                 os.remove(fnamec)
             
-            pluginDirCache = os.path.join(os.path.dirname(pluginFile), "__pycache__")
+            pluginDirCache = os.path.join(
+                os.path.dirname(pluginFile), "__pycache__")
             if os.path.exists(pluginDirCache):
-                pluginFileName = os.path.splitext(os.path.basename(pluginFile))[0]
+                pluginFileName = os.path.splitext(
+                    os.path.basename(pluginFile))[0]
                 for fnameo in glob.glob(
-                    os.path.join(pluginDirCache, "{0}*.pyo".format(pluginFileName))):
+                    os.path.join(pluginDirCache,
+                                 "{0}*.pyo".format(pluginFileName))):
                     os.remove(fnameo)
                 for fnamec in glob.glob(
-                    os.path.join(pluginDirCache, "{0}*.pyc".format(pluginFileName))):
+                    os.path.join(pluginDirCache,
+                                 "{0}*.pyc".format(pluginFileName))):
                     os.remove(fnamec)
             
             os.remove(pluginFile)
@@ -583,7 +609,8 @@ class PluginInstallWindow(E5MainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

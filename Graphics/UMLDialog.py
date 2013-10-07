@@ -52,7 +52,8 @@ class UMLDialog(E5MainWindow):
         from .UMLGraphicsView import UMLGraphicsView
         self.scene = QGraphicsScene(0.0, 0.0, 800.0, 600.0)
         self.umlView = UMLGraphicsView(self.scene, parent=self)
-        self.builder = self.__diagramBuilder(self.__diagramType, path, **kwargs)
+        self.builder = self.__diagramBuilder(
+            self.__diagramType, path, **kwargs)
         if self.builder and initBuilder:
             self.builder.initialize()
         
@@ -104,7 +105,8 @@ class UMLDialog(E5MainWindow):
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
                     self.trUtf8("Print Preview"), self)
-        self.printPreviewAct.triggered[()].connect(self.umlView.printPreviewDiagram)
+        self.printPreviewAct.triggered[()].connect(
+            self.umlView.printPreviewDiagram)
     
     def __initToolBars(self):
         """
@@ -154,7 +156,8 @@ class UMLDialog(E5MainWindow):
         Private method to instantiate a diagram builder object.
         
         @param diagramType type of the diagram
-            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram,
+            PackageDiagram)
         @param path file or directory path to build the diagram from (string)
         @keyparam kwargs diagram specific data
         @return reference to the instantiated diagram builder
@@ -162,16 +165,16 @@ class UMLDialog(E5MainWindow):
         """
         if diagramType == UMLDialog.ClassDiagram:
             from .UMLClassDiagramBuilder import UMLClassDiagramBuilder
-            return UMLClassDiagramBuilder(self, self.umlView, self.__project, path,
-                                          **kwargs)
+            return UMLClassDiagramBuilder(
+                self, self.umlView, self.__project, path, **kwargs)
         elif diagramType == UMLDialog.PackageDiagram:
             from .PackageDiagramBuilder import PackageDiagramBuilder
-            return PackageDiagramBuilder(self, self.umlView, self.__project, path,
-                                         **kwargs)
+            return PackageDiagramBuilder(
+                self, self.umlView, self.__project, path, **kwargs)
         elif diagramType == UMLDialog.ImportsDiagram:
             from .ImportsDiagramBuilder import ImportsDiagramBuilder
-            return ImportsDiagramBuilder(self, self.umlView, self.__project, path,
-                                         **kwargs)
+            return ImportsDiagramBuilder(
+                self, self.umlView, self.__project, path, **kwargs)
         elif diagramType == UMLDialog.ApplicationDiagram:
             from .ApplicationDiagramBuilder import ApplicationDiagramBuilder
             return ApplicationDiagramBuilder(self, self.umlView, self.__project,
@@ -179,8 +182,8 @@ class UMLDialog(E5MainWindow):
         elif diagramType == UMLDialog.NoDiagram:
             return None
         else:
-            raise ValueError(
-                self.trUtf8("Illegal diagram type '{0}' given.").format(diagramType))
+            raise ValueError(self.trUtf8(
+                "Illegal diagram type '{0}' given.").format(diagramType))
     
     def __diagramTypeString(self):
         """
@@ -240,7 +243,8 @@ class UMLDialog(E5MainWindow):
             "version: 1.0",
             "diagram_type: {0} ({1})".format(self.__diagramType,
                 self.__diagramTypeString()),
-            "scene_size: {0};{1}".format(self.scene.width(), self.scene.height()),
+            "scene_size: {0};{1}".format(self.scene.width(),
+                                         self.scene.height()),
         ]
         persistenceData = self.builder.getPersistenceData()
         if persistenceData:
@@ -254,8 +258,9 @@ class UMLDialog(E5MainWindow):
         except (IOError, OSError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("Save Diagram"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>"""
-                             """<p>Reason: {1}</p>""").format(filename, str(err)))
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be saved.</p>"""
+                    """<p>Reason: {1}</p>""").format(filename, str(err)))
             return
         
         self.__fileName = filename
@@ -282,8 +287,9 @@ class UMLDialog(E5MainWindow):
         except (IOError, OSError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("Load Diagram"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>"""
-                             """<p>Reason: {1}</p>""").format(filename, str(err)))
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be read.</p>"""
+                    """<p>Reason: {1}</p>""").format(filename, str(err)))
             return False
         
         lines = data.splitlines()
@@ -295,7 +301,8 @@ class UMLDialog(E5MainWindow):
             # step 1: check version
             linenum = 0
             key, value = lines[linenum].split(": ", 1)
-            if key.strip() != "version" or value.strip() not in UMLDialog.FileVersions:
+            if key.strip() != "version" or \
+                    value.strip() not in UMLDialog.FileVersions:
                 self.__showInvalidDataMessage(filename, linenum)
                 return False
             else:
@@ -339,7 +346,8 @@ class UMLDialog(E5MainWindow):
                 linenum += 1
             
             # step 5: extract the graphics items
-            ok, vlinenum = self.umlView.parsePersistenceData(version, lines[linenum:])
+            ok, vlinenum = self.umlView.parsePersistenceData(
+                version, lines[linenum:])
             if not ok:
                 self.__showInvalidDataMessage(filename, linenum + vlinenum)
                 return False

@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the writer class for writing an XML project debugger properties file.
+Module implementing the writer class for writing an XML project debugger
+properties file.
 """
 
 import time
@@ -19,8 +20,8 @@ import Preferences
 
 class DebuggerPropertiesWriter(XMLStreamWriterBase):
     """
-    Class implementing the writer class for writing an XML project debugger properties
-    file.
+    Class implementing the writer class for writing an XML project debugger
+    properties file.
     """
     def __init__(self, device, projectName):
         """
@@ -40,23 +41,30 @@ class DebuggerPropertiesWriter(XMLStreamWriterBase):
         """
         XMLStreamWriterBase.writeXML(self)
         
-        self.writeDTD('<!DOCTYPE DebuggerProperties SYSTEM "DebuggerProperties-{0}.dtd">'\
-            .format(debuggerPropertiesFileFormatVersion))
+        self.writeDTD(
+            '<!DOCTYPE DebuggerProperties SYSTEM'
+            ' "DebuggerProperties-{0}.dtd">'.format(
+            debuggerPropertiesFileFormatVersion))
         
         # add some generation comments
-        self.writeComment(" eric5 debugger properties file for project {0} "\
-            .format(self.name))
-        self.writeComment(" This file was generated automatically, do not edit. ")
+        self.writeComment(
+            " eric5 debugger properties file for project {0} ".format(
+            self.name))
+        self.writeComment(
+            " This file was generated automatically, do not edit. ")
         if Preferences.getProject("XMLTimestamp"):
-            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(
+                " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
         self.writeStartElement("DebuggerProperties")
         self.writeAttribute("version", debuggerPropertiesFileFormatVersion)
         
-        self.writeTextElement("Interpreter", self.project.debugProperties["INTERPRETER"])
+        self.writeTextElement(
+            "Interpreter", self.project.debugProperties["INTERPRETER"])
         
-        self.writeTextElement("DebugClient", self.project.debugProperties["DEBUGCLIENT"])
+        self.writeTextElement(
+            "DebugClient", self.project.debugProperties["DEBUGCLIENT"])
         
         self.writeStartElement("Environment")
         self.writeAttribute("override",

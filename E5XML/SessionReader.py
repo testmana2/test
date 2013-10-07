@@ -59,11 +59,13 @@ class SessionReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Session":
-                    self.version = self.attribute("version", sessionFileFormatVersion)
+                    self.version = self.attribute(
+                        "version", sessionFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "MultiProject":
-                    self.multiProject.openMultiProject(self.readElementText(), False)
+                    self.multiProject.openMultiProject(
+                        self.readElementText(), False)
                 elif self.name() == "Project":
                     self.project.openProject(self.readElementText(), False)
                 elif self.name() == "Filenames":

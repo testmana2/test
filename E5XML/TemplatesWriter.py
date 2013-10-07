@@ -22,7 +22,8 @@ class TemplatesWriter(XMLStreamWriterBase):
         Constructor
         
         @param device reference to the I/O device to write to (QIODevice)
-        @param templatesViewer reference to the templates viewer object (TemplateViewer)
+        @param templatesViewer reference to the templates viewer object
+            (TemplateViewer)
         """
         XMLStreamWriterBase.__init__(self, device)
         
@@ -39,7 +40,8 @@ class TemplatesWriter(XMLStreamWriterBase):
         
         # add some generation comments
         self.writeComment(" eric5 templates file ")
-        self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+        self.writeComment(
+            " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
         self.writeStartElement("Templates")
@@ -56,8 +58,10 @@ class TemplatesWriter(XMLStreamWriterBase):
             for template in templates:
                 self.writeStartElement("Template")
                 self.writeAttribute("name", template.getName())
-                self.writeTextElement("TemplateDescription", template.getDescription())
-                self.writeTextElement("TemplateText", template.getTemplateText())
+                self.writeTextElement(
+                    "TemplateDescription", template.getDescription())
+                self.writeTextElement(
+                    "TemplateText", template.getTemplateText())
                 self.writeEndElement()
             self.writeEndElement()
         

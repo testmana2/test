@@ -46,8 +46,10 @@ class MultiProjectWriter(XMLStreamWriterBase):
         self.writeComment(" eric5 multi project file for multi project {0} "\
             .format(self.name))
         if Preferences.getMultiProject("XMLTimestamp"):
-            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
-            self.writeComment(" Copyright (C) {0} ".format(time.strftime('%Y')))
+            self.writeComment(
+                " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(
+                " Copyright (C) {0} ".format(time.strftime('%Y')))
         
         # add the main tag
         self.writeStartElement("MultiProject")

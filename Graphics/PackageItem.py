@@ -121,7 +121,8 @@ class PackageItem(UMLItem):
             height = height + self.modules.boundingRect().height()
         latchW = width / 3.0
         latchH = min(15.0, latchW)
-        self.setSize(width + 2 * self.margin, height + latchH + 2 * self.margin)
+        self.setSize(width + 2 * self.margin,
+                     height + latchH + 2 * self.margin)
         
         x = self.margin + self.rect().x()
         y = self.margin + self.rect().y() + latchH
@@ -154,7 +155,8 @@ class PackageItem(UMLItem):
         @param widget optional reference to the widget painted on (QWidget)
         """
         pen = self.pen()
-        if (option.state & QStyle.State_Selected) == QStyle.State(QStyle.State_Selected):
+        if (option.state & QStyle.State_Selected) == \
+                QStyle.State(QStyle.State_Selected):
             pen.setWidth(2)
         else:
             pen.setWidth(1)
@@ -182,8 +184,8 @@ class PackageItem(UMLItem):
         Public method to build a string to persist the specific item data.
         
         This string must start with ", " and should be built like
-        "attribute=value" with pairs separated by ", ". value must not contain ", "
-        or newlines.
+        "attribute=value" with pairs separated by ", ". value must not
+        contain ", " or newlines.
         
         @return persistence data (string)
         """

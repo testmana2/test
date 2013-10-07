@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the writer class for writing a highlighting styles XML file.
+Module implementing the writer class for writing a highlighting styles XML
+file.
 """
 
 import time
@@ -17,7 +18,8 @@ import Preferences
 
 class HighlightingStylesWriter(XMLStreamWriterBase):
     """
-    Class implementing the writer class for writing a highlighting styles XML file.
+    Class implementing the writer class for writing a highlighting styles XML
+    file.
     """
     def __init__(self, device, lexers):
         """
@@ -37,12 +39,15 @@ class HighlightingStylesWriter(XMLStreamWriterBase):
         """
         XMLStreamWriterBase.writeXML(self)
         
-        self.writeDTD('<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-{0}.dtd">'\
-            .format(highlightingStylesFileFormatVersion))
+        self.writeDTD(
+            '<!DOCTYPE HighlightingStyles SYSTEM'
+            ' "HighlightingStyles-{0}.dtd">'.format(
+            highlightingStylesFileFormatVersion))
         
         # add some generation comments
         self.writeComment(" Eric5 highlighting styles ")
-        self.writeComment(" Saved: {0}".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+        self.writeComment(
+            " Saved: {0}".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         self.writeComment(" Author: {0} ".format(self.email))
         
         # add the main tag

@@ -31,10 +31,11 @@ def usage(rcode=2):
     print("    {0} [-h] [-d dir]".format(progName))
     print("where:")
     print("    -h             display this help message")
-    print("    -d dir         where Mod_python files are installed [default {0}]".format(
-        modDir))
+    print("    -d dir         where Mod_python files are installed"
+          " [default {0}]".format(modDir))
     print()
-    print("This script patches the file apache.py of the Mod_python distribution")
+    print("This script patches the file apache.py of the Mod_python"
+          " distribution")
     print("so that it will work with the eric5 debugger instead of pdb.")
     print("Please see mod_python.html for more details.")
     print()
@@ -49,7 +50,8 @@ def initGlobals():
     """
     global modDir
 
-    modDir = os.path.join(distutils.sysconfig.get_python_lib(True), "mod_python")
+    modDir = os.path.join(distutils.sysconfig.get_python_lib(True),
+                          "mod_python")
 
 
 def main(argv):
@@ -106,7 +108,8 @@ def main(argv):
         s.write("\n")
         s.write('def initDebugger(name):\n')
         s.write('    """\n')
-        s.write('    Initialize the debugger and set the script name to be reported \n')
+        s.write('    Initialize the debugger and set the script name to be'
+                ' reported \n')
         s.write('    by the debugger. This is a patch for eric5.\n')
         s.write('    """\n')
         s.write('    if not pdb.initDebugger("standard"):\n')
@@ -154,7 +157,8 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print("""An internal error occured.  Please report all the output of the program,
+        print(
+"""An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric-bugs@die-offenbachs.de.
 """)
         raise

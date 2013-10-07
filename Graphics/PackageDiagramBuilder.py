@@ -31,7 +31,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @param view reference to the view object (UMLGraphicsView)
         @param project reference to the project object (Project)
         @param package name of a python package to be shown (string)
-        @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
+        @keyparam noAttrs flag indicating, that no attributes should be shown
+            (boolean)
         """
         super().__init__(dialog, view, project)
         self.setObjectName("PackageDiagram")
@@ -62,15 +63,18 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
     
     def __buildModulesDict(self):
         """
-        Private method to build a dictionary of modules contained in the package.
+        Private method to build a dictionary of modules contained in the
+        package.
         
         @return dictionary of modules contained in the package.
         """
         import Utilities.ModuleParser
         
         supportedExt = \
-            ['*{0}'.format(ext) for ext in Preferences.getPython("PythonExtensions")] + \
-            ['*{0}'.format(ext) for ext in Preferences.getPython("Python3Extensions")] + \
+            ['*{0}'.format(ext) for ext in 
+             Preferences.getPython("PythonExtensions")] + \
+            ['*{0}'.format(ext) for ext in 
+             Preferences.getPython("Python3Extensions")] + \
             ['*.rb']
         extensions = Preferences.getPython("PythonExtensions") + \
             Preferences.getPython("Python3Extensions") + ['.rb']
@@ -92,8 +96,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 QApplication.processEvents()
                 prog += 1
                 try:
-                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions,
-                                                            caching=False)
+                    mod = Utilities.ModuleParser.readModule(
+                        module, extensions=extensions, caching=False)
                 except ImportError:
                     continue
                 else:
@@ -108,15 +112,18 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
     
     def __buildSubpackagesDict(self):
         """
-        Private method to build a dictionary of sub-packages contained in this package.
+        Private method to build a dictionary of sub-packages contained in this
+        package.
         
         @return dictionary of sub-packages contained in this package
         """
         import Utilities.ModuleParser
         
         supportedExt = \
-            ['*{0}'.format(ext) for ext in Preferences.getPython("PythonExtensions")] + \
-            ['*{0}'.format(ext) for ext in Preferences.getPython("Python3Extensions")] + \
+            ['*{0}'.format(ext) for ext in 
+             Preferences.getPython("PythonExtensions")] + \
+            ['*{0}'.format(ext) for ext in 
+             Preferences.getPython("Python3Extensions")] + \
             ['*.rb']
         extensions = Preferences.getPython("PythonExtensions") + \
             Preferences.getPython("Python3Extensions") + ['.rb']
@@ -147,7 +154,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 subpackagesDict[packageName] = []
                 modules = []
                 for ext in supportedExt:
-                    modules.extend(glob.glob(Utilities.normjoinpath(subpackage, ext)))
+                    modules.extend(glob.glob(
+                        Utilities.normjoinpath(subpackage, ext)))
                 for module in modules:
                     progress.setValue(prog)
                     QApplication.processEvents()
@@ -192,7 +200,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         if not modules:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
-                self.trUtf8("The package <b>'{0}'</b> does not contain any modules.")
+                self.trUtf8(
+                    "The package <b>'{0}'</b> does not contain any modules.")
                     .format(self.package))
             return
             
@@ -207,7 +216,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         if not classesFound:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
-                self.trUtf8("The package <b>'{0}'</b> does not contain any classes.")
+                self.trUtf8(
+                    "The package <b>'{0}'</b> does not contain any classes.")
                     .format(self.package))
             return
         
@@ -237,12 +247,14 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                     else:
                         if className in module.classes:
                             # this is a local class (defined in this module)
-                            self.__addLocalClass(className, module.classes[className],
-                                                 0, 0)
+                            self.__addLocalClass(
+                                className, module.classes[className],
+                                0, 0)
                         elif className in module.modules:
                             # this is a local module (defined in this module)
-                            self.__addLocalClass(className, module.modules[className],
-                                                 0, 0, True)
+                            self.__addLocalClass(
+                                className, module.modules[className],
+                                0, 0, True)
                         else:
                             self.__addExternalClass(className, 0, 0)
                         nodes.append(className)
@@ -285,7 +297,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         for generation in generations:
             sizes.append([])
             for child in generation:
-                sizes[-1].append(self.__getCurrentShape(child).sceneBoundingRect())
+                sizes[-1].append(
+                    self.__getCurrentShape(child).sceneBoundingRect())
                 
         # calculate total width and total height
         width = 0
@@ -334,7 +347,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 itertools.zip_longest(widths, heights, generations):
             x = 10.0
             # whiteSpace is the space between any two elements
-            whiteSpace = (width - currentWidth - 20) / (len(generation) - 1.0 or 2.0)
+            whiteSpace = (width - currentWidth - 20) / \
+                (len(generation) - 1.0 or 2.0)
             for className in generation:
                 cw = self.__getCurrentShape(className)
                 cw.setPos(x, y)
@@ -418,7 +432,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         @return persisted data string (string)
         """
-        return "package={0}, no_attributes={1}".format(self.package, self.noAttrs)
+        return "package={0}, no_attributes={1}".format(
+            self.package, self.noAttrs)
     
     def parsePersistenceData(self, version, data):
         """

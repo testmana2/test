@@ -78,8 +78,9 @@ def checkBlacklistedVersions():
             # check for blacklisted versions
             for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
-                    print('Sorry, sip version {0} is not compatible with eric5.'\
-                          .format(vers))
+                    print(
+                        'Sorry, sip version {0} is not compatible with eric5.'
+                        .format(vers))
                     print('Please install another version.')
                     return False
     except ImportError:
@@ -104,10 +105,12 @@ def checkBlacklistedVersions():
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
         # check for blacklisted versions
-        for vers in BlackLists["QScintilla2"] + PlatformBlackLists["QScintilla2"]:
+        for vers in BlackLists["QScintilla2"] + \
+                PlatformBlackLists["QScintilla2"]:
             if vers == scintillaVersion:
-                print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
-                      .format(vers))
+                print(
+                    'Sorry, QScintilla2 version {0} is not compatible'
+                    ' with eric5.'.format(vers))
                 print('Please install another version.')
                 return False
     
@@ -199,7 +202,8 @@ def findPython2Interpreters():
     
     @return list of interpreters found (list of strings)
     """
-    winPathList = ["C:\\Python25", "C:\\Python26", "C:\\Python27", "C:\\Python28"]
+    winPathList = ["C:\\Python25", "C:\\Python26",
+                   "C:\\Python27", "C:\\Python28"]
     posixPathList = ["/usr/bin", "/usr/local/bin"]
     posixVersionsList = ["2.5", "2.6", "2.7", "2.8"]
     

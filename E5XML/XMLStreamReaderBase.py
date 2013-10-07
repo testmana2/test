@@ -49,11 +49,14 @@ class XMLStreamReaderBase(QXmlStreamReader):
         """
         if self.hasError():
             msg = QCoreApplication.translate("XMLStreamReaderBase",
-                "<p>XML parse error in file <b>{0}</b>, line {1}, column {2}</p>"
-                "<p>Error: {3}</p>").format(self.device().fileName(),
-                    self.lineNumber(), self.columnNumber(), self.errorString())
+                "<p>XML parse error in file <b>{0}</b>, line {1},"
+                " column {2}</p><p>Error: {3}</p>").format(
+                    self.device().fileName(),
+                    self.lineNumber(), self.columnNumber(),
+                    self.errorString())
             E5MessageBox.warning(None,
-                QCoreApplication.translate("XMLStreamReaderBase", "XML parse error"),
+                QCoreApplication.translate(
+                "XMLStreamReaderBase", "XML parse error"),
                 msg)
     
     def raiseUnexpectedStartTag(self, tag):
@@ -131,7 +134,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         val = None
                     elif self.name() == "int":
                         val = int(self.readElementText())
-                    elif self.name() == "long":     # backward compatibility to 4.6
+                    elif self.name() == "long":
+                        # backward compatibility to 4.6
                         val = int(self.readElementText())
                     elif self.name() == "bool":
                         b = self.readElementText()
@@ -146,15 +150,16 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         val = float(real) + float(imag) * 1j
                     elif self.name() == "string":
                         val = self.readElementText()
-                    elif self.name() == "unicode":  # backward compatibility to 4.6
+                    elif self.name() == "unicode":
+                        # backward compatibility to 4.6
                         val = self.readElementText()
                     elif self.name() == "bytes":
-                        by = bytes(
-                            [int(b) for b in self.readElementText().split(",")])
+                        by = bytes([int(b) for b in 
+                                    self.readElementText().split(",")])
                         val = by
                     elif self.name() == "bytearray":
-                        by = bytearray(
-                            [int(b) for b in self.readElementText().split(",")])
+                        by = bytearray([int(b) for b in 
+                                        self.readElementText().split(",")])
                         val = by
                     elif self.name() == "tuple":
                         val = self.__readTuple()
@@ -176,8 +181,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         if encoding != "base64":
                             self.raiseError(QCoreApplication.translate(
                                 "XMLStreamReaderBase",
-                                "Pickle data encoding '{0}' is not supported.")\
-                                    .format(encoding))
+                                "Pickle data encoding '{0}' is not"
+                                " supported.").format(encoding))
                             continue
                         b64 = self.readElementText()
                         pic = base64.b64decode(b64.encode("ASCII"))
@@ -189,7 +194,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
                     continue
             
             if self.isEndElement():
-                if self.name() in ["tuple", "list", "dict", "set", "frozenset"]:
+                if self.name() in [
+                        "tuple", "list", "dict", "set", "frozenset"]:
                     return None
                 else:
                     return val
@@ -265,7 +271,9 @@ class XMLStreamReaderBase(QXmlStreamReader):
         l = []
         while not self.atEnd():
             val = self._readBasics()
-            if self.isEndElement() and self.name() == "frozenset" and val is None:
+            if self.isEndElement() and \
+                    self.name() == "frozenset" and \
+                    val is None:
                 return frozenset(l)
             else:
                 l.append(val)

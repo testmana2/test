@@ -60,7 +60,8 @@ class MultiProject(QObject):
         
         @param project reference to the project object (Project.Project)
         @param parent parent widget (usually the ui object) (QWidget)
-        @param filename optional filename of a multi project file to open (string)
+        @param filename optional filename of a multi project file to open
+            (string)
         """
         super().__init__(parent)
         
@@ -86,10 +87,12 @@ class MultiProject(QObject):
         self.description = ""   # description of the multi project
         self.name = ""
         self.opened = False
-        self.projects = []      # list of project info; each info entry is a dictionary
+        self.projects = []      # list of project info; each info entry is
+                                # a dictionary
                                 # 'name'        : Name of the project
                                 # 'file'        : project filename
-                                # 'master'      : flag indicating the master project
+                                # 'master'      : flag indicating the master
+                                #                 project
                                 # 'description' : description of the project
     
     def __loadRecent(self):
@@ -108,7 +111,8 @@ class MultiProject(QObject):
         """
         Private method to save the list of recently opened filenames.
         """
-        Preferences.Prefs.rsettings.setValue(recentNameMultiProject, self.recent)
+        Preferences.Prefs.rsettings.setValue(
+            recentNameMultiProject, self.recent)
         Preferences.Prefs.rsettings.sync()
     
     def getMostRecent(self):
@@ -203,8 +207,9 @@ class MultiProject(QObject):
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Read multiproject file"),
-                self.trUtf8("<p>The multiproject file <b>{0}</b> could not be read.</p>")\
-                    .format(fn))
+                self.trUtf8(
+                    "<p>The multiproject file <b>{0}</b> could not be"
+                    " read.</p>").format(fn))
             return False
             
         self.pfile = os.path.abspath(fn)
@@ -225,10 +230,10 @@ class MultiProject(QObject):
         Private method to save the multi project infos to a multi project file.
         
         @param fn optional filename of the multi project file to be written.
-                If fn is None, the filename stored in the multi project object
-                is used. This is the 'save' action. If fn is given, this filename
-                is used instead of the one in the multi project object. This is the
-                'save as' action.
+            If fn is None, the filename stored in the multi project object
+            is used. This is the 'save' action. If fn is given, this filename
+            is used instead of the one in the multi project object. This is the
+            'save as' action.
         @return flag indicating success
         """
         if fn is None:
@@ -237,7 +242,8 @@ class MultiProject(QObject):
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
             from E5XML.MultiProjectWriter import MultiProjectWriter
-            MultiProjectWriter(f, self, os.path.splitext(os.path.basename(fn))[0])\
+            MultiProjectWriter(
+                f, self, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
             res = True
         else:
@@ -349,7 +355,8 @@ class MultiProject(QObject):
         """
         Public slot to remove a project from the multi project.
         
-        @param fn filename of the project to be removed from the multi project (string)
+        @param fn filename of the project to be removed from the multi
+            project (string)
         """
         for project in self.projects:
             if project['file'] == fn:
@@ -396,7 +403,8 @@ class MultiProject(QObject):
         """
         Public slot to open a multi project.
         
-        @param fn optional filename of the multi project file to be read (string)
+        @param fn optional filename of the multi project file to be
+            read (string)
         @param openMaster flag indicating, that the master project
             should be opened depending on the configuration (boolean)
         """
@@ -407,7 +415,8 @@ class MultiProject(QObject):
             fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open multiproject"),
-                Preferences.getMultiProject("Workspace") or Utilities.getHomeDir(),
+                Preferences.getMultiProject("Workspace") or \
+                    Utilities.getHomeDir(),
                 self.trUtf8("Multiproject Files (*.e4m)"))
             
             if fn == "":
@@ -431,7 +440,8 @@ class MultiProject(QObject):
                 
                 self.multiProjectOpened.emit()
                 
-                if openMaster and Preferences.getMultiProject("OpenMasterAutomatically"):
+                if openMaster and Preferences.getMultiProject(
+                    "OpenMasterAutomatically"):
                     self.__openMasterProject(False)
             else:
                 QApplication.restoreOverrideCursor()
@@ -583,7 +593,8 @@ class MultiProject(QObject):
         self.closeAct = E5Action(self.trUtf8('Close multiproject'),
                 UI.PixmapCache.getIcon("multiProjectClose.png"),
                 self.trUtf8('&Close'), 0, 0, self, 'multi_project_close')
-        self.closeAct.setStatusTip(self.trUtf8('Close the current multiproject'))
+        self.closeAct.setStatusTip(self.trUtf8(
+            'Close the current multiproject'))
         self.closeAct.setWhatsThis(self.trUtf8(
             """<b>Close</b>"""
             """<p>This closes the current multiproject.</p>"""
@@ -604,7 +615,8 @@ class MultiProject(QObject):
 
         self.saveasAct = E5Action(self.trUtf8('Save multiproject as'),
                 UI.PixmapCache.getIcon("multiProjectSaveAs.png"),
-                self.trUtf8('Save &as...'), 0, 0, self, 'multi_project_save_as')
+                self.trUtf8('Save &as...'), 0, 0, self,
+                'multi_project_save_as')
         self.saveasAct.setStatusTip(self.trUtf8(
             'Save the current multiproject to a new file'))
         self.saveasAct.setWhatsThis(self.trUtf8(
@@ -614,10 +626,11 @@ class MultiProject(QObject):
         self.saveasAct.triggered[()].connect(self.saveMultiProjectAs)
         self.actions.append(self.saveasAct)
 
-        self.addProjectAct = E5Action(self.trUtf8('Add project to multiproject'),
-                UI.PixmapCache.getIcon("fileProject.png"),
-                self.trUtf8('Add &project...'), 0, 0,
-                self, 'multi_project_add_project')
+        self.addProjectAct = E5Action(
+            self.trUtf8('Add project to multiproject'),
+            UI.PixmapCache.getIcon("fileProject.png"),
+            self.trUtf8('Add &project...'), 0, 0,
+            self, 'multi_project_add_project')
         self.addProjectAct.setStatusTip(self.trUtf8(
             'Add a project to the current multiproject'))
         self.addProjectAct.setWhatsThis(self.trUtf8(
@@ -630,11 +643,14 @@ class MultiProject(QObject):
 
         self.propsAct = E5Action(self.trUtf8('Multiproject properties'),
                 UI.PixmapCache.getIcon("multiProjectProps.png"),
-                self.trUtf8('&Properties...'), 0, 0, self, 'multi_project_properties')
-        self.propsAct.setStatusTip(self.trUtf8('Show the multiproject properties'))
+                self.trUtf8('&Properties...'), 0, 0, self,
+                'multi_project_properties')
+        self.propsAct.setStatusTip(self.trUtf8(
+            'Show the multiproject properties'))
         self.propsAct.setWhatsThis(self.trUtf8(
             """<b>Properties...</b>"""
-            """<p>This shows a dialog to edit the multiproject properties.</p>"""
+            """<p>This shows a dialog to edit the multiproject"""
+            """ properties.</p>"""
         ))
         self.propsAct.triggered[()].connect(self.__showProperties)
         self.actions.append(self.propsAct)
@@ -652,7 +668,8 @@ class MultiProject(QObject):
         @return the menu generated (QMenu)
         """
         menu = QMenu(self.trUtf8('&Multiproject'), self.parent())
-        self.recentMenu = QMenu(self.trUtf8('Open &Recent Multiprojects'), menu)
+        self.recentMenu = QMenu(self.trUtf8('Open &Recent Multiprojects'),
+                                menu)
         
         self.__menus = {
             "Main": menu,
@@ -685,7 +702,8 @@ class MultiProject(QObject):
         """
         Public slot to initialize the multi project toolbar.
         
-        @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
         @return the toolbar generated (QToolBar)
         """
         tb = QToolBar(self.trUtf8("Multiproject"), self.ui)
@@ -715,8 +733,8 @@ class MultiProject(QObject):
     
     def __syncRecent(self):
         """
-        Private method to synchronize the list of recently opened multi projects
-        with the central store.
+        Private method to synchronize the list of recently opened multi
+        projects with the central store.
         """
         for recent in self.recent[:]:
             if Utilities.samepath(self.pfile, recent):

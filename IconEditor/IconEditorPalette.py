@@ -8,9 +8,9 @@ Module implementing a palette widget for the icon editor.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt
-from PyQt4.QtGui import QWidget, QColor, QPainter, QBoxLayout, QLabel, QFrame, \
-    QPushButton, QSpinBox, QGroupBox, QVBoxLayout, QRadioButton, QSpacerItem, \
-    QSizePolicy, QPixmap, QColorDialog
+from PyQt4.QtGui import QWidget, QColor, QPainter, QBoxLayout, QLabel, \
+    QFrame, QPushButton, QSpinBox, QGroupBox, QVBoxLayout, QRadioButton, \
+    QSpacerItem, QSizePolicy, QPixmap, QColorDialog
 
 
 class IconEditorPalette(QWidget):
@@ -18,8 +18,8 @@ class IconEditorPalette(QWidget):
     Class implementing a palette widget for the icon editor.
     
     @signal colorSelected(QColor) emitted after a new color has been selected
-    @signal compositingChanged(QPainter.CompositionMode) emitted to signal a change
-            of the compositing mode
+    @signal compositingChanged(QPainter.CompositionMode) emitted to signal a
+        change of the compositing mode
     """
     colorSelected = pyqtSignal(QColor)
     compositingChanged = pyqtSignal(QPainter.CompositionMode)
@@ -63,14 +63,16 @@ class IconEditorPalette(QWidget):
         self.__colorTxt.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
         self.__colorTxt.setWhatsThis(self.trUtf8(
             """<b>Current Color Value</b>"""
-            """<p>This is the currently selected color value used for drawing.</p>"""
+            """<p>This is the currently selected color value used for"""
+            """ drawing.</p>"""
         ))
         self.__layout.addWidget(self.__colorTxt)
         
         self.__colorButton = QPushButton(self.trUtf8("Select Color"), self)
         self.__colorButton.setWhatsThis(self.trUtf8(
             """<b>Select Color</b>"""
-            """<p>Select the current drawing color via a color selection dialog.</p>"""
+            """<p>Select the current drawing color via a color selection"""
+            """ dialog.</p>"""
         ))
         self.__colorButton.clicked[()].connect(self.__selectColor)
         self.__layout.addWidget(self.__colorButton)
@@ -79,7 +81,8 @@ class IconEditorPalette(QWidget):
         self.__colorAlpha.setRange(0, 255)
         self.__colorAlpha.setWhatsThis(self.trUtf8(
             """<b>Select alpha channel value</b>"""
-            """<p>Select the value for the alpha channel of the current color.</p>"""
+            """<p>Select the value for the alpha channel of the current"""
+            """ color.</p>"""
         ))
         self.__layout.addWidget(self.__colorAlpha)
         self.__colorAlpha.valueChanged[int].connect(self.__alphaChanged)
@@ -102,11 +105,13 @@ class IconEditorPalette(QWidget):
             """<p>Blend the new color over the existing pixel.</p>"""
         ))
         self.__sourceOverButton.setChecked(True)
-        self.__sourceOverButton.clicked[bool].connect(self.__compositingChanged)
+        self.__sourceOverButton.clicked[bool].connect(
+            self.__compositingChanged)
         self.__compositingGroupLayout.addWidget(self.__sourceOverButton)
         self.__layout.addWidget(self.__compositingGroup)
         
-        spacer = QSpacerItem(10, 10, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        spacer = QSpacerItem(
+            10, 10, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.__layout.addItem(spacer)
     
     def previewChanged(self, pixmap):
@@ -172,10 +177,13 @@ class IconEditorPalette(QWidget):
         """
         Private slot to handle a change of the compositing mode.
         
-        @param on flag indicating the checked state of the compositing button (boolean)
+        @param on flag indicating the checked state of the compositing button
+            (boolean)
         """
         if on:
             if self.__sourceButton.isChecked():
-                self.compositingChanged.emit(QPainter.CompositionMode_Source)
+                self.compositingChanged.emit(
+                    QPainter.CompositionMode_Source)
             elif self.__sourceOverButton.isChecked():
-                self.compositingChanged.emit(QPainter.CompositionMode_SourceOver)
+                self.compositingChanged.emit(
+                    QPainter.CompositionMode_SourceOver)

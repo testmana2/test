@@ -73,7 +73,8 @@ class AssociationItem(E5ArrowItem):
         self.setFlag(QGraphicsItem.ItemIsSelectable, False)
         
         if topToBottom:
-            self.calculateEndingPoints = self.__calculateEndingPoints_topToBottom
+            self.calculateEndingPoints = \
+                self.__calculateEndingPoints_topToBottom
         else:
 ##            self.calculateEndingPoints = self.__calculateEndingPoints_center
             self.calculateEndingPoints = self.__calculateEndingPoints_rectangle
@@ -93,7 +94,8 @@ class AssociationItem(E5ArrowItem):
         
     def __mapRectFromItem(self, item):
         """
-        Private method to map item's rectangle to this item's coordinate system.
+        Private method to map item's rectangle to this item's coordinate
+        system.
         
         @param item reference to the item to be mapped (QGraphicsRectItem)
         @return item's rectangle in local coordinates (QRectF)
@@ -237,8 +239,8 @@ class AssociationItem(E5ArrowItem):
         
     def __findPointRegion(self, rect, posX, posY):
         """
-        Private method to find out, which region of rectangle rect contains the point
-        (PosX, PosY) and returns the region number.
+        Private method to find out, which region of rectangle rect contains
+        the point (PosX, PosY) and returns the region number.
         
         @param rect rectangle to calculate the region for (QRectF)
         @param posX x position of point (float)
@@ -350,7 +352,8 @@ class AssociationItem(E5ArrowItem):
         
     def __findRectIntersectionPoint(self, item, p1, p2):
         """
-        Private method to find the intersetion point of a line with a rectangle.
+        Private method to find the intersetion point of a line with a
+        rectangle.
         
         @param item item to check against
         @param p1 first point of the line (QPointF)
@@ -479,19 +482,23 @@ class AssociationItem(E5ArrowItem):
         pt.setX(slope1 * pt.y() + b1)
         # the intersection point must be inside the segment (x1, y1) (x2, y2)
         if x2 >= x1 and y2 >= y1:
-            if not ((x1 <= pt.y() and pt.y() <= x2) and (y1 <= pt.x() and pt.x() <= y2)):
+            if not ((x1 <= pt.y() and pt.y() <= x2) and
+                    (y1 <= pt.x() and pt.x() <= y2)):
                 pt.setX(-1.0)
                 pt.setY(-1.0)
         elif x2 < x1 and y2 >= y1:
-            if not ((x2 <= pt.y() and pt.y() <= x1) and (y1 <= pt.x() and pt.x() <= y2)):
+            if not ((x2 <= pt.y() and pt.y() <= x1) and
+                    (y1 <= pt.x() and pt.x() <= y2)):
                 pt.setX(-1.0)
                 pt.setY(-1.0)
         elif x2 >= x1 and y2 < y1:
-            if not ((x1 <= pt.y() and pt.y() <= x2) and (y2 <= pt.x() and pt.x() <= y1)):
+            if not ((x1 <= pt.y() and pt.y() <= x2) and
+                    (y2 <= pt.x() and pt.x() <= y1)):
                 pt.setX(-1.0)
                 pt.setY(-1.0)
         else:
-            if not ((x2 <= pt.y() and pt.y() <= x1) and (y2 <= pt.x() and pt.x() <= y1)):
+            if not ((x2 <= pt.y() and pt.y() <= x1) and
+                    (y2 <= pt.x() and pt.x() <= y1)):
                 pt.setX(-1.0)
                 pt.setY(-1.0)
         

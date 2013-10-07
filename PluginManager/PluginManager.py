@@ -16,8 +16,9 @@ from PyQt4.QtGui import QPixmap
 
 from E5Gui import E5MessageBox
 
-from .PluginExceptions import PluginPathError, PluginModulesError, PluginLoadError, \
-    PluginActivationError, PluginModuleFormatError, PluginClassFormatError
+from .PluginExceptions import PluginPathError, PluginModulesError, \
+    PluginLoadError, PluginActivationError, PluginModuleFormatError, \
+    PluginClassFormatError
 
 import UI.PixmapCache
 
@@ -32,16 +33,16 @@ class PluginManager(QObject):
     Class implementing the Plugin Manager.
     
     @signal shutdown() emitted at shutdown of the IDE
-    @signal pluginAboutToBeActivated(modulName, pluginObject) emitted just before a
-        plugin is activated
-    @signal pluginActivated(modulName, pluginObject) emitted just after a plugin
-        was activated
+    @signal pluginAboutToBeActivated(modulName, pluginObject) emitted just
+        before a plugin is activated
+    @signal pluginActivated(modulName, pluginObject) emitted just after
+        a plugin was activated
     @signal allPlugginsActivated() emitted at startup after all plugins have
         been activated
-    @signal pluginAboutToBeDeactivated(modulName, pluginObject) emitted just before a
-        plugin is deactivated
-    @signal pluginDeactivated(modulName, pluginObject) emitted just after a plugin
-        was deactivated
+    @signal pluginAboutToBeDeactivated(modulName, pluginObject) emitted just
+        before a plugin is deactivated
+    @signal pluginDeactivated(modulName, pluginObject) emitted just after
+        a plugin was deactivated
     """
     shutdown = pyqtSignal()
     pluginAboutToBeActivated = pyqtSignal(str, object)
@@ -84,7 +85,8 @@ class PluginManager(QObject):
         }
         self.__priorityOrder = ["eric5", "global", "user"]
         
-        self.__defaultDownloadDir = os.path.join(Utilities.getConfigDir(), "Downloads")
+        self.__defaultDownloadDir = os.path.join(
+            Utilities.getConfigDir(), "Downloads")
         
         self.__activePlugins = {}
         self.__inactivePlugins = {}
@@ -192,8 +194,9 @@ class PluginManager(QObject):
         
         if not os.path.exists(self.pluginDirs["eric5"]):
             return (False,
-                self.trUtf8("The internal plugin directory <b>{0}</b> does not exits.")\
-                    .format(self.pluginDirs["eric5"]))
+                self.trUtf8(
+                    "The internal plugin directory <b>{0}</b>"
+                    " does not exits.").format(self.pluginDirs["eric5"]))
         
         return (True, "")
     
@@ -203,10 +206,12 @@ class PluginManager(QObject):
         
         @return flag indicating the availability of plugins (boolean)
         """
-        if self.__develPluginFile and not os.path.exists(self.__develPluginFile):
+        if self.__develPluginFile and \
+                not os.path.exists(self.__develPluginFile):
             return False
         
-        self.__foundCoreModules = self.getPluginModules(self.pluginDirs["eric5"])
+        self.__foundCoreModules = self.getPluginModules(
+            self.pluginDirs["eric5"])
         if "global" in self.pluginDirs:
             self.__foundGlobalModules = \
                 self.getPluginModules(self.pluginDirs["global"])
@@ -306,8 +311,8 @@ class PluginManager(QObject):
             fname = "{0}.py".format(os.path.join(directory, name))
             module = imp.load_source(name, fname)
             if not hasattr(module, "autoactivate"):
-                module.error = \
-                    self.trUtf8("Module is missing the 'autoactivate' attribute.")
+                module.error = self.trUtf8(
+                    "Module is missing the 'autoactivate' attribute.")
                 self.__failedModules[name] = module
                 raise PluginLoadError(name)
             if getattr(module, "autoactivate"):
@@ -331,8 +336,8 @@ class PluginManager(QObject):
             print("Error loading plugin module:", name)
         except Exception as err:
             module = imp.new_module(name)
-            module.error = \
-                self.trUtf8("Module failed to load. Error: {0}").format(str(err))
+            module.error = self.trUtf8(
+                "Module failed to load. Error: {0}").format(str(err))
             self.__failedModules[name] = module
             print("Error loading plugin module:",  name)
             print(str(err))
@@ -369,21 +374,25 @@ class PluginManager(QObject):
         self.__modulesCount -= 1
         return True
     
-    def removePluginFromSysModules(self, pluginName, package, internalPackages):
+    def removePluginFromSysModules(self, pluginName, package,
+                                   internalPackages):
         """
-        Public method to remove a plugin and all related modules from sys.modules.
+        Public method to remove a plugin and all related modules from
+        sys.modules.
         
         @param pluginName name of the plugin module (string)
         @param package name of the plugin package (string)
         @param internalPackages list of intenal packages (list of string)
-        @return flag indicating the plugin module was found in sys.modules (boolean)
+        @return flag indicating the plugin module was found in sys.modules
+            (boolean)
         """
         packages = [package] + internalPackages
         found = False
         if not package:
             package = "__None__"
         for moduleName in list(sys.modules.keys())[:]:
-            if moduleName == pluginName or moduleName.split(".")[0] in packages:
+            if moduleName == pluginName or \
+                    moduleName.split(".")[0] in packages:
                 found = True
                 del sys.modules[moduleName]
         return found
@@ -431,10 +440,11 @@ class PluginManager(QObject):
     
     def activatePlugins(self):
         """
-        Public method to activate all plugins having the "autoactivate" attribute
-        set to True.
+        Public method to activate all plugins having the "autoactivate"
+        attribute set to True.
         """
-        savedInactiveList = Preferences.Prefs.settings.value(self.__inactivePluginsKey)
+        savedInactiveList = Preferences.Prefs.settings.value(
+            self.__inactivePluginsKey)
         if self.__develPluginName is not None and \
            savedInactiveList is not None and \
            self.__develPluginName in savedInactiveList:
@@ -481,7 +491,8 @@ class PluginManager(QObject):
             try:
                 obj, ok = pluginObject.activate()
             except TypeError:
-                module.error = self.trUtf8("Incompatible plugin activation method.")
+                module.error = self.trUtf8(
+                    "Incompatible plugin activation method.")
                 obj = None
                 ok = True
             except Exception as err:
@@ -530,12 +541,15 @@ class PluginManager(QObject):
         """
         try:
             if not hasattr(module, "version"):
-                raise PluginModuleFormatError(module.eric5PluginModuleName, "version")
+                raise PluginModuleFormatError(
+                    module.eric5PluginModuleName, "version")
             if not hasattr(module, "className"):
-                raise PluginModuleFormatError(module.eric5PluginModuleName, "className")
+                raise PluginModuleFormatError(
+                    module.eric5PluginModuleName, "className")
             className = getattr(module, "className")
             if not hasattr(module, className):
-                raise PluginModuleFormatError(module.eric5PluginModuleName, className)
+                raise PluginModuleFormatError(
+                    module.eric5PluginModuleName, className)
             pluginClass = getattr(module, className)
             if not hasattr(pluginClass, "__init__"):
                 raise PluginClassFormatError(module.eric5PluginModuleName,
@@ -607,7 +621,8 @@ class PluginManager(QObject):
     
     def getPluginObject(self, type_, typename, maybeActive=False):
         """
-        Public method to activate an ondemand plugin given by type and typename.
+        Public method to activate an ondemand plugin given by type and
+        typename.
         
         @param type_ type of the plugin to be activated (string)
         @param typename name of the plugin within the type category (string)
@@ -633,9 +648,9 @@ class PluginManager(QObject):
         """
         Public method to get infos about all loaded plugins.
         
-        @return list of tuples giving module name (string), plugin name (string),
-            version (string), autoactivate (boolean), active (boolean),
-            short description (string), error flag (boolean)
+        @return list of tuples giving module name (string), plugin name
+            (string), version (string), autoactivate (boolean), active
+            (boolean), short description (string), error flag (boolean)
         """
         infos = []
         
@@ -646,19 +661,23 @@ class PluginManager(QObject):
         for name in list(self.__inactiveModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__inactiveModules[name])
-            infos.append((name,  pname, version, True, False, shortDesc, error))
+            infos.append(
+                (name,  pname, version, True, False, shortDesc, error))
         for name in list(self.__onDemandActiveModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__onDemandActiveModules[name])
-            infos.append((name,  pname, version, False, True, shortDesc, error))
+            infos.append(
+                (name,  pname, version, False, True, shortDesc, error))
         for name in list(self.__onDemandInactiveModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__onDemandInactiveModules[name])
-            infos.append((name,  pname, version, False, False, shortDesc, error))
+            infos.append(
+                (name,  pname, version, False, False, shortDesc, error))
         for name in list(self.__failedModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__failedModules[name])
-            infos.append((name,  pname, version, False, False, shortDesc, error))
+            infos.append(
+                (name,  pname, version, False, False, shortDesc, error))
         return infos
     
     def __getShortInfo(self, module):
@@ -709,7 +728,8 @@ class PluginManager(QObject):
             return None
         
         details["moduleName"] = name
-        details["moduleFileName"] = getattr(module, "eric5PluginModuleFilename", "")
+        details["moduleFileName"] = getattr(
+            module, "eric5PluginModuleFilename", "")
         details["pluginName"] = getattr(module, "name", "")
         details["version"] = getattr(module, "version", "")
         details["author"] = getattr(module, "author", "")
@@ -733,7 +753,8 @@ class PluginManager(QObject):
 
     def getPluginDisplayStrings(self, type_):
         """
-        Public method to get the display strings of all plugins of a specific type.
+        Public method to get the display strings of all plugins of a specific
+        type.
         
         @param type_ type of the plugins (string)
         @return dictionary with name as key and display string as value
@@ -801,26 +822,29 @@ class PluginManager(QObject):
         external tool.
         
         @return list of dictionaries containing the data. Each dictionary must
-            either contain data for the determination or the data to be displayed.<br />
+            either contain data for the determination or the data to be
+            displayed.<br />
             A dictionary of the first form must have the following entries:
             <ul>
-                <li>programEntry - indicator for this dictionary form (boolean),
-                    always True</li>
+                <li>programEntry - indicator for this dictionary form
+                   (boolean), always True</li>
                 <li>header - string to be diplayed as a header (string)</li>
                 <li>exe - the executable (string)</li>
-                <li>versionCommand - commandline parameter for the exe (string)</li>
-                <li>versionStartsWith - indicator for the output line containing
-                    the version (string)</li>
+                <li>versionCommand - commandline parameter for the exe
+                    (string)</li>
+                <li>versionStartsWith - indicator for the output line
+                    containing the version (string)</li>
                 <li>versionPosition - number of element containing the
                     version (integer)</li>
                 <li>version - version to be used as default (string)</li>
-                <li>versionCleanup - tuple of two integers giving string positions
-                    start and stop for the version string (tuple of integers)</li>
+                <li>versionCleanup - tuple of two integers giving string
+                    positions start and stop for the version string
+                    (tuple of integers)</li>
             </ul>
             A dictionary of the second form must have the following entries:
             <ul>
-                <li>programEntry - indicator for this dictionary form (boolean),
-                    always False</li>
+                <li>programEntry - indicator for this dictionary form
+                    (boolean), always False</li>
                 <li>header - string to be diplayed as a header (string)</li>
                 <li>text - entry text to be shown (string)</li>
                 <li>version - version text to be shown (string)</li>
@@ -845,8 +869,8 @@ class PluginManager(QObject):
         
     def getPluginConfigData(self):
         """
-        Public method to get the config data of all active, non on-demand plugins
-        used by the configuration dialog.
+        Public method to get the config data of all active, non on-demand
+        plugins used by the configuration dialog.
         
         Plugins supporting this functionality must provide the plugin module
         function 'getConfigData' returning a dictionary with unique keys
@@ -856,18 +880,21 @@ class PluginManager(QObject):
           <dd>string shown in the selection area of the configuration page.
               This should be a localized string</dd>
           <dt>pixmap name</dt>
-          <dd>filename of the pixmap to be shown next to the display string</dd>
+          <dd>filename of the pixmap to be shown next to the display
+              string</dd>
           <dt>page creation function</dt>
           <dd>plugin module function to be called to create the configuration
               page. The page must be subclasses from
               Preferences.ConfigurationPages.ConfigurationPageBase and must
               implement a method called 'save' to save the settings. A parent
-              entry will be created in the selection list, if this value is None.</dd>
+              entry will be created in the selection list, if this value is
+              None.</dd>
           <dt>parent key</dt>
           <dd>dictionary key of the parent entry or None, if this defines a
               toplevel entry.</dd>
           <dt>reference to configuration page</dt>
-          <dd>This will be used by the configuration dialog and must always be None</dd>
+          <dd>This will be used by the configuration dialog and must always
+              be None</dd>
         </dl>
         
         @return plug-in configuration data
@@ -902,13 +929,13 @@ class PluginManager(QObject):
         return pluginName in self.__activeModules or \
                pluginName in self.__onDemandActiveModules
     
-    ############################################################################
+    ###########################################################################
     ## Specialized plugin module handling methods below
-    ############################################################################
+    ###########################################################################
     
-    ############################################################################
+    ###########################################################################
     ## VCS related methods below
-    ############################################################################
+    ###########################################################################
     
     def getVcsSystemIndicators(self):
         """
@@ -918,8 +945,9 @@ class PluginManager(QObject):
         getVcsSystemIndicator returning a dictionary with indicator as key and
         a tuple with the vcs name (string) and vcs display string (string).
         
-        @return dictionary with indicator as key and a list of tuples as values.
-            Each tuple contains the vcs name (string) and vcs display string (string).
+        @return dictionary with indicator as key and a list of tuples as
+            values. Each tuple contains the vcs name (string) and vcs display
+            string (string).
         """
         vcsDict = {}
         
@@ -947,7 +975,8 @@ class PluginManager(QObject):
 
     def __checkPluginsDownloadDirectory(self):
         """
-        Private slot to check for the existence of the plugins download directory.
+        Private slot to check for the existence of the plugins download
+        directory.
         """
         downloadDir = Preferences.getPluginManager("DownloadPath")
         if not downloadDir:
@@ -965,10 +994,11 @@ class PluginManager(QObject):
                     except (OSError, IOError) as err:
                         E5MessageBox.critical(self.__ui,
                             self.trUtf8("Plugin Manager Error"),
-                            self.trUtf8("""<p>The plugin download directory <b>{0}</b> """
-                                        """could not be created. Please configure it """
-                                        """via the configuration dialog.</p>"""
-                                        """<p>Reason: {1}</p>""")\
+                            self.trUtf8(
+                                """<p>The plugin download directory"""
+                                """ <b>{0}</b> could not be created. Please"""
+                                """ configure it via the configuration"""
+                                """ dialog.</p><p>Reason: {1}</p>""")
                                 .format(downloadDir, str(err)))
                         downloadDir = ""
         

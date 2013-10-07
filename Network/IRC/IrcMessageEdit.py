@@ -18,14 +18,15 @@ class IrcMessageEdit(E5ClearableLineEdit):
     """
     MaxHistory = 100
     
-    def __init__(self, parent=None, inactiveText="", side=E5LineEdit.RightSide):
+    def __init__(self, parent=None, inactiveText="",
+                 side=E5LineEdit.RightSide):
         """
         Constructor
         
         @param parent reference to the parent widget (QWidget)
         @keyparam inactiveText text to be shown on inactivity (string)
-        @keyparam side side the clear button should be shown at (E5LineEdit.RightSide,
-            E5LineEdit.LeftSide)
+        @keyparam side side the clear button should be shown at
+            (E5LineEdit.RightSide, E5LineEdit.LeftSide)
         """
         super().__init__(parent, inactiveText, side)
         
@@ -36,7 +37,8 @@ class IrcMessageEdit(E5ClearableLineEdit):
         """
         Public method to set the text.
         
-        Note: This reimplementation ensures, that the cursor is at the end of the text.
+        Note: This reimplementation ensures, that the cursor is at the end of
+        the text.
         
         @param text text to be set (string)
         """
@@ -107,19 +109,21 @@ class IrcMessageEdit(E5ClearableLineEdit):
         
         if up:
             self.__historyLine += 1
-            # If the position was moved past the end of the history, go to the last entry
+            # If the position was moved past the end of the history,
+            # go to the last entry
             if self.__historyLine == len(self.__historyList):
                 self.__historyLine -= 1
                 return
         else:
-            # If the position is at the top of the history, arrow-down shall add the text
-            # to the history and clear the line edit for new input
+            # If the position is at the top of the history, arrow-down shall
+            # add the text to the history and clear the line edit for new input
             if self.__historyLine == 0:
                 if self.text():
                     self.__addHistory(self.text())
                 self.setText("")
             else:
-                # If the position is not at the top of the history, decrement it
+                # If the position is not at the top of the history,
+                # decrement it
                 self.__historyLine -= 1
         
         # replace the text of the line edit with the selected history entry

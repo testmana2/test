@@ -53,7 +53,8 @@ class TasksReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Tasks":
-                    self.version = self.attribute("version", tasksFileFormatVersion)
+                    self.version = self.attribute(
+                        "version", tasksFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "Task":
@@ -105,8 +106,8 @@ class TasksReader(XMLStreamReaderBase):
                 elif self.name() == "Description":
                     task["description"] = self.readElementText()
                 elif self.name() == "Created":
-                    task["created"] = time.mktime(
-                        time.strptime(self.readElementText(), "%Y-%m-%d, %H:%M:%S"))
+                    task["created"] = time.mktime(time.strptime(
+                        self.readElementText(), "%Y-%m-%d, %H:%M:%S"))
                 elif self.name() == "Resource":
                     continue    # handle but ignore this tag
                 elif self.name() == "Filename":

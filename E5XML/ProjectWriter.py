@@ -44,9 +44,11 @@ class ProjectWriter(XMLStreamWriterBase):
             projectFileFormatVersion))
         
         # add some generation comments
-        self.writeComment(" eric5 project file for project {0} ".format(self.name))
+        self.writeComment(
+            " eric5 project file for project {0} ".format(self.name))
         if Preferences.getProject("XMLTimestamp"):
-            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(
+                " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
             self.writeComment(" Copyright (C) {0} {1}, {2} ".format(
                     time.strftime('%Y'),
                     self.pdata["AUTHOR"][0],
@@ -88,13 +90,17 @@ class ProjectWriter(XMLStreamWriterBase):
             
         # do the translation pattern
         if self.pdata["TRANSLATIONPATTERN"]:
-            self.writeTextElement("TranslationPattern",
-                Utilities.fromNativeSeparators(self.pdata["TRANSLATIONPATTERN"][0]))
+            self.writeTextElement(
+                "TranslationPattern",
+                Utilities.fromNativeSeparators(
+                    self.pdata["TRANSLATIONPATTERN"][0]))
         
         # do the binary translations path
         if self.pdata["TRANSLATIONSBINPATH"]:
-            self.writeTextElement("TranslationsBinPath",
-                Utilities.fromNativeSeparators(self.pdata["TRANSLATIONSBINPATH"][0]))
+            self.writeTextElement(
+                "TranslationsBinPath",
+                Utilities.fromNativeSeparators(
+                    self.pdata["TRANSLATIONSBINPATH"][0]))
         
         # do the eol setting
         if self.pdata["EOL"] and self.pdata["EOL"][0]:
@@ -104,7 +110,8 @@ class ProjectWriter(XMLStreamWriterBase):
         # do the sources
         self.writeStartElement("Sources")
         for name in self.pdata["SOURCES"]:
-            self.writeTextElement("Source", Utilities.fromNativeSeparators(name))
+            self.writeTextElement(
+                "Source", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the forms
@@ -116,7 +123,8 @@ class ProjectWriter(XMLStreamWriterBase):
         # do the translations
         self.writeStartElement("Translations")
         for name in self.pdata["TRANSLATIONS"]:
-            self.writeTextElement("Translation", Utilities.fromNativeSeparators(name))
+            self.writeTextElement(
+                "Translation", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the translation exceptions
@@ -130,19 +138,22 @@ class ProjectWriter(XMLStreamWriterBase):
         # do the resources
         self.writeStartElement("Resources")
         for name in self.pdata["RESOURCES"]:
-            self.writeTextElement("Resource", Utilities.fromNativeSeparators(name))
+            self.writeTextElement(
+                "Resource", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the interfaces (IDL)
         self.writeStartElement("Interfaces")
         for name in self.pdata["INTERFACES"]:
-            self.writeTextElement("Interface", Utilities.fromNativeSeparators(name))
+            self.writeTextElement(
+                "Interface", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the others
         self.writeStartElement("Others")
         for name in self.pdata["OTHERS"]:
-            self.writeTextElement("Other", Utilities.fromNativeSeparators(name))
+            self.writeTextElement(
+                "Other", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the main script

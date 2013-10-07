@@ -22,11 +22,15 @@ class IrcIdentity(object):
     Class implementing the IRC identity object.
     """
     DefaultIdentityName = "0default"
-    DefaultIdentityDisplay = QCoreApplication.translate("IrcIdentity", "Default Identity")
+    DefaultIdentityDisplay = QCoreApplication.translate(
+        "IrcIdentity", "Default Identity")
     
-    DefaultAwayMessage = QCoreApplication.translate("IrcIdentity", "Gone away for now.")
-    DefaultQuitMessage = QCoreApplication.translate("IrcIdentity", "IRC for eric5 IDE")
-    DefaultPartMessage = QCoreApplication.translate("IrcIdentity", "IRC for eric5 IDE")
+    DefaultAwayMessage = QCoreApplication.translate(
+        "IrcIdentity", "Gone away for now.")
+    DefaultQuitMessage = QCoreApplication.translate(
+        "IrcIdentity", "IRC for eric5 IDE")
+    DefaultPartMessage = QCoreApplication.translate(
+        "IrcIdentity", "IRC for eric5 IDE")
     
     def __init__(self, name):
         """
@@ -152,7 +156,8 @@ class IrcIdentity(object):
     
     def setServiceName(self, name):
         """
-        Public method to set the service name of the identity used for identification.
+        Public method to set the service name of the identity used for
+        identification.
         
         @param name service name (string)
         """
@@ -160,7 +165,8 @@ class IrcIdentity(object):
     
     def getServiceName(self):
         """
-        Public method to get the service name of the identity used for identification.
+        Public method to get the service name of the identity used for
+        identification.
         
         @return service name (string)
         """
@@ -230,7 +236,8 @@ class IrcIdentity(object):
     
     def rememberAwayPosition(self):
         """
-        Public method to get a flag indicating to remember the chat position upon AWAY.
+        Public method to get a flag indicating to remember the chat position
+        upon AWAY.
         
         @return flag indicating to remember the chat position (boolean)
         """
@@ -504,7 +511,8 @@ class IrcNetwork(object):
         @param settings reference to the settings object (QSettings)
         """
         self.__identity = settings.value("Identity", "")
-        self.__autoConnect = Preferences.toBool(settings.value("AutoConnect", False))
+        self.__autoConnect = Preferences.toBool(
+            settings.value("AutoConnect", False))
         
         settings.beginGroup("Server")
         self.__server = IrcServer("")
@@ -655,7 +663,8 @@ class IrcNetwork(object):
     
     def autoConnect(self):
         """
-        Public method to check, if the network should be connected to at start-up.
+        Public method to check, if the network should be connected to at
+        start-up.
         
         @return flag indicating an auto connect (boolean)
         """
@@ -666,7 +675,8 @@ class IrcNetwork(object):
         """
         Class method to create the default network.
         
-        @param ssl flag indicating to create a SSL network configuration (boolean)
+        @param ssl flag indicating to create a SSL network configuration
+            (boolean)
         @return default network object (IrcNetwork)
         """
         # network
@@ -905,7 +915,8 @@ class IrcNetworkManager(QObject):
         
         @param name name of the identity to delete (string)
         """
-        if name in self.__identities and name != IrcIdentity.DefaultIdentityName:
+        if name in self.__identities and \
+                name != IrcIdentity.DefaultIdentityName:
             del self.__identities[name]
             self.identityChanged()
     

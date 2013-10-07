@@ -51,12 +51,14 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             self.__pluginManager = pluginManager
             self.__external = False
         
-        self.pluginDirectoryCombo.addItem(self.trUtf8("User plugins directory"),
+        self.pluginDirectoryCombo.addItem(
+            self.trUtf8("User plugins directory"),
             self.__pluginManager.getPluginDir("user"))
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
-            self.pluginDirectoryCombo.addItem(self.trUtf8("Global plugins directory"),
+            self.pluginDirectoryCombo.addItem(
+                self.trUtf8("Global plugins directory"),
                 globalDir)
     
     @pyqtSlot(int)
@@ -69,7 +71,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         """
         pluginDirectory = self.pluginDirectoryCombo\
                 .itemData(index)
-        pluginNames = sorted(self.__pluginManager.getPluginModules(pluginDirectory))
+        pluginNames = sorted(self.__pluginManager.getPluginModules(
+            pluginDirectory))
         self.pluginNameCombo.clear()
         for pluginName in pluginNames:
             fname = "{0}.py".format(os.path.join(pluginDirectory, pluginName))
@@ -100,8 +103,9 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         if not self.__pluginManager.unloadPlugin(pluginName):
             E5MessageBox.critical(self,
                 self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8("""<p>The plugin <b>{0}</b> could not be unloaded."""
-                            """ Aborting...</p>""").format(pluginName))
+                self.trUtf8(
+                    """<p>The plugin <b>{0}</b> could not be unloaded."""
+                    """ Aborting...</p>""").format(pluginName))
             return False
         
         if not pluginDirectory in sys.path:
@@ -110,8 +114,9 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         if not hasattr(module, "packageName"):
             E5MessageBox.critical(self,
                 self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8("""<p>The plugin <b>{0}</b> has no 'packageName' attribute."""
-                            """ Aborting...</p>""").format(pluginName))
+                self.trUtf8(
+                    """<p>The plugin <b>{0}</b> has no 'packageName'"""
+                    """ attribute. Aborting...</p>""").format(pluginName))
             return False
         
         package = getattr(module, "packageName")
@@ -125,7 +130,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         internalPackages = []
         if hasattr(module, "internalPackages"):
             # it is a comma separated string
-            internalPackages = [p.strip() for p in module.internalPackages.split(",")]
+            internalPackages = [p.strip() for p in 
+                                module.internalPackages.split(",")]
         del module
         
         # clean sys.modules
@@ -144,23 +150,26 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             if os.path.exists(fnamec):
                 os.remove(fnamec)
             
-            pluginDirCache = os.path.join(os.path.dirname(pluginFile), "__pycache__")
+            pluginDirCache = os.path.join(
+                os.path.dirname(pluginFile), "__pycache__")
             if os.path.exists(pluginDirCache):
-                pluginFileName = os.path.splitext(os.path.basename(pluginFile))[0]
-                for fnameo in glob.glob(
-                    os.path.join(pluginDirCache, "{0}*.pyo".format(pluginFileName))):
+                pluginFileName = os.path.splitext(
+                    os.path.basename(pluginFile))[0]
+                for fnameo in glob.glob(os.path.join(
+                        pluginDirCache, "{0}*.pyo".format(pluginFileName))):
                     os.remove(fnameo)
-                for fnamec in glob.glob(
-                    os.path.join(pluginDirCache, "{0}*.pyc".format(pluginFileName))):
+                for fnamec in glob.glob(os.path.join(
+                        pluginDirCache, "{0}*.pyc".format(pluginFileName))):
                     os.remove(fnamec)
             
             os.remove(pluginFile)
         except OSError as err:
             E5MessageBox.critical(self,
                 self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8("""<p>The plugin package <b>{0}</b> could not be"""
-                            """ removed. Aborting...</p>"""
-                            """<p>Reason: {1}</p>""").format(packageDir, str(err)))
+                self.trUtf8(
+                    """<p>The plugin package <b>{0}</b> could not be"""
+                    """ removed. Aborting...</p>"""
+                    """<p>Reason: {1}</p>""").format(packageDir, str(err)))
             return False
         
         if not self.__external:
@@ -168,15 +177,17 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             if ui.notificationsEnabled():
                 ui.showNotification(UI.PixmapCache.getPixmap("plugin48.png"),
                 self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8("""<p>The plugin <b>{0}</b> was uninstalled successfully"""
-                            """ from {1}.</p>""")\
+                self.trUtf8(
+                    """<p>The plugin <b>{0}</b> was uninstalled successfully"""
+                    """ from {1}.</p>""")\
                     .format(pluginName, pluginDirectory))
                 return True
         
         E5MessageBox.information(self,
             self.trUtf8("Plugin Uninstallation"),
-            self.trUtf8("""<p>The plugin <b>{0}</b> was uninstalled successfully"""
-                        """ from {1}.</p>""")\
+            self.trUtf8(
+                """<p>The plugin <b>{0}</b> was uninstalled successfully"""
+                """ from {1}.</p>""")\
                 .format(pluginName, pluginDirectory))
         return True
 
@@ -224,7 +235,8 @@ class PluginUninstallWindow(E5MainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

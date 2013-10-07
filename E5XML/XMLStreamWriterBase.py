@@ -68,12 +68,13 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         
         @param pyobject object to be dumped
         """
-        writeMethod = self.basics.get(type(pyobject)) or self._write_unimplemented
+        writeMethod = self.basics.get(type(pyobject)) or \
+            self._write_unimplemented
         writeMethod(pyobject)
 
-    ############################################################################
+    ###########################################################################
     ## The various writer methods for basic types
-    ############################################################################
+    ###########################################################################
 
     def _write_none(self, value):
         """
@@ -130,7 +131,8 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         
         @param value value to be dumped (bytes)
         """
-        self.writeTextElement("bytes", ",".join(["{0:d}".format(b) for b in value]))
+        self.writeTextElement(
+            "bytes", ",".join(["{0:d}".format(b) for b in value]))
         
     def _write_bytearray(self, value):
         """
@@ -138,7 +140,8 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         
         @param value value to be dumped (bytearray)
         """
-        self.writeTextElement("bytearray", ",".join(["{0:d}".format(b) for b in value]))
+        self.writeTextElement(
+            "bytearray", ",".join(["{0:d}".format(b) for b in value]))
     
     def _write_tuple(self, value):
         """
@@ -214,5 +217,6 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         self.writeStartElement("pickle")
         self.writeAttribute("method", "pickle")
         self.writeAttribute("encoding", "base64")
-        self.writeCharacters(str(base64.b64encode(pickle.dumps(value)), "ASCII"))
+        self.writeCharacters(
+            str(base64.b64encode(pickle.dumps(value)), "ASCII"))
         self.writeEndElement()

@@ -28,7 +28,8 @@ splash = None
 
 # generate list of arguments to be remembered for a restart
 restartArgsList = ["--nosplash", "--plugin", "--debug", "--config"]
-restartArgs = [arg for arg in sys.argv[1:] if arg.split("=", 1)[0] in restartArgsList]
+restartArgs = [arg for arg in sys.argv[1:] 
+               if arg.split("=", 1)[0] in restartArgsList]
 
 if "--debug" in sys.argv:
     del sys.argv[sys.argv.index("--debug")]
@@ -43,8 +44,10 @@ for arg in sys.argv:
         break
 
 # make Third-Party package available as a packages repository
-sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
-sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Jasy"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__),
+                                "ThirdParty", "Pygments"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__),
+                                "ThirdParty", "Jasy"))
 
 from E5Gui.E5Application import E5Application
 
@@ -99,7 +102,8 @@ def excepthook(excType, excValue, tracebackobj):
         BugAddress, logFile)
     timeString = time.strftime("%Y-%m-%d, %H:%M:%S")
     
-    versionInfo = "\n{0}\n{1}".format(separator, Utilities.generateVersionInfo())
+    versionInfo = "\n{0}\n{1}".format(
+        separator, Utilities.generateVersionInfo())
     pluginVersionInfo = Utilities.generatePluginsVersionInfo()
     if pluginVersionInfo:
         versionInfo += "{0}\n{1}".format(separator, pluginVersionInfo)
@@ -160,14 +164,18 @@ def main():
          "use the given directory as the one containing the config files"),
         ("--debug", "activate debugging output to the console"),
         ("--nosplash", "don't show the splash screen"),
-        ("--noopen", "don't open anything at startup except that given in command"),
-        ("--plugin=plugin-file", "load the given plugin file (plugin development)"),
+        ("--noopen",
+         "don't open anything at startup except that given in command"),
+        ("--plugin=plugin-file",
+         "load the given plugin file (plugin development)"),
         ("--start-file", "load the most recently opened file"),
         ("--start-multi", "load the most recently opened multi-project"),
         ("--start-project", "load the most recently opened project"),
         ("--start-session", "load the global session file"),
-        ("--", "indicate that there are options for the program to be debugged"),
-        ("", "(everything after that is considered arguments for this program)")
+        ("--",
+         "indicate that there are options for the program to be debugged"),
+        ("",
+         "(everything after that is considered arguments for this program)")
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
                                   "Eric5",
@@ -211,7 +219,8 @@ def main():
     if Globals.isWindowsPlatform():
         pyqtDataDir = Globals.getPyQt4ModulesDirectory()
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
-            path = os.path.join(pyqtDataDir, "bin") + os.pathsep + os.environ["PATH"]
+            path = os.path.join(pyqtDataDir, "bin") + \
+                os.pathsep + os.environ["PATH"]
         else:
             path = pyqtDataDir + os.pathsep + os.environ["PATH"]
         os.environ["PATH"] = path
@@ -248,9 +257,11 @@ def main():
     # make Qt calls that need the E5Application to exist.
     from UI.UserInterface import UserInterface
 
-    splash.showMessage(QApplication.translate("eric5", "Generating Main Window..."))
+    splash.showMessage(
+        QApplication.translate("eric5", "Generating Main Window..."))
     try:
-        mainWindow = UserInterface(app, loc, splash, pluginFile, noopen, restartArgs)
+        mainWindow = UserInterface(app, loc, splash, pluginFile, noopen,
+                                   restartArgs)
         app.lastWindowClosed.connect(app.quit)
         mainWindow.show()
         

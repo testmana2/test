@@ -7,8 +7,10 @@
 Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, QRectF
-from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, QPrintDialog
+from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, \
+    QRectF
+from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, \
+    QPrintDialog
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
@@ -49,7 +51,8 @@ class UMLGraphicsView(E5GraphicsView):
         self.border = 10
         self.deltaSize = 100.0
         
-        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+        self.__zoomWidget = E5ZoomWidget(
+            UI.PixmapCache.getPixmap("zoomOut.png"),
             UI.PixmapCache.getPixmap("zoomIn.png"),
             UI.PixmapCache.getPixmap("zoomReset.png"), self)
         parent.statusBar().addPermanentWidget(self.__zoomWidget)
@@ -78,25 +81,29 @@ class UMLGraphicsView(E5GraphicsView):
         
         self.incWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthInc.png"),
-                    self.trUtf8("Increase width by {0} points").format(self.deltaSize),
+                    self.trUtf8("Increase width by {0} points").format(
+                        self.deltaSize),
                     self)
         self.incWidthAct.triggered[()].connect(self.__incWidth)
         
         self.incHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightInc.png"),
-                    self.trUtf8("Increase height by {0} points").format(self.deltaSize),
+                    self.trUtf8("Increase height by {0} points").format(
+                        self.deltaSize),
                     self)
         self.incHeightAct.triggered[()].connect(self.__incHeight)
         
         self.decWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthDec.png"),
-                    self.trUtf8("Decrease width by {0} points").format(self.deltaSize),
+                    self.trUtf8("Decrease width by {0} points").format(
+                        self.deltaSize),
                     self)
         self.decWidthAct.triggered[()].connect(self.__decWidth)
         
         self.decHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightDec.png"),
-                    self.trUtf8("Decrease height by {0} points").format(self.deltaSize),
+                    self.trUtf8("Decrease height by {0} points").format(
+                        self.deltaSize),
                     self)
         self.decHeightAct.triggered[()].connect(self.__decHeight)
         
@@ -342,11 +349,13 @@ class UMLGraphicsView(E5GraphicsView):
                 if not res:
                     return
             
-            success = super().saveImage(fname, QFileInfo(fname).suffix().upper())
+            success = super().saveImage(
+                fname, QFileInfo(fname).suffix().upper())
             if not success:
                 E5MessageBox.critical(self,
                     self.trUtf8("Save Diagram"),
-                    self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>""")
+                    self.trUtf8(
+                        """<p>The file <b>{0}</b> could not be saved.</p>""")
                         .format(fname))
         
     def __relayout(self):
@@ -677,7 +686,8 @@ class UMLGraphicsView(E5GraphicsView):
         
         from .AssociationItem import AssociationItem
         for item in self.filteredItems(self.scene().items(), AssociationItem):
-            lines.append("association: {0}".format(item.buildAssociationItemDataString()))
+            lines.append("association: {0}".format(
+                item.buildAssociationItemDataString()))
         
         return lines
     
@@ -729,7 +739,8 @@ class UMLGraphicsView(E5GraphicsView):
                     return False, linenum
             elif key == "association":
                 srcId, dstId, assocType, topToBottom = \
-                    AssociationItem.parseAssociationItemDataString(value.strip())
+                    AssociationItem.parseAssociationItemDataString(
+                        value.strip())
                 assoc = AssociationItem(umlItems[srcId], umlItems[dstId],
                     assocType, topToBottom)
                 self.scene().addItem(assoc)

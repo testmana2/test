@@ -12,10 +12,12 @@ import sys
 import os
 import zipfile
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, QProcess
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QTreeWidgetItem, \
-    QDialog, QVBoxLayout
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, \
+    QProcess
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
+    QTreeWidgetItem, QDialog, QVBoxLayout
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
+    QNetworkReply
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
@@ -47,7 +49,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     """
     Class implementing a dialog showing the available plugins.
     
-    @signal closeAndInstall() emitted when the Close & Install button is pressed
+    @signal closeAndInstall() emitted when the Close & Install button is
+        pressed
     """
     closeAndInstall = pyqtSignal()
     
@@ -62,26 +65,28 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.__updateButton = \
-            self.buttonBox.addButton(self.trUtf8("Update"), QDialogButtonBox.ActionRole)
-        self.__downloadButton = \
-            self.buttonBox.addButton(self.trUtf8("Download"), QDialogButtonBox.ActionRole)
+        self.__updateButton = self.buttonBox.addButton(
+            self.trUtf8("Update"), QDialogButtonBox.ActionRole)
+        self.__downloadButton = self.buttonBox.addButton(
+            self.trUtf8("Download"), QDialogButtonBox.ActionRole)
         self.__downloadButton.setEnabled(False)
         self.__downloadInstallButton = \
             self.buttonBox.addButton(self.trUtf8("Download && Install"),
             QDialogButtonBox.ActionRole)
         self.__downloadInstallButton.setEnabled(False)
-        self.__downloadCancelButton = \
-            self.buttonBox.addButton(self.trUtf8("Cancel"), QDialogButtonBox.ActionRole)
+        self.__downloadCancelButton = self.buttonBox.addButton(
+            self.trUtf8("Cancel"), QDialogButtonBox.ActionRole)
         self.__installButton = \
             self.buttonBox.addButton(self.trUtf8("Close && Install"),
                                      QDialogButtonBox.ActionRole)
         self.__downloadCancelButton.setEnabled(False)
         self.__installButton.setEnabled(False)
         
-        self.repositoryUrlEdit.setText(Preferences.getUI("PluginRepositoryUrl5"))
+        self.repositoryUrlEdit.setText(
+            Preferences.getUI("PluginRepositoryUrl5"))
         
-        self.repositoryList.headerItem().setText(self.repositoryList.columnCount(), "")
+        self.repositoryList.headerItem().setText(
+            self.repositoryList.columnCount(), "")
         self.repositoryList.header().setSortIndicator(0, Qt.AscendingOrder)
         
         self.pluginRepositoryFile = \
@@ -243,7 +248,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadInstallButton.setEnabled(False)
         self.__installButton.setEnabled(False)
         for itm in self.repositoryList.selectedItems():
-            if itm not in [self.__stableItem, self.__unstableItem, self.__unknownItem]:
+            if itm not in [self.__stableItem, self.__unstableItem,
+                           self.__unknownItem]:
                 url = itm.data(0, urlRole)
                 filename = os.path.join(
                     Preferences.getPluginManager("DownloadPath"),
@@ -284,8 +290,9 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         Private method to resort the tree.
         """
-        self.repositoryList.sortItems(self.repositoryList.sortColumn(),
-                                      self.repositoryList.header().sortIndicatorOrder())
+        self.repositoryList.sortItems(
+            self.repositoryList.sortColumn(),
+            self.repositoryList.header().sortIndicatorOrder())
     
     def __populateList(self):
         """
@@ -315,9 +322,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self.repositoryUrlEdit.setText(url)
                     E5MessageBox.warning(self,
                         self.trUtf8("Plugins Repository URL Changed"),
-                        self.trUtf8("""The URL of the Plugins Repository has"""
-                                    """ changed. Select the "Update" button to get"""
-                                    """ the new repository file."""))
+                        self.trUtf8(
+                            """The URL of the Plugins Repository has"""
+                            """ changed. Select the "Update" button to get"""
+                            """ the new repository file."""))
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Read plugins repository file"),
@@ -327,8 +335,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         else:
             self.__repositoryMissing = True
             QTreeWidgetItem(self.repositoryList,
-                ["",
-                 self.trUtf8("No plugin repository file available.\nSelect Update.")
+                ["", self.trUtf8(
+                    "No plugin repository file available.\nSelect Update.")
                 ])
             self.repositoryList.resizeColumnToContents(1)
     
@@ -380,8 +388,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 E5MessageBox.warning(self,
                     self.trUtf8("Error downloading file"),
                     self.trUtf8(
-                        """<p>Could not download the requested file from {0}.</p>"""
-                        """<p>Error: {1}</p>"""
+                        """<p>Could not download the requested file"""
+                        """ from {0}.</p><p>Error: {1}</p>"""
                     ).format(self.__downloadURL, reply.errorString())
                 )
             self.downloadProgress.setValue(0)
@@ -393,8 +401,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self.repositoryList.setCurrentItem(
                         self.repositoryList.topLevelItem(0))
                 else:
-                    self.__downloadButton.setEnabled(len(self.__selectedItems()))
-                    self.__downloadInstallButton.setEnabled(len(self.__selectedItems()))
+                    self.__downloadButton.setEnabled(
+                        len(self.__selectedItems()))
+                    self.__downloadInstallButton.setEnabled(
+                        len(self.__selectedItems()))
             return
         
         self.__downloadIODevice.open(QIODevice.WriteOnly)
@@ -430,7 +440,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             self.downloadProgress.setMaximum(total)
             self.downloadProgress.setValue(done)
     
-    def addEntry(self, name, short, description, url, author, version, filename, status):
+    def addEntry(self, name, short, description, url, author, version,
+                 filename, status):
         """
         Public method to add an entry to the list.
         
@@ -446,19 +457,22 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if status == "stable":
             if self.__stableItem is None:
                 self.__stableItem = \
-                    QTreeWidgetItem(self.repositoryList, [self.trUtf8("Stable")])
+                    QTreeWidgetItem(self.repositoryList,
+                                    [self.trUtf8("Stable")])
                 self.__stableItem.setExpanded(True)
             parent = self.__stableItem
         elif status == "unstable":
             if self.__unstableItem is None:
                 self.__unstableItem = \
-                    QTreeWidgetItem(self.repositoryList, [self.trUtf8("Unstable")])
+                    QTreeWidgetItem(self.repositoryList,
+                                    [self.trUtf8("Unstable")])
                 self.__unstableItem.setExpanded(True)
             parent = self.__unstableItem
         else:
             if self.__unknownItem is None:
                 self.__unknownItem = \
-                    QTreeWidgetItem(self.repositoryList, [self.trUtf8("Unknown")])
+                    QTreeWidgetItem(self.repositoryList,
+                                    [self.trUtf8("Unknown")])
                 self.__unknownItem.setExpanded(True)
             parent = self.__unknownItem
         itm = QTreeWidgetItem(parent, [name, version, short])
@@ -523,7 +537,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     @pyqtSlot(bool)
     def on_repositoryUrlEditButton_toggled(self, checked):
         """
-        Private slot to set the read only status of the repository URL line edit.
+        Private slot to set the read only status of the repository URL line
+        edit.
         
         @param checked state of the push button (boolean)
         """
@@ -587,7 +602,8 @@ class PluginRepositoryWindow(E5MainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)
@@ -604,7 +620,8 @@ class PluginRepositoryWindow(E5MainWindow):
         args.append(applPath)
         args += self.cw.getDownloadedPlugins()
         
-        if not os.path.isfile(applPath) or not proc.startDetached(sys.executable, args):
+        if not os.path.isfile(applPath) or \
+                not proc.startDetached(sys.executable, args):
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(

@@ -33,7 +33,8 @@ def usage():
     """
     print("eric5_api")
     print()
-    print("Copyright (c) 2004 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>.")
+    print("Copyright (c) 2004 - 2013 Detlev Offenbach"
+          " <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
@@ -57,13 +58,16 @@ def usage():
     print("  -l language or --language=language")
     print("        Generate an API file for the given programming language.")
     print("        Supported programming languages are:")
-    for lang in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
+    for lang in sorted(
+            DocumentationTools.supportedExtensionsDictForApis.keys()):
         print("            * {0}".format(lang))
     print("        The default is 'Python3'.")
     print("        This option may be repeated multiple times.")
     print("  -o filename or --output=filename")
-    print("        Write the API information to the named file. A '%L' placeholder")
-    print("        is replaced by the language of the API file (see --language).")
+    print("        Write the API information to the named file."
+          " A '%L' placeholder")
+    print("        is replaced by the language of the API file"
+          " (see --language).")
     print("  -p or --private")
     print("        Include private methods and functions.")
     print("  -R, -r or --recursive")
@@ -111,7 +115,8 @@ def main():
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
-                   ".eric5project", "_eric5project", "dist", "build", "doc", "docs"]
+                   ".eric5project", "_eric5project", "dist", "build", "doc",
+                   "docs"]
     excludePatterns = []
     outputFileName = ""
     recursive = False
@@ -145,8 +150,9 @@ def main():
         elif k in ["-l", "--language"]:
             if v not in progLanguages:
                 if v not in \
-                   list(DocumentationTools.supportedExtensionsDictForApis.keys()):
-                    sys.stderr.write("Wrong language given: {0}. Aborting\n".format(v))
+                        DocumentationTools.supportedExtensionsDictForApis:
+                    sys.stderr.write(
+                        "Wrong language given: {0}. Aborting\n".format(v))
                     sys.exit(1)
                 else:
                     progLanguages.append(v)
@@ -183,17 +189,19 @@ def main():
                 outputFile = outputFileName
             else:
                 root, ext = os.path.splitext(outputFileName)
-                outputFile = "{0}-{1}{2}".format(root, progLanguage.lower(), ext)
+                outputFile = "{0}-{1}{2}".format(root, progLanguage.lower(),
+                                                 ext)
         basesFile = os.path.splitext(outputFile)[0] + '.bas'
         
         for arg in args:
             if os.path.isdir(arg):
                 if os.path.exists(os.path.join(arg,
-                                               Utilities.joinext("__init__", ".py"))):
+                        Utilities.joinext("__init__", ".py"))):
                     basename = os.path.dirname(arg)
                     if arg == '.':
                         sys.stderr.write("The directory '.' is a package.\n")
-                        sys.stderr.write("Please repeat the call giving its real name.\n")
+                        sys.stderr.write(
+                            "Please repeat the call giving its real name.\n")
                         sys.stderr.write("Ignoring the directory.\n")
                         continue
                 else:
@@ -214,10 +222,10 @@ def main():
                 if os.path.isdir(filename):
                     files = []
                     for ext in supportedExtensions:
-                        files.extend(glob.glob(os.path.join(filename,
-                                                            Utilities.joinext("*", ext))))
-                        initFile = os.path.join(filename,
-                                                Utilities.joinext("__init__", ext))
+                        files.extend(glob.glob(os.path.join(
+                            filename, Utilities.joinext("*", ext))))
+                        initFile = os.path.join(
+                            filename, Utilities.joinext("__init__", ext))
                         if initFile in files:
                             inpackage = True
                             files.remove(initFile)
@@ -226,7 +234,8 @@ def main():
                             # assume package
                             inpackage = True
                 else:
-                    if Utilities.isWindowsPlatform() and glob.has_magic(filename):
+                    if Utilities.isWindowsPlatform() and \
+                            glob.has_magic(filename):
                         files = glob.glob(filename)
                     else:
                         files = [filename]
@@ -244,7 +253,8 @@ def main():
                         module = Utilities.ModuleParser.readModule(file,
                             basename=basename, inpackage=inpackage)
                         apiGenerator = APIGenerator(module)
-                        api = apiGenerator.genAPI(True, basePackage, includePrivate)
+                        api = apiGenerator.genAPI(True, basePackage,
+                                                  includePrivate)
                         bases = apiGenerator.genBases(includePrivate)
                     except IOError as v:
                         sys.stderr.write("{0} error: {1}\n".format(file, v[1]))
@@ -259,7 +269,8 @@ def main():
                     for basesEntry in bases:
                         if bases[basesEntry]:
                             basesDict[basesEntry] = bases[basesEntry][:]
-                    sys.stdout.write("-- {0} -- {1} ok\n".format(progLanguage, file))
+                    sys.stdout.write("-- {0} -- {1} ok\n".format(
+                        progLanguage, file))
 
         outdir = os.path.dirname(outputFile)
         if outdir and not os.path.exists(outdir):

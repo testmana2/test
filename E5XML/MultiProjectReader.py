@@ -87,7 +87,8 @@ class MultiProjectReader(XMLStreamReaderBase):
                 if self.name() == "ProjectName":
                     project["name"] = self.readElementText()
                 elif self.name() == "ProjectFile":
-                    project["file"] = Utilities.toNativeSeparators(self.readElementText())
+                    project["file"] = Utilities.toNativeSeparators(
+                        self.readElementText())
                 elif self.name() == "ProjectDescription":
                     project["description"] = self.readElementText()
                 else:

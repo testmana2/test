@@ -24,7 +24,8 @@ for arg in sys.argv:
         break
 
 # make ThirdParty package available as a packages repository
-sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__),
+                                "ThirdParty", "Pygments"))
 
 import Globals
 from Globals import AppInfo

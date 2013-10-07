@@ -110,13 +110,16 @@ def ircFilter(msg):
                 else:
                     if colors[0]:
                         # foreground and background
-                        tag = '<span style="background-color:{0};color={1}">'.format(
-                            Preferences.getIrc("IrcColor{0}".format(int(colors[0]))),
-                            Preferences.getIrc("IrcColor{0}".format(int(colors[1]))))
+                        tag = '<span style="background-color:{0};color={1}">'\
+                            .format(Preferences.getIrc(
+                                "IrcColor{0}".format(int(colors[0]))),
+                                    Preferences.getIrc(
+                                "IrcColor{0}".format(int(colors[1]))))
                     else:
                         # background only
                         tag = '<span style="background-color:{0}">'.format(
-                            Preferences.getIrc("IrcColor{0}".format(int(colors[1]))))
+                            Preferences.getIrc(
+                                "IrcColor{0}".format(int(colors[1]))))
                 msgParts.append(tag)
                 openTags.append("span")
             else:
@@ -156,7 +159,8 @@ def __initChannelModesDict():
         "k": QCoreApplication.translate("IrcUtilities", "password protected"),
         "l": QCoreApplication.translate("IrcUtilities", "user limit"),
         "m": QCoreApplication.translate("IrcUtilities", "moderated"),
-        "n": QCoreApplication.translate("IrcUtilities", "no messages from outside"),
+        "n": QCoreApplication.translate("IrcUtilities",
+                                        "no messages from outside"),
         "p": QCoreApplication.translate("IrcUtilities", "private"),
         "q": QCoreApplication.translate("IrcUtilities", "quiet"),
         "r": QCoreApplication.translate("IrcUtilities", "reop channel"),

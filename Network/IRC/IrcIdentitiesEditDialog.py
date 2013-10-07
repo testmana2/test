@@ -30,7 +30,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         """
         Constructor
         
-        @param manager reference to the IRC network manager object (IrcNetworkManager)
+        @param manager reference to the IRC network manager object
+            (IrcNetworkManager)
         @param identityName name of the identity to be selected (string)
         @param parent reference to the parent widget (QWidget)
         """
@@ -44,7 +45,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.nicknameAddButton.setIcon(UI.PixmapCache.getIcon("plus.png"))
         self.nicknameDeleteButton.setIcon(UI.PixmapCache.getIcon("minus.png"))
         self.nicknameUpButton.setIcon(UI.PixmapCache.getIcon("1uparrow.png"))
-        self.nicknameDownButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
+        self.nicknameDownButton.setIcon(
+            UI.PixmapCache.getIcon("1downarrow.png"))
         
         self.__manager = manager
         
@@ -86,7 +88,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         """
         Private slot to update the status of the identity related buttons.
         """
-        enable = self.identitiesCombo.currentText() != IrcIdentity.DefaultIdentityDisplay
+        enable = (self.identitiesCombo.currentText() != 
+                  IrcIdentity.DefaultIdentityDisplay)
         self.renameButton.setEnabled(enable)
         self.deleteButton.setEnabled(enable)
     
@@ -140,8 +143,9 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         
         # General Tab
         self.__currentIdentity.setRealName(self.realnameEdit.text())
-        self.__currentIdentity.setNickNames([self.nicknamesList.item(row).text()
-            for row in range(self.nicknamesList.count())])
+        self.__currentIdentity.setNickNames(
+            [self.nicknamesList.item(row).text()
+             for row in range(self.nicknamesList.count())])
         self.__currentIdentity.setServiceName(self.serviceEdit.text())
         self.__currentIdentity.setPassword(self.passwordEdit.text())
         
@@ -164,12 +168,14 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if self.nicknamesList.count() == 0:
             E5MessageBox.critical(self,
                 self.trUtf8("Edit Identity"),
-                self.trUtf8("""The identity must contain at least one nick name."""))
+                self.trUtf8(
+                    """The identity must contain at least one nick name."""))
             block = self.identitiesCombo.blockSignals(True)
             identity = self.__currentIdentity.getName()
             if identity == IrcIdentity.DefaultIdentityName:
                 identity = IrcIdentity.DefaultIdentityDisplay
-            self.identitiesCombo.setCurrentIndex(self.identitiesCombo.findText(identity))
+            self.identitiesCombo.setCurrentIndex(
+                self.identitiesCombo.findText(identity))
             self.identitiesCombo.blockSignals(block)
             self.identityTabWidget.setCurrentIndex(0)
             self.nicknameEdit.setFocus()
@@ -183,7 +189,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             identity = self.__currentIdentity.getName()
             if identity == IrcIdentity.DefaultIdentityName:
                 identity = IrcIdentity.DefaultIdentityDisplay
-            self.identitiesCombo.setCurrentIndex(self.identitiesCombo.findText(identity))
+            self.identitiesCombo.setCurrentIndex(
+                self.identitiesCombo.findText(identity))
             self.identitiesCombo.blockSignals(block)
             self.identityTabWidget.setCurrentIndex(0)
             self.realnameEdit.setFocus()
@@ -207,8 +214,9 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 if name in self.__identities:
                     E5MessageBox.critical(self,
                         self.trUtf8("Add Identity"),
-                        self.trUtf8("""An identity named <b>{0}</b> already exists."""
-                                    """ You must provide a different name.""").format(
+                        self.trUtf8(
+                            """An identity named <b>{0}</b> already exists."""
+                            """ You must provide a different name.""").format(
                             name))
                     self.on_addButton_clicked()
                 else:
@@ -217,7 +225,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                     identity.setRealName(Utilities.getRealName())
                     self.__identities[name] = identity
                     self.identitiesCombo.addItem(name)
-                    self.identitiesCombo.setCurrentIndex(self.identitiesCombo.count() - 1)
+                    self.identitiesCombo.setCurrentIndex(
+                        self.identitiesCombo.count() - 1)
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Add Identity"),
@@ -242,8 +251,9 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 if name in self.__identities:
                     E5MessageBox.critical(self,
                         self.trUtf8("Copy Identity"),
-                        self.trUtf8("""An identity named <b>{0}</b> already exists."""
-                                    """ You must provide a different name.""").format(
+                        self.trUtf8(
+                            """An identity named <b>{0}</b> already exists."""
+                            """ You must provide a different name.""").format(
                             name))
                     self.on_copyButton_clicked()
                 else:
@@ -251,7 +261,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                     identity.setName(name)
                     self.__identities[name] = identity
                     self.identitiesCombo.addItem(name)
-                    self.identitiesCombo.setCurrentIndex(self.identitiesCombo.count() - 1)
+                    self.identitiesCombo.setCurrentIndex(
+                        self.identitiesCombo.count() - 1)
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Copy Identity"),
@@ -276,8 +287,9 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 if name in self.__identities:
                     E5MessageBox.critical(self,
                         self.trUtf8("Rename Identity"),
-                        self.trUtf8("""An identity named <b>{0}</b> already exists."""
-                                    """ You must provide a different name.""").format(
+                        self.trUtf8(
+                            """An identity named <b>{0}</b> already exists."""
+                            """ You must provide a different name.""").format(
                             name))
                     self.on_renameButton_clicked()
                 else:
@@ -310,12 +322,14 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 break
         
         if inUse:
-            msg = self.trUtf8("""This identity is in use. If you remove it, the network"""
-                              """ settings using it will fall back to the default"""
-                              """ identity. Should it be deleted anyway?""")
+            msg = self.trUtf8(
+                """This identity is in use. If you remove it, the network"""
+                """ settings using it will fall back to the default"""
+                """ identity. Should it be deleted anyway?""")
         else:
-            msg = self.trUtf8("""Do you really want to delete all information for"""
-                              """ this identity?""")
+            msg = self.trUtf8(
+                """Do you really want to delete all information for"""
+                """ this identity?""")
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Delete Identity"),
             msg,
@@ -327,7 +341,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
     
     def __updateNicknameUpDownButtons(self):
         """
-        Private method to set the enabled state of the nick name up and down buttons.
+        Private method to set the enabled state of the nick name up and
+        down buttons.
         """
         if len(self.nicknamesList.selectedItems()) == 0:
             self.nicknameUpButton.setEnabled(False)
@@ -336,7 +351,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             if self.nicknamesList.currentRow() == 0:
                 self.nicknameUpButton.setEnabled(False)
                 self.nicknameDownButton.setEnabled(True)
-            elif self.nicknamesList.currentRow() == self.nicknamesList.count() - 1:
+            elif self.nicknamesList.currentRow() == \
+                    self.nicknamesList.count() - 1:
                 self.nicknameUpButton.setEnabled(True)
                 self.nicknameDownButton.setEnabled(False)
             else:

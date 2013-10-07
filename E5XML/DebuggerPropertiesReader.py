@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a class for reading an XML project debugger properties file.
+Module implementing a class for reading an XML project debugger properties
+file.
 """
 
 from .Config import debuggerPropertiesFileFormatVersion
@@ -42,14 +43,16 @@ class DebuggerPropertiesReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "DebuggerProperties":
-                    self.version = \
-                        self.attribute("version", debuggerPropertiesFileFormatVersion)
+                    self.version = self.attribute(
+                        "version", debuggerPropertiesFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "Interpreter":
-                    self.project.debugProperties["INTERPRETER"] = self.readElementText()
+                    self.project.debugProperties["INTERPRETER"] = \
+                        self.readElementText()
                 elif self.name() == "DebugClient":
-                    self.project.debugProperties["DEBUGCLIENT"] = self.readElementText()
+                    self.project.debugProperties["DEBUGCLIENT"] = \
+                        self.readElementText()
                 elif self.name() == "Environment":
                     self.project.debugProperties["ENVIRONMENTOVERRIDE"] = \
                         int(self.attribute("override", "0"))
@@ -80,7 +83,8 @@ class DebuggerPropertiesReader(XMLStreamReaderBase):
         """
         Private method to read the remote debugger info.
         """
-        self.project.debugProperties["REMOTEDEBUGGER"] = int(self.attribute("on", "0"))
+        self.project.debugProperties["REMOTEDEBUGGER"] = int(self.attribute(
+            "on", "0"))
         
         while not self.atEnd():
             self.readNext()
@@ -89,9 +93,11 @@ class DebuggerPropertiesReader(XMLStreamReaderBase):
             
             if self.isStartElement():
                 if self.name() == "RemoteHost":
-                    self.project.debugProperties["REMOTEHOST"] = self.readElementText()
+                    self.project.debugProperties["REMOTEHOST"] = \
+                        self.readElementText()
                 elif self.name() == "RemoteCommand":
-                    self.project.debugProperties["REMOTECOMMAND"] = self.readElementText()
+                    self.project.debugProperties["REMOTECOMMAND"] = \
+                        self.readElementText()
                 else:
                     self.raiseUnexpectedStartTag(self.name())
     
@@ -99,7 +105,8 @@ class DebuggerPropertiesReader(XMLStreamReaderBase):
         """
         Private method to read the path translation info.
         """
-        self.project.debugProperties["PATHTRANSLATION"] = int(self.attribute("on", "0"))
+        self.project.debugProperties["PATHTRANSLATION"] = int(self.attribute(
+            "on", "0"))
         
         while not self.atEnd():
             self.readNext()
@@ -108,8 +115,10 @@ class DebuggerPropertiesReader(XMLStreamReaderBase):
             
             if self.isStartElement():
                 if self.name() == "RemotePath":
-                    self.project.debugProperties["REMOTEPATH"] = self.readElementText()
+                    self.project.debugProperties["REMOTEPATH"] = \
+                        self.readElementText()
                 elif self.name() == "LocalPath":
-                    self.project.debugProperties["LOCALPATH"] = self.readElementText()
+                    self.project.debugProperties["LOCALPATH"] = \
+                        self.readElementText()
                 else:
                     self.raiseUnexpectedStartTag(self.name())

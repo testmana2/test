@@ -36,7 +36,8 @@ class ShortcutsReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Shortcuts":
-                    self.version = self.attribute("version", shortcutsFileFormatVersion)
+                    self.version = self.attribute(
+                        "version", shortcutsFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "Shortcut":

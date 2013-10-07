@@ -39,12 +39,14 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         
         self.noModules = noModules
         
-        self.umlView.setDiagramName(self.trUtf8("Application Diagram {0}").format(
-            self.project.getProjectName()))
+        self.umlView.setDiagramName(
+            self.trUtf8("Application Diagram {0}").format(
+                self.project.getProjectName()))
         
     def __buildModulesDict(self):
         """
-        Private method to build a dictionary of modules contained in the application.
+        Private method to build a dictionary of modules contained in the
+        application.
         
         @return dictionary of modules contained in the application.
         """
@@ -55,7 +57,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         mods = self.project.pdata["SOURCES"]
         modules = []
         for module in mods:
-            modules.append(Utilities.normabsjoinpath(self.project.ppath, module))
+            modules.append(Utilities.normabsjoinpath(
+                self.project.ppath, module))
         tot = len(modules)
         try:
             prog = 0
@@ -71,8 +74,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                 if module.endswith("__init__.py"):
                     continue
                 try:
-                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions,
-                                                            caching=False)
+                    mod = Utilities.ModuleParser.readModule(
+                        module, extensions=extensions, caching=False)
                 except ImportError:
                     continue
                 else:
@@ -143,13 +146,15 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                         ppath = packagePath
                         while hasInit:
                             ppath = os.path.dirname(ppath)
-                            hasInit = \
-                                len(glob.glob(os.path.join(ppath, '__init__.*'))) > 0
-                        shortPackage = \
-                            packagePath.replace(ppath, '').replace(os.sep, '.')[1:]
+                            hasInit = len(glob.glob(os.path.join(
+                                ppath, '__init__.*'))) > 0
+                        shortPackage = packagePath.replace(ppath, '')\
+                            .replace(os.sep, '.')[1:]
                         packageList = shortPackage.split('.')[1:]
                         packageListLen = len(packageList)
-                        i = '.'.join(packageList[:packageListLen - dots + 1] + [i[dots:]])
+                        i = '.'.join(
+                            packageList[:packageListLen - dots + 1] + 
+                            [i[dots:]])
                 
                 if i in modules:
                     impLst.append(i)
@@ -185,7 +190,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                     relPackage = self.trUtf8("<<Application>>")
             else:
                 relPackage = self.trUtf8("<<Others>>")
-            shape = self.__addPackage(relPackage, packages[package][0], 0.0, 0.0)
+            shape = self.__addPackage(
+                relPackage, packages[package][0], 0.0, 0.0)
             shapeRect = shape.sceneBoundingRect()
             shapes[package] = (shape, packages[package][1])
             pn = p + shapeRect.width() + 10
@@ -270,8 +276,9 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         if projectFile != self.project.getProjectFile():
             res = E5MessageBox.yesNo(None,
                 self.trUtf8("Load Diagram"),
-                self.trUtf8("""<p>The diagram belongs to the project <b>{0}</b>."""
-                             """ Shall this project be opened?</p>""").format(
+                self.trUtf8(
+                    """<p>The diagram belongs to the project <b>{0}</b>."""
+                    """ Shall this project be opened?</p>""").format(
                     projectFile))
             if res:
                 self.project.openProject(projectFile)

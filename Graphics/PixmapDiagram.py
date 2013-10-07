@@ -8,8 +8,9 @@ Module implementing a dialog showing a pixmap.
 """
 
 from PyQt4.QtCore import Qt, QSize, QEvent
-from PyQt4.QtGui import QLabel, QPalette, QSizePolicy, QScrollArea, QAction, QMenu, \
-    QToolBar, QImage, QPixmap, QPrinter, QPrintDialog, QPainter, QFont, QColor
+from PyQt4.QtGui import QLabel, QPalette, QSizePolicy, QScrollArea, QAction, \
+    QMenu, QToolBar, QImage, QPixmap, QPrinter, QPrintDialog, QPainter, \
+    QFont, QColor
 
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
@@ -51,7 +52,8 @@ class PixmapDiagram(E5MainWindow):
         self.pixmapLabel = QLabel()
         self.pixmapLabel.setObjectName("pixmapLabel")
         self.pixmapLabel.setBackgroundRole(QPalette.Base)
-        self.pixmapLabel.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Ignored)
+        self.pixmapLabel.setSizePolicy(
+            QSizePolicy.Ignored, QSizePolicy.Ignored)
         self.pixmapLabel.setScaledContents(True)
         
         self.pixmapView = QScrollArea()
@@ -61,7 +63,8 @@ class PixmapDiagram(E5MainWindow):
         
         self.setCentralWidget(self.pixmapView)
         
-        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+        self.__zoomWidget = E5ZoomWidget(
+            UI.PixmapCache.getPixmap("zoomOut.png"),
             UI.PixmapCache.getPixmap("zoomIn.png"),
             UI.PixmapCache.getPixmap("zoomReset.png"), self)
         self.statusBar().addPermanentWidget(self.__zoomWidget)
@@ -215,9 +218,9 @@ class PixmapDiagram(E5MainWindow):
                 self.__doZoom(int(pinch.scaleFactor() * 100))
             evt.accept()
     
-    ############################################################################
+    ###########################################################################
     ## Private menu handling methods below.
-    ############################################################################
+    ###########################################################################
     
     def __adjustScrollBar(self, scrollBar, factor):
         """
@@ -252,11 +255,14 @@ class PixmapDiagram(E5MainWindow):
         """
         oldValue = self.__zoom()
         if value != oldValue:
-            self.pixmapLabel.resize(value / 100 * self.pixmapLabel.pixmap().size())
+            self.pixmapLabel.resize(
+                value / 100 * self.pixmapLabel.pixmap().size())
             
             factor = value / oldValue
-            self.__adjustScrollBar(self.pixmapView.horizontalScrollBar(), factor)
-            self.__adjustScrollBar(self.pixmapView.verticalScrollBar(), factor)
+            self.__adjustScrollBar(
+                self.pixmapView.horizontalScrollBar(), factor)
+            self.__adjustScrollBar(
+                self.pixmapView.verticalScrollBar(), factor)
             
             self.__zoomWidget.setValue(value)
         
@@ -288,7 +294,8 @@ class PixmapDiagram(E5MainWindow):
         
         @return current zoom factor in percent (integer)
         """
-        return int(self.pixmapLabel.width() / self.pixmapLabel.pixmap().width() * 100.0)
+        return int(self.pixmapLabel.width() / 
+                   self.pixmapLabel.pixmap().width() * 100.0)
         
     def __printDiagram(self):
         """
@@ -354,18 +361,18 @@ class PixmapDiagram(E5MainWindow):
         fm = painter.fontMetrics()
         fontHeight = fm.lineSpacing()
         marginX = printer.pageRect().x() - printer.paperRect().x()
-        marginX = \
-            Preferences.getPrinter("LeftMargin") * int(printer.resolution() / 2.54) \
-            - marginX
+        marginX = Preferences.getPrinter("LeftMargin") * \
+            int(printer.resolution() / 2.54) - marginX
         marginY = printer.pageRect().y() - printer.paperRect().y()
-        marginY = \
-            Preferences.getPrinter("TopMargin") * int(printer.resolution() / 2.54) \
-            - marginY
+        marginY = Preferences.getPrinter("TopMargin") * \
+            int(printer.resolution() / 2.54) - marginY
 
-        width = printer.width() - marginX \
-            - Preferences.getPrinter("RightMargin") * int(printer.resolution() / 2.54)
-        height = printer.height() - fontHeight - 4 - marginY \
-            - Preferences.getPrinter("BottomMargin") * int(printer.resolution() / 2.54)
+        width = printer.width() - marginX - \
+            Preferences.getPrinter("RightMargin") * \
+            int(printer.resolution() / 2.54)
+        height = printer.height() - fontHeight - 4 - marginY - \
+            Preferences.getPrinter("BottomMargin") * \
+            int(printer.resolution() / 2.54)
 
         # write a foot note
         s = self.trUtf8("Diagram: {0}").format(self.getDiagramName())
@@ -382,7 +389,8 @@ class PixmapDiagram(E5MainWindow):
         size = self.pixmapLabel.pixmap().size()
         size.scale(QSize(width - 10, height - 10),  # 5 px inner margin
             Qt.KeepAspectRatio)
-        painter.setViewport(marginX + 5, marginY + 5, size.width(), size.height())
+        painter.setViewport(marginX + 5, marginY + 5,
+                            size.width(), size.height())
         painter.setWindow(self.pixmapLabel.pixmap().rect())
         painter.drawPixmap(0, 0, self.pixmapLabel.pixmap())
         painter.end()

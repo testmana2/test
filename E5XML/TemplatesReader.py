@@ -44,7 +44,8 @@ class TemplatesReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Templates":
-                    self.version = self.attribute("version", templatesFileFormatVersion)
+                    self.version = self.attribute(
+                        "version", templatesFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "TemplateGroup":
@@ -83,7 +84,9 @@ class TemplatesReader(XMLStreamReaderBase):
         
         while not self.atEnd():
             self.readNext()
-            if self.isEndElement() and self.name() == "Template" and templateName:
+            if self.isEndElement() and \
+                    self.name() == "Template" and \
+                    templateName:
                 self.viewer.addEntry(self.groupName, templateName,
                                      templateDescription, templateText,
                                      quiet=True)

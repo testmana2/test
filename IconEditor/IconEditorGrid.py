@@ -8,8 +8,9 @@ Module implementing the icon editor grid.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QPoint, QRect, QSize
-from PyQt4.QtGui import QUndoCommand, QImage, QWidget, QColor, QPixmap, QSizePolicy, \
-    QUndoStack, qRgba, QPainter, QApplication, QCursor, QBrush, QDialog, qGray, qAlpha
+from PyQt4.QtGui import QUndoCommand, QImage, QWidget, QColor, QPixmap, \
+    QSizePolicy, QUndoStack, qRgba, QPainter, QApplication, QCursor, \
+    QBrush, QDialog, qGray, qAlpha
 
 from E5Gui import E5MessageBox
 
@@ -26,7 +27,8 @@ class IconEditCommand(QUndoCommand):
         
         @param grid reference to the icon editor grid (IconEditorGrid)
         @param text text for the undo command (string)
-        @param oldImage copy of the icon before the changes were applied (QImage)
+        @param oldImage copy of the icon before the changes were applied
+            (QImage)
         @param parent reference to the parent command (QUndoCommand)
         """
         super().__init__(text, parent)
@@ -63,13 +65,15 @@ class IconEditorGrid(QWidget):
     
     @signal canRedoChanged(bool) emitted after the redo status has changed
     @signal canUndoChanged(bool) emitted after the undo status has changed
-    @signal clipboardImageAvailable(bool) emitted to signal the availability of an
-        image to be pasted
+    @signal clipboardImageAvailable(bool) emitted to signal the availability
+        of an image to be pasted
     @signal colorChanged(QColor) emitted after the drawing color was changed
     @signal imageChanged(bool) emitted after the image was modified
-    @signal positionChanged(int, int) emitted after the cursor poition was changed
+    @signal positionChanged(int, int) emitted after the cursor poition was
+        changed
     @signal previewChanged(QPixmap) emitted to signal a new preview pixmap
-    @signal selectionAvailable(bool) emitted to signal a change of the selection
+    @signal selectionAvailable(bool) emitted to signal a change of the
+        selection
     @signal sizeChanged(int, int) emitted after the size has been changed
     @signal zoomChanged(int) emitted to signal a change of the zoom value
     """
@@ -192,8 +196,8 @@ class IconEditorGrid(QWidget):
     
     def __initUndoTexts(self):
         """
-        Private method to initialize texts to be associated with undo commands for
-        the various drawing tools.
+        Private method to initialize texts to be associated with undo commands
+        for the various drawing tools.
         """
         self.__undoTexts = {
             self.Pencil: self.trUtf8("Set Pixel"),
@@ -221,7 +225,8 @@ class IconEditorGrid(QWidget):
         Public slot to set the dirty flag.
         
         @param dirty flag indicating the new modification status (boolean)
-        @param setCleanState flag indicating to set the undo stack to clean (boolean)
+        @param setCleanState flag indicating to set the undo stack to clean
+            (boolean)
         """
         self.__dirty = dirty
         self.imageChanged.emit(dirty)
@@ -288,8 +293,8 @@ class IconEditorGrid(QWidget):
         else:
             self.__selecting = False
         
-        if self.__curTool in [self.RectangleSelection, self.CircleSelection, self.Line,
-                              self.Rectangle, self.FilledRectangle,
+        if self.__curTool in [self.RectangleSelection, self.CircleSelection,
+                              self.Line, self.Rectangle, self.FilledRectangle,
                               self.Circle, self.FilledCircle,
                               self.Ellipse, self.FilledEllipse]:
             self.setCursor(self.__aimCursor)
@@ -408,13 +413,15 @@ class IconEditorGrid(QWidget):
             painter.setPen(self.palette().windowText().color())
             i = 0
             while i <= self.__image.width():
-                painter.drawLine(self.__zoom * i, 0,
-                                 self.__zoom * i, self.__zoom * self.__image.height())
+                painter.drawLine(
+                    self.__zoom * i, 0,
+                    self.__zoom * i, self.__zoom * self.__image.height())
                 i += 1
             j = 0
             while j <= self.__image.height():
-                painter.drawLine(0,  self.__zoom * j,
-                                 self.__zoom * self.__image.width(), self.__zoom * j)
+                painter.drawLine(
+                    0,  self.__zoom * j,
+                    self.__zoom * self.__image.width(), self.__zoom * j)
                 j += 1
         
         col = QColor("#aaa")
@@ -426,7 +433,8 @@ class IconEditorGrid(QWidget):
                     color = QColor.fromRgba(self.__image.pixel(i, j))
                     painter.fillRect(rect, QBrush(Qt.white))
                     painter.fillRect(QRect(rect.topLeft(), rect.center()), col)
-                    painter.fillRect(QRect(rect.center(), rect.bottomRight()), col)
+                    painter.fillRect(QRect(rect.center(), rect.bottomRight()),
+                                     col)
                     painter.fillRect(rect, QBrush(color))
                 
                     if self.__isMarked(i, j):
@@ -446,7 +454,8 @@ class IconEditorGrid(QWidget):
             return QRect(self.__zoom * i + 1, self.__zoom * j + 1,
                          self.__zoom - 1, self.__zoom - 1)
         else:
-            return QRect(self.__zoom * i, self.__zoom * j, self.__zoom, self.__zoom)
+            return QRect(self.__zoom * i, self.__zoom * j,
+                         self.__zoom, self.__zoom)
     
     def mousePressEvent(self, evt):
         """
@@ -535,7 +544,8 @@ class IconEditorGrid(QWidget):
             
             if self.__curTool not in [self.Pencil, self.Rubber,
                                       self.Fill, self.ColorPicker,
-                                      self.RectangleSelection, self.CircleSelection]:
+                                      self.RectangleSelection,
+                                      self.CircleSelection]:
                 cmd = IconEditCommand(self, self.__undoTexts[self.__curTool],
                                       self.__image)
                 if self.__drawTool(evt.pos(), False):
@@ -583,8 +593,9 @@ class IconEditorGrid(QWidget):
         """
         self.__markImage.fill(self.NoMarkColor.rgba())
         if self.__pasteRect.isValid():
-            self.__updateImageRect(self.__pasteRect.topLeft(),
-                                   self.__pasteRect.bottomRight() + QPoint(1, 1))
+            self.__updateImageRect(
+                self.__pasteRect.topLeft(),
+                self.__pasteRect.bottomRight() + QPoint(1, 1))
         
         x, y = self.__imageCoordinates(pos)
         isize = self.__image.size()
@@ -661,7 +672,8 @@ class IconEditorGrid(QWidget):
                 painter.setBrush(QBrush(drawColor))
             painter.drawEllipse(start, r, r)
             if self.__selecting:
-                self.__selRect = QRect(start.x() - r, start.y() - r, 2 * r + 1, 2 * r + 1)
+                self.__selRect = QRect(start.x() - r, start.y() - r,
+                                       2 * r + 1, 2 * r + 1)
                 self.__selectionAvailable = True
                 self.selectionAvailable.emit(True)
         
@@ -713,8 +725,10 @@ class IconEditorGrid(QWidget):
         """
         Private slot to update parts of the widget.
         
-        @param pos1 top, left position for the update in widget coordinates (QPoint)
-        @param pos2 bottom, right position for the update in widget coordinates (QPoint)
+        @param pos1 top, left position for the update in widget coordinates
+            (QPoint)
+        @param pos2 bottom, right position for the update in widget
+            coordinates (QPoint)
         """
         self.__updateImageRect(QPoint(*self.__imageCoordinates(pos1)),
                                QPoint(*self.__imageCoordinates(pos2)))
@@ -723,8 +737,10 @@ class IconEditorGrid(QWidget):
         """
         Private slot to update parts of the widget.
         
-        @param ipos1 top, left position for the update in image coordinates (QPoint)
-        @param ipos2 bottom, right position for the update in image coordinates (QPoint)
+        @param ipos1 top, left position for the update in image coordinates
+            (QPoint)
+        @param ipos2 bottom, right position for the update in image
+            coordinates (QPoint)
         """
         r1 = self.__pixelRect(ipos1.x(), ipos1.y())
         r2 = self.__pixelRect(ipos2.x(), ipos2.y())
@@ -780,8 +796,8 @@ class IconEditorGrid(QWidget):
     
     def __checkClipboard(self):
         """
-        Private slot to check, if the clipboard contains a valid image, and signal
-        the result.
+        Private slot to check, if the clipboard contains a valid image, and
+        signal the result.
         """
         ok = self.__clipboardImage()[1]
         self.__clipboardImageAvailable = ok
@@ -817,7 +833,8 @@ class IconEditorGrid(QWidget):
         @return image of the selection (QImage)
         """
         if cut:
-            cmd = IconEditCommand(self, self.trUtf8("Cut Selection"), self.__image)
+            cmd = IconEditCommand(self, self.trUtf8("Cut Selection"),
+                                  self.__image)
         
         img = QImage(self.__selRect.size(), QImage.Format_ARGB32)
         img.fill(qRgba(0, 0, 0, 0))
@@ -825,9 +842,10 @@ class IconEditorGrid(QWidget):
             for j in range(0, self.__selRect.height()):
                 if self.__image.rect().contains(self.__selRect.x() + i,
                                                 self.__selRect.y() + j):
-                    if self.__isMarked(self.__selRect.x() + i, self.__selRect.y() + j):
-                        img.setPixel(i, j, self.__image.pixel(self.__selRect.x() + i,
-                                                              self.__selRect.y() + j))
+                    if self.__isMarked(
+                            self.__selRect.x() + i, self.__selRect.y() + j):
+                        img.setPixel(i, j, self.__image.pixel(
+                            self.__selRect.x() + i, self.__selRect.y() + j))
                         if cut:
                             self.__image.setPixel(self.__selRect.x() + i,
                                                   self.__selRect.y() + j,
@@ -864,15 +882,18 @@ class IconEditorGrid(QWidget):
         """
         Public slot to paste an image from the clipboard.
         
-        @param pasting flag indicating part two of the paste operation (boolean)
+        @param pasting flag indicating part two of the paste operation
+            (boolean)
         """
         img, ok = self.__clipboardImage()
         if ok:
-            if img.width() > self.__image.width() or img.height() > self.__image.height():
+            if img.width() > self.__image.width() or \
+                    img.height() > self.__image.height():
                 res = E5MessageBox.yesNo(self,
                     self.trUtf8("Paste"),
-                    self.trUtf8("""<p>The clipboard image is larger than the current """
-                                """image.<br/>Paste as new image?</p>"""))
+                    self.trUtf8(
+                        """<p>The clipboard image is larger than the"""
+                        """ current image.<br/>Paste as new image?</p>"""))
                 if res:
                     self.editPasteAsNew()
                 return
@@ -880,19 +901,23 @@ class IconEditorGrid(QWidget):
                 self.__isPasting = True
                 self.__clipboardSize = img.size()
             else:
-                cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard"), self.__image)
+                cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard"),
+                                      self.__image)
                 self.__markImage.fill(self.NoMarkColor.rgba())
                 painter = QPainter(self.__image)
                 painter.setPen(self.penColor())
                 painter.setCompositionMode(self.__compositingMode)
-                painter.drawImage(self.__pasteRect.x(), self.__pasteRect.y(), img, 0, 0,
-                    self.__pasteRect.width() + 1, self.__pasteRect.height() + 1)
+                painter.drawImage(
+                    self.__pasteRect.x(), self.__pasteRect.y(), img, 0, 0,
+                    self.__pasteRect.width() + 1,
+                    self.__pasteRect.height() + 1)
                 
                 self.__undoStack.push(cmd)
                 cmd.setAfterImage(self.__image)
                 
-                self.__updateImageRect(self.__pasteRect.topLeft(),
-                                       self.__pasteRect.bottomRight() + QPoint(1, 1))
+                self.__updateImageRect(
+                    self.__pasteRect.topLeft(),
+                    self.__pasteRect.bottomRight() + QPoint(1, 1))
         else:
             E5MessageBox.warning(self,
                 self.trUtf8("Pasting Image"),
@@ -904,8 +929,9 @@ class IconEditorGrid(QWidget):
         """
         img, ok = self.__clipboardImage()
         if ok:
-            cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard as New Image"),
-                                  self.__image)
+            cmd = IconEditCommand(
+                self, self.trUtf8("Paste Clipboard as New Image"),
+                self.__image)
             self.setIconImage(img)
             self.setDirty(True)
             self.__undoStack.push(cmd)
@@ -948,10 +974,13 @@ class IconEditorGrid(QWidget):
         res = dlg.exec_()
         if res == QDialog.Accepted:
             newWidth, newHeight = dlg.getData()
-            if newWidth != self.__image.width() or newHeight != self.__image.height():
-                cmd = IconEditCommand(self, self.trUtf8("Resize Image"), self.__image)
-                img = self.__image.scaled(newWidth, newHeight, Qt.IgnoreAspectRatio,
-                                          Qt.SmoothTransformation)
+            if newWidth != self.__image.width() or \
+                    newHeight != self.__image.height():
+                cmd = IconEditCommand(self, self.trUtf8("Resize Image"),
+                                      self.__image)
+                img = self.__image.scaled(
+                    newWidth, newHeight, Qt.IgnoreAspectRatio,
+                    Qt.SmoothTransformation)
                 self.setIconImage(img)
                 self.setDirty(True)
                 self.__undoStack.push(cmd)
@@ -974,13 +1003,15 @@ class IconEditorGrid(QWidget):
         """
         Public slot to convert the image to gray preserving transparency.
         """
-        cmd = IconEditCommand(self, self.trUtf8("Convert to Grayscale"), self.__image)
+        cmd = IconEditCommand(self, self.trUtf8("Convert to Grayscale"),
+                              self.__image)
         for x in range(self.__image.width()):
             for y in range(self.__image.height()):
                 col = self.__image.pixel(x, y)
                 if col != qRgba(0, 0, 0, 0):
                     gray = qGray(col)
-                    self.__image.setPixel(x, y, qRgba(gray, gray, gray, qAlpha(col)))
+                    self.__image.setPixel(
+                        x, y, qRgba(gray, gray, gray, qAlpha(col)))
         self.update()
         self.setDirty(True)
         self.__undoStack.push(cmd)

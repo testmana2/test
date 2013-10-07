@@ -27,7 +27,8 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         Constructor
         
-        @param manager reference to the IRC network manager object (IrcNetworkManager)
+        @param manager reference to the IRC network manager object
+            (IrcNetworkManager)
         @param networkName name of the network to work on (string)
         @param parent reference to the parent widget (QWidget)
         """
@@ -36,16 +37,20 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         
         self.__manager = manager
         
-        self.editIdentitiesButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
-        self.editServerButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
-        self.editChannelButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
+        self.editIdentitiesButton.setIcon(
+            UI.PixmapCache.getIcon("ircConfigure.png"))
+        self.editServerButton.setIcon(
+            UI.PixmapCache.getIcon("ircConfigure.png"))
+        self.editChannelButton.setIcon(
+            UI.PixmapCache.getIcon("ircConfigure.png"))
         self.addChannelButton.setIcon(UI.PixmapCache.getIcon("plus.png"))
         self.deleteChannelButton.setIcon(UI.PixmapCache.getIcon("minus.png"))
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
         if networkName:
-            self.__network = copy.deepcopy(self.__manager.getNetwork(networkName))
+            self.__network = copy.deepcopy(
+                self.__manager.getNetwork(networkName))
         else:
             from .IrcNetworkManager import IrcNetwork
             self.__network = IrcNetwork("")
@@ -178,7 +183,8 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         if itm:
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("Delete Channel"),
-                self.trUtf8("""Do you really want to delete channel <b>{0}</b>?""")\
+                self.trUtf8(
+                    """Do you really want to delete channel <b>{0}</b>?""")
                     .format(itm.text(0)))
             if res:
                 self.__network.deleteChannel(itm.text(0))

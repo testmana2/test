@@ -78,11 +78,13 @@ class ClassItem(UMLItem):
         Constructor
         
         @param model class model containing the class data (ClassModel)
-        @param external flag indicating a class defined outside our scope (boolean)
+        @param external flag indicating a class defined outside our scope
+            (boolean)
         @param x x-coordinate (integer)
         @param y y-coordinate (integer)
         @keyparam rounded flag indicating a rounded corner (boolean)
-        @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
+        @keyparam noAttrs flag indicating, that no attributes should be shown
+            (boolean)
         @keyparam parent reference to the parent object (QGraphicsItem)
         @keyparam scene reference to the scene object (QGraphicsScene)
         """
@@ -182,7 +184,8 @@ class ClassItem(UMLItem):
         @param widget optional reference to the widget painted on (QWidget)
         """
         pen = self.pen()
-        if (option.state & QStyle.State_Selected) == QStyle.State(QStyle.State_Selected):
+        if (option.state & QStyle.State_Selected) == \
+                QStyle.State(QStyle.State_Selected):
             pen.setWidth(2)
         else:
             pen.setWidth(1)
@@ -201,7 +204,8 @@ class ClassItem(UMLItem):
         painter.drawLine(offsetX, offsetY + y, offsetX + w - 1, offsetY + y)
         if self.attrs:
             y += self.margin + self.attrs.boundingRect().height()
-            painter.drawLine(offsetX, offsetY + y, offsetX + w - 1, offsetY + y)
+            painter.drawLine(offsetX, offsetY + y,
+                             offsetX + w - 1, offsetY + y)
         
         self.adjustAssociations()
         
@@ -218,8 +222,8 @@ class ClassItem(UMLItem):
         Public method to build a string to persist the specific item data.
         
         This string must start with ", " and should be built like
-        "attribute=value" with pairs separated by ", ". value must not contain ", "
-        or newlines.
+        "attribute=value" with pairs separated by ", ". value must not
+        contain ", " or newlines.
         
         @return persistence data (string)
         """

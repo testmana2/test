@@ -130,14 +130,16 @@ def uninstallEric():
     
     # Cleanup the install directories
     for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                 'ericIconDir', 'ericPixDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',
-                 'ericOthersDir', 'ericStylesDir', 'ericDir']:
+                 'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
+                 'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
+                 'ericDir']:
         dirpath = getConfig(name)
         if os.path.exists(dirpath):
             shutil.rmtree(dirpath, True)
     
     # Cleanup translations
-    for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+    for name in glob.glob(
+            os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
         if os.path.exists(name):
             os.remove(name)
     
@@ -148,7 +150,8 @@ def uninstallEric():
             apiname = os.path.join(apidir, progLanguage.lower(), name)
             if os.path.exists(apiname):
                 os.remove(apiname)
-        for apiname in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
+        for apiname in glob.glob(
+                os.path.join(apidir, progLanguage.lower(), "*.bas")):
             os.remove(apiname)
     
     if sys.platform == "darwin":
@@ -187,9 +190,11 @@ def main(argv):
     try:
         uninstallEric()
     except IOError as msg:
-        sys.stderr.write('IOError: {0}\nTry uninstall with admin rights.\n'.format(msg))
+        sys.stderr.write(
+            'IOError: {0}\nTry uninstall with admin rights.\n'.format(msg))
     except OSError as msg:
-        sys.stderr.write('OSError: {0}\nTry uninstall with admin rights.\n'.format(msg))
+        sys.stderr.write(
+            'OSError: {0}\nTry uninstall with admin rights.\n'.format(msg))
     
     exit(0)
 
@@ -200,7 +205,8 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print("""An internal error occured.  Please report all the output of the program,
+        print(
+"""An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
 """)
         raise

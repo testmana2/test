@@ -35,7 +35,8 @@ sourceDir = "eric"
 configName = 'eric5config.py'
 defaultMacAppBundleName = "eric5.app"
 macAppBundleName = "eric5.app"
-macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(sys.exec_prefix)
+macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
+    sys.exec_prefix)
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
@@ -93,8 +94,8 @@ def usage(rcode=2):
     print()
     print("Usage:")
     if sys.platform == "darwin":
-        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir] [-m name] [-p python]"\
-        .format(progName))
+        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
+              " [-m name] [-p python]".format(progName))
     elif sys.platform.startswith("win"):
         print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file]"\
         .format(progName))
@@ -112,7 +113,8 @@ def usage(rcode=2):
     print("              (default: {0})".format(platBinDir))
     print("    -d dir    where eric5 python files will be installed")
     print("              (default: {0})".format(modDir))
-    print("    -f file   configuration file naming the various installation paths")
+    print("    -f file   configuration file naming the various installation"
+          " paths")
     if not sys.platform.startswith("win"):
         print("    -i dir    temporary install prefix")
         print("              (default: {0})".format(distDir))
@@ -121,17 +123,21 @@ def usage(rcode=2):
         print("              (default: {0})".format(macAppBundleName))
         print("    -p python name of the python executable")
         print("              (default: {0})".format(macPythonExe))
-    print("    -x        don't perform dependency checks (use on your own risk)")
+    print("    -x        don't perform dependency checks (use on your own"
+          " risk)")
     print("    -c        don't cleanup old installation first")
     print("    -z        don't compile the installed python files")
     print()
-    print("The file given to the -f option must be valid Python code defining a")
-    print("dictionary called 'cfg' with the keys 'ericDir', 'ericPixDir', 'ericIconDir',")
-    print("'ericDTDDir', 'ericCSSDir', 'ericStylesDir', 'ericDocDir', 'ericExamplesDir',")
+    print("The file given to the -f option must be valid Python code"
+          " defining a")
+    print("dictionary called 'cfg' with the keys 'ericDir', 'ericPixDir',"
+          " 'ericIconDir',")
+    print("'ericDTDDir', 'ericCSSDir', 'ericStylesDir', 'ericDocDir',"
+          " 'ericExamplesDir',")
     print("'ericTranslationsDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',")
     print("'ericOthersDir','bindir', 'mdir' and 'apidir.")
-    print("These define the directories for the installation of the various parts of"\
-          " eric5.")
+    print("These define the directories for the installation of the various"
+          " parts of eric5.")
 
     exit(rcode)
 
@@ -216,7 +222,8 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
                 '''@echo off\n''' \
                 '''start "" "{2}\\pythonw.exe"''' \
                 ''' "{0}\\{1}.pyw"''' \
-                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(pydir, wfile, sys.exec_prefix)
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(
+                pydir, wfile, sys.exec_prefix)
         else:
             wrapper = \
                 '''@"{0}\\python" "{1}\\{2}.py"''' \
@@ -259,12 +266,14 @@ def copyTree(src, dst, filters, excludeDirs=[], excludePatterns=[]):
     @param dst name of the destination directory
     @param filters list of filter pattern determining the files to be copied
     @param excludeDirs list of (sub)directories to exclude from copying
-    @keyparam excludePatterns list of filter pattern determining the files to be skipped
+    @keyparam excludePatterns list of filter pattern determining the files to
+        be skipped
     """
     try:
         names = os.listdir(src)
     except OSError:
-        return      # ignore missing directories (most probably the i18n directory)
+        # ignore missing directories (most probably the i18n directory)
+        return
     
     for name in names:
         skipIt = False
@@ -284,7 +293,8 @@ def copyTree(src, dst, filters, excludeDirs=[], excludePatterns=[]):
                     break
             else:
                 if os.path.isdir(srcname) and not srcname in excludeDirs:
-                    copyTree(srcname, dstname, filters, excludePatterns=excludePatterns)
+                    copyTree(srcname, dstname, filters,
+                             excludePatterns=excludePatterns)
 
 
 def createGlobalPluginsDir():
@@ -379,7 +389,8 @@ def cleanUp():
         # Cleanup the install directories
         for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
                      'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
-                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir', 'ericDir']:
+                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
+                     'ericDir']:
             if os.path.exists(getConfig(name)):
                 shutil.rmtree(getConfig(name), True)
         
@@ -411,7 +422,8 @@ def cleanUp():
                 shutil.rmtree("/Applications/" + macAppBundleName)
         
     except (IOError, OSError) as msg:
-        sys.stderr.write('Error: {0}\nTry install with admin rights.\n'.format(msg))
+        sys.stderr.write(
+            'Error: {0}\nTry install with admin rights.\n'.format(msg))
         exit(7)
 
 
@@ -492,15 +504,18 @@ def installEric():
         copyTree('{1}{0}Plugins'.format(os.sep, sourceDir),
             '{0}{1}Plugins'.format(cfg['ericDir'], os.sep),
             ['*.png', '*.style'])
-        copyTree('{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'],
+        copyTree(
+            '{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'],
             ['*.html', '*.qch'])
         copyTree('{1}{0}DTDs'.format(os.sep, sourceDir), cfg['ericDTDDir'],
             ['*.dtd'])
         copyTree('{1}{0}CSSs'.format(os.sep, sourceDir), cfg['ericCSSDir'],
             ['*.css'])
-        copyTree('{1}{0}Styles'.format(os.sep, sourceDir), cfg['ericStylesDir'],
+        copyTree(
+            '{1}{0}Styles'.format(os.sep, sourceDir), cfg['ericStylesDir'],
             ['*.qss'])
-        copyTree('{1}{0}i18n'.format(os.sep, sourceDir), cfg['ericTranslationsDir'],
+        copyTree(
+            '{1}{0}i18n'.format(os.sep, sourceDir), cfg['ericTranslationsDir'],
             ['*.qm'])
         copyTree('{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'],
             ['*.png', 'LICENSE*.*', 'readme.txt'])
@@ -512,7 +527,8 @@ def installEric():
         copyTree('{1}{0}CodeTemplates'.format(os.sep, sourceDir),
             cfg['ericCodeTemplatesDir'],
             ['*.tmpl'])
-        copyTree('{1}{0}Examples'.format(os.sep, sourceDir), cfg['ericExamplesDir'],
+        copyTree(
+            '{1}{0}Examples'.format(os.sep, sourceDir), cfg['ericExamplesDir'],
             ['*.py', '*.pyc', '*.pyo'])
         
         # copy the wrappers
@@ -521,21 +537,25 @@ def installEric():
             os.remove(wname)
         
         # copy the license file
-        shutilCopy('{1}{0}LICENSE.GPL3'.format(os.sep, sourceDir), cfg['ericDir'])
+        shutilCopy(
+            '{1}{0}LICENSE.GPL3'.format(os.sep, sourceDir), cfg['ericDir'])
         
         # create the global plugins directory
         createGlobalPluginsDir()
         
     except (IOError, OSError) as msg:
-        sys.stderr.write('Error: {0}\nTry install with admin rights.\n'.format(msg))
+        sys.stderr.write(
+            'Error: {0}\nTry install with admin rights.\n'.format(msg))
         return(7)
     
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
         try:
-            shutilCopy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericDocDir'])
+            shutilCopy(
+                '{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericDocDir'])
         except EnvironmentError:
-            print("Could not install '{2}{0}{1}'.".format(os.sep, name, sourceDir))
+            print("Could not install '{2}{0}{1}'.".format(
+                os.sep, name, sourceDir))
     for name in glob.glob(os.path.join(sourceDir, 'README*.*')):
         try:
             shutilCopy(name, cfg['ericDocDir'])
@@ -545,33 +565,40 @@ def installEric():
     # copy some more stuff
     for name in ['default.e4k', 'default_Mac.e4k']:
         try:
-            shutilCopy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericOthersDir'])
+            shutilCopy(
+                '{2}{0}{1}'.format(os.sep, name, sourceDir),
+                cfg['ericOthersDir'])
         except EnvironmentError:
-            print("Could not install '{2}{0}{1}'.".format(os.sep, name, sourceDir))
+            print("Could not install '{2}{0}{1}'.".format(
+                os.sep, name, sourceDir))
     
     # install the API file
     for progLanguage in progLanguages:
         apidir = os.path.join(cfg['apidir'], progLanguage.lower())
         if not os.path.exists(apidir):
             os.makedirs(apidir)
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
+        for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                              progLanguage, "*.api")):
             try:
                 shutilCopy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '{0}'.".format(apiName))
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.bas")):
+        for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                              progLanguage, "*.bas")):
             try:
                 shutilCopy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '{0}'.".format(apiName))
         if progLanguage == "Python":
             # copy Python3 API files to the same destination
-            for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+            for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                                  "Python3", "*.api")):
                 try:
                     shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
-            for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.bas")):
+            for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                                  "Python3", "*.bas")):
                 try:
                     shutilCopy(apiName, apidir)
                 except EnvironmentError:
@@ -585,7 +612,8 @@ def installEric():
                 os.makedirs(dst)
             shutilCopy(os.path.join(sourceDir, "icons", "default", "eric.png"),
                        os.path.join(dst, "eric.png"))
-            dst = os.path.normpath(os.path.join(distDir, "usr/share/applications"))
+            dst = os.path.normpath(
+                os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
@@ -594,7 +622,8 @@ def installEric():
                 "/usr/share/pixmaps/eric.png")
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"),
                 "/usr/share/applications")
-            shutilCopy(os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
+            shutilCopy(
+                os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
                 "/usr/share/pixmaps/ericWeb.png")
             shutilCopy(os.path.join(sourceDir, "eric5_webbrowser.desktop"),
                 "/usr/share/applications")
@@ -610,14 +639,15 @@ def createMacAppBundle(pydir):
     """
     Create a Mac application bundle.
 
-    @param pydir the name of the directory where the Python script will eventually
-        be installed (string)
+    @param pydir the name of the directory where the Python script will
+        eventually be installed (string)
     """
     global cfg, sourceDir, macAppBundleName, macPythonExe
     
     dirs = {"contents": "/Applications/{0}/Contents/".format(macAppBundleName),
             "exe": "/Applications/{0}/Contents/MacOS".format(macAppBundleName),
-            "icns": "/Applications/{0}/Contents/Resources".format(macAppBundleName)}
+            "icns": "/Applications/{0}/Contents/Resources".format(
+                macAppBundleName)}
     os.makedirs(dirs["contents"])
     os.mkdir(dirs["exe"])
     os.mkdir(dirs["icns"])
@@ -720,11 +750,13 @@ def createConfig():
     
     apis = []
     for progLanguage in progLanguages:
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
+        for apiName in glob.glob(
+                os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
             apis.append(os.path.basename(apiName))
         if progLanguage == "Python":
             # treat Python3 API files the same as Python API files
-            for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+            for apiName in glob.glob(
+                    os.path.join(sourceDir, "APIs", "Python3", "*.api")):
                 apis.append(os.path.basename(apiName))
     
     fn = 'eric5config.py'
@@ -764,7 +796,8 @@ def getConfig(name):
     except KeyError:
         pass
 
-    raise AttributeError('"{{0}}" is not a valid configuration value'.format(name))
+    raise AttributeError('"{{0}}" is not a valid configuration value'.format(
+        name))
 """.format(cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
            cfg['ericDTDDir'], cfg['ericCSSDir'],
            cfg['ericStylesDir'], cfg['ericDocDir'],
@@ -856,8 +889,9 @@ def doDependancyChecks():
             # check for blacklisted versions
             for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
-                    print('Sorry, sip version {0} is not compatible with eric5.'\
-                          .format(vers))
+                    print(
+                        'Sorry, sip version {0} is not compatible with eric5.'
+                        .format(vers))
                     print('Please install another version.')
                     exit(3)
     except ImportError:
@@ -903,10 +937,12 @@ def doDependancyChecks():
                   ' a recent snapshot release.')
             exit(5)
         # check for blacklisted versions
-        for vers in BlackLists["QScintilla2"] + PlatformBlackLists["QScintilla2"]:
+        for vers in BlackLists["QScintilla2"] + \
+                PlatformBlackLists["QScintilla2"]:
             if vers == scintillaVersion:
-                print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
-                      .format(vers))
+                print(
+                    'Sorry, QScintilla2 version {0} is not compatible with'
+                    ' eric5.'.format(vers))
                 print('Please install another version.')
                 exit(5)
     print("QScintilla Version: ", QSCINTILLA_VERSION_STR)
@@ -930,19 +966,22 @@ def compileUiFiles():
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
             
-            Note: This function is a modified version of the one found in PyQt4.
+            Note: This function is a modified version of the one found in
+            PyQt4.
 
-            @param dir Name of the directory to scan for files whose name ends with
-                '.ui'. By default the generated Python module is created in the same
-                directory ending with '.py'.
-            @param recurse flag indicating that any sub-directories should be scanned.
-            @param map an optional callable that is passed the name of the directory
-                containing the '.ui' file and the name of the Python module that will be
-                created. The callable should return a tuple of the name of the directory
-                in which the Python module will be created and the (possibly modified)
-                name of the module.
-            @param compileUi_args any additional keyword arguments that are passed to
-                the compileUi() function that is called to create each Python module.
+            @param dir Name of the directory to scan for files whose name ends
+                with '.ui'. By default the generated Python module is created
+                in the same directory ending with '.py'.
+            @param recurse flag indicating that any sub-directories should be
+                scanned.
+            @param map an optional callable that is passed the name of the
+                directory containing the '.ui' file and the name of the Python
+                module that will be created. The callable should return a
+                tuple of the name of the directory in which the Python module
+                will be created and the (possibly modified) name of the module.
+            @param compileUi_args any additional keyword arguments that are
+                passed to the compileUi() function that is called to create
+                each Python module.
             """
             def compile_ui(ui_dir, ui_file):
                 """
@@ -956,8 +995,8 @@ def compileUiFiles():
                     py_dir = ui_dir
                     py_file = ui_file[:-3] + '.py'
 
-                    # Allow the caller to change the name of the .py file or generate
-                    # it in a different directory.
+                    # Allow the caller to change the name of the .py file or
+                    # generate it in a different directory.
                     if map is not None:
                         py_dir, py_file = list(map(py_dir, py_file))
 
@@ -990,7 +1029,8 @@ def compileUiFiles():
     
     def pyName(py_dir, py_file):
         """
-        Local function to create the Python source file name for the compiled .ui file.
+        Local function to create the Python source file name for the compiled
+        .ui file.
         
         @param py_dir suggested name of the directory (string)
         @param py_file suggested name for the compile source file (string)
@@ -1121,14 +1161,17 @@ def main(argv):
         if distDir:
             compileall.compile_dir(sourceDir,
                 ddir=os.path.join(distDir, modDir, cfg['ericDir']),
-                rx=re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
+                rx=re.compile(
+                    r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
                 quiet=True)
-            py_compile.compile(configName,
-                               dfile=os.path.join(distDir, modDir, "eric5config.py"))
+            py_compile.compile(
+                configName,
+                dfile=os.path.join(distDir, modDir, "eric5config.py"))
         else:
             compileall.compile_dir(sourceDir,
                 ddir=os.path.join(modDir, cfg['ericDir']),
-                rx=re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
+                rx=re.compile(
+                    r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
                 quiet=True)
             py_compile.compile(configName,
                                dfile=os.path.join(modDir, "eric5config.py"))
