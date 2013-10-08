@@ -44,24 +44,35 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         self.ppath = pro.ppath
         self.targetDirEdit.setText(self.ppath)
         self.startdir = startdir
-        self.on_filterComboBox_highlighted('(*.py)')  # enable all dialog elements
+        self.on_filterComboBox_highlighted('(*.py)')
+        # enable all dialog elements
         if filter == 'source':  # it is a source file
-            self.filterComboBox.addItem(self.trUtf8("Source Files"), "SOURCES")
+            self.filterComboBox.addItem(
+                self.trUtf8("Source Files"), "SOURCES")
         elif filter == 'form':
-            self.filterComboBox.addItem(self.trUtf8("Forms Files"), "FORMS")
+            self.filterComboBox.addItem(
+                self.trUtf8("Forms Files"), "FORMS")
         elif filter == 'resource':
-            self.filterComboBox.addItem(self.trUtf8("Resource Files"), "RESOURCES")
+            self.filterComboBox.addItem(
+                self.trUtf8("Resource Files"), "RESOURCES")
         elif filter == 'interface':
-            self.filterComboBox.addItem(self.trUtf8("Interface Files"), "INTERFACES")
+            self.filterComboBox.addItem(
+                self.trUtf8("Interface Files"), "INTERFACES")
         elif filter == 'others':
-            self.filterComboBox.addItem(self.trUtf8("Other Files (*)"), "OTHERS")
+            self.filterComboBox.addItem(
+                self.trUtf8("Other Files (*)"), "OTHERS")
             self.on_filterComboBox_highlighted('(*)')
         else:
-            self.filterComboBox.addItem(self.trUtf8("Source Files"), "SOURCES")
-            self.filterComboBox.addItem(self.trUtf8("Forms Files"), "FORMS")
-            self.filterComboBox.addItem(self.trUtf8("Resource Files"), "RESOURCES")
-            self.filterComboBox.addItem(self.trUtf8("Interface Files"), "INTERFACES")
-            self.filterComboBox.addItem(self.trUtf8("Other Files (*)"), "OTHERS")
+            self.filterComboBox.addItem(
+                self.trUtf8("Source Files"), "SOURCES")
+            self.filterComboBox.addItem(
+                self.trUtf8("Forms Files"), "FORMS")
+            self.filterComboBox.addItem(
+                self.trUtf8("Resource Files"), "RESOURCES")
+            self.filterComboBox.addItem(
+                self.trUtf8("Interface Files"), "INTERFACES")
+            self.filterComboBox.addItem(
+                self.trUtf8("Other Files (*)"), "OTHERS")
         self.filterComboBox.setCurrentIndex(0)
         
     @pyqtSlot(str)
@@ -87,7 +98,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         Private slot to display a directory selection dialog.
         
         @param textEdit field for the display of the selected directory name
-                (QLineEdit)
+            (QLineEdit)
         """
         startdir = textEdit.text()
         if not startdir and self.startdir is not None:

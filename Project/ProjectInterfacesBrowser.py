@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the a class used to display the interfaces (IDL) part of the project.
+Module implementing the a class used to display the interfaces (IDL) part
+of the project.
 """
 
 import os
@@ -21,8 +22,8 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserInterfaceType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
-from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
-    BrowserClassAttributeItem
+from UI.BrowserModel import BrowserFileItem, BrowserClassItem, \
+    BrowserMethodItem, BrowserClassAttributeItem
 import UI.PixmapCache
 
 import Preferences
@@ -34,14 +35,14 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
     A class used to display the interfaces (IDL) part of the project.
     
     @signal sourceFile(str, int = 0) emitted to open a file
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
-            from the project
+    @signal closeSourceWindow(str) emitted after a file has been
+        removed/deleted from the project
     @signal appendStdout(str) emitted after something was received from
-            a QProcess on stdout
+        a QProcess on stdout
     @signal appendStderr(str) emitted after something was received from
-            a QProcess on stderr
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+        a QProcess on stderr
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown.
+        The name of the menu and a reference to the menu are given.
     """
     appendStdout = pyqtSignal(str)
     appendStderr = pyqtSignal(str)
@@ -56,11 +57,13 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         self.omniidl = Preferences.getCorba("omniidl")
         if self.omniidl == "":
-            self.omniidl = Utilities.isWindowsPlatform() and "omniidl.exe" or "omniidl"
+            self.omniidl = Utilities.isWindowsPlatform() and \
+                "omniidl.exe" or "omniidl"
         if not Utilities.isinpath(self.omniidl):
             self.omniidl = None
         
-        ProjectBaseBrowser.__init__(self, project, ProjectBrowserInterfaceType, parent)
+        ProjectBaseBrowser.__init__(self, project,
+                                    ProjectBrowserInterfaceType, parent)
         
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
@@ -70,8 +73,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         self.setWhatsThis(self.trUtf8(
             """<b>Project Interfaces Browser</b>"""
             """<p>This allows to easily see all interfaces (CORBA IDL files)"""
-            """ contained in the current project. Several actions can be executed"""
-            """ via the context menu.</p>"""
+            """ contained in the current project. Several actions can be"""
+            """ executed via the context menu.</p>"""
         ))
         
         project.prepareRepopulateItem.connect(self._prepareRepopulateItem)
@@ -94,12 +97,14 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 self.__compileAllInterfaces)
         self.sourceMenu.addAction(self.trUtf8('Open'), self._openItem)
         self.sourceMenu.addSeparator()
-        act = self.sourceMenu.addAction(self.trUtf8('Rename file'), self._renameFile)
+        act = self.sourceMenu.addAction(
+            self.trUtf8('Rename file'), self._renameFile)
         self.menuActions.append(act)
         act = self.sourceMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.menuActions.append(act)
-        act = self.sourceMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.sourceMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(self.trUtf8('Add interfaces...'),
@@ -116,16 +121,19 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self._collapseAllDirs)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(self.trUtf8('Configure...'), self._configure)
-        self.sourceMenu.addAction(self.trUtf8('Configure CORBA...'), self.__configureCorba)
+        self.sourceMenu.addAction(
+            self.trUtf8('Configure CORBA...'), self.__configureCorba)
 
         self.menu = QMenu(self)
         if self.omniidl is not None:
-            self.menu.addAction(self.trUtf8('Compile interface'), self.__compileInterface)
+            self.menu.addAction(
+                self.trUtf8('Compile interface'), self.__compileInterface)
             self.menu.addAction(self.trUtf8('Compile all interfaces'),
                 self.__compileAllInterfaces)
         self.menu.addAction(self.trUtf8('Open'), self._openItem)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
+        self.menu.addAction(
+            self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
         self.menu.addAction(self.trUtf8('Add interfaces directory...'),
             self.__addInterfacesDirectory)
         self.menu.addSeparator()
@@ -135,7 +143,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self._collapseAllDirs)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
-        self.menu.addAction(self.trUtf8('Configure CORBA...'), self.__configureCorba)
+        self.menu.addAction(
+            self.trUtf8('Configure CORBA...'), self.__configureCorba)
 
         self.backMenu = QMenu(self)
         if self.omniidl is not None:
@@ -153,7 +162,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self._collapseAllDirs)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
-        self.backMenu.addAction(self.trUtf8('Configure CORBA...'), self.__configureCorba)
+        self.backMenu.addAction(
+            self.trUtf8('Configure CORBA...'), self.__configureCorba)
         self.backMenu.setEnabled(False)
 
         # create the menu for multiple selected files
@@ -166,7 +176,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Expand all directories'),
@@ -175,19 +186,23 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self._collapseAllDirs)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
-        self.multiMenu.addAction(self.trUtf8('Configure CORBA...'), self.__configureCorba)
+        self.multiMenu.addAction(
+            self.trUtf8('Configure CORBA...'), self.__configureCorba)
 
         self.dirMenu = QMenu(self)
         if self.omniidl is not None:
             self.dirMenu.addAction(self.trUtf8('Compile all interfaces'),
                 self.__compileAllInterfaces)
             self.dirMenu.addSeparator()
-        act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeFile)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Remove from project'), self._removeFile)
         self.dirMenuActions.append(act)
-        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
+        self.dirMenu.addAction(
+            self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
         self.dirMenu.addAction(self.trUtf8('Add interfaces directory...'),
             self.__addInterfacesDirectory)
         self.dirMenu.addSeparator()
@@ -200,7 +215,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self._collapseAllDirs)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
-        self.dirMenu.addAction(self.trUtf8('Configure CORBA...'), self.__configureCorba)
+        self.dirMenu.addAction(
+            self.trUtf8('Configure CORBA...'), self.__configureCorba)
         
         self.dirMultiMenu = QMenu(self)
         if self.omniidl is not None:
@@ -217,7 +233,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         self.dirMultiMenu.addAction(self.trUtf8('Configure CORBA...'),
                                     self.__configureCorba)
         
@@ -387,7 +404,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete interfaces"),
             self.trUtf8("Do you really want to delete these interfaces from"
@@ -399,13 +417,14 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
-    ############################################################################
+    ###########################################################################
     ##  Methods to handle the various compile commands
-    ############################################################################
+    ###########################################################################
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal of the omniidl process.
+        Private slot to handle the readyReadStandardOutput signal of the
+        omniidl process.
         """
         if self.compileProc is None:
             return
@@ -421,7 +440,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
     def __readStderr(self):
         """
-        Private slot to handle the readyReadStandardError signal of the omniidl process.
+        Private slot to handle the readyReadStandardError signal of the
+        omniidl process.
         """
         if self.compileProc is None:
             return
@@ -456,20 +476,26 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             if not self.noDialog and not ui.notificationsEnabled():
                 E5MessageBox.information(self,
                     self.trUtf8("Interface Compilation"),
-                    self.trUtf8("The compilation of the interface file was successful."))
+                    self.trUtf8(
+                        "The compilation of the interface file was"
+                        " successful."))
             else:
                 ui.showNotification(UI.PixmapCache.getPixmap("corba48.png"),
                     self.trUtf8("Interface Compilation"),
-                    self.trUtf8("The compilation of the interface file was successful."))
+                    self.trUtf8(
+                        "The compilation of the interface file was"
+                        " successful."))
         else:
             if not self.noDialog:
                 E5MessageBox.information(self,
                     self.trUtf8("Interface Compilation"),
-                    self.trUtf8("The compilation of the interface file failed."))
+                    self.trUtf8(
+                        "The compilation of the interface file failed."))
             else:
                 ui.showNotification(UI.PixmapCache.getPixmap("corba48.png"),
                     self.trUtf8("Interface Compilation"),
-                    self.trUtf8("The compilation of the interface file failed."))
+                    self.trUtf8(
+                        "The compilation of the interface file failed."))
         self.compileProc = None
         
     def __compileIDL(self, fn, noDialog=False, progress=None):

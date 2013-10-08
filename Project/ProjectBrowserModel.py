@@ -106,7 +106,8 @@ class ProjectBrowserItemMixin(object):
 
 class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
     """
-    Class implementing the data structure for project browser simple directory items.
+    Class implementing the data structure for project browser simple directory
+    items.
     """
     def __init__(self, parent, projectType, text, path=""):
         """
@@ -165,7 +166,8 @@ class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
         return BrowserItem.lessThan(self, other, column, order)
 
 
-class ProjectBrowserDirectoryItem(BrowserDirectoryItem, ProjectBrowserItemMixin):
+class ProjectBrowserDirectoryItem(BrowserDirectoryItem,
+                                  ProjectBrowserItemMixin):
     """
     Class implementing the data structure for project browser directory items.
     """
@@ -263,7 +265,8 @@ class ProjectBrowserModel(BrowserModel):
             "Z": Preferences.getProjectBrowserColour(self.colorNames["Z"]),
         }
         
-        self.highLightColor = Preferences.getProjectBrowserColour("Highlighted")
+        self.highLightColor = \
+            Preferences.getProjectBrowserColour("Highlighted")
         # needed by preferencesChanged()
         
         self.vcsStatusReport = {}
@@ -287,7 +290,8 @@ class ProjectBrowserModel(BrowserModel):
                     return None
         elif role == Qt.BackgroundColorRole:
             try:
-                col = self.itemBackgroundColors[index.internalPointer().vcsState]
+                col = self.itemBackgroundColors[
+                    index.internalPointer().vcsState]
                 if col.isValid():
                     return col
                 else:
@@ -327,14 +331,17 @@ class ProjectBrowserModel(BrowserModel):
         qdir = QDir(parentItem.dirName())
         
         if Preferences.getUI("BrowsersListHiddenFiles"):
-            filter = QDir.Filters(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(QDir.AllEntries | 
+                                  QDir.Hidden | 
+                                  QDir.NoDotAndDotDot)
         else:
             filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
         entryInfoList = qdir.entryInfoList(filter)
         
         if len(entryInfoList) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(self.createIndex(
+                        parentItem.row(), 0, parentItem),
                     0, len(entryInfoList) - 1)
             states = {}
             if self.project.vcs is not None:
@@ -356,9 +363,11 @@ class ProjectBrowserModel(BrowserModel):
                         parentItem.getProjectTypes()[0])
                 if self.project.vcs is not None:
                     fname = f.absoluteFilePath()
-                    if states[os.path.normcase(fname)] == self.project.vcs.canBeCommitted:
+                    if states[os.path.normcase(fname)] == \
+                            self.project.vcs.canBeCommitted:
                         node.addVcsStatus(self.project.vcs.vcsName())
-                        self.project.clearStatusMonitorCachedState(f.absoluteFilePath())
+                        self.project.clearStatusMonitorCachedState(
+                            f.absoluteFilePath())
                     else:
                         node.addVcsStatus(self.trUtf8("local"))
                 self._addItem(node, parentItem)
@@ -384,7 +393,8 @@ class ProjectBrowserModel(BrowserModel):
         
     def projectOpened(self):
         """
-        Public method used to populate the model after a project has been opened.
+        Public method used to populate the model after a project has been
+        opened.
         """
         self.__vcsStatus = {}
         states = {}
@@ -393,14 +403,17 @@ class ProjectBrowserModel(BrowserModel):
         if self.project.vcs is not None:
             for key in keys:
                 for fn in self.project.pdata[key]:
-                    states[os.path.normcase(os.path.join(self.project.ppath, fn))] = 0
+                    states[os.path.normcase(
+                        os.path.join(self.project.ppath, fn))] = 0
             
             self.project.vcs.clearStatusCache()
-            states = self.project.vcs.vcsAllRegisteredStates(states, self.project.ppath)
+            states = self.project.vcs.vcsAllRegisteredStates(
+                states, self.project.ppath)
         
         self.inRefresh = True
         for key in keys:
-            # Show the entry in bold in the others browser to make it more distinguishable
+            # Show the entry in bold in the others browser to make it more
+            # distinguishable
             if key == "OTHERS":
                 bold = True
             else:
@@ -413,8 +426,8 @@ class ProjectBrowserModel(BrowserModel):
             
             for fn in self.project.pdata[key]:
                 fname = os.path.join(self.project.ppath, fn)
-                parentItem, dt = \
-                    self.findParentItemByName(self.projectBrowserTypes[key], fn)
+                parentItem, dt = self.findParentItemByName(
+                    self.projectBrowserTypes[key], fn)
                 if os.path.isdir(fname):
                     itm = ProjectBrowserDirectoryItem(parentItem, fname,
                         self.projectBrowserTypes[key], False, bold)
@@ -424,7 +437,8 @@ class ProjectBrowserModel(BrowserModel):
                         sourceLanguage=sourceLanguage)
                 self._addItem(itm, parentItem)
                 if self.project.vcs is not None:
-                    if states[os.path.normcase(fname)] == self.project.vcs.canBeCommitted:
+                    if states[os.path.normcase(fname)] == \
+                            self.project.vcs.canBeCommitted:
                         itm.addVcsStatus(self.project.vcs.vcsName())
                     else:
                         itm.addVcsStatus(self.trUtf8("local"))
@@ -459,7 +473,8 @@ class ProjectBrowserModel(BrowserModel):
                 itm = self.findChildItem(p, 0, olditem)
                 path = os.path.join(path, p)
                 if itm is None:
-                    itm = ProjectBrowserSimpleDirectoryItem(olditem, type_, p, path)
+                    itm = ProjectBrowserSimpleDirectoryItem(
+                        olditem, type_, p, path)
                     self.__addVCSStatus(itm, path)
                     if self.inRefresh:
                         self._addItem(itm, olditem)
@@ -467,7 +482,8 @@ class ProjectBrowserModel(BrowserModel):
                         if olditem == self.rootItem:
                             oldindex = QModelIndex()
                         else:
-                            oldindex = self.createIndex(olditem.row(), 0, olditem)
+                            oldindex = self.createIndex(
+                                olditem.row(), 0, olditem)
                         self.addItem(itm, oldindex)
                 else:
                     if type_ and type_ not in itm.getProjectTypes():
@@ -505,15 +521,16 @@ class ProjectBrowserModel(BrowserModel):
         @param name name of the new item (string)
         @param additionalTypeStrings names of additional types (list of string)
         """
-        # Show the entry in bold in the others browser to make it more distinguishable
+        # Show the entry in bold in the others browser to make it more
+        # distinguishable
         if typeString == "OTHERS":
             bold = True
         else:
             bold = False
         
         fname = os.path.join(self.project.ppath, name)
-        parentItem, dt = \
-            self.findParentItemByName(self.projectBrowserTypes[typeString], name)
+        parentItem, dt = self.findParentItemByName(
+            self.projectBrowserTypes[typeString], name)
         if parentItem == self.rootItem:
             parentIndex = QModelIndex()
         else:
@@ -636,7 +653,9 @@ class ProjectBrowserModel(BrowserModel):
             return
         
         if Preferences.getUI("BrowsersListHiddenFiles"):
-            filter = QDir.Filters(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(QDir.AllEntries | 
+                                  QDir.Hidden | 
+                                  QDir.NoDotAndDotDot)
         else:
             filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
         
@@ -809,8 +828,8 @@ class ProjectBrowserModel(BrowserModel):
         """
         Public slot to record the (non normal) VCS states.
         
-        @param statesList list of VCS state entries (list of strings) giving the
-            states in the first column and the path relative to the project
+        @param statesList list of VCS state entries (list of strings) giving
+            the states in the first column and the path relative to the project
             directory starting with the third column. The allowed status flags
             are:
             <ul>

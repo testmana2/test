@@ -46,7 +46,8 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         self.filter = filter
         self.ppath = pro.ppath
         self.startdir = startdir
-        self.filetypes = pro.pdata["FILETYPES"]  # save a reference to the filetypes dict
+        self.filetypes = pro.pdata["FILETYPES"]
+        # save a reference to the filetypes dict
         
         if self.filter is not None:
             self.sourcecodeCheckBox.hide()
@@ -178,9 +179,9 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         """
         Public slot to retrieve the dialogs data.
         
-        @return tuple of three values (list of string, string, boolean) giving the
-            source files, the target directory and a flag telling, whether
-            the files shall be added as source code
+        @return tuple of three values (list of string, string, boolean)
+            giving the source files, the target directory and a flag
+            telling, whether the files shall be added as source code
         """
         return (
             [Utilities.toNativeSeparators(f) for f in

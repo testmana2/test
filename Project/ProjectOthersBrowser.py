@@ -4,8 +4,8 @@
 #
 
 """
-Module implementing a class used to display the parts of the project, that don't fit
-the other categories.
+Module implementing a class used to display the parts of the project, that
+don't fit the other categories.
 """
 
 import mimetypes
@@ -21,16 +21,17 @@ from .ProjectBaseBrowser import ProjectBaseBrowser
 
 class ProjectOthersBrowser(ProjectBaseBrowser):
     """
-    A class used to display the parts of the project, that don't fit the other categories.
+    A class used to display the parts of the project, that don't fit the
+    other categories.
     
     @signal sourceFile(str) emitted to open a file
     @signal pixmapFile(str) emitted to open a pixmap file
     @signal pixmapEditFile(str) emitted to edit a pixmap file
     @signal svgFile(str) emitted to open a SVG file
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
-            from the project
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+    @signal closeSourceWindow(str) emitted after a file has been
+        removed/deleted from the project
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown.
+        The name of the menu and a reference to the menu are given.
     """
     showMenu = pyqtSignal(str, QMenu)
     
@@ -41,9 +42,11 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         @param project reference to the project object
         @param parent parent widget of this browser (QWidget)
         """
-        ProjectBaseBrowser.__init__(self, project, ProjectBrowserOthersType, parent)
+        ProjectBaseBrowser.__init__(self, project, ProjectBrowserOthersType,
+                                    parent)
     
-        self.selectedItemsFilter = [ProjectBrowserFileItem, ProjectBrowserDirectoryItem]
+        self.selectedItemsFilter = [ProjectBrowserFileItem,
+                                    ProjectBrowserDirectoryItem]
         self.specialMenuEntries = [1]
 
         self.setWindowTitle(self.trUtf8('Others'))
@@ -72,13 +75,16 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         self.renameFileAct = self.menu.addAction(self.trUtf8('Rename file'),
             self._renameFile)
         self.menuActions.append(self.renameFileAct)
-        act = self.menu.addAction(self.trUtf8('Remove from project'), self.__removeItem)
+        act = self.menu.addAction(
+            self.trUtf8('Remove from project'), self.__removeItem)
         self.menuActions.append(act)
         act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteItem)
         self.menuActions.append(act)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Add files...'), self.project.addOthersFiles)
-        self.menu.addAction(self.trUtf8('Add directory...'), self.project.addOthersDir)
+        self.menu.addAction(
+            self.trUtf8('Add files...'), self.project.addOthersFiles)
+        self.menu.addAction(
+            self.trUtf8('Add directory...'), self.project.addOthersDir)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Refresh'), self.__refreshItem)
         self.menu.addSeparator()
@@ -110,7 +116,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self.__removeItem)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteItem)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteItem)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Expand all directories'),
@@ -236,7 +243,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         
     def __removeItem(self):
         """
-        Private slot to remove the selected entry from the OTHERS project data area.
+        Private slot to remove the selected entry from the OTHERS project
+        data area.
         """
         itmList = self.getSelectedItems()
         
@@ -251,7 +259,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         
     def __deleteItem(self):
         """
-        Private method to delete the selected entry from the OTHERS project data area.
+        Private method to delete the selected entry from the OTHERS project
+        data area.
         """
         itmList = self.getSelectedItems()
         
@@ -281,10 +290,13 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         del dirFullNames
         del dirNames
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete files/directories"),
-            self.trUtf8("Do you really want to delete these entries from the project?"),
+            self.trUtf8(
+                "Do you really want to delete these entries from the"
+                " project?"),
             names)
         
         if dlg.exec_() == QDialog.Accepted:

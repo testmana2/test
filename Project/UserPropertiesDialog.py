@@ -45,8 +45,9 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
         enableVcsGroup = False
         if self.project.pdata["VCS"]:
             found = False
-            for indicator, vcsData in list(e5App().getObject("PluginManager")\
-                                             .getVcsSystemIndicators().items()):
+            for indicator, vcsData in \
+                    e5App().getObject("PluginManager")\
+                        .getVcsSystemIndicators().items():
                 for vcsSystem, vcsSystemDisplay in vcsData:
                     if vcsSystem == self.project.pdata["VCS"][0]:
                         found = True
@@ -54,7 +55,8 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
                 
                 if found:
                     for vcsSystem, vcsSystemDisplay in vcsData:
-                        self.vcsInterfaceCombo.addItem(vcsSystemDisplay, vcsSystem)
+                        self.vcsInterfaceCombo.addItem(
+                            vcsSystemDisplay, vcsSystem)
                     enableVcsGroup = len(vcsData) > 1
                     break
         self.vcsGroup.setEnabled(enableVcsGroup)
@@ -74,8 +76,10 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
         Public method to store the entered/modified data.
         """
         vcsStatusMonitorInterval = self.vcsStatusMonitorIntervalSpinBox.value()
-        if vcsStatusMonitorInterval != Preferences.getVCS("StatusMonitorInterval"):
-            self.project.pudata["VCSSTATUSMONITORINTERVAL"] = [vcsStatusMonitorInterval]
+        if vcsStatusMonitorInterval != \
+                Preferences.getVCS("StatusMonitorInterval"):
+            self.project.pudata["VCSSTATUSMONITORINTERVAL"] = \
+                [vcsStatusMonitorInterval]
         else:
             self.project.pudata["VCSSTATUSMONITORINTERVAL"] = []
         

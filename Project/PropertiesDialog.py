@@ -53,14 +53,17 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         projectTypes = project.getProjectTypes()
         self.projectTypeComboBox.clear()
         for projectType in sorted(projectTypes.keys()):
-            self.projectTypeComboBox.addItem(projectTypes[projectType], projectType)
+            self.projectTypeComboBox.addItem(
+                projectTypes[projectType], projectType)
         
         if not new:
             name = os.path.splitext(self.project.pfile)[0]
             self.nameEdit.setText(os.path.basename(name))
             self.languageComboBox.setCurrentIndex(
-                self.languageComboBox.findText(self.project.pdata["PROGLANGUAGE"][0]))
-            self.mixedLanguageCheckBox.setChecked(self.project.pdata["MIXEDLANGUAGE"][0])
+                self.languageComboBox.findText(
+                    self.project.pdata["PROGLANGUAGE"][0]))
+            self.mixedLanguageCheckBox.setChecked(
+                self.project.pdata["MIXEDLANGUAGE"][0])
             curIndex = self.projectTypeComboBox.findData(
                 self.project.pdata["PROJECTTYPE"][0])
             if curIndex == -1:
@@ -72,7 +75,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             except IndexError:
                 pass
             try:
-                self.mainscriptEdit.setText(self.project.pdata["MAINSCRIPT"][0])
+                self.mainscriptEdit.setText(
+                    self.project.pdata["MAINSCRIPT"][0])
             except IndexError:
                 pass
             try:
@@ -84,7 +88,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             except IndexError:
                 pass
             try:
-                self.descriptionEdit.setPlainText(self.project.pdata["DESCRIPTION"][0])
+                self.descriptionEdit.setPlainText(
+                    self.project.pdata["DESCRIPTION"][0])
             except LookupError:
                 pass
             try:
@@ -96,11 +101,13 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 vcsSystemsDict = e5App().getObject("PluginManager")\
                     .getPluginDisplayStrings("version_control")
                 try:
-                    vcsSystemDisplay = vcsSystemsDict[self.project.pdata["VCS"][0]]
+                    vcsSystemDisplay = \
+                        vcsSystemsDict[self.project.pdata["VCS"][0]]
                 except KeyError:
                     vcsSystemDisplay = "None"
                 self.vcsLabel.setText(
-                    self.trUtf8("The project is version controlled by <b>{0}</b>.")
+                    self.trUtf8(
+                        "The project is version controlled by <b>{0}</b>.")
                     .format(vcsSystemDisplay))
                 self.vcsInfoButton.show()
             else:
@@ -113,7 +120,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
                 self.projectTypeComboBox.findData("Qt4"))
-            hp = Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()
+            hp = Preferences.getMultiProject("Workspace") or \
+                Utilities.getHomeDir()
             self.dirEdit.setText(hp)
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()
@@ -133,7 +141,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.projectTypeComboBox.clear()
         projectTypes = self.project.getProjectTypes(language)
         for projectType in sorted(projectTypes.keys()):
-            self.projectTypeComboBox.addItem(projectTypes[projectType], projectType)
+            self.projectTypeComboBox.addItem(
+                projectTypes[projectType], projectType)
         
         self.projectTypeComboBox.setCurrentIndex(
             self.projectTypeComboBox.findData(curProjectType))
@@ -171,9 +180,11 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         Private slot to display the translations properties dialog.
         """
         if self.transPropertiesDlg is None:
-            from .TranslationPropertiesDialog import TranslationPropertiesDialog
+            from .TranslationPropertiesDialog import \
+                TranslationPropertiesDialog
             self.transPropertiesDlg = \
-                TranslationPropertiesDialog(self.project, self.newProject, self)
+                TranslationPropertiesDialog(self.project, self.newProject,
+                                            self)
         else:
             self.transPropertiesDlg.initFilters()
         res = self.transPropertiesDlg.exec_()
@@ -226,7 +237,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         
         @return selected UI type (string)
         """
-        return self.projectTypeComboBox.itemData(self.projectTypeComboBox.currentIndex())
+        return self.projectTypeComboBox.itemData(
+            self.projectTypeComboBox.currentIndex())
     
     def getPPath(self):
         """
@@ -259,10 +271,12 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.project.translationsRoot = ""
         self.project.pdata["AUTHOR"] = [self.authorEdit.text()]
         self.project.pdata["EMAIL"] = [self.emailEdit.text()]
-        self.project.pdata["DESCRIPTION"] = [self.descriptionEdit.toPlainText()]
+        self.project.pdata["DESCRIPTION"] = \
+            [self.descriptionEdit.toPlainText()]
         self.project.pdata["PROGLANGUAGE"] = \
             [self.languageComboBox.currentText()]
-        self.project.pdata["MIXEDLANGUAGE"] = [self.mixedLanguageCheckBox.isChecked()]
+        self.project.pdata["MIXEDLANGUAGE"] = \
+            [self.mixedLanguageCheckBox.isChecked()]
         projectType = self.getProjectType()
         if projectType is not None:
             self.project.pdata["PROJECTTYPE"] = [projectType]

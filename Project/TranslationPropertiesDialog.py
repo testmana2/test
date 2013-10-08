@@ -92,7 +92,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         if "%language%" in tp:
             tp = tp.split("%language%")[0]
         if not os.path.isabs(tp):
-            tp = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, tp))
+            tp = Utilities.fromNativeSeparators(
+                os.path.join(self.project.ppath, tp))
         tsfile = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select translation file"),
@@ -120,7 +121,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         tbp = Utilities.fromNativeSeparators(self.transBinPathEdit.text())
         if not os.path.isabs(tbp):
-            tbp = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, tbp))
+            tbp = Utilities.fromNativeSeparators(
+                os.path.join(self.project.ppath, tbp))
         directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory for binary translations"),
@@ -187,7 +189,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         
     def on_exceptionsList_currentRowChanged(self, row):
         """
-        Private slot to handle the currentRowChanged signal of the exceptions list.
+        Private slot to handle the currentRowChanged signal of the exceptions
+        list.
         
         @param row the current row (integer)
         """

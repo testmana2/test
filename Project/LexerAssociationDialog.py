@@ -29,7 +29,8 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         super().__init__(parent)
         self.setupUi(self)
 
-        self.editorLexerList.headerItem().setText(self.editorLexerList.columnCount(), "")
+        self.editorLexerList.headerItem().setText(
+            self.editorLexerList.columnCount(), "")
         header = self.editorLexerList.header()
         if qVersion() >= "5.0.0":
             header.setSectionResizeMode(QHeaderView.ResizeToContents)
@@ -45,8 +46,9 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         self.extras = ["-----------", self.trUtf8("Alternative")]
         
         import QScintilla.Lexers
-        languages = \
-            [''] + sorted(QScintilla.Lexers.getSupportedLanguages().keys()) + self.extras
+        languages = [''] + \
+            sorted(QScintilla.Lexers.getSupportedLanguages().keys()) + \
+            self.extras
         self.editorLexerCombo.addItems(languages)
         
         from pygments.lexers import get_all_lexers
@@ -91,7 +93,8 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
     @pyqtSlot()
     def on_deleteLexerButton_clicked(self):
         """
-        Private slot to delete the currently selected lexer association of the list.
+        Private slot to delete the currently selected lexer association of the
+        list.
         """
         itmList = self.editorLexerList.selectedItems()
         if itmList:
@@ -108,7 +111,8 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         Private slot to handle the clicked signal of the lexer association list.
         
         @param itm reference to the selecte item (QTreeWidgetItem)
-        @param column column the item was clicked or activated (integer) (ignored)
+        @param column column the item was clicked or activated (integer)
+            (ignored)
         """
         if itm is None:
             self.editorFileExtEdit.clear()
@@ -129,10 +133,12 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
     
     def on_editorLexerList_itemActivated(self, itm, column):
         """
-        Private slot to handle the activated signal of the lexer association list.
+        Private slot to handle the activated signal of the lexer association
+        list.
         
         @param itm reference to the selecte item (QTreeWidgetItem)
-        @param column column the item was clicked or activated (integer) (ignored)
+        @param column column the item was clicked or activated (integer)
+            (ignored)
         """
         self.on_editorLexerList_itemClicked(itm, column)
     
@@ -152,7 +158,8 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
 
     def transferData(self):
         """
-        Public slot to transfer the associations into the projects data structure.
+        Public slot to transfer the associations into the projects data
+        structure.
         """
         self.project.pdata["LEXERASSOCS"] = {}
         for index in range(self.editorLexerList.topLevelItemCount()):

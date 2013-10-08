@@ -29,14 +29,17 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
 
         self.filetypeAssociationList.headerItem().setText(
             self.filetypeAssociationList.columnCount(), "")
-        self.filetypeAssociationList.header().setSortIndicator(0, Qt.AscendingOrder)
+        self.filetypeAssociationList.header().setSortIndicator(
+            0, Qt.AscendingOrder)
         
         # keep these lists in sync
-        self.filetypes = ["SOURCES", "FORMS", "TRANSLATIONS", "RESOURCES", "INTERFACES",
-                          "OTHERS", "__IGNORE__"]
+        self.filetypes = ["SOURCES", "FORMS", "TRANSLATIONS", "RESOURCES",
+                          "INTERFACES", "OTHERS", "__IGNORE__"]
         self.filetypeStrings = [self.trUtf8("Sources"), self.trUtf8("Forms"),
-                                self.trUtf8("Translations"), self.trUtf8("Resources"),
-                                self.trUtf8("Interfaces"), self.trUtf8("Others"),
+                                self.trUtf8("Translations"),
+                                self.trUtf8("Resources"),
+                                self.trUtf8("Interfaces"),
+                                self.trUtf8("Others"),
                                 self.trUtf8("Ignore")]
         self.filetypeCombo.addItems(self.filetypeStrings)
         
@@ -55,14 +58,16 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         """
         Private method to resort the tree.
         """
-        self.filetypeAssociationList.sortItems(self.filetypeAssociationList.sortColumn(),
+        self.filetypeAssociationList.sortItems(
+            self.filetypeAssociationList.sortColumn(),
             self.filetypeAssociationList.header().sortIndicatorOrder())
         
     def __reformat(self):
         """
         Private method to reformat the tree.
         """
-        self.filetypeAssociationList.header().resizeSections(QHeaderView.ResizeToContents)
+        self.filetypeAssociationList.header().resizeSections(
+            QHeaderView.ResizeToContents)
         self.filetypeAssociationList.header().setStretchLastSection(True)
         
     def __createItem(self, pattern, filetype):
@@ -78,7 +83,8 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         
     def on_filetypeAssociationList_currentItemChanged(self, itm, prevItm):
         """
-        Private slot to handle the currentItemChanged signal of the association list.
+        Private slot to handle the currentItemChanged signal of the
+        association list.
         
         @param itm reference to the new current item (QTreeWidgetItem)
         @param prevItm reference to the previous current item (QTreeWidgetItem)
@@ -89,7 +95,8 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
             self.deleteAssociationButton.setEnabled(False)
         else:
             self.filePatternEdit.setText(itm.text(0))
-            self.filetypeCombo.setCurrentIndex(self.filetypeCombo.findText(itm.text(1)))
+            self.filetypeCombo.setCurrentIndex(
+                self.filetypeCombo.findText(itm.text(1)))
             self.deleteAssociationButton.setEnabled(True)
 
     @pyqtSlot()
@@ -116,7 +123,8 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
     @pyqtSlot()
     def on_deleteAssociationButton_clicked(self):
         """
-        Private slot to delete the currently selected association of the listbox.
+        Private slot to delete the currently selected association of the
+        listbox.
         """
         for itm in self.filetypeAssociationList.selectedItems():
             itm = self.filetypeAssociationList.takeTopLevelItem(
@@ -142,11 +150,13 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
                 self.deleteAssociationButton.setEnabled(False)
             else:
                 self.deleteAssociationButton.setEnabled(
-                    self.filetypeAssociationList.selectedItems()[0].text(0) == txt)
+                    self.filetypeAssociationList.selectedItems()[0].text(0) \
+                    == txt)
 
     def transferData(self):
         """
-        Public slot to transfer the associations into the projects data structure.
+        Public slot to transfer the associations into the projects data
+        structure.
         """
         self.project.pdata["FILETYPES"] = {}
         for index in range(self.filetypeAssociationList.topLevelItemCount()):

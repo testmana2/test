@@ -10,8 +10,8 @@ Module implementing the baseclass for the various project browsers.
 import os
 
 from PyQt4.QtCore import QModelIndex, pyqtSignal, Qt
-from PyQt4.QtGui import QTreeView, QCursor, QItemSelection, QItemSelectionModel, \
-    QApplication, QMenu, QAbstractItemView, QDialog
+from PyQt4.QtGui import QTreeView, QCursor, QItemSelection, \
+    QItemSelectionModel, QApplication, QMenu, QAbstractItemView, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -20,7 +20,8 @@ from UI.Browser import Browser
 
 from .ProjectBrowserModel import ProjectBrowserSimpleDirectoryItem, \
     ProjectBrowserDirectoryItem, ProjectBrowserFileItem
-from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyModel
+from .ProjectBrowserSortFilterProxyModel import \
+    ProjectBrowserSortFilterProxyModel
 
 
 class ProjectBaseBrowser(Browser):
@@ -111,7 +112,8 @@ class ProjectBaseBrowser(Browser):
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        self.multiMenu.addAction(QApplication.translate('ProjectBaseBrowser', 'Open'),
+        self.multiMenu.addAction(
+            QApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
         
         # create the background menu
@@ -271,7 +273,8 @@ class ProjectBaseBrowser(Browser):
         
     def _deleteDirectory(self):
         """
-        Protected method to delete the selected directory from the project data area.
+        Protected method to delete the selected directory from the project
+        data area.
         """
         itmList = self.getSelectedItems()
         
@@ -283,7 +286,8 @@ class ProjectBaseBrowser(Browser):
             dn = self.project.getRelativePath(dn)
             dirs.append(dn)
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete directories"),
             self.trUtf8("Do you really want to delete these directories from"
@@ -412,7 +416,8 @@ class ProjectBaseBrowser(Browser):
         
     def _showContextMenuMulti(self, menu):
         """
-        Protected slot called before the context menu (multiple selections) is shown.
+        Protected slot called before the context menu (multiple selections) is
+        shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.
@@ -453,7 +458,8 @@ class ProjectBaseBrowser(Browser):
             for act in self.dirMultiMenuActions:
                 act.setEnabled(True)
         else:
-            self.vcsHelper.showContextMenuDirMulti(menu, self.dirMultiMenuActions)
+            self.vcsHelper.showContextMenuDirMulti(
+                menu, self.dirMultiMenuActions)
         
     def _showContextMenuBack(self, menu):
         """
@@ -468,15 +474,16 @@ class ProjectBaseBrowser(Browser):
         """
         Protected method to select entries based on their VCS status.
         
-        @param local flag indicating local (i.e. non VCS controlled) file/directory
-            entries should be selected (boolean)
+        @param local flag indicating local (i.e. non VCS controlled)
+            file/directory entries should be selected (boolean)
         @param filter list of classes to check against
         """
         if self.project.vcs is None:
             return
         
         if local:
-            compareString = QApplication.translate('ProjectBaseBrowser', "local")
+            compareString = \
+                QApplication.translate('ProjectBaseBrowser', "local")
         else:
             compareString = self.project.vcs.vcsName()
         
@@ -538,14 +545,16 @@ class ProjectBaseBrowser(Browser):
         Public slot to handle the select local directories context menu entries.
         """
         self._selectEntries(local=True,
-            filter=[ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
+            filter=[ProjectBrowserSimpleDirectoryItem,
+                    ProjectBrowserDirectoryItem])
         
     def selectVCSDirEntries(self):
         """
         Public slot to handle the select VCS directories context menu entries.
         """
         self._selectEntries(local=False,
-            filter=[ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
+            filter=[ProjectBrowserSimpleDirectoryItem,
+                    ProjectBrowserDirectoryItem])
         
     def _prepareRepopulateItem(self, name):
         """
@@ -572,7 +581,8 @@ class ProjectBaseBrowser(Browser):
             if childIndex.parent() == index.parent():
                 break
             if self.isExpanded(childIndex):
-                self.expandedNames.append(self.model().item(childIndex).data(0))
+                self.expandedNames.append(
+                    self.model().item(childIndex).data(0))
             childIndex = self.indexBelow(childIndex)
         
     def _completeRepopulateItem(self, name):
@@ -588,12 +598,14 @@ class ProjectBaseBrowser(Browser):
                 if self.isExpanded(index):
                     childIndex = self.indexBelow(index)
                     while childIndex.isValid():
-                        if not childIndex.isValid() or childIndex.parent() == index.parent():
+                        if not childIndex.isValid() or \
+                                childIndex.parent() == index.parent():
                             break
                         itm = self.model().item(childIndex)
                         if itm is not None:
                             itemData = itm.data(0)
-                            if self.currentItemName and self.currentItemName == itemData:
+                            if self.currentItemName and \
+                                    self.currentItemName == itemData:
                                 self._selectSingleItem(childIndex)
                             if itemData in self.expandedNames:
                                 self.setExpanded(childIndex, True)
@@ -615,9 +627,9 @@ class ProjectBaseBrowser(Browser):
         itm = self.model().item(self.currentIndex())
         return itm
     
-    ############################################################################
+    ###########################################################################
     ## Support for hooks below
-    ############################################################################
+    ###########################################################################
     
     def _initHookMethods(self):
         """
@@ -682,4 +694,5 @@ class ProjectBaseBrowser(Browser):
         """
         Protected method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("projectBrowserPage")
+        e5App().getObject("UserInterface")\
+            .showPreferences("projectBrowserPage")
