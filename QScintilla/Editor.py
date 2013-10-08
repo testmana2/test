@@ -4779,16 +4779,25 @@ class Editor(QsciScintillaCompat):
         if line1Text in ["", "\r", "\n", "\r\n"]:
             return
         
+        if line0Text.rstrip("\r\n\\ \t").endswith(("'", '"')) and \
+                line1Text.lstrip().startswith(("'", '"')):
+            # merging multi line strings
+            startChars = "\r\n\\ \t'\""
+            endChars = " \t'\""
+        else:
+            startChars = "\r\n\\ \t"
+            endChars = " \t"
+        
         # determine start index
         startIndex = len(line0Text)
-        while startIndex > 0 and line0Text[startIndex - 1] in "\r\n\\ \t":
+        while startIndex > 0 and line0Text[startIndex - 1] in startChars:
             startIndex -= 1
         if startIndex == 0:
             return
         
         # determine end index
         endIndex = 0
-        while line1Text[endIndex] in " \t":
+        while line1Text[endIndex] in endChars:
             endIndex += 1
         
         self.setSelection(curLine, startIndex, curLine + 1, endIndex)
