@@ -55,7 +55,8 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
             self.typeCombo.setCurrentIndex(0)
         else:
             self.typeGroup.setChecked(True)
-            self.typeCombo.setCurrentIndex(self.typeCombo.findData(taskFilter.typeFilter))
+            self.typeCombo.setCurrentIndex(
+                self.typeCombo.findData(taskFilter.typeFilter))
         
         if taskFilter.scopeFilter is None:
             self.scopeGroup.setChecked(False)
@@ -84,9 +85,12 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
             self.priorityLowCheckBox.setChecked(False)
         else:
             self.priorityGroup.setChecked(True)
-            self.priorityHighCheckBox.setChecked(0 in taskFilter.prioritiesFilter)
-            self.priorityNormalCheckBox.setChecked(1 in taskFilter.prioritiesFilter)
-            self.priorityLowCheckBox.setChecked(2 in taskFilter.prioritiesFilter)
+            self.priorityHighCheckBox.setChecked(
+                0 in taskFilter.prioritiesFilter)
+            self.priorityNormalCheckBox.setChecked(
+                1 in taskFilter.prioritiesFilter)
+            self.priorityLowCheckBox.setChecked(
+                2 in taskFilter.prioritiesFilter)
     
     def configureTaskFilter(self, taskFilter):
         """

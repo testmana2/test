@@ -12,7 +12,8 @@ import os
 import re
 
 from PyQt4.QtCore import QFile, QFileInfo, QIODevice, Qt
-from PyQt4.QtGui import QTreeWidget, QDialog, QApplication, QMenu, QTreeWidgetItem
+from PyQt4.QtGui import QTreeWidget, QDialog, QApplication, QMenu, \
+    QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -92,15 +93,17 @@ class TemplateGroup(QTreeWidgetItem):
             if not quiet:
                 E5MessageBox.critical(None,
                     QApplication.translate("TemplateGroup", "Add Template"),
-                    QApplication.translate("TemplateGroup",
-                                """<p>The group <b>{0}</b> already contains a"""
-                                """ template named <b>{1}</b>.</p>""")\
+                    QApplication.translate(
+                        "TemplateGroup",
+                        """<p>The group <b>{0}</b> already contains a"""
+                        """ template named <b>{1}</b>.</p>""")
                         .format(self.name, name))
             return
         
         self.entries[name] = TemplateEntry(self, name, description, template)
         
-        if Preferences.getTemplates("AutoOpenGroups") and not self.isExpanded():
+        if Preferences.getTemplates("AutoOpenGroups") and \
+                not self.isExpanded():
             self.setExpanded(True)
     
     def removeEntry(self, name):
@@ -115,7 +118,8 @@ class TemplateGroup(QTreeWidgetItem):
             del self.entries[name]
             
             if len(self.entries) == 0:
-                if Preferences.getTemplates("AutoOpenGroups") and self.isExpanded():
+                if Preferences.getTemplates("AutoOpenGroups") and \
+                        self.isExpanded():
                     self.setExpanded(False)
     
     def removeAllEntries(self):
@@ -148,8 +152,8 @@ class TemplateGroup(QTreeWidgetItem):
 
     def getEntryNames(self, beginning):
         """
-        Public method to get the names of all entries, who's name starts with the
-        given string.
+        Public method to get the names of all entries, who's name starts with
+        the given string.
         
         @param beginning string denoting the beginning of the template name
             (string)
@@ -315,7 +319,8 @@ class TemplateEntry(QTreeWidgetItem):
                     prefix = line[:ind]
                     postfix = line[ind + len(var):]
                     for v in val.splitlines():
-                        t = "{0}{1}{2}{3}{4}".format(t, os.linesep, prefix, v, postfix)
+                        t = "{0}{1}{2}{3}{4}".format(
+                            t, os.linesep, prefix, v, postfix)
                 elif format == 'ml':
                     indent = line.replace(line.lstrip(), "")
                     prefix = line[:ind]
@@ -348,8 +353,9 @@ class TemplateEntry(QTreeWidgetItem):
         """
         sepchar = Preferences.getTemplates("SeparatorChar")
         variablesPattern = \
-            re.compile(r"""\{0}[a-zA-Z][a-zA-Z0-9_]*(?::(?:ml|rl))?\{1}""".format(
-                       sepchar, sepchar))
+            re.compile(
+                r"""\{0}[a-zA-Z][a-zA-Z0-9_]*(?::(?:ml|rl))?\{1}""".format(
+                    sepchar, sepchar))
         variables = variablesPattern.findall(self.template)
         self.variables = []
         self.formatedVariables = []
@@ -383,8 +389,8 @@ class TemplateViewer(QTreeWidget):
         self.setAlternatingRowColors(True)
         
         self.__menu = QMenu(self)
-        self.applyAct = \
-            self.__menu.addAction(self.trUtf8("Apply"), self.__templateItemActivated)
+        self.applyAct = self.__menu.addAction(
+            self.trUtf8("Apply"), self.__templateItemActivated)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Add entry..."), self.__addEntry)
         self.__menu.addAction(self.trUtf8("Add group..."), self.__addGroup)
@@ -396,7 +402,8 @@ class TemplateViewer(QTreeWidget):
         self.__menu.addAction(self.trUtf8("Export..."), self.__export)
         self.__menu.addAction(self.trUtf8("Reload"), self.__reload)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Help about Templates..."), self.__showHelp)
+        self.__menu.addAction(
+            self.trUtf8("Help about Templates..."), self.__showHelp)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
         
@@ -408,9 +415,11 @@ class TemplateViewer(QTreeWidget):
         self.__backMenu.addAction(self.trUtf8("Export..."), self.__export)
         self.__backMenu.addAction(self.trUtf8("Reload"), self.__reload)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Help about Templates..."), self.__showHelp)
+        self.__backMenu.addAction(
+            self.trUtf8("Help about Templates..."), self.__showHelp)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__backMenu.addAction(
+            self.trUtf8("Configure..."), self.__configure)
         
         self.__activating = False
         self.__dirty = False
@@ -452,7 +461,8 @@ class TemplateViewer(QTreeWidget):
         if itm is None:
             self.__backMenu.popup(coord)
         else:
-            self.applyAct.setEnabled(self.viewmanager.activeWindow() is not None)
+            self.applyAct.setEnabled(
+                self.viewmanager.activeWindow() is not None)
             self.__menu.popup(coord)
     
     def __addEntry(self):
@@ -573,8 +583,9 @@ class TemplateViewer(QTreeWidget):
         if self.__dirty:
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("Reload Templates"),
-                self.trUtf8("""The templates contain unsaved changes. Shall these"""
-                            """ changes be discarded?"""),
+                self.trUtf8(
+                    """The templates contain unsaved changes. Shall these"""
+                    """ changes be discarded?"""),
                 icon=E5MessageBox.Warning)
             if not res:
                 return
@@ -590,15 +601,16 @@ class TemplateViewer(QTreeWidget):
         """
         E5MessageBox.information(self,
             self.trUtf8("Template Help"),
-            self.trUtf8("""<p><b>Template groups</b> are a means of grouping individual"""
-                        """ templates. Groups have an attribute that specifies,"""
-                        """ which programming language they apply for."""
-                        """ In order to add template entries, at least one group"""
-                        """ has to be defined.</p>"""
-                        """<p><b>Template entries</b> are the actual templates."""
-                        """ They are grouped by the template groups. Help about"""
-                        """ how to define them is available in the template edit"""
-                        """ dialog.</p>"""))
+            self.trUtf8(
+                """<p><b>Template groups</b> are a means of grouping"""
+                """ individual templates. Groups have an attribute that"""
+                """ specifies, which programming language they apply for."""
+                """ In order to add template entries, at least one group"""
+                """ has to be defined.</p>"""
+                """<p><b>Template entries</b> are the actual templates."""
+                """ They are grouped by the template groups. Help about"""
+                """ how to define them is available in the template edit"""
+                """ dialog.</p>"""))
 
     def __getPredefinedVars(self):
         """
@@ -634,8 +646,10 @@ class TemplateViewer(QTreeWidget):
                     keyfmt.format('ext'): ext
             })
         
-        varValues[keyfmt.format('clipboard:ml')] = QApplication.clipboard().text()
-        varValues[keyfmt.format('clipboard')] = QApplication.clipboard().text()
+        varValues[keyfmt.format('clipboard:ml')] = \
+            QApplication.clipboard().text()
+        varValues[keyfmt.format('clipboard')] = \
+            QApplication.clipboard().text()
 
         if editor.hasSelectedText():
             varValues[keyfmt.format('cur_select:ml')] = editor.selectedText()
@@ -680,7 +694,8 @@ class TemplateViewer(QTreeWidget):
                     varValues.update(dlg.getVariables())
                     ok = True
             else:
-                from .TemplateSingleVariableDialog import TemplateSingleVariableDialog
+                from .TemplateSingleVariableDialog import \
+                    TemplateSingleVariableDialog
                 for var in vars:
                     dlg = TemplateSingleVariableDialog(var, self)
                     if dlg.exec_() == QDialog.Accepted:
@@ -712,7 +727,8 @@ class TemplateViewer(QTreeWidget):
                     count += len(indent)
             
             if "i_n_s_e_r_t_i_o_n" in txt and "s_e_l_e_c_t" in txt:
-                txt = "'Insertion and selection can not be in template together'"
+                txt = "'Insertion and selection can not be in" \
+                    " template together'"
             
             if "i_n_s_e_r_t_i_o_n" in txt:
                 lines = 1
@@ -752,7 +768,8 @@ class TemplateViewer(QTreeWidget):
             editor.insert(txt)
             
             if setselect:
-                editor.setSelection(line + linea - 1, posa, line + lineb - 1, posb)
+                editor.setSelection(line + linea - 1, posa,
+                                    line + lineb - 1, posb)
             else:
                 editor.setCursorPosition(line + lines - 1, count)
                 
@@ -791,7 +808,8 @@ class TemplateViewer(QTreeWidget):
         @param template template text of the entry (string)
         @param quiet flag indicating quiet operation (boolean)
         """
-        self.groups[groupName].addEntry(name, description, template, quiet=quiet)
+        self.groups[groupName].addEntry(
+            name, description, template, quiet=quiet)
         self.__resort()
     
     def hasGroup(self, name):
@@ -912,13 +930,16 @@ class TemplateViewer(QTreeWidget):
         @return flag indicating success (boolean)
         """
         if filename is None:
-            filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
+            filename = os.path.join(
+                Utilities.getConfigDir(), "eric5templates.e4c")
         f = QFile(filename)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
             E5MessageBox.critical(self,
                 self.trUtf8("Save templates"),
-                self.trUtf8("<p>The templates file <b>{0}</b> could not be written.</p>")
+                self.trUtf8(
+                    "<p>The templates file <b>{0}</b> could not be"
+                    " written.</p>")
                     .format(filename))
             return False
         
@@ -935,7 +956,8 @@ class TemplateViewer(QTreeWidget):
         @param filename name of a templates file to read (string)
         """
         if filename is None:
-            filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
+            filename = os.path.join(
+                Utilities.getConfigDir(), "eric5templates.e4c")
             if not os.path.exists(filename):
                 return
         
@@ -948,7 +970,8 @@ class TemplateViewer(QTreeWidget):
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read templates"),
-                self.trUtf8("<p>The templates file <b>{0}</b> could not be read.</p>")
+                self.trUtf8(
+                    "<p>The templates file <b>{0}</b> could not be read.</p>")
                     .format(filename))
     
     def __configure(self):
@@ -981,7 +1004,8 @@ class TemplateViewer(QTreeWidget):
     
     def getTemplateNames(self, start, groupName=None):
         """
-        Public method to get the names of templates starting with the given string.
+        Public method to get the names of templates starting with the
+        given string.
         
         @param start start string of the name (string)
         @param groupName name of the group to get the entry from (string).

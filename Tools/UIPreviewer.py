@@ -8,10 +8,11 @@ Module implementing the UI Previewer main window.
 """
 
 from PyQt4.QtCore import qVersion, QDir, QFileInfo, QEvent, QSize, Qt
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QCursor, \
-    QPrinter, QKeySequence, QPrintDialog, QWhatsThis, QPixmap, QImageWriter, QPainter, \
-    QDialog, QScrollArea, qApp, QApplication, QStyleFactory, QFrame, QMainWindow, \
-    QComboBox, QVBoxLayout, QAction, QLabel
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QCursor, QPrinter, QKeySequence, QPrintDialog, QWhatsThis, QPixmap, \
+    QImageWriter, QPainter, QDialog, QScrollArea, qApp, QApplication, \
+    QStyleFactory, QFrame, QMainWindow, QComboBox, QVBoxLayout, QAction, \
+    QLabel
 from PyQt4 import uic
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -43,7 +44,8 @@ class UIPreviewer(E5MainWindow):
         else:
             self.setObjectName(name)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.resize(QSize(600, 480).expandedTo(self.minimumSizeHint()))
         self.setAttribute(Qt.WA_DeleteOnClose)
@@ -79,7 +81,8 @@ class UIPreviewer(E5MainWindow):
         if currentStyle is not None:
             self.styleCombo.setCurrentIndex(int(currentStyle))
         
-        styleSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        styleSpacer = QSpacerItem(
+            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.styleLayout.addItem(styleSpacer)
         self.UIPreviewerLayout.addLayout(self.styleLayout)
 
@@ -87,7 +90,8 @@ class UIPreviewer(E5MainWindow):
         self.previewSV.setObjectName("preview")
         self.previewSV.setFrameShape(QFrame.NoFrame)
         self.previewSV.setFrameShadow(QFrame.Plain)
-        self.previewSV.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.previewSV.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.UIPreviewerLayout.addWidget(self.previewSV)
 
         self.setCentralWidget(self.cw)
@@ -122,7 +126,8 @@ class UIPreviewer(E5MainWindow):
         """
         self.openAct = QAction(UI.PixmapCache.getIcon("openUI.png"),
                         self.trUtf8('&Open File'), self)
-        self.openAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+O", "File|Open")))
+        self.openAct.setShortcut(
+            QKeySequence(self.trUtf8("Ctrl+O", "File|Open")))
         self.openAct.setStatusTip(self.trUtf8('Open a UI file for display'))
         self.openAct.setWhatsThis(self.trUtf8(
                 """<b>Open File</b>"""
@@ -132,7 +137,8 @@ class UIPreviewer(E5MainWindow):
         
         self.printAct = QAction(UI.PixmapCache.getIcon("print.png"),
                         self.trUtf8('&Print'), self)
-        self.printAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+P", "File|Print")))
+        self.printAct.setShortcut(
+            QKeySequence(self.trUtf8("Ctrl+P", "File|Print")))
         self.printAct.setStatusTip(self.trUtf8('Print a screen capture'))
         self.printAct.setWhatsThis(self.trUtf8(
                 """<b>Print</b>"""
@@ -140,8 +146,9 @@ class UIPreviewer(E5MainWindow):
         ))
         self.printAct.triggered[()].connect(self.__printImage)
         
-        self.printPreviewAct = QAction(UI.PixmapCache.getIcon("printPreview.png"),
-                        self.trUtf8('Print Preview'), self)
+        self.printPreviewAct = QAction(
+            UI.PixmapCache.getIcon("printPreview.png"),
+            self.trUtf8('Print Preview'), self)
         self.printPreviewAct.setStatusTip(self.trUtf8(
                 'Print preview a screen capture'))
         self.printPreviewAct.setWhatsThis(self.trUtf8(
@@ -154,7 +161,8 @@ class UIPreviewer(E5MainWindow):
                         self.trUtf8('&Screen Capture'), self)
         self.imageAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+S", "File|Screen Capture")))
-        self.imageAct.setStatusTip(self.trUtf8('Save a screen capture to an image file'))
+        self.imageAct.setStatusTip(self.trUtf8(
+            'Save a screen capture to an image file'))
         self.imageAct.setWhatsThis(self.trUtf8(
                 """<b>Screen Capture</b>"""
                 """<p>Save a screen capture to an image file.</p>"""
@@ -163,7 +171,8 @@ class UIPreviewer(E5MainWindow):
         
         self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"),
                         self.trUtf8('&Quit'), self)
-        self.exitAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
+        self.exitAct.setShortcut(
+            QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
         self.exitAct.setWhatsThis(self.trUtf8(
                 """<b>Quit</b>"""
@@ -173,8 +182,10 @@ class UIPreviewer(E5MainWindow):
         
         self.copyAct = QAction(UI.PixmapCache.getIcon("editCopy.png"),
                             self.trUtf8('&Copy'), self)
-        self.copyAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")))
-        self.copyAct.setStatusTip(self.trUtf8('Copy screen capture to clipboard'))
+        self.copyAct.setShortcut(
+            QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")))
+        self.copyAct.setStatusTip(
+            self.trUtf8('Copy screen capture to clipboard'))
         self.copyAct.setWhatsThis(self.trUtf8(
                 """<b>Copy</b>"""
                 """<p>Copy screen capture to clipboard.</p>"""
@@ -186,17 +197,18 @@ class UIPreviewer(E5MainWindow):
         self.whatsThisAct.setShortcut(QKeySequence(self.trUtf8("Shift+F1")))
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
-                """<b>Display context sensitive help</b>"""
-                """<p>In What's This? mode, the mouse cursor shows an arrow with a"""
-                """ question mark, and you can click on the interface elements to get"""
-                """ a short description of what they do and how to use them. In"""
-                """ dialogs, this feature can be accessed using the context help"""
-                """ button in the titlebar.</p>"""
+            """<b>Display context sensitive help</b>"""
+            """<p>In What's This? mode, the mouse cursor shows an arrow"""
+            """ with a question mark, and you can click on the interface"""
+            """ elements to get a short description of what they do and"""
+            """ how to use them. In dialogs, this feature can be accessed"""
+            """ using the context help button in the titlebar.</p>"""
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
 
         self.aboutAct = QAction(self.trUtf8('&About'), self)
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
                 """<b>About</b>"""
                 """<p>Display some information about this software.</p>"""
@@ -284,8 +296,9 @@ class UIPreviewer(E5MainWindow):
         """
         E5MessageBox.about(self, self.trUtf8("UI Previewer"), self.trUtf8(
             """<h3> About UI Previewer </h3>"""
-            """<p>The UI Previewer loads and displays Qt User-Interface files"""
-            """ with various styles, which are selectable via a selection list.</p>"""
+            """<p>The UI Previewer loads and displays Qt User-Interface"""
+            """ files with various styles, which are selectable via a"""
+            """ selection list.</p>"""
         ))
     
     def __aboutQt(self):
@@ -337,7 +350,8 @@ class UIPreviewer(E5MainWindow):
         else:
             E5MessageBox.warning(self,
                 self.trUtf8("Load UI File"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be loaded.</p>""")\
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be loaded.</p>""")\
                     .format(fn))
         self.__updateActions()
     
@@ -431,7 +445,8 @@ class UIPreviewer(E5MainWindow):
         filters = ""
         formats = QImageWriter.supportedImageFormats()
         for format in formats:
-            filters = "{0}*.{1} ".format(filters, bytes(format).decode().lower())
+            filters = "{0}*.{1} ".format(
+                filters, bytes(format).decode().lower())
         filter = self.trUtf8("Images ({0})").format(filters[:-1])
         
         fname = E5FileDialog.getSaveFileName(
@@ -455,7 +470,8 @@ class UIPreviewer(E5MainWindow):
         if not pix.save(fname, str(ext)):
             E5MessageBox.critical(self,
                 self.trUtf8("Save Image"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>""")
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be saved.</p>""")
                     .format(fname))
 
     def __copyImageToClipboard(self):
@@ -494,8 +510,8 @@ class UIPreviewer(E5MainWindow):
             QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
             QPrinter.PageOrder(int(settings.value("UIPreviewer/pageorder"))))
-        printer.setOrientation(
-            QPrinter.Orientation(int(settings.value("UIPreviewer/orientation"))))
+        printer.setOrientation(QPrinter.Orientation(
+            int(settings.value("UIPreviewer/orientation"))))
         printer.setColorMode(
             QPrinter.ColorMode(int(settings.value("UIPreviewer/colormode"))))
         
@@ -510,7 +526,8 @@ class UIPreviewer(E5MainWindow):
             settings.setValue("UIPreviewer/orientation", printer.orientation())
             settings.setValue("UIPreviewer/colormode", printer.colorMode())
         
-        self.statusBar().showMessage(self.trUtf8("Image sent to printer..."), 2000)
+        self.statusBar().showMessage(
+            self.trUtf8("Image sent to printer..."), 2000)
 
     def __printPreviewImage(self):
         """
@@ -533,8 +550,8 @@ class UIPreviewer(E5MainWindow):
             QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
             QPrinter.PageOrder(int(settings.value("UIPreviewer/pageorder"))))
-        printer.setOrientation(
-            QPrinter.Orientation(int(settings.value("UIPreviewer/orientation"))))
+        printer.setOrientation(QPrinter.Orientation(
+            int(settings.value("UIPreviewer/orientation"))))
         printer.setColorMode(
             QPrinter.ColorMode(int(settings.value("UIPreviewer/colormode"))))
         

@@ -341,7 +341,8 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                              file, lineno, meth_sig, modifierType=modifier)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
-                    meth_name = "{0}_{1:d}".format(meth_name, dict_counts[meth_name])
+                    meth_name = "{0}_{1:d}".format(
+                        meth_name, dict_counts[meth_name])
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
@@ -407,7 +408,8 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             if not classstack:
                 if class_name in dict_counts:
                     dict_counts[class_name] += 1
-                    class_name = "{0}_{1:d}".format(class_name, dict_counts[class_name])
+                    class_name = "{0}_{1:d}".format(
+                        class_name, dict_counts[class_name])
                 else:
                     dict_counts[class_name] = 0
                 dict[class_name] = cur_class
@@ -426,7 +428,8 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             while index >= -len(classstack):
                 if classstack[index][0] is not None and \
                    not isinstance(classstack[index][0], Function):
-                    attr = Attribute(module, m.group("AttributeName"), file, lineno)
+                    attr = Attribute(
+                        module, m.group("AttributeName"), file, lineno)
                     classstack[index][0]._addattribute(attr)
                     break
                 else:
@@ -440,8 +443,8 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             if thisindent == 0:
                 # global variable
                 if "@@Globals@@" not in dict:
-                    dict["@@Globals@@"] = \
-                        ClbrBaseClasses.ClbrBase(module, "Globals", file, lineno)
+                    dict["@@Globals@@"] = ClbrBaseClasses.ClbrBase(
+                        module, "Globals", file, lineno)
                 dict["@@Globals@@"]._addglobal(
                     Attribute(module, variable_name, file, lineno))
                 if lastGlobalEntry:
@@ -482,7 +485,8 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
             if "@@Coding@@" not in dict:
-                dict["@@Coding@@"] = ClbrBaseClasses.Coding(module, file, lineno, coding)
+                dict["@@Coding@@"] = ClbrBaseClasses.Coding(
+                    module, file, lineno, coding)
         
         else:
             assert 0, "regexp _getnext found something unexpected"

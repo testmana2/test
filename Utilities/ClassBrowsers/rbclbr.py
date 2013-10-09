@@ -47,7 +47,8 @@ _getnext = re.compile(r"""
         (?P<MethodIndent> [ \t]* )
         def [ \t]+
         (?:
-            (?P<MethodName2> [a-zA-Z0-9_]+ (?: \. | :: ) [a-zA-Z_] [a-zA-Z0-9_?!=]* )
+            (?P<MethodName2> [a-zA-Z0-9_]+ (?: \. | :: )
+            [a-zA-Z_] [a-zA-Z0-9_?!=]* )
         |
             (?P<MethodName> [a-zA-Z_] [a-zA-Z0-9_?!=]* )
         |
@@ -100,11 +101,13 @@ _getnext = re.compile(r"""
         (?:
             (?P<AccessControlType> private | public | protected ) [^_]
         |
-            (?P<AccessControlType2> private_class_method | public_class_method )
+            (?P<AccessControlType2>
+            private_class_method | public_class_method )
         )
         \(?
         [ \t]*
-        (?P<AccessControlList> (?: : [a-zA-Z0-9_]+ , \s* )* (?: : [a-zA-Z0-9_]+ )+ )?
+        (?P<AccessControlList> (?: : [a-zA-Z0-9_]+ , \s* )*
+        (?: : [a-zA-Z0-9_]+ )+ )?
         [ \t]*
         \)?
     )
@@ -123,7 +126,8 @@ _getnext = re.compile(r"""
         (?P<AttrType> (?: _accessor | _reader | _writer ) )?
         \(?
         [ \t]*
-        (?P<AttrList> (?: : [a-zA-Z0-9_]+ , \s* )* (?: : [a-zA-Z0-9_]+ | true | false )+ )
+        (?P<AttrList> (?: : [a-zA-Z0-9_]+ , \s* )*
+        (?: : [a-zA-Z0-9_]+ | true | false )+ )
         [ \t]*
         \)?
     )
@@ -131,7 +135,8 @@ _getnext = re.compile(r"""
 |   (?P<Begin>
             ^
             [ \t]*
-            (?: def | if | unless | case | while | until | for | begin ) \b [^_]
+            (?: def | if | unless | case | while | until | for | begin )
+            \b [^_]
         |
             [ \t]* do [ \t]* (?: \| .*? \| )? [ \t]* $
     )
@@ -207,7 +212,8 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a Ruby function.
     """
-    def __init__(self, module, name, file, lineno, signature='', separator=','):
+    def __init__(self, module, name, file, lineno, signature='',
+                 separator=','):
         """
         Constructor
         
@@ -319,7 +325,8 @@ def readmodule_ex(module, path=[]):
             if classstack:
                 # it's a class/module method
                 cur_class = classstack[-1][0]
-                if isinstance(cur_class, Class) or isinstance(cur_class, Module):
+                if isinstance(cur_class, Class) or \
+                        isinstance(cur_class, Module):
                     # it's a method
                     f = Function(None, meth_name,
                                  file, lineno, meth_sig)
@@ -342,7 +349,8 @@ def readmodule_ex(module, path=[]):
                              file, lineno, meth_sig)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
-                    meth_name = "{0}_{1:d}".format(meth_name, dict_counts[meth_name])
+                    meth_name = "{0}_{1:d}".format(
+                        meth_name, dict_counts[meth_name])
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
@@ -408,7 +416,8 @@ def readmodule_ex(module, path=[]):
             while acstack and \
                   acstack[-1][1] >= thisindent:
                 del acstack[-1]
-            acstack.append(["public", thisindent])  # default access control is 'public'
+            acstack.append(["public", thisindent])  # default access control
+                                                    # is 'public'
 
         elif m.start("Module") >= 0:
             # we found a module definition
@@ -448,7 +457,8 @@ def readmodule_ex(module, path=[]):
             while acstack and \
                   acstack[-1][1] >= thisindent:
                 del acstack[-1]
-            acstack.append(["public", thisindent])  # default access control is 'public'
+            acstack.append(["public", thisindent])  # default access control
+                                                    # is 'public'
 
         elif m.start("AccessControl") >= 0:
             aclist = m.group("AccessControlList")
@@ -473,7 +483,7 @@ def readmodule_ex(module, path=[]):
                                  m.group("AccessControlType2").split('_')[0]
                         actype = actype.lower()
                         for name in aclist.split(","):
-                            name = name.strip()[1:]     # get rid of leading ':'
+                            name = name.strip()[1:]   # get rid of leading ':'
                             acmeth = parent._getmethod(name)
                             if acmeth is None:
                                 continue
@@ -495,7 +505,8 @@ def readmodule_ex(module, path=[]):
                 if classstack[index][0] is not None and \
                    not isinstance(classstack[index][0], Function) and \
                    not classstack[index][1] >= indent:
-                    attr = Attribute(module, m.group("AttributeName"), file, lineno)
+                    attr = Attribute(
+                        module, m.group("AttributeName"), file, lineno)
                     classstack[index][0]._addattribute(attr)
                     break
                 else:
@@ -529,7 +540,7 @@ def readmodule_ex(module, path=[]):
                     else:
                         access = m.group("AttrType")
                         for name in m.group("AttrList").split(","):
-                            name = name.strip()[1:]     # get rid of leading ':'
+                            name = name.strip()[1:]   # get rid of leading ':'
                             attr = parent._getattribute("@" + name) or \
                                    parent._getattribute("@@" + name) or \
                                    Attribute(module, "@" + name, file, lineno)
@@ -569,7 +580,8 @@ def readmodule_ex(module, path=[]):
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
             if "@@Coding@@" not in dict:
-                dict["@@Coding@@"] = ClbrBaseClasses.Coding(module, file, lineno, coding)
+                dict["@@Coding@@"] = ClbrBaseClasses.Coding(
+                    module, file, lineno, coding)
 
         else:
             assert 0, "regexp _getnext found something unexpected"

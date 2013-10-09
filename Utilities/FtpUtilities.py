@@ -75,7 +75,8 @@ class FtpDirLineParser(QObject):
         @exception FtpDirLineParserError Raised if the mode cannot be parsed.
         """
         if len(modeString) != 10:
-            raise FtpDirLineParserError("invalid mode string '{0}'".format(modeString))
+            raise FtpDirLineParserError(
+                "invalid mode string '{0}'".format(modeString))
         
         modeString = modeString.lower()
         
@@ -134,10 +135,12 @@ class FtpDirLineParser(QObject):
             not recognized.
         """
         try:
-            month = FtpDirLineParser.MonthnamesNumbers[monthAbbreviation.lower()]
+            month = FtpDirLineParser.MonthnamesNumbers[
+                monthAbbreviation.lower()]
         except KeyError:
-            raise FtpDirLineParserError("illegal month abbreviation '{0}'".format(
-                monthAbbreviation))
+            raise FtpDirLineParserError(
+                "illegal month abbreviation '{0}'".format(
+                    monthAbbreviation))
         day = int(day)
         if ':' in yearOrTime:
             year = QDate.currentDate().year()
@@ -172,7 +175,8 @@ class FtpDirLineParser(QObject):
         fieldCountWithoutUserID = 8
         fieldCountWithUserID = fieldCountWithoutUserID + 1
         if len(lineParts) < fieldCountWithoutUserID:
-            raise FtpDirLineParserError("line '{0}' cannot be parsed".format(line))
+            raise FtpDirLineParserError(
+                "line '{0}' cannot be parsed".format(line))
         
         # If we have a valid format (either with or without user id field),
         # the field with index 5 is either the month abbreviation or a day.
@@ -238,13 +242,15 @@ class FtpDirLineParser(QObject):
             else:
                 year = 2000 + year
         except (ValueError, IndexError):
-            raise FtpDirLineParserError("illegal date string '{0}'".format(month))
+            raise FtpDirLineParserError(
+                "illegal date string '{0}'".format(month))
         try:
             hour, minute, am_pm = time[0:2], time[3:5], time[5]
             hour = int(hour)
             minute = int(minute)
         except (ValueError, IndexError):
-            raise FtpDirLineParserError("illegal time string '{0}'".format(month))
+            raise FtpDirLineParserError(
+                "illegal time string '{0}'".format(month))
         if hour == 12 and am_pm == 'A':
             hour = 0
         if hour != 12 and am_pm == 'P':
@@ -266,7 +272,8 @@ class FtpDirLineParser(QObject):
             date, time, dirOrSize, name = line.split(None, 3)
         except ValueError:
             # "unpack list of wrong size"
-            raise FtpDirLineParserError("line '{0}' cannot be parsed".format(line))
+            raise FtpDirLineParserError(
+                "line '{0}' cannot be parsed".format(line))
         
         if name in [".", ".."]:
             return None
@@ -282,7 +289,8 @@ class FtpDirLineParser(QObject):
             try:
                 urlInfo.setSize(int(dirOrSize))
             except ValueError:
-                raise FtpDirLineParserError("illegal size '{0}'".format(dirOrSize))
+                raise FtpDirLineParserError(
+                    "illegal size '{0}'".format(dirOrSize))
         urlInfo.setName(name)
         
         ext = os.path.splitext(name.lower())[1]
@@ -292,7 +300,8 @@ class FtpDirLineParser(QObject):
                       | E5UrlInfo.ReadGroup | E5UrlInfo.WriteGroup
                       | E5UrlInfo.ReadOther | E5UrlInfo.WriteOther)
         if ext in [".exe", ".com", ".bat", ".cmd"]:
-            permissions |= E5UrlInfo.ExeOwner | E5UrlInfo.ExeGroup | E5UrlInfo.ExeOther
+            permissions |= E5UrlInfo.ExeOwner | E5UrlInfo.ExeGroup | \
+                E5UrlInfo.ExeOther
         urlInfo.setPermissions(permissions)
         
         return urlInfo

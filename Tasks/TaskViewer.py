@@ -15,8 +15,9 @@ import os
 import fnmatch
 
 from PyQt4.QtCore import pyqtSignal, Qt
-from PyQt4.QtGui import QHeaderView, QLineEdit, QTreeWidget, QDialog, QInputDialog, \
-    QApplication, QMenu, QAbstractItemView, QProgressDialog, QTreeWidgetItem
+from PyQt4.QtGui import QHeaderView, QLineEdit, QTreeWidget, QDialog, \
+    QInputDialog, QApplication, QMenu, QAbstractItemView, QProgressDialog, \
+    QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -54,8 +55,10 @@ class TaskViewer(QTreeWidget):
         
         self.__headerItem = QTreeWidgetItem(["", "", self.trUtf8("Summary"),
             self.trUtf8("Filename"), self.trUtf8("Line"), ""])
-        self.__headerItem.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
-        self.__headerItem.setIcon(1, UI.PixmapCache.getIcon("taskPriority.png"))
+        self.__headerItem.setIcon(
+            0, UI.PixmapCache.getIcon("taskCompleted.png"))
+        self.__headerItem.setIcon(
+            1, UI.PixmapCache.getIcon("taskPriority.png"))
         self.setHeaderItem(self.__headerItem)
         
         self.header().setSortIndicator(2, Qt.AscendingOrder)
@@ -86,54 +89,66 @@ class TaskViewer(QTreeWidget):
         self.__menu = QMenu(self)
         self.__menu.addAction(self.trUtf8("&New Task..."), self.__newTask)
         self.__menu.addSeparator()
-        self.projectTasksMenuItem = self.__menu.addMenu(self.__projectTasksMenu)
+        self.projectTasksMenuItem = self.__menu.addMenu(
+            self.__projectTasksMenu)
         self.__menu.addSeparator()
-        self.gotoItem = self.__menu.addAction(self.trUtf8("&Go To"), self.__goToTask)
+        self.gotoItem = self.__menu.addAction(
+            self.trUtf8("&Go To"), self.__goToTask)
         self.__menu.addSeparator()
-        self.copyItem = self.__menu.addAction(self.trUtf8("&Copy"), self.__copyTask)
-        self.pasteItem = self.__menu.addAction(self.trUtf8("&Paste"), self.__pasteTask)
-        self.deleteItem = self.__menu.addAction(self.trUtf8("&Delete"), self.__deleteTask)
+        self.copyItem = self.__menu.addAction(
+            self.trUtf8("&Copy"), self.__copyTask)
+        self.pasteItem = self.__menu.addAction(
+            self.trUtf8("&Paste"), self.__pasteTask)
+        self.deleteItem = self.__menu.addAction(
+            self.trUtf8("&Delete"), self.__deleteTask)
         self.__menu.addSeparator()
-        self.markCompletedItem = self.__menu.addAction(self.trUtf8("&Mark Completed"),
-                                                       self.__markCompleted)
-        self.__menu.addAction(self.trUtf8("Delete Completed &Tasks"),
-                              self.__deleteCompleted)
+        self.markCompletedItem = self.__menu.addAction(
+            self.trUtf8("&Mark Completed"), self.__markCompleted)
+        self.__menu.addAction(
+            self.trUtf8("Delete Completed &Tasks"), self.__deleteCompleted)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("P&roperties..."), self.__editTaskProperties)
+        self.__menu.addAction(
+            self.trUtf8("P&roperties..."), self.__editTaskProperties)
         self.__menu.addSeparator()
-        self.__menuFilteredAct = self.__menu.addAction(self.trUtf8("&Filtered display"))
+        self.__menuFilteredAct = self.__menu.addAction(
+            self.trUtf8("&Filtered display"))
         self.__menuFilteredAct.setCheckable(True)
         self.__menuFilteredAct.setChecked(False)
         self.__menuFilteredAct.triggered[bool].connect(self.__activateFilter)
-        self.__menu.addAction(self.trUtf8("Filter c&onfiguration..."),
-                              self.__configureFilter)
+        self.__menu.addAction(
+            self.trUtf8("Filter c&onfiguration..."), self.__configureFilter)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Resi&ze columns"), self.__resizeColumns)
+        self.__menu.addAction(
+            self.trUtf8("Resi&ze columns"), self.__resizeColumns)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
         
         self.__backMenu = QMenu(self)
         self.__backMenu.addAction(self.trUtf8("&New Task..."), self.__newTask)
         self.__backMenu.addSeparator()
-        self.backProjectTasksMenuItem = self.__backMenu.addMenu(self.__projectTasksMenu)
+        self.backProjectTasksMenuItem = self.__backMenu.addMenu(
+            self.__projectTasksMenu)
         self.__backMenu.addSeparator()
-        self.backPasteItem = self.__backMenu.addAction(self.trUtf8("&Paste"),
-                                                       self.__pasteTask)
+        self.backPasteItem = self.__backMenu.addAction(
+            self.trUtf8("&Paste"), self.__pasteTask)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Delete Completed &Tasks"),
-                                  self.__deleteCompleted)
+        self.__backMenu.addAction(
+            self.trUtf8("Delete Completed &Tasks"), self.__deleteCompleted)
         self.__backMenu.addSeparator()
-        self.__backMenuFilteredAct = \
-            self.__backMenu.addAction(self.trUtf8("&Filtered display"))
+        self.__backMenuFilteredAct = self.__backMenu.addAction(
+            self.trUtf8("&Filtered display"))
         self.__backMenuFilteredAct.setCheckable(True)
         self.__backMenuFilteredAct.setChecked(False)
-        self.__backMenuFilteredAct.triggered[bool].connect(self.__activateFilter)
-        self.__backMenu.addAction(self.trUtf8("Filter c&onfiguration..."),
-                              self.__configureFilter)
+        self.__backMenuFilteredAct.triggered[bool].connect(
+            self.__activateFilter)
+        self.__backMenu.addAction(
+            self.trUtf8("Filter c&onfiguration..."), self.__configureFilter)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Resi&ze columns"), self.__resizeColumns)
+        self.__backMenu.addAction(
+            self.trUtf8("Resi&ze columns"), self.__resizeColumns)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__backMenu.addAction(
+            self.trUtf8("Configure..."), self.__configure)
         
         self.__activating = False
         
@@ -275,7 +290,8 @@ class TaskViewer(QTreeWidget):
         """
         self.addTask(summary, filename=filename, lineno=lineno,
                      isProjectTask=(
-                        self.project and self.project.isProjectSource(filename)),
+                        self.project and 
+                        self.project.isProjectSource(filename)),
                      taskType=taskType, description=description)
         
     def getProjectTasks(self):
@@ -372,8 +388,8 @@ class TaskViewer(QTreeWidget):
         dlg = TaskPropertiesDialog(None, self, self.projectOpen)
         if dlg.exec_() == QDialog.Accepted:
             data = dlg.getData()
-            self.addTask(data[0], data[1], completed=data[2], isProjectTask=data[3],
-                description=data[4])
+            self.addTask(data[0], data[1], completed=data[2],
+                         isProjectTask=data[3], description=data[4])
     
     def __markCompleted(self):
         """
@@ -460,8 +476,9 @@ class TaskViewer(QTreeWidget):
         if on and not self.taskFilter.hasActiveFilter():
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("Activate task filter"),
-                self.trUtf8("""The task filter doesn't have any active filters."""
-                            """ Do you want to configure the filter settings?"""),
+                self.trUtf8(
+                    """The task filter doesn't have any active filters."""
+                    """ Do you want to configure the filter settings?"""),
                 yesDefault=True)
             if not res:
                 on = False
@@ -500,10 +517,12 @@ class TaskViewer(QTreeWidget):
     
     def __regenerateProjectTasks(self):
         """
-        Private slot to handle the "Regenerated project tasks" context menu entry.
+        Private slot to handle the "Regenerated project tasks" context menu
+        entry.
         """
         markers = {
-            Task.TypeWarning: Preferences.getTasks("TasksWarningMarkers").split(),
+            Task.TypeWarning: 
+                Preferences.getTasks("TasksWarningMarkers").split(),
             Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
             Task.TypeTodo: Preferences.getTasks("TasksTodoMarkers").split(),
             Task.TypeFixme: Preferences.getTasks("TasksFixmeMarkers").split(),

@@ -40,7 +40,8 @@ def pbkdf2(password, salt, iterations, digestMod):
     return hash
 
 
-def hashPasswordTuple(password, digestMod=hashlib.sha512, iterations=10000, saltSize=32):
+def hashPasswordTuple(password, digestMod=hashlib.sha512, iterations=10000,
+                      saltSize=32):
     """
     Module function to hash a password according to the PBKDF2 specification.
     
@@ -58,7 +59,8 @@ def hashPasswordTuple(password, digestMod=hashlib.sha512, iterations=10000, salt
     return digestname, iterations, salt, hash
 
 
-def hashPassword(password, digestMod=hashlib.sha512, iterations=10000, saltSize=32):
+def hashPassword(password, digestMod=hashlib.sha512, iterations=10000,
+                 saltSize=32):
     """
     Module function to hash a password according to the PBKDF2 specification.
     
@@ -94,13 +96,14 @@ def verifyPassword(password, hash):
         digestname, iterations, salt, pwHash = hash.split(Delimiter)
     except ValueError:
         raise ValueError(
-            "Expected hash encoded password in format "\
-            "'digestmod{0}iterations{0}salt{0}hashed_password".format(Delimiter))
+            "Expected hash encoded password in format "
+            "'digestmod{0}iterations{0}salt{0}hashed_password"
+            .format(Delimiter))
     
     if digestname not in Hashes.keys():
         raise ValueError(
-            "Unsupported hash algorithm '{0}' for hash encoded password '{1}'.".format(
-            digestname, hash))
+            "Unsupported hash algorithm '{0}' for hash encoded password '{1}'."
+            .format(digestname, hash))
     
     iterations = int(iterations)
     salt = base64.b64decode(salt.encode("ascii"))
@@ -117,8 +120,8 @@ def rehashPassword(password, hashParameters):
     @param hashParameters hash parameters in the form
         'digestmod$iterations$salt' (string)
     @return hashed password (bytes)
-    @exception ValueError the hash parameters string is not of the expected format
-        or the digest is not one of the known ones
+    @exception ValueError the hash parameters string is not of the expected
+        format or the digest is not one of the known ones
     """
     try:
         digestname, iterations, salt = hashParameters.split(Delimiter)
@@ -129,8 +132,8 @@ def rehashPassword(password, hashParameters):
     
     if digestname not in Hashes.keys():
         raise ValueError(
-            "Unsupported hash algorithm '{0}' for hash parameters '{1}'.".format(
-            digestname, hash))
+            "Unsupported hash algorithm '{0}' for hash parameters '{1}'."
+            .format(digestname, hash))
     
     iterations = int(iterations)
     salt = base64.b64decode(salt.encode("ascii"))

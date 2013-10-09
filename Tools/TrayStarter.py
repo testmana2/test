@@ -11,7 +11,8 @@ import sys
 import os
 
 from PyQt4.QtCore import QProcess, QSettings, QFileInfo
-from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, QApplication, QDialog
+from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, \
+    QApplication, QDialog
 
 from E5Gui import E5MessageBox
 
@@ -33,7 +34,8 @@ class TrayStarter(QSystemTrayIcon):
         Constructor
         """
         super().__init__(
-            UI.PixmapCache.getIcon(Preferences.getTrayStarter("TrayStarterIcon")))
+            UI.PixmapCache.getIcon(
+                Preferences.getTrayStarter("TrayStarterIcon")))
         
         self.maxMenuFilePathLen = 75
         
@@ -53,8 +55,10 @@ class TrayStarter(QSystemTrayIcon):
         
         self.__menu = QMenu(self.trUtf8("Eric5 tray starter"))
         
-        self.recentProjectsMenu = QMenu(self.trUtf8('Recent Projects'), self.__menu)
-        self.recentProjectsMenu.aboutToShow.connect(self.__showRecentProjectsMenu)
+        self.recentProjectsMenu = QMenu(
+            self.trUtf8('Recent Projects'), self.__menu)
+        self.recentProjectsMenu.aboutToShow.connect(
+            self.__showRecentProjectsMenu)
         self.recentProjectsMenu.triggered.connect(self.__openRecent)
         
         self.recentMultiProjectsMenu = \
@@ -74,8 +78,10 @@ class TrayStarter(QSystemTrayIcon):
         act.setFont(font)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(self.trUtf8("QRegExp editor"), self.__startQRegExp)
-        self.__menu.addAction(self.trUtf8("Python re editor"), self.__startPyRe)
+        self.__menu.addAction(
+            self.trUtf8("QRegExp editor"), self.__startQRegExp)
+        self.__menu.addAction(
+            self.trUtf8("Python re editor"), self.__startPyRe)
         self.__menu.addSeparator()
         
         self.__menu.addAction(UI.PixmapCache.getIcon("uiPreviewer.png"),
@@ -130,7 +136,8 @@ class TrayStarter(QSystemTrayIcon):
         self.menuRecentMultiProjectsAct = \
             self.__menu.addMenu(self.recentMultiProjectsMenu)
         # recent projects
-        self.menuRecentProjectsAct = self.__menu.addMenu(self.recentProjectsMenu)
+        self.menuRecentProjectsAct = self.__menu.addMenu(
+            self.recentProjectsMenu)
         self.__menu.addSeparator()
         
         self.__menu.addAction(UI.PixmapCache.getIcon("exit.png"),
@@ -170,7 +177,8 @@ class TrayStarter(QSystemTrayIcon):
         """
         Private slot to handle the activated signal.
         
-        @param reason reason code of the signal (QSystemTrayIcon.ActivationReason)
+        @param reason reason code of the signal
+            (QSystemTrayIcon.ActivationReason)
         """
         if reason == QSystemTrayIcon.Context or \
            reason == QSystemTrayIcon.MiddleClick:
@@ -183,7 +191,8 @@ class TrayStarter(QSystemTrayIcon):
         Private slot to show the context menu.
         """
         self.menuRecentProjectsAct.setEnabled(len(self.recentProjects) > 0)
-        self.menuRecentMultiProjectsAct.setEnabled(len(self.recentMultiProjects) > 0)
+        self.menuRecentMultiProjectsAct.setEnabled(
+            len(self.recentMultiProjects) > 0)
         self.menuRecentFilesAct.setEnabled(len(self.recentFiles) > 0)
         
         pos = QCursor.pos()
@@ -208,7 +217,8 @@ class TrayStarter(QSystemTrayIcon):
         for arg in applArgs:
             args.append(arg)
         
-        if not os.path.isfile(applPath) or not proc.startDetached(sys.executable, args):
+        if not os.path.isfile(applPath) or \
+                not proc.startDetached(sys.executable, args):
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -404,8 +414,8 @@ class TrayStarter(QSystemTrayIcon):
     
     def __openRecent(self, act):
         """
-        Private method to open a project or file from the list of rencently opened
-        projects or files.
+        Private method to open a project or file from the list of recently
+        opened projects or files.
         
         @param act reference to the action that triggered (QAction)
         """
@@ -418,9 +428,9 @@ class TrayStarter(QSystemTrayIcon):
         Private slot to set the preferences.
         """
         from Preferences.ConfigurationDialog import ConfigurationDialog
-        dlg = ConfigurationDialog(None, 'Configuration', True,
-                                  fromEric=True,
-                                  displayMode=ConfigurationDialog.TrayStarterMode)
+        dlg = ConfigurationDialog(
+            None, 'Configuration', True, fromEric=True,
+            displayMode=ConfigurationDialog.TrayStarterMode)
         dlg.preferencesChanged.connect(self.preferencesChanged)
         dlg.show()
         dlg.showConfigurationPageByName("trayStarterPage")
@@ -436,7 +446,8 @@ class TrayStarter(QSystemTrayIcon):
         Public slot to handle a change of preferences.
         """
         self.setIcon(
-            UI.PixmapCache.getIcon(Preferences.getTrayStarter("TrayStarterIcon")))
+            UI.PixmapCache.getIcon(
+                Preferences.getTrayStarter("TrayStarterIcon")))
 
     def __about(self):
         """

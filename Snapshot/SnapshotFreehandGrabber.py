@@ -121,7 +121,8 @@ class SnapshotFreehandGrabber(QWidget):
             # Draw outline around selection.
             # Important: the 1px-wide outline is *also* part of the
             # captured free-region
-            pen = QPen(handleColor, 1, Qt.SolidLine, Qt.SquareCap, Qt.BevelJoin)
+            pen = QPen(handleColor, 1, Qt.SolidLine, Qt.SquareCap,
+                       Qt.BevelJoin)
             painter.setPen(pen)
             painter.drawPolygon(pol)
             

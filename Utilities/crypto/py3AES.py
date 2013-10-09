@@ -6,7 +6,8 @@
 # Copyright (c) 2008    Josh Davis ( http://www.josh-davis.org ),
 #           Alex Martelli ( http://www.aleax.it )
 #
-# Ported from C code written by Laurent Haan ( http://www.progressive-coding.com )
+# Ported from C code written by Laurent Haan
+# ( http://www.progressive-coding.com )
 #
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/
@@ -46,10 +47,12 @@ def strip_PKCS7_padding(b):
     @return stripped data (bytes)
     """
     if len(b) % 16 or not b:
-        raise ValueError("Data of len {0} can't be PCKS7-padded".format(len(b)))
+        raise ValueError(
+            "Data of len {0} can't be PCKS7-padded".format(len(b)))
     numpads = b[-1]
     if numpads > 16:
-        raise ValueError("Data ending with {0} can't be PCKS7-padded".format(b[-1]))
+        raise ValueError(
+            "Data ending with {0} can't be PCKS7-padded".format(b[-1]))
     return b[:-numpads]
 
 
@@ -164,7 +167,8 @@ class AES(object):
         """
         Private method performing Rijndael's key schedule rotate operation.
 
-        Rotate the data word eight bits to the left: eg, rotate(1d2c3a4f) == 2c3a4f1d.
+        Rotate the data word eight bits to the left: eg,
+        rotate(1d2c3a4f) == 2c3a4f1d.
         
         @param data data of size 4 (bytearray)
         """
@@ -228,12 +232,14 @@ class AES(object):
                 t = self.__core(t, rconIteration)
                 rconIteration += 1
             # For 256-bit keys, we add an extra sbox to the calculation
-            if size == self.KeySize["SIZE_256"] and ((currentSize % size) == 16):
+            if size == self.KeySize["SIZE_256"] and \
+                    ((currentSize % size) == 16):
                 for l in range(4):
                     t[l] = self.__getSBoxValue(t[l])
 
             # We XOR t with the four-byte block 16, 24, 32 bytes before the new
-            # expanded key. This becomes the next four bytes in the expanded key.
+            # expanded key. This becomes the next four bytes in the expanded
+            # key.
             for m in range(4):
                 expandedKey[currentSize] = \
                     expandedKey[currentSize - size] ^ t[m]
@@ -270,7 +276,8 @@ class AES(object):
 
     def __galois_multiplication(self, a, b):
         """
-        Private method to perform a Galois multiplication of 8 bit characters a and b.
+        Private method to perform a Galois multiplication of 8 bit characters
+        a and b.
         
         @param a first factor (byte)
         @param b second factor (byte)
@@ -291,8 +298,8 @@ class AES(object):
 
     def __subBytes(self, state, isInv):
         """
-        Private method to substitute all the values from the state with the value in
-        the SBox using the state value as index for the SBox.
+        Private method to substitute all the values from the state with the
+        value in the SBox using the state value as index for the SBox.
         
         @param state state to be worked on (bytearray)
         @param isInv flag indicating an inverse operation (boolean)
@@ -366,7 +373,8 @@ class AES(object):
     # galois multiplication of 1 column of the 4x4 matrix
     def __mixColumn(self, column, isInv):
         """
-        Private method to perform a galois multiplication of 1 column the 4x4 matrix.
+        Private method to perform a galois multiplication of 1 column the
+        4x4 matrix.
         
         @param column column to be worked on (bytearray)
         @param isInv flag indicating an inverse operation (boolean)
@@ -392,7 +400,8 @@ class AES(object):
 
     def __aes_round(self, state, roundKey):
         """
-        Private method to apply the 4 operations of the forward round in sequence.
+        Private method to apply the 4 operations of the forward round in
+        sequence.
         
         @param state state to be worked on (bytearray)
         @param roundKey round key to be used (bytearray)
@@ -406,7 +415,8 @@ class AES(object):
 
     def __aes_invRound(self, state, roundKey):
         """
-        Private method to apply the 4 operations of the inverse round in sequence.
+        Private method to apply the 4 operations of the inverse round in
+        sequence.
         
         @param state state to be worked on (bytearray)
         @param roundKey round key to be used (bytearray)
@@ -420,15 +430,19 @@ class AES(object):
 
     def __aes_main(self, state, expandedKey, nbrRounds):
         """
-        Private method to perform the initial operations, the standard round, and the
-        final operations of the forward AES, creating a round key for each round.
+        Private method to do the AES encryption for one round.
+        
+        Perform the initial operations, the standard round, and the
+        final operations of the forward AES, creating a round key for
+        each round.
         
         @param state state to be worked on (bytearray)
         @param expandedKey expanded key to be used (bytearray)
         @param nbrRounds number of rounds to be done (integer)
         @return modified state (bytearray)
         """
-        state = self.__addRoundKey(state, self.__createRoundKey(expandedKey, 0))
+        state = self.__addRoundKey(
+            state, self.__createRoundKey(expandedKey, 0))
         i = 1
         while i < nbrRounds:
             state = self.__aes_round(
@@ -442,8 +456,11 @@ class AES(object):
 
     def __aes_invMain(self, state, expandedKey, nbrRounds):
         """
-        Private method to perform the initial operations, the standard round, and the
-        final operations of the inverse AES, creating a round key for each round.
+        Private method to do the inverse AES encryption for one round.
+        
+        Perform the initial operations, the standard round, and the
+        final operations of the inverse AES, creating a round key for
+        each round.
         
         @param state state to be worked on (bytearray)
         @param expandedKey expanded key to be used (bytearray)
@@ -459,13 +476,14 @@ class AES(object):
             i -= 1
         state = self.__shiftRows(state, True)
         state = self.__subBytes(state, True)
-        state = self.__addRoundKey(state, self.__createRoundKey(expandedKey, 0))
+        state = self.__addRoundKey(
+            state, self.__createRoundKey(expandedKey, 0))
         return state
 
     def encrypt(self, iput, key, size):
         """
-        Public method to encrypt a 128 bit input block against the given key of size
-        specified.
+        Public method to encrypt a 128 bit input block against the given key
+        of size specified.
         
         @param iput input data (bytearray)
         @param key key to be used (bytes or bytearray)
@@ -520,8 +538,8 @@ class AES(object):
     # decrypts a 128 bit input block against the given key of size specified
     def decrypt(self, iput, key, size):
         """
-        Public method to decrypt a 128 bit input block against the given key of size
-        specified.
+        Public method to decrypt a 128 bit input block against the given key
+        of size specified.
         
         @param iput input data (bytearray)
         @param key key to be used (bytes or bytearray)
@@ -801,7 +819,8 @@ def encryptData(key, data, mode=AESModeOfOperation.ModeOfOperation["CBC"]):
     if mode == AESModeOfOperation.ModeOfOperation["CBC"]:
         data = append_PKCS7_padding(data)
     keysize = len(key)
-    assert keysize in AES.KeySize.values(), 'invalid key size: {0}'.format(keysize)
+    assert keysize in AES.KeySize.values(), \
+        'invalid key size: {0}'.format(keysize)
     # create a new iv using random data
     iv = bytearray([i for i in os.urandom(16)])
     moo = AESModeOfOperation()
@@ -817,7 +836,8 @@ def decryptData(key, data, mode=AESModeOfOperation.ModeOfOperation["CBC"]):
     Module function to decrypt the given data with the given key.
     
     @param key key to be used for decryption (bytes)
-    @param data data to be decrypted (with initialization vector prepended) (bytes)
+    @param data data to be decrypted (with initialization vector prepended)
+        (bytes)
     @param mode mode of operations (0, 1 or 2)
     @return decrypted data (bytes)
     @exception ValueError key size is invalid or decrypted data is invalid

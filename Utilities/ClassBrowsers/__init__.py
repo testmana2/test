@@ -131,9 +131,10 @@ def find_module(name, path, isPyFile=False):
     try:
         return imp.find_module(name, path)
     except ImportError:
-        if name.lower().endswith(tuple(Preferences.getPython("PythonExtensions") + \
-                                       Preferences.getPython("Python3Extensions"))) or \
-           isPyFile:
+        if name.lower().endswith(
+                tuple(Preferences.getPython("PythonExtensions") +
+                      Preferences.getPython("Python3Extensions"))) or \
+                isPyFile:
             for p in path:      # search in path
                 pathname = os.path.join(p, name)
                 if os.path.exists(pathname):

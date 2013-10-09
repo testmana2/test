@@ -84,8 +84,10 @@ class PasswordChecker(object):
         # long enough. we will skip the redudancy penalty if this
         # number is not exceeded (meaning redundancy < this number)
         self.redundancy = {
-            "value": 1,         # 1 means, not double characters, default to start
-            "permitted": 2.0,   # 2 means, in average every character can occur twice
+            "value": 1,         # 1 means, not double characters,
+                                # default to start
+            "permitted": 2.0,   # 2 means, in average every character
+                                # can occur twice
             "status": self.Status_Failed,
             "rating": 0,
         }
@@ -316,9 +318,10 @@ class PasswordChecker(object):
             # calculate a redundancy number
             self.redundancy["value"] = len(password) / len(uniqueCharacters)
         
-        # Check for sequential alpha string patterns (forward and reverse) but only,
-        # if the string has already a length to check for, does not make sense to check
-        # the password "ab" for the sequential data "abc"
+        # Check for sequential alpha string patterns (forward and reverse)
+        # but only, if the string has already a length to check for, does
+        # not make sense to check the password "ab" for the sequential data
+        # "abc"
         lowercasedPassword = password.lower()
         
         if self.passwordLength["count"] >= self.sequentialLetters["length"]:
@@ -348,8 +351,10 @@ class PasswordChecker(object):
         patternsMatched = []
         if self.passwordLength["count"] >= self.keyboardPatterns["length"]:
             for pattern in self.keyboardPatterns["data"]:
-                for index in range(len(pattern) - self.keyboardPatterns["length"] + 1):
-                    fwd = pattern[index:index + self.keyboardPatterns["length"]]
+                for index in range(
+                        len(pattern) - self.keyboardPatterns["length"] + 1):
+                    fwd = pattern[index:index + 
+                                  self.keyboardPatterns["length"]]
                     rev = self.__strReverse(fwd)
                     if lowercasedPassword.find(fwd) != -1:
                         if fwd not in patternsMatched:
@@ -364,7 +369,8 @@ class PasswordChecker(object):
         if self.passwordLength["count"] >= self.repeatedSequences["length"]:
             for index in range(len(lowercasedPassword) - \
                                self.repeatedSequences["length"] + 1):
-                fwd = lowercasedPassword[index:index + self.repeatedSequences["length"]]
+                fwd = lowercasedPassword[
+                    index:index + self.repeatedSequences["length"]]
                 if lowercasedPassword.find(
                    fwd, index + self.repeatedSequences["length"]) != -1:
                     self.repeatedSequences["count"] += 1
@@ -373,21 +379,24 @@ class PasswordChecker(object):
         if self.passwordLength["count"] >= self.mirroredSequences["length"]:
             for index in range(len(lowercasedPassword) - \
                                self.mirroredSequences["length"] + 1):
-                fwd = lowercasedPassword[index:index + self.mirroredSequences["length"]]
+                fwd = lowercasedPassword[
+                    index:index + self.mirroredSequences["length"]]
                 rev = self.__strReverse(fwd)
                 if lowercasedPassword.find(
                    fwd, index + self.mirroredSequences["length"]) != -1:
                     self.mirroredSequences["count"] += 1
         
         # Initial score based on length
-        self.score["count"] = self.passwordLength["count"] * self.passwordLength["factor"]
+        self.score["count"] = self.passwordLength["count"] * \
+            self.passwordLength["factor"]
         
         # passwordLength
         # credit additional length or punish "under" length
         if self.passwordLength["count"] >= self.passwordLength["minimum"]:
             # credit additional characters over minimum
             self.passwordLength["rating"] = self.passwordLength["bonus"] + \
-                (self.passwordLength["count"] - self.passwordLength["minimum"]) * \
+                (self.passwordLength["count"] - 
+                 self.passwordLength["minimum"]) * \
                 self.passwordLength["factor"]
         else:
             self.passwordLength["rating"] = self.passwordLength["penalty"]
@@ -396,7 +405,8 @@ class PasswordChecker(object):
         # recommendedPasswordLength
         # Credit reaching the recommended password length or put a
         # penalty on it
-        if self.passwordLength["count"] >= self.recommendedPasswordLength["minimum"]:
+        if self.passwordLength["count"] >= \
+                self.recommendedPasswordLength["minimum"]:
             self.recommendedPasswordLength["rating"] = \
                 self.recommendedPasswordLength["bonus"] + \
                 (self.passwordLength["count"] - \
@@ -410,8 +420,10 @@ class PasswordChecker(object):
         # lowercaseLetters
         # Honor or punish the lowercase letter use
         if self.lowercaseLetters["count"] > 0:
-            self.lowercaseLetters["rating"] = self.lowercaseLetters["bonus"] + \
-                self.lowercaseLetters["count"] * self.lowercaseLetters["factor"]
+            self.lowercaseLetters["rating"] = \
+                self.lowercaseLetters["bonus"] + \
+                self.lowercaseLetters["count"] * \
+                self.lowercaseLetters["factor"]
         else:
             self.lowercaseLetters["rating"] = self.lowercaseLetters["penalty"]
         self.score["count"] += self.lowercaseLetters["rating"]
@@ -419,8 +431,10 @@ class PasswordChecker(object):
         # uppercaseLetters
         # Honor or punish the lowercase letter use
         if self.uppercaseLetters["count"] > 0:
-            self.uppercaseLetters["rating"] = self.uppercaseLetters["bonus"] + \
-                self.uppercaseLetters["count"] * self.uppercaseLetters["factor"]
+            self.uppercaseLetters["rating"] = \
+                self.uppercaseLetters["bonus"] + \
+                self.uppercaseLetters["count"] * \
+                self.uppercaseLetters["factor"]
         else:
             self.uppercaseLetters["rating"] = self.uppercaseLetters["penalty"]
         self.score["count"] += self.uppercaseLetters["rating"]
@@ -464,26 +478,34 @@ class PasswordChecker(object):
         # sequentialLetters
         # Honor or punish the sequential letter use
         if self.sequentialLetters["count"] == 0:
-            self.sequentialLetters["rating"] = self.sequentialLetters["bonus"] + \
-                self.sequentialLetters["count"] * self.sequentialLetters["factor"]
+            self.sequentialLetters["rating"] = \
+                self.sequentialLetters["bonus"] + \
+                self.sequentialLetters["count"] * \
+                self.sequentialLetters["factor"]
         else:
-            self.sequentialLetters["rating"] = self.sequentialLetters["penalty"]
+            self.sequentialLetters["rating"] = \
+                self.sequentialLetters["penalty"]
         self.score["count"] += self.sequentialLetters["rating"]
         
         # sequentialNumerics
         # Honor or punish the sequential numerics use
         if self.sequentialNumerics["count"] == 0:
-            self.sequentialNumerics["rating"] = self.sequentialNumerics["bonus"] + \
-                self.sequentialNumerics["count"] * self.sequentialNumerics["factor"]
+            self.sequentialNumerics["rating"] = \
+                self.sequentialNumerics["bonus"] + \
+                self.sequentialNumerics["count"] * \
+                self.sequentialNumerics["factor"]
         else:
-            self.sequentialNumerics["rating"] = self.sequentialNumerics["penalty"]
+            self.sequentialNumerics["rating"] = \
+                self.sequentialNumerics["penalty"]
         self.score["count"] += self.sequentialNumerics["rating"]
         
         # keyboardPatterns
         # Honor or punish the keyboard patterns use
         if self.keyboardPatterns["count"] == 0:
-            self.keyboardPatterns["rating"] = self.keyboardPatterns["bonus"] + \
-                self.keyboardPatterns["count"] * self.keyboardPatterns["factor"]
+            self.keyboardPatterns["rating"] = \
+                self.keyboardPatterns["bonus"] + \
+                self.keyboardPatterns["count"] * \
+                self.keyboardPatterns["factor"]
         else:
             self.keyboardPatterns["rating"] = self.keyboardPatterns["penalty"]
         self.score["count"] += self.keyboardPatterns["rating"]
@@ -528,13 +550,16 @@ class PasswordChecker(object):
         
         # judge the requirement status
         self.basicRequirements["status"] = self.__determineStatus(
-            self.basicRequirements["count"] - self.basicRequirements["minimum"])
+            self.basicRequirements["count"] - 
+            self.basicRequirements["minimum"])
         if self.basicRequirements["status"] != self.Status_Failed:
             self.basicRequirements["rating"] = \
                 self.basicRequirements["bonus"] + \
-                self.basicRequirements["factor"] * self.basicRequirements["count"]
+                self.basicRequirements["factor"] * \
+                self.basicRequirements["count"]
         else:
-            self.basicRequirements["rating"] = self.basicRequirements["penalty"]
+            self.basicRequirements["rating"] = \
+                self.basicRequirements["penalty"]
         self.score["count"] += self.basicRequirements["rating"]
         
         # beyond basic requirements
@@ -563,18 +588,22 @@ class PasswordChecker(object):
             # repeatedSequences
             # Honor or punish the use of repeated sequences
             if self.repeatedSequences["count"] == 0:
-                self.repeatedSequences["rating"] = self.repeatedSequences["bonus"]
+                self.repeatedSequences["rating"] = \
+                    self.repeatedSequences["bonus"]
             else:
-                self.repeatedSequences["rating"] = self.repeatedSequences["penalty"] + \
+                self.repeatedSequences["rating"] = \
+                    self.repeatedSequences["penalty"] + \
                     self.repeatedSequences["count"] * \
                     self.repeatedSequences["factor"]
             
             # mirroredSequences
             # Honor or punish the use of mirrored sequences
             if self.mirroredSequences["count"] == 0:
-                self.mirroredSequences["rating"] = self.mirroredSequences["bonus"]
+                self.mirroredSequences["rating"] = \
+                    self.mirroredSequences["bonus"]
             else:
-                self.mirroredSequences["rating"] = self.mirroredSequences["penalty"] + \
+                self.mirroredSequences["rating"] = \
+                    self.mirroredSequences["penalty"] + \
                     self.mirroredSequences["count"] * \
                     self.mirroredSequences["factor"]
         
@@ -584,7 +613,8 @@ class PasswordChecker(object):
         # apply the redundancy
         # is the password length requirement fulfilled?
         if self.recommendedPasswordLength["status"] != self.Status_Exceeded:
-            # full penalty, because password is not long enough, only for a positive score
+            # full penalty, because password is not long enough, only for
+            # a positive score
             if self.score["count"] > 0:
                 self.score["count"] *= 1.0 / self.redundancy["value"]
         
