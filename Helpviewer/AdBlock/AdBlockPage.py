@@ -60,8 +60,9 @@ class AdBlockPage(QObject):
         elementHiding += "{display: none !important;}\n</style>"
         
         bodyElement = docElement.findFirst("body")
-        bodyElement.appendInside('<style type="text/css">\n/* AdBlock for eric */\n' +
-                                 elementHiding)
+        bodyElement.appendInside(
+            '<style type="text/css">\n/* AdBlock for eric */\n' +
+            elementHiding)
 
 
 class AdBlockedPageEntry(object):

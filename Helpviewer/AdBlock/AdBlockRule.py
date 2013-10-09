@@ -184,7 +184,8 @@ class AdBlockRule(object):
                     # Hiding placeholders of blocked elements
                     handledOptions += 1
             
-            # If we don't handle all options, it's safer to just disable this rule
+            # If we don't handle all options, it's safer to just disable
+            # this rule
             if handledOptions != len(options):
                 self.__internalDisabled = True
                 return
@@ -228,7 +229,8 @@ class AdBlockRule(object):
         if "*" in parsedLine or "^" in parsedLine or "|" in parsedLine:
             pattern = self.__convertPatternToRegExp(parsedLine)
             self.__useRegExp = True
-            self.__regExp = QRegExp(pattern, self.__caseSensitivity, QRegExp.RegExp)
+            self.__regExp = QRegExp(pattern, self.__caseSensitivity,
+                                    QRegExp.RegExp)
             return
         
         # no regexp required
@@ -275,7 +277,8 @@ class AdBlockRule(object):
             matched = domain.endswith(self.__matchString)
         elif self.__useEndsMatch:
             if self.__caseSensitivity == Qt.CaseInsensitive:
-                matched = encodedUrl.lower().endswith(self.__matchString.lower())
+                matched = encodedUrl.lower().endswith(
+                    self.__matchString.lower())
             else:
                 matched = encodedUrl.endswith(self.__matchString)
         else:
@@ -542,19 +545,26 @@ class AdBlockRule(object):
         """
         pattern = wildcardPattern
         
-        pattern = re.sub(r"\*+", "*", pattern)       # remove multiple wildcards
-        pattern = re.sub(r"\^\|$", "^", pattern)     # remove anchors following separator
-                                                     # placeholder
-        pattern = re.sub(r"^(\*)", "", pattern)      # remove leading wildcards
-        pattern = re.sub(r"(\*)$", "", pattern)      # remove trailing wildcards
-        pattern = re.sub(r"(\W)", r"\\\1", pattern)  # escape special symbols
+        # remove multiple wildcards
+        pattern = re.sub(r"\*+", "*", pattern)
+        # remove anchors following separator placeholder
+        pattern = re.sub(r"\^\|$", "^", pattern)
+        # remove leading wildcards
+        pattern = re.sub(r"^(\*)", "", pattern)
+        # remove trailing wildcards
+        pattern = re.sub(r"(\*)$", "", pattern)
+        # escape special symbols
+        pattern = re.sub(r"(\W)", r"\\\1", pattern)
+        # process extended anchor at expression start
         pattern = re.sub(r"^\\\|\\\|",
-            r"^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?", pattern)  # process extended anchor at
-                                                          # expression start
-        pattern = re.sub(r"\\\^",
-            r"(?:[^\w\d\-.%]|$)", pattern)           # process separator placeholders
-        pattern = re.sub(r"^\\\|", "^", pattern)     # process anchor at expression start
-        pattern = re.sub(r"\\\|$", "$", pattern)     # process anchor at expression end
-        pattern = re.sub(r"\\\*", ".*", pattern)     # replace wildcards by .*
+            r"^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?", pattern)
+        # process separator placeholders
+        pattern = re.sub(r"\\\^", r"(?:[^\w\d\-.%]|$)", pattern)
+        # process anchor at expression start
+        pattern = re.sub(r"^\\\|", "^", pattern)
+        # process anchor at expression end
+        pattern = re.sub(r"\\\|$", "$", pattern)
+        # replace wildcards by .*
+        pattern = re.sub(r"\\\*", ".*", pattern)
         
         return pattern

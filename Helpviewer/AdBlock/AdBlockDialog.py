@@ -78,7 +78,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
                 icon = UI.PixmapCache.getIcon("adBlockPlus.png")
             else:
                 icon = UI.PixmapCache.getIcon("adBlockPlusDisabled.png")
-            self.subscriptionsTabWidget.addTab(tree, icon, subscription.title())
+            self.subscriptionsTabWidget.addTab(
+                tree, icon, subscription.title())
         
         self.__loaded = True
         QCoreApplication.processEvents()
@@ -96,7 +97,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         from .AdBlockTreeWidget import AdBlockTreeWidget
         tree = AdBlockTreeWidget(subscription, self.subscriptionsTabWidget)
         index = self.subscriptionsTabWidget.insertTab(
-            self.subscriptionsTabWidget.count() - 1, tree, subscription.title())
+            self.subscriptionsTabWidget.count() - 1, tree,
+            subscription.title())
         self.subscriptionsTabWidget.setCurrentIndex(index)
         QCoreApplication.processEvents()
         if refresh:
@@ -122,8 +124,10 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         menu.addAction(self.trUtf8("Remove Rule"), self.__removeCustomRule)\
             .setEnabled(subscriptionEditable)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Browse Subscriptions..."), self.__browseSubscriptions)
-        menu.addAction(self.trUtf8("Remove Subscription"), self.__removeSubscription)\
+        menu.addAction(
+            self.trUtf8("Browse Subscriptions..."), self.__browseSubscriptions)
+        menu.addAction(
+            self.trUtf8("Remove Subscription"), self.__removeSubscription)\
             .setEnabled(subscriptionRemovable)
         if self.__currentSubscription:
             menu.addSeparator()
@@ -133,7 +137,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
                 txt = self.trUtf8("Enable Subscription")
             menu.addAction(txt, self.__switchSubscriptionEnabled)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Update Subscription"), self.__updateSubscription)\
+        menu.addAction(
+            self.trUtf8("Update Subscription"), self.__updateSubscription)\
             .setEnabled(not subscriptionEditable)
         menu.addAction(self.trUtf8("Update All Subscriptions"),
             self.__updateAllSubscriptions)
@@ -203,13 +208,15 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         for subscription in requiresSubscriptions:
             requiresTitles.append(subscription.title())
         if requiresTitles:
-            message = self.trUtf8("<p>Do you really want to remove subscription"
+            message = self.trUtf8(
+                "<p>Do you really want to remove subscription"
                 " <b>{0}</b> and all subscriptions requiring it?</p>"
                 "<ul><li>{1}</li></ul>").format(
                     self.__currentSubscription.title(),
                     "</li><li>".join(requiresTitles))
         else:
-            message = self.trUtf8("<p>Do you really want to remove subscription"
+            message = self.trUtf8(
+                "<p>Do you really want to remove subscription"
                 " <b>{0}</b>?</p>").format(self.__currentSubscription.title())
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Remove Subscription"),
@@ -238,7 +245,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         """
         Private slot to set the enabled state of a subscription.
         
-        @param subscription subscription to set the state for (AdBlockSubscription)
+        @param subscription subscription to set the state for
+            (AdBlockSubscription)
         @param enable state to set to (boolean)
         """
         if enable:
@@ -284,8 +292,10 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         @param index index of the new current tab (integer)
         """
         if index != -1:
-            self.__currentTreeWidget = self.subscriptionsTabWidget.widget(index)
-            self.__currentSubscription = self.__currentTreeWidget.subscription()
+            self.__currentTreeWidget = \
+                self.subscriptionsTabWidget.widget(index)
+            self.__currentSubscription = \
+                self.__currentTreeWidget.subscription()
     
     @pyqtSlot(str)
     def on_searchEdit_textChanged(self, filter):
