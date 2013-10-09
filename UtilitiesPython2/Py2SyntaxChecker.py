@@ -115,7 +115,8 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
                 continue
             
             _fn, lineno, message = warning.getMessageData()
-            if "__IGNORE_WARNING__" not in extractLineFlags(lines[lineno - 1].strip()):
+            if "__IGNORE_WARNING__" not in \
+                    extractLineFlags(lines[lineno - 1].strip()):
                 strings.extend(["FLAKES_WARNING", _fn, lineno, message])
     except SyntaxError as err:
         if err.text.strip():
@@ -161,7 +162,8 @@ if __name__ == "__main__":
         
         if not syntaxerror and sys.argv[1] in ["-fi", "-fs"]:
             # do pyflakes check
-            warningLines = flakesCheck(filename, codestring, sys.argv[1] == "-fi")
+            warningLines = flakesCheck(
+                filename, codestring, sys.argv[1] == "-fi")
             for warningLine in warningLines:
                 print warningLine
     

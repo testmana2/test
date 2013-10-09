@@ -93,7 +93,8 @@ class NannyNag(Exception):
 
 def check(filename, codestring):
     """
-    Private function to check one Python source file for whitespace related problems.
+    Private function to check one Python source file for whitespace related
+    problems.
     
     @param filename source filename (string)
     @param codestring source code (string)
@@ -114,7 +115,8 @@ def check(filename, codestring):
         return (True, filename, "1", "Token Error: %s" % unicode(msg))
     
     except IndentationError, err:
-        return (True, filename, err.lineno, "Indentation Error: %s" % unicode(err.msg))
+        return (True, filename, err.lineno,
+                "Indentation Error: %s" % unicode(err.msg))
     
     except NannyNag, nag:
         badline = nag.get_lineno()
@@ -224,7 +226,8 @@ class Whitespace(object):
     # for all t >= 1
     def equal(self, other):
         """
-        Method to compare the indentation levels of two Whitespace objects for equality.
+        Method to compare the indentation levels of two Whitespace objects for
+        equality.
         
         @param other Whitespace object to compare against.
         @return True, if we compare equal against the other Whitespace object.
@@ -271,8 +274,8 @@ class Whitespace(object):
     # Note that M is of the form (T*)(S*) iff len(M.norm[0]) <= 1.
     def less(self, other):
         """
-        Method to compare the indentation level against another Whitespace objects to
-        be smaller.
+        Method to compare the indentation level against another Whitespace
+        objects to be smaller.
         
         @param other Whitespace object to compare against.
         @return True, if we compare less against the other Whitespace object.
@@ -370,7 +373,8 @@ def process_tokens(tokens):
             # Ouch!  This assert triggers if the last line of the source
             # is indented *and* lacks a newline -- then DEDENTs pop out
             # of thin air.
-            # assert check_equal  # else no earlier NEWLINE, or an earlier INDENT
+            # assert check_equal  # else no earlier NEWLINE, or an
+            # earlier INDENT
             check_equal = 1
 
             del indents[-1]
