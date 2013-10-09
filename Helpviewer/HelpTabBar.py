@@ -39,7 +39,8 @@ class HelpTabBar(E5WheelTabBar):
         """
         Private slot to show the tab preview.
         """
-        indexedBrowser = self.__tabWidget.browserAt(self.__currentTabPreviewIndex)
+        indexedBrowser = self.__tabWidget.browserAt(
+            self.__currentTabPreviewIndex)
         currentBrowser = self.__tabWidget.currentBrowser()
         
         if indexedBrowser is None or currentBrowser is None:

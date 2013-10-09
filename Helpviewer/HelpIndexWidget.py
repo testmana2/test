@@ -16,8 +16,8 @@ class HelpIndexWidget(QWidget):
     Class implementing a window for showing the QtHelp index.
     
     @signal linkActivated(QUrl) emitted when an index entry is activated
-    @signal linksActivated(links, keyword) emitted when an index entry referencing
-            multiple targets is activated
+    @signal linksActivated(links, keyword) emitted when an index entry
+        referencing multiple targets is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
     linkActivated = pyqtSignal(QUrl)
@@ -52,10 +52,13 @@ class HelpIndexWidget(QWidget):
         
         self.__index = self.__engine.indexWidget()
         self.__index.installEventFilter(self)
-        self.__engine.indexModel().indexCreationStarted.connect(self.__disableSearchEdit)
-        self.__engine.indexModel().indexCreated.connect(self.__enableSearchEdit)
+        self.__engine.indexModel().indexCreationStarted.connect(
+            self.__disableSearchEdit)
+        self.__engine.indexModel().indexCreated.connect(
+            self.__enableSearchEdit)
         self.__index.activated.connect(self.__activated)
-        self.__searchEdit.returnPressed.connect(self.__index.activateCurrentItem)
+        self.__searchEdit.returnPressed.connect(
+            self.__index.activateCurrentItem)
         self.__layout.addWidget(self.__index)
         
         self.__index.viewport().installEventFilter(self)

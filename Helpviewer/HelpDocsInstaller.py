@@ -66,11 +66,13 @@ class HelpDocsInstaller(QThread):
         changes = False
         
         qt4Docs = ["designer", "linguist", "qt"]
-        qt5Docs = ["activeqt", "qtconcurrent", "qtcore", "qtdbus", "qtdesigner", "qtdoc",
-            "qtgraphicaleffects", "qtgui", "qthelp", "qtimageformats", "qtlinguist",
-            "qtmultimedia", "qtnetwork", "qtopengl", "qtprintsupport", "qtqml", "qtquick",
-            "qtscript", "qtsql", "qtsvg", "qttestlib", "qtuitools", "qtwebkit",
-            "qtwebkitexamples", "qtwidgets", "qtxml", "qtxmlpatterns"]
+        qt5Docs = [
+            "activeqt", "qtconcurrent", "qtcore", "qtdbus", "qtdesigner",
+            "qtdoc", "qtgraphicaleffects", "qtgui", "qthelp", "qtimageformats",
+            "qtlinguist", "qtmultimedia", "qtnetwork", "qtopengl",
+            "qtprintsupport", "qtqml", "qtquick", "qtscript", "qtsql", "qtsvg",
+            "qttestlib", "qtuitools", "qtwebkit", "qtwebkitexamples",
+            "qtwidgets", "qtxml", "qtxmlpatterns"]
         for qtDocs, version in [(qt4Docs, 4), (qt5Docs, 5)]:
             for doc in qtDocs:
                 changes |= self.__installQtDoc(doc, version, engine)
@@ -108,10 +110,12 @@ class HelpDocsInstaller(QThread):
             qchFile = lst[1]
         
         if version == 4:
-            docsPath = QDir(QLibraryInfo.location(QLibraryInfo.DocumentationPath) + \
-                       QDir.separator() + "qch")
+            docsPath = QDir(
+                QLibraryInfo.location(QLibraryInfo.DocumentationPath) + \
+                QDir.separator() + "qch")
         elif version == 5:
-            docsPath = QDir(QLibraryInfo.location(QLibraryInfo.DocumentationPath))
+            docsPath = QDir(
+                QLibraryInfo.location(QLibraryInfo.DocumentationPath))
         else:
             # unsupported Qt version
             return False
@@ -125,13 +129,15 @@ class HelpDocsInstaller(QThread):
         for f in files:
             if f.startswith(name):
                 fi = QFileInfo(docsPath.absolutePath() + QDir.separator() + f)
-                namespace = QHelpEngineCore.namespaceName(fi.absoluteFilePath())
+                namespace = QHelpEngineCore.namespaceName(
+                    fi.absoluteFilePath())
                 if not namespace:
                     continue
                 
                 if dt.isValid() and \
                    namespace in engine.registeredDocumentations() and \
-                   fi.lastModified().toString(Qt.ISODate) == dt.toString(Qt.ISODate) and \
+                   fi.lastModified().toString(Qt.ISODate) == \
+                    dt.toString(Qt.ISODate) and \
                    qchFile == fi.absoluteFilePath():
                     return False
                 
@@ -140,8 +146,9 @@ class HelpDocsInstaller(QThread):
                 
                 if not engine.registerDocumentation(fi.absoluteFilePath()):
                     self.errorMessage.emit(
-                        self.trUtf8("""<p>The file <b>{0}</b> could not be registered."""
-                                    """<br/>Reason: {1}</p>""")\
+                        self.trUtf8(
+                            """<p>The file <b>{0}</b> could not be"""
+                            """ registered. <br/>Reason: {1}</p>""")\
                             .format(fi.absoluteFilePath, engine.error())
                     )
                     return False
@@ -184,11 +191,13 @@ class HelpDocsInstaller(QThread):
             if f == "source.qch":
                 fi = QFileInfo(docsPath.absolutePath() + QDir.separator() + f)
                 if dt.isValid() and \
-                   fi.lastModified().toString(Qt.ISODate) == dt.toString(Qt.ISODate) and \
+                   fi.lastModified().toString(Qt.ISODate) == \
+                    dt.toString(Qt.ISODate) and \
                    qchFile == fi.absoluteFilePath():
                     return False
                 
-                namespace = QHelpEngineCore.namespaceName(fi.absoluteFilePath())
+                namespace = QHelpEngineCore.namespaceName(
+                    fi.absoluteFilePath())
                 if not namespace:
                     continue
                 
@@ -197,8 +206,9 @@ class HelpDocsInstaller(QThread):
                 
                 if not engine.registerDocumentation(fi.absoluteFilePath()):
                     self.errorMessage.emit(
-                        self.trUtf8("""<p>The file <b>{0}</b> could not be registered."""
-                                    """<br/>Reason: {1}</p>""")\
+                        self.trUtf8(
+                            """<p>The file <b>{0}</b> could not be"""
+                            """ registered. <br/>Reason: {1}</p>""")\
                             .format(fi.absoluteFilePath, engine.error())
                     )
                     return False

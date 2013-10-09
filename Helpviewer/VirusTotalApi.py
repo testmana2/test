@@ -4,28 +4,32 @@
 #
 
 """
-Module implementing the <a href="http://www.virustotal.com">VirusTotal</a> API class.
+Module implementing the <a href="http://www.virustotal.com">VirusTotal</a>
+API class.
 """
 
 import json
 
 from PyQt4.QtCore import QObject, QUrl, QByteArray, pyqtSignal
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, QNetworkAccessManager
+from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, \
+    QNetworkAccessManager
 
 import Preferences
 
 
 class VirusTotalAPI(QObject):
     """
-    Class implementing the <a href="http://www.virustotal.com">VirusTotal</a> API.
+    Class implementing the <a href="http://www.virustotal.com">VirusTotal</a>
+    API.
     
-    @signal checkServiceKeyFinished(bool, str) emitted after the service key check
-            has been performed. It gives a flag indicating validity (boolean) and
-            an error message in case of a network error (string).
+    @signal checkServiceKeyFinished(bool, str) emitted after the service key
+        check has been performed. It gives a flag indicating validity
+        (boolean) and an error message in case of a network error (string).
     @signal submitUrlError(str) emitted with the error string, if the URL scan
-            submission returned an error.
+        submission returned an error.
     @signal urlScanReport(str) emitted with the URL of the URL scan report page
-    @signal fileScanReport(str) emitted with the URL of the file scan report page
+    @signal fileScanReport(str) emitted with the URL of the file scan report
+        page
     """
     checkServiceKeyFinished = pyqtSignal(bool, str)
     submitUrlError = pyqtSignal(str)
@@ -44,8 +48,10 @@ class VirusTotalAPI(QObject):
     ScanUrlPattern = "{0}://www.virustotal.com/api/scan_url.json"
     GetUrlReportPattern = "{0}://www.virustotal.com/api/get_url_report.json"
     
-    ReportUrlScanPagePattern = "http://www.virustotal.com/url-scan/report.html?id={0}"
-    ReportFileScanPagePattern = "http://www.virustotal.com/file-scan/report.html?id={0}"
+    ReportUrlScanPagePattern = \
+        "http://www.virustotal.com/url-scan/report.html?id={0}"
+    ReportFileScanPagePattern = \
+        "http://www.virustotal.com/file-scan/report.html?id={0}"
     
     SearchUrl = "http://www.virustotal.com/search.html"
     
@@ -135,8 +141,8 @@ class VirusTotalAPI(QObject):
         request = QNetworkRequest(QUrl(self.ScanUrlUrl))
         request.setHeader(QNetworkRequest.ContentTypeHeader,
                           "application/x-www-form-urlencoded")
-        params = QByteArray(
-            "key={0}&url=".format(Preferences.getHelp("VirusTotalServiceKey")))\
+        params = QByteArray("key={0}&url=".format(
+                Preferences.getHelp("VirusTotalServiceKey")))\
             .append(QUrl.toPercentEncoding(url.toString()))
         
         import Helpviewer.HelpWindow
@@ -182,14 +188,16 @@ class VirusTotalAPI(QObject):
     
     def __getFileScanReportUrlFinished(self):
         """
-        Private slot to determine the result of the file scan report URL request.
+        Private slot to determine the result of the file scan report URL
+        request.
         """
         reply = self.sender()
         if reply.error() == QNetworkReply.NoError:
             result = json.loads(str(reply.readAll(), "utf-8"))
             if "file-report" in result:
                 self.fileScanReport.emit(
-                    self.ReportFileScanPagePattern.format(result["file-report"]))
+                    self.ReportFileScanPagePattern.format(
+                        result["file-report"]))
         self.__replies.remove(reply)
     
     @classmethod

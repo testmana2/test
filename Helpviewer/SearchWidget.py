@@ -46,8 +46,10 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.havefound = False
         self.__findBackwards = False
         
-        self.findtextCombo.lineEdit().returnPressed.connect(self.__findByReturnPressed)
-        self.findtextCombo.lineEdit().textEdited.connect(self.__searchTextEdited)
+        self.findtextCombo.lineEdit().returnPressed.connect(
+            self.__findByReturnPressed)
+        self.findtextCombo.lineEdit().textEdited.connect(
+            self.__searchTextEdited)
         
         if hasattr(QWebPage, "HighlightAllOccurrences"):
             self.highlightAllCheckBox.setChecked(True)
@@ -67,7 +69,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         """
         Private slot to perform an incremental search.
         
-        @param txt current text of the search combos line edit (string) (unused)
+        @param txt current text of the search combos line edit (string)
+            (unused)
         """
         self.on_highlightAllCheckBox_toggled(True)
         self.__findNextPrev()
@@ -167,7 +170,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
     
     def __findByReturnPressed(self):
         """
-        Private slot to handle the returnPressed signal of the findtext combobox.
+        Private slot to handle the returnPressed signal of the findtext
+        combobox.
         """
         if self.__findBackwards:
             self.on_findPrevButton_clicked()
@@ -217,7 +221,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
     
     def __setFindtextComboBackground(self, error):
         """
-        Private slot to change the findtext combo background to indicate errors.
+        Private slot to change the findtext combo background to indicate
+        errors.
         
         @param error flag indicating an error condition (boolean)
         """

@@ -8,8 +8,8 @@ Module implementing a dialog to save a screenshot of a web page.
 """
 
 from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractButton, QImage, QPainter,  \
-    QPixmap
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractButton, QImage, \
+    QPainter, QPixmap
 
 from E5Gui import E5FileDialog, E5MessageBox
 

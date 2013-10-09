@@ -24,9 +24,11 @@ def renderTabPreview(page, w, h):
     oldSize = page.viewportSize()
     width = page.mainFrame().contentsSize().width()
     page.setViewportSize(QSize(width, int(width * h / w)))
-    pageImage = __render(page, page.viewportSize().width(), page.viewportSize().height())
+    pageImage = __render(page, page.viewportSize().width(),
+                         page.viewportSize().height())
     page.setViewportSize(oldSize)
-    return pageImage.scaled(w, h, Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
+    return pageImage.scaled(
+        w, h, Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
 
 
 def __render(page, w, h):

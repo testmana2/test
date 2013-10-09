@@ -47,7 +47,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         Private slot handling a change of the documents selection.
         """
-        self.removeButton.setEnabled(len(self.documentsList.selectedItems()) != 0)
+        self.removeButton.setEnabled(
+            len(self.documentsList.selectedItems()) != 0)
     
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -67,15 +68,17 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             if not ns:
                 E5MessageBox.warning(self,
                     self.trUtf8("Add Documentation"),
-                    self.trUtf8("""The file <b>{0}</b> is not a valid Qt Help File.""")\
-                        .format(fileName)
+                    self.trUtf8(
+                        """The file <b>{0}</b> is not a valid"""
+                        """ Qt Help File.""").format(fileName)
                 )
                 continue
             
             if len(self.documentsList.findItems(ns, Qt.MatchFixedString)):
                 E5MessageBox.warning(self,
                     self.trUtf8("Add Documentation"),
-                    self.trUtf8("""The namespace <b>{0}</b> is already registered.""")\
+                    self.trUtf8(
+                        """The namespace <b>{0}</b> is already registered.""")\
                         .format(ns)
                 )
                 continue
@@ -93,8 +96,9 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         res = E5MessageBox.question(self,
             self.trUtf8("Remove Documentation"),
-            self.trUtf8("""Do you really want to remove the selected documentation """
-                        """sets from the database?"""))
+            self.trUtf8(
+                """Do you really want to remove the selected documentation """
+                """sets from the database?"""))
         if not res:
             return
         
@@ -106,10 +110,11 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             if ns in list(openedDocs.values()):
                 res = E5MessageBox.yesNo(self,
                     self.trUtf8("Remove Documentation"),
-                    self.trUtf8("""Some documents currently opened reference the """
-                                """documentation you are attempting to remove. """
-                                """Removing the documentation will close those """
-                                """documents. Remove anyway?"""),
+                    self.trUtf8(
+                        """Some documents currently opened reference the """
+                        """documentation you are attempting to remove. """
+                        """Removing the documentation will close those """
+                        """documents. Remove anyway?"""),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
@@ -123,7 +128,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             self.__engine.unregisterDocumentation(ns)
         
         if self.documentsList.count():
-            self.documentsList.setCurrentRow(0, QItemSelectionModel.ClearAndSelect)
+            self.documentsList.setCurrentRow(
+                0, QItemSelectionModel.ClearAndSelect)
     
     def hasChanges(self):
         """
