@@ -42,8 +42,9 @@ class AdBlockPage(QObject):
             if urlString.endswith("/"):
                 urlEnd = urlString[:-1]
             
-            selector = 'img[src$="{0}"], iframe[src$="{0}"], embed[src$="{0}"]'\
-                       .format(urlEnd)
+            selector = \
+                'img[src$="{0}"], iframe[src$="{0}"], embed[src$="{0}"]'\
+                .format(urlEnd)
             elements = docElement.findAll(selector)
             
             for element in elements:
