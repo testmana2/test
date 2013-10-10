@@ -130,7 +130,9 @@ class BookmarksMenu(E5ModelMenu):
         """
         act = self.actionAt(pos)
         
-        if act is not None and act.menu() is None and self.index(act).isValid():
+        if act is not None and \
+                act.menu() is None and \
+                self.index(act).isValid():
             menu = QMenu()
             v = act.data()
             

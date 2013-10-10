@@ -129,8 +129,9 @@ class SpeedDial(QObject):
                     else:
                         imgSource = QUrl.fromLocalFile(imgSource).toString()
                 
-                self.__initialScript += "addBox('{0}', '{1}', '{2}');\n".format(
-                    page.url, page.title, imgSource)
+                self.__initialScript += \
+                    "addBox('{0}', '{1}', '{2}');\n".format(
+                        page.url, page.title, imgSource)
         
         return self.__initialScript
     
