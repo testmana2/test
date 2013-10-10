@@ -74,8 +74,8 @@ class E5MessageBoxWizard(QObject):
         self.action.setWhatsThis(self.trUtf8(
             """<b>E5MessageBox Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
-            """ needed to create an E5MessageBox. The generated code is inserted"""
-            """ at the current cursor position.</p>"""
+            """ needed to create an E5MessageBox. The generated code is"""
+            """ inserted at the current cursor position.</p>"""
         ))
         self.action.triggered[()].connect(self.__handle)
         

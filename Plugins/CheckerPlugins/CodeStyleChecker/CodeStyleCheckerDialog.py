@@ -433,13 +433,13 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         stats.update(report.counters)
                     else:
                         if includeMessages:
-                            select = [s.strip() for s in includeMessages.split(',')
-                                      if s.strip()]
+                            select = [s.strip() for s in 
+                                      includeMessages.split(',') if s.strip()]
                         else:
                             select = []
                         if excludeMessages:
-                            ignore = [i.strip() for i in excludeMessages.split(',')
-                                      if i.strip()]
+                            ignore = [i.strip() for i in 
+                                      excludeMessages.split(',') if i.strip()]
                         else:
                             ignore = []
                         
@@ -469,19 +469,23 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
-                        if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
+                        if "__IGNORE_WARNING__" not in \
+                                Utilities.extractLineFlags(
                                 source[lineno - 1].strip()):
                             self.noResults = False
                             if fixer:
-                                res, msg, id_ = fixer.fixIssue(lineno, position, text)
+                                res, msg, id_ = fixer.fixIssue(lineno,
+                                                               position, text)
                                 if res == 1:
                                     text += "\n" + \
                                             self.trUtf8("Fix: {0}").format(msg)
                                     self.__createResultItem(
-                                        fname, lineno, position, text, True, True)
+                                        fname, lineno, position, text, True,
+                                        True)
                                 elif res == 0:
                                     self.__createResultItem(
-                                        fname, lineno, position, text, False, True)
+                                        fname, lineno, position, text, False,
+                                        True)
                                 else:
                                     itm = self.__createResultItem(
                                         fname, lineno, position,
@@ -489,14 +493,16 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                                     deferredFixes[id_] = itm
                             else:
                                 self.__createResultItem(
-                                    fname, lineno, position, text, False, False)
+                                    fname, lineno, position, text, False,
+                                    False)
                     if fixer:
                         deferredResults = fixer.finalize()
                         for id_ in deferredResults:
                             fixed, msg = deferredResults[id_]
                             itm = deferredFixes[id_]
                             if fixed == 1:
-                                text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                                text = "\n" + \
+                                    self.trUtf8("Fix: {0}").format(msg)
                                 self.__modifyFixedResultItem(itm, text, True)
                             else:
                                 self.__modifyFixedResultItem(itm, "", False)

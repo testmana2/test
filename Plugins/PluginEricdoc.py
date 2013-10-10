@@ -148,7 +148,8 @@ class EricdocPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        e5App().getObject("Project").showMenu.disconnect(self.__projectShowMenu)
+        e5App().getObject("Project").showMenu.disconnect(
+            self.__projectShowMenu)
         
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
@@ -174,7 +175,8 @@ class EricdocPlugin(QObject):
         """
         Private slot to perform the eric5_doc api documentation generation.
         """
-        from DocumentationPlugins.Ericdoc.EricdocConfigDialog import EricdocConfigDialog
+        from DocumentationPlugins.Ericdoc.EricdocConfigDialog import \
+            EricdocConfigDialog
         eolTranslation = {
             '\r': 'cr',
             '\n': 'lf',
@@ -189,10 +191,12 @@ class EricdocPlugin(QObject):
             
             # add parameter for the eol setting
             if not project.useSystemEol():
-                args.append("--eol={0}".format(eolTranslation[project.getEolString()]))
+                args.append(
+                    "--eol={0}".format(eolTranslation[project.getEolString()]))
             
             # now do the call
-            from DocumentationPlugins.Ericdoc.EricdocExecDialog import EricdocExecDialog
+            from DocumentationPlugins.Ericdoc.EricdocExecDialog import \
+                EricdocExecDialog
             dia = EricdocExecDialog("Ericdoc")
             res = dia.start(args, project.ppath)
             if res:
@@ -210,9 +214,11 @@ class EricdocPlugin(QObject):
                 project.othersAdded(outdir)
             
             if parms['qtHelpEnabled']:
-                outdir = Utilities.toNativeSeparators(parms['qtHelpOutputDirectory'])
+                outdir = Utilities.toNativeSeparators(
+                    parms['qtHelpOutputDirectory'])
                 if outdir == '':
-                    outdir = 'help'      # that is eric5_docs default QtHelp output dir
+                    outdir = 'help'      # that is eric5_docs default QtHelp
+                                         # output dir
                     
                 # add it to the project data, if it isn't in already
                 outdir = project.getRelativePath(outdir)

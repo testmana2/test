@@ -18,7 +18,8 @@ from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
 
 from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
-from DocumentationTools.Config import eric5docDefaultColors, eric5docColorParameterNames
+from DocumentationTools.Config import eric5docDefaultColors, \
+    eric5docColorParameterNames
 import Utilities
 
 from eric5config import getConfig
@@ -50,10 +51,13 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             '''<html><head>'''
             '''<title></title>'''
             '''</head>'''
-            '''<body style="background-color:{BodyBgColor};color:{BodyColor}">'''
-            '''<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">'''
+            '''<body style="background-color:{BodyBgColor};'''
+            '''color:{BodyColor}">'''
+            '''<h1 style="background-color:{Level1HeaderBgColor};'''
+            '''color:{Level1HeaderColor}">'''
             '''Level 1 Header</h1>'''
-            '''<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">'''
+            '''<h3 style="background-color:{Level2HeaderBgColor};'''
+            '''color:{Level2HeaderColor}">'''
             '''Level 2 Header</h3>'''
             '''<h2 style="background-color:{CFBgColor};color:{CFColor}">'''
             '''Class and Function Header</h2>'''
@@ -76,7 +80,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.parameters['outputDirectory'] = \
             Utilities.toNativeSeparators(self.parameters['outputDirectory'])
         self.parameters['qtHelpOutputDirectory'] = \
-            Utilities.toNativeSeparators(self.parameters['qtHelpOutputDirectory'])
+            Utilities.toNativeSeparators(
+                self.parameters['qtHelpOutputDirectory'])
         self.parameters['cssFile'] = \
             Utilities.toNativeSeparators(self.parameters['cssFile'])
         if self.parameters['cssFile'].startswith("%PYTHON%"):
@@ -98,8 +103,10 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         for d in self.parameters['ignoreDirectories']:
             self.ignoreDirsList.addItem(d)
         self.cssEdit.setText(self.parameters['cssFile'])
-        self.sourceExtEdit.setText(", ".join(self.parameters['sourceExtensions']))
-        self.excludeFilesEdit.setText(", ".join(self.parameters['ignoreFilePatterns']))
+        self.sourceExtEdit.setText(
+            ", ".join(self.parameters['sourceExtensions']))
+        self.excludeFilesEdit.setText(
+            ", ".join(self.parameters['ignoreFilePatterns']))
         self.sample.setHtml(self.sampleText.format(**self.colors))
         
         self.qtHelpGroup.setChecked(self.parameters['qtHelpEnabled'])
@@ -107,7 +114,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.qtHelpNamespaceEdit.setText(self.parameters['qtHelpNamespace'])
         self.qtHelpFolderEdit.setText(self.parameters['qtHelpVirtualFolder'])
         self.qtHelpFilterNameEdit.setText(self.parameters['qtHelpFilterName'])
-        self.qtHelpFilterAttributesEdit.setText(self.parameters['qtHelpFilterAttributes'])
+        self.qtHelpFilterAttributesEdit.setText(
+            self.parameters['qtHelpFilterAttributes'])
         self.qtHelpTitleEdit.setText(self.parameters['qtHelpTitle'])
         self.qtHelpGenerateCollectionCheckBox.setChecked(
             self.parameters['qtHelpCreateCollection'])
@@ -149,33 +157,41 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         dictionary can be passed back upon object generation to overwrite
         the default settings.
         
-        @return a tuple of the commandline parameters and non default parameters
-            (list of strings, dictionary)
+        @return a tuple of the commandline parameters and non default
+            parameters (list of strings, dictionary)
         """
         parms = {}
         args = []
         
         # 1. the program name
         args.append(sys.executable)
-        args.append(Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_doc.py"))
+        args.append(
+            Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_doc.py"))
         
         # 2. the commandline options
         # 2a. general commandline options
-        if self.parameters['outputDirectory'] != self.defaults['outputDirectory']:
+        if self.parameters['outputDirectory'] != \
+                self.defaults['outputDirectory']:
             parms['outputDirectory'] = Utilities.fromNativeSeparators(
-                self.project.getRelativePath(self.parameters['outputDirectory']))
+                self.project.getRelativePath(
+                    self.parameters['outputDirectory']))
             args.append('-o')
             if os.path.isabs(self.parameters['outputDirectory']):
                 args.append(self.parameters['outputDirectory'])
             else:
-                args.append(os.path.join(self.ppath, self.parameters['outputDirectory']))
-        if self.parameters['ignoreDirectories'] != self.defaults['ignoreDirectories']:
-            parms['ignoreDirectories'] = self.parameters['ignoreDirectories'][:]
+                args.append(os.path.join(
+                    self.ppath, self.parameters['outputDirectory']))
+        if self.parameters['ignoreDirectories'] != \
+                self.defaults['ignoreDirectories']:
+            parms['ignoreDirectories'] = \
+                self.parameters['ignoreDirectories'][:]
             for d in self.parameters['ignoreDirectories']:
                 args.append('-x')
                 args.append(d)
-        if self.parameters['ignoreFilePatterns'] != self.defaults['ignoreFilePatterns']:
-            parms['ignoreFilePatterns'] = self.parameters['ignoreFilePatterns'][:]
+        if self.parameters['ignoreFilePatterns'] != \
+                self.defaults['ignoreFilePatterns']:
+            parms['ignoreFilePatterns'] = \
+                self.parameters['ignoreFilePatterns'][:]
             for pattern in self.parameters['ignoreFilePatterns']:
                 args.append("--exclude-file={0}".format(pattern))
         if self.parameters['useRecursion'] != self.defaults['useRecursion']:
@@ -187,7 +203,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if self.parameters['noempty'] != self.defaults['noempty']:
             parms['noempty'] = self.parameters['noempty']
             args.append('-e')
-        if self.parameters['sourceExtensions'] != self.defaults['sourceExtensions']:
+        if self.parameters['sourceExtensions'] != \
+                self.defaults['sourceExtensions']:
             parms['sourceExtensions'] = self.parameters['sourceExtensions'][:]
             for ext in self.parameters['sourceExtensions']:
                 args.append('-t')
@@ -204,12 +221,13 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             if os.path.isabs(self.parameters['cssFile']):
                 args.append(self.parameters['cssFile'])
             else:
-                args.append(os.path.join(self.ppath, self.parameters['cssFile']))
+                args.append(
+                    os.path.join(self.ppath, self.parameters['cssFile']))
         for key, value in list(self.colors.items()):
             if self.colors[key] != eric5docDefaultColors[key]:
                 parms[key] = self.colors[key]
                 args.append("--{0}={1}".format(
-                            eric5docColorParameterNames[key], self.colors[key]))
+                    eric5docColorParameterNames[key], self.colors[key]))
         
         # 2c. QtHelp commandline options
         parms['qtHelpEnabled'] = self.parameters['qtHelpEnabled']
@@ -218,35 +236,45 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if self.parameters['qtHelpOutputDirectory'] != \
            self.defaults['qtHelpOutputDirectory']:
             parms['qtHelpOutputDirectory'] = Utilities.fromNativeSeparators(
-                self.project.getRelativePath(self.parameters['qtHelpOutputDirectory']))
+                self.project.getRelativePath(
+                    self.parameters['qtHelpOutputDirectory']))
             if os.path.isabs(self.parameters['outputDirectory']):
                 args.append("--qhp-outdir={0}".format(
                     self.parameters['qtHelpOutputDirectory']))
             else:
                 args.append("--qhp-outdir={0}".format(
-                    os.path.join(self.ppath, self.parameters['qtHelpOutputDirectory'])))
-        if self.parameters['qtHelpNamespace'] != self.defaults['qtHelpNamespace']:
+                    os.path.join(self.ppath,
+                                 self.parameters['qtHelpOutputDirectory'])))
+        if self.parameters['qtHelpNamespace'] != \
+                self.defaults['qtHelpNamespace']:
             parms['qtHelpNamespace'] = self.parameters['qtHelpNamespace']
-            args.append("--qhp-namespace={0}".format(self.parameters['qtHelpNamespace']))
-        if self.parameters['qtHelpVirtualFolder'] != self.defaults['qtHelpVirtualFolder']:
-            parms['qtHelpVirtualFolder'] = self.parameters['qtHelpVirtualFolder']
+            args.append("--qhp-namespace={0}".format(
+                self.parameters['qtHelpNamespace']))
+        if self.parameters['qtHelpVirtualFolder'] != \
+                self.defaults['qtHelpVirtualFolder']:
+            parms['qtHelpVirtualFolder'] = \
+                self.parameters['qtHelpVirtualFolder']
             args.append("--qhp-virtualfolder={0}".format(
                 self.parameters['qtHelpVirtualFolder']))
-        if self.parameters['qtHelpFilterName'] != self.defaults['qtHelpFilterName']:
+        if self.parameters['qtHelpFilterName'] != \
+                self.defaults['qtHelpFilterName']:
             parms['qtHelpFilterName'] = self.parameters['qtHelpFilterName']
             args.append("--qhp-filtername={0}".format(
                 self.parameters['qtHelpFilterName']))
         if self.parameters['qtHelpFilterAttributes'] != \
            self.defaults['qtHelpFilterAttributes']:
-            parms['qtHelpFilterAttributes'] = self.parameters['qtHelpFilterAttributes']
+            parms['qtHelpFilterAttributes'] = \
+                self.parameters['qtHelpFilterAttributes']
             args.append("--qhp-filterattribs={0}".format(
                 self.parameters['qtHelpFilterAttributes']))
         if self.parameters['qtHelpTitle'] != self.defaults['qtHelpTitle']:
             parms['qtHelpTitle'] = self.parameters['qtHelpTitle']
-            args.append("--qhp-title={0}".format(self.parameters['qtHelpTitle']))
+            args.append("--qhp-title={0}".format(
+                self.parameters['qtHelpTitle']))
         if self.parameters['qtHelpCreateCollection'] != \
            self.defaults['qtHelpCreateCollection']:
-            parms['qtHelpCreateCollection'] = self.parameters['qtHelpCreateCollection']
+            parms['qtHelpCreateCollection'] = \
+                self.parameters['qtHelpCreateCollection']
             args.append('--create-qhc')
         
         return (args, parms)
@@ -412,7 +440,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     
     def __checkQtHelpOptions(self):
         """
-        Private slot to check the QtHelp options and set the ok button accordingly.
+        Private slot to check the QtHelp options and set the ok button
+        accordingly.
         """
         setOn = True
         if self.qtHelpGroup.isChecked():

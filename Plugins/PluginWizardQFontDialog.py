@@ -74,8 +74,8 @@ class FontDialogWizard(QObject):
         self.action.setWhatsThis(self.trUtf8(
             """<b>QFontDialog Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
-            """ needed to create a QFontDialog. The generated code is inserted"""
-            """ at the current cursor position.</p>"""
+            """ needed to create a QFontDialog. The generated code is"""
+            """ inserted at the current cursor position.</p>"""
         ))
         self.action.triggered[()].connect(self.__handle)
         

@@ -48,7 +48,8 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         Public slot to start the ericapi command.
         
         @param args commandline arguments for ericapi program (list of strings)
-        @param fn filename or dirname to be processed by ericapi program (string)
+        @param fn filename or dirname to be processed by ericapi program
+            (string)
         @return flag indicating the successful start of the process (boolean)
         """
         self.errorGroup.hide()
@@ -78,7 +79,8 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process.readyReadStandardError.connect(self.__readStderr)
         self.process.finished.connect(self.__finish)
             
-        self.setWindowTitle(self.trUtf8('{0} - {1}').format(self.cmdname, self.filename))
+        self.setWindowTitle(
+            self.trUtf8('{0} - {1}').format(self.cmdname, self.filename))
         self.process.start(program, args)
         procStarted = self.process.waitForStarted(5000)
         if not procStarted:

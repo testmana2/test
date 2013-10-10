@@ -11,8 +11,8 @@ import os
 import fnmatch
 
 from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, QApplication, \
-    QHeaderView
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, \
+    QApplication, QHeaderView
 
 from E5Gui.E5Application import e5App
 
@@ -209,7 +209,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     isPy3 = False
                     nok, fname, line, index, code, error, warnings = \
                         Utilities.py2compile(file,
-                            checkFlakes=Preferences.getFlakes("IncludeInSyntaxCheck"))
+                            checkFlakes=Preferences.getFlakes(
+                                "IncludeInSyntaxCheck"))
                 else:
                     isPy3 = True
                     nok, fname, line, index, code, error = \
@@ -222,7 +223,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         if isPy3:
                             try:
                                 from Utilities.py3flakes.checker import Checker
-                                from Utilities.py3flakes.messages import ImportStarUsed
+                                from Utilities.py3flakes.messages import \
+                                    ImportStarUsed
                                 sourceLines = source.splitlines()
                                 warnings = Checker(source, file)
                                 warnings.messages.sort(key=lambda a: a.lineno)
@@ -356,7 +358,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 if citm.data(0, self.warningRole):
                     editor.toggleFlakesWarning(lineno, True, error)
                 else:
-                    editor.toggleSyntaxError(lineno, index, True, error, show=True)
+                    editor.toggleSyntaxError(
+                        lineno, index, True, error, show=True)
         
     @pyqtSlot()
     def on_showButton_clicked(self):

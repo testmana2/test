@@ -35,7 +35,8 @@ for being called from within the eric5 IDE.
 #   linenumber and the error message (boolean, string, string, string). The
 #   values are only valid, if the status equals 1.
 #
-# Mofifications Copyright (c) 2003-2013 Detlev Offenbach <detlev@die-offenbachs.de>
+# Mofifications Copyright (c) 2003-2013 Detlev Offenbach
+# <detlev@die-offenbachs.de>
 #
 
 __version__ = "6_eric"
@@ -95,7 +96,8 @@ class NannyNag(Exception):
 
 def check(file, text=""):
     """
-    Private function to check one Python source file for whitespace related problems.
+    Private function to check one Python source file for whitespace related
+    problems.
     
     @param file source filename (string)
     @param text source text (string)
@@ -125,7 +127,8 @@ def check(file, text=""):
         return (True, file, "1", "Token Error: {0}".format(str(msg)))
     
     except IndentationError as err:
-        return (True, file, err.lineno, "Indentation Error: {0}".format(str(err.msg)))
+        return (True, file, err.lineno,
+                "Indentation Error: {0}".format(str(err.msg)))
     
     except NannyNag as nag:
         badline = nag.get_lineno()
@@ -235,7 +238,8 @@ class Whitespace(object):
     # for all t >= 1
     def equal(self, other):
         """
-        Method to compare the indentation levels of two Whitespace objects for equality.
+        Method to compare the indentation levels of two Whitespace objects for
+        equality.
         
         @param other Whitespace object to compare against.
         @return True, if we compare equal against the other Whitespace object.
@@ -282,8 +286,8 @@ class Whitespace(object):
     # Note that M is of the form (T*)(S*) iff len(M.norm[0]) <= 1.
     def less(self, other):
         """
-        Method to compare the indentation level against another Whitespace objects to
-        be smaller.
+        Method to compare the indentation level against another Whitespace
+        objects to be smaller.
         
         @param other Whitespace object to compare against.
         @return True, if we compare less against the other Whitespace object.
@@ -381,7 +385,8 @@ def process_tokens(tokens):
             # Ouch!  This assert triggers if the last line of the source
             # is indented *and* lacks a newline -- then DEDENTs pop out
             # of thin air.
-            # assert check_equal  # else no earlier NEWLINE, or an earlier INDENT
+            # assert check_equal  # else no earlier NEWLINE, or an
+            # earlier INDENT
             check_equal = 1
 
             del indents[-1]

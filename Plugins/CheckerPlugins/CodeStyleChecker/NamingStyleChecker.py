@@ -127,10 +127,12 @@ class NamingStyleChecker(object):
         @return translated and formatted message (string)
         """
         if code in cls.Messages:
-            return code + " " + QCoreApplication.translate("NamingStyleChecker",
+            return code + " " + QCoreApplication.translate(
+                "NamingStyleChecker",
                 cls.Messages[code]).format(*args)
         else:
-            return code + " " + QCoreApplication.translate("NamingStyleChecker",
+            return code + " " + QCoreApplication.translate(
+                "NamingStyleChecker",
                 "no message for this code defined")
     
     def __visitTree(self, node):

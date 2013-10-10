@@ -32,7 +32,8 @@ pluginTypename = "Mercurial"
 className = "VcsMercurialPlugin"
 packageName = "__core__"
 shortDescription = "Implements the Mercurial version control interface."
-longDescription = """This plugin provides the Mercurial version control interface."""
+longDescription = \
+    """This plugin provides the Mercurial version control interface."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -69,8 +70,8 @@ def getVcsSystemIndicator():
     """
     Public function to get the indicators for this version control system.
     
-    @return dictionary with indicator as key and a tuple with the vcs name (string)
-        and vcs display string (string)
+    @return dictionary with indicator as key and a tuple with the vcs name
+        (string) and vcs display string (string)
     """
     global pluginTypename
     data = {}
@@ -108,7 +109,8 @@ def createConfigurationPage(configDlg):
     @return reference to the configuration page
     """
     global mercurialCfgPluginObject
-    from VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage import MercurialPage
+    from VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage import \
+        MercurialPage
     if mercurialCfgPluginObject is None:
         mercurialCfgPluginObject = VcsMercurialPlugin(None)
     page = MercurialPage(mercurialCfgPluginObject)
@@ -119,7 +121,8 @@ def getConfigData():
     """
     Module function returning data as required by the configuration dialog.
     
-    @return dictionary with key "zzz_mercurialPage" containing the relevant data
+    @return dictionary with key "zzz_mercurialPage" containing the relevant
+        data
     """
     return {
         "zzz_mercurialPage": \
@@ -134,7 +137,8 @@ def prepareUninstall():
     """
     Module function to prepare for an uninstallation.
     """
-    if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsMercurial"):
+    if not e5App().getObject("PluginManager").isPluginLoaded(
+            "PluginVcsMercurial"):
         Preferences.Prefs.settings.remove("Mercurial")
     
 
@@ -167,8 +171,8 @@ class VcsMercurialPlugin(QObject):
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
         self.__projectHelperObject = HgProjectHelper(None, None)
         try:
-            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject,
-                                         pluginType)
+            e5App().registerPluginObject(
+                pluginTypename, self.__projectHelperObject, pluginType)
         except KeyError:
             pass    # ignore duplicate registration
         readShortcuts(pluginName=pluginTypename)
@@ -205,8 +209,8 @@ class VcsMercurialPlugin(QObject):
         @param key the key of the value to get
         @return the requested setting
         """
-        if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate", "PreferUnbundle",
-                   "CreateBackup"]:
+        if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate",
+                   "PreferUnbundle", "CreateBackup"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages", "ServerPort"]:

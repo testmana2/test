@@ -40,7 +40,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
-        for language in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
+        for language in sorted(
+                DocumentationTools.supportedExtensionsDictForApis.keys()):
             self.languagesList.addItem(language)
         
         self.ppath = project.getProjectPath()
@@ -62,19 +63,23 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
         
         self.recursionCheckBox.setChecked(self.parameters['useRecursion'])
-        self.includePrivateCheckBox.setChecked(self.parameters['includePrivate'])
+        self.includePrivateCheckBox.setChecked(
+            self.parameters['includePrivate'])
         self.outputFileEdit.setText(self.parameters['outputFile'])
         self.baseEdit.setText(self.parameters['basePackage'])
         self.ignoreDirsList.clear()
         for d in self.parameters['ignoreDirectories']:
             self.ignoreDirsList.addItem(d)
-        self.sourceExtEdit.setText(", ".join(self.parameters['sourceExtensions']))
-        self.excludeFilesEdit.setText(", ".join(self.parameters['ignoreFilePatterns']))
+        self.sourceExtEdit.setText(
+            ", ".join(self.parameters['sourceExtensions']))
+        self.excludeFilesEdit.setText(
+            ", ".join(self.parameters['ignoreFilePatterns']))
         for language in self.parameters['languages']:
             if language == "Python":
                 # convert Python to the more specific Python2
                 language = "Python2"
-            items = self.languagesList.findItems(language, Qt.MatchFlags(Qt.MatchExactly))
+            items = self.languagesList.findItems(
+                language, Qt.MatchFlags(Qt.MatchExactly))
             items and items[0].setSelected(True)
     
     def __initializeDefaults(self):
@@ -110,15 +115,16 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         dictionary can be passed back upon object generation to overwrite
         the default settings.
         
-        @return a tuple of the commandline parameters and non default parameters
-            (list of strings, dictionary)
+        @return a tuple of the commandline parameters and non default
+            parameters (list of strings, dictionary)
         """
         parms = {}
         args = []
         
         # 1. the program name
         args.append(sys.executable)
-        args.append(Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_api.py"))
+        args.append(
+            Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_api.py"))
         
         # 2. the commandline options
         if self.parameters['outputFile'] != self.defaults['outputFile']:
@@ -128,29 +134,36 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             if os.path.isabs(self.parameters['outputFile']):
                 args.append(self.parameters['outputFile'])
             else:
-                args.append(os.path.join(self.ppath, self.parameters['outputFile']))
+                args.append(
+                    os.path.join(self.ppath, self.parameters['outputFile']))
         if self.parameters['basePackage'] != self.defaults['basePackage']:
             parms['basePackage'] = self.parameters['basePackage']
             args.append('-b')
             args.append(self.parameters['basePackage'])
-        if self.parameters['ignoreDirectories'] != self.defaults['ignoreDirectories']:
-            parms['ignoreDirectories'] = self.parameters['ignoreDirectories'][:]
+        if self.parameters['ignoreDirectories'] != \
+                self.defaults['ignoreDirectories']:
+            parms['ignoreDirectories'] = \
+                self.parameters['ignoreDirectories'][:]
             for d in self.parameters['ignoreDirectories']:
                 args.append('-x')
                 args.append(d)
-        if self.parameters['ignoreFilePatterns'] != self.defaults['ignoreFilePatterns']:
-            parms['ignoreFilePatterns'] = self.parameters['ignoreFilePatterns'][:]
+        if self.parameters['ignoreFilePatterns'] != \
+                self.defaults['ignoreFilePatterns']:
+            parms['ignoreFilePatterns'] = \
+                self.parameters['ignoreFilePatterns'][:]
             for pattern in self.parameters['ignoreFilePatterns']:
                 args.append("--exclude-file={0}".format(pattern))
         if self.parameters['useRecursion'] != self.defaults['useRecursion']:
             parms['useRecursion'] = self.parameters['useRecursion']
             args.append('-r')
-        if self.parameters['sourceExtensions'] != self.defaults['sourceExtensions']:
+        if self.parameters['sourceExtensions'] != \
+                self.defaults['sourceExtensions']:
             parms['sourceExtensions'] = self.parameters['sourceExtensions'][:]
             for ext in self.parameters['sourceExtensions']:
                 args.append('-t')
                 args.append(ext)
-        if self.parameters['includePrivate'] != self.defaults['includePrivate']:
+        if self.parameters['includePrivate'] != \
+                self.defaults['includePrivate']:
             parms['includePrivate'] = self.parameters['includePrivate']
             args.append('-p')
         parms['languages'] = self.parameters['languages'][:]
@@ -240,7 +253,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It saves the values in the parameters dictionary.
         """
         self.parameters['useRecursion'] = self.recursionCheckBox.isChecked()
-        self.parameters['includePrivate'] = self.includePrivateCheckBox.isChecked()
+        self.parameters['includePrivate'] = \
+            self.includePrivateCheckBox.isChecked()
         outfile = self.outputFileEdit.text()
         if outfile != '':
             outfile = os.path.normpath(outfile)
