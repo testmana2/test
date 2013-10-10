@@ -110,7 +110,8 @@ class SyntaxCheckerPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        e5App().getObject("Project").showMenu.disconnect(self.__projectShowMenu)
+        e5App().getObject("Project").showMenu.disconnect(
+            self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
             .showMenu.disconnect(self.__projectBrowserShowMenu)
         e5App().getObject("ViewManager").editorOpenedEd.disconnect(

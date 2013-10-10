@@ -27,7 +27,8 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         """
         Constructor
         
-        @param mode mode of the dialog (one of RegExpMode, WildcardMode, W3CMode)
+        @param mode mode of the dialog (one of RegExpMode, WildcardMode,
+            W3CMode)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
