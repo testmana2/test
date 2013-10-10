@@ -75,7 +75,8 @@ class HistoryMenuModel(QAbstractProxyModel):
             folders = self.sourceModel().rowCount()
             bumpedItems = self.bumpedRows()
             if bumpedItems <= self.MOVEDROWS and \
-               bumpedItems == self.sourceModel().rowCount(self.sourceModel().index(0, 0)):
+                    bumpedItems == self.sourceModel().rowCount(
+                        self.sourceModel().index(0, 0)):
                 folders -= 1
             return bumpedItems + folders
         
@@ -98,7 +99,8 @@ class HistoryMenuModel(QAbstractProxyModel):
         @return proxy model index (QModelIndex)
         """
         sourceRow = self.__treeModel.mapToSource(sourceIndex).row()
-        return self.createIndex(sourceIndex.row(), sourceIndex.column(), sourceRow)
+        return self.createIndex(
+            sourceIndex.row(), sourceIndex.column(), sourceRow)
     
     def mapToSource(self, proxyIndex):
         """
@@ -113,10 +115,12 @@ class HistoryMenuModel(QAbstractProxyModel):
         if proxyIndex.internalId() == sys.maxsize:
             bumpedItems = self.bumpedRows()
             if proxyIndex.row() < bumpedItems:
-                return self.__treeModel.index(proxyIndex.row(), proxyIndex.column(),
+                return self.__treeModel.index(
+                    proxyIndex.row(), proxyIndex.column(),
                     self.__treeModel.index(0, 0))
             if bumpedItems <= self.MOVEDROWS and \
-               bumpedItems == self.sourceModel().rowCount(self.__treeModel.index(0, 0)):
+                    bumpedItems == self.sourceModel().rowCount(
+                        self.__treeModel.index(0, 0)):
                 bumpedItems -= 1
             return self.__treeModel.index(proxyIndex.row() - bumpedItems,
                                           proxyIndex.column())
@@ -149,7 +153,8 @@ class HistoryMenuModel(QAbstractProxyModel):
         bumpedItems = 0
         if treeIndexParent == self.sourceModel().index(0, 0):
             bumpedItems = self.bumpedRows()
-        treeIndex = self.__treeModel.index(row + bumpedItems, column, treeIndexParent)
+        treeIndex = self.__treeModel.index(
+            row + bumpedItems, column, treeIndexParent)
         historyIndex = self.__treeModel.mapToSource(treeIndex)
         historyRow = historyIndex.row()
         if historyRow == -1:
@@ -167,14 +172,16 @@ class HistoryMenuModel(QAbstractProxyModel):
         if offset == sys.maxsize or not index.isValid():
             return QModelIndex()
         
-        historyIndex = self.__treeModel.sourceModel().index(index.internalId(), 0)
+        historyIndex = self.__treeModel.sourceModel().index(
+            index.internalId(), 0)
         treeIndex = self.__treeModel.mapFromSource(historyIndex)
         treeIndexParent = treeIndex.parent()
         
         sourceRow = self.sourceModel().mapToSource(treeIndexParent).row()
         bumpedItems = self.bumpedRows()
         if bumpedItems <= self.MOVEDROWS and \
-           bumpedItems == self.sourceModel().rowCount(self.sourceModel().index(0, 0)):
+                bumpedItems == self.sourceModel().rowCount(
+                    self.sourceModel().index(0, 0)):
             bumpedItems -= 1
         
         return self.createIndex(bumpedItems + treeIndexParent.row(),
@@ -232,8 +239,8 @@ class HistoryMostVisitedMenuModel(QSortFilterProxyModel):
         dateTime_R = \
             self.sourceModel().data(right, HistoryModel.DateTimeRole)
         
-        # Sort results in descending frequency-derived score. If frequencies are equal,
-        # sort on most recently viewed
+        # Sort results in descending frequency-derived score. If frequencies
+        # are equal, sort on most recently viewed
         if frequency_R == frequency_L:
             return dateTime_R < dateTime_L
         
@@ -268,7 +275,8 @@ class HistoryMenu(E5ModelMenu):
         self.__mostVisitedMenu = None
         
         self.__closedTabsMenu = QMenu(self.trUtf8("Closed Tabs"))
-        self.__closedTabsMenu.aboutToShow.connect(self.__aboutToShowClosedTabsMenu)
+        self.__closedTabsMenu.aboutToShow.connect(
+            self.__aboutToShowClosedTabsMenu)
         self.__tabWidget.closedTabsManager().closedTabAvailable.connect(
             self.__closedTabAvailable)
         
@@ -300,9 +308,10 @@ class HistoryMenu(E5ModelMenu):
         """
         if self.__historyManager is None:
             import Helpviewer.HelpWindow
-            self.__historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
-            self.__historyMenuModel = \
-                HistoryMenuModel(self.__historyManager.historyTreeModel(), self)
+            self.__historyManager = \
+                Helpviewer.HelpWindow.HelpWindow.historyManager()
+            self.__historyMenuModel = HistoryMenuModel(
+                self.__historyManager.historyTreeModel(), self)
             self.setModel(self.__historyMenuModel)
         
         # initial actions
@@ -341,7 +350,8 @@ class HistoryMenu(E5ModelMenu):
     
     def setInitialActions(self, actions):
         """
-        Public method to set the list of actions that should appear first in the menu.
+        Public method to set the list of actions that should appear first in
+        the menu.
         
         @param actions list of initial actions (list of QAction)
         """
@@ -451,8 +461,8 @@ class HistoryMostVisitedMenu(E5ModelMenu):
         if self.__historyMenuModel is None:
             import Helpviewer.HelpWindow
             historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
-            self.__historyMenuModel = \
-                HistoryMostVisitedMenuModel(historyManager.historyFilterModel(), self)
+            self.__historyMenuModel = HistoryMostVisitedMenuModel(
+                historyManager.historyFilterModel(), self)
             self.setModel(self.__historyMenuModel)
         self.__historyMenuModel.sort(0)
         

@@ -65,7 +65,8 @@ class OpenSearchWriter(QXmlStreamWriter):
             
             if len(engine.searchParameters()) > 0:
                 self.writeNamespace(
-                    "http://a9.com/-/spec/opensearch/extensions/parameters/1.0/", "p")
+                    "http://a9.com/-/spec/opensearch/extensions/"
+                    "parameters/1.0/", "p")
                 for parameter in engine.searchParameters():
                     self.writeStartElement("p:Parameter")
                     self.writeAttribute("name", parameter[0])
@@ -81,7 +82,8 @@ class OpenSearchWriter(QXmlStreamWriter):
             
             if len(engine.suggestionsParameters()) > 0:
                 self.writeNamespace(
-                    "http://a9.com/-/spec/opensearch/extensions/parameters/1.0/", "p")
+                    "http://a9.com/-/spec/opensearch/extensions/"
+                    "parameters/1.0/", "p")
                 for parameter in engine.suggestionsParameters():
                     self.writeStartElement("p:Parameter")
                     self.writeAttribute("name", parameter[0])

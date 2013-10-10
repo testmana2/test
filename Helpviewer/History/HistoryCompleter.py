@@ -76,7 +76,8 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         super().__init__(parent)
         
         self.__searchString = ""
-        self.__searchMatcher = QRegExp("", Qt.CaseInsensitive, QRegExp.FixedString)
+        self.__searchMatcher = QRegExp(
+            "", Qt.CaseInsensitive, QRegExp.FixedString)
         self.__wordMatcher = QRegExp("", Qt.CaseInsensitive)
         self.__isValid = False
         
@@ -90,8 +91,8 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         @param role data role (integer)
         @return history entry data
         """
-        # If the model is valid, tell QCompleter that everything we have filtered
-        # matches what the user typed; if not, nothing matches
+        # If the model is valid, tell QCompleter that everything we have
+        # filtered matches what the user typed; if not, nothing matches
         if role == self.HistoryCompletionRole and index.isValid():
             if self.isValid():
                 return "t"
@@ -125,7 +126,8 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         
         self.__searchString = string
         self.__searchMatcher.setPattern(self.__searchString)
-        self.__wordMatcher.setPattern("\\b" + QRegExp.escape(self.__searchString))
+        self.__wordMatcher.setPattern(
+            "\\b" + QRegExp.escape(self.__searchString))
         self.invalidateFilter()
     
     def isValid(self):
@@ -148,7 +150,8 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         self.__isValid = valid
         
         # tell the history completer that the model has changed
-        self.dataChanged.emit(self.index(0, 0), self.index(0, self.rowCount() - 1))
+        self.dataChanged.emit(self.index(0, 0), self.index(0,
+                              self.rowCount() - 1))
     
     def filterAcceptsRow(self, sourceRow, sourceParent):
         """
@@ -250,8 +253,8 @@ class HistoryCompleter(QCompleter):
     
     def splitPath(self, path):
         """
-        Public method to split the given path into strings, that are used to match
-        at each level in the model.
+        Public method to split the given path into strings, that are used to
+        match at each level in the model.
         
         @param path path to be split (string)
         @return list of path elements (list of strings)
@@ -260,7 +263,8 @@ class HistoryCompleter(QCompleter):
             return ["t"]
         
         # Queue an update to the search string. Wait a bit, so that if the user
-        # is quickly typing, the completer doesn't try to complete until they pause.
+        # is quickly typing, the completer doesn't try to complete until they
+        # pause.
         if self.__filterTimer.isActive():
             self.__filterTimer.stop()
         self.__filterTimer.start(150)
@@ -273,7 +277,8 @@ class HistoryCompleter(QCompleter):
         self.__searchString = path
         
         # The actual filtering is done by the HistoryCompletionModel. Just
-        # return a short dummy here so that QCompleter thinks everything matched.
+        # return a short dummy here so that QCompleter thinks everything
+        # matched.
         return ["t"]
     
     def __updateFilter(self):
@@ -291,6 +296,7 @@ class HistoryCompleter(QCompleter):
         # Mark it valid.
         completionModel.setValid(True)
         
-        # Now update the QCompleter widget, but only if the user is still typing a URL.
+        # Now update the QCompleter widget, but only if the user is still
+        # typing a URL.
         if self.widget() is not None and self.widget().hasFocus():
             self.complete()

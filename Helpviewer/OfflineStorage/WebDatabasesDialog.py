@@ -38,7 +38,8 @@ class WebDatabasesDialog(QDialog, Ui_WebDatabasesDialog):
         self.__proxyModel.setFilterKeyColumn(-1)
         self.__proxyModel.setSourceModel(model)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.databasesTree.setModel(self.__proxyModel)
         fm = QFontMetrics(self.font())

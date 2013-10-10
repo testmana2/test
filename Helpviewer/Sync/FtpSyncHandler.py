@@ -10,7 +10,8 @@ Module implementing a synchronization handler using FTP.
 import ftplib
 import io
 
-from PyQt4.QtCore import pyqtSignal, QTimer, QFileInfo, QCoreApplication, QByteArray
+from PyQt4.QtCore import pyqtSignal, QTimer, QFileInfo, QCoreApplication, \
+    QByteArray
 
 from E5Network.E5Ftp import E5Ftp, E5FtpProxyType, E5FtpProxyError
 
@@ -28,13 +29,15 @@ class FtpSyncHandler(SyncHandler):
     Class implementing a synchronization handler using FTP.
     
     @signal syncStatus(type_, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", string)
-    @signal syncError(message) emitted for a general error with the error message (string)
-    @signal syncMessage(message) emitted to send a message about synchronization (string)
-    @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", boolean, boolean)
+        status (string one of "bookmarks", "history", "passwords",
+        "useragents" or "speeddial", string)
+    @signal syncError(message) emitted for a general error with the error
+        message (string)
+    @signal syncMessage(message) emitted to send a message about
+        synchronization (string)
+    @signal syncFinished(type_, done, download) emitted after a
+        synchronization has finished (string one of "bookmarks", "history",
+        "passwords", "useragents" or "speeddial", boolean, boolean)
     """
     syncStatus = pyqtSignal(str, str)
     syncError = pyqtSignal(str)
@@ -59,7 +62,8 @@ class FtpSyncHandler(SyncHandler):
         """
         Public method to do the initial check.
         
-        @keyparam forceUpload flag indicating a forced upload of the files (boolean)
+        @keyparam forceUpload flag indicating a forced upload of the files
+            (boolean)
         """
         if not Preferences.getHelp("SyncEnabled"):
             return
@@ -71,7 +75,8 @@ class FtpSyncHandler(SyncHandler):
         self.__remoteFilesFound = {}
         
         self.__idleTimer = QTimer(self)
-        self.__idleTimer.setInterval(Preferences.getHelp("SyncFtpIdleTimeout") * 1000)
+        self.__idleTimer.setInterval(
+            Preferences.getHelp("SyncFtpIdleTimeout") * 1000)
         self.__idleTimer.timeout.connect(self.__idleTimeout)
         
         self.__ftp = E5Ftp()
@@ -164,7 +169,8 @@ class FtpSyncHandler(SyncHandler):
         
         if urlInfo and urlInfo.isValid() and urlInfo.isFile():
             if urlInfo.name() in self._remoteFiles.values():
-                self.__remoteFilesFound[urlInfo.name()] = urlInfo.lastModified()
+                self.__remoteFilesFound[urlInfo.name()] = \
+                    urlInfo.lastModified()
         
         QCoreApplication.processEvents()
     
@@ -173,9 +179,11 @@ class FtpSyncHandler(SyncHandler):
         Private method to downlaod the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be downloaded (string)
-        @param timestamp time stamp in seconds of the file to be downloaded (int)
+        @param timestamp time stamp in seconds of the file to be downloaded
+            (integer)
         """
         self.syncStatus.emit(type_, self._messages[type_]["RemoteExists"])
         buffer = io.BytesIO()
@@ -209,7 +217,8 @@ class FtpSyncHandler(SyncHandler):
         Private method to upload the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be uploaded (string)
         @return flag indicating success (boolean)
         """
@@ -237,23 +246,29 @@ class FtpSyncHandler(SyncHandler):
         Private method to do the initial synchronization of the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         if not self.__forceUpload and \
            self._remoteFiles[type_] in self.__remoteFilesFound:
             if QFileInfo(fileName).lastModified() < \
                self.__remoteFilesFound[self._remoteFiles[type_]]:
-                self.__downloadFile(type_, fileName,
-                    self.__remoteFilesFound[self._remoteFiles[type_]].toTime_t())
+                self.__downloadFile(
+                    type_, fileName,
+                    self.__remoteFilesFound[self._remoteFiles[type_]]
+                        .toTime_t())
             else:
-                self.syncStatus.emit(type_, self.trUtf8("No synchronization required."))
+                self.syncStatus.emit(
+                    type_, self.trUtf8("No synchronization required."))
                 self.syncFinished.emit(type_, True, True)
         else:
             if self._remoteFiles[type_] not in self.__remoteFilesFound:
-                self.syncStatus.emit(type_, self._messages[type_]["RemoteMissing"])
+                self.syncStatus.emit(
+                    type_, self._messages[type_]["RemoteMissing"])
             else:
-                self.syncStatus.emit(type_, self._messages[type_]["LocalNewer"])
+                self.syncStatus.emit(
+                    type_, self._messages[type_]["LocalNewer"])
             self.__uploadFile(type_, fileName)
     
     def __initialSync(self):
@@ -262,27 +277,36 @@ class FtpSyncHandler(SyncHandler):
         """
         # Bookmarks
         if Preferences.getHelp("SyncBookmarks"):
-            self.__initialSyncFile("bookmarks",
-                Helpviewer.HelpWindow.HelpWindow.bookmarksManager().getFileName())
+            self.__initialSyncFile(
+                "bookmarks",
+                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+                    .getFileName())
         
         # History
         if Preferences.getHelp("SyncHistory"):
-            self.__initialSyncFile("history",
-                Helpviewer.HelpWindow.HelpWindow.historyManager().getFileName())
+            self.__initialSyncFile(
+                "history",
+                Helpviewer.HelpWindow.HelpWindow.historyManager()
+                    .getFileName())
         
         # Passwords
         if Preferences.getHelp("SyncPasswords"):
-            self.__initialSyncFile("passwords",
-                Helpviewer.HelpWindow.HelpWindow.passwordManager().getFileName())
+            self.__initialSyncFile(
+                "passwords",
+                Helpviewer.HelpWindow.HelpWindow.passwordManager()
+                    .getFileName())
         
         # User Agent Settings
         if Preferences.getHelp("SyncUserAgents"):
-            self.__initialSyncFile("useragents",
-                Helpviewer.HelpWindow.HelpWindow.userAgentsManager().getFileName())
+            self.__initialSyncFile(
+                "useragents",
+                Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
+                    .getFileName())
         
         # Speed Dial Settings
         if Preferences.getHelp("SyncSpeedDial"):
-            self.__initialSyncFile("speeddial",
+            self.__initialSyncFile(
+                "speeddial",
                 Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
         
         self.__forceUpload = False
@@ -292,7 +316,8 @@ class FtpSyncHandler(SyncHandler):
         Private method to synchronize the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         if self.__state == "initializing":
@@ -304,14 +329,16 @@ class FtpSyncHandler(SyncHandler):
         if not self.__connected or self.__ftp.sock is None:
             ok = self.__connectAndLogin()
             if not ok:
-                self.syncStatus.emit(type_, self.trUtf8("Cannot log in to FTP host."))
+                self.syncStatus.emit(
+                    type_, self.trUtf8("Cannot log in to FTP host."))
                 return
         
         # upload the changed file
         self.__state = "uploading"
         self.syncStatus.emit(type_, self._messages[type_]["Uploading"])
         if self.__uploadFile(type_, fileName):
-            self.syncStatus.emit(type_, self.trUtf8("Synchronization finished."))
+            self.syncStatus.emit(
+                type_, self.trUtf8("Synchronization finished."))
         self.__state = "idle"
     
     def syncBookmarks(self):

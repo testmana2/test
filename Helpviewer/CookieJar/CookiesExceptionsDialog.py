@@ -8,7 +8,8 @@ Module implementing a dialog for the configuration of cookie exceptions.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QSortFilterProxyModel, QCompleter, QFont, QFontMetrics
+from PyQt4.QtGui import QDialog, QSortFilterProxyModel, QCompleter, QFont, \
+    QFontMetrics
 
 from .CookieExceptionsModel import CookieExceptionsModel
 from .CookieModel import CookieModel
@@ -32,14 +33,17 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         
         self.__cookieJar = cookieJar
         
-        self.removeButton.clicked[()].connect(self.exceptionsTable.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.exceptionsTable.removeAll)
+        self.removeButton.clicked[()].connect(
+            self.exceptionsTable.removeSelected)
+        self.removeAllButton.clicked[()].connect(
+            self.exceptionsTable.removeAll)
         
         self.exceptionsTable.verticalHeader().hide()
         self.__exceptionsModel = CookieExceptionsModel(cookieJar)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(self.__exceptionsModel)
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         self.exceptionsTable.setModel(self.__proxyModel)
         
         cookieModel = CookieModel(cookieJar, self)
@@ -52,14 +56,16 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         self.exceptionsTable.verticalHeader().setDefaultSectionSize(height)
         self.exceptionsTable.verticalHeader().setMinimumSectionSize(-1)
         for section in range(self.__exceptionsModel.columnCount()):
-            header = self.exceptionsTable.horizontalHeader().sectionSizeHint(section)
+            header = self.exceptionsTable.horizontalHeader()\
+                .sectionSizeHint(section)
             if section == 0:
                 header = fm.width("averagebiglonghost.averagedomain.info")
             elif section == 1:
                 header = fm.width(self.trUtf8("Allow For Session"))
             buffer = fm.width("mm")
             header += buffer
-            self.exceptionsTable.horizontalHeader().resizeSection(section, header)
+            self.exceptionsTable.horizontalHeader()\
+                .resizeSection(section, header)
     
     def setDomainName(self, domain):
         """
@@ -95,7 +101,8 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         Private slot to allow cookies of a domain for the current session only.
         """
         from .CookieJar import CookieJar
-        self.__exceptionsModel.addRule(self.domainEdit.text(), CookieJar.AllowForSession)
+        self.__exceptionsModel.addRule(self.domainEdit.text(),
+                                       CookieJar.AllowForSession)
     
     @pyqtSlot()
     def on_allowButton_clicked(self):

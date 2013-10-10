@@ -4,5 +4,6 @@
 #
 
 """
-Package implementing the personal information manager for the completion of forms.
+Package implementing the personal information manager for the completion of
+forms.
 """

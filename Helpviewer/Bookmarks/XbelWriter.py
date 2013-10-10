@@ -85,9 +85,11 @@ class XbelWriter(QXmlStreamWriter):
             if node.added.isValid():
                 self.writeAttribute("added", node.added.toString(Qt.ISODate))
             if node.modified.isValid():
-                self.writeAttribute("modified", node.modified.toString(Qt.ISODate))
+                self.writeAttribute(
+                    "modified", node.modified.toString(Qt.ISODate))
             if node.visited.isValid():
-                self.writeAttribute("visited", node.visited.toString(Qt.ISODate))
+                self.writeAttribute(
+                    "visited", node.visited.toString(Qt.ISODate))
             self.writeTextElement("title", node.title)
             if node.desc:
                 self.writeTextElement("desc", node.desc)

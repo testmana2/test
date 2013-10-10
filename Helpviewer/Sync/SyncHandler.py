@@ -21,13 +21,15 @@ class SyncHandler(QObject):
     Base class for synchronization handlers.
     
     @signal syncStatus(type_, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", string)
-    @signal syncError(message) emitted for a general error with the error message (string)
-    @signal syncMessage(message) emitted to send a message about synchronization (string)
-    @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", boolean, boolean)
+        status (string one of "bookmarks", "history", "passwords",
+        "useragents" or "speeddial", string)
+    @signal syncError(message) emitted for a general error with the error
+        message (string)
+    @signal syncMessage(message) emitted to send a message about
+        synchronization (string)
+    @signal syncFinished(type_, done, download) emitted after a
+        synchronization has finished (string one of "bookmarks", "history",
+        "passwords", "useragents" or "speeddial", boolean, boolean)
     """
     syncStatus = pyqtSignal(str, str)
     syncError = pyqtSignal(str)
@@ -57,60 +59,72 @@ class SyncHandler(QObject):
                 "RemoteExists": self.trUtf8(
                     "Remote bookmarks file exists! Syncing local copy..."),
                 "RemoteMissing": self.trUtf8(
-                    "Remote bookmarks file does NOT exists. Exporting local copy..."),
+                    "Remote bookmarks file does NOT exists. Exporting"
+                    " local copy..."),
                 "LocalNewer": self.trUtf8(
                     "Local bookmarks file is NEWER. Exporting local copy..."),
                 "LocalMissing": self.trUtf8(
-                    "Local bookmarks file does NOT exist. Skipping synchronization!"),
+                    "Local bookmarks file does NOT exist. Skipping"
+                    " synchronization!"),
                 "Uploading": self.trUtf8("Uploading local bookmarks file..."),
             },
             "history": {
                 "RemoteExists": self.trUtf8(
                     "Remote history file exists! Syncing local copy..."),
                 "RemoteMissing": self.trUtf8(
-                    "Remote history file does NOT exists. Exporting local copy..."),
+                    "Remote history file does NOT exists. Exporting"
+                    " local copy..."),
                 "LocalNewer": self.trUtf8(
                     "Local history file is NEWER. Exporting local copy..."),
                 "LocalMissing": self.trUtf8(
-                    "Local history file does NOT exist. Skipping synchronization!"),
+                    "Local history file does NOT exist. Skipping"
+                    " synchronization!"),
                 "Uploading": self.trUtf8("Uploading local history file..."),
             },
             "passwords": {
                 "RemoteExists": self.trUtf8(
                     "Remote logins file exists! Syncing local copy..."),
                 "RemoteMissing": self.trUtf8(
-                    "Remote logins file does NOT exists. Exporting local copy..."),
+                    "Remote logins file does NOT exists. Exporting"
+                    " local copy..."),
                 "LocalNewer": self.trUtf8(
                     "Local logins file is NEWER. Exporting local copy..."),
                 "LocalMissing": self.trUtf8(
-                    "Local logins file does NOT exist. Skipping synchronization!"),
+                    "Local logins file does NOT exist. Skipping"
+                    " synchronization!"),
                 "Uploading": self.trUtf8("Uploading local logins file..."),
             },
             "useragents": {
                 "RemoteExists": self.trUtf8(
-                    "Remote user agent settings file exists! Syncing local copy..."),
+                    "Remote user agent settings file exists! Syncing local"
+                    " copy..."),
                 "RemoteMissing": self.trUtf8(
                     "Remote user agent settings file does NOT exists."
                     " Exporting local copy..."),
                 "LocalNewer": self.trUtf8(
-                    "Local user agent settings file is NEWER. Exporting local copy..."),
+                    "Local user agent settings file is NEWER. Exporting"
+                    " local copy..."),
                 "LocalMissing": self.trUtf8(
                     "Local user agent settings file does NOT exist."
                     " Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local user agent settings file..."),
+                "Uploading": self.trUtf8("Uploading local user agent"
+                    " settings file..."),
             },
             "speeddial": {
                 "RemoteExists": self.trUtf8(
-                    "Remote speed dial settings file exists! Syncing local copy..."),
+                    "Remote speed dial settings file exists! Syncing local"
+                    " copy..."),
                 "RemoteMissing": self.trUtf8(
                     "Remote speed dial settings file does NOT exists."
                     " Exporting local copy..."),
                 "LocalNewer": self.trUtf8(
-                    "Local speed dial settings file is NEWER. Exporting local copy..."),
+                    "Local speed dial settings file is NEWER. Exporting"
+                    " local copy..."),
                 "LocalMissing": self.trUtf8(
                     "Local speed dial settings file does NOT exist."
                     " Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local speed dial settings file..."),
+                "Uploading": self.trUtf8("Uploading local speed dial"
+                    " settings file..."),
             },
         }
     
@@ -163,7 +177,8 @@ class SyncHandler(QObject):
         """
         Public method to do the initial check.
         
-        @keyparam forceUpload flag indicating a forced upload of the files (boolean)
+        @keyparam forceUpload flag indicating a forced upload of the files
+            (boolean)
         @exception NotImplementedError raised to indicate that this method
             must be implemented by subclasses
         """
@@ -182,12 +197,13 @@ class SyncHandler(QObject):
         """
         Public method to read a file.
         
-        If encrypted synchronization is enabled, the data will be encrypted using
-        the relevant encryption key.
+        If encrypted synchronization is enabled, the data will be encrypted
+        using the relevant encryption key.
         
         @param fileName name of the file to be read (string)
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @return data of the file, optionally encrypted (QByteArray)
         """
         if os.path.exists(fileName):
@@ -220,21 +236,24 @@ class SyncHandler(QObject):
         """
         Public method to write the data to a file.
         
-        If encrypted synchronization is enabled, the data will be decrypted using
-        the relevant encryption key.
+        If encrypted synchronization is enabled, the data will be decrypted
+        using the relevant encryption key.
         
         @param data data to be written and optionally decrypted (QByteArray)
         @param fileName name of the file the data is to be written to (string)
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param timestamp timestamp to be given to the file (int)
-        @return tuple giving a success flag and an error string (boolean, string)
+        @return tuple giving a success flag and an error string (boolean,
+            string)
         """
         data = bytes(data)
         
         if Preferences.getHelp("SyncEncryptData") and \
-           (not Preferences.getHelp("SyncEncryptPasswordsOnly") or \
-            (Preferences.getHelp("SyncEncryptPasswordsOnly") and type_ == "passwords")):
+                (not Preferences.getHelp("SyncEncryptPasswordsOnly") or
+                 (Preferences.getHelp("SyncEncryptPasswordsOnly") and 
+                  type_ == "passwords")):
             key = Preferences.getHelp("SyncEncryptionKey")
             if not key:
                 return False, self.trUtf8("Invalid encryption key given.")

@@ -84,7 +84,8 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
@@ -94,10 +95,10 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         strUrl = url.toString()
         
         # For some reason the url to load is already wrong (passed from webkit)
-        # though the css file and the references inside should work that way. One
-        # possible problem might be that the css is loaded at the same level as the
-        # html, thus a path inside the css like (../images/foo.png) might cd out of
-        # the virtual folder
+        # though the css file and the references inside should work that way.
+        # One possible problem might be that the css is loaded at the same
+        # level as the html, thus a path inside the css like
+        # (../images/foo.png) might cd out of the virtual folder
         if not self.__engine.findFile(url).isValid():
             if strUrl.startswith(QtDocPath):
                 newUrl = request.url()

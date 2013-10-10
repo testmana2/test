@@ -25,7 +25,8 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "firefox":
@@ -42,8 +43,9 @@ def getImporterInfo(id):
             "Mozilla Firefox",
             "places.sqlite",
             QCoreApplication.translate("FirefoxImporter",
-                """Mozilla Firefox stores its bookmarks in the <b>places.sqlite</b> """
-                """SQLite database. This file is usually located in"""),
+                """Mozilla Firefox stores its bookmarks in the"""
+                """ <b>places.sqlite</b> SQLite database. This file is"""
+                """ usually located in"""),
             QCoreApplication.translate("FirefoxImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
@@ -92,8 +94,8 @@ class FirefoxImporter(BookmarksImporter):
             self.__db = sqlite3.connect(self.__fileName)
         except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = self.trUtf8("Unable to open database.\nReason: {0}")\
-                .format(str(err))
+            self._errorString = self.trUtf8(
+                "Unable to open database.\nReason: {0}").format(str(err))
             return False
         
         return True
@@ -127,8 +129,8 @@ class FirefoxImporter(BookmarksImporter):
                 folders[id_] = folder
         except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = self.trUtf8("Unable to open database.\nReason: {0}")\
-                .format(str(err))
+            self._errorString = self.trUtf8(
+                "Unable to open database.\nReason: {0}").format(str(err))
             return None
         
         try:
@@ -143,23 +145,27 @@ class FirefoxImporter(BookmarksImporter):
                 
                 cursor2 = self.__db.cursor()
                 cursor2.execute(
-                    "SELECT url FROM moz_places WHERE id = {0}".format(placesId))
+                    "SELECT url FROM moz_places WHERE id = {0}"
+                    .format(placesId))
                 row2 = cursor2.fetchone()
                 if row2:
                     url = QUrl(row2[0])
-                    if not title or url.isEmpty() or url.scheme() in ["place", "about"]:
+                    if not title or url.isEmpty() or \
+                            url.scheme() in ["place", "about"]:
                         continue
                     
                     if parent in folders:
-                        bookmark = BookmarkNode(BookmarkNode.Bookmark, folders[parent])
+                        bookmark = BookmarkNode(BookmarkNode.Bookmark,
+                                                folders[parent])
                     else:
-                        bookmark = BookmarkNode(BookmarkNode.Bookmark, importRootNode)
+                        bookmark = BookmarkNode(BookmarkNode.Bookmark,
+                                                importRootNode)
                     bookmark.url = url.toString()
                     bookmark.title = title.replace("&", "&&")
         except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = self.trUtf8("Unable to open database.\nReason: {0}")\
-                .format(str(err))
+            self._errorString = self.trUtf8(
+                "Unable to open database.\nReason: {0}").format(str(err))
             return None
         
         importRootNode.setType(BookmarkNode.Folder)

@@ -9,8 +9,8 @@ Module implementing the manager for GreaseMonkey scripts.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, QUrl, \
-    QByteArray
+from PyQt4.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, \
+    QUrl, QByteArray
 from PyQt4.QtNetwork import QNetworkAccessManager
 
 import Utilities
@@ -44,8 +44,8 @@ class GreaseMonkeyManager(QObject):
         
         @param parent reference to the parent widget (QWidget)
         """
-        from .GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog import \
-            GreaseMonkeyConfigurationDialog
+        from .GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog \
+            import GreaseMonkeyConfigurationDialog
         self.__configDiaolg = GreaseMonkeyConfigurationDialog(self, parent)
         self.__configDiaolg.show()
     
@@ -76,7 +76,8 @@ class GreaseMonkeyManager(QObject):
         
         @return path of the scripts directory (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "greasemonkey")
+        return os.path.join(
+            Utilities.getConfigDir(), "browser", "greasemonkey")
     
     def requireScriptsDirectory(self):
         """
@@ -99,8 +100,9 @@ class GreaseMonkeyManager(QObject):
         
         script = ""
         
-        settings = QSettings(os.path.join(self.requireScriptsDirectory(), "requires.ini"),
-                             QSettings.IniFormat)
+        settings = QSettings(
+            os.path.join(self.requireScriptsDirectory(), "requires.ini"),
+            QSettings.IniFormat)
         settings.beginGroup("Files")
         for url in urlList:
             if settings.contains(url):
@@ -119,7 +121,8 @@ class GreaseMonkeyManager(QObject):
         """
         Public method to save the configuration.
         """
-        Preferences.setHelp("GreaseMonkeyDisabledScripts", self.__disabledScripts)
+        Preferences.setHelp("GreaseMonkeyDisabledScripts",
+                            self.__disabledScripts)
     
     def allScripts(self):
         """
@@ -261,7 +264,8 @@ class GreaseMonkeyManager(QObject):
         if not scriptsDir.exists("requires"):
             scriptsDir.mkdir("requires")
         
-        self.__disabledScripts = Preferences.getHelp("GreaseMonkeyDisabledScripts")
+        self.__disabledScripts = \
+            Preferences.getHelp("GreaseMonkeyDisabledScripts")
         
         from .GreaseMonkeyScript import GreaseMonkeyScript
         for fileName in scriptsDir.entryList(["*.js"], QDir.Files):
@@ -282,13 +286,15 @@ class GreaseMonkeyManager(QObject):
         
         @param page reference to the web page (HelpWebPage)
         """
-        page.mainFrame().javaScriptWindowObjectCleared.connect(self.pageLoadStarted)
+        page.mainFrame().javaScriptWindowObjectCleared.connect(
+            self.pageLoadStarted)
     
     def createRequest(self, op, request, outgoingData=None):
         """
         Public method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
@@ -296,10 +302,12 @@ class GreaseMonkeyManager(QObject):
         """
         if op == QNetworkAccessManager.GetOperation and \
            request.rawHeader("X-Eric5-UserLoadAction") == QByteArray("1"):
-            urlString = request.url().toString(QUrl.RemoveFragment | QUrl.RemoveQuery)
+            urlString = request.url().toString(
+                QUrl.RemoveFragment | QUrl.RemoveQuery)
             if urlString.endswith(".user.js"):
                 self.downloadScript(request)
-                from Helpviewer.Network.EmptyNetworkReply import EmptyNetworkReply
+                from Helpviewer.Network.EmptyNetworkReply import \
+                    EmptyNetworkReply
                 return EmptyNetworkReply(self)
         
         return None

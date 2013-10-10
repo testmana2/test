@@ -22,7 +22,8 @@ class FollowRedirectReply(QObject):
         Constructor
         
         @param url URL to get (QUrl)
-        @param manager reference to the network access manager (QNetworkAccessManager)
+        @param manager reference to the network access manager
+            (QNetworkAccessManager)
         @keyparam maxRedirects maximum allowed redirects (integer)
         """
         super().__init__()
@@ -92,7 +93,8 @@ class FollowRedirectReply(QObject):
         """
         Private slot handling the receipt of the requested data.
         """
-        replyStatus = self.__reply.attribute(QNetworkRequest.HttpStatusCodeAttribute)
+        replyStatus = self.__reply.attribute(
+            QNetworkRequest.HttpStatusCodeAttribute)
         if (replyStatus != 301 and replyStatus != 302) or \
            self.__redirectCount == self.__maxRedirects:
             self.finished.emit()
@@ -100,9 +102,9 @@ class FollowRedirectReply(QObject):
         
         self.__redirectCount += 1
         
-        redirectUrl = self.__reply.attribute(QNetworkRequest.RedirectionTargetAttribute)
+        redirectUrl = self.__reply.attribute(
+            QNetworkRequest.RedirectionTargetAttribute)
         self.__reply.close()
-##        self.__reply.finished[()].disconnect(self.__replyFinished)
         self.__reply.deleteLater()
         self.__reply = None
         

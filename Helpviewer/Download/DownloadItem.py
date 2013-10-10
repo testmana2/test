@@ -7,8 +7,8 @@
 Module implementing a widget controlling a download.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, QUrl, \
-    QIODevice, QCryptographicHash
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, \
+    QUrl, QIODevice, QCryptographicHash
 from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QDialog
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
@@ -44,9 +44,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         Constructor
         
         @keyparam reply reference to the network reply object (QNetworkReply)
-        @keyparam requestFilename flag indicating to ask the user for a filename (boolean)
-        @keyparam webPage reference to the web page object the download originated
-            from (QWebPage)
+        @keyparam requestFilename flag indicating to ask the user for a
+            filename (boolean)
+        @keyparam webPage reference to the web page object the download
+            originated from (QWebPage)
         @keyparam download flag indicating a download operation (boolean)
         @keyparam parent reference to the parent widget (QWidget)
         @keyparam mainWindow reference to the main window (HelpWindow)
@@ -60,7 +61,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         self.progressBar.setMaximum(0)
         
-        self.__isFtpDownload = reply is not None and reply.url().scheme() == "ftp"
+        self.__isFtpDownload = reply is not None and \
+            reply.url().scheme() == "ftp"
         
         self.tryAgainButton.setIcon(UI.PixmapCache.getIcon("restart.png"))
         self.tryAgainButton.setEnabled(False)
@@ -103,7 +105,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__md5Hash = QCryptographicHash(QCryptographicHash.Md5)
         
         if not requestFilename:
-            self.__requestFilename = Preferences.getUI("RequestDownloadFilename")
+            self.__requestFilename = \
+                Preferences.getUI("RequestDownloadFilename")
         
         self.__initialize()
     
@@ -163,7 +166,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.__toDownload = True
             ask = False
         else:
-            defaultFileName, originalFileName = self.__saveFileName(downloadDirectory)
+            defaultFileName, originalFileName = \
+                self.__saveFileName(downloadDirectory)
             fileName = defaultFileName
             self.__originalFileName = originalFileName
             ask = True
@@ -180,8 +184,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.progressBar.setVisible(False)
                 self.__reply.close()
                 self.on_stopButton_clicked()
-                self.filenameLabel.setText(self.trUtf8("Download canceled: {0}").format(
-                    QFileInfo(defaultFileName).fileName()))
+                self.filenameLabel.setText(
+                    self.trUtf8("Download canceled: {0}").format(
+                        QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
             
@@ -198,8 +203,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 return
             
             self.__autoOpen = dlg.getAction() == "open"
-            fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
-                        '/' + QFileInfo(fileName).completeBaseName()
+            fileName = QDesktopServices.storageLocation(
+                QDesktopServices.TempLocation) + \
+                '/' + QFileInfo(fileName).completeBaseName()
         
         if ask and not self.__autoOpen and self.__requestFilename:
             self.__gettingFileName = True
@@ -213,14 +219,15 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.progressBar.setVisible(False)
                 self.__reply.close()
                 self.on_stopButton_clicked()
-                self.filenameLabel.setText(self.trUtf8("Download canceled: {0}")\
-                    .format(QFileInfo(defaultFileName).fileName()))
+                self.filenameLabel.setText(
+                    self.trUtf8("Download canceled: {0}")\
+                        .format(QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
         
         fileInfo = QFileInfo(fileName)
-        Helpviewer.HelpWindow.HelpWindow.downloadManager().setDownloadDirectory(
-            fileInfo.absoluteDir().absolutePath())
+        Helpviewer.HelpWindow.HelpWindow.downloadManager()\
+            .setDownloadDirectory(fileInfo.absoluteDir().absolutePath())
         self.filenameLabel.setText(fileInfo.fileName())
         
         self.__output.setFileName(fileName + ".part")
@@ -232,8 +239,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             if not saveDirPath.mkpath(saveDirPath.absolutePath()):
                 self.progressBar.setVisible(False)
                 self.on_stopButton_clicked()
-                self.infoLabel.setText(
-                    self.trUtf8("Download directory ({0}) couldn't be created.")\
+                self.infoLabel.setText(self.trUtf8(
+                    "Download directory ({0}) couldn't be created.")\
                     .format(saveDirPath.absolutePath()))
                 return
         
@@ -250,7 +257,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         path = ""
         if self.__reply.hasRawHeader("Content-Disposition"):
-            header = bytes(self.__reply.rawHeader("Content-Disposition")).decode()
+            header = bytes(self.__reply.rawHeader("Content-Disposition"))\
+                .decode()
             if header:
                 pos = header.find("filename=")
                 if pos != -1:
@@ -407,7 +415,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             if not self.__requestFilename:
                 self.__getFileName()
             if not self.__output.open(QIODevice.WriteOnly):
-                self.infoLabel.setText(self.trUtf8("Error opening save file: {0}")\
+                self.infoLabel.setText(
+                    self.trUtf8("Error opening save file: {0}")\
                     .format(self.__output.errorString()))
                 self.on_stopButton_clicked()
                 self.statusChanged.emit()
@@ -445,8 +454,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if locationHeader and locationHeader.isValid():
             self.__url = QUrl(locationHeader)
             import Helpviewer.HelpWindow
-            self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
-                           QNetworkRequest(self.__url))
+            self.__reply = Helpviewer.HelpWindow.HelpWindow\
+                .networkAccessManager().get(QNetworkRequest(self.__url))
             self.__initialize()
     
     def __downloadProgress(self, bytesReceived, bytesTotal):
@@ -476,7 +485,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @return total number of bytes (integer)
         """
         if self.__bytesTotal == -1:
-            self.__bytesTotal = self.__reply.header(QNetworkRequest.ContentLengthHeader)
+            self.__bytesTotal = self.__reply.header(
+                QNetworkRequest.ContentLengthHeader)
             if self.__bytesTotal is None:
                 self.__bytesTotal = -1
         return self.__bytesTotal
@@ -501,7 +511,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if self.bytesTotal() == -1:
             return -1.0
         
-        timeRemaining = (self.bytesTotal() - self.bytesReceived()) / self.currentSpeed()
+        timeRemaining = (self.bytesTotal() - 
+                         self.bytesReceived()) / self.currentSpeed()
         
         # ETA should never be 0
         if timeRemaining == 0:
@@ -551,8 +562,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             if self.__bytesReceived == bytesTotal or bytesTotal == -1:
                 info = self.trUtf8("{0} downloaded\nSHA1: {1}\nMD5: {2}")\
                     .format(dataString(self.__output.size()),
-                            str(self.__sha1Hash.result().toHex(), encoding="ascii"),
-                            str(self.__md5Hash.result().toHex(), encoding="ascii"))
+                            str(self.__sha1Hash.result().toHex(),
+                                encoding="ascii"),
+                            str(self.__md5Hash.result().toHex(),
+                                encoding="ascii")
+                    )
             else:
                 info = self.trUtf8("{0} of {1} - Stopped")\
                     .format(dataString(self.__bytesReceived),

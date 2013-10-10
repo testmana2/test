@@ -179,16 +179,19 @@ class CookieExceptionsModel(QAbstractTableModel):
         from .CookieJar import CookieJar
         
         if rule == CookieJar.Allow:
-            self.__addHost(host,
-                self.__allowedCookies, self.__blockedCookies, self.__sessionCookies)
+            self.__addHost(
+                host, self.__allowedCookies, self.__blockedCookies,
+                self.__sessionCookies)
             return
         elif rule == CookieJar.Block:
-            self.__addHost(host,
-                self.__blockedCookies, self.__allowedCookies, self.__sessionCookies)
+            self.__addHost(
+                host, self.__blockedCookies, self.__allowedCookies,
+                self.__sessionCookies)
             return
         elif rule == CookieJar.AllowForSession:
-            self.__addHost(host,
-                self.__sessionCookies, self.__allowedCookies, self.__blockedCookies)
+            self.__addHost(
+                host, self.__sessionCookies, self.__allowedCookies,
+                self.__blockedCookies)
             return
     
     def __addHost(self, host, addList, removeList1, removeList2):
@@ -197,8 +200,10 @@ class CookieExceptionsModel(QAbstractTableModel):
         
         @param host name of the host to add (string)
         @param addList reference to the list to add it to (list of strings)
-        @param removeList1 reference to first list to remove it from (list of strings)
-        @param removeList2 reference to second list to remove it from (list of strings)
+        @param removeList1 reference to first list to remove it from
+            (list of strings)
+        @param removeList2 reference to second list to remove it from
+            (list of strings)
         """
         if host not in addList:
             addList.append(host)

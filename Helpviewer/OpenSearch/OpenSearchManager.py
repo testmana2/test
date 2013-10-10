@@ -9,8 +9,8 @@ Module implementing a manager for open search engines.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice, QByteArray, \
-    QBuffer
+from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice, \
+    QByteArray, QBuffer
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
 from E5Gui.E5Application import e5App
@@ -182,7 +182,8 @@ class OpenSearchManager(QObject):
         """
         Private method to add a new search engine given a filename.
         
-        @param filename name of a file containing the engine definition (string)
+        @param filename name of a file containing the engine definition
+            (string)
         @return flag indicating success (boolean)
         """
         file_ = QFile(filename)
@@ -200,7 +201,8 @@ class OpenSearchManager(QObject):
     
     def __addEngineByEngine(self, engine):
         """
-        Private method to add a new search engine given a reference to an engine.
+        Private method to add a new search engine given a reference to an
+        engine.
         
         @param engine reference to an engine object (OpenSearchEngine)
         @return flag indicating success (boolean)
@@ -234,11 +236,13 @@ class OpenSearchManager(QObject):
             return
         
         engine = self.__engines[name]
-        for keyword in [k for k in self.__keywords if self.__keywords[k] == engine]:
+        for keyword in [k for k in self.__keywords
+                        if self.__keywords[k] == engine]:
             del self.__keywords[keyword]
         del self.__engines[name]
         
-        file_ = QDir(self.enginesDirectory()).filePath(self.generateEngineFileName(name))
+        file_ = QDir(self.enginesDirectory()).filePath(
+            self.generateEngineFileName(name))
         QFile.remove(file_)
         
         if name == self.__current:
@@ -374,7 +378,8 @@ class OpenSearchManager(QObject):
         
         @return directory name (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "searchengines")
+        return os.path.join(
+            Utilities.getConfigDir(), "browser", "searchengines")
     
     def __confirmAddition(self, engine):
         """
@@ -390,10 +395,10 @@ class OpenSearchManager(QObject):
         
         res = E5MessageBox.yesNo(None,
             "",
-            self.trUtf8("""<p>Do you want to add the following engine to your list of"""
-                        """ search engines?<br/><br/>Name: {0}<br/>"""
-                        """Searches on: {1}</p>""")\
-                .format(engine.name(), host))
+            self.trUtf8(
+                """<p>Do you want to add the following engine to your"""
+                """ list of search engines?<br/><br/>Name: {0}<br/>"""
+                """Searches on: {1}</p>""").format(engine.name(), host))
         return res
     
     def __engineFromUrlAvailable(self):
@@ -516,6 +521,7 @@ class OpenSearchManager(QObject):
     
     def enginesChanged(self):
         """
-        Public slot to tell the search engine manager, that something has changed.
+        Public slot to tell the search engine manager, that something has
+        changed.
         """
         self.changed.emit()

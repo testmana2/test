@@ -37,7 +37,8 @@ class DownloadModel(QAbstractListModel):
             return None
         
         if role == Qt.ToolTipRole:
-            if self.__manager.downloads()[index.row()].downloadedSuccessfully():
+            if self.__manager.downloads()[index.row()]\
+                    .downloadedSuccessfully():
                 return self.__manager.downloads()[index.row()].getInfoData()
         
         return None

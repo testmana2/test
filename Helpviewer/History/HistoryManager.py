@@ -9,8 +9,8 @@ Module implementing the history manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QFileInfo, QDateTime, QDate, QTime, QUrl, QTimer, \
-    QFile, QIODevice, QByteArray, QDataStream, QTemporaryFile
+from PyQt4.QtCore import pyqtSignal, QFileInfo, QDateTime, QDate, QTime, \
+    QUrl, QTimer, QFile, QIODevice, QByteArray, QDataStream, QTemporaryFile
 from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
 
 from E5Gui import E5MessageBox
@@ -42,7 +42,8 @@ class HistoryEntry(object):
         """
         Special method determining equality.
         
-        @param other reference to the history entry to compare against (HistoryEntry)
+        @param other reference to the history entry to compare against
+            (HistoryEntry)
         @return flag indicating equality (boolean)
         """
         return other.title == self.title and \
@@ -55,7 +56,8 @@ class HistoryEntry(object):
         
         Note: History is sorted in reverse order by date and time
         
-        @param other reference to the history entry to compare against (HistoryEntry)
+        @param other reference to the history entry to compare against
+            (HistoryEntry)
         @return flag indicating less (boolean)
         """
         return self.dateTime > other.dateTime
@@ -80,8 +82,10 @@ class HistoryManager(QWebHistoryInterface):
     
     @signal historyCleared() emitted after the history has been cleared
     @signal historyReset() emitted after the history has been reset
-    @signal entryAdded(HistoryEntry) emitted after a history entry has been added
-    @signal entryRemoved(HistoryEntry) emitted after a history entry has been removed
+    @signal entryAdded(HistoryEntry) emitted after a history entry has been
+        added
+    @signal entryRemoved(HistoryEntry) emitted after a history entry has been
+        removed
     @signal entryUpdated(int) emitted after a history entry has been updated
     @signal historySaved() emitted after the history was saved
     """
@@ -123,8 +127,10 @@ class HistoryManager(QWebHistoryInterface):
         from .HistoryTreeModel import HistoryTreeModel
         
         self.__historyModel = HistoryModel(self, self)
-        self.__historyFilterModel = HistoryFilterModel(self.__historyModel, self)
-        self.__historyTreeModel = HistoryTreeModel(self.__historyFilterModel, self)
+        self.__historyFilterModel = \
+            HistoryFilterModel(self.__historyModel, self)
+        self.__historyTreeModel = \
+            HistoryTreeModel(self.__historyFilterModel, self)
         
         super().setDefaultInterface(self)
         self.__startFrequencyTimer()
@@ -152,7 +158,8 @@ class HistoryManager(QWebHistoryInterface):
         
         @param history reference to the list of history entries to be set
             (list of HistoryEntry)
-        @param loadedAndSorted flag indicating that the list is sorted (boolean)
+        @param loadedAndSorted flag indicating that the list is sorted
+            (boolean)
         """
         self.__history = history[:]
         if not loadedAndSorted:
@@ -217,7 +224,8 @@ class HistoryManager(QWebHistoryInterface):
                 cleanurl.setPassword("")
             if cleanurl.host():
                 cleanurl.setHost(cleanurl.host().lower())
-            itm = HistoryEntry(cleanurl.toString(), QDateTime.currentDateTime())
+            itm = HistoryEntry(cleanurl.toString(),
+                               QDateTime.currentDateTime())
             self._addHistoryEntry(itm)
     
     def updateHistoryEntry(self, url, title):
@@ -287,7 +295,8 @@ class HistoryManager(QWebHistoryInterface):
         
         while self.__history:
             checkForExpired = QDateTime(self.__history[-1].dateTime)
-            checkForExpired.setDate(checkForExpired.date().addDays(self.__daysToExpire))
+            checkForExpired.setDate(
+                checkForExpired.date().addDays(self.__daysToExpire))
             if now.daysTo(checkForExpired) > 7:
                 nextTimeout = 7 * 86400
             else:
@@ -342,7 +351,8 @@ class HistoryManager(QWebHistoryInterface):
         else:
             breakMS = QDateTime.currentMSecsSinceEpoch() - period
             while self.__history and \
-                  QDateTime(self.__history[0].dateTime).toMSecsSinceEpoch() > breakMS:
+                  (QDateTime(self.__history[0].dateTime).toMSecsSinceEpoch() >
+                   breakMS):
                 itm = self.__history.pop(0)
                 self.entryRemoved.emit(itm)
         self.__lastSavedUrl = ""
@@ -374,8 +384,9 @@ class HistoryManager(QWebHistoryInterface):
         if not historyFile.open(QIODevice.ReadOnly):
             E5MessageBox.warning(None,
                 self.trUtf8("Loading History"),
-                self.trUtf8("""<p>Unable to open history file <b>{0}</b>.<br/>"""
-                            """Reason: {1}</p>""")\
+                self.trUtf8(
+                    """<p>Unable to open history file <b>{0}</b>.<br/>"""
+                    """Reason: {1}</p>""")\
                     .format(historyFile.fileName, historyFile.errorString()))
             return
         
@@ -452,8 +463,9 @@ class HistoryManager(QWebHistoryInterface):
         if not opened:
             E5MessageBox.warning(None,
                 self.trUtf8("Saving History"),
-                self.trUtf8("""<p>Unable to open history file <b>{0}</b>.<br/>"""
-                            """Reason: {1}</p>""")\
+                self.trUtf8(
+                    """<p>Unable to open history file <b>{0}</b>.<br/>"""
+                    """Reason: {1}</p>""")\
                     .format(f.fileName(), f.errorString()))
             return
         
@@ -473,14 +485,17 @@ class HistoryManager(QWebHistoryInterface):
             if historyFile.exists() and not historyFile.remove():
                 E5MessageBox.warning(None,
                     self.trUtf8("Saving History"),
-                    self.trUtf8("""<p>Error removing old history file <b>{0}</b>."""
-                                """<br/>Reason: {1}</p>""")\
-                        .format(historyFile.fileName(), historyFile.errorString()))
+                    self.trUtf8(
+                        """<p>Error removing old history file <b>{0}</b>."""
+                        """<br/>Reason: {1}</p>""")\
+                        .format(historyFile.fileName(),
+                                historyFile.errorString()))
             if not f.copy(historyFile.fileName()):
                 E5MessageBox.warning(None,
                     self.trUtf8("Saving History"),
-                    self.trUtf8("""<p>Error moving new history file over old one """
-                                """(<b>{0}</b>).<br/>Reason: {1}</p>""")\
+                    self.trUtf8(
+                        """<p>Error moving new history file over old one """
+                        """(<b>{0}</b>).<br/>Reason: {1}</p>""")\
                         .format(historyFile.fileName(), f.errorString()))
         self.historySaved.emit()
         try:
@@ -500,4 +515,5 @@ class HistoryManager(QWebHistoryInterface):
         Private method to start the timer to recalculate the frequencies.
         """
         tomorrow = QDateTime(QDate.currentDate().addDays(1), QTime(3, 0))
-        self.__frequencyTimer.start(QDateTime.currentDateTime().secsTo(tomorrow) * 1000)
+        self.__frequencyTimer.start(
+            QDateTime.currentDateTime().secsTo(tomorrow) * 1000)

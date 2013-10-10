@@ -8,7 +8,8 @@ Module implementing the URL bar widget.
 """
 
 from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime, qVersion
-from PyQt4.QtGui import QColor, QPalette, QLinearGradient, QIcon, QDialog, QApplication
+from PyQt4.QtGui import QColor, QPalette, QLinearGradient, QIcon, QDialog, \
+    QApplication
 try:
     from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
 except ImportError:
@@ -49,7 +50,8 @@ class UrlBar(E5LineEdit):
             QWebSettings.PrivateBrowsingEnabled)
         
         self.__bmActiveIcon = UI.PixmapCache.getIcon("bookmark16.png")
-        self.__bmInactiveIcon = QIcon(self.__bmActiveIcon.pixmap(16, 16, QIcon.Disabled))
+        self.__bmInactiveIcon = QIcon(
+            self.__bmActiveIcon.pixmap(16, 16, QIcon.Disabled))
         
         self.__favicon = FavIconLabel(self)
         self.addWidget(self.__favicon, E5LineEdit.LeftSide)
@@ -59,7 +61,8 @@ class UrlBar(E5LineEdit):
         self.__sslLabel.setVisible(False)
         
         self.__privacyButton = E5LineEditButton(self)
-        self.__privacyButton.setIcon(UI.PixmapCache.getIcon("privateBrowsing.png"))
+        self.__privacyButton.setIcon(
+            UI.PixmapCache.getIcon("privateBrowsing.png"))
         self.addWidget(self.__privacyButton, E5LineEdit.RightSide)
         self.__privacyButton.setVisible(self.__privateMode)
         
@@ -84,12 +87,12 @@ class UrlBar(E5LineEdit):
         self.__mw.privacyChanged.connect(self.__privacyButton.setVisible)
         self.textChanged.connect(self.__textChanged)
         
-        Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryChanged.connect(
-            self.__bookmarkChanged)
-        Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryAdded.connect(
-            self.__bookmarkChanged)
-        Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryRemoved.connect(
-            self.__bookmarkChanged)
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+            .entryChanged.connect(self.__bookmarkChanged)
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+            .entryAdded.connect(self.__bookmarkChanged)
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+            .entryRemoved.connect(self.__bookmarkChanged)
         Helpviewer.HelpWindow.HelpWindow.speedDial().pagesChanged.connect(
             self.__bookmarkChanged)
     
@@ -178,18 +181,20 @@ class UrlBar(E5LineEdit):
                 sslInfo = self.__browser.page().getSslCertificate()
                 if sslInfo is not None:
                     if qVersion() >= "5.0.0":
-                        org = Utilities.decodeString(
-                            ", ".join(sslInfo.subjectInfo(QSslCertificate.Organization)))
+                        org = Utilities.decodeString(", ".join(
+                            sslInfo.subjectInfo(QSslCertificate.Organization)))
                     else:
                         org = Utilities.decodeString(
                             sslInfo.subjectInfo(QSslCertificate.Organization))
                     if org == "":
                         if qVersion() >= "5.0.0":
                             cn = Utilities.decodeString(", ".join(
-                                sslInfo.subjectInfo(QSslCertificate.CommonName)))
+                                sslInfo.subjectInfo(
+                                    QSslCertificate.CommonName)))
                         else:
                             cn = Utilities.decodeString(
-                                sslInfo.subjectInfo(QSslCertificate.CommonName))
+                                sslInfo.subjectInfo(
+                                    QSslCertificate.CommonName))
                         if cn != "":
                             org = cn.split(".", 1)[1]
                         if org == "":
@@ -244,7 +249,8 @@ class UrlBar(E5LineEdit):
         """
         Private slot to show a dialog with some bookmark info.
         """
-        from .BookmarkActionSelectionDialog import BookmarkActionSelectionDialog
+        from .BookmarkActionSelectionDialog import \
+            BookmarkActionSelectionDialog
         url = self.__browser.url()
         dlg = BookmarkActionSelectionDialog(url)
         if dlg.exec_() == QDialog.Accepted:
@@ -290,7 +296,8 @@ class UrlBar(E5LineEdit):
                 if self.__browser.url().scheme() == "https":
                     if QSslCertificate is not None:
                         if self.__browser.page().hasValidSslInfo():
-                            backgroundColor = Preferences.getHelp("SaveUrlColor")
+                            backgroundColor = Preferences.getHelp(
+                                "SaveUrlColor")
                     else:
                         backgroundColor = Preferences.getHelp("SaveUrlColor")
                 p.setBrush(QPalette.Base, backgroundColor)
@@ -299,7 +306,8 @@ class UrlBar(E5LineEdit):
                 if self.__browser.url().scheme() == "https":
                     if QSslCertificate is not None:
                         if self.__browser.page().hasValidSslInfo():
-                            backgroundColor = Preferences.getHelp("SaveUrlColor")
+                            backgroundColor = Preferences.getHelp(
+                                "SaveUrlColor")
                     else:
                         backgroundColor = Preferences.getHelp("SaveUrlColor")
                 highlight = QApplication.palette().color(QPalette.Highlight)
@@ -308,14 +316,16 @@ class UrlBar(E5LineEdit):
                 b = (highlight.blue() + 2 * backgroundColor.blue()) // 3
                 
                 loadingColor = QColor(r, g, b)
-                if abs(loadingColor.lightness() - backgroundColor.lightness()) < 20:
+                if abs(loadingColor.lightness() - 
+                        backgroundColor.lightness()) < 20:
                     # special handling for special color schemes (e.g Gaia)
                     r = (2 * highlight.red() + backgroundColor.red()) // 3
                     g = (2 * highlight.green() + backgroundColor.green()) // 3
                     b = (2 * highlight.blue() + backgroundColor.blue()) // 3
                     loadingColor = QColor(r, g, b)
                 
-                gradient = QLinearGradient(QPointF(0, 0), QPointF(self.width(), 0))
+                gradient = QLinearGradient(
+                    QPointF(0, 0), QPointF(self.width(), 0))
                 gradient.setColorAt(0, loadingColor)
                 gradient.setColorAt(progress / 100 - 0.000001, loadingColor)
                 gradient.setColorAt(progress / 100, backgroundColor)
@@ -366,7 +376,8 @@ class UrlBar(E5LineEdit):
         @param evt reference to the key press event (QKeyEvent)
         """
         if evt.key() == Qt.Key_Escape and self.__browser is not None:
-            self.setText(str(self.__browser.url().toEncoded(), encoding="utf-8"))
+            self.setText(
+                str(self.__browser.url().toEncoded(), encoding="utf-8"))
             self.selectAll()
             return
         
@@ -376,8 +387,8 @@ class UrlBar(E5LineEdit):
             append = ""
             if evt.modifiers() == Qt.KeyboardModifiers(Qt.ControlModifier):
                 append = ".com"
-            elif evt.modifiers() == \
-                    Qt.KeyboardModifiers(Qt.ControlModifier | Qt.ShiftModifier):
+            elif evt.modifiers() == Qt.KeyboardModifiers(
+                    Qt.ControlModifier | Qt.ShiftModifier):
                 append = ".org"
             elif evt.modifiers() == Qt.KeyboardModifiers(Qt.ShiftModifier):
                 append = ".net"

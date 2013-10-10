@@ -63,8 +63,9 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
             if not osm.addEngine(fileName):
                 E5MessageBox.critical(self,
                     self.trUtf8("Add search engine"),
-                    self.trUtf8("""{0} is not a valid OpenSearch 1.1 description or"""
-                                """ is already on your list.""").format(fileName))
+                    self.trUtf8(
+                        """{0} is not a valid OpenSearch 1.1 description or"""
+                        """ is already on your list.""").format(fileName))
     
     @pyqtSlot()
     def on_deleteButton_clicked(self):

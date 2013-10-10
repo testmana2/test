@@ -32,7 +32,8 @@ class UserAgentMenu(QMenu):
         if self.__url:
             if self.__url.isValid():
                 import Helpviewer.HelpWindow
-                self.__manager = Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
+                self.__manager = \
+                    Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
             else:
                 self.__url = None
         
@@ -50,7 +51,8 @@ class UserAgentMenu(QMenu):
         self.__defaultUserAgent = QAction(self)
         self.__defaultUserAgent.setText(self.trUtf8("Default"))
         self.__defaultUserAgent.setCheckable(True)
-        self.__defaultUserAgent.triggered[()].connect(self.__switchToDefaultUserAgent)
+        self.__defaultUserAgent.triggered[()].connect(
+            self.__switchToDefaultUserAgent)
         if self.__url:
             self.__defaultUserAgent.setChecked(
                 self.__manager.userAgentForUrl(self.__url) == "")
@@ -69,7 +71,8 @@ class UserAgentMenu(QMenu):
         self.__otherUserAgent = QAction(self)
         self.__otherUserAgent.setText(self.trUtf8("Other..."))
         self.__otherUserAgent.setCheckable(True)
-        self.__otherUserAgent.triggered[()].connect(self.__switchToOtherUserAgent)
+        self.__otherUserAgent.triggered[()].connect(
+            self.__switchToOtherUserAgent)
         self.addAction(self.__otherUserAgent)
         self.__actionGroup.addAction(self.__otherUserAgent)
         self.__otherUserAgent.setChecked(not isChecked)
@@ -174,7 +177,8 @@ class UserAgentMenu(QMenu):
         if xml.hasError():
             E5MessageBox.critical(self,
                 self.trUtf8("Parsing default user agents"),
-                self.trUtf8("""<p>Error parsing default user agents.</p><p>{0}</p>""")\
+                self.trUtf8(
+                    """<p>Error parsing default user agents.</p><p>{0}</p>""")
                     .format(xml.errorString()))
         
         return isChecked

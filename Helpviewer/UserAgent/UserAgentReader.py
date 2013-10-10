@@ -27,7 +27,8 @@ class UserAgentReader(QXmlStreamReader):
         
         @param fileNameOrDevice name of the file to read (string)
             or reference to the device to read (QIODevice)
-        @return dictionary with user agent data (host as key, agent string as value)
+        @return dictionary with user agent data (host as key, agent string as
+            value)
         """
         self.__agents = {}
         

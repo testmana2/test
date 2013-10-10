@@ -30,7 +30,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         Constructor
         
         @param parent reference to the parent widget (QWidget
-        @param manager reference to the bookmarks manager object (BookmarksManager)
+        @param manager reference to the bookmarks manager object
+            (BookmarksManager)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -38,14 +39,16 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         self.__bookmarksManager = manager
         if self.__bookmarksManager is None:
             import Helpviewer.HelpWindow
-            self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+            self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow\
+                .bookmarksManager()
         
         self.__bookmarksModel = self.__bookmarksManager.bookmarksModel()
         self.__proxyModel = E5TreeSortFilterProxyModel(self)
         self.__proxyModel.setFilterKeyColumn(-1)
         self.__proxyModel.setSourceModel(self.__bookmarksModel)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.bookmarksTree.setModel(self.__proxyModel)
         self.bookmarksTree.setExpanded(self.__proxyModel.index(0, 0), True)
@@ -59,7 +62,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         self.bookmarksTree.customContextMenuRequested.connect(
             self.__customContextMenuRequested)
         
-        self.removeButton.clicked[()].connect(self.bookmarksTree.removeSelected)
+        self.removeButton.clicked[()].connect(
+            self.bookmarksTree.removeSelected)
         self.addFolderButton.clicked[()].connect(self.__newFolder)
         
         self.__expandNodes(self.__bookmarksManager.bookmarks())
@@ -135,15 +139,18 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         sourceIndex = self.__proxyModel.mapToSource(idx)
         node = self.__bookmarksModel.node(sourceIndex)
         if idx.isValid() and node.type() != BookmarkNode.Folder:
-            menu.addAction(self.trUtf8("&Open"), self.__openBookmarkInCurrentTab)
-            menu.addAction(self.trUtf8("Open in New &Tab"), self.__openBookmarkInNewTab)
+            menu.addAction(
+                self.trUtf8("&Open"), self.__openBookmarkInCurrentTab)
+            menu.addAction(
+                self.trUtf8("Open in New &Tab"), self.__openBookmarkInNewTab)
             menu.addSeparator()
         act = menu.addAction(self.trUtf8("Edit &Name"), self.__editName)
         act.setEnabled(idx.flags() & Qt.ItemIsEditable)
         if idx.isValid() and node.type() != BookmarkNode.Folder:
             menu.addAction(self.trUtf8("Edit &Address"), self.__editAddress)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8("&Delete"), self.bookmarksTree.removeSelected)
+        act = menu.addAction(
+            self.trUtf8("&Delete"), self.bookmarksTree.removeSelected)
         act.setEnabled(idx.flags() & Qt.ItemIsDragEnabled)
         menu.addSeparator()
         act = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
@@ -156,7 +163,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         
         @param idx reference to the entry index (QModelIndex)
         """
-        self.__openBookmark(QApplication.keyboardModifiers() & Qt.ControlModifier)
+        self.__openBookmark(
+            QApplication.keyboardModifiers() & Qt.ControlModifier)
         
     def __openBookmarkInCurrentTab(self):
         """
@@ -174,7 +182,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         """
         Private method to open a bookmark.
         
-        @param newTab flag indicating to open the bookmark in a new tab (boolean)
+        @param newTab flag indicating to open the bookmark in a new tab
+            (boolean)
         """
         from .BookmarkNode import BookmarkNode
         from .BookmarksModel import BookmarksModel

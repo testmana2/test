@@ -42,7 +42,8 @@ class FavIconLabel(QLabel):
             url = QUrl()
             if self.__browser:
                 url = self.__browser.url()
-            self.setPixmap(Helpviewer.HelpWindow.HelpWindow.icon(url).pixmap(16, 16))
+            self.setPixmap(
+                Helpviewer.HelpWindow.HelpWindow.icon(url).pixmap(16, 16))
         except RuntimeError:
             pass
     

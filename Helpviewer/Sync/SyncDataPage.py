@@ -30,7 +30,8 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         self.bookmarksCheckBox.setChecked(Preferences.getHelp("SyncBookmarks"))
         self.historyCheckBox.setChecked(Preferences.getHelp("SyncHistory"))
         self.passwordsCheckBox.setChecked(Preferences.getHelp("SyncPasswords"))
-        self.userAgentsCheckBox.setChecked(Preferences.getHelp("SyncUserAgents"))
+        self.userAgentsCheckBox.setChecked(
+            Preferences.getHelp("SyncUserAgents"))
         self.speedDialCheckBox.setChecked(Preferences.getHelp("SyncSpeedDial"))
         
         self.activeCheckBox.setChecked(Preferences.getHelp("SyncEnabled"))
@@ -44,11 +45,16 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         # save the settings
         Preferences.setHelp("SyncEnabled", self.activeCheckBox.isChecked())
         
-        Preferences.setHelp("SyncBookmarks", self.bookmarksCheckBox.isChecked())
-        Preferences.setHelp("SyncHistory", self.historyCheckBox.isChecked())
-        Preferences.setHelp("SyncPasswords", self.passwordsCheckBox.isChecked())
-        Preferences.setHelp("SyncUserAgents", self.userAgentsCheckBox.isChecked())
-        Preferences.setHelp("SyncSpeedDial", self.speedDialCheckBox.isChecked())
+        Preferences.setHelp(
+            "SyncBookmarks", self.bookmarksCheckBox.isChecked())
+        Preferences.setHelp(
+            "SyncHistory", self.historyCheckBox.isChecked())
+        Preferences.setHelp(
+            "SyncPasswords", self.passwordsCheckBox.isChecked())
+        Preferences.setHelp(
+            "SyncUserAgents", self.userAgentsCheckBox.isChecked())
+        Preferences.setHelp(
+            "SyncSpeedDial", self.speedDialCheckBox.isChecked())
         
         from . import SyncGlobals
         if self.activeCheckBox.isChecked():

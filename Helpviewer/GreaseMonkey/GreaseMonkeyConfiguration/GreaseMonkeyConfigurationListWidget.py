@@ -10,7 +10,8 @@ Module implementing a special list widget for GreaseMonkey scripts.
 from PyQt4.QtCore import pyqtSignal, QRect
 from PyQt4.QtGui import QListWidget, QListWidgetItem
 
-from .GreaseMonkeyConfigurationListDelegate import GreaseMonkeyConfigurationListDelegate
+from .GreaseMonkeyConfigurationListDelegate import \
+    GreaseMonkeyConfigurationListDelegate
 
 
 class GreaseMonkeyConfigurationListWidget(QListWidget):
@@ -32,7 +33,8 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
     
     def __containsRemoveIcon(self, pos):
         """
-        Private method to check, if the given position is inside the remove icon.
+        Private method to check, if the given position is inside the remove
+        icon.
         
         @param pos position to check for (QPoint)
         @return flag indicating success (boolean)
@@ -47,7 +49,8 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
         center = rect.height() // 2 + rect.top()
         removeIconYPos = center - iconSize // 2
         
-        removeIconRect = QRect(removeIconXPos, removeIconYPos, iconSize, iconSize)
+        removeIconRect = QRect(removeIconXPos, removeIconYPos,
+                               iconSize, iconSize)
         return removeIconRect.contains(pos)
     
     def mousePressEvent(self, evt):

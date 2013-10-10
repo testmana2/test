@@ -93,14 +93,18 @@ class GreaseMonkeyUrlMatcher(object):
             self.__regExp = QRegExp(pattern, Qt.CaseInsensitive)
             self.__useRegExp = True
         elif ".tld" in pattern:
-            pattern = re.sub(r"(\W)", r"\\\1", pattern)   # escape special symbols
-            pattern = re.sub(r"\*+", "*", pattern)        # remove multiple wildcards
-            pattern = re.sub(r"^\\\|", "^", pattern)      # process anchor at expression
-                                                           # start
-            pattern = re.sub(r"\\\|$", "$", pattern)      # process anchor at expression
-                                                           # end
-            pattern = re.sub(r"\\\*", ".*", pattern)      # replace wildcards by .*
-            pattern = re.sub(r"\.tld", r"\.[a-z.]{2,6}")  # replace domain pattern
+            # escape special symbols
+            pattern = re.sub(r"(\W)", r"\\\1", pattern)
+            # remove multiple wildcards
+            pattern = re.sub(r"\*+", "*", pattern)
+            # process anchor at expression start
+            pattern = re.sub(r"^\\\|", "^", pattern)
+            # process anchor at expression end
+            pattern = re.sub(r"\\\|$", "$", pattern)
+            # replace wildcards by .*
+            pattern = re.sub(r"\\\*", ".*", pattern)
+            # replace domain pattern
+            pattern = re.sub(r"\.tld", r"\.[a-z.]{2,6}")
             
             self.__useRegExp = True
             self.__regExp = QRegExp(pattern,  Qt.CaseInsensitive)

@@ -28,14 +28,16 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         """
         Constructor
         
-        @param manager reference to the GreaseMonkey manager (GreaseMonkeyManager)
+        @param manager reference to the GreaseMonkey manager
+            (GreaseMonkeyManager)
         @param script GreaseMonkey script to be added (GreaseMonkeyScript)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
         
-        self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("greaseMonkey48.png"))
+        self.iconLabel.setPixmap(
+            UI.PixmapCache.getPixmap("greaseMonkey48.png"))
         
         self.__manager = manager
         self.__script = script
@@ -51,11 +53,13 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
                 "<br/>".join(include))
         
         if exclude:
-            doesNotRunAt = self.trUtf8("<p>does not run at:<br/><i>{0}</i></p>").format(
-                "<br/>".join(exclude))
+            doesNotRunAt = self.trUtf8(
+                "<p>does not run at:<br/><i>{0}</i></p>").format(
+                    "<br/>".join(exclude))
         
         scriptInfoTxt = "<p><b>{0}</b> {1}<br/>{2}</p>{3}{4}".format(
-            script.name(), script.version(), script.description(), runsAt, doesNotRunAt)
+            script.name(), script.version(), script.description(), runsAt,
+            doesNotRunAt)
         self.scriptInfo.setHtml(scriptInfoTxt)
         
         self.accepted.connect(self.__accepted)
@@ -79,7 +83,8 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         Private slot handling the accepted signal.
         """
         if self.__manager.addScript(self.__script):
-            msg = self.trUtf8("<p><b>{0}</b> installed successfully.</p>").format(
+            msg = self.trUtf8(
+                "<p><b>{0}</b> installed successfully.</p>").format(
                 self.__script.name())
             success = True
         else:

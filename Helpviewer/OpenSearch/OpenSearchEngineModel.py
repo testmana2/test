@@ -21,7 +21,8 @@ class OpenSearchEngineModel(QAbstractTableModel):
         """
         Constructor
         
-        @param manager reference to the search engine manager (OpenSearchManager)
+        @param manager reference to the search engine manager
+            (OpenSearchManager)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
@@ -109,7 +110,8 @@ class OpenSearchEngineModel(QAbstractTableModel):
         if index.row() >= self.__manager.enginesCount() or index.row() < 0:
             return None
         
-        engine = self.__manager.engine(self.__manager.allEnginesNames()[index.row()])
+        engine = self.__manager.engine(
+            self.__manager.allEnginesNames()[index.row()])
         
         if engine is None:
             return None
@@ -132,17 +134,18 @@ class OpenSearchEngineModel(QAbstractTableModel):
                               .format(engine.description())
                 if engine.providesSuggestions():
                     description += "<br/>"
-                    description += \
-                        self.trUtf8("<strong>Provides contextual suggestions</strong>")
+                    description += self.trUtf8(
+                        "<strong>Provides contextual suggestions</strong>")
                 
                 return description
         elif index.column() == 1:
             if role in [Qt.EditRole, Qt.DisplayRole]:
                 return ",".join(self.__manager.keywordsForEngine(engine))
             elif role == Qt.ToolTipRole:
-                return self.trUtf8("Comma-separated list of keywords that may"
-                    " be entered in the location bar followed by search terms to search"
-                    " with this engine")
+                return self.trUtf8(
+                    "Comma-separated list of keywords that may"
+                    " be entered in the location bar followed by search terms"
+                    " to search with this engine")
         
         return None
     
@@ -166,7 +169,8 @@ class OpenSearchEngineModel(QAbstractTableModel):
         
         engineName = self.__manager.allEnginesNames()[index.row()]
         keywords = re.split("[ ,]+", value)
-        self.__manager.setKeywordsForEngine(self.__manager.engine(engineName), keywords)
+        self.__manager.setKeywordsForEngine(
+            self.__manager.engine(engineName), keywords)
         
         return True
     

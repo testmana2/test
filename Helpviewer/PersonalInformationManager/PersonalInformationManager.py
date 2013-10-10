@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a personal information manager used to complete form fields.
+Module implementing a personal information manager used to complete form
+fields.
 """
 
 from PyQt4.QtCore import Qt, QObject
@@ -16,7 +17,8 @@ import UI.PixmapCache
 
 class PersonalInformationManager(QObject):
     """
-    Class implementing the personal information manager used to complete form fields.
+    Class implementing the personal information manager used to complete form
+    fields.
     """
     FullName = 0
     LastName = 1
@@ -122,7 +124,8 @@ class PersonalInformationManager(QObject):
         
         @param menu reference to the main menu (QMenu)
         @param view reference to the view (HelpBrowser)
-        @param hitTestResult reference to the hit test result (QWebHitTestResult)
+        @param hitTestResult reference to the hit test result
+            (QWebHitTestResult)
         """
         self.__view = view
         self.__element = hitTestResult.element()
@@ -138,7 +141,8 @@ class PersonalInformationManager(QObject):
         
         for key, info in sorted(self.__allInfo.items()):
             if info:
-                act = submenu.addAction(self.__translations[key], self.__insertData)
+                act = submenu.addAction(
+                    self.__translations[key], self.__insertData)
                 act.setData(info)
         
         submenu.addSeparator()
@@ -159,8 +163,9 @@ class PersonalInformationManager(QObject):
         info = act.data()
         info = info.replace('"', '\\"')
         self.__element.evaluateJavaScript(
-            'var newVal = this.value.substring(0, this.selectionStart) + "{0}" +'
-            ' this.value.substring(this.selectionEnd); this.value = newVal;'.format(info))
+            'var newVal = this.value.substring(0, this.selectionStart) +'
+            ' "{0}" + this.value.substring(this.selectionEnd); this.value ='
+            ' newVal;'.format(info))
     
     def viewKeyPressEvent(self, view, evt):
         """
@@ -212,7 +217,8 @@ class PersonalInformationManager(QObject):
     
     def connectPage(self, page):
         """
-        Public method to allow the personal information manager to connect to the page.
+        Public method to allow the personal information manager to connect to
+        the page.
         
         @param page reference to the web page (HelpWebPage)
         """

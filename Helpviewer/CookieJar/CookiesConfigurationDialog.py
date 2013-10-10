@@ -47,7 +47,8 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         elif keepPolicy == CookieJar.KeepUntilTimeLimit:
             self.keepUntilCombo.setCurrentIndex(2)
         
-        self.filterTrackingCookiesCheckbox.setChecked(jar.filterTrackingCookies())
+        self.filterTrackingCookiesCheckbox.setChecked(
+            jar.filterTrackingCookies())
     
     def accept(self):
         """
@@ -72,7 +73,8 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         jar = self.__mw.cookieJar()
         jar.setAcceptPolicy(acceptPolicy)
         jar.setKeepPolicy(keepPolicy)
-        jar.setFilterTrackingCookies(self.filterTrackingCookiesCheckbox.isChecked())
+        jar.setFilterTrackingCookies(
+            self.filterTrackingCookiesCheckbox.isChecked())
         
         super().accept()
     

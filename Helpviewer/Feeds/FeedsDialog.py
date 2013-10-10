@@ -25,7 +25,8 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
         """
         Constructor
         
-        @param availableFeeds list of available RSS feeds (list of tuple of two strings)
+        @param availableFeeds list of available RSS feeds (list of tuple of
+            two strings)
         @param browser reference to the browser widget (HelpBrowser)
         @param parent reference to the parent widget (QWidget)
         """
