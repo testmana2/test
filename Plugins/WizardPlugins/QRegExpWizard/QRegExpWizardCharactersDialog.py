@@ -8,8 +8,9 @@ Module implementing a dialog for entering character classes.
 """
 
 from PyQt4.QtCore import QRegExp
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QLineEdit, \
-    QPushButton, QDialog, QScrollArea, QComboBox, QVBoxLayout, QRegExpValidator, QLabel
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QLineEdit, QPushButton, QDialog, QScrollArea, QComboBox, QVBoxLayout, \
+    QRegExpValidator, QLabel
 
 from .Ui_QRegExpWizardCharactersDialog import Ui_QRegExpWizardCharactersDialog
 
@@ -54,28 +55,39 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
             self.comboItems.append((self.trUtf8(
                 "ASCII/Latin1 character in octal notation"), "-o"))
             self.singleComboItems.append(("---", "-i"))
-            self.singleComboItems.append((self.trUtf8("Bell character (\\a)"), "\\a"))
-            self.singleComboItems.append((self.trUtf8("Page break (\\f)"), "\\f"))
-            self.singleComboItems.append((self.trUtf8("Line feed (\\n)"), "\\n"))
-            self.singleComboItems.append((self.trUtf8("Carriage return (\\r)"), "\\r"))
+            self.singleComboItems.append(
+                (self.trUtf8("Bell character (\\a)"), "\\a"))
+            self.singleComboItems.append(
+                (self.trUtf8("Page break (\\f)"), "\\f"))
+            self.singleComboItems.append(
+                (self.trUtf8("Line feed (\\n)"), "\\n"))
+            self.singleComboItems.append(
+                (self.trUtf8("Carriage return (\\r)"), "\\r"))
             self.singleComboItems.append(
                 (self.trUtf8("Horizontal tabulator (\\t)"), "\\t"))
-            self.singleComboItems.append((self.trUtf8("Vertical tabulator (\\v)"), "\\v"))
+            self.singleComboItems.append(
+                (self.trUtf8("Vertical tabulator (\\v)"), "\\v"))
         elif mode == QRegExpWizardCharactersDialog.W3CMode:
             self.comboItems.append((self.trUtf8(
                 "Unicode character in hexadecimal notation"), "-h"))
             self.comboItems.append((self.trUtf8(
                 "ASCII/Latin1 character in octal notation"), "-o"))
             self.singleComboItems.append(("---", "-i"))
-            self.singleComboItems.append((self.trUtf8("Line feed (\\n)"), "\\n"))
-            self.singleComboItems.append((self.trUtf8("Carriage return (\\r)"), "\\r"))
+            self.singleComboItems.append(
+                (self.trUtf8("Line feed (\\n)"), "\\n"))
+            self.singleComboItems.append(
+                (self.trUtf8("Carriage return (\\r)"), "\\r"))
             self.singleComboItems.append(
                 (self.trUtf8("Horizontal tabulator (\\t)"), "\\t"))
             self.singleComboItems.append(("---", "-i"))
-            self.singleComboItems.append((self.trUtf8("Character Category"), "-ccp"))
-            self.singleComboItems.append((self.trUtf8("Character Block"), "-cbp"))
-            self.singleComboItems.append((self.trUtf8("Not Character Category"), "-ccn"))
-            self.singleComboItems.append((self.trUtf8("Not Character Block"), "-cbn"))
+            self.singleComboItems.append(
+                (self.trUtf8("Character Category"), "-ccp"))
+            self.singleComboItems.append(
+                (self.trUtf8("Character Block"), "-cbp"))
+            self.singleComboItems.append(
+                (self.trUtf8("Not Character Category"), "-ccn"))
+            self.singleComboItems.append(
+                (self.trUtf8("Not Character Block"), "-cbn"))
         
         self.charValidator = QRegExpValidator(QRegExp(".{0,1}"), self)
         self.hexValidator = QRegExpValidator(QRegExp("[0-9a-fA-F]{0,4}"), self)
@@ -110,7 +122,8 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
             self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
-        hspacer0 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        hspacer0 = QSpacerItem(
+            30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
         self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
@@ -144,7 +157,8 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
             self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
-        hspacer1 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        hspacer1 = QSpacerItem(
+            30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
         self.moreRangesButton.clicked[()].connect(self.__addRangesLine)
@@ -530,7 +544,8 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         
     def __singlesCharTypeSelected(self, index):
         """
-        Private slot to handle the activated(int) signal of the single chars combo boxes.
+        Private slot to handle the activated(int) signal of the single chars
+        combo boxes.
         
         @param index selected list index (integer)
         """
@@ -538,12 +553,14 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         for entriesList in self.singlesEntries:
             if combo == entriesList[0]:
                 format = combo.itemData(index)
-                self.__performSelectedAction(format, entriesList[1], entriesList[2])
+                self.__performSelectedAction(
+                    format, entriesList[1], entriesList[2])
                 break
         
     def __rangesCharTypeSelected(self, index):
         """
-        Private slot to handle the activated(int) signal of the char ranges combo boxes.
+        Private slot to handle the activated(int) signal of the char ranges
+        combo boxes.
         
         @param index selected list index (integer)
         """

@@ -10,8 +10,8 @@ Module implementing the listspace viewmanager class.
 import os
 
 from PyQt4.QtCore import pyqtSignal, QFileInfo, QEvent, Qt
-from PyQt4.QtGui import QStackedWidget, QSplitter, QListWidget, QListWidgetItem, \
-    QSizePolicy, QMenu, QApplication
+from PyQt4.QtGui import QStackedWidget, QSplitter, QListWidget, \
+    QListWidgetItem, QSizePolicy, QMenu, QApplication
 
 from ViewManager.ViewManager import ViewManager
 
@@ -126,7 +126,8 @@ class StackedWidget(QStackedWidget):
         
     def firstEditor(self):
         """
-        Public method to retrieve the first editor in the list of managed editors.
+        Public method to retrieve the first editor in the list of managed
+            editors.
         
         @return first editor in list (QScintilla.Editor.Editor)
         """
@@ -144,21 +145,24 @@ class Listspace(QSplitter, ViewManager):
     @signal editorOpened(str) emitted after an editor window was opened
     @signal editorOpenedEd(Editor) emitted after an editor window was opened
     @signal editorClosed(str) emitted just before an editor window gets closed
-    @signal editorClosedEd(Editor) emitted just before an editor window gets closed
+    @signal editorClosedEd(Editor) emitted just before an editor window gets
+        closed
     @signal editorSaved(str) emitted after an editor window was saved
     @signal checkActions(Editor) emitted when some actions should be checked
-            for their status
-    @signal cursorChanged(Editor) emitted after the cursor position of the active
-            window has changed
+        for their status
+    @signal cursorChanged(Editor) emitted after the cursor position of the
+        active window has changed
     @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
     @signal syntaxerrorToggled(Editor) emitted when a syntax error is toggled.
-    @signal previewStateChanged(bool) emitted to signal a change in the preview state
+    @signal previewStateChanged(bool) emitted to signal a change in the
+        preview state
     @signal editorLanguageChanged(Editor) emitted to signal a change of an
-            editors language
-    @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
-    @signal editorLineChanged(str,int) emitted to signal a change of an editor's
-            current line (line is given one based)
+        editors language
+    @signal editorTextChanged(Editor) emitted to signal a change of an
+        editor's text
+    @signal editorLineChanged(str,int) emitted to signal a change of an
+        editor's current line (line is given one based)
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -224,9 +228,11 @@ class Listspace(QSplitter, ViewManager):
         self.__menu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
             self.trUtf8('Close'), self.__contextMenuClose)
         self.closeOthersMenuAct = self.__menu.addAction(
-            UI.PixmapCache.getIcon("tabCloseOther.png"), self.trUtf8("Close Others"),
+            UI.PixmapCache.getIcon("tabCloseOther.png"),
+            self.trUtf8("Close Others"),
             self.__contextMenuCloseOthers)
-        self.__menu.addAction(self.trUtf8('Close All'), self.__contextMenuCloseAll)
+        self.__menu.addAction(
+            self.trUtf8('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
         self.saveMenuAct = \
             self.__menu.addAction(UI.PixmapCache.getIcon("fileSave.png"),
@@ -243,7 +249,8 @@ class Listspace(QSplitter, ViewManager):
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
-        self.copyPathAct = self.__menu.addAction(self.trUtf8("Copy Path to Clipboard"),
+        self.copyPathAct = self.__menu.addAction(
+            self.trUtf8("Copy Path to Clipboard"),
             self.__contextMenuCopyPathToClipboard)
         
     def __showMenu(self, point):
@@ -260,16 +267,19 @@ class Listspace(QSplitter, ViewManager):
                 self.contextMenuEditor = self.editors[row]
                 self.contextMenuIndex = row
                 if self.contextMenuEditor:
-                    self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
+                    self.saveMenuAct.setEnabled(
+                        self.contextMenuEditor.isModified())
                     fileName = self.contextMenuEditor.getFileName()
                     self.copyPathAct.setEnabled(bool(fileName))
                     if fileName:
                         rej = "{0}.rej".format(fileName)
-                        self.openRejectionsMenuAct.setEnabled(os.path.exists(rej))
+                        self.openRejectionsMenuAct.setEnabled(
+                            os.path.exists(rej))
                     else:
                         self.openRejectionsMenuAct.setEnabled(False)
                     
-                    self.closeOthersMenuAct.setEnabled(self.viewlist.count() > 1)
+                    self.closeOthersMenuAct.setEnabled(
+                        self.viewlist.count() > 1)
                     
                     self.__menu.popup(self.viewlist.mapToGlobal(point))
         
@@ -474,7 +484,8 @@ class Listspace(QSplitter, ViewManager):
         
     def _initWindowActions(self):
         """
-        Protected method to define the user interface actions for window handling.
+        Protected method to define the user interface actions for window
+        handling.
         """
         pass
         
@@ -507,13 +518,17 @@ class Listspace(QSplitter, ViewManager):
         currentRow = self.viewlist.currentRow()
         index = self.editors.index(editor)
         if m:
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("fileModified.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("fileModified.png"))
         elif editor.hasSyntaxErrors():
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("syntaxError.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("syntaxError.png"))
         elif editor.hasFlakesWarnings():
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("warning.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("warning.png"))
         else:
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("empty.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("empty.png"))
         self.viewlist.setCurrentRow(currentRow)
         self._checkActions(editor)
         
@@ -526,13 +541,17 @@ class Listspace(QSplitter, ViewManager):
         currentRow = self.viewlist.currentRow()
         index = self.editors.index(editor)
         if editor.hasSyntaxErrors():
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("syntaxError.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("syntaxError.png"))
         elif editor.hasFlakesWarnings():
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("warning.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("warning.png"))
         elif editor.isModified():
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("fileModified.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("fileModified.png"))
         else:
-            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("empty.png"))
+            self.viewlist.item(index).setIcon(
+                UI.PixmapCache.getIcon("empty.png"))
         self.viewlist.setCurrentRow(currentRow)
         
         ViewManager._syntaxErrorToggled(self, editor)
@@ -552,7 +571,8 @@ class Listspace(QSplitter, ViewManager):
             size = self.stackArea.width()
         else:
             size = self.stackArea.height()
-        self.stackArea.setSizes([int(size / len(self.stacks))] * len(self.stacks))
+        self.stackArea.setSizes(
+            [int(size / len(self.stacks))] * len(self.stacks))
         self.splitRemoveAct.setEnabled(True)
         self.nextSplitAct.setEnabled(True)
         self.prevSplitAct.setEnabled(True)
@@ -680,7 +700,8 @@ class Listspace(QSplitter, ViewManager):
         
     def __contextMenuOpenRejections(self):
         """
-        Private slot to open a rejections file associated with the selected editor.
+        Private slot to open a rejections file associated with the selected
+        editor.
         """
         if self.contextMenuEditor:
             fileName = self.contextMenuEditor.getFileName()
@@ -698,7 +719,8 @@ class Listspace(QSplitter, ViewManager):
         
     def __contextMenuCopyPathToClipboard(self):
         """
-        Private method to copy the file name of the selected editor to the clipboard.
+        Private method to copy the file name of the selected editor to the
+        clipboard.
         """
         if self.contextMenuEditor:
             fn = self.contextMenuEditor.getFileName()
@@ -726,7 +748,8 @@ class Listspace(QSplitter, ViewManager):
             self.changeCaption.emit(fn)
             if not self.__inRemoveView:
                 self.editorChanged.emit(fn)
-                self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
+                self.editorLineChanged.emit(
+                    fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -767,7 +790,8 @@ class Listspace(QSplitter, ViewManager):
                     self.changeCaption.emit(fn)
                     if switched:
                         self.editorChanged.emit(fn)
-                        self.editorLineChanged.emit(fn, aw.getCursorPosition()[0] + 1)
+                        self.editorLineChanged.emit(
+                            fn, aw.getCursorPosition()[0] + 1)
                 else:
                     self.changeCaption.emit("")
                 self.editorChangedEd.emit(aw)

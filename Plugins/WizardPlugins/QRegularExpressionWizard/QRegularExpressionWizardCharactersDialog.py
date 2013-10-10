@@ -8,8 +8,9 @@ Module implementing a dialog for entering character classes.
 """
 
 from PyQt4.QtCore import QRegExp
-from PyQt4.QtGui import QWidget, QDialog, QVBoxLayout, QHBoxLayout, QScrollArea, \
-    QPushButton, QSpacerItem, QSizePolicy, QComboBox, QRegExpValidator, QLineEdit, QLabel
+from PyQt4.QtGui import QWidget, QDialog, QVBoxLayout, QHBoxLayout, \
+    QScrollArea, QPushButton, QSpacerItem, QSizePolicy, QComboBox, \
+    QRegExpValidator, QLineEdit, QLabel
 
 from .Ui_QRegularExpressionWizardCharactersDialog import \
     Ui_QRegularExpressionWizardCharactersDialog
@@ -90,7 +91,8 @@ class QRegularExpressionWizardCharactersDialog(
             self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
-        hspacer0 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        hspacer0 = QSpacerItem(
+            30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
         self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
@@ -124,7 +126,8 @@ class QRegularExpressionWizardCharactersDialog(
             self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
-        hspacer1 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        hspacer1 = QSpacerItem(
+            30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
         self.moreRangesButton.clicked[()].connect(self.__addRangesLine)
@@ -176,118 +179,118 @@ class QRegularExpressionWizardCharactersDialog(
         )
         
         self.__specialCharacterCategories = (
-            # display name                                  code
-            (self.trUtf8("Alphanumeric"),                   "Xan"),
-            (self.trUtf8("POSIX Space"),                    "Xps"),
-            (self.trUtf8("Perl Space"),                     "Xsp"),
-            (self.trUtf8("Universal Character"),            "Xuc"),
-            (self.trUtf8("Perl Word"),                      "Xan"),
+            # display name                           code
+            (self.trUtf8("Alphanumeric"),            "Xan"),
+            (self.trUtf8("POSIX Space"),             "Xps"),
+            (self.trUtf8("Perl Space"),              "Xsp"),
+            (self.trUtf8("Universal Character"),     "Xuc"),
+            (self.trUtf8("Perl Word"),               "Xan"),
         )
         
         self.__characterBlocks = (
-            # display name                                  code
-            (self.trUtf8("Arabic"),                         "Arabic"),
-            (self.trUtf8("Armenian"),                       "Armenian"),
-            (self.trUtf8("Avestan"),                        "Avestan"),
-            (self.trUtf8("Balinese"),                       "Balinese"),
-            (self.trUtf8("Bamum"),                          "Bamum"),
-            (self.trUtf8("Batak"),                          "Batak"),
-            (self.trUtf8("Bengali"),                        "Bengali"),
-            (self.trUtf8("Bopomofo"),                       "Bopomofo"),
-            (self.trUtf8("Brahmi"),                         "Brahmi"),
-            (self.trUtf8("Braille"),                        "Braille"),
-            (self.trUtf8("Buginese"),                       "Buginese"),
-            (self.trUtf8("Buhid"),                          "Buhid"),
-            (self.trUtf8("Canadian Aboriginal"),            "Canadian_Aboriginal"),
-            (self.trUtf8("Carian"),                         "Carian"),
-            (self.trUtf8("Chakma"),                         "Chakma"),
-            (self.trUtf8("Cham"),                           "Cham"),
-            (self.trUtf8("Cherokee"),                       "Cherokee"),
-            (self.trUtf8("Common"),                         "Common"),
-            (self.trUtf8("Coptic"),                         "Coptic"),
-            (self.trUtf8("Cuneiform"),                      "Cuneiform"),
-            (self.trUtf8("Cypriot"),                        "Cypriot"),
-            (self.trUtf8("Cyrillic"),                       "Cyrillic"),
-            (self.trUtf8("Deseret"),                        "Deseret,"),
-            (self.trUtf8("Devanagari"),                     "Devanagari"),
-            (self.trUtf8("Egyptian Hieroglyphs"),           "Egyptian_Hieroglyphs"),
-            (self.trUtf8("Ethiopic"),                       "Ethiopic"),
-            (self.trUtf8("Georgian"),                       "Georgian"),
-            (self.trUtf8("Glagolitic"),                     "Glagolitic"),
-            (self.trUtf8("Gothic"),                         "Gothic"),
-            (self.trUtf8("Greek"),                          "Greek"),
-            (self.trUtf8("Gujarati"),                       "Gujarati"),
-            (self.trUtf8("Gurmukhi"),                       "Gurmukhi"),
-            (self.trUtf8("Han"),                            "Han"),
-            (self.trUtf8("Hangul"),                         "Hangul"),
-            (self.trUtf8("Hanunoo"),                        "Hanunoo"),
-            (self.trUtf8("Hebrew"),                         "Hebrew"),
-            (self.trUtf8("Hiragana"),                       "Hiragana"),
-            (self.trUtf8("Imperial Aramaic"),               "Imperial_Aramaic"),
-            (self.trUtf8("Inherited"),                      "Inherited"),
-            (self.trUtf8("Inscriptional Pahlavi"),          "Inscriptional_Pahlavi"),
-            (self.trUtf8("Inscriptional Parthian"),         "Inscriptional_Parthian"),
-            (self.trUtf8("Javanese"),                       "Javanese"),
-            (self.trUtf8("Kaithi"),                         "Kaithi"),
-            (self.trUtf8("Kannada"),                        "Kannada"),
-            (self.trUtf8("Katakana"),                       "Katakana"),
-            (self.trUtf8("Kayah Li"),                       "Kayah_Li"),
-            (self.trUtf8("Kharoshthi"),                     "Kharoshthi"),
-            (self.trUtf8("Khmer"),                          "Khmer"),
-            (self.trUtf8("Lao"),                            "Lao"),
-            (self.trUtf8("Latin"),                          "Latin"),
-            (self.trUtf8("Lepcha"),                         "Lepcha"),
-            (self.trUtf8("Limbu"),                          "Limbu"),
-            (self.trUtf8("Linear B"),                       "Linear_B"),
-            (self.trUtf8("Lisu"),                           "Lisu"),
-            (self.trUtf8("Lycian"),                         "Lycian"),
-            (self.trUtf8("Lydian"),                         "Lydian"),
-            (self.trUtf8("Malayalam"),                      "Malayalam"),
-            (self.trUtf8("Mandaic"),                        "Mandaic"),
-            (self.trUtf8("Meetei Mayek"),                   "Meetei_Mayek"),
-            (self.trUtf8("Meroitic Cursive"),               "Meroitic_Cursive"),
-            (self.trUtf8("Meroitic Hieroglyphs"),           "Meroitic_Hieroglyphs"),
-            (self.trUtf8("Miao"),                           "Miao"),
-            (self.trUtf8("Mongolian"),                      "Mongolian"),
-            (self.trUtf8("Myanmar"),                        "Myanmar"),
-            (self.trUtf8("New Tai Lue"),                    "New_Tai_Lue"),
-            (self.trUtf8("N'Ko"),                           "Nko"),
-            (self.trUtf8("Ogham"),                          "Ogham"),
-            (self.trUtf8("Old Italic"),                     "Old_Italic"),
-            (self.trUtf8("Old Persian"),                    "Old_Persian"),
-            (self.trUtf8("Old South Arabian"),              "Old_South_Arabian"),
-            (self.trUtf8("Old Turkic"),                     "Old_Turkic,"),
-            (self.trUtf8("Ol Chiki"),                       "Ol_Chiki"),
-            (self.trUtf8("Oriya"),                          "Oriya"),
-            (self.trUtf8("Osmanya"),                        "Osmanya"),
-            (self.trUtf8("Phags-pa"),                       "Phags_Pa"),
-            (self.trUtf8("Phoenician"),                     "Phoenician"),
-            (self.trUtf8("Rejang"),                         "Rejang"),
-            (self.trUtf8("Runic"),                          "Runic"),
-            (self.trUtf8("Samaritan"),                      "Samaritan"),
-            (self.trUtf8("Saurashtra"),                     "Saurashtra"),
-            (self.trUtf8("Sharada"),                        "Sharada"),
-            (self.trUtf8("Shavian"),                        "Shavian"),
-            (self.trUtf8("Sinhala"),                        "Sinhala"),
-            (self.trUtf8("Sora Sompeng"),                   "Sora_Sompeng"),
-            (self.trUtf8("Sundanese"),                      "Sundanese"),
-            (self.trUtf8("Syloti Nagri"),                   "Syloti_Nagri"),
-            (self.trUtf8("Syriac"),                         "Syriac"),
-            (self.trUtf8("Tagalog"),                        "Tagalog"),
-            (self.trUtf8("Tagbanwa"),                       "Tagbanwa"),
-            (self.trUtf8("Tai Le"),                         "Tai_Le"),
-            (self.trUtf8("Tai Tham"),                       "Tai_Tham"),
-            (self.trUtf8("Tai Viet"),                       "Tai_Viet"),
-            (self.trUtf8("Takri"),                          "Takri"),
-            (self.trUtf8("Tamil"),                          "Tamil"),
-            (self.trUtf8("Telugu"),                         "Telugu"),
-            (self.trUtf8("Thaana"),                         "Thaana"),
-            (self.trUtf8("Thai"),                           "Thai"),
-            (self.trUtf8("Tibetan"),                        "Tibetan"),
-            (self.trUtf8("Tifinagh"),                       "Tifinagh"),
-            (self.trUtf8("Ugaritic"),                       "Ugaritic"),
-            (self.trUtf8("Vai"),                            "Vai"),
-            (self.trUtf8("Yi"),                             "Yi"),
+            # display name                           code
+            (self.trUtf8("Arabic"),                  "Arabic"),
+            (self.trUtf8("Armenian"),                "Armenian"),
+            (self.trUtf8("Avestan"),                 "Avestan"),
+            (self.trUtf8("Balinese"),                "Balinese"),
+            (self.trUtf8("Bamum"),                   "Bamum"),
+            (self.trUtf8("Batak"),                   "Batak"),
+            (self.trUtf8("Bengali"),                 "Bengali"),
+            (self.trUtf8("Bopomofo"),                "Bopomofo"),
+            (self.trUtf8("Brahmi"),                  "Brahmi"),
+            (self.trUtf8("Braille"),                 "Braille"),
+            (self.trUtf8("Buginese"),                "Buginese"),
+            (self.trUtf8("Buhid"),                   "Buhid"),
+            (self.trUtf8("Canadian Aboriginal"),     "Canadian_Aboriginal"),
+            (self.trUtf8("Carian"),                  "Carian"),
+            (self.trUtf8("Chakma"),                  "Chakma"),
+            (self.trUtf8("Cham"),                    "Cham"),
+            (self.trUtf8("Cherokee"),                "Cherokee"),
+            (self.trUtf8("Common"),                  "Common"),
+            (self.trUtf8("Coptic"),                  "Coptic"),
+            (self.trUtf8("Cuneiform"),               "Cuneiform"),
+            (self.trUtf8("Cypriot"),                 "Cypriot"),
+            (self.trUtf8("Cyrillic"),                "Cyrillic"),
+            (self.trUtf8("Deseret"),                 "Deseret,"),
+            (self.trUtf8("Devanagari"),              "Devanagari"),
+            (self.trUtf8("Egyptian Hieroglyphs"),    "Egyptian_Hieroglyphs"),
+            (self.trUtf8("Ethiopic"),                "Ethiopic"),
+            (self.trUtf8("Georgian"),                "Georgian"),
+            (self.trUtf8("Glagolitic"),              "Glagolitic"),
+            (self.trUtf8("Gothic"),                  "Gothic"),
+            (self.trUtf8("Greek"),                   "Greek"),
+            (self.trUtf8("Gujarati"),                "Gujarati"),
+            (self.trUtf8("Gurmukhi"),                "Gurmukhi"),
+            (self.trUtf8("Han"),                     "Han"),
+            (self.trUtf8("Hangul"),                  "Hangul"),
+            (self.trUtf8("Hanunoo"),                 "Hanunoo"),
+            (self.trUtf8("Hebrew"),                  "Hebrew"),
+            (self.trUtf8("Hiragana"),                "Hiragana"),
+            (self.trUtf8("Imperial Aramaic"),        "Imperial_Aramaic"),
+            (self.trUtf8("Inherited"),               "Inherited"),
+            (self.trUtf8("Inscriptional Pahlavi"),   "Inscriptional_Pahlavi"),
+            (self.trUtf8("Inscriptional Parthian"),  "Inscriptional_Parthian"),
+            (self.trUtf8("Javanese"),                "Javanese"),
+            (self.trUtf8("Kaithi"),                  "Kaithi"),
+            (self.trUtf8("Kannada"),                 "Kannada"),
+            (self.trUtf8("Katakana"),                "Katakana"),
+            (self.trUtf8("Kayah Li"),                "Kayah_Li"),
+            (self.trUtf8("Kharoshthi"),              "Kharoshthi"),
+            (self.trUtf8("Khmer"),                   "Khmer"),
+            (self.trUtf8("Lao"),                     "Lao"),
+            (self.trUtf8("Latin"),                   "Latin"),
+            (self.trUtf8("Lepcha"),                  "Lepcha"),
+            (self.trUtf8("Limbu"),                   "Limbu"),
+            (self.trUtf8("Linear B"),                "Linear_B"),
+            (self.trUtf8("Lisu"),                    "Lisu"),
+            (self.trUtf8("Lycian"),                  "Lycian"),
+            (self.trUtf8("Lydian"),                  "Lydian"),
+            (self.trUtf8("Malayalam"),               "Malayalam"),
+            (self.trUtf8("Mandaic"),                 "Mandaic"),
+            (self.trUtf8("Meetei Mayek"),            "Meetei_Mayek"),
+            (self.trUtf8("Meroitic Cursive"),        "Meroitic_Cursive"),
+            (self.trUtf8("Meroitic Hieroglyphs"),    "Meroitic_Hieroglyphs"),
+            (self.trUtf8("Miao"),                    "Miao"),
+            (self.trUtf8("Mongolian"),               "Mongolian"),
+            (self.trUtf8("Myanmar"),                 "Myanmar"),
+            (self.trUtf8("New Tai Lue"),             "New_Tai_Lue"),
+            (self.trUtf8("N'Ko"),                    "Nko"),
+            (self.trUtf8("Ogham"),                   "Ogham"),
+            (self.trUtf8("Old Italic"),              "Old_Italic"),
+            (self.trUtf8("Old Persian"),             "Old_Persian"),
+            (self.trUtf8("Old South Arabian"),       "Old_South_Arabian"),
+            (self.trUtf8("Old Turkic"),              "Old_Turkic,"),
+            (self.trUtf8("Ol Chiki"),                "Ol_Chiki"),
+            (self.trUtf8("Oriya"),                   "Oriya"),
+            (self.trUtf8("Osmanya"),                 "Osmanya"),
+            (self.trUtf8("Phags-pa"),                "Phags_Pa"),
+            (self.trUtf8("Phoenician"),              "Phoenician"),
+            (self.trUtf8("Rejang"),                  "Rejang"),
+            (self.trUtf8("Runic"),                   "Runic"),
+            (self.trUtf8("Samaritan"),               "Samaritan"),
+            (self.trUtf8("Saurashtra"),              "Saurashtra"),
+            (self.trUtf8("Sharada"),                 "Sharada"),
+            (self.trUtf8("Shavian"),                 "Shavian"),
+            (self.trUtf8("Sinhala"),                 "Sinhala"),
+            (self.trUtf8("Sora Sompeng"),            "Sora_Sompeng"),
+            (self.trUtf8("Sundanese"),               "Sundanese"),
+            (self.trUtf8("Syloti Nagri"),            "Syloti_Nagri"),
+            (self.trUtf8("Syriac"),                  "Syriac"),
+            (self.trUtf8("Tagalog"),                 "Tagalog"),
+            (self.trUtf8("Tagbanwa"),                "Tagbanwa"),
+            (self.trUtf8("Tai Le"),                  "Tai_Le"),
+            (self.trUtf8("Tai Tham"),                "Tai_Tham"),
+            (self.trUtf8("Tai Viet"),                "Tai_Viet"),
+            (self.trUtf8("Takri"),                   "Takri"),
+            (self.trUtf8("Tamil"),                   "Tamil"),
+            (self.trUtf8("Telugu"),                  "Telugu"),
+            (self.trUtf8("Thaana"),                  "Thaana"),
+            (self.trUtf8("Thai"),                    "Thai"),
+            (self.trUtf8("Tibetan"),                 "Tibetan"),
+            (self.trUtf8("Tifinagh"),                "Tifinagh"),
+            (self.trUtf8("Ugaritic"),                "Ugaritic"),
+            (self.trUtf8("Vai"),                     "Vai"),
+            (self.trUtf8("Yi"),                      "Yi"),
         )
         
         self.__posixNamedSets = (
@@ -444,7 +447,8 @@ class QRegularExpressionWizardCharactersDialog(
                 lineedit.setValidator(self.hexValidator)
             elif format == "-o":
                 lineedit.setValidator(self.octValidator)
-        elif format in ["-ccp", "-ccn", "-cbp", "-cbn", "-csp", "-csn", "-psp", "-psn"]:
+        elif format in ["-ccp", "-ccn", "-cbp", "-cbn", "-csp", "-csn",
+                        "-psp", "-psn"]:
             lineedit.setEnabled(False)
             lineedit.hide()
             if combo is not None:
@@ -459,7 +463,8 @@ class QRegularExpressionWizardCharactersDialog(
     
     def __singlesCharTypeSelected(self, index):
         """
-        Private slot to handle the activated(int) signal of the single chars combo boxes.
+        Private slot to handle the activated(int) signal of the single chars
+        combo boxes.
         
         @param index selected list index (integer)
         """
@@ -467,12 +472,14 @@ class QRegularExpressionWizardCharactersDialog(
         for entriesList in self.singlesEntries:
             if combo == entriesList[0]:
                 format = combo.itemData(index)
-                self.__performSelectedAction(format, entriesList[1], entriesList[2])
+                self.__performSelectedAction(
+                    format, entriesList[1], entriesList[2])
                 break
     
     def __rangesCharTypeSelected(self, index):
         """
-        Private slot to handle the activated(int) signal of the char ranges combo boxes.
+        Private slot to handle the activated(int) signal of the char ranges
+        combo boxes.
         
         @param index selected list index (integer)
         """
@@ -563,7 +570,8 @@ class QRegularExpressionWizardCharactersDialog(
         # single characters
         for entrieslist in self.singlesEntries:
             format = entrieslist[0].itemData(entrieslist[0].currentIndex())
-            if format in ["-ccp", "-ccn", "-cbp", "-cbn", "-csp", "-csn", "-psp", "-psn"]:
+            if format in ["-ccp", "-ccn", "-cbp", "-cbn", "-csp", "-csn",
+                          "-psp", "-psn"]:
                 char = entrieslist[2].itemData(entrieslist[2].currentIndex())
             else:
                 char = entrieslist[1].text()
