@@ -424,7 +424,7 @@ class TabWidget(E5TabWidget):
         @param lineno line number of the current editor's cursor (zero based)
         """
         editor = self.sender()
-        if editor:
+        if editor and isinstance(editor, QScintilla.Editor.Editor):
             fn = editor.getFileName()
             if fn:
                 self.vm.editorLineChanged.emit(fn, lineno + 1)
