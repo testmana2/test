@@ -328,10 +328,12 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     uptodate = True
                     if file.repos_text_status != pysvn.wc_status_kind.none:
                         uptodate = uptodate and \
-                            file.repos_text_status != pysvn.wc_status_kind.modified
+                            file.repos_text_status != \
+                                pysvn.wc_status_kind.modified
                     if file.repos_prop_status != pysvn.wc_status_kind.none:
                         uptodate = uptodate and \
-                            file.repos_prop_status != pysvn.wc_status_kind.modified
+                            file.repos_prop_status != \
+                                pysvn.wc_status_kind.modified
                     
                     lockState = " "
                     if file.entry is not None and \
@@ -348,7 +350,8 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                              file.entry.lock_token != file.repos_lock["token"]:
                             lockState = "S"
                     
-                    fpath = Utilities.normcasepath(os.path.join(self.dname, file.path))
+                    fpath = Utilities.normcasepath(
+                        os.path.join(self.dname, file.path))
                     if fpath in changelistsDict:
                         changelist = changelistsDict[fpath]
                     else:

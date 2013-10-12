@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to show repository related information for a file/directory.
+Module implementing a dialog to show repository related information for a
+file/directory.
 """
 
 import os
@@ -63,8 +64,8 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
             infoStr = "<table>"
             for path, info in entries:
                 infoStr += self.trUtf8(
-                    "<tr><td><b>Path (relative to project):</b></td><td>{0}</td></tr>")\
-                    .format(path)
+                    "<tr><td><b>Path (relative to project):</b></td>"
+                    "<td>{0}</td></tr>").format(path)
                 if info['URL']:
                     infoStr += self.trUtf8(
                         "<tr><td><b>Url:</b></td><td>{0}</td></tr>")\
@@ -75,24 +76,28 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
                         .format(info['rev'].number)
                 if info['repos_root_URL']:
                     infoStr += self.trUtf8(
-                        "<tr><td><b>Repository root URL:</b></td><td>{0}</td></tr>")\
-                        .format(info['repos_root_URL'])
+                        "<tr><td><b>Repository root URL:</b></td>"
+                        "<td>{0}</td></tr>").format(info['repos_root_URL'])
                 if info['repos_UUID']:
                     infoStr += self.trUtf8(
-                        "<tr><td><b>Repository UUID:</b></td><td>{0}</td></tr>")\
-                        .format(info['repos_UUID'])
+                        "<tr><td><b>Repository UUID:</b></td>"
+                        "<td>{0}</td></tr>").format(info['repos_UUID'])
                 if info['last_changed_author']:
                     infoStr += self.trUtf8(
-                        "<tr><td><b>Last changed author:</b></td><td>{0}</td></tr>")\
+                        "<tr><td><b>Last changed author:</b></td>"
+                        "<td>{0}</td></tr>")\
                         .format(info['last_changed_author'])
                 if info['last_changed_date']:
                     infoStr += self.trUtf8(
-                        "<tr><td><b>Last Changed Date:</b></td><td>{0}</td></tr>")\
+                        "<tr><td><b>Last Changed Date:</b></td>"
+                        "<td>{0}</td></tr>")\
                         .format(formatTime(info['last_changed_date']))
                 if info['last_changed_rev'] and \
-                   info['last_changed_rev'].kind == pysvn.opt_revision_kind.number:
+                        info['last_changed_rev'].kind == \
+                            pysvn.opt_revision_kind.number:
                     infoStr += self.trUtf8(
-                        "<tr><td><b>Last changed revision:</b></td><td>{0}</td></tr>")\
+                        "<tr><td><b>Last changed revision:</b></td>"
+                        "<td>{0}</td></tr>")\
                         .format(info['last_changed_rev'].number)
                 if info['kind']:
                     if info['kind'] == pysvn.node_kind.file:
@@ -112,12 +117,14 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
                         "<tr><td><b>Lock Owner:</b></td><td>{0}</td></tr>")\
                         .format(lockInfo['owner'])
                     infoStr += self.trUtf8(
-                        "<tr><td><b>Lock Creation Date:</b></td><td>{0}</td></tr>")\
+                        "<tr><td><b>Lock Creation Date:</b></td>"
+                        "<td>{0}</td></tr>")\
                         .format(formatTime(lockInfo['creation_date']))
                     if lockInfo['expiration_date'] is not None:
                         infoStr += \
                             self.trUtf8(
-                            "<tr><td><b>Lock Expiration Date:</b></td><td>{0}</td></tr>")\
+                            "<tr><td><b>Lock Expiration Date:</b></td>"
+                            "<td>{0}</td></tr>")\
                             .format(formatTime(lockInfo['expiration_date']))
                     infoStr += self.trUtf8(
                         "<tr><td><b>Lock Token:</b></td><td>{0}</td></tr>")\
@@ -141,18 +148,22 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
                             .format(schedule)
                     if wcInfo['copyfrom_url']:
                         infoStr += self.trUtf8(
-                            "<tr><td><b>Copied From URL:</b></td><td>{0}</td></tr>")\
+                            "<tr><td><b>Copied From URL:</b></td>"
+                            "<td>{0}</td></tr>")\
                             .format(wcInfo['copyfrom_url'])
                         infoStr += self.trUtf8(
-                            "<tr><td><b>Copied From Rev:</b></td><td>{0}</td></tr>")\
+                            "<tr><td><b>Copied From Rev:</b></td>"
+                            "<td>{0}</td></tr>")\
                             .format(wcInfo['copyfrom_rev'].number)
                     if wcInfo['text_time']:
                         infoStr += self.trUtf8(
-                            "<tr><td><b>Text Last Updated:</b></td><td>{0}</td></tr>")\
+                            "<tr><td><b>Text Last Updated:</b></td>"
+                            "<td>{0}</td></tr>")\
                             .format(formatTime(wcInfo['text_time']))
                     if wcInfo['prop_time']:
                         infoStr += self.trUtf8(
-                            "<tr><td><b>Properties Last Updated:</b></td><td>{0}</td></tr>")\
+                            "<tr><td><b>Properties Last Updated:</b></td>"
+                            "<td>{0}</td></tr>")\
                             .format(formatTime(wcInfo['prop_time']))
                     if wcInfo['checksum']:
                         infoStr += self.trUtf8(

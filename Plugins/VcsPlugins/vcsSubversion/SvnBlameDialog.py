@@ -10,8 +10,8 @@ Module implementing a dialog to show the output of the svn blame command.
 import os
 
 from PyQt4.QtCore import QTimer, QProcess, Qt, pyqtSlot
-from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QDialogButtonBox, QFont, \
-    QTreeWidgetItem
+from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QDialogButtonBox, \
+    QFont, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
@@ -108,7 +108,8 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -119,7 +120,8 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
@@ -178,7 +180,8 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), self.__ioEncoding, 'replace').strip()
+            s = str(self.process.readLine(), self.__ioEncoding, 'replace')\
+                .strip()
             rev, s = s.split(None, 1)
             try:
                 author, text = s.split(' ', 1)

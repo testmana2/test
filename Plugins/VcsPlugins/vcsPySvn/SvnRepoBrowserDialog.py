@@ -10,8 +10,8 @@ Module implementing the subversion repository browser dialog.
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, QDialogButtonBox, \
-    QTreeWidgetItem
+from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
@@ -88,7 +88,8 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         """
         Private method to generate a tree item in the repository tree.
         
-        @param parent parent of the item to be created (QTreeWidget or QTreeWidgetItem)
+        @param parent parent of the item to be created (QTreeWidget or
+            QTreeWidgetItem)
         @param repopath path of the item (string)
         @param revision revision info (string or pysvn.opt_revision_kind)
         @param author author info (string)
@@ -163,7 +164,8 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                         continue
                     if firstTime:
                         if dirent["repos_path"] != "/":
-                            repoUrl = dirent["path"].replace(dirent["repos_path"], "")
+                            repoUrl = dirent["path"].replace(
+                                dirent["repos_path"], "")
                         else:
                             repoUrl = dirent["path"]
                         if repoUrl != url:
@@ -173,9 +175,11 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                             itm.setExpanded(True)
                             parent = itm
                             urlPart = repoUrl
-                            for element in dirent["repos_path"].split("/")[:-1]:
+                            for element in \
+                                    dirent["repos_path"].split("/")[:-1]:
                                 if element:
-                                    urlPart = "{0}/{1}".format(urlPart, element)
+                                    urlPart = "{0}/{1}".format(urlPart,
+                                                               element)
                                     itm = self.__generateItem(parent, element,
                                         "", "", 0, "", pysvn.node_kind.dir,
                                         urlPart)

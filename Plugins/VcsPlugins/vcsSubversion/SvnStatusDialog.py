@@ -188,8 +188,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             '*': self.trUtf8('no'),
         }
         
-        self.rx_status = \
-            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+        self.rx_status = QRegExp(
+            '(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
             # flags (8 or 9 anything), revision, changed rev, author, path
         self.rx_status2 = \
             QRegExp('(.{8,9})\\s+(.+)\\s*')
@@ -413,7 +413,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()

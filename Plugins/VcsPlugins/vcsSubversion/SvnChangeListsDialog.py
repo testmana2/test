@@ -39,8 +39,8 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         self.process = None
         self.vcs = vcs
         
-        self.rx_status = \
-            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+        self.rx_status = QRegExp(
+            '(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
             # flags (8 or 9 anything), revision, changed rev, author, path
         self.rx_status2 = \
             QRegExp('(.{8,9})\\s+(.+)\\s*')
@@ -62,7 +62,8 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         if current is not None:
             changelist = current.text()
             if changelist in self.changeListsDict:
-                self.filesList.addItems(sorted(self.changeListsDict[changelist]))
+                self.filesList.addItems(
+                    sorted(self.changeListsDict[changelist]))
     
     def start(self, path):
         """
@@ -72,7 +73,8 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         """
         self.changeListsDict = {}
         
-        self.filesLabel.setText(self.trUtf8("Files (relative to {0}):").format(path))
+        self.filesLabel.setText(
+            self.trUtf8("Files (relative to {0}):").format(path))
         
         self.errorGroup.hide()
         self.intercept = False
@@ -136,7 +138,8 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         
         if len(self.changeListsDict) == 0:
             self.changeLists.addItem(self.trUtf8("No changelists found"))
-            self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+            self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+                Qt.OtherFocusReason)
         else:
             self.changeLists.addItems(sorted(self.changeListsDict.keys()))
             self.changeLists.setCurrentRow(0)
@@ -176,16 +179,22 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
                 s = str(self.process.readLine(),
                         Preferences.getSystem("IOEncoding"),
                         'replace')
-                if self.currentChangelist != "" and self.rx_status.exactMatch(s):
+                if self.currentChangelist != "" and \
+                        self.rx_status.exactMatch(s):
                     file = self.rx_status.cap(5).strip()
                     filename = file.replace(self.path + os.sep, "")
-                    if filename not in self.changeListsDict[self.currentChangelist]:
-                        self.changeListsDict[self.currentChangelist].append(filename)
-                elif self.currentChangelist != "" and self.rx_status2.exactMatch(s):
+                    if filename not in \
+                            self.changeListsDict[self.currentChangelist]:
+                        self.changeListsDict[self.currentChangelist].append(
+                            filename)
+                elif self.currentChangelist != "" and \
+                        self.rx_status2.exactMatch(s):
                     file = self.rx_status2.cap(2).strip()
                     filename = file.replace(self.path + os.sep, "")
-                    if filename not in self.changeListsDict[self.currentChangelist]:
-                        self.changeListsDict[self.currentChangelist].append(filename)
+                    if filename not in \
+                            self.changeListsDict[self.currentChangelist]:
+                        self.changeListsDict[self.currentChangelist].append(
+                            filename)
                 elif self.rx_changelist.exactMatch(s):
                     self.currentChangelist = self.rx_changelist.cap(1)
                     if self.currentChangelist not in self.changeListsDict:

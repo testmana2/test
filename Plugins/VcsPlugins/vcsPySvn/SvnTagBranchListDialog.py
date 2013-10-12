@@ -12,8 +12,8 @@ import os
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, QRegExp, Qt
-from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QInputDialog, QApplication, \
-    QDialogButtonBox, QTreeWidgetItem
+from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QInputDialog, \
+    QApplication, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
@@ -23,7 +23,8 @@ from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
 
 
-class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog):
+class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
+                             Ui_SvnTagBranchListDialog):
     """
     Class implementing a dialog to show a list of tags or branches.
     """
@@ -76,9 +77,10 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         if reposURL is None:
             E5MessageBox.critical(self,
                 self.trUtf8("Subversion Error"),
-                self.trUtf8("""The URL of the project repository could not be"""
-                    """ retrieved from the working copy. The list operation will"""
-                    """ be aborted"""))
+                self.trUtf8(
+                    """The URL of the project repository could not be"""
+                    """ retrieved from the working copy. The list operation"""
+                    """ will be aborted"""))
             self.close()
             return False
         
@@ -103,7 +105,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             reposPath, ok = QInputDialog.getText(
                 self,
                 self.trUtf8("Subversion List"),
-                self.trUtf8("Enter the repository URL containing the tags or branches"),
+                self.trUtf8("Enter the repository URL containing the"
+                            " tags or branches"),
                 QLineEdit.Normal,
                 self.vcs.svnNormalizeURL(reposURL))
             if not ok:
@@ -112,7 +115,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             if not reposPath:
                 E5MessageBox.critical(self,
                     self.trUtf8("Subversion List"),
-                    self.trUtf8("""The repository URL is empty. Aborting..."""))
+                    self.trUtf8(
+                        """The repository URL is empty. Aborting..."""))
                 self.close()
                 return False
             path = reposPath
@@ -142,7 +146,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             res = False
         except AttributeError:
             self.__showError(
-                self.trUtf8("The installed version of PySvn should be 1.4.0 or better."))
+                self.trUtf8("The installed version of PySvn should be"
+                            " 1.4.0 or better."))
             res = False
         locker.unlock()
         self.__finish()
@@ -151,7 +156,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)

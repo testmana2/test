@@ -12,7 +12,8 @@ import os
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, Qt
-from PyQt4.QtGui import QHeaderView, QDialog, QDialogButtonBox, QFont, QTreeWidgetItem
+from PyQt4.QtGui import QHeaderView, QDialog, QDialogButtonBox, QFont, \
+    QTreeWidgetItem
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
@@ -74,8 +75,9 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
             annotations = self.client.annotate(fname)
             locker.unlock()
             for annotation in annotations:
-                self.__generateItem(annotation["revision"].number,
-                    annotation["author"], annotation["number"] + 1, annotation["line"])
+                self.__generateItem(
+                    annotation["revision"].number, annotation["author"],
+                    annotation["number"] + 1, annotation["line"])
         except pysvn.ClientError as e:
             locker.unlock()
             self.__showError(e.args[0] + '\n')
@@ -84,7 +86,8 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)

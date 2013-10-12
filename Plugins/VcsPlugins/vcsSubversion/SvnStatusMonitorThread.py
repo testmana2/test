@@ -33,8 +33,8 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         
         self.rx_status1 = \
             QRegExp('(.{8,9})\\s+([0-9-]+)\\s+(.+)\\s*')
-        self.rx_status2 = \
-            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+        self.rx_status2 = QRegExp(
+            '(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
     
     def _performMonitor(self):
         """
@@ -72,8 +72,8 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         if procStarted:
             finished = process.waitForFinished(300000)
             if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), self.__ioEncoding, 'replace')
+                output = str(process.readAllStandardOutput(),
+                             self.__ioEncoding, 'replace')
                 states = {}
                 for line in output.splitlines():
                     if self.rx_status1.exactMatch(line):
@@ -100,23 +100,26 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                         states[name] = status
                         try:
                             if self.reportedStates[name] != status:
-                                self.statusList.append("{0} {1}".format(status, name))
+                                self.statusList.append(
+                                    "{0} {1}".format(status, name))
                         except KeyError:
-                            self.statusList.append("{0} {1}".format(status, name))
+                            self.statusList.append(
+                                "{0} {1}".format(status, name))
                 for name in list(self.reportedStates.keys()):
                     if name not in states:
                         self.statusList.append("  {0}".format(name))
                 self.reportedStates = states
-                return True, \
-                       self.trUtf8("Subversion status checked successfully (using svn)")
+                return True, self.trUtf8(
+                    "Subversion status checked successfully (using svn)")
             else:
                 process.kill()
                 process.waitForFinished()
                 return False, \
                        str(process.readAllStandardError(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                           Preferences.getSystem("IOEncoding"),
+                           'replace')
         else:
             process.kill()
             process.waitForFinished()
-            return False, self.trUtf8("Could not start the Subversion process.")
+            return False, self.trUtf8(
+                "Could not start the Subversion process.")

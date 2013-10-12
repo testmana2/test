@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to show the output of the svn proplist command process.
+Module implementing a dialog to show the output of the svn proplist command
+process.
 """
 
 from PyQt4.QtCore import QTimer, QProcess, QProcessEnvironment, QRegExp, Qt
@@ -19,7 +20,8 @@ import Preferences
 
 class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
     """
-    Class implementing a dialog to show the output of the svn proplist command process.
+    Class implementing a dialog to show the output of the svn proplist command
+    process.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -129,7 +131,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -186,13 +189,15 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
                      'replace')
             if self.rx_path.exactMatch(s):
                 if self.lastProp:
-                    self.__generateItem(self.lastPath, self.lastProp, self.propBuffer)
+                    self.__generateItem(
+                        self.lastPath, self.lastProp, self.propBuffer)
                 self.lastPath = self.rx_path.cap(1)
                 self.lastProp = None
                 self.propBuffer = ""
             elif self.rx_prop.exactMatch(s):
                 if self.lastProp:
-                    self.__generateItem(self.lastPath, self.lastProp, self.propBuffer)
+                    self.__generateItem(
+                        self.lastPath, self.lastProp, self.propBuffer)
                 self.lastProp = self.rx_prop.cap(1)
                 self.propBuffer = self.rx_prop.cap(2)
             else:
