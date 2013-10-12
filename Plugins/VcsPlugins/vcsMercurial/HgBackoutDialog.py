@@ -17,7 +17,8 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
     """
     Class implementing a dialog to enter the data for a backout operation.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 parent=None):
         """
         Constructor
         

@@ -17,7 +17,8 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
     """
     Class implementing a dialog to enter the revisions for the hg diff command.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 parent=None):
         """
         Constructor
         

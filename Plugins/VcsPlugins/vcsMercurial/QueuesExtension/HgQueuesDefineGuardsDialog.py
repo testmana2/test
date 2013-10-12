@@ -10,7 +10,8 @@ Module implementing a dialog to define guards for patches.
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QTimer, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractButton, QListWidgetItem
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractButton, \
+    QListWidgetItem
 
 from E5Gui import E5MessageBox
 
@@ -106,7 +107,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
     @pyqtSlot(str)
     def on_patchSelector_activated(self, patch):
         """
-        Private slot to get the list of guards defined for the given patch name.
+        Private slot to get the list of guards defined for the given patch
+        name.
         
         @param patch selected patch name (empty for current patch)
         """
@@ -149,8 +151,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(), ioEncoding, 'replace').strip()
+                    output = str(process.readAllStandardOutput(), ioEncoding,
+                                 'replace').strip()
         
         if output:
             patchName, guards = output.split(":", 1)
@@ -235,7 +237,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         """
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Remove Guards"),
-            self.trUtf8("""Do you really want to remove the selected guards?"""))
+            self.trUtf8(
+                """Do you really want to remove the selected guards?"""))
         if res:
             for guardItem in self.guardsList.selectedItems():
                 row = self.guardsList.row(guardItem)
@@ -290,13 +293,15 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                     finished = process.waitForFinished(30000)
                     if finished:
                         if process.exitCode() != 0:
-                            error = \
-                                str(process.readAllStandardError(), ioEncoding, 'replace')
+                            error = str(
+                                process.readAllStandardError(), ioEncoding,
+                                'replace')
                     else:
                         E5MessageBox.warning(self,
                             self.trUtf8("Apply Guard Definitions"),
-                            self.trUtf8("""The Mercurial process did not finish"""
-                                        """ in time."""))
+                            self.trUtf8(
+                                """The Mercurial process did not finish"""
+                                """ in time."""))
             
             if error:
                 E5MessageBox.warning(self,
@@ -306,4 +311,5 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                         .format(error))
             else:
                             self.__dirtyList = False
-                            self.on_patchSelector_activated(self.patchNameLabel.text())
+                            self.on_patchSelector_activated(
+                                self.patchNameLabel.text())

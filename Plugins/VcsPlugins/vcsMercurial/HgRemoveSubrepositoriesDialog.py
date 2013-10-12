@@ -35,7 +35,8 @@ class HgRemoveSubrepositoriesDialog(QDialog, Ui_HgRemoveSubrepositoriesDialog):
         """
         Private slot handling the selection of entries.
         """
-        self.removeButton.setEnabled(len(self.subrepositories.selectedItems()) > 0)
+        self.removeButton.setEnabled(
+            len(self.subrepositories.selectedItems()) > 0)
     
     @pyqtSlot()
     def on_removeButton_clicked(self):
@@ -53,8 +54,8 @@ class HgRemoveSubrepositoriesDialog(QDialog, Ui_HgRemoveSubrepositoriesDialog):
         Public method to retrieve the data.
         
         @return tuple giving the remaining sub-repositories, the removed ones
-            and a flag indicating to delete the removed ones from disc (list of strings,
-            list of strings, boolean)
+            and a flag indicating to delete the removed ones from disc (list
+            of strings, list of strings, boolean)
         """
         return (
             [self.subrepositories.item(row).text()

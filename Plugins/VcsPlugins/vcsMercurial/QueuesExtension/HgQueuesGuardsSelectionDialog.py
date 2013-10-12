@@ -7,7 +7,8 @@
 Module implementing a dialog to select a list of guards.
 """
 
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, QAbstractItemView
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, \
+    QAbstractItemView
 
 from .Ui_HgQueuesGuardsSelectionDialog import Ui_HgQueuesGuardsSelectionDialog
 

@@ -15,7 +15,8 @@ from .Ui_HgPhaseDialog import Ui_HgPhaseDialog
 
 class HgPhaseDialog(QDialog, Ui_HgPhaseDialog):
     """
-    Class dimplementing a dialog to enter data for the Mercurial Phase operation.
+    Class dimplementing a dialog to enter data for the Mercurial Phase
+    operation.
     """
     def __init__(self, parent=None):
         """

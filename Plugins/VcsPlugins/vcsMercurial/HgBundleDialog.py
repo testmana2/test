@@ -17,7 +17,8 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
     """
     Class implementing a dialog to enter the data for a bundle operation.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 parent=None):
         """
         Constructor
         
@@ -130,8 +131,9 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         """
         Public method to retrieve the bundle data.
         
-        @return tuple naming the revisions, base revisions, the compression type and
-            a flag indicating to bundle all changesets (string, string, boolean)
+        @return tuple naming the revisions, base revisions, the compression
+            type and a flag indicating to bundle all changesets (string,
+            string, boolean)
         """
         if self.multipleButton.isChecked():
             revs = self.multipleEdit.toPlainText().strip().splitlines()

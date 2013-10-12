@@ -117,8 +117,8 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
             flag indicating to set the user, a flag indicating to use the
             current user and the user name and another tuple giving a flag
             indicating to set the date, a flag indicating to use the
-            current date and the date (string, string, (boolean, boolean, string),
-            (boolean, boolean, string))
+            current date and the date (string, string, (boolean, boolean,
+            string), (boolean, boolean, string))
         """
         userData = (self.userGroup.isChecked(),
                     self.currentUserCheckBox.isChecked(),

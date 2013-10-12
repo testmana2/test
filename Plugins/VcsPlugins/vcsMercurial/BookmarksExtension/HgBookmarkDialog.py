@@ -20,7 +20,8 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
     DEFINE_MODE = 0
     MOVE_MODE = 1
     
-    def __init__(self, mode, tagsList, branchesList, bookmarksList, parent=None):
+    def __init__(self, mode, tagsList, branchesList, bookmarksList,
+                 parent=None):
         """
         Constructor
         

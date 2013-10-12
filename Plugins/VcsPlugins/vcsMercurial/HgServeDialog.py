@@ -45,12 +45,14 @@ class HgServeDialog(E5MainWindow):
         
         self.__startAct = QAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "startServer.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "startServer.png")),
             self.trUtf8("Start Server"), self)
         self.__startAct.triggered[()].connect(self.__startServer)
         self.__stopAct = QAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "stopServer.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "stopServer.png")),
             self.trUtf8("Stop Server"), self)
         self.__stopAct.triggered[()].connect(self.__stopServer)
         self.__browserAct = QAction(
@@ -62,7 +64,8 @@ class HgServeDialog(E5MainWindow):
         self.__portSpin.setMinimum(2048)
         self.__portSpin.setMaximum(65535)
         self.__portSpin.setToolTip(self.trUtf8("Enter the server port"))
-        self.__portSpin.setValue(self.vcs.getPlugin().getPreferences("ServerPort"))
+        self.__portSpin.setValue(
+            self.vcs.getPlugin().getPreferences("ServerPort"))
         
         self.__styleCombo = QComboBox(self)
         self.__styleCombo.addItems(self.__styles)
@@ -101,7 +104,8 @@ class HgServeDialog(E5MainWindow):
         
         self.cNormalFormat = self.__log.currentCharFormat()
         self.cErrorFormat = self.__log.currentCharFormat()
-        self.cErrorFormat.setForeground(QBrush(Preferences.getUI("LogStdErrColour")))
+        self.cErrorFormat.setForeground(
+            QBrush(Preferences.getUI("LogStdErrColour")))
     
     def __startServer(self):
         """
@@ -160,7 +164,8 @@ class HgServeDialog(E5MainWindow):
         Private slot to start a browser for the served repository.
         """
         ui = e5App().getObject("UserInterface")
-        ui.launchHelpViewer("http://localhost:{0}".format(self.__portSpin.value()))
+        ui.launchHelpViewer(
+            "http://localhost:{0}".format(self.__portSpin.value()))
     
     def closeEvent(self, e):
         """

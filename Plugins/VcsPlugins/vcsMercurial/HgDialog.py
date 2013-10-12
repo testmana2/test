@@ -53,7 +53,8 @@ class HgDialog(QDialog, Ui_HgDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.proc is not None and \
            self.proc.state() != QProcess.NotRunning:
@@ -69,7 +70,8 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         if Preferences.getVCS("AutoClose") and \
            self.normal and \
@@ -114,8 +116,9 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.intercept = False
         
         self.__hasAddOrDelete = False
-        if args[0] in ["fetch", "qpush", "qpop", "qgoto", "rebase", "transplant",
-                       "update", "import", "revert", "graft"] or \
+        if args[0] in ["fetch", "qpush", "qpop", "qgoto", "rebase",
+                       "transplant", "update", "import", "revert",
+                       "graft"] or \
            (args[0] in ["pull", "unbundle"] and \
             ("--update" in args[1:] or "--rebase" in args[1:])):
             self.__updateCommand = True

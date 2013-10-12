@@ -76,7 +76,8 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
     @pyqtSlot()
     def on_pathButton_clicked(self):
         """
-        Private slot to handle the path selection via a directory selection dialog.
+        Private slot to handle the path selection via a directory selection
+        dialog.
         """
         path = E5FileDialog.getExistingDirectory(
             self,
@@ -100,8 +101,9 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         """
         Public method to get the data.
         
-        @return tuple containing the relative path within the project, the sub-repository
-            type and the sub-repository URL (string, string, string)
+        @return tuple containing the relative path within the project, the
+            sub-repository type and the sub-repository URL (string, string,
+            string)
         """
         return (
             self.pathEdit.text(),

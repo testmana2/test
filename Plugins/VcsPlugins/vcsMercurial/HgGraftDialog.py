@@ -22,7 +22,8 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
         Constructor
         
         @param vcs reference to the VCS object (Hg)
-        @param revs list of revisions to show in the revisions pane (list of strings)
+        @param revs list of revisions to show in the revisions pane (list of
+            strings)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -95,9 +96,9 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
             current user and the user name, another tuple giving a flag
             indicating to set the date, a flag indicating to use the
             current date and the date, a flag indicating to append graft info
-            to the log message and a flag indicating a dry-run (list of strings,
-            (boolean, boolean, string), (boolean, boolean, string), boolean,
-            boolean)
+            to the log message and a flag indicating a dry-run (list of
+            strings, (boolean, boolean, string), (boolean, boolean, string),
+            boolean, boolean)
         """
         userData = (self.userGroup.isChecked(),
                     self.currentUserCheckBox.isChecked(),

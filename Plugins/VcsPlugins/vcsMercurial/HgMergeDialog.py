@@ -17,7 +17,8 @@ class HgMergeDialog(QDialog, Ui_HgMergeDialog):
     """
     Class implementing a dialog to enter the data for a merge operation.
     """
-    def __init__(self, force, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, force, tagsList, branchesList, bookmarksList=None,
+                 parent=None):
         """
         Constructor
         

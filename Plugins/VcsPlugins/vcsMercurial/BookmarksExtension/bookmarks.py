@@ -79,8 +79,9 @@ class Bookmarks(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(
+                        process.readAllStandardOutput(), ioEncoding,
+                        'replace')
         
         self.bookmarksList = []
         for line in output.splitlines():
@@ -275,8 +276,9 @@ class Bookmarks(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(
+                        process.readAllStandardOutput(), ioEncoding,
+                        'replace')
         
         for line in output.splitlines():
             if line.startswith(" "):

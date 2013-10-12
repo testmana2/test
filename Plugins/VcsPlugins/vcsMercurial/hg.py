@@ -34,8 +34,8 @@ class Hg(VersionControl):
     Class implementing the version control systems interface to Mercurial.
     
     @signal committed() emitted after the commit action has completed
-    @signal activeExtensionsChanged() emitted when the list of active extensions
-            has changed
+    @signal activeExtensionsChanged() emitted when the list of active
+        extensions has changed
     """
     committed = pyqtSignal()
     activeExtensionsChanged = pyqtSignal()
@@ -195,7 +195,8 @@ class Hg(VersionControl):
         """
         Public method used to test for the presence of the hg executable.
         
-        @return flag indicating the existance (boolean) and an error message (string)
+        @return flag indicating the existance (boolean) and an error message
+            (string)
         """
         self.versionStr = ''
         errMsg = ""
@@ -224,11 +225,12 @@ class Hg(VersionControl):
                 return True, errMsg
             else:
                 if finished:
-                    errMsg = \
-                        self.trUtf8("The hg process finished with the exit code {0}")\
+                    errMsg = self.trUtf8(
+                        "The hg process finished with the exit code {0}")\
                         .format(process.exitCode())
                 else:
-                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+                    errMsg = self.trUtf8(
+                        "The hg process did not finish within 30s.")
         else:
             errMsg = self.trUtf8("Could not start the hg executable.")
         
@@ -238,8 +240,9 @@ class Hg(VersionControl):
         """
         Public method used to initialize the mercurial repository.
         
-        The initialization is done, when a project is converted into a Mercurial
-        controlled project. Therefore we always return TRUE without doing anything.
+        The initialization is done, when a project is converted into a
+        Mercurial controlled project. Therefore we always return TRUE without
+        doing anything.
         
         @param vcsDir name of the VCS directory (string)
         @param noDialog flag indicating quiet operations (boolean)
@@ -249,7 +252,8 @@ class Hg(VersionControl):
     
     def vcsConvertProject(self, vcsDataDict, project):
         """
-        Public method to convert an uncontrolled project to a version controlled project.
+        Public method to convert an uncontrolled project to a version
+        controlled project.
         
         @param vcsDataDict dictionary of data required for the conversion
         @param project reference to the project object
@@ -258,7 +262,8 @@ class Hg(VersionControl):
         if not success:
             E5MessageBox.critical(self.__ui,
                 self.trUtf8("Create project repository"),
-                self.trUtf8("""The project repository could not be created."""))
+                self.trUtf8(
+                    """The project repository could not be created."""))
         else:
             pfn = project.pfile
             if not os.path.isfile(pfn):
@@ -268,7 +273,7 @@ class Hg(VersionControl):
     
     def vcsImport(self, vcsDataDict, projectDir, noDialog=False):
         """
-        Public method used to import the project into the Subversion repository.
+        Public method used to import the project into the Mercurial repository.
         
         @param vcsDataDict dictionary of data required for the import
         @param projectDir project directory (string)
@@ -301,8 +306,9 @@ class Hg(VersionControl):
                 args.append('--addremove')
                 args.append('--message')
                 args.append(msg)
-                dia = HgDialog(self.trUtf8('Initial commit to Mercurial repository'),
-                               self)
+                dia = HgDialog(
+                    self.trUtf8('Initial commit to Mercurial repository'),
+                    self)
                 res = dia.startProcess(args, projectDir)
                 if res:
                     dia.exec_()
@@ -312,7 +318,8 @@ class Hg(VersionControl):
     
     def vcsCheckout(self, vcsDataDict, projectDir, noDialog=False):
         """
-        Public method used to check the project out of a Mercurial repository (clone).
+        Public method used to check the project out of a Mercurial repository
+        (clone).
         
         @param vcsDataDict dictionary of data required for the checkout
         @param projectDir project directory to create (string)
@@ -347,8 +354,9 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
                 return err == ""
         else:
-            dia = HgDialog(self.trUtf8('Cloning project from a Mercurial repository'),
-                           self)
+            dia = HgDialog(
+                self.trUtf8('Cloning project from a Mercurial repository'),
+                self)
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -356,7 +364,7 @@ class Hg(VersionControl):
     
     def vcsExport(self, vcsDataDict, projectDir):
         """
-        Public method used to export a directory from the Subversion repository.
+        Public method used to export a directory from the Mercurial repository.
         
         @param vcsDataDict dictionary of data required for the checkout
         @param projectDir project directory to create (string)
@@ -368,12 +376,14 @@ class Hg(VersionControl):
             os.remove(os.path.join(projectDir, '.hgignore'))
         return status
     
-    def vcsCommit(self, name, message, noDialog=False, closeBranch=False, mq=False):
+    def vcsCommit(self, name, message, noDialog=False, closeBranch=False,
+                  mq=False):
         """
-        Public method used to make the change of a file/directory permanent in the
-        Mercurial repository.
+        Public method used to make the change of a file/directory permanent
+        in the Mercurial repository.
         
-        @param name file/directory name to be committed (string or list of strings)
+        @param name file/directory name to be committed (string or list of
+            strings)
         @param message message for this operation (string)
         @param noDialog flag indicating quiet operations
         @keyparam closeBranch flag indicating a close branch commit (boolean)
@@ -426,11 +436,14 @@ class Hg(VersionControl):
                 if os.path.isdir(nam):
                     project = e5App().getObject("Project")
                     if nam == project.getProjectPath():
-                        ok &= project.checkAllScriptsDirty(reportSyntaxErrors=True) and \
-                              project.checkDirty()
+                        ok &= \
+                            project.checkAllScriptsDirty(
+                                reportSyntaxErrors=True) and \
+                            project.checkDirty()
                         continue
                 elif os.path.isfile(nam):
-                    editor = e5App().getObject("ViewManager").getOpenEditor(nam)
+                    editor = \
+                        e5App().getObject("ViewManager").getOpenEditor(nam)
                     if editor:
                         ok &= editor.checkDirty()
                 if not ok:
@@ -439,8 +452,9 @@ class Hg(VersionControl):
             if not ok:
                 res = E5MessageBox.yesNo(self.__ui,
                     self.trUtf8("Commit Changes"),
-                    self.trUtf8("""The commit affects files, that have unsaved"""
-                                """ changes. Shall the commit be continued?"""),
+                    self.trUtf8(
+                        """The commit affects files, that have unsaved"""
+                        """ changes. Shall the commit be continued?"""),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
@@ -503,8 +517,9 @@ class Hg(VersionControl):
         if noDialog:
             self.startSynchronizedProcess(QProcess(), "hg", args, dname)
         else:
-            dia = HgDialog(self.trUtf8('Committing changes to Mercurial repository'),
-                           self)
+            dia = HgDialog(
+                self.trUtf8('Committing changes to Mercurial repository'),
+                self)
             res = dia.startProcess(args, dname)
             if res:
                 dia.exec_()
@@ -518,9 +533,11 @@ class Hg(VersionControl):
     
     def vcsUpdate(self, name, noDialog=False, revision=None):
         """
-        Public method used to update a file/directory with the Mercurial repository.
+        Public method used to update a file/directory with the Mercurial
+        repository.
         
-        @param name file/directory name to be updated (string or list of strings)
+        @param name file/directory name to be updated (string or list of
+            strings)
         @param noDialog flag indicating quiet operations (boolean)
         @keyparam revision revision to update to (string)
         @return flag indicating, that the update contained an add
@@ -555,8 +572,9 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
             res = False
         else:
-            dia = HgDialog(self.trUtf8('Synchronizing with the Mercurial repository'),
-                           self)
+            dia = HgDialog(self.trUtf8(
+                'Synchronizing with the Mercurial repository'),
+                self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -608,7 +626,9 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
         else:
             dia = HgDialog(
-                self.trUtf8('Adding files/directories to the Mercurial repository'), self)
+                self.trUtf8(
+                    'Adding files/directories to the Mercurial repository'),
+                self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -625,20 +645,25 @@ class Hg(VersionControl):
     
     def vcsAddTree(self, path):
         """
-        Public method to add a directory tree rooted at path to the Mercurial repository.
+        Public method to add a directory tree rooted at path to the Mercurial
+        repository.
         
-        @param path root directory of the tree to be added (string or list of strings))
+        @param path root directory of the tree to be added (string or list of
+            strings))
         """
         self.vcsAdd(path, isDir=False)
     
     def vcsRemove(self, name, project=False, noDialog=False):
         """
-        Public method used to remove a file/directory from the Mercurial repository.
+        Public method used to remove a file/directory from the Mercurial
+        repository.
         
         The default operation is to remove the local copy as well.
         
-        @param name file/directory name to be removed (string or list of strings))
-        @param project flag indicating deletion of a project tree (boolean) (not needed)
+        @param name file/directory name to be removed (string or list of
+            strings))
+        @param project flag indicating deletion of a project tree (boolean)
+            (not needed)
         @param noDialog flag indicating quiet operations
         @return flag indicating successfull operation (boolean)
         """
@@ -666,13 +691,16 @@ class Hg(VersionControl):
         
         if noDialog:
             if self.__client is None:
-                res = self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
+                res = self.startSynchronizedProcess(
+                    QProcess(), 'hg', args, repodir)
             else:
                 out, err = self.__client.runcommand(args)
                 res = err == ""
         else:
             dia = HgDialog(
-                self.trUtf8('Removing files/directories from the Mercurial repository'),
+                self.trUtf8(
+                    'Removing files/directories from the Mercurial'
+                    ' repository'),
                 self)
             res = dia.startProcess(args, repodir)
             if res:
@@ -730,7 +758,8 @@ class Hg(VersionControl):
             
             if noDialog:
                 if self.__client is None:
-                    res = self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
+                    res = self.startSynchronizedProcess(
+                        QProcess(), 'hg', args, repodir)
                 else:
                     out, err = self.__client.runcommand(args)
                     res = err == ""
@@ -772,11 +801,13 @@ class Hg(VersionControl):
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         
-        from .HgMultiRevisionSelectionDialog import HgMultiRevisionSelectionDialog
+        from .HgMultiRevisionSelectionDialog import \
+            HgMultiRevisionSelectionDialog
         dlg = HgMultiRevisionSelectionDialog(
                 self.hgGetTagsList(repodir),
                 self.hgGetBranchesList(repodir),
@@ -797,8 +828,9 @@ class Hg(VersionControl):
         Mercurial repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
         
         @param name file/directory name to be diffed (string)
         """
@@ -844,7 +876,8 @@ class Hg(VersionControl):
         from .HgSummaryDialog import HgSummaryDialog
         self.summary = HgSummaryDialog(self)
         self.summary.show()
-        self.summary.start(self.__projectHelper.getProject().getProjectPath(), mq=mq)
+        self.summary.start(self.__projectHelper.getProject().getProjectPath(),
+                           mq=mq)
     
     def vcsTag(self, name):
         """
@@ -920,11 +953,13 @@ class Hg(VersionControl):
         project = e5App().getObject("Project")
         names = [project.getRelativePath(nam) for nam in names]
         if names[0]:
-            from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+            from UI.DeleteFilesConfirmationDialog import \
+                DeleteFilesConfirmationDialog
             dlg = DeleteFilesConfirmationDialog(self.parent(),
                 self.trUtf8("Revert changes"),
-                self.trUtf8("Do you really want to revert all changes to these files"
-                            " or directories?"),
+                self.trUtf8(
+                    "Do you really want to revert all changes to these files"
+                    " or directories?"),
                 names)
             yes = dlg.exec_() == QDialog.Accepted
         else:
@@ -966,7 +1001,8 @@ class Hg(VersionControl):
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         from .HgMergeDialog import HgMergeDialog
@@ -995,7 +1031,8 @@ class Hg(VersionControl):
     
     def vcsSwitch(self, name):
         """
-        Public method used to switch a working directory to a different revision.
+        Public method used to switch a working directory to a different
+        revision.
         
         @param name directory name to be switched (string)
         @return flag indicating, that the switch contained an add
@@ -1012,7 +1049,8 @@ class Hg(VersionControl):
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
@@ -1089,11 +1127,12 @@ class Hg(VersionControl):
     
     def vcsAllRegisteredStates(self, names, dname, shortcut=True):
         """
-        Public method used to get the registered states of a number of files in the vcs.
+        Public method used to get the registered states of a number of files
+        in the vcs.
         
-        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
-        directory has been scanned already. If so, it is assumed, that the states for
-        all files have been populated by the previous run.
+        <b>Note:</b> If a shortcut is to be taken, the code will only check,
+        if the named directory has been scanned already. If so, it is assumed,
+        that the states for all files have been populated by the previous run.
         
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
@@ -1305,7 +1344,8 @@ class Hg(VersionControl):
             index = 0
             for line in output.splitlines():
                 index += 1
-                changeset, tags, author, date, branches, bookmarks = line.split("@@@")
+                changeset, tags, author, date, branches, bookmarks = \
+                    line.split("@@@")
                 cdate, ctime = date.split()[:2]
                 info = []
                 info.append(QApplication.translate("mercurial",
@@ -1368,9 +1408,9 @@ class Hg(VersionControl):
             """</table></p>\n"""
             ).format(self.versionStr, url, infoStr)
 
-    ############################################################################
+    ###########################################################################
     ## Private Mercurial specific methods are below.
-    ############################################################################
+    ###########################################################################
     
     def __hgURL(self, url):
         """
@@ -1392,14 +1432,16 @@ class Hg(VersionControl):
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/", 1)
-            return "{0}:{1}:{2}/{3}".format(scheme, host, port, urllib.parse.quote(path))
+            return "{0}:{1}:{2}/{3}".format(
+                scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
                 return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/", 1)
-                return "{0}://{1}/{2}".format(scheme, host, urllib.parse.quote(path))
+                return "{0}://{1}/{2}".format(
+                    scheme, host, urllib.parse.quote(path))
 
     def hgNormalizeURL(self, url):
         """
@@ -1569,7 +1611,8 @@ class Hg(VersionControl):
                 self.branchesList = []
                 allTagsBranchesList = None
             self.tagbranchList.start(path, tags,
-                                     self.branchesList, self.allTagsBranchesList)
+                                     self.branchesList,
+                                     self.allTagsBranchesList)
     
     def hgAnnotate(self, name):
         """
@@ -1588,8 +1631,9 @@ class Hg(VersionControl):
         Mercurial repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
         
         This method gives the chance to enter the revisions to be compared.
         
@@ -1620,7 +1664,8 @@ class Hg(VersionControl):
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
@@ -1636,7 +1681,8 @@ class Hg(VersionControl):
     
     def __hgGetFileForRevision(self, name, rev=""):
         """
-        Private method to get a file for a specific revision from the repository.
+        Private method to get a file for a specific revision from the
+        repository.
         
         @param name file name to get from the repository (string)
         @keyparam rev revision to retrieve (string)
@@ -1674,7 +1720,8 @@ class Hg(VersionControl):
                         error = str(process.readAllStandardError(),
                             Preferences.getSystem("IOEncoding"), 'replace')
                 else:
-                    error = self.trUtf8("The hg process did not finish within 30s.")
+                    error = self.trUtf8(
+                        "The hg process did not finish within 30s.")
             else:
                 error = self.trUtf8('The process {0} could not be started. '
                     'Ensure, that it is in the search path.').format('hg')
@@ -1685,8 +1732,8 @@ class Hg(VersionControl):
     
     def hgSbsDiff(self, name, extended=False, revisions=None):
         """
-        Public method used to view the difference of a file to the Mercurial repository
-        side-by-side.
+        Public method used to view the difference of a file to the Mercurial
+        repository side-by-side.
         
         @param name file name to be diffed (string)
         @keyparam extended flag indicating the extended variant (boolean)
@@ -1706,7 +1753,8 @@ class Hg(VersionControl):
             
             if self.isExtensionActive("bookmarks"):
                 bookmarksList = \
-                    self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                    self.getExtensionObject("bookmarks")\
+                        .hgGetBookmarksList(repodir)
             else:
                 bookmarksList = None
             
@@ -1746,7 +1794,8 @@ class Hg(VersionControl):
             except IOError:
                 E5MessageBox.critical(self.__ui,
                     self.trUtf8("Mercurial Side-by-Side Difference"),
-                    self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                    self.trUtf8(
+                        """<p>The file <b>{0}</b> could not be read.</p>""")
                         .format(name))
                 return
         
@@ -1762,7 +1811,8 @@ class Hg(VersionControl):
         Mercurial repository.
         
         @param path file/directory name to show the log of (string)
-        @keyparam isFile flag indicating log for a file is to be shown (boolean)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
         """
         from .HgLogBrowserDialog import HgLogBrowserDialog
         self.logBrowser = HgLogBrowserDialog(self, isFile=isFile)
@@ -1873,7 +1923,8 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Pushing to a remote Mercurial repository'), self)
+        dia = HgDialog(
+            self.trUtf8('Pushing to a remote Mercurial repository'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1885,7 +1936,8 @@ class Hg(VersionControl):
         Public method to show information about the heads of the repository.
         
         @param ppath local path to get the repository infos (string)
-        @keyparam mode mode of the operation (string, one of heads, parents, tip)
+        @keyparam mode mode of the operation (string, one of heads, parents,
+            tip)
         """
         if mode not in ("heads", "parents", "tip"):
             mode = "heads"
@@ -2024,8 +2076,9 @@ class Hg(VersionControl):
             args.append('branch')
             args.append(name.strip().replace(" ", "_"))
             
-            dia = HgDialog(self.trUtf8('Creating branch in the Mercurial repository'),
-                           self)
+            dia = HgDialog(
+                self.trUtf8('Creating branch in the Mercurial repository'),
+                self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2062,7 +2115,8 @@ class Hg(VersionControl):
         if not os.path.exists(cfgFile):
             try:
                 f = open(cfgFile, "w")
-                f.write("[ui]\nusername = Firstname Lastname <email_address>\n")
+                f.write("[ui]\nusername = Firstname Lastname"
+                        " <email_address>\n")
                 f.close()
             except (IOError, OSError):
                 # ignore these
@@ -2114,8 +2168,9 @@ class Hg(VersionControl):
         args = []
         args.append('verify')
         
-        dia = HgDialog(self.trUtf8('Verifying the integrity of the Mercurial repository'),
-                       self)
+        dia = HgDialog(
+            self.trUtf8('Verifying the integrity of the Mercurial repository'),
+            self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2139,7 +2194,9 @@ class Hg(VersionControl):
         args.append('showconfig')
         args.append("--untrusted")
         
-        dia = HgDialog(self.trUtf8('Showing the combined configuration settings'), self)
+        dia = HgDialog(
+            self.trUtf8('Showing the combined configuration settings'),
+            self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2162,7 +2219,9 @@ class Hg(VersionControl):
         args = []
         args.append('paths')
         
-        dia = HgDialog(self.trUtf8('Showing aliases for remote repositories'), self)
+        dia = HgDialog(
+            self.trUtf8('Showing aliases for remote repositories'),
+            self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2185,7 +2244,9 @@ class Hg(VersionControl):
         args = []
         args.append('recover')
         
-        dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'), self)
+        dia = HgDialog(
+            self.trUtf8('Recovering from interrupted transaction'),
+            self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2286,7 +2347,8 @@ class Hg(VersionControl):
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         from .HgBundleDialog import HgBundleDialog
@@ -2469,7 +2531,8 @@ class Hg(VersionControl):
         """
         if subcommand not in ("good", "bad", "skip", "reset"):
             raise ValueError(
-                self.trUtf8("Bisect subcommand ({0}) invalid.").format(subcommand))
+                self.trUtf8("Bisect subcommand ({0}) invalid.")
+                    .format(subcommand))
         
         dname, fname = self.splitPath(name)
         
@@ -2484,7 +2547,8 @@ class Hg(VersionControl):
         if subcommand in ("good", "bad", "skip"):
             if self.isExtensionActive("bookmarks"):
                 bookmarksList = \
-                    self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                    self.getExtensionObject("bookmarks")\
+                        .hgGetBookmarksList(repodir)
             else:
                 bookmarksList = None
             from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
@@ -2503,7 +2567,8 @@ class Hg(VersionControl):
         if rev:
             args.append(rev)
         
-        dia = HgDialog(self.trUtf8('Mercurial Bisect ({0})').format(subcommand), self)
+        dia = HgDialog(
+            self.trUtf8('Mercurial Bisect ({0})').format(subcommand), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2514,7 +2579,8 @@ class Hg(VersionControl):
         
         This will not remove the file from the project directory.
         
-        @param name file/directory name to be removed (string or list of strings))
+        @param name file/directory name to be removed (string or list of
+            strings))
         """
         args = []
         args.append('forget')
@@ -2536,7 +2602,8 @@ class Hg(VersionControl):
                 return
         
         dia = HgDialog(
-            self.trUtf8('Removing files from the Mercurial repository only'), self)
+            self.trUtf8('Removing files from the Mercurial repository only'),
+            self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2547,7 +2614,8 @@ class Hg(VersionControl):
     
     def hgBackout(self, name):
         """
-        Public method used to backout an earlier changeset from the Mercurial repository.
+        Public method used to backout an earlier changeset from the Mercurial
+        repository.
         
         @param name directory name (string or list of strings)
         """
@@ -2562,7 +2630,8 @@ class Hg(VersionControl):
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         from .HgBackoutDialog import HgBackoutDialog
@@ -2612,9 +2681,11 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        res = E5MessageBox.yesNo(None,
+        res = E5MessageBox.yesNo(
+            None,
             self.trUtf8("Rollback last transaction"),
-            self.trUtf8("""Are you sure you want to rollback the last transaction?"""),
+            self.trUtf8("""Are you sure you want to rollback the last"""
+                        """ transaction?"""),
             icon=E5MessageBox.Warning)
         if res:
             dia = HgDialog(self.trUtf8('Rollback last transaction'), self)
@@ -2797,7 +2868,8 @@ class Hg(VersionControl):
         Public method to copy changesets from another branch.
         
         @param path directory name of the project (string)
-        @param revs list of revisions to show in the revisions pane (list of strings)
+        @param revs list of revisions to show in the revisions pane (list of
+            strings)
         @return flag indicating that the project should be reread (boolean)
         """
         # find the root of the repo
@@ -2903,14 +2975,14 @@ class Hg(VersionControl):
             if res:
                 dia.exec_()
     
-    ############################################################################
+    ###########################################################################
     ## Methods to deal with subrepositories are below.
-    ############################################################################
+    ###########################################################################
     
     def getHgSubPath(self):
         """
-        Public method to get the path to the .hgsub file containing the definitions
-        of sub-repositories.
+        Public method to get the path to the .hgsub file containing the
+        definitions of sub-repositories.
         
         @return full path of the .hgsub file (string)
         """
@@ -2953,17 +3025,19 @@ class Hg(VersionControl):
                 except IOError as err:
                     E5MessageBox.critical(self.__ui,
                         self.trUtf8("Add Sub-repository"),
-                        self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
-                                    """ be read.</p><p>Reason: {0}</p>""")
-                                    .format(str(err)))
+                        self.trUtf8(
+                            """<p>The sub-repositories file .hgsub could not"""
+                            """ be read.</p><p>Reason: {0}</p>""")
+                            .format(str(err)))
                     return
                 
                 if entry in contents:
                     E5MessageBox.critical(self.__ui,
                         self.trUtf8("Add Sub-repository"),
-                        self.trUtf8("""<p>The sub-repositories file .hgsub already"""
-                                    """ contains an entry <b>{0}</b>. Aborting...</p>""")
-                                    .format(entry))
+                        self.trUtf8(
+                            """<p>The sub-repositories file .hgsub already"""
+                            """ contains an entry <b>{0}</b>."""
+                            """ Aborting...</p>""").format(entry))
                     return
             else:
                 needsAdd = True
@@ -2978,9 +3052,10 @@ class Hg(VersionControl):
             except IOError as err:
                 E5MessageBox.critical(self.__ui,
                     self.trUtf8("Add Sub-repository"),
-                    self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
-                                """ be written to.</p><p>Reason: {0}</p>""")
-                                .format(str(err)))
+                    self.trUtf8(
+                        """<p>The sub-repositories file .hgsub could not"""
+                        """ be written to.</p><p>Reason: {0}</p>""")
+                        .format(str(err)))
                 return
             
             if needsAdd:
@@ -3013,7 +3088,8 @@ class Hg(VersionControl):
                             .format(str(err)))
             return
         
-        from .HgRemoveSubrepositoriesDialog import HgRemoveSubrepositoriesDialog
+        from .HgRemoveSubrepositoriesDialog import \
+            HgRemoveSubrepositoriesDialog
         dlg = HgRemoveSubrepositoriesDialog(subrepositories)
         if dlg.exec_() == QDialog.Accepted:
             subrepositories, removedSubrepos, deleteSubrepos = dlg.getData()
@@ -3025,9 +3101,10 @@ class Hg(VersionControl):
             except IOError as err:
                 E5MessageBox.critical(self.__ui,
                     self.trUtf8("Remove Sub-repositories"),
-                    self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
-                                """ be written to.</p><p>Reason: {0}</p>""")
-                                .format(str(err)))
+                    self.trUtf8(
+                        """<p>The sub-repositories file .hgsub could not"""
+                        """ be written to.</p><p>Reason: {0}</p>""")
+                        .format(str(err)))
                 return
             
             if deleteSubrepos:
@@ -3037,9 +3114,9 @@ class Hg(VersionControl):
                     subrepoAbsPath = os.path.join(ppath, subrepoPath)
                     shutil.rmtree(subrepoAbsPath, True)
     
-    ############################################################################
+    ###########################################################################
     ## Methods to handle extensions are below.
-    ############################################################################
+    ###########################################################################
     
     def __iniFileChanged(self, path):
         """
@@ -3054,14 +3131,15 @@ class Hg(VersionControl):
             if not ok:
                 E5MessageBox.warning(None,
                     self.trUtf8("Mercurial Command Server"),
-                    self.trUtf8("""<p>The Mercurial Command Server could not be"""
-                                """ restarted.</p><p>Reason: {0}</p>""").format(err))
+                    self.trUtf8(
+                        """<p>The Mercurial Command Server could not be"""
+                        """ restarted.</p><p>Reason: {0}</p>""").format(err))
                 self.__client = None
     
     def __monitorRepoIniFile(self, name):
         """
-        Private slot to add a repository configuration file to the list of monitored
-        files.
+        Private slot to add a repository configuration file to the list of
+        monitored files.
         
         @param name directory name pointing into the repository (string)
         """
@@ -3104,7 +3182,8 @@ class Hg(VersionControl):
         
         if output:
             for line in output.splitlines():
-                extensionName = line.split("=", 1)[0].strip().split(".")[-1].strip()
+                extensionName = \
+                    line.split("=", 1)[0].strip().split(".")[-1].strip()
                 self.__activeExtensions.append(extensionName)
         
         if self.version >= (1, 8):
@@ -3123,7 +3202,9 @@ class Hg(VersionControl):
         """
         extensionName = extensionName.strip()
         isActive = extensionName in self.__activeExtensions
-        if isActive and extensionName == "transplant" and self.version >= (2, 3):
+        if isActive and \
+                extensionName == "transplant" and \
+                self.version >= (2, 3):
             # transplant extension is deprecated as of Mercurial 2.3.0
             isActive = False
         
@@ -3138,22 +3219,25 @@ class Hg(VersionControl):
         """
         return self.__extensions[extensionName]
     
-    ############################################################################
+    ###########################################################################
     ## Methods to get the helper objects are below.
-    ############################################################################
+    ###########################################################################
     
-    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser=False):
+    def vcsGetProjectBrowserHelper(self, browser, project,
+                                   isTranslationsBrowser=False):
         """
-        Public method to instantiate a helper object for the different project browsers.
+        Public method to instantiate a helper object for the different
+        project browsers.
         
         @param browser reference to the project browser object
         @param project reference to the project object
-        @param isTranslationsBrowser flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+        @param isTranslationsBrowser flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
         @return the project browser helper object
         """
         from .ProjectBrowserHelper import HgProjectBrowserHelper
-        return HgProjectBrowserHelper(self, browser, project, isTranslationsBrowser)
+        return HgProjectBrowserHelper(self, browser, project,
+                                      isTranslationsBrowser)
         
     def vcsGetProjectHelper(self, project):
         """
@@ -3183,20 +3267,23 @@ class Hg(VersionControl):
                 else:
                     E5MessageBox.warning(None,
                         self.trUtf8("Mercurial Command Server"),
-                        self.trUtf8("""<p>The Mercurial Command Server could not be"""
-                                    """ started.</p><p>Reason: {0}</p>""").format(err))
+                        self.trUtf8(
+                            """<p>The Mercurial Command Server could not be"""
+                            """ started.</p><p>Reason: {0}</p>""").format(err))
         
         return self.__projectHelper
 
-    ############################################################################
+    ###########################################################################
     ##  Status Monitor Thread methods
-    ############################################################################
+    ###########################################################################
 
     def _createStatusMonitorThread(self, interval, project):
         """
-        Protected method to create an instance of the VCS status monitor thread.
+        Protected method to create an instance of the VCS status monitor
+        thread.
         
-        @param interval check interval for the monitor thread in seconds (integer)
+        @param interval check interval for the monitor thread in seconds
+            (integer)
         @param project reference to the project object (Project)
         @return reference to the monitor thread (QThread)
         """

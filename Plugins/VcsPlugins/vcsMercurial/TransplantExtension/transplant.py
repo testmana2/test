@@ -45,7 +45,8 @@ class Transplant(HgExtension):
         res = False
         dlg = TransplantDialog(self.vcs.hgGetBranchesList(repodir))
         if dlg.exec_() == QDialog.Accepted:
-            revs, sourceRepo, branch, all, pruneRevs, mergeRevs, log = dlg.getData()
+            revs, sourceRepo, branch, all, pruneRevs, mergeRevs, log = \
+                dlg.getData()
             
             args = []
             args.append("transplant")
@@ -95,7 +96,8 @@ class Transplant(HgExtension):
         args.append("--continue")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Transplant Changesets (Continue)'), self.vcs)
+        dia = HgDialog(
+            self.trUtf8('Transplant Changesets (Continue)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()

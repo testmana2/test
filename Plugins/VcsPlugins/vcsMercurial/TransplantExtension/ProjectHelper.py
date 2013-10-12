@@ -54,8 +54,9 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         ))
         self.hgTransplantAct.setWhatsThis(self.trUtf8(
             """<b>Transplant Changesets</b>"""
-            """<p>This transplants changesets from another branch on top of the"""
-            """ current working directory with the log of the original changeset.</p>"""
+            """<p>This transplants changesets from another branch on top"""
+            """ of the current working directory with the log of the"""
+            """ original changeset.</p>"""
         ))
         self.hgTransplantAct.triggered[()].connect(self.__hgTransplant)
         self.actions.append(self.hgTransplantAct)
@@ -69,9 +70,11 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         ))
         self.hgTransplantContinueAct.setWhatsThis(self.trUtf8(
             """<b>Continue Transplant Session</b>"""
-            """<p>This continues the last transplant session after repair.</p>"""
+            """<p>This continues the last transplant session after"""
+            """ repair.</p>"""
         ))
-        self.hgTransplantContinueAct.triggered[()].connect(self.__hgTransplantContinue)
+        self.hgTransplantContinueAct.triggered[()].connect(
+            self.__hgTransplantContinue)
         self.actions.append(self.hgTransplantContinueAct)
     
     def initMenu(self, mainMenu):
@@ -85,7 +88,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         menu.setIcon(UI.PixmapCache.getIcon("vcsTransplant.png"))
         if self.vcs.version >= (2, 3):
             # transplant is deprecated as of Mercurial 2.3
-            menu.addAction(self.trUtf8("Transplant is deprecated")).setEnabled(False)
+            menu.addAction(
+                self.trUtf8("Transplant is deprecated")).setEnabled(False)
         else:
             menu.setTearOffEnabled(True)
             

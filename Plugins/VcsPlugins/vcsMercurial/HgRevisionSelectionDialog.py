@@ -17,15 +17,16 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
     """
     Class implementing a dialog to select a revision.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, showNone=False,
-                 parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 showNone=False, parent=None):
         """
         Constructor
         
         @param tagsList list of tags (list of strings)
         @param branchesList list of branches (list of strings)
         @param bookmarksList list of bookmarks (list of strings)
-        @param showNone flag influencing the label of the 'None' selection (boolean)
+        @param showNone flag influencing the label of the 'None' selection
+            (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)

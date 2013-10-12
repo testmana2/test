@@ -24,12 +24,14 @@ import Preferences
 
 class HgLogDialog(QWidget, Ui_HgLogDialog):
     """
-    Class implementing a dialog to show the output of the hg log command process.
+    Class implementing a dialog to show the output of the hg log command
+    process.
     
     The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the revisions.
     """
-    def __init__(self, vcs, mode="log", bundle=None, isFile=False, parent=None):
+    def __init__(self, vcs, mode="log", bundle=None, isFile=False,
+                 parent=None):
         """
         Constructor
         
@@ -195,7 +197,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
     
     def __getParents(self, rev):
         """
-        Private method to get the parents of the currently viewed file/directory.
+        Private method to get the parents of the currently viewed
+        file/directory.
         
         @param rev revision number to get parents for (string)
         @return list of parent revisions (list of strings)
@@ -210,7 +213,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 if self.bundle:
                     args.append("--repository")
                     args.append(self.bundle)
-                elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
+                elif self.vcs.bundleFile and \
+                        os.path.exists(self.vcs.bundleFile):
                     args.append("--repository")
                     args.append(self.vcs.bundleFile)
             args.append("--template")
@@ -263,7 +267,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
@@ -313,21 +318,27 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             html += dstr
             
             if "phase" in entry:
-                html += self.trUtf8("Phase: {0}<br />\n").format(entry["phase"])
+                html += self.trUtf8("Phase: {0}<br />\n")\
+                    .format(entry["phase"])
             
-            html += self.trUtf8("Branches: {0}<br />\n").format(entry["branches"])
+            html += self.trUtf8("Branches: {0}<br />\n")\
+                .format(entry["branches"])
             
             html += self.trUtf8("Tags: {0}<br />\n").format(entry["tags"])
             
             if "bookmarks" in entry:
-                html += self.trUtf8("Bookmarks: {0}<br />\n").format(entry["bookmarks"])
+                html += self.trUtf8("Bookmarks: {0}<br />\n")\
+                    .format(entry["bookmarks"])
             
-            html += self.trUtf8("Parents: {0}<br />\n").format(entry["parents"])
+            html += self.trUtf8("Parents: {0}<br />\n")\
+                .format(entry["parents"])
             
-            html += self.trUtf8('<i>Author: {0}</i><br />\n').format(entry["user"])
+            html += self.trUtf8('<i>Author: {0}</i><br />\n')\
+                .format(entry["user"])
             
             date, time = entry["date"].split()[:2]
-            html += self.trUtf8('<i>Date: {0}, {1}</i><br />\n').format(date, time)
+            html += self.trUtf8('<i>Date: {0}, {1}</i><br />\n')\
+                .format(date, time)
             
             for line in entry["description"]:
                 html += Utilities.html_encode(line.strip())
@@ -337,9 +348,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 html += '<br />\n'
                 for f in entry["file_adds"].strip().split(", "):
                     if f in fileCopies:
-                        html += self.trUtf8('Added {0} (copied from {1})<br />\n')\
-                                .format(Utilities.html_encode(f),
-                                        Utilities.html_encode(fileCopies[f]))
+                        html += self.trUtf8(
+                            'Added {0} (copied from {1})<br />\n')\
+                            .format(Utilities.html_encode(f),
+                                    Utilities.html_encode(fileCopies[f]))
                     else:
                         html += self.trUtf8('Added {0}<br />\n')\
                                 .format(Utilities.html_encode(f))

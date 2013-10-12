@@ -41,10 +41,10 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         self.hgFetchAct.setWhatsThis(self.trUtf8(
             """<b>Fetch changes</b>"""
             """<p>This pulls changes from a remote repository into the """
-            """local repository. If the pulled changes add a new branch head,"""
-            """ the head is automatically merged, and the result of the merge"""
-            """ is committed. Otherwise, the working directory is updated to"""
-            """ include the new changes.</p>"""
+            """local repository. If the pulled changes add a new branch"""
+            """ head, the head is automatically merged, and the result of"""
+            """ the merge is committed. Otherwise, the working directory"""
+            """ is updated to include the new changes.</p>"""
         ))
         self.hgFetchAct.triggered[()].connect(self.__hgFetch)
         self.actions.append(self.hgFetchAct)

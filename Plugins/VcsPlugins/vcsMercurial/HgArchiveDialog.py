@@ -38,13 +38,20 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         self.archiveEdit.setCompleter(self.__activeCompleter)
         self.__activeCompleter.model().setNameFilters([])
         
-        self.typeComboBox.addItem(self.trUtf8("Detect Automatically"), "")
-        self.typeComboBox.addItem(self.trUtf8("Directory of Files"), "files")
-        self.typeComboBox.addItem(self.trUtf8("Uncompressed TAR-Archive"), "tar")
-        self.typeComboBox.addItem(self.trUtf8("Bzip2 compressed TAR-Archive"), "tbz2")
-        self.typeComboBox.addItem(self.trUtf8("Gzip compressed TAR-Archive"), "tgz")
-        self.typeComboBox.addItem(self.trUtf8("Uncompressed ZIP-Archive"), "uzip")
-        self.typeComboBox.addItem(self.trUtf8("Compressed ZIP-Archive"), "zip")
+        self.typeComboBox.addItem(
+            self.trUtf8("Detect Automatically"), "")
+        self.typeComboBox.addItem(
+            self.trUtf8("Directory of Files"), "files")
+        self.typeComboBox.addItem(
+            self.trUtf8("Uncompressed TAR-Archive"), "tar")
+        self.typeComboBox.addItem(
+            self.trUtf8("Bzip2 compressed TAR-Archive"), "tbz2")
+        self.typeComboBox.addItem(
+            self.trUtf8("Gzip compressed TAR-Archive"), "tgz")
+        self.typeComboBox.addItem(
+            self.trUtf8("Uncompressed ZIP-Archive"), "uzip")
+        self.typeComboBox.addItem(
+            self.trUtf8("Compressed ZIP-Archive"), "zip")
         
         self.__unixFileFilters = [
             self.trUtf8("Bzip2 compressed TAR-Archive (*.tar.bz2)"),
@@ -139,7 +146,8 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
                 self.__activeCompleter = self.__archiveFileCompleter
                 self.archiveEdit.setCompleter(self.__activeCompleter)
             if type_ in self.__typeFilters:
-                self.__activeCompleter.model().setNameFilters(self.__typeFilters[type_])
+                self.__activeCompleter.model().setNameFilters(
+                    self.__typeFilters[type_])
             else:
                 self.__activeCompleter.model().setNameFilters([])
     
@@ -147,9 +155,9 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         """
         Public method to retrieve the data.
         
-        @return tuple giving the archive name (string), the archive type (string),
-            the directory prefix 8string) and a flag indicating to recurse into
-            subrepositories (boolean)
+        @return tuple giving the archive name (string), the archive type
+            (string), the directory prefix 8string) and a flag indicating
+            to recurse into subrepositories (boolean)
         """
         return (
             self.archiveEdit.text(),
