@@ -42,7 +42,8 @@ class GraphicsPage(ConfigurationPageBase, Ui_GraphicsPage):
         """
         Private method used to select the font for the graphics items.
         """
-        self.graphicsFont = self.selectFont(self.graphicsFontSample, self.graphicsFont)
+        self.graphicsFont = self.selectFont(self.graphicsFontSample,
+                                            self.graphicsFont)
         
     def polishPage(self):
         """

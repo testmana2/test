@@ -3870,7 +3870,8 @@ class Project(QObject):
                     continue
                 
                 # set fn to project relative name
-                # then reset ns to fully qualified name for insertion, possibly.
+                # then reset ns to fully qualified name for insertion,
+                # possibly.
                 if dir == "":
                     fn = ns
                 else:
@@ -3887,7 +3888,8 @@ class Project(QObject):
                 
                 filetype = ""
                 bfn = os.path.basename(fn)
-                for pattern in reversed(sorted(self.pdata["FILETYPES"].keys())):
+                for pattern in reversed(
+                        sorted(self.pdata["FILETYPES"].keys())):
                     if fnmatch.fnmatch(bfn, pattern):
                         filetype = self.pdata["FILETYPES"][pattern]
                         break
@@ -4058,8 +4060,8 @@ class Project(QObject):
                     E5MessageBox.critical(self.ui,
                         self.trUtf8("Version Control System"),
                         self.trUtf8(
-                            "<p>The selected VCS <b>{0}</b> could not be found."
-                            "<br/>Reverting override.</p><p>{1}</p>")\
+                            "<p>The selected VCS <b>{0}</b> could not be"
+                            " found. <br/>Reverting override.</p><p>{1}</p>")
                             .format(vcsSystem, msg))
                     self.pudata["VCSOVERRIDE"] = []
                     return self.initVCS(nooverride=True)
@@ -4640,9 +4642,10 @@ class Project(QObject):
         except (IOError, UnicodeError) as why:
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
-                self.trUtf8("""<p>The plugin file <b>{0}</b> could """
-                            """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(filename, str(why)))
+                self.trUtf8(
+                    """<p>The plugin file <b>{0}</b> could """
+                    """not be read.</p> <p>Reason: {1}</p>""")
+                    .format(filename, str(why)))
             return ""
         
         for sourceline in sourcelines:

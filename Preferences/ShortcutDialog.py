@@ -165,7 +165,8 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         if self.keyIndex == 1:
             self.__setKeyEditText(QKeySequence(self.keys[0]).toString())
         elif self.keyIndex == 2:
-            self.__setKeyEditText(QKeySequence(self.keys[0], self.keys[1]).toString())
+            self.__setKeyEditText(
+                QKeySequence(self.keys[0], self.keys[1]).toString())
         elif self.keyIndex == 3:
             self.__setKeyEditText(QKeySequence(self.keys[0], self.keys[1],
                 self.keys[2]).toString())

@@ -50,8 +50,9 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
             Preferences.getEditor("CallTipsScintillaOnFail"))
         
         if QSCINTILLA_VERSION() >= 0x020700:
-            self.positionComboBox.setCurrentIndex(self.positionComboBox.findData(
-                Preferences.getEditor("CallTipsPosition")))
+            self.positionComboBox.setCurrentIndex(
+                self.positionComboBox.findData(
+                    Preferences.getEditor("CallTipsPosition")))
         
     def save(self):
         """
@@ -69,7 +70,8 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         
         if QSCINTILLA_VERSION() >= 0x020700:
             Preferences.setEditor("CallTipsPosition",
-                self.positionComboBox.itemData(self.positionComboBox.currentIndex()))
+                self.positionComboBox.itemData(
+                    self.positionComboBox.currentIndex()))
 
 
 def create(dlg):

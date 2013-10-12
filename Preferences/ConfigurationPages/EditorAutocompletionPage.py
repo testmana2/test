@@ -13,7 +13,8 @@ from .Ui_EditorAutocompletionPage import Ui_EditorAutocompletionPage
 import Preferences
 
 
-class EditorAutocompletionPage(ConfigurationPageBase, Ui_EditorAutocompletionPage):
+class EditorAutocompletionPage(ConfigurationPageBase,
+                               Ui_EditorAutocompletionPage):
     """
     Class implementing the Editor Autocompletion configuration page.
     """

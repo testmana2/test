@@ -43,7 +43,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         act = self.__fontButtonMenu.addAction(self.trUtf8("Font"))
         act.setData(self.FONT)
         self.__fontButtonMenu.addSeparator()
-        act = self.__fontButtonMenu.addAction(self.trUtf8("Family and Size only"))
+        act = self.__fontButtonMenu.addAction(
+            self.trUtf8("Family and Size only"))
         act.setData(self.FAMILYANDSIZE)
         act = self.__fontButtonMenu.addAction(self.trUtf8("Family only"))
         act.setData(self.FAMILYONLY)
@@ -56,13 +57,15 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         act = self.__allFontsButtonMenu.addAction(self.trUtf8("Font"))
         act.setData(self.FONT)
         self.__allFontsButtonMenu.addSeparator()
-        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Family and Size only"))
+        act = self.__allFontsButtonMenu.addAction(
+            self.trUtf8("Family and Size only"))
         act.setData(self.FAMILYANDSIZE)
         act = self.__allFontsButtonMenu.addAction(self.trUtf8("Family only"))
         act.setData(self.FAMILYONLY)
         act = self.__allFontsButtonMenu.addAction(self.trUtf8("Size only"))
         act.setData(self.SIZEONLY)
-        self.__allFontsButtonMenu.triggered.connect(self.__allFontsButtonMenuTriggered)
+        self.__allFontsButtonMenu.triggered.connect(
+            self.__allFontsButtonMenuTriggered)
         self.allFontsButton.setMenu(self.__allFontsButtonMenu)
         
         self.lexer = None
@@ -133,8 +136,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_foregroundButton_clicked(self):
         """
-        Private method used to select the foreground colour of the selected style
-        and lexer.
+        Private method used to select the foreground colour of the selected
+        style and lexer.
         """
         colour = QColorDialog.getColor(self.lexer.color(self.style))
         if colour.isValid():
@@ -144,7 +147,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.sampleText.repaint()
             if len(self.styleElementList.selectedItems()) > 1:
                 for selItem in self.styleElementList.selectedItems():
-                    style = self.lexer.ind2style[self.styleElementList.row(selItem)]
+                    style = self.lexer.ind2style[
+                        self.styleElementList.row(selItem)]
                     self.lexer.setColor(colour, style)
             else:
                 self.lexer.setColor(colour, self.style)
@@ -152,8 +156,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_backgroundButton_clicked(self):
         """
-        Private method used to select the background colour of the selected style
-        and lexer.
+        Private method used to select the background colour of the selected
+        style and lexer.
         """
         colour = QColorDialog.getColor(self.lexer.paper(self.style))
         if colour.isValid():
@@ -163,7 +167,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.sampleText.repaint()
             if len(self.styleElementList.selectedItems()) > 1:
                 for selItem in self.styleElementList.selectedItems():
-                    style = self.lexer.ind2style[self.styleElementList.row(selItem)]
+                    style = self.lexer.ind2style[
+                        self.styleElementList.row(selItem)]
                     self.lexer.setPaper(colour, style)
             else:
                 self.lexer.setPaper(colour, self.style)
@@ -187,7 +192,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Private slot to change the highlighter font.
         
-        @param doAll flag indicating to change the font for all styles (boolean)
+        @param doAll flag indicating to change the font for all styles
+            (boolean)
         @param familyOnly flag indicating to set the font family only (boolean)
         @param sizeOnly flag indicating to set the font size only (boolean
         """
@@ -197,7 +203,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             
             @param font font to be set (QFont)
             @param style style to set the font for (integer)
-            @param familyOnly flag indicating to set the font family only (boolean)
+            @param familyOnly flag indicating to set the font family only
+                (boolean)
             @param sizeOnly flag indicating to set the font size only (boolean
             """
             if familyOnly or sizeOnly:
@@ -215,7 +222,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             Local function to set the font of the sample text.
             
             @param font font to be set (QFont)
-            @param familyOnly flag indicating to set the font family only (boolean)
+            @param familyOnly flag indicating to set the font family only
+                (boolean)
             @param sizeOnly flag indicating to set the font size only (boolean
             """
             if familyOnly or sizeOnly:
@@ -236,7 +244,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                     setFont(font, style, familyOnly, sizeOnly)
             elif len(self.styleElementList.selectedItems()) > 1:
                 for selItem in self.styleElementList.selectedItems():
-                    style = self.lexer.ind2style[self.styleElementList.row(selItem)]
+                    style = self.lexer.ind2style[
+                        self.styleElementList.row(selItem)]
                     setFont(font, style, familyOnly, sizeOnly)
             else:
                 setFont(font, self.style, familyOnly, sizeOnly)
@@ -269,7 +278,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
     def on_eolfillCheckBox_toggled(self, b):
         """
-        Private method used to set the eolfill for the selected style and lexer.
+        Private method used to set the eolfill for the selected style and
+        lexer.
         
         @param b Flag indicating enabled or disabled state.
         """
@@ -278,7 +288,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_allEolFillButton_clicked(self):
         """
-        Private method used to set the eolfill for all styles of a selected lexer.
+        Private method used to set the eolfill for all styles of a selected
+        lexer.
         """
         on = self.trUtf8("Enabled")
         off = self.trUtf8("Disabled")
@@ -301,11 +312,13 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         if len(self.styleElementList.selectedItems()) > 1:
             for selItem in self.styleElementList.selectedItems():
-                style = self.lexer.ind2style[self.styleElementList.row(selItem)]
+                style = self.lexer.ind2style[
+                    self.styleElementList.row(selItem)]
                 self.__setToDefault(style)
         else:
             self.__setToDefault(self.style)
-        self.on_styleElementList_currentRowChanged(self.styleElementList.currentRow())
+        self.on_styleElementList_currentRowChanged(
+            self.styleElementList.currentRow())
         
     @pyqtSlot()
     def on_allDefaultButton_clicked(self):
@@ -314,7 +327,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         for style in list(self.lexer.ind2style.values()):
             self.__setToDefault(style)
-        self.on_styleElementList_currentRowChanged(self.styleElementList.currentRow())
+        self.on_styleElementList_currentRowChanged(
+            self.styleElementList.currentRow())
         
     def __setToDefault(self, style):
         """
@@ -386,8 +400,9 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Export Highlighting Styles"),
-                self.trUtf8("""<p>The highlighting styles could not be exported"""
-                            """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
+                self.trUtf8(
+                    """<p>The highlighting styles could not be exported"""
+                    """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
                     .format(fn, f.errorString())
             )
         
@@ -395,7 +410,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Private method to import the styles of the given lexers.
         
-        @param lexers dictionary of lexer objects for which to import the styles
+        @param lexers dictionary of lexer objects for which to import the
+            styles
         """
         fn = E5FileDialog.getOpenFileName(
             self,
@@ -415,8 +431,9 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
-                self.trUtf8("""<p>The highlighting styles could not be read"""
-                            """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
+                self.trUtf8(
+                    """<p>The highlighting styles could not be read"""
+                    """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
                     .format(fn, f.errorString())
             )
             return
@@ -439,8 +456,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Public method to save the current state of the widget.
         
-        @return array containing the index of the selected lexer language (integer)
-            and the index of the selected lexer entry (integer)
+        @return array containing the index of the selected lexer language
+            (integer) and the index of the selected lexer entry (integer)
         """
         savedState = [
             self.lexerLanguageComboBox.currentIndex(),
@@ -455,7 +472,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         @param state state data generated by saveState
         """
         self.lexerLanguageComboBox.setCurrentIndex(state[0])
-        self.on_lexerLanguageComboBox_activated(self.lexerLanguageComboBox.currentText())
+        self.on_lexerLanguageComboBox_activated(
+            self.lexerLanguageComboBox.currentText())
         self.styleElementList.setCurrentRow(state[1])
 
 

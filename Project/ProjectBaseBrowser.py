@@ -542,7 +542,8 @@ class ProjectBaseBrowser(Browser):
         
     def selectLocalDirEntries(self):
         """
-        Public slot to handle the select local directories context menu entries.
+        Public slot to handle the select local directories context menu
+        entries.
         """
         self._selectEntries(local=True,
             filter=[ProjectBrowserSimpleDirectoryItem,

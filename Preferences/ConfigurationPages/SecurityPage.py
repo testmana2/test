@@ -25,7 +25,8 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         """
         Constructor
         
-        @param configDialog reference to the configuration dialog (ConfigurationDialog)
+        @param configDialog reference to the configuration dialog
+            (ConfigurationDialog)
         """
         super().__init__()
         self.setupUi(self)
@@ -61,7 +62,8 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
             Preferences.setHelp("DnsPrefetchEnabled",
                 self.dnsPrefetchCheckBox.isChecked())
         
-        if self.__oldUseMasterPassword != self.masterPasswordCheckBox.isChecked():
+        if self.__oldUseMasterPassword != \
+                self.masterPasswordCheckBox.isChecked():
             self.__configDlg.masterPasswordChanged.emit("", self.__newPassword)
     
     @pyqtSlot(bool)
@@ -91,12 +93,14 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         Private slot to change the master password.
         """
         from .MasterPasswordEntryDialog import MasterPasswordEntryDialog
-        dlg = MasterPasswordEntryDialog(Preferences.getUser("MasterPassword"), self)
+        dlg = MasterPasswordEntryDialog(
+            Preferences.getUser("MasterPassword"), self)
         if dlg.exec_() == QDialog.Accepted:
             Preferences.setUser("MasterPassword",
                 dlg.getMasterPassword())
             
-            if self.__oldUseMasterPassword != self.masterPasswordCheckBox.isChecked():
+            if self.__oldUseMasterPassword != \
+                    self.masterPasswordCheckBox.isChecked():
                 # the user is about to change the use of a master password
                 # just save the changed password
                 self.__newPassword = dlg.getMasterPassword()

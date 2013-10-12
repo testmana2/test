@@ -10,13 +10,14 @@ Module implementing the QScintilla Autocompletion configuration page.
 from PyQt4.Qsci import QsciScintilla
 
 from .ConfigurationPageBase import ConfigurationPageBase
-from .Ui_EditorAutocompletionQScintillaPage import Ui_EditorAutocompletionQScintillaPage
+from .Ui_EditorAutocompletionQScintillaPage import \
+    Ui_EditorAutocompletionQScintillaPage
 
 import Preferences
 
 
-class EditorAutocompletionQScintillaPage(ConfigurationPageBase,
-                                         Ui_EditorAutocompletionQScintillaPage):
+class EditorAutocompletionQScintillaPage(
+    ConfigurationPageBase, Ui_EditorAutocompletionQScintillaPage):
     """
     Class implementing the QScintilla Autocompletion configuration page.
     """
@@ -46,14 +47,16 @@ class EditorAutocompletionQScintillaPage(ConfigurationPageBase,
         """
         Public slot to save the Editor Autocompletion configuration.
         """
-        Preferences.setEditor("AutoCompletionShowSingle",
-            self.acShowSingleCheckBox.isChecked())
-        Preferences.setEditor("AutoCompletionFillups",
-            self.acFillupsCheckBox.isChecked())
+        Preferences.setEditor(
+            "AutoCompletionShowSingle", self.acShowSingleCheckBox.isChecked())
+        Preferences.setEditor(
+            "AutoCompletionFillups", self.acFillupsCheckBox.isChecked())
         if self.acSourceDocumentRadioButton.isChecked():
-            Preferences.setEditor("AutoCompletionSource", QsciScintilla.AcsDocument)
+            Preferences.setEditor(
+                "AutoCompletionSource", QsciScintilla.AcsDocument)
         elif self.acSourceAPIsRadioButton.isChecked():
-            Preferences.setEditor("AutoCompletionSource", QsciScintilla.AcsAPIs)
+            Preferences.setEditor(
+                "AutoCompletionSource", QsciScintilla.AcsAPIs)
         elif self.acSourceAllRadioButton.isChecked():
             Preferences.setEditor("AutoCompletionSource", QsciScintilla.AcsAll)
     

@@ -908,12 +908,14 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if ui.notificationsEnabled():
                 ui.showNotification(UI.PixmapCache.getPixmap("linguist48.png"),
                     self.trUtf8("Translation file generation"),
-                    self.trUtf8("The generation of the translation files (*.ts)"
+                    self.trUtf8(
+                        "The generation of the translation files (*.ts)"
                         " was successful."))
             else:
                 E5MessageBox.information(self,
                     self.trUtf8("Translation file generation"),
-                    self.trUtf8("The generation of the translation files (*.ts)"
+                    self.trUtf8(
+                        "The generation of the translation files (*.ts)"
                         " was successful."))
         else:
             E5MessageBox.critical(self,

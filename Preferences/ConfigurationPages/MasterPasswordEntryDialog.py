@@ -44,8 +44,8 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
         error = ""
         if self.currentPasswordEdit.isEnabled():
             from Utilities.crypto.py3PBKDF2 import verifyPassword
-            enable = \
-                verifyPassword(self.currentPasswordEdit.text(), self.__oldPasswordHash)
+            enable = verifyPassword(
+                self.currentPasswordEdit.text(), self.__oldPasswordHash)
             if not enable:
                 error = error or self.trUtf8("Wrong password entered.")
         
@@ -61,7 +61,8 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
         if self.currentPasswordEdit.isEnabled():
             if self.newPasswordEdit.text() == self.currentPasswordEdit.text():
                 enable = False
-                error = error or self.trUtf8("Old and new password must not be the same.")
+                error = error or \
+                    self.trUtf8("Old and new password must not be the same.")
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enable)
         self.errorLabel.setText(error)

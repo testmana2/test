@@ -33,7 +33,8 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         
         from Helpviewer.VirusTotalApi import VirusTotalAPI
         self.__vt = VirusTotalAPI(self)
-        self.__vt.checkServiceKeyFinished.connect(self.__checkServiceKeyFinished)
+        self.__vt.checkServiceKeyFinished.connect(
+            self.__checkServiceKeyFinished)
         
         # set initial values
         self.vtEnabledCheckBox.setChecked(
@@ -75,7 +76,8 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
             protocol = "https"
         else:
             protocol = "http"
-        self.__vt.checkServiceKeyValidity(self.vtServiceKeyEdit.text(), protocol)
+        self.__vt.checkServiceKeyValidity(
+            self.vtServiceKeyEdit.text(), protocol)
     
     @pyqtSlot(bool, str)
     def __checkServiceKeyFinished(self, result, msg):
@@ -86,14 +88,17 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         @param msg network error message (str)
         """
         if result:
-            self.testResultLabel.setText(self.trUtf8("The service key is valid."))
+            self.testResultLabel.setText(
+                self.trUtf8("The service key is valid."))
         else:
             if msg == "":
                 self.testResultLabel.setText(self.trUtf8(
-                    '<font color="#FF0000">The service key is not valid.</font>'))
+                    '<font color="#FF0000">The service key is'
+                    ' not valid.</font>'))
             else:
                 self.testResultLabel.setText(self.trUtf8(
-                    '<font color="#FF0000"><b>Error:</b> {0}</font>').format(msg))
+                    '<font color="#FF0000"><b>Error:</b> {0}</font>')\
+                    .format(msg))
     
 
 def create(dlg):

@@ -131,7 +131,8 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         Preferences.setEditorExporter("PDF/Font",
             self.pdfFontCombo.itemData(self.pdfFontCombo.currentIndex()))
         Preferences.setEditorExporter("PDF/PageSize",
-            self.pdfPageSizeCombo.itemData(self.pdfPageSizeCombo.currentIndex()))
+            self.pdfPageSizeCombo.itemData(
+                self.pdfPageSizeCombo.currentIndex()))
         Preferences.setEditorExporter("PDF/MarginTop",
             self.pdfMarginTopSpin.value())
         Preferences.setEditorExporter("PDF/MarginBottom",

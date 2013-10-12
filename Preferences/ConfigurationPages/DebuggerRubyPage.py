@@ -31,7 +31,8 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         self.setupUi(self)
         self.setObjectName("DebuggerRubyPage")
         
-        self.rubyInterpreterCompleter = E5FileCompleter(self.rubyInterpreterEdit)
+        self.rubyInterpreterCompleter = E5FileCompleter(
+            self.rubyInterpreterEdit)
         
         # set initial values
         self.rubyInterpreterEdit.setText(

@@ -54,7 +54,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             self.consoleDbgEdit.setWhatsThis(t)
         
         self.consoleDbgCompleter = E5FileCompleter(self.consoleDbgEdit)
-        self.dbgTranslationLocalCompleter = E5DirCompleter(self.dbgTranslationLocalEdit)
+        self.dbgTranslationLocalCompleter = E5DirCompleter(
+            self.dbgTranslationLocalEdit)
         
         # set initial values
         interfaces = []
@@ -63,11 +64,13 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             addressEntries = networkInterface.addressEntries()
             if len(addressEntries) > 0:
                 for addressEntry in addressEntries:
-                    if ":" in addressEntry.ip().toString() and not socket.has_ipv6:
+                    if ":" in addressEntry.ip().toString() and \
+                            not socket.has_ipv6:
                         continue    # IPv6 not supported by Python
-                    interfaces.append("{0} ({1})"\
-                                      .format(networkInterface.humanReadableName(),
-                                              addressEntry.ip().toString()))
+                    interfaces.append(
+                        "{0} ({1})".format(
+                            networkInterface.humanReadableName(),
+                            addressEntry.ip().toString()))
         self.interfacesCombo.addItems(interfaces)
         interface = Preferences.getDebugger("NetworkInterface")
         if not socket.has_ipv6:
@@ -83,7 +86,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             self.selectedInterfaceButton.setChecked(True)
             index = -1
             for i in range(len(interfaces)):
-                if QRegExp(".*{0}.*".format(interface)).exactMatch(interfaces[i]):
+                if QRegExp(".*{0}.*".format(interface))\
+                        .exactMatch(interfaces[i]):
                     index = i
                     break
             self.interfacesCombo.setCurrentIndex(index)
@@ -225,8 +229,10 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Add allowed host"),
-                    self.trUtf8("""<p>The entered address <b>{0}</b> is not"""
-                        """ a valid IP v4 or IP v6 address. Aborting...</p>""")\
+                    self.trUtf8(
+                        """<p>The entered address <b>{0}</b> is not"""
+                        """ a valid IP v4 or IP v6 address."""
+                        """ Aborting...</p>""")\
                         .format(allowedHost))
         
     @pyqtSlot()
@@ -255,8 +261,10 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Edit allowed host"),
-                    self.trUtf8("""<p>The entered address <b>{0}</b> is not"""
-                        """ a valid IP v4 or IP v6 address. Aborting...</p>""")\
+                    self.trUtf8(
+                        """<p>The entered address <b>{0}</b> is not"""
+                        """ a valid IP v4 or IP v6 address."""
+                        """ Aborting...</p>""")\
                         .format(allowedHost))
     
 

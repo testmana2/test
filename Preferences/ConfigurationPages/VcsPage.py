@@ -27,7 +27,8 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         
         # set initial values
         self.vcsAutoCloseCheckBox.setChecked(Preferences.getVCS("AutoClose"))
-        self.vcsAutoSaveCheckBox.setChecked(Preferences.getVCS("AutoSaveFiles"))
+        self.vcsAutoSaveCheckBox.setChecked(
+            Preferences.getVCS("AutoSaveFiles"))
         self.vcsAutoSaveProjectCheckBox.setChecked(
             Preferences.getVCS("AutoSaveProject"))
         self.vcsStatusMonitorIntervalSpinBox.setValue(

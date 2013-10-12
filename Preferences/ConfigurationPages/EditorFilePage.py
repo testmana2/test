@@ -33,8 +33,10 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         self.setObjectName("EditorFilePage")
         
         self.__showsOpenFilters = True
-        self.openFileFilters = Preferences.getEditor("AdditionalOpenFilters")[:]
-        self.saveFileFilters = Preferences.getEditor("AdditionalSaveFilters")[:]
+        self.openFileFilters = \
+            Preferences.getEditor("AdditionalOpenFilters")[:]
+        self.saveFileFilters = \
+            Preferences.getEditor("AdditionalSaveFilters")[:]
         self.fileFiltersList.addItems(self.openFileFilters)
         
         self.__setDefaultFiltersLists()
@@ -79,7 +81,8 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         self.previewHtmlExtensionsEdit.setText(
             " ".join(Preferences.getEditor("PreviewHtmlFileNameExtensions")))
         self.previewMarkdownExtensionsEdit.setText(
-            " ".join(Preferences.getEditor("PreviewMarkdownFileNameExtensions")))
+            " ".join(
+                Preferences.getEditor("PreviewMarkdownFileNameExtensions")))
         self.previewRestExtensionsEdit.setText(
             " ".join(Preferences.getEditor("PreviewRestFileNameExtensions")))
         
@@ -124,11 +127,14 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         Preferences.setEditor("AdditionalSaveFilters", self.saveFileFilters)
         
         Preferences.setEditor("PreviewHtmlFileNameExtensions",
-            [ext.strip() for ext in self.previewHtmlExtensionsEdit.text().split()])
+            [ext.strip() for ext in 
+             self.previewHtmlExtensionsEdit.text().split()])
         Preferences.setEditor("PreviewMarkdownFileNameExtensions",
-            [ext.strip() for ext in self.previewMarkdownExtensionsEdit.text().split()])
+            [ext.strip() for ext in 
+             self.previewMarkdownExtensionsEdit.text().split()])
         Preferences.setEditor("PreviewRestFileNameExtensions",
-            [ext.strip() for ext in self.previewRestExtensionsEdit.text().split()])
+            [ext.strip() for ext in 
+             self.previewRestExtensionsEdit.text().split()])
     
     def __setDefaultFiltersLists(self, keepSelection=False):
         """
@@ -142,15 +148,13 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             selectedSaveFilter = self.saveFilesFilterComboBox.currentText()
         
         import QScintilla.Lexers
-        openFileFiltersList = \
-            QScintilla.Lexers.getOpenFileFiltersList(False, withAdditional=False) + \
-            self.openFileFilters
+        openFileFiltersList = QScintilla.Lexers.getOpenFileFiltersList(
+            False, withAdditional=False) + self.openFileFilters
         openFileFiltersList.sort()
         self.openFilesFilterComboBox.clear()
         self.openFilesFilterComboBox.addItems(openFileFiltersList)
-        saveFileFiltersList = \
-            QScintilla.Lexers.getSaveFileFiltersList(False, withAdditional=False) + \
-            self.saveFileFilters
+        saveFileFiltersList = QScintilla.Lexers.getSaveFileFiltersList(
+            False, withAdditional=False) + self.saveFileFilters
         saveFileFiltersList.sort()
         self.saveFilesFilterComboBox.clear()
         self.saveFilesFilterComboBox.addItems(saveFileFiltersList)

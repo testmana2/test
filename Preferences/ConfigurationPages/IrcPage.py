@@ -35,7 +35,8 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         # set initial values
         # timestamps
         self.timestampGroup.setChecked(Preferences.getIrc("ShowTimestamps"))
-        self.showDateCheckBox.setChecked(Preferences.getIrc("TimestampIncludeDate"))
+        self.showDateCheckBox.setChecked(
+            Preferences.getIrc("TimestampIncludeDate"))
         self.timeFormatCombo.setCurrentIndex(
             self.timeFormatCombo.findText(Preferences.getIrc("TimeFormat")))
         self.dateFormatCombo.setCurrentIndex(
@@ -66,7 +67,8 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
                          Preferences.getIrc, byName=True)
         
         # notifications
-        self.notificationsGroup.setChecked(Preferences.getIrc("ShowNotifications"))
+        self.notificationsGroup.setChecked(
+            Preferences.getIrc("ShowNotifications"))
         self.joinLeaveCheckBox.setChecked(Preferences.getIrc("NotifyJoinPart"))
         self.messageCheckBox.setChecked(Preferences.getIrc("NotifyMessage"))
         self.ownNickCheckBox.setChecked(Preferences.getIrc("NotifyNick"))
@@ -108,14 +110,17 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         # Automatic User Information Lookup
         self.whoGroup.setChecked(Preferences.getIrc("AutoUserInfoLookup"))
         self.whoUsersSpinBox.setValue(Preferences.getIrc("AutoUserInfoMax"))
-        self.whoIntervalSpinBox.setValue(Preferences.getIrc("AutoUserInfoInterval"))
+        self.whoIntervalSpinBox.setValue(
+            Preferences.getIrc("AutoUserInfoInterval"))
         
         # Markers
         self.markWhenHiddenCheckBox.setChecked(
             Preferences.getIrc("MarkPositionWhenHidden"))
-        self.initColour("MarkerLineForegroundColour", self.markerForegroundButton,
+        self.initColour("MarkerLineForegroundColour",
+                         self.markerForegroundButton,
                          Preferences.getIrc, byName=True)
-        self.initColour("MarkerLineBackgroundColour", self.markerBackgroundButton,
+        self.initColour("MarkerLineBackgroundColour",
+                         self.markerBackgroundButton,
                          Preferences.getIrc, byName=True)
         
         # Shutdown
@@ -128,27 +133,32 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         """
         # timestamps
         Preferences.setIrc("ShowTimestamps", self.timestampGroup.isChecked())
-        Preferences.setIrc("TimestampIncludeDate", self.showDateCheckBox.isChecked())
+        Preferences.setIrc(
+            "TimestampIncludeDate", self.showDateCheckBox.isChecked())
         Preferences.setIrc("TimeFormat", self.timeFormatCombo.currentText())
         Preferences.setIrc("DateFormat", self.dateFormatCombo.currentText())
         
         # notifications
-        Preferences.setIrc("ShowNotifications", self.notificationsGroup.isChecked())
-        Preferences.setIrc("NotifyJoinPart", self.joinLeaveCheckBox.isChecked())
+        Preferences.setIrc(
+            "ShowNotifications", self.notificationsGroup.isChecked())
+        Preferences.setIrc(
+            "NotifyJoinPart", self.joinLeaveCheckBox.isChecked())
         Preferences.setIrc("NotifyMessage", self.messageCheckBox.isChecked())
         Preferences.setIrc("NotifyNick", self.ownNickCheckBox.isChecked())
         
         # Automatic User Information Lookup
         Preferences.setIrc("AutoUserInfoLookup", self.whoGroup.isChecked())
         Preferences.setIrc("AutoUserInfoMax", self.whoUsersSpinBox.value())
-        Preferences.setIrc("AutoUserInfoInterval", self.whoIntervalSpinBox.value())
+        Preferences.setIrc(
+            "AutoUserInfoInterval", self.whoIntervalSpinBox.value())
         
         # Markers
         Preferences.setIrc("MarkPositionWhenHidden",
             self.markWhenHiddenCheckBox.isChecked())
         
         # Shutdown
-        Preferences.setIrc("AskOnShutdown", self.confirmShutdownCheckBox.isChecked())
+        Preferences.setIrc(
+            "AskOnShutdown", self.confirmShutdownCheckBox.isChecked())
         
         # colours
         self.saveColours(Preferences.setIrc)

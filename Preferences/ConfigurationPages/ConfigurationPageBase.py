@@ -8,7 +8,8 @@ Module implementing the base class for all configuration pages.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QWidget, QIcon, QPixmap, QColor, QColorDialog, QFontDialog
+from PyQt4.QtGui import QWidget, QIcon, QPixmap, QColor, QColorDialog, \
+    QFontDialog
 
 
 class ConfigurationPageBase(QWidget):
@@ -43,14 +44,16 @@ class ConfigurationPageBase(QWidget):
         """
         return
         
-    def initColour(self, colourKey, button, prefMethod, byName=False, hasAlpha=False):
+    def initColour(self, colourKey, button, prefMethod, byName=False,
+                   hasAlpha=False):
         """
         Public method to initialize a colour selection button.
         
         @param colourKey key of the colour resource (string)
         @param button reference to a button to show the colour on (QPushButton)
         @param prefMethod preferences method to get the colour
-        @keyparam byName flag indicating to retrieve/save by colour name (boolean)
+        @keyparam byName flag indicating to retrieve/save by colour name
+            (boolean)
         @keyparam hasAlpha flag indicating to allow alpha channel (boolean)
         """
         colour = QColor(prefMethod(colourKey))
@@ -74,7 +77,8 @@ class ConfigurationPageBase(QWidget):
         hasAlpha = button.property("hasAlpha")
         
         if hasAlpha:
-            colour = QColorDialog.getColor(self.__coloursDict[colorKey][0], None, "",
+            colour = QColorDialog.getColor(
+                self.__coloursDict[colorKey][0], None, "",
                 QColorDialog.ShowAlphaChannel)
         else:
             colour = QColorDialog.getColor(self.__coloursDict[colorKey][0])

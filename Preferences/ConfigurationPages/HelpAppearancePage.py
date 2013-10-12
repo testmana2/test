@@ -51,11 +51,13 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.initColour("SaveUrlColor", self.secureURLsColourButton,
                          Preferences.getHelp)
         
-        self.autoLoadImagesCheckBox.setChecked(Preferences.getHelp("AutoLoadImages"))
+        self.autoLoadImagesCheckBox.setChecked(
+            Preferences.getHelp("AutoLoadImages"))
         
         self.styleSheetEdit.setText(Preferences.getHelp("UserStyleSheet"))
         
-        self.tabsCloseButtonCheckBox.setChecked(Preferences.getUI("SingleCloseButton"))
+        self.tabsCloseButtonCheckBox.setChecked(
+            Preferences.getUI("SingleCloseButton"))
         self.warnOnMultipleCloseCheckBox.setChecked(
             Preferences.getHelp("WarnOnMultipleClose"))
     
@@ -64,7 +66,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         Public method to perform mode dependent setups.
         
         @param displayMode mode of the configuration dialog
-            (ConfigurationWidget.DefaultMode, ConfigurationWidget.HelpBrowserMode,
+            (ConfigurationWidget.DefaultMode,
+             ConfigurationWidget.HelpBrowserMode,
              ConfigurationWidget.TrayStarterMode)
         """
         from ..ConfigurationDialog import ConfigurationWidget

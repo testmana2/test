@@ -108,7 +108,8 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
     
     def on_editorLexerList_itemClicked(self, itm, column):
         """
-        Private slot to handle the clicked signal of the lexer association list.
+        Private slot to handle the clicked signal of the lexer association
+        list.
         
         @param itm reference to the selecte item (QTreeWidgetItem)
         @param column column the item was clicked or activated (integer)

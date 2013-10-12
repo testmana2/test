@@ -34,7 +34,8 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         self.setupUi(self)
         self.setObjectName("EditorHighlightersPage")
         
-        self.editorLexerList.headerItem().setText(self.editorLexerList.columnCount(), "")
+        self.editorLexerList.headerItem().setText(
+            self.editorLexerList.columnCount(), "")
         header = self.editorLexerList.header()
         if qVersion() >= "5.0.0":
             header.setSectionResizeMode(QHeaderView.ResizeToContents)

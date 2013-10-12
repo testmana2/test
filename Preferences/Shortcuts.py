@@ -41,7 +41,8 @@ def readShortcuts(prefClass=Prefs, helpViewer=None, pluginName=None):
     
     @keyparam prefClass preferences class used as the storage area
     @keyparam helpViewer reference to the help window object
-    @keyparam pluginName name of the plugin for which to load shortcuts (string)
+    @keyparam pluginName name of the plugin for which to load shortcuts
+        (string)
     """
     if helpViewer is None and pluginName is None:
         for act in e5App().getObject("Project").getActions():
@@ -199,8 +200,10 @@ def exportShortcuts(fn):
     else:
         E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
-            QApplication.translate("Shortcuts",
-                "<p>The keyboard shortcuts could not be written to file <b>{0}</b>.</p>")
+            QApplication.translate(
+                "Shortcuts",
+                "<p>The keyboard shortcuts could not be written to file"
+                " <b>{0}</b>.</p>")
                 .format(fn))
 
 
@@ -228,8 +231,10 @@ def importShortcuts(fn):
     else:
         E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-            QApplication.translate("Shortcuts",
-                "<p>The keyboard shortcuts could not be read from file <b>{0}</b>.</p>")
+            QApplication.translate(
+                "Shortcuts",
+                "<p>The keyboard shortcuts could not be read from file"
+                " <b>{0}</b>.</p>")
                 .format(fn))
         return
 

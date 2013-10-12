@@ -78,7 +78,8 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         @param filetype file type of the entry (string)
         @return reference to the newly generated entry (QTreeWidgetItem)
         """
-        itm = QTreeWidgetItem(self.filetypeAssociationList, [pattern, filetype])
+        itm = QTreeWidgetItem(
+            self.filetypeAssociationList, [pattern, filetype])
         return itm
         
     def on_filetypeAssociationList_currentItemChanged(self, itm, prevItm):

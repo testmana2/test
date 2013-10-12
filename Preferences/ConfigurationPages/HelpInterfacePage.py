@@ -19,7 +19,8 @@ import Utilities
 
 class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
     """
-    Class implementing the Interface configuration page (variant for web browser).
+    Class implementing the Interface configuration page (variant for web
+    browser).
     """
     def __init__(self):
         """
@@ -69,8 +70,9 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
             self,
             self.trUtf8("Select style sheet file"),
             self.styleSheetEdit.text(),
-            self.trUtf8("Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
-                        "All files (*)"))
+            self.trUtf8(
+                "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
+                "All files (*)"))
         
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))
