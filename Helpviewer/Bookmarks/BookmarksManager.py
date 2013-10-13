@@ -10,8 +10,7 @@ Module implementing the bookmarks manager.
 import os
 
 from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, \
-    QByteArray, QBuffer, QIODevice, QXmlStreamReader, QDate, QDateTime, \
-    QFileInfo, QUrl
+    QIODevice, QXmlStreamReader, QDate, QDateTime, QFileInfo, QUrl
 from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication, QDialog
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -127,9 +126,8 @@ class BookmarksManager(QObject):
         
         bookmarkFile = self.getFileName()
         if not QFile.exists(bookmarkFile):
-            from .DefaultBookmarks import DefaultBookmarks
-            ba = QByteArray(DefaultBookmarks)
-            bookmarkFile = QBuffer(ba)
+            from . import DefaultBookmarks_rc       # __IGNORE_WARNING__
+            bookmarkFile = QFile(":/DefaultBookmarks.xbel")
             bookmarkFile.open(QIODevice.ReadOnly)
         
         from .XbelReader import XbelReader

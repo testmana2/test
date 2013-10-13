@@ -9,8 +9,7 @@ Module implementing a manager for open search engines.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice, \
-    QByteArray, QBuffer
+from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
 from E5Gui.E5Application import e5App
@@ -357,18 +356,23 @@ class OpenSearchManager(QObject):
         """
         Public method to restore the default search engines.
         """
-        from .OpenSearchDefaultEngines import OpenSearchDefaultEngines
         from .OpenSearchReader import OpenSearchReader
+        from .DefaultSearchEngines import DefaultSearchEngines_rc   # __IGNORE_WARNING__
         
+        defaultEngineFiles = ["YouTube.xml", "Amazoncom.xml", "Bing.xml", 
+                              "DeEn_Beolingus.xml", "Facebook.xml", 
+                              "Google_Im_Feeling_Lucky.xml", "Google.xml",
+                              "LEO_DeuEng.xml", "LinuxMagazin.xml",
+                              "Reddit.xml", "Wikia_en.xml", "Wikia.xml",
+                              "Wikipedia.xml", "Wiktionary.xml", "Yahoo.xml"]
+        # Keep this list in sync with the contents of the resource file.
+
         reader = OpenSearchReader()
-        for engine in OpenSearchDefaultEngines:
-            engineDescription = QByteArray(OpenSearchDefaultEngines[engine])
-            buffer_ = QBuffer(engineDescription)
-            if not buffer_.open(QIODevice.ReadOnly):
+        for engineFileName in defaultEngineFiles:
+            engineFile = QFile(":/" + engineFileName)
+            if not engineFile.open(QIODevice.ReadOnly):
                 continue
-            
-            engine = reader.read(buffer_)
-            
+            engine = reader.read(engineFile)
             self.__addEngineByEngine(engine)
     
     def enginesDirectory(self):

@@ -7,7 +7,7 @@
 Module implementing a menu to select the user agent string.
 """
 
-from PyQt4.QtCore import QByteArray, QXmlStreamReader
+from PyQt4.QtCore import QXmlStreamReader, QFile, QIODevice
 from PyQt4.QtGui import QMenu, QAction, QActionGroup, QInputDialog, QLineEdit
 
 from E5Gui import E5MessageBox
@@ -121,10 +121,12 @@ class UserAgentMenu(QMenu):
         
         @return flag indicating that a user agent entry is checked (boolean)
         """
-        from .UserAgentDefaults import UserAgentDefaults
+        from . import UserAgentDefaults_rc              # __IGNORE_WARNING__
+        defaultUserAgents = QFile(":/UserAgentDefaults.xml")
+        defaultUserAgents.open(QIODevice.ReadOnly)
+        
         menuStack = []
         isChecked = False
-        defaultUserAgents = QByteArray(UserAgentDefaults)
         
         if self.__url:
             currentUserAgentString = self.__manager.userAgentForUrl(self.__url)
