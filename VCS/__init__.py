@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the general part of the interface to version control systems.
+Module implementing the general part of the interface to version control
+systems.
 
 The general part of the VCS interface defines classes to implement common
 dialogs. These are a dialog to enter command options, a dialog to display
@@ -32,12 +33,14 @@ def factory(vcs):
         # that should not happen
         vc = None
     
-    vc = pluginManager.getPluginObject("version_control", vcs, maybeActive=True)
+    vc = pluginManager.getPluginObject("version_control", vcs,
+                                       maybeActive=True)
     if vc is None:
         # try alternative vcs interfaces assuming, that there is a common
         # indicator for the alternatives
         found = False
-        for indicator, vcsData in list(pluginManager.getVcsSystemIndicators().items()):
+        for indicator, vcsData in \
+                pluginManager.getVcsSystemIndicators().items():
             for vcsSystem, vcsSystemDisplay in vcsData:
                 if vcsSystem == vcs:
                     found = True

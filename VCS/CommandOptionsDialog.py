@@ -61,7 +61,8 @@ class vcsCommandOptionsDialog(QDialog, Ui_vcsCommandOptionsDialog):
         """
         Public method used to retrieve the entered options.
         
-        @return dictionary of strings giving the options for each supported vcs command
+        @return dictionary of strings giving the options for each supported
+            vcs command
         """
         opt = {}
         opt['global'] = Utilities.parseOptionString(self.globalEdit.text())

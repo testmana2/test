@@ -68,13 +68,16 @@ class VcsProjectHelper(QObject):
         ))
         self.vcsNewAct.setWhatsThis(self.trUtf8(
             """<b>New from repository</b>"""
-            """<p>This creates a new local project from the VCS repository.</p>"""
+            """<p>This creates a new local project from the VCS"""
+            """ repository.</p>"""
         ))
         self.vcsNewAct.triggered[()].connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
-        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'),
-                self.trUtf8('&Export from repository...'), 0, 0, self, 'vcs_export')
+        self.vcsExportAct = E5Action(
+            self.trUtf8('Export from repository'),
+            self.trUtf8('&Export from repository...'),
+            0, 0, self, 'vcs_export')
         self.vcsExportAct.setStatusTip(self.trUtf8(
             'Export a project from the repository'
         ))
@@ -92,7 +95,8 @@ class VcsProjectHelper(QObject):
         ))
         self.vcsAddAct.setWhatsThis(self.trUtf8(
             """<b>Add to repository</b>"""
-            """<p>This adds (imports) the local project to the VCS repository.</p>"""
+            """<p>This adds (imports) the local project to the VCS"""
+            """ repository.</p>"""
         ))
         self.vcsAddAct.triggered[()].connect(self._vcsImport)
         self.actions.append(self.vcsAddAct)
@@ -164,7 +168,8 @@ class VcsProjectHelper(QObject):
                 # edit VCS command options
                 vcores = E5MessageBox.yesNo(self.parent(),
                     self.trUtf8("New Project"),
-                    self.trUtf8("""Would you like to edit the VCS command options?"""))
+                    self.trUtf8(
+                        """Would you like to edit the VCS command options?"""))
                 if vcores:
                     from .CommandOptionsDialog import vcsCommandOptionsDialog
                     codlg = vcsCommandOptionsDialog(self.project.vcs)
@@ -178,7 +183,8 @@ class VcsProjectHelper(QObject):
                     except EnvironmentError:
                         E5MessageBox.critical(self.parent(),
                             self.trUtf8("Create project directory"),
-                            self.trUtf8("<p>The project directory <b>{0}</b> could not"
+                            self.trUtf8(
+                                "<p>The project directory <b>{0}</b> could not"
                                 " be created.</p>").format(projectdir))
                         self.project.pdata["VCS"] = ['None']
                         self.project.vcs = self.project.initVCS()
@@ -189,7 +195,8 @@ class VcsProjectHelper(QObject):
                 if export:
                     ok = self.project.vcs.vcsExport(vcsDataDict, projectdir)
                 else:
-                    ok = self.project.vcs.vcsCheckout(vcsDataDict, projectdir, False)
+                    ok = self.project.vcs.vcsCheckout(vcsDataDict, projectdir,
+                                                      False)
                 if ok:
                     projectdir = os.path.normpath(projectdir)
                     filters = ["*.e4p"]
@@ -197,7 +204,8 @@ class VcsProjectHelper(QObject):
                     plist = d.entryInfoList(filters)
                     if len(plist):
                         if len(plist) == 1:
-                            self.project.openProject(plist[0].absoluteFilePath())
+                            self.project.openProject(
+                                plist[0].absoluteFilePath())
                             self.project.newProject.emit()
                         else:
                             pfilenamelist = d.entryList(filters)
@@ -218,7 +226,8 @@ class VcsProjectHelper(QObject):
                     else:
                         res = E5MessageBox.yesNo(self.parent(),
                             self.trUtf8("New project from repository"),
-                            self.trUtf8("The project retrieved from the repository"
+                            self.trUtf8(
+                                "The project retrieved from the repository"
                                 " does not contain an eric project file"
                                 " (*.e4p). Create it?"),
                             yesDefault=True)
@@ -226,15 +235,17 @@ class VcsProjectHelper(QObject):
                             self.project.ppath = projectdir
                             self.project.opened = True
                             
-                            from Project.PropertiesDialog import PropertiesDialog
+                            from Project.PropertiesDialog import \
+                                PropertiesDialog
                             dlg = PropertiesDialog(self.project, False)
                             if dlg.exec_() == QDialog.Accepted:
                                 dlg.storeData()
                                 self.project.initFileTypes()
                                 self.project.setDirty(True)
                                 try:
-                                    ms = os.path.join(self.project.ppath,
-                                                      self.project.pdata["MAINSCRIPT"][0])
+                                    ms = os.path.join(
+                                        self.project.ppath,
+                                        self.project.pdata["MAINSCRIPT"][0])
                                     if os.path.exists(ms):
                                         self.project.appendFile(ms)
                                 except IndexError:
@@ -243,17 +254,23 @@ class VcsProjectHelper(QObject):
                                 self.project.saveProject()
                                 self.project.openProject(self.project.pfile)
                                 if not export:
-                                    res = E5MessageBox.yesNo(self.parent(),
-                                        self.trUtf8("New project from repository"),
-                                        self.trUtf8("Shall the project file be added to"
-                                            " the repository?"),
+                                    res = E5MessageBox.yesNo(
+                                        self.parent(),
+                                        self.trUtf8(
+                                            "New project from repository"),
+                                        self.trUtf8(
+                                            "Shall the project file be added"
+                                            " to the repository?"),
                                         yesDefault=True)
                                     if res:
-                                        self.project.vcs.vcsAdd(self.project.pfile)
+                                        self.project.vcs.vcsAdd(
+                                            self.project.pfile)
                 else:
-                    E5MessageBox.critical(self.parent(),
+                    E5MessageBox.critical(
+                        self.parent(),
                         self.trUtf8("New project from repository"),
-                        self.trUtf8("""The project could not be retrieved from"""
+                        self.trUtf8(
+                            """The project could not be retrieved from"""
                             """ the repository."""))
                     self.project.pdata["VCS"] = ['None']
                     self.project.vcs = self.project.initVCS()
@@ -273,8 +290,8 @@ class VcsProjectHelper(QObject):
         
         <b>NOTE</b>:
             This does not necessarily make the local project a vcs controlled
-            project. You may have to checkout the project from the repository in
-            order to accomplish that.
+            project. You may have to checkout the project from the repository
+            in order to accomplish that.
         """
         def revertChanges():
             """
@@ -320,13 +337,15 @@ class VcsProjectHelper(QObject):
         self.project.pdata["VCS"] = [vcsSystem]
         self.project.vcs = self.project.initVCS(vcsSystem)
         if self.project.vcs is not None:
-            vcsdlg = self.project.vcs.vcsOptionsDialog(self.project, self.project.name, 1)
+            vcsdlg = self.project.vcs.vcsOptionsDialog(self.project,
+                                                       self.project.name, 1)
             if vcsdlg.exec_() == QDialog.Accepted:
                 vcsDataDict = vcsdlg.getData()
                 # edit VCS command options
                 vcores = E5MessageBox.yesNo(self.parent(),
                     self.trUtf8("Import Project"),
-                    self.trUtf8("""Would you like to edit the VCS command options?"""))
+                    self.trUtf8(
+                        """Would you like to edit the VCS command options?"""))
                 if vcores:
                     from .CommandOptionsDialog import vcsCommandOptionsDialog
                     codlg = vcsCommandOptionsDialog(self.project.vcs)
@@ -335,8 +354,8 @@ class VcsProjectHelper(QObject):
                 self.project.setDirty(True)
                 self.project.vcs.vcsSetDataFromDict(vcsDataDict)
                 self.project.saveProject()
-                isVcsControlled = \
-                    self.project.vcs.vcsImport(vcsDataDict, self.project.ppath)[0]
+                isVcsControlled = self.project.vcs.vcsImport(
+                    vcsDataDict, self.project.ppath)[0]
                 if isVcsControlled:
                     # reopen the project
                     self.project.openProject(self.project.pfile)
@@ -363,7 +382,8 @@ class VcsProjectHelper(QObject):
         
     def _vcsCommit(self):
         """
-        Protected slot used to commit changes to the local project to the repository.
+        Protected slot used to commit changes to the local project to the
+        repository.
         """
         if Preferences.getVCS("AutoSaveProject"):
             self.project.saveProject()
@@ -409,7 +429,8 @@ class VcsProjectHelper(QObject):
         
     def _vcsDiff(self):
         """
-        Protected slot used to show the difference of the local project to the repository.
+        Protected slot used to show the difference of the local project to
+        the repository.
         """
         self.vcs.vcsDiff(self.project.ppath)
         
@@ -446,7 +467,8 @@ class VcsProjectHelper(QObject):
         
     def _vcsMerge(self):
         """
-        Protected slot used to merge changes of a tag/revision into the local project.
+        Protected slot used to merge changes of a tag/revision into the local
+        project.
         """
         self.vcs.vcsMerge(self.project.ppath)
         
