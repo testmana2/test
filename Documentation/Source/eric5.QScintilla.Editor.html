@@ -48,29 +48,31 @@ Module implementing the editor component of the eric5 IDE.
 <dt>autoCompletionAPIsAvailable(bool)</dt>
 <dd>
 emitted after the autocompletion
-            function has been configured
+        function has been configured
 </dd><dt>bookmarkToggled(QsciScintillaCompat)</dt>
 <dd>
-emitted when a bookmark is toggled
+emitted when a bookmark is
+        toggled
 </dd><dt>breakpointToggled(QsciScintillaCompat)</dt>
 <dd>
-emitted when a breakpoint is toggled
+emitted when a breakpoint
+        is toggled
 </dd><dt>captionChanged(str, QsciScintillaCompat)</dt>
 <dd>
-emitted when the caption is
-            updated. Typically due to a readOnly attribute change.
+emitted when the caption
+        is updated. Typically due to a readOnly attribute change.
 </dd><dt>changeMarkersUpdated(QsciScintillaCompat)</dt>
 <dd>
-emitted when the change markers
-            were updated
+emitted when the change
+        markers were updated
 </dd><dt>coverageMarkersShown(bool)</dt>
 <dd>
-emitted after the coverage markers have been
-            shown or cleared
+emitted after the coverage markers have
+        been shown or cleared
 </dd><dt>cursorChanged(str, int, int)</dt>
 <dd>
 emitted when the cursor position
-            was changed
+        was changed
 </dd><dt>cursorLineChanged(int)</dt>
 <dd>
 emitted when the cursor line was changed
@@ -80,7 +82,7 @@ emitted before the editor is saved
 </dd><dt>editorRenamed(str)</dt>
 <dd>
 emitted after the editor got a new name
-            (i.e. after a 'Save As')
+        (i.e. after a 'Save As')
 </dd><dt>editorSaved(str)</dt>
 <dd>
 emitted after the editor has been saved
@@ -90,19 +92,20 @@ emitted when the editors encoding was set. The
             encoding name is passed as a parameter.
 </dd><dt>eolChanged(str)</dt>
 <dd>
-emitted when the editors eol type was set. The eol string
-            is passed as a parameter.
+emitted when the editors eol type was set. The eol
+        string is passed as a parameter.
 </dd><dt>languageChanged(str)</dt>
 <dd>
 emitted when the editors language was set. The
-            language is passed as a parameter.
+        language is passed as a parameter.
 </dd><dt>lastEditPositionAvailable()</dt>
 <dd>
-emitted when a last edit position is available
+emitted when a last edit position is
+        available
 </dd><dt>modificationStatusChanged(bool, QsciScintillaCompat)</dt>
 <dd>
-emitted when the
-            modification status has changed
+emitted when
+        the modification status has changed
 </dd><dt>redoAvailable(bool)</dt>
 <dd>
 emitted to signal the redo availability
@@ -111,17 +114,17 @@ emitted to signal the redo availability
 emitted to signal a refresh of the editor contents
 </dd><dt>showMenu(str, QMenu, QsciScintillaCompat)</dt>
 <dd>
-emitted when a menu is about
-            to be shown. The name of the menu, a reference to the menu and a reference
-            to the editor are given.
+emitted when a menu is
+        about to be shown. The name of the menu, a reference to the menu and
+        a reference to the editor are given.
 </dd><dt>syntaxerrorToggled(QsciScintillaCompat)</dt>
 <dd>
 emitted when a syntax error
-            was discovered
+        was discovered
 </dd><dt>taskMarkersUpdated(QsciScintillaCompat)</dt>
 <dd>
-emitted when the task markers
-            were updated
+emitted when the task
+        markers were updated
 </dd><dt>undoAvailable(bool)</dt>
 <dd>
 emitted to signal the undo availability
@@ -1155,7 +1158,8 @@ end row (integer)
 <h4>Editor.__addLocalizedResource</h4>
 <b>__addLocalizedResource</b>(<i></i>)
 <p>
-        Private method to handle the Add localized resource context menu action.
+        Private method to handle the Add localized resource context menu
+        action.
 </p><a NAME="Editor.__addResourceFrame" ID="Editor.__addResourceFrame"></a>
 <h4>Editor.__addResourceFrame</h4>
 <b>__addResourceFrame</b>(<i></i>)
@@ -1165,7 +1169,8 @@ end row (integer)
 <h4>Editor.__addToSpellingDictionary</h4>
 <b>__addToSpellingDictionary</b>(<i></i>)
 <p>
-        Private slot to add the word below the spelling context menu to the dictionary.
+        Private slot to add the word below the spelling context menu to the
+        dictionary.
 </p><a NAME="Editor.__adjustedCallTipPosition" ID="Editor.__adjustedCallTipPosition"></a>
 <h4>Editor.__adjustedCallTipPosition</h4>
 <b>__adjustedCallTipPosition</b>(<i>ctshift, pos</i>)
@@ -1227,7 +1232,8 @@ filename used to determine the associated typing
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
-filename used to determine the associated lexer language (string)
+filename used to determine the associated lexer
+            language (string)
 </dd><dt><i>pyname=</i></dt>
 <dd>
 name of the pygments lexer to use (string)
@@ -1350,7 +1356,8 @@ name of the file (string)
 <h4>Editor.__codeCoverageHideAnnotations</h4>
 <b>__codeCoverageHideAnnotations</b>(<i></i>)
 <p>
-        Private method to handle the hide code coverage annotations context menu action.
+        Private method to handle the hide code coverage annotations context
+        menu action.
 </p><a NAME="Editor.__completionListSelected" ID="Editor.__completionListSelected"></a>
 <h4>Editor.__completionListSelected</h4>
 <b>__completionListSelected</b>(<i>id, txt</i>)
@@ -1373,7 +1380,8 @@ the selected text (string)
 <h4>Editor.__contextMenuSpellingTriggered</h4>
 <b>__contextMenuSpellingTriggered</b>(<i>action</i>)
 <p>
-        Private slot to handle the selection of a suggestion of the spelling context menu.
+        Private slot to handle the selection of a suggestion of the spelling
+        context menu.
 </p><dl>
 <dt><i>action</i></dt>
 <dd>
@@ -1536,7 +1544,8 @@ requested character or "", if there are no more (string) and
 <h4>Editor.__getCodeCoverageFile</h4>
 <b>__getCodeCoverageFile</b>(<i></i>)
 <p>
-        Private method to get the filename of the file containing coverage info.
+        Private method to get the filename of the file containing coverage
+        info.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -1550,8 +1559,8 @@ filename of the coverage file (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-Tuple of macro name and a flag, indicating, if the user pressed ok or
-            canceled the operation. (string, boolean)
+Tuple of macro name and a flag, indicating, if the user
+            pressed ok or canceled the operation. (string, boolean)
 </dd>
 </dl><a NAME="Editor.__ignoreSpellingAlways" ID="Editor.__ignoreSpellingAlways"></a>
 <h4>Editor.__ignoreSpellingAlways</h4>
@@ -1676,7 +1685,8 @@ reference to the generated menu (QMenu)
 <h4>Editor.__initContextMenuSeparateMargins</h4>
 <b>__initContextMenuSeparateMargins</b>(<i></i>)
 <p>
-        Private method used to setup the context menu for the separated margins.
+        Private method used to setup the context menu for the separated
+        margins.
 </p><a NAME="Editor.__initContextMenuShow" ID="Editor.__initContextMenuShow"></a>
 <h4>Editor.__initContextMenuShow</h4>
 <b>__initContextMenuShow</b>(<i></i>)
@@ -1706,8 +1716,8 @@ reference to the generated menu (QMenu)
 <h4>Editor.__isCommentedLine</h4>
 <b>__isCommentedLine</b>(<i>line, commentStr</i>)
 <p>
-        Private method to check, if the given line is a comment line as produced
-        by the configured comment rules.
+        Private method to check, if the given line is a comment line as
+        produced by the configured comment rules.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
@@ -1725,7 +1735,8 @@ flag indicating a commented line (boolean)
 <h4>Editor.__isStartChar</h4>
 <b>__isStartChar</b>(<i>ch</i>)
 <p>
-        Private method to check, if a character is an autocompletion start character.
+        Private method to check, if a character is an autocompletion start
+        character.
 </p><dl>
 <dt><i>ch</i></dt>
 <dd>
@@ -1763,12 +1774,14 @@ reference to the action that was triggered (QAction)
 <h4>Editor.__lmBbookmarks</h4>
 <b>__lmBbookmarks</b>(<i></i>)
 <p>
-        Private method to handle the 'LMB toggles bookmark' context menu action.
+        Private method to handle the 'LMB toggles bookmark' context menu
+        action.
 </p><a NAME="Editor.__lmBbreakpoints" ID="Editor.__lmBbreakpoints"></a>
 <h4>Editor.__lmBbreakpoints</h4>
 <b>__lmBbreakpoints</b>(<i></i>)
 <p>
-        Private method to handle the 'LMB toggles breakpoint' context menu action.
+        Private method to handle the 'LMB toggles breakpoint' context menu
+        action.
 </p><a NAME="Editor.__loadDiagram" ID="Editor.__loadDiagram"></a>
 <h4>Editor.__loadDiagram</h4>
 <b>__loadDiagram</b>(<i></i>)
@@ -1819,12 +1832,14 @@ margin number (integer, -1 for no margin)
 <h4>Editor.__menuToggleBreakpointEnabled</h4>
 <b>__menuToggleBreakpointEnabled</b>(<i></i>)
 <p>
-        Private slot to handle the 'Enable/Disable breakpoint' context menu action.
+        Private slot to handle the 'Enable/Disable breakpoint' context menu
+        action.
 </p><a NAME="Editor.__menuToggleTemporaryBreakpoint" ID="Editor.__menuToggleTemporaryBreakpoint"></a>
 <h4>Editor.__menuToggleTemporaryBreakpoint</h4>
 <b>__menuToggleTemporaryBreakpoint</b>(<i></i>)
 <p>
-        Private slot to handle the 'Toggle temporary breakpoint' context menu action.
+        Private slot to handle the 'Toggle temporary breakpoint' context menu
+        action.
 </p><a NAME="Editor.__modificationChanged" ID="Editor.__modificationChanged"></a>
 <h4>Editor.__modificationChanged</h4>
 <b>__modificationChanged</b>(<i>m</i>)
@@ -1878,7 +1893,8 @@ previous fold level (integer)
 ???
 </dd><dt><i>annotationLinesAdded</i></dt>
 <dd>
-number of added/deleted annotation lines (integer)
+number of added/deleted annotation lines
+            (integer)
 </dd>
 </dl><a NAME="Editor.__newView" ID="Editor.__newView"></a>
 <h4>Editor.__newView</h4>
@@ -1913,7 +1929,8 @@ normalized encoding (string)
 </p><dl>
 <dt><i>printer</i></dt>
 <dd>
-reference to the printer object (QScintilla.Printer.Printer)
+reference to the printer object
+            (QScintilla.Printer.Printer)
 </dd>
 </dl><a NAME="Editor.__processEndEditCommand" ID="Editor.__processEndEditCommand"></a>
 <h4>Editor.__processEndEditCommand</h4>
@@ -1989,7 +2006,8 @@ string containing the command parameters (string)
 <h4>Editor.__removeFromSpellingDictionary</h4>
 <b>__removeFromSpellingDictionary</b>(<i></i>)
 <p>
-        Private slot to remove the word below the context menu to the dictionary.
+        Private slot to remove the word below the context menu to the
+        dictionary.
 </p><a NAME="Editor.__removeTrailingWhitespace" ID="Editor.__removeTrailingWhitespace"></a>
 <h4>Editor.__removeTrailingWhitespace</h4>
 <b>__removeTrailingWhitespace</b>(<i></i>)
@@ -2173,12 +2191,14 @@ name of the personal/project exclude list (string)
 <h4>Editor.__showContextMenuChecks</h4>
 <b>__showContextMenuChecks</b>(<i></i>)
 <p>
-        Private slot handling the aboutToShow signal of the checks context menu.
+        Private slot handling the aboutToShow signal of the checks context
+        menu.
 </p><a NAME="Editor.__showContextMenuEncodings" ID="Editor.__showContextMenuEncodings"></a>
 <h4>Editor.__showContextMenuEncodings</h4>
 <b>__showContextMenuEncodings</b>(<i></i>)
 <p>
-        Private slot handling the aboutToShow signal of the encodings context menu.
+        Private slot handling the aboutToShow signal of the encodings context
+        menu.
 </p><a NAME="Editor.__showContextMenuEol" ID="Editor.__showContextMenuEol"></a>
 <h4>Editor.__showContextMenuEol</h4>
 <b>__showContextMenuEol</b>(<i></i>)
@@ -2188,22 +2208,26 @@ name of the personal/project exclude list (string)
 <h4>Editor.__showContextMenuGraphics</h4>
 <b>__showContextMenuGraphics</b>(<i></i>)
 <p>
-        Private slot handling the aboutToShow signal of the diagrams context menu.
+        Private slot handling the aboutToShow signal of the diagrams context
+        menu.
 </p><a NAME="Editor.__showContextMenuLanguages" ID="Editor.__showContextMenuLanguages"></a>
 <h4>Editor.__showContextMenuLanguages</h4>
 <b>__showContextMenuLanguages</b>(<i></i>)
 <p>
-        Private slot handling the aboutToShow signal of the languages context menu.
+        Private slot handling the aboutToShow signal of the languages context
+        menu.
 </p><a NAME="Editor.__showContextMenuMargin" ID="Editor.__showContextMenuMargin"></a>
 <h4>Editor.__showContextMenuMargin</h4>
 <b>__showContextMenuMargin</b>(<i></i>)
 <p>
-        Private slot handling the aboutToShow signal of the margins context menu.
+        Private slot handling the aboutToShow signal of the margins context
+        menu.
 </p><a NAME="Editor.__showContextMenuResources" ID="Editor.__showContextMenuResources"></a>
 <h4>Editor.__showContextMenuResources</h4>
 <b>__showContextMenuResources</b>(<i></i>)
 <p>
-        Private slot handling the aboutToShow signal of the resources context menu.
+        Private slot handling the aboutToShow signal of the resources context
+        menu.
 </p><a NAME="Editor.__showContextMenuShow" ID="Editor.__showContextMenuShow"></a>
 <h4>Editor.__showContextMenuShow</h4>
 <b>__showContextMenuShow</b>(<i></i>)
@@ -2351,7 +2375,8 @@ reference to the cloned editor (Editor)
 </p><dl>
 <dt><i>auto=</i></dt>
 <dd>
-flag indicating a call from the __charAdded method (boolean)
+flag indicating a call from the __charAdded method
+            (boolean)
 </dd><dt><i>context=</i></dt>
 <dd>
 flag indicating to complete a context (boolean)
@@ -2513,7 +2538,8 @@ flag indicating a successful close of the editor (boolean)
 <h4>Editor.codeCoverageShowAnnotations</h4>
 <b>codeCoverageShowAnnotations</b>(<i>silent=False</i>)
 <p>
-        Public method to handle the show code coverage annotations context menu action.
+        Public method to handle the show code coverage annotations context
+        menu action.
 </p><dl>
 <dt><i>silent</i></dt>
 <dd>
@@ -2548,7 +2574,8 @@ the context menu event (QContextMenuEvent)
 <h4>Editor.curLineHasBreakpoint</h4>
 <b>curLineHasBreakpoint</b>(<i></i>)
 <p>
-        Public method to check for the presence of a breakpoint at the current line.
+        Public method to check for the presence of a breakpoint at the current
+        line.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -2683,7 +2710,8 @@ filename to be set for the editor (string).
 </p><p>
         This method checks for modifications of the current file and
         rereads it upon request. The cursor is placed at the current position
-        assuming, that it is in the vicinity of the old position after the reread.
+        assuming, that it is in the vicinity of the old position after the
+        reread.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -2785,12 +2813,13 @@ type of the displayed file (string)
 <h4>Editor.getFileTypeByFlag</h4>
 <b>getFileTypeByFlag</b>(<i></i>)
 <p>
-        Public method to return the type of the file, if it was set by an eflag: marker.
+        Public method to return the type of the file, if it was set by an
+        eflag: marker.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-type of the displayed file, if set by an eflag: marker or an empty
-            string (string)
+type of the displayed file, if set by an eflag: marker or an
+            empty string (string)
 </dd>
 </dl><a NAME="Editor.getFlakesWarnings" ID="Editor.getFlakesWarnings"></a>
 <h4>Editor.getFlakesWarnings</h4>
@@ -2872,8 +2901,8 @@ display string for this unnamed editor (string)
 <h4>Editor.getSearchText</h4>
 <b>getSearchText</b>(<i>selectionOnly=False</i>)
 <p>
-        Public method to determine the selection or the current word for the next
-        search operation.
+        Public method to determine the selection or the current word for the
+        next search operation.
 </p><dl>
 <dt><i>selectionOnly</i></dt>
 <dd>
@@ -2893,9 +2922,9 @@ selection or current word (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple indicating, if the editor is sharable, the sharing status,
-            if it is inside a locally initiated shared edit session and
-            if it is inside a remotely initiated shared edit session
+tuple indicating, if the editor is sharable, the sharing
+            status, if it is inside a locally initiated shared edit session
+            and if it is inside a remotely initiated shared edit session
             (boolean, boolean, boolean, boolean)
 </dd>
 </dl><a NAME="Editor.getSyntaxErrors" ID="Editor.getSyntaxErrors"></a>
@@ -2923,7 +2952,8 @@ number of line to look at (int)
 position to look at (int)
 </dd><dt><i>direction</i></dt>
 <dd>
-direction to look in (0 = whole word, 1 = left, 2 = right)
+direction to look in (0 = whole word, 1 = left,
+            2 = right)
 </dd><dt><i>useWordChars=</i></dt>
 <dd>
 flag indicating to use the wordCharacters
@@ -3196,8 +3226,8 @@ flag indicating a Ruby file (boolean)
 <h4>Editor.isSpellCheckRegion</h4>
 <b>isSpellCheckRegion</b>(<i>pos</i>)
 <p>
-        Public method to check, if the given position is within a region, that should
-        be spell checked.
+        Public method to check, if the given position is within a region, that
+        should be spell checked.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>
@@ -3393,8 +3423,8 @@ properties for the breakpoint (tuple)
 filename to read from (string)
 </dd><dt><i>createIt</i></dt>
 <dd>
-flag indicating the creation of a new file, if the given
-            one doesn't exist (boolean)
+flag indicating the creation of a new file, if the
+            given one doesn't exist (boolean)
 </dd>
 </dl><a NAME="Editor.readSettings" ID="Editor.readSettings"></a>
 <h4>Editor.readSettings</h4>
@@ -3470,13 +3500,14 @@ flag indicating success (boolean)
 directory to save the file in (string)
 </dd><dt><i>toProject=</i></dt>
 <dd>
-flag indicating a save to project operation (boolean)
+flag indicating a save to project operation
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of two values (boolean, string) giving a success indicator and
-            the name of the saved file
+tuple of two values (boolean, string) giving a success
+            indicator and the name of the saved file
 </dd>
 </dl><a NAME="Editor.searchCurrentWordBackward" ID="Editor.searchCurrentWordBackward"></a>
 <h4>Editor.searchCurrentWordBackward</h4>
@@ -3520,7 +3551,8 @@ position to look at (int)
 </p><dl>
 <dt><i>enable</i></dt>
 <dd>
-flag indicating the desired autocompletion status (boolean)
+flag indicating the desired autocompletion status
+            (boolean)
 </dd>
 </dl><a NAME="Editor.setAutoCompletionHook" ID="Editor.setAutoCompletionHook"></a>
 <h4>Editor.setAutoCompletionHook</h4>
@@ -3561,11 +3593,12 @@ Function to be set to determine calltips. func
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
-filename used to determine the associated lexer language (string)
+filename used to determine the associated lexer
+            language (string)
 </dd><dt><i>initTextDisplay</i></dt>
 <dd>
-flag indicating an initialization of the text display
-            is required as well (boolean)
+flag indicating an initialization of the text
+            display is required as well (boolean)
 </dd><dt><i>propagate=</i></dt>
 <dd>
 flag indicating to propagate the change (boolean)
@@ -3636,7 +3669,8 @@ flag indicating the share status (boolean)
 <h4>Editor.shortenEmptyLines</h4>
 <b>shortenEmptyLines</b>(<i></i>)
 <p>
-        Public slot to compress lines consisting solely of whitespace characters.
+        Public slot to compress lines consisting solely of whitespace
+        characters.
 </p><a NAME="Editor.shouldAutosave" ID="Editor.shouldAutosave"></a>
 <h4>Editor.shouldAutosave</h4>
 <b>shouldAutosave</b>(<i></i>)

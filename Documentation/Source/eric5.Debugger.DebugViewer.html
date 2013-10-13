@@ -58,9 +58,9 @@ The views avaliable are:
     Class implementing a widget conatining various debug related views.
 </p><p>
     The individual tabs contain the interpreter shell (optional),
-    the filesystem browser (optional), the two variables viewers (global and local),
-    a breakpoint viewer, a watch expression viewer and the exception logger. Additionally
-    a list of all threads is shown.
+    the filesystem browser (optional), the two variables viewers
+    (global and local), a breakpoint viewer, a watch expression viewer and
+    the exception logger. Additionally a list of all threads is shown.
 </p><h3>Signals</h3>
 <dl>
 <dt>sourceFile(string, int)</dt>
@@ -184,15 +184,15 @@ reference to the viewmanager object
 parent widget (QWidget)
 </dd><dt><i>embeddedShell</i></dt>
 <dd>
-flag indicating whether the shell should be included.
-                This flag is set to False by those layouts, that have the interpreter
-                shell in a separate window.
+flag indicating whether the shell should be
+            included. This flag is set to False by those layouts, that have
+            the interpreter shell in a separate window.
 </dd><dt><i>embeddedBrowser</i></dt>
 <dd>
 flag indicating whether the file browser should
-                be included. This flag is set to False by those layouts, that
-                have the file browser in a separate window or embedded
-                in the project browser instead.
+            be included. This flag is set to False by those layouts, that
+            have the file browser in a separate window or embedded
+            in the project browser instead.
 </dd>
 </dl><a NAME="DebugViewer.__callStackFrameSelected" ID="DebugViewer.__callStackFrameSelected"></a>
 <h4>DebugViewer.__callStackFrameSelected</h4>
@@ -229,7 +229,8 @@ frame number (0 is the current frame) (int)
 <h4>DebugViewer.__showSource</h4>
 <b>__showSource</b>(<i></i>)
 <p>
-        Private slot to handle the source button press to show the selected file.
+        Private slot to handle the source button press to show the selected
+        file.
 </p><a NAME="DebugViewer.__threadSelected" ID="DebugViewer.__threadSelected"></a>
 <h4>DebugViewer.__threadSelected</h4>
 <b>__threadSelected</b>(<i>current, previous</i>)
@@ -241,7 +242,8 @@ frame number (0 is the current frame) (int)
 reference to the new current item (QTreeWidgetItem)
 </dd><dt><i>previous</i></dt>
 <dd>
-reference to the previous current item (QTreeWidgetItem)
+reference to the previous current item
+            (QTreeWidgetItem)
 </dd>
 </dl><a NAME="DebugViewer.clearCallTrace" ID="DebugViewer.clearCallTrace"></a>
 <h4>DebugViewer.clearCallTrace</h4>
@@ -266,8 +268,8 @@ reference to the current widget (QWidget)
 </p><dl>
 <dt><i>stack</i></dt>
 <dd>
-list of tuples with call stack data (file name, line number,
-            function name, formatted argument/values list)
+list of tuples with call stack data (file name,
+            line number, function name, formatted argument/values list)
 </dd>
 </dl><a NAME="DebugViewer.handleDebuggingStarted" ID="DebugViewer.handleDebuggingStarted"></a>
 <h4>DebugViewer.handleDebuggingStarted</h4>
@@ -362,7 +364,8 @@ reference to the DebugUI object (DebugUI)
 </p><dl>
 <dt><i>globalsFilter</i></dt>
 <dd>
-filter list for global variable types (list of int)
+filter list for global variable types
+            (list of int)
 </dd><dt><i>localsFilter</i></dt>
 <dd>
 filter list for local variable types (list of int)

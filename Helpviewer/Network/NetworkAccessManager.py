@@ -31,9 +31,10 @@ class NetworkAccessManager(QNetworkAccessManager):
     """
     Class implementing a QNetworkAccessManager subclass.
     
-    @signal requestCreated(QNetworkAccessManager.Operation, QNetworkRequest,
+    @signal requestCreated emitted after the request has been created passing
+        the operation, a reference to the network request and a reference to
+        the network reply (QNetworkAccessManager.Operation, QNetworkRequest,
         QNetworkReply)
-        emitted after the request has been created
     """
     requestCreated = pyqtSignal(
         QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)

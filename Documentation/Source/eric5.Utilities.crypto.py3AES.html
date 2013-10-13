@@ -77,13 +77,13 @@ object
 <td>Private method to add (XORs) the round key to the state.</td>
 </tr><tr>
 <td><a href="#AES.__aes_invMain">__aes_invMain</a></td>
-<td>Private method to perform the initial operations, the standard round, and the final operations of the inverse AES, creating a round key for each round.</td>
+<td>Private method to do the inverse AES encryption for one round.</td>
 </tr><tr>
 <td><a href="#AES.__aes_invRound">__aes_invRound</a></td>
 <td>Private method to apply the 4 operations of the inverse round in sequence.</td>
 </tr><tr>
 <td><a href="#AES.__aes_main">__aes_main</a></td>
-<td>Private method to perform the initial operations, the standard round, and the final operations of the forward AES, creating a round key for each round.</td>
+<td>Private method to do the AES encryption for one round.</td>
 </tr><tr>
 <td><a href="#AES.__aes_round">__aes_round</a></td>
 <td>Private method to apply the 4 operations of the forward round in sequence.</td>
@@ -160,8 +160,11 @@ modified state (bytearray)
 <h4>AES.__aes_invMain</h4>
 <b>__aes_invMain</b>(<i>state, expandedKey, nbrRounds</i>)
 <p>
-        Private method to perform the initial operations, the standard round, and the
-        final operations of the inverse AES, creating a round key for each round.
+        Private method to do the inverse AES encryption for one round.
+</p><p>
+        Perform the initial operations, the standard round, and the
+        final operations of the inverse AES, creating a round key for
+        each round.
 </p><dl>
 <dt><i>state</i></dt>
 <dd>
@@ -182,7 +185,8 @@ modified state (bytearray)
 <h4>AES.__aes_invRound</h4>
 <b>__aes_invRound</b>(<i>state, roundKey</i>)
 <p>
-        Private method to apply the 4 operations of the inverse round in sequence.
+        Private method to apply the 4 operations of the inverse round in
+        sequence.
 </p><dl>
 <dt><i>state</i></dt>
 <dd>
@@ -200,8 +204,11 @@ modified state (bytearray)
 <h4>AES.__aes_main</h4>
 <b>__aes_main</b>(<i>state, expandedKey, nbrRounds</i>)
 <p>
-        Private method to perform the initial operations, the standard round, and the
-        final operations of the forward AES, creating a round key for each round.
+        Private method to do the AES encryption for one round.
+</p><p>
+        Perform the initial operations, the standard round, and the
+        final operations of the forward AES, creating a round key for
+        each round.
 </p><dl>
 <dt><i>state</i></dt>
 <dd>
@@ -222,7 +229,8 @@ modified state (bytearray)
 <h4>AES.__aes_round</h4>
 <b>__aes_round</b>(<i>state, roundKey</i>)
 <p>
-        Private method to apply the 4 operations of the forward round in sequence.
+        Private method to apply the 4 operations of the forward round in
+        sequence.
 </p><dl>
 <dt><i>state</i></dt>
 <dd>
@@ -299,7 +307,8 @@ expanded key (bytearray)
 <h4>AES.__galois_multiplication</h4>
 <b>__galois_multiplication</b>(<i>a, b</i>)
 <p>
-        Private method to perform a Galois multiplication of 8 bit characters a and b.
+        Private method to perform a Galois multiplication of 8 bit characters
+        a and b.
 </p><dl>
 <dt><i>a</i></dt>
 <dd>
@@ -362,7 +371,8 @@ value of the S-Box (integer)
 <h4>AES.__mixColumn</h4>
 <b>__mixColumn</b>(<i>column, isInv</i>)
 <p>
-        Private method to perform a galois multiplication of 1 column the 4x4 matrix.
+        Private method to perform a galois multiplication of 1 column the
+        4x4 matrix.
 </p><dl>
 <dt><i>column</i></dt>
 <dd>
@@ -400,7 +410,8 @@ modified state (bytearray)
 <p>
         Private method performing Rijndael's key schedule rotate operation.
 </p><p>
-        Rotate the data word eight bits to the left: eg, rotate(1d2c3a4f) == 2c3a4f1d.
+        Rotate the data word eight bits to the left: eg,
+        rotate(1d2c3a4f) == 2c3a4f1d.
 </p><dl>
 <dt><i>data</i></dt>
 <dd>
@@ -453,8 +464,8 @@ modified state (bytearray)
 <h4>AES.__subBytes</h4>
 <b>__subBytes</b>(<i>state, isInv</i>)
 <p>
-        Private method to substitute all the values from the state with the value in
-        the SBox using the state value as index for the SBox.
+        Private method to substitute all the values from the state with the
+        value in the SBox using the state value as index for the SBox.
 </p><dl>
 <dt><i>state</i></dt>
 <dd>
@@ -472,8 +483,8 @@ modified state (bytearray)
 <h4>AES.decrypt</h4>
 <b>decrypt</b>(<i>iput, key, size</i>)
 <p>
-        Public method to decrypt a 128 bit input block against the given key of size
-        specified.
+        Public method to decrypt a 128 bit input block against the given key
+        of size specified.
 </p><dl>
 <dt><i>iput</i></dt>
 <dd>
@@ -494,8 +505,8 @@ decrypted data (bytes)
 <h4>AES.encrypt</h4>
 <b>encrypt</b>(<i>iput, key, size</i>)
 <p>
-        Public method to encrypt a 128 bit input block against the given key of size
-        specified.
+        Public method to encrypt a 128 bit input block against the given key
+        of size specified.
 </p><dl>
 <dt><i>iput</i></dt>
 <dd>
@@ -662,7 +673,8 @@ padded data (bytes)
 key to be used for decryption (bytes)
 </dd><dt><i>data</i></dt>
 <dd>
-data to be decrypted (with initialization vector prepended) (bytes)
+data to be decrypted (with initialization vector prepended)
+        (bytes)
 </dd><dt><i>mode</i></dt>
 <dd>
 mode of operations (0, 1 or 2)

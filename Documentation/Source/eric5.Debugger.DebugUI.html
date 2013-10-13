@@ -47,8 +47,8 @@ Module implementing the debugger UI.
 <dl>
 <dt>appendStdout(msg)</dt>
 <dd>
-emitted when the client program has terminated and the
-        display of the termination dialog is suppressed
+emitted when the client program has terminated
+        and the display of the termination dialog is suppressed
 </dd><dt>clientStack(stack)</dt>
 <dd>
 emitted at breaking after a reported exception
@@ -57,14 +57,16 @@ emitted at breaking after a reported exception
 emitted if changed project forms should be compiled
 </dd><dt>compileResources()</dt>
 <dd>
-emitted if changed project resources should be compiled
+emitted if changed project resources should be
+        compiled
 </dd><dt>debuggingStarted(filename)</dt>
 <dd>
-emitted when a debugging session was started
+emitted when a debugging session was
+        started
 </dd><dt>exceptionInterrupt()</dt>
 <dd>
-emitted after the execution was interrupted by an
-        exception and acknowledged by the user
+emitted after the execution was interrupted
+        by an exception and acknowledged by the user
 </dd><dt>resetUI()</dt>
 <dd>
 emitted to reset the UI
@@ -430,13 +432,15 @@ flag indicating this is for a stack dump (boolean)
 message of the syntax error (string)
 </dd><dt><i>filename</i></dt>
 <dd>
-translated filename of the syntax error position (string)
+translated filename of the syntax error position
+            (string)
 </dd><dt><i>lineNo</i></dt>
 <dd>
 line number of the syntax error position (integer)
 </dd><dt><i>characterNo</i></dt>
 <dd>
-character number of the syntax error position (integer)
+character number of the syntax error position
+            (integer)
 </dd>
 </dl><a NAME="DebugUI.__clientThreadSet" ID="DebugUI.__clientThreadSet"></a>
 <h4>DebugUI.__clientThreadSet</h4>
@@ -447,12 +451,13 @@ character number of the syntax error position (integer)
 <h4>DebugUI.__clientVariable</h4>
 <b>__clientVariable</b>(<i>scope, variables</i>)
 <p>
-        Private method to write the contents of a clients classvariable to the user
-        interface.
+        Private method to write the contents of a clients classvariable to
+        the user interface.
 </p><dl>
 <dt><i>scope</i></dt>
 <dd>
-scope of the variables (-1 = empty global, 1 = global, 0 = local)
+scope of the variables (-1 = empty global, 1 = global,
+            0 = local)
 </dd><dt><i>variables</i></dt>
 <dd>
 the list of members of a classvariable from the client
@@ -465,7 +470,8 @@ the list of members of a classvariable from the client
 </p><dl>
 <dt><i>scope</i></dt>
 <dd>
-scope of the variables (-1 = empty global, 1 = global, 0 = local)
+scope of the variables (-1 = empty global, 1 = global,
+            0 = local)
 </dd><dt><i>variables</i></dt>
 <dd>
 the list of variables from the client
@@ -546,8 +552,8 @@ editor window
 </p><dl>
 <dt><i>runProject</i></dt>
 <dd>
-flag indicating coverage of the current project (True)
-                or script (false)
+flag indicating coverage of the current project
+            (True) or script (false)
 </dd>
 </dl><a NAME="DebugUI.__doDebug" ID="DebugUI.__doDebug"></a>
 <h4>DebugUI.__doDebug</h4>
@@ -557,8 +563,8 @@ flag indicating coverage of the current project (True)
 </p><dl>
 <dt><i>debugProject</i></dt>
 <dd>
-flag indicating debugging the current project (True)
-                or script (False)
+flag indicating debugging the current project
+            (True) or script (False)
 </dd>
 </dl><a NAME="DebugUI.__doProfile" ID="DebugUI.__doProfile"></a>
 <h4>DebugUI.__doProfile</h4>
@@ -568,14 +574,15 @@ flag indicating debugging the current project (True)
 </p><dl>
 <dt><i>runProject</i></dt>
 <dd>
-flag indicating profiling of the current project (True)
-                or script (False)
+flag indicating profiling of the current project
+            (True) or script (False)
 </dd>
 </dl><a NAME="DebugUI.__doRestart" ID="DebugUI.__doRestart"></a>
 <h4>DebugUI.__doRestart</h4>
 <b>__doRestart</b>(<i></i>)
 <p>
-        Private slot to handle the restart action to restart the last debugged file.
+        Private slot to handle the restart action to restart the last
+        debugged file.
 </p><a NAME="DebugUI.__doRun" ID="DebugUI.__doRun"></a>
 <h4>DebugUI.__doRun</h4>
 <b>__doRun</b>(<i>runProject</i>)
@@ -780,7 +787,8 @@ the generated menu
 </p><dl>
 <dt><i>toolbarManager</i></dt>
 <dd>
-reference to a toolbar manager object (E5ToolBarManager)
+reference to a toolbar manager object
+            (E5ToolBarManager)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -820,8 +828,8 @@ flag indicating, that the interpreter window
 </p><dl>
 <dt><i>autoContinue</i></dt>
 <dd>
-flag indicating, that the debugger should not stop at
-            the first executable line (boolean)
+flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
 </dd>
 </dl><a NAME="DebugUI.setEnvHistory" ID="DebugUI.setEnvHistory"></a>
 <h4>DebugUI.setEnvHistory</h4>

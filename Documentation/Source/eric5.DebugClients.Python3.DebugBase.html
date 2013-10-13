@@ -225,8 +225,8 @@ the current execution frame
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of watch expression and a flag to indicate, that a temporary
-            watch expression may be deleted (bdb.Breakpoint, boolean)
+tuple of watch expression and a flag to indicate, that a
+            temporary watch expression may be deleted (bdb.Breakpoint, boolean)
 </dd>
 </dl><a NAME="DebugBase.__extractExceptionName" ID="DebugBase.__extractExceptionName"></a>
 <h4>DebugBase.__extractExceptionName</h4>
@@ -479,7 +479,8 @@ list of lists with file name (string), line number (integer)
 <h4>DebugBase.get_break</h4>
 <b>get_break</b>(<i>filename, lineno</i>)
 <p>
-        Reimplemented from bdb.py to get the first breakpoint of a particular line.
+        Reimplemented from bdb.py to get the first breakpoint of a particular
+        line.
 </p><p>
         Because eric5 supports only one breakpoint per line, this overwritten
         method will return this one and only breakpoint.

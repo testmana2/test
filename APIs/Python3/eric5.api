@@ -2215,7 +2215,11 @@ eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar._createMenu?5()
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.newUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar?1(mainWindow, model, parent=None)
-eric5.Helpviewer.Bookmarks.DefaultBookmarks.DefaultBookmarks?7
+eric5.Helpviewer.Bookmarks.DefaultBookmarks_rc.qCleanupResources?4()
+eric5.Helpviewer.Bookmarks.DefaultBookmarks_rc.qInitResources?4()
+eric5.Helpviewer.Bookmarks.DefaultBookmarks_rc.qt_resource_data?7
+eric5.Helpviewer.Bookmarks.DefaultBookmarks_rc.qt_resource_name?7
+eric5.Helpviewer.Bookmarks.DefaultBookmarks_rc.qt_resource_struct?7
 eric5.Helpviewer.Bookmarks.NsHtmlReader.NsHtmlReader.indentSize?7
 eric5.Helpviewer.Bookmarks.NsHtmlReader.NsHtmlReader.read?4(fileNameOrDevice)
 eric5.Helpviewer.Bookmarks.NsHtmlReader.NsHtmlReader?1()
@@ -2870,7 +2874,11 @@ eric5.Helpviewer.OfflineStorage.WebDatabasesModel.WebDatabasesModel.parent?4(ind
 eric5.Helpviewer.OfflineStorage.WebDatabasesModel.WebDatabasesModel.removeRows?4(row, count, parent=QModelIndex())
 eric5.Helpviewer.OfflineStorage.WebDatabasesModel.WebDatabasesModel.rowCount?4(parent=QModelIndex())
 eric5.Helpviewer.OfflineStorage.WebDatabasesModel.WebDatabasesModel?1(parent=None)
-eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.OpenSearchDefaultEngines?7
+eric5.Helpviewer.OpenSearch.DefaultSearchEngines.DefaultSearchEngines_rc.qCleanupResources?4()
+eric5.Helpviewer.OpenSearch.DefaultSearchEngines.DefaultSearchEngines_rc.qInitResources?4()
+eric5.Helpviewer.OpenSearch.DefaultSearchEngines.DefaultSearchEngines_rc.qt_resource_data?7
+eric5.Helpviewer.OpenSearch.DefaultSearchEngines.DefaultSearchEngines_rc.qt_resource_name?7
+eric5.Helpviewer.OpenSearch.DefaultSearchEngines.DefaultSearchEngines_rc.qt_resource_struct?7
 eric5.Helpviewer.OpenSearch.OpenSearchDialog.OpenSearchDialog.on_addButton_clicked?4()
 eric5.Helpviewer.OpenSearch.OpenSearchDialog.OpenSearchDialog.on_deleteButton_clicked?4()
 eric5.Helpviewer.OpenSearch.OpenSearchDialog.OpenSearchDialog.on_editButton_clicked?4()
@@ -3195,7 +3203,11 @@ eric5.Helpviewer.UrlBar.UrlBar.UrlBar.preferencesChanged?4()
 eric5.Helpviewer.UrlBar.UrlBar.UrlBar.setBrowser?4(browser)
 eric5.Helpviewer.UrlBar.UrlBar.UrlBar.setPrivateMode?4(on)
 eric5.Helpviewer.UrlBar.UrlBar.UrlBar?1(mainWindow, parent=None)
-eric5.Helpviewer.UserAgent.UserAgentDefaults.UserAgentDefaults?7
+eric5.Helpviewer.UserAgent.UserAgentDefaults_rc.qCleanupResources?4()
+eric5.Helpviewer.UserAgent.UserAgentDefaults_rc.qInitResources?4()
+eric5.Helpviewer.UserAgent.UserAgentDefaults_rc.qt_resource_data?7
+eric5.Helpviewer.UserAgent.UserAgentDefaults_rc.qt_resource_name?7
+eric5.Helpviewer.UserAgent.UserAgentDefaults_rc.qt_resource_struct?7
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.allHostNames?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.changed?7
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.close?4()

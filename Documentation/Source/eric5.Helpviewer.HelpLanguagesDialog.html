@@ -60,7 +60,7 @@ QDialog, Ui_HelpLanguagesDialog
 <td>Class method to expand a language enum to a readable languages list.</td>
 </tr><tr>
 <td><a href="#HelpLanguagesDialog.httpString">httpString</a></td>
-<td>Class method to convert a list of acceptable languages into a byte array that can be sent along with the Accept-Language http header (see RFC 2616).</td>
+<td>Class method to convert a list of acceptable languages into a byte array.</td>
 </tr>
 </table>
 <h3>Methods</h3>
@@ -121,8 +121,11 @@ list of expanded language names (list of strings)
 <h4>HelpLanguagesDialog.httpString (class method)</h4>
 <b>httpString</b>(<i>languages</i>)
 <p>
-        Class method to convert a list of acceptable languages into a byte array that
-        can be sent along with the Accept-Language http header (see RFC 2616).
+        Class method to convert a list of acceptable languages into a byte
+        array.
+</p><p>
+        The byte array can be sent along with the Accept-Language http header
+        (see RFC 2616).
 </p><dl>
 <dt><i>languages</i></dt>
 <dd>
@@ -175,7 +178,8 @@ index of the previously selected item (QModelIndex)
 <h4>HelpLanguagesDialog.on_removeButton_clicked</h4>
 <b>on_removeButton_clicked</b>(<i></i>)
 <p>
-        Private slot to remove a language from the list of acceptable languages.
+        Private slot to remove a language from the list of acceptable
+        languages.
 </p><a NAME="HelpLanguagesDialog.on_upButton_clicked" ID="HelpLanguagesDialog.on_upButton_clicked"></a>
 <h4>HelpLanguagesDialog.on_upButton_clicked</h4>
 <b>on_upButton_clicked</b>(<i></i>)

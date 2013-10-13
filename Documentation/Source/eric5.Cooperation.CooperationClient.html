@@ -50,18 +50,20 @@ Module implementing the client of the cooperation package.
 emitted, if the initial connection fails
 </dd><dt>connectionError(message)</dt>
 <dd>
-emitted when a connection error occurs (string)
+emitted when a connection error occurs
+        (string)
 </dd><dt>editorCommand(hash, filename, message)</dt>
 <dd>
-emitted when an editor command
-            has been received (string, string, string)
+emitted when an editor
+        command has been received (string, string, string)
 </dd><dt>newMessage(user, message)</dt>
 <dd>
 emitted after a new message has
-            arrived (string, string)
+        arrived (string, string)
 </dd><dt>newParticipant(nickname)</dt>
 <dd>
-emitted after a new participant joined (string)
+emitted after a new participant joined
+        (string)
 </dd><dt>participantLeft(nickname)</dt>
 <dd>
 emitted after a participant left (string)
@@ -178,7 +180,8 @@ reference to the parent object (QObject)
 </p><dl>
 <dt><i>socketError</i></dt>
 <dd>
-reference to the error object (QAbstractSocket.SocketError)
+reference to the error object
+            (QAbstractSocket.SocketError)
 </dd>
 </dl><a NAME="CooperationClient.__connectionRejected" ID="CooperationClient.__connectionRejected"></a>
 <h4>CooperationClient.__connectionRejected</h4>
@@ -208,7 +211,8 @@ nick name in the format of self.nickName() (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-list of references to the connection objects (list of Connection)
+list of references to the connection objects (list of
+            Connection)
 </dd>
 </dl><a NAME="CooperationClient.__getParticipants" ID="CooperationClient.__getParticipants"></a>
 <h4>CooperationClient.__getParticipants</h4>
@@ -233,7 +237,8 @@ reference to the new connection (Connection)
 </p><dl>
 <dt><i>participants</i></dt>
 <dd>
-list of participants (list of strings of "host:port")
+list of participants (list of strings of
+            "host:port")
 </dd>
 </dl><a NAME="CooperationClient.__readyForUse" ID="CooperationClient.__readyForUse"></a>
 <h4>CooperationClient.__readyForUse</h4>
@@ -297,11 +302,13 @@ port to connect to (integer)
 <h4>CooperationClient.errorString</h4>
 <b>errorString</b>(<i></i>)
 <p>
-        Public method to get a human readable error message about the last server error.
+        Public method to get a human readable error message about the last
+        server error.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-human readable error message about the last server error (string)
+human readable error message about the last server error
+            (string)
 </dd>
 </dl><a NAME="CooperationClient.hasConnection" ID="CooperationClient.hasConnection"></a>
 <h4>CooperationClient.hasConnection</h4>
@@ -369,7 +376,8 @@ nick name (string)
 </p><dl>
 <dt><i>connection</i></dt>
 <dd>
-reference to the connection to be removed (Connection)
+reference to the connection to be removed
+            (Connection)
 </dd>
 </dl><a NAME="CooperationClient.sendEditorCommand" ID="CooperationClient.sendEditorCommand"></a>
 <h4>CooperationClient.sendEditorCommand</h4>

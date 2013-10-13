@@ -54,8 +54,8 @@ Module implementing a previewer widget for HTML, Markdown and ReST files.
 <dl>
 <dt>htmlReady(str,str)</dt>
 <dd>
-emitted with the file name and processed HTML to signal
-            the availability of the processed HTML
+emitted with the file name and processed HTML
+        to signal the availability of the processed HTML
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -179,7 +179,8 @@ processed HTML text (string)
 text to be processed (string)
 </dd><dt><i>filename</i></dt>
 <dd>
-name of the file associated with the given text (string)
+name of the file associated with the given text
+            (string)
 </dd><dt><i>root</i></dt>
 <dd>
 directory of the document root (string)
@@ -206,7 +207,8 @@ language of the text (string)
 text to be processed (string)
 </dd><dt><i>ssiEnabled</i></dt>
 <dd>
-flag indicating to do some (limited) SSI processing (boolean)
+flag indicating to do some (limited) SSI processing
+            (boolean)
 </dd><dt><i>rootPath</i></dt>
 <dd>
 root path to be used for SSI processing (str)
@@ -349,7 +351,8 @@ reference to the editor (Editor)
 <h4>Previewer.__isPreviewable</h4>
 <b>__isPreviewable</b>(<i>editor</i>)
 <p>
-        Private method to check, if a preview can be shown for the given editor.
+        Private method to check, if a preview can be shown for the given
+        editor.
 </p><dl>
 <dt><i>editor</i></dt>
 <dd>
@@ -389,7 +392,8 @@ flag indicating to show a preview (boolean)
 <h4>Previewer.__setHtml</h4>
 <b>__setHtml</b>(<i>filePath, html</i>)
 <p>
-        Private method to set the HTML to the view and restore the scroll bars positions.
+        Private method to set the HTML to the view and restore the scroll bars
+        positions.
 </p><dl>
 <dt><i>filePath</i></dt>
 <dd>
@@ -477,9 +481,9 @@ state of the checkbox (boolean)
                 Class is placed here, because it depends on imported markdown,
                 and markdown import is lazy.
 </p><p>
-                (see
-                <a href="http://achinghead.com/python-markdown-adding-insert-delete.html">
-                this page for details</a>)
+                (see http://achinghead.com/
+                python-markdown-adding-insert-delete.html this page for
+                details)
 </p>
 <h3>Derived from</h3>
 markdown.Extension

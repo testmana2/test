@@ -45,24 +45,26 @@ Module implementing the debug server.
     Class implementing the debug server embedded within the IDE.
 </p><h3>Signals</h3>
 <dl>
-<dt>callTraceInfo(isCall, fromFile, fromLine, fromFunction, toFile, toLine, toFunction)</dt>
+<dt>callTraceInfo</dt>
 <dd>
-            emitted after the client reported the call trace data
+emitted after the client reported the call trace
+        data (isCall, fromFile, fromLine, fromFunction, toFile, toLine,
+        toFunction)
 </dd><dt>clientBanner(banner)</dt>
 <dd>
 emitted after the client banner was received
 </dd><dt>clientBreakConditionError(fn, lineno)</dt>
 <dd>
-emitted after the client has signaled
-            a syntax error in a breakpoint condition
+emitted after the client has
+        signaled a syntax error in a breakpoint condition
 </dd><dt>clientCapabilities(int capabilities, string cltype)</dt>
 <dd>
-emitted after the clients
-            capabilities were received
+emitted after
+        the clients capabilities were received
 </dd><dt>clientClearBreak(filename, lineno)</dt>
 <dd>
 emitted after the debug client
-            has decided to clear a temporary breakpoint
+        has decided to clear a temporary breakpoint
 </dd><dt>clientClearWatch(condition)</dt>
 <dd>
 emitted after the debug client
@@ -70,110 +72,115 @@ emitted after the debug client
 </dd><dt>clientCompletionList(completionList, text)</dt>
 <dd>
 emitted after the client
-            the commandline completion list and the reworked searchstring was
-            received from the client
+        the commandline completion list and the reworked searchstring was
+        received from the client
 </dd><dt>clientException(exception)</dt>
 <dd>
-emitted after an exception occured on the
-            client side
+emitted after an exception occured on
+        the client side
 </dd><dt>clientExit(int)</dt>
 <dd>
-emitted with the exit status after the client has exited
+emitted with the exit status after the client has
+        exited
 </dd><dt>clientGone(bool)</dt>
 <dd>
-emitted if the client went away (planned or unplanned)
+emitted if the client went away (planned or
+        unplanned)
 </dd><dt>clientLine(filename, lineno, forStack)</dt>
 <dd>
-emitted after the debug client
-            has executed a line of code
+emitted after the
+        debug client has executed a line of code
 </dd><dt>clientOutput(str)</dt>
 <dd>
 emitted after the client has sent some output
 </dd><dt>clientProcessStderr(str)</dt>
 <dd>
-emitted after the client has sent some output
-            via stderr
+emitted after the client has sent some
+        output via stderr
 </dd><dt>clientProcessStdout(str)</dt>
 <dd>
-emitted after the client has sent some output
-            via stdout
+emitted after the client has sent some
+        output via stdout
 </dd><dt>clientRawInput(prompt, echo)</dt>
 <dd>
-emitted after a raw input request was received
+emitted after a raw input request was
+        received
 </dd><dt>clientRawInputSent()</dt>
 <dd>
-emitted after the data was sent to the debug client
+emitted after the data was sent to the
+        debug client
 </dd><dt>clientStack(stack)</dt>
 <dd>
 emitted after the debug client has executed a
-            line of code
+        line of code
 </dd><dt>clientStatement(bool)</dt>
 <dd>
 emitted after an interactive command has
-            been executed. The parameter is 0 to indicate that the command is
-            complete and 1 if it needs more input.
+        been executed. The parameter is 0 to indicate that the command is
+        complete and 1 if it needs more input.
 </dd><dt>clientSyntaxError(exception)</dt>
 <dd>
-emitted after a syntax error has been detected
-            on the client side
+emitted after a syntax error has been
+        detected on the client side
 </dd><dt>clientThreadList(currentId, threadList)</dt>
 <dd>
 emitted after a thread list
-            has been received
+        has been received
 </dd><dt>clientThreadSet()</dt>
 <dd>
-emitted after the client has acknowledged the change
-            of the current thread
+emitted after the client has acknowledged the
+        change of the current thread
 </dd><dt>clientVariable(scope, variables)</dt>
 <dd>
 emitted after a dump for one class
-            variable has been received
+        variable has been received
 </dd><dt>clientVariables(scope, variables)</dt>
 <dd>
-emitted after a variables dump has
-            been received
+emitted after a variables dump
+        has been received
 </dd><dt>clientWatchConditionError(condition)</dt>
 <dd>
-emitted after the client has signaled
-            a syntax error in a watch expression
+emitted after the client has
+        signaled a syntax error in a watch expression
 </dd><dt>passiveDebugStarted(str, bool)</dt>
 <dd>
-emitted after the debug client has connected in
-            passive debug mode
+emitted after the debug client has
+        connected in passive debug mode
 </dd><dt>utFinished()</dt>
 <dd>
-emitted after the client signalled the end of the unittest
+emitted after the client signalled the end of the
+        unittest
 </dd><dt>utPrepared(nrTests, exc_type, exc_value)</dt>
 <dd>
-emitted after the client has
-            loaded a unittest suite
+emitted after the client
+        has loaded a unittest suite
 </dd><dt>utStartTest(testname, testdocu)</dt>
 <dd>
-emitted after the client has started
-            a test
+emitted after the client has
+        started a test
 </dd><dt>utStopTest()</dt>
 <dd>
 emitted after the client has finished a test
 </dd><dt>utTestErrored(testname, exc_info, id)</dt>
 <dd>
-emitted after the client reported
-            an errored test
+emitted after the client
+        reported an errored test
 </dd><dt>utTestFailed(testname, exc_info, id)</dt>
 <dd>
-emitted after the client reported
-            a failed test
+emitted after the client
+        reported a failed test
 </dd><dt>utTestFailedExpected(testname, exc_info, id)</dt>
 <dd>
-emitted after the client reported
-            an expected test failure
+emitted after the
+        client reported an expected test failure
 </dd><dt>utTestSkipped(testname, reason, id)</dt>
 <dd>
-emitted after the client reported
-            a skipped test
+emitted after the client
+        reported a skipped test
 </dd><dt>utTestSucceededUnexpected(testname, id)</dt>
 <dd>
-emitted after the client reported
-            an unexpected test success
+emitted after the client
+        reported an unexpected test success
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -520,7 +527,8 @@ end row (integer)
 <h4>DebugServer.__breakPointDataAboutToBeChanged</h4>
 <b>__breakPointDataAboutToBeChanged</b>(<i>startIndex, endIndex</i>)
 <p>
-        Private slot to handle the dataAboutToBeChanged signal of the breakpoint model.
+        Private slot to handle the dataAboutToBeChanged signal of the
+        breakpoint model.
 </p><dl>
 <dt><i>startIndex</i></dt>
 <dd>
@@ -634,7 +642,8 @@ end row (integer)
 <h4>DebugServer.__getNetworkInterfaceAndIndex</h4>
 <b>__getNetworkInterfaceAndIndex</b>(<i>address</i>)
 <p>
-        Private method to determine the network interface and the interface index.
+        Private method to determine the network interface and the interface
+        index.
 </p><dl>
 <dt><i>address</i></dt>
 <dd>
@@ -692,7 +701,8 @@ filename the breakpoint belongs to (string)
 linenumber of the breakpoint (int)
 </dd><dt><i>enable</i></dt>
 <dd>
-flag indicating enabling or disabling a breakpoint (boolean)
+flag indicating enabling or disabling a breakpoint
+            (boolean)
 </dd>
 </dl><a NAME="DebugServer.__remoteBreakpointIgnore" ID="DebugServer.__remoteBreakpointIgnore"></a>
 <h4>DebugServer.__remoteBreakpointIgnore</h4>
@@ -721,7 +731,8 @@ number of occurrences to ignore (int)
 expression of the watch expression (string)
 </dd><dt><i>set</i></dt>
 <dd>
-flag indicating setting or resetting a watch expression (boolean)
+flag indicating setting or resetting a watch expression
+            (boolean)
 </dd><dt><i>temp</i></dt>
 <dd>
 flag indicating a temporary watch expression (boolean)
@@ -737,13 +748,15 @@ flag indicating a temporary watch expression (boolean)
 expression of the watch expression (string)
 </dd><dt><i>enable</i></dt>
 <dd>
-flag indicating enabling or disabling a watch expression (boolean)
+flag indicating enabling or disabling a watch expression
+            (boolean)
 </dd>
 </dl><a NAME="DebugServer.__remoteWatchpointIgnore" ID="DebugServer.__remoteWatchpointIgnore"></a>
 <h4>DebugServer.__remoteWatchpointIgnore</h4>
 <b>__remoteWatchpointIgnore</b>(<i>cond, count</i>)
 <p>
-        Private method to ignore a watch expression the next couple of occurrences.
+        Private method to ignore a watch expression the next couple of
+        occurrences.
 </p><dl>
 <dt><i>cond</i></dt>
 <dd>
@@ -785,7 +798,8 @@ remote expression (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of local expression (string) and special condition (string)
+tuple of local expression (string) and special condition
+            (string)
 </dd>
 </dl><a NAME="DebugServer.__watchPointDataAboutToBeChanged" ID="DebugServer.__watchPointDataAboutToBeChanged"></a>
 <h4>DebugServer.__watchPointDataAboutToBeChanged</h4>
@@ -955,17 +969,20 @@ language to get extensions for (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of extensions associated with the language (tuple of strings)
+tuple of extensions associated with the language
+            (tuple of strings)
 </dd>
 </dl><a NAME="DebugServer.getHostAddress" ID="DebugServer.getHostAddress"></a>
 <h4>DebugServer.getHostAddress</h4>
 <b>getHostAddress</b>(<i>localhost</i>)
 <p>
-        Public method to get the IP address or hostname the debug server is listening.
+        Public method to get the IP address or hostname the debug server is
+        listening.
 </p><dl>
 <dt><i>localhost</i></dt>
 <dd>
-flag indicating to return the address for localhost (boolean)
+flag indicating to return the address for localhost
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -996,7 +1013,8 @@ list of supported languages (list of strings)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-reference to the watch expression model object (WatchPointModel)
+reference to the watch expression model object
+            (WatchPointModel)
 </dd>
 </dl><a NAME="DebugServer.isConnected" ID="DebugServer.isConnected"></a>
 <h4>DebugServer.isConnected</h4>
@@ -1147,8 +1165,8 @@ the working directory for the program (string)
 environment settings (string)
 </dd><dt><i>autoClearShell=</i></dt>
 <dd>
-flag indicating, that the interpreter window should
-            be cleared (boolean)
+flag indicating, that the interpreter window
+            should be cleared (boolean)
 </dd><dt><i>erase=</i></dt>
 <dd>
 flag indicating that coverage info should be
@@ -1178,7 +1196,8 @@ environment settings (string)
 <h4>DebugServer.remoteEval</h4>
 <b>remoteEval</b>(<i>arg</i>)
 <p>
-        Public method to evaluate arg in the current context of the debugged program.
+        Public method to evaluate arg in the current context of the debugged
+        program.
 </p><dl>
 <dt><i>arg</i></dt>
 <dd>
@@ -1188,7 +1207,8 @@ the arguments to evaluate (string)
 <h4>DebugServer.remoteExec</h4>
 <b>remoteExec</b>(<i>stmt</i>)
 <p>
-        Public method to execute stmt in the current context of the debugged program.
+        Public method to execute stmt in the current context of the debugged
+        program.
 </p><dl>
 <dt><i>stmt</i></dt>
 <dd>
@@ -1214,16 +1234,16 @@ the working directory for the program (string)
 environment settings (string)
 </dd><dt><i>autoClearShell=</i></dt>
 <dd>
-flag indicating, that the interpreter window should
-            be cleared (boolean)
+flag indicating, that the interpreter window
+            should be cleared (boolean)
 </dd><dt><i>tracePython=</i></dt>
 <dd>
-flag indicating if the Python library should be traced
-            as well (boolean)
+flag indicating if the Python library should be
+            traced as well (boolean)
 </dd><dt><i>autoContinue=</i></dt>
 <dd>
-flag indicating, that the debugger should not stop
-            at the first executable line (boolean)
+flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
 </dd><dt><i>forProject=</i></dt>
 <dd>
 flag indicating a project related action (boolean)
@@ -1236,7 +1256,8 @@ flag indicating to start the debugger in a
 flag indicating the automatic fork mode (boolean)
 </dd><dt><i>forkChild=</i></dt>
 <dd>
-flag indicating to debug the child after forking (boolean)
+flag indicating to debug the child after forking
+            (boolean)
 </dd><dt><i>clientType=</i></dt>
 <dd>
 client type to be used (string)
@@ -1265,11 +1286,12 @@ the working directory for the program (string)
 environment settings (string)
 </dd><dt><i>autoClearShell=</i></dt>
 <dd>
-flag indicating, that the interpreter window should
-            be cleared (boolean)
+flag indicating, that the interpreter window
+            should be cleared (boolean)
 </dd><dt><i>erase=</i></dt>
 <dd>
-flag indicating that timing info should be cleared first (boolean)
+flag indicating that timing info should be cleared
+            first (boolean)
 </dd><dt><i>forProject=</i></dt>
 <dd>
 flag indicating a project related action (boolean)
@@ -1311,8 +1333,8 @@ the working directory for the program (string)
 environment settings (string)
 </dd><dt><i>autoClearShell=</i></dt>
 <dd>
-flag indicating, that the interpreter window should
-            be cleared (boolean)
+flag indicating, that the interpreter window
+            should be cleared (boolean)
 </dd><dt><i>forProject=</i></dt>
 <dd>
 flag indicating a project related action (boolean)
@@ -1325,7 +1347,8 @@ flag indicating to start the debugger in a
 flag indicating the automatic fork mode (boolean)
 </dd><dt><i>forkChild=</i></dt>
 <dd>
-flag indicating to debug the child after forking (boolean)
+flag indicating to debug the child after forking
+            (boolean)
 </dd><dt><i>clientType=</i></dt>
 <dd>
 client type to be used (string)
@@ -1394,17 +1417,19 @@ the test function name to load tests from (string)
 </dd><dt><i>failed</i></dt>
 <dd>
 list of failed test, if only failed test should be run
-                (list of strings)
+            (list of strings)
 </dd><dt><i>cov</i></dt>
 <dd>
-flag indicating collection of coverage data is requested (boolean)
+flag indicating collection of coverage data is requested
+            (boolean)
 </dd><dt><i>covname</i></dt>
 <dd>
 filename to be used to assemble the coverage caches
-                filename (string)
+            filename (string)
 </dd><dt><i>coverase</i></dt>
 <dd>
-flag indicating erasure of coverage data is requested (boolean)
+flag indicating erasure of coverage data is requested
+            (boolean)
 </dd><dt><i>clientType=</i></dt>
 <dd>
 client type to be used (string)
@@ -1558,7 +1583,8 @@ message given by the exception (string)
 </dd><dt><i>stackTrace</i></dt>
 <dd>
 list of stack entries with the exception position
-            first. Each stack entry is a list giving the filename and the linenumber.
+            first. Each stack entry is a list giving the filename and the
+            linenumber.
 </dd>
 </dl><a NAME="DebugServer.signalClientExit" ID="DebugServer.signalClientExit"></a>
 <h4>DebugServer.signalClientExit</h4>
@@ -1642,13 +1668,15 @@ flag indicating that more user input is required
 message of the syntax error (string)
 </dd><dt><i>filename</i></dt>
 <dd>
-translated filename of the syntax error position (string)
+translated filename of the syntax error position
+            (string)
 </dd><dt><i>lineNo</i></dt>
 <dd>
 line number of the syntax error position (integer)
 </dd><dt><i>characterNo</i></dt>
 <dd>
-character number of the syntax error position (integer)
+character number of the syntax error position
+            (integer)
 </dd>
 </dl><a NAME="DebugServer.signalClientThreadList" ID="DebugServer.signalClientThreadList"></a>
 <h4>DebugServer.signalClientThreadList</h4>
@@ -1676,7 +1704,8 @@ list of dictionaries containing the thread data
 </p><dl>
 <dt><i>scope</i></dt>
 <dd>
-scope of the variables (-1 = empty global, 1 = global, 0 = local)
+scope of the variables (-1 = empty global, 1 = global,
+            0 = local)
 </dd><dt><i>variables</i></dt>
 <dd>
 the list of members of a classvariable from the client
@@ -1689,7 +1718,8 @@ the list of members of a classvariable from the client
 </p><dl>
 <dt><i>scope</i></dt>
 <dd>
-scope of the variables (-1 = empty global, 1 = global, 0 = local)
+scope of the variables (-1 = empty global, 1 = global,
+            0 = local)
 </dd><dt><i>variables</i></dt>
 <dd>
 the list of variables from the client

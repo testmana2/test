@@ -50,13 +50,16 @@ Module implementing the APIsManager.
 <dl>
 <dt>apiPreparationCancelled()</dt>
 <dd>
-emitted after the API preparation has been cancelled
+emitted after the API preparation has
+        been cancelled
 </dd><dt>apiPreparationFinished()</dt>
 <dd>
-emitted after the API preparation has finished
+emitted after the API preparation has
+        finished
 </dd><dt>apiPreparationStarted()</dt>
 <dd>
-emitted after the API preparation has started
+emitted after the API preparation has
+        started
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -131,7 +134,8 @@ reference to the parent object (QObject)
 <h4>APIs.__apiPreparationCancelled</h4>
 <b>__apiPreparationCancelled</b>(<i></i>)
 <p>
-        Private method called, after the API preparation process has been cancelled.
+        Private method called, after the API preparation process has been
+        cancelled.
 </p><a NAME="APIs.__apiPreparationFinished" ID="APIs.__apiPreparationFinished"></a>
 <h4>APIs.__apiPreparationFinished</h4>
 <b>__apiPreparationFinished</b>(<i></i>)
@@ -253,15 +257,16 @@ reference to the parent object (QObject)
         Public method to get an apis object for autocompletion/calltips.
 </p><p>
         This method creates and loads an APIs object dynamically upon request.
-        This saves memory for languages, that might not be needed at the moment.
+        This saves memory for languages, that might not be needed at the
+        moment.
 </p><dl>
 <dt><i>language</i></dt>
 <dd>
 the language of the requested api object (string)
 </dd><dt><i>forPreparation</i></dt>
 <dd>
-flag indicating the requested api object is just needed
-            for a preparation process (boolean)
+flag indicating the requested api object is just
+            needed for a preparation process (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

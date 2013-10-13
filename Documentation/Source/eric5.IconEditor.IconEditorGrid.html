@@ -91,7 +91,8 @@ reference to the icon editor grid (IconEditorGrid)
 text for the undo command (string)
 </dd><dt><i>oldImage</i></dt>
 <dd>
-copy of the icon before the changes were applied (QImage)
+copy of the icon before the changes were applied
+            (QImage)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent command (QUndoCommand)
@@ -133,8 +134,8 @@ emitted after the redo status has changed
 emitted after the undo status has changed
 </dd><dt>clipboardImageAvailable(bool)</dt>
 <dd>
-emitted to signal the availability of an
-        image to be pasted
+emitted to signal the availability
+        of an image to be pasted
 </dd><dt>colorChanged(QColor)</dt>
 <dd>
 emitted after the drawing color was changed
@@ -143,13 +144,15 @@ emitted after the drawing color was changed
 emitted after the image was modified
 </dd><dt>positionChanged(int, int)</dt>
 <dd>
-emitted after the cursor poition was changed
+emitted after the cursor poition was
+        changed
 </dd><dt>previewChanged(QPixmap)</dt>
 <dd>
 emitted to signal a new preview pixmap
 </dd><dt>selectionAvailable(bool)</dt>
 <dd>
-emitted to signal a change of the selection
+emitted to signal a change of the
+        selection
 </dd><dt>sizeChanged(int, int)</dt>
 <dd>
 emitted after the size has been changed
@@ -355,8 +358,8 @@ reference to the parent widget (QWidget)
 <h4>IconEditorGrid.__checkClipboard</h4>
 <b>__checkClipboard</b>(<i></i>)
 <p>
-        Private slot to check, if the clipboard contains a valid image, and signal
-        the result.
+        Private slot to check, if the clipboard contains a valid image, and
+        signal the result.
 </p><a NAME="IconEditorGrid.__cleanChanged" ID="IconEditorGrid.__cleanChanged"></a>
 <h4>IconEditorGrid.__cleanChanged</h4>
 <b>__cleanChanged</b>(<i>clean</i>)
@@ -466,8 +469,8 @@ tuple with the image coordinates (tuple of two integers)
 <h4>IconEditorGrid.__initUndoTexts</h4>
 <b>__initUndoTexts</b>(<i></i>)
 <p>
-        Private method to initialize texts to be associated with undo commands for
-        the various drawing tools.
+        Private method to initialize texts to be associated with undo commands
+        for the various drawing tools.
 </p><a NAME="IconEditorGrid.__isMarked" ID="IconEditorGrid.__isMarked"></a>
 <h4>IconEditorGrid.__isMarked</h4>
 <b>__isMarked</b>(<i>i, j</i>)
@@ -530,10 +533,12 @@ flag indicating a set operation (boolean)
 </p><dl>
 <dt><i>ipos1</i></dt>
 <dd>
-top, left position for the update in image coordinates (QPoint)
+top, left position for the update in image coordinates
+            (QPoint)
 </dd><dt><i>ipos2</i></dt>
 <dd>
-bottom, right position for the update in image coordinates (QPoint)
+bottom, right position for the update in image
+            coordinates (QPoint)
 </dd>
 </dl><a NAME="IconEditorGrid.__updatePreviewPixmap" ID="IconEditorGrid.__updatePreviewPixmap"></a>
 <h4>IconEditorGrid.__updatePreviewPixmap</h4>
@@ -548,10 +553,12 @@ bottom, right position for the update in image coordinates (QPoint)
 </p><dl>
 <dt><i>pos1</i></dt>
 <dd>
-top, left position for the update in widget coordinates (QPoint)
+top, left position for the update in widget coordinates
+            (QPoint)
 </dd><dt><i>pos2</i></dt>
 <dd>
-bottom, right position for the update in widget coordinates (QPoint)
+bottom, right position for the update in widget
+            coordinates (QPoint)
 </dd>
 </dl><a NAME="IconEditorGrid.canPaste" ID="IconEditorGrid.canPaste"></a>
 <h4>IconEditorGrid.canPaste</h4>
@@ -621,7 +628,8 @@ compositing mode (QPainter.CompositionMode)
 </p><dl>
 <dt><i>pasting</i></dt>
 <dd>
-flag indicating part two of the paste operation (boolean)
+flag indicating part two of the paste operation
+            (boolean)
 </dd>
 </dl><a NAME="IconEditorGrid.editPasteAsNew" ID="IconEditorGrid.editPasteAsNew"></a>
 <h4>IconEditorGrid.editPasteAsNew</h4>
@@ -784,7 +792,8 @@ compositing mode to set (QPainter.CompositionMode)
 flag indicating the new modification status (boolean)
 </dd><dt><i>setCleanState</i></dt>
 <dd>
-flag indicating to set the undo stack to clean (boolean)
+flag indicating to set the undo stack to clean
+            (boolean)
 </dd>
 </dl><a NAME="IconEditorGrid.setGridEnabled" ID="IconEditorGrid.setGridEnabled"></a>
 <h4>IconEditorGrid.setGridEnabled</h4>

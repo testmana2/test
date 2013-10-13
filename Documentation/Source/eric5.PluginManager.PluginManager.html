@@ -51,20 +51,20 @@ emitted at startup after all plugins have
         been activated
 </dd><dt>pluginAboutToBeActivated(modulName, pluginObject)</dt>
 <dd>
-emitted just before a
-        plugin is activated
+emitted just
+        before a plugin is activated
 </dd><dt>pluginAboutToBeDeactivated(modulName, pluginObject)</dt>
 <dd>
-emitted just before a
-        plugin is deactivated
+emitted just
+        before a plugin is deactivated
 </dd><dt>pluginActivated(modulName, pluginObject)</dt>
 <dd>
-emitted just after a plugin
-        was activated
+emitted just after
+        a plugin was activated
 </dd><dt>pluginDeactivated(modulName, pluginObject)</dt>
 <dd>
-emitted just after a plugin
-        was deactivated
+emitted just after
+        a plugin was deactivated
 </dd><dt>shutdown()</dt>
 <dd>
 emitted at shutdown of the IDE
@@ -269,7 +269,8 @@ flag indicating, if the module satisfies all requirements
 <h4>PluginManager.__checkPluginsDownloadDirectory</h4>
 <b>__checkPluginsDownloadDirectory</b>(<i></i>)
 <p>
-        Private slot to check for the existence of the plugins download directory.
+        Private slot to check for the existence of the plugins download
+        directory.
 </p><a NAME="PluginManager.__getShortInfo" ID="PluginManager.__getShortInfo"></a>
 <h4>PluginManager.__getShortInfo</h4>
 <b>__getShortInfo</b>(<i>module</i>)
@@ -349,8 +350,8 @@ raised to indicate an issue during the
 <h4>PluginManager.activatePlugins</h4>
 <b>activatePlugins</b>(<i></i>)
 <p>
-        Public method to activate all plugins having the "autoactivate" attribute
-        set to True.
+        Public method to activate all plugins having the "autoactivate"
+        attribute set to True.
 </p><a NAME="PluginManager.deactivatePlugin" ID="PluginManager.deactivatePlugin"></a>
 <h4>PluginManager.deactivatePlugin</h4>
 <b>deactivatePlugin</b>(<i>name, onDemand=False</i>)
@@ -399,8 +400,8 @@ list of API filenames (list of string)
 <h4>PluginManager.getPluginConfigData</h4>
 <b>getPluginConfigData</b>(<i></i>)
 <p>
-        Public method to get the config data of all active, non on-demand plugins
-        used by the configuration dialog.
+        Public method to get the config data of all active, non on-demand
+        plugins used by the configuration dialog.
 </p><p>
         Plugins supporting this functionality must provide the plugin module
         function 'getConfigData' returning a dictionary with unique keys
@@ -410,18 +411,21 @@ list of API filenames (list of string)
           <dd>string shown in the selection area of the configuration page.
               This should be a localized string</dd>
           <dt>pixmap name</dt>
-          <dd>filename of the pixmap to be shown next to the display string</dd>
+          <dd>filename of the pixmap to be shown next to the display
+              string</dd>
           <dt>page creation function</dt>
           <dd>plugin module function to be called to create the configuration
               page. The page must be subclasses from
               Preferences.ConfigurationPages.ConfigurationPageBase and must
               implement a method called 'save' to save the settings. A parent
-              entry will be created in the selection list, if this value is None.</dd>
+              entry will be created in the selection list, if this value is
+              None.</dd>
           <dt>parent key</dt>
           <dd>dictionary key of the parent entry or None, if this defines a
               toplevel entry.</dd>
           <dt>reference to configuration page</dt>
-          <dd>This will be used by the configuration dialog and must always be None</dd>
+          <dd>This will be used by the configuration dialog and must always
+              be None</dd>
         </dl>
 </p><dl>
 <dt>Returns:</dt>
@@ -462,7 +466,8 @@ path of the requested plugin directory (string)
 <h4>PluginManager.getPluginDisplayStrings</h4>
 <b>getPluginDisplayStrings</b>(<i>type_</i>)
 <p>
-        Public method to get the display strings of all plugins of a specific type.
+        Public method to get the display strings of all plugins of a specific
+        type.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
@@ -484,26 +489,29 @@ dictionary with name as key and display string as value
 <dt>Returns:</dt>
 <dd>
 list of dictionaries containing the data. Each dictionary must
-            either contain data for the determination or the data to be displayed.<br />
+            either contain data for the determination or the data to be
+            displayed.<br />
             A dictionary of the first form must have the following entries:
             <ul>
-                <li>programEntry - indicator for this dictionary form (boolean),
-                    always True</li>
+                <li>programEntry - indicator for this dictionary form
+                   (boolean), always True</li>
                 <li>header - string to be diplayed as a header (string)</li>
                 <li>exe - the executable (string)</li>
-                <li>versionCommand - commandline parameter for the exe (string)</li>
-                <li>versionStartsWith - indicator for the output line containing
-                    the version (string)</li>
+                <li>versionCommand - commandline parameter for the exe
+                    (string)</li>
+                <li>versionStartsWith - indicator for the output line
+                    containing the version (string)</li>
                 <li>versionPosition - number of element containing the
                     version (integer)</li>
                 <li>version - version to be used as default (string)</li>
-                <li>versionCleanup - tuple of two integers giving string positions
-                    start and stop for the version string (tuple of integers)</li>
+                <li>versionCleanup - tuple of two integers giving string
+                    positions start and stop for the version string
+                    (tuple of integers)</li>
             </ul>
             A dictionary of the second form must have the following entries:
             <ul>
-                <li>programEntry - indicator for this dictionary form (boolean),
-                    always False</li>
+                <li>programEntry - indicator for this dictionary form
+                    (boolean), always False</li>
                 <li>header - string to be diplayed as a header (string)</li>
                 <li>text - entry text to be shown (string)</li>
                 <li>version - version text to be shown (string)</li>
@@ -517,9 +525,9 @@ list of dictionaries containing the data. Each dictionary must
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-list of tuples giving module name (string), plugin name (string),
-            version (string), autoactivate (boolean), active (boolean),
-            short description (string), error flag (boolean)
+list of tuples giving module name (string), plugin name
+            (string), version (string), autoactivate (boolean), active
+            (boolean), short description (string), error flag (boolean)
 </dd>
 </dl><a NAME="PluginManager.getPluginModules" ID="PluginManager.getPluginModules"></a>
 <h4>PluginManager.getPluginModules</h4>
@@ -540,7 +548,8 @@ list of plugin module names (list of string)
 <h4>PluginManager.getPluginObject</h4>
 <b>getPluginObject</b>(<i>type_, typename, maybeActive=False</i>)
 <p>
-        Public method to activate an ondemand plugin given by type and typename.
+        Public method to activate an ondemand plugin given by type and
+        typename.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
@@ -588,8 +597,9 @@ preview pixmap (QPixmap)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-dictionary with indicator as key and a list of tuples as values.
-            Each tuple contains the vcs name (string) and vcs display string (string).
+dictionary with indicator as key and a list of tuples as
+            values. Each tuple contains the vcs name (string) and vcs display
+            string (string).
 </dd>
 </dl><a NAME="PluginManager.initOnDemandPlugin" ID="PluginManager.initOnDemandPlugin"></a>
 <h4>PluginManager.initOnDemandPlugin</h4>
@@ -699,7 +709,8 @@ raised to indicate an issue loading
 <h4>PluginManager.removePluginFromSysModules</h4>
 <b>removePluginFromSysModules</b>(<i>pluginName, package, internalPackages</i>)
 <p>
-        Public method to remove a plugin and all related modules from sys.modules.
+        Public method to remove a plugin and all related modules from
+        sys.modules.
 </p><dl>
 <dt><i>pluginName</i></dt>
 <dd>
@@ -714,7 +725,8 @@ list of intenal packages (list of string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating the plugin module was found in sys.modules (boolean)
+flag indicating the plugin module was found in sys.modules
+            (boolean)
 </dd>
 </dl><a NAME="PluginManager.unloadPlugin" ID="PluginManager.unloadPlugin"></a>
 <h4>PluginManager.unloadPlugin</h4>

@@ -56,8 +56,8 @@ Module implementing a debug client base class.
 <p>
     Class implementing the client side of the debugger.
 </p><p>
-    It provides access to the Python interpeter from a debugger running in another
-    process whether or not the Qt event loop is running.
+    It provides access to the Python interpeter from a debugger running in
+    another process whether or not the Qt event loop is running.
 </p><p>
     The protocol between the debugger and the client assumes that there will be
     a single source of debugger commands and a single source of Python
@@ -70,12 +70,11 @@ Module implementing a debug client base class.
     See DebugProtocol.py for a listing of valid protocol tokens.
 </p><p>
     A Python statement consists of the statement to execute, followed (in a
-    separate line) by &gt;OK?&lt;.  If the statement was incomplete then the response
-    is &gt;Continue&lt;.  If there was an exception then the response is
-    &gt;Exception&lt;.
-    Otherwise the response is &gt;OK&lt;.  The reason for the &gt;OK?&lt; part is to
-    provide a sentinal (ie. the responding &gt;OK&lt;) after any possible output as a
-    result of executing the command.
+    separate line) by &gt;OK?&lt;. If the statement was incomplete then the
+    response is &gt;Continue&lt;. If there was an exception then the response
+    is &gt;Exception&lt;. Otherwise the response is &gt;OK&lt;.  The reason
+    for the &gt;OK?&lt; part is to provide a sentinal (ie. the responding
+    &gt;OK&lt;) after any possible output as a result of executing the command.
 </p><p>
     The client may send any other lines at any other time which should be
     interpreted as program output.
@@ -84,8 +83,8 @@ Module implementing a debug client base class.
     The client may close the session at any time as a result of the script
     being debugged closing or crashing.
 </p><p>
-    <b>Note</b>: This class is meant to be subclassed by individual DebugClient classes.
-    Do not instantiate it directly.
+    <b>Note</b>: This class is meant to be subclassed by individual
+    DebugClient classes. Do not instantiate it directly.
 </p>
 <h3>Derived from</h3>
 object
@@ -266,16 +265,19 @@ the text to be completed (string)
 </p><dl>
 <dt><i>var</i></dt>
 <dd>
-list encoded name of the requested variable (list of strings)
+list encoded name of the requested variable
+            (list of strings)
 </dd><dt><i>frmnr</i></dt>
 <dd>
-distance of frame reported on. 0 is the current frame (int)
+distance of frame reported on. 0 is the current frame
+            (int)
 </dd><dt><i>scope</i></dt>
 <dd>
 1 to report global variables, 0 for local variables (int)
 </dd><dt><i>filter</i></dt>
 <dd>
-the indices of variable types to be filtered (list of int)
+the indices of variable types to be filtered
+            (list of int)
 </dd>
 </dl><a NAME="DebugClientBase.__dumpVariables" ID="DebugClientBase.__dumpVariables"></a>
 <h4>DebugClientBase.__dumpVariables</h4>
@@ -285,13 +287,15 @@ the indices of variable types to be filtered (list of int)
 </p><dl>
 <dt><i>frmnr</i></dt>
 <dd>
-distance of frame reported on. 0 is the current frame (int)
+distance of frame reported on. 0 is the current frame
+            (int)
 </dd><dt><i>scope</i></dt>
 <dd>
 1 to report global variables, 0 for local variables (int)
 </dd><dt><i>filter</i></dt>
 <dd>
-the indices of variable types to be filtered (list of int)
+the indices of variable types to be filtered
+            (list of int)
 </dd>
 </dl><a NAME="DebugClientBase.__exceptionRaised" ID="DebugClientBase.__exceptionRaised"></a>
 <h4>DebugClientBase.__exceptionRaised</h4>
@@ -328,8 +332,9 @@ A tuple consisting of a list of formatted variables. Each
 </p><p>
         The dictionary passed in to it is scanned. Variables are
         only added to the list, if their type is not contained
-        in the filter list and their name doesn't match any of the filter expressions.
-        The formated variables list (a list of tuples of 3 values) is returned.
+        in the filter list and their name doesn't match any of the filter
+        expressions. The formated variables list (a list of tuples of 3
+        values) is returned.
 </p><dl>
 <dt><i>keylist</i></dt>
 <dd>
@@ -341,25 +346,25 @@ the dictionary to be scanned
 <dd>
 1 to filter using the globals filter, 0 using the locals
             filter (int).
-            Variables are only added to the list, if their name do not match any of the
-            filter expressions.
+            Variables are only added to the list, if their name do not match
+            any of the filter expressions.
 </dd><dt><i>filter</i></dt>
 <dd>
-the indices of variable types to be filtered. Variables are
-            only added to the list, if their type is not contained in the filter
-            list.
+the indices of variable types to be filtered. Variables
+            are only added to the list, if their type is not contained in the
+            filter list.
 </dd><dt><i>formatSequences</i></dt>
 <dd>
-flag indicating, that sequence or dictionary variables
-            should be formatted. If it is 0 (or false), just the number of items contained
-            in these variables is returned. (boolean)
+flag indicating, that sequence or dictionary
+            variables should be formatted. If it is 0 (or false), just the
+            number of items contained in these variables is returned. (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-A tuple consisting of a list of formatted variables. Each variable
-            entry is a tuple of three elements, the variable name, its type and
-            value.
+A tuple consisting of a list of formatted variables. Each
+            variable entry is a tuple of three elements, the variable name,
+            its type and value.
 </dd>
 </dl><a NAME="DebugClientBase.__generateFilterObjects" ID="DebugClientBase.__generateFilterObjects"></a>
 <h4>DebugClientBase.__generateFilterObjects</h4>
@@ -466,7 +471,8 @@ the converted filename (string)
 </p><dl>
 <dt><i>target</i></dt>
 <dd>
-the start function of the target thread (i.e. the user code)
+the start function of the target thread (i.e. the
+            user code)
 </dd><dt><i>args</i></dt>
 <dd>
 arguments to pass to target
@@ -482,7 +488,8 @@ True, if we are attaching to the already
 <h4>DebugClientBase.close</h4>
 <b>close</b>(<i>fd</i>)
 <p>
-        Private method implementing a close method as a replacement for os.close().
+        Private method implementing a close method as a replacement for
+        os.close().
 </p><p>
         It prevents the debugger connections from being closed.
 </p><dl>
@@ -505,10 +512,12 @@ file descriptor to be closed (integer)
 the port number to connect to (int)
 </dd><dt><i>remoteAddress</i></dt>
 <dd>
-the network address of the debug server host (string)
+the network address of the debug server host
+            (string)
 </dd><dt><i>redirect</i></dt>
 <dd>
-flag indicating redirection of stdin, stdout and stderr (boolean)
+flag indicating redirection of stdin, stdout and
+            stderr (boolean)
 </dd>
 </dl><a NAME="DebugClientBase.eventLoop" ID="DebugClientBase.eventLoop"></a>
 <h4>DebugClientBase.eventLoop</h4>
@@ -563,8 +572,8 @@ flag indicating a running debug session (boolean)
 <p>
         Public method to handle the receipt of a complete line.
 </p><p>
-        It first looks for a valid protocol token at the start of the line. Thereafter
-        it trys to execute the lines accumulated so far.
+        It first looks for a valid protocol token at the start of the line.
+        Thereafter it trys to execute the lines accumulated so far.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
@@ -628,7 +637,8 @@ result of the function call
 <h4>DebugClientBase.sessionClose</h4>
 <b>sessionClose</b>(<i>exit=True</i>)
 <p>
-        Public method to close the session with the debugger and optionally terminate.
+        Public method to close the session with the debugger and optionally
+        terminate.
 </p><dl>
 <dt><i>exit</i></dt>
 <dd>
@@ -647,7 +657,8 @@ filename to be checked
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-non-zero if fn represents a file we are 'skipping', zero otherwise.
+non-zero if fn represents a file we are 'skipping',
+            zero otherwise.
 </dd>
 </dl><a NAME="DebugClientBase.startDebugger" ID="DebugClientBase.startDebugger"></a>
 <h4>DebugClientBase.startDebugger</h4>
@@ -669,13 +680,16 @@ portnumber of the debug server (int)
 flag to enable the tracing function (boolean)
 </dd><dt><i>exceptions</i></dt>
 <dd>
-flag to enable exception reporting of the IDE (boolean)
+flag to enable exception reporting of the IDE
+            (boolean)
 </dd><dt><i>tracePython</i></dt>
 <dd>
-flag to enable tracing into the Python library (boolean)
+flag to enable tracing into the Python library
+            (boolean)
 </dd><dt><i>redirect</i></dt>
 <dd>
-flag indicating redirection of stdin, stdout and stderr (boolean)
+flag indicating redirection of stdin, stdout and
+            stderr (boolean)
 </dd>
 </dl><a NAME="DebugClientBase.startProgInDebugger" ID="DebugClientBase.startProgInDebugger"></a>
 <h4>DebugClientBase.startProgInDebugger</h4>
@@ -698,13 +712,16 @@ hostname of the debug server (string)
 portnumber of the debug server (int)
 </dd><dt><i>exceptions</i></dt>
 <dd>
-flag to enable exception reporting of the IDE (boolean)
+flag to enable exception reporting of the IDE
+            (boolean)
 </dd><dt><i>tracePython</i></dt>
 <dd>
-flag to enable tracing into the Python library (boolean)
+flag to enable tracing into the Python library
+            (boolean)
 </dd><dt><i>redirect</i></dt>
 <dd>
-flag indicating redirection of stdin, stdout and stderr (boolean)
+flag indicating redirection of stdin, stdout and
+            stderr (boolean)
 </dd>
 </dl><a NAME="DebugClientBase.write" ID="DebugClientBase.write"></a>
 <h4>DebugClientBase.write</h4>

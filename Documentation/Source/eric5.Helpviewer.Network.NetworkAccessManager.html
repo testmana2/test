@@ -45,9 +45,12 @@ Module implementing a QNetworkAccessManager subclass.
     Class implementing a QNetworkAccessManager subclass.
 </p><h3>Signals</h3>
 <dl>
-<dt>requestCreated(QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)</dt>
+<dt>requestCreated</dt>
 <dd>
-        emitted after the request has been created
+emitted after the request has been created passing
+        the operation, a reference to the network request and a reference to
+        the network reply (QNetworkAccessManager.Operation, QNetworkRequest,
+        QNetworkReply)
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -128,7 +131,8 @@ reference to the authenticator object (QAuthenticator)
 </p><dl>
 <dt><i>op</i></dt>
 <dd>
-the operation to be performed (QNetworkAccessManager.Operation)
+the operation to be performed
+            (QNetworkAccessManager.Operation)
 </dd><dt><i>request</i></dt>
 <dd>
 reference to the request object (QNetworkRequest)
@@ -163,7 +167,8 @@ reference to the created reply object (QNetworkReply)
 access scheme (string)
 </dd><dt><i>handler</i></dt>
 <dd>
-reference to the scheme handler object (SchemeAccessHandler)
+reference to the scheme handler object
+            (SchemeAccessHandler)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

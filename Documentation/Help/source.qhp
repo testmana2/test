@@ -239,7 +239,6 @@
               <section title="eric5.Helpviewer.Bookmarks.BookmarksMenu" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksModel" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksToolBar" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html" />
-              <section title="eric5.Helpviewer.Bookmarks.DefaultBookmarks" ref="eric5.Helpviewer.Bookmarks.DefaultBookmarks.html" />
               <section title="eric5.Helpviewer.Bookmarks.NsHtmlReader" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html" />
               <section title="eric5.Helpviewer.Bookmarks.NsHtmlWriter" ref="eric5.Helpviewer.Bookmarks.NsHtmlWriter.html" />
               <section title="eric5.Helpviewer.Bookmarks.XbelReader" ref="eric5.Helpviewer.Bookmarks.XbelReader.html" />
@@ -314,7 +313,8 @@
               <section title="eric5.Helpviewer.OfflineStorage.WebDatabasesModel" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html" />
             </section>
             <section title="eric5.Helpviewer.OpenSearch" ref="index-eric5.Helpviewer.OpenSearch.html">
-              <section title="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines" ref="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html" />
+              <section title="eric5.Helpviewer.OpenSearch.DefaultSearchEngines" ref="index-eric5.Helpviewer.OpenSearch.DefaultSearchEngines.html">
+              </section>
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchDialog" ref="eric5.Helpviewer.OpenSearch.OpenSearchDialog.html" />
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchEditDialog" ref="eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.html" />
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchEngine" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html" />
@@ -369,7 +369,6 @@
               <section title="eric5.Helpviewer.UrlBar.UrlBar" ref="eric5.Helpviewer.UrlBar.UrlBar.html" />
             </section>
             <section title="eric5.Helpviewer.UserAgent" ref="index-eric5.Helpviewer.UserAgent.html">
-              <section title="eric5.Helpviewer.UserAgent.UserAgentDefaults" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentManager" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentModel" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html" />
@@ -3379,7 +3378,7 @@
       <keyword name="DebuggerRubyPage (Module)" id="DebuggerRubyPage (Module)" ref="eric5.Preferences.ConfigurationPages.DebuggerRubyPage.html" />
       <keyword name="DebuggerRubyPage.on_rubyInterpreterButton_clicked" id="DebuggerRubyPage.on_rubyInterpreterButton_clicked" ref="eric5.Preferences.ConfigurationPages.DebuggerRubyPage.html#DebuggerRubyPage.on_rubyInterpreterButton_clicked" />
       <keyword name="DebuggerRubyPage.save" id="DebuggerRubyPage.save" ref="eric5.Preferences.ConfigurationPages.DebuggerRubyPage.html#DebuggerRubyPage.save" />
-      <keyword name="DefaultBookmarks (Module)" id="DefaultBookmarks (Module)" ref="eric5.Helpviewer.Bookmarks.DefaultBookmarks.html" />
+      <keyword name="DefaultSearchEngines (Package)" id="DefaultSearchEngines (Package)" ref="index-eric5.Helpviewer.OpenSearch.DefaultSearchEngines.html" />
       <keyword name="DeleteFilesConfirmationDialog" id="DeleteFilesConfirmationDialog" ref="eric5.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog" />
       <keyword name="DeleteFilesConfirmationDialog (Constructor)" id="DeleteFilesConfirmationDialog (Constructor)" ref="eric5.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog.__init__" />
       <keyword name="DeleteFilesConfirmationDialog (Module)" id="DeleteFilesConfirmationDialog (Module)" ref="eric5.UI.DeleteFilesConfirmationDialog.html" />
@@ -7995,7 +7994,6 @@
       <keyword name="OfflineStorageConfigDialog.on_showDatabasesButton_clicked" id="OfflineStorageConfigDialog.on_showDatabasesButton_clicked" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.on_showDatabasesButton_clicked" />
       <keyword name="OfflineStorageConfigDialog.storeData" id="OfflineStorageConfigDialog.storeData" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.storeData" />
       <keyword name="OpenSearch (Package)" id="OpenSearch (Package)" ref="index-eric5.Helpviewer.OpenSearch.html" />
-      <keyword name="OpenSearchDefaultEngines (Module)" id="OpenSearchDefaultEngines (Module)" ref="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html" />
       <keyword name="OpenSearchDialog" id="OpenSearchDialog" ref="eric5.Helpviewer.OpenSearch.OpenSearchDialog.html#OpenSearchDialog" />
       <keyword name="OpenSearchDialog (Constructor)" id="OpenSearchDialog (Constructor)" ref="eric5.Helpviewer.OpenSearch.OpenSearchDialog.html#OpenSearchDialog.__init__" />
       <keyword name="OpenSearchDialog (Module)" id="OpenSearchDialog (Module)" ref="eric5.Helpviewer.OpenSearch.OpenSearchDialog.html" />
@@ -11776,7 +11774,6 @@
       <keyword name="UrlBar.setBrowser" id="UrlBar.setBrowser" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.setBrowser" />
       <keyword name="UrlBar.setPrivateMode" id="UrlBar.setPrivateMode" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.setPrivateMode" />
       <keyword name="UserAgent (Package)" id="UserAgent (Package)" ref="index-eric5.Helpviewer.UserAgent.html" />
-      <keyword name="UserAgentDefaults (Module)" id="UserAgentDefaults (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
       <keyword name="UserAgentManager" id="UserAgentManager" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager" />
       <keyword name="UserAgentManager (Constructor)" id="UserAgentManager (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.__init__" />
       <keyword name="UserAgentManager (Module)" id="UserAgentManager (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html" />
@@ -13596,7 +13593,6 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksMenu.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksModel.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksToolBar.html</file>
-      <file>eric5.Helpviewer.Bookmarks.DefaultBookmarks.html</file>
       <file>eric5.Helpviewer.Bookmarks.NsHtmlReader.html</file>
       <file>eric5.Helpviewer.Bookmarks.NsHtmlWriter.html</file>
       <file>eric5.Helpviewer.Bookmarks.XbelReader.html</file>
@@ -13669,7 +13665,6 @@
       <file>eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html</file>
       <file>eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html</file>
       <file>eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html</file>
-      <file>eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchDialog.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchEngine.html</file>
@@ -13714,7 +13709,6 @@
       <file>eric5.Helpviewer.UrlBar.SslLabel.html</file>
       <file>eric5.Helpviewer.UrlBar.StackedUrlBar.html</file>
       <file>eric5.Helpviewer.UrlBar.UrlBar.html</file>
-      <file>eric5.Helpviewer.UserAgent.UserAgentDefaults.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentManager.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentMenu.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentModel.html</file>
@@ -14236,6 +14230,7 @@
       <file>index-eric5.Helpviewer.History.html</file>
       <file>index-eric5.Helpviewer.Network.html</file>
       <file>index-eric5.Helpviewer.OfflineStorage.html</file>
+      <file>index-eric5.Helpviewer.OpenSearch.DefaultSearchEngines.html</file>
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
       <file>index-eric5.Helpviewer.PersonalInformationManager.html</file>

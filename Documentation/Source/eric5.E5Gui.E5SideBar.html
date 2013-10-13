@@ -42,8 +42,8 @@ Module implementing a sidebar class.
 <a NAME="E5SideBar" ID="E5SideBar"></a>
 <h2>E5SideBar</h2>
 <p>
-    Class implementing a sidebar with a widget area, that is hidden or shown, if the
-    current tab is clicked again.
+    Class implementing a sidebar with a widget area, that is hidden or shown,
+    if the current tab is clicked again.
 </p>
 <h3>Derived from</h3>
 QWidget
@@ -209,10 +209,12 @@ QWidget
 </p><dl>
 <dt><i>orientation</i></dt>
 <dd>
-orientation of the sidebar widget (North, East, South, West)
+orientation of the sidebar widget (North, East,
+            South, West)
 </dd><dt><i>delay</i></dt>
 <dd>
-value for the expand/shrink delay in milliseconds (integer)
+value for the expand/shrink delay in milliseconds
+            (integer)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -238,7 +240,8 @@ reference to the widget having the focus (QWidget or None)
 </p><dl>
 <dt><i>checked</i></dt>
 <dd>
-flag indicating the checked state of the button (boolean)
+flag indicating the checked state of the button
+            (boolean)
 </dd>
 </dl><a NAME="E5SideBar.__cancelDelayTimer" ID="E5SideBar.__cancelDelayTimer"></a>
 <h4>E5SideBar.__cancelDelayTimer</h4>
@@ -330,7 +333,8 @@ reference to the current widget (QWidget)
 <h4>E5SideBar.delay</h4>
 <b>delay</b>(<i></i>)
 <p>
-        Public method to get the delay value for the expand/shrink delay in milliseconds.
+        Public method to get the delay value for the expand/shrink delay in
+        milliseconds.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -523,17 +527,20 @@ the index to set as the current index (integer)
 </p><dl>
 <dt><i>widget</i></dt>
 <dd>
-reference to the widget to become the current widget (QWidget)
+reference to the widget to become the current widget
+            (QWidget)
 </dd>
 </dl><a NAME="E5SideBar.setDelay" ID="E5SideBar.setDelay"></a>
 <h4>E5SideBar.setDelay</h4>
 <b>setDelay</b>(<i>delay</i>)
 <p>
-        Public method to set the delay value for the expand/shrink delay in milliseconds.
+        Public method to set the delay value for the expand/shrink delay in
+        milliseconds.
 </p><dl>
 <dt><i>delay</i></dt>
 <dd>
-value for the expand/shrink delay in milliseconds (integer)
+value for the expand/shrink delay in milliseconds
+            (integer)
 </dd>
 </dl><a NAME="E5SideBar.setOrientation" ID="E5SideBar.setOrientation"></a>
 <h4>E5SideBar.setOrientation</h4>
@@ -631,9 +638,9 @@ WhatsThis text to set (string)
 <p>
         Public method to shut down the object.
 </p><p>
-        This method does some preparations so the object can be deleted properly.
-        It disconnects from the focusChanged signal in order to avoid trouble later
-        on.
+        This method does some preparations so the object can be deleted
+        properly. It disconnects from the focusChanged signal in order to
+        avoid trouble later on.
 </p><a NAME="E5SideBar.tabIcon" ID="E5SideBar.tabIcon"></a>
 <h4>E5SideBar.tabIcon</h4>
 <b>tabIcon</b>(<i>index</i>)

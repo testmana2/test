@@ -47,8 +47,8 @@ Module implementing the version control systems interface to Mercurial.
 <dl>
 <dt>activeExtensionsChanged()</dt>
 <dd>
-emitted when the list of active extensions
-            has changed
+emitted when the list of active
+        extensions has changed
 </dd><dt>committed()</dt>
 <dd>
 emitted after the commit action has completed
@@ -278,7 +278,7 @@ VersionControl
 <td>Public method used to test for the presence of the hg executable.</td>
 </tr><tr>
 <td><a href="#Hg.vcsExport">vcsExport</a></td>
-<td>Public method used to export a directory from the Subversion repository.</td>
+<td>Public method used to export a directory from the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsGetProjectBrowserHelper">vcsGetProjectBrowserHelper</a></td>
 <td>Public method to instantiate a helper object for the different project browsers.</td>
@@ -287,7 +287,7 @@ VersionControl
 <td>Public method to instantiate a helper object for the project.</td>
 </tr><tr>
 <td><a href="#Hg.vcsImport">vcsImport</a></td>
-<td>Public method used to import the project into the Subversion repository.</td>
+<td>Public method used to import the project into the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsInit">vcsInit</a></td>
 <td>Public method used to initialize the mercurial repository.</td>
@@ -367,7 +367,8 @@ name of this object (string)
 <h4>Hg.__hgGetFileForRevision</h4>
 <b>__hgGetFileForRevision</b>(<i>name, rev=""</i>)
 <p>
-        Private method to get a file for a specific revision from the repository.
+        Private method to get a file for a specific revision from the
+        repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -410,8 +411,8 @@ name of the changed file (string)
 <h4>Hg.__monitorRepoIniFile</h4>
 <b>__monitorRepoIniFile</b>(<i>name</i>)
 <p>
-        Private slot to add a repository configuration file to the list of monitored
-        files.
+        Private slot to add a repository configuration file to the list of
+        monitored files.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -426,11 +427,13 @@ directory name pointing into the repository (string)
 <h4>Hg._createStatusMonitorThread</h4>
 <b>_createStatusMonitorThread</b>(<i>interval, project</i>)
 <p>
-        Protected method to create an instance of the VCS status monitor thread.
+        Protected method to create an instance of the VCS status monitor
+        thread.
 </p><dl>
 <dt><i>interval</i></dt>
 <dd>
-check interval for the monitor thread in seconds (integer)
+check interval for the monitor thread in seconds
+            (integer)
 </dd><dt><i>project</i></dt>
 <dd>
 reference to the project object (Project)
@@ -474,8 +477,8 @@ reference to the extension object (boolean)
 <h4>Hg.getHgSubPath</h4>
 <b>getHgSubPath</b>(<i></i>)
 <p>
-        Public method to get the path to the .hgsub file containing the definitions
-        of sub-repositories.
+        Public method to get the path to the .hgsub file containing the
+        definitions of sub-repositories.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -525,7 +528,8 @@ file name to show the annotations for (string)
 <h4>Hg.hgBackout</h4>
 <b>hgBackout</b>(<i>name</i>)
 <p>
-        Public method used to backout an earlier changeset from the Mercurial repository.
+        Public method used to backout an earlier changeset from the Mercurial
+        repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -639,8 +643,9 @@ directory name of the project to export from (string)
         Mercurial repository.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
 </p><p>
         This method gives the chance to enter the revisions to be compared.
 </p><dl>
@@ -658,7 +663,8 @@ file/directory name to be diffed (string)
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be removed (string or list of strings))
+file/directory name to be removed (string or list of
+            strings))
 </dd>
 </dl><a NAME="Hg.hgGetBranchesList" ID="Hg.hgGetBranchesList"></a>
 <h4>Hg.hgGetBranchesList</h4>
@@ -701,7 +707,8 @@ list of tags (list of string)
 directory name of the project (string)
 </dd><dt><i>revs</i></dt>
 <dd>
-list of revisions to show in the revisions pane (list of strings)
+list of revisions to show in the revisions pane (list of
+            strings)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -781,7 +788,8 @@ file/directory name to show the log of (string)
 local path to get the repository infos (string)
 </dd><dt><i>mode=</i></dt>
 <dd>
-mode of the operation (string, one of heads, parents, tip)
+mode of the operation (string, one of heads, parents,
+            tip)
 </dd>
 </dl><a NAME="Hg.hgListTagBranch" ID="Hg.hgListTagBranch"></a>
 <h4>Hg.hgListTagBranch</h4>
@@ -809,7 +817,8 @@ flag indicating listing of branches or tags
 file/directory name to show the log of (string)
 </dd><dt><i>isFile=</i></dt>
 <dd>
-flag indicating log for a file is to be shown (boolean)
+flag indicating log for a file is to be shown
+            (boolean)
 </dd>
 </dl><a NAME="Hg.hgNormalizeURL" ID="Hg.hgNormalizeURL"></a>
 <h4>Hg.hgNormalizeURL</h4>
@@ -959,8 +968,8 @@ directory name (string or list of strings)
 <h4>Hg.hgSbsDiff</h4>
 <b>hgSbsDiff</b>(<i>name, extended=False, revisions=None</i>)
 <p>
-        Public method used to view the difference of a file to the Mercurial repository
-        side-by-side.
+        Public method used to view the difference of a file to the Mercurial
+        repository side-by-side.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1103,21 +1112,24 @@ flag indicating name is a directory (boolean)
 <h4>Hg.vcsAddTree</h4>
 <b>vcsAddTree</b>(<i>path</i>)
 <p>
-        Public method to add a directory tree rooted at path to the Mercurial repository.
+        Public method to add a directory tree rooted at path to the Mercurial
+        repository.
 </p><dl>
 <dt><i>path</i></dt>
 <dd>
-root directory of the tree to be added (string or list of strings))
+root directory of the tree to be added (string or list of
+            strings))
 </dd>
 </dl><a NAME="Hg.vcsAllRegisteredStates" ID="Hg.vcsAllRegisteredStates"></a>
 <h4>Hg.vcsAllRegisteredStates</h4>
 <b>vcsAllRegisteredStates</b>(<i>names, dname, shortcut=True</i>)
 <p>
-        Public method used to get the registered states of a number of files in the vcs.
+        Public method used to get the registered states of a number of files
+        in the vcs.
 </p><p>
-        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
-        directory has been scanned already. If so, it is assumed, that the states for
-        all files have been populated by the previous run.
+        <b>Note:</b> If a shortcut is to be taken, the code will only check,
+        if the named directory has been scanned already. If so, it is assumed,
+        that the states for all files have been populated by the previous run.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
@@ -1139,7 +1151,8 @@ the received dictionary completed with a combination of
 <h4>Hg.vcsCheckout</h4>
 <b>vcsCheckout</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
-        Public method used to check the project out of a Mercurial repository (clone).
+        Public method used to check the project out of a Mercurial repository
+        (clone).
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -1180,12 +1193,13 @@ directory name of the working directory (string)
 <h4>Hg.vcsCommit</h4>
 <b>vcsCommit</b>(<i>name, message, noDialog=False, closeBranch=False, mq=False</i>)
 <p>
-        Public method used to make the change of a file/directory permanent in the
-        Mercurial repository.
+        Public method used to make the change of a file/directory permanent
+        in the Mercurial repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be committed (string or list of strings)
+file/directory name to be committed (string or list of
+            strings)
 </dd><dt><i>message</i></dt>
 <dd>
 message for this operation (string)
@@ -1203,7 +1217,8 @@ flag indicating a queue commit (boolean)
 <h4>Hg.vcsConvertProject</h4>
 <b>vcsConvertProject</b>(<i>vcsDataDict, project</i>)
 <p>
-        Public method to convert an uncontrolled project to a version controlled project.
+        Public method to convert an uncontrolled project to a version
+        controlled project.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -1220,8 +1235,9 @@ reference to the project object
         Mercurial repository.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1235,13 +1251,14 @@ file/directory name to be diffed (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating the existance (boolean) and an error message (string)
+flag indicating the existance (boolean) and an error message
+            (string)
 </dd>
 </dl><a NAME="Hg.vcsExport" ID="Hg.vcsExport"></a>
 <h4>Hg.vcsExport</h4>
 <b>vcsExport</b>(<i>vcsDataDict, projectDir</i>)
 <p>
-        Public method used to export a directory from the Subversion repository.
+        Public method used to export a directory from the Mercurial repository.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -1259,7 +1276,8 @@ flag indicating an execution without errors (boolean)
 <h4>Hg.vcsGetProjectBrowserHelper</h4>
 <b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser=False</i>)
 <p>
-        Public method to instantiate a helper object for the different project browsers.
+        Public method to instantiate a helper object for the different
+        project browsers.
 </p><dl>
 <dt><i>browser</i></dt>
 <dd>
@@ -1269,8 +1287,8 @@ reference to the project browser object
 reference to the project object
 </dd><dt><i>isTranslationsBrowser</i></dt>
 <dd>
-flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1296,7 +1314,7 @@ the project helper object
 <h4>Hg.vcsImport</h4>
 <b>vcsImport</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
-        Public method used to import the project into the Subversion repository.
+        Public method used to import the project into the Mercurial repository.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -1320,8 +1338,9 @@ flag indicating an execution without errors (boolean)
 <p>
         Public method used to initialize the mercurial repository.
 </p><p>
-        The initialization is done, when a project is converted into a Mercurial
-        controlled project. Therefore we always return TRUE without doing anything.
+        The initialization is done, when a project is converted into a
+        Mercurial controlled project. Therefore we always return TRUE without
+        doing anything.
 </p><dl>
 <dt><i>vcsDir</i></dt>
 <dd>
@@ -1463,16 +1482,19 @@ a combination of canBeCommited and canBeAdded
 <h4>Hg.vcsRemove</h4>
 <b>vcsRemove</b>(<i>name, project=False, noDialog=False</i>)
 <p>
-        Public method used to remove a file/directory from the Mercurial repository.
+        Public method used to remove a file/directory from the Mercurial
+        repository.
 </p><p>
         The default operation is to remove the local copy as well.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be removed (string or list of strings))
+file/directory name to be removed (string or list of
+            strings))
 </dd><dt><i>project</i></dt>
 <dd>
-flag indicating deletion of a project tree (boolean) (not needed)
+flag indicating deletion of a project tree (boolean)
+            (not needed)
 </dd><dt><i>noDialog</i></dt>
 <dd>
 flag indicating quiet operations
@@ -1518,7 +1540,8 @@ file/directory name(s) to show the status of
 <h4>Hg.vcsSwitch</h4>
 <b>vcsSwitch</b>(<i>name</i>)
 <p>
-        Public method used to switch a working directory to a different revision.
+        Public method used to switch a working directory to a different
+        revision.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1544,11 +1567,13 @@ file/directory name to be tagged (string)
 <h4>Hg.vcsUpdate</h4>
 <b>vcsUpdate</b>(<i>name, noDialog=False, revision=None</i>)
 <p>
-        Public method used to update a file/directory with the Mercurial repository.
+        Public method used to update a file/directory with the Mercurial
+        repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be updated (string or list of strings)
+file/directory name to be updated (string or list of
+            strings)
 </dd><dt><i>noDialog</i></dt>
 <dd>
 flag indicating quiet operations (boolean)

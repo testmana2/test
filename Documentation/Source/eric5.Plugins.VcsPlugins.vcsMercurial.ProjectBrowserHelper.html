@@ -88,7 +88,7 @@ VcsProjectBrowserHelper
 <td>Private slot called by the context menu to show the difference of a file to the repository side-by-side.</td>
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper.__HgSbsExtendedDiff">__HgSbsExtendedDiff</a></td>
-<td>Private slot called by the context menu to show the difference of a file to the repository side-by-side allowing the selection of revisions to compare.</td>
+<td>Private slot called by the context menu to show the difference of a file to the repository side-by-side.</td>
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper._addVCSMenu">_addVCSMenu</a></td>
 <td>Protected method used to add the VCS menu to all project browsers.</td>
@@ -139,8 +139,8 @@ reference to the project browser object
 reference to the project object
 </dd><dt><i>isTranslationsBrowser</i></dt>
 <dd>
-flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -152,7 +152,8 @@ name of this object (string)
 <h4>HgProjectBrowserHelper.__HgAnnotate</h4>
 <b>__HgAnnotate</b>(<i></i>)
 <p>
-        Private slot called by the context menu to show the annotations of a file.
+        Private slot called by the context menu to show the annotations of a
+        file.
 </p><a NAME="HgProjectBrowserHelper.__HgCopy" ID="HgProjectBrowserHelper.__HgCopy"></a>
 <h4>HgProjectBrowserHelper.__HgCopy</h4>
 <b>__HgCopy</b>(<i></i>)
@@ -162,21 +163,22 @@ name of this object (string)
 <h4>HgProjectBrowserHelper.__HgExtendedDiff</h4>
 <b>__HgExtendedDiff</b>(<i></i>)
 <p>
-        Private slot called by the context menu to show the difference of a file to
-        the repository.
+        Private slot called by the context menu to show the difference of a
+        file to the repository.
 </p><p>
         This gives the chance to enter the revisions to compare.
 </p><a NAME="HgProjectBrowserHelper.__HgForget" ID="HgProjectBrowserHelper.__HgForget"></a>
 <h4>HgProjectBrowserHelper.__HgForget</h4>
 <b>__HgForget</b>(<i></i>)
 <p>
-        Private slot called by the context menu to remove the selected file from the
-        Mercurial repository leaving a copy in the project directory.
+        Private slot called by the context menu to remove the selected file
+        from the Mercurial repository leaving a copy in the project directory.
 </p><a NAME="HgProjectBrowserHelper.__HgLogBrowser" ID="HgProjectBrowserHelper.__HgLogBrowser"></a>
 <h4>HgProjectBrowserHelper.__HgLogBrowser</h4>
 <b>__HgLogBrowser</b>(<i></i>)
 <p>
-        Private slot called by the context menu to show the log browser for a file.
+        Private slot called by the context menu to show the log browser for a
+        file.
 </p><a NAME="HgProjectBrowserHelper.__HgMove" ID="HgProjectBrowserHelper.__HgMove"></a>
 <h4>HgProjectBrowserHelper.__HgMove</h4>
 <b>__HgMove</b>(<i></i>)
@@ -196,14 +198,16 @@ name of this object (string)
 <h4>HgProjectBrowserHelper.__HgSbsDiff</h4>
 <b>__HgSbsDiff</b>(<i></i>)
 <p>
-        Private slot called by the context menu to show the difference of a file to
-        the repository side-by-side.
+        Private slot called by the context menu to show the difference of a
+        file to the repository side-by-side.
 </p><a NAME="HgProjectBrowserHelper.__HgSbsExtendedDiff" ID="HgProjectBrowserHelper.__HgSbsExtendedDiff"></a>
 <h4>HgProjectBrowserHelper.__HgSbsExtendedDiff</h4>
 <b>__HgSbsExtendedDiff</b>(<i></i>)
 <p>
-        Private slot called by the context menu to show the difference of a file to
-        the repository side-by-side allowing the selection of revisions to compare.
+        Private slot called by the context menu to show the difference of a
+        file to the repository side-by-side.
+</p><p>
+        It allows the selection of revisions to compare.
 </p><a NAME="HgProjectBrowserHelper._addVCSMenu" ID="HgProjectBrowserHelper._addVCSMenu"></a>
 <h4>HgProjectBrowserHelper._addVCSMenu</h4>
 <b>_addVCSMenu</b>(<i>mainMenu</i>)
@@ -269,8 +273,8 @@ reference to the menu to be amended
 reference to the menu to be shown
 </dd><dt><i>standardItems</i></dt>
 <dd>
-array of standard items that need activation/deactivation
-            depending on the overall VCS status
+array of standard items that need
+            activation/deactivation depending on the overall VCS status
 </dd>
 </dl><a NAME="HgProjectBrowserHelper.showContextMenuDir" ID="HgProjectBrowserHelper.showContextMenuDir"></a>
 <h4>HgProjectBrowserHelper.showContextMenuDir</h4>
@@ -286,8 +290,8 @@ array of standard items that need activation/deactivation
 reference to the menu to be shown
 </dd><dt><i>standardItems</i></dt>
 <dd>
-array of standard items that need activation/deactivation
-            depending on the overall VCS status
+array of standard items that need
+            activation/deactivation depending on the overall VCS status
 </dd>
 </dl><a NAME="HgProjectBrowserHelper.showContextMenuDirMulti" ID="HgProjectBrowserHelper.showContextMenuDirMulti"></a>
 <h4>HgProjectBrowserHelper.showContextMenuDirMulti</h4>
@@ -303,8 +307,8 @@ array of standard items that need activation/deactivation
 reference to the menu to be shown
 </dd><dt><i>standardItems</i></dt>
 <dd>
-array of standard items that need activation/deactivation
-            depending on the overall VCS status
+array of standard items that need
+            activation/deactivation depending on the overall VCS status
 </dd>
 </dl><a NAME="HgProjectBrowserHelper.showContextMenuMulti" ID="HgProjectBrowserHelper.showContextMenuMulti"></a>
 <h4>HgProjectBrowserHelper.showContextMenuMulti</h4>
@@ -320,8 +324,8 @@ array of standard items that need activation/deactivation
 reference to the menu to be shown
 </dd><dt><i>standardItems</i></dt>
 <dd>
-array of standard items that need activation/deactivation
-            depending on the overall VCS status
+array of standard items that need
+            activation/deactivation depending on the overall VCS status
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -288,7 +288,8 @@ name of the executable to start (string)
 arguments to be passed to the program (list of string)
 </dd><dt><i>environment</i></dt>
 <dd>
-dictionary of environment settings to pass (dict of string)
+dictionary of environment settings to pass
+            (dict of string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -376,7 +377,8 @@ filename the breakpoint belongs to (string)
 linenumber of the breakpoint (int)
 </dd><dt><i>enable</i></dt>
 <dd>
-flag indicating enabling or disabling a breakpoint (boolean)
+flag indicating enabling or disabling a breakpoint
+            (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteBreakpointIgnore" ID="DebuggerInterfacePython3.remoteBreakpointIgnore"></a>
 <h4>DebuggerInterfacePython3.remoteBreakpointIgnore</h4>
@@ -502,7 +504,8 @@ environment settings (dictionary)
 <h4>DebuggerInterfacePython3.remoteEval</h4>
 <b>remoteEval</b>(<i>arg</i>)
 <p>
-        Public method to evaluate arg in the current context of the debugged program.
+        Public method to evaluate arg in the current context of the debugged
+        program.
 </p><dl>
 <dt><i>arg</i></dt>
 <dd>
@@ -512,7 +515,8 @@ the arguments to evaluate (string)
 <h4>DebuggerInterfacePython3.remoteExec</h4>
 <b>remoteExec</b>(<i>stmt</i>)
 <p>
-        Public method to execute stmt in the current context of the debugged program.
+        Public method to execute stmt in the current context of the debugged
+        program.
 </p><dl>
 <dt><i>stmt</i></dt>
 <dd>
@@ -535,18 +539,19 @@ the commandline arguments to pass to the program (string)
 the working directory for the program (string)
 </dd><dt><i>traceInterpreter=</i></dt>
 <dd>
-flag indicating if the interpreter library should be
-            traced as well (boolean)
+flag indicating if the interpreter library
+            should be traced as well (boolean)
 </dd><dt><i>autoContinue=</i></dt>
 <dd>
-flag indicating, that the debugger should not stop
-            at the first executable line (boolean)
+flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
 </dd><dt><i>autoFork=</i></dt>
 <dd>
 flag indicating the automatic fork mode (boolean)
 </dd><dt><i>forkChild=</i></dt>
 <dd>
-flag indicating to debug the child after forking (boolean)
+flag indicating to debug the child after forking
+            (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteProfile" ID="DebuggerInterfacePython3.remoteProfile"></a>
 <h4>DebuggerInterfacePython3.remoteProfile</h4>
@@ -565,7 +570,8 @@ the commandline arguments to pass to the program (string)
 the working directory for the program (string)
 </dd><dt><i>erase=</i></dt>
 <dd>
-flag indicating that timing info should be cleared first (boolean)
+flag indicating that timing info should be cleared
+            first (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteRawInput" ID="DebuggerInterfacePython3.remoteRawInput"></a>
 <h4>DebuggerInterfacePython3.remoteRawInput</h4>
@@ -597,7 +603,8 @@ the working directory for the program (string)
 flag indicating the automatic fork mode (boolean)
 </dd><dt><i>forkChild=</i></dt>
 <dd>
-flag indicating to debug the child after forking (boolean)
+flag indicating to debug the child after forking
+            (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteSetThread" ID="DebuggerInterfacePython3.remoteSetThread"></a>
 <h4>DebuggerInterfacePython3.remoteSetThread</h4>
@@ -663,17 +670,19 @@ the test function name to load tests from (string)
 </dd><dt><i>failed</i></dt>
 <dd>
 list of failed test, if only failed test should be run
-                (list of strings)
+            (list of strings)
 </dd><dt><i>cov</i></dt>
 <dd>
-flag indicating collection of coverage data is requested (boolean)
+flag indicating collection of coverage data is requested
+            (boolean)
 </dd><dt><i>covname</i></dt>
 <dd>
 filename to be used to assemble the coverage caches
-                filename (string)
+            filename (string)
 </dd><dt><i>coverase</i></dt>
 <dd>
-flag indicating erasure of coverage data is requested (boolean)
+flag indicating erasure of coverage data is requested
+            (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteUTRun" ID="DebuggerInterfacePython3.remoteUTRun"></a>
 <h4>DebuggerInterfacePython3.remoteUTRun</h4>
@@ -696,7 +705,8 @@ flag indicating erasure of coverage data is requested (boolean)
 expression of the watch expression (string)
 </dd><dt><i>set</i></dt>
 <dd>
-flag indicating setting or resetting a watch expression (boolean)
+flag indicating setting or resetting a watch expression
+            (boolean)
 </dd><dt><i>temp</i></dt>
 <dd>
 flag indicating a temporary watch expression (boolean)
@@ -712,13 +722,15 @@ flag indicating a temporary watch expression (boolean)
 expression of the watch expression (string)
 </dd><dt><i>enable</i></dt>
 <dd>
-flag indicating enabling or disabling a watch expression (boolean)
+flag indicating enabling or disabling a watch expression
+            (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteWatchpointIgnore" ID="DebuggerInterfacePython3.remoteWatchpointIgnore"></a>
 <h4>DebuggerInterfacePython3.remoteWatchpointIgnore</h4>
 <b>remoteWatchpointIgnore</b>(<i>cond, count</i>)
 <p>
-        Public method to ignore a watch expression the next couple of occurrences.
+        Public method to ignore a watch expression the next couple of
+        occurrences.
 </p><dl>
 <dt><i>cond</i></dt>
 <dd>

@@ -48,32 +48,33 @@ Module implementing the project management functionality.
 <dt>completeRepopulateItem(str)</dt>
 <dd>
 emitted after an item of the model was
-            repopulated
+        repopulated
 </dd><dt>directoryRemoved(str)</dt>
 <dd>
-emitted after a directory has been removed from
-            the project
+emitted after a directory has been removed
+        from the project
 </dd><dt>dirty(int)</dt>
 <dd>
 emitted when the dirty state changes
 </dd><dt>lexerAssociationsChanged()</dt>
 <dd>
-emitted after the lexer associations have been
-            changed
+emitted after the lexer associations
+        have been changed
 </dd><dt>newProject()</dt>
 <dd>
 emitted after a new project was generated
 </dd><dt>newProjectHooks()</dt>
 <dd>
-emitted after a new project was generated but before
-            the newProject() signal is sent
+emitted after a new project was generated but
+        before the newProject() signal is sent
 </dd><dt>prepareRepopulateItem(str)</dt>
 <dd>
 emitted before an item of the model is
-            repopulated
+        repopulated
 </dd><dt>projectAboutToBeCreated()</dt>
 <dd>
-emitted just before the project will be created
+emitted just before the project will be
+        created
 </dd><dt>projectChanged()</dt>
 <dd>
 emitted to signal a change of the project
@@ -82,12 +83,12 @@ emitted to signal a change of the project
 emitted after a project was closed
 </dd><dt>projectClosedHooks()</dt>
 <dd>
-emitted after a project file was closed but before the
-            projectClosed() signal is sent
+emitted after a project file was closed but
+        before the projectClosed() signal is sent
 </dd><dt>projectFileRenamed(str, str)</dt>
 <dd>
 emitted after a file of the project
-            has been renamed
+        has been renamed
 </dd><dt>projectFormAdded(str)</dt>
 <dd>
 emitted after a new form was added
@@ -108,8 +109,8 @@ emitted after a IDL file was removed
 emitted after a new language was added
 </dd><dt>projectLanguageAddedByCode(str)</dt>
 <dd>
-emitted after a new language was added.
-            The language code is sent by this signal.
+emitted after a new language was
+        added. The language code is sent by this signal.
 </dd><dt>projectLanguageRemoved(str)</dt>
 <dd>
 emitted after a language was removed
@@ -118,22 +119,24 @@ emitted after a language was removed
 emitted after a project file was read
 </dd><dt>projectOpenedHooks()</dt>
 <dd>
-emitted after a project file was read but before the
-            projectOpened() signal is sent
+emitted after a project file was read but
+        before the projectOpened() signal is sent
 </dd><dt>projectOthersAdded(str)</dt>
 <dd>
 emitted after a file or directory was added
-            to the OTHERS project data area
+        to the OTHERS project data area
 </dd><dt>projectOthersRemoved(str)</dt>
 <dd>
 emitted after a file was removed from the
-            OTHERS project data area
+        OTHERS project data area
 </dd><dt>projectPropertiesChanged()</dt>
 <dd>
-emitted after the project properties were changed
+emitted after the project properties
+        were changed
 </dd><dt>projectResourceAdded(str)</dt>
 <dd>
-emitted after a new resource file was added
+emitted after a new resource file was
+        added
 </dd><dt>projectResourceRemoved(str)</dt>
 <dd>
 emitted after a resource was removed
@@ -148,16 +151,16 @@ emitted after a source was removed
 emitted after the VCS has been reinitialized
 </dd><dt>showMenu(str, QMenu)</dt>
 <dd>
-emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+emitted when a menu is about to be shown. The
+        name of the menu and a reference to the menu are given.
 </dd><dt>sourceFile(str)</dt>
 <dd>
 emitted after a project file was read to
-            open the main script
+        open the main script
 </dd><dt>vcsStatusMonitorStatus(str, str)</dt>
 <dd>
-emitted to signal the status of the
-            monitoring thread (ok, nok, op, off) and a status message
+emitted to signal the status of
+        the monitoring thread (ok, nok, op, off) and a status message
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -703,7 +706,8 @@ target directory (string)
 <h4>Project.__addSingleDirectory</h4>
 <b>__addSingleDirectory</b>(<i>filetype, source, target, quiet=False</i>)
 <p>
-        Private method used to add all files of a single directory to the project.
+        Private method used to add all files of a single directory to the
+        project.
 </p><dl>
 <dt><i>filetype</i></dt>
 <dd>
@@ -722,8 +726,8 @@ flag indicating quiet operations (boolean)
 <h4>Project.__binaryTranslationFile</h4>
 <b>__binaryTranslationFile</b>(<i>langFile</i>)
 <p>
-        Private method to calculate the filename of the binary translations file
-        given the name of the raw translations file.
+        Private method to calculate the filename of the binary translations
+        file given the name of the raw translations file.
 </p><dl>
 <dt><i>langFile</i></dt>
 <dd>
@@ -752,7 +756,8 @@ key of the list to be checked (string)
 <h4>Project.__checkProjectFileGroup</h4>
 <b>__checkProjectFileGroup</b>(<i>fn, group</i>)
 <p>
-        Private method to check, if a file is in a specific file group of the project.
+        Private method to check, if a file is in a specific file group of the
+        project.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -867,7 +872,8 @@ flag indicating whether this method was
 <h4>Project.__openRecent</h4>
 <b>__openRecent</b>(<i>act</i>)
 <p>
-        Private method to open a project from the list of rencently opened projects.
+        Private method to open a project from the list of rencently opened
+        projects.
 </p><dl>
 <dt><i>act</i></dt>
 <dd>
@@ -972,7 +978,8 @@ indicator string (string)
 <h4>Project.__showCodeCoverage</h4>
 <b>__showCodeCoverage</b>(<i></i>)
 <p>
-        Private slot used to show the code coverage information for the project files.
+        Private slot used to show the code coverage information for the
+        project files.
 </p><a NAME="Project.__showCodeMetrics" ID="Project.__showCodeMetrics"></a>
 <h4>Project.__showCodeMetrics</h4>
 <b>__showCodeMetrics</b>(<i></i>)
@@ -1104,10 +1111,10 @@ flag indicating quiet operations.
 <dt><i>fn</i></dt>
 <dd>
 optional filename of the project file to be written (string).
-                If fn is None, the filename stored in the project object
-                is used. This is the 'save' action. If fn is given, this filename
-                is used instead of the one in the project object. This is the
-                'save as' action.
+            If fn is None, the filename stored in the project object
+            is used. This is the 'save' action. If fn is given, this filename
+            is used instead of the one in the project object. This is the
+            'save as' action.
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1175,7 +1182,8 @@ start directory for the selection dialog
 <h4>Project.addIdlDir</h4>
 <b>addIdlDir</b>(<i></i>)
 <p>
-        Public slot to add all IDL interfaces of a directory to the current project.
+        Public slot to add all IDL interfaces of a directory to the current
+        project.
 </p><a NAME="Project.addIdlFiles" ID="Project.addIdlFiles"></a>
 <h4>Project.addIdlFiles</h4>
 <b>addIdlFiles</b>(<i></i>)
@@ -1200,7 +1208,8 @@ start directory for the selection dialog
 <h4>Project.addResourceDir</h4>
 <b>addResourceDir</b>(<i></i>)
 <p>
-        Public slot to add all Qt resource files of a directory to the current project.
+        Public slot to add all Qt resource files of a directory to the current
+        project.
 </p><a NAME="Project.addResourceFiles" ID="Project.addResourceFiles"></a>
 <h4>Project.addResourceFiles</h4>
 <b>addResourceFiles</b>(<i></i>)
@@ -1210,7 +1219,8 @@ start directory for the selection dialog
 <h4>Project.addSourceDir</h4>
 <b>addSourceDir</b>(<i></i>)
 <p>
-        Public slot to add all source files of a directory to the current project.
+        Public slot to add all source files of a directory to the current
+        project.
 </p><a NAME="Project.addSourceFiles" ID="Project.addSourceFiles"></a>
 <h4>Project.addSourceFiles</h4>
 <b>addSourceFiles</b>(<i></i>)
@@ -1248,10 +1258,11 @@ filename to be added to the project (string)
 </dd><dt><i>isSourceFile</i></dt>
 <dd>
 flag indicating that this is a source file
-                even if it doesn't have the source extension (boolean)
+            even if it doesn't have the source extension (boolean)
 </dd><dt><i>updateModel</i></dt>
 <dd>
-flag indicating an update of the model is requested (boolean)
+flag indicating an update of the model is
+            requested (boolean)
 </dd>
 </dl><a NAME="Project.checkAllScriptsDirty" ID="Project.checkAllScriptsDirty"></a>
 <h4>Project.checkAllScriptsDirty</h4>
@@ -1430,8 +1441,8 @@ list of all actions (list of E5Action)
 <dt><i>category</i></dt>
 <dd>
 category of the data to get (string, one of
-            PROJECTTYPESPECIFICDATA, CHECKERSPARMS, PACKAGERSPARMS, DOCUMENTATIONPARMS
-            or OTHERTOOLSPARMS)
+            PROJECTTYPESPECIFICDATA, CHECKERSPARMS, PACKAGERSPARMS,
+            DOCUMENTATIONPARMS or OTHERTOOLSPARMS)
 </dd><dt><i>key</i></dt>
 <dd>
 key of the data entry to get (string).
@@ -1475,7 +1486,8 @@ default extension (including the dot) (string)
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
-filename used to determine the associated lexer language (string)
+filename used to determine the associated lexer
+            language (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1525,7 +1537,8 @@ project hash as a hex string (string)
 </p><dl>
 <dt><i>normalized</i></dt>
 <dd>
-flag indicating a normalized filename is wanted (boolean)
+flag indicating a normalized filename is wanted
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1668,7 +1681,8 @@ UI type of the project (string)
 </p><dl>
 <dt><i>progLanguage</i></dt>
 <dd>
-programming language to get project types for (string)
+programming language to get project types for
+            (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1717,7 +1731,8 @@ project relative path or unchanged path, if path doesn't
 </p><dl>
 <dt><i>normalized</i></dt>
 <dd>
-flag indicating a normalized filename is wanted (boolean)
+flag indicating a normalized filename is wanted
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1816,7 +1831,8 @@ flag indicating presence of the project type (boolean)
 <h4>Project.initFileTypes</h4>
 <b>initFileTypes</b>(<i></i>)
 <p>
-        Public method to initialize the filetype associations with default values.
+        Public method to initialize the filetype associations with default
+        values.
 </p><a NAME="Project.initMenu" ID="Project.initMenu"></a>
 <h4>Project.initMenu</h4>
 <b>initMenu</b>(<i></i>)
@@ -1835,7 +1851,8 @@ the menu generated (QMenu)
 </p><dl>
 <dt><i>toolbarManager</i></dt>
 <dd>
-reference to a toolbar manager object (E5ToolBarManager)
+reference to a toolbar manager object
+            (E5ToolBarManager)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1853,7 +1870,8 @@ the toolbar generated (QToolBar)
 type of VCS to be used (string)
 </dd><dt><i>nooverride</i></dt>
 <dd>
-flag indicating to ignore an override request (boolean)
+flag indicating to ignore an override request
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1894,7 +1912,8 @@ open state (boolean)
 <h4>Project.isProjectFile</h4>
 <b>isProjectFile</b>(<i>fn</i>)
 <p>
-        Public method used to check, if the passed in filename belongs to the project.
+        Public method used to check, if the passed in filename belongs to the
+        project.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -1909,8 +1928,8 @@ flag indicating membership (boolean)
 <h4>Project.isProjectForm</h4>
 <b>isProjectForm</b>(<i>fn</i>)
 <p>
-        Public method used to check, if the passed in filename belongs to the project
-        forms.
+        Public method used to check, if the passed in filename belongs to the
+        project forms.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -1925,8 +1944,8 @@ flag indicating membership (boolean)
 <h4>Project.isProjectInterface</h4>
 <b>isProjectInterface</b>(<i>fn</i>)
 <p>
-        Public method used to check, if the passed in filename belongs to the project
-        interfaces.
+        Public method used to check, if the passed in filename belongs to the
+        project interfaces.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -1941,8 +1960,8 @@ flag indicating membership (boolean)
 <h4>Project.isProjectResource</h4>
 <b>isProjectResource</b>(<i>fn</i>)
 <p>
-        Public method used to check, if the passed in filename belongs to the project
-        resources.
+        Public method used to check, if the passed in filename belongs to the
+        project resources.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -1957,8 +1976,8 @@ flag indicating membership (boolean)
 <h4>Project.isProjectSource</h4>
 <b>isProjectSource</b>(<i>fn</i>)
 <p>
-        Public method used to check, if the passed in filename belongs to the project
-        sources.
+        Public method used to check, if the passed in filename belongs to the
+        project sources.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -2043,14 +2062,16 @@ flag indicating a reopening of the project (boolean)
 <h4>Project.othersAdded</h4>
 <b>othersAdded</b>(<i>fn, updateModel=True</i>)
 <p>
-        Public slot to be called, if something was added to the OTHERS project data area.
+        Public slot to be called, if something was added to the OTHERS project
+        data area.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename or directory name added (string)
 </dd><dt><i>updateModel</i></dt>
 <dd>
-flag indicating an update of the model is requested (boolean)
+flag indicating an update of the model is requested
+            (boolean)
 </dd>
 </dl><a NAME="Project.registerProjectType" ID="Project.registerProjectType"></a>
 <h4>Project.registerProjectType</h4>
@@ -2070,8 +2091,8 @@ reference to a method returning a dictionary
             of filetype associations.
 </dd><dt><i>binaryTranslationsCallback=</i></dt>
 <dd>
-reference to a method returning the
-            name of the binary translation file given the name of the raw
+reference to a method returning
+            the name of the binary translation file given the name of the raw
             translation file
 </dd><dt><i>lexerAssociationCallback=</i></dt>
 <dd>
@@ -2118,7 +2139,8 @@ list of actions (list of E5Action)
 filename to be removed from the project
 </dd><dt><i>updateModel</i></dt>
 <dd>
-flag indicating an update of the model is requested (boolean)
+flag indicating an update of the model is
+            requested (boolean)
 </dd>
 </dl><a NAME="Project.removeLanguageFile" ID="Project.removeLanguageFile"></a>
 <h4>Project.removeLanguageFile</h4>
@@ -2240,8 +2262,8 @@ flag indicating success (boolean)
 <dt><i>category</i></dt>
 <dd>
 category of the data to get (string, one of
-            PROJECTTYPESPECIFICDATA, CHECKERSPARMS, PACKAGERSPARMS, DOCUMENTATIONPARMS
-            or OTHERTOOLSPARMS)
+            PROJECTTYPESPECIFICDATA, CHECKERSPARMS, PACKAGERSPARMS,
+            DOCUMENTATIONPARMS or OTHERTOOLSPARMS)
 </dd><dt><i>key</i></dt>
 <dd>
 key of the data entry to get (string).
@@ -2288,8 +2310,8 @@ flag to indicate if the Python library should be
             traced as well (boolean)
 </dd><dt><i>autoContinue=</i></dt>
 <dd>
-flag indicating, that the debugger should not stop
-            at the first executable line (boolean)
+flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
 </dd>
 </dl><a NAME="Project.setDirty" ID="Project.setDirty"></a>
 <h4>Project.setDirty</h4>
@@ -2363,7 +2385,8 @@ internal type designator to be unregistered (string)
 <h4>Project.updateFileTypes</h4>
 <b>updateFileTypes</b>(<i></i>)
 <p>
-        Public method to update the filetype associations with new default values.
+        Public method to update the filetype associations with new default
+        values.
 </p><a NAME="Project.useSystemEol" ID="Project.useSystemEol"></a>
 <h4>Project.useSystemEol</h4>
 <b>useSystemEol</b>(<i></i>)

@@ -107,7 +107,8 @@ flag indicating stderr is being redirected
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-number of characters buffered or length of buffered line (integer)
+number of characters buffered or length of buffered line
+            (integer)
 </dd>
 </dl><a NAME="Redirector.__nWrite" ID="Redirector.__nWrite"></a>
 <h4>Redirector.__nWrite</h4>
@@ -152,7 +153,7 @@ emitted to write data to stdout logger
 </dd><dt>masterPasswordChanged(str, str)</dt>
 <dd>
 emitted after the master
-            password has been changed with the old and the new password
+        password has been changed with the old and the new password
 </dd><dt>preferencesChanged()</dt>
 <dd>
 emitted after the preferences were changed
@@ -161,8 +162,8 @@ emitted after the preferences were changed
 emitted to reload the api information
 </dd><dt>showMenu(str, QMenu)</dt>
 <dd>
-emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+emitted when a menu is about to be shown. The
+        name of the menu and a reference to the menu are given.
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -776,18 +777,20 @@ reference to the application object (E5Application)
 locale to be used by the UI (string)
 </dd><dt><i>splash</i></dt>
 <dd>
-reference to the splashscreen (UI.SplashScreen.SplashScreen)
+reference to the splashscreen
+            (UI.SplashScreen.SplashScreen)
 </dd><dt><i>plugin</i></dt>
 <dd>
-filename of a plugin to be loaded (used for plugin development)
+filename of a plugin to be loaded (used for plugin
+            development)
 </dd><dt><i>noOpenAtStartup</i></dt>
 <dd>
 flag indicating that the open at startup option
             should not be executed (boolean)
 </dd><dt><i>restartArguments</i></dt>
 <dd>
-list of command line parameters to be used for a
-            restart (list of strings)
+list of command line parameters to be used for
+            a restart (list of strings)
 </dd>
 </dl><a NAME="UserInterface.__TBMenuTriggered" ID="UserInterface.__TBMenuTriggered"></a>
 <h4>UserInterface.__TBMenuTriggered</h4>
@@ -811,7 +814,8 @@ filenames of forms and/or translations to be previewed
             (list of strings)
 </dd><dt><i>ignore</i></dt>
 <dd>
-flag indicating non existing files should be ignored (boolean)
+flag indicating non existing files should be ignored
+            (boolean)
 </dd>
 </dl><a NAME="UserInterface.__UIPreviewer" ID="UserInterface.__UIPreviewer"></a>
 <h4>UserInterface.__UIPreviewer</h4>
@@ -1162,7 +1166,8 @@ list giving the widget's geometry and its visibility
 <h4>UserInterface.__initPythonDocActions</h4>
 <b>__initPythonDocActions</b>(<i></i>)
 <p>
-        Private slot to initialize the actions to show the Python documentation.
+        Private slot to initialize the actions to show the Python
+        documentation.
 </p><a NAME="UserInterface.__initQtDocActions" ID="UserInterface.__initQtDocActions"></a>
 <h4>UserInterface.__initQtDocActions</h4>
 <b>__initQtDocActions</b>(<i></i>)
@@ -1377,7 +1382,8 @@ project name to be displayed (string)
 <h4>UserInterface.__setupDockWindow</h4>
 <b>__setupDockWindow</b>(<i>dock, where, widget, caption</i>)
 <p>
-        Private method to configure the dock window created with __createDockWindow().
+        Private method to configure the dock window created with
+        __createDockWindow().
 </p><dl>
 <dt><i>dock</i></dt>
 <dd>
@@ -1400,7 +1406,8 @@ caption of the dock window (string)
 </p><dl>
 <dt><i>versions</i></dt>
 <dd>
-contents of the downloaded versions file (list of strings)
+contents of the downloaded versions file (list of
+            strings)
 </dd>
 </dl><a NAME="UserInterface.__showCertificatesDialog" ID="UserInterface.__showCertificatesDialog"></a>
 <h4>UserInterface.__showCertificatesDialog</h4>
@@ -1416,7 +1423,8 @@ contents of the downloaded versions file (list of strings)
 <h4>UserInterface.__showExternalTools</h4>
 <b>__showExternalTools</b>(<i></i>)
 <p>
-        Private slot to display a dialog show a list of external tools used by eric5.
+        Private slot to display a dialog show a list of external tools used
+        by eric5.
 </p><a NAME="UserInterface.__showExtrasMenu" ID="UserInterface.__showExtrasMenu"></a>
 <h4>UserInterface.__showExtrasMenu</h4>
 <b>__showExtrasMenu</b>(<i></i>)
@@ -1627,7 +1635,8 @@ list of tool entries
 <h4>UserInterface.__switchTab</h4>
 <b>__switchTab</b>(<i></i>)
 <p>
-        Private slot used to switch between the current and the previous current tab.
+        Private slot used to switch between the current and the previous
+        current tab.
 </p><a NAME="UserInterface.__toggleBottomSidebar" ID="UserInterface.__toggleBottomSidebar"></a>
 <h4>UserInterface.__toggleBottomSidebar</h4>
 <b>__toggleBottomSidebar</b>(<i></i>)
@@ -1730,7 +1739,8 @@ reference to the action that was triggered (QAction)
 <h4>UserInterface.__unittestProject</h4>
 <b>__unittestProject</b>(<i></i>)
 <p>
-        Private slot for displaying the unittest dialog and run the current project.
+        Private slot for displaying the unittest dialog and run the current
+        project.
 </p><a NAME="UserInterface.__unittestRerunFailed" ID="UserInterface.__unittestRerunFailed"></a>
 <h4>UserInterface.__unittestRerunFailed</h4>
 <b>__unittestRerunFailed</b>(<i></i>)
@@ -1741,12 +1751,14 @@ reference to the action that was triggered (QAction)
 <h4>UserInterface.__unittestRestart</h4>
 <b>__unittestRestart</b>(<i></i>)
 <p>
-        Private slot to display the unittest dialog and rerun the last unit test.
+        Private slot to display the unittest dialog and rerun the last
+        unit test.
 </p><a NAME="UserInterface.__unittestScript" ID="UserInterface.__unittestScript"></a>
 <h4>UserInterface.__unittestScript</h4>
 <b>__unittestScript</b>(<i>prog=None</i>)
 <p>
-        Private slot for displaying the unittest dialog and run the current script.
+        Private slot for displaying the unittest dialog and run the current
+        script.
 </p><dl>
 <dt><i>prog</i></dt>
 <dd>
@@ -1761,16 +1773,19 @@ the python program to be opened
 <h4>UserInterface.__updateExternalToolsActions</h4>
 <b>__updateExternalToolsActions</b>(<i></i>)
 <p>
-        Private method to update the external tools actions for the current tool group.
+        Private method to update the external tools actions for the current
+        tool group.
 </p><a NAME="UserInterface.__updateVersionsUrls" ID="UserInterface.__updateVersionsUrls"></a>
 <h4>UserInterface.__updateVersionsUrls</h4>
 <b>__updateVersionsUrls</b>(<i>versions</i>)
 <p>
-        Private method to update the URLs from which to retrieve the versions file.
+        Private method to update the URLs from which to retrieve the versions
+        file.
 </p><dl>
 <dt><i>versions</i></dt>
 <dd>
-contents of the downloaded versions file (list of strings)
+contents of the downloaded versions file (list of
+            strings)
 </dd>
 </dl><a NAME="UserInterface.__versionCheckResult" ID="UserInterface.__versionCheckResult"></a>
 <h4>UserInterface.__versionCheckResult</h4>
@@ -1780,7 +1795,8 @@ contents of the downloaded versions file (list of strings)
 </p><dl>
 <dt><i>versions</i></dt>
 <dd>
-contents of the downloaded versions file (list of strings)
+contents of the downloaded versions file (list of
+            strings)
 </dd>
 </dl><a NAME="UserInterface.__versionsDownloadCanceled" ID="UserInterface.__versionsDownloadCanceled"></a>
 <h4>UserInterface.__versionsDownloadCanceled</h4>
@@ -1892,8 +1908,8 @@ output to be appended (string)
 <h4>UserInterface.checkForErrorLog</h4>
 <b>checkForErrorLog</b>(<i></i>)
 <p>
-        Public method to check for the presence of an error log and ask the user,
-        what to do with it.
+        Public method to check for the presence of an error log and ask the
+        user, what to do with it.
 </p><a NAME="UserInterface.checkProjectsWorkspace" ID="UserInterface.checkProjectsWorkspace"></a>
 <h4>UserInterface.checkProjectsWorkspace</h4>
 <b>checkProjectsWorkspace</b>(<i></i>)
@@ -1976,7 +1992,8 @@ list of all actions (list of E5Action)
 </p><dl>
 <dt><i>preview=</i></dt>
 <dd>
-flag indicating to get a help window for preview (boolean)
+flag indicating to get a help window for preview
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -2091,7 +2108,8 @@ filename of file to be shown (string)
 word to search for (string)
 </dd><dt><i>useSingle=</i></dt>
 <dd>
-flag indicating to use a single browser window (boolean)
+flag indicating to use a single browser window
+            (boolean)
 </dd>
 </dl><a NAME="UserInterface.notificationsEnabled" ID="UserInterface.notificationsEnabled"></a>
 <h4>UserInterface.notificationsEnabled</h4>
@@ -2228,8 +2246,8 @@ mode of the email dialog (string, "bug" or "feature")
 name of a file to attach to the email (string)
 </dd><dt><i>deleteAttachFile</i></dt>
 <dd>
-flag indicating to delete the attached file after
-            it has been sent (boolean)
+flag indicating to delete the attached file
+            after it has been sent (boolean)
 </dd>
 </dl><a NAME="UserInterface.showEvent" ID="UserInterface.showEvent"></a>
 <h4>UserInterface.showEvent</h4>
@@ -2341,8 +2359,8 @@ required snapshot version (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating, that the version is newer than the required one
-            (boolean)
+flag indicating, that the version is newer than the required
+            one (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

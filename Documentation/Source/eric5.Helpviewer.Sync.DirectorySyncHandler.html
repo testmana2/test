@@ -47,20 +47,22 @@ Module implementing a synchronization handler using a shared directory.
 <dl>
 <dt>syncError(message)</dt>
 <dd>
-emitted for a general error with the error message (string)
+emitted for a general error with the error
+        message (string)
 </dd><dt>syncFinished(type_, done, download)</dt>
 <dd>
-emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", boolean, boolean)
+emitted after a
+        synchronization has finished (string one of "bookmarks", "history",
+        "passwords", "useragents" or "speeddial", boolean, boolean)
 </dd><dt>syncMessage(message)</dt>
 <dd>
-emitted to send a message about synchronization (string)
+emitted to send a message about
+        synchronization (string)
 </dd><dt>syncStatus(type_, message)</dt>
 <dd>
 emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", string)
+        status (string one of "bookmarks", "history", "passwords",
+        "useragents" or "speeddial", string)
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -139,13 +141,15 @@ reference to the parent object (QObject)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be downloaded (string)
 </dd><dt><i>timestamp</i></dt>
 <dd>
-time stamp in seconds of the file to be downloaded (int)
+time stamp in seconds of the file to be downloaded
+            (integer)
 </dd>
 </dl><a NAME="DirectorySyncHandler.__initialSync" ID="DirectorySyncHandler.__initialSync"></a>
 <h4>DirectorySyncHandler.__initialSync</h4>
@@ -161,7 +165,8 @@ time stamp in seconds of the file to be downloaded (int)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be synchronized (string)
@@ -175,7 +180,8 @@ name of the file to be synchronized (string)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be synchronized (string)
@@ -189,7 +195,8 @@ name of the file to be synchronized (string)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be uploaded (string)
@@ -202,7 +209,8 @@ name of the file to be uploaded (string)
 </p><dl>
 <dt><i>forceUpload=</i></dt>
 <dd>
-flag indicating a forced upload of the files (boolean)
+flag indicating a forced upload of the files
+            (boolean)
 </dd>
 </dl><a NAME="DirectorySyncHandler.shutdown" ID="DirectorySyncHandler.shutdown"></a>
 <h4>DirectorySyncHandler.shutdown</h4>

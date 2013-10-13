@@ -50,8 +50,8 @@ Module implementing the VCS status monitor thread base class.
 emitted to update the VCS status
 </dd><dt>vcsStatusMonitorStatus(str, str)</dt>
 <dd>
-emitted to signal the status of the
-        monitoring thread (ok, nok, op) and a status message
+emitted to signal the status of
+        the monitoring thread (ok, nok, op) and a status message
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -130,10 +130,10 @@ reference to the parent object (QObject)
 <p>
         Protected method implementing the real monitoring action.
 </p><p>
-        This method must be overridden and populate the statusList member variable
-        with a list of strings giving the status in the first column and the
-        path relative to the project directory starting with the third column.
-        The allowed status flags are:
+        This method must be overridden and populate the statusList member
+        variable with a list of strings giving the status in the first column
+        and the path relative to the project directory starting with the
+        third column. The allowed status flags are:
         <ul>
             <li>"A" path was added but not yet comitted</li>
             <li>"M" path has local changes</li>

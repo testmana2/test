@@ -21,7 +21,8 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Project.ProjectTranslationsBrowser</h1>
 <p>
-Module implementing a class used to display the translations part of the project.
+Module implementing a class used to display the translations part of the
+project.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -48,30 +49,30 @@ Module implementing a class used to display the translations part of the project
 <dt>appendStderr(str)</dt>
 <dd>
 emitted after something was received from
-            a QProcess on stderr
+        a QProcess on stderr
 </dd><dt>appendStdout(str)</dt>
 <dd>
 emitted after something was received from
-            a QProcess on stdout
+        a QProcess on stdout
 </dd><dt>closeSourceWindow(str)</dt>
 <dd>
-emitted after a file has been removed/deleted
-            from the project
+emitted after a file has been
+        removed/deleted from the project
 </dd><dt>linguistFile(str)</dt>
 <dd>
 emitted to open a translation file with
-            Qt-Linguist
+        Qt-Linguist
 </dd><dt>showMenu(str, QMenu)</dt>
 <dd>
-emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+emitted when a menu is about to be shown.
+        The name of the menu and a reference to the menu are given.
 </dd><dt>sourceFile(str)</dt>
 <dd>
 emitted to open a translation file in an editor
 </dd><dt>trpreview(list of str, bool = False)</dt>
 <dd>
-emitted to preview translations in the
-            translations previewer
+emitted to preview
+        translations in the translations previewer
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -253,21 +254,24 @@ flag indicating, that all translations
 <h4>ProjectTranslationsBrowser.__generateObsoleteSelected</h4>
 <b>__generateObsoleteSelected</b>(<i></i>)
 <p>
-        Private method to generate selected translation files (.ts) for Qt Linguist.
+        Private method to generate selected translation files (.ts) for
+        Qt Linguist.
 </p><p>
         Obsolete strings are kept.
 </p><a NAME="ProjectTranslationsBrowser.__generateSelected" ID="ProjectTranslationsBrowser.__generateSelected"></a>
 <h4>ProjectTranslationsBrowser.__generateSelected</h4>
 <b>__generateSelected</b>(<i></i>)
 <p>
-        Private method to generate selected translation files (.ts) for Qt Linguist.
+        Private method to generate selected translation files (.ts) for
+        Qt Linguist.
 </p><p>
         All obsolete strings are removed from the .ts file.
 </p><a NAME="ProjectTranslationsBrowser.__generateTSFile" ID="ProjectTranslationsBrowser.__generateTSFile"></a>
 <h4>ProjectTranslationsBrowser.__generateTSFile</h4>
 <b>__generateTSFile</b>(<i>noobsolete=False, generateAll=True</i>)
 <p>
-        Private method used to run pylupdate/pylupdate4 to generate the .ts files.
+        Private method used to run pylupdate/pylupdate4 to generate the .ts
+        files.
 </p><dl>
 <dt><i>noobsolete</i></dt>
 <dd>
@@ -409,13 +413,13 @@ exit status of the process (QProcess.ExitStatus)
 <h4>ProjectTranslationsBrowser.__writeTempProjectFile</h4>
 <b>__writeTempProjectFile</b>(<i>langs, filter</i>)
 <p>
-        Private method to write a temporary project file suitable for pylupdate and
-        lrelease.
+        Private method to write a temporary project file suitable for
+        pylupdate and lrelease.
 </p><dl>
 <dt><i>langs</i></dt>
 <dd>
-list of languages to include in the process. An empty list (default)
-            means that all translations should be included.
+list of languages to include in the process. An empty
+            list (default) means that all translations should be included.
             (list of ProjectBrowserFileItem)
 </dd><dt><i>filter</i></dt>
 <dd>
@@ -454,7 +458,8 @@ the position of the mouse pointer (QPoint)
         <li>generateAll: takes list of filenames as parameter</li>
         <li>generateAllWithObsolete: takes list of filenames as parameter</li>
         <li>generateSelected: takes list of filenames as parameter</li>
-        <li>generateSelectedWithObsolete: takes list of filenames as parameter</li>
+        <li>generateSelectedWithObsolete: takes list of filenames as
+            parameter</li>
         <li>releaseAll: takes list of filenames as parameter</li>
         <li>releaseSelected: takes list of filenames as parameter</li>
         <li>open: takes a filename as parameter</li>

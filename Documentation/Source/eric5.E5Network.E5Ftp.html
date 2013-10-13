@@ -21,7 +21,8 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5Network.E5Ftp</h1>
 <p>
-Module implementing an extension to the Python FTP class to support FTP proxies.
+Module implementing an extension to the Python FTP class to support FTP
+proxies.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -48,7 +49,8 @@ Module implementing an extension to the Python FTP class to support FTP proxies.
 <a NAME="E5Ftp" ID="E5Ftp"></a>
 <h2>E5Ftp</h2>
 <p>
-    Class implementing an extension to the Python FTP class to support FTP proxies.
+    Class implementing an extension to the Python FTP class to support FTP
+    proxies.
 </p>
 <h3>Derived from</h3>
 ftplib.FTP
@@ -159,17 +161,18 @@ raised to indicate a proxy related issue
 <p>
         Public method to login to the FTP server.
 </p><p>
-        This extended method respects the FTP proxy configuration. There are many
-        different FTP proxy products available. But unfortunately there is no
-        standard for how o traverse a FTP proxy. The lis below shows the sequence
-        of commands used.
+        This extended method respects the FTP proxy configuration. There are
+        many different FTP proxy products available. But unfortunately there
+        is no standard for how o traverse a FTP proxy. The lis below shows
+        the sequence of commands used.
 </p><p>
         <table>
           <tr><td>user</td><td>Username for remote host</td></tr>
           <tr><td>pass</td><td>Password for remote host</td></tr>
           <tr><td>pruser</td><td>Username for FTP proxy</td></tr>
           <tr><td>prpass</td><td>Password for FTP proxy</td></tr>
-          <tr><td>remote.host</td><td>Hostname of the remote FTP server</td></tr>
+          <tr><td>remote.host</td><td>Hostname of the remote FTP server</td>
+          </tr>
         </table>
 </p><p>
         <dl>
@@ -305,14 +308,18 @@ accounting info for the proxy (string)
     The error message starts with a three digit error code followed by a
     space and the error string. Supported error codes are:
     <ul>
-      <li>910: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
-      <li>930: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
-      <li>940: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
-      <li>950: proxy error; the second number gives the category of the proxy error.
-          The original response from the proxy is appended in the next line.</li>
+      <li>910: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
+      <li>930: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
+      <li>940: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
+      <li>950: proxy error; the second number gives the category of the proxy
+          error. The original response from the proxy is appended in the next
+          line.</li>
       <li>990: proxy usage is enabled but no proxy host given</li>
       <li>991: proxy usage is enabled but no proxy user given</li>
       <li>992: proxy usage is enabled but no proxy password given</li>

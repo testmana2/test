@@ -73,7 +73,7 @@ VersionControl
 <td>Private method to format a url for subversion.</td>
 </tr><tr>
 <td><a href="#Subversion.__vcsAllRegisteredStates_wc">__vcsAllRegisteredStates_wc</a></td>
-<td>Private method used to get the registered states of a number of files in the vcs.</td>
+<td>Private method used to get the registered states of a number of files in the VCS.</td>
 </tr><tr>
 <td><a href="#Subversion.__vcsAllRegisteredStates_wcng">__vcsAllRegisteredStates_wcng</a></td>
 <td>Private method used to get the registered states of a number of files in the vcs.</td>
@@ -286,7 +286,8 @@ name of this object (string)
 <h4>Subversion.__svnGetFileForRevision</h4>
 <b>__svnGetFileForRevision</b>(<i>name, rev=""</i>)
 <p>
-        Private method to get a file for a specific revision from the repository.
+        Private method to get a file for a specific revision from the
+        repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -319,14 +320,15 @@ properly formated url for subversion (string)
 <h4>Subversion.__vcsAllRegisteredStates_wc</h4>
 <b>__vcsAllRegisteredStates_wc</b>(<i>names, dname, shortcut=True</i>)
 <p>
-        Private method used to get the registered states of a number of files in the vcs.
+        Private method used to get the registered states of a number of files
+        in the VCS.
 </p><p>
-        This is the variant for subversion installations using the old working copy
-        meta-data format.
+        This is the variant for subversion installations using the old working
+        copy meta-data format.
 </p><p>
-        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
-        directory has been scanned already. If so, it is assumed, that the states for
-        all files has been populated by the previous run.
+        <b>Note:</b> If a shortcut is to be taken, the code will only check,
+        if the named directory has been scanned already. If so, it is assumed,
+        that the states for all files has been populated by the previous run.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
@@ -348,14 +350,15 @@ the received dictionary completed with a combination of
 <h4>Subversion.__vcsAllRegisteredStates_wcng</h4>
 <b>__vcsAllRegisteredStates_wcng</b>(<i>names, dname, shortcut=True</i>)
 <p>
-        Private method used to get the registered states of a number of files in the vcs.
+        Private method used to get the registered states of a number of files
+        in the vcs.
 </p><p>
-        This is the variant for subversion installations using the new working copy
-        meta-data format.
+        This is the variant for subversion installations using the new working
+        copy meta-data format.
 </p><p>
-        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
-        directory has been scanned already. If so, it is assumed, that the states for
-        all files has been populated by the previous run.
+        <b>Note:</b> If a shortcut is to be taken, the code will only check,
+        if the named directory has been scanned already. If so, it is assumed,
+        that the states for all files has been populated by the previous run.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
@@ -384,8 +387,8 @@ the received dictionary completed with a combination of
 <p>
         Private method used to get the registered state of a file in the vcs.
 </p><p>
-        This is the variant for subversion installations using the old working copy
-        meta-data format.
+        This is the variant for subversion installations using the old working
+        copy meta-data format.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -402,8 +405,8 @@ a combination of canBeCommited and canBeAdded
 <p>
         Private method used to get the registered state of a file in the vcs.
 </p><p>
-        This is the variant for subversion installations using the new working copy
-        meta-data format.
+        This is the variant for subversion installations using the new
+        working copy meta-data format.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -521,8 +524,9 @@ flag indicating a recursive list is requested
         Subversion repository.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
 </p><p>
         This method gives the chance to enter the revisions to be compared.
 </p><dl>
@@ -544,7 +548,8 @@ list of defined change list names (list of strings)
 <h4>Subversion.svnGetReposName</h4>
 <b>svnGetReposName</b>(<i>path</i>)
 <p>
-        Public method used to retrieve the URL of the subversion repository path.
+        Public method used to retrieve the URL of the subversion repository
+        path.
 </p><dl>
 <dt><i>path</i></dt>
 <dd>
@@ -603,13 +608,15 @@ flag indicating listing of branches or tags
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be locked (string or list of strings)
+file/directory name to be locked (string or list of
+            strings)
 </dd><dt><i>stealIt</i></dt>
 <dd>
 flag indicating a forced operation (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
-reference to the parent object of the subversion dialog (QWidget)
+reference to the parent object of the subversion dialog
+            (QWidget)
 </dd>
 </dl><a NAME="Subversion.svnLogBrowser" ID="Subversion.svnLogBrowser"></a>
 <h4>Subversion.svnLogBrowser</h4>
@@ -736,13 +743,15 @@ directory name to show change lists for (string)
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be unlocked (string or list of strings)
+file/directory name to be unlocked (string or list of
+            strings)
 </dd><dt><i>breakIt</i></dt>
 <dd>
 flag indicating a forced operation (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
-reference to the parent object of the subversion dialog (QWidget)
+reference to the parent object of the subversion dialog
+            (QWidget)
 </dd>
 </dl><a NAME="Subversion.svnUrlDiff" ID="Subversion.svnUrlDiff"></a>
 <h4>Subversion.svnUrlDiff</h4>
@@ -752,8 +761,9 @@ reference to the parent object of the subversion dialog (QWidget)
         repository URLs.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
 </p><p>
         This method gives the chance to enter the revisions to be compared.
 </p><dl>
@@ -765,7 +775,8 @@ file/directory name to be diffed (string)
 <h4>Subversion.vcsAdd</h4>
 <b>vcsAdd</b>(<i>name, isDir=False, noDialog=False</i>)
 <p>
-        Public method used to add a file/directory to the Subversion repository.
+        Public method used to add a file/directory to the Subversion
+        repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -795,21 +806,24 @@ flag indicating name is a directory (boolean)
 <h4>Subversion.vcsAddTree</h4>
 <b>vcsAddTree</b>(<i>path</i>)
 <p>
-        Public method to add a directory tree rooted at path to the Subversion repository.
+        Public method to add a directory tree rooted at path to the Subversion
+        repository.
 </p><dl>
 <dt><i>path</i></dt>
 <dd>
-root directory of the tree to be added (string or list of strings))
+root directory of the tree to be added (string or list of
+            strings))
 </dd>
 </dl><a NAME="Subversion.vcsAllRegisteredStates" ID="Subversion.vcsAllRegisteredStates"></a>
 <h4>Subversion.vcsAllRegisteredStates</h4>
 <b>vcsAllRegisteredStates</b>(<i>names, dname, shortcut=True</i>)
 <p>
-        Public method used to get the registered states of a number of files in the vcs.
+        Public method used to get the registered states of a number of files
+        in the vcs.
 </p><p>
-        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
-        directory has been scanned already. If so, it is assumed, that the states for
-        all files has been populated by the previous run.
+        <b>Note:</b> If a shortcut is to be taken, the code will only check,
+        if the named directory has been scanned already. If so, it is assumed,
+        that the states for all files has been populated by the previous run.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
@@ -831,7 +845,8 @@ the received dictionary completed with a combination of
 <h4>Subversion.vcsCheckout</h4>
 <b>vcsCheckout</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
-        Public method used to check the project out of the Subversion repository.
+        Public method used to check the project out of the Subversion
+        repository.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -872,12 +887,13 @@ directory name of the working directory (string)
 <h4>Subversion.vcsCommit</h4>
 <b>vcsCommit</b>(<i>name, message, noDialog=False</i>)
 <p>
-        Public method used to make the change of a file/directory permanent in the
-        Subversion repository.
+        Public method used to make the change of a file/directory permanent
+        in the Subversion repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be committed (string or list of strings)
+file/directory name to be committed (string or
+        list of strings)
 </dd><dt><i>message</i></dt>
 <dd>
 message for this operation (string)
@@ -889,7 +905,8 @@ flag indicating quiet operations
 <h4>Subversion.vcsConvertProject</h4>
 <b>vcsConvertProject</b>(<i>vcsDataDict, project</i>)
 <p>
-        Public method to convert an uncontrolled project to a version controlled project.
+        Public method to convert an uncontrolled project to a version
+        controlled project.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -906,8 +923,9 @@ reference to the project object
         Subversion repository.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited
-        and has unsaved modification, they can be saved or the operation may be aborted.
+        are saved first. If name is a file (or list of files), which is/are 
+        being edited and has unsaved modification, they can be saved or the
+        operation may be aborted.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -921,13 +939,15 @@ file/directory name to be diffed (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating the existance (boolean) and an error message (string)
+flag indicating the existance (boolean) and an error message
+            (string)
 </dd>
 </dl><a NAME="Subversion.vcsExport" ID="Subversion.vcsExport"></a>
 <h4>Subversion.vcsExport</h4>
 <b>vcsExport</b>(<i>vcsDataDict, projectDir</i>)
 <p>
-        Public method used to export a directory from the Subversion repository.
+        Public method used to export a directory from the Subversion
+        repository.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -945,7 +965,8 @@ flag indicating an execution without errors (boolean)
 <h4>Subversion.vcsGetProjectBrowserHelper</h4>
 <b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser=False</i>)
 <p>
-        Public method to instanciate a helper object for the different project browsers.
+        Public method to instanciate a helper object for the different
+        project browsers.
 </p><dl>
 <dt><i>browser</i></dt>
 <dd>
@@ -955,8 +976,8 @@ reference to the project browser object
 reference to the project object
 </dd><dt><i>isTranslationsBrowser</i></dt>
 <dd>
-flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -982,7 +1003,8 @@ the project helper object
 <h4>Subversion.vcsImport</h4>
 <b>vcsImport</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
-        Public method used to import the project into the Subversion repository.
+        Public method used to import the project into the Subversion
+        repository.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -1028,7 +1050,8 @@ always TRUE
 <p>
         Public method to initialize the VCS configuration.
 </p><p>
-        This method ensures, that eric specific files and directories are ignored.
+        This method ensures, that eric specific files and directories are
+        ignored.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
@@ -1150,16 +1173,19 @@ a combination of canBeCommited and canBeAdded
 <h4>Subversion.vcsRemove</h4>
 <b>vcsRemove</b>(<i>name, project=False, noDialog=False</i>)
 <p>
-        Public method used to remove a file/directory from the Subversion repository.
+        Public method used to remove a file/directory from the Subversion
+        repository.
 </p><p>
         The default operation is to remove the local copy as well.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be removed (string or list of strings))
+file/directory name to be removed (string or list of
+            strings))
 </dd><dt><i>project</i></dt>
 <dd>
-flag indicating deletion of a project tree (boolean) (not needed)
+flag indicating deletion of a project tree (boolean)
+            (not needed)
 </dd><dt><i>noDialog</i></dt>
 <dd>
 flag indicating quiet operations
@@ -1242,11 +1268,13 @@ file/directory name to be tagged (string)
 <h4>Subversion.vcsUpdate</h4>
 <b>vcsUpdate</b>(<i>name, noDialog=False</i>)
 <p>
-        Public method used to update a file/directory with the Subversion repository.
+        Public method used to update a file/directory with the Subversion
+        repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be updated (string or list of strings)
+file/directory name to be updated (string or list of
+            strings)
 </dd><dt><i>noDialog</i></dt>
 <dd>
 flag indicating quiet operations (boolean)

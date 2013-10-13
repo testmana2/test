@@ -28,9 +28,9 @@ values for all configuration items and stores the actual values. These
 values are read and written to the eric5 preferences file by module
 functions. The data is stored in a file in a subdirectory of the users home
 directory. The individual configuration data is accessed by accessor functions
-defined on the module level. The module is simply imported wherever it is needed
-with the statement 'import Preferences'. Do not use 'from Preferences import *'
-to import it.
+defined on the module level. The module is simply imported wherever it is
+needed with the statement 'import Preferences'. Do not use
+'from Preferences import *' to import it.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -584,7 +584,8 @@ the requested list of language keywords (list of strings)
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
-filename used to determine the associated lexer language (string)
+filename used to determine the associated lexer language
+        (string)
 </dd><dt><i>prefClass</i></dt>
 <dd>
 preferences class used as the storage area
@@ -620,7 +621,8 @@ a reference to the list of lexer associations
 <h2>getEditorOtherFonts</h2>
 <b>getEditorOtherFonts</b>(<i>key, prefClass=Prefs</i>)
 <p>
-    Module function to retrieve the various editor fonts except the lexer fonts.
+    Module function to retrieve the various editor fonts except the lexer
+    fonts.
 </p><dl>
 <dt><i>key</i></dt>
 <dd>
@@ -2148,7 +2150,8 @@ flag indicating a reset of the layout (boolean)
 <p>
     Module function to sync the preferences to disk.
 </p><p>
-    In addition to syncing, the central configuration store is reinitialized as well.
+    In addition to syncing, the central configuration store is reinitialized
+    as well.
 </p><dl>
 <dt><i>prefClass</i></dt>
 <dd>
