@@ -54,7 +54,8 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         """
         Private slot to handle a double click of an item.
         
-        @param item reference to the item that was double clicked (QListWidgetItem)
+        @param item reference to the item that was double clicked
+            (QListWidgetItem)
         """
         self.on_executeButton_clicked()
     

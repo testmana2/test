@@ -30,15 +30,18 @@ class SpellChecker(QObject):
     _spelling_lang = None
     _spelling_dict = None
     
-    def __init__(self, editor, indicator, defaultLanguage=None, checkRegion=None):
+    def __init__(self, editor, indicator, defaultLanguage=None,
+                 checkRegion=None):
         """
         Constructor
         
         @param editor reference to the editor object (QScintilla.Editor)
         @param indicator spell checking indicator
-        @keyparam defaultLanguage the language to be used as the default (string).
-            The string should be in language locale format (e.g. en_US, de).
-        @keyparam checkRegion reference to a function to check for a valid region
+        @keyparam defaultLanguage the language to be used as the default
+            (string). The string should be in language locale format
+            (e.g. en_US, de).
+        @keyparam checkRegion reference to a function to check for a valid
+            region
         """
         super().__init__(editor)
         
@@ -94,9 +97,11 @@ class SpellChecker(QObject):
             exception dictionary (string)
         """
         if isException:
-            return os.path.join(Utilities.getConfigDir(), "spelling", "pel.dic")
+            return os.path.join(
+                Utilities.getConfigDir(), "spelling", "pel.dic")
         else:
-            return os.path.join(Utilities.getConfigDir(), "spelling", "pwl.dic")
+            return os.path.join(
+                Utilities.getConfigDir(), "spelling", "pwl.dic")
     
     @classmethod
     def getUserDictionaryPath(cls, isException=False):
@@ -191,7 +196,8 @@ class SpellChecker(QObject):
     
     def __getNextWord(self, pos, endPosition):
         """
-        Private method to get the next word in the text after the given position.
+        Private method to get the next word in the text after the given
+        position.
         
         @param pos position to start word extraction (integer)
         @param endPosition position to stop word extraction (integer)
@@ -240,7 +246,8 @@ class SpellChecker(QObject):
         Public method to get information about the last error found.
         
         @return tuple of last faulty word (string), starting position of the
-            faulty word (integer) and ending position of the faulty word (integer)
+            faulty word (integer) and ending position of the faulty word
+            (integer)
         """
         return (self.word, self.wordStart, self.wordEnd)
     
@@ -259,7 +266,8 @@ class SpellChecker(QObject):
         if spell is None:
             return False
         
-        self.editor.clearIndicatorRange(self.indicator, startPos, endPos - startPos)
+        self.editor.clearIndicatorRange(
+            self.indicator, startPos, endPos - startPos)
         
         self.pos = startPos
         self.endPos = endPos
@@ -294,7 +302,8 @@ class SpellChecker(QObject):
             return
         
         linesChunk = Preferences.getEditor("AutoSpellCheckChunkSize")
-        self.checkLines(self.lastCheckedLine, self.lastCheckedLine + linesChunk)
+        self.checkLines(self.lastCheckedLine,
+                        self.lastCheckedLine + linesChunk)
         self.lastCheckedLine = self.lastCheckedLine + linesChunk + 1
         if self.lastCheckedLine >= self.editor.lines():
             self.lastCheckedLine = -1
@@ -321,7 +330,8 @@ class SpellChecker(QObject):
             pos1 = -1
             if not self.editor.charAt(pos).isalnum():
                 line, index = self.editor.lineIndexFromPosition(pos)
-                self.editor.clearIndicator(self.indicator, line, index, line, index + 1)
+                self.editor.clearIndicator(
+                    self.indicator, line, index, line, index + 1)
                 pos1 = self.editor.positionAfter(pos)
                 pos0 = self.editor.positionBefore(pos)
             
@@ -333,13 +343,15 @@ class SpellChecker(QObject):
                         ok = spell.check(word)
                     else:
                         ok = True
-                    start, end = \
-                        self.editor.getWordBoundaries(line, index, useWordChars=False)
+                    start, end = self.editor.getWordBoundaries(
+                        line, index, useWordChars=False)
                     if ok:
-                        self.editor.clearIndicator(self.indicator, line, start, line, end)
+                        self.editor.clearIndicator(
+                            self.indicator, line, start, line, end)
                     else:
                         # spell check indicated an error
-                        self.editor.setIndicator(self.indicator, line, start, line, end)
+                        self.editor.setIndicator(
+                            self.indicator, line, start, line, end)
     
     def checkLines(self, firstLine, lastLine):
         """
@@ -403,7 +415,8 @@ class SpellChecker(QObject):
         """
         Public method to clear all spelling markers.
         """
-        self.editor.clearIndicatorRange(self.indicator, 0, self.editor.length())
+        self.editor.clearIndicatorRange(
+            self.indicator, 0, self.editor.length())
     
     def getSuggestions(self, word):
         """
@@ -504,7 +517,8 @@ class SpellChecker(QObject):
         spell = self._spelling_dict
         if spell:
             while self.pos < self.endPos and self.pos >= 0:
-                word, wordStart, wordEnd = self.__getNextWord(self.pos, self.endPos)
+                word, wordStart, wordEnd = \
+                    self.__getNextWord(self.pos, self.endPos)
                 self.pos = wordEnd
                 if (wordEnd - wordStart) >= self.minimumWordSize and \
                    self.__checkRegion(wordStart):

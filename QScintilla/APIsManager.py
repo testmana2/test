@@ -21,9 +21,12 @@ class APIs(QObject):
     """
     Class implementing an API storage entity.
     
-    @signal apiPreparationFinished() emitted after the API preparation has finished
-    @signal apiPreparationCancelled() emitted after the API preparation has been cancelled
-    @signal apiPreparationStarted() emitted after the API preparation has started
+    @signal apiPreparationFinished() emitted after the API preparation has
+        finished
+    @signal apiPreparationCancelled() emitted after the API preparation has
+        been cancelled
+    @signal apiPreparationStarted() emitted after the API preparation has
+        started
     """
     apiPreparationFinished = pyqtSignal()
     apiPreparationCancelled = pyqtSignal()
@@ -51,9 +54,12 @@ class APIs(QObject):
             self.__apis = None
         else:
             self.__apis = QsciAPIs(self.__lexer)
-            self.__apis.apiPreparationFinished.connect(self.__apiPreparationFinished)
-            self.__apis.apiPreparationCancelled.connect(self.__apiPreparationCancelled)
-            self.__apis.apiPreparationStarted.connect(self.__apiPreparationStarted)
+            self.__apis.apiPreparationFinished.connect(
+                self.__apiPreparationFinished)
+            self.__apis.apiPreparationCancelled.connect(
+                self.__apiPreparationCancelled)
+            self.__apis.apiPreparationStarted.connect(
+                self.__apiPreparationStarted)
             self.__loadAPIs()
         
     def __loadAPIs(self):
@@ -62,19 +68,22 @@ class APIs(QObject):
         """
         if self.__apis.isPrepared():
             # load a prepared API file
-            if not self.__forPreparation and Preferences.getEditor("AutoPrepareAPIs"):
+            if not self.__forPreparation and \
+                    Preferences.getEditor("AutoPrepareAPIs"):
                 self.prepareAPIs()
             self.__apis.loadPrepared()
         else:
             # load the raw files and prepare the API file
-            if not self.__forPreparation and Preferences.getEditor("AutoPrepareAPIs"):
+            if not self.__forPreparation and \
+                    Preferences.getEditor("AutoPrepareAPIs"):
                 self.prepareAPIs(ondemand=True)
     
     def reloadAPIs(self):
         """
         Public method to reload the API information.
         """
-        if not self.__forPreparation and Preferences.getEditor("AutoPrepareAPIs"):
+        if not self.__forPreparation and \
+                Preferences.getEditor("AutoPrepareAPIs"):
             self.prepareAPIs()
         self.__loadAPIs()
     
@@ -84,7 +93,8 @@ class APIs(QObject):
         
         @return reference to the QsciAPIs object (QsciAPIs)
         """
-        if not self.__forPreparation and Preferences.getEditor("AutoPrepareAPIs"):
+        if not self.__forPreparation and \
+                Preferences.getEditor("AutoPrepareAPIs"):
             self.prepareAPIs()
         return self.__apis
     
@@ -98,7 +108,8 @@ class APIs(QObject):
     
     def __apiPreparationCancelled(self):
         """
-        Private method called, after the API preparation process has been cancelled.
+        Private method called, after the API preparation process has been
+        cancelled.
         """
         self.__inPreparation = False
         self.apiPreparationCancelled.emit()
@@ -132,11 +143,13 @@ class APIs(QObject):
                     needsPreparation = True
                 else:
                     preparedAPIsTime = preparedAPIsInfo.lastModified()
-                    apifiles = sorted(Preferences.getEditorAPI(self.__language))
+                    apifiles = sorted(
+                        Preferences.getEditorAPI(self.__language))
                     if self.__apifiles != apifiles:
                         needsPreparation = True
                     for apifile in apifiles:
-                        if QFileInfo(apifile).lastModified() > preparedAPIsTime:
+                        if QFileInfo(apifile).lastModified() > \
+                                preparedAPIsTime:
                             needsPreparation = True
                             break
         
@@ -166,10 +179,12 @@ class APIs(QObject):
         """
         if self.__apis is not None:
             if Globals.isWindowsPlatform():
-                qsciPath = os.path.join(Globals.getPyQt4ModulesDirectory(), "qsci")
+                qsciPath = os.path.join(
+                    Globals.getPyQt4ModulesDirectory(), "qsci")
                 if os.path.exists(qsciPath):
                     # it's the installer
-                    apidir = os.path.join(qsciPath, "api", self.__lexer.lexer())
+                    apidir = os.path.join(qsciPath, "api",
+                                          self.__lexer.lexer())
                     fnames = []
                     filist = QDir(apidir).entryInfoList(["*.api"], QDir.Files,
                                                         QDir.IgnoreCase)
@@ -221,11 +236,12 @@ class APIsManager(QObject):
         Public method to get an apis object for autocompletion/calltips.
         
         This method creates and loads an APIs object dynamically upon request.
-        This saves memory for languages, that might not be needed at the moment.
+        This saves memory for languages, that might not be needed at the
+        moment.
         
         @param language the language of the requested api object (string)
-        @param forPreparation flag indicating the requested api object is just needed
-            for a preparation process (boolean)
+        @param forPreparation flag indicating the requested api object is just
+            needed for a preparation process (boolean)
         @return the apis object (APIs)
         """
         if forPreparation:

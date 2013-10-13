@@ -58,7 +58,8 @@ class CompleterPython(CompleterBase):
         """
         Public slot called to reread the configuration parameters.
         """
-        self.setEnabled(Preferences.getEditorTyping("Python/EnabledTypingAids"))
+        self.setEnabled(
+            Preferences.getEditorTyping("Python/EnabledTypingAids"))
         self.__insertClosingBrace = \
             Preferences.getEditorTyping("Python/InsertClosingBrace")
         self.__indentBrace = \
@@ -91,7 +92,8 @@ class CompleterPython(CompleterBase):
         @param charNumber value of the character entered (integer)
         """
         char = chr(charNumber)
-        if char not in ['(', ')', '{', '}', '[', ']', ' ', ',', "'", '"', '\n', ':']:
+        if char not in ['(', ')', '{', '}', '[', ']', ' ', ',', "'", '"',
+                        '\n', ':']:
             return  # take the short route
         
         line, col = self.editor.getCursorPosition()
@@ -135,7 +137,8 @@ class CompleterPython(CompleterBase):
                     self.editor.removeSelectedText()
         
         # space
-        # insert import, dedent to if for elif, dedent to try for except, dedent def
+        # insert import, dedent to if for elif, dedent to try for except,
+        # dedent def
         elif char == ' ':
             txt = self.editor.text(line)[:col]
             if self.__insertImport and self.__importRX.exactMatch(txt):
@@ -217,7 +220,8 @@ class CompleterPython(CompleterBase):
                             index -= 1
                         if openCount > closeCount and lastOpenIndex > col:
                             self.editor.insert(' ' * (lastOpenIndex - col + 1))
-                            self.editor.setCursorPosition(line, lastOpenIndex + 1)
+                            self.editor.setCursorPosition(
+                                line, lastOpenIndex + 1)
     
     def __dedentToIf(self):
         """
@@ -305,7 +309,8 @@ class CompleterPython(CompleterBase):
             if self.__py24StyleTry:
                 if (self.__exceptcRX.indexIn(txt) == 0 or \
                     self.__exceptRX.indexIn(txt) == 0 or \
-                    self.__finallyRX.indexIn(txt) == 0) and edInd <= indentation:
+                    self.__finallyRX.indexIn(txt) == 0) and \
+                        edInd <= indentation:
                     indentation = edInd - 1
                 elif self.__tryRX.indexIn(txt) == 0 and edInd <= indentation:
                     self.editor.cancelList()
@@ -316,7 +321,8 @@ class CompleterPython(CompleterBase):
                     indentation = edInd - 1
                 elif (self.__tryRX.indexIn(txt) == 0 or \
                       self.__exceptcRX.indexIn(txt) == 0 or \
-                      self.__exceptRX.indexIn(txt) == 0) and edInd <= indentation:
+                      self.__exceptRX.indexIn(txt) == 0) and \
+                        edInd <= indentation:
                     self.editor.cancelList()
                     self.editor.setIndentation(line, edInd)
                     break
@@ -324,8 +330,8 @@ class CompleterPython(CompleterBase):
     
     def __dedentDefStatement(self):
         """
-        Private method to dedent the line of the def statement to a previous def
-        statement or class statement.
+        Private method to dedent the line of the def statement to a previous
+        def statement or class statement.
         """
         line, col = self.editor.getCursorPosition()
         indentation = self.editor.indentation(line)
@@ -418,7 +424,8 @@ class CompleterPython(CompleterBase):
     
     def __inDoubleQuotedString(self):
         """
-        Private method to check, if the cursor is within a double quoted string.
+        Private method to check, if the cursor is within a double quoted
+        string.
         
         @return flag indicating, if the cursor is inside a double
             quoted string (boolean)
@@ -427,16 +434,19 @@ class CompleterPython(CompleterBase):
     
     def __inTripleDoubleQuotedString(self):
         """
-        Private method to check, if the cursor is within a triple double quoted string.
+        Private method to check, if the cursor is within a triple double
+        quoted string.
         
         @return flag indicating, if the cursor is inside a triple double
             quoted string (boolean)
         """
-        return self.editor.currentStyle() == QsciLexerPython.TripleDoubleQuotedString
+        return self.editor.currentStyle() == \
+            QsciLexerPython.TripleDoubleQuotedString
     
     def __inSingleQuotedString(self):
         """
-        Private method to check, if the cursor is within a single quoted string.
+        Private method to check, if the cursor is within a single quoted
+        string.
         
         @return flag indicating, if the cursor is inside a single
             quoted string (boolean)
@@ -445,9 +455,11 @@ class CompleterPython(CompleterBase):
     
     def __inTripleSingleQuotedString(self):
         """
-        Private method to check, if the cursor is within a triple single quoted string.
+        Private method to check, if the cursor is within a triple single
+        quoted string.
         
         @return flag indicating, if the cursor is inside a triple single
             quoted string (boolean)
         """
-        return self.editor.currentStyle() == QsciLexerPython.TripleSingleQuotedString
+        return self.editor.currentStyle() == \
+            QsciLexerPython.TripleSingleQuotedString

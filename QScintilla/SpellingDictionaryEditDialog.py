@@ -17,7 +17,8 @@ from .Ui_SpellingDictionaryEditDialog import Ui_SpellingDictionaryEditDialog
 
 class SpellingDictionaryEditDialog(QDialog, Ui_SpellingDictionaryEditDialog):
     """
-    Class implementing a dialog to edit the various spell checking dictionaries.
+    Class implementing a dialog to edit the various spell checking
+    dictionaries.
     """
     def __init__(self, data, info, parent=None):
         """
@@ -40,7 +41,8 @@ class SpellingDictionaryEditDialog(QDialog, Ui_SpellingDictionaryEditDialog):
         self.__proxyModel.setSourceModel(self.__model)
         self.wordList.setModel(self.__proxyModel)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.removeButton.clicked[()].connect(self.wordList.removeSelected)
         self.removeAllButton.clicked[()].connect(self.wordList.removeAll)
@@ -51,7 +53,8 @@ class SpellingDictionaryEditDialog(QDialog, Ui_SpellingDictionaryEditDialog):
         Private slot to handle adding an entry.
         """
         self.__model.insertRow(self.__model.rowCount())
-        self.wordList.edit(self.__proxyModel.index(self.__model.rowCount() - 1, 0))
+        self.wordList.edit(
+            self.__proxyModel.index(self.__model.rowCount() - 1, 0))
     
     def getData(self):
         """
@@ -59,4 +62,5 @@ class SpellingDictionaryEditDialog(QDialog, Ui_SpellingDictionaryEditDialog):
         
         @return data of the dialog (string)
         """
-        return os.linesep.join([line for line in self.__model.stringList() if line])
+        return os.linesep.join(
+            [line for line in self.__model.stringList() if line])

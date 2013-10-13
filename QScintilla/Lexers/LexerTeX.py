@@ -35,7 +35,8 @@ class LexerTeX(QsciLexerTeX, Lexer):
         try:
             self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
             self.setFoldComments(Preferences.getEditor("TexFoldComment"))
-            self.setProcessComments(Preferences.getEditor("TexProcessComments"))
+            self.setProcessComments(
+                Preferences.getEditor("TexProcessComments"))
             self.setProcessIf(Preferences.getEditor("TexProcessIf"))
         except AttributeError:
             pass

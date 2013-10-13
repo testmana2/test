@@ -58,15 +58,16 @@ class Printer(QsciPrinter):
         """
         fn = self.docName()
         
-        header = QApplication.translate('Printer',
-                                        '{0} - Printed on {1}, {2} - Page {3}')\
+        header = QApplication.translate(
+            'Printer', '{0} - Printed on {1}, {2} - Page {3}')\
             .format(fn, self.date, self.time, pagenr)
         
         painter.save()
         painter.setFont(self.headerFont)    # set our header font
         painter.setPen(QColor(Qt.black))            # set color
         if drawing:
-            painter.drawText(area.right() - painter.fontMetrics().width(header),
+            painter.drawText(
+                area.right() - painter.fontMetrics().width(header),
                 area.top() + painter.fontMetrics().ascent(), header)
         area.setTop(area.top() + painter.fontMetrics().height() + 5)
         painter.restore()

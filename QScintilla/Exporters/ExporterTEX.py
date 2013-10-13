@@ -60,7 +60,8 @@ class ExporterTEX(ExporterBase):
     
     def __texStyle(self, style):
         """
-        Private method to calculate a style name string for a given style number.
+        Private method to calculate a style name string for a given style
+        number.
         
         @param style style number (integer)
         @return style name string (string)
@@ -85,8 +86,9 @@ class ExporterTEX(ExporterBase):
         @param istyle style number (integer)
         """
         closing_brackets = 3
-        file.write("\\newcommand{{\\eric{0}}}[1]{{\\noindent{{\\ttfamily{{".format(
-                   self.__texStyle(istyle)))
+        file.write(
+            "\\newcommand{{\\eric{0}}}[1]{{\\noindent{{\\ttfamily{{".format(
+                self.__texStyle(istyle)))
         if font.italic():
             file.write("\\textit{")
             closing_brackets += 1
@@ -94,10 +96,12 @@ class ExporterTEX(ExporterBase):
             file.write("\\textbf{")
             closing_brackets += 1
         if color != self.defaultColor:
-            file.write("\\textcolor[rgb]{{{0}}}{{".format(self.__getTexRGB(color)))
+            file.write(
+                "\\textcolor[rgb]{{{0}}}{{".format(self.__getTexRGB(color)))
             closing_brackets += 1
         if paper != self.defaultPaper:
-            file.write("\\colorbox[rgb]{{{0}}}{{".format(self.__getTexRGB(paper)))
+            file.write(
+                "\\colorbox[rgb]{{{0}}}{{".format(self.__getTexRGB(paper)))
             closing_brackets += 1
         file.write("#1{0}\n".format('}' * closing_brackets))
     
@@ -119,8 +123,10 @@ class ExporterTEX(ExporterBase):
             if tabSize == 0:
                 tabSize = 4
             
-            onlyStylesUsed = Preferences.getEditorExporter("TeX/OnlyStylesUsed")
-            titleFullPath = Preferences.getEditorExporter("TeX/FullPathAsTitle")
+            onlyStylesUsed = Preferences.getEditorExporter(
+                "TeX/OnlyStylesUsed")
+            titleFullPath = Preferences.getEditorExporter(
+                "TeX/FullPathAsTitle")
             
             lex = self.editor.getLexer()
             self.defaultPaper = lex and \
@@ -174,7 +180,8 @@ class ExporterTEX(ExporterBase):
                                 colour = lex.color(istyle)
                                 paper = lex.paper(istyle)
                                 
-                                self.__defineTexStyle(font, colour, paper, f, istyle)
+                                self.__defineTexStyle(font, colour, paper, f,
+                                                      istyle)
                         istyle += 1
                 else:
                     colour = self.editor.color()
@@ -190,7 +197,8 @@ class ExporterTEX(ExporterBase):
                     title = self.editor.getFileName()
                 else:
                     title = os.path.basename(self.editor.getFileName())
-                f.write("Source File: {0}\n\n\\noindent\n\\tiny{{\n".format(title))
+                f.write(
+                    "Source File: {0}\n\n\\noindent\n\\tiny{{\n".format(title))
                 
                 styleCurrent = self.editor.styleAt(0)
                 f.write("\\eric{0}{{".format(self.__texStyle(styleCurrent)))
@@ -206,7 +214,8 @@ class ExporterTEX(ExporterBase):
                     style = self.editor.styleAt(pos)
                     if style != styleCurrent:
                         # new style
-                        f.write("}}\n\\eric{0}{{".format(self.__texStyle(style)))
+                        f.write(
+                            "}}\n\\eric{0}{{".format(self.__texStyle(style)))
                         styleCurrent = style
                     
                     if ch == b'\t':
@@ -217,11 +226,13 @@ class ExporterTEX(ExporterBase):
                         f.write("{\\textbackslash}")
                     elif ch in [b'>', b'<', b'@']:
                         f.write("${0}$".format(ch[0]))
-                    elif ch in [b'{', b'}', b'^', b'_', b'&', b'$', b'#', b'%', b'~']:
+                    elif ch in [b'{', b'}', b'^', b'_', b'&', b'$', b'#',
+                                b'%', b'~']:
                         f.write("\\{0}".format(ch[0]))
                     elif ch in [b'\r', b'\n']:
                         lineIdx = -1    # because incremented below
-                        if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
+                        if ch == b'\r' and \
+                                self.editor.byteAt(pos + 1) == b'\n':
                             pos += 1    # skip the LF
                         styleCurrent = self.editor.styleAt(pos + 1)
                         f.write("}} \\\\\n\\eric{0}{{".format(
@@ -259,8 +270,8 @@ class ExporterTEX(ExporterBase):
                 E5MessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(
-                        """<p>The source could not be exported to <b>{0}</b>.</p>"""
-                        """<p>Reason: {1}</p>""")\
+                        """<p>The source could not be exported to"""
+                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")\
                         .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

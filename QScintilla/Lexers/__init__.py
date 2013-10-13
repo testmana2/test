@@ -22,8 +22,8 @@ import UI.PixmapCache
 #          This function must take a reference to the parent as argument.
 #       3. list of open file filters (list of strings)
 #       4. list of save file filters (list of strings)
-#       5. default lexer associations (list of strings of filename wildcard patterns
-#          to be associated with the lexer)
+#       5. default lexer associations (list of strings of filename wildcard
+#          patterns to be associated with the lexer)
 #       6. name of an icon file (string)
 LexerRegistry = {}
 
@@ -37,12 +37,13 @@ def registerLexer(name, displayString, filenameSample, getLexerFunc,
     @param name lexer language name (string)
     @param displayString display string (string)
     @param filenameSample dummy filename to derive lexer name (string)
-    @param getLexerFunc reference to a function instantiating the specific lexer.
-        This function must take a reference to the parent as its only argument.
+    @param getLexerFunc reference to a function instantiating the specific
+        lexer. This function must take a reference to the parent as its only
+        argument.
     @keyparam openFilters list of open file filters (list of strings)
     @keyparam saveFilters list of save file filters (list of strings)
-    @keyparam defaultAssocs default lexer associations (list of strings of filename
-        wildcard patterns to be associated with the lexer)
+    @keyparam defaultAssocs default lexer associations (list of strings of
+        filename wildcard patterns to be associated with the lexer)
     @keyparam iconFileName name of an icon file (string)
     @exception KeyError raised when the given name is already in use
     """
@@ -78,77 +79,78 @@ def getSupportedLanguages():
     """
     supportedLanguages = {
         "Bash": [QApplication.translate('Lexers', "Bash"), 'dummy.sh',
-            "lexerBash.png"],
+                 "lexerBash.png"],
         "Batch": [QApplication.translate('Lexers', "Batch"), 'dummy.bat',
-                "lexerBatch.png"],
+                  "lexerBatch.png"],
         "C++": [QApplication.translate('Lexers', "C/C++"), 'dummy.cpp',
-            "lexerCPP.png"],
+                "lexerCPP.png"],
         "C#": [QApplication.translate('Lexers', "C#"), 'dummy.cs',
-            "lexerCsharp.png"],
+               "lexerCsharp.png"],
         "CMake": [QApplication.translate('Lexers', "CMake"), 'dummy.cmake',
-            "lexerCMake.png"],
+                  "lexerCMake.png"],
         "CSS": [QApplication.translate('Lexers', "CSS"), 'dummy.css',
-            "lexerCSS.png"],
+                "lexerCSS.png"],
         "D": [QApplication.translate('Lexers', "D"), 'dummy.d',
-            "lexerD.png"],
+              "lexerD.png"],
         "Diff": [QApplication.translate('Lexers', "Diff"), 'dummy.diff',
-            "lexerDiff.png"],
+                 "lexerDiff.png"],
         "Fortran": [QApplication.translate('Lexers', "Fortran"), 'dummy.f95',
-            "lexerFortran.png"],
+                    "lexerFortran.png"],
         "Fortran77": [QApplication.translate('Lexers', "Fortran77"), 'dummy.f',
-            "lexerFortran.png"],
-        "HTML": [QApplication.translate('Lexers', "HTML/PHP/XML"), 'dummy.html',
-            "lexerHTML.png"],
+                      "lexerFortran.png"],
+        "HTML": [QApplication.translate('Lexers', "HTML/PHP/XML"),
+                 'dummy.html', "lexerHTML.png"],
         "IDL": [QApplication.translate('Lexers', "IDL"), 'dummy.idl',
-            "lexerIDL.png"],
+                "lexerIDL.png"],
         "Java": [QApplication.translate('Lexers', "Java"), 'dummy.java',
-            "lexerJava.png"],
-        "JavaScript": [QApplication.translate('Lexers', "JavaScript"), 'dummy.js',
-            "lexerJavaScript.png"],
+                 "lexerJava.png"],
+        "JavaScript": [QApplication.translate('Lexers', "JavaScript"),
+                       'dummy.js', "lexerJavaScript.png"],
         "Lua": [QApplication.translate('Lexers', "Lua"), 'dummy.lua',
-            "lexerLua.png"],
+                "lexerLua.png"],
         "Makefile": [QApplication.translate('Lexers', "Makefile"), 'dummy.mak',
-            "lexerMakefile.png"],
+                     "lexerMakefile.png"],
         "Pascal": [QApplication.translate('Lexers', "Pascal"), 'dummy.pas',
-            "lexerPascal.png"],
+                   "lexerPascal.png"],
         "Perl": [QApplication.translate('Lexers', "Perl"), 'dummy.pl',
-            "lexerPerl.png"],
-        "PostScript": [QApplication.translate('Lexers', "PostScript"), 'dummy.ps',
-            "lexerPostscript.png"],
+                 "lexerPerl.png"],
+        "PostScript": [QApplication.translate('Lexers', "PostScript"),
+                       'dummy.ps', "lexerPostscript.png"],
         "Povray": [QApplication.translate('Lexers', "Povray"), 'dummy.pov',
-            "lexerPOV.png"],
-        "Properties": [QApplication.translate('Lexers', "Properties"), 'dummy.ini',
-            "lexerProperties.png"],
+                   "lexerPOV.png"],
+        "Properties": [QApplication.translate('Lexers', "Properties"),
+                       'dummy.ini', "lexerProperties.png"],
         "Python2": [QApplication.translate('Lexers', "Python2"), 'dummy.py',
-            "lexerPython.png"],
+                    "lexerPython.png"],
         "Python3": [QApplication.translate('Lexers', "Python3"), 'dummy.py',
-            "lexerPython3.png"],
+                    "lexerPython3.png"],
         "Ruby": [QApplication.translate('Lexers', "Ruby"), 'dummy.rb',
-            "lexerRuby.png"],
+                 "lexerRuby.png"],
         "SQL": [QApplication.translate('Lexers', "SQL"), 'dummy.sql',
-            "lexerSQL.png"],
+                "lexerSQL.png"],
         "TCL": [QApplication.translate('Lexers', "TCL"), 'dummy.tcl',
-            "lexerTCL.png"],
+                "lexerTCL.png"],
         "TeX": [QApplication.translate('Lexers', "TeX"), 'dummy.tex',
-            "lexerTeX.png"],
+                "lexerTeX.png"],
         "VHDL": [QApplication.translate('Lexers', "VHDL"), 'dummy.vhd',
-            "lexerVHDL.png"],
+                "lexerVHDL.png"],
         "XML": [QApplication.translate('Lexers', "XML"), 'dummy.xml',
-            "lexerXML.png"],
+                "lexerXML.png"],
         "YAML": [QApplication.translate('Lexers', "YAML"), 'dummy.yml',
-            "lexerYAML.png"],
+                 "lexerYAML.png"],
     }
     
     if QSCINTILLA_VERSION() >= 0x020501:
         supportedLanguages.update({
-            "Matlab": [QApplication.translate('Lexers', "Matlab"), 'dummy.m.matlab',
-                "lexerMatlab.png"],
-            "Octave": [QApplication.translate('Lexers', "Octave"), 'dummy.m.octave',
-                "lexerOctave.png"],
+            "Matlab": [QApplication.translate('Lexers', "Matlab"),
+                       'dummy.m.matlab', "lexerMatlab.png"],
+            "Octave": [QApplication.translate('Lexers', "Octave"),
+                       'dummy.m.octave', "lexerOctave.png"],
         })
     
     for name in LexerRegistry:
-        supportedLanguages[name] = LexerRegistry[name][:2] + [LexerRegistry[name][6]]
+        supportedLanguages[name] = \
+            LexerRegistry[name][:2] + [LexerRegistry[name][6]]
     
     supportedLanguages["Guessed"] = \
         [QApplication.translate('Lexers', "Pygments"), 'dummy.pygments', ""]
@@ -308,7 +310,8 @@ def __getPygmentsLexer(parent, name=""):
         return None
     
 
-def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True):
+def getOpenFileFiltersList(includeAll=False, asString=False,
+                           withAdditional=True):
     """
     Module function to get the file filter list for an open file operation.
     
@@ -321,87 +324,127 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
     @return file filter list (list of strings or string)
     """
     openFileFiltersList = [
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Python Files (*.py *.py2 *.py3)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Python GUI Files (*.pyw *.pyw2 *.pyw3)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Pyrex Files (*.pyx)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Quixote Template Files (*.ptl)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Ruby Files (*.rb)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'IDL Files (*.idl)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'C Files (*.h *.c)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'C++ Files (*.h *.hpp *.hh *.cxx *.cpp *.cc)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'C# Files (*.cs)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'HTML Files (*.html *.htm *.asp *.shtml)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'CSS Files (*.css)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'QSS Files (*.qss)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'PHP Files (*.php *.php3 *.php4 *.php5 *.phtml)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'XML Files (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Qt Resource Files (*.qrc)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'D Files (*.d *.di)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Java Files (*.java)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'JavaScript Files (*.js)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'SQL Files (*.sql)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Docbook Files (*.docbook)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Perl Files (*.pl *.pm *.ph)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Lua Files (*.lua)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Tex Files (*.tex *.sty *.aux *.toc *.idx)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Shell Files (*.sh)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Batch Files (*.bat *.cmd)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Diff Files (*.diff *.patch)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Makefiles (*.mak)'),
-        QApplication.translate('Lexers',
-            'Properties Files (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
+            'Properties Files (*.properties *.ini *.inf *.reg *.cfg'
+            ' *.cnf *.rc)'),
+        QApplication.translate(
+            'Lexers',
             'Povray Files (*.pov)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'CMake Files (CMakeLists.txt *.cmake *.ctest)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'VHDL Files (*.vhd *.vhdl)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'TCL/Tk Files (*.tcl *.tk)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Fortran Files (*.f90 *.f95 *.f2k)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Fortran77 Files (*.f *.for)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Pascal Files (*.dpr *.dpk *.pas *.dfm *.inc *.pp)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'PostScript Files (*.ps)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'YAML Files (*.yaml *.yml)'),
     ]
     
     if QSCINTILLA_VERSION() >= 0x020501:
         openFileFiltersList.extend([
-            QApplication.translate('Lexers',
+            QApplication.translate(
+                'Lexers',
                 'Matlab Files (*.m *.m.matlab)'),
-            QApplication.translate('Lexers',
+            QApplication.translate(
+                'Lexers',
                 'Octave Files (*.m *.m.octave)'),
         ])
     
@@ -409,11 +452,13 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
         openFileFiltersList.extend(LexerRegistry[name][3])
     
     if withAdditional:
-        openFileFiltersList.extend(Preferences.getEditor("AdditionalOpenFilters"))
+        openFileFiltersList.extend(
+            Preferences.getEditor("AdditionalOpenFilters"))
     
     openFileFiltersList.sort()
     if includeAll:
-        openFileFiltersList.append(QApplication.translate('Lexers', 'All Files (*)'))
+        openFileFiltersList.append(
+            QApplication.translate('Lexers', 'All Files (*)'))
     
     if asString:
         return ';;'.join(openFileFiltersList)
@@ -421,7 +466,8 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
         return openFileFiltersList
 
 
-def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True):
+def getSaveFileFiltersList(includeAll=False, asString=False,
+                           withAdditional=True):
     """
     Module function to get the file filter list for a save file operation.
     
@@ -434,111 +480,162 @@ def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True
     @return file filter list (list of strings or string)
     """
     saveFileFiltersList = [
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Python2 Files (*.py2)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Python3 Files (*.py)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Python2 GUI Files (*.pyw2)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Python3 GUI Files (*.pyw)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Pyrex Files (*.pyx)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Quixote Template Files (*.ptl)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Ruby Files (*.rb)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "IDL Files (*.idl)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "C Files (*.c)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "C++ Files (*.cpp)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "C++/C Header Files (*.h)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "C# Files (*.cs)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "HTML Files (*.html)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "PHP Files (*.php)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "ASP Files (*.asp)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "CSS Files (*.css)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "QSS Files (*.qss)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "XML Files (*.xml)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "XSL Files (*.xsl)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "DTD Files (*.dtd)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Qt Resource Files (*.qrc)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "D Files (*.d)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "D Interface Files (*.di)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Java Files (*.java)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "JavaScript Files (*.js)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "SQL Files (*.sql)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Docbook Files (*.docbook)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Perl Files (*.pl)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Perl Module Files (*.pm)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Lua Files (*.lua)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Shell Files (*.sh)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Batch Files (*.bat)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "TeX Files (*.tex)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "TeX Template Files (*.sty)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Diff Files (*.diff)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Make Files (*.mak)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Properties Files (*.ini)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             "Configuration Files (*.cfg)"),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Povray Files (*.pov)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'CMake Files (CMakeLists.txt)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'CMake Macro Files (*.cmake)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'VHDL Files (*.vhd)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'TCL Files (*.tcl)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Tk Files (*.tk)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Fortran Files (*.f95)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Fortran77 Files (*.f)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'Pascal Files (*.pas)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'PostScript Files (*.ps)'),
-        QApplication.translate('Lexers',
+        QApplication.translate(
+            'Lexers',
             'YAML Files (*.yml)'),
     ]
     
     if QSCINTILLA_VERSION() >= 0x020501:
         saveFileFiltersList.extend([
-            QApplication.translate('Lexers',
+            QApplication.translate(
+                'Lexers',
                 'Matlab Files (*.m)'),
-            QApplication.translate('Lexers',
+            QApplication.translate(
+                'Lexers',
                 'Octave Files (*.m.octave)'),
         ])
     
@@ -546,12 +643,14 @@ def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True
         saveFileFiltersList.extend(LexerRegistry[name][4])
     
     if withAdditional:
-        saveFileFiltersList.extend(Preferences.getEditor("AdditionalSaveFilters"))
+        saveFileFiltersList.extend(
+            Preferences.getEditor("AdditionalSaveFilters"))
     
     saveFileFiltersList.sort()
     
     if includeAll:
-        saveFileFiltersList.append(QApplication.translate('Lexers', 'All Files (*)'))
+        saveFileFiltersList.append(
+            QApplication.translate('Lexers', 'All Files (*)'))
     
     if asString:
         return ';;'.join(saveFileFiltersList)

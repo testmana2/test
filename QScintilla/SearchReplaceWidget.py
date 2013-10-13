@@ -8,8 +8,8 @@ Module implementing the search and replace widget.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, QSizePolicy, \
-    QFrame
+from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, \
+    QSizePolicy, QFrame
 
 from .Editor import Editor
 
@@ -55,9 +55,9 @@ class SearchReplaceWidget(QWidget):
             whatsThis = self.trUtf8(r"""
 <b>Find and Replace</b>
 <p>This dialog is used to find some text and replace it with another text.
-By checking the various checkboxes, the search can be made more specific. The search
-string might be a regular expression. In a regular expression, special characters
-interpreted are:</p>
+By checking the various checkboxes, the search can be made more specific.
+The search string might be a regular expression. In a regular expression,
+special characters interpreted are:</p>
 """
             )
         else:
@@ -65,9 +65,9 @@ interpreted are:</p>
             self.ui = Ui_SearchWidget()
             whatsThis = self.trUtf8(r"""
 <b>Find</b>
-<p>This dialog is used to find some text. By checking the various checkboxes, the search
-can be made more specific. The search string might be a regular expression. In a regular
-expression, special characters interpreted are:</p>
+<p>This dialog is used to find some text. By checking the various checkboxes,
+the search can be made more specific. The search string might be a regular
+expression. In a regular expression, special characters interpreted are:</p>
 """
             )
         self.ui.setupUi(self)
@@ -77,32 +77,41 @@ expression, special characters interpreted are:</p>
         whatsThis += self.trUtf8(r"""
 <table border="0">
 <tr><td><code>.</code></td><td>Matches any character</td></tr>
-<tr><td><code>\(</code></td><td>This marks the start of a region for tagging a match.</td></tr>
-<tr><td><code>\)</code></td><td>This marks the end of a tagged region.</td></tr>
+<tr><td><code>\(</code></td><td>This marks the start of a region for tagging a
+match.</td></tr>
+<tr><td><code>\)</code></td><td>This marks the end of a tagged region.
+</td></tr>
 <tr><td><code>\\n</code></td>
-<td>Where <code>n</code> is 1 through 9 refers to the first through ninth tagged region
-when replacing. For example, if the search string was <code>Fred\([1-9]\)XXX</code> and
-the replace string was <code>Sam\1YYY</code>, when applied to <code>Fred2XXX</code> this
-would generate <code>Sam2YYY</code>.</td></tr>
+<td>Where <code>n</code> is 1 through 9 refers to the first through ninth
+tagged region when replacing. For example, if the search string was
+<code>Fred\([1-9]\)XXX</code> and the replace string was <code>Sam\1YYY</code>,
+when applied to <code>Fred2XXX</code> this would generate <code>Sam2YYY</code>.
+</td></tr>
 <tr><td><code>\&lt;</code></td>
-<td>This matches the start of a word using Scintilla's definitions of words.</td></tr>
+<td>This matches the start of a word using Scintilla's definitions of words.
+</td></tr>
 <tr><td><code>\&gt;</code></td>
-<td>This matches the end of a word using Scintilla's definition of words.</td></tr>
+<td>This matches the end of a word using Scintilla's definition of words.
+</td></tr>
 <tr><td><code>\\x</code></td>
-<td>This allows you to use a character x that would otherwise have a special meaning. For
-example, \\[ would be interpreted as [ and not as the start of a character set.</td></tr>
+<td>This allows you to use a character x that would otherwise have a special
+meaning. For example, \\[ would be interpreted as [ and not as the start of a
+character set.</td></tr>
 <tr><td><code>[...]</code></td>
-<td>This indicates a set of characters, for example, [abc] means any of the characters a,
-b or c. You can also use ranges, for example [a-z] for any lower case character.</td></tr>
+<td>This indicates a set of characters, for example, [abc] means any of the
+characters a, b or c. You can also use ranges, for example [a-z] for any lower
+case character.</td></tr>
 <tr><td><code>[^...]</code></td>
-<td>The complement of the characters in the set. For example, [^A-Za-z] means any
-character except an alphabetic character.</td></tr>
+<td>The complement of the characters in the set. For example, [^A-Za-z] means
+any character except an alphabetic character.</td></tr>
 <tr><td><code>^</code></td>
-<td>This matches the start of a line (unless used inside a set, see above).</td></tr>
+<td>This matches the start of a line (unless used inside a set, see above).
+</td></tr>
 <tr><td><code>$</code></td> <td>This matches the end of a line.</td></tr>
 <tr><td><code>*</code></td>
-<td>This matches 0 or more times. For example, <code>Sa*m</code> matches <code>Sm</code>,
-<code>Sam</code>, <code>Saam</code>, <code>Saaam</code> and so on.</td></tr>
+<td>This matches 0 or more times. For example, <code>Sa*m</code> matches
+<code>Sm</code>, <code>Sam</code>, <code>Saam</code>, <code>Saaam</code>
+and so on.</td></tr>
 <tr><td><code>+</code></td>
 <td>This matches 1 or more times. For example, <code>Sa+m</code> matches
 <code>Sam</code>, <code>Saam</code>, <code>Saaam</code> and so on.</td></tr>
@@ -111,8 +120,10 @@ character except an alphabetic character.</td></tr>
         self.setWhatsThis(whatsThis)
         
         self.ui.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
-        self.ui.findPrevButton.setIcon(UI.PixmapCache.getIcon("1leftarrow.png"))
-        self.ui.findNextButton.setIcon(UI.PixmapCache.getIcon("1rightarrow.png"))
+        self.ui.findPrevButton.setIcon(
+            UI.PixmapCache.getIcon("1leftarrow.png"))
+        self.ui.findNextButton.setIcon(
+            UI.PixmapCache.getIcon("1rightarrow.png"))
         
         if replace:
             self.ui.replaceButton.setIcon(
@@ -122,7 +133,8 @@ character except an alphabetic character.</td></tr>
             self.ui.replaceAllButton.setIcon(
                 UI.PixmapCache.getIcon("editReplaceAll.png"))
         
-        self.ui.findtextCombo.lineEdit().returnPressed.connect(self.__findByReturnPressed)
+        self.ui.findtextCombo.lineEdit().returnPressed.connect(
+            self.__findByReturnPressed)
         if replace:
             self.ui.replacetextCombo.lineEdit().returnPressed.connect(
                 self.on_replaceButton_clicked)
@@ -270,7 +282,8 @@ character except an alphabetic character.</td></tr>
     
     def __findByReturnPressed(self):
         """
-        Private slot to handle the returnPressed signal of the findtext combobox.
+        Private slot to handle the returnPressed signal of the findtext
+        combobox.
         """
         if self.__findBackwards:
             self.findPrev()
@@ -423,11 +436,13 @@ character except an alphabetic character.</td></tr>
                                     line, index = self.__selections[ind][2:]
                                 else:
                                     if ind > 0:
-                                        line, index = self.__selections[ind - 1][2:]
+                                        line, index = \
+                                            self.__selections[ind - 1][2:]
                             else:
                                 if after:
                                     if ind < len(self.__selections) - 1:
-                                        line, index = self.__selections[ind + 1][:2]
+                                        line, index = \
+                                            self.__selections[ind + 1][:2]
                                 else:
                                     line, index = self.__selections[ind][:2]
                             break
@@ -441,10 +456,14 @@ character except an alphabetic character.</td></tr>
                         not backwards,
                         line, index)
                     if ok:
-                        lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
-                        if lineFrom < boundary[0] or lineFrom > boundary[2] or \
-                           indexFrom < boundary[1] or indexFrom > boundary[3] or \
-                           indexTo < boundary[1] or indexTo > boundary[3]:
+                        lineFrom, indexFrom, lineTo, indexTo = \
+                            aw.getSelection()
+                        if lineFrom < boundary[0] or \
+                                lineFrom > boundary[2] or \
+                                indexFrom < boundary[1] or \
+                                indexFrom > boundary[3] or \
+                                indexTo < boundary[1] or \
+                                indexTo > boundary[3]:
                             ok = False
                             break
             if not ok:
@@ -462,7 +481,8 @@ character except an alphabetic character.</td></tr>
                         not backwards,
                         line, index)
                     if ok:
-                        lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
+                        lineFrom, indexFrom, lineTo, indexTo = \
+                            aw.getSelection()
                         if len(self.__selections) > 1:
                             for sel in self.__selections:
                                 if lineFrom == sel[0] and \
@@ -545,7 +565,8 @@ character except an alphabetic character.</td></tr>
         if not self.__finding and isinstance(editor, Editor):
             if editor.hasSelectedText():
                 selections = editor.getSelections()
-                line1, index1, line2, index2 = self.__selectionBoundary(selections)
+                line1, index1, line2, index2 = \
+                    self.__selectionBoundary(selections)
                 if line1 != line2:
                     self.ui.selectionCheckBox.setEnabled(True)
                     self.ui.selectionCheckBox.setChecked(True)
@@ -566,7 +587,8 @@ character except an alphabetic character.</td></tr>
     @pyqtSlot()
     def on_replaceSearchButton_clicked(self):
         """
-        Private slot to replace one occurrence of text and search for the next one.
+        Private slot to replace one occurrence of text and search for the next
+        one.
         """
         self.__doReplace(True)
     
@@ -574,7 +596,8 @@ character except an alphabetic character.</td></tr>
         """
         Private method to replace one occurrence of text.
         
-        @param searchNext flag indicating to search for the next occurrence (boolean).
+        @param searchNext flag indicating to search for the next occurrence
+        (boolean).
         """
         self.__finding = True
         
@@ -675,7 +698,8 @@ character except an alphabetic character.</td></tr>
                             after = indexTo > self.__selections[ind][3]
                             if after:
                                 if ind < len(self.__selections) - 1:
-                                    line, index = self.__selections[ind + 1][:2]
+                                    line, index = \
+                                        self.__selections[ind + 1][:2]
                             else:
                                 line, index = self.__selections[ind][:2]
                         break
@@ -687,10 +711,14 @@ character except an alphabetic character.</td></tr>
                             self.ui.wordCheckBox.isChecked(),
                             False, True, line, index)
                     if ok:
-                        lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
-                        if lineFrom < boundary[0] or lineFrom > boundary[2] or \
-                           indexFrom < boundary[1] or indexFrom > boundary[3] or \
-                           indexTo < boundary[1] or indexTo > boundary[3]:
+                        lineFrom, indexFrom, lineTo, indexTo = \
+                            aw.getSelection()
+                        if lineFrom < boundary[0] or \
+                                lineFrom > boundary[2] or \
+                                indexFrom < boundary[1] or \
+                                indexFrom > boundary[3] or \
+                                indexTo < boundary[1] or \
+                                indexTo > boundary[3]:
                             ok = False
                             break
             
@@ -829,7 +857,8 @@ class SearchReplaceSlidingWidget(QWidget):
         """
         super().__init__(parent)
         
-        self.__searchReplaceWidget = SearchReplaceWidget(replace, vm, self, True)
+        self.__searchReplaceWidget = \
+            SearchReplaceWidget(replace, vm, self, True)
         srHeight = self.__searchReplaceWidget.height()
         
         self.__layout = QHBoxLayout(self)
@@ -865,7 +894,8 @@ class SearchReplaceSlidingWidget(QWidget):
         
         self.setMaximumHeight(srHeight)
         
-        self.__searchReplaceWidget.searchListChanged.connect(self.searchListChanged)
+        self.__searchReplaceWidget.searchListChanged.connect(
+            self.searchListChanged)
         self.__leftButton.clicked[()].connect(self.__slideLeft)
         self.__rightButton.clicked[()].connect(self.__slideRight)
     
@@ -909,13 +939,15 @@ class SearchReplaceSlidingWidget(QWidget):
     
     def __slideLeft(self):
         """
-        Private slot to move the widget to the left, i.e. show contents to the right.
+        Private slot to move the widget to the left, i.e. show contents to the
+        right.
         """
         self.__slide(True)
     
     def __slideRight(self):
         """
-        Private slot to move the widget to the right, i.e. show contents to the left.
+        Private slot to move the widget to the right, i.e. show contents to
+        the left.
         """
         self.__slide(False)
     

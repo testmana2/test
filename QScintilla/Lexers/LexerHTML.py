@@ -40,12 +40,15 @@ class LexerHTML(QsciLexerHTML, Lexer):
             Preferences.getEditor("HtmlCaseSensitiveTags"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
         try:
-            self.setFoldScriptComments(Preferences.getEditor("HtmlFoldScriptComments"))
-            self.setFoldScriptHeredocs(Preferences.getEditor("HtmlFoldScriptHeredocs"))
+            self.setFoldScriptComments(
+                Preferences.getEditor("HtmlFoldScriptComments"))
+            self.setFoldScriptHeredocs(
+                Preferences.getEditor("HtmlFoldScriptHeredocs"))
         except AttributeError:
             pass
         try:
-            self.setDjangoTemplates(Preferences.getEditor("HtmlDjangoTemplates"))
+            self.setDjangoTemplates(
+                Preferences.getEditor("HtmlDjangoTemplates"))
             self.setMakoTemplates(Preferences.getEditor("HtmlMakoTemplates"))
         except AttributeError:
             pass

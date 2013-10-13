@@ -35,7 +35,8 @@ def getExporter(format, editor):
     
     @param format format of the exporter (string)
     @param editor reference to the editor object (QScintilla.Editor.Editor)
-    @return reference to the instanciated exporter object (QScintilla.Exporter.Exporter)
+    @return reference to the instanciated exporter object
+        (QScintilla.Exporter.Exporter)
     """
     try:
         if format == "HTML":

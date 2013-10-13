@@ -29,8 +29,8 @@ class SortOptionsDialog(QDialog, Ui_SortOptionsDialog):
         """
         Public method to get the selected options.
         
-        @return tuple of three flags indicating ascending order, alphanumeric sort
-            and case sensitivity (tuple of three boolean)
+        @return tuple of three flags indicating ascending order, alphanumeric
+            sort and case sensitivity (tuple of three boolean)
         """
         return (
             self.ascendingButton.isChecked(),

@@ -32,7 +32,8 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         self.setupUi(self)
         
         self.__spell = spellChecker
-        self.languageLabel.setText("<b>{0}</b>".format(self.__spell.getLanguage()))
+        self.languageLabel.setText(
+            "<b>{0}</b>".format(self.__spell.getLanguage()))
         if not self.__spell.initCheck(startPos, endPos):
             self.__enableButtons(False)
         else:
@@ -65,12 +66,14 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         
         self.__enableButtons(True)
         self.word, self.wordStart, self.wordEnd = self.__spell.getError()
-        lcontext, rcontext = self.__spell.getContext(self.wordStart, self.wordEnd)
+        lcontext, rcontext = self.__spell.getContext(
+            self.wordStart, self.wordEnd)
         self.changeEdit.setText(self.word)
-        self.contextLabel.setText('{0}<font color="#FF0000">{1}</font>{2}'.format(
-                                    Utilities.html_encode(lcontext),
-                                    self.word,
-                                    Utilities.html_encode(rcontext)))
+        self.contextLabel.setText(
+            '{0}<font color="#FF0000">{1}</font>{2}'.format(
+                Utilities.html_encode(lcontext),
+                self.word,
+                Utilities.html_encode(rcontext)))
         suggestions = self.__spell.getSuggestions(self.word)
         self.suggestionsList.clear()
         self.suggestionsList.addItems(suggestions)

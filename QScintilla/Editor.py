@@ -12,9 +12,9 @@ import difflib
 
 from PyQt4.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
     pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
-from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, QActionGroup, \
-    QDialog, QAbstractPrintDialog, QInputDialog, QApplication, QMenu, QPalette, QFont, \
-    QPixmap, QPainter
+from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, \
+    QActionGroup, QDialog, QAbstractPrintDialog, QInputDialog, QApplication, \
+    QMenu, QPalette, QFont, QPixmap, QPainter
 from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
@@ -35,41 +35,44 @@ class Editor(QsciScintillaCompat):
     """
     Class implementing the editor component of the eric5 IDE.
     
-    @signal modificationStatusChanged(bool, QsciScintillaCompat) emitted when the
-            modification status has changed
+    @signal modificationStatusChanged(bool, QsciScintillaCompat) emitted when
+        the modification status has changed
     @signal undoAvailable(bool) emitted to signal the undo availability
     @signal redoAvailable(bool) emitted to signal the redo availability
     @signal cursorChanged(str, int, int) emitted when the cursor position
-            was changed
+        was changed
     @signal cursorLineChanged(int) emitted when the cursor line was changed
     @signal editorAboutToBeSaved(str) emitted before the editor is saved
     @signal editorSaved(str) emitted after the editor has been saved
     @signal editorRenamed(str) emitted after the editor got a new name
-            (i.e. after a 'Save As')
-    @signal captionChanged(str, QsciScintillaCompat) emitted when the caption is
-            updated. Typically due to a readOnly attribute change.
-    @signal breakpointToggled(QsciScintillaCompat) emitted when a breakpoint is toggled
-    @signal bookmarkToggled(QsciScintillaCompat) emitted when a bookmark is toggled
+        (i.e. after a 'Save As')
+    @signal captionChanged(str, QsciScintillaCompat) emitted when the caption
+        is updated. Typically due to a readOnly attribute change.
+    @signal breakpointToggled(QsciScintillaCompat) emitted when a breakpoint
+        is toggled
+    @signal bookmarkToggled(QsciScintillaCompat) emitted when a bookmark is
+        toggled
     @signal syntaxerrorToggled(QsciScintillaCompat) emitted when a syntax error
-            was discovered
+        was discovered
     @signal autoCompletionAPIsAvailable(bool) emitted after the autocompletion
-            function has been configured
-    @signal coverageMarkersShown(bool) emitted after the coverage markers have been
-            shown or cleared
-    @signal taskMarkersUpdated(QsciScintillaCompat) emitted when the task markers
-            were updated
-    @signal changeMarkersUpdated(QsciScintillaCompat) emitted when the change markers
-            were updated
-    @signal showMenu(str, QMenu, QsciScintillaCompat) emitted when a menu is about
-            to be shown. The name of the menu, a reference to the menu and a reference
-            to the editor are given.
+        function has been configured
+    @signal coverageMarkersShown(bool) emitted after the coverage markers have
+        been shown or cleared
+    @signal taskMarkersUpdated(QsciScintillaCompat) emitted when the task
+        markers were updated
+    @signal changeMarkersUpdated(QsciScintillaCompat) emitted when the change
+        markers were updated
+    @signal showMenu(str, QMenu, QsciScintillaCompat) emitted when a menu is
+        about to be shown. The name of the menu, a reference to the menu and
+        a reference to the editor are given.
     @signal languageChanged(str) emitted when the editors language was set. The
-            language is passed as a parameter.
-    @signal eolChanged(str) emitted when the editors eol type was set. The eol string
-            is passed as a parameter.
+        language is passed as a parameter.
+    @signal eolChanged(str) emitted when the editors eol type was set. The eol
+        string is passed as a parameter.
     @signal encodingChanged(str) emitted when the editors encoding was set. The
             encoding name is passed as a parameter.
-    @signal lastEditPositionAvailable() emitted when a last edit position is available
+    @signal lastEditPositionAvailable() emitted when a last edit position is
+        available
     @signal refreshed() emitted to signal a refresh of the editor contents
     """
     modificationStatusChanged = pyqtSignal(bool, QsciScintillaCompat)
@@ -248,9 +251,11 @@ class Editor(QsciScintillaCompat):
             self.__unifiedMargins = True
         
         # define the margins markers
-        self.__changeMarkerSaved = self.markerDefine(self.__createChangeMarkerPixmap(
+        self.__changeMarkerSaved = self.markerDefine(
+            self.__createChangeMarkerPixmap(
             "OnlineChangeTraceMarkerSaved"))
-        self.__changeMarkerUnsaved = self.markerDefine(self.__createChangeMarkerPixmap(
+        self.__changeMarkerUnsaved = self.markerDefine(
+            self.__createChangeMarkerPixmap(
             "OnlineChangeTraceMarkerUnsaved"))
         self.breakpoint = \
             self.markerDefine(UI.PixmapCache.getPixmap("break.png"))
@@ -312,8 +317,10 @@ class Editor(QsciScintillaCompat):
                         self.trUtf8("""<p>The size of the file <b>{0}</b>"""
                                     """ is <b>{1} KB</b>."""
                                     """ Do you really want to load it?</p>""")\
-                                    .format(self.fileName,
-                                            QFileInfo(self.fileName).size() // 1024),
+                                    .format(
+                                        self.fileName,
+                                        QFileInfo(self.fileName).size() //
+                                            1024),
                         icon=E5MessageBox.Warning)
                     if not res:
                         raise IOError()
@@ -363,13 +370,13 @@ class Editor(QsciScintillaCompat):
         self.setWhatsThis(self.trUtf8(
             """<b>A Source Editor Window</b>"""
             """<p>This window is used to display and edit a source file."""
-            """  You can open as many of these as you like. The name of the file"""
-            """ is displayed in the window's titlebar.</p>"""
-            """<p>In order to set breakpoints just click in the space between"""
-            """ the line numbers and the fold markers. Via the context menu"""
-            """ of the margins they may be edited.</p>"""
-            """<p>In order to set bookmarks just Shift click in the space between"""
-            """ the line numbers and the fold markers.</p>"""
+            """  You can open as many of these as you like. The name of the"""
+            """ file is displayed in the window's titlebar.</p>"""
+            """<p>In order to set breakpoints just click in the space"""
+            """ between the line numbers and the fold markers. Via the"""
+            """ context menu of the margins they may be edited.</p>"""
+            """<p>In order to set bookmarks just Shift click in the space"""
+            """ between the line numbers and the fold markers.</p>"""
             """<p>These actions can be reversed via the context menu.</p>"""
             """<p>Ctrl clicking on a syntax error marker shows some info"""
             """ about this error.</p>"""
@@ -432,7 +439,8 @@ class Editor(QsciScintillaCompat):
         if self.fileName and \
            self.project.isOpen() and \
            self.project.isProjectSource(self.fileName):
-            self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+            self.project.projectPropertiesChanged.connect(
+                self.__projectPropertiesChanged)
         
         self.grabGesture(Qt.PinchGesture)
     
@@ -637,7 +645,8 @@ class Editor(QsciScintillaCompat):
                 self.menu.addAction(UI.PixmapCache.getIcon("editComment.png"),
                     self.trUtf8('Comment'), self.commentLineOrSelection)
             self.menuActs["Uncomment"] = \
-                self.menu.addAction(UI.PixmapCache.getIcon("editUncomment.png"),
+                self.menu.addAction(
+                    UI.PixmapCache.getIcon("editUncomment.png"),
                     self.trUtf8('Uncomment'), self.uncommentLineOrSelection)
             self.menuActs["StreamComment"] = \
                 self.menu.addAction(self.trUtf8('Stream Comment'),
@@ -649,7 +658,8 @@ class Editor(QsciScintillaCompat):
             self.menu.addAction(self.trUtf8('Select to brace'),
                 self.selectToMatchingBrace)
             self.menu.addAction(self.trUtf8('Select all'), self.__selectAll)
-            self.menu.addAction(self.trUtf8('Deselect all'), self.__deselectAll)
+            self.menu.addAction(
+                self.trUtf8('Deselect all'), self.__deselectAll)
             self.menu.addSeparator()
         self.menuActs["SpellCheck"] = \
             self.menu.addAction(UI.PixmapCache.getIcon("spellchecking.png"),
@@ -683,7 +693,8 @@ class Editor(QsciScintillaCompat):
             self.menu.addAction(self.trUtf8("Typing aids enabled"),
                 self.__toggleTypingAids)
         self.menuActs["TypingAidsEnabled"].setCheckable(True)
-        self.menuActs["TypingAidsEnabled"].setEnabled(self.completer is not None)
+        self.menuActs["TypingAidsEnabled"].setEnabled(
+            self.completer is not None)
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         self.menuActs["AutoCompletionEnable"] = \
@@ -737,7 +748,8 @@ class Editor(QsciScintillaCompat):
         self.__menus["Spelling"] = self.spellingMenu
         
         self.spellingMenu.aboutToShow.connect(self.__showContextMenuSpelling)
-        self.spellingMenu.triggered.connect(self.__contextMenuSpellingTriggered)
+        self.spellingMenu.triggered.connect(
+            self.__contextMenuSpellingTriggered)
 
     def __initContextMenuAutocompletion(self):
         """
@@ -786,16 +798,16 @@ class Editor(QsciScintillaCompat):
         menu = QMenu(self.trUtf8('Show'))
         
         menu.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
-        self.coverageMenuAct = \
-            menu.addAction(self.trUtf8('Code coverage...'), self.__showCodeCoverage)
-        self.coverageShowAnnotationMenuAct = \
-            menu.addAction(self.trUtf8('Show code coverage annotations'),
-                self.codeCoverageShowAnnotations)
-        self.coverageHideAnnotationMenuAct = \
-            menu.addAction(self.trUtf8('Hide code coverage annotations'),
-                self.__codeCoverageHideAnnotations)
-        self.profileMenuAct = \
-            menu.addAction(self.trUtf8('Profile data...'), self.__showProfileData)
+        self.coverageMenuAct = menu.addAction(
+            self.trUtf8('Code coverage...'), self.__showCodeCoverage)
+        self.coverageShowAnnotationMenuAct = menu.addAction(
+            self.trUtf8('Show code coverage annotations'),
+            self.codeCoverageShowAnnotations)
+        self.coverageHideAnnotationMenuAct = menu.addAction(
+            self.trUtf8('Hide code coverage annotations'),
+            self.__codeCoverageHideAnnotations)
+        self.profileMenuAct = menu.addAction(
+            self.trUtf8('Profile data...'), self.__showProfileData)
         
         menu.aboutToShow.connect(self.__showContextMenuShow)
         
@@ -847,7 +859,8 @@ class Editor(QsciScintillaCompat):
         languages = sorted(list(supportedLanguages.keys()))
         for language in languages:
             if language != "Guessed":
-                self.supportedLanguages[language] = supportedLanguages[language][:2]
+                self.supportedLanguages[language] = \
+                    supportedLanguages[language][:2]
                 act = menu.addAction(
                     UI.PixmapCache.getIcon(supportedLanguages[language][2]),
                     self.supportedLanguages[language][0])
@@ -963,7 +976,8 @@ class Editor(QsciScintillaCompat):
         
     def __initContextMenuSeparateMargins(self):
         """
-        Private method used to setup the context menu for the separated margins.
+        Private method used to setup the context menu for the separated
+        margins.
         """
         # bookmark margin
         self.bmMarginMenu = QMenu()
@@ -989,7 +1003,8 @@ class Editor(QsciScintillaCompat):
             self.bpMarginMenu.addAction(self.trUtf8('Toggle breakpoint'),
                 self.menuToggleBreakpoint)
         self.marginMenuActs["TempBreakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Toggle temporary breakpoint'),
+            self.bpMarginMenu.addAction(
+                self.trUtf8('Toggle temporary breakpoint'),
                 self.__menuToggleTemporaryBreakpoint)
         self.marginMenuActs["EditBreakpoint"] = \
             self.bpMarginMenu.addAction(self.trUtf8('Edit breakpoint...'),
@@ -1016,7 +1031,8 @@ class Editor(QsciScintillaCompat):
             self.indicMarginMenu.addAction(self.trUtf8('Goto syntax error'),
                 self.gotoSyntaxError)
         self.marginMenuActs["ShowSyntaxError"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Show syntax error message'),
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Show syntax error message'),
                 self.__showSyntaxError)
         self.marginMenuActs["ClearSyntaxError"] = \
             self.indicMarginMenu.addAction(self.trUtf8('Clear syntax error'),
@@ -1039,7 +1055,8 @@ class Editor(QsciScintillaCompat):
             self.indicMarginMenu.addAction(self.trUtf8('Next uncovered line'),
                 self.nextUncovered)
         self.marginMenuActs["PreviousCoverageMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Previous uncovered line'),
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Previous uncovered line'),
                 self.previousUncovered)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextTaskMarker"] = \
@@ -1103,7 +1120,8 @@ class Editor(QsciScintillaCompat):
             self.marginMenu.addAction(self.trUtf8('Toggle breakpoint'),
                 self.menuToggleBreakpoint)
         self.marginMenuActs["TempBreakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Toggle temporary breakpoint'),
+            self.marginMenu.addAction(
+                self.trUtf8('Toggle temporary breakpoint'),
                 self.__menuToggleTemporaryBreakpoint)
         self.marginMenuActs["EditBreakpoint"] = \
             self.marginMenu.addAction(self.trUtf8('Edit breakpoint...'),
@@ -1178,8 +1196,9 @@ class Editor(QsciScintillaCompat):
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Export source"),
-                    self.trUtf8("""<p>No exporter available for the """
-                                """export format <b>{0}</b>. Aborting...</p>""")\
+                    self.trUtf8(
+                        """<p>No exporter available for the """
+                        """export format <b>{0}</b>. Aborting...</p>""")\
                         .format(exporterFormat))
         else:
             E5MessageBox.critical(self,
@@ -1188,7 +1207,8 @@ class Editor(QsciScintillaCompat):
         
     def __showContextMenuLanguages(self):
         """
-        Private slot handling the aboutToShow signal of the languages context menu.
+        Private slot handling the aboutToShow signal of the languages context
+        menu.
         """
         if self.apiLanguage.startswith("Pygments|"):
             self.pygmentsSelAct.setText(
@@ -1260,7 +1280,8 @@ class Editor(QsciScintillaCompat):
             self.setLanguage("dummy.pygments", pyname=pyname)
         else:
             self.filetype = language
-            self.setLanguage(self.supportedLanguages[language][1], propagate=propagate)
+            self.setLanguage(self.supportedLanguages[language][1],
+                             propagate=propagate)
             self.__autoSyntaxCheck()
         
     def __resetLanguage(self, propagate=True):
@@ -1293,9 +1314,10 @@ class Editor(QsciScintillaCompat):
         """
         Public method to set a lexer language.
         
-        @param filename filename used to determine the associated lexer language (string)
-        @param initTextDisplay flag indicating an initialization of the text display
-            is required as well (boolean)
+        @param filename filename used to determine the associated lexer
+            language (string)
+        @param initTextDisplay flag indicating an initialization of the text
+            display is required as well (boolean)
         @keyparam propagate flag indicating to propagate the change (boolean)
         @keyparam pyname name of the pygments lexer to use (string)
         """
@@ -1341,7 +1363,8 @@ class Editor(QsciScintillaCompat):
     
     def __showContextMenuEncodings(self):
         """
-        Private slot handling the aboutToShow signal of the encodings context menu.
+        Private slot handling the aboutToShow signal of the encodings context
+        menu.
         """
         self.showMenu.emit("Encodings", self.encodingsMenu,  self)
         
@@ -1359,7 +1382,8 @@ class Editor(QsciScintillaCompat):
         Private method to check the selected encoding of the encodings submenu.
         """
         try:
-            self.supportedEncodings[self.__normalizedEncoding()].setChecked(True)
+            self.supportedEncodings[self.__normalizedEncoding()]\
+                .setChecked(True)
         except (AttributeError, KeyError):
             pass
         
@@ -1429,7 +1453,8 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to set the correct lexer depending on language.
         
-        @param filename filename used to determine the associated lexer language (string)
+        @param filename filename used to determine the associated lexer
+            language (string)
         @keyparam pyname name of the pygments lexer to use (string)
         """
         if self.lexer_ is not None and \
@@ -1438,7 +1463,8 @@ class Editor(QsciScintillaCompat):
         
         language = ""
         if self.project.isOpen() and self.project.isProjectFile(filename):
-            language = self.project.getEditorLexerAssoc(os.path.basename(filename))
+            language = self.project.getEditorLexerAssoc(
+                os.path.basename(filename))
         if not language:
             ext = os.path.splitext(filename)[1]
             if ext in [".py", ".pyw"]:
@@ -1532,7 +1558,8 @@ class Editor(QsciScintillaCompat):
             names for Pygments (boolean)
         @return language of the editor (string)
         """
-        if self.apiLanguage == "Guessed" or self.apiLanguage.startswith("Pygments|"):
+        if self.apiLanguage == "Guessed" or \
+                self.apiLanguage.startswith("Pygments|"):
             lang = self.lexer_.name()
             if normalized:
                 # adjust some Pygments lexer names
@@ -1622,7 +1649,8 @@ class Editor(QsciScintillaCompat):
             # do spell checking
             doSpelling = True
             if self.lastLine == line:
-                start, end = self.getWordBoundaries(line, index, useWordChars=False)
+                start, end = self.getWordBoundaries(
+                    line, index, useWordChars=False)
                 if start <= self.lastIndex and self.lastIndex <= end:
                     doSpelling = False
             if doSpelling:
@@ -1675,10 +1703,11 @@ class Editor(QsciScintillaCompat):
         
     def getFileTypeByFlag(self):
         """
-        Public method to return the type of the file, if it was set by an eflag: marker.
+        Public method to return the type of the file, if it was set by an
+        eflag: marker.
         
-        @return type of the displayed file, if set by an eflag: marker or an empty
-            string (string)
+        @return type of the displayed file, if set by an eflag: marker or an
+            empty string (string)
         """
         if self.filetypeByFlag:
             return self.filetype
@@ -1740,7 +1769,8 @@ class Editor(QsciScintillaCompat):
                        self.project.isOpen() and \
                        self.project.isProjectFile(self.fileName):
                         isProjectPy2 = \
-                            self.project.getProjectLanguage() in ["Python", "Python2"]
+                            self.project.getProjectLanguage() in ["Python",
+                                                                  "Python2"]
                         if isProjectPy2:
                             self.filetype = "Python2"
                         return isProjectPy2
@@ -1782,13 +1812,15 @@ class Editor(QsciScintillaCompat):
                     if Preferences.getProject("DeterminePyFromProject") and \
                        self.project.isOpen() and \
                        self.project.isProjectFile(self.fileName):
-                        isProjectPy3 = self.project.getProjectLanguage() in ["Python3"]
+                        isProjectPy3 = \
+                            self.project.getProjectLanguage() in ["Python3"]
                         if isProjectPy3:
                             self.filetype = "Python3"
                         return isProjectPy3
                     else:
                         # 3) determine by compiling the sources
-                        syntaxError = Utilities.compile(self.fileName, self.text())
+                        syntaxError = Utilities.compile(
+                            self.fileName, self.text())
                         if not syntaxError:
                             self.filetype = "Python3"
                             return True
@@ -1816,7 +1848,8 @@ class Editor(QsciScintillaCompat):
                 return True
             
             if self.fileName is not None and \
-               os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Ruby'):
+               os.path.splitext(self.fileName)[1] in \
+                    self.dbs.getExtensions('Ruby'):
                 self.filetype = "Ruby"
                 return True
         
@@ -1856,7 +1889,8 @@ class Editor(QsciScintillaCompat):
             else:
                 if self.lastCurrMarker is not None:
                     self.markerDeleteHandle(self.lastCurrMarker)
-                self.lastCurrMarker = self.markerAdd(line - 1, self.currentline)
+                self.lastCurrMarker = self.markerAdd(line - 1,
+                                                     self.currentline)
                 self.lastHighlight = self.lastCurrMarker
             self.setCursorPosition(line - 1, 0)
         
@@ -1871,12 +1905,12 @@ class Editor(QsciScintillaCompat):
         else:
             return 1
     
-    ############################################################################
+    ###########################################################################
     ## Breakpoint handling methods below
-    ############################################################################
+    ###########################################################################
 
-    def __modified(self, pos, mtype, text, length, linesAdded, line, foldNow, foldPrev,
-                     token, annotationLinesAdded):
+    def __modified(self, pos, mtype, text, length, linesAdded, line, foldNow,
+                   foldPrev, token, annotationLinesAdded):
         """
         Private method to handle changes of the number of lines.
         
@@ -1889,20 +1923,24 @@ class Editor(QsciScintillaCompat):
         @param foldNow new fold level (integer)
         @param foldPrev previous fold level (integer)
         @param token ???
-        @param annotationLinesAdded number of added/deleted annotation lines (integer)
+        @param annotationLinesAdded number of added/deleted annotation lines
+            (integer)
         """
         if mtype & (self.SC_MOD_INSERTTEXT | self.SC_MOD_DELETETEXT) and \
            linesAdded != 0:
             if self.breaks:
                 bps = []    # list of breakpoints
-                for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
+                for handle, (ln, cond, temp, enabled, ignorecount) in \
+                        self.breaks.items():
                     line = self.markerLine(handle) + 1
                     if ln != line:
                         bps.append((ln, line))
-                        self.breaks[handle] = (line, cond, temp, enabled, ignorecount)
+                        self.breaks[handle] = (line, cond, temp, enabled,
+                                               ignorecount)
                 self.inLinesChanged = True
                 for ln, line in sorted(bps, reverse=linesAdded > 0):
-                    index1 = self.breakpointModel.getBreakPointIndex(self.fileName, ln)
+                    index1 = self.breakpointModel.getBreakPointIndex(
+                        self.fileName, ln)
                     index2 = self.breakpointModel.index(index1.row(), 1)
                     self.breakpointModel.setData(index2, line)
                 self.inLinesChanged = False
@@ -1913,7 +1951,8 @@ class Editor(QsciScintillaCompat):
         """
         for handle in list(self.breaks.keys()):
             self.markerDeleteHandle(handle)
-        self.__addBreakPoints(QModelIndex(), 0, self.breakpointModel.rowCount() - 1)
+        self.__addBreakPoints(
+            QModelIndex(), 0, self.breakpointModel.rowCount() - 1)
         
     def __deleteBreakPoints(self, parentIndex, start, end):
         """
@@ -1939,7 +1978,8 @@ class Editor(QsciScintillaCompat):
             (QModelIndex)
         """
         if not self.inLinesChanged:
-            self.__addBreakPoints(QModelIndex(), startIndex.row(), endIndex.row())
+            self.__addBreakPoints(QModelIndex(), startIndex.row(),
+                                  endIndex.row())
         
     def __breakPointDataAboutToBeChanged(self, startIndex, endIndex):
         """
@@ -1949,7 +1989,8 @@ class Editor(QsciScintillaCompat):
         @param startIndex start index of the rows to be changed (QModelIndex)
         @param endIndex end index of the rows to be changed (QModelIndex)
         """
-        self.__deleteBreakPoints(QModelIndex(), startIndex.row(), endIndex.row())
+        self.__deleteBreakPoints(QModelIndex(), startIndex.row(),
+                                 endIndex.row())
         
     def __addBreakPoints(self, parentIndex, start, end):
         """
@@ -1964,7 +2005,8 @@ class Editor(QsciScintillaCompat):
             fn, line, cond, temp, enabled, ignorecount = \
                 self.breakpointModel.getBreakPointByIndex(index)[:6]
             if fn == self.fileName:
-                self.newBreakpointWithProperties(line, (cond, temp, enabled, ignorecount))
+                self.newBreakpointWithProperties(
+                    line, (cond, temp, enabled, ignorecount))
         
     def clearBreakpoint(self, line):
         """
@@ -2018,9 +2060,11 @@ class Editor(QsciScintillaCompat):
         for handle, (ln, _, _, _, _) in list(self.breaks.items()):
             if self.markerLine(handle) == line - 1:
                 # delete breakpoint or toggle it to the next state
-                index = self.breakpointModel.getBreakPointIndex(self.fileName, line)
+                index = self.breakpointModel.getBreakPointIndex(
+                    self.fileName, line)
                 if Preferences.getDebugger("ThreeStateBreakPoints") and \
-                   not self.breakpointModel.isBreakPointTemporaryByIndex(index):
+                        not self.breakpointModel.isBreakPointTemporaryByIndex(
+                            index):
                     self.breakpointModel.deleteBreakPointByIndex(index)
                     self.__addBreakPoint(line, True)
                 else:
@@ -2049,7 +2093,8 @@ class Editor(QsciScintillaCompat):
         
         @param line line number of the breakpoint (integer)
         """
-        for handle, (ln, cond, temp, enabled, ignorecount) in list(self.breaks.items()):
+        for handle, (ln, cond, temp, enabled, ignorecount) in \
+                self.breaks.items():
             if self.markerLine(handle) == line - 1:
                 break
         else:
@@ -2061,7 +2106,8 @@ class Editor(QsciScintillaCompat):
         
     def curLineHasBreakpoint(self):
         """
-        Public method to check for the presence of a breakpoint at the current line.
+        Public method to check for the presence of a breakpoint at the current
+        line.
         
         @return flag indicating the presence of a breakpoint (boolean)
         """
@@ -2078,7 +2124,8 @@ class Editor(QsciScintillaCompat):
         
     def __menuToggleTemporaryBreakpoint(self):
         """
-        Private slot to handle the 'Toggle temporary breakpoint' context menu action.
+        Private slot to handle the 'Toggle temporary breakpoint' context menu
+        action.
         """
         if self.line < 0:
             self.line, index = self.getCursorPosition()
@@ -2098,7 +2145,8 @@ class Editor(QsciScintillaCompat):
         
     def __menuToggleBreakpointEnabled(self):
         """
-        Private slot to handle the 'Enable/Disable breakpoint' context menu action.
+        Private slot to handle the 'Enable/Disable breakpoint' context menu
+        action.
         """
         if self.line < 0:
             self.line, index = self.getCursorPosition()
@@ -2117,7 +2165,8 @@ class Editor(QsciScintillaCompat):
         if self.line < 0:
             self.line, index = self.getCursorPosition()
         found = False
-        for handle, (ln, cond, temp, enabled, ignorecount) in list(self.breaks.items()):
+        for handle, (ln, cond, temp, enabled, ignorecount) in \
+                self.breaks.items():
             if self.markerLine(handle) == self.line:
                 found = True
                 break
@@ -2167,7 +2216,8 @@ class Editor(QsciScintillaCompat):
         bpline = self.markerFindPrevious(line, self.breakpointMask)
         if bpline < 0:
             # wrap around
-            bpline = self.markerFindPrevious(self.lines() - 1, self.breakpointMask)
+            bpline = self.markerFindPrevious(
+                self.lines() - 1, self.breakpointMask)
         if bpline >= 0:
             self.setCursorPosition(bpline, 0)
             self.ensureLineVisible(bpline)
@@ -2192,9 +2242,9 @@ class Editor(QsciScintillaCompat):
         if idxList:
             self.breakpointModel.deleteBreakPoints(idxList)
     
-    ############################################################################
+    ###########################################################################
     ## Bookmark handling methods below
-    ############################################################################
+    ###########################################################################
     
     def toggleBookmark(self, line):
         """
@@ -2277,7 +2327,8 @@ class Editor(QsciScintillaCompat):
         bmline = self.markerFindPrevious(line, 1 << self.bookmark)
         if bmline < 0:
             # wrap around
-            bmline = self.markerFindPrevious(self.lines() - 1, 1 << self.bookmark)
+            bmline = self.markerFindPrevious(
+                self.lines() - 1, 1 << self.bookmark)
         if bmline >= 0:
             self.setCursorPosition(bmline, 0)
             self.ensureLineVisible(bmline)
@@ -2291,9 +2342,9 @@ class Editor(QsciScintillaCompat):
         self.bookmarks = []
         self.bookmarkToggled.emit(self)
     
-    ############################################################################
+    ###########################################################################
     ## Printing methods below
-    ############################################################################
+    ###########################################################################
 
     def printFile(self):
         """
@@ -2352,13 +2403,14 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to generate a print preview.
         
-        @param printer reference to the printer object (QScintilla.Printer.Printer)
+        @param printer reference to the printer object
+            (QScintilla.Printer.Printer)
         """
         printer.printRange(self)
     
-    ############################################################################
+    ###########################################################################
     ## Task handling methods below
-    ############################################################################
+    ###########################################################################
 
     def hasTaskMarkers(self):
         """
@@ -2397,7 +2449,8 @@ class Editor(QsciScintillaCompat):
         taskline = self.markerFindPrevious(line, 1 << self.taskmarker)
         if taskline < 0:
             # wrap around
-            taskline = self.markerFindPrevious(self.lines() - 1, 1 << self.taskmarker)
+            taskline = self.markerFindPrevious(
+                self.lines() - 1, 1 << self.taskmarker)
         if taskline >= 0:
             self.setCursorPosition(taskline, 0)
             self.ensureLineVisible(taskline)
@@ -2408,10 +2461,14 @@ class Editor(QsciScintillaCompat):
         """
         from Tasks.Task import Task
         markers = {
-            Task.TypeWarning: Preferences.getTasks("TasksWarningMarkers").split(),
-            Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
-            Task.TypeTodo: Preferences.getTasks("TasksTodoMarkers").split(),
-            Task.TypeFixme: Preferences.getTasks("TasksFixmeMarkers").split(),
+            Task.TypeWarning:
+                Preferences.getTasks("TasksWarningMarkers").split(),
+            Task.TypeNote:
+                Preferences.getTasks("TasksNoteMarkers").split(),
+            Task.TypeTodo:
+                Preferences.getTasks("TasksTodoMarkers").split(),
+            Task.TypeFixme:
+                Preferences.getTasks("TasksFixmeMarkers").split(),
         }
         txtList = self.text().split(self.getLineSeparator())
         
@@ -2432,8 +2489,8 @@ class Editor(QsciScintillaCompat):
                     if index > -1:
                         task = line[index:]
                         self.markerAdd(lineIndex, self.taskmarker)
-                        self.taskViewer.addFileTask(task, self.fileName, lineIndex + 1,
-                                                    taskType)
+                        self.taskViewer.addFileTask(
+                            task, self.fileName, lineIndex + 1, taskType)
                         self.__hasTaskMarkers = True
                         shouldBreak = True
                         break
@@ -2441,9 +2498,9 @@ class Editor(QsciScintillaCompat):
                     break
         self.taskMarkersUpdated.emit(self)
     
-    ############################################################################
+    ###########################################################################
     ## Change tracing methods below
-    ############################################################################
+    ###########################################################################
     
     def __createChangeMarkerPixmap(self, key, size=16, width=4):
         """
@@ -2457,7 +2514,8 @@ class Editor(QsciScintillaCompat):
         pixmap = QPixmap(size, size)
         pixmap.fill(Qt.transparent)
         painter = QPainter(pixmap)
-        painter.fillRect(size - 4, 0, 4, size, Preferences.getEditorColour(key))
+        painter.fillRect(size - 4, 0, 4, size,
+                         Preferences.getEditorColour(key))
         painter.end()
         return pixmap
         
@@ -2590,14 +2648,15 @@ class Editor(QsciScintillaCompat):
         changeline = self.markerFindPrevious(line, self.changeMarkersMask)
         if changeline < 0:
             # wrap around
-            changeline = self.markerFindPrevious(self.lines() - 1, self.changeMarkersMask)
+            changeline = self.markerFindPrevious(
+                self.lines() - 1, self.changeMarkersMask)
         if changeline >= 0:
             self.setCursorPosition(changeline, 0)
             self.ensureLineVisible(changeline)
     
-    ############################################################################
+    ###########################################################################
     ## Flags handling methods below
-    ############################################################################
+    ###########################################################################
     
     def __processFlags(self):
         """
@@ -2627,9 +2686,9 @@ class Editor(QsciScintillaCompat):
         
         return changedFlags
     
-    ############################################################################
+    ###########################################################################
     ## File handling methods below
-    ############################################################################
+    ###########################################################################
     
     def checkDirty(self):
         """
@@ -2677,8 +2736,8 @@ class Editor(QsciScintillaCompat):
         Public slot to read the text from a file.
         
         @param fn filename to read from (string)
-        @param createIt flag indicating the creation of a new file, if the given
-            one doesn't exist (boolean)
+        @param createIt flag indicating the creation of a new file, if the
+            given one doesn't exist (boolean)
         """
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         
@@ -2822,11 +2881,13 @@ class Editor(QsciScintillaCompat):
             if not path and self.fileName is not None:
                 path = os.path.dirname(self.fileName)
             if not path:
-                path = Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()
+                path = Preferences.getMultiProject("Workspace") or \
+                    Utilities.getHomeDir()
             
             from . import Lexers
             if self.fileName:
-                filterPattern = "(*{0})".format(os.path.splitext(self.fileName)[1])
+                filterPattern = "(*{0})".format(
+                    os.path.splitext(self.fileName)[1])
                 for filter in Lexers.getSaveFileFiltersList(True):
                     if filterPattern in filter:
                         defaultFilter = filter
@@ -2866,7 +2927,8 @@ class Editor(QsciScintillaCompat):
                 return False
             
             # save to project, if a project is loaded
-            if self.project.isOpen() and self.project.startswithProjectPath(fn):
+            if self.project.isOpen() and \
+                    self.project.startswithProjectPath(fn):
                 self.setEolModeByEolString(self.project.getEolString())
                 self.convertEols(self.eolMode())
         else:
@@ -2891,7 +2953,8 @@ class Editor(QsciScintillaCompat):
                 self.editorRenamed.emit(self.fileName)
                 
                 # save to project, if a project is loaded
-                if self.project.isOpen() and self.project.startswithProjectPath(fn):
+                if self.project.isOpen() and \
+                        self.project.startswithProjectPath(fn):
                     self.project.appendFile(self.fileName)
                     self.addedToProject()
                     self.setLanguage(self.fileName)
@@ -2913,9 +2976,10 @@ class Editor(QsciScintillaCompat):
         Public slot to save a file with a new name.
         
         @param path directory to save the file in (string)
-        @keyparam toProject flag indicating a save to project operation (boolean)
-        @return tuple of two values (boolean, string) giving a success indicator and
-            the name of the saved file
+        @keyparam toProject flag indicating a save to project operation
+            (boolean)
+        @return tuple of two values (boolean, string) giving a success
+            indicator and the name of the saved file
         """
         return self.saveFile(True, path)
         
@@ -2949,9 +3013,9 @@ class Editor(QsciScintillaCompat):
             self.editorRenamed.emit(self.fileName)
             self.inFileRenamed = False
     
-    ############################################################################
+    ###########################################################################
     ## Utility methods below
-    ############################################################################
+    ###########################################################################
 
     def ensureVisible(self, line):
         """
@@ -3014,7 +3078,8 @@ class Editor(QsciScintillaCompat):
             self.setMonospaced(True)
         else:
             if self.lexer_:
-                self.lexer_.readSettings(Preferences.Prefs.settings, "Scintilla")
+                self.lexer_.readSettings(
+                    Preferences.Prefs.settings, "Scintilla")
                 self.lexer_.initProperties()
             self.setMonospaced(False)
             self.__setMarginsDisplay()
@@ -3059,7 +3124,8 @@ class Editor(QsciScintillaCompat):
         
         @param line number of line to look at (int)
         @param index position to look at (int)
-        @param direction direction to look in (0 = whole word, 1 = left, 2 = right)
+        @param direction direction to look in (0 = whole word, 1 = left,
+            2 = right)
         @keyparam useWordChars flag indicating to use the wordCharacters
             method (boolean)
         @return the word at that position (string)
@@ -3155,8 +3221,8 @@ class Editor(QsciScintillaCompat):
     
     def getSearchText(self, selectionOnly=False):
         """
-        Public method to determine the selection or the current word for the next
-        search operation.
+        Public method to determine the selection or the current word for the
+        next search operation.
         
         @param selectionOnly flag indicating that only selected text should be
             returned (boolean)
@@ -3206,21 +3272,22 @@ class Editor(QsciScintillaCompat):
             return
         
         self.clearSearchIndicators()
-        ok = self.findFirstTarget(word, False, self.caseSensitive(), True, 0, 0)
+        ok = self.findFirstTarget(word, False, self.caseSensitive(), True,
+                                  0, 0)
         while ok:
             tgtPos, tgtLen = self.getFoundTarget()
             self.setSearchIndicator(tgtPos, tgtLen)
             ok = self.findNextTarget()
         self.__markedText = word
     
-    ############################################################################
+    ###########################################################################
     ## Comment handling methods below
-    ############################################################################
+    ###########################################################################
     
     def __isCommentedLine(self, line, commentStr):
         """
-        Private method to check, if the given line is a comment line as produced
-        by the configured comment rules.
+        Private method to check, if the given line is a comment line as
+        produced by the configured comment rules.
         
         @param line text of the line to check (string)
         @param commentStr comment string to check against (string)
@@ -3248,7 +3315,8 @@ class Editor(QsciScintillaCompat):
         # check if line starts with our comment string (i.e. was commented
         # by our comment...() slots
         if self.hasSelectedText() and \
-           self.__isCommentedLine(self.text(self.getSelection()[0]), commentStr):
+                self.__isCommentedLine(self.text(self.getSelection()[0]),
+                                       commentStr):
             self.uncommentLineOrSelection()
         elif not self.__isCommentedLine(self.text(line), commentStr):
             # it doesn't, so comment the line or selection
@@ -3284,7 +3352,8 @@ class Editor(QsciScintillaCompat):
         if Preferences.getEditor("CommentColumn0"):
             self.insertAt(self.lexer_.commentStr(), line, 0)
         else:
-            self.insertAt(self.lexer_.commentStr(), line, self.indentation(line))
+            self.insertAt(self.lexer_.commentStr(), line,
+                          self.indentation(line))
         self.endUndoAction()
         
     def uncommentLine(self):
@@ -3373,8 +3442,10 @@ class Editor(QsciScintillaCompat):
             if Preferences.getEditor("CommentColumn0"):
                 self.setSelection(line, 0, line, len(commentStr))
             else:
-                self.setSelection(line, self.indentation(line),
-                                  line, self.indentation(line) + len(commentStr))
+                self.setSelection(line,
+                                  self.indentation(line),
+                                  line,
+                                  self.indentation(line) + len(commentStr))
             self.removeSelectedText()
             
             # adjust selection start
@@ -3531,9 +3602,9 @@ class Editor(QsciScintillaCompat):
         else:
             self.boxCommentLine()
     
-    ############################################################################
+    ###########################################################################
     ## Indentation handling methods below
-    ############################################################################
+    ###########################################################################
 
     def __indentLine(self, indent=True):
         """
@@ -3584,11 +3655,13 @@ class Editor(QsciScintillaCompat):
         self.endUndoAction()
         if indent:
             if indexTo == 0:
-                self.setSelection(lineFrom, indexFrom + self.indentationWidth(),
-                                  lineTo, 0)
+                self.setSelection(
+                    lineFrom, indexFrom + self.indentationWidth(),
+                    lineTo, 0)
             else:
-                self.setSelection(lineFrom, indexFrom + self.indentationWidth(),
-                                  lineTo, indexTo + self.indentationWidth())
+                self.setSelection(
+                    lineFrom, indexFrom + self.indentationWidth(),
+                    lineTo, indexTo + self.indentationWidth())
         else:
             indexStart = indexFrom - self.indentationWidth()
             if indexStart < 0:
@@ -3729,9 +3802,9 @@ class Editor(QsciScintillaCompat):
                 else:
                     lineNo += 1
     
-    ############################################################################
+    ###########################################################################
     ## Setup methods below
-    ############################################################################
+    ###########################################################################
 
     def readSettings(self):
         """
@@ -3815,14 +3888,14 @@ class Editor(QsciScintillaCompat):
         """
         Private method to set the line marker colours.
         """
-        self.setMarkerForegroundColor(Preferences.getEditorColour("CurrentMarker"),
-            self.currentline)
-        self.setMarkerBackgroundColor(Preferences.getEditorColour("CurrentMarker"),
-            self.currentline)
-        self.setMarkerForegroundColor(Preferences.getEditorColour("ErrorMarker"),
-            self.errorline)
-        self.setMarkerBackgroundColor(Preferences.getEditorColour("ErrorMarker"),
-            self.errorline)
+        self.setMarkerForegroundColor(
+            Preferences.getEditorColour("CurrentMarker"), self.currentline)
+        self.setMarkerBackgroundColor(
+            Preferences.getEditorColour("CurrentMarker"), self.currentline)
+        self.setMarkerForegroundColor(
+            Preferences.getEditorColour("ErrorMarker"), self.errorline)
+        self.setMarkerBackgroundColor(
+            Preferences.getEditorColour("ErrorMarker"), self.errorline)
         
     def __setMarginsDisplay(self):
         """
@@ -3830,8 +3903,10 @@ class Editor(QsciScintillaCompat):
         """
         # set the settings for all margins
         self.setMarginsFont(Preferences.getEditorOtherFonts("MarginsFont"))
-        self.setMarginsForegroundColor(Preferences.getEditorColour("MarginsForeground"))
-        self.setMarginsBackgroundColor(Preferences.getEditorColour("MarginsBackground"))
+        self.setMarginsForegroundColor(
+            Preferences.getEditorColour("MarginsForeground"))
+        self.setMarginsBackgroundColor(
+            Preferences.getEditorColour("MarginsBackground"))
         
         # reset standard margins settings
         for margin in range(5):
@@ -3929,7 +4004,8 @@ class Editor(QsciScintillaCompat):
         """
         linenoMargin = Preferences.getEditor("LinenoMargin")
         if linenoMargin:
-            self.setMarginWidth(self.__linenoMargin, '8' * (len(str(self.lines())) + 1))
+            self.setMarginWidth(
+                self.__linenoMargin, '8' * (len(str(self.lines())) + 1))
     
     def __setTextDisplay(self):
         """
@@ -3940,7 +4016,8 @@ class Editor(QsciScintillaCompat):
         if self.lexer_ and self.lexer_.alwaysKeepTabs():
             self.setIndentationsUseTabs(True)
         else:
-            self.setIndentationsUseTabs(Preferences.getEditor("TabForIndentation"))
+            self.setIndentationsUseTabs(
+                Preferences.getEditor("TabForIndentation"))
         self.setTabIndents(Preferences.getEditor("TabIndents"))
         self.setBackspaceUnindents(Preferences.getEditor("TabIndents"))
         self.setIndentationGuides(Preferences.getEditor("IndentationGuides"))
@@ -4018,7 +4095,8 @@ class Editor(QsciScintillaCompat):
             self.clearAllIndicators(self.searchIndicator)
         
         self.spellingIndicator = QsciScintilla.INDIC_CONTAINER + 1
-        self.indicatorDefine(self.spellingIndicator, QsciScintilla.INDIC_SQUIGGLE,
+        self.indicatorDefine(
+            self.spellingIndicator, QsciScintilla.INDIC_SQUIGGLE,
             Preferences.getEditorColour("SpellingMarkers"))
         self.__setSpelling()
         
@@ -4037,7 +4115,8 @@ class Editor(QsciScintillaCompat):
             self.setColor(Preferences.getEditorColour("EditAreaForeground"))
             self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
         
-        self.setVirtualSpaceOptions(Preferences.getEditor("VirtualSpaceOptions"))
+        self.setVirtualSpaceOptions(
+            Preferences.getEditor("VirtualSpaceOptions"))
     
     def __setEolMode(self):
         """
@@ -4098,20 +4177,23 @@ class Editor(QsciScintillaCompat):
             calltipsStyle = Preferences.getEditor("CallTipsStyle")
             if calltipsStyle == QsciScintilla.CallTipsNoContext:
                 self.setCallTipsStyle(QsciScintilla.CallTipsNoContext)
-            elif calltipsStyle == QsciScintilla.CallTipsNoAutoCompletionContext:
-                self.setCallTipsStyle(QsciScintilla.CallTipsNoAutoCompletionContext)
+            elif calltipsStyle == \
+                    QsciScintilla.CallTipsNoAutoCompletionContext:
+                self.setCallTipsStyle(
+                    QsciScintilla.CallTipsNoAutoCompletionContext)
             else:
                 self.setCallTipsStyle(QsciScintilla.CallTipsContext)
             try:
-                self.setCallTipsPosition(Preferences.getEditor("CallTipsPosition"))
+                self.setCallTipsPosition(
+                    Preferences.getEditor("CallTipsPosition"))
             except AttributeError:
                 pass
         else:
             self.setCallTipsStyle(QsciScintilla.CallTipsNone)
 
-    ############################################################################
+    ###########################################################################
     ## Autocompletion handling methods below
-    ############################################################################
+    ###########################################################################
 
     def canAutoCompleteFromAPIs(self):
         """
@@ -4142,12 +4224,14 @@ class Editor(QsciScintillaCompat):
         """
         Public method to enable/disable autocompletion.
         
-        @param enable flag indicating the desired autocompletion status (boolean)
+        @param enable flag indicating the desired autocompletion status
+            (boolean)
         """
         if enable:
             self.setAutoCompletionThreshold(
                 Preferences.getEditor("AutoCompletionThreshold"))
-            autoCompletionSource = Preferences.getEditor("AutoCompletionSource")
+            autoCompletionSource = \
+                Preferences.getEditor("AutoCompletionSource")
             if autoCompletionSource == QsciScintilla.AcsDocument:
                 self.setAutoCompletionSource(QsciScintilla.AcsDocument)
             elif autoCompletionSource == QsciScintilla.AcsAPIs:
@@ -4204,7 +4288,8 @@ class Editor(QsciScintillaCompat):
     
     def __isStartChar(self, ch):
         """
-        Private method to check, if a character is an autocompletion start character.
+        Private method to check, if a character is an autocompletion start
+        character.
         
         @param ch character to be checked (one character string)
         @return flag indicating the result (boolean)
@@ -4263,7 +4348,8 @@ class Editor(QsciScintillaCompat):
         """
         Public method to start autocompletion.
         
-        @keyparam auto flag indicating a call from the __charAdded method (boolean)
+        @keyparam auto flag indicating a call from the __charAdded method
+            (boolean)
         @keyparam context flag indicating to complete a context (boolean)
         """
         if auto and self.autoCompletionThreshold() == -1:
@@ -4292,8 +4378,8 @@ class Editor(QsciScintillaCompat):
         """
         pos = self.currentPosition()
         
-        # move backward to the start of the current calltip working out which argument
-        # to highlight
+        # move backward to the start of the current calltip working out
+        # which argument to highlight
         commas = 0
         found = False
         ch, pos = self.__getCharacter(pos)
@@ -4303,7 +4389,8 @@ class Editor(QsciScintillaCompat):
             elif ch == ')':
                 depth = 1
                 
-                # ignore everything back to the start of the corresponding parenthesis
+                # ignore everything back to the start of the corresponding
+                # parenthesis
                 ch, pos = self.__getCharacter(pos)
                 while ch:
                     if ch == ')':
@@ -4382,7 +4469,8 @@ class Editor(QsciScintillaCompat):
                 depth -= 1
         
         if astart != aend:
-            self.SendScintilla(QsciScintilla.SCI_CALLTIPSETHLT, astart + 1, aend)
+            self.SendScintilla(QsciScintilla.SCI_CALLTIPSETHLT,
+                               astart + 1, aend)
     
     def __adjustedCallTipPosition(self, ctshift, pos):
         """
@@ -4475,7 +4563,8 @@ class Editor(QsciScintillaCompat):
             if self.__unifiedMargins:
                 self.marginMenu.popup(evt.globalPos())
             else:
-                if self.__marginNumber(evt.x()) in [self.__bmMargin, self.__linenoMargin]:
+                if self.__marginNumber(evt.x()) in [self.__bmMargin,
+                                                    self.__linenoMargin]:
                     self.bmMarginMenu.popup(evt.globalPos())
                 elif self.__marginNumber(evt.x()) == self.__bpMargin:
                     self.bpMarginMenu.popup(evt.globalPos())
@@ -4506,17 +4595,22 @@ class Editor(QsciScintillaCompat):
                 self.menuActs["Diagrams"].setEnabled(False)
         if not self.miniMenu:
             if self.lexer_ is not None:
-                self.menuActs["Comment"].setEnabled(self.lexer_.canBlockComment())
-                self.menuActs["Uncomment"].setEnabled(self.lexer_.canBlockComment())
-                self.menuActs["StreamComment"].setEnabled(self.lexer_.canStreamComment())
-                self.menuActs["BoxComment"].setEnabled(self.lexer_.canBoxComment())
+                self.menuActs["Comment"].setEnabled(
+                    self.lexer_.canBlockComment())
+                self.menuActs["Uncomment"].setEnabled(
+                    self.lexer_.canBlockComment())
+                self.menuActs["StreamComment"].setEnabled(
+                    self.lexer_.canStreamComment())
+                self.menuActs["BoxComment"].setEnabled(
+                    self.lexer_.canBoxComment())
             else:
                 self.menuActs["Comment"].setEnabled(False)
                 self.menuActs["Uncomment"].setEnabled(False)
                 self.menuActs["StreamComment"].setEnabled(False)
                 self.menuActs["BoxComment"].setEnabled(False)
         
-        self.menuActs["TypingAidsEnabled"].setEnabled(self.completer is not None)
+        self.menuActs["TypingAidsEnabled"].setEnabled(
+            self.completer is not None)
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         
@@ -4557,7 +4651,8 @@ class Editor(QsciScintillaCompat):
         coEnable = False
         
         # first check if the file belongs to a project
-        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+        if self.project.isOpen() and \
+                self.project.isProjectSource(self.fileName):
             fn = self.project.getMainScript(True)
             if fn is not None:
                 tfn = Utilities.getTestFileName(fn)
@@ -4600,9 +4695,11 @@ class Editor(QsciScintillaCompat):
         
     def __showContextMenuGraphics(self):
         """
-        Private slot handling the aboutToShow signal of the diagrams context menu.
+        Private slot handling the aboutToShow signal of the diagrams context
+        menu.
         """
-        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+        if self.project.isOpen() and \
+                self.project.isProjectSource(self.fileName):
             self.applicationDiagramMenuAct.setEnabled(True)
         else:
             self.applicationDiagramMenuAct.setEnabled(False)
@@ -4611,7 +4708,8 @@ class Editor(QsciScintillaCompat):
         
     def __showContextMenuMargin(self):
         """
-        Private slot handling the aboutToShow signal of the margins context menu.
+        Private slot handling the aboutToShow signal of the margins context
+        menu.
         """
         if self.fileName and \
            (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
@@ -4706,7 +4804,8 @@ class Editor(QsciScintillaCompat):
         
     def __showContextMenuChecks(self):
         """
-        Private slot handling the aboutToShow signal of the checks context menu.
+        Private slot handling the aboutToShow signal of the checks context
+        menu.
         """
         self.showMenu.emit("Checks", self.checksMenu,  self)
         
@@ -4808,7 +4907,8 @@ class Editor(QsciScintillaCompat):
         
     def shortenEmptyLines(self):
         """
-        Public slot to compress lines consisting solely of whitespace characters.
+        Public slot to compress lines consisting solely of whitespace
+        characters.
         """
         searchRE = r"^[ \t]+$"
         
@@ -4849,7 +4949,8 @@ class Editor(QsciScintillaCompat):
             self.clearFlakesWarnings()
             if self.isPy3File():
                 syntaxError, _fn, errorline, errorindex, _code, _error = \
-                    Utilities.compile(self.fileName or "(Unnamed)", self.text())
+                    Utilities.compile(self.fileName or "(Unnamed)",
+                                      self.text())
                 if syntaxError:
                     self.toggleSyntaxError(
                         int(errorline), int(errorindex), True, _error)
@@ -4864,7 +4965,8 @@ class Editor(QsciScintillaCompat):
                             txt = self.text()\
                                 .replace("\r\n", "\n")\
                                 .replace("\r", "\n")
-                            warnings = Checker(txt, self.fileName or "(Unnamed)")
+                            warnings = Checker(
+                                txt, self.fileName or "(Unnamed)")
                             warnings.messages.sort(key=lambda a: a.lineno)
                             for warning in warnings.messages:
                                 if ignoreStarImportWarnings and \
@@ -4872,8 +4974,9 @@ class Editor(QsciScintillaCompat):
                                     continue
                                 
                                 _fn, lineno, message = warning.getMessageData()
-                                if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
-                                        self.text(lineno - 1).strip()):
+                                if "__IGNORE_WARNING__" not in \
+                                        Utilities.extractLineFlags(
+                                            self.text(lineno - 1).strip()):
                                     self.toggleFlakesWarning(
                                         lineno, True, message)
                         except SyntaxError as err:
@@ -4928,7 +5031,8 @@ class Editor(QsciScintillaCompat):
         
     def __getCodeCoverageFile(self):
         """
-        Private method to get the filename of the file containing coverage info.
+        Private method to get the filename of the file containing coverage
+        info.
         
         @return filename of the coverage file (string)
         """
@@ -4936,7 +5040,8 @@ class Editor(QsciScintillaCompat):
         
         # first check if the file belongs to a project and there is
         # a project coverage file
-        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+        if self.project.isOpen() and \
+                self.project.isProjectSource(self.fileName):
             fn = self.project.getMainScript(True)
             if fn is not None:
                 tfn = Utilities.getTestFileName(fn)
@@ -5001,7 +5106,8 @@ class Editor(QsciScintillaCompat):
         
     def codeCoverageShowAnnotations(self, silent=False):
         """
-        Public method to handle the show code coverage annotations context menu action.
+        Public method to handle the show code coverage annotations context
+        menu action.
         
         @param silent flag indicating to not show any dialog (boolean)
         """
@@ -5033,7 +5139,8 @@ class Editor(QsciScintillaCompat):
         
     def __codeCoverageHideAnnotations(self):
         """
-        Private method to handle the hide code coverage annotations context menu action.
+        Private method to handle the hide code coverage annotations context
+        menu action.
         """
         for handle in self.notcoveredMarkers:
             self.markerDeleteHandle(handle)
@@ -5078,7 +5185,8 @@ class Editor(QsciScintillaCompat):
         ucline = self.markerFindPrevious(line, 1 << self.notcovered)
         if ucline < 0:
             # wrap around
-            ucline = self.markerFindPrevious(self.lines() - 1, 1 << self.notcovered)
+            ucline = self.markerFindPrevious(
+                self.lines() - 1, 1 << self.notcovered)
         if ucline >= 0:
             self.setCursorPosition(ucline, 0)
             self.ensureLineVisible(ucline)
@@ -5091,7 +5199,8 @@ class Editor(QsciScintillaCompat):
         
         # first check if the file belongs to a project and there is
         # a project profile file
-        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+        if self.project.isOpen() and \
+                self.project.isProjectSource(self.fileName):
             fn = self.project.getMainScript(True)
             if fn is not None:
                 tfn = Utilities.getTestFileName(fn)
@@ -5141,21 +5250,23 @@ class Editor(QsciScintillaCompat):
         
     def __lmBbookmarks(self):
         """
-        Private method to handle the 'LMB toggles bookmark' context menu action.
+        Private method to handle the 'LMB toggles bookmark' context menu
+        action.
         """
         self.marginMenuActs["LMBbookmarks"].setChecked(True)
         self.marginMenuActs["LMBbreakpoints"].setChecked(False)
         
     def __lmBbreakpoints(self):
         """
-        Private method to handle the 'LMB toggles breakpoint' context menu action.
+        Private method to handle the 'LMB toggles breakpoint' context menu
+        action.
         """
         self.marginMenuActs["LMBbookmarks"].setChecked(True)
         self.marginMenuActs["LMBbreakpoints"].setChecked(False)
     
-    ############################################################################
+    ###########################################################################
     ## Syntax error handling methods below
-    ############################################################################
+    ###########################################################################
 
     def toggleSyntaxError(self, line, index, error, msg="", show=False):
         """
@@ -5262,9 +5373,9 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8("Syntax Error"),
                 self.trUtf8("No syntax error message available."))
     
-    ############################################################################
+    ###########################################################################
     ## Flakes warning handling methods below
-    ############################################################################
+    ###########################################################################
     
     def toggleFlakesWarning(self, line, warning, msg="",
                             warningType=WarningCode):
@@ -5355,7 +5466,8 @@ class Editor(QsciScintillaCompat):
         fwline = self.markerFindPrevious(line, 1 << self.warning)
         if fwline < 0:
             # wrap around
-            fwline = self.markerFindPrevious(self.lines() - 1, 1 << self.warning)
+            fwline = self.markerFindPrevious(
+                self.lines() - 1, 1 << self.warning)
         if fwline >= 0:
             self.setCursorPosition(fwline, 0)
             self.ensureLineVisible(fwline)
@@ -5391,36 +5503,43 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8("Warning"),
                 self.trUtf8("No warning messages available."))
     
-    ############################################################################
+    ###########################################################################
     ## Annotation handling methods below
-    ############################################################################
+    ###########################################################################
     
     def __setAnnotationStyles(self):
         """
         Private slot to define the style used by inline annotations.
         """
         if hasattr(QsciScintilla, "annotate"):
-            self.annotationWarningStyle = QsciScintilla.STYLE_LASTPREDEFINED + 1
-            self.SendScintilla(QsciScintilla.SCI_STYLESETFORE,
+            self.annotationWarningStyle = \
+                QsciScintilla.STYLE_LASTPREDEFINED + 1
+            self.SendScintilla(
+                QsciScintilla.SCI_STYLESETFORE,
                 self.annotationWarningStyle,
                 Preferences.getEditorColour("AnnotationsWarningForeground"))
-            self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,
+            self.SendScintilla(
+                QsciScintilla.SCI_STYLESETBACK,
                 self.annotationWarningStyle,
                 Preferences.getEditorColour("AnnotationsWarningBackground"))
             
             self.annotationErrorStyle = self.annotationWarningStyle + 1
-            self.SendScintilla(QsciScintilla.SCI_STYLESETFORE,
+            self.SendScintilla(
+                QsciScintilla.SCI_STYLESETFORE,
                 self.annotationErrorStyle,
                 Preferences.getEditorColour("AnnotationsErrorForeground"))
-            self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,
+            self.SendScintilla(
+                QsciScintilla.SCI_STYLESETBACK,
                 self.annotationErrorStyle,
                 Preferences.getEditorColour("AnnotationsErrorBackground"))
             
             self.annotationStyleStyle = self.annotationErrorStyle + 1
-            self.SendScintilla(QsciScintilla.SCI_STYLESETFORE,
+            self.SendScintilla(
+                QsciScintilla.SCI_STYLESETFORE,
                 self.annotationStyleStyle,
                 Preferences.getEditorColour("AnnotationsStyleForeground"))
-            self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,
+            self.SendScintilla(
+                QsciScintilla.SCI_STYLESETBACK,
                 self.annotationStyleStyle,
                 Preferences.getEditorColour("AnnotationsStyleBackground"))
         
@@ -5484,7 +5603,8 @@ class Editor(QsciScintillaCompat):
         """
         if hasattr(QsciScintilla, "annotate"):
             self.clearAnnotations()
-            for handle in list(self.warnings.keys()) + list(self.syntaxerrors.keys()):
+            for handle in list(self.warnings.keys()) + \
+                    list(self.syntaxerrors.keys()):
                 line = self.markerLine(handle)
                 self.__setAnnotation(line)
     
@@ -5496,8 +5616,8 @@ class Editor(QsciScintillaCompat):
         """
         Private method to select a macro name from the list of macros.
         
-        @return Tuple of macro name and a flag, indicating, if the user pressed ok or
-            canceled the operation. (string, boolean)
+        @return Tuple of macro name and a flag, indicating, if the user
+            pressed ok or canceled the operation. (string, boolean)
         """
         qs = []
         for s in list(self.macros.keys()):
@@ -5547,7 +5667,8 @@ class Editor(QsciScintillaCompat):
         except IOError:
             E5MessageBox.critical(self,
                 self.trUtf8("Error loading macro"),
-                self.trUtf8("<p>The macro file <b>{0}</b> could not be read.</p>")
+                self.trUtf8(
+                    "<p>The macro file <b>{0}</b> could not be read.</p>")
                     .format(fname))
             return
         
@@ -5605,7 +5726,8 @@ class Editor(QsciScintillaCompat):
         except IOError:
             E5MessageBox.critical(self,
                 self.trUtf8("Error saving macro"),
-                self.trUtf8("<p>The macro file <b>{0}</b> could not be written.</p>")
+                self.trUtf8(
+                    "<p>The macro file <b>{0}</b> could not be written.</p>")
                     .format(fname))
             return
         
@@ -5737,7 +5859,8 @@ class Editor(QsciScintillaCompat):
         
         This method checks for modifications of the current file and
         rereads it upon request. The cursor is placed at the current position
-        assuming, that it is in the vicinity of the old position after the reread.
+        assuming, that it is in the vicinity of the old position after the
+        reread.
         
         @param event the event object (QFocusEvent)
         """
@@ -5761,8 +5884,9 @@ class Editor(QsciScintillaCompat):
                 self.refresh()
             else:
                 msg = self.trUtf8(
-                    """<p>The file <b>{0}</b> has been changed while it was opened in"""
-                    """ eric5. Reread it?</p>""").format(self.fileName)
+                    """<p>The file <b>{0}</b> has been changed while it"""
+                    """ was opened in eric5. Reread it?</p>""")\
+                    .format(self.fileName)
                 yesDefault = True
                 if self.isModified():
                     msg += self.trUtf8(
@@ -5901,7 +6025,8 @@ class Editor(QsciScintillaCompat):
         """
         if self.fileName is None:
             return
-        readOnly = not QFileInfo(self.fileName).isWritable() or self.isReadOnly()
+        readOnly = not QFileInfo(self.fileName).isWritable() or \
+            self.isReadOnly()
         if not bForce and (readOnly == self.isReadOnly()):
             return
         cap = self.fileName
@@ -6068,7 +6193,8 @@ class Editor(QsciScintillaCompat):
         
     def __showContextMenuResources(self):
         """
-        Private slot handling the aboutToShow signal of the resources context menu.
+        Private slot handling the aboutToShow signal of the resources context
+        menu.
         """
         self.showMenu.emit("Resources", self.resourcesMenu,  self)
         
@@ -6134,7 +6260,8 @@ class Editor(QsciScintillaCompat):
         
     def __addLocalizedResource(self):
         """
-        Private method to handle the Add localized resource context menu action.
+        Private method to handle the Add localized resource context menu
+        action.
         """
         from Project.AddLanguageDialog import AddLanguageDialog
         dlg = AddLanguageDialog(self)
@@ -6168,7 +6295,8 @@ class Editor(QsciScintillaCompat):
         if not self.checkDirty():
             return
         
-        self.classDiagram = UMLDialog(UMLDialog.ClassDiagram, self.project, self.fileName,
+        self.classDiagram = UMLDialog(
+            UMLDialog.ClassDiagram, self.project, self.fileName,
             self, noAttrs=False)
         self.classDiagram.show()
         
@@ -6180,14 +6308,15 @@ class Editor(QsciScintillaCompat):
         if not self.checkDirty():
             return
         
-        package = os.path.isdir(self.fileName) and self.fileName \
-                                               or os.path.dirname(self.fileName)
+        package = os.path.isdir(self.fileName) and \
+            self.fileName or os.path.dirname(self.fileName)
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.packageDiagram = UMLDialog(UMLDialog.PackageDiagram, self.project, package,
-                                        self, noAttrs=not res)
+        self.packageDiagram = UMLDialog(
+            UMLDialog.PackageDiagram, self.project, package,
+            self, noAttrs=not res)
         self.packageDiagram.show()
         
     def __showImportsDiagram(self):
@@ -6199,12 +6328,13 @@ class Editor(QsciScintillaCompat):
             return
         
         package = os.path.isdir(self.fileName) and self.fileName \
-                                               or os.path.dirname(self.fileName)
+            or os.path.dirname(self.fileName)
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
-        self.importsDiagram = UMLDialog(UMLDialog.ImportsDiagram, self.project, package,
-                                        self, showExternalImports=res)
+        self.importsDiagram = UMLDialog(
+            UMLDialog.ImportsDiagram, self.project, package,
+            self, showExternalImports=res)
         self.importsDiagram.show()
         
     def __showApplicationDiagram(self):
@@ -6216,8 +6346,9 @@ class Editor(QsciScintillaCompat):
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
-        self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
-                                            self, noModules=not res)
+        self.applicationDiagram = UMLDialog(
+            UMLDialog.ApplicationDiagram, self.project,
+            self, noModules=not res)
         self.applicationDiagram.show()
     
     def __loadDiagram(self):
@@ -6225,7 +6356,8 @@ class Editor(QsciScintillaCompat):
         Private slot to load a diagram from file.
         """
         from Graphics.UMLDialog import UMLDialog
-        self.loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self.project, parent=self)
+        self.loadedDiagram = UMLDialog(
+            UMLDialog.NoDiagram, self.project, parent=self)
         if self.loadedDiagram.load():
             self.loadedDiagram.show(fromFile=True)
         else:
@@ -6267,7 +6399,8 @@ class Editor(QsciScintillaCompat):
                         e5App().getObject("TemplateViewer").getTemplateNames(
                             tmplName, self.getLanguage())
                     if len(templateNames) == 1:
-                        self.__applyTemplate(templateNames[0], self.getLanguage())
+                        self.__applyTemplate(templateNames[0],
+                                             self.getLanguage())
                         return
                     elif len(templateNames) > 1:
                         self.showUserList(TemplateCompletionListID,
@@ -6326,7 +6459,8 @@ class Editor(QsciScintillaCompat):
             self.__setSpellingLanguage(self.project.getProjectSpellLanguage(),
                                        pwl=pwl, pel=pel)
         
-        self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+        self.project.projectPropertiesChanged.connect(
+            self.__projectPropertiesChanged)
     
     def projectOpened(self):
         """
@@ -6334,7 +6468,8 @@ class Editor(QsciScintillaCompat):
         """
         if self.fileName and \
            self.project.isProjectSource(self.fileName):
-            self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+            self.project.projectPropertiesChanged.connect(
+                self.__projectPropertiesChanged)
             self.setSpellingForProject()
     
     def projectClosed(self):
@@ -6368,7 +6503,8 @@ class Editor(QsciScintillaCompat):
         Private method to initialize the spell checking functionality.
         """
         if Preferences.getEditor("SpellCheckingEnabled"):
-            self.__spellCheckStringsOnly = Preferences.getEditor("SpellCheckStringsOnly")
+            self.__spellCheckStringsOnly = Preferences.getEditor(
+                "SpellCheckStringsOnly")
             if self.spell is None:
                 from .SpellChecker import SpellChecker
                 self.spell = SpellChecker(self, self.spellingIndicator,
@@ -6400,7 +6536,8 @@ class Editor(QsciScintillaCompat):
         """
         if Preferences.getEditor("AutoSpellCheckingEnabled"):
             try:
-                self.SCN_CHARADDED.connect(self.__spellCharAdded, Qt.UniqueConnection)
+                self.SCN_CHARADDED.connect(
+                    self.__spellCharAdded, Qt.UniqueConnection)
             except TypeError:
                 pass
             self.spell.checkDocumentIncrementally()
@@ -6413,8 +6550,8 @@ class Editor(QsciScintillaCompat):
     
     def isSpellCheckRegion(self, pos):
         """
-        Public method to check, if the given position is within a region, that should
-        be spell checked.
+        Public method to check, if the given position is within a region, that
+        should be spell checked.
         
         @param pos position to be checked (integer)
         @return flag indicating pos is in a spell check region (boolean)
@@ -6435,8 +6572,10 @@ class Editor(QsciScintillaCompat):
         """
         if self.spell:
             if not chr(charNumber).isalnum():
-                self.spell.checkWord(self.positionBefore(self.currentPosition()), True)
-            elif self.hasIndicator(self.spellingIndicator, self.currentPosition()):
+                self.spell.checkWord(
+                    self.positionBefore(self.currentPosition()), True)
+            elif self.hasIndicator(
+                    self.spellingIndicator, self.currentPosition()):
                 self.spell.checkWord(self.currentPosition())
     
     def checkSpelling(self):
@@ -6485,10 +6624,12 @@ class Editor(QsciScintillaCompat):
         word = self.getWord(line, index)
         suggestions = self.spell.getSuggestions(word)
         for suggestion in suggestions[:5]:
-            self.spellingSuggActs.append(self.spellingMenu.addAction(suggestion))
+            self.spellingSuggActs.append(
+                self.spellingMenu.addAction(suggestion))
         if suggestions:
             self.spellingMenu.addSeparator()
-        self.spellingMenu.addAction(UI.PixmapCache.getIcon("spellchecking.png"),
+        self.spellingMenu.addAction(
+            UI.PixmapCache.getIcon("spellchecking.png"),
             self.trUtf8("Check spelling..."), self.__checkSpellingWord)
         self.spellingMenu.addAction(self.trUtf8("Add to dictionary"),
             self.__addToSpellingDictionary)
@@ -6499,7 +6640,8 @@ class Editor(QsciScintillaCompat):
     
     def __contextMenuSpellingTriggered(self, action):
         """
-        Private slot to handle the selection of a suggestion of the spelling context menu.
+        Private slot to handle the selection of a suggestion of the spelling
+        context menu.
         
         @param action reference to the action that was selected (QAction)
         """
@@ -6515,20 +6657,23 @@ class Editor(QsciScintillaCompat):
     
     def __addToSpellingDictionary(self):
         """
-        Private slot to add the word below the spelling context menu to the dictionary.
+        Private slot to add the word below the spelling context menu to the
+        dictionary.
         """
         line, index = self.lineIndexFromPosition(self.spellingMenuPos)
         word = self.getWord(line, index)
         self.spell.add(word)
         
         wordStart, wordEnd = self.getWordBoundaries(line, index)
-        self.clearIndicator(self.spellingIndicator, line, wordStart, line, wordEnd)
+        self.clearIndicator(self.spellingIndicator, line, wordStart,
+                            line, wordEnd)
         if Preferences.getEditor("AutoSpellCheckingEnabled"):
             self.spell.checkDocumentIncrementally()
     
     def __removeFromSpellingDictionary(self):
         """
-        Private slot to remove the word below the context menu to the dictionary.
+        Private slot to remove the word below the context menu to the
+        dictionary.
         """
         line, index = self.lineIndexFromPosition(self.spellingMenuPos)
         word = self.getWord(line, index)
@@ -6555,9 +6700,9 @@ class Editor(QsciScintillaCompat):
         """
         Public method to get some share status info.
         
-        @return tuple indicating, if the editor is sharable, the sharing status,
-            if it is inside a locally initiated shared edit session and
-            if it is inside a remotely initiated shared edit session
+        @return tuple indicating, if the editor is sharable, the sharing
+            status, if it is inside a locally initiated shared edit session
+            and if it is inside a remotely initiated shared edit session
             (boolean, boolean, boolean, boolean)
         """
         return self.fileName is not None and \
@@ -6882,7 +7027,8 @@ class Editor(QsciScintillaCompat):
             endLine = max(origStartLine, origEndLine)
             endIndex = max(origStartIndex, origEndIndex)
             
-            # step 1: extract the text of the rectangular selection and the lines
+            # step 1: extract the text of the rectangular selection and
+            #         the lines
             selText = {}
             txtLines = {}
             for line in range(startLine, endLine + 1):
@@ -6894,8 +7040,9 @@ class Editor(QsciScintillaCompat):
                     except ValueError:
                         E5MessageBox.critical(self,
                             self.trUtf8("Sort Lines"),
-                            self.trUtf8("""The selection contains illegal data for a"""
-                                        """ numerical sort."""))
+                            self.trUtf8(
+                                """The selection contains illegal data for a"""
+                                """ numerical sort."""))
                         return
                 
                 if txt in selText:

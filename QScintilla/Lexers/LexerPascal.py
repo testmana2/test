@@ -37,10 +37,12 @@ class LexerPascal(QsciLexerPascal, Lexer):
         Public slot to initialize the properties.
         """
         self.setFoldComments(Preferences.getEditor("PascalFoldComment"))
-        self.setFoldPreprocessor(Preferences.getEditor("PascalFoldPreprocessor"))
+        self.setFoldPreprocessor(
+            Preferences.getEditor("PascalFoldPreprocessor"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
         try:
-            self.setSmartHighlighting(Preferences.getEditor("PascalSmartHighlighting"))
+            self.setSmartHighlighting(
+                Preferences.getEditor("PascalSmartHighlighting"))
         except AttributeError:
             pass
     

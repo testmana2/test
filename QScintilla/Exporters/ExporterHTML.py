@@ -45,8 +45,8 @@ class HTMLGenerator(object):
         @keyparam useTabs flag indicating the use of tab characters (boolean)
         @keyparam wysiwyg flag indicating colorization (boolean)
         @keyparam folding flag indicating usage of fold markers
-        @keyparam onlyStylesUsed flag indicating to include only style definitions
-            for styles used in the source (boolean)
+        @keyparam onlyStylesUsed flag indicating to include only style
+            definitions for styles used in the source (boolean)
         @keyparam titleFullPath flag indicating to include the full file path
             in the title tag (boolean)
         @return generated HTML text (string)
@@ -68,13 +68,16 @@ class HTMLGenerator(object):
                 styleIsUsed[index] = True
         styleIsUsed[QsciScintilla.STYLE_DEFAULT] = True
         
-        html = '''<!DOCTYPE html PUBLIC "-//W3C//DTD''' \
+        html = \
+            '''<!DOCTYPE html PUBLIC "-//W3C//DTD''' \
             ''' XHTML 1.0 Transitional//EN"\n''' \
-            ''' "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n''' \
+            ''' "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">''' \
+            '''\n''' \
             '''<html xmlns="http://www.w3.org/1999/xhtml">\n''' \
             '''<head>\n'''
         if titleFullPath:
-            html += '''<title>{0}</title>\n'''.format(self.editor.getFileName())
+            html += '''<title>{0}</title>\n'''.format(
+                self.editor.getFileName())
         else:
             html += '''<title>{0}</title>\n'''.format(
                 os.path.basename(self.editor.getFileName()))
@@ -82,32 +85,33 @@ class HTMLGenerator(object):
             '''<meta http-equiv="Content-Type" ''' \
             '''content="text/html; charset=utf-8" />\n'''
         if folding:
-            html += '''<script language="JavaScript" type="text/javascript">\n''' \
-                    '''<!--\n''' \
-                    '''function symbol(id, sym) {\n''' \
-                    '''  if (id.textContent == undefined) {\n''' \
-                    '''    id.innerText = sym;\n''' \
-                    '''  } else {\n''' \
-                    '''    id.textContent = sym;\n''' \
-                    '''  }\n''' \
-                    '''}\n''' \
-                    '''function toggle(id) {\n''' \
-                    '''  var thislayer = document.getElementById('ln' + id);\n''' \
-                    '''  id -= 1;\n''' \
-                    '''  var togline = document.getElementById('hd' + id);\n''' \
-                    '''  var togsym = document.getElementById('bt' + id);\n''' \
-                    '''  if (thislayer.style.display == 'none') {\n''' \
-                    '''    thislayer.style.display = 'block';\n''' \
-                    '''    togline.style.textDecoration = 'none';\n''' \
-                    '''    symbol(togsym, '- ');\n''' \
-                    '''  } else {\n''' \
-                    '''    thislayer.style.display = 'none';\n''' \
-                    '''    togline.style.textDecoration = 'underline';\n''' \
-                    '''    symbol(togsym, '+ ');\n''' \
-                    '''  }\n''' \
-                    '''}\n''' \
-                    '''//-->\n''' \
-                    '''</script>\n'''
+            html += \
+                '''<script language="JavaScript" type="text/javascript">\n''' \
+                '''<!--\n''' \
+                '''function symbol(id, sym) {\n''' \
+                '''  if (id.textContent == undefined) {\n''' \
+                '''    id.innerText = sym;\n''' \
+                '''  } else {\n''' \
+                '''    id.textContent = sym;\n''' \
+                '''  }\n''' \
+                '''}\n''' \
+                '''function toggle(id) {\n''' \
+                '''  var thislayer = document.getElementById('ln' + id);\n''' \
+                '''  id -= 1;\n''' \
+                '''  var togline = document.getElementById('hd' + id);\n''' \
+                '''  var togsym = document.getElementById('bt' + id);\n''' \
+                '''  if (thislayer.style.display == 'none') {\n''' \
+                '''    thislayer.style.display = 'block';\n''' \
+                '''    togline.style.textDecoration = 'none';\n''' \
+                '''    symbol(togsym, '- ');\n''' \
+                '''  } else {\n''' \
+                '''    thislayer.style.display = 'none';\n''' \
+                '''    togline.style.textDecoration = 'underline';\n''' \
+                '''    symbol(togsym, '+ ');\n''' \
+                '''  }\n''' \
+                '''}\n''' \
+                '''//-->\n''' \
+                '''</script>\n'''
         
         lex = self.editor.getLexer()
         if lex:
@@ -280,7 +284,8 @@ class HTMLGenerator(object):
                     if self.editor.foldFlagsAt(line) & \
                        QsciScintilla.SC_FOLDLEVELHEADERFLAG:
                         html += \
-                            '''<span id="hd{0:d}" onclick="toggle('{1:d}')">'''\
+                            '''<span id="hd{0:d}"''' \
+                            ''' onclick="toggle('{1:d}')">''' \
                             .format(line, line + 1)
                         html += '''<span id="bt{0:d}">- </span>'''.format(line)
                         inFoldSpan = True
@@ -375,8 +380,10 @@ class ExporterHTML(ExporterBase):
                 tabSize = 4
             wysiwyg = Preferences.getEditorExporter("HTML/WYSIWYG")
             folding = Preferences.getEditorExporter("HTML/Folding")
-            onlyStylesUsed = Preferences.getEditorExporter("HTML/OnlyStylesUsed")
-            titleFullPath = Preferences.getEditorExporter("HTML/FullPathAsTitle")
+            onlyStylesUsed = Preferences.getEditorExporter(
+                "HTML/OnlyStylesUsed")
+            titleFullPath = Preferences.getEditorExporter(
+                "HTML/FullPathAsTitle")
             tabs = Preferences.getEditorExporter("HTML/UseTabs")
             
             generator = HTMLGenerator(self.editor)
@@ -395,11 +402,12 @@ class ExporterHTML(ExporterBase):
                 f.close()
             except IOError as err:
                 QApplication.restoreOverrideCursor()
-                E5MessageBox.critical(self.editor,
+                E5MessageBox.critical(
+                    self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(
-                        """<p>The source could not be exported to <b>{0}</b>.</p>"""
-                        """<p>Reason: {1}</p>""")\
+                        """<p>The source could not be exported to"""
+                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")\
                         .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

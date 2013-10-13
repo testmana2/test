@@ -28,8 +28,9 @@ PDF_ENCODING = "WinAnsiEncoding"
 
 PDFfontNames = [
     "Courier", "Courier-Bold", "Courier-Oblique", "Courier-BoldOblique",
-    "Helvetica", "Helvetica-Bold", "Helvetica-Oblique", "Helvetica-BoldOblique",
-    "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+    "Helvetica", "Helvetica-Bold", "Helvetica-Oblique",
+    "Helvetica-BoldOblique", "Times-Roman", "Times-Bold", "Times-Italic",
+    "Times-BoldItalic"
 ]
 PDFfontAscenders = [629, 718, 699]
 PDFfontDescenders = [157, 207, 217]
@@ -174,12 +175,12 @@ class PDFRender(object):
         
         buf = ""
         if styleNext != self.styleCurrent or style_ == -1:
-            if self.style[self.styleCurrent].font != self.style[styleNext].font or \
-               style_ == -1:
-                buf += "/F{0:d} {1:d} Tf ".format(self.style[styleNext].font + 1,
-                                                  self.fontSize)
-            if self.style[self.styleCurrent].fore != self.style[styleNext].fore or \
-               style_ == -1:
+            if self.style[self.styleCurrent].font != \
+                    self.style[styleNext].font or style_ == -1:
+                buf += "/F{0:d} {1:d} Tf ".format(
+                    self.style[styleNext].font + 1, self.fontSize)
+            if self.style[self.styleCurrent].fore != \
+                    self.style[styleNext].fore or style_ == -1:
                 buf += "{0}rg ".format(self.style[styleNext].fore)
         return buf
         
@@ -213,8 +214,9 @@ class PDFRender(object):
         # to be inserted (PDF1.4Ref(p317))
         for i in range(4):
             buffer = \
-                "<</Type/Font/Subtype/Type1/Name/F{0:d}/BaseFont/{1}/Encoding/{2}>>\n"\
-                .format(i + 1, PDFfontNames[self.fontSet * 4 + i], PDF_ENCODING)
+                "<</Type/Font/Subtype/Type1/Name/F{0:d}/BaseFont/{1}/" \
+                "Encoding/{2}>>\n".format(
+                    i + 1, PDFfontNames[self.fontSet * 4 + i], PDF_ENCODING)
             self.oT.add(buffer)
         
         self.pageContentStart = self.oT.index
@@ -229,7 +231,8 @@ class PDFRender(object):
         
         # refer to all used or unused fonts for simplicity
         resourceRef = self.oT.add(
-            "<</ProcSet[/PDF/Text]\n/Font<</F1 1 0 R/F2 2 0 R/F3 3 0 R/F4 4 0 R>> >>\n")
+            "<</ProcSet[/PDF/Text]\n/Font<</F1 1 0 R/F2 2 0 R/F3 3 0 R/"
+            "F4 4 0 R>> >>\n")
         
         # create all the page objects (PDF1.4Ref(p88))
         # forward reference pages object; calculate its object number
@@ -259,8 +262,9 @@ class PDFRender(object):
         xref = self.oT.xref()
         
         # end the file with the trailer (PDF1.4Ref(p67))
-        buffer = "trailer\n<< /Size {0:d} /Root {1:d} 0 R\n>>\nstartxref\n{2:d}\n%%EOF\n"\
-                 .format(self.oT.index, catalogRef, xref)
+        buffer = \
+            "trailer\n<< /Size {0:d} /Root {1:d} 0 R\n>>\nstartxref\n{2:d}\n" \
+            "%%EOF\n".format(self.oT.index, catalogRef, xref)
         self.oT.write(buffer)
         
     def add(self, ch, style_):
@@ -425,7 +429,8 @@ class ExporterPDF(ExporterBase):
                 tabSize = 4
             
             # get magnification value to add to default screen font size
-            self.pr.fontSize = Preferences.getEditorExporter("PDF/Magnification")
+            self.pr.fontSize = Preferences.getEditorExporter(
+                "PDF/Magnification")
             
             # set font family according to face name
             fontName = Preferences.getEditorExporter("PDF/Font")
@@ -521,7 +526,8 @@ class ExporterPDF(ExporterBase):
             
             try:
                 # save file in win ansi using cp1250
-                f = open(filename, "w", encoding="cp1250", errors="backslashreplace")
+                f = open(filename, "w", encoding="cp1250",
+                         errors="backslashreplace")
                 
                 # initialise PDF rendering
                 ot = PDFObjectTracker(f)
@@ -550,7 +556,8 @@ class ExporterPDF(ExporterBase):
                             column += ts
                             self.pr.add(' ' * ts, style)
                         elif ch == b'\r' or ch == b'\n':
-                            if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
+                            if ch == b'\r' and \
+                                    self.editor.byteAt(pos + 1) == b'\n':
                                 pos += 1
                             # close and begin a newline...
                             self.pr.nextLine()
@@ -566,14 +573,16 @@ class ExporterPDF(ExporterBase):
                                         utf8Len = 3
                                     elif (utf8Ch[0] & 0xC0) == 0xC0:
                                         utf8Len = 2
-                                    column -= 1  # will be incremented again later
+                                    column -= 1  # will be incremented
+                                                 # again later
                                 elif len(utf8Ch) == utf8Len:
                                     ch = utf8Ch.decode('utf8')
                                     self.pr.add(ch, style)
                                     utf8Ch = b""
                                     utf8Len = 0
                                 else:
-                                    column -= 1  # will be incremented again later
+                                    column -= 1  # will be incremented
+                                                 # again later
                             else:
                                 self.pr.add(ch.decode(), style)
                             column += 1
@@ -585,11 +594,12 @@ class ExporterPDF(ExporterBase):
                 f.close()
             except IOError as err:
                 QApplication.restoreOverrideCursor()
-                E5MessageBox.critical(self.editor,
+                E5MessageBox.critical(
+                    self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(
-                        """<p>The source could not be exported to <b>{0}</b>.</p>"""
-                        """<p>Reason: {1}</p>""")\
+                        """<p>The source could not be exported to"""
+                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")\
                         .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

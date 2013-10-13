@@ -40,8 +40,10 @@ class LexerXML(QsciLexerXML, Lexer):
             Preferences.getEditor("HtmlCaseSensitiveTags"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
         try:
-            self.setFoldScriptComments(Preferences.getEditor("HtmlFoldScriptComments"))
-            self.setFoldScriptHeredocs(Preferences.getEditor("HtmlFoldScriptHeredocs"))
+            self.setFoldScriptComments(
+                Preferences.getEditor("HtmlFoldScriptComments"))
+            self.setFoldScriptHeredocs(
+                Preferences.getEditor("HtmlFoldScriptHeredocs"))
             self.setScriptsStyled(Preferences.getEditor("XMLStyleScripts"))
         except AttributeError:
             pass
