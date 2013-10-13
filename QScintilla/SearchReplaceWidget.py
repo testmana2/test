@@ -52,8 +52,8 @@ class SearchReplaceWidget(QWidget):
             from .Ui_ReplaceWidget import Ui_ReplaceWidget
             self.replaceHistory = vm.getSRHistory('replace')
             self.ui = Ui_ReplaceWidget()
-            whatsThis = self.trUtf8(r"""
-<b>Find and Replace</b>
+            whatsThis = self.trUtf8(
+r"""<b>Find and Replace</b>
 <p>This dialog is used to find some text and replace it with another text.
 By checking the various checkboxes, the search can be made more specific.
 The search string might be a regular expression. In a regular expression,
@@ -63,8 +63,8 @@ special characters interpreted are:</p>
         else:
             from .Ui_SearchWidget import Ui_SearchWidget
             self.ui = Ui_SearchWidget()
-            whatsThis = self.trUtf8(r"""
-<b>Find</b>
+            whatsThis = self.trUtf8(
+r"""<b>Find</b>
 <p>This dialog is used to find some text. By checking the various checkboxes,
 the search can be made more specific. The search string might be a regular
 expression. In a regular expression, special characters interpreted are:</p>
@@ -74,8 +74,8 @@ expression. In a regular expression, special characters interpreted are:</p>
         if not replace:
             self.ui.wrapCheckBox.setChecked(True)
         
-        whatsThis += self.trUtf8(r"""
-<table border="0">
+        whatsThis += self.trUtf8(
+r"""<table border="0">
 <tr><td><code>.</code></td><td>Matches any character</td></tr>
 <tr><td><code>\(</code></td><td>This marks the start of a region for tagging a
 match.</td></tr>
