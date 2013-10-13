@@ -133,7 +133,8 @@ def context_diff(a, b, fromfile='', tofile='',
     Example:
 
     <pre>
-    &gt;&gt;&gt; print ''.join(context_diff('one\ntwo\nthree\nfour\n'.splitlines(1),
+    &gt;&gt;&gt; print ''.join(
+    ...       context_diff('one\ntwo\nthree\nfour\n'.splitlines(1),
     ...       'zero\none\ntree\nfour\n'.splitlines(1), 'Original', 'Current',
     ...       'Sat Jan 26 23:30:50 1991', 'Fri Jun 06 10:22:46 2003')),
     *** Original Sat Jan 26 23:30:50 1991
@@ -162,7 +163,8 @@ def context_diff(a, b, fromfile='', tofile='',
     @return a generator yielding lines of differences
     """
     started = False
-    prefixmap = {'insert': '+ ', 'delete': '- ', 'replace': '! ', 'equal': '  '}
+    prefixmap = {'insert': '+ ', 'delete': '- ', 'replace': '! ',
+                 'equal': '  '}
     for group in SequenceMatcher(None, a, b).get_grouped_opcodes(n):
         if not started:
             yield '*** {0}\t{1}{2}'.format(fromfile, fromfiledate, lineterm)
@@ -171,7 +173,8 @@ def context_diff(a, b, fromfile='', tofile='',
 
         yield '***************{0}'.format(lineterm)
         if group[-1][2] - group[0][1] >= 2:
-            yield '*** {0:d},{1:d} ****{2}'.format(group[0][1] + 1, group[-1][2], lineterm)
+            yield '*** {0:d},{1:d} ****{2}'.format(
+                group[0][1] + 1, group[-1][2], lineterm)
         else:
             yield '*** {0:d} ****{1}'.format(group[-1][2], lineterm)
         visiblechanges = [e for e in group if e[0] in ('replace', 'delete')]
@@ -182,7 +185,8 @@ def context_diff(a, b, fromfile='', tofile='',
                         yield prefixmap[tag] + line
 
         if group[-1][4] - group[0][3] >= 2:
-            yield '--- {0:d},{1:d} ----{2}'.format(group[0][3] + 1, group[-1][4], lineterm)
+            yield '--- {0:d},{1:d} ----{2}'.format(
+                group[0][3] + 1, group[-1][4], lineterm)
         else:
             yield '--- {0:d} ----{1}'.format(group[-1][4], lineterm)
         visiblechanges = [e for e in group if e[0] in ('replace', 'insert')]
@@ -209,13 +213,14 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.file1Completer = E5FileCompleter(self.file1Edit)
         self.file2Completer = E5FileCompleter(self.file2Edit)
         
-        self.diffButton = \
-            self.buttonBox.addButton(self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
+        self.diffButton = self.buttonBox.addButton(
+            self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
         self.diffButton.setToolTip(
             self.trUtf8("Press to perform the comparison of the two files"))
-        self.saveButton = \
-            self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)
-        self.saveButton.setToolTip(self.trUtf8("Save the output to a patch file"))
+        self.saveButton = self.buttonBox.addButton(
+            self.trUtf8("Save"), QDialogButtonBox.ActionRole)
+        self.saveButton.setToolTip(
+            self.trUtf8("Save the output to a patch file"))
         self.diffButton.setEnabled(False)
         self.saveButton.setEnabled(False)
         self.diffButton.setDefault(True)
@@ -313,10 +318,11 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 pass
             f.close()
         except IOError as why:
-            E5MessageBox.critical(self, self.trUtf8('Save Diff'),
-                self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.<br />'
-                            'Reason: {1}</p>')
-                    .format(fname, str(why)))
+            E5MessageBox.critical(
+                self, self.trUtf8('Save Diff'),
+                self.trUtf8(
+                    '<p>The patch file <b>{0}</b> could not be saved.<br />'
+                    'Reason: {1}</p>').format(fname, str(why)))
 
     @pyqtSlot()
     def on_diffButton_clicked(self):
@@ -335,7 +341,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(self.filename1))
             return
 
@@ -351,7 +358,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(self.filename2))
             return
         
@@ -359,11 +367,13 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.saveButton.setEnabled(False)
         
         if self.unifiedRadioButton.isChecked():
-            self.__generateUnifiedDiff(lines1, lines2, self.filename1, self.filename2,
-                                filemtime1, filemtime2)
+            self.__generateUnifiedDiff(
+                lines1, lines2, self.filename1, self.filename2,
+                filemtime1, filemtime2)
         else:
-            self.__generateContextDiff(lines1, lines2, self.filename1, self.filename2,
-                                filemtime1, filemtime2)
+            self.__generateContextDiff(
+                lines1, lines2, self.filename1, self.filename2,
+                filemtime1, filemtime2)
         
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
@@ -414,7 +424,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 QApplication.processEvents()
             
         if paras == 0:
-            self.__appendText(self.trUtf8('There is no difference.'), self.cNormalFormat)
+            self.__appendText(
+                self.trUtf8('There is no difference.'), self.cNormalFormat)
 
     def __generateContextDiff(self, a, b, fromfile, tofile,
                             fromfiledate, tofiledate):
@@ -437,7 +448,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 format = self.cRemovedFormat
             elif line.startswith('! '):
                 format = self.cReplacedFormat
-            elif (line.startswith('*** ') or line.startswith('--- ')) and paras > 1:
+            elif (line.startswith('*** ') or line.startswith('--- ')) and \
+                    paras > 1:
                 format = self.cLineNoFormat
             else:
                 format = self.cNormalFormat
@@ -447,7 +459,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 QApplication.processEvents()
             
         if paras == 0:
-            self.__appendText(self.trUtf8('There is no difference.'), self.cNormalFormat)
+            self.__appendText(
+                self.trUtf8('There is no difference.'), self.cNormalFormat)
 
     def __fileChanged(self):
         """
@@ -502,7 +515,8 @@ class DiffWindow(E5MainWindow):
         """
         super().__init__(parent)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.cw = DiffDialog(self)
         self.cw.installEventFilter(self)

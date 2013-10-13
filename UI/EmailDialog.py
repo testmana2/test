@@ -13,8 +13,8 @@ import smtplib
 import socket
 
 from PyQt4.QtCore import Qt, pyqtSlot, qVersion
-from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, QInputDialog, \
-    QApplication, QDialogButtonBox, QTreeWidgetItem
+from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, \
+    QInputDialog, QApplication, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -53,7 +53,8 @@ def _encode_base64(msg):
     msg.set_payload(encdata)
     msg['Content-Transfer-Encoding'] = 'base64'
 
-encoders.encode_base64 = _encode_base64     # WORK AROUND: implement our corrected encoder
+encoders.encode_base64 = _encode_base64     # WORK AROUND: implement our
+                                            # corrected encoder
 
 
 class EmailDialog(QDialog, Ui_EmailDialog):
@@ -84,17 +85,19 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 " Version information is added automatically."))
             self.__toAddress = BugAddress
         
-        self.sendButton = \
-            self.buttonBox.addButton(self.trUtf8("Send"), QDialogButtonBox.ActionRole)
+        self.sendButton = self.buttonBox.addButton(
+            self.trUtf8("Send"), QDialogButtonBox.ActionRole)
         self.sendButton.setEnabled(False)
         self.sendButton.setDefault(True)
         
         height = self.height()
         self.mainSplitter.setSizes([int(0.7 * height), int(0.3 * height)])
         
-        self.attachments.headerItem().setText(self.attachments.columnCount(), "")
+        self.attachments.headerItem().setText(
+            self.attachments.columnCount(), "")
         if qVersion() >= "5.0.0":
-            self.attachments.header().setSectionResizeMode(QHeaderView.Interactive)
+            self.attachments.header().setSectionResizeMode(
+                QHeaderView.Interactive)
         else:
             self.attachments.header().setResizeMode(QHeaderView.Interactive)
         
@@ -251,7 +254,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                     att = MIMEText(txt, _subtype=subtype)
                 except UnicodeEncodeError:
                     att = MIMEText(
-                        txt.encode("utf-8"), _subtype=subtype, _charset="utf-8")
+                        txt.encode("utf-8"), _subtype=subtype,
+                        _charset="utf-8")
             elif maintype == 'image':
                 att = MIMEImage(open(fname, 'rb').read(), _subtype=subtype)
             elif maintype == 'audio':
@@ -299,7 +303,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                         errorStr = str(e)
                     res = E5MessageBox.retryAbort(self,
                         self.trUtf8("Send bug report"),
-                        self.trUtf8("""<p>Authentication failed.<br>Reason: {0}</p>""")
+                        self.trUtf8(
+                            """<p>Authentication failed.<br>Reason: {0}</p>""")
                             .format(errorStr),
                         E5MessageBox.Critical)
                     if res:
@@ -309,7 +314,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
 
             QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
             QApplication.processEvents()
-            server.sendmail(Preferences.getUser("Email"), self.__toAddress, msg)
+            server.sendmail(Preferences.getUser("Email"), self.__toAddress,
+                            msg)
             server.quit()
             QApplication.restoreOverrideCursor()
         except (smtplib.SMTPException, socket.error) as e:
@@ -322,7 +328,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 errorStr = str(e)
             res = E5MessageBox.retryAbort(self,
                 self.trUtf8("Send bug report"),
-                self.trUtf8("""<p>Message could not be sent.<br>Reason: {0}</p>""")
+                self.trUtf8(
+                    """<p>Message could not be sent.<br>Reason: {0}</p>""")
                     .format(errorStr),
                 E5MessageBox.Critical)
             if res:

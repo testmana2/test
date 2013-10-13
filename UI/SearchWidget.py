@@ -19,10 +19,10 @@ class SearchWidget(QWidget, Ui_SearchWidget):
     """
     Class implementing the search box for the shel, terminal and log viewer.
     
-    @signal searchNext(text, caseSensitive, wholeWord) emitted when the user pressed
-        the next button (string, boolean, boolean)
-    @signal searchPrevious(text, caseSensitive, wholeWord) emitted when the user pressed
-        the previous button (string, boolean, boolean)
+    @signal searchNext(text, caseSensitive, wholeWord) emitted when the user
+        pressed the next button (string, boolean, boolean)
+    @signal searchPrevious(text, caseSensitive, wholeWord) emitted when the
+        user pressed the previous button (string, boolean, boolean)
     """
     searchNext = pyqtSignal(str, bool, bool)
     searchPrevious = pyqtSignal(str, bool, bool)
@@ -39,11 +39,12 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         super().__init__(parent)
         self.setupUi(self)
         if spacer:
-            spacerItem = QSpacerItem(20, 1, QSizePolicy.Minimum, QSizePolicy.Expanding)
+            spacerItem = QSpacerItem(
+                20, 1, QSizePolicy.Minimum, QSizePolicy.Expanding)
             self.verticalLayout.addItem(spacerItem)
         else:
-            # change the size policy of the search combo if the spacer is not wanted,
-            # i.e. it is below the to be searched widget
+            # change the size policy of the search combo if the spacer is not
+            # wanted, i.e. it is below the to be searched widget
             sizePolicy = self.findtextCombo.sizePolicy()
             sizePolicy.setHorizontalPolicy(QSizePolicy.Expanding)
             self.findtextCombo.setSizePolicy(sizePolicy)
@@ -57,7 +58,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         
         self.findHistory = []
         
-        self.findtextCombo.lineEdit().returnPressed.connect(self.__findByReturnPressed)
+        self.findtextCombo.lineEdit().returnPressed.connect(
+            self.__findByReturnPressed)
     
     @pyqtSlot()
     def on_closeButton_clicked(self):
@@ -137,7 +139,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
     
     def __findByReturnPressed(self):
         """
-        Private slot to handle the returnPressed signal of the findtext combobox.
+        Private slot to handle the returnPressed signal of the findtext
+        combobox.
         """
         if self.__findBackwards:
             self.on_findPrevButton_clicked()
@@ -169,4 +172,5 @@ class SearchWidget(QWidget, Ui_SearchWidget):
             self.statusLabel.clear()
         else:
             txt = self.findtextCombo.currentText()
-            self.statusLabel.setText(self.trUtf8("'{0}' was not found.").format(txt))
+            self.statusLabel.setText(
+                self.trUtf8("'{0}' was not found.").format(txt))

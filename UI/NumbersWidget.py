@@ -7,7 +7,8 @@
 Module implementing a widget to show numbers in different formats.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel, qVersion
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel, \
+    qVersion
 from PyQt4.QtGui import QWidget, QHeaderView
 
 from E5Gui.E5Application import e5App
@@ -199,7 +200,8 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
             self.binTable.horizontalHeader().setSectionResizeMode(
                 QHeaderView.ResizeToContents)
         else:
-            self.binTable.horizontalHeader().setResizeMode(QHeaderView.ResizeToContents)
+            self.binTable.horizontalHeader().setResizeMode(
+                QHeaderView.ResizeToContents)
         self.__model.setBitsAndValue(self.__bytes * 8, self.__input)
         self.__model.dataChanged.connect(self.__binModelDataChanged)
     

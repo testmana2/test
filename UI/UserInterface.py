@@ -11,11 +11,12 @@ import os
 import sys
 import logging
 
-from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, PYQT_VERSION_STR, QDate, \
-    QIODevice, qVersion, QProcess, QSize, QUrl, QObject, Qt
+from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, \
+    PYQT_VERSION_STR, QDate, QIODevice, qVersion, QProcess, QSize, QUrl, \
+    QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
-    QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QProgressDialog, \
-    QVBoxLayout, QDockWidget, QAction, QLabel
+    QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, \
+    QProgressDialog, QVBoxLayout, QDockWidget, QAction, QLabel
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
@@ -85,7 +86,8 @@ class Redirector(QObject):
         """
         Private method returning number of characters to write.
         
-        @return number of characters buffered or length of buffered line (integer)
+        @return number of characters buffered or length of buffered line
+            (integer)
         """
         return self.buffer.rfind('\n') + 1
         
@@ -113,10 +115,10 @@ class UserInterface(E5MainWindow):
     @signal appendStdout(str) emitted to write data to stdout logger
     @signal preferencesChanged() emitted after the preferences were changed
     @signal reloadAPIs() emitted to reload the api information
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The
+        name of the menu and a reference to the menu are given.
     @signal masterPasswordChanged(str, str) emitted after the master
-            password has been changed with the old and the new password
+        password has been changed with the old and the new password
     """
     appendStderr = pyqtSignal(str)
     appendStdout = pyqtSignal(str)
@@ -132,25 +134,29 @@ class UserInterface(E5MainWindow):
     BottomSide = 2
     RightSide = 3
     
-    def __init__(self, app, locale, splash, plugin, noOpenAtStartup, restartArguments):
+    def __init__(self, app, locale, splash, plugin, noOpenAtStartup,
+                 restartArguments):
         """
         Constructor
         
         @param app reference to the application object (E5Application)
         @param locale locale to be used by the UI (string)
-        @param splash reference to the splashscreen (UI.SplashScreen.SplashScreen)
-        @param plugin filename of a plugin to be loaded (used for plugin development)
+        @param splash reference to the splashscreen
+            (UI.SplashScreen.SplashScreen)
+        @param plugin filename of a plugin to be loaded (used for plugin
+            development)
         @param noOpenAtStartup flag indicating that the open at startup option
             should not be executed (boolean)
-        @param restartArguments list of command line parameters to be used for a
-            restart (list of strings)
+        @param restartArguments list of command line parameters to be used for
+            a restart (list of strings)
         """
         super().__init__()
         self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.__restartArgs = restartArguments[:]
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.maxEditorPathLen = Preferences.getUI("CaptionFilenameLength")
         self.locale = locale
@@ -242,7 +248,8 @@ class UserInterface(E5MainWindow):
         self.browser.designerFile.connect(self.__designer)
         self.browser.linguistFile.connect(self.__linguist4)
         self.browser.projectFile.connect(self.project.openProject)
-        self.browser.multiProjectFile.connect(self.multiProject.openMultiProject)
+        self.browser.multiProjectFile.connect(
+            self.multiProject.openMultiProject)
         self.browser.pixmapEditFile.connect(self.__editPixmap)
         self.browser.pixmapFile.connect(self.__showPixmap)
         self.browser.svgFile.connect(self.__showSvg)
@@ -264,7 +271,8 @@ class UserInterface(E5MainWindow):
             self.viewmanager.openSourceFile)
         self.projectBrowser.psBrowser.closeSourceWindow.connect(
             self.viewmanager.closeWindow)
-        self.projectBrowser.psBrowser.unittestOpen.connect(self.__unittestScript)
+        self.projectBrowser.psBrowser.unittestOpen.connect(
+            self.__unittestScript)
         
         self.projectBrowser.pfBrowser.designerFile.connect(self.__designer)
         self.projectBrowser.pfBrowser.sourceFile.connect(
@@ -284,8 +292,10 @@ class UserInterface(E5MainWindow):
         self.projectBrowser.ptBrowser.linguistFile.connect(self.__linguist4)
         self.projectBrowser.ptBrowser.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.projectBrowser.ptBrowser.trpreview[list].connect(self.__TRPreviewer)
-        self.projectBrowser.ptBrowser.trpreview[list, bool].connect(self.__TRPreviewer)
+        self.projectBrowser.ptBrowser.trpreview[list].connect(
+            self.__TRPreviewer)
+        self.projectBrowser.ptBrowser.trpreview[list, bool].connect(
+            self.__TRPreviewer)
         self.projectBrowser.ptBrowser.closeSourceWindow.connect(
             self.viewmanager.closeWindow)
         self.projectBrowser.ptBrowser.appendStdout.connect(self.appendToStdout)
@@ -311,7 +321,8 @@ class UserInterface(E5MainWindow):
         self.project.sourceFile.connect(self.viewmanager.openSourceFile)
         self.project.projectOpened.connect(self.viewmanager.projectOpened)
         self.project.projectClosed.connect(self.viewmanager.projectClosed)
-        self.project.projectFileRenamed.connect(self.viewmanager.projectFileRenamed)
+        self.project.projectFileRenamed.connect(
+            self.viewmanager.projectFileRenamed)
         self.project.lexerAssociationsChanged.connect(
             self.viewmanager.projectLexerAssociationsChanged)
         self.project.newProject.connect(self.__newProject)
@@ -319,15 +330,18 @@ class UserInterface(E5MainWindow):
         self.project.projectOpened.connect(self.__activateProjectBrowser)
         self.project.projectClosed.connect(self.__projectClosed)
         
-        self.multiProject.multiProjectOpened.connect(self.__activateMultiProjectBrowser)
+        self.multiProject.multiProjectOpened.connect(
+            self.__activateMultiProjectBrowser)
         
         self.debuggerUI.resetUI.connect(self.viewmanager.handleResetUI)
         self.debuggerUI.resetUI.connect(self.debugViewer.handleResetUI)
         self.debuggerUI.resetUI.connect(self.__debuggingDone)
-        self.debuggerUI.debuggingStarted.connect(self.browser.handleProgramChange)
+        self.debuggerUI.debuggingStarted.connect(
+            self.browser.handleProgramChange)
         self.debuggerUI.debuggingStarted.connect(
             self.debugViewer.exceptionLogger.debuggingStarted)
-        self.debuggerUI.debuggingStarted.connect(self.debugViewer.handleDebuggingStarted)
+        self.debuggerUI.debuggingStarted.connect(
+            self.debugViewer.handleDebuggingStarted)
         self.debuggerUI.debuggingStarted.connect(self.__programChange)
         self.debuggerUI.debuggingStarted.connect(self.__debuggingStarted)
         self.debuggerUI.compileForms.connect(
@@ -338,8 +352,10 @@ class UserInterface(E5MainWindow):
         
         debugServer.passiveDebugStarted.connect(
             self.debugViewer.exceptionLogger.debuggingStarted)
-        debugServer.passiveDebugStarted.connect(self.debugViewer.handleDebuggingStarted)
-        debugServer.clientException.connect(self.debugViewer.exceptionLogger.addException)
+        debugServer.passiveDebugStarted.connect(
+            self.debugViewer.handleDebuggingStarted)
+        debugServer.clientException.connect(
+            self.debugViewer.exceptionLogger.addException)
         debugServer.clientLine.connect(
             self.debugViewer.breakpointViewer.highlightBreakpoint)
         debugServer.clientProcessStdout.connect(self.appendToStdout)
@@ -355,7 +371,8 @@ class UserInterface(E5MainWindow):
         self.appendStderr.connect(self.logViewer.appendToStderr)
         self.preferencesChanged.connect(self.shell.handlePreferencesChanged)
         self.preferencesChanged.connect(self.project.handlePreferencesChanged)
-        self.preferencesChanged.connect(self.projectBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.handlePreferencesChanged)
         self.preferencesChanged.connect(
             self.projectBrowser.psBrowser.handlePreferencesChanged)
         self.preferencesChanged.connect(
@@ -369,7 +386,8 @@ class UserInterface(E5MainWindow):
         self.preferencesChanged.connect(
             self.projectBrowser.poBrowser.handlePreferencesChanged)
         self.preferencesChanged.connect(self.browser.handlePreferencesChanged)
-        self.preferencesChanged.connect(self.taskViewer.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.taskViewer.handlePreferencesChanged)
         self.preferencesChanged.connect(self.pluginManager.preferencesChanged)
         self.preferencesChanged.connect(debugServer.preferencesChanged)
         self.preferencesChanged.connect(self.debugViewer.preferencesChanged)
@@ -380,10 +398,12 @@ class UserInterface(E5MainWindow):
         self.viewmanager.editorOpened.connect(self.__editorOpened)
         self.viewmanager.changeCaption.connect(self.__setWindowCaption)
         self.viewmanager.checkActions.connect(self.__checkActions)
-        self.viewmanager.editorChanged.connect(self.projectBrowser.handleEditorChanged)
+        self.viewmanager.editorChanged.connect(
+            self.projectBrowser.handleEditorChanged)
         self.viewmanager.editorLineChanged.connect(
             self.projectBrowser.handleEditorLineChanged)
-        self.viewmanager.checkActions.connect(self.cooperation.checkEditorActions)
+        self.viewmanager.checkActions.connect(
+            self.cooperation.checkEditorActions)
         
         self.shell.zoomValueChanged.connect(self.viewmanager.zoomValueChanged)
         
@@ -413,7 +433,8 @@ class UserInterface(E5MainWindow):
         
         # create a dummy help window for shortcuts handling
         from Helpviewer.HelpWindow import HelpWindow
-        self.dummyHelpViewer = HelpWindow(None, '.', None, 'help viewer', True, True)
+        self.dummyHelpViewer = \
+            HelpWindow(None, '.', None, 'help viewer', True, True)
         
         # register all relevant objects
         splash.showMessage(self.trUtf8("Registering Objects..."))
@@ -469,7 +490,8 @@ class UserInterface(E5MainWindow):
 
         # now fire up the single application server
         if Preferences.getUI("SingleApplicationMode"):
-            splash.showMessage(self.trUtf8("Initializing Single Application Server..."))
+            splash.showMessage(
+                self.trUtf8("Initializing Single Application Server..."))
             self.SAServer = E5SingleApplicationServer()
         else:
             self.SAServer = None
@@ -486,7 +508,8 @@ class UserInterface(E5MainWindow):
         
         # restore toolbar manager state
         splash.showMessage(self.trUtf8("Restoring Toolbarmanager..."))
-        self.toolbarManager.restoreState(Preferences.getUI("ToolbarManagerState"))
+        self.toolbarManager.restoreState(
+            Preferences.getUI("ToolbarManagerState"))
         
         # now activate the initial view profile
         splash.showMessage(self.trUtf8("Setting View Profile..."))
@@ -548,7 +571,8 @@ class UserInterface(E5MainWindow):
         layout.addWidget(self.viewmanager)
         layout.addWidget(self.viewmanager.searchWidget())
         layout.addWidget(self.viewmanager.replaceWidget())
-        self.viewmanager.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        self.viewmanager.setSizePolicy(
+            QSizePolicy.Preferred, QSizePolicy.Expanding)
         leftWidget.setLayout(layout)
         self.viewmanager.searchWidget().hide()
         self.viewmanager.replaceWidget().hide()
@@ -574,7 +598,8 @@ class UserInterface(E5MainWindow):
             self.__createSidebarsLayout(debugServer)
         
         else:
-            raise ValueError("Wrong layout type given ({0})".format(self.layout))
+            raise ValueError("Wrong layout type given ({0})".format(
+                self.layout))
         logging.debug("Created Layout")
 
     def __createToolboxesLayout(self, debugServer):
@@ -595,7 +620,8 @@ class UserInterface(E5MainWindow):
         self.hToolboxDock = self.__createDockWindow("hToolboxDock")
         self.hToolbox = E5HorizontalToolBox(self.hToolboxDock)
         self.__setupDockWindow(self.hToolboxDock, Qt.BottomDockWidgetArea,
-                               self.hToolbox, self.trUtf8("Horizontal Toolbox"))
+                               self.hToolbox,
+                               self.trUtf8("Horizontal Toolbox"))
         
         # Create the right toolbox
         self.rToolboxDock = self.__createDockWindow("rToolboxDock")
@@ -669,7 +695,8 @@ class UserInterface(E5MainWindow):
         else:
             # Create the shell
             from QScintilla.Shell import ShellAssembly
-            self.shellAssembly = ShellAssembly(debugServer, self.viewmanager, True)
+            self.shellAssembly = \
+                ShellAssembly(debugServer, self.viewmanager, True)
             self.shell = self.shellAssembly.shell()
             self.hToolbox.insertItem(0, self.shellAssembly,
                                      UI.PixmapCache.getIcon("shell.png"),
@@ -754,15 +781,17 @@ class UserInterface(E5MainWindow):
             None,
             embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
-        self.rightSidebar.addTab(self.debugViewer,
-            UI.PixmapCache.getIcon("debugViewer.png"), self.trUtf8("Debug-Viewer"))
+        self.rightSidebar.addTab(
+            self.debugViewer, UI.PixmapCache.getIcon("debugViewer.png"),
+            self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
         logging.debug("Creating Chat Widget...")
         from Cooperation.ChatWidget import ChatWidget
         self.cooperation = ChatWidget(self)
-        self.rightSidebar.addTab(self.cooperation,
-            UI.PixmapCache.getIcon("cooperation.png"), self.trUtf8("Cooperation"))
+        self.rightSidebar.addTab(
+            self.cooperation, UI.PixmapCache.getIcon("cooperation.png"),
+            self.trUtf8("Cooperation"))
         
         # Create the IRC part of the user interface
         logging.debug("Creating IRC Widget...")
@@ -776,16 +805,16 @@ class UserInterface(E5MainWindow):
         from Tasks.TaskViewer import TaskViewer
         self.taskViewer = TaskViewer(None, self.project)
         self.bottomSidebar.addTab(self.taskViewer,
-                              UI.PixmapCache.getIcon("task.png"),
-                              self.trUtf8("Task-Viewer"))
+                                  UI.PixmapCache.getIcon("task.png"),
+                                  self.trUtf8("Task-Viewer"))
 
         # Create the log viewer part of the user interface
         logging.debug("Creating Log Viewer...")
         from .LogView import LogViewer
         self.logViewer = LogViewer()
         self.bottomSidebar.addTab(self.logViewer,
-                              UI.PixmapCache.getIcon("logViewer.png"),
-                              self.trUtf8("Log-Viewer"))
+                                  UI.PixmapCache.getIcon("logViewer.png"),
+                                  self.trUtf8("Log-Viewer"))
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -793,11 +822,12 @@ class UserInterface(E5MainWindow):
             # Create the shell
             logging.debug("Creating Shell...")
             from QScintilla.Shell import ShellAssembly
-            self.shellAssembly = ShellAssembly(debugServer, self.viewmanager, True)
+            self.shellAssembly = \
+                ShellAssembly(debugServer, self.viewmanager, True)
             self.shell = self.shellAssembly.shell()
             self.bottomSidebar.insertTab(0, self.shellAssembly,
-                                     UI.PixmapCache.getIcon("shell.png"),
-                                     self.trUtf8("Shell"))
+                                         UI.PixmapCache.getIcon("shell.png"),
+                                         self.trUtf8("Shell"))
 
         if self.embeddedFileBrowser == 0:   # separate window
             # Create the file browser
@@ -908,7 +938,8 @@ class UserInterface(E5MainWindow):
                 if index != -1:
                     container.removeItem(index)
         elif self.layout == "Sidebars":
-            for container in [self.leftSidebar, self.bottomSidebar, self.rightSidebar]:
+            for container in [self.leftSidebar, self.bottomSidebar,
+                              self.rightSidebar]:
                 index = container.indexOf(widget)
                 if index != -1:
                     container.removeTab(index)
@@ -1076,7 +1107,8 @@ class UserInterface(E5MainWindow):
 
     def __setupDockWindow(self, dock, where, widget, caption):
         """
-        Private method to configure the dock window created with __createDockWindow().
+        Private method to configure the dock window created with
+        __createDockWindow().
         
         @param dock the dock window (QDockWindow)
         @param where dock area to be docked to (Qt.DockWidgetArea)
@@ -1105,7 +1137,8 @@ class UserInterface(E5MainWindow):
         
         if self.passiveMode:
             if not self.capProject and not self.capEditor:
-                self.setWindowTitle(self.trUtf8("{0} - Passive Mode").format(Program))
+                self.setWindowTitle(
+                    self.trUtf8("{0} - Passive Mode").format(Program))
             elif self.capProject and not self.capEditor:
                 self.setWindowTitle(self.trUtf8("{0} - {1} - Passive Mode")\
                     .format(self.capProject, Program))
@@ -1113,15 +1146,18 @@ class UserInterface(E5MainWindow):
                 self.setWindowTitle(self.trUtf8("{0} - {1} - Passive Mode")\
                     .format(self.capEditor, Program))
             else:
-                self.setWindowTitle(self.trUtf8("{0} - {1} - {2} - Passive Mode")\
+                self.setWindowTitle(
+                    self.trUtf8("{0} - {1} - {2} - Passive Mode")\
                     .format(self.capProject, self.capEditor, Program))
         else:
             if not self.capProject and not self.capEditor:
                 self.setWindowTitle(Program)
             elif self.capProject and not self.capEditor:
-                self.setWindowTitle("{0} - {1}".format(self.capProject, Program))
+                self.setWindowTitle(
+                    "{0} - {1}".format(self.capProject, Program))
             elif not self.capProject and self.capEditor:
-                self.setWindowTitle("{0} - {1}".format(self.capEditor, Program))
+                self.setWindowTitle(
+                    "{0} - {1}".format(self.capEditor, Program))
             else:
                 self.setWindowTitle("{0} - {1} - {2}".format(
                     self.capProject, self.capEditor, Program))
@@ -1141,9 +1177,9 @@ class UserInterface(E5MainWindow):
         self.exitAct.setStatusTip(self.trUtf8('Quit the IDE'))
         self.exitAct.setWhatsThis(self.trUtf8(
             """<b>Quit the IDE</b>"""
-            """<p>This quits the IDE. Any unsaved changes may be saved first."""
-            """ Any Python program being debugged will be stopped and the"""
-            """ preferences will be written to disc.</p>"""
+            """<p>This quits the IDE. Any unsaved changes may be saved"""
+            """ first. Any Python program being debugged will be stopped"""
+            """ and the preferences will be written to disc.</p>"""
         ))
         self.exitAct.triggered[()].connect(self.__quit)
         self.exitAct.setMenuRole(QAction.QuitRole)
@@ -1154,14 +1190,16 @@ class UserInterface(E5MainWindow):
                 self.trUtf8('New &Window'),
                 QKeySequence(self.trUtf8("Ctrl+Shift+N", "File|New Window")),
                 0, self, 'new_window')
-        self.newWindowAct.setStatusTip(self.trUtf8('Open a new eric5 instance'))
+        self.newWindowAct.setStatusTip(self.trUtf8(
+            'Open a new eric5 instance'))
         self.newWindowAct.setWhatsThis(self.trUtf8(
             """<b>New Window</b>"""
             """<p>This opens a new instance of the eric5 IDE.</p>"""
         ))
         self.newWindowAct.triggered[()].connect(self.__newWindow)
         self.actions.append(self.newWindowAct)
-        self.newWindowAct.setEnabled(not Preferences.getUI("SingleApplicationMode"))
+        self.newWindowAct.setEnabled(
+            not Preferences.getUI("SingleApplicationMode"))
         
         self.viewProfileActGrp = createActionGroup(self, "viewprofiles", True)
         
@@ -1170,7 +1208,8 @@ class UserInterface(E5MainWindow):
                 self.trUtf8('Edit Profile'),
                 0, 0,
                 self.viewProfileActGrp, 'edit_profile', True)
-        self.setEditProfileAct.setStatusTip(self.trUtf8('Activate the edit view profile'))
+        self.setEditProfileAct.setStatusTip(self.trUtf8(
+            'Activate the edit view profile'))
         self.setEditProfileAct.setWhatsThis(self.trUtf8(
             """<b>Edit Profile</b>"""
             """<p>Activate the "Edit View Profile". Windows being shown,"""
@@ -1205,7 +1244,8 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Project-Viewer window."))
         self.pbActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Project-Viewer</b>"""
-            """<p>This switches the input focus to the Project-Viewer window.</p>"""
+            """<p>This switches the input focus to the Project-Viewer"""
+            """ window.</p>"""
         ))
         self.pbActivateAct.triggered[()].connect(self.__activateProjectBrowser)
         self.actions.append(self.pbActivateAct)
@@ -1220,9 +1260,11 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Multiproject-Viewer window."))
         self.mpbActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Multiproject-Viewer</b>"""
-            """<p>This switches the input focus to the Multiproject-Viewer window.</p>"""
+            """<p>This switches the input focus to the Multiproject-Viewer"""
+            """ window.</p>"""
         ))
-        self.mpbActivateAct.triggered[()].connect(self.__activateMultiProjectBrowser)
+        self.mpbActivateAct.triggered[()].connect(
+            self.__activateMultiProjectBrowser)
         self.actions.append(self.mpbActivateAct)
         self.addAction(self.mpbActivateAct)
 
@@ -1235,9 +1277,11 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Debug-Viewer window."))
         self.debugViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Debug-Viewer</b>"""
-            """<p>This switches the input focus to the Debug-Viewer window.</p>"""
+            """<p>This switches the input focus to the Debug-Viewer"""
+            """ window.</p>"""
         ))
-        self.debugViewerActivateAct.triggered[()].connect(self.__activateDebugViewer)
+        self.debugViewerActivateAct.triggered[()].connect(
+            self.__activateDebugViewer)
         self.actions.append(self.debugViewerActivateAct)
         self.addAction(self.debugViewerActivateAct)
 
@@ -1265,7 +1309,8 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the File-Browser window."))
         self.browserActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate File-Browser</b>"""
-            """<p>This switches the input focus to the File-Browser window.</p>"""
+            """<p>This switches the input focus to the File-Browser"""
+            """ window.</p>"""
         ))
         self.browserActivateAct.triggered[()].connect(self.__activateBrowser)
         self.actions.append(self.browserActivateAct)
@@ -1280,9 +1325,11 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Log-Viewer window."))
         self.logViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Log-Viewer</b>"""
-            """<p>This switches the input focus to the Log-Viewer window.</p>"""
+            """<p>This switches the input focus to the Log-Viewer"""
+            """ window.</p>"""
         ))
-        self.logViewerActivateAct.triggered[()].connect(self.__activateLogViewer)
+        self.logViewerActivateAct.triggered[()].connect(
+            self.__activateLogViewer)
         self.actions.append(self.logViewerActivateAct)
         self.addAction(self.logViewerActivateAct)
 
@@ -1295,30 +1342,35 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Task-Viewer window."))
         self.taskViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Task-Viewer</b>"""
-            """<p>This switches the input focus to the Task-Viewer window.</p>"""
+            """<p>This switches the input focus to the Task-Viewer"""
+            """ window.</p>"""
         ))
-        self.taskViewerActivateAct.triggered[()].connect(self.__activateTaskViewer)
+        self.taskViewerActivateAct.triggered[()].connect(
+            self.__activateTaskViewer)
         self.actions.append(self.taskViewerActivateAct)
         self.addAction(self.taskViewerActivateAct)
 
-        self.templateViewerActivateAct = E5Action(self.trUtf8('Template-Viewer'),
-                self.trUtf8('Templ&ate-Viewer'),
-                QKeySequence(self.trUtf8("Alt+Shift+A")),
-                0, self,
-                'template_viewer_activate')
+        self.templateViewerActivateAct = E5Action(
+            self.trUtf8('Template-Viewer'),
+            self.trUtf8('Templ&ate-Viewer'),
+            QKeySequence(self.trUtf8("Alt+Shift+A")),
+            0, self,
+            'template_viewer_activate')
         self.templateViewerActivateAct.setStatusTip(self.trUtf8(
             "Switch the input focus to the Template-Viewer window."))
         self.templateViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Template-Viewer</b>"""
-            """<p>This switches the input focus to the Template-Viewer window.</p>"""
+            """<p>This switches the input focus to the Template-Viewer"""
+            """ window.</p>"""
         ))
         self.templateViewerActivateAct.triggered[()].connect(
             self.__activateTemplateViewer)
         self.actions.append(self.templateViewerActivateAct)
         self.addAction(self.templateViewerActivateAct)
 
-        self.ltAct = E5Action(self.trUtf8('Left Toolbox'),
-                self.trUtf8('&Left Toolbox'), 0, 0, self, 'vertical_toolbox', True)
+        self.ltAct = E5Action(
+            self.trUtf8('Left Toolbox'),
+            self.trUtf8('&Left Toolbox'), 0, 0, self, 'vertical_toolbox', True)
         self.ltAct.setStatusTip(self.trUtf8('Toggle the Left Toolbox window'))
         self.ltAct.setWhatsThis(self.trUtf8(
             """<b>Toggle the Left Toolbox window</b>"""
@@ -1328,8 +1380,10 @@ class UserInterface(E5MainWindow):
         self.ltAct.triggered[()].connect(self.__toggleLeftToolbox)
         self.actions.append(self.ltAct)
         
-        self.rtAct = E5Action(self.trUtf8('Right Toolbox'),
-                self.trUtf8('&Right Toolbox'), 0, 0, self, 'vertical_toolbox', True)
+        self.rtAct = E5Action(
+            self.trUtf8('Right Toolbox'),
+            self.trUtf8('&Right Toolbox'),
+            0, 0, self, 'vertical_toolbox', True)
         self.rtAct.setStatusTip(self.trUtf8('Toggle the Right Toolbox window'))
         self.rtAct.setWhatsThis(self.trUtf8(
             """<b>Toggle the Right Toolbox window</b>"""
@@ -1342,11 +1396,12 @@ class UserInterface(E5MainWindow):
         self.htAct = E5Action(self.trUtf8('Horizontal Toolbox'),
                 self.trUtf8('&Horizontal Toolbox'), 0, 0, self,
                 'horizontal_toolbox', True)
-        self.htAct.setStatusTip(self.trUtf8('Toggle the Horizontal Toolbox window'))
+        self.htAct.setStatusTip(self.trUtf8(
+            'Toggle the Horizontal Toolbox window'))
         self.htAct.setWhatsThis(self.trUtf8(
             """<b>Toggle the Horizontal Toolbox window</b>"""
-            """<p>If the Horizontal Toolbox window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
+            """<p>If the Horizontal Toolbox window is hidden then display"""
+            """ it. If it is displayed then close it.</p>"""
         ))
         self.htAct.triggered[()].connect(self.__toggleHorizontalToolbox)
         self.actions.append(self.htAct)
@@ -1362,9 +1417,11 @@ class UserInterface(E5MainWindow):
         self.lsbAct.triggered[()].connect(self.__toggleLeftSidebar)
         self.actions.append(self.lsbAct)
         
-        self.rsbAct = E5Action(self.trUtf8('Right Sidebar'),
-                self.trUtf8('&Right Sidebar'), 0, 0, self, 'right_sidebar', True)
-        self.rsbAct.setStatusTip(self.trUtf8('Toggle the right sidebar window'))
+        self.rsbAct = E5Action(
+            self.trUtf8('Right Sidebar'),
+            self.trUtf8('&Right Sidebar'), 0, 0, self, 'right_sidebar', True)
+        self.rsbAct.setStatusTip(self.trUtf8(
+            'Toggle the right sidebar window'))
         self.rsbAct.setWhatsThis(self.trUtf8(
             """<b>Toggle the right sidebar window</b>"""
             """<p>If the right sidebar window is hidden then display it."""
@@ -1376,7 +1433,8 @@ class UserInterface(E5MainWindow):
         self.bsbAct = E5Action(self.trUtf8('Bottom Sidebar'),
                 self.trUtf8('&Bottom Sidebar'), 0, 0, self,
                 'bottom_sidebar', True)
-        self.bsbAct.setStatusTip(self.trUtf8('Toggle the bottom sidebar window'))
+        self.bsbAct.setStatusTip(self.trUtf8(
+            'Toggle the bottom sidebar window'))
         self.bsbAct.setWhatsThis(self.trUtf8(
             """<b>Toggle the bottom sidebar window</b>"""
             """<p>If the bottom sidebar window is hidden then display it."""
@@ -1395,7 +1453,8 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Cooperation-Viewer window."))
         self.cooperationViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Cooperation-Viewer</b>"""
-            """<p>This switches the input focus to the Cooperation-Viewer window.</p>"""
+            """<p>This switches the input focus to the Cooperation-Viewer"""
+            """ window.</p>"""
         ))
         self.cooperationViewerActivateAct.triggered[()].connect(
             self.activateCooperationViewer)
@@ -1429,9 +1488,11 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Symbols-Viewer window."))
         self.symbolsViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Symbols-Viewer</b>"""
-            """<p>This switches the input focus to the Symbols-Viewer window.</p>"""
+            """<p>This switches the input focus to the Symbols-Viewer"""
+            """ window.</p>"""
         ))
-        self.symbolsViewerActivateAct.triggered[()].connect(self.__activateSymbolsViewer)
+        self.symbolsViewerActivateAct.triggered[()].connect(
+            self.__activateSymbolsViewer)
         self.actions.append(self.symbolsViewerActivateAct)
         self.addAction(self.symbolsViewerActivateAct)
 
@@ -1445,9 +1506,11 @@ class UserInterface(E5MainWindow):
             "Switch the input focus to the Numbers-Viewer window."))
         self.numbersViewerActivateAct.setWhatsThis(self.trUtf8(
             """<b>Activate Numbers-Viewer</b>"""
-            """<p>This switches the input focus to the Numbers-Viewer window.</p>"""
+            """<p>This switches the input focus to the Numbers-Viewer"""
+            """ window.</p>"""
         ))
-        self.numbersViewerActivateAct.triggered[()].connect(self.__activateNumbersViewer)
+        self.numbersViewerActivateAct.triggered[()].connect(
+            self.__activateNumbersViewer)
         self.actions.append(self.numbersViewerActivateAct)
         self.addAction(self.numbersViewerActivateAct)
 
@@ -1459,11 +1522,11 @@ class UserInterface(E5MainWindow):
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
             """<b>Display context sensitive help</b>"""
-            """<p>In What's This? mode, the mouse cursor shows an arrow with a question"""
-            """ mark, and you can click on the interface elements to get a short"""
-            """ description of what they do and how to use them. In dialogs, this"""
-            """ feature can be accessed using the context help button in the"""
-            """ titlebar.</p>"""
+            """<p>In What's This? mode, the mouse cursor shows an arrow with"""
+            """ a question mark, and you can click on the interface elements"""
+            """ to get a short description of what they do and how to use"""
+            """ them. In dialogs, this feature can be accessed using the"""
+            """ context help button in the titlebar.</p>"""
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
         self.actions.append(self.whatsThisAct)
@@ -1473,15 +1536,16 @@ class UserInterface(E5MainWindow):
                 self.trUtf8('&Helpviewer...'),
                 QKeySequence(self.trUtf8("F1")),
                 0, self, 'helpviewer')
-        self.helpviewerAct.setStatusTip(self.trUtf8('Open the helpviewer window'))
+        self.helpviewerAct.setStatusTip(self.trUtf8(
+            'Open the helpviewer window'))
         self.helpviewerAct.setWhatsThis(self.trUtf8(
             """<b>Helpviewer</b>"""
             """<p>Display the eric5 web browser. This window will show"""
-            """ HTML help files and help from Qt help collections. It has the"""
-            """ capability to navigate to links, set bookmarks, print the displayed"""
-            """ help and some more features. You may use it to browse the internet"""
-            """ as well</p><p>If called with a word selected, this word is search"""
-            """ in the Qt help collection.</p>"""
+            """ HTML help files and help from Qt help collections. It has"""
+            """ the capability to navigate to links, set bookmarks, print"""
+            """ the displayed help and some more features. You may use it to"""
+            """ browse the internet as well</p><p>If called with a word"""
+            """ selected, this word is search in the Qt help collection.</p>"""
         ))
         self.helpviewerAct.triggered[()].connect(self.__helpViewer)
         self.actions.append(self.helpviewerAct)
@@ -1493,7 +1557,8 @@ class UserInterface(E5MainWindow):
       
         self.versionAct = E5Action(self.trUtf8('Show Versions'),
                 self.trUtf8('Show &Versions'), 0, 0, self, 'show_versions')
-        self.versionAct.setStatusTip(self.trUtf8('Display version information'))
+        self.versionAct.setStatusTip(self.trUtf8(
+            'Display version information'))
         self.versionAct.setWhatsThis(self.trUtf8(
             """<b>Show Versions</b>"""
             """<p>Display version information.</p>"""
@@ -1501,8 +1566,9 @@ class UserInterface(E5MainWindow):
         self.versionAct.triggered[()].connect(self.__showVersions)
         self.actions.append(self.versionAct)
 
-        self.checkUpdateAct = E5Action(self.trUtf8('Check for Updates'),
-                self.trUtf8('Check for &Updates...'), 0, 0, self, 'check_updates')
+        self.checkUpdateAct = E5Action(
+            self.trUtf8('Check for Updates'),
+            self.trUtf8('Check for &Updates...'), 0, 0, self, 'check_updates')
         self.checkUpdateAct.setStatusTip(self.trUtf8('Check for Updates'))
         self.checkUpdateAct.setWhatsThis(self.trUtf8(
             """<b>Check for Updates...</b>"""
@@ -1511,9 +1577,10 @@ class UserInterface(E5MainWindow):
         self.checkUpdateAct.triggered[()].connect(self.performVersionCheck)
         self.actions.append(self.checkUpdateAct)
     
-        self.showVersionsAct = E5Action(self.trUtf8('Show downloadable versions'),
-                self.trUtf8('Show &downloadable versions...'),
-                0, 0, self, 'show_downloadable_versions')
+        self.showVersionsAct = E5Action(
+            self.trUtf8('Show downloadable versions'),
+            self.trUtf8('Show &downloadable versions...'),
+            0, 0, self, 'show_downloadable_versions')
         self.showVersionsAct.setStatusTip(
             self.trUtf8('Show the versions available for download'))
         self.showVersionsAct.setWhatsThis(self.trUtf8(
@@ -1521,7 +1588,8 @@ class UserInterface(E5MainWindow):
             """<p>Shows the eric5 versions available for download """
             """from the internet.</p>"""
                              ))
-        self.showVersionsAct.triggered[()].connect(self.showAvailableVersionsInfo)
+        self.showVersionsAct.triggered[()].connect(
+            self.showAvailableVersionsInfo)
         self.actions.append(self.showVersionsAct)
 
         self.reportBugAct = E5Action(self.trUtf8('Report Bug'),
@@ -1534,9 +1602,11 @@ class UserInterface(E5MainWindow):
         self.reportBugAct.triggered[()].connect(self.__reportBug)
         self.actions.append(self.reportBugAct)
         
-        self.requestFeatureAct = E5Action(self.trUtf8('Request Feature'),
-                self.trUtf8('Request &Feature...'), 0, 0, self, 'request_feature')
-        self.requestFeatureAct.setStatusTip(self.trUtf8('Send a feature request'))
+        self.requestFeatureAct = E5Action(
+            self.trUtf8('Request Feature'),
+            self.trUtf8('Request &Feature...'), 0, 0, self, 'request_feature')
+        self.requestFeatureAct.setStatusTip(self.trUtf8(
+            'Send a feature request'))
         self.requestFeatureAct.setWhatsThis(self.trUtf8(
             """<b>Request Feature...</b>"""
             """<p>Opens a dialog to send a feature request.</p>"""
@@ -1580,7 +1650,8 @@ class UserInterface(E5MainWindow):
             'Rerun failed tests of the last run'))
         self.utRerunFailedAct.setWhatsThis(self.trUtf8(
             """<b>Rerun Failed Tests</b>"""
-            """<p>Rerun all tests that failed during the last unittest run.</p>"""
+            """<p>Rerun all tests that failed during the last unittest"""
+            """ run.</p>"""
         ))
         self.utRerunFailedAct.triggered[()].connect(self.__unittestRerunFailed)
         self.utRerunFailedAct.setEnabled(False)
@@ -1590,7 +1661,8 @@ class UserInterface(E5MainWindow):
             UI.PixmapCache.getIcon("unittestScript.png"),
             self.trUtf8('Unittest &Script...'),
             0, 0, self.utActGrp, 'unittest_script')
-        self.utScriptAct.setStatusTip(self.trUtf8('Run unittest with current script'))
+        self.utScriptAct.setStatusTip(self.trUtf8(
+            'Run unittest with current script'))
         self.utScriptAct.setWhatsThis(self.trUtf8(
             """<b>Unittest Script</b>"""
             """<p>Run unittest with current script.</p>"""
@@ -1603,7 +1675,8 @@ class UserInterface(E5MainWindow):
             UI.PixmapCache.getIcon("unittestProject.png"),
             self.trUtf8('Unittest &Project...'),
             0, 0, self.utActGrp, 'unittest_project')
-        self.utProjectAct.setStatusTip(self.trUtf8('Run unittest with current project'))
+        self.utProjectAct.setStatusTip(self.trUtf8(
+            'Run unittest with current project'))
         self.utProjectAct.setWhatsThis(self.trUtf8(
             """<b>Unittest Project</b>"""
             """<p>Run unittest with current project.</p>"""
@@ -1668,10 +1741,13 @@ class UserInterface(E5MainWindow):
         self.uipreviewerAct.triggered[()].connect(self.__UIPreviewer)
         self.actions.append(self.uipreviewerAct)
         
-        self.trpreviewerAct = E5Action(self.trUtf8('Translations Previewer'),
-                UI.PixmapCache.getIcon("trPreviewer.png"),
-                self.trUtf8('&Translations Previewer...'), 0, 0, self, 'tr_previewer')
-        self.trpreviewerAct.setStatusTip(self.trUtf8('Start the Translations Previewer'))
+        self.trpreviewerAct = E5Action(
+            self.trUtf8('Translations Previewer'),
+            UI.PixmapCache.getIcon("trPreviewer.png"),
+            self.trUtf8('&Translations Previewer...'),
+            0, 0, self, 'tr_previewer')
+        self.trpreviewerAct.setStatusTip(self.trUtf8(
+            'Start the Translations Previewer'))
         self.trpreviewerAct.setWhatsThis(self.trUtf8(
             """<b>Translations Previewer</b>"""
             """<p>Start the Translations Previewer.</p>"""
@@ -1731,7 +1807,8 @@ class UserInterface(E5MainWindow):
                 UI.PixmapCache.getIcon("ericWeb.png"),
                 self.trUtf8('eric5 &Web Browser...'),
                 0, 0, self, 'web_browser')
-        self.webBrowserAct.setStatusTip(self.trUtf8('Start the eric5 Web Browser'))
+        self.webBrowserAct.setStatusTip(self.trUtf8(
+            'Start the eric5 Web Browser'))
         self.webBrowserAct.setWhatsThis(self.trUtf8(
             """<b>eric5 Web Browser</b>"""
             """<p>Browse the Internet with the eric5 Web Browser.</p>"""
@@ -1743,7 +1820,8 @@ class UserInterface(E5MainWindow):
                 UI.PixmapCache.getIcon("iconEditor.png"),
                 self.trUtf8('&Icon Editor...'),
                 0, 0, self, 'icon_editor')
-        self.iconEditorAct.setStatusTip(self.trUtf8('Start the eric5 Icon Editor'))
+        self.iconEditorAct.setStatusTip(self.trUtf8(
+            'Start the eric5 Icon Editor'))
         self.iconEditorAct.setWhatsThis(self.trUtf8(
             """<b>Icon Editor</b>"""
             """<p>Starts the eric5 Icon Editor for editing simple icons.</p>"""
@@ -1755,10 +1833,12 @@ class UserInterface(E5MainWindow):
                 UI.PixmapCache.getIcon("ericSnap.png"),
                 self.trUtf8('&Snapshot...'),
                 0, 0, self, 'snapshot')
-        self.snapshotAct.setStatusTip(self.trUtf8('Take snapshots of a screen region'))
+        self.snapshotAct.setStatusTip(self.trUtf8(
+            'Take snapshots of a screen region'))
         self.snapshotAct.setWhatsThis(self.trUtf8(
             """<b>Snapshot</b>"""
-            """<p>This opens a dialog to take snapshots of a screen region.</p>"""
+            """<p>This opens a dialog to take snapshots of a screen"""
+            """ region.</p>"""
         ))
         self.snapshotAct.triggered[()].connect(self.__snapshot)
         self.actions.append(self.snapshotAct)
@@ -1766,7 +1846,8 @@ class UserInterface(E5MainWindow):
         self.prefAct = E5Action(self.trUtf8('Preferences'),
                 UI.PixmapCache.getIcon("configure.png"),
                 self.trUtf8('&Preferences...'), 0, 0, self, 'preferences')
-        self.prefAct.setStatusTip(self.trUtf8('Set the prefered configuration'))
+        self.prefAct.setStatusTip(self.trUtf8(
+            'Set the prefered configuration'))
         self.prefAct.setWhatsThis(self.trUtf8(
             """<b>Preferences</b>"""
             """<p>Set the configuration items of the application"""
@@ -1776,10 +1857,13 @@ class UserInterface(E5MainWindow):
         self.prefAct.setMenuRole(QAction.PreferencesRole)
         self.actions.append(self.prefAct)
 
-        self.prefExportAct = E5Action(self.trUtf8('Export Preferences'),
-                UI.PixmapCache.getIcon("configureExport.png"),
-                self.trUtf8('E&xport Preferences...'), 0, 0, self, 'export_preferences')
-        self.prefExportAct.setStatusTip(self.trUtf8('Export the current configuration'))
+        self.prefExportAct = E5Action(
+            self.trUtf8('Export Preferences'),
+            UI.PixmapCache.getIcon("configureExport.png"),
+            self.trUtf8('E&xport Preferences...'),
+            0, 0, self, 'export_preferences')
+        self.prefExportAct.setStatusTip(self.trUtf8(
+            'Export the current configuration'))
         self.prefExportAct.setWhatsThis(self.trUtf8(
             """<b>Export Preferences</b>"""
             """<p>Export the current configuration to a file.</p>"""
@@ -1787,9 +1871,11 @@ class UserInterface(E5MainWindow):
         self.prefExportAct.triggered[()].connect(self.__exportPreferences)
         self.actions.append(self.prefExportAct)
 
-        self.prefImportAct = E5Action(self.trUtf8('Import Preferences'),
-                UI.PixmapCache.getIcon("configureImport.png"),
-                self.trUtf8('I&mport Preferences...'), 0, 0, self, 'import_preferences')
+        self.prefImportAct = E5Action(
+            self.trUtf8('Import Preferences'),
+            UI.PixmapCache.getIcon("configureImport.png"),
+            self.trUtf8('I&mport Preferences...'),
+            0, 0, self, 'import_preferences')
         self.prefImportAct.setStatusTip(self.trUtf8(
             'Import a previously exported configuration'))
         self.prefImportAct.setWhatsThis(self.trUtf8(
@@ -1801,7 +1887,8 @@ class UserInterface(E5MainWindow):
 
         self.reloadAPIsAct = E5Action(self.trUtf8('Reload APIs'),
                 self.trUtf8('Reload &APIs'), 0, 0, self, 'reload_apis')
-        self.reloadAPIsAct.setStatusTip(self.trUtf8('Reload the API information'))
+        self.reloadAPIsAct.setStatusTip(self.trUtf8(
+            'Reload the API information'))
         self.reloadAPIsAct.setWhatsThis(self.trUtf8(
             """<b>Reload APIs</b>"""
             """<p>Reload the API information.</p>"""
@@ -1809,29 +1896,35 @@ class UserInterface(E5MainWindow):
         self.reloadAPIsAct.triggered[()].connect(self.__reloadAPIs)
         self.actions.append(self.reloadAPIsAct)
 
-        self.showExternalToolsAct = E5Action(self.trUtf8('Show external tools'),
-                UI.PixmapCache.getIcon("showPrograms.png"),
-                self.trUtf8('Show external &tools'), 0, 0, self, 'show_external_tools')
-        self.showExternalToolsAct.setStatusTip(self.trUtf8('Show external tools'))
+        self.showExternalToolsAct = E5Action(
+            self.trUtf8('Show external tools'),
+            UI.PixmapCache.getIcon("showPrograms.png"),
+            self.trUtf8('Show external &tools'),
+            0, 0, self, 'show_external_tools')
+        self.showExternalToolsAct.setStatusTip(self.trUtf8(
+            'Show external tools'))
         self.showExternalToolsAct.setWhatsThis(self.trUtf8(
             """<b>Show external tools</b>"""
             """<p>Opens a dialog to show the path and versions of all"""
             """ extenal tools used by eric5.</p>"""
         ))
-        self.showExternalToolsAct.triggered[()].connect(self.__showExternalTools)
+        self.showExternalToolsAct.triggered[()].connect(
+            self.__showExternalTools)
         self.actions.append(self.showExternalToolsAct)
 
         self.configViewProfilesAct = E5Action(self.trUtf8('View Profiles'),
                 UI.PixmapCache.getIcon("configureViewProfiles.png"),
                 self.trUtf8('&View Profiles...'), 0, 0, self, 'view_profiles')
-        self.configViewProfilesAct.setStatusTip(self.trUtf8('Configure view profiles'))
+        self.configViewProfilesAct.setStatusTip(self.trUtf8(
+            'Configure view profiles'))
         self.configViewProfilesAct.setWhatsThis(self.trUtf8(
             """<b>View Profiles</b>"""
             """<p>Configure the view profiles. With this dialog you may"""
-            """ set the visibility of the various windows for the predetermined"""
-            """ view profiles.</p>"""
+            """ set the visibility of the various windows for the"""
+            """ predetermined view profiles.</p>"""
         ))
-        self.configViewProfilesAct.triggered[()].connect(self.__configViewProfiles)
+        self.configViewProfilesAct.triggered[()].connect(
+            self.__configViewProfiles)
         self.actions.append(self.configViewProfilesAct)
 
         self.configToolBarsAct = E5Action(self.trUtf8('Toolbars'),
@@ -1847,10 +1940,13 @@ class UserInterface(E5MainWindow):
         self.configToolBarsAct.triggered[()].connect(self.__configToolBars)
         self.actions.append(self.configToolBarsAct)
 
-        self.shortcutsAct = E5Action(self.trUtf8('Keyboard Shortcuts'),
-                UI.PixmapCache.getIcon("configureShortcuts.png"),
-                self.trUtf8('Keyboard &Shortcuts...'), 0, 0, self, 'keyboard_shortcuts')
-        self.shortcutsAct.setStatusTip(self.trUtf8('Set the keyboard shortcuts'))
+        self.shortcutsAct = E5Action(
+            self.trUtf8('Keyboard Shortcuts'),
+            UI.PixmapCache.getIcon("configureShortcuts.png"),
+            self.trUtf8('Keyboard &Shortcuts...'),
+            0, 0, self, 'keyboard_shortcuts')
+        self.shortcutsAct.setStatusTip(self.trUtf8(
+            'Set the keyboard shortcuts'))
         self.shortcutsAct.setWhatsThis(self.trUtf8(
             """<b>Keyboard Shortcuts</b>"""
             """<p>Set the keyboard shortcuts of the application"""
@@ -1859,11 +1955,13 @@ class UserInterface(E5MainWindow):
         self.shortcutsAct.triggered[()].connect(self.__configShortcuts)
         self.actions.append(self.shortcutsAct)
 
-        self.exportShortcutsAct = E5Action(self.trUtf8('Export Keyboard Shortcuts'),
-                UI.PixmapCache.getIcon("exportShortcuts.png"),
-                self.trUtf8('&Export Keyboard Shortcuts...'), 0, 0, self,
-                'export_keyboard_shortcuts')
-        self.exportShortcutsAct.setStatusTip(self.trUtf8('Export the keyboard shortcuts'))
+        self.exportShortcutsAct = E5Action(
+            self.trUtf8('Export Keyboard Shortcuts'),
+            UI.PixmapCache.getIcon("exportShortcuts.png"),
+            self.trUtf8('&Export Keyboard Shortcuts...'),
+            0, 0, self, 'export_keyboard_shortcuts')
+        self.exportShortcutsAct.setStatusTip(self.trUtf8(
+            'Export the keyboard shortcuts'))
         self.exportShortcutsAct.setWhatsThis(self.trUtf8(
             """<b>Export Keyboard Shortcuts</b>"""
             """<p>Export the keyboard shortcuts of the application.</p>"""
@@ -1871,11 +1969,13 @@ class UserInterface(E5MainWindow):
         self.exportShortcutsAct.triggered[()].connect(self.__exportShortcuts)
         self.actions.append(self.exportShortcutsAct)
 
-        self.importShortcutsAct = E5Action(self.trUtf8('Import Keyboard Shortcuts'),
-                UI.PixmapCache.getIcon("importShortcuts.png"),
-                self.trUtf8('&Import Keyboard Shortcuts...'), 0, 0, self,
-                'import_keyboard_shortcuts')
-        self.importShortcutsAct.setStatusTip(self.trUtf8('Import the keyboard shortcuts'))
+        self.importShortcutsAct = E5Action(
+            self.trUtf8('Import Keyboard Shortcuts'),
+            UI.PixmapCache.getIcon("importShortcuts.png"),
+            self.trUtf8('&Import Keyboard Shortcuts...'),
+            0, 0, self, 'import_keyboard_shortcuts')
+        self.importShortcutsAct.setStatusTip(self.trUtf8(
+            'Import the keyboard shortcuts'))
         self.importShortcutsAct.setWhatsThis(self.trUtf8(
             """<b>Import Keyboard Shortcuts</b>"""
             """<p>Import the keyboard shortcuts of the application.</p>"""
@@ -1884,40 +1984,46 @@ class UserInterface(E5MainWindow):
         self.actions.append(self.importShortcutsAct)
 
         if SSL_AVAILABLE:
-            self.certificatesAct = E5Action(self.trUtf8('Manage SSL Certificates'),
-                    UI.PixmapCache.getIcon("certificates.png"),
-                    self.trUtf8('Manage SSL Certificates...'),
-                    0, 0,
-                    self, 'manage_ssl_certificates')
+            self.certificatesAct = E5Action(
+                self.trUtf8('Manage SSL Certificates'),
+                UI.PixmapCache.getIcon("certificates.png"),
+                self.trUtf8('Manage SSL Certificates...'),
+                0, 0, self, 'manage_ssl_certificates')
             self.certificatesAct.setStatusTip(self.trUtf8(
                 'Manage the saved SSL certificates'))
             self.certificatesAct.setWhatsThis(self.trUtf8(
                 """<b>Manage SSL Certificates...</b>"""
-                """<p>Opens a dialog to manage the saved SSL certificates.</p>"""
+                """<p>Opens a dialog to manage the saved SSL certificates."""
+                """</p>"""
             ))
-            self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
+            self.certificatesAct.triggered[()].connect(
+                self.__showCertificatesDialog)
             self.actions.append(self.certificatesAct)
         
-        self.editMessageFilterAct = E5Action(self.trUtf8('Edit Message Filters'),
-                UI.PixmapCache.getIcon("warning.png"),
-                self.trUtf8('Edit Message Filters...'), 0, 0, self,
-                'manage_message_filters')
+        self.editMessageFilterAct = E5Action(
+            self.trUtf8('Edit Message Filters'),
+            UI.PixmapCache.getIcon("warning.png"),
+            self.trUtf8('Edit Message Filters...'),
+            0, 0, self, 'manage_message_filters')
         self.editMessageFilterAct.setStatusTip(self.trUtf8(
             'Edit the message filters used to suppress unwanted messages'))
         self.editMessageFilterAct.setWhatsThis(self.trUtf8(
             """<b>Edit Message Filters</b>"""
-            """<p>Opens a dialog to edit the message filters used to suppress"""
-            """ unwanted messages been shown in an error window.</p>"""
+            """<p>Opens a dialog to edit the message filters used to"""
+            """ suppress unwanted messages been shown in an error"""
+            """ window.</p>"""
         ))
-        self.editMessageFilterAct.triggered[()].connect(E5ErrorMessage.editMessageFilters)
+        self.editMessageFilterAct.triggered[()].connect(
+            E5ErrorMessage.editMessageFilters)
         self.actions.append(self.editMessageFilterAct)
 
-        self.viewmanagerActivateAct = E5Action(self.trUtf8('Activate current editor'),
-                self.trUtf8('Activate current editor'),
-                QKeySequence(self.trUtf8("Alt+Shift+E")),
-                0, self,
-                'viewmanager_activate', 1)
-        self.viewmanagerActivateAct.triggered[()].connect(self.__activateViewmanager)
+        self.viewmanagerActivateAct = E5Action(
+            self.trUtf8('Activate current editor'),
+            self.trUtf8('Activate current editor'),
+            QKeySequence(self.trUtf8("Alt+Shift+E")),
+            0, self, 'viewmanager_activate', 1)
+        self.viewmanagerActivateAct.triggered[()].connect(
+            self.__activateViewmanager)
         self.actions.append(self.viewmanagerActivateAct)
         self.addAction(self.viewmanagerActivateAct)
 
@@ -1957,9 +2063,11 @@ class UserInterface(E5MainWindow):
         self.pluginInfoAct.triggered[()].connect(self.__showPluginInfo)
         self.actions.append(self.pluginInfoAct)
         
-        self.pluginInstallAct = E5Action(self.trUtf8('Install Plugins'),
-                UI.PixmapCache.getIcon("pluginInstall.png"),
-                self.trUtf8('&Install Plugins...'), 0, 0, self, 'plugin_install')
+        self.pluginInstallAct = E5Action(
+            self.trUtf8('Install Plugins'),
+            UI.PixmapCache.getIcon("pluginInstall.png"),
+            self.trUtf8('&Install Plugins...'),
+            0, 0, self, 'plugin_install')
         self.pluginInstallAct.setStatusTip(self.trUtf8('Install Plugins'))
         self.pluginInstallAct.setWhatsThis(self.trUtf8(
             """<b>Install Plugins...</b>"""
@@ -1968,9 +2076,11 @@ class UserInterface(E5MainWindow):
         self.pluginInstallAct.triggered[()].connect(self.__installPlugins)
         self.actions.append(self.pluginInstallAct)
         
-        self.pluginDeinstallAct = E5Action(self.trUtf8('Uninstall Plugin'),
-                UI.PixmapCache.getIcon("pluginUninstall.png"),
-                self.trUtf8('&Uninstall Plugin...'), 0, 0, self, 'plugin_deinstall')
+        self.pluginDeinstallAct = E5Action(
+            self.trUtf8('Uninstall Plugin'),
+            UI.PixmapCache.getIcon("pluginUninstall.png"),
+            self.trUtf8('&Uninstall Plugin...'),
+            0, 0, self, 'plugin_deinstall')
         self.pluginDeinstallAct.setStatusTip(self.trUtf8('Uninstall Plugin'))
         self.pluginDeinstallAct.setWhatsThis(self.trUtf8(
             """<b>Uninstall Plugin...</b>"""
@@ -1979,9 +2089,11 @@ class UserInterface(E5MainWindow):
         self.pluginDeinstallAct.triggered[()].connect(self.__deinstallPlugin)
         self.actions.append(self.pluginDeinstallAct)
 
-        self.pluginRepoAct = E5Action(self.trUtf8('Plugin Repository'),
-                UI.PixmapCache.getIcon("pluginRepository.png"),
-                self.trUtf8('Plugin &Repository...'), 0, 0, self, 'plugin_repository')
+        self.pluginRepoAct = E5Action(
+            self.trUtf8('Plugin Repository'),
+            UI.PixmapCache.getIcon("pluginRepository.png"),
+            self.trUtf8('Plugin &Repository...'),
+            0, 0, self, 'plugin_repository')
         self.pluginRepoAct.setStatusTip(self.trUtf8(
             'Show Plugins available for download'))
         self.pluginRepoAct.setWhatsThis(self.trUtf8(
@@ -2008,52 +2120,62 @@ class UserInterface(E5MainWindow):
         """
         Private slot to initialize the action to show the Qt documentation.
         """
-        self.qt4DocAct = E5Action(self.trUtf8('Qt4 Documentation'),
-                self.trUtf8('Qt&4 Documentation'), 0, 0, self, 'qt4_documentation')
+        self.qt4DocAct = E5Action(
+            self.trUtf8('Qt4 Documentation'),
+            self.trUtf8('Qt&4 Documentation'),
+            0, 0, self, 'qt4_documentation')
         self.qt4DocAct.setStatusTip(self.trUtf8('Open Qt4 Documentation'))
         self.qt4DocAct.setWhatsThis(self.trUtf8(
             """<b>Qt4 Documentation</b>"""
-            """<p>Display the Qt4 Documentation. Dependant upon your settings, this"""
-            """ will either show the help in Eric's internal help viewer, or execute"""
-            """ a web browser or Qt Assistant. </p>"""
+            """<p>Display the Qt4 Documentation. Dependent upon your"""
+            """ settings, this will either show the help in Eric's internal"""
+            """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
         self.qt4DocAct.triggered[()].connect(self.__showQt4Doc)
         self.actions.append(self.qt4DocAct)
       
-        self.qt5DocAct = E5Action(self.trUtf8('Qt5 Documentation'),
-                self.trUtf8('Qt&5 Documentation'), 0, 0, self, 'qt5_documentation')
+        self.qt5DocAct = E5Action(
+            self.trUtf8('Qt5 Documentation'),
+            self.trUtf8('Qt&5 Documentation'),
+            0, 0, self, 'qt5_documentation')
         self.qt5DocAct.setStatusTip(self.trUtf8('Open Qt5 Documentation'))
         self.qt5DocAct.setWhatsThis(self.trUtf8(
             """<b>Qt5 Documentation</b>"""
-            """<p>Display the Qt5 Documentation. Dependant upon your settings, this"""
-            """ will either show the help in Eric's internal help viewer, or execute"""
-            """ a web browser or Qt Assistant. </p>"""
+            """<p>Display the Qt5 Documentation. Dependent upon your"""
+            """ settings, this will either show the help in Eric's internal"""
+            """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
         self.qt5DocAct.triggered[()].connect(self.__showQt5Doc)
         self.actions.append(self.qt5DocAct)
       
-        self.pyqt4DocAct = E5Action(self.trUtf8('PyQt4 Documentation'),
-                self.trUtf8('PyQt&4 Documentation'), 0, 0, self, 'pyqt4_documentation')
+        self.pyqt4DocAct = E5Action(
+            self.trUtf8('PyQt4 Documentation'),
+            self.trUtf8('PyQt&4 Documentation'),
+            0, 0, self, 'pyqt4_documentation')
         self.pyqt4DocAct.setStatusTip(self.trUtf8('Open PyQt4 Documentation'))
         self.pyqt4DocAct.setWhatsThis(self.trUtf8(
             """<b>PyQt4 Documentation</b>"""
-            """<p>Display the PyQt4 Documentation. Dependant upon your settings, this"""
-            """ will either show the help in Eric's internal help viewer, or execute"""
-            """ a web browser or Qt Assistant. </p>"""
+            """<p>Display the PyQt4 Documentation. Dependent upon your"""
+            """ settings, this will either show the help in Eric's internal"""
+            """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
         self.pyqt4DocAct.triggered[()].connect(self.__showPyQt4Doc)
         self.actions.append(self.pyqt4DocAct)
         
         try:
             import PyQt5        # __IGNORE_WARNING__
-            self.pyqt5DocAct = E5Action(self.trUtf8('PyQt5 Documentation'),
-                self.trUtf8('PyQt&5 Documentation'), 0, 0, self, 'pyqt5_documentation')
-            self.pyqt5DocAct.setStatusTip(self.trUtf8('Open PyQt5 Documentation'))
+            self.pyqt5DocAct = E5Action(
+                self.trUtf8('PyQt5 Documentation'),
+                self.trUtf8('PyQt&5 Documentation'),
+                0, 0, self, 'pyqt5_documentation')
+            self.pyqt5DocAct.setStatusTip(self.trUtf8(
+                'Open PyQt5 Documentation'))
             self.pyqt5DocAct.setWhatsThis(self.trUtf8(
                 """<b>PyQt5 Documentation</b>"""
-                """<p>Display the PyQt5 Documentation. Dependant upon your settings,"""
-                """ this will either show the help in Eric's internal help viewer,"""
-                """ or execute a web browser or Qt Assistant. </p>"""
+                """<p>Display the PyQt5 Documentation. Dependent upon your"""
+                """ settings, this will either show the help in Eric's"""
+                """ internal help viewer, or execute a web browser or"""
+                """ Qt Assistant. </p>"""
             ))
             self.pyqt5DocAct.triggered[()].connect(self.__showPyQt5Doc)
             self.actions.append(self.pyqt5DocAct)
@@ -2062,36 +2184,43 @@ class UserInterface(E5MainWindow):
         
     def __initPythonDocActions(self):
         """
-        Private slot to initialize the actions to show the Python documentation.
+        Private slot to initialize the actions to show the Python
+        documentation.
         """
-        self.pythonDocAct = E5Action(self.trUtf8('Python 3 Documentation'),
-            self.trUtf8('Python &3 Documentation'), 0, 0, self, 'python3_documentation')
-        self.pythonDocAct.setStatusTip(self.trUtf8('Open Python 3 Documentation'))
+        self.pythonDocAct = E5Action(
+            self.trUtf8('Python 3 Documentation'),
+            self.trUtf8('Python &3 Documentation'),
+            0, 0, self, 'python3_documentation')
+        self.pythonDocAct.setStatusTip(self.trUtf8(
+            'Open Python 3 Documentation'))
         self.pythonDocAct.setWhatsThis(self.trUtf8(
-                """<b>Python 3 Documentation</b>"""
-                """<p>Display the Python 3 documentation."""
-                """ If no documentation directory is configured,"""
-                """ the location of the Python 3 documentation is assumed to be the doc"""
-                """ directory underneath the location of the Python 3 executable on"""
-                """ Windows and <i>/usr/share/doc/packages/python/html</i> on Unix."""
-                """ Set PYTHON3DOCDIR in your environment to override this. </p>"""
+            """<b>Python 3 Documentation</b>"""
+            """<p>Display the Python 3 documentation. If no documentation"""
+            """ directory is configured, the location of the Python 3"""
+            """ documentation is assumed to be the doc directory underneath"""
+            """ the location of the Python 3 executable on Windows and"""
+            """ <i>/usr/share/doc/packages/python/html</i> on Unix. Set"""
+            """ PYTHON3DOCDIR in your environment to override this.</p>"""
         ))
         self.pythonDocAct.triggered[()].connect(self.__showPythonDoc)
         self.actions.append(self.pythonDocAct)
         
-        self.python2DocAct = E5Action(self.trUtf8('Python 2 Documentation'),
-            self.trUtf8('Python &2 Documentation'), 0, 0, self, 'python2_documentation')
-        self.python2DocAct.setStatusTip(self.trUtf8('Open Python 2 Documentation'))
+        self.python2DocAct = E5Action(
+            self.trUtf8('Python 2 Documentation'),
+            self.trUtf8('Python &2 Documentation'),
+            0, 0, self, 'python2_documentation')
+        self.python2DocAct.setStatusTip(self.trUtf8(
+            'Open Python 2 Documentation'))
         self.python2DocAct.setWhatsThis(self.trUtf8(
-                """<b>Python 2 Documentation</b>"""
-                """<p>Display the Python 2 documentation."""
-                """ If no documentation directory is configured,"""
-                """ the location of the Python 2 documentation is assumed to be the doc"""
-                """ directory underneath the location of the configured Python 2"""
-                """ executable on Windows and"""
-                """ <i>/usr/share/doc/packages/python/html/python-docs-html</i>"""
-                """ on Unix. Set PYTHON2DOCDIR in your environment to override"""
-                """ this. </p>"""
+            """<b>Python 2 Documentation</b>"""
+            """<p>Display the Python 2 documentation. If no documentation"""
+            """ directory is configured, the location of the Python 2"""
+            """ documentation is assumed to be the doc directory underneath"""
+            """ the location of the configured Python 2 executable on"""
+            """ Windows and"""
+            """ <i>/usr/share/doc/packages/python/html/python-docs-html</i>"""
+            """ on Unix. Set PYTHON2DOCDIR in your environment to override"""
+            """ this. </p>"""
         ))
         self.python2DocAct.triggered[()].connect(self.__showPython2Doc)
         self.actions.append(self.python2DocAct)
@@ -2100,14 +2229,17 @@ class UserInterface(E5MainWindow):
         """
         Private slot to initialize the action to show the eric5 documentation.
         """
-        self.ericDocAct = E5Action(self.trUtf8("Eric API Documentation"),
-            self.trUtf8('&Eric API Documentation'), 0, 0, self, 'eric_documentation')
-        self.ericDocAct.setStatusTip(self.trUtf8("Open Eric API Documentation"))
+        self.ericDocAct = E5Action(
+            self.trUtf8("Eric API Documentation"),
+            self.trUtf8('&Eric API Documentation'),
+            0, 0, self, 'eric_documentation')
+        self.ericDocAct.setStatusTip(self.trUtf8(
+            "Open Eric API Documentation"))
         self.ericDocAct.setWhatsThis(self.trUtf8(
             """<b>Eric API Documentation</b>"""
-            """<p>Display the Eric API documentation."""
-            """ The location for the documentation is the Documentation/Source"""
-            """ subdirectory of the eric5 installation directory.</p>"""
+            """<p>Display the Eric API documentation. The location for the"""
+            """ documentation is the Documentation/Source subdirectory of"""
+            """ the eric5 installation directory.</p>"""
         ))
         self.ericDocAct.triggered[()].connect(self.__showEricDoc)
         self.actions.append(self.ericDocAct)
@@ -2118,14 +2250,18 @@ class UserInterface(E5MainWindow):
         """
         pyside2, pyside3 = Utilities.checkPyside()
         if pyside2 or pyside3:
-            self.pysideDocAct = E5Action(self.trUtf8('PySide Documentation'),
-                self.trUtf8('Py&Side Documentation'), 0, 0, self, 'pyside_documentation')
-            self.pysideDocAct.setStatusTip(self.trUtf8('Open PySide Documentation'))
+            self.pysideDocAct = E5Action(
+                self.trUtf8('PySide Documentation'),
+                self.trUtf8('Py&Side Documentation'),
+                0, 0, self, 'pyside_documentation')
+            self.pysideDocAct.setStatusTip(self.trUtf8(
+                'Open PySide Documentation'))
             self.pysideDocAct.setWhatsThis(self.trUtf8(
                 """<b>PySide Documentation</b>"""
-                """<p>Display the PySide Documentation. Dependant upon your settings, """
-                """this will either show the help in Eric's internal help viewer, or """
-                """execute a web browser or Qt Assistant. </p>"""
+                """<p>Display the PySide Documentation. Dependent upon your"""
+                """ settings, this will either show the help in Eric's"""
+                """ internal help viewer, or execute a web browser or"""
+                """ Qt Assistant. </p>"""
             ))
             self.pysideDocAct.triggered[()].connect(self.__showPySideDoc)
             self.actions.append(self.pysideDocAct)
@@ -2154,7 +2290,8 @@ class UserInterface(E5MainWindow):
         self.__menus["view"] = self.viewmanager.initViewMenu()
         mb.addMenu(self.__menus["view"])
         
-        self.__menus["start"], self.__menus["debug"] = self.debuggerUI.initMenus()
+        self.__menus["start"], self.__menus["debug"] = \
+            self.debuggerUI.initMenus()
         mb.addMenu(self.__menus["start"])
         mb.addMenu(self.__menus["debug"])
         
@@ -2183,7 +2320,8 @@ class UserInterface(E5MainWindow):
         self.__menus["wizards"] = QMenu(self.trUtf8('Wi&zards'), self)
         self.__menus["wizards"].setTearOffEnabled(True)
         self.__menus["wizards"].aboutToShow.connect(self.__showWizardsMenu)
-        self.wizardsMenuAct = self.__menus["extras"].addMenu(self.__menus["wizards"])
+        self.wizardsMenuAct = self.__menus["extras"].addMenu(
+            self.__menus["wizards"])
         self.wizardsMenuAct.setEnabled(False)
         self.__menus["macros"] = self.viewmanager.initMacroMenu()
         self.__menus["extras"].addMenu(self.__menus["macros"])
@@ -2224,7 +2362,8 @@ class UserInterface(E5MainWindow):
         self.__menus["window"].setTearOffEnabled(True)
         self.__menus["window"].aboutToShow.connect(self.__showWindowMenu)
         
-        self.__menus["subwindow"] = QMenu(self.trUtf8("&Windows"), self.__menus["window"])
+        self.__menus["subwindow"] = QMenu(self.trUtf8("&Windows"),
+                                          self.__menus["window"])
         self.__menus["subwindow"].setTearOffEnabled(True)
         # left side
         self.__menus["subwindow"].addAction(self.pbActivateAct)
@@ -2309,7 +2448,8 @@ class UserInterface(E5MainWindow):
         """
         filetb = self.viewmanager.initFileToolbar(self.toolbarManager)
         edittb = self.viewmanager.initEditToolbar(self.toolbarManager)
-        searchtb, quicksearchtb = self.viewmanager.initSearchToolbars(self.toolbarManager)
+        searchtb, quicksearchtb = self.viewmanager.initSearchToolbars(
+            self.toolbarManager)
         viewtb = self.viewmanager.initViewToolbar(self.toolbarManager)
         starttb, debugtb = self.debuggerUI.initToolbars(self.toolbarManager)
         multiprojecttb = self.multiProject.initToolbar(self.toolbarManager)
@@ -2388,8 +2528,10 @@ class UserInterface(E5MainWindow):
         settingstb.addAction(self.shortcutsAct)
         settingstb.addAction(self.showExternalToolsAct)
         self.toolbarManager.addToolBar(settingstb, settingstb.windowTitle())
-        self.toolbarManager.addAction(self.exportShortcutsAct, settingstb.windowTitle())
-        self.toolbarManager.addAction(self.importShortcutsAct, settingstb.windowTitle())
+        self.toolbarManager.addAction(
+            self.exportShortcutsAct, settingstb.windowTitle())
+        self.toolbarManager.addAction(
+            self.importShortcutsAct, settingstb.windowTitle())
         
         # setup the help toolbar
         helptb.addAction(self.whatsThisAct)
@@ -2452,10 +2594,13 @@ class UserInterface(E5MainWindow):
         self.__toolbars["settings"] = [settingstb.windowTitle(), settingstb]
         self.__toolbars["bookmarks"] = [bookmarktb.windowTitle(), bookmarktb]
         self.__toolbars["unittest"] = [unittesttb.windowTitle(), unittesttb]
-        self.__toolbars["view_profiles"] = [profilestb.windowTitle(), profilestb]
+        self.__toolbars["view_profiles"] = [profilestb.windowTitle(),
+                                            profilestb]
         self.__toolbars["plugins"] = [pluginstb.windowTitle(), pluginstb]
-        self.__toolbars["quicksearch"] = [quicksearchtb.windowTitle(), quicksearchtb]
-        self.__toolbars["multiproject"] = [multiprojecttb.windowTitle(), multiprojecttb]
+        self.__toolbars["quicksearch"] = [quicksearchtb.windowTitle(),
+                                          quicksearchtb]
+        self.__toolbars["multiproject"] = [multiprojecttb.windowTitle(),
+                                           multiprojecttb]
         self.__toolbars["spelling"] = [spellingtb.windowTitle(), spellingtb]
         
     def __initDebugToolbarsLayout(self):
@@ -2513,15 +2658,15 @@ class UserInterface(E5MainWindow):
         self.sbLine = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbLine)
         self.sbLine.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the line number of the"""
-            """ current editor.</p>"""
+            """<p>This part of the status bar displays the line number of"""
+            """ the current editor.</p>"""
         ))
 
         self.sbPos = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbPos)
         self.sbPos.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the cursor position of"""
-            """ the current editor.</p>"""
+            """<p>This part of the status bar displays the cursor position"""
+            """ of the current editor.</p>"""
         ))
         
         self.sbZoom = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
@@ -2530,13 +2675,13 @@ class UserInterface(E5MainWindow):
             self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbZoom)
         self.sbZoom.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar allows zooming the current editor,"""
-            """ shell or terminal.</p>"""
+            """<p>This part of the status bar allows zooming the current"""
+            """ editor, shell or terminal.</p>"""
         ))
         
-        self.viewmanager.setSbInfo(self.sbLine, self.sbPos, self.sbWritable,
-                                   self.sbEncoding, self.sbLanguage, self.sbEol,
-                                   self.sbZoom)
+        self.viewmanager.setSbInfo(
+            self.sbLine, self.sbPos, self.sbWritable, self.sbEncoding,
+            self.sbLanguage, self.sbEol, self.sbZoom)
 
         from VCS.StatusMonitorLed import StatusMonitorLed
         self.sbVcsMonitorLed = StatusMonitorLed(self.project, self.__statusBar)
@@ -2551,8 +2696,8 @@ class UserInterface(E5MainWindow):
             category = self.trUtf8("External Tools/{0}").format(toolGroup[0])
             for tool in toolGroup[1]:
                 if tool['menutext'] != '--':
-                    act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'],
-                                  self)
+                    act = QAction(UI.PixmapCache.getIcon(tool['icon']),
+                                  tool['menutext'], self)
                     act.setObjectName("{0}@@{1}".format(toolGroup[0],
                                       tool['menutext']))
                     act.triggered[()].connect(self.__toolActionTriggered)
@@ -2562,7 +2707,8 @@ class UserInterface(E5MainWindow):
     
     def __updateExternalToolsActions(self):
         """
-        Private method to update the external tools actions for the current tool group.
+        Private method to update the external tools actions for the current
+        tool group.
         """
         toolGroup = self.toolGroups[self.currentToolGroup]
         groupkey = "{0}@@".format(toolGroup[0])
@@ -2592,8 +2738,8 @@ class UserInterface(E5MainWindow):
             if tool['menutext'] != '--':
                 key = "{0}@@{1}".format(toolGroup[0], tool['menutext'])
                 if key not in groupActionKeys:
-                    act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'],
-                                  self)
+                    act = QAction(UI.PixmapCache.getIcon(tool['icon']),
+                                  tool['menutext'], self)
                     act.setObjectName(key)
                     act.triggered[()].connect(self.__toolActionTriggered)
                     self.toolGroupActions[key] = act
@@ -2631,7 +2777,8 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the Settings menu.
         """
-        self.editMessageFilterAct.setEnabled(E5ErrorMessage.messageHandlerInstalled())
+        self.editMessageFilterAct.setEnabled(
+            E5ErrorMessage.messageHandlerInstalled())
         
         self.showMenu.emit("Settings", self.__menus["settings"])
     
@@ -2657,7 +2804,8 @@ class UserInterface(E5MainWindow):
     
     def __switchTab(self):
         """
-        Private slot used to switch between the current and the previous current tab.
+        Private slot used to switch between the current and the previous
+        current tab.
         """
         fwidget = QApplication.focusWidget()
         while fwidget and not hasattr(fwidget, 'switchTab'):
@@ -2724,8 +2872,8 @@ class UserInterface(E5MainWindow):
         
         @param mode mode of the email dialog (string, "bug" or "feature")
         @param attachFile name of a file to attach to the email (string)
-        @param deleteAttachFile flag indicating to delete the attached file after
-            it has been sent (boolean)
+        @param deleteAttachFile flag indicating to delete the attached file
+            after it has been sent (boolean)
         """
         if Preferences.getUser("UseSystemEmailClient"):
             self.__showSystemEmailClient(mode, attachFile, deleteAttachFile)
@@ -2734,9 +2882,10 @@ class UserInterface(E5MainWindow):
                Preferences.getUser("MailServer") == "":
                 E5MessageBox.critical(self,
                     self.trUtf8("Report Bug"),
-                    self.trUtf8("""Email address or mail server address is empty."""
-                                """ Please configure your Email settings in the"""
-                                """ Preferences Dialog."""))
+                    self.trUtf8(
+                        """Email address or mail server address is empty."""
+                        """ Please configure your Email settings in the"""
+                        """ Preferences Dialog."""))
                 self.showPreferences("emailPage")
                 return
                 
@@ -2746,7 +2895,8 @@ class UserInterface(E5MainWindow):
                 self.dlg.attachFile(attachFile, deleteAttachFile)
             self.dlg.show()
         
-    def __showSystemEmailClient(self, mode, attachFile=None, deleteAttachFile=False):
+    def __showSystemEmailClient(self, mode, attachFile=None,
+                                deleteAttachFile=False):
         """
         Private slot to show the system email dialog.
         
@@ -2780,8 +2930,8 @@ class UserInterface(E5MainWindow):
         
     def checkForErrorLog(self):
         """
-        Public method to check for the presence of an error log and ask the user,
-        what to do with it.
+        Public method to check for the presence of an error log and ask the
+        user, what to do with it.
         """
         if Preferences.getUI("CheckErrorLog"):
             logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
@@ -2980,9 +3130,11 @@ class UserInterface(E5MainWindow):
         """
         Private method to restart the application.
         """
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Restart application"),
-            self.trUtf8("""The application needs to be restarted. Do it now?"""),
+            self.trUtf8(
+                """The application needs to be restarted. Do it now?"""),
             yesDefault=True)
         
         if res and self.__shutdown():
@@ -3012,7 +3164,8 @@ class UserInterface(E5MainWindow):
         self.__menus["tools"].clear()
         
         self.__menus["tools"].addMenu(self.toolGroupsMenu)
-        act = self.__menus["tools"].addAction(self.trUtf8("Configure Tool Groups ..."),
+        act = self.__menus["tools"].addAction(
+            self.trUtf8("Configure Tool Groups ..."),
             self.__toolGroupsConfiguration)
         act.setData(-1)
         act = self.__menus["tools"].addAction(
@@ -3050,7 +3203,8 @@ class UserInterface(E5MainWindow):
                         self.__menus["tools"].addSeparator()
                     else:
                         act = self.__menus["tools"].addAction(
-                            UI.PixmapCache.getIcon(tool['icon']), tool['menutext'])
+                            UI.PixmapCache.getIcon(tool['icon']),
+                            tool['menutext'])
                         act.setData(idx)
                     idx += 1
             except IndexError:
@@ -3218,13 +3372,19 @@ class UserInterface(E5MainWindow):
                     self.profiles[self.currentProfile][2][5] = state
             # step 2: save the visibility of the windows of the active profile
             if self.layout == "Toolboxes":
-                self.profiles[self.currentProfile][1][0] = self.lToolboxDock.isVisible()
-                self.profiles[self.currentProfile][1][1] = self.hToolboxDock.isVisible()
-                self.profiles[self.currentProfile][1][2] = self.rToolboxDock.isVisible()
+                self.profiles[self.currentProfile][1][0] = \
+                    self.lToolboxDock.isVisible()
+                self.profiles[self.currentProfile][1][1] = \
+                    self.hToolboxDock.isVisible()
+                self.profiles[self.currentProfile][1][2] = \
+                    self.rToolboxDock.isVisible()
             elif self.layout == "Sidebars":
-                self.profiles[self.currentProfile][1][0] = self.leftSidebar.isVisible()
-                self.profiles[self.currentProfile][1][1] = self.bottomSidebar.isVisible()
-                self.profiles[self.currentProfile][1][2] = self.rightSidebar.isVisible()
+                self.profiles[self.currentProfile][1][0] = \
+                    self.leftSidebar.isVisible()
+                self.profiles[self.currentProfile][1][1] = \
+                    self.bottomSidebar.isVisible()
+                self.profiles[self.currentProfile][1][2] = \
+                    self.rightSidebar.isVisible()
             Preferences.setUI("ViewProfiles2", self.profiles)
     
     def __activateViewProfile(self, name, save=True):
@@ -3281,7 +3441,8 @@ class UserInterface(E5MainWindow):
             # step 5: make sure that cursor of the shell is visible
             self.shell.ensureCursorVisible()
             
-            # step 6: make sure, that the toolbars and window menu are shown correctly
+            # step 6: make sure, that the toolbars and window menu are
+            #         shown correctly
             if self.__menus["toolbars"].isTearOffMenuVisible():
                 self.__showToolbarsMenu()
             if self.__menus["window"].isTearOffMenuVisible():
@@ -3366,7 +3527,8 @@ class UserInterface(E5MainWindow):
             self.leftSidebar.setCurrentWidget(self.projectBrowser)
         else:
             self.projectBrowser.show()
-        self.projectBrowser.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+        self.projectBrowser.currentWidget().setFocus(
+            Qt.ActiveWindowFocusReason)
         
     def __activateMultiProjectBrowser(self):
         """
@@ -3541,7 +3703,8 @@ class UserInterface(E5MainWindow):
         hasFocus = self.leftSidebar.currentWidget().hasFocus()
         shown = self.__toggleWindow(self.leftSidebar)
         if shown:
-            self.leftSidebar.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+            self.leftSidebar.currentWidget().setFocus(
+                Qt.ActiveWindowFocusReason)
         else:
             if hasFocus:
                 self.__activateViewmanager()
@@ -3553,7 +3716,8 @@ class UserInterface(E5MainWindow):
         hasFocus = self.rightSidebar.currentWidget().hasFocus()
         shown = self.__toggleWindow(self.rightSidebar)
         if shown:
-            self.rightSidebar.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+            self.rightSidebar.currentWidget().setFocus(
+                Qt.ActiveWindowFocusReason)
         else:
             if hasFocus:
                 self.__activateViewmanager()
@@ -3565,7 +3729,8 @@ class UserInterface(E5MainWindow):
         hasFocus = self.bottomSidebar.currentWidget().hasFocus()
         shown = self.__toggleWindow(self.bottomSidebar)
         if shown:
-            self.bottomSidebar.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+            self.bottomSidebar.currentWidget().setFocus(
+                Qt.ActiveWindowFocusReason)
         else:
             if hasFocus:
                 self.__activateViewmanager()
@@ -3653,7 +3818,8 @@ class UserInterface(E5MainWindow):
         Private slot to handle the tools configuration menu entry.
         """
         from Preferences.ToolConfigurationDialog import ToolConfigurationDialog
-        dlg = ToolConfigurationDialog(self.toolGroups[self.currentToolGroup][1], self)
+        dlg = ToolConfigurationDialog(
+            self.toolGroups[self.currentToolGroup][1], self)
         if dlg.exec_() == QDialog.Accepted:
             self.toolGroups[self.currentToolGroup][1] = dlg.getToollist()
             self.__updateExternalToolsActions()
@@ -3662,8 +3828,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the tool groups configuration menu entry.
         """
-        from Preferences.ToolGroupConfigurationDialog import ToolGroupConfigurationDialog
-        dlg = ToolGroupConfigurationDialog(self.toolGroups, self.currentToolGroup, self)
+        from Preferences.ToolGroupConfigurationDialog import \
+            ToolGroupConfigurationDialog
+        dlg = ToolGroupConfigurationDialog(
+            self.toolGroups, self.currentToolGroup, self)
         if dlg.exec_() == QDialog.Accepted:
             self.toolGroups, self.currentToolGroup = dlg.getToolGroups()
         
@@ -3675,7 +3843,8 @@ class UserInterface(E5MainWindow):
             from PyUnit.UnittestDialog import UnittestDialog
             self.unittestDialog = UnittestDialog(
                 None, self.debuggerUI.debugServer, self, fromEric=True)
-            self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
+            self.unittestDialog.unittestFile.connect(
+                self.viewmanager.setFileLine)
             self.unittestDialog.unittestStopped.connect(self.__unittestStopped)
     
     def __unittestStopped(self):
@@ -3695,7 +3864,8 @@ class UserInterface(E5MainWindow):
 
     def __unittestScript(self, prog=None):
         """
-        Private slot for displaying the unittest dialog and run the current script.
+        Private slot for displaying the unittest dialog and run the current
+        script.
         
         @param prog the python program to be opened
         """
@@ -3717,7 +3887,8 @@ class UserInterface(E5MainWindow):
         
     def __unittestProject(self):
         """
-        Private slot for displaying the unittest dialog and run the current project.
+        Private slot for displaying the unittest dialog and run the current
+        project.
         """
         fn = self.project.getMainScript(True)
         if fn:
@@ -3742,7 +3913,8 @@ class UserInterface(E5MainWindow):
         
     def __unittestRestart(self):
         """
-        Private slot to display the unittest dialog and rerun the last unit test.
+        Private slot to display the unittest dialog and rerun the last
+        unit test.
         """
         self.__createUnitTestDialog()
         self.unittestDialog.show()
@@ -3813,7 +3985,8 @@ class UserInterface(E5MainWindow):
                 return
         
         if Utilities.isMacPlatform():
-            designer, args = Utilities.prepareQtMacBundle("designer", version, args)
+            designer, args = Utilities.prepareQtMacBundle(
+                "designer", version, args)
         else:
             if version == 4:
                 designer = os.path.join(
@@ -3854,7 +4027,8 @@ class UserInterface(E5MainWindow):
         if fn is not None:
             fn = fn.replace('.qm', '.ts')
             try:
-                if os.path.isfile(fn) and os.path.getsize(fn) and fn not in args:
+                if os.path.isfile(fn) and os.path.getsize(fn) and \
+                        fn not in args:
                     args.append(fn)
                 else:
                     E5MessageBox.critical(self,
@@ -3872,7 +4046,8 @@ class UserInterface(E5MainWindow):
                 return
         
         if Utilities.isMacPlatform():
-            linguist, args = Utilities.prepareQtMacBundle("linguist", version, args)
+            linguist, args = Utilities.prepareQtMacBundle(
+                "linguist", version, args)
         else:
             if version == 4:
                 linguist = os.path.join(
@@ -3918,7 +4093,8 @@ class UserInterface(E5MainWindow):
             args.append(home)
         
         if Utilities.isMacPlatform():
-            assistant, args = Utilities.prepareQtMacBundle("assistant", version, args)
+            assistant, args = Utilities.prepareQtMacBundle(
+                "assistant", version, args)
         else:
             if version == 4:
                 assistant = os.path.join(
@@ -3958,8 +4134,9 @@ class UserInterface(E5MainWindow):
         if not customViewer:
             E5MessageBox.information(self,
                 self.trUtf8("Help"),
-                self.trUtf8("""Currently no custom viewer is selected."""
-                            """ Please use the preferences dialog to specify one."""))
+                self.trUtf8(
+                    """Currently no custom viewer is selected."""
+                    """ Please use the preferences dialog to specify one."""))
             return
             
         proc = QProcess()
@@ -4026,8 +4203,10 @@ class UserInterface(E5MainWindow):
                         .format(fn))
                 return
                 
-        if not os.path.isfile(viewer) or not proc.startDetached(sys.executable, args):
-            E5MessageBox.critical(self,
+        if not os.path.isfile(viewer) or \
+                not proc.startDetached(sys.executable, args):
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start UI Previewer.<br>'
@@ -4040,7 +4219,8 @@ class UserInterface(E5MainWindow):
         
         @param fileNames filenames of forms and/or translations to be previewed
             (list of strings)
-        @param ignore flag indicating non existing files should be ignored (boolean)
+        @param ignore flag indicating non existing files should be ignored
+            (boolean)
         """
         proc = QProcess()
         
@@ -4058,7 +4238,8 @@ class UserInterface(E5MainWindow):
                         if not ignore:
                             E5MessageBox.critical(self,
                                 self.trUtf8('Problem'),
-                                self.trUtf8('<p>The file <b>{0}</b> does not exist or'
+                                self.trUtf8(
+                                    '<p>The file <b>{0}</b> does not exist or'
                                     ' is zero length.</p>')
                                     .format(fn))
                             return
@@ -4066,13 +4247,16 @@ class UserInterface(E5MainWindow):
                     if not ignore:
                         E5MessageBox.critical(self,
                             self.trUtf8('Problem'),
-                            self.trUtf8('<p>The file <b>{0}</b> does not exist or'
+                            self.trUtf8(
+                                '<p>The file <b>{0}</b> does not exist or'
                                 ' is zero length.</p>')
                                 .format(fn))
                         return
         
-        if not os.path.isfile(viewer) or not proc.startDetached(sys.executable, args):
-            E5MessageBox.critical(self,
+        if not os.path.isfile(viewer) or \
+                not proc.startDetached(sys.executable, args):
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Translation Previewer.<br>'
@@ -4090,8 +4274,10 @@ class UserInterface(E5MainWindow):
         args = []
         args.append(browser)
         
-        if not os.path.isfile(browser) or not proc.startDetached(sys.executable, args):
-            E5MessageBox.critical(self,
+        if not os.path.isfile(browser) or \
+                not proc.startDetached(sys.executable, args):
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start SQL Browser.<br>'
@@ -4140,8 +4326,10 @@ class UserInterface(E5MainWindow):
         args = []
         args.append(snap)
         
-        if not os.path.isfile(snap) or not proc.startDetached(sys.executable, args):
-            E5MessageBox.critical(self,
+        if not os.path.isfile(snap) or \
+                not proc.startDetached(sys.executable, args):
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Snapshot tool.<br>'
@@ -4161,15 +4349,21 @@ class UserInterface(E5MainWindow):
                         self.__startToolProcess(tool)
                         return
                 
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("External Tools"),
-                    self.trUtf8("""No tool entry found for external tool '{0}' """
-                        """in tool group '{1}'.""").format(toolMenuText, toolGroupName))
+                    self.trUtf8(
+                        """No tool entry found for external tool '{0}' """
+                        """in tool group '{1}'.""")
+                    .format(toolMenuText, toolGroupName))
                 return
         
-        E5MessageBox.information(self,
+        E5MessageBox.information(
+            self,
             self.trUtf8("External Tools"),
-            self.trUtf8("""No toolgroup entry '{0}' found.""").format(toolGroupName))
+            self.trUtf8("""No toolgroup entry '{0}' found.""")
+                .format(toolGroupName)
+        )
     
     def __toolExecute(self, act):
         """
@@ -4318,8 +4512,10 @@ class UserInterface(E5MainWindow):
                 
                 if Utilities.isWindowsPlatform() and not os.path.exists(home):
                     pyversion = sys.hexversion >> 16
-                    vers = "{0:d}{1:d}".format((pyversion >> 8) & 0xff, pyversion & 0xff)
-                    home = os.path.join(pythonDocDir, "python{0}.chm".format(vers))
+                    vers = "{0:d}{1:d}".format((pyversion >> 8) & 0xff,
+                                               pyversion & 0xff)
+                    home = os.path.join(
+                        pythonDocDir, "python{0}.chm".format(vers))
             else:
                 home = pythonDocDir
             
@@ -4364,7 +4560,8 @@ class UserInterface(E5MainWindow):
                     default = os.path.join(os.path.dirname(executable), "doc")
                 else:
                     default = ""
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON2DOCDIR", default)
+                pythonDocDir = \
+                    Utilities.getEnvironmentEntry("PYTHON2DOCDIR", default)
             else:
                 pythonDocDir = Utilities.getEnvironmentEntry("PYTHON2DOCDIR",
                     '/usr/share/doc/packages/python/html/python-docs-html')
@@ -4548,9 +4745,11 @@ class UserInterface(E5MainWindow):
                 if pyqt5DocDir.startswith("file://"):
                     pyqt5DocDir = pyqt5DocDir[7:]
                 if not os.path.splitext(pyqt5DocDir)[1]:
-                    possibleHomes = [\
-                        Utilities.normjoinpath(pyqt5DocDir, 'index.html'),
-                        Utilities.normjoinpath(pyqt5DocDir, 'class_reference.html'),
+                    possibleHomes = [
+                        Utilities.normjoinpath(
+                            pyqt5DocDir, 'index.html'),
+                        Utilities.normjoinpath(
+                            pyqt5DocDir, 'class_reference.html'),
                     ]
                     for possibleHome in possibleHomes:
                         if os.path.exists(possibleHome):
@@ -4671,7 +4870,8 @@ class UserInterface(E5MainWindow):
         
         @param home filename of file to be shown (string)
         @keyparam searchWord word to search for (string)
-        @keyparam useSingle flag indicating to use a single browser window (boolean)
+        @keyparam useSingle flag indicating to use a single browser window
+            (boolean)
         """
         if len(home) > 0:
             homeUrl = QUrl(home)
@@ -4692,8 +4892,10 @@ class UserInterface(E5MainWindow):
             if useSingle or Preferences.getHelp("SingleHelpWindow"):
                 self.helpWindow = help
                 self.helpWindow.helpClosed.connect(self.__helpClosed)
-                self.preferencesChanged.connect(self.helpWindow.preferencesChanged)
-                self.masterPasswordChanged.connect(self.helpWindow.masterPasswordChanged)
+                self.preferencesChanged.connect(
+                    self.helpWindow.preferencesChanged)
+                self.masterPasswordChanged.connect(
+                    self.helpWindow.masterPasswordChanged)
         elif searchWord is not None:
             self.helpWindow.search(searchWord)
             self.helpWindow.raise_()
@@ -4706,8 +4908,10 @@ class UserInterface(E5MainWindow):
         Private slot to handle the helpClosed signal of the help window.
         """
         if Preferences.getHelp("SingleHelpWindow"):
-            self.preferencesChanged.disconnect(self.helpWindow.preferencesChanged)
-            self.masterPasswordChanged.disconnect(self.helpWindow.masterPasswordChanged)
+            self.preferencesChanged.disconnect(
+                self.helpWindow.preferencesChanged)
+            self.masterPasswordChanged.disconnect(
+                self.helpWindow.masterPasswordChanged)
             self.helpWindow = None
     
     def __helpViewer(self):
@@ -4736,7 +4940,8 @@ class UserInterface(E5MainWindow):
         """
         Public method to get a reference to the help window instance.
         
-        @keyparam preview flag indicating to get a help window for preview (boolean)
+        @keyparam preview flag indicating to get a help window for preview
+            (boolean)
         @return reference to the help window instance (HelpWindow)
         """
         if self.helpWindow is None:
@@ -4786,7 +4991,8 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle a change of the preferences.
         """
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         if Preferences.getUI("SingleApplicationMode"):
             if self.SAServer is None:
@@ -4795,7 +5001,8 @@ class UserInterface(E5MainWindow):
             if self.SAServer is not None:
                 self.SAServer.shutdown()
                 self.SAServer = None
-        self.newWindowAct.setEnabled(not Preferences.getUI("SingleApplicationMode"))
+        self.newWindowAct.setEnabled(
+            not Preferences.getUI("SingleApplicationMode"))
         
         self.maxEditorPathLen = Preferences.getUI("CaptionFilenameLength")
         self.captionShowsFilename = Preferences.getUI("CaptionShowsFilename")
@@ -4849,7 +5056,8 @@ class UserInterface(E5MainWindow):
         
     def __showExternalTools(self):
         """
-        Private slot to display a dialog show a list of external tools used by eric5.
+        Private slot to display a dialog show a list of external tools used
+        by eric5.
         """
         if self.programsDialog is None:
             from Preferences.ProgramsDialog import ProgramsDialog
@@ -4880,7 +5088,8 @@ class UserInterface(E5MainWindow):
         from E5Gui.E5ToolBarDialog import E5ToolBarDialog
         dlg = E5ToolBarDialog(self.toolbarManager)
         if dlg.exec_() == QDialog.Accepted:
-            Preferences.setUI("ToolbarManagerState", self.toolbarManager.saveState())
+            Preferences.setUI(
+                "ToolbarManagerState", self.toolbarManager.saveState())
         
     def __configShortcuts(self):
         """
@@ -4999,7 +5208,8 @@ class UserInterface(E5MainWindow):
         
         @param fn filename of the opened editor (string)
         """
-        self.wizardsMenuAct.setEnabled(len(self.__menus["wizards"].actions()) > 0)
+        self.wizardsMenuAct.setEnabled(
+            len(self.__menus["wizards"].actions()) > 0)
         
         if fn and str(fn) != "None":
             dbs = e5App().getObject("DebugServer")
@@ -5056,7 +5266,8 @@ class UserInterface(E5MainWindow):
         if not ok:
             E5MessageBox.critical(self,
                 self.trUtf8("Save tasks"),
-                self.trUtf8("<p>The tasks file <b>{0}</b> could not be written.</p>")
+                self.trUtf8(
+                    "<p>The tasks file <b>{0}</b> could not be written.</p>")
                     .format(fn))
             return
         
@@ -5080,7 +5291,8 @@ class UserInterface(E5MainWindow):
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read tasks"),
-                self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")
+                self.trUtf8(
+                    "<p>The tasks file <b>{0}</b> could not be read.</p>")
                     .format(fn))
         
     def __writeSession(self):
@@ -5096,7 +5308,8 @@ class UserInterface(E5MainWindow):
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Save session"),
-                self.trUtf8("<p>The session file <b>{0}</b> could not be written.</p>")
+                self.trUtf8(
+                    "<p>The session file <b>{0}</b> could not be written.</p>")
                     .format(fn))
         
     def __readSession(self):
@@ -5107,7 +5320,8 @@ class UserInterface(E5MainWindow):
         if not os.path.exists(fn):
             E5MessageBox.critical(self,
                 self.trUtf8("Read session"),
-                self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
+                self.trUtf8(
+                    "<p>The session file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
             return
         
@@ -5120,7 +5334,8 @@ class UserInterface(E5MainWindow):
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read session"),
-                self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
+                self.trUtf8(
+                    "<p>The session file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
     
     def showFindFileByNameDialog(self):
@@ -5130,7 +5345,8 @@ class UserInterface(E5MainWindow):
         if self.findFileNameDialog is None:
             from .FindFileNameDialog import FindFileNameDialog
             self.findFileNameDialog = FindFileNameDialog(self.project)
-            self.findFileNameDialog.sourceFile.connect(self.viewmanager.openSourceFile)
+            self.findFileNameDialog.sourceFile.connect(
+                self.viewmanager.openSourceFile)
             self.findFileNameDialog.designerFile.connect(self.__designer)
         self.findFileNameDialog.show()
         self.findFileNameDialog.raise_()
@@ -5168,7 +5384,8 @@ class UserInterface(E5MainWindow):
         """
         if self.replaceFilesDialog is None:
             from .FindFileDialog import FindFileDialog
-            self.replaceFilesDialog = FindFileDialog(self.project, replaceMode=True)
+            self.replaceFilesDialog = \
+                FindFileDialog(self.project, replaceMode=True)
             self.replaceFilesDialog.sourceFile.connect(
                 self.viewmanager.openSourceFile)
             self.replaceFilesDialog.designerFile.connect(self.__designer)
@@ -5380,7 +5597,8 @@ class UserInterface(E5MainWindow):
             Preferences.setGeometry("MainGeometry", self.saveGeometry())
         self.browser.saveToplevelDirs()
         
-        Preferences.setUI("ToolbarManagerState", self.toolbarManager.saveState())
+        Preferences.setUI(
+            "ToolbarManagerState", self.toolbarManager.saveState())
         self.__saveCurrentViewProfile(True)
         Preferences.saveToolGroups(self.toolGroups, self.currentToolGroup)
         Preferences.syncPreferences()
@@ -5397,7 +5615,8 @@ class UserInterface(E5MainWindow):
         """
         self.performVersionCheck(manual=True, showVersions=True)
         
-    def performVersionCheck(self, manual=True, alternative=0, showVersions=False):
+    def performVersionCheck(self, manual=True, alternative=0,
+                            showVersions=False):
         """
         Public method to check the internet for an eric5 update.
         
@@ -5498,8 +5717,9 @@ class UserInterface(E5MainWindow):
                                     """ Please go online and try again."""))
                 return
             else:
-                self.performVersionCheck(self.manualUpdatesCheck, self.httpAlternative,
-                    self.showAvailableVersions)
+                self.performVersionCheck(self.manualUpdatesCheck,
+                                         self.httpAlternative,
+                                         self.showAvailableVersions)
                 return
         
         self.__inVersionCheck = False
@@ -5517,9 +5737,11 @@ class UserInterface(E5MainWindow):
         
     def __updateVersionsUrls(self, versions):
         """
-        Private method to update the URLs from which to retrieve the versions file.
+        Private method to update the URLs from which to retrieve the versions
+        file.
         
-        @param versions contents of the downloaded versions file (list of strings)
+        @param versions contents of the downloaded versions file (list of
+            strings)
         """
         if len(versions) > 5 and versions[4] == "---":
             line = 5
@@ -5534,48 +5756,64 @@ class UserInterface(E5MainWindow):
         """
         Private method to show the result of the version check action.
         
-        @param versions contents of the downloaded versions file (list of strings)
+        @param versions contents of the downloaded versions file (list of
+            strings)
         """
         url = ""
         try:
             if "-snapshot-" in Version:
                 # check snapshot version
                 if versions[2][0] == "5" and versions[2] > Version:
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Update available"),
-                        self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
-                                    """ at <b>{1}</b>. Would you like to get it?""")\
+                        self.trUtf8(
+                            """The update to <b>{0}</b> of eric5 is"""
+                            """ available at <b>{1}</b>. Would you like to"""
+                            """ get it?""")\
                             .format(versions[2], versions[3]),
                         yesDefault=True)
                     url = res and versions[3] or ''
                 elif versions[0] > Version:
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Update available"),
-                        self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
-                                    """ at <b>{1}</b>. Would you like to get it?""")\
+                        self.trUtf8(
+                            """The update to <b>{0}</b> of eric5 is"""
+                            """ available at <b>{1}</b>. Would you like to"""
+                            """ get it?""")\
                             .format(versions[0], versions[1]),
                         yesDefault=True)
                     url = res and versions[1] or ''
                 else:
                     if self.manualUpdatesCheck:
-                        E5MessageBox.information(self,
+                        E5MessageBox.information(
+                            self,
                             self.trUtf8("Eric5 is up to date"),
-                            self.trUtf8("""You are using the latest version of eric5"""))
+                            self.trUtf8(
+                                """You are using the latest version of"""
+                                """ eric5"""))
             else:
                 # check release version
                 if versions[0] > Version:
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Update available"),
-                        self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
-                                    """ at <b>{1}</b>. Would you like to get it?""")\
+                        self.trUtf8(
+                            """The update to <b>{0}</b> of eric5 is"""
+                            """ available at <b>{1}</b>. Would you like"""
+                            """ to get it?""")\
                             .format(versions[0], versions[1]),
                         yesDefault=True)
                     url = res and versions[1] or ''
                 else:
                     if self.manualUpdatesCheck:
-                        E5MessageBox.information(self,
+                        E5MessageBox.information(
+                            self,
                             self.trUtf8("Eric5 is up to date"),
-                            self.trUtf8("""You are using the latest version of eric5"""))
+                            self.trUtf8(
+                                """You are using the latest version of"""
+                                """ eric5"""))
         except IndexError:
             E5MessageBox.warning(self,
                 self.trUtf8("Error during updates check"),
@@ -5596,7 +5834,8 @@ class UserInterface(E5MainWindow):
         """
         Private method to show the versions available for download.
         
-        @param versions contents of the downloaded versions file (list of strings)
+        @param versions contents of the downloaded versions file (list of
+            strings)
         """
         versionText = self.trUtf8(
             """<h3>Available versions</h3>"""
@@ -5606,8 +5845,9 @@ class UserInterface(E5MainWindow):
             if versions[line] == "---":
                 break
             
-            versionText += """<tr><td>{0}</td><td><a href="{1}">{2}</a></td></tr>"""\
-                .format(versions[line], versions[line + 1],
+            versionText += """<tr><td>{0}</td><td><a href="{1}">{2}</a>""" \
+                """</td></tr>""".format(
+                    versions[line], versions[line + 1],
                     'sourceforge' in versions[line + 1] and \
                         "SourceForge" or versions[line + 1])
             line += 2
@@ -5670,8 +5910,8 @@ class UserInterface(E5MainWindow):
         
         @param required required version (string)
         @param snapshot required snapshot version (string)
-        @return flag indicating, that the version is newer than the required one
-            (boolean)
+        @return flag indicating, that the version is newer than the required
+            one (boolean)
         """
         if Version.startswith("@@"):
             # development version, always newer
@@ -5736,7 +5976,8 @@ class UserInterface(E5MainWindow):
             self.__notification.setPixmap(icon)
             self.__notification.setHeading(heading)
             self.__notification.setText(text)
-            self.__notification.setTimeout(Preferences.getUI("NotificationTimeout"))
+            self.__notification.setTimeout(
+                Preferences.getUI("NotificationTimeout"))
             self.__notification.move(Preferences.getUI("NotificationPosition"))
             self.__notification.show()
     

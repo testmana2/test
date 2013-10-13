@@ -24,9 +24,10 @@ class SplashScreen(QSplashScreen):
         """
         Constructor
         """
-        ericPic = QPixmap(os.path.join(getConfig('ericPixDir'), 'ericSplash.png'))
-        self.labelAlignment = \
-            Qt.Alignment(Qt.AlignBottom | Qt.AlignRight | Qt.AlignAbsolute)
+        ericPic = QPixmap(
+            os.path.join(getConfig('ericPixDir'), 'ericSplash.png'))
+        self.labelAlignment = Qt.Alignment(
+            Qt.AlignBottom | Qt.AlignRight | Qt.AlignAbsolute)
         super().__init__(ericPic)
         self.show()
         QApplication.flush()

@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to compare two files and show the result side by side.
+Module implementing a dialog to compare two files and show the result side by
+side.
 """
 
 import re
@@ -28,7 +29,8 @@ import Preferences
 
 def sbsdiff(a, b, linenumberwidth=4):
     """
-    Compare two sequences of lines; generate the delta for display side by side.
+    Compare two sequences of lines; generate the delta for display side by
+    side.
     
     @param a first sequence of lines (list of strings)
     @param b second sequence of lines (list of strings)
@@ -36,7 +38,8 @@ def sbsdiff(a, b, linenumberwidth=4):
     @return a generator yielding tuples of differences. The tuple is composed
         of strings as follows.
         <ul>
-            <li>opcode -- one of e, d, i, r for equal, delete, insert, replace</li>
+            <li>opcode -- one of e, d, i, r for equal, delete, insert,
+                replace</li>
             <li>lineno a -- linenumber of sequence a</li>
             <li>line a -- line of sequence a</li>
             <li>lineno b -- linenumber of sequence b</li>
@@ -59,7 +62,8 @@ def sbsdiff(a, b, linenumberwidth=4):
     linenumberformat = "{{0:{0:d}d}}".format(linenumberwidth)
     emptylineno = ' ' * linenumberwidth
     
-    for (ln1, l1), (ln2, l2), flag in _mdiff(a, b, None, None, IS_CHARACTER_JUNK):
+    for (ln1, l1), (ln2, l2), flag in _mdiff(a, b, None, None,
+                                             IS_CHARACTER_JUNK):
         if not flag:
             yield ('e', linenumberformat.format(ln1), l1,
                         linenumberformat.format(ln2), l2)
@@ -78,7 +82,8 @@ def sbsdiff(a, b, linenumberwidth=4):
 
 class CompareDialog(QWidget, Ui_CompareDialog):
     """
-    Class implementing a dialog to compare two files and show the result side by side.
+    Class implementing a dialog to compare two files and show the result side
+    by side.
     """
     def __init__(self, files=[], parent=None):
         """
@@ -94,8 +99,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.file1Completer = E5FileCompleter(self.file1Edit)
         self.file2Completer = E5FileCompleter(self.file2Edit)
         
-        self.diffButton = \
-            self.buttonBox.addButton(self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
+        self.diffButton = self.buttonBox.addButton(
+            self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
         self.diffButton.setToolTip(
             self.trUtf8("Press to perform the comparison of the two files"))
         self.diffButton.setEnabled(False)
@@ -226,7 +231,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         except IOError:
             E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(filename1))
             return
 
@@ -238,7 +244,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         except IOError:
             E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(filename2))
             return
         
@@ -478,7 +485,8 @@ class CompareWindow(E5MainWindow):
         """
         super().__init__(parent)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.cw = CompareDialog(files, self)
         self.cw.installEventFilter(self)
