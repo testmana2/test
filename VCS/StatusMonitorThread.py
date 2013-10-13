@@ -15,8 +15,8 @@ class VcsStatusMonitorThread(QThread):
     Class implementing the VCS status monitor thread base class.
     
     @signal vcsStatusMonitorData(list of str) emitted to update the VCS status
-    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of the
-        monitoring thread (ok, nok, op) and a status message
+    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of
+        the monitoring thread (ok, nok, op) and a status message
     """
     vcsStatusMonitorData = pyqtSignal(list)
     vcsStatusMonitorStatus = pyqtSignal(str, str)
@@ -57,7 +57,8 @@ class VcsStatusMonitorThread(QThread):
         while not self.__stopIt:
             # perform the checking task
             self.statusList = []
-            self.vcsStatusMonitorStatus.emit("wait", self.trUtf8("Waiting for lock"))
+            self.vcsStatusMonitorStatus.emit(
+                "wait", self.trUtf8("Waiting for lock"))
             try:
                 locked = self.vcs.vcsExecutionMutex.tryLock(5000)
             except TypeError:
@@ -73,7 +74,8 @@ class VcsStatusMonitorThread(QThread):
                     status = "ok"
                 else:
                     status = "nok"
-                self.vcsStatusMonitorStatus.emit("send", self.trUtf8("Sending data"))
+                self.vcsStatusMonitorStatus.emit(
+                    "send", self.trUtf8("Sending data"))
                 self.vcsStatusMonitorData.emit(self.statusList)
                 self.vcsStatusMonitorStatus.emit(status, statusMsg)
             else:
@@ -88,7 +90,8 @@ class VcsStatusMonitorThread(QThread):
             # wait until interval has expired checking for a stop condition
             self.monitorMutex.lock()
             if not self.__stopIt:
-                self.monitorCondition.wait(self.monitorMutex, self.interval * 1000)
+                self.monitorCondition.wait(
+                    self.monitorMutex, self.interval * 1000)
             self.monitorMutex.unlock()
         
         self._shutdown()
@@ -165,10 +168,10 @@ class VcsStatusMonitorThread(QThread):
         """
         Protected method implementing the real monitoring action.
         
-        This method must be overridden and populate the statusList member variable
-        with a list of strings giving the status in the first column and the
-        path relative to the project directory starting with the third column.
-        The allowed status flags are:
+        This method must be overridden and populate the statusList member
+        variable with a list of strings giving the status in the first column
+        and the path relative to the project directory starting with the
+        third column. The allowed status flags are:
         <ul>
             <li>"A" path was added but not yet comitted</li>
             <li>"M" path has local changes</li>

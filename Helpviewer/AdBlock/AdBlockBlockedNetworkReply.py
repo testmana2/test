@@ -20,7 +20,8 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         Constructor
         
         @param request reference to the request object (QNetworkRequest)
-        @param subscription subscription containing the matched rule (AdBlockSubscription)
+        @param subscription subscription containing the matched rule
+            (AdBlockSubscription)
         @param rule matching rule (AdBlockRule)
         @param parent reference to the parent object (QObject)
         """
@@ -28,15 +29,18 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         self.setOperation(QNetworkAccessManager.GetOperation)
         self.setRequest(request)
         self.setUrl(request.url())
-        self.setError(QNetworkReply.ContentAccessDenied,
-                      "AdBlockRule:{0} ({1})".format(subscription.title(), rule.filter()))
+        self.setError(
+            QNetworkReply.ContentAccessDenied,
+            "AdBlockRule:{0} ({1})"
+                .format(subscription.title(), rule.filter()))
         QTimer.singleShot(0, self.__fireSignals)
     
     def __fireSignals(self):
         """
         Private method to send some signals to end the connection.
         """
-        self.error[QNetworkReply.NetworkError].emit(QNetworkReply.ContentAccessDenied)
+        self.error[QNetworkReply.NetworkError].emit(
+            QNetworkReply.ContentAccessDenied)
         self.finished.emit()
     
     def readData(self, maxlen):

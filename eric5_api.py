@@ -108,8 +108,8 @@ def main():
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], "b:e:hl:o:pRrt:Vx:",
-            ["base=", "eol=", "exclude=", "exclude-file=", "extension=", "help",
-             "language=", "output=", "private", "recursive",
+            ["base=", "eol=", "exclude=", "exclude-file=", "extension=",
+             "help", "language=", "output=", "private", "recursive",
              "version", ])
     except getopt.error:
         usage()

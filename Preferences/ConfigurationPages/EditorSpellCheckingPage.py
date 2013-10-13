@@ -19,7 +19,8 @@ import Preferences
 import Utilities
 
 
-class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage):
+class EditorSpellCheckingPage(ConfigurationPageBase,
+                              Ui_EditorSpellCheckingPage):
     """
     Class implementing the Editor Spellchecking configuration page.
     """
@@ -58,39 +59,46 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         self.initColour("SpellingMarkers", self.spellingMarkerButton,
             Preferences.getEditorColour, hasAlpha=True)
         
-        self.pwlEdit.setText(Preferences.getEditor("SpellCheckingPersonalWordList"))
-        self.pelEdit.setText(Preferences.getEditor("SpellCheckingPersonalExcludeList"))
+        self.pwlEdit.setText(
+            Preferences.getEditor("SpellCheckingPersonalWordList"))
+        self.pelEdit.setText(
+            Preferences.getEditor("SpellCheckingPersonalExcludeList"))
         
         if self.spellingFrame.isEnabled():
             self.enabledCheckBox.setChecked(
                 Preferences.getEditor("AutoSpellCheckingEnabled"))
         else:
             self.enabledCheckBox.setChecked(False)  # not available
-        self.chunkSizeSpinBox.setValue(Preferences.getEditor("AutoSpellCheckChunkSize"))
+        self.chunkSizeSpinBox.setValue(
+            Preferences.getEditor("AutoSpellCheckChunkSize"))
         
     def save(self):
         """
         Public slot to save the Editor Search configuration.
         """
-        Preferences.setEditor("SpellCheckingEnabled",
-            self.checkingEnabledCheckBox.isChecked())
+        Preferences.setEditor(
+            "SpellCheckingEnabled", self.checkingEnabledCheckBox.isChecked())
         
-        Preferences.setEditor("SpellCheckingDefaultLanguage",
+        Preferences.setEditor(
+            "SpellCheckingDefaultLanguage",
             self.defaultLanguageCombo.currentText())
         
-        Preferences.setEditor("SpellCheckStringsOnly",
-            self.stringsOnlyCheckBox.isChecked())
-        Preferences.setEditor("SpellCheckingMinWordSize",
-            self.minimumWordSizeSlider.value())
+        Preferences.setEditor(
+            "SpellCheckStringsOnly", self.stringsOnlyCheckBox.isChecked())
+        Preferences.setEditor(
+            "SpellCheckingMinWordSize", self.minimumWordSizeSlider.value())
         
         self.saveColours(Preferences.setEditorColour)
         
-        Preferences.setEditor("SpellCheckingPersonalWordList", self.pwlEdit.text())
-        Preferences.setEditor("SpellCheckingPersonalExcludeList", self.pelEdit.text())
+        Preferences.setEditor(
+            "SpellCheckingPersonalWordList", self.pwlEdit.text())
+        Preferences.setEditor(
+            "SpellCheckingPersonalExcludeList", self.pelEdit.text())
         
-        Preferences.setEditor("AutoSpellCheckingEnabled",
-            self.enabledCheckBox.isChecked())
-        Preferences.setEditor("AutoSpellCheckChunkSize", self.chunkSizeSpinBox.value())
+        Preferences.setEditor(
+            "AutoSpellCheckingEnabled", self.enabledCheckBox.isChecked())
+        Preferences.setEditor(
+            "AutoSpellCheckChunkSize", self.chunkSizeSpinBox.value())
     
     @pyqtSlot()
     def on_pwlButton_clicked(self):

@@ -8,13 +8,16 @@ Module implementing a dialog for entering character classes.
 """
 
 from PyQt4.QtCore import QRegExp
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QLineEdit, \
-    QPushButton, QDialog, QScrollArea, QComboBox, QVBoxLayout, QRegExpValidator, QLabel
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QLineEdit, QPushButton, QDialog, QScrollArea, QComboBox, QVBoxLayout, \
+    QRegExpValidator, QLabel
 
-from .Ui_PyRegExpWizardCharactersDialog import Ui_PyRegExpWizardCharactersDialog
+from .Ui_PyRegExpWizardCharactersDialog import \
+    Ui_PyRegExpWizardCharactersDialog
 
 
-class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog):
+class PyRegExpWizardCharactersDialog(
+    QDialog, Ui_PyRegExpWizardCharactersDialog):
     """
     Class implementing a dialog for entering character classes.
     """
@@ -41,8 +44,10 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         self.comboItems = []
         self.singleComboItems = []      # these are in addition to the above
         self.comboItems.append(self.trUtf8("Normal character"))
-        self.comboItems.append(self.trUtf8("Unicode character in hexadecimal notation"))
-        self.comboItems.append(self.trUtf8("Unicode character in octal notation"))
+        self.comboItems.append(
+            self.trUtf8("Unicode character in hexadecimal notation"))
+        self.comboItems.append(
+            self.trUtf8("Unicode character in octal notation"))
         self.singleComboItems.append(self.trUtf8("---"))
         self.singleComboItems.append(self.trUtf8("Bell character (\\a)"))
         self.singleComboItems.append(self.trUtf8("Page break (\\f)"))
@@ -83,7 +88,8 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
             self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
-        hspacer0 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        hspacer0 = QSpacerItem(
+            30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
         self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
@@ -116,7 +122,8 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
             self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
-        hspacer1 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        hspacer1 = QSpacerItem(
+            30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
         self.moreRangesButton.clicked[()].connect(self.__addRangesLine)
@@ -211,7 +218,8 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         
     def __singlesCharTypeSelected(self, index):
         """
-        Private slot to handle the activated(int) signal of the single chars combo boxes.
+        Private slot to handle the activated(int) signal of the single chars
+        combo boxes.
         
         @param index selected list index (integer)
         """
@@ -223,7 +231,8 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         
     def __rangesCharTypeSelected(self, index):
         """
-        Private slot to handle the activated(int) signal of the char ranges combo boxes.
+        Private slot to handle the activated(int) signal of the char ranges
+        combo boxes.
         
         @param index selected list index (integer)
         """
@@ -299,8 +308,9 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
                 self.__formatCharacter(index, char2))
         
         if regexp:
-            if (len(regexp) == 2 and \
-                (regexp in self.predefinedClasses or regexp in self.specialChars)) or \
+            if (len(regexp) == 2 and
+                (regexp in self.predefinedClasses or
+                 regexp in self.specialChars)) or \
                len(regexp) == 1:
                 return regexp
             else:

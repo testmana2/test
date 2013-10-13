@@ -29,14 +29,16 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.__model = QStringListModel(Preferences.getHelp("SendRefererWhitelist"), self)
+        self.__model = QStringListModel(
+            Preferences.getHelp("SendRefererWhitelist"), self)
         self.__model.sort(0)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setFilterCaseSensitivity(Qt.CaseInsensitive)
         self.__proxyModel.setSourceModel(self.__model)
         self.whitelist.setModel(self.__proxyModel)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.removeButton.clicked[()].connect(self.whitelist.removeSelected)
         self.removeAllButton.clicked[()].connect(self.whitelist.removeAll)

@@ -34,7 +34,8 @@ class LexerProperties(QsciLexerProperties, Lexer):
         """
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
         try:
-            self.setInitialSpaces(Preferences.getEditor("PropertiesInitialSpaces"))
+            self.setInitialSpaces(
+                Preferences.getEditor("PropertiesInitialSpaces"))
         except AttributeError:
             pass
     

@@ -54,9 +54,12 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.toDate.setDisplayFormat("yyyy-MM-dd")
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(self.trUtf8("Message")))
-        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences("LogLimit"))
-        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
+        self.fieldCombo.setCurrentIndex(
+            self.fieldCombo.findText(self.trUtf8("Message")))
+        self.limitSpinBox.setValue(
+            self.vcs.getPlugin().getPreferences("LogLimit"))
+        self.stopCheckBox.setChecked(
+            self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
@@ -68,15 +71,18 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         
         self.rx_sep1 = QRegExp('\\-+\\s*')
         self.rx_sep2 = QRegExp('=+\\s*')
-        self.rx_rev1 = QRegExp('rev ([0-9]+):  ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
+        self.rx_rev1 = QRegExp(
+            'rev ([0-9]+):  ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
         # "rev" followed by one or more decimals followed by a colon followed
-        # anything up to " | " (twice) followed by one or more decimals followed
-        # by anything
-        self.rx_rev2 = QRegExp('r([0-9]+) \| ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
+        # anything up to " | " (twice) followed by one or more decimals
+        # followed by anything
+        self.rx_rev2 = QRegExp(
+            'r([0-9]+) \| ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
         # "r" followed by one or more decimals followed by " | " followed
-        # anything up to " | " (twice) followed by one or more decimals followed
-        # by anything
-        self.rx_flags1 = QRegExp(r"""   ([ADM])\s(.*)\s+\(\w+\s+(.*):([0-9]+)\)\s*""")
+        # anything up to " | " (twice) followed by one or more decimals
+        # followed by anything
+        self.rx_flags1 = QRegExp(
+            r"""   ([ADM])\s(.*)\s+\(\w+\s+(.*):([0-9]+)\)\s*""")
         # three blanks followed by A or D or M followed by path followed by
         # path copied from followed by copied from revision
         self.rx_flags2 = QRegExp('   ([ADM]) (.*)\\s*')
@@ -281,7 +287,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -341,7 +348,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                     self.__generateLogItem(log["author"], log["date"],
                         log["message"], log["revision"], changedPaths)
                     dt = QDate.fromString(log["date"], Qt.ISODate)
-                    if not self.__maxDate.isValid() and not self.__minDate.isValid():
+                    if not self.__maxDate.isValid() and \
+                            not self.__minDate.isValid():
                         self.__maxDate = dt
                         self.__minDate = dt
                     else:
@@ -416,7 +424,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @param rev2 second revision number (integer)
         """
         if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
-            self.vcs.svnSbsDiff(self.filename, revisions=(str(rev1), str(rev2)))
+            self.vcs.svnSbsDiff(self.filename,
+                                revisions=(str(rev1), str(rev2)))
         else:
             if self.diff is None:
                 from .SvnDiffDialog import SvnDiffDialog
@@ -459,14 +468,16 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             self.__resortFiles()
         
         self.diffPreviousButton.setEnabled(
-            current != self.logTree.topLevelItem(self.logTree.topLevelItemCount() - 1))
+            current != self.logTree.topLevelItem(
+                self.logTree.topLevelItemCount() - 1))
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
         """
         Private slot called, when the selection has changed.
         """
-        self.diffRevisionsButton.setEnabled(len(self.logTree.selectedItems()) == 2)
+        self.diffRevisionsButton.setEnabled(
+            len(self.logTree.selectedItems()) == 2)
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -487,7 +498,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             return
         rev2 = int(itm.text(0))
         
-        itm = self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) + 1)
+        itm = self.logTree.topLevelItem(
+            self.logTree.indexOfTopLevelItem(itm) + 1)
         if itm is None:
             self.diffPreviousButton.setEnabled(False)
             return
@@ -561,7 +573,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                 fieldIndex = 0
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
+                    searchRx = QRegExp(
+                        "^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:

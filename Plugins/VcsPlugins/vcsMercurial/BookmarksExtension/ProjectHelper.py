@@ -95,15 +95,17 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         ))
         self.hgBookmarkMoveAct.setWhatsThis(self.trUtf8(
             """<b>Move bookmark</b>"""
-            """<p>This moves a bookmark of the project to another changeset.</p>"""
+            """<p>This moves a bookmark of the project to another"""
+            """ changeset.</p>"""
         ))
         self.hgBookmarkMoveAct.triggered[()].connect(self.__hgBookmarkMove)
         self.actions.append(self.hgBookmarkMoveAct)
         
-        self.hgBookmarkIncomingAct = E5Action(self.trUtf8('Show incoming bookmarks'),
-                UI.PixmapCache.getIcon("incomingBookmark.png"),
-                self.trUtf8('Show incoming bookmarks'),
-                0, 0, self, 'mercurial_incoming_bookmarks')
+        self.hgBookmarkIncomingAct = E5Action(
+            self.trUtf8('Show incoming bookmarks'),
+            UI.PixmapCache.getIcon("incomingBookmark.png"),
+            self.trUtf8('Show incoming bookmarks'),
+            0, 0, self, 'mercurial_incoming_bookmarks')
         self.hgBookmarkIncomingAct.setStatusTip(self.trUtf8(
             'Show a list of incoming bookmarks'
         ))
@@ -112,7 +114,8 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This shows a list of new bookmarks available at the remote"""
             """ repository.</p>"""
         ))
-        self.hgBookmarkIncomingAct.triggered[()].connect(self.__hgBookmarkIncoming)
+        self.hgBookmarkIncomingAct.triggered[()].connect(
+            self.__hgBookmarkIncoming)
         self.actions.append(self.hgBookmarkIncomingAct)
         
         self.hgBookmarkPullAct = E5Action(self.trUtf8('Pull bookmark'),
@@ -130,10 +133,11 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.hgBookmarkPullAct.triggered[()].connect(self.__hgBookmarkPull)
         self.actions.append(self.hgBookmarkPullAct)
         
-        self.hgBookmarkOutgoingAct = E5Action(self.trUtf8('Show outgoing bookmarks'),
-                UI.PixmapCache.getIcon("outgoingBookmark.png"),
-                self.trUtf8('Show outgoing bookmarks'),
-                0, 0, self, 'mercurial_outgoing_bookmarks')
+        self.hgBookmarkOutgoingAct = E5Action(
+            self.trUtf8('Show outgoing bookmarks'),
+            UI.PixmapCache.getIcon("outgoingBookmark.png"),
+            self.trUtf8('Show outgoing bookmarks'),
+            0, 0, self, 'mercurial_outgoing_bookmarks')
         self.hgBookmarkOutgoingAct.setStatusTip(self.trUtf8(
             'Show a list of outgoing bookmarks'
         ))
@@ -142,7 +146,8 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This shows a list of new bookmarks available at the local"""
             """ repository.</p>"""
         ))
-        self.hgBookmarkOutgoingAct.triggered[()].connect(self.__hgBookmarkOutgoing)
+        self.hgBookmarkOutgoingAct.triggered[()].connect(
+            self.__hgBookmarkOutgoing)
         self.actions.append(self.hgBookmarkOutgoingAct)
         
         self.hgBookmarkPushAct = E5Action(self.trUtf8('Push bookmark'),

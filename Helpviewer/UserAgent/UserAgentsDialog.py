@@ -29,15 +29,18 @@ class UserAgentsDialog(QDialog, Ui_UserAgentsDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.removeButton.clicked[()].connect(self.userAgentsTable.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.userAgentsTable.removeAll)
+        self.removeButton.clicked[()].connect(
+            self.userAgentsTable.removeSelected)
+        self.removeAllButton.clicked[()].connect(
+            self.userAgentsTable.removeAll)
         
         self.userAgentsTable.verticalHeader().hide()
-        self.__userAgentModel = \
-            UserAgentModel(Helpviewer.HelpWindow.HelpWindow.userAgentsManager(), self)
+        self.__userAgentModel = UserAgentModel(
+            Helpviewer.HelpWindow.HelpWindow.userAgentsManager(), self)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(self.__userAgentModel)
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         self.userAgentsTable.setModel(self.__proxyModel)
         
         fm = QFontMetrics(QFont())

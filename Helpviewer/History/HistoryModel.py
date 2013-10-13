@@ -27,7 +27,8 @@ class HistoryModel(QAbstractTableModel):
         """
         Constructor
         
-        @param historyManager reference to the history manager object (HistoryManager)
+        @param historyManager reference to the history manager object
+            (HistoryManager)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)

@@ -17,12 +17,15 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
     """
     Class implementing a dialog to enter the data for a merge operation.
     """
-    def __init__(self, mergelist1, mergelist2, targetlist, force=False, parent=None):
+    def __init__(self, mergelist1, mergelist2, targetlist, force=False,
+                 parent=None):
         """
         Constructor
         
-        @param mergelist1 list of previously entered URLs/revisions (list of strings)
-        @param mergelist2 list of previously entered URLs/revisions (list of strings)
+        @param mergelist1 list of previously entered URLs/revisions
+            (list of strings)
+        @param mergelist2 list of previously entered URLs/revisions
+            (list of strings)
         @param targetlist list of previously entered targets (list of strings)
         @param force flag indicating a forced merge (boolean)
         @param parent parent widget (QWidget)

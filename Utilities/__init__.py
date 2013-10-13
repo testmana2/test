@@ -171,12 +171,14 @@ def readEncodedFileWithHash(filename):
     into proper text.
     
     @param filename name of the file to read (string)
-    @return tuple of decoded text, encoding and hash value (string, string, string)
+    @return tuple of decoded text, encoding and hash value (string, string,
+        string)
     """
     f = open(filename, "rb")
     text = f.read()
     f.close()
-    hash = str(QCryptographicHash.hash(QByteArray(text), QCryptographicHash.Md5).toHex(),
+    hash = str(QCryptographicHash.hash(
+               QByteArray(text), QCryptographicHash.Md5).toHex(),
                encoding="ASCII")
     return decode(text) + (hash, )
 
@@ -216,7 +218,8 @@ def decode(text):
         try:
             import ThirdParty.CharDet.chardet
             guess = ThirdParty.CharDet.chardet.detect(text)
-            if guess and guess['confidence'] > 0.95 and guess['encoding'] is not None:
+            if guess and guess['confidence'] > 0.95 and \
+                    guess['encoding'] is not None:
                 codec = guess['encoding'].lower()
                 return str(text, codec), '{0}-guessed'.format(codec)
         except (UnicodeError, LookupError):
@@ -598,7 +601,8 @@ def extractFlagsFromFile(filename):
 
 def extractLineFlags(line, startComment="#", endComment=""):
     """
-    Function to extract flags starting and ending with '__' from a line comment.
+    Function to extract flags starting and ending with '__' from a line
+    comment.
     
     @param line line to extract flags from (string)
     @keyparam startComment string identifying the start of the comment (string)
@@ -639,7 +643,8 @@ def fromNativeSeparators(path):
 
 def normcasepath(path):
     """
-    Function returning a path, that is normalized with respect to its case and references.
+    Function returning a path, that is normalized with respect to its case
+    and references.
     
     @param path file path (string)
     @return case normalized path (string)
@@ -659,8 +664,8 @@ def normabspath(path):
 
 def normcaseabspath(path):
     """
-    Function returning an absolute path, that is normalized with respect to its case
-    and references.
+    Function returning an absolute path, that is normalized with respect to
+    its case and references.
     
     @param path file path (string)
     @return absolute, normalized path (string)
@@ -681,7 +686,8 @@ def normjoinpath(a, *p):
 
 def normabsjoinpath(a, *p):
     """
-    Function returning a normalized, absolute path of the joined parts passed into it.
+    Function returning a normalized, absolute path of the joined parts passed
+    into it.
     
     @param a first path to be joined (string)
     @param p variable number of path parts to be joind (string)
@@ -782,9 +788,9 @@ def getExecutablePaths(file):
     Function to build all full path of an executable file from the environment.
     
     @param file filename of the executable (string)
-    @return list of full executable names (list of strings), if the executable file
-        is accessible via the searchpath defined by the PATH environment variable,
-        or an empty list otherwise.
+    @return list of full executable names (list of strings), if the executable
+        file is accessible via the searchpath defined by the PATH environment
+        variable, or an empty list otherwise.
     """
     paths = []
     
@@ -834,7 +840,8 @@ def samepath(f1, f2):
     if f1 is None or f2 is None:
         return False
     
-    if normcaseabspath(os.path.realpath(f1)) == normcaseabspath(os.path.realpath(f2)):
+    if normcaseabspath(os.path.realpath(f1)) == \
+            normcaseabspath(os.path.realpath(f2)):
         return True
     
     return False
@@ -872,7 +879,8 @@ def joinext(prefix, ext):
     @return the complete filename (string)
     """
     if ext[0] != ".":
-        ext = ".{0}".format(ext)  # require leading separator, to match os.path.splitext
+        ext = ".{0}".format(ext)  # require leading separator to match
+                                  # os.path.splitext
     return prefix + EXTSEP + ext[1:]
 
 
@@ -882,7 +890,8 @@ def compactPath(path, width, measure=len):
     
     @param path path to be compacted (string)
     @param width width for the compacted path (integer)
-    @param measure reference to a function used to measure the length of the string
+    @param measure reference to a function used to measure the length of the
+        string
     @return compacted path (string)
     """
     if measure(path) <= width:
@@ -912,7 +921,8 @@ def compactPath(path, width, measure=len):
     return ""
     
 
-def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkStop=None):
+def direntries(path, filesonly=False, pattern=None, followsymlinks=True,
+               checkStop=None):
     """
     Function returning a list of all files and directories.
     
@@ -953,7 +963,8 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkSt
             if os.path.isdir(fentry):
                 if os.path.islink(fentry) and not followsymlinks:
                     continue
-                files += direntries(fentry, filesonly, pattern, followsymlinks, checkStop)
+                files += direntries(
+                    fentry, filesonly, pattern, followsymlinks, checkStop)
             else:
                 files.append(fentry)
     except OSError:
@@ -1023,7 +1034,8 @@ def parseOptionString(s):
 
 def parseEnvironmentString(s):
     """
-    Function used to convert an environment string into a list of environment settings.
+    Function used to convert an environment string into a list of environment
+    settings.
     
     @param s environment string (string)
     @return list of environment settings (list of strings)
@@ -1154,11 +1166,13 @@ def getPercentReplacementHelp():
         """<p>You may use %-codes as placeholders in the string."""
         """ Supported codes are:"""
         """<table>"""
-        """<tr><td>%C</td><td>column of the cursor of the current editor</td></tr>"""
+        """<tr><td>%C</td><td>column of the cursor of the current editor"""
+        """</td></tr>"""
         """<tr><td>%D</td><td>directory of the current editor</td></tr>"""
         """<tr><td>%F</td><td>filename of the current editor</td></tr>"""
         """<tr><td>%H</td><td>home directory of the current user</td></tr>"""
-        """<tr><td>%L</td><td>line of the cursor of the current editor</td></tr>"""
+        """<tr><td>%L</td><td>line of the cursor of the current editor"""
+        """</td></tr>"""
         """<tr><td>%P</td><td>path of the current project</td></tr>"""
         """<tr><td>%S</td><td>selected text of the current editor</td></tr>"""
         """<tr><td>%U</td><td>username of the current user</td></tr>"""
@@ -1391,14 +1405,14 @@ def py2compile(file, checkFlakes=False):
             return (False, "", "", "", "", "", [])
     
     return (True, file, "1", "0", "",
-        QCoreApplication.translate("Utilities",
-                                   "Python2 interpreter did not finish within 30s."),
+        QCoreApplication.translate(
+            "Utilities", "Python2 interpreter did not finish within 30s."),
         [])
 
 
-################################################################################
+###############################################################################
 # functions for environment handling
-################################################################################
+###############################################################################
 
 
 def getEnvironmentEntry(key, default=None):
@@ -1415,7 +1429,8 @@ def getEnvironmentEntry(key, default=None):
     if isWindowsPlatform():
         filter.setCaseSensitivity(Qt.CaseInsensitive)
     
-    entries = [e for e in QProcess.systemEnvironment() if filter.indexIn(e) != -1]
+    entries = [e for e in QProcess.systemEnvironment()
+               if filter.indexIn(e) != -1]
     if not entries:
         return default
     
@@ -1435,17 +1450,19 @@ def hasEnvironmentEntry(key):
     if isWindowsPlatform():
         filter.setCaseSensitivity(Qt.CaseInsensitive)
     
-    entries = [e for e in QProcess.systemEnvironment() if filter.indexIn(e) != -1]
+    entries = [e for e in QProcess.systemEnvironment()
+               if filter.indexIn(e) != -1]
     return len(entries) > 0
 
-################################################################################
+###############################################################################
 # Qt utility functions below
-################################################################################
+###############################################################################
 
 
 def generateQtToolName(toolname):
     """
-    Module function to generate the executable name for a Qt tool like designer.
+    Module function to generate the executable name for a Qt tool like
+    designer.
     
     @param toolname base name of the tool (string)
     @return the Qt tool name without extension (string)
@@ -1465,9 +1482,11 @@ def getQtMacBundle(toolname):
     """
     qtDir = getQtBinariesPath()
     bundles = [
-        os.path.join(qtDir, 'bin', generateQtToolName(toolname.capitalize())) + ".app",
+        os.path.join(
+            qtDir, 'bin', generateQtToolName(toolname.capitalize())) + ".app",
         os.path.join(qtDir, 'bin', generateQtToolName(toolname)) + ".app",
-        os.path.join(qtDir, generateQtToolName(toolname.capitalize())) + ".app",
+        os.path.join(
+            qtDir, generateQtToolName(toolname.capitalize())) + ".app",
         os.path.join(qtDir, generateQtToolName(toolname)) + ".app",
     ]
     for bundle in bundles:
@@ -1501,9 +1520,9 @@ def prepareQtMacBundle(toolname, version, args):
 
     return ("open", newArgs)
 
-################################################################################
+###############################################################################
 # Qt utility functions below
-################################################################################
+###############################################################################
 
 
 def generatePySideToolPath(toolname):
@@ -1521,7 +1540,8 @@ def generatePySideToolPath(toolname):
             prefix = sys.prefix
         except ImportError:
             # step 2: check for a Python2 variant
-            prefix = os.path.dirname(Preferences.getDebugger("PythonInterpreter"))
+            prefix = os.path.dirname(
+                Preferences.getDebugger("PythonInterpreter"))
         if toolname == "pyside-uic":
             return os.path.join(prefix, "Scripts", toolname + '.exe')
         else:
@@ -1565,9 +1585,9 @@ def checkPyside():
     
     return py2, py3
 
-################################################################################
+###############################################################################
 # Other utility functions below
-################################################################################
+###############################################################################
 
 
 def generateVersionInfo(linesep='\n'):
@@ -1670,15 +1690,15 @@ def toBool(dataStr):
     else:
         return bool(dataStr)
 
-################################################################################
+###############################################################################
 # posix compatibility functions below
-################################################################################
+###############################################################################
 
 # None right now
 
-################################################################################
+###############################################################################
 # win32 compatibility functions below
-################################################################################
+###############################################################################
 
 
 def win32_Kill(pid):

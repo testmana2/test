@@ -430,7 +430,7 @@ the respective line and position.&lt;/p&gt;</string>
    <item>
     <widget class="QProgressBar" name="checkProgress">
      <property name="toolTip">
-      <string>Shows the progress of the style check check</string>
+      <string>Shows the progress of the code style check</string>
      </property>
      <property name="value">
       <number>0</number>

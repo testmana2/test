@@ -24,7 +24,8 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "opera":
@@ -98,7 +99,8 @@ class OperaImporter(BookmarksImporter):
             f.close()
         except IOError as err:
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' cannot be read.\nReason: {1}")\
+            self._errorString = self.trUtf8(
+                "File '{0}' cannot be read.\nReason: {1}")\
                 .format(self.__fileName, str(err))
             return None
         

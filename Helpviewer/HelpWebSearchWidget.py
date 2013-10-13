@@ -42,7 +42,8 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         self.__mw = parent
         
         self.__openSearchManager = OpenSearchManager(self)
-        self.__openSearchManager.currentEngineChanged.connect(self.__currentEngineChanged)
+        self.__openSearchManager.currentEngineChanged.connect(
+            self.__currentEngineChanged)
         self.__currentEngine = ""
         
         self.__enginesMenu = QMenu(self)
@@ -58,14 +59,17 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         self.__model = QStandardItemModel(self)
         self.__completer = QCompleter()
         self.__completer.setModel(self.__model)
-        self.__completer.setCompletionMode(QCompleter.UnfilteredPopupCompletion)
+        self.__completer.setCompletionMode(
+            QCompleter.UnfilteredPopupCompletion)
         self.__completer.setWidget(self)
         
         self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
         self.textEdited.connect(self.__textEdited)
         self.returnPressed[()].connect(self.__searchNow)
-        self.__completer.activated[QModelIndex].connect(self.__completerActivated)
-        self.__completer.highlighted[QModelIndex].connect(self.__completerHighlighted)
+        self.__completer.activated[QModelIndex].connect(
+            self.__completerActivated)
+        self.__completer.highlighted[QModelIndex].connect(
+            self.__completerHighlighted)
         self.__enginesMenu.aboutToShow.connect(self.__showEnginesMenu)
         
         self.__suggestionsItem = None
@@ -91,12 +95,14 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
             return
         
         globalSettings = QWebSettings.globalSettings()
-        if not globalSettings.testAttribute(QWebSettings.PrivateBrowsingEnabled):
+        if not globalSettings.testAttribute(
+                QWebSettings.PrivateBrowsingEnabled):
             if searchText in self.__recentSearches:
                 self.__recentSearches.remove(searchText)
             self.__recentSearches.insert(0, searchText)
             if len(self.__recentSearches) > self.__maxSavedSearches:
-                self.__recentSearches = self.__recentSearches[:self.__maxSavedSearches]
+                self.__recentSearches = \
+                    self.__recentSearches[:self.__maxSavedSearches]
             self.__setupCompleterMenu()
         
         url = self.__openSearchManager.currentEngine().searchUrl(searchText)
@@ -120,7 +126,8 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         if self.__suggestions:
             if self.__model.rowCount() == 0:
                 if not self.__suggestionsItem:
-                    self.__suggestionsItem = QStandardItem(self.trUtf8("Suggestions"))
+                    self.__suggestionsItem = QStandardItem(
+                        self.trUtf8("Suggestions"))
                     self.__suggestionsItem.setFont(boldFont)
                 self.__model.appendRow(self.__suggestionsItem)
             
@@ -128,19 +135,21 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
                 self.__model.appendRow(QStandardItem(suggestion))
         
         if not self.__recentSearches:
-            self.__recentSearchesItem = QStandardItem(self.trUtf8("No Recent Searches"))
+            self.__recentSearchesItem = QStandardItem(
+                self.trUtf8("No Recent Searches"))
             self.__recentSearchesItem.setFont(boldFont)
             self.__model.appendRow(self.__recentSearchesItem)
         else:
-            self.__recentSearchesItem = QStandardItem(self.trUtf8("Recent Searches"))
+            self.__recentSearchesItem = QStandardItem(
+                self.trUtf8("Recent Searches"))
             self.__recentSearchesItem.setFont(boldFont)
             self.__model.appendRow(self.__recentSearchesItem)
             for recentSearch in self.__recentSearches:
                 self.__model.appendRow(QStandardItem(recentSearch))
         
         view = self.__completer.popup()
-        view.setFixedHeight(
-            view.sizeHintForRow(0) * self.__model.rowCount() + view.frameWidth() * 2)
+        view.setFixedHeight(view.sizeHintForRow(0) * self.__model.rowCount() +
+                            view.frameWidth() * 2)
         
         self.__searchButton.setEnabled(
             bool(self.__recentSearches or self.__suggestions))
@@ -198,11 +207,13 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
     
     def __getSuggestions(self):
         """
-        Private slot to get search suggestions from the configured search engine.
+        Private slot to get search suggestions from the configured search
+        engine.
         """
         searchText = self.text()
         if searchText:
-            self.__openSearchManager.currentEngine().requestSuggestions(searchText)
+            self.__openSearchManager.currentEngine()\
+                .requestSuggestions(searchText)
     
     def __newSuggestions(self, suggestions):
         """
@@ -258,8 +269,9 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
                 else:
                     title = ct.title()
             
-            action = self.__enginesMenu.addAction(self.trUtf8("Add '{0}'").format(title),
-                                                  self.__addEngineFromUrl)
+            action = self.__enginesMenu.addAction(
+                self.trUtf8("Add '{0}'").format(title),
+                self.__addEngineFromUrl)
             action.setData(url)
             action.setIcon(ct.icon())
         
@@ -358,8 +370,8 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         
         self.setInactiveText(self.__openSearchManager.currentEngineName())
         self.__currentEngine = self.__openSearchManager.currentEngineName()
-        self.__engineButton.setIcon(
-            QIcon(QPixmap.fromImage(self.__openSearchManager.currentEngine().image())))
+        self.__engineButton.setIcon(QIcon(QPixmap.fromImage(
+                self.__openSearchManager.currentEngine().image())))
         self.__suggestions = []
         self.__setupCompleterMenu()
     
@@ -367,8 +379,8 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         """
         Private slot to handle a change of the current search engine icon.
         """
-        self.__engineButton.setIcon(
-            QIcon(QPixmap.fromImage(self.__openSearchManager.currentEngine().image())))
+        self.__engineButton.setIcon(QIcon(QPixmap.fromImage(
+                self.__openSearchManager.currentEngine().image())))
     
     def mousePressEvent(self, evt):
         """

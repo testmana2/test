@@ -115,7 +115,8 @@ class WebDatabasesModel(QAbstractItemModel):
                 # web database
                 db = self.__data[parent.row()][1][index.row()]
                 if index.column() == 0:
-                    return self.trUtf8("{0} ({1})").format(db.displayName(), db.name())
+                    return self.trUtf8("{0} ({1})").format(
+                        db.displayName(), db.name())
                 elif index.column() == 1:
                     return self.__dataString(db.size())
     

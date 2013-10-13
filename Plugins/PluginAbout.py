@@ -73,11 +73,13 @@ class AboutPlugin(QObject):
         """
         acts = []
         
-        self.aboutAct = E5Action(self.trUtf8('About {0}').format(UI.Info.Program),
-                UI.PixmapCache.getIcon("helpAbout.png"),
-                self.trUtf8('&About {0}').format(UI.Info.Program),
-                0, 0, self, 'about_eric')
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct = E5Action(
+            self.trUtf8('About {0}').format(UI.Info.Program),
+            UI.PixmapCache.getIcon("helpAbout.png"),
+            self.trUtf8('&About {0}').format(UI.Info.Program),
+            0, 0, self, 'about_eric')
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
             """<b>About {0}</b>"""
             """<p>Display some information about this software.</p>"""

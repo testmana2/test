@@ -41,7 +41,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     MessageColumn = 6
     TagsColumn = 7
     
-    def __init__(self, vcs, mode="log", bundle=None, isFile=False, parent=None):
+    def __init__(self, vcs, mode="log", bundle=None, isFile=False,
+                 parent=None):
         """
         Constructor
         
@@ -67,8 +68,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.headerItem().setText(self.filesTree.columnCount(), "")
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
-        self.refreshButton = \
-            self.buttonBox.addButton(self.trUtf8("&Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton = self.buttonBox.addButton(
+            self.trUtf8("&Refresh"), QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
             self.trUtf8("Press to refresh the list of changesets"))
         self.refreshButton.setEnabled(False)
@@ -389,7 +390,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if self.bundle:
                     args.append("--repository")
                     args.append(self.bundle)
-                elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
+                elif self.vcs.bundleFile and \
+                        os.path.exists(self.vcs.bundleFile):
                     args.append("--repository")
                     args.append(self.vcs.bundleFile)
             args.append("--template")
@@ -660,13 +662,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         args.append('--style')
         if self.vcs.version >= (2, 1):
             args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logBrowserBookmarkPhase.style"))
+                                     "styles",
+                                     "logBrowserBookmarkPhase.style"))
         elif self.vcs.version >= (1, 8):
             args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logBrowserBookmark.style"))
+                                     "styles",
+                                     "logBrowserBookmark.style"))
         else:
             args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logBrowser.style"))
+                                     "styles",
+                                     "logBrowser.style"))
         if self.commandMode == "incoming":
             if self.bundle:
                 args.append(self.bundle)
@@ -1045,7 +1050,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if self.graftButton.isVisible():
             if self.initialCommandMode == "log":
-                # step 1: count selected entries not belonging to the current branch
+                # step 1: count selected entries not belonging to the
+                #         current branch
                 otherBranches = 0
                 for itm in self.logTree.selectedItems():
                     branch = itm.text(self.BranchColumn)
@@ -1061,7 +1067,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to update GUI elements except the diff and phase buttons.
         
-        @param itm reference to the item the update should be based on (QTreeWidgetItem)
+        @param itm reference to the item the update should be based on
+            (QTreeWidgetItem)
         """
         self.messageEdit.clear()
         self.filesTree.clear()
@@ -1344,7 +1351,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         revs = []
         for itm in self.logTree.selectedItems():
             if itm.text(self.PhaseColumn) == currentPhase:
-                revs.append(itm.text(self.RevisionColumn).split(":")[0].strip())
+                revs.append(
+                    itm.text(self.RevisionColumn).split(":")[0].strip())
         
         if not revs:
             self.phaseButton.setEnabled(False)
@@ -1371,14 +1379,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         for itm in self.logTree.selectedItems():
             branch = itm.text(self.BranchColumn)
             if branch != self.__projectBranch:
-                revs.append(itm.text(self.RevisionColumn).strip().split(":", 1)[0])
+                revs.append(
+                    itm.text(self.RevisionColumn).strip().split(":", 1)[0])
         
         if revs:
             shouldReopen = self.vcs.hgGraft(self.repodir, revs)
             if shouldReopen:
                 res = E5MessageBox.yesNo(None,
                     self.trUtf8("Copy Changesets"),
-                    self.trUtf8("""The project should be reread. Do this now?"""),
+                    self.trUtf8(
+                        """The project should be reread. Do this now?"""),
                     yesDefault=True)
                 if res:
                     e5App().getObject("Project").reopenProject()

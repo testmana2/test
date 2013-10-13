@@ -48,7 +48,8 @@ class AdBlockManager(QObject):
         
         self.__defaultSubscriptionUrlString = \
             "abp:subscribe?location=" \
-            "https://easylist-downloads.adblockplus.org/easylist.txt&title=EasyList"
+            "https://easylist-downloads.adblockplus.org/easylist.txt&"\
+            "title=EasyList"
         self.__customSubscriptionUrlString = \
             bytes(self.__customSubscriptionUrl().toEncoded()).decode()
         
@@ -59,7 +60,8 @@ class AdBlockManager(QObject):
         Public method to close the open search engines manager.
         """
         self.__adBlockDialog and self.__adBlockDialog.close()
-        self.__adBlockExceptionsDialog and self.__adBlockExceptionsDialog.close()
+        self.__adBlockExceptionsDialog and \
+            self.__adBlockExceptionsDialog.close()
         
         self.__saveTimer.saveIfNeccessary()
     
@@ -119,7 +121,8 @@ class AdBlockManager(QObject):
         
         @return URL for custom subscriptions (QUrl)
         """
-        dataDir = os.path.join(Utilities.getConfigDir(), "browser", "subscriptions")
+        dataDir = os.path.join(Utilities.getConfigDir(), "browser",
+                               "subscriptions")
         if not os.path.exists(dataDir):
             os.makedirs(dataDir)
         fileName = os.path.join(dataDir, "adblock_subscription_custom")
@@ -189,14 +192,16 @@ class AdBlockManager(QObject):
         """
         Public method to remove an AdBlock subscription.
         
-        @param subscription AdBlock subscription to be removed (AdBlockSubscription)
+        @param subscription AdBlock subscription to be removed
+            (AdBlockSubscription)
         @param emitSignal flag indicating to send a signal (boolean)
         """
         if subscription is None:
             return
         
         if subscription.url().toString().startswith(
-            (self.__defaultSubscriptionUrlString, self.__customSubscriptionUrlString)):
+            (self.__defaultSubscriptionUrlString,
+             self.__customSubscriptionUrlString)):
             return
         
         try:
@@ -215,7 +220,8 @@ class AdBlockManager(QObject):
         """
         Public method to add an AdBlock subscription.
         
-        @param subscription AdBlock subscription to be added (AdBlockSubscription)
+        @param subscription AdBlock subscription to be added
+            (AdBlockSubscription)
         """
         if subscription is None:
             return
@@ -276,7 +282,8 @@ class AdBlockManager(QObject):
         subscriptions = Preferences.getHelp("AdBlockSubscriptions")
         if subscriptions:
             for subscription in subscriptions:
-                if subscription.startswith(self.__defaultSubscriptionUrlString):
+                if subscription.startswith(
+                        self.__defaultSubscriptionUrlString):
                     break
             else:
                 subscriptions.insert(0, self.__defaultSubscriptionUrlString)
@@ -309,7 +316,8 @@ class AdBlockManager(QObject):
         @param title title of the required subscription (string)
         """
         # Step 1: check, if the subscription is in the list of subscriptions
-        urlString = "abp:subscribe?location={0}&title={1}".format(location, title)
+        urlString = "abp:subscribe?location={0}&title={1}".format(
+            location, title)
         for subscription in self.__subscriptions:
             if subscription.url().toString().startswith(urlString):
                 # We found it!
@@ -323,10 +331,12 @@ class AdBlockManager(QObject):
     
     def getRequiresSubscriptions(self, subscription):
         """
-        Public method to get a list of subscriptions, that require the given one.
+        Public method to get a list of subscriptions, that require the given
+        one.
         
         @param subscription subscription to check for (AdBlockSubscription)
-        @return list of subscription requiring the given one (list of AdBlockSubscription)
+        @return list of subscription requiring the given one (list of
+            AdBlockSubscription)
         """
         subscriptions = []
         location = subscription.location().toString()

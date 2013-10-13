@@ -77,7 +77,8 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
     @pyqtSlot()
     def on_monospacedFontButton_clicked(self):
         """
-        Private method used to select the font to be used as the monospaced font.
+        Private method used to select the font to be used as the monospaced
+        font.
         """
         self.monospacedFont = \
             self.selectFont(self.monospacedFontSample, self.monospacedFont)
@@ -87,7 +88,8 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         """
         Private method used to select the font for the editor margins.
         """
-        self.marginsFont = self.selectFont(self.marginsFontSample, self.marginsFont)
+        self.marginsFont = self.selectFont(self.marginsFontSample,
+                                           self.marginsFont)
         
     def polishPage(self):
         """

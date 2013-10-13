@@ -10,7 +10,8 @@ Module implementing a dialog to show the output of the svn log command process.
 import os
 
 from PyQt4.QtCore import QTimer, QByteArray, QProcess, QRegExp, QUrl, pyqtSlot
-from PyQt4.QtGui import QWidget, QLineEdit, QApplication, QTextCursor, QDialogButtonBox
+from PyQt4.QtGui import QWidget, QLineEdit, QApplication, QTextCursor, \
+    QDialogButtonBox
 
 from E5Gui import E5MessageBox
 
@@ -22,7 +23,8 @@ import Preferences
 
 class SvnLogDialog(QWidget, Ui_SvnLogDialog):
     """
-    Class implementing a dialog to show the output of the svn log command process.
+    Class implementing a dialog to show the output of the svn log command
+    process.
     
     The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the versions.
@@ -54,14 +56,16 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         
         self.rx_sep = QRegExp('\\-+\\s*')
         self.rx_sep2 = QRegExp('=+\\s*')
-        self.rx_rev = QRegExp('rev ([0-9]+):  ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
+        self.rx_rev = QRegExp(
+            'rev ([0-9]+):  ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
         # "rev" followed by one or more decimals followed by a colon followed
-        # anything up to " | " (twice) followed by one or more decimals followed
-        # by anything
-        self.rx_rev2 = QRegExp('r([0-9]+) \| ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
+        # anything up to " | " (twice) followed by one or more decimals
+        # followed by anything
+        self.rx_rev2 = QRegExp(
+            'r([0-9]+) \| ([^|]*) \| ([^|]*) \| ([0-9]+) .*')
         # "r" followed by one or more decimals followed by " | " followed
-        # anything up to " | " (twice) followed by one or more decimals followed
-        # by anything
+        # anything up to " | " (twice) followed by one or more decimals
+        # followed by anything
         self.rx_flags = QRegExp('   ([ADM])( .*)\\s*')
         # three blanks followed by A or D or M
         self.rx_changed = QRegExp('Changed .*\\s*')

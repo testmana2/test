@@ -38,8 +38,9 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         if task is not None:
             self.summaryEdit.setText(task.summary)
             self.descriptionEdit.setText(task.description)
-            self.creationLabel.setText(time.strftime("%Y-%m-%d, %H:%M:%S",
-                                                     time.localtime(task.created)))
+            self.creationLabel.setText(
+                time.strftime("%Y-%m-%d, %H:%M:%S",
+                              time.localtime(task.created)))
             self.priorityCombo.setCurrentIndex(task.priority)
             self.projectCheckBox.setChecked(task._isProjectTask)
             self.completedCheckBox.setChecked(task.completed)
@@ -63,8 +64,11 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         Public method to retrieve the dialogs data.
         
         @return tuple of description, priority, completion flag,
-                project flag and long text (string, string, boolean, boolean, string)
+                project flag and long text (string, string, boolean,
+                boolean, string)
         """
-        return (self.summaryEdit.text(), self.priorityCombo.currentIndex(),
-                self.completedCheckBox.isChecked(), self.projectCheckBox.isChecked(),
+        return (self.summaryEdit.text(),
+                self.priorityCombo.currentIndex(),
+                self.completedCheckBox.isChecked(),
+                self.projectCheckBox.isChecked(),
                 self.descriptionEdit.toPlainText())

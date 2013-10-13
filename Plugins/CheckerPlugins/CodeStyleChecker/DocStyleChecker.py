@@ -404,7 +404,8 @@ class DocStyleChecker(object):
         """
         if code in DocStyleChecker.Messages:
             return code + " " + QCoreApplication.translate(
-                "DocStyleChecker", DocStyleChecker.Messages[code]).format(*args)
+                "DocStyleChecker",
+                DocStyleChecker.Messages[code]).format(*args)
         else:
             return code + " " + QCoreApplication.translate(
                 "DocStyleChecker", "no message for this code defined")

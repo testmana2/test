@@ -84,9 +84,9 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         
         @param projectType type of the selected project (string)
         """
-        from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
-            ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
-            OthersBrowserFlag
+        from Project.ProjectBrowserFlags import SourcesBrowserFlag, \
+            FormsBrowserFlag, ResourcesBrowserFlag, TranslationsBrowserFlag, \
+            InterfacesBrowserFlag, OthersBrowserFlag
         
         flags = 0
         if self.sourcesBrowserCheckBox.isChecked():
@@ -106,21 +106,24 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
     
     def __setProjectBrowsersCheckBoxes(self, projectType):
         """
-        Private method to set the checkboxes according to the selected project type.
+        Private method to set the checkboxes according to the selected project
+        type.
         
         @param projectType type of the selected project (string)
         """
-        from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
-            ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
-            OthersBrowserFlag
+        from Project.ProjectBrowserFlags import SourcesBrowserFlag, \
+            FormsBrowserFlag, ResourcesBrowserFlag, TranslationsBrowserFlag, \
+            InterfacesBrowserFlag, OthersBrowserFlag
         
         flags = self.__projectBrowserFlags[projectType]
         
         self.sourcesBrowserCheckBox.setChecked(flags & SourcesBrowserFlag)
         self.formsBrowserCheckBox.setChecked(flags & FormsBrowserFlag)
         self.resourcesBrowserCheckBox.setChecked(flags & ResourcesBrowserFlag)
-        self.translationsBrowserCheckBox.setChecked(flags & TranslationsBrowserFlag)
-        self.interfacesBrowserCheckBox.setChecked(flags & InterfacesBrowserFlag)
+        self.translationsBrowserCheckBox.setChecked(
+            flags & TranslationsBrowserFlag)
+        self.interfacesBrowserCheckBox.setChecked(
+            flags & InterfacesBrowserFlag)
         self.othersBrowserCheckBox.setChecked(flags & OthersBrowserFlag)
     
     @pyqtSlot(int)

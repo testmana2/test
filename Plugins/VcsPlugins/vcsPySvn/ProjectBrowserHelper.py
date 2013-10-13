@@ -25,21 +25,22 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     """
     Class implementing the VCS project browser helper for subversion.
     """
-    def __init__(self, vcsObject, browserObject, projectObject, isTranslationsBrowser,
-        parent=None, name=None):
+    def __init__(self, vcsObject, browserObject, projectObject,
+                 isTranslationsBrowser, parent=None, name=None):
         """
         Constructor
         
         @param vcsObject reference to the vcs object
         @param browserObject reference to the project browser object
         @param projectObject reference to the project object
-        @param isTranslationsBrowser flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+        @param isTranslationsBrowser flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
         @param parent parent widget (QWidget)
         @param name name of this object (string)
         """
-        VcsProjectBrowserHelper.__init__(self, vcsObject, browserObject, projectObject,
-            isTranslationsBrowser, parent, name)
+        VcsProjectBrowserHelper.__init__(self, vcsObject, browserObject,
+                                         projectObject, isTranslationsBrowser,
+                                         parent, name)
     
     def showContextMenu(self, menu, standardItems):
         """
@@ -49,8 +50,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the file status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         if self.browser.currentItem().data(1) == self.vcs.vcsName():
             for act in self.vcsMenuActions:
@@ -84,8 +85,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the files status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         vcsName = self.vcs.vcsName()
         items = self.browser.getSelectedItems()
@@ -125,8 +126,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         if self.browser.currentItem().data(1) == self.vcs.vcsName():
             for act in self.vcsDirMenuActions:
@@ -151,8 +152,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         vcsName = self.vcs.vcsName()
         items = self.browser.getSelectedItems()
@@ -181,9 +182,9 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             for act in standardItems:
                 act.setEnabled(True)
 
-    ############################################################################
+    ###########################################################################
     # Protected menu generation methods below
-    ############################################################################
+    ###########################################################################
 
     def _addVCSMenu(self, mainMenu):
         """
@@ -218,7 +219,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self._VCSAdd)
         self.vcsAddMenuActions.append(act)
         if 1 in self.browser.specialMenuEntries:
-            self.vcsMenuAddTree = menu.addAction(UI.PixmapCache.getIcon("vcsAdd.png"),
+            self.vcsMenuAddTree = menu.addAction(
+                UI.PixmapCache.getIcon("vcsAdd.png"),
                 self.trUtf8('Add tree to repository'),
                 self._VCSAddTree)
             self.vcsAddMenuActions.append(self.vcsMenuAddTree)
@@ -282,7 +284,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsLock.png"),
@@ -300,7 +303,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
         self.vcsMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('List Properties'), self.__SVNListProps)
+        act = menu.addAction(
+            self.trUtf8('List Properties'), self.__SVNListProps)
         self.vcsMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
         self.vcsMenuActions.append(act)
@@ -389,7 +393,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self._VCSRevert)
         self.vcsMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsLock.png"),
@@ -407,7 +412,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
         self.vcsMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('List Properties'), self.__SVNListProps)
+        act = menu.addAction(
+            self.trUtf8('List Properties'), self.__SVNListProps)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
         self.vcsMultiMenuActions.append(act)
@@ -543,12 +549,14 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('List Properties'), self.__SVNListProps)
+        act = menu.addAction(
+            self.trUtf8('List Properties'), self.__SVNListProps)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
         self.vcsDirMenuActions.append(act)
@@ -637,12 +645,14 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsDirMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
         self.vcsDirMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('List Properties'), self.__SVNListProps)
+        act = menu.addAction(
+            self.trUtf8('List Properties'), self.__SVNListProps)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
         self.vcsDirMultiMenuActions.append(act)
@@ -662,9 +672,9 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         mainMenu.addMenu(menu)
         self.menuDirMulti = menu
     
-    ############################################################################
+    ###########################################################################
     # Menu handling methods below
-    ############################################################################
+    ###########################################################################
     
     def __SVNCopy(self):
         """
@@ -709,8 +719,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNListProps(self):
         """
-        Private slot called by the context menu to list the subversion properties of
-        a file.
+        Private slot called by the context menu to list the subversion
+        properties of a file.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -722,7 +732,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNSetProp(self):
         """
-        Private slot called by the context menu to set a subversion property of a file.
+        Private slot called by the context menu to set a subversion
+        property of a file.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -734,7 +745,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNDelProp(self):
         """
-        Private slot called by the context menu to delete a subversion property of a file.
+        Private slot called by the context menu to delete a subversion
+        property of a file.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -746,8 +758,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNExtendedDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file to
-        the repository.
+        Private slot called by the context menu to show the difference of a
+        file to the repository.
         
         This gives the chance to enter the revisions to compare.
         """
@@ -761,8 +773,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNUrlDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file of
-        two repository URLs.
+        Private slot called by the context menu to show the difference of a
+        file of two repository URLs.
         
         This gives the chance to enter the repository URLs to compare.
         """
@@ -776,8 +788,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNSbsDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file to
-        the repository side-by-side.
+        Private slot called by the context menu to show the difference of a
+        file to the repository side-by-side.
         """
         itm = self.browser.currentItem()
         fn = itm.fileName()
@@ -785,8 +797,9 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __SVNSbsExtendedDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file to
-        the repository side-by-side allowing the selection of revisions to compare.
+        Private slot called by the context menu to show the difference of a
+        file to the repository side-by-side allowing the selection of
+        revisions to compare.
         """
         itm = self.browser.currentItem()
         fn = itm.fileName()
@@ -794,7 +807,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __SVNLogBrowser(self):
         """
-        Private slot called by the context menu to show the log browser for a file.
+        Private slot called by the context menu to show the log browser for a
+        file.
         """
         itm = self.browser.currentItem()
         try:
@@ -815,7 +829,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNLock(self):
         """
-        Private slot called by the context menu to lock files in the repository.
+        Private slot called by the context menu to lock files in the
+        repository.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -827,7 +842,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNUnlock(self):
         """
-        Private slot called by the context menu to unlock files in the repository.
+        Private slot called by the context menu to unlock files in the
+        repository.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -839,7 +855,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNBreakLock(self):
         """
-        Private slot called by the context menu to break lock files in the repository.
+        Private slot called by the context menu to break lock files in the
+        repository.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -851,7 +868,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNStealLock(self):
         """
-        Private slot called by the context menu to steal lock files in the repository.
+        Private slot called by the context menu to steal lock files in the
+        repository.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -863,8 +881,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNInfo(self):
         """
-        Private slot called by the context menu to show repository information of
-        a file or directory.
+        Private slot called by the context menu to show repository information
+        of a file or directory.
         """
         try:
             name = self.browser.currentItem().fileName()
@@ -877,7 +895,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         """
         Private method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("zzz_subversionPage")
+        e5App().getObject("UserInterface")\
+            .showPreferences("zzz_subversionPage")
         
     def __SVNAddToChangelist(self):
         """
@@ -893,7 +912,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __SVNRemoveFromChangelist(self):
         """
-        Private slot called by the context menu to remove files from their changelist.
+        Private slot called by the context menu to remove files from their
+        changelist.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -903,9 +923,9 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
                 names.append(itm.dirName())
         self.vcs.svnRemoveFromChangelist(names)
 
-    ############################################################################
+    ###########################################################################
     # Some private utility methods below
-    ############################################################################
+    ###########################################################################
     
     def __itemsHaveFiles(self, items):
         """

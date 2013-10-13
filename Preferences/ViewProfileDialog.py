@@ -17,7 +17,8 @@ class ViewProfileDialog(QDialog):
     """
     Class implementing a dialog to configure the various view profiles.
     """
-    def __init__(self, layout, editVisibilities, debugVisibilities, parent=None):
+    def __init__(self, layout, editVisibilities, debugVisibilities,
+                 parent=None):
         """
         Constructor
         
@@ -37,7 +38,8 @@ class ViewProfileDialog(QDialog):
         elif self.__layout == "Sidebars":
             self.ui = Ui_ViewProfileSidebarsDialog()
         else:
-            raise ValueError("Illegal layout given ({0}).".format(self.__layout))
+            raise ValueError(
+                "Illegal layout given ({0}).".format(self.__layout))
         self.ui.setupUi(self)
         
         if self.__layout in ["Toolboxes", "Sidebars"]:

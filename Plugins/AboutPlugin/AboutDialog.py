@@ -21,8 +21,8 @@ titleText = "<b>{0} - {1}</b>".format(UI.Info.Program, UI.Info.Version)
 
 aboutText = QApplication.translate("AboutDialog",
     """<p>{0} is an Integrated Development Environment for the Python"""
-    """ programming language. It is written using the PyQt Python bindings for"""
-    """ the Qt GUI toolkit and the QScintilla editor widget.</p>"""
+    """ programming language. It is written using the PyQt Python bindings"""
+    """ for the Qt GUI toolkit and the QScintilla editor widget.</p>"""
     """<p>For more information see"""
     """ <a href="{1}">{1}</a>.</p>"""
     """<p>Please send bug reports to <a href="mailto:{2}">{2}</a>.</p>"""
@@ -31,7 +31,8 @@ aboutText = QApplication.translate("AboutDialog",
     """<p>{0} uses third party software which is copyrighted"""
     """ by its respective copyright holder. For details see"""
     """ the copyright notice of the individual package.</p>"""
-).format(UI.Info.Program, UI.Info.Homepage, UI.Info.BugAddress, UI.Info.FeatureAddress)
+).format(UI.Info.Program, UI.Info.Homepage, UI.Info.BugAddress,
+         UI.Info.FeatureAddress)
 
 authorsText = \
 """\
@@ -64,8 +65,9 @@ Gianluca
     Italian translations
 """
 
-thanksText = \
-"""Phil Thompson for providing PyQt and QScintilla and pushing me into this business.
+thanksText = """\
+Phil Thompson for providing PyQt and QScintilla and pushing me into this
+business.
 
 Andrew Bushnell of Fluent Inc. for contributing the multithreading debugger
 and a bunch of fixes to enhance the platform independence.
@@ -739,7 +741,8 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         self.setupUi(self)
         
         self.ericLabel.setText(titleText)
-        self.ericPixmap.setPixmap(UI.PixmapCache.getPixmap("eric.png").scaled(48, 48))
+        self.ericPixmap.setPixmap(
+            UI.PixmapCache.getPixmap("eric.png").scaled(48, 48))
         
         ####################################################################
         ## ABOUT

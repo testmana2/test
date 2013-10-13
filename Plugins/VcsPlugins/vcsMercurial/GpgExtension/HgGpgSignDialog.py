@@ -17,7 +17,8 @@ class HgGpgSignDialog(QDialog, Ui_HgGpgSignDialog):
     """
     Class implementing a dialog to enter data for signing a revision.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 parent=None):
         """
         Constructor
         

@@ -40,7 +40,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             ("no", self.trUtf8("no redirection")),
             ("show", self.trUtf8("show output")),
             ("insert", self.trUtf8("insert into current editor")),
-            ("replaceSelection", self.trUtf8("replace selection of current editor")),
+            ("replaceSelection",
+             self.trUtf8("replace selection of current editor")),
         ]
         
         self.toollist = copy.deepcopy(toollist)
@@ -117,7 +118,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
                     " Please choose an executable filename."))
             return
         
-        if len(self.toolsList.findItems(menutext, Qt.MatchFlags(Qt.MatchExactly))):
+        if len(self.toolsList.findItems(
+                menutext, Qt.MatchFlags(Qt.MatchExactly))):
             E5MessageBox.critical(self,
                 self.trUtf8("Add tool entry"),
                 self.trUtf8("An entry for the menu text {0} already exists.")\
@@ -246,7 +248,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
     @pyqtSlot()
     def on_executableButton_clicked(self):
         """
-        Private slot to handle the executable selection via a file selection dialog.
+        Private slot to handle the executable selection via a file selection
+        dialog.
         """
         execfile = E5FileDialog.getOpenFileName(
             self,
@@ -296,7 +299,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
                 self.iconEdit.setText(tool['icon'])
                 self.executableEdit.setText(tool['executable'])
                 self.argumentsEdit.setText(tool['arguments'])
-                self.redirectCombo.setCurrentIndex(self.__findModeIndex(tool['redirect']))
+                self.redirectCombo.setCurrentIndex(
+                    self.__findModeIndex(tool['redirect']))
             
             self.changeButton.setEnabled(False)
             self.deleteButton.setEnabled(True)

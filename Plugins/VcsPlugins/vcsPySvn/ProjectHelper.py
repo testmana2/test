@@ -45,15 +45,18 @@ class SvnProjectHelper(VcsProjectHelper):
         """
         Public method to generate the action objects.
         """
-        self.vcsNewAct = E5Action(self.trUtf8('New from repository'),
-                UI.PixmapCache.getIcon("vcsCheckout.png"),
-                self.trUtf8('&New from repository...'), 0, 0, self, 'subversion_new')
+        self.vcsNewAct = E5Action(
+            self.trUtf8('New from repository'),
+            UI.PixmapCache.getIcon("vcsCheckout.png"),
+            self.trUtf8('&New from repository...'), 0, 0, self,
+            'subversion_new')
         self.vcsNewAct.setStatusTip(self.trUtf8(
             'Create a new project from the VCS repository'
         ))
         self.vcsNewAct.setWhatsThis(self.trUtf8(
             """<b>New from repository</b>"""
-            """<p>This creates a new local project from the VCS repository.</p>"""
+            """<p>This creates a new local project from the VCS"""
+            """ repository.</p>"""
         ))
         self.vcsNewAct.triggered[()].connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
@@ -67,21 +70,24 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.vcsUpdateAct.setWhatsThis(self.trUtf8(
             """<b>Update from repository</b>"""
-            """<p>This updates the local project from the VCS repository.</p>"""
+            """<p>This updates the local project from the VCS"""
+            """ repository.</p>"""
         ))
         self.vcsUpdateAct.triggered[()].connect(self._vcsUpdate)
         self.actions.append(self.vcsUpdateAct)
         
-        self.vcsCommitAct = E5Action(self.trUtf8('Commit changes to repository'),
-                UI.PixmapCache.getIcon("vcsCommit.png"),
-                self.trUtf8('&Commit changes to repository...'), 0, 0, self,
-                'subversion_commit')
+        self.vcsCommitAct = E5Action(
+            self.trUtf8('Commit changes to repository'),
+            UI.PixmapCache.getIcon("vcsCommit.png"),
+            self.trUtf8('&Commit changes to repository...'), 0, 0, self,
+            'subversion_commit')
         self.vcsCommitAct.setStatusTip(self.trUtf8(
             'Commit changes to the local project to the VCS repository'
         ))
         self.vcsCommitAct.setWhatsThis(self.trUtf8(
             """<b>Commit changes to repository</b>"""
-            """<p>This commits changes to the local project to the VCS repository.</p>"""
+            """<p>This commits changes to the local project to the VCS"""
+            """ repository.</p>"""
         ))
         self.vcsCommitAct.triggered[()].connect(self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
@@ -109,9 +115,9 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.svnLogBrowserAct.setWhatsThis(self.trUtf8(
             """<b>Show log browser</b>"""
-            """<p>This shows a dialog to browse the log of the local project."""
-            """ A limited number of entries is shown first. More can be"""
-            """ retrieved later on.</p>"""
+            """<p>This shows a dialog to browse the log of the local"""
+            """ project. A limited number of entries is shown first. More"""
+            """ can be retrieved later on.</p>"""
         ))
         self.svnLogBrowserAct.triggered[()].connect(self.__svnLogBrowser)
         self.actions.append(self.svnLogBrowserAct)
@@ -125,21 +131,24 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.vcsDiffAct.setWhatsThis(self.trUtf8(
             """<b>Show difference</b>"""
-            """<p>This shows the difference of the local project to the repository.</p>"""
+            """<p>This shows the difference of the local project to the"""
+            """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered[()].connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
-        self.svnExtDiffAct = E5Action(self.trUtf8('Show difference (extended)'),
-                UI.PixmapCache.getIcon("vcsDiff.png"),
-                self.trUtf8('Show difference (extended)'),
-                0, 0, self, 'subversion_extendeddiff')
+        self.svnExtDiffAct = E5Action(
+            self.trUtf8('Show difference (extended)'),
+            UI.PixmapCache.getIcon("vcsDiff.png"),
+            self.trUtf8('Show difference (extended)'),
+            0, 0, self, 'subversion_extendeddiff')
         self.svnExtDiffAct.setStatusTip(self.trUtf8(
             'Show the difference of revisions of the project to the repository'
         ))
         self.svnExtDiffAct.setWhatsThis(self.trUtf8(
             """<b>Show difference (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of the project.</p>"""
+            """<p>This shows the difference of selectable revisions of"""
+            """ the project.</p>"""
         ))
         self.svnExtDiffAct.triggered[()].connect(self.__svnExtendedDiff)
         self.actions.append(self.svnExtDiffAct)
@@ -234,7 +243,8 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsPropsAct = E5Action(self.trUtf8('Command options'),
                 self.trUtf8('Command &options...'), 0, 0, self,
                 'subversion_options')
-        self.vcsPropsAct.setStatusTip(self.trUtf8('Show the VCS command options'))
+        self.vcsPropsAct.setStatusTip(self.trUtf8(
+            'Show the VCS command options'))
         self.vcsPropsAct.setWhatsThis(self.trUtf8(
             """<b>Command options...</b>"""
             """<p>This shows a dialog to edit the VCS command options.</p>"""
@@ -265,7 +275,8 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.vcsMergeAct.setWhatsThis(self.trUtf8(
             """<b>Merge</b>"""
-            """<p>This merges changes of a tag/revision into the local project.</p>"""
+            """<p>This merges changes of a tag/revision into the local"""
+            """ project.</p>"""
         ))
         self.vcsMergeAct.triggered[()].connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
@@ -292,7 +303,8 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.vcsResolveAct.setWhatsThis(self.trUtf8(
             """<b>Conflicts resolved</b>"""
-            """<p>This marks all conflicts of the local project as resolved.</p>"""
+            """<p>This marks all conflicts of the local project as"""
+            """ resolved.</p>"""
         ))
         self.vcsResolveAct.triggered[()].connect(self.__svnResolve)
         self.actions.append(self.vcsResolveAct)
@@ -410,7 +422,8 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.svnRelocateAct.setWhatsThis(self.trUtf8(
             """<b>Relocate</b>"""
-            """<p>This relocates the working copy to a new repository URL.</p>"""
+            """<p>This relocates the working copy to a new repository"""
+            """ URL.</p>"""
         ))
         self.svnRelocateAct.triggered[()].connect(self.__svnRelocate)
         self.actions.append(self.svnRelocateAct)
@@ -437,7 +450,8 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.svnConfigAct.setWhatsThis(self.trUtf8(
             """<b>Configure</b>"""
-            """<p>Show the configuration dialog with the Subversion page selected.</p>"""
+            """<p>Show the configuration dialog with the Subversion page"""
+            """ selected.</p>"""
         ))
         self.svnConfigAct.triggered[()].connect(self.__svnConfigure)
         self.actions.append(self.svnConfigAct)
@@ -541,13 +555,15 @@ class SvnProjectHelper(VcsProjectHelper):
         
     def __svnExtendedDiff(self):
         """
-        Private slot used to perform a svn diff with the selection of revisions.
+        Private slot used to perform a svn diff with the selection of
+        revisions.
         """
         self.vcs.svnExtendedDiff(self.project.ppath)
         
     def __svnUrlDiff(self):
         """
-        Private slot used to perform a svn diff with the selection of repository URLs.
+        Private slot used to perform a svn diff with the selection of
+        repository URLs.
         """
         self.vcs.svnUrlDiff(self.project.ppath)
         
@@ -579,7 +595,8 @@ class SvnProjectHelper(VcsProjectHelper):
         """
         Private slot to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("zzz_subversionPage")
+        e5App().getObject("UserInterface")\
+            .showPreferences("zzz_subversionPage")
     
     def __svnChangeLists(self):
         """

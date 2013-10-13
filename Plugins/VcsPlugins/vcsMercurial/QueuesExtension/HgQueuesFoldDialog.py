@@ -52,7 +52,8 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         """
         Private slot to add a patch to the list of selected patches.
         """
-        row = self.sourcePatches.indexOfTopLevelItem(self.sourcePatches.currentItem())
+        row = self.sourcePatches.indexOfTopLevelItem(
+            self.sourcePatches.currentItem())
         itm = self.sourcePatches.takeTopLevelItem(row)
         
         curItm = self.selectedPatches.currentItem()
@@ -69,7 +70,8 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         """
         Private slot to remove a patch from the list of selected patches.
         """
-        row = self.selectedPatches.indexOfTopLevelItem(self.selectedPatches.currentItem())
+        row = self.selectedPatches.indexOfTopLevelItem(
+            self.selectedPatches.currentItem())
         itm = self.selectedPatches.takeTopLevelItem(row)
         self.sourcePatches.addTopLevelItem(itm)
         self.sourcePatches.sortItems(0, Qt.AscendingOrder)
@@ -81,7 +83,8 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         """
         Private slot to move a patch up in the list.
         """
-        row = self.selectedPatches.indexOfTopLevelItem(self.selectedPatches.currentItem())
+        row = self.selectedPatches.indexOfTopLevelItem(
+            self.selectedPatches.currentItem())
         if row > 0:
             targetRow = row - 1
             itm = self.selectedPatches.takeTopLevelItem(row)
@@ -93,7 +96,8 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         """
         Private slot to move a patch down in the list.
         """
-        row = self.selectedPatches.indexOfTopLevelItem(self.selectedPatches.currentItem())
+        row = self.selectedPatches.indexOfTopLevelItem(
+            self.selectedPatches.currentItem())
         if row < self.selectedPatches.topLevelItemCount() - 1:
             targetRow = row + 1
             itm = self.selectedPatches.takeTopLevelItem(row)
@@ -106,23 +110,27 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         Private slot to react on changes of the current item of source patches.
         
         @param current reference to the new current item (QTreeWidgetItem)
-        @param previous reference to the previous current item (QTreeWidgetItem)
+        @param previous reference to the previous current item
+            (QTreeWidgetItem)
         """
         self.addButton.setEnabled(current is not None)
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_selectedPatches_currentItemChanged(self, current, previous):
         """
-        Private slot to react on changes of the current item of selected patches.
+        Private slot to react on changes of the current item of selected
+        patches.
         
         @param current reference to the new current item (QTreeWidgetItem)
-        @param previous reference to the previous current item (QTreeWidgetItem)
+        @param previous reference to the previous current item
+            (QTreeWidgetItem)
         """
         self.removeButton.setEnabled(current is not None)
         
         row = self.selectedPatches.indexOfTopLevelItem(current)
         self.upButton.setEnabled(row > 0)
-        self.downButton.setEnabled(row < self.selectedPatches.topLevelItemCount() - 1)
+        self.downButton.setEnabled(
+            row < self.selectedPatches.topLevelItemCount() - 1)
     
     def getData(self):
         """

@@ -18,11 +18,13 @@ class AboutAccessHandler(SchemeAccessHandler):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
-        from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+        from .NetworkProtocolUnknownErrorReply import \
+            NetworkProtocolUnknownErrorReply
         return NetworkProtocolUnknownErrorReply("about", self.parent())

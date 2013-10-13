@@ -30,7 +30,8 @@ class GreaseMonkeyDownloader(QObject):
         Constructor
         
         @param request reference to the request object (QNetworkRequest)
-        @param manager reference to the GreaseMonkey manager (GreaseMonkeyManager)
+        @param manager reference to the GreaseMonkey manager
+            (GreaseMonkeyManager)
         """
         super().__init__()
         
@@ -65,17 +66,19 @@ class GreaseMonkeyDownloader(QObject):
             except (IOError, OSError) as err:
                 E5MessageBox.critical(None,
                     self.trUtf8("GreaseMonkey Download"),
-                    self.trUtf8("""<p>The file <b>{0}</b> could not be opened"""
-                                """ for writing.<br/>Reason: {1}</p>""").format(
-                                self.__fileName, str(err)))
+                    self.trUtf8(
+                        """<p>The file <b>{0}</b> could not be opened"""
+                        """ for writing.<br/>Reason: {1}</p>""").format(
+                            self.__fileName, str(err)))
                 self.finished.emit()
                 return
             f.write(response)
             f.close()
             
-            settings = QSettings(os.path.join(self.__manager.requireScriptsDirectory(),
-                                              "requires.ini"),
-                                 QSettings.IniFormat)
+            settings = QSettings(
+                os.path.join(self.__manager.requireScriptsDirectory(),
+                             "requires.ini"),
+                QSettings.IniFormat)
             settings.beginGroup("Files")
             
             rx = QRegExp("@require(.*)\\n")
@@ -113,17 +116,19 @@ class GreaseMonkeyDownloader(QObject):
             except (IOError, OSError) as err:
                 E5MessageBox.critical(None,
                     self.trUtf8("GreaseMonkey Download"),
-                    self.trUtf8("""<p>The file <b>{0}</b> could not be opened"""
-                                """ for writing.<br/>Reason: {1}</p>""").format(
-                                fileName, str(err)))
+                    self.trUtf8(
+                        """<p>The file <b>{0}</b> could not be opened"""
+                        """ for writing.<br/>Reason: {1}</p>""").format(
+                            fileName, str(err)))
                 self.finished.emit()
                 return
             f.write(response)
             f.close()
             
-            settings = QSettings(os.path.join(self.__manager.requireScriptsDirectory(),
-                                              "requires.ini"),
-                                 QSettings.IniFormat)
+            settings = QSettings(
+                os.path.join(self.__manager.requireScriptsDirectory(),
+                             "requires.ini"),
+                QSettings.IniFormat)
             settings.beginGroup("Files")
             settings.setValue(self.__reply.originalUrl().toString(), fileName)
         
@@ -147,13 +152,15 @@ class GreaseMonkeyDownloader(QObject):
             
             if script.isValid():
                 if not self.__manager.containsScript(script.fullName()):
-                    from .GreaseMonkeyAddScriptDialog import GreaseMonkeyAddScriptDialog
+                    from .GreaseMonkeyAddScriptDialog import \
+                        GreaseMonkeyAddScriptDialog
                     dlg = GreaseMonkeyAddScriptDialog(self.__manager, script)
                     deleteScript = dlg.exec_() != QDialog.Accepted
                 else:
                     E5MessageBox.information(None,
                         self.trUtf8("GreaseMonkey Download"),
-                        self.trUtf8("""<p><b>{0}</b> is already installed.</p>""")
+                        self.trUtf8(
+                            """<p><b>{0}</b> is already installed.</p>""")
                             .format(script.name()))
             
             if deleteScript:

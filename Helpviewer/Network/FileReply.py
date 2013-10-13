@@ -27,7 +27,8 @@ dirListPage_html = """\
 <style type="text/css">
 body {{
   padding: 3em 0em;
-  background: -webkit-gradient(linear, left top, left bottom, from(#85784A), to(#FDFDFD), color-stop(0.5, #FDFDFD));
+  background: -webkit-gradient(linear, left top, left bottom, from(#85784A),
+                               to(#FDFDFD), color-stop(0.5, #FDFDFD));
   background-repeat: repeat-x;
 }}
 #box {{
@@ -107,7 +108,8 @@ class FileReply(QNetworkReply):
         super().__init__(parent)
         
         self.__content = QByteArray()
-        self.__units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
+        self.__units = ["Bytes", "KB", "MB", "GB", "TB",
+                        "PB", "EB", "ZB", "YB"]
         
         if url.path() == "":
             url.setPath("/")
@@ -162,7 +164,8 @@ class FileReply(QNetworkReply):
         cssString = \
             """a.{{0}} {{{{\n"""\
             """  padding-left: {0}px;\n"""\
-            """  background: transparent url(data:image/png;base64,{1}) no-repeat center left;\n"""\
+            """  background: transparent url(data:image/png;base64,{1})"""\
+            """ no-repeat center left;\n"""\
             """  font-weight: bold;\n"""\
             """}}}}\n"""
         pixmap = icon.pixmap(size, size)
@@ -182,8 +185,9 @@ class FileReply(QNetworkReply):
         Private slot loading the directory and preparing the listing page.
         """
         dir = QDir(self.url().toLocalFile())
-        dirItems = dir.entryInfoList(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot,
-                                     QDir.Name | QDir.DirsFirst)
+        dirItems = dir.entryInfoList(
+            QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot,
+            QDir.Name | QDir.DirsFirst)
         
         u = self.url()
         if not u.path().endswith("/"):
@@ -193,7 +197,8 @@ class FileReply(QNetworkReply):
         basePath = u.path()
         
         linkClasses = {}
-        iconSize = QWebSettings.globalSettings().fontSize(QWebSettings.DefaultFontSize)
+        iconSize = QWebSettings.globalSettings().fontSize(
+            QWebSettings.DefaultFontSize)
         
         parent = u.resolved(QUrl(".."))
         if parent.isParentOf(u):
@@ -274,11 +279,14 @@ class FileReply(QNetworkReply):
         self.__content.append(512 * b' ')
         
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
-        self.setHeader(QNetworkRequest.ContentTypeHeader, "text/html; charset=UTF-8")
-        self.setHeader(QNetworkRequest.ContentLengthHeader, self.__content.size())
+        self.setHeader(
+            QNetworkRequest.ContentTypeHeader, "text/html; charset=UTF-8")
+        self.setHeader(
+            QNetworkRequest.ContentLengthHeader, self.__content.size())
         self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "Ok")
         self.metaDataChanged.emit()
-        self.downloadProgress.emit(self.__content.size(), self.__content.size())
+        self.downloadProgress.emit(
+            self.__content.size(), self.__content.size())
         self.readyRead.emit()
         self.finished.emit()

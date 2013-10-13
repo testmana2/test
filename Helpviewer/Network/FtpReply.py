@@ -37,7 +37,8 @@ ftpListPage_html = """\
 <style type="text/css">
 body {{
   padding: 3em 0em;
-  background: -webkit-gradient(linear, left top, left bottom, from(#85784A), to(#FDFDFD), color-stop(0.5, #FDFDFD));
+  background: -webkit-gradient(linear, left top, left bottom, from(#85784A),
+                               to(#FDFDFD), color-stop(0.5, #FDFDFD));
   background-repeat: repeat-x;
 }}
 #box {{
@@ -124,7 +125,8 @@ class FtpReply(QNetworkReply):
         
         self.__items = []
         self.__content = QByteArray()
-        self.__units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
+        self.__units = ["Bytes", "KB", "MB", "GB", "TB",
+                        "PB", "EB", "ZB", "YB"]
         self.__dirLineParser = FtpDirLineParser()
         self.__fileBytesReceived = 0
         
@@ -187,7 +189,8 @@ class FtpReply(QNetworkReply):
     
     def __doFtpCommands(self):
         """
-        Private slot doing the sequence of FTP commands to get the requested result.
+        Private slot doing the sequence of FTP commands to get the requested
+        result.
         """
         retry = True
         try:
@@ -214,7 +217,8 @@ class FtpReply(QNetworkReply):
                     else:
                         retry = False
             if ok:
-                self.__ftp.retrlines("LIST " + self.url().path(), self.__dirCallback)
+                self.__ftp.retrlines("LIST " + self.url().path(),
+                                     self.__dirCallback)
                 if len(self.__items) == 1 and \
                    self.__items[0].isFile():
                     self.__fileBytesReceived = 0
@@ -229,7 +233,8 @@ class FtpReply(QNetworkReply):
         except ftplib.all_errors as err:
             if isinstance(err, socket.gaierror):
                 errCode = QNetworkReply.HostNotFoundError
-            elif isinstance(err, socket.error) and err.errno == errno.ECONNREFUSED:
+            elif isinstance(err, socket.error) and \
+                    err.errno == errno.ECONNREFUSED:
                 errCode = QNetworkReply.ConnectionRefusedError
             else:
                 errCode = QNetworkReply.ProtocolFailure
@@ -239,8 +244,8 @@ class FtpReply(QNetworkReply):
     
     def __doFtpLogin(self, username, password, byAuth=False):
         """
-        Private method to do the FTP login with asking for a username and password,
-        if the login fails with an error 530.
+        Private method to do the FTP login with asking for a username and
+        password, if the login fails with an error 530.
         
         @param username user name to use for the login (string)
         @param password password to use for the login (string)
@@ -260,17 +265,22 @@ class FtpReply(QNetworkReply):
                 if lines[1][:3] == "530":
                     if "usage" in "\n".join(lines[1:].lower()):
                         # found a not supported proxy
-                        self.setError(QNetworkReply.ProxyConnectionRefusedError,
+                        self.setError(
+                            QNetworkReply.ProxyConnectionRefusedError,
                             self.trUtf8("The proxy type seems to be wrong."
-                                        " If it is not in the list of supported"
-                                        " proxy types please report it with the"
-                                        " instructions given by the proxy.\n{0}").format(
+                                        " If it is not in the list of"
+                                        " supported proxy types please report"
+                                        " it with the instructions given by"
+                                        " the proxy.\n{0}").format(
                                 "\n".join(lines[1:])))
-                        self.error.emit(QNetworkReply.ProxyConnectionRefusedError)
+                        self.error.emit(
+                            QNetworkReply.ProxyConnectionRefusedError)
                         return False, False
                     else:
-                        from UI.AuthenticationDialog import AuthenticationDialog
-                        info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
+                        from UI.AuthenticationDialog import \
+                            AuthenticationDialog
+                        info = self.trUtf8(
+                            "<b>Connect to proxy '{0}' using:</b>")\
                             .format(Utilities.html_encode(
                                 Preferences.getUI("ProxyHost/Ftp")))
                         dlg = AuthenticationDialog(info,
@@ -281,15 +291,18 @@ class FtpReply(QNetworkReply):
                             username, password = dlg.getData()
                             if dlg.shallSave():
                                 Preferences.setUI("ProxyUser/Ftp", username)
-                                Preferences.setUI("ProxyPassword/Ftp", password)
-                            self.__ftp.setProxyAuthentication(username, password)
+                                Preferences.setUI(
+                                    "ProxyPassword/Ftp", password)
+                            self.__ftp.setProxyAuthentication(username,
+                                                              password)
                             return False, True
             return False, False
         except (ftplib.error_perm, ftplib.error_temp) as err:
             code = err.args[0].strip()[:3]
             if code in ["530", "421"]:
                 # error 530 -> Login incorrect
-                # error 421 -> Login may be incorrect (reported by some proxies)
+                # error 421 -> Login may be incorrect (reported by some
+                # proxies)
                 if byAuth:
                     self.__handler.setAuthenticator(self.url().host(), None)
                     auth = None
@@ -300,7 +313,8 @@ class FtpReply(QNetworkReply):
                     self.__manager.authenticationRequired.emit(self, auth)
                     if not auth.isNull():
                         if auth.user():
-                            self.__handler.setAuthenticator(self.url().host(), auth)
+                            self.__handler.setAuthenticator(self.url().host(),
+                                                            auth)
                             return False, True
                     return False, False
                 return False, True
@@ -332,7 +346,8 @@ class FtpReply(QNetworkReply):
         """
         self.__content += QByteArray(data)
         self.__fileBytesReceived += len(data)
-        self.downloadProgress.emit(self.__fileBytesReceived, self.__items[0].size())
+        self.downloadProgress.emit(
+            self.__fileBytesReceived, self.__items[0].size())
         self.readyRead.emit()
         
         QCoreApplication.processEvents()
@@ -343,7 +358,8 @@ class FtpReply(QNetworkReply):
         """
         mtype, encoding = mimetypes.guess_type(self.url().toString())
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
-        self.setHeader(QNetworkRequest.ContentLengthHeader, self.__items[0].size())
+        self.setHeader(QNetworkRequest.ContentLengthHeader,
+                       self.__items[0].size())
         if mtype:
             self.setHeader(QNetworkRequest.ContentTypeHeader, mtype)
         self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
@@ -361,7 +377,8 @@ class FtpReply(QNetworkReply):
         cssString = \
             """a.{{0}} {{{{\n"""\
             """  padding-left: {0}px;\n"""\
-            """  background: transparent url(data:image/png;base64,{1}) no-repeat center left;\n"""\
+            """  background: transparent url(data:image/png;base64,{1})"""\
+            """ no-repeat center left;\n"""\
             """  font-weight: bold;\n"""\
             """}}}}\n"""
         pixmap = icon.pixmap(size, size)
@@ -388,7 +405,8 @@ class FtpReply(QNetworkReply):
         basePath = u.path()
         
         linkClasses = {}
-        iconSize = QWebSettings.globalSettings().fontSize(QWebSettings.DefaultFontSize)
+        iconSize = QWebSettings.globalSettings().fontSize(
+            QWebSettings.DefaultFontSize)
         
         parent = u.resolved(QUrl(".."))
         if parent.isParentOf(u):
@@ -469,10 +487,13 @@ class FtpReply(QNetworkReply):
         self.__content.append(512 * b' ')
         
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
-        self.setHeader(QNetworkRequest.ContentTypeHeader, "text/html; charset=UTF-8")
-        self.setHeader(QNetworkRequest.ContentLengthHeader, self.__content.size())
+        self.setHeader(
+            QNetworkRequest.ContentTypeHeader, "text/html; charset=UTF-8")
+        self.setHeader(
+            QNetworkRequest.ContentLengthHeader, self.__content.size())
         self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "Ok")
         self.metaDataChanged.emit()
-        self.downloadProgress.emit(self.__content.size(), self.__content.size())
+        self.downloadProgress.emit(
+            self.__content.size(), self.__content.size())
         self.readyRead.emit()

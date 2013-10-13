@@ -17,9 +17,9 @@ from E5Gui import E5MessageBox
 
 import Preferences
 
-################################################################################
+###############################################################################
 ## password handling functions below
-################################################################################
+###############################################################################
 
 
 EncodeMarker = "CE4"
@@ -37,8 +37,10 @@ def pwEncode(pw):
     @param pw password to encode (string)
     @return encoded password (string)
     """
-    pop = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,;:-_!$?*+#"
-    rpw = "".join(random.sample(pop, 32)) + pw + "".join(random.sample(pop, 32))
+    pop = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" \
+          ".,;:-_!$?*+#"
+    rpw = "".join(random.sample(pop, 32)) + pw + \
+        "".join(random.sample(pop, 32))
     return EncodeMarker + base64.b64encode(rpw.encode("utf-8")).decode("ascii")
 
 
@@ -75,8 +77,10 @@ def __getMasterPassword():
                     MasterPassword = pwEncode(pw)
                 else:
                     E5MessageBox.warning(None,
-                        QCoreApplication.translate("Crypto", "Master Password"),
-                        QCoreApplication.translate("Crypto",
+                        QCoreApplication.translate(
+                            "Crypto", "Master Password"),
+                        QCoreApplication.translate(
+                            "Crypto",
                             """The given password is incorrect."""))
             else:
                 E5MessageBox.critical(None,
@@ -252,7 +256,8 @@ def dataEncrypt(data, password, keyLength=32, hashIterations=10000):
     
     @param data data to encrypt (bytes)
     @param password password to be used for encryption (string)
-    @keyparam keyLength length of the key to be generated for encryption (16, 24 or 32)
+    @keyparam keyLength length of the key to be generated for encryption
+        (16, 24 or 32)
     @keyparam hashIterations number of hashes to be applied to the password for
         generating the encryption key (integer)
     @return encrypted data (bytes) and flag indicating
@@ -282,7 +287,8 @@ def dataDecrypt(edata, password, keyLength=32):
     
     @param edata hashed data to decrypt (string)
     @param password password to be used for decryption (string)
-    @keyparam keyLength length of the key to be generated for decryption (16, 24 or 32)
+    @keyparam keyLength length of the key to be generated for decryption
+        (16, 24 or 32)
     @return decrypted data (bytes) and flag indicating
         success (boolean)
     """

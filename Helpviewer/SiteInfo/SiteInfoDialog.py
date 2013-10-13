@@ -10,17 +10,17 @@ Module implementing a dialog to show some information about a site.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QFile, qVersion
-from PyQt4.QtGui import QDialog, QTreeWidgetItem, QPixmap, QGraphicsScene, QMenu, \
-    QCursor, QApplication, QListWidgetItem
+from PyQt4.QtGui import QDialog, QTreeWidgetItem, QPixmap, QGraphicsScene, \
+    QMenu, QCursor, QApplication, QListWidgetItem
 from PyQt4.QtWebKit import QWebSettings
 
 from E5Gui import E5MessageBox, E5FileDialog
 
 try:
-    from .Ui_SiteInfoDialog import Ui_SiteInfoDialog        # __IGNORE_WARNING__
+    from .Ui_SiteInfoDialog import Ui_SiteInfoDialog       # __IGNORE_WARNING__
     SSL = True
 except ImportError:
-    from .Ui_SiteInfoNoSslDialog import Ui_SiteInfoDialog   # __IGNORE_WARNING__
+    from .Ui_SiteInfoNoSslDialog import Ui_SiteInfoDialog  # __IGNORE_WARNING__
     SSL = False
 
 from ..Download.DownloadUtilities import dataString
@@ -46,11 +46,15 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         self.setupUi(self)
         
         # put icons
-        self.tabWidget.setTabIcon(0, UI.PixmapCache.getIcon("siteinfo-general.png"))
-        self.tabWidget.setTabIcon(1, UI.PixmapCache.getIcon("siteinfo-media.png"))
-        self.tabWidget.setTabIcon(2, UI.PixmapCache.getIcon("siteinfo-databases.png"))
+        self.tabWidget.setTabIcon(
+            0, UI.PixmapCache.getIcon("siteinfo-general.png"))
+        self.tabWidget.setTabIcon(
+            1, UI.PixmapCache.getIcon("siteinfo-media.png"))
+        self.tabWidget.setTabIcon(
+            2, UI.PixmapCache.getIcon("siteinfo-databases.png"))
         if SSL:
-            self.tabWidget.setTabIcon(3, UI.PixmapCache.getIcon("siteinfo-security.png"))
+            self.tabWidget.setTabIcon(
+                3, UI.PixmapCache.getIcon("siteinfo-security.png"))
         
         self.__mainFrame = browser.page().mainFrame()
         title = browser.title()
@@ -100,7 +104,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             self.securityLabel.setStyleSheet(SiteInfoDialog.nokStyle)
             self.securityLabel.setText('<b>Connection is not encrypted.</b>')
             self.securityDetailsButton.setEnabled(False)
-            self.tabWidget.setTabEnabled(self.tabWidget.indexOf(self.securityTab), False)
+            self.tabWidget.setTabEnabled(
+                self.tabWidget.indexOf(self.securityTab), False)
         
         # populate Media tab
         images = self.__mainFrame.findAllElements("img")
@@ -148,7 +153,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         """
         Private slot to show security details.
         """
-        self.tabWidget.setCurrentIndex(self.tabWidget.indexOf(self.securityTab))
+        self.tabWidget.setCurrentIndex(
+            self.tabWidget.indexOf(self.securityTab))
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_imagesTree_currentItemChanged(self, current, previous):
@@ -261,7 +267,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             E5MessageBox.critical(self,
                 self.trUtf8("Save Image"),
                 self.trUtf8(
-                    """<p>Cannot write to file <b>{0}</b>.</p>""".format(filename)))
+                    """<p>Cannot write to file <b>{0}</b>.</p>""")
+                    .format(filename))
             return
         f.write(cacheData.readAll())
         f.close()
@@ -284,6 +291,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             return
         
         db = databases[id]
-        self.databaseName.setText("{0} ({1})".format(db.displayName(), db.name()))
+        self.databaseName.setText(
+            "{0} ({1})".format(db.displayName(), db.name()))
         self.databasePath.setText(db.fileName())
         self.databaseSize.setText(dataString(db.size()))

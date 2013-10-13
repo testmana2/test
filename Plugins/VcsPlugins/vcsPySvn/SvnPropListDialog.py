@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to show the output of the svn proplist command process.
+Module implementing a dialog to show the output of the svn proplist command
+process.
 """
 
 import os
@@ -21,7 +22,8 @@ from .Ui_SvnPropListDialog import Ui_SvnPropListDialog
 
 class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
     """
-    Class implementing a dialog to show the output of the svn proplist command process.
+    Class implementing a dialog to show the output of the svn proplist command
+    process.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -118,7 +120,8 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if not self.propsFound:
             self.__generateItem("", self.trUtf8("None"), "")

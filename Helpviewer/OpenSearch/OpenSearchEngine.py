@@ -10,8 +10,8 @@ Module implementing the open search engine.
 import re
 import json
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, QBuffer, \
-    QIODevice, QObject
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, \
+    QBuffer, QIODevice, QObject
 from PyQt4.QtGui import QImage
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
@@ -81,8 +81,9 @@ class OpenSearchEngine(QObject):
         result = result.replace("{country}", country)
         result = result.replace("{inputEncoding}", "UTF-8")
         result = result.replace("{outputEncoding}", "UTF-8")
-        result = result.replace("{searchTerms}",
-                                bytes(QUrl.toPercentEncoding(searchTerm)).decode())
+        result = result.replace(
+            "{searchTerms}",
+            bytes(QUrl.toPercentEncoding(searchTerm)).decode())
         result = re.sub(r"""\{([^\}]*:|)source\??\}""", Program, result)
 
         return result
@@ -146,7 +147,8 @@ class OpenSearchEngine(QObject):
         if not self._searchUrlTemplate:
             return QUrl()
         
-        ret = QUrl.fromEncoded(self.parseTemplate(searchTerm, self._searchUrlTemplate))
+        ret = QUrl.fromEncoded(
+            self.parseTemplate(searchTerm, self._searchUrlTemplate))
         
         if self.__searchMethod != "post":
             for parameter in self._searchParameters:
@@ -212,7 +214,8 @@ class OpenSearchEngine(QObject):
         """
         Public method to set the engine search parameters.
         
-        @param searchParameters search parameters of the engine (list of two tuples)
+        @param searchParameters search parameters of the engine
+            (list of two tuples)
         """
         self._searchParameters = searchParameters[:]
     
@@ -235,7 +238,8 @@ class OpenSearchEngine(QObject):
     
     def searchMethod(self):
         """
-        Public method to get the HTTP request method used to perform search requests.
+        Public method to get the HTTP request method used to perform search
+        requests.
         
         @return HTTP request method (string)
         """
@@ -243,7 +247,8 @@ class OpenSearchEngine(QObject):
     
     def setSearchMethod(self, method):
         """
-        Public method to set the HTTP request method used to perform search requests.
+        Public method to set the HTTP request method used to perform search
+        requests.
         
         @param method HTTP request method (string)
         """
@@ -255,7 +260,8 @@ class OpenSearchEngine(QObject):
     
     def suggestionsMethod(self):
         """
-        Public method to get the HTTP request method used to perform suggestions requests.
+        Public method to get the HTTP request method used to perform
+        suggestions requests.
         
         @return HTTP request method (string)
         """
@@ -263,7 +269,8 @@ class OpenSearchEngine(QObject):
     
     def setSuggestionsMethod(self, method):
         """
-        Public method to set the HTTP request method used to perform suggestions requests.
+        Public method to set the HTTP request method used to perform
+        suggestions requests.
         
         @param method HTTP request method (string)
         """
@@ -357,8 +364,8 @@ class OpenSearchEngine(QObject):
             imageBuffer = QBuffer()
             imageBuffer.open(QIODevice.ReadWrite)
             if image.save(imageBuffer, "PNG"):
-                self._imageUrl = "data:image/png;base64,{0}"\
-                                .format(bytes(imageBuffer.buffer().toBase64()).decode())
+                self._imageUrl = "data:image/png;base64,{0}".format(
+                    bytes(imageBuffer.buffer().toBase64()).decode())
         
         self.__image = QImage(image)
         self.imageChanged.emit()
@@ -414,7 +421,6 @@ class OpenSearchEngine(QObject):
             return
         
         if self.__suggestionsReply is not None:
-##            self.__suggestionsReply.finished[()].disconnect(self.__suggestionsObtained)
             self.__suggestionsReply.abort()
             self.__suggestionsReply.deleteLater()
             self.__suggestionsReply = None
@@ -433,7 +439,8 @@ class OpenSearchEngine(QObject):
             data = "&".join(parameters)
             self.__suggestionsReply = self.networkAccessManager().post(
                 QNetworkRequest(self.suggestionsUrl(searchTerm)), data)
-        self.__suggestionsReply.finished[()].connect(self.__suggestionsObtained)
+        self.__suggestionsReply.finished[()].connect(
+            self.__suggestionsObtained)
     
     def __suggestionsObtained(self):
         """
@@ -465,7 +472,8 @@ class OpenSearchEngine(QObject):
         """
         Public method to get a reference to the network access manager object.
         
-        @return reference to the network access manager object (QNetworkAccessManager)
+        @return reference to the network access manager object
+            (QNetworkAccessManager)
         """
         return self.__networkAccessManager
     

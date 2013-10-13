@@ -11,8 +11,8 @@ import os
 import re
 
 from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QDialog, QApplication, QMenu, QDialogButtonBox, \
-    QTreeWidgetItem
+from PyQt4.QtGui import QCursor, QDialog, QApplication, QMenu, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog

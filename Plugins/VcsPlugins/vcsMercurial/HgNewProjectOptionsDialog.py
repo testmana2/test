@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the Mercurial Options Dialog for a new project from the repository.
+Module implementing the Mercurial Options Dialog for a new project from the
+repository.
 """
 
 import os
@@ -24,7 +25,8 @@ import Preferences
 
 class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
     """
-    Class implementing the Options Dialog for a new project from the repository.
+    Class implementing the Options Dialog for a new project from the
+    repository.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -52,7 +54,8 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         self.localProtocol = True
         
         self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
-            Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()))
+            Preferences.getMultiProject("Workspace") or \
+                Utilities.getHomeDir()))
     
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
@@ -67,7 +70,8 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
             if directory:
-                self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
+                self.vcsUrlEdit.setText(
+                    Utilities.toNativeSeparators(directory))
     
     @pyqtSlot()
     def on_projectDirButton_clicked(self):
@@ -81,7 +85,8 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
         if directory:
-            self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(directory))
+            self.vcsProjectDirEdit.setText(
+                Utilities.toNativeSeparators(directory))
     
     @pyqtSlot(str)
     def on_protocolCombo_activated(self, protocol):

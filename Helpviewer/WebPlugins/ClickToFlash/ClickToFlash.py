@@ -11,7 +11,8 @@ Module implementing the Flash blocker.
 from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QByteArray,  QTimer
 from PyQt4.QtGui import QWidget, QMenu, QCursor, QDialog, QLabel, QFormLayout
 from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import QWebHitTestResult, QWebElement, QWebView, QWebElementCollection
+from PyQt4.QtWebKit import QWebHitTestResult, QWebElement, QWebView, \
+    QWebElementCollection
 
 from .Ui_ClickToFlash import Ui_ClickToFlash
 
@@ -26,7 +27,8 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
     _acceptedArgNames = []
     _acceptedArgValues = []
 
-    def __init__(self, plugin, mimeType, url, argumentNames, argumentValues, parent=None):
+    def __init__(self, plugin, mimeType, url, argumentNames, argumentValues,
+                 parent=None):
         """
         Constructor
         
@@ -89,16 +91,19 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         font = act.font()
         font.setBold(True)
         act.setFont(font)
-        menu.addAction(self.trUtf8("Show information about object"), self.__showInfo)
+        menu.addAction(
+            self.trUtf8("Show information about object"), self.__showInfo)
         menu.addSeparator()
         menu.addAction(self.trUtf8("Load"), self.__load)
         menu.addAction(self.trUtf8("Delete object"), self.__hideAdBlocked)
         menu.addSeparator()
         host = self.__url.host()
-        add = menu.addAction(self.trUtf8("Add '{0}' to Whitelist".format(host)),
-                             self.__addToWhitelist)
-        remove = menu.addAction(self.trUtf8("Remove '{0}' from Whitelist".format(host)),
-                                self.__removeFromWhitelist)
+        add = menu.addAction(
+            self.trUtf8("Add '{0}' to Whitelist").format(host),
+            self.__addToWhitelist)
+        remove = menu.addAction(
+            self.trUtf8("Remove '{0}' from Whitelist").format(host),
+            self.__removeFromWhitelist)
         onWhitelist = self.__plugin.onWhitelist(host)
         add.setEnabled(not onWhitelist)
         remove.setEnabled(onWhitelist)
@@ -152,7 +157,8 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
     
     def __findElement(self):
         """
-        Private method to find the element belonging to this ClickToFlash instance.
+        Private method to find the element belonging to this ClickToFlash
+        instance.
         """
         parent = self.parentWidget()
         view = None
@@ -216,7 +222,8 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         
         checkString = view.url().resolved(QUrl(checkString)).toString(
             QUrl.RemoveQuery)
-        return self.__url.toEncoded().contains(QByteArray(checkString.encode("utf-8")))
+        return self.__url.toEncoded().contains(
+            QByteArray(checkString.encode("utf-8")))
     
     def __checkElement(self, element):
         """
@@ -297,11 +304,13 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
     @classmethod
     def isAlreadyAccepted(cls, url, argumentNames, argumentValues):
         """
-        Class method to check, if the given parameter combination is being accepted.
+        Class method to check, if the given parameter combination is being
+        accepted.
         
         @param url URL to be checked for (QUrl)
         @param argumentNames argument names to be checked for (list of strings)
-        @param argumentValues argument values to be checked for (list of strings)
+        @param argumentValues argument values to be checked for (list of
+            strings)
         @return flag indicating that this was already accepted (boolean)
         """
         return url == cls._acceptedUrl and \

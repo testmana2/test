@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a library for reading and writing binary property list files.
+Module implementing a library for reading and writing binary property list
+files.
 
 Binary Property List (plist) files provide a faster and smaller serialization
 format for property lists on OS X. This is a library for generating binary
@@ -73,14 +74,15 @@ Plist parsing example:
 #
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 # AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
 #
 
 from collections import namedtuple
@@ -116,7 +118,8 @@ class Uid(int):
 
 class Data(bytes):
     """
-    Class implementing a wrapper around bytes types for representing Data values.
+    Class implementing a wrapper around bytes types for representing Data
+    values.
     """
     pass
 
@@ -139,7 +142,8 @@ def readPlist(pathOrFile):
     """
     Module function to read a plist file.
     
-    @param pathOrFile name of the plist file (string) or an open file (file object)
+    @param pathOrFile name of the plist file (string) or an open file
+        (file object)
     @return reference to the read object
     @exception InvalidPlistException raised to signal an invalid plist file
     """
@@ -167,8 +171,10 @@ def writePlist(rootObject, pathOrFile, binary=True):
     Module function to write a plist file.
     
     @param rootObject reference to the object to be written
-    @param pathOrFile name of the plist file (string) or an open file (file object)
-    @param binary flag indicating the generation of a binary plist file (boolean)
+    @param pathOrFile name of the plist file (string) or an open file
+        (file object)
+    @param binary flag indicating the generation of a binary plist file
+        (boolean)
     """
     if not binary:
         plistlib.writePlist(rootObject, pathOrFile)
@@ -228,10 +234,11 @@ def is_stream_binary_plist(stream):
         return False
 
 PlistTrailer = namedtuple('PlistTrailer',
-    'offsetSize, objectRefSize, offsetCount, topLevelObjectNumber, offsetTableOffset')
+    'offsetSize, objectRefSize, offsetCount, topLevelObjectNumber,'
+    ' offsetTableOffset')
 PlistByteCounts = namedtuple('PlistByteCounts',
-    'nullBytes, boolBytes, intBytes, realBytes, dateBytes, dataBytes, stringBytes, '
-    'uidBytes, arrayBytes, setBytes, dictBytes')
+    'nullBytes, boolBytes, intBytes, realBytes, dateBytes, dataBytes,'
+    ' stringBytes, uidBytes, arrayBytes, setBytes, dictBytes')
 
 
 class PlistReader(object):
@@ -289,18 +296,22 @@ class PlistReader(object):
             raise InvalidPlistException("File is too short.")
         trailerContents = self.contents[-32:]
         try:
-            self.trailer = PlistTrailer._make(unpack("!xxxxxxBBQQQ", trailerContents))
+            self.trailer = PlistTrailer._make(
+                unpack("!xxxxxxBBQQQ", trailerContents))
             offset_size = self.trailer.offsetSize * self.trailer.offsetCount
             offset = self.trailer.offsetTableOffset
             offset_contents = self.contents[offset:offset + offset_size]
             offset_i = 0
             while offset_i < self.trailer.offsetCount:
                 begin = self.trailer.offsetSize * offset_i
-                tmp_contents = offset_contents[begin:begin + self.trailer.offsetSize]
-                tmp_sized = self.getSizedInteger(tmp_contents, self.trailer.offsetSize)
+                tmp_contents = offset_contents[
+                    begin:begin + self.trailer.offsetSize]
+                tmp_sized = self.getSizedInteger(
+                    tmp_contents, self.trailer.offsetSize)
                 self.offsets.append(tmp_sized)
                 offset_i += 1
-            self.setCurrentOffsetToObjectNumber(self.trailer.topLevelObjectNumber)
+            self.setCurrentOffsetToObjectNumber(
+                self.trailer.topLevelObjectNumber)
             result = self.readObject()
         except TypeError as e:
             raise InvalidPlistException(e)
@@ -347,7 +358,8 @@ class PlistReader(object):
                 pass  # fill byte
             else:
                 raise InvalidPlistException(
-                    "Invalid object found at offset: {0}".format(self.currentOffset - 1))
+                    "Invalid object found at offset: {0}".format(
+                        self.currentOffset - 1))
         # int
         elif format == 0b0001:
             extra = proc_extra(extra)
@@ -438,7 +450,8 @@ class PlistReader(object):
         i = 0
         while i < count:
             fragment = self.contents[
-                self.currentOffset:self.currentOffset + self.trailer.objectRefSize]
+                self.currentOffset:
+                self.currentOffset + self.trailer.objectRefSize]
             ref = self.getSizedInteger(fragment, len(fragment))
             refs.append(ref)
             self.currentOffset += self.trailer.objectRefSize
@@ -503,7 +516,8 @@ class PlistReader(object):
         @return unicode encoded string
         """
         actual_length = length * 2
-        data = self.contents[self.currentOffset:self.currentOffset + actual_length]
+        data = self.contents[
+            self.currentOffset:self.currentOffset + actual_length]
         # unpack not needed?!! data = unpack(">%ds" % (actual_length), data)[0]
         self.currentOffset += actual_length
         return data.decode('utf_16_be')
@@ -515,8 +529,10 @@ class PlistReader(object):
         @return date object (datetime.datetime)
         """
         global apple_reference_date_offset
-        result = unpack(">d", self.contents[self.currentOffset:self.currentOffset + 8])[0]
-        result = datetime.datetime.utcfromtimestamp(result + apple_reference_date_offset)
+        result = unpack(">d",
+            self.contents[self.currentOffset:self.currentOffset + 8])[0]
+        result = datetime.datetime.utcfromtimestamp(
+            result + apple_reference_date_offset)
         self.currentOffset += 8
         return result
     
@@ -561,7 +577,8 @@ class PlistReader(object):
         elif bytes == 8:
             result = unpack('>q', data)[0]
         else:
-            raise InvalidPlistException("Encountered integer longer than 8 bytes.")
+            raise InvalidPlistException(
+                "Encountered integer longer than 8 bytes.")
         return result
 
 
@@ -686,12 +703,14 @@ class PlistWriter(object):
         """
         output = self.header
         wrapped_root = self.wrapRoot(root)
-        should_reference_root = True  # not isinstance(wrapped_root, HashableWrapper)
-        self.computeOffsets(wrapped_root, asReference=should_reference_root, isRoot=True)
+        should_reference_root = True
+        self.computeOffsets(
+            wrapped_root, asReference=should_reference_root, isRoot=True)
         self.trailer = self.trailer._replace(
             **{'objectRefSize': self.intSize(len(self.computedUniques))})
         (_, output) = self.writeObjectReference(wrapped_root, output)
-        output = self.writeObject(wrapped_root, output, setReferencePosition=True)
+        output = self.writeObject(
+            wrapped_root, output, setReferencePosition=True)
         
         # output size at this point is an upper bound on how big the
         # object reference offsets need to be.
@@ -761,9 +780,11 @@ class PlistWriter(object):
         """                                             # __IGNORE_WARNING__
         def check_key(key):
             if key is None:
-                raise InvalidPlistException('Dictionary keys cannot be null in plists.')
+                raise InvalidPlistException(
+                    'Dictionary keys cannot be null in plists.')
             elif isinstance(key, Data):
-                raise InvalidPlistException('Data cannot be dictionary keys in plists.')
+                raise InvalidPlistException(
+                    'Data cannot be dictionary keys in plists.')
             elif not isinstance(key, str):
                 raise InvalidPlistException('Keys must be strings.')
         
@@ -844,7 +865,8 @@ class PlistWriter(object):
                                       bytes=self.trailer.objectRefSize)
             return (True, output)
         else:
-            output += self.binaryInt(position, bytes=self.trailer.objectRefSize)
+            output += self.binaryInt(
+                position, bytes=self.trailer.objectRefSize)
             return (False, output)
 
     def writeObject(self, obj, output, setReferencePosition=False):
@@ -916,7 +938,8 @@ class PlistWriter(object):
                     if isNew:
                         objectsToWrite.append(objRef)
                 for objRef in objectsToWrite:
-                    output = self.writeObject(objRef, output, setReferencePosition=True)
+                    output = self.writeObject(
+                        objRef, output, setReferencePosition=True)
             elif isinstance(obj, dict):
                 output += proc_variable_length(0b1101, len(obj))
                 keys = []
@@ -934,7 +957,8 @@ class PlistWriter(object):
                     if isNew:
                         objectsToWrite.append(value)
                 for objRef in objectsToWrite:
-                    output = self.writeObject(objRef, output, setReferencePosition=True)
+                    output = self.writeObject(
+                        objRef, output, setReferencePosition=True)
         return output
     
     def writeOffsetTable(self, output):
@@ -993,7 +1017,8 @@ class PlistWriter(object):
             result += pack('>q', obj)
         else:
             raise InvalidPlistException(
-                "Core Foundation can't handle integers with size greater than 8 bytes.")
+                "Core Foundation can't handle integers with size greater"
+                " than 8 bytes.")
         return result
     
     def intSize(self, obj):
@@ -1022,7 +1047,8 @@ class PlistWriter(object):
             return 8
         else:
             raise InvalidPlistException(
-                "Core Foundation can't handle integers with size greater than 8 bytes.")
+                "Core Foundation can't handle integers with size greater"
+                " than 8 bytes.")
     
     def realSize(self, obj):
         """

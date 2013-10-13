@@ -111,13 +111,17 @@ class Task(QTreeWidgetItem):
         boldFont.setBold(True)
         for col in range(5):
             if self.taskType == Task.TypeFixme:
-                self.setBackgroundColor(col, Preferences.getTasks("TasksFixmeColor"))
+                self.setBackgroundColor(
+                    col, Preferences.getTasks("TasksFixmeColor"))
             elif self.taskType == Task.TypeWarning:
-                self.setBackgroundColor(col, Preferences.getTasks("TasksWarningColor"))
+                self.setBackgroundColor(
+                    col, Preferences.getTasks("TasksWarningColor"))
             elif self.taskType == Task.TypeTodo:
-                self.setBackgroundColor(col, Preferences.getTasks("TasksTodoColor"))
+                self.setBackgroundColor(
+                    col, Preferences.getTasks("TasksTodoColor"))
             else:
-                self.setBackgroundColor(col, Preferences.getTasks("TasksNoteColor"))
+                self.setBackgroundColor(
+                    col, Preferences.getTasks("TasksNoteColor"))
             if self._isProjectTask:
                 self.setFont(col, boldFont)
     
@@ -222,7 +226,8 @@ class Task(QTreeWidgetItem):
     
     def isProjectFileTask(self):
         """
-        Public slot to get an indication, if this task is related to a project file.
+        Public slot to get an indication, if this task is related to a
+        project file.
         
         @return flag indicating a project file task (boolean)
         """

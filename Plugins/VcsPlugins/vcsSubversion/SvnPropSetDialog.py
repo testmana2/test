@@ -58,4 +58,5 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         if self.fileRadioButton.isChecked():
             return (self.propNameEdit.text(), True, self.propFileEdit.text())
         else:
-            return (self.propNameEdit.text(), False, self.propTextEdit.toPlainText())
+            return (self.propNameEdit.text(), False,
+                    self.propTextEdit.toPlainText())

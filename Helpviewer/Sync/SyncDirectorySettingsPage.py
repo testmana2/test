@@ -59,7 +59,8 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
     @pyqtSlot()
     def on_directoryButton_clicked(self):
         """
-        Private slot to select the shared directory via a directory selection dialog.
+        Private slot to select the shared directory via a directory selection
+        dialog.
         """
         directory = E5FileDialog.getExistingDirectory(
             self,

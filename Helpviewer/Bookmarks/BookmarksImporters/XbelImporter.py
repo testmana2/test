@@ -23,7 +23,8 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "e5browser":
@@ -33,9 +34,10 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("ericWeb48.png"),
             "eric5 Web Browser",
             os.path.basename(bookmarksFile),
-            QCoreApplication.translate("XbelImporter",
-                """eric5 Web Browser stores its bookmarks in the <b>{0}</b> XML file. """
-                """This file is usually located in"""
+            QCoreApplication.translate(
+                "XbelImporter",
+                """eric5 Web Browser stores its bookmarks in the"""
+                """ <b>{0}</b> XML file. This file is usually located in"""
             ).format(os.path.basename(bookmarksFile)),
             QCoreApplication.translate("XbelImporter",
                 """Please choose the file to begin importing bookmarks."""),
@@ -52,9 +54,11 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("konqueror.png"),
             "Konqueror",
             "bookmarks.xml",
-            QCoreApplication.translate("XbelImporter",
-                """Konqueror stores its bookmarks in the <b>bookmarks.xml</b> XML """
-                """file. This file is usually located in"""),
+            QCoreApplication.translate(
+                "XbelImporter",
+                """Konqueror stores its bookmarks in the"""
+                """ <b>bookmarks.xml</b> XML file. This file is usually"""
+                """ located in"""),
             QCoreApplication.translate("XbelImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
@@ -63,12 +67,15 @@ def getImporterInfo(id):
         return (
             UI.PixmapCache.getPixmap("xbel.png"),
             "XBEL Bookmarks",
-            QCoreApplication.translate("XbelImporter", "XBEL Bookmarks") + \
-                " (*.xbel *.xml)",
-            QCoreApplication.translate("XbelImporter",
-                """You can import bookmarks from any browser that supports XBEL """
-                """exporting. This file has usually the extension .xbel or .xml."""),
-            QCoreApplication.translate("XbelImporter",
+            QCoreApplication.translate(
+                "XbelImporter", "XBEL Bookmarks") + " (*.xbel *.xml)",
+            QCoreApplication.translate(
+                "XbelImporter",
+                """You can import bookmarks from any browser that supports"""
+                """ XBEL exporting. This file has usually the extension"""
+                """ .xbel or .xml."""),
+            QCoreApplication.translate(
+                "XbelImporter",
                 """Please choose the file to begin importing bookmarks."""),
             "",
         )
@@ -126,7 +133,8 @@ class XbelImporter(BookmarksImporter):
         if reader.error() != QXmlStreamReader.NoError:
             self._error = True
             self._errorString = self.trUtf8(
-                """Error when importing bookmarks on line {0}, column {1}:\n{2}""")\
+                """Error when importing bookmarks on line {0},"""
+                """ column {1}:\n{2}""")\
                 .format(reader.lineNumber(),
                         reader.columnNumber(),
                         reader.errorString())

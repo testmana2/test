@@ -44,7 +44,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         
         from QScintilla.SpellChecker import SpellChecker
         self.spellingComboBox.addItem(self.trUtf8("<default>"))
-        self.spellingComboBox.addItems(sorted(SpellChecker.getAvailableLanguages()))
+        self.spellingComboBox.addItems(
+            sorted(SpellChecker.getAvailableLanguages()))
         
         if not new:
             self.initDialog()
@@ -53,16 +54,17 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         """
         Public method to initialize the dialogs data.
         """
-        index = self.spellingComboBox.findText(self.project.pdata["SPELLLANGUAGE"][0])
+        index = self.spellingComboBox.findText(
+            self.project.pdata["SPELLLANGUAGE"][0])
         if index == -1:
             index = 0
         self.spellingComboBox.setCurrentIndex(index)
         if self.project.pdata["SPELLWORDS"][0]:
-            self.pwlEdit.setText(
-                Utilities.toNativeSeparators(self.project.pdata["SPELLWORDS"][0]))
+            self.pwlEdit.setText(Utilities.toNativeSeparators(
+                self.project.pdata["SPELLWORDS"][0]))
         if self.project.pdata["SPELLEXCLUDES"][0]:
-            self.pelEdit.setText(
-                Utilities.toNativeSeparators(self.project.pdata["SPELLEXCLUDES"][0]))
+            self.pelEdit.setText(Utilities.toNativeSeparators(
+                self.project.pdata["SPELLEXCLUDES"][0]))
     
     @pyqtSlot()
     def on_pwlButton_clicked(self):
@@ -73,7 +75,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         if not pwl:
             pwl = self.project.ppath
         elif not os.path.isabs(pwl):
-            pwl = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, pwl))
+            pwl = Utilities.fromNativeSeparators(
+                os.path.join(self.project.ppath, pwl))
         file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project word list"),
@@ -93,7 +96,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         if not pel:
             pel = self.project.ppath
         elif not os.path.isabs(pel):
-            pel = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, pel))
+            pel = Utilities.fromNativeSeparators(
+                os.path.join(self.project.ppath, pel))
         file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project exclude list"),

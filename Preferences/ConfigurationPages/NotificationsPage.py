@@ -46,7 +46,8 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
         self.__notification = None
         
         # set initial values
-        self.enableCheckBox.setChecked(Preferences.getUI("NotificationsEnabled"))
+        self.enableCheckBox.setChecked(
+            Preferences.getUI("NotificationsEnabled"))
         self.timeoutSpinBox.setValue(Preferences.getUI("NotificationTimeout"))
         point = Preferences.getUI("NotificationPosition")
         self.xSpinBox.setValue(point.x())
@@ -56,7 +57,8 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
         """
         Public slot to save the Notifications configuration.
         """
-        Preferences.setUI("NotificationsEnabled", self.enableCheckBox.isChecked())
+        Preferences.setUI(
+            "NotificationsEnabled", self.enableCheckBox.isChecked())
         Preferences.setUI("NotificationTimeout", self.timeoutSpinBox.value())
         Preferences.setUI("NotificationPosition", QPoint(
             self.xSpinBox.value(), self.ySpinBox.value()))
@@ -70,12 +72,16 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
         """
         if checked:
             from UI.NotificationWidget import NotificationWidget
-            self.__notification = NotificationWidget(parent=self, setPosition=True)
-            self.__notification.setPixmap(UI.PixmapCache.getPixmap("notification48.png"))
+            self.__notification = NotificationWidget(
+                parent=self, setPosition=True)
+            self.__notification.setPixmap(
+                UI.PixmapCache.getPixmap("notification48.png"))
             self.__notification.setHeading(self.trUtf8("Visual Selection"))
-            self.__notification.setText(self.trUtf8("Drag the notification window to"
-                " the desired place and release the button."))
-            self.__notification.move(QPoint(self.xSpinBox.value(), self.ySpinBox.value()))
+            self.__notification.setText(
+                self.trUtf8("Drag the notification window to"
+                            " the desired place and release the button."))
+            self.__notification.move(
+                QPoint(self.xSpinBox.value(), self.ySpinBox.value()))
             self.__notification.show()
         else:
             # retrieve the position

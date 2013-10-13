@@ -25,8 +25,8 @@ import Utilities
 from functools import reduce
 import Preferences
 
-__all__ = ["Module", "Class", "Function", "Attribute", "RbModule", "readModule",
-           "getTypeFromTypeName"]
+__all__ = ["Module", "Class", "Function", "Attribute", "RbModule",
+           "readModule", "getTypeFromTypeName"]
 
 TABWIDTH = 4
 
@@ -123,7 +123,8 @@ _py_getnext = re.compile(r"""
     )
 
 |   (?P<Method>
-        (^ [ \t]* @ (?: PyQt4 \. )? (?: QtCore \. )? (?: pyqtSignature | pyqtSlot )
+        (^ [ \t]* @ (?: PyQt4 \. )? (?: QtCore \. )?
+            (?: pyqtSignature | pyqtSlot )
             [ \t]* \(
                 (?P<MethodPyQtSignature> [^)]* )
             \) \s*
@@ -215,7 +216,8 @@ _rb_getnext = re.compile(r"""
         (?P<MethodIndent> [ \t]* )
         def [ \t]+
         (?:
-            (?P<MethodName2> [a-zA-Z0-9_]+ (?: \. | :: ) [a-zA-Z_] [a-zA-Z0-9_?!=]* )
+            (?P<MethodName2> [a-zA-Z0-9_]+ (?: \. | :: )
+            [a-zA-Z_] [a-zA-Z0-9_?!=]* )
         |
             (?P<MethodName> [a-zA-Z_] [a-zA-Z0-9_?!=]* )
         |
@@ -268,11 +270,13 @@ _rb_getnext = re.compile(r"""
         (?:
             (?P<AccessControlType> private | public | protected ) [^_]
         |
-            (?P<AccessControlType2> private_class_method | public_class_method )
+            (?P<AccessControlType2>
+            private_class_method | public_class_method )
         )
         \(?
         [ \t]*
-        (?P<AccessControlList> (?: : [a-zA-Z0-9_]+ , \s* )* (?: : [a-zA-Z0-9_]+ )+ )?
+        (?P<AccessControlList> (?: : [a-zA-Z0-9_]+ , \s* )*
+        (?: : [a-zA-Z0-9_]+ )+ )?
         [ \t]*
         \)?
     )
@@ -291,7 +295,8 @@ _rb_getnext = re.compile(r"""
         (?P<AttrType> (?: _accessor | _reader | _writer ) )?
         \(?
         [ \t]*
-        (?P<AttrList> (?: : [a-zA-Z0-9_]+ , \s* )* (?: : [a-zA-Z0-9_]+ | true | false )+ )
+        (?P<AttrList> (?: : [a-zA-Z0-9_]+ , \s* )*
+        (?: : [a-zA-Z0-9_]+ | true | false )+ )
         [ \t]*
         \)?
     )
@@ -471,7 +476,8 @@ class Module(object):
     
     def scan(self, src):
         """
-        Public method to scan the source text and retrieve the relevant information.
+        Public method to scan the source text and retrieve the relevant
+        information.
         
         @param src the source text to be scanned (string)
         """
@@ -495,8 +501,8 @@ class Module(object):
     
     def __py_scan(self, src):
         """
-        Private method to scan the source text of a Python module and retrieve the
-        relevant information.
+        Private method to scan the source text of a Python module and retrieve
+        the relevant information.
         
         @param src the source text to be scanned (string)
         """
@@ -551,8 +557,10 @@ class Module(object):
                 if conditionalsstack:
                     if thisindent > conditionalsstack[-1]:
                         if not deltaindentcalculated:
-                            deltastack.append(thisindent - conditionalsstack[-1])
-                            deltaindent = reduce(lambda x, y:  x + y, deltastack)
+                            deltastack.append(
+                                thisindent - conditionalsstack[-1])
+                            deltaindent = reduce(
+                                lambda x, y:  x + y, deltastack)
                             deltaindentcalculated = 1
                         thisindent -= deltaindent
                     else:
@@ -581,15 +589,17 @@ class Module(object):
                         
                         if isinstance(cur_class, Class):
                             # it's a class method
-                            f = Function(None, meth_name, None, lineno,
-                                         meth_sig, meth_pyqtSig, modifierType=modifier)
+                            f = Function(
+                                None, meth_name, None, lineno,
+                                meth_sig, meth_pyqtSig, modifierType=modifier)
                             self.__py_setVisibility(f)
                             cur_class.addMethod(meth_name, f)
                             break
                     else:
                         # it's a nested function of a module function
-                        f = Function(self.name, meth_name, self.file, lineno,
-                                     meth_sig, meth_pyqtSig, modifierType=modifier)
+                        f = Function(
+                            self.name, meth_name, self.file, lineno,
+                            meth_sig, meth_pyqtSig, modifierType=modifier)
                         self.__py_setVisibility(f)
                         self.addFunction(meth_name, f)
                 else:
@@ -700,7 +710,8 @@ class Module(object):
                 while index >= -len(classstack):
                     if classstack[index][0] is not None:
                         attrName = m.group("AttributeName")
-                        attr = Attribute(self.name, attrName, self.file, lineno)
+                        attr = Attribute(
+                            self.name, attrName, self.file, lineno)
                         self.__py_setVisibility(attr)
                         classstack[index][0].addAttribute(attrName, attr)
                         break
@@ -715,8 +726,9 @@ class Module(object):
                 last_lineno_pos = start
                 if thisindent == 0:
                     # global variable
-                    attr = Attribute(self.name, variable_name, self.file, lineno,
-                                     isSignal=isSignal)
+                    attr = Attribute(
+                        self.name, variable_name, self.file, lineno,
+                        isSignal=isSignal)
                     self.__py_setVisibility(attr)
                     self.addGlobal(variable_name, attr)
                     if lastGlobalEntry:
@@ -730,16 +742,19 @@ class Module(object):
                         else:
                             if classstack[index][0] is not None and \
                                isinstance(classstack[index][0], Class):
-                                attr = Attribute(self.name, variable_name, self.file,
-                                                 lineno, isSignal=isSignal)
+                                attr = Attribute(
+                                    self.name, variable_name, self.file,
+                                    lineno, isSignal=isSignal)
                                 self.__py_setVisibility(attr)
-                                classstack[index][0].addGlobal(variable_name, attr)
+                                classstack[index][0].addGlobal(
+                                    variable_name, attr)
                             break
 
             elif m.start("Import") >= 0:
                 # import module
-                names = [n.strip() for n in "".join(
-                    m.group("ImportList").splitlines()).replace("\\", "").split(',')]
+                names = [n.strip() for n in 
+                         "".join(m.group("ImportList").splitlines())
+                         .replace("\\", "").split(',')]
                 for name in names:
                     if not name in self.imports:
                         self.imports.append(name)
@@ -747,8 +762,9 @@ class Module(object):
             elif m.start("ImportFrom") >= 0:
                 # from module import stuff
                 mod = m.group("ImportFromPath")
-                names = [n.strip() for n in "".join(
-                    m.group("ImportFromList").splitlines()).replace("\\", "").split(',')]
+                names = [n.strip() for n in 
+                         "".join(m.group("ImportFromList").splitlines())
+                         .replace("\\", "").split(',')]
                 if mod not in self.from_imports:
                     self.from_imports[mod] = []
                 self.from_imports[mod].extend(names)
@@ -771,8 +787,8 @@ class Module(object):
     
     def __rb_scan(self, src):
         """
-        Private method to scan the source text of a Python module and retrieve the
-        relevant information.
+        Private method to scan the source text of a Python module and retrieve
+        the relevant information.
         
         @param src the source text to be scanned (string)
         """
@@ -808,7 +824,8 @@ class Module(object):
                 while classstack and \
                       classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
-                       isinstance(classstack[-1][0], (Class, Function, RbModule)):
+                       isinstance(classstack[-1][0],
+                                  (Class, Function, RbModule)):
                         # record the end line of this class, function or module
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
@@ -833,7 +850,8 @@ class Module(object):
                             break
                     else:
                         # it's a nested function of a module function
-                        f = Function(self.name, meth_name, self.file, lineno, meth_sig)
+                        f = Function(
+                            self.name, meth_name, self.file, lineno, meth_sig)
                         self.addFunction(meth_name, f)
                     # set access control
                     if acstack:
@@ -846,7 +864,8 @@ class Module(object):
                             f.setPublic()
                 else:
                     # it's a function
-                    f = Function(self.name, meth_name, self.file, lineno, meth_sig)
+                    f = Function(
+                        self.name, meth_name, self.file, lineno, meth_sig)
                     self.addFunction(meth_name, f)
                 if not classstack:
                     if lastGlobalEntry:
@@ -883,7 +902,8 @@ class Module(object):
                 while classstack and \
                       classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
-                       isinstance(classstack[-1][0], (Class, Function, RbModule)):
+                       isinstance(classstack[-1][0],
+                                  (Class, Function, RbModule)):
                         # record the end line of this class, function or module
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
@@ -931,7 +951,8 @@ class Module(object):
                 while classstack and \
                       classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
-                       isinstance(classstack[-1][0], (Class, Function, RbModule)):
+                       isinstance(classstack[-1][0],
+                                  (Class, Function, RbModule)):
                         # record the end line of this class, function or module
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
@@ -962,8 +983,9 @@ class Module(object):
                     index = -1
                     while index >= -len(acstack):
                         if acstack[index][1] < indent:
-                            actype = m.group("AccessControlType") or \
-                                     m.group("AccessControlType2").split('_')[0]
+                            actype = \
+                                m.group("AccessControlType") or \
+                                m.group("AccessControlType2").split('_')[0]
                             acstack[index][0] = actype.lower()
                             break
                         else:
@@ -975,11 +997,13 @@ class Module(object):
                            not isinstance(classstack[index][0], Function) and \
                            not classstack[index][1] >= indent:
                             parent = classstack[index][0]
-                            actype = m.group("AccessControlType") or \
-                                     m.group("AccessControlType2").split('_')[0]
+                            actype = \
+                                m.group("AccessControlType") or \
+                                m.group("AccessControlType2").split('_')[0]
                             actype = actype.lower()
                             for name in aclist.split(","):
-                                name = name.strip()[1:]     # get rid of leading ':'
+                                # get rid of leading ':'
+                                name = name.strip()[1:]
                                 acmeth = parent.getMethod(name)
                                 if acmeth is None:
                                     continue
@@ -1002,7 +1026,8 @@ class Module(object):
                        not isinstance(classstack[index][0], Function) and \
                        not classstack[index][1] >= indent:
                         attrName = m.group("AttributeName")
-                        attr = Attribute(self.name, attrName, self.file, lineno)
+                        attr = Attribute(
+                            self.name, attrName, self.file, lineno)
                         if attrName.startswith("@@") or attrName[0].isupper():
                             classstack[index][0].addGlobal(attrName, attr)
                         else:
@@ -1013,7 +1038,8 @@ class Module(object):
                 else:
                     attrName = m.group("AttributeName")
                     if attrName[0] != "@":
-                        attr = Attribute(self.name, attrName, self.file, lineno)
+                        attr = Attribute(
+                            self.name, attrName, self.file, lineno)
                         self.addGlobal(attrName, attr)
                     if lastGlobalEntry:
                         lastGlobalEntry.setEndLine(lineno - 1)
@@ -1032,10 +1058,12 @@ class Module(object):
                             nv = m.group("AttrList").split(",")
                             if not nv:
                                 break
-                            name = nv[0].strip()[1:]    # get rid of leading ':'
+                            # get rid of leading ':'
+                            name = nv[0].strip()[1:]
                             attr = parent.getAttribute("@" + name) or \
                                    parent.getAttribute("@@" + name) or \
-                                   Attribute(self.name, "@" + name, self.file, lineno)
+                                   Attribute(
+                                    self.name, "@" + name, self.file, lineno)
                             if len(nv) == 1 or nv[1].strip() == "false":
                                 attr.setProtected()
                             elif nv[1].strip() == "true":
@@ -1044,13 +1072,17 @@ class Module(object):
                         else:
                             access = m.group("AttrType")
                             for name in m.group("AttrList").split(","):
-                                name = name.strip()[1:]     # get rid of leading ':'
+                                # get rid of leading ':'
+                                name = name.strip()[1:]
                                 attr = parent.getAttribute("@" + name) or \
                                        parent.getAttribute("@@" + name) or \
-                                       Attribute(self.name, "@" + name, self.file, lineno)
+                                       Attribute(
+                                        self.name, "@" + name, self.file,
+                                        lineno)
                                 if access == "_accessor":
                                     attr.setPublic()
-                                elif access == "_reader" or access == "_writer":
+                                elif access == "_reader" or \
+                                        access == "_writer":
                                     if attr.isPrivate():
                                         attr.setProtected()
                                     elif attr.isProtected():
@@ -1083,7 +1115,8 @@ class Module(object):
     
     def createHierarchy(self):
         """
-        Public method to build the inheritance hierarchy for all classes of this module.
+        Public method to build the inheritance hierarchy for all classes of
+        this module.
         
         @return A dictionary with inheritance hierarchies.
         """
@@ -1116,7 +1149,8 @@ class Module(object):
                     rv[cls] = {}
                     exhausted = path + [cls]
                     exhausted.reverse()
-                    self.addPathToHierarchy(exhausted, result, self.addPathToHierarchy)
+                    self.addPathToHierarchy(
+                        exhausted, result, self.addPathToHierarchy)
                 else:
                     rv[cls] = self.assembleHierarchy(cls,
                                    classes, path + [cls], result)
@@ -1315,8 +1349,8 @@ class Function(VisibilityBase):
     Static = 1
     Class = 2
     
-    def __init__(self, module, name, file, lineno, signature='', pyqtSignature=None,
-                 modifierType=General):
+    def __init__(self, module, name, file, lineno, signature='',
+                 pyqtSignature=None, modifierType=General):
         """
         Constructor
         
@@ -1383,7 +1417,8 @@ class Attribute(VisibilityBase):
         """
         Public method to add another assignment line number.
         
-        @param lineno linenumber of the additional attribute assignment (integer)
+        @param lineno linenumber of the additional attribute assignment
+            (integer)
         """
         if lineno not in self.linenos:
             self.linenos.append(lineno)
@@ -1462,12 +1497,14 @@ def readModule(module, path=[], inpackage=False, basename="",
     f = None
     if inpackage:
         try:
-            f, file, (suff, mode, type) = find_module(module, path, _extensions)
+            f, file, (suff, mode, type) = find_module(
+                module, path, _extensions)
         except ImportError:
             f = None
     if f is None:
         fullpath = list(path) + sys.path
-        f, file, (suff, mode, type) = find_module(module, fullpath, _extensions)
+        f, file, (suff, mode, type) = find_module(
+            module, fullpath, _extensions)
     if f:
         f.close()
     if type not in SUPPORTED_TYPES:
@@ -1520,12 +1557,15 @@ def find_module(name, path, extensions):
                     pathname = os.path.join(p, name)
                     if ext == '.ptl':
                         # Quixote page template
-                        return (open(pathname), pathname, ('.ptl', 'r', PTL_SOURCE))
+                        return (open(pathname), pathname,
+                                ('.ptl', 'r', PTL_SOURCE))
                     elif ext == '.rb':
                         # Ruby source file
-                        return (open(pathname), pathname, ('.rb', 'r', RB_SOURCE))
+                        return (open(pathname), pathname,
+                                ('.rb', 'r', RB_SOURCE))
                     else:
-                        return (open(pathname), pathname, (ext, 'r', imp.PY_SOURCE))
+                        return (open(pathname), pathname,
+                                (ext, 'r', imp.PY_SOURCE))
             raise ImportError
     
     # standard Python module file
@@ -1562,7 +1602,8 @@ def resetParsedModule(module, basename=""):
             modname = module.replace(os.sep, '.')
         else:
             modname = os.path.basename(module)
-        if modname.lower().endswith(".ptl") or modname.lower().endswith(".pyw"):
+        if modname.lower().endswith(".ptl") or \
+                modname.lower().endswith(".pyw"):
             modname = modname[:-4]
         elif modname.lower().endswith(".rb"):
             modname = modname[:-3]

@@ -10,7 +10,8 @@ Module implementing a dialog to manage the QtHelp filters.
 import sqlite3
 
 from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QTreeWidgetItem, QListWidgetItem, QInputDialog, QLineEdit
+from PyQt4.QtGui import QDialog, QTreeWidgetItem, QListWidgetItem, \
+    QInputDialog, QLineEdit
 from PyQt4.QtHelp import QHelpEngineCore
 
 from .Ui_QtHelpFiltersDialog import Ui_QtHelpFiltersDialog
@@ -64,7 +65,8 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         Private slot to update the attributes depending on the current filter.
         
         @param current reference to the current item (QListWidgetitem)
-        @param previous reference to the previous current item (QListWidgetItem)
+        @param previous reference to the previous current item
+            (QListWidgetItem)
         """
         checkedList = []
         if current is not None:
@@ -164,7 +166,8 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         
         for attr in self.__removedAttributes:
             self.__db.execute(
-                "DELETE FROM FilterAttributeTable WHERE Name = '{0}'".format(attr))
+                "DELETE FROM FilterAttributeTable WHERE Name = '{0}'"
+                .format(attr))
         self.__db.commit()
         self.__db.close()
     

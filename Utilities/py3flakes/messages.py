@@ -38,7 +38,8 @@ class Message(object):
         @return string representation of the object (string)
         """
         return '{0}:{1} {2}'.format(
-            self.filename, self.lineno, self.message.format(*self.message_args))
+            self.filename, self.lineno,
+            self.message.format(*self.message_args))
     
     def getMessageData(self):
         """
@@ -47,7 +48,8 @@ class Message(object):
         @return tuple containing file name, line number and message
             (string, integer, string)
         """
-        return (self.filename, self.lineno, self.message.format(*self.message_args))
+        return (self.filename, self.lineno,
+        self.message.format(*self.message_args))
 
 
 class UnusedImport(Message):
@@ -150,7 +152,8 @@ class UndefinedExport(Message):
     """
     Class defining the "Undefined Export" message.
     """
-    message = QCoreApplication.translate('py3Flakes', 'Undefined name {0!r} in __all__.')
+    message = QCoreApplication.translate(
+        'py3Flakes', 'Undefined name {0!r} in __all__.')
     
     def __init__(self, filename, lineno, name):
         """

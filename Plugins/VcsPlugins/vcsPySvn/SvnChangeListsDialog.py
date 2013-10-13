@@ -12,8 +12,8 @@ import os
 import pysvn
 
 from PyQt4.QtCore import pyqtSlot, Qt, QMutexLocker
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, QApplication, \
-    QCursor
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, \
+    QApplication, QCursor
 
 from .SvnDialogMixin import SvnDialogMixin
 
@@ -60,7 +60,8 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
         if current is not None:
             changelist = current.text()
             if changelist in self.changeListsDict:
-                self.filesList.addItems(sorted(self.changeListsDict[changelist]))
+                self.filesList.addItems(
+                    sorted(self.changeListsDict[changelist]))
     
     def start(self, path):
         """
@@ -71,14 +72,16 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
         self.changeListsDict = {}
         self.cancelled = False
         
-        self.filesLabel.setText(self.trUtf8("Files (relative to {0}):").format(path))
+        self.filesLabel.setText(
+            self.trUtf8("Files (relative to {0}):").format(path))
         
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         QApplication.processEvents()
         
         locker = QMutexLocker(self.vcs.vcsExecutionMutex)
         try:
-            entries = self.client.get_changelist(path, depth=pysvn.depth.infinity)
+            entries = self.client.get_changelist(
+                path, depth=pysvn.depth.infinity)
             for entry in entries:
                 file = entry[0]
                 changelist = entry[1]
@@ -105,7 +108,8 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
         
         if len(self.changeListsDict) == 0:
             self.changeLists.addItem(self.trUtf8("No changelists found"))
-            self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+            self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+                Qt.OtherFocusReason)
         else:
             self.changeLists.setCurrentRow(0)
             self.changeLists.setFocus(Qt.OtherFocusReason)

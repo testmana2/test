@@ -10,8 +10,8 @@ Module implementing a dialog to show a list of bookmarks.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QLineEdit
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QLineEdit
 
 from E5Gui import E5MessageBox
 
@@ -42,7 +42,8 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         self.__bookmarksList = None
         self.__hgClient = vcs.getClient()
         
-        self.bookmarksList.headerItem().setText(self.bookmarksList.columnCount(), "")
+        self.bookmarksList.headerItem().setText(
+            self.bookmarksList.columnCount(), "")
         self.bookmarksList.header().setSortIndicator(3, Qt.AscendingOrder)
         
         self.process.finished.connect(self.__procFinished)
@@ -130,7 +131,8 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -144,13 +146,15 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
         
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
-            self.__generateItem(self.trUtf8("no bookmarks defined"), "", "", "")
+            self.__generateItem(
+                self.trUtf8("no bookmarks defined"), "", "", "")
         self.__resizeColumns()
         self.__resort()
     
@@ -188,7 +192,8 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         """
         Private method to resize the list columns.
         """
-        self.bookmarksList.header().resizeSections(QHeaderView.ResizeToContents)
+        self.bookmarksList.header().resizeSections(
+            QHeaderView.ResizeToContents)
         self.bookmarksList.header().setStretchLastSection(True)
     
     def __generateItem(self, revision, changeset, status, name):

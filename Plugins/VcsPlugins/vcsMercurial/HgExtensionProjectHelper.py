@@ -12,10 +12,11 @@ from PyQt4.QtCore import QObject
 
 class HgExtensionProjectHelper(QObject):
     """
-    Class implementing the project helper base for Mercurial extension interfaces.
+    Class implementing the project helper base for Mercurial extension
+    interfaces.
     
-    Note: The methods initActions(), initMenu(mainMenu) and menuTitle() have to be
-          reimplemented by derived classes.
+    Note: The methods initActions(), initMenu(mainMenu) and menuTitle() have
+    to be reimplemented by derived classes.
     """
     def __init__(self):
         """
@@ -51,7 +52,8 @@ class HgExtensionProjectHelper(QObject):
         
         Note: Derived class must implement this method.
         
-        @exception NotImplementedError raised if the class has not been reimplemente
+        @exception NotImplementedError raised if the class has not been
+            reimplemente
         """
         raise NotImplementedError
     
@@ -63,7 +65,8 @@ class HgExtensionProjectHelper(QObject):
         
         @param mainMenu reference to the main menu (QMenu)
         @ireturn populated menu (QMenu)
-        @exception NotImplementedError raised if the class has not been reimplemente
+        @exception NotImplementedError raised if the class has not been
+            reimplemente
         """
         raise NotImplementedError
     
@@ -74,6 +77,7 @@ class HgExtensionProjectHelper(QObject):
         Note: Derived class must implement this method.
         
         @ireturn title of the menu (string)
-        @exception NotImplementedError raised if the class has not been reimplemente
+        @exception NotImplementedError raised if the class has not been
+            reimplemente
         """
         raise NotImplementedError

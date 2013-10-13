@@ -141,7 +141,8 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                     errorStr = str(e)
                 E5MessageBox.critical(self,
                     self.trUtf8("Login Test"),
-                    self.trUtf8("""<p>The login test failed.<br>Reason: {0}</p>""")
+                    self.trUtf8(
+                        """<p>The login test failed.<br>Reason: {0}</p>""")
                         .format(errorStr))
             server.quit()
         except (smtplib.SMTPException, socket.error) as e:

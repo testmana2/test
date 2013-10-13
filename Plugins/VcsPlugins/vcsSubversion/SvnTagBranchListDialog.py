@@ -49,8 +49,9 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
         
-        self.rx_list = \
-            QRegExp(r"""\w*\s*(\d+)\s+(\w+)\s+\d*\s*((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)/\s*""")
+        self.rx_list = QRegExp(
+            r"""\w*\s*(\d+)\s+(\w+)\s+\d*\s*"""
+            r"""((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)/\s*""")
         
     def closeEvent(self, e):
         """
@@ -94,9 +95,10 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         if reposURL is None:
             E5MessageBox.critical(self,
                 self.trUtf8("Subversion Error"),
-                self.trUtf8("""The URL of the project repository could not be"""
-                    """ retrieved from the working copy. The list operation will"""
-                    """ be aborted"""))
+                self.trUtf8(
+                    """The URL of the project repository could not be"""
+                    """ retrieved from the working copy. The list operation"""
+                    """ will be aborted"""))
             self.close()
             return
         
@@ -127,16 +129,19 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             reposPath, ok = QInputDialog.getText(
                 self,
                 self.trUtf8("Subversion List"),
-                self.trUtf8("Enter the repository URL containing the tags or branches"),
+                self.trUtf8("Enter the repository URL containing the tags"
+                            " or branches"),
                 QLineEdit.Normal,
                 self.vcs.svnNormalizeURL(reposURL))
             if not ok:
                 self.close()
                 return
             if not reposPath:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Subversion List"),
-                    self.trUtf8("""The repository URL is empty. Aborting..."""))
+                    self.trUtf8("""The repository URL is empty."""
+                                """ Aborting..."""))
                 self.close()
                 return
             args.append(reposPath)
@@ -161,7 +166,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -172,7 +178,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()

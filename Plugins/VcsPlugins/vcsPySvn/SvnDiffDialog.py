@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to show the output of the svn diff command process.
+Module implementing a dialog to show the output of the svn diff command
+process.
 """
 
 import os
@@ -12,8 +13,8 @@ import os
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, QFileInfo, QDateTime, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget, QColor, QCursor, QBrush, QApplication, QTextCursor, \
-    QDialogButtonBox
+from PyQt4.QtGui import QWidget, QColor, QCursor, QBrush, QApplication, \
+    QTextCursor, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -68,7 +69,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
     def __getVersionArg(self, version):
         """
-        Private method to get a pysvn revision object for the given version number.
+        Private method to get a pysvn revision object for the given version
+        number.
         
         @param version revision (integer or string)
         @return revision object (pysvn.Revision)
@@ -115,7 +117,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         Public slot to start the svn diff command.
         
         @param fn filename to be diffed (string)
-        @param versions list of versions to be diffed (list of up to 2 integer or None)
+        @param versions list of versions to be diffed (list of up to 2 integer
+            or None)
         @keyparam urls list of repository URLs (list of 2 strings)
         @keyparam summary flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
@@ -197,7 +200,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             if dname:
                 dname += "/"
             for name in fnames:
-                self.__showError(self.trUtf8("Processing file '{0}'...\n").format(name))
+                self.__showError(
+                    self.trUtf8("Processing file '{0}'...\n").format(name))
                 if urls is not None:
                     url1 = "{0}/{1}{2}".format(urls[0], dname, name)
                     url2 = "{0}/{1}{2}".format(urls[1], dname, name)
@@ -209,7 +213,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                         diff_list = []
                         for diff_sum in diff_summary:
                             diff_list.append("{0} {1}".format(
-                                self.__getDiffSummaryKind(diff_sum['summarize_kind']),
+                                self.__getDiffSummaryKind(
+                                    diff_sum['summarize_kind']),
                                 diff_sum['path']))
                         diffText = os.linesep.join(diff_list)
                     else:
@@ -219,9 +224,11 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             recurse=recurse)
                 else:
                     if pegRev is not None:
-                        diffText = self.client.diff_peg(tmpdir, name,
+                        diffText = self.client.diff_peg(
+                            tmpdir, name,
                             peg_revision=self.__getVersionArg(pegRev),
-                            revision_start=rev1, revision_end=rev2, recurse=recurse)
+                            revision_start=rev1, revision_end=rev2,
+                            recurse=recurse)
                     else:
                         diffText = self.client.diff(tmpdir, name,
                             revision1=rev1, revision2=rev2, recurse=recurse)
@@ -259,9 +266,11 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
         @param line line of text to insert (string)
         """
-        if line.startswith('+') or line.startswith('>') or line.startswith('A '):
+        if line.startswith('+') or line.startswith('>') or \
+                line.startswith('A '):
             format = self.cAddedFormat
-        elif line.startswith('-') or line.startswith('<') or line.startswith('D '):
+        elif line.startswith('-') or line.startswith('<') or \
+                line.startswith('D '):
             format = self.cRemovedFormat
         elif line.startswith('@@'):
             format = self.cLineNoFormat
@@ -297,7 +306,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             self.__oldFile = self.__extractFileName(line)
         else:
             self.__fileSeparators.append(
-                (self.__oldFile, self.__extractFileName(line), self.__oldFileLine))
+                (self.__oldFile, self.__extractFileName(line),
+                 self.__oldFileLine))
     
     def __finish(self):
         """
@@ -318,7 +328,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.filesCombo.addItem(self.trUtf8("<End>"), -1)
         for oldFile, newFile, pos in sorted(self.__fileSeparators):
             if oldFile != newFile:
-                self.filesCombo.addItem("{0}\n{1}".format(oldFile, newFile), pos)
+                self.filesCombo.addItem(
+                    "{0}\n{1}".format(oldFile, newFile), pos)
             else:
                 self.filesCombo.addItem(oldFile, pos)
         
@@ -366,7 +377,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             # step 2: move cursor to desired line
             tc = self.contents.textCursor()
             delta = tc.blockNumber() - para
-            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor, delta)
+            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor,
+                            delta)
             self.contents.setTextCursor(tc)
             self.contents.ensureCursorVisible()
     

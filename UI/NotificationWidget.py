@@ -111,7 +111,8 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
             return
         
         if evt.button() == Qt.LeftButton:
-            self.__dragPosition = evt.globalPos() - self.frameGeometry().topLeft()
+            self.__dragPosition = \
+                evt.globalPos() - self.frameGeometry().topLeft()
             self.setCursor(Qt.ClosedHandCursor)
             evt.accept()
     

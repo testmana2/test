@@ -10,11 +10,11 @@ Module implementing a minimalistic editor for simple editing tasks.
 import os
 import re
 
-from PyQt4.QtCore import QSignalMapper, QPoint, QTimer, QFileInfo, pyqtSignal, QSize, \
-    QRegExp, Qt
-from PyQt4.QtGui import QWidget, QCursor, QPrinter, QKeySequence, QPrintDialog, \
-    QWhatsThis, QActionGroup, QDialog, QAbstractPrintDialog, QInputDialog, \
-    QApplication, QMenu, QPalette, QFont, QVBoxLayout, QLabel
+from PyQt4.QtCore import QSignalMapper, QPoint, QTimer, QFileInfo, \
+    pyqtSignal, QSize, QRegExp, Qt
+from PyQt4.QtGui import QWidget, QCursor, QPrinter, QKeySequence, \
+    QPrintDialog, QWhatsThis, QActionGroup, QDialog, QAbstractPrintDialog, \
+    QInputDialog, QApplication, QMenu, QPalette, QFont, QVBoxLayout, QLabel
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -34,7 +34,8 @@ import Preferences
 
 class MiniScintilla(QsciScintillaCompat):
     """
-    Class implementing a QsciScintillaCompat subclass for handling focus events.
+    Class implementing a QsciScintillaCompat subclass for handling focus
+    events.
     """
     def __init__(self, parent=None):
         """
@@ -60,7 +61,8 @@ class MiniScintilla(QsciScintillaCompat):
         
         This method checks for modifications of the current file and
         rereads it upon request. The cursor is placed at the current position
-        assuming, that it is in the vicinity of the old position after the reread.
+        assuming, that it is in the vicinity of the old position after the
+        reread.
         
         @param event the event object (QFocusEvent)
         """
@@ -109,7 +111,8 @@ class MiniEditor(E5MainWindow):
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.setWindowIcon(UI.PixmapCache.getIcon("editor.png"))
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.__textEdit = MiniScintilla(self)
         self.__textEdit.clearSearchIndicators = self.clearSearchIndicators
@@ -166,14 +169,18 @@ class MiniEditor(E5MainWindow):
         
         self.__textEdit.textChanged.connect(self.__documentWasModified)
         self.__textEdit.modificationChanged.connect(self.__modificationChanged)
-        self.__textEdit.cursorPositionChanged.connect(self.__cursorPositionChanged)
+        self.__textEdit.cursorPositionChanged.connect(
+            self.__cursorPositionChanged)
         self.__textEdit.linesChanged.connect(self.__resizeLinenoMargin)
         
         self.__textEdit.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.__textEdit.customContextMenuRequested.connect(self.__contextMenuRequested)
+        self.__textEdit.customContextMenuRequested.connect(
+            self.__contextMenuRequested)
         
-        self.__textEdit.selectionChanged.connect(self.searchDlg.selectionChanged)
-        self.__textEdit.selectionChanged.connect(self.replaceDlg.selectionChanged)
+        self.__textEdit.selectionChanged.connect(
+            self.searchDlg.selectionChanged)
+        self.__textEdit.selectionChanged.connect(
+            self.replaceDlg.selectionChanged)
         
         self.__setCurrentFile("")
         if filename:
@@ -269,7 +276,8 @@ class MiniEditor(E5MainWindow):
         Private slot to check some actions for their enable/disable status
         and set the statusbar info.
         
-        @param setSb flag indicating an update of the status bar is wanted (boolean)
+        @param setSb flag indicating an update of the status bar is wanted
+            (boolean)
         """
         self.saveAct.setEnabled(self.__textEdit.isModified())
         
@@ -318,7 +326,8 @@ class MiniEditor(E5MainWindow):
             if accel is not None:
                 act.setShortcut(QKeySequence(accel))
             accel = Preferences.Prefs.settings.value(
-                "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()))
+                "Shortcuts/{0}/{1}/AltAccel".format(
+                    category, act.objectName()))
             if accel is not None:
                 act.setAlternateShortcut(QKeySequence(accel))
     
@@ -395,7 +404,8 @@ class MiniEditor(E5MainWindow):
                 self.trUtf8('Save &as...'),
                 QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")),
                 0, self, 'vm_file_save_as')
-        self.saveAsAct.setStatusTip(self.trUtf8('Save the current file to a new one'))
+        self.saveAsAct.setStatusTip(self.trUtf8(
+            'Save the current file to a new one'))
         self.saveAsAct.setWhatsThis(self.trUtf8(
             """<b>Save File as</b>"""
             """<p>Save the contents of current editor window to a new file."""
@@ -484,7 +494,8 @@ class MiniEditor(E5MainWindow):
         self.cutAct.setStatusTip(self.trUtf8('Cut the selection'))
         self.cutAct.setWhatsThis(self.trUtf8(
             """<b>Cut</b>"""
-            """<p>Cut the selected text of the current editor to the clipboard.</p>"""
+            """<p>Cut the selected text of the current editor to the"""
+            """ clipboard.</p>"""
         ))
         self.cutAct.triggered[()].connect(self.__textEdit.cut)
         self.editActions.append(self.cutAct)
@@ -498,7 +509,8 @@ class MiniEditor(E5MainWindow):
         self.copyAct.setStatusTip(self.trUtf8('Copy the selection'))
         self.copyAct.setWhatsThis(self.trUtf8(
             """<b>Copy</b>"""
-            """<p>Copy the selected text of the current editor to the clipboard.</p>"""
+            """<p>Copy the selected text of the current editor to the"""
+            """ clipboard.</p>"""
         ))
         self.copyAct.triggered[()].connect(self.__textEdit.copy)
         self.editActions.append(self.copyAct)
@@ -509,7 +521,8 @@ class MiniEditor(E5MainWindow):
                 QKeySequence(self.trUtf8("Ctrl+V", "Edit|Paste")),
                 QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")),
                 self, 'vm_edit_paste')
-        self.pasteAct.setStatusTip(self.trUtf8('Paste the last cut/copied text'))
+        self.pasteAct.setStatusTip(self.trUtf8(
+            'Paste the last cut/copied text'))
         self.pasteAct.setWhatsThis(self.trUtf8(
             """<b>Paste</b>"""
             """<p>Paste the last cut/copied text from the clipboard to"""
@@ -546,10 +559,11 @@ class MiniEditor(E5MainWindow):
         
         self.editorActGrp = createActionGroup(self)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move left one character'),
-                      QApplication.translate('ViewManager', 'Move left one character'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Left')), 0,
-                      self.editorActGrp, 'vm_edit_move_left_char')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move left one character'),
+            QApplication.translate('ViewManager', 'Move left one character'),
+            QKeySequence(QApplication.translate('ViewManager', 'Left')), 0,
+            self.editorActGrp, 'vm_edit_move_left_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARLEFT)
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
@@ -557,10 +571,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move right one character'),
-                      QApplication.translate('ViewManager', 'Move right one character'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Right')), 0,
-                      self.editorActGrp, 'vm_edit_move_right_char')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move right one character'),
+            QApplication.translate('ViewManager', 'Move right one character'),
+            QKeySequence(QApplication.translate('ViewManager', 'Right')), 0,
+            self.editorActGrp, 'vm_edit_move_right_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+F')))
@@ -568,10 +583,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move up one line'),
-                      QApplication.translate('ViewManager', 'Move up one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Up')), 0,
-                      self.editorActGrp, 'vm_edit_move_up_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move up one line'),
+            QApplication.translate('ViewManager', 'Move up one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Up')), 0,
+            self.editorActGrp, 'vm_edit_move_up_line')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+P')))
@@ -579,10 +595,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move down one line'),
-                      QApplication.translate('ViewManager', 'Move down one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Down')), 0,
-                      self.editorActGrp, 'vm_edit_move_down_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move down one line'),
+            QApplication.translate('ViewManager', 'Move down one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Down')), 0,
+            self.editorActGrp, 'vm_edit_move_down_line')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+N')))
@@ -590,10 +607,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move left one word part'),
-                      QApplication.translate('ViewManager', 'Move left one word part'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_left_word_part')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move left one word part'),
+            QApplication.translate('ViewManager', 'Move left one word part'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_left_word_part')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Left')))
@@ -601,10 +619,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move right one word part'),
-                      QApplication.translate('ViewManager', 'Move right one word part'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_right_word_part')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move right one word part'),
+            QApplication.translate('ViewManager', 'Move right one word part'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_right_word_part')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Right')))
@@ -612,10 +631,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move left one word'),
-                      QApplication.translate('ViewManager', 'Move left one word'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_left_word')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move left one word'),
+            QApplication.translate('ViewManager', 'Move left one word'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_left_word')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Left')))
@@ -626,10 +646,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move right one word'),
-                      QApplication.translate('ViewManager', 'Move right one word'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_right_word')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move right one word'),
+            QApplication.translate('ViewManager', 'Move right one word'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_right_word')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Right')))
@@ -685,50 +706,56 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Scroll view down one line'),
-                      QApplication.translate('ViewManager', 'Scroll view down one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Down')), 0,
-                      self.editorActGrp, 'vm_edit_scroll_down_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Scroll view down one line'),
+            QApplication.translate('ViewManager', 'Scroll view down one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Down')),
+            0, self.editorActGrp, 'vm_edit_scroll_down_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINESCROLLDOWN)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Scroll view up one line'),
-                      QApplication.translate('ViewManager', 'Scroll view up one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Up')), 0,
-                      self.editorActGrp, 'vm_edit_scroll_up_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Scroll view up one line'),
+            QApplication.translate('ViewManager', 'Scroll view up one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Up')), 0,
+            self.editorActGrp, 'vm_edit_scroll_up_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINESCROLLUP)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move up one paragraph'),
-                      QApplication.translate('ViewManager', 'Move up one paragraph'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Up')), 0,
-                      self.editorActGrp, 'vm_edit_move_up_para')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move up one paragraph'),
+            QApplication.translate('ViewManager', 'Move up one paragraph'),
+            QKeySequence(QApplication.translate('ViewManager', 'Alt+Up')), 0,
+            self.editorActGrp, 'vm_edit_move_up_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARAUP)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move down one paragraph'),
-                      QApplication.translate('ViewManager', 'Move down one paragraph'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Down')), 0,
-                      self.editorActGrp, 'vm_edit_move_down_para')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move down one paragraph'),
+            QApplication.translate('ViewManager', 'Move down one paragraph'),
+            QKeySequence(QApplication.translate('ViewManager', 'Alt+Down')), 0,
+            self.editorActGrp, 'vm_edit_move_down_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARADOWN)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move up one page'),
-                      QApplication.translate('ViewManager', 'Move up one page'),
-                      QKeySequence(QApplication.translate('ViewManager', 'PgUp')), 0,
-                      self.editorActGrp, 'vm_edit_move_up_page')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move up one page'),
+            QApplication.translate('ViewManager', 'Move up one page'),
+            QKeySequence(QApplication.translate('ViewManager', 'PgUp')), 0,
+            self.editorActGrp, 'vm_edit_move_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUP)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move down one page'),
-                      QApplication.translate('ViewManager', 'Move down one page'),
-                      QKeySequence(QApplication.translate('ViewManager', 'PgDown')), 0,
-                      self.editorActGrp, 'vm_edit_move_down_page')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move down one page'),
+            QApplication.translate('ViewManager', 'Move down one page'),
+            QKeySequence(QApplication.translate('ViewManager', 'PgDown')), 0,
+            self.editorActGrp, 'vm_edit_move_down_page')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+V')))
@@ -736,10 +763,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move to start of document'),
-                      QApplication.translate('ViewManager', 'Move to start of document'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_start_text')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move to start of document'),
+            QApplication.translate('ViewManager', 'Move to start of document'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_start_text')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Up')))
@@ -750,10 +778,11 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Move to end of document'),
-                      QApplication.translate('ViewManager', 'Move to end of document'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_end_text')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Move to end of document'),
+            QApplication.translate('ViewManager', 'Move to end of document'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_end_text')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Down')))
@@ -764,29 +793,32 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Indent one level'),
-                      QApplication.translate('ViewManager', 'Indent one level'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Tab')), 0,
-                      self.editorActGrp, 'vm_edit_indent_one_level')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Indent one level'),
+            QApplication.translate('ViewManager', 'Indent one level'),
+            QKeySequence(QApplication.translate('ViewManager', 'Tab')), 0,
+            self.editorActGrp, 'vm_edit_indent_one_level')
         self.esm.setMapping(act, QsciScintilla.SCI_TAB)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Unindent one level'),
-                      QApplication.translate('ViewManager', 'Unindent one level'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Tab')), 0,
-                      self.editorActGrp, 'vm_edit_unindent_one_level')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Unindent one level'),
+            QApplication.translate('ViewManager', 'Unindent one level'),
+            QKeySequence(QApplication.translate('ViewManager', 'Shift+Tab')),
+            0, self.editorActGrp, 'vm_edit_unindent_one_level')
         self.esm.setMapping(act, QsciScintilla.SCI_BACKTAB)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection left one character'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection left one character'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Left')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_left_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection left one character'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection left one character'),
+            QKeySequence(QApplication.translate('ViewManager', 'Shift+Left')),
+            0, self.editorActGrp, 'vm_edit_extend_selection_left_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+B')))
@@ -794,13 +826,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection right one character'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection right one character'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Right')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_right_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection right one character'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection right one character'),
+            QKeySequence(QApplication.translate('ViewManager', 'Shift+Right')),
+            0, self.editorActGrp, 'vm_edit_extend_selection_right_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+F')))
@@ -808,12 +842,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection up one line'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection up one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Up')), 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_up_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection up one line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection up one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Shift+Up')), 0,
+            self.editorActGrp, 'vm_edit_extend_selection_up_line')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+P')))
@@ -821,13 +858,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection down one line'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection down one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Down')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_down_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection down one line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection down one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Shift+Down')),
+            0, self.editorActGrp, 'vm_edit_extend_selection_down_line')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+N')))
@@ -835,12 +874,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection left one word part'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection left one word part'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_left_word_part')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection left one word part'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection left one word part'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_left_word_part')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Left')))
@@ -848,12 +890,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection right one word part'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection right one word part'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_right_word_part')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection right one word part'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection right one word part'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_right_word_part')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Right')))
@@ -893,12 +938,17 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection to first visible character in document line'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection to first visible character in document line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_first_visible_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection to first visible character in document'
+                ' line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection to first visible character in document'
+                ' line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_first_visible_char')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Shift+Home')))
@@ -922,13 +972,16 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection up one paragraph'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection up one paragraph'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+Up')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_up_para')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection up one paragraph'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection up one paragraph'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Alt+Shift+Up')),
+            0, self.editorActGrp, 'vm_edit_extend_selection_up_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARAUPEXTEND)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -945,24 +998,29 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection up one page'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection up one page'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+PgUp')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_up_page')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection up one page'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection up one page'),
+            QKeySequence(QApplication.translate('ViewManager', 'Shift+PgUp')),
+            0, self.editorActGrp, 'vm_edit_extend_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPEXTEND)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection down one page'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection down one page'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+PgDown')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_down_page')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection down one page'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection down one page'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Shift+PgDown')),
+            0, self.editorActGrp, 'vm_edit_extend_selection_down_page')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+V')))
@@ -1002,12 +1060,13 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Delete previous character'),
-                      QApplication.translate('ViewManager', 'Delete previous character'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Backspace')),
-                      0,
-                      self.editorActGrp, 'vm_edit_delete_previous_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Delete previous character'),
+            QApplication.translate('ViewManager', 'Delete previous character'),
+            QKeySequence(QApplication.translate('ViewManager', 'Backspace')),
+            0, self.editorActGrp, 'vm_edit_delete_previous_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+H')))
@@ -1018,20 +1077,24 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Delete previous character if not at start of line'),
-                      QApplication.translate('ViewManager',
-                        'Delete previous character if not at start of line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_delet_previous_char_not_line_start')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Delete previous character if not at start of line'),
+            QApplication.translate(
+                'ViewManager',
+                'Delete previous character if not at start of line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_delet_previous_char_not_line_start')
         self.esm.setMapping(act, QsciScintilla.SCI_DELETEBACKNOTLINE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Delete current character'),
-                      QApplication.translate('ViewManager', 'Delete current character'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Del')), 0,
-                      self.editorActGrp, 'vm_edit_delete_current_char')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Delete current character'),
+            QApplication.translate('ViewManager', 'Delete current character'),
+            QKeySequence(QApplication.translate('ViewManager', 'Del')), 0,
+            self.editorActGrp, 'vm_edit_delete_current_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+D')))
@@ -1039,38 +1102,40 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Delete word to left'),
-                      QApplication.translate('ViewManager', 'Delete word to left'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Ctrl+Backspace')),
-                      0,
-                      self.editorActGrp, 'vm_edit_delete_word_left')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Delete word to left'),
+            QApplication.translate('ViewManager', 'Delete word to left'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Backspace')),
+            0, self.editorActGrp, 'vm_edit_delete_word_left')
         self.esm.setMapping(act, QsciScintilla.SCI_DELWORDLEFT)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Delete word to right'),
-                      QApplication.translate('ViewManager', 'Delete word to right'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Del')), 0,
-                      self.editorActGrp, 'vm_edit_delete_word_right')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Delete word to right'),
+            QApplication.translate('ViewManager', 'Delete word to right'),
+            QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Del')), 0,
+            self.editorActGrp, 'vm_edit_delete_word_right')
         self.esm.setMapping(act, QsciScintilla.SCI_DELWORDRIGHT)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Delete line to left'),
-                      QApplication.translate('ViewManager', 'Delete line to left'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Ctrl+Shift+Backspace')),
-                      0,
-                      self.editorActGrp, 'vm_edit_delete_line_left')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Delete line to left'),
+            QApplication.translate('ViewManager', 'Delete line to left'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Shift+Backspace')),
+            0, self.editorActGrp, 'vm_edit_delete_line_left')
         self.esm.setMapping(act, QsciScintilla.SCI_DELLINELEFT)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Delete line to right'),
-                      QApplication.translate('ViewManager', 'Delete line to right'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_delete_line_right')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Delete line to right'),
+            QApplication.translate('ViewManager', 'Delete line to right'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_delete_line_right')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+K')))
@@ -1081,86 +1146,99 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Insert new line'),
-                      QApplication.translate('ViewManager', 'Insert new line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Return')),
-                      QKeySequence(QApplication.translate('ViewManager', 'Enter')),
-                      self.editorActGrp, 'vm_edit_insert_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Insert new line'),
+            QApplication.translate('ViewManager', 'Insert new line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Return')),
+            QKeySequence(QApplication.translate('ViewManager', 'Enter')),
+            self.editorActGrp, 'vm_edit_insert_line')
         self.esm.setMapping(act, QsciScintilla.SCI_NEWLINE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Delete current line'),
-                      QApplication.translate('ViewManager', 'Delete current line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+L')),
-                      0,
-                      self.editorActGrp, 'vm_edit_delete_current_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Delete current line'),
+            QApplication.translate('ViewManager', 'Delete current line'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Shift+L')),
+            0, self.editorActGrp, 'vm_edit_delete_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDELETE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Duplicate current line'),
-                      QApplication.translate('ViewManager', 'Duplicate current line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+D')), 0,
-                      self.editorActGrp, 'vm_edit_duplicate_current_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Duplicate current line'),
+            QApplication.translate('ViewManager', 'Duplicate current line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Ctrl+D')), 0,
+            self.editorActGrp, 'vm_edit_duplicate_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDUPLICATE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Swap current and previous lines'),
-                      QApplication.translate('ViewManager',
-                        'Swap current and previous lines'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+T')), 0,
-                      self.editorActGrp, 'vm_edit_swap_current_previous_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Swap current and previous lines'),
+            QApplication.translate(
+                'ViewManager',
+                'Swap current and previous lines'),
+            QKeySequence(QApplication.translate('ViewManager', 'Ctrl+T')), 0,
+            self.editorActGrp, 'vm_edit_swap_current_previous_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINETRANSPOSE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Cut current line'),
-                      QApplication.translate('ViewManager', 'Cut current line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+L')),
-                      0,
-                      self.editorActGrp, 'vm_edit_cut_current_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Cut current line'),
+            QApplication.translate('ViewManager', 'Cut current line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+L')),
+            0, self.editorActGrp, 'vm_edit_cut_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINECUT)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Copy current line'),
-                      QApplication.translate('ViewManager', 'Copy current line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+T')),
-                      0,
-                      self.editorActGrp, 'vm_edit_copy_current_line')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Copy current line'),
+            QApplication.translate('ViewManager', 'Copy current line'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Shift+T')),
+            0, self.editorActGrp, 'vm_edit_copy_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINECOPY)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Toggle insert/overtype'),
-                      QApplication.translate('ViewManager', 'Toggle insert/overtype'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ins')), 0,
-                      self.editorActGrp, 'vm_edit_toggle_insert_overtype')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Toggle insert/overtype'),
+            QApplication.translate('ViewManager', 'Toggle insert/overtype'),
+            QKeySequence(QApplication.translate('ViewManager', 'Ins')), 0,
+            self.editorActGrp, 'vm_edit_toggle_insert_overtype')
         self.esm.setMapping(act, QsciScintilla.SCI_EDITTOGGLEOVERTYPE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Convert selection to lower case'),
-                      QApplication.translate('ViewManager',
-                        'Convert selection to lower case'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
-                      0,
-                      self.editorActGrp, 'vm_edit_convert_selection_lower')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Convert selection to lower case'),
+            QApplication.translate(
+                'ViewManager',
+                'Convert selection to lower case'),
+            QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
+            0, self.editorActGrp, 'vm_edit_convert_selection_lower')
         self.esm.setMapping(act, QsciScintilla.SCI_LOWERCASE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Convert selection to upper case'),
-                      QApplication.translate('ViewManager',
-                        'Convert selection to upper case'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+U')),
-                      0,
-                      self.editorActGrp, 'vm_edit_convert_selection_upper')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Convert selection to upper case'),
+            QApplication.translate(
+                'ViewManager',
+                'Convert selection to upper case'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Shift+U')),
+            0, self.editorActGrp, 'vm_edit_convert_selection_upper')
         self.esm.setMapping(act, QsciScintilla.SCI_UPPERCASE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -1181,12 +1259,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection to end of display line'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection to end of display line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_end_displayed_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection to end of display line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend selection to end of display line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_end_displayed_line')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Right')))
@@ -1202,22 +1283,25 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Escape'),
-                      QApplication.translate('ViewManager', 'Escape'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Esc')), 0,
-                      self.editorActGrp, 'vm_edit_escape')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Escape'),
+            QApplication.translate('ViewManager', 'Escape'),
+            QKeySequence(QApplication.translate('ViewManager', 'Esc')), 0,
+            self.editorActGrp, 'vm_edit_escape')
         self.esm.setMapping(act, QsciScintilla.SCI_CANCEL)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection down one line'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection down one line'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Ctrl+Down')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_down_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection down one line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection down one line'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Alt+Ctrl+Down')),
+            0, self.editorActGrp, 'vm_edit_extend_rect_selection_down_line')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+N')))
@@ -1225,13 +1309,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection up one line'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection up one line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Ctrl+Up')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_up_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection up one line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection up one line'),
+            QKeySequence(QApplication.translate('ViewManager', 'Alt+Ctrl+Up')),
+            0, self.editorActGrp, 'vm_edit_extend_rect_selection_up_line')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+P')))
@@ -1239,14 +1325,16 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection left one character'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection left one character'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Ctrl+Left')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_left_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection left one character'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection left one character'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Alt+Ctrl+Left')),
+            0, self.editorActGrp, 'vm_edit_extend_rect_selection_left_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+B')))
@@ -1254,14 +1342,16 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection right one character'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection right one character'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Ctrl+Right')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_right_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection right one character'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection right one character'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Alt+Ctrl+Right')),
+            0, self.editorActGrp, 'vm_edit_extend_rect_selection_right_char')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+F')))
@@ -1285,12 +1375,15 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection to end of document line'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection to end of document line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_end_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection to end of document line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection to end of document line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_rect_selection_end_line')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+E')))
@@ -1301,26 +1394,30 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection up one page'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection up one page'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Shift+PgUp')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_up_page')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection up one page'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection up one page'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Alt+Shift+PgUp')),
+            0, self.editorActGrp, 'vm_edit_extend_rect_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPRECTEXTEND)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection down one page'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection down one page'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Shift+PgDown')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_rect_selection_down_page')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection down one page'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection down one page'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Alt+Shift+PgDown')),
+            0, self.editorActGrp, 'vm_edit_extend_rect_selection_down_page')
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+V')))
@@ -1328,13 +1425,16 @@ class MiniEditor(E5MainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Duplicate current selection'),
-                      QApplication.translate('ViewManager',
-                        'Duplicate current selection'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+D')),
-                      0,
-                      self.editorActGrp, 'vm_edit_duplicate_current_selection')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Duplicate current selection'),
+            QApplication.translate(
+                'ViewManager',
+                'Duplicate current selection'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Shift+D')),
+            0, self.editorActGrp, 'vm_edit_duplicate_current_selection')
         self.esm.setMapping(act, QsciScintilla.SCI_SELECTIONDUPLICATE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -1446,12 +1546,16 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to start of document line'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to start of document line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_extend_selection_start_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to start of document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to start of document line'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_extend_selection_start_document_line')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+Shift+A')))
@@ -1460,12 +1564,15 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMERECTEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend rectangular selection to start of document line'),
-                        QApplication.translate('ViewManager',
-                            'Extend rectangular selection to start of document line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_select_rect_start_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend rectangular selection to start of document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend rectangular selection to start of document line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_select_rect_start_line')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+Alt+Shift+A')))
@@ -1474,12 +1581,16 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEDISPLAYEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to start of display line'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to start of display line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_extend_selection_start_display_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to start of display line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to start of display line'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_extend_selection_start_display_line')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Ctrl+Shift+Left')))
@@ -1488,24 +1599,30 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEWRAP"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move to start of display or document line'),
-                        QApplication.translate('ViewManager',
-                            'Move to start of display or document line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_move_start_display_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Move to start of display or document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Move to start of display or document line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_move_start_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_HOMEWRAP)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEWRAPEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to start of display or document line'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to start of display or document line'),
-                        0, 0,
-                        self.editorActGrp,
-                        'vm_edit_extend_selection_start_display_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to start of display or document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to start of display or document line'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_extend_selection_start_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_HOMEWRAPEXTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
@@ -1525,38 +1642,47 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_VCHOMEWRAPEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to first visible character in'
-                            ' display or document line'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to first visible character in'
-                            ' display or document line'),
-                        0, 0,
-                        self.editorActGrp,
-                        'vm_edit_extend_selection_first_visible_char_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to first visible character in'
+                    ' display or document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to first visible character in'
+                    ' display or document line'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_extend_selection_first_visible_char_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_VCHOMEWRAPEXTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_LINEENDWRAP"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move to end of display or document line'),
-                        QApplication.translate('ViewManager',
-                            'Move to end of display or document line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_end_start_display_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Move to end of display or document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Move to end of display or document line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_end_start_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_LINEENDWRAP)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_LINEENDWRAPEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to end of display or document line'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to end of display or document line'),
-                        0, 0,
-                        self.editorActGrp,
-                        'vm_edit_extend_selection_end_display_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to end of display or document line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Extend selection to end of display or document line'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_extend_selection_end_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_LINEENDWRAPEXTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
@@ -1573,12 +1699,16 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEUPEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Stuttered extend selection up one page'),
-                        QApplication.translate('ViewManager',
-                            'Stuttered extend selection up one page'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_stuttered_extend_selection_up_page')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Stuttered extend selection up one page'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Stuttered extend selection up one page'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_stuttered_extend_selection_up_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEUPEXTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
@@ -1595,23 +1725,30 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEDOWNEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Stuttered extend selection down one page'),
-                        QApplication.translate('ViewManager',
-                            'Stuttered extend selection down one page'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_stuttered_extend_selection_down_page')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Stuttered extend selection down one page'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Stuttered extend selection down one page'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_stuttered_extend_selection_down_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEDOWNEXTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_DELWORDRIGHTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Delete right to end of next word'),
-                        QApplication.translate('ViewManager',
-                            'Delete right to end of next word'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_delete_right_end_next_word')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Delete right to end of next word'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Delete right to end of next word'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_delete_right_end_next_word')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Alt+Del')))
@@ -1620,34 +1757,43 @@ class MiniEditor(E5MainWindow):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_MOVESELECTEDLINESUP"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move selected lines up one line'),
-                        QApplication.translate('ViewManager',
-                            'Move selected lines up one line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_move_selection_up_one_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Move selected lines up one line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Move selected lines up one line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_move_selection_up_one_line')
             self.esm.setMapping(act, QsciScintilla.SCI_MOVESELECTEDLINESUP)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_MOVESELECTEDLINESDOWN"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move selected lines down one line'),
-                        QApplication.translate('ViewManager',
-                            'Move selected lines down one line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_move_selection_down_one_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Move selected lines down one line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Move selected lines down one line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_move_selection_down_one_line')
             self.esm.setMapping(act, QsciScintilla.SCI_MOVESELECTEDLINESDOWN)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Duplicate current selection'),
-                      QApplication.translate('ViewManager',
-                        'Duplicate current selection'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+D')),
-                      0,
-                      self.editorActGrp, 'vm_edit_duplicate_current_selection')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Duplicate current selection'),
+            QApplication.translate(
+                'ViewManager',
+                'Duplicate current selection'),
+            QKeySequence(QApplication.translate('ViewManager',
+                                                'Ctrl+Shift+D')),
+            0, self.editorActGrp, 'vm_edit_duplicate_current_selection')
         self.esm.setMapping(act, QsciScintilla.SCI_SELECTIONDUPLICATE)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -1656,15 +1802,17 @@ class MiniEditor(E5MainWindow):
     
     def __createSearchActions(self):
         """
-        Private method defining the user interface actions for the search commands.
+        Private method defining the user interface actions for the search
+            commands.
         """
-        self.searchAct = E5Action(QApplication.translate('ViewManager', 'Search'),
-                UI.PixmapCache.getIcon("find.png"),
-                QApplication.translate('ViewManager', '&Search...'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+F", "Search|Search")),
-                0,
-                self, 'vm_search')
+        self.searchAct = E5Action(
+            QApplication.translate('ViewManager', 'Search'),
+            UI.PixmapCache.getIcon("find.png"),
+            QApplication.translate('ViewManager', '&Search...'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+F", "Search|Search")),
+            0,
+            self, 'vm_search')
         self.searchAct.setStatusTip(QApplication.translate('ViewManager',
             'Search for a text'))
         self.searchAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -1688,8 +1836,9 @@ class MiniEditor(E5MainWindow):
             'Search next occurrence of text'))
         self.searchNextAct.setWhatsThis(QApplication.translate('ViewManager',
             """<b>Search next</b>"""
-            """<p>Search the next occurrence of some text in the current editor."""
-            """ The previously entered searchtext and options are reused.</p>"""
+            """<p>Search the next occurrence of some text in the current"""
+            """ editor. The previously entered searchtext and options are"""
+            """ reused.</p>"""
         ))
         self.searchNextAct.triggered[()].connect(self.searchDlg.findNext)
         self.searchActions.append(self.searchNextAct)
@@ -1706,42 +1855,47 @@ class MiniEditor(E5MainWindow):
             'Search previous occurrence of text'))
         self.searchPrevAct.setWhatsThis(QApplication.translate('ViewManager',
             """<b>Search previous</b>"""
-            """<p>Search the previous occurrence of some text in the current editor."""
-            """ The previously entered searchtext and options are reused.</p>"""
+            """<p>Search the previous occurrence of some text in the"""
+            """ current editor. The previously entered searchtext and"""
+            """ options are reused.</p>"""
         ))
         self.searchPrevAct.triggered[()].connect(self.searchDlg.findPrev)
         self.searchActions.append(self.searchPrevAct)
         
-        self.searchClearMarkersAct = E5Action(QApplication.translate('ViewManager',
-                    'Clear search markers'),
-                UI.PixmapCache.getIcon("findClear.png"),
-                QApplication.translate('ViewManager', 'Clear search markers'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+3", "Search|Clear search markers")),
-                0,
-                self, 'vm_clear_search_markers')
-        self.searchClearMarkersAct.setStatusTip(QApplication.translate('ViewManager',
-            'Clear all displayed search markers'))
-        self.searchClearMarkersAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.searchClearMarkersAct = E5Action(
+            QApplication.translate('ViewManager',
+                                   'Clear search markers'),
+            UI.PixmapCache.getIcon("findClear.png"),
+            QApplication.translate('ViewManager', 'Clear search markers'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+3", "Search|Clear search markers")),
+            0,
+            self, 'vm_clear_search_markers')
+        self.searchClearMarkersAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Clear all displayed search markers'))
+        self.searchClearMarkersAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Clear search markers</b>"""
             """<p>Clear all displayed search markers.</p>"""
         ))
-        self.searchClearMarkersAct.triggered[()].connect(self.__searchClearMarkers)
+        self.searchClearMarkersAct.triggered[()].connect(
+            self.__searchClearMarkers)
         self.searchActions.append(self.searchClearMarkersAct)
         
-        self.replaceAct = E5Action(QApplication.translate('ViewManager', 'Replace'),
-                QApplication.translate('ViewManager', '&Replace...'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+R", "Search|Replace")),
-                0,
-                self, 'vm_search_replace')
+        self.replaceAct = E5Action(
+            QApplication.translate('ViewManager', 'Replace'),
+            QApplication.translate('ViewManager', '&Replace...'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+R", "Search|Replace")),
+            0,
+            self, 'vm_search_replace')
         self.replaceAct.setStatusTip(QApplication.translate('ViewManager',
             'Replace some text'))
         self.replaceAct.setWhatsThis(QApplication.translate('ViewManager',
             """<b>Replace</b>"""
-            """<p>Search for some text in the current editor and replace it. A"""
-            """ dialog is shown to enter the searchtext, the replacement text"""
-            """ and options for the search and replace.</p>"""
+            """<p>Search for some text in the current editor and replace"""
+            """ it. A dialog is shown to enter the searchtext, the"""
+            """ replacement text and options for the search and replace.</p>"""
         ))
         self.replaceAct.triggered[()].connect(self.__replace)
         self.searchActions.append(self.replaceAct)
@@ -1753,7 +1907,8 @@ class MiniEditor(E5MainWindow):
         self.aboutAct = E5Action(self.trUtf8('About'),
                 self.trUtf8('&About'),
                 0, 0, self, 'about_eric')
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
@@ -1779,11 +1934,12 @@ class MiniEditor(E5MainWindow):
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
                 """<b>Display context sensitive help</b>"""
-                """<p>In What's This? mode, the mouse cursor shows an arrow with a"""
-                """ question mark, and you can click on the interface elements to get"""
-                """ a short description of what they do and how to use them. In"""
-                """ dialogs, this feature can be accessed using the context help button"""
-                """ in the titlebar.</p>"""
+                """<p>In What's This? mode, the mouse cursor shows an arrow"""
+                """ with a question mark, and you can click on the interface"""
+                """ elements to get a short description of what they do and"""
+                """ how to use them. In dialogs, this feature can be"""
+                """ accessed using the context help button in the titlebar."""
+                """</p>"""
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
         self.helpActions.append(self.whatsThisAct)
@@ -1882,15 +2038,15 @@ class MiniEditor(E5MainWindow):
         self.sbLine = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbLine)
         self.sbLine.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the line number of the"""
-            """ editor.</p>"""
+            """<p>This part of the status bar displays the line number of"""
+            """ the editor.</p>"""
         ))
 
         self.sbPos = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbPos)
         self.sbPos.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the cursor position of"""
-            """ the editor.</p>"""
+            """<p>This part of the status bar displays the cursor position"""
+            """ of the editor.</p>"""
         ))
         
         self.__statusBar.showMessage(self.trUtf8("Ready"))
@@ -1971,7 +2127,8 @@ class MiniEditor(E5MainWindow):
         QApplication.setOverrideCursor(Qt.WaitCursor)
         txt = self.__textEdit.text()
         try:
-            self.encoding = Utilities.writeEncodedFile(fileName, txt, self.encoding)
+            self.encoding = Utilities.writeEncodedFile(
+                fileName, txt, self.encoding)
         except (IOError, Utilities.CodingError, UnicodeError) as why:
             E5MessageBox.critical(self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
@@ -2084,7 +2241,8 @@ class MiniEditor(E5MainWindow):
         Private method to configure the margins.
         """
         # set the settings for all margins
-        self.__textEdit.setMarginsFont(Preferences.getEditorOtherFonts("MarginsFont"))
+        self.__textEdit.setMarginsFont(
+            Preferences.getEditorOtherFonts("MarginsFont"))
         self.__textEdit.setMarginsForegroundColor(
             Preferences.getEditorColour("MarginsForeground"))
         self.__textEdit.setMarginsBackgroundColor(
@@ -2133,15 +2291,18 @@ class MiniEditor(E5MainWindow):
         Private method to configure the text display.
         """
         self.__textEdit.setTabWidth(Preferences.getEditor("TabWidth"))
-        self.__textEdit.setIndentationWidth(Preferences.getEditor("IndentWidth"))
+        self.__textEdit.setIndentationWidth(
+            Preferences.getEditor("IndentWidth"))
         if self.lexer_ and self.lexer_.alwaysKeepTabs():
             self.__textEdit.setIndentationsUseTabs(True)
         else:
             self.__textEdit.setIndentationsUseTabs(
                 Preferences.getEditor("TabForIndentation"))
         self.__textEdit.setTabIndents(Preferences.getEditor("TabIndents"))
-        self.__textEdit.setBackspaceUnindents(Preferences.getEditor("TabIndents"))
-        self.__textEdit.setIndentationGuides(Preferences.getEditor("IndentationGuides"))
+        self.__textEdit.setBackspaceUnindents(
+            Preferences.getEditor("TabIndents"))
+        self.__textEdit.setIndentationGuides(
+            Preferences.getEditor("IndentationGuides"))
         if Preferences.getEditor("ShowWhitespace"):
             self.__textEdit.setWhitespaceVisibility(QsciScintilla.WsVisible)
             try:
@@ -2184,12 +2345,14 @@ class MiniEditor(E5MainWindow):
         else:
             self.__textEdit.setSelectionForegroundColor(
                 QApplication.palette().color(QPalette.HighlightedText))
-        self.__textEdit.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
+        self.__textEdit.setSelectionToEol(
+            Preferences.getEditor("ExtendSelectionToEol"))
         self.__textEdit.setCaretForegroundColor(
             Preferences.getEditorColour("CaretForeground"))
         self.__textEdit.setCaretLineBackgroundColor(
             Preferences.getEditorColour("CaretLineBackground"))
-        self.__textEdit.setCaretLineVisible(Preferences.getEditor("CaretLineVisible"))
+        self.__textEdit.setCaretLineVisible(
+            Preferences.getEditor("CaretLineVisible"))
         self.caretWidth = Preferences.getEditor("CaretWidth")
         self.__textEdit.setCaretWidth(self.caretWidth)
         self.useMonospaced = Preferences.getEditor("UseMonospacedFont")
@@ -2206,14 +2369,17 @@ class MiniEditor(E5MainWindow):
         self.__textEdit.setWrapVisualFlags(wrapVisualFlag, wrapVisualFlag)
         
         self.searchIndicator = QsciScintilla.INDIC_CONTAINER
-        self.__textEdit.indicatorDefine(self.searchIndicator, QsciScintilla.INDIC_BOX,
+        self.__textEdit.indicatorDefine(
+            self.searchIndicator, QsciScintilla.INDIC_BOX,
             Preferences.getEditorColour("SearchMarkers"))
         
         self.__textEdit.setCursorFlashTime(QApplication.cursorFlashTime())
         
         if Preferences.getEditor("OverrideEditAreaColours"):
-            self.__textEdit.setColor(Preferences.getEditorColour("EditAreaForeground"))
-            self.__textEdit.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+            self.__textEdit.setColor(
+                Preferences.getEditorColour("EditAreaForeground"))
+            self.__textEdit.setPaper(
+                Preferences.getEditorColour("EditAreaBackground"))
         
         self.__textEdit.setVirtualSpaceOptions(
             Preferences.getEditor("VirtualSpaceOptions"))
@@ -2239,7 +2405,8 @@ class MiniEditor(E5MainWindow):
             if not self.lexer_:
                 self.__textEdit.clearStyles()
                 self.__setMargins()
-            self.__textEdit.setFont(Preferences.getEditorOtherFonts("DefaultFont"))
+            self.__textEdit.setFont(
+                Preferences.getEditorOtherFonts("DefaultFont"))
         
         self.useMonospaced = on
     
@@ -2262,7 +2429,8 @@ class MiniEditor(E5MainWindow):
                 printer.setDocName(self.trUtf8("Untitled"))
             if printDialog.printRange() == QAbstractPrintDialog.Selection:
                 # get the selection
-                fromLine, fromIndex, toLine, toIndex = self.__textEdit.getSelection()
+                fromLine, fromIndex, toLine, toIndex = \
+                    self.__textEdit.getSelection()
                 if toIndex == 0:
                     toLine -= 1
                 # Qscintilla seems to print one line more than told
@@ -2298,7 +2466,8 @@ class MiniEditor(E5MainWindow):
         """
         Private slot to generate a print preview.
         
-        @param printer reference to the printer object (QScintilla.Printer.Printer)
+        @param printer reference to the printer object
+            (QScintilla.Printer.Printer)
         """
         printer.printRange(self.__textEdit)
     
@@ -2330,7 +2499,8 @@ class MiniEditor(E5MainWindow):
         self.contextMenu.addAction(self.pasteAct)
         self.contextMenu.addSeparator()
         self.contextMenu.addAction(self.trUtf8('Select all'), self.__selectAll)
-        self.contextMenu.addAction(self.trUtf8('Deselect all'), self.__deselectAll)
+        self.contextMenu.addAction(
+            self.trUtf8('Deselect all'), self.__deselectAll)
         self.contextMenu.addSeparator()
         self.languagesMenuAct = self.contextMenu.addMenu(self.languagesMenu)
         self.contextMenu.addSeparator()
@@ -2358,7 +2528,8 @@ class MiniEditor(E5MainWindow):
         languages = sorted(list(supportedLanguages.keys()))
         for language in languages:
             if language != "Guessed":
-                self.supportedLanguages[language] = supportedLanguages[language][:2]
+                self.supportedLanguages[language] = \
+                    supportedLanguages[language][:2]
                 act = menu.addAction(
                     UI.PixmapCache.getIcon(supportedLanguages[language][2]),
                     self.supportedLanguages[language][0])
@@ -2382,7 +2553,8 @@ class MiniEditor(E5MainWindow):
     
     def __showContextMenuLanguages(self):
         """
-        Private slot handling the aboutToShow signal of the languages context menu.
+        Private slot handling the aboutToShow signal of the languages context
+        menu.
         """
         if self.apiLanguage.startswith("Pygments|"):
             self.pygmentsSelAct.setText(
@@ -2447,16 +2619,19 @@ class MiniEditor(E5MainWindow):
         self.__setMonospaced(self.useMonospaced)
         
         if Preferences.getEditor("OverrideEditAreaColours"):
-            self.__textEdit.setColor(Preferences.getEditorColour("EditAreaForeground"))
-            self.__textEdit.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+            self.__textEdit.setColor(
+                Preferences.getEditorColour("EditAreaForeground"))
+            self.__textEdit.setPaper(
+                Preferences.getEditorColour("EditAreaBackground"))
         
     def setLanguage(self, filename, initTextDisplay=True, pyname=""):
         """
         Public method to set a lexer language.
         
-        @param filename filename used to determine the associated lexer language (string)
-        @param initTextDisplay flag indicating an initialization of the text display
-            is required as well (boolean)
+        @param filename filename used to determine the associated lexer
+            language (string)
+        @param initTextDisplay flag indicating an initialization of the text
+            display is required as well (boolean)
         @keyparam pyname name of the pygments lexer to use (string)
         """
         self.__bindLexer(filename, pyname=pyname)
@@ -2474,7 +2649,8 @@ class MiniEditor(E5MainWindow):
         
         @return language of the editor (string)
         """
-        if self.apiLanguage == "Guessed" or self.apiLanguage.startswith("Pygments|"):
+        if self.apiLanguage == "Guessed" or \
+                self.apiLanguage.startswith("Pygments|"):
             return self.lexer_.name()
         else:
             return self.apiLanguage
@@ -2498,7 +2674,8 @@ class MiniEditor(E5MainWindow):
         """
         Private slot to set the correct lexer depending on language.
         
-        @param filename filename used to determine the associated lexer language (string)
+        @param filename filename used to determine the associated lexer
+            language (string)
         @keyparam pyname name of the pygments lexer to use (string)
         """
         if self.lexer_ is not None and \
@@ -2655,8 +2832,8 @@ class MiniEditor(E5MainWindow):
     
     def textForFind(self):
         """
-        Public method to determine the selection or the current word for the next
-        find operation.
+        Public method to determine the selection or the current word for the
+        next find operation.
         
         @return selection or current word (string)
         """
@@ -2750,7 +2927,8 @@ class MiniEditor(E5MainWindow):
         @param startPos start position of the indicator (integer)
         @param indicLength length of the indicator (integer)
         """
-        self.__textEdit.setIndicatorRange(self.searchIndicator, startPos, indicLength)
+        self.__textEdit.setIndicatorRange(
+            self.searchIndicator, startPos, indicLength)
     
     def clearSearchIndicators(self):
         """

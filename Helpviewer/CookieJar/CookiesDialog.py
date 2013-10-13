@@ -40,7 +40,8 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         model = CookieModel(cookieJar, self)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(model)
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         self.cookiesTable.setModel(self.__proxyModel)
         self.cookiesTable.doubleClicked.connect(self.__showCookieDetails)
         self.cookiesTable.selectionModel().selectionChanged.connect(
@@ -52,13 +53,15 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         self.cookiesTable.verticalHeader().setDefaultSectionSize(height)
         self.cookiesTable.verticalHeader().setMinimumSectionSize(-1)
         for section in range(model.columnCount()):
-            header = self.cookiesTable.horizontalHeader().sectionSizeHint(section)
+            header = self.cookiesTable.horizontalHeader()\
+                .sectionSizeHint(section)
             if section == 0:
                 header = fm.width("averagebiglonghost.averagedomain.info")
             elif section == 1:
                 header = fm.width("_session_id")
             elif section == 4:
-                header = fm.width(QDateTime.currentDateTime().toString(Qt.LocalDate))
+                header = fm.width(
+                    QDateTime.currentDateTime().toString(Qt.LocalDate))
             buffer = fm.width("mm")
             header += buffer
             self.cookiesTable.horizontalHeader().resizeSection(section, header)
@@ -91,12 +94,14 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         secure = model.data(model.index(row, 3))
         expires = model.data(model.index(row, 4)).toString("yyyy-MM-dd hh:mm")
         value = bytes(
-            QByteArray.fromPercentEncoding(model.data(model.index(row, 5)))).decode()
+            QByteArray.fromPercentEncoding(
+                model.data(model.index(row, 5)))).decode()
         
         if self.__detailsDialog is None:
             from .CookieDetailsDialog import CookieDetailsDialog
             self.__detailsDialog = CookieDetailsDialog(self)
-        self.__detailsDialog.setData(domain, name, path, secure, expires, value)
+        self.__detailsDialog.setData(domain, name, path, secure, expires,
+                                     value)
         self.__detailsDialog.show()
     
     @pyqtSlot()

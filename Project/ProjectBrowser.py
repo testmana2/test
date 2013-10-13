@@ -139,7 +139,8 @@ class ProjectBrowser(E5TabWidget):
         self.project.projectOpened.connect(self.__projectOpened)
         self.project.projectClosed.connect(self.__projectClosed)
         self.project.newProject.connect(self.__newProject)
-        self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+        self.project.projectPropertiesChanged.connect(
+            self.__projectPropertiesChanged)
         self.currentChanged.connect(self.__currentChanged)
         self.project.getModel().vcsStateChanged.connect(self.__vcsStateChanged)
         
@@ -251,7 +252,8 @@ class ProjectBrowser(E5TabWidget):
         Private slot to handle the projectPropertiesChanged signal.
         """
         if self.project.isOpen():
-            flags = Preferences.getProjectBrowserFlags(self.project.getProjectType())
+            flags = Preferences.getProjectBrowserFlags(
+                self.project.getProjectType())
         else:
             flags = AllBrowsersFlag
         
@@ -275,7 +277,8 @@ class ProjectBrowser(E5TabWidget):
         if not self.project.isOpen():
             icon = UI.PixmapCache.getIcon("projectSources.png")
         else:
-            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+            if self.project.pdata["PROGLANGUAGE"][0] in \
+                    ["Python", "Python2", "Python3"]:
                 if self.project.pdata["MIXEDLANGUAGE"][0]:
                     icon = UI.PixmapCache.getIcon("projectSourcesPyMixed.png")
                 else:
@@ -366,7 +369,8 @@ class ProjectBrowser(E5TabWidget):
             self.vcsStatusIndicator.setColor(QColor(Qt.lightGray))
         else:
             self.vcsStatusIndicator.setColor(
-                Preferences.getProjectBrowserColour(self.vcsStatusColorNames[state]))
+                Preferences.getProjectBrowserColour(
+                    self.vcsStatusColorNames[state]))
         if state not in self.vcsStatusText:
             self.vcsStatusIndicator.setToolTip(self.trUtf8("unknown status"))
         else:

@@ -24,7 +24,8 @@ class AdBlockAccessHandler(SchemeAccessHandler):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
@@ -42,13 +43,15 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             return None
         res = E5MessageBox.yesNo(None,
             self.trUtf8("Subscribe?"),
-            self.trUtf8("""<p>Subscribe to this AdBlock subscription?</p><p>{0}</p>""")\
-                .format(title))
+            self.trUtf8(
+                """<p>Subscribe to this AdBlock subscription?</p>"""
+                """<p>{0}</p>""").format(title))
         if res:
             from .AdBlockSubscription import AdBlockSubscription
             import Helpviewer.HelpWindow
             
-            dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager().showDialog()
+            dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
+                .showDialog()
             subscription = AdBlockSubscription(url, False,
                 Helpviewer.HelpWindow.HelpWindow.adBlockManager())
             Helpviewer.HelpWindow.HelpWindow.adBlockManager()\

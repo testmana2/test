@@ -63,7 +63,8 @@ class CompleterRuby(CompleterBase):
         @param charNumber value of the character entered (integer)
         """
         char = chr(charNumber)
-        if char not in ['(', ')', '{', '}', '[', ']', ',', "'", '"', '\n', ' ']:
+        if char not in ['(', ')', '{', '}', '[', ']', ',', "'", '"',
+                        '\n', ' ']:
             return  # take the short route
         
         line, col = self.editor.getCursorPosition()
@@ -174,7 +175,8 @@ class CompleterRuby(CompleterBase):
     
     def __inDoubleQuotedString(self):
         """
-        Private method to check, if the cursor is within a double quoted string.
+        Private method to check, if the cursor is within a double quoted
+        string.
         
         @return flag indicating, if the cursor is inside a double
             quoted string (boolean)
@@ -183,7 +185,8 @@ class CompleterRuby(CompleterBase):
     
     def __inSingleQuotedString(self):
         """
-        Private method to check, if the cursor is within a single quoted string.
+        Private method to check, if the cursor is within a single quoted
+        string.
         
         @return flag indicating, if the cursor is inside a single
             quoted string (boolean)
@@ -194,7 +197,8 @@ class CompleterRuby(CompleterBase):
         """
         Private method to check, if the cursor is within a here document.
         
-        @return flag indicating, if the cursor is inside a here document (boolean)
+        @return flag indicating, if the cursor is inside a here document
+            (boolean)
         """
         return self.editor.currentStyle() == QsciLexerRuby.HereDocument
     
@@ -202,6 +206,7 @@ class CompleterRuby(CompleterBase):
         """
         Private method to check, if the cursor is within an inline document.
         
-        @return flag indicating, if the cursor is inside an inline document (boolean)
+        @return flag indicating, if the cursor is inside an inline document
+            (boolean)
         """
         return self.editor.currentStyle() == QsciLexerRuby.POD

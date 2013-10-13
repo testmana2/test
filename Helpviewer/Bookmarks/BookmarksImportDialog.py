@@ -56,7 +56,8 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         Private slot to set the enabled state of the next button.
         """
         if self.__currentPage == 0:
-            self.nextButton.setEnabled(len(self.sourcesList.selectedItems()) == 1)
+            self.nextButton.setEnabled(
+                len(self.sourcesList.selectedItems()) == 1)
         elif self.__currentPage == 1:
             self.nextButton.setEnabled(self.fileEdit.text() != "")
     
@@ -112,15 +113,17 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         if self.__currentPage == 0:
             self.__selectedSource = self.sourcesList.currentItem().data(
                 self.SourcesListIdRole)
-            pixmap, sourceName, self.__sourceFile, info, prompt, self.__sourceDir = \
-                BookmarksImporters.getImporterInfo(self.__selectedSource)
+            (pixmap, sourceName, self.__sourceFile, info, prompt,
+             self.__sourceDir) = BookmarksImporters.getImporterInfo(
+                self.__selectedSource)
             
             self.iconLabel.setPixmap(pixmap)
             self.importingFromLabel.setText(
                 self.trUtf8("<b>Importing from {0}</b>").format(sourceName))
             self.fileLabel1.setText(info)
             self.fileLabel2.setText(prompt)
-            self.standardDirLabel.setText("<i>{0}</i>".format(self.__sourceDir))
+            self.standardDirLabel.setText(
+                "<i>{0}</i>".format(self.__sourceDir))
             
             self.nextButton.setText(self.trUtf8("Finish"))
             

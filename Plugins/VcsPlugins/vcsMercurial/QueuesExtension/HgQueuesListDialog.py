@@ -10,8 +10,8 @@ Module implementing a dialog to show a list of applied and unapplied patches.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QLineEdit
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QLineEdit
 
 from E5Gui import E5MessageBox
 
@@ -22,7 +22,8 @@ import Preferences
 
 class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
     """
-    Class implementing a dialog to show a list of applied and unapplied patches.
+    Class implementing a dialog to show a list of applied and unapplied
+    patches.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -100,11 +101,11 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
     
     def __getSeries(self, missing=False):
         """
-        Private slot to get the list of applied, unapplied and guarded patches and
-        patches missing in the series file.
+        Private slot to get the list of applied, unapplied and guarded patches
+        and patches missing in the series file.
         
-        @param missing flag indicating to get the patches missing in the series file
-            (boolean)
+        @param missing flag indicating to get the patches missing in the
+            series file (boolean)
         """
         if missing:
             self.__mode = "missing"
@@ -199,7 +200,8 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -213,13 +215,15 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
         
         if self.patchesList.topLevelItemCount() == 0:
             # no patches present
-            self.__generateItem(0, "", self.trUtf8("no patches found"), "", True)
+            self.__generateItem(
+                0, "", self.trUtf8("no patches found"), "", True)
         self.__resizeColumns()
         self.__resort()
     

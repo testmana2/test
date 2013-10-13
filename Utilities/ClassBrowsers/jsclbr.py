@@ -40,7 +40,8 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a Python function.
     """
-    def __init__(self, module, name, file, lineno, signature='', separator=','):
+    def __init__(self, module, name, file, lineno, signature='',
+                 separator=','):
         """
         Constructor
         
@@ -116,7 +117,8 @@ class Visitor(object):
         
         @param root root node to visit
         """
-        call = lambda n: getattr(self, "visit_{0}".format(n.type), self.visit_noop)(n)
+        call = lambda n: getattr(self, "visit_{0}".format(n.type),
+                                 self.visit_noop)(n)
         call(root)
         for node in root:
             self.__visit(node)
@@ -140,7 +142,8 @@ class Visitor(object):
            node.functionForm == "declared_form":
             if self.__stack and self.__stack[-1].endlineno < node.line:
                 del self.__stack[-1]
-            endline = node.line + self.__source.count('\n', node.start, node.end)
+            endline = node.line + self.__source.count(
+                '\n', node.start, node.end)
             if getattr(node, "params", None):
                 func_sig = ", ".join([p.value for p in node.params])
             else:
@@ -175,7 +178,8 @@ class Visitor(object):
         if node.type == "property_init" and node[1].type == "function":
             if self.__stack and self.__stack[-1].endlineno < node[0].line:
                 del self.__stack[-1]
-            endline = node[0].line + self.__source.count('\n', node.start, node[1].end)
+            endline = node[0].line + self.__source.count(
+                '\n', node.start, node[1].end)
             if getattr(node[1], "params", None):
                 func_sig = ", ".join([p.value for p in node[1].params])
             else:
@@ -215,16 +219,17 @@ class Visitor(object):
             if self.__stack:
                 # function variables
                 for var in node:
-                    attr = Attribute(self.__module, var.name, self.__file, var.line)
+                    attr = Attribute(
+                        self.__module, var.name, self.__file, var.line)
                     self.__stack[-1]._addattribute(attr)
             else:
                 # global variable
                 if "@@Globals@@" not in self.__dict:
-                    self.__dict["@@Globals@@"] = \
-                        ClbrBaseClasses.ClbrBase(self.__module, "Globals", self.__file, 0)
+                    self.__dict["@@Globals@@"] = ClbrBaseClasses.ClbrBase(
+                        self.__module, "Globals", self.__file, 0)
                 for var in node:
-                    self.__dict["@@Globals@@"]._addglobal(
-                        Attribute(self.__module, var.name, self.__file, var.line))
+                    self.__dict["@@Globals@@"]._addglobal(Attribute(
+                        self.__module, var.name, self.__file, var.line))
     
     def visit_const(self, node):
         """
@@ -246,8 +251,8 @@ class Visitor(object):
             else:
                 # global variable
                 if "@@Globals@@" not in self.__dict:
-                    self.__dict["@@Globals@@"] = \
-                        ClbrBaseClasses.ClbrBase(self.__module, "Globals", self.__file, 0)
+                    self.__dict["@@Globals@@"] = ClbrBaseClasses.ClbrBase(
+                        self.__module, "Globals", self.__file, 0)
                 for var in node:
                     self.__dict["@@Globals@@"]._addglobal(
                         Attribute(self.__module, "const " + var.name,

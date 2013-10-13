@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing the Subversion Options Dialog for a new project from the repository.
+Module implementing the Subversion Options Dialog for a new project from the
+repository.
 """
 
 import os
@@ -24,7 +25,8 @@ import Preferences
 
 class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
     """
-    Class implementing the Options Dialog for a new project from the repository.
+    Class implementing the Options Dialog for a new project from the
+    repository.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -52,7 +54,8 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         self.localProtocol = True
         
         self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
-            Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()))
+            Preferences.getMultiProject("Workspace") or
+            Utilities.getHomeDir()))
         
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
@@ -67,11 +70,13 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
             if directory:
-                self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
+                self.vcsUrlEdit.setText(
+                    Utilities.toNativeSeparators(directory))
         else:
             from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
             dlg = SvnRepoBrowserDialog(self.vcs, mode="select", parent=self)
-            dlg.start(self.protocolCombo.currentText() + self.vcsUrlEdit.text())
+            dlg.start(
+                self.protocolCombo.currentText() + self.vcsUrlEdit.text())
             if dlg.exec_() == QDialog.Accepted:
                 url = dlg.getSelectedUrl()
                 if url:
@@ -93,7 +98,8 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
         if directory:
-            self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(directory))
+            self.vcsProjectDirEdit.setText(
+                Utilities.toNativeSeparators(directory))
         
     def on_layoutCheckBox_toggled(self, checked):
         """

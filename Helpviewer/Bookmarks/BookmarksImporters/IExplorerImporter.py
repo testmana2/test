@@ -24,7 +24,8 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "ie":
@@ -37,10 +38,13 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("internet_explorer.png"),
             "Internet Explorer",
             "",
-            QCoreApplication.translate("IExplorerImporter",
-                """Internet Explorer stores its bookmarks in the <b>Favorites</b> """
-                """folder This folder is usually located in"""),
-            QCoreApplication.translate("IExplorerImporter",
+            QCoreApplication.translate(
+                "IExplorerImporter",
+                """Internet Explorer stores its bookmarks in the"""
+                """ <b>Favorites</b> folder This folder is usually"""
+                """ located in"""),
+            QCoreApplication.translate(
+                "IExplorerImporter",
                 """Please choose the folder to begin importing bookmarks."""),
             standardDir,
         )
@@ -128,9 +132,11 @@ class IExplorerImporter(BookmarksImporter):
                             break
                     if url:
                         if dir in folders:
-                            bookmark = BookmarkNode(BookmarkNode.Bookmark, folders[dir])
+                            bookmark = BookmarkNode(BookmarkNode.Bookmark,
+                                                    folders[dir])
                         else:
-                            bookmark = BookmarkNode(BookmarkNode.Bookmark, importRootNode)
+                            bookmark = BookmarkNode(BookmarkNode.Bookmark,
+                                                    importRootNode)
                         bookmark.url = url
                         bookmark.title = name.replace("&", "&&")
         

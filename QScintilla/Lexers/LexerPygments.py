@@ -8,7 +8,8 @@ Module implementing a custom lexer using pygments.
 """
 
 from pygments.token import Token
-from pygments.lexers import guess_lexer_for_filename, guess_lexer, find_lexer_class
+from pygments.lexers import guess_lexer_for_filename, guess_lexer, \
+    find_lexer_class
 from pygments.util import ClassNotFound
 
 from PyQt4.QtGui import QColor, QFont
@@ -305,7 +306,8 @@ class LexerPygments(LexerContainer):
         @param style style number (integer)
         @return font (QFont)
         """
-        if style in [PYGMENTS_COMMENT, PYGMENTS_PREPROCESSOR, PYGMENTS_MULTILINECOMMENT]:
+        if style in [PYGMENTS_COMMENT, PYGMENTS_PREPROCESSOR,
+                     PYGMENTS_MULTILINECOMMENT]:
             if Utilities.isWindowsPlatform():
                 f = QFont("Comic Sans MS", 9)
             else:
@@ -320,11 +322,12 @@ class LexerPygments(LexerContainer):
             else:
                 return QFont("Bitstream Vera Serif", 10)
         
-        if style in [PYGMENTS_KEYWORD, PYGMENTS_OPERATOR, PYGMENTS_WORD, PYGMENTS_BUILTIN,
-                     PYGMENTS_ATTRIBUTE, PYGMENTS_FUNCTION, PYGMENTS_CLASS,
-                     PYGMENTS_NAMESPACE, PYGMENTS_EXCEPTION, PYGMENTS_ENTITY,
-                     PYGMENTS_TAG, PYGMENTS_SCALAR, PYGMENTS_ESCAPE, PYGMENTS_HEADING,
-                     PYGMENTS_SUBHEADING, PYGMENTS_STRONG, PYGMENTS_PROMPT]:
+        if style in [PYGMENTS_KEYWORD, PYGMENTS_OPERATOR, PYGMENTS_WORD,
+                     PYGMENTS_BUILTIN, PYGMENTS_ATTRIBUTE, PYGMENTS_FUNCTION,
+                     PYGMENTS_CLASS, PYGMENTS_NAMESPACE, PYGMENTS_EXCEPTION,
+                     PYGMENTS_ENTITY, PYGMENTS_TAG, PYGMENTS_SCALAR,
+                     PYGMENTS_ESCAPE, PYGMENTS_HEADING, PYGMENTS_SUBHEADING,
+                     PYGMENTS_STRONG, PYGMENTS_PROMPT]:
             f = LexerContainer.defaultFont(self, style)
             f.setBold(True)
             return f
@@ -426,7 +429,8 @@ class LexerPygments(LexerContainer):
         self.__lexer = self.__guessLexer(text)
         
         cpos = 0
-        # adjust start position because pygments ignores empty line at start of text
+        # adjust start position because pygments ignores empty line at
+        # start of text
         for c in text:
             if c == "\n":
                 cpos += 1
@@ -468,8 +472,8 @@ class LexerPygments(LexerContainer):
         @return flag indicating a string style (boolean)
         """
         return style in [PYGMENTS_STRING, PYGMENTS_DOCSTRING, PYGMENTS_OTHER,
-                         PYGMENTS_HEADING, PYGMENTS_SUBHEADING, PYGMENTS_EMPHASIZE,
-                         PYGMENTS_STRONG]
+                         PYGMENTS_HEADING, PYGMENTS_SUBHEADING,
+                         PYGMENTS_EMPHASIZE, PYGMENTS_STRONG]
     
     def defaultKeywords(self, kwSet):
         """

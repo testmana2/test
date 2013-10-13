@@ -4,13 +4,15 @@
 #
 
 """
-Module implementing a dialog to show the output of the svn diff command process.
+Module implementing a dialog to show the output of the svn diff command
+process.
 """
 
 import os
 
 from PyQt4.QtCore import QTimer, QFileInfo, QProcess, pyqtSlot, Qt
-from PyQt4.QtGui import QWidget, QColor, QLineEdit, QBrush, QTextCursor, QDialogButtonBox
+from PyQt4.QtGui import QWidget, QColor, QLineEdit, QBrush, QTextCursor, \
+    QDialogButtonBox
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -23,7 +25,8 @@ import Preferences
 
 class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
     """
-    Class implementing a dialog to show the output of the svn diff command process.
+    Class implementing a dialog to show the output of the svn diff command
+    process.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -88,7 +91,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         Public slot to start the svn diff command.
         
         @param fn filename to be diffed (string)
-        @param versions list of versions to be diffed (list of up to 2 strings or None)
+        @param versions list of versions to be diffed (list of up to 2 strings
+            or None)
         @keyparam urls list of repository URLs (list of 2 strings)
         @keyparam summary flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
@@ -194,7 +198,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
@@ -205,7 +210,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         self.filesCombo.addItem(self.trUtf8("<End>"), -1)
         for oldFile, newFile, pos in sorted(self.__fileSeparators):
             if oldFile != newFile:
-                self.filesCombo.addItem("{0}\n{1}".format(oldFile, newFile), pos)
+                self.filesCombo.addItem(
+                    "{0}\n{1}".format(oldFile, newFile), pos)
             else:
                 self.filesCombo.addItem(oldFile, pos)
         
@@ -244,7 +250,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             self.__oldFile = self.__extractFileName(line)
         else:
             self.__fileSeparators.append(
-                (self.__oldFile, self.__extractFileName(line), self.__oldFileLine))
+                (self.__oldFile, self.__extractFileName(line),
+                 self.__oldFileLine))
     
     def __readStdout(self):
         """
@@ -266,9 +273,11 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
                 line.startswith("+++ "):
                     self.__processFileLine(line)
                 
-            if line.startswith('+') or line.startswith('>') or line.startswith('A '):
+            if line.startswith('+') or line.startswith('>') or \
+                    line.startswith('A '):
                 format = self.cAddedFormat
-            elif line.startswith('-') or line.startswith('<') or line.startswith('D '):
+            elif line.startswith('-') or line.startswith('<') or \
+                    line.startswith('D '):
                 format = self.cRemovedFormat
             elif line.startswith('@@'):
                 format = self.cLineNoFormat
@@ -330,7 +339,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             # step 2: move cursor to desired line
             tc = self.contents.textCursor()
             delta = tc.blockNumber() - para
-            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor, delta)
+            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor,
+                            delta)
             self.contents.setTextCursor(tc)
             self.contents.ensureCursorVisible()
     

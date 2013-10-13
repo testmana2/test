@@ -9,9 +9,10 @@ Module implementing a dialog showing signed changesets.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QRegExp, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QLineEdit
+from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QRegExp, \
+    QCoreApplication
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QLineEdit
 
 from E5Gui import E5MessageBox
 
@@ -124,7 +125,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -138,7 +140,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
         
@@ -182,7 +185,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         Private method to resize the list columns.
         """
-        self.signaturesList.header().resizeSections(QHeaderView.ResizeToContents)
+        self.signaturesList.header().resizeSections(
+            QHeaderView.ResizeToContents)
         self.signaturesList.header().setStretchLastSection(True)
     
     def __generateItem(self, revision, changeset, signature):
@@ -197,7 +201,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
             QTreeWidgetItem(self.signaturesList, [signature])
         else:
             revString = "{0:>7}:{1}".format(revision, changeset)
-            topItems = self.signaturesList.findItems(revString, Qt.MatchExactly)
+            topItems = self.signaturesList.findItems(
+                revString, Qt.MatchExactly)
             if len(topItems) == 0:
                 # first signature for this changeset
                 topItm = QTreeWidgetItem(self.signaturesList, [
@@ -279,7 +284,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         Private slot to verify the signatures of the selected revision.
         """
-        rev = self.signaturesList.selectedItems()[0].text(0).split(":")[0].strip()
+        rev = self.signaturesList.selectedItems()[0].text(0)\
+            .split(":")[0].strip()
         self.vcs.getExtensionObject("gpg")\
             .hgGpgVerifySignatures(self.__path, rev)
     
@@ -308,13 +314,15 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         searchRxText = self.rxEdit.text()
         filterTop = self.categoryCombo.currentText() == self.trUtf8("Revision")
         if filterTop and searchRxText.startswith("^"):
-            searchRx = QRegExp("^\s*{0}".format(searchRxText[1:]), Qt.CaseInsensitive)
+            searchRx = QRegExp(
+                "^\s*{0}".format(searchRxText[1:]), Qt.CaseInsensitive)
         else:
             searchRx = QRegExp(searchRxText, Qt.CaseInsensitive)
         for topIndex in range(self.signaturesList.topLevelItemCount()):
             topLevelItem = self.signaturesList.topLevelItem(topIndex)
             if filterTop:
-                topLevelItem.setHidden(searchRx.indexIn(topLevelItem.text(0)) == -1)
+                topLevelItem.setHidden(
+                    searchRx.indexIn(topLevelItem.text(0)) == -1)
             else:
                 visibleChildren = topLevelItem.childCount()
                 for childIndex in range(topLevelItem.childCount()):

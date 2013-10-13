@@ -56,8 +56,10 @@ class LexerPython(QsciLexerPython, Lexer):
         if not Preferences.getEditor("PythonAutoIndent"):
             self.setAutoIndentStyle(QsciScintilla.AiMaintain)
         try:
-            self.setV2UnicodeAllowed(Preferences.getEditor("PythonAllowV2Unicode"))
-            self.setV3BinaryOctalAllowed(Preferences.getEditor("PythonAllowV3Binary"))
+            self.setV2UnicodeAllowed(
+                Preferences.getEditor("PythonAllowV2Unicode"))
+            self.setV3BinaryOctalAllowed(
+                Preferences.getEditor("PythonAllowV3Binary"))
             self.setV3BytesAllowed(Preferences.getEditor("PythonAllowV3Bytes"))
         except AttributeError:
             pass

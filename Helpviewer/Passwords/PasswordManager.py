@@ -9,8 +9,8 @@ Module implementing the password manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, QCoreApplication, \
-    QXmlStreamReader
+from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
+    QCoreApplication, QXmlStreamReader
 from PyQt4.QtGui import QProgressDialog, QApplication
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebPage
@@ -99,7 +99,10 @@ class PasswordManager(QObject):
             self.__load()
         
         key = self.__createKey(url, realm)
-        self.__logins[key] = (username, Utilities.crypto.pwConvert(password, encode=True))
+        self.__logins[key] = (
+            username, 
+            Utilities.crypto.pwConvert(password, encode=True)
+        )
         self.changed.emit()
     
     def __createKey(self, url, realm):
@@ -111,7 +114,8 @@ class PasswordManager(QObject):
         @return key string (string)
         """
         if realm:
-            key = "{0}://{1} ({2})".format(url.scheme(), url.authority(), realm)
+            key = "{0}://{1} ({2})".format(
+                url.scheme(), url.authority(), realm)
         else:
             key = "{0}://{1}".format(url.scheme(), url.authority())
         return key
@@ -134,11 +138,13 @@ class PasswordManager(QObject):
         from .PasswordWriter import PasswordWriter
         loginFile = self.getFileName()
         writer = PasswordWriter()
-        if not writer.write(loginFile, self.__logins, self.__loginForms, self.__never):
+        if not writer.write(
+                loginFile, self.__logins, self.__loginForms, self.__never):
             E5MessageBox.critical(None,
                 self.trUtf8("Saving login data"),
-                self.trUtf8("""<p>Login data could not be saved to <b>{0}</b></p>"""
-                            ).format(loginFile))
+                self.trUtf8(
+                    """<p>Login data could not be saved to <b>{0}</b></p>"""
+                ).format(loginFile))
         else:
             self.passwordsSaved.emit()
     
@@ -152,7 +158,8 @@ class PasswordManager(QObject):
         else:
             from .PasswordReader import PasswordReader
             reader = PasswordReader()
-            self.__logins, self.__loginForms, self.__never = reader.read(loginFile)
+            self.__logins, self.__loginForms, self.__never = \
+                reader.read(loginFile)
             if reader.error() != QXmlStreamReader.NoError:
                 E5MessageBox.warning(None,
                     self.trUtf8("Loading login data"),
@@ -188,7 +195,8 @@ class PasswordManager(QObject):
                 return
             
             data = []
-            section = 0     # 0 = login data, 1 = forms data, 2 = never store info
+            section = 0     # 0 = login data, 1 = forms data,
+                            # 2 = never store info
             for line in lines.splitlines():
                 if line == self.FORMS:
                     section = 1
@@ -204,9 +212,10 @@ class PasswordManager(QObject):
                         if len(data) != 3:
                             E5MessageBox.critical(None,
                                 self.trUtf8("Loading login data"),
-                                self.trUtf8("""<p>Login data could not be loaded """
-                                            """from <b>{0}</b></p>"""
-                                            """<p>Reason: Wrong input format</p>""")\
+                                self.trUtf8(
+                                    """<p>Login data could not be loaded """
+                                    """from <b>{0}</b></p>"""
+                                    """<p>Reason: Wrong input format</p>""")\
                                     .format(loginFile))
                             return
                         self.__logins[data[0]] = (data[1], data[2])
@@ -373,11 +382,14 @@ class PasswordManager(QObject):
                 self.trUtf8(
                     """<b>Would you like to save this password?</b><br/>"""
                     """To review passwords you have saved and remove them, """
-                    """use the password management dialog of the Settings menu."""),
+                    """use the password management dialog of the Settings"""
+                    """ menu."""),
                 modal=True)
             neverButton = mb.addButton(
-                self.trUtf8("Never for this site"), E5MessageBox.DestructiveRole)
-            noButton = mb.addButton(self.trUtf8("Not now"), E5MessageBox.RejectRole)
+                self.trUtf8("Never for this site"),
+                E5MessageBox.DestructiveRole)
+            noButton = mb.addButton(
+                self.trUtf8("Not now"), E5MessageBox.RejectRole)
             mb.addButton(E5MessageBox.Yes)
             mb.exec_()
             if mb.clickedButton() == neverButton:
@@ -400,7 +412,8 @@ class PasswordManager(QObject):
                 password = element[1]
                 form.elements[index] = (element[0], "--PASSWORD--")
         if user and password:
-            self.__logins[key] = (user, Utilities.crypto.pwConvert(password, encode=True))
+            self.__logins[key] = \
+                (user, Utilities.crypto.pwConvert(password, encode=True))
             self.__loginForms[key] = form
             self.changed.emit()
     
@@ -423,8 +436,8 @@ class PasswordManager(QObject):
         
         @param webPage reference to the web page (QWebPage)
         @param data data to be sent (QByteArray)
-        @keyparam boundary boundary string (QByteArray) for multipart encoded data,
-            None for urlencoded data
+        @keyparam boundary boundary string (QByteArray) for multipart
+            encoded data, None for urlencoded data
         @return parsed form (LoginForm)
         """
         from .LoginForm import LoginForm
@@ -546,27 +559,32 @@ class PasswordManager(QObject):
             value = element[1]
             
             disabled = page.mainFrame().evaluateJavaScript(
-                'document.forms[{0}].elements["{1}"].disabled'.format(formName, name))
+                'document.forms[{0}].elements["{1}"].disabled'.format(
+                    formName, name))
             if disabled:
                 continue
             
             readOnly = page.mainFrame().evaluateJavaScript(
-                'document.forms[{0}].elements["{1}"].readOnly'.format(formName, name))
+                'document.forms[{0}].elements["{1}"].readOnly'.format(
+                    formName, name))
             if readOnly:
                 continue
             
             type_ = page.mainFrame().evaluateJavaScript(
-                'document.forms[{0}].elements["{1}"].type'.format(formName, name))
+                'document.forms[{0}].elements["{1}"].type'.format(
+                    formName, name))
             if type_ == "" or \
                type_ in ["hidden", "reset", "submit"]:
                 continue
             if type_ == "password":
-                value = Utilities.crypto.pwConvert(self.__logins[key][1], encode=False)
+                value = Utilities.crypto.pwConvert(
+                    self.__logins[key][1], encode=False)
             setType = type_ == "checkbox" and "checked" or "value"
             value = value.replace("\\", "\\\\")
             value = value.replace('"', '\\"')
-            javascript = 'document.forms[{0}].elements["{1}"].{2}="{3}";'.format(
-                         formName, name, setType, value)
+            javascript = \
+                'document.forms[{0}].elements["{1}"].{2}="{3}";'.format(
+                    formName, name, setType, value)
             page.mainFrame().evaluateJavaScript(javascript)
     
     def masterPasswordChanged(self, oldPassword, newPassword):
@@ -579,7 +597,8 @@ class PasswordManager(QObject):
         if not self.__loaded:
             self.__load()
         
-        progress = QProgressDialog(self.trUtf8("Re-encoding saved passwords..."),
+        progress = QProgressDialog(
+            self.trUtf8("Re-encoding saved passwords..."),
             None, 0, len(self.__logins), QApplication.activeModalWidget())
         progress.setMinimumDuration(0)
         count = 0

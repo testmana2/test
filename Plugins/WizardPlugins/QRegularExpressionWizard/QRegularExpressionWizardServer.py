@@ -124,14 +124,14 @@ def main():
                     except ImportError:
                         responseDict["available"] = False
                 elif command == "validate":
-                    valid, error, errorOffset = rxValidate(commandDict["regexp"],
-                                                           commandDict["options"])
+                    valid, error, errorOffset = rxValidate(
+                        commandDict["regexp"], commandDict["options"])
                     responseDict["valid"] = valid
                     responseDict["errorMessage"] = error
                     responseDict["errorOffset"] = errorOffset
                 elif command == "execute":
-                    valid, error, errorOffset = rxValidate(commandDict["regexp"],
-                                                           commandDict["options"])
+                    valid, error, errorOffset = rxValidate(
+                        commandDict["regexp"], commandDict["options"])
                     if not valid:
                         responseDict["valid"] = valid
                         responseDict["errorMessage"] = error

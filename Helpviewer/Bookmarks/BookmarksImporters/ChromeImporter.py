@@ -25,13 +25,15 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "chrome":
         if Globals.isWindowsPlatform():
             standardDir = os.path.expandvars(
-                "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
+                "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\"
+                "User Data\\Default")
         elif Globals.isMacPlatform():
             standardDir = os.path.expanduser(
                 "~/Library/Application Support/Google/Chrome/Default")
@@ -41,9 +43,11 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("chrome.png"),
             "Google Chrome",
             "Bookmarks",
-            QCoreApplication.translate("ChromeImporter",
-                """Google Chrome stores its bookmarks in the <b>Bookmarks</b> """
-                """text file. This file is usually located in"""),
+            QCoreApplication.translate(
+                "ChromeImporter",
+                """Google Chrome stores its bookmarks in the"""
+                """ <b>Bookmarks</b> text file. This file is usually"""
+                """ located in"""),
             QCoreApplication.translate("ChromeImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
@@ -51,16 +55,18 @@ def getImporterInfo(id):
     elif id == "chromium":
         if Globals.isWindowsPlatform():
             standardDir = os.path.expandvars(
-                "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
+                "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\"
+                "User Data\\Default")
         else:
             standardDir = os.path.expanduser("~/.config/chromium/Default")
         return (
             UI.PixmapCache.getPixmap("chromium.png"),
             "Chromium",
             "Bookmarks",
-            QCoreApplication.translate("ChromeImporter",
-                """Chromium stores its bookmarks in the <b>Bookmarks</b> text file. """
-                """This file is usually located in"""),
+            QCoreApplication.translate(
+                "ChromeImporter",
+                """Chromium stores its bookmarks in the <b>Bookmarks</b>"""
+                """ text file. This file is usually located in"""),
             QCoreApplication.translate("ChromeImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
@@ -100,8 +106,8 @@ class ChromeImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' does not exist.")\
-                .format(self.__fileName)
+            self._errorString = self.trUtf8(
+                "File '{0}' does not exist.").format(self.__fileName)
             return False
         return True
     
@@ -117,7 +123,8 @@ class ChromeImporter(BookmarksImporter):
             f.close()
         except IOError as err:
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' cannot be read.\nReason: {1}")\
+            self._errorString = self.trUtf8(
+                "File '{0}' cannot be read.\nReason: {1}")\
                 .format(self.__fileName, str(err))
             return None
         

@@ -31,7 +31,8 @@ class TrayStarterPage(ConfigurationPageBase, Ui_TrayStarterPage):
         self.standardButton.setIcon(UI.PixmapCache.getIcon("erict.png"))
         self.highContrastButton.setIcon(UI.PixmapCache.getIcon("erict-hc.png"))
         self.blackWhiteButton.setIcon(UI.PixmapCache.getIcon("erict-bw.png"))
-        self.blackWhiteInverseButton.setIcon(UI.PixmapCache.getIcon("erict-bwi.png"))
+        self.blackWhiteInverseButton.setIcon(
+            UI.PixmapCache.getIcon("erict-bwi.png"))
         
         # set initial values
         iconName = Preferences.getTrayStarter("TrayStarterIcon")

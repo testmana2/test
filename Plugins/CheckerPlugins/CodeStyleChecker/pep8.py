@@ -146,11 +146,13 @@ pep8_messages = {
     "E122": QT_TRANSLATE_NOOP("pep8",
         "continuation line missing indentation or outdented"),
     "E123": QT_TRANSLATE_NOOP("pep8",
-        "closing bracket does not match indentation of opening bracket's line"),
+        "closing bracket does not match indentation of opening"
+        " bracket's line"),
     "E124": QT_TRANSLATE_NOOP("pep8",
         "closing bracket does not match visual indentation"),
     "E125": QT_TRANSLATE_NOOP("pep8",
-        "continuation line does not distinguish itself from next logical line"),
+        "continuation line does not distinguish itself from next"
+        " logical line"),
     "E126": QT_TRANSLATE_NOOP("pep8",
         "continuation line over-indented for hanging indent"),
     "E127": QT_TRANSLATE_NOOP("pep8",

@@ -4,10 +4,12 @@
 #
 
 """
-Parse a CORBA IDL file and retrieve modules, interfaces, methods and attributes.
+Parse a CORBA IDL file and retrieve modules, interfaces, methods and
+attributes.
 
-Parse enough of a CORBA IDL file to recognize module, interface and method definitions
-and to find out the superclasses of an interface as well as its attributes.
+Parse enough of a CORBA IDL file to recognize module, interface and method
+definitions and to find out the superclasses of an interface as well as its
+attributes.
 
 It is based on the Python class browser found in this package.
 """
@@ -140,7 +142,8 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a CORBA IDL function.
     """
-    def __init__(self, module, name, file, lineno, signature='', separator=','):
+    def __init__(self, module, name, file, lineno, signature='',
+                 separator=','):
         """
         Constructor
         
@@ -175,7 +178,8 @@ class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
 
 def readmodule_ex(module, path=[]):
     """
-    Read a CORBA IDL file and return a dictionary of classes, functions and modules.
+    Read a CORBA IDL file and return a dictionary of classes, functions and
+    modules.
 
     @param module name of the CORBA IDL file (string)
     @param path path the file should be searched in (list of strings)
@@ -241,7 +245,8 @@ def readmodule_ex(module, path=[]):
             if classstack:
                 # it's an interface/module method
                 cur_class = classstack[-1][0]
-                if isinstance(cur_class, Interface) or isinstance(cur_class, Module):
+                if isinstance(cur_class, Interface) or \
+                        isinstance(cur_class, Module):
                     # it's a method
                     f = Function(None, meth_name,
                                  file, lineno, meth_sig)
@@ -255,7 +260,8 @@ def readmodule_ex(module, path=[]):
                              file, lineno, meth_sig)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
-                    meth_name = "{0}_{1:d}".format(meth_name, dict_counts[meth_name])
+                    meth_name = "{0}_{1:d}".format(
+                        meth_name, dict_counts[meth_name])
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f

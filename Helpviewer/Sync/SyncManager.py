@@ -23,11 +23,11 @@ class SyncManager(QObject):
     @signal syncMessage(message) emitted to give status info about the sync
         process (string)
     @signal syncStatus(type_, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", string)
-    @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", boolean, boolean)
+        status (string one of "bookmarks", "history", "passwords",
+        "useragents" or "speeddial", string)
+    @signal syncFinished(type_, done, download) emitted after a
+        synchronization has finished (string one of "bookmarks", "history",
+        "passwords", "useragents" or "speeddial", boolean, boolean)
     """
     syncError = pyqtSignal(str)
     syncMessage = pyqtSignal(str)
@@ -64,7 +64,8 @@ class SyncManager(QObject):
         """
         Public method to load the settings.
         
-        @keyparam forceUpload flag indicating a forced upload of the files (boolean)
+        @keyparam forceUpload flag indicating a forced upload of the files
+            (boolean)
         """
         if self.__handler is not None:
             self.__handler.syncError.disconnect(self.__syncError)
@@ -78,7 +79,8 @@ class SyncManager(QObject):
             if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:
                 from .FtpSyncHandler import FtpSyncHandler
                 self.__handler = FtpSyncHandler(self)
-            elif Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeDirectory:
+            elif Preferences.getHelp("SyncType") == \
+                    SyncGlobals.SyncTypeDirectory:
                 from .DirectorySyncHandler import DirectorySyncHandler
                 self.__handler = DirectorySyncHandler(self)
             self.__handler.syncError.connect(self.__syncError)
@@ -90,12 +92,12 @@ class SyncManager(QObject):
             
             # connect sync manager to bookmarks manager
             if Preferences.getHelp("SyncBookmarks"):
-                Helpviewer.HelpWindow.HelpWindow.bookmarksManager().bookmarksSaved\
-                    .connect(self.__syncBookmarks)
+                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                    .bookmarksSaved.connect(self.__syncBookmarks)
             else:
                 try:
-                    Helpviewer.HelpWindow.HelpWindow.bookmarksManager().bookmarksSaved\
-                        .disconnect(self.__syncBookmarks)
+                    Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                        .bookmarksSaved.disconnect(self.__syncBookmarks)
                 except TypeError:
                     pass
             
@@ -105,19 +107,19 @@ class SyncManager(QObject):
                     .connect(self.__syncHistory)
             else:
                 try:
-                    Helpviewer.HelpWindow.HelpWindow.historyManager().historySaved\
-                        .disconnect(self.__syncHistory)
+                    Helpviewer.HelpWindow.HelpWindow.historyManager()\
+                        .historySaved.disconnect(self.__syncHistory)
                 except TypeError:
                     pass
             
             # connect sync manager to passwords manager
             if Preferences.getHelp("SyncPasswords"):
-                Helpviewer.HelpWindow.HelpWindow.passwordManager().passwordsSaved\
-                    .connect(self.__syncPasswords)
+                Helpviewer.HelpWindow.HelpWindow.passwordManager()\
+                    .passwordsSaved.connect(self.__syncPasswords)
             else:
                 try:
-                    Helpviewer.HelpWindow.HelpWindow.passwordManager().passwordsSaved\
-                        .disconnect(self.__syncPasswords)
+                    Helpviewer.HelpWindow.HelpWindow.passwordManager()\
+                        .passwordsSaved.disconnect(self.__syncPasswords)
                 except TypeError:
                     pass
             
@@ -128,7 +130,8 @@ class SyncManager(QObject):
             else:
                 try:
                     Helpviewer.HelpWindow.HelpWindow.userAgentsManager()\
-                        .userAgentSettingsSaved.disconnect(self.__syncUserAgents)
+                        .userAgentSettingsSaved.disconnect(
+                            self.__syncUserAgents)
                 except TypeError:
                     pass
             
@@ -146,8 +149,8 @@ class SyncManager(QObject):
             self.__handler = None
             
             try:
-                Helpviewer.HelpWindow.HelpWindow.bookmarksManager().bookmarksSaved\
-                    .disconnect(self.__syncBookmarks)
+                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                    .bookmarksSaved.disconnect(self.__syncBookmarks)
             except TypeError:
                 pass
             try:
@@ -156,8 +159,8 @@ class SyncManager(QObject):
             except TypeError:
                 pass
             try:
-                Helpviewer.HelpWindow.HelpWindow.passwordManager().passwordsSaved\
-                    .disconnect(self.__syncPasswords)
+                Helpviewer.HelpWindow.HelpWindow.passwordManager()\
+                    .passwordsSaved.disconnect(self.__syncPasswords)
             except TypeError:
                 pass
             try:
@@ -229,7 +232,8 @@ class SyncManager(QObject):
         Private slot to handle a finished synchronization event.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param status flag indicating success (boolean)
         @param download flag indicating a download of a file (boolean)
         """
@@ -251,7 +255,8 @@ class SyncManager(QObject):
         Private slot to handle a status update of a synchronization event.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param message status message for the event (string)
         """
         self.syncMessage.emit(message)

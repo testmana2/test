@@ -65,7 +65,8 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
@@ -75,6 +76,8 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
             pageRequest = QNetworkRequest(request)
             if self.__webPage is not None:
                 self.__webPage.populateNetworkRequest(pageRequest)
-            return self.primaryManager.createRequest(op, pageRequest, outgoingData)
+            return self.primaryManager.createRequest(
+                op, pageRequest, outgoingData)
         else:
-            return QNetworkAccessManager.createRequest(self, op, request, outgoingData)
+            return QNetworkAccessManager.createRequest(
+                self, op, request, outgoingData)

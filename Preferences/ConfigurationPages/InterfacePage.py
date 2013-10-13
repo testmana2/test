@@ -206,7 +206,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.languageComboBox.clear()
         
         fnlist = glob.glob("eric5_*.qm") + \
-            glob.glob(os.path.join(getConfig('ericTranslationsDir'), "eric5_*.qm")) + \
+            glob.glob(os.path.join(
+                getConfig('ericTranslationsDir'), "eric5_*.qm")) + \
             glob.glob(os.path.join(Utilities.getConfigDir(), "eric5_*.qm"))
         locales = {}
         for fn in fnlist:
@@ -214,9 +215,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             if locale not in locales:
                 translator = QTranslator()
                 translator.load(fn)
-                locales[locale] = \
-                    translator.translate("InterfacePage", "English",
-                                         "Translate this with your language") + \
+                locales[locale] = translator.translate(
+                    "InterfacePage", "English",
+                    "Translate this with your language") + \
                     " ({0})".format(locale)
         localeList = sorted(list(locales.keys()))
         try:
@@ -246,8 +247,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self,
             self.trUtf8("Select style sheet file"),
             self.styleSheetEdit.text(),
-            self.trUtf8("Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
-                        "All files (*)"))
+            self.trUtf8(
+                "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
+                "All files (*)"))
         
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))

@@ -200,7 +200,8 @@ class Attribute(_ClbrBase):
         """
         Public method to add another assignment line number.
         
-        @param lineno linenumber of the additional attribute assignment (integer)
+        @param lineno linenumber of the additional attribute assignment
+            (integer)
         """
         if lineno not in self.linenos:
             self.linenos.append(lineno)

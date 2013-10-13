@@ -11,7 +11,8 @@ import os
 
 from PyQt4.QtCore import pyqtSignal
 
-from Toolbox.SingleApplication import SingleApplicationClient, SingleApplicationServer
+from Toolbox.SingleApplication import SingleApplicationClient, \
+    SingleApplicationServer
 
 ###########################################################################
 # define some module global stuff
@@ -73,7 +74,8 @@ class TRSingleApplicationServer(SingleApplicationServer):
         """
         Private method used to handle the "Load Translation" command.
         
-        @param fnames filenames of the translations to be loaded (list of strings)
+        @param fnames filenames of the translations to be loaded
+            (list of strings)
         """
         first = True
         for fname in fnames:
@@ -83,7 +85,8 @@ class TRSingleApplicationServer(SingleApplicationServer):
 
 class TRSingleApplicationClient(SingleApplicationClient):
     """
-    Class implementing the single application client of the Translations Previewer.
+    Class implementing the single application client of the Translations
+    Previewer.
     """
     def __init__(self):
         """

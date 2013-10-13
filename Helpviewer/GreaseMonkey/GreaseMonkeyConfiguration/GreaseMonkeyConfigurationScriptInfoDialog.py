@@ -33,11 +33,13 @@ class GreaseMonkeyConfigurationScriptInfoDialog(QDialog,
         super().__init__(parent)
         self.setupUi(self)
         
-        self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("greaseMonkey48.png"))
+        self.iconLabel.setPixmap(
+            UI.PixmapCache.getPixmap("greaseMonkey48.png"))
         
         self.__scriptFileName = script.fileName()
         
-        self.setWindowTitle(self.trUtf8("Script Details of {0}").format(script.name()))
+        self.setWindowTitle(
+            self.trUtf8("Script Details of {0}").format(script.name()))
         
         self.nameLabel.setText(script.fullName())
         self.versionLabel.setText(script.version())

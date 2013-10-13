@@ -279,8 +279,9 @@ class Checker(object):
             if self.traceTree:
                 print('  ' * self.nodeDepth + node.__class__.__name__)
             self.nodeDepth += 1
-            if self.futuresAllowed and not \
-                   (isinstance(node, ast.ImportFrom) or self.isDocstring(node)):
+            if self.futuresAllowed and \
+                    not (isinstance(node, ast.ImportFrom) or 
+                         self.isDocstring(node)):
                 self.futuresAllowed = False
             nodeType = node.__class__.__name__.upper()
             try:
@@ -322,7 +323,8 @@ class Checker(object):
         '''
         Called when a binding is altered.
 
-        @param lineno line of the statement responsible for the change (integer)
+        @param lineno line of the statement responsible for the change
+            (integer)
         @param value the optional new value, a Binding instance, associated
             with the binding; if None, the binding is deleted if it exists
         @param reportRedef flag indicating if rebinding while unused will be
@@ -333,7 +335,8 @@ class Checker(object):
                     and not self.scope.get(value.name).is_property
                     and not value.is_property):
             self.report(messages.RedefinedFunction,
-                        lineno, value.name, self.scope[value.name].source.lineno)
+                        lineno, value.name,
+                        self.scope[value.name].source.lineno)
 
         if not isinstance(self.scope, ClassScope):
             for scope in self.scopeStack[::-1]:
@@ -345,7 +348,8 @@ class Checker(object):
                     value.fullName == existing.fullName) and \
                    reportRedef:
                     self.report(messages.RedefinedWhileUnused,
-                                lineno, value.name, scope[value.name].source.lineno)
+                                lineno, value.name,
+                                scope[value.name].source.lineno)
 
         if isinstance(value, UnBinding):
             try:
@@ -446,10 +450,12 @@ class Checker(object):
                         # the special name __path__ is valid only in packages
                         pass
                     else:
-                        self.report(messages.UndefinedName, node.lineno, node.id)
+                        self.report(messages.UndefinedName,
+                                    node.lineno, node.id)
         elif isinstance(node.ctx, (ast.Store, ast.AugStore)):
             # if the name hasn't already been defined in the current scope
-            if isinstance(self.scope, FunctionScope) and node.id not in self.scope:
+            if isinstance(self.scope, FunctionScope) and \
+                    node.id not in self.scope:
                 # for each function or module scope above us
                 for scope in self.scopeStack[:-1]:
                     if not isinstance(scope, (FunctionScope, ModuleScope)):
@@ -486,8 +492,8 @@ class Checker(object):
             else:
                 self.addBinding(node.lineno, UnBinding(node.id, node))
         else:
-            # must be a Param context -- this only happens for names in function
-            # arguments, but these aren't dispatched through here
+            # must be a Param context -- this only happens for names in
+            # function arguments, but these aren't dispatched through here
             raise RuntimeError(
                 "Got impossible expression context: {0:r}".format(node.ctx,))
 
@@ -518,7 +524,8 @@ class Checker(object):
                         addArgs(arg.arg)
                     else:
                         if arg.arg in args:
-                            self.report(messages.DuplicateArgument, node.lineno, arg.arg)
+                            self.report(messages.DuplicateArgument,
+                                        node.lineno, arg.arg)
                         args.append(arg.arg)
             
             def checkUnusedAssignments():
@@ -540,7 +547,8 @@ class Checker(object):
             if node.args.kwarg:
                 args.append(node.args.kwarg)
             for name in args:
-                self.addBinding(node.lineno, Argument(name, node), reportRedef=False)
+                self.addBinding(node.lineno, Argument(name, node),
+                                reportRedef=False)
             if isinstance(node.body, list):
                 self.handleBody(node)
             else:
@@ -628,8 +636,8 @@ class Checker(object):
             self.handleNode(target, node)
     
     def AUGASSIGN(self, node):
-        # AugAssign is awkward: must set the context explicitly and visit twice,
-        # once with AugLoad context, once with AugStore context
+        # AugAssign is awkward: must set the context explicitly and
+        # visit twice, once with AugLoad context, once with AugStore context
         node.target.ctx = ast.AugLoad()
         self.handleNode(node.target, node)
         self.handleNode(node.value, node)

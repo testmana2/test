@@ -53,7 +53,8 @@ class Lexer(object):
         
     def canBlockComment(self):
         """
-        Public method to determine, whether the lexer language supports a block comment.
+        Public method to determine, whether the lexer language supports a 
+        block comment.
         
         @return flag (boolean)
         """
@@ -69,7 +70,8 @@ class Lexer(object):
         
     def canStreamComment(self):
         """
-        Public method to determine, whether the lexer language supports a stream comment.
+        Public method to determine, whether the lexer language supports a
+        stream comment.
         
         @return flag (boolean)
         """
@@ -87,7 +89,8 @@ class Lexer(object):
         
     def canBoxComment(self):
         """
-        Public method to determine, whether the lexer language supports a box comment.
+        Public method to determine, whether the lexer language supports a
+        box comment.
         
         @return flag (boolean)
         """

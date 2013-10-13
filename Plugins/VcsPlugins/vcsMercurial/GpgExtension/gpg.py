@@ -66,12 +66,14 @@ class Gpg(HgExtension):
         if rev is None:
             if self.vcs.isExtensionActive("bookmarks"):
                 bookmarksList = \
-                    self.vcs.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                    self.vcs.getExtensionObject("bookmarks")\
+                        .hgGetBookmarksList(repodir)
             else:
                 bookmarksList = None
-            dlg = HgRevisionSelectionDialog(self.vcs.hgGetTagsList(repodir),
-                                            self.vcs.hgGetBranchesList(repodir),
-                                            bookmarksList)
+            dlg = HgRevisionSelectionDialog(
+                self.vcs.hgGetTagsList(repodir),
+                self.vcs.hgGetBranchesList(repodir),
+                bookmarksList)
             if dlg.exec_() == QDialog.Accepted:
                 rev = dlg.getRevision()
         
@@ -102,7 +104,8 @@ class Gpg(HgExtension):
         
         if self.vcs.isExtensionActive("bookmarks"):
             bookmarksList = \
-                self.vcs.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+                self.vcs.getExtensionObject("bookmarks")\
+                    .hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
         from .HgGpgSignDialog import HgGpgSignDialog

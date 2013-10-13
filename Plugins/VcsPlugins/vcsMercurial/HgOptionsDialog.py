@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to enter options used to start a project in the VCS.
+Module implementing a dialog to enter options used to start a project in
+the VCS.
 """
 
 from PyQt4.QtGui import QDialog

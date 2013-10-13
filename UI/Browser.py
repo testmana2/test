@@ -11,14 +11,14 @@ import os
 import mimetypes
 
 from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl, Qt, qVersion
-from PyQt4.QtGui import QTreeView, QDesktopServices, QItemSelectionModel, QApplication, \
-    QMenu, QAbstractItemView
+from PyQt4.QtGui import QTreeView, QDesktopServices, QItemSelectionModel, \
+    QApplication, QMenu, QAbstractItemView
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog
 
-from .BrowserModel import BrowserModel, \
-    BrowserDirectoryItem, BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
+from .BrowserModel import BrowserModel, BrowserDirectoryItem, \
+    BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
 from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 
@@ -35,11 +35,12 @@ class Browser(QTreeView):
     is displayed by a right click the user can select various actions on
     the selected file.
     
-    @signal sourceFile(str, int = 0, str = "") emitted to open a Python file at a line
+    @signal sourceFile(str, int = 0, str = "") emitted to open a Python file
+        at a line
     @signal designerFile(str) emitted to open a Qt-Designer file
     @signal linguistFile(str) emitted to open a Qt-Linguist (*.ts) file
-    @signal trpreview(list of str, bool = False) emitted to preview a Qt-Linguist
-            (*.qm) file
+    @signal trpreview(list of str, bool = False) emitted to preview a
+        Qt-Linguist (*.qm) file
     @signal projectFile(str) emitted to open an eric4/5 project file
     @signal multiProjectFile(str) emitted to open an eric4/5 multi project file
     @signal pixmapFile(str) emitted to open a pixmap file
@@ -86,38 +87,44 @@ class Browser(QTreeView):
         self.expanded.connect(self._resizeColumns)
         self.collapsed.connect(self._resizeColumns)
         
-        self.setWhatsThis(QApplication.translate('Browser',
+        self.setWhatsThis(QApplication.translate(
+            'Browser',
             """<b>The Browser Window</b>"""
-            """<p>This allows you to easily navigate the hierachy of directories and"""
-            """ files on your system, identify the Python programs and open them up in"""
-            """ a Source Viewer window. The window displays several separate"""
-            """ hierachies.</p>"""
-            """<p>The first hierachy is only shown if you have opened a program for"""
-            """ debugging and its root is the directory containing that program."""
-            """ Usually all of the separate files that make up a Python application are"""
-            """ held in the same directory, so this hierachy gives you easy access to"""
-            """ most of what you will need.</p>"""
-            """<p>The next hierachy is used to easily navigate the directories that are"""
-            """ specified in the Python <tt>sys.path</tt> variable.</p>"""
-            """<p>The remaining hierachies allow you navigate your system as a whole."""
-            """ On a UNIX system there will be a hierachy with <tt>/</tt> at its"""
-            """ root and another with the user home directory."""
-            """ On a Windows system there will be a hierachy for each drive on the"""
+            """<p>This allows you to easily navigate the hierarchy of"""
+            """ directories and files on your system, identify the Python"""
+            """ programs and open them up in a Source Viewer window. The"""
+            """ window displays several separate hierarchies.</p>"""
+            """<p>The first hierarchy is only shown if you have opened a"""
+            """ program for debugging and its root is the directory"""
+            """ containing that program. Usually all of the separate files"""
+            """ that make up a Python application are held in the same"""
+            """ directory, so this hierarchy gives you easy access to most"""
+            """ of what you will need.</p>"""
+            """<p>The next hierarchy is used to easily navigate the"""
+            """ directories that are specified in the Python"""
+            """ <tt>sys.path</tt> variable.</p>"""
+            """<p>The remaining hierarchies allow you navigate your system"""
+            """ as a whole. On a UNIX system there will be a hierarchy with"""
+            """ <tt>/</tt> at its root and another with the user home"""
+            """ directory. On a Windows system there will be a hierarchy for"""
+            """ each drive on the"""
             """ system.</p>"""
-            """<p>Python programs (i.e. those with a <tt>.py</tt> file name suffix)"""
-            """ are identified in the hierachies with a Python icon."""
-            """ The right mouse button will popup a menu which lets you"""
-            """ open the file in a Source Viewer window,"""
-            """ open the file for debugging or use it for a unittest run.</p>"""
-            """<p>The context menu of a class, function or method allows you to open"""
-            """ the file defining this class, function or method and will ensure, that"""
-            """ the correct source line is visible.</p>"""
-            """<p>Qt-Designer files (i.e. those with a <tt>.ui</tt> file name suffix)"""
-            """ are shown with a Designer icon. The context menu of these files"""
-            """ allows you to start Qt-Designer with that file.</p>"""
-            """<p>Qt-Linguist files (i.e. those with a <tt>.ts</tt> file name suffix)"""
-            """ are shown with a Linguist icon. The context menu of these files"""
-            """ allows you to start Qt-Linguist with that file.</p>"""
+            """<p>Python programs (i.e. those with a <tt>.py</tt> file name"""
+            """ suffix) are identified in the hierarchies with a Python"""
+            """ icon. The right mouse button will popup a menu which lets"""
+            """ you open the file in a Source Viewer window, open the file"""
+            """ for debugging or use it for a unittest run.</p>"""
+            """<p>The context menu of a class, function or method allows you"""
+            """ to open the file defining this class, function or method and"""
+            """ will ensure, that the correct source line is visible.</p>"""
+            """<p>Qt-Designer files (i.e. those with a <tt>.ui</tt> file"""
+            """ name suffix) are shown with a Designer icon. The context"""
+            """ menu of these files allows you to start Qt-Designer with"""
+            """ that file.</p>"""
+            """<p>Qt-Linguist files (i.e. those with a <tt>.ts</tt> file"""
+            """ name suffix) are shown with a Linguist icon. The context"""
+            """ menu of these files allows you to start Qt-Linguist with"""
+            """ that file.</p>"""
         ))
         
         self.__createPopupMenus()
@@ -183,24 +190,27 @@ class Browser(QTreeView):
         self.sourceMenu.addAction(QApplication.translate('Browser', 'Open'),
             self._openItem)
         self.unittestAct = self.sourceMenu.addAction(
-            QApplication.translate('Browser', 'Run unittest...'), self.handleUnittest)
+            QApplication.translate('Browser', 'Run unittest...'),
+            self.handleUnittest)
         self.sourceMenu.addAction(
             QApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
         
         # create the popup menu for general use
         self.menu = QMenu(self)
-        self.menu.addAction(QApplication.translate('Browser', 'Open'), self._openItem)
-        self.editPixmapAct = \
-            self.menu.addAction(QApplication.translate('Browser', 'Open in Icon Editor'),
+        self.menu.addAction(
+            QApplication.translate('Browser', 'Open'), self._openItem)
+        self.editPixmapAct = self.menu.addAction(
+            QApplication.translate('Browser', 'Open in Icon Editor'),
             self._editPixmap)
         self.menu.addAction(
             QApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
         if self.__embeddedBrowser in [1, 2]:
             self.menu.addSeparator()
-            self.menu.addAction(QApplication.translate('Browser', 'Configure...'),
-                                self.__configure)
+            self.menu.addAction(
+                QApplication.translate('Browser', 'Configure...'),
+                self.__configure)
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
@@ -208,8 +218,9 @@ class Browser(QTreeView):
             self._openItem)
         if self.__embeddedBrowser in [1, 2]:
             self.multiMenu.addSeparator()
-            self.multiMenu.addAction(QApplication.translate('Browser', 'Configure...'),
-                                     self.__configure)
+            self.multiMenu.addAction(
+                QApplication.translate('Browser', 'Configure...'),
+                self.__configure)
         
         # create the directory menu
         self.dirMenu = QMenu(self)
@@ -238,8 +249,9 @@ class Browser(QTreeView):
             self._copyToClipboard)
         if self.__embeddedBrowser in [1, 2]:
             self.dirMenu.addSeparator()
-            self.dirMenu.addAction(QApplication.translate('Browser', 'Configure...'),
-                                   self.__configure)
+            self.dirMenu.addAction(
+                QApplication.translate('Browser', 'Configure...'),
+                self.__configure)
         
         # create the attribute menu
         self.gotoMenu = QMenu(self.trUtf8("Goto"), self)
@@ -265,15 +277,16 @@ class Browser(QTreeView):
             self.__newToplevelDir)
         if self.__embeddedBrowser in [1, 2]:
             self.backMenu.addSeparator()
-            self.backMenu.addAction(QApplication.translate('Browser', 'Configure...'),
-                                    self.__configure)
+            self.backMenu.addAction(
+                QApplication.translate('Browser', 'Configure...'),
+                self.__configure)
 
     def mouseDoubleClickEvent(self, mouseEvent):
         """
         Protected method of QAbstractItemView.
         
-        Reimplemented to disable expanding/collapsing
-        of items when double-clicking. Instead the double-clicked entry is opened.
+        Reimplemented to disable expanding/collapsing of items when
+        double-clicking. Instead the double-clicked entry is opened.
         
         @param mouseEvent the mouse event (QMouseEvent)
         """
@@ -300,7 +313,8 @@ class Browser(QTreeView):
             if index.isValid():
                 self.setCurrentIndex(index)
                 flags = QItemSelectionModel.SelectionFlags(
-                    QItemSelectionModel.ClearAndSelect | QItemSelectionModel.Rows)
+                    QItemSelectionModel.ClearAndSelect | 
+                    QItemSelectionModel.Rows)
                 self.selectionModel().select(index, flags)
                 
                 itm = self.model().item(index)
@@ -344,7 +358,8 @@ class Browser(QTreeView):
         fileName = itm.fileName()
         
         for lineno in sorted(linenos):
-            act = self.gotoMenu.addAction(self.trUtf8("Line {0}".format(lineno)))
+            act = self.gotoMenu.addAction(
+                self.trUtf8("Line {0}".format(lineno)))
             act.setData([fileName, lineno])
         
     def _gotoAttribute(self, act):
@@ -380,9 +395,11 @@ class Browser(QTreeView):
                     elif itm.isPython3File():
                         self.sourceFile[str].emit(itm.fileName())
                     elif itm.isRubyFile():
-                        self.sourceFile[str, int, str].emit(itm.fileName(), -1, "Ruby")
+                        self.sourceFile[str, int, str].emit(
+                            itm.fileName(), -1, "Ruby")
                     elif itm.isDFile():
-                        self.sourceFile[str, int, str].emit(itm.fileName(), -1, "D")
+                        self.sourceFile[str, int, str].emit(
+                            itm.fileName(), -1, "D")
                     elif itm.isDesignerFile():
                         self.designerFile.emit(itm.fileName())
                     elif itm.isLinguistFile():
@@ -505,7 +522,8 @@ class Browser(QTreeView):
         index = self.currentIndex()
         searchDir = self.model().item(index).dirName()
         
-        e5App().getObject("UserInterface").showFindFilesDialog(searchDir=searchDir)
+        e5App().getObject("UserInterface")\
+            .showFindFilesDialog(searchDir=searchDir)
         
     def __replaceInDirectory(self):
         """
@@ -514,7 +532,8 @@ class Browser(QTreeView):
         index = self.currentIndex()
         searchDir = self.model().item(index).dirName()
         
-        e5App().getObject("UserInterface").showReplaceFilesDialog(searchDir=searchDir)
+        e5App().getObject("UserInterface")\
+            .showReplaceFilesDialog(searchDir=searchDir)
         
     def handleProgramChange(self, fn):
         """
@@ -612,6 +631,8 @@ class Browser(QTreeView):
         Private method to open the configuration dialog.
         """
         if self.__embeddedBrowser == 1:
-            e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+            e5App().getObject("UserInterface")\
+                .showPreferences("debuggerGeneralPage")
         elif self.__embeddedBrowser == 2:
-            e5App().getObject("UserInterface").showPreferences("projectBrowserPage")
+            e5App().getObject("UserInterface")\
+                .showPreferences("projectBrowserPage")

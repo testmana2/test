@@ -12,7 +12,8 @@ import os
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, QByteArray, QUrl, Qt
-from PyQt4.QtGui import QWidget, QCursor, QApplication, QTextCursor, QDialogButtonBox
+from PyQt4.QtGui import QWidget, QCursor, QApplication, QTextCursor, \
+    QDialogButtonBox
 
 from .SvnUtilities import formatTime
 
@@ -131,7 +132,8 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                 if self.__pegRev is None:
                     self.__pegRev = int(ver)
                 try:
-                    lv = "{0:d}".format(logs[logs.index(log) + 1]["revision"].number)
+                    lv = "{0:d}".format(
+                        logs[logs.index(log) + 1]["revision"].number)
                     url = QUrl()
                     url.setScheme("file")
                     url.setPath(self.filename)
@@ -139,14 +141,16 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                     query.append(lv).append('_').append(ver)
                     url.setEncodedQuery(query)
                     dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
-                        url.toString(), query, self.trUtf8('diff to {0}').format(lv)
+                        url.toString(), query,
+                        self.trUtf8('diff to {0}').format(lv)
                     )
                 except IndexError:
                     pass
                 dstr += '<br />\n'
                 self.contents.insertHtml(dstr)
                 
-                dstr = self.trUtf8('<i>author: {0}</i><br />\n').format(log["author"])
+                dstr = self.trUtf8('<i>author: {0}</i><br />\n')\
+                    .format(log["author"])
                 self.contents.insertHtml(dstr)
                 
                 dstr = self.trUtf8('<i>date: {0}</i><br />\n')\
@@ -166,9 +170,10 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                                .format(self.flags[changeInfo["action"]],
                                        changeInfo["path"])
                         if changeInfo["copyfrom_path"] is not None:
-                            dstr += self.trUtf8(" (copied from {0}, revision {1})")\
-                                        .format(changeInfo["copyfrom_path"],
-                                                changeInfo["copyfrom_revision"].number)
+                            dstr += self.trUtf8(
+                                " (copied from {0}, revision {1})")\
+                                .format(changeInfo["copyfrom_path"],
+                                        changeInfo["copyfrom_revision"].number)
                         dstr += '<br />\n'
                         self.contents.insertHtml(dstr)
                 

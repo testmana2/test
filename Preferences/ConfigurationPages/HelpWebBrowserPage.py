@@ -26,7 +26,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         """
         Constructor
         
-        @param configDialog reference to the configuration dialog (ConfigurationDialog)
+        @param configDialog reference to the configuration dialog
+            (ConfigurationDialog)
         """
         super().__init__()
         self.setupUi(self)
@@ -45,7 +46,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         defaultSchemes = ["file://", "http://", "https://"]
         self.defaultSchemeCombo.addItems(defaultSchemes)
         
-        self.clickToFlashCheckBox.setIcon(UI.PixmapCache.getIcon("flashBlock.png"))
+        self.clickToFlashCheckBox.setIcon(
+            UI.PixmapCache.getIcon("flashBlock.png"))
         
         # set initial values
         self.singleHelpWindowCheckBox.setChecked(
@@ -122,11 +124,13 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         
         for language in range(2, QLocale.LastLanguage + 1):
             if len(QLocale.countriesForLanguage(language)) > 0:
-                self.languageCombo.addItem(QLocale.languageToString(language), language)
+                self.languageCombo.addItem(
+                    QLocale.languageToString(language), language)
         self.languageCombo.model().sort(0)
         self.languageCombo.insertSeparator(0)
         self.languageCombo.insertItem(0, QLocale.languageToString(0), 0)
-        index = self.languageCombo.findData(Preferences.getHelp("SearchLanguage"))
+        index = self.languageCombo.findData(
+            Preferences.getHelp("SearchLanguage"))
         if index > -1:
             self.languageCombo.setCurrentIndex(index)
         
@@ -264,7 +268,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
     @pyqtSlot(int)
     def on_startupCombo_currentIndexChanged(self, index):
         """
-        Private slot to enable elements depending on the selected startup entry.
+        Private slot to enable elements depending on the selected startup
+        entry.
         
         @param index index of the selected entry (integer)
         """

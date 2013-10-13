@@ -48,7 +48,8 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if self.proc is not None and \
            self.proc.state() != QProcess.NotRunning:
@@ -68,7 +69,8 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         if Preferences.getVCS("AutoClose") and \
            self.normal and \

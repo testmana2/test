@@ -9,8 +9,8 @@ Module implementing the bookmarks manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, QByteArray, \
-    QBuffer, QIODevice, QXmlStreamReader, QDate, QDateTime, QFileInfo, QUrl
+from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, \
+    QIODevice, QXmlStreamReader, QDate, QDateTime, QFileInfo, QUrl
 from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication, QDialog
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -33,10 +33,12 @@ class BookmarksManager(QObject):
     """
     Class implementing the bookmarks manager.
     
-    @signal entryAdded(BookmarkNode) emitted after a bookmark node has been added
-    @signal entryRemoved(BookmarkNode, int, BookmarkNode) emitted after a bookmark
-        node has been removed
-    @signal entryChanged(BookmarkNode) emitted after a bookmark node has been changed
+    @signal entryAdded(BookmarkNode) emitted after a bookmark node has been
+        added
+    @signal entryRemoved(BookmarkNode, int, BookmarkNode) emitted after a
+        bookmark node has been removed
+    @signal entryChanged(BookmarkNode) emitted after a bookmark node has been
+        changed
     @signal bookmarksSaved() emitted after the bookmarks were saved
     @signal bookmarksReloaded() emitted after the bookmarks were reloaded
     """
@@ -79,7 +81,8 @@ class BookmarksManager(QObject):
         
         @return name of the bookmark file (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "bookmarks.xbel")
+        return os.path.join(Utilities.getConfigDir(), "browser",
+                            "bookmarks.xbel")
     
     def close(self):
         """
@@ -123,9 +126,8 @@ class BookmarksManager(QObject):
         
         bookmarkFile = self.getFileName()
         if not QFile.exists(bookmarkFile):
-            from .DefaultBookmarks import DefaultBookmarks
-            ba = QByteArray(DefaultBookmarks)
-            bookmarkFile = QBuffer(ba)
+            from . import DefaultBookmarks_rc       # __IGNORE_WARNING__
+            bookmarkFile = QFile(":/DefaultBookmarks.xbel")
             bookmarkFile.open(QIODevice.ReadOnly)
         
         from .XbelReader import XbelReader
@@ -134,14 +136,16 @@ class BookmarksManager(QObject):
         if reader.error() != QXmlStreamReader.NoError:
             E5MessageBox.warning(None,
                 self.trUtf8("Loading Bookmarks"),
-                self.trUtf8("""Error when loading bookmarks on line {0}, column {1}:\n"""
-                            """{2}""")\
+                self.trUtf8(
+                    """Error when loading bookmarks on line {0},"""
+                    """ column {1}:\n {2}""")\
                     .format(reader.lineNumber(),
                             reader.columnNumber(),
                             reader.errorString()))
         
         others = []
-        for index in range(len(self.__bookmarkRootNode.children()) - 1, -1, -1):
+        for index in range(
+                len(self.__bookmarkRootNode.children()) - 1, -1, -1):
             node = self.__bookmarkRootNode.children()[index]
             if node.type() == BookmarkNode.Folder:
                 if (node.title == self.trUtf8("Toolbar Bookmarks") or \
@@ -163,13 +167,15 @@ class BookmarksManager(QObject):
             raise RuntimeError("Error loading bookmarks.")
         
         if self.__toolbar is None:
-            self.__toolbar = BookmarkNode(BookmarkNode.Folder, self.__bookmarkRootNode)
+            self.__toolbar = BookmarkNode(BookmarkNode.Folder,
+                                          self.__bookmarkRootNode)
             self.__toolbar.title = self.trUtf8(BOOKMARKBAR)
         else:
             self.__bookmarkRootNode.add(self.__toolbar)
         
         if self.__menu is None:
-            self.__menu = BookmarkNode(BookmarkNode.Folder, self.__bookmarkRootNode)
+            self.__menu = BookmarkNode(BookmarkNode.Folder,
+                                       self.__bookmarkRootNode)
             self.__menu.title = self.trUtf8(BOOKMARKMENU)
         else:
             self.__bookmarkRootNode.add(self.__menu)
@@ -216,7 +222,8 @@ class BookmarksManager(QObject):
         if not self.__loaded:
             return
         
-        self.setTimestamp(node,  BookmarkNode.TsAdded, QDateTime.currentDateTime())
+        self.setTimestamp(node,  BookmarkNode.TsAdded,
+                          QDateTime.currentDateTime())
         
         command = InsertBookmarksCommand(self, parent, node, row)
         self.__commands.push(command)
@@ -394,9 +401,11 @@ class BookmarksManager(QObject):
             if len(bmNames) == len(bmFiles):
                 convertedRootNode = BookmarkNode(BookmarkNode.Folder)
                 convertedRootNode.title = self.trUtf8("Converted {0}")\
-                    .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
+                    .format(QDate.currentDate().toString(
+                        Qt.SystemLocaleShortDate))
                 for i in range(len(bmNames)):
-                    node = BookmarkNode(BookmarkNode.Bookmark, convertedRootNode)
+                    node = BookmarkNode(BookmarkNode.Bookmark,
+                                        convertedRootNode)
                     node.title = bmNames[i]
                     url = QUrl(bmFiles[i])
                     if not url.scheme():
@@ -446,7 +455,8 @@ class BookmarksManager(QObject):
         Private method get a bookmark node for a given URL.
         
         @param url URL of the bookmark to search for (string)
-        @param startNode reference to the node to start searching (BookmarkNode)
+        @param startNode reference to the node to start searching
+            (BookmarkNode)
         @return bookmark node for the given url (BookmarkNode)
         """
         bm = None
@@ -488,7 +498,8 @@ class BookmarksManager(QObject):
         Private method get a list of bookmark nodes for a given URL.
         
         @param url URL of the bookmarks to search for (string)
-        @param startNode reference to the node to start searching (BookmarkNode)
+        @param startNode reference to the node to start searching
+            (BookmarkNode)
         @return list of bookmark nodes for the given url (list of BookmarkNode)
         """
         bm = []
@@ -509,7 +520,8 @@ class RemoveBookmarksCommand(QUndoCommand):
         """
         Constructor
         
-        @param bookmarksManager reference to the bookmarks manager (BookmarksManager)
+        @param bookmarksManager reference to the bookmarks manager
+            (BookmarksManager)
         @param parent reference to the parent node (BookmarkNode)
         @param row row number of bookmark (integer)
         """
@@ -536,7 +548,8 @@ class RemoveBookmarksCommand(QUndoCommand):
         Public slot to perform the redo action.
         """
         self._parent.remove(self._node)
-        self._bookmarksManager.entryRemoved.emit(self._parent, self._row, self._node)
+        self._bookmarksManager.entryRemoved.emit(
+            self._parent, self._row, self._node)
 
 
 class InsertBookmarksCommand(RemoveBookmarksCommand):
@@ -547,13 +560,15 @@ class InsertBookmarksCommand(RemoveBookmarksCommand):
         """
         Constructor
         
-        @param bookmarksManager reference to the bookmarks manager (BookmarksManager)
+        @param bookmarksManager reference to the bookmarks manager
+            (BookmarksManager)
         @param parent reference to the parent node (BookmarkNode)
         @param node reference to the node to be inserted (BookmarkNode)
         @param row row number of bookmark (integer)
         """
         RemoveBookmarksCommand.__init__(self, bookmarksManager, parent, row)
-        self.setText(QApplication.translate("BookmarksManager", "Insert Bookmark"))
+        self.setText(QApplication.translate(
+            "BookmarksManager", "Insert Bookmark"))
         self._node = node
     
     def undo(self):
@@ -577,7 +592,8 @@ class ChangeBookmarkCommand(QUndoCommand):
         """
         Constructor
         
-        @param bookmarksManager reference to the bookmarks manager (BookmarksManager)
+        @param bookmarksManager reference to the bookmarks manager
+            (BookmarksManager)
         @param node reference to the node to be changed (BookmarkNode)
         @param newValue new value to be set (string)
         @param title flag indicating a change of the title (True) or
@@ -592,10 +608,12 @@ class ChangeBookmarkCommand(QUndoCommand):
         
         if self._title:
             self._oldValue = self._node.title
-            self.setText(QApplication.translate("BookmarksManager", "Name Change"))
+            self.setText(QApplication.translate(
+                "BookmarksManager", "Name Change"))
         else:
             self._oldValue = self._node.url
-            self.setText(QApplication.translate("BookmarksManager", "Address Change"))
+            self.setText(QApplication.translate(
+                "BookmarksManager", "Address Change"))
     
     def undo(self):
         """

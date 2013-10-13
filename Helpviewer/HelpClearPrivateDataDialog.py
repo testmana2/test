@@ -29,10 +29,10 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
         """
         Public method to get the data from the dialog.
         
-        @return tuple with flags indicating which data to clear (browsing history,
-            search history, favicons, disk cache, cookies, passwords, web
-            databases, downloads, flash) and the selected history period in milliseconds
-            (tuple of booleans and integer)
+        @return tuple with flags indicating which data to clear
+            (browsing history, search history, favicons, disk cache, cookies,
+            passwords, web databases, downloads, flash) and the selected
+            history period in milliseconds (tuple of booleans and integer)
         """
         index = self.historyCombo.currentIndex()
         if index == 0:

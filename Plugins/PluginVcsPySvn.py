@@ -30,7 +30,8 @@ pluginTypename = "PySvn"
 className = "VcsPySvnPlugin"
 packageName = "__core__"
 shortDescription = "Implements the PySvn version control interface."
-longDescription = """This plugin provides the PySvn version control interface."""
+longDescription = \
+    """This plugin provides the PySvn version control interface."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -69,8 +70,8 @@ def getVcsSystemIndicator():
     """
     Public function to get the indicators for this version control system.
     
-    @return dictionary with indicator as key and a tuple with the vcs name (string)
-        and vcs display string (string)
+    @return dictionary with indicator as key and a tuple with the vcs name
+        (string) and vcs display string (string)
     """
     global pluginTypename
     data = {}
@@ -102,7 +103,8 @@ def createConfigurationPage(configDlg):
     @return reference to the configuration page
     """
     global subversionCfgPluginObject
-    from VcsPlugins.vcsPySvn.ConfigurationPage.SubversionPage import SubversionPage
+    from VcsPlugins.vcsPySvn.ConfigurationPage.SubversionPage import \
+        SubversionPage
     if subversionCfgPluginObject is None:
         subversionCfgPluginObject = VcsPySvnPlugin(None)
     page = SubversionPage(subversionCfgPluginObject)
@@ -113,7 +115,8 @@ def getConfigData():
     """
     Module function returning data as required by the configuration dialog.
     
-    @return dictionary with key "zzz_subversionPage" containing the relevant data
+    @return dictionary with key "zzz_subversionPage" containing the relevant
+    data
     """
     return {
         "zzz_subversionPage": \
@@ -128,7 +131,8 @@ def prepareUninstall():
     """
     Module function to prepare for an uninstallation.
     """
-    if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsSubversion"):
+    if not e5App().getObject("PluginManager").isPluginLoaded(
+            "PluginVcsSubversion"):
         Preferences.Prefs.settings.remove("Subversion")
     
 
@@ -154,8 +158,8 @@ class VcsPySvnPlugin(QObject):
         from VcsPlugins.vcsPySvn.ProjectHelper import SvnProjectHelper
         self.__projectHelperObject = SvnProjectHelper(None, None)
         try:
-            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject,
-                                         pluginType)
+            e5App().registerPluginObject(
+                pluginTypename, self.__projectHelperObject, pluginType)
         except KeyError:
             pass    # ignore duplicate registration
         readShortcuts(pluginName=pluginTypename)

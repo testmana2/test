@@ -73,7 +73,8 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         """
         msg = ""
         if eventDict["action"] == pysvn.wc_notify_action.update_completed:
-            msg = self.trUtf8("Revision {0}.\n").format(eventDict["revision"].number)
+            msg = self.trUtf8("Revision {0}.\n").format(
+                eventDict["revision"].number)
         elif eventDict["path"] != "" and \
              eventDict["action"] in svnNotifyActionMap and \
              svnNotifyActionMap[eventDict["action"]] is not None:
@@ -85,10 +86,12 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
                         mime)
             if '.e4p' in eventDict["path"]:
                 self.__hasAddOrDelete = True
-            if eventDict["action"] in \
-               [pysvn.wc_notify_action.add, pysvn.wc_notify_action.commit_added,
-                pysvn.wc_notify_action.commit_deleted, pysvn.wc_notify_action.delete,
-                pysvn.wc_notify_action.update_add, pysvn.wc_notify_action.update_delete]:
+            if eventDict["action"] in [pysvn.wc_notify_action.add,
+                                       pysvn.wc_notify_action.commit_added,
+                                       pysvn.wc_notify_action.commit_deleted,
+                                       pysvn.wc_notify_action.delete,
+                                       pysvn.wc_notify_action.update_add,
+                                       pysvn.wc_notify_action.update_delete]:
                 self.__hasAddOrDelete = True
         if msg:
             self.showMessage(msg)
@@ -116,7 +119,8 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         
     def finish(self):
         """
-        Public slot called when the process finished or the user pressed the button.
+        Public slot called when the process finished or the user pressed the
+        button.
         """
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)

@@ -29,14 +29,16 @@ class NoCacheHostsDialog(QDialog, Ui_NoCacheHostsDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.__model = QStringListModel(Preferences.getHelp("NoCacheHosts"), self)
+        self.__model = QStringListModel(
+            Preferences.getHelp("NoCacheHosts"), self)
         self.__model.sort(0)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setFilterCaseSensitivity(Qt.CaseInsensitive)
         self.__proxyModel.setSourceModel(self.__model)
         self.noCacheList.setModel(self.__proxyModel)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.removeButton.clicked[()].connect(self.noCacheList.removeSelected)
         self.removeAllButton.clicked[()].connect(self.noCacheList.removeAll)

@@ -43,7 +43,8 @@ class Previewer(QWidget, Ui_Previewer):
         
         self.__firstShow = True
         
-        self.previewView.page().setLinkDelegationPolicy(QWebPage.DelegateAllLinks)
+        self.previewView.page().setLinkDelegationPolicy(
+            QWebPage.DelegateAllLinks)
         
         # Don't update too often because the UI might become sluggish
         self.__typingTimer = QTimer()
@@ -75,9 +76,12 @@ class Previewer(QWidget, Ui_Previewer):
         """
         super().show()
         if self.__firstShow:
-            self.__splitter.restoreState(Preferences.getUI("PreviewSplitterState"))
-            self.jsCheckBox.setChecked(Preferences.getUI("ShowFilePreviewJS"))
-            self.ssiCheckBox.setChecked(Preferences.getUI("ShowFilePreviewSSI"))
+            self.__splitter.restoreState(
+                Preferences.getUI("PreviewSplitterState"))
+            self.jsCheckBox.setChecked(
+                Preferences.getUI("ShowFilePreviewJS"))
+            self.ssiCheckBox.setChecked(
+                Preferences.getUI("ShowFilePreviewSSI"))
             self.__firstShow = False
         self.__typingTimer.start()
     
@@ -145,7 +149,8 @@ class Previewer(QWidget, Ui_Previewer):
             self.hide()
             return
         
-        if Preferences.getUI("ShowFilePreview") and self.__isPreviewable(editor):
+        if Preferences.getUI("ShowFilePreview") and \
+                self.__isPreviewable(editor):
             self.show()
             self.__runProcessingThread()
         else:
@@ -183,7 +188,8 @@ class Previewer(QWidget, Ui_Previewer):
     
     def __isPreviewable(self, editor):
         """
-        Private method to check, if a preview can be shown for the given editor.
+        Private method to check, if a preview can be shown for the given
+        editor.
         
         @param editor reference to an editor (Editor)
         @return flag indicating if a preview can be shown (boolean)
@@ -194,7 +200,8 @@ class Previewer(QWidget, Ui_Previewer):
                     os.path.splitext(editor.getFileName())[1][1:])
                 return extension in \
                     Preferences.getEditor("PreviewHtmlFileNameExtensions") + \
-                    Preferences.getEditor("PreviewMarkdownFileNameExtensions") + \
+                    Preferences.getEditor(
+                        "PreviewMarkdownFileNameExtensions") + \
                     Preferences.getEditor("PreviewRestFileNameExtensions")
             elif editor.getLanguage() == "HTML":
                 return True
@@ -226,8 +233,8 @@ class Previewer(QWidget, Ui_Previewer):
                 Preferences.getEditor("PreviewRestFileNameExtensions"):
                 language = "ReST"
             else:
-                self.__setHtml(fn,
-                    self.trUtf8("<p>No preview available for this type of file.</p>"))
+                self.__setHtml(fn, self.trUtf8(
+                    "<p>No preview available for this type of file.</p>"))
                 return
             
             if fn:
@@ -245,7 +252,8 @@ class Previewer(QWidget, Ui_Previewer):
 
     def __setHtml(self, filePath, html):
         """
-        Private method to set the HTML to the view and restore the scroll bars positions.
+        Private method to set the HTML to the view and restore the scroll bars
+        positions.
         
         @param filePath file path of the previewed editor (string)
         @param html processed HTML text ready to be shown (string)
@@ -299,13 +307,16 @@ class Previewer(QWidget, Ui_Previewer):
             return
         
         frame = self.previewView.page().mainFrame()
-        frame.setScrollPosition(self.__scrollBarPositions[self.__previewedPath])
+        frame.setScrollPosition(
+            self.__scrollBarPositions[self.__previewedPath])
         
         if self.__hScrollBarAtEnd[self.__previewedPath]:
-            frame.setScrollBarValue(Qt.Horizontal, frame.scrollBarMaximum(Qt.Horizontal))
+            frame.setScrollBarValue(
+                Qt.Horizontal, frame.scrollBarMaximum(Qt.Horizontal))
         
         if self.__vScrollBarAtEnd[self.__previewedPath]:
-            frame.setScrollBarValue(Qt.Vertical, frame.scrollBarMaximum(Qt.Vertical))
+            frame.setScrollBarValue(
+                Qt.Vertical, frame.scrollBarMaximum(Qt.Vertical))
     
     @pyqtSlot(QUrl)
     def on_previewView_linkClicked(self, url):
@@ -322,8 +333,8 @@ class PreviewProcessingThread(QThread):
     Class implementing a thread to process some text into HTML usable by the
     previewer view.
     
-    @signal htmlReady(str,str) emitted with the file name and processed HTML to signal
-            the availability of the processed HTML
+    @signal htmlReady(str,str) emitted with the file name and processed HTML
+        to signal the availability of the processed HTML
     """
     htmlReady = pyqtSignal(str, str)
     
@@ -344,7 +355,8 @@ class PreviewProcessingThread(QThread):
         @param filePath file path of the text (string)
         @param language language of the text (string)
         @param text text to be processed (string)
-        @param ssiEnabled flag indicating to do some (limited) SSI processing (boolean)
+        @param ssiEnabled flag indicating to do some (limited) SSI processing
+            (boolean)
         @param rootPath root path to be used for SSI processing (str)
         """
         with self.__lock:
@@ -371,7 +383,8 @@ class PreviewProcessingThread(QThread):
                 rootPath = self.__rootPath
                 self.__haveData = False
             
-            html = self.__getHtml(language, text, ssiEnabled, filePath, rootPath)
+            html = self.__getHtml(language, text, ssiEnabled, filePath,
+                                  rootPath)
             
             with self.__lock:
                 if not self.__haveData:
@@ -402,7 +415,8 @@ class PreviewProcessingThread(QThread):
         elif language == "ReST":
             return self.__convertReST(text)
         else:
-            return self.trUtf8("<p>No preview available for this type of file.</p>")
+            return self.trUtf8(
+                "<p>No preview available for this type of file.</p>")
     
     def __processSSI(self, txt, filename, root):
         """
@@ -411,7 +425,8 @@ class PreviewProcessingThread(QThread):
         Note: Only a limited subset of SSI statements are supported.
         
         @param txt text to be processed (string)
-        @param filename name of the file associated with the given text (string)
+        @param filename name of the file associated with the given text
+            (string)
         @param root directory of the document root (string)
         @return processed HTML (string)
         """
@@ -461,11 +476,14 @@ class PreviewProcessingThread(QThread):
             import docutils.core    # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
         except ImportError:
             return self.trUtf8(
-                """<p>ReStructuredText preview requires the <b>python-docutils</b> """
-                """package.<br/>Install it with your package manager or see """
-                """<a href="http://pypi.python.org/pypi/docutils">this page.</a></p>""")
+                """<p>ReStructuredText preview requires the"""
+                """ <b>python-docutils</b> package.<br/>Install it with"""
+                """ your package manager or see"""
+                """ <a href="http://pypi.python.org/pypi/docutils">"""
+                """this page.</a></p>""")
         
-        return docutils.core.publish_string(text, writer_name='html').decode("utf-8")
+        return docutils.core.publish_string(text, writer_name='html')\
+            .decode("utf-8")
     
     def __convertMarkdown(self, text):
         """
@@ -493,22 +511,23 @@ class PreviewProcessingThread(QThread):
         
         # version 2.0 supports only extension names, not instances
         if markdown.version_info[0] > 2 or \
-           (markdown.version_info[0] == 2 and markdown.version_info[1] > 0):
-            
+                (markdown.version_info[0] == 2 and 
+                 markdown.version_info[1] > 0):
             class _StrikeThroughExtension(markdown.Extension):
                 """
                 Class is placed here, because it depends on imported markdown,
                 and markdown import is lazy.
                 
-                (see
-                <a href="http://achinghead.com/python-markdown-adding-insert-delete.html">
-                this page for details</a>)
+                (see http://achinghead.com/
+                python-markdown-adding-insert-delete.html this page for
+                details)
                 """
                 DEL_RE = r'(~~)(.*?)~~'
 
                 def extendMarkdown(self, md, md_globals):
                     # Create the del pattern
-                    del_tag = markdown.inlinepatterns.SimpleTagPattern(self.DEL_RE, 'del')
+                    del_tag = markdown.inlinepatterns.SimpleTagPattern(
+                        self.DEL_RE, 'del')
                     # Insert del pattern into markdown parser
                     md.inlinePatterns.add('del', del_tag, '>not_strong')
             
@@ -518,6 +537,6 @@ class PreviewProcessingThread(QThread):
             return markdown.markdown(text,  extensions + ['mathjax'])
         except (ImportError, ValueError):
             # markdown raises ValueError or ImportError, depends on version
-            # It is not clear, how to distinguish missing mathjax from other errors.
-            # So keep going without mathjax.
+            # It is not clear, how to distinguish missing mathjax from other
+            # errors. So keep going without mathjax.
             return markdown.markdown(text, extensions)

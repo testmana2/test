@@ -9,10 +9,10 @@ Module implementing a dialog to generate code for a Qt4/Qt5 dialog.
 
 import os
 
-from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, QMetaMethod, \
-    qVersion
-from PyQt4.QtGui import QWidget, QSortFilterProxyModel, QStandardItemModel, QDialog, \
-    QBrush, QStandardItem, QDialogButtonBox, QAction
+from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, \
+    QMetaMethod, qVersion
+from PyQt4.QtGui import QWidget, QSortFilterProxyModel, QStandardItemModel, \
+    QDialog, QBrush, QStandardItem, QDialogButtonBox, QAction
 from PyQt4 import uic
 
 from E5Gui.E5Application import e5App
@@ -31,9 +31,11 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
     """
     Class implementing a dialog to generate code for a Qt4/Qt5 dialog.
     """
-    DialogClasses = {"QDialog", "QWidget", "QMainWindow", "QWizard", "QWizardPage",
+    DialogClasses = {
+        "QDialog", "QWidget", "QMainWindow", "QWizard", "QWizardPage",
         "QDockWidget", "QFrame", "QGroupBox", "QScrollArea", "QMdiArea",
-        "QTabWidget", "QToolBox", "QStackedWidget"}
+        "QTabWidget", "QToolBox", "QStackedWidget"
+    }
     Separator = 25 * "="
     
     def __init__(self, formName, project, parent=None):
@@ -55,7 +57,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         self.formFile = formName
         filename, ext = os.path.splitext(self.formFile)
-        self.srcFile = '{0}{1}'.format(filename, self.project.getDefaultSourceExtension())
+        self.srcFile = '{0}{1}'.format(
+            filename, self.project.getDefaultSourceExtension())
         
         self.slotsModel = QStandardItemModel()
         self.proxyModel = QSortFilterProxyModel()
@@ -81,8 +84,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 else:
                     exts = None
                 from Utilities import ModuleParser
-                self.__module = ModuleParser.readModule(self.srcFile, extensions=exts,
-                                                        caching=False)
+                self.__module = ModuleParser.readModule(
+                    self.srcFile, extensions=exts, caching=False)
             except ImportError:
                 pass
         
@@ -92,7 +95,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             classesList = []
             vagueClassesList = []
             for cls in list(self.__module.classes.values()):
-                if not set(cls.super).isdisjoint(CreateDialogCodeDialog.DialogClasses):
+                if not set(cls.super).isdisjoint(
+                        CreateDialogCodeDialog.DialogClasses):
                     classesList.append(cls.name)
                 else:
                     vagueClassesList.append(cls.name)
@@ -100,7 +104,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             self.classNameCombo.addItems(classesList)
             if vagueClassesList:
                 if classesList:
-                    self.classNameCombo.addItem(CreateDialogCodeDialog.Separator)
+                    self.classNameCombo.addItem(
+                        CreateDialogCodeDialog.Separator)
                 self.classNameCombo.addItems(sorted(vagueClassesList))
         
         if os.path.exists(self.srcFile) and \
@@ -109,8 +114,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             self.__initError = True
             E5MessageBox.critical(self,
                 self.trUtf8("Create Dialog Code"),
-                self.trUtf8("""The file <b>{0}</b> exists but does not contain"""
-                            """ any classes.""").format(self.srcFile))
+                self.trUtf8(
+                    """The file <b>{0}</b> exists but does not contain"""
+                    """ any classes.""").format(self.srcFile))
         
         self.okButton.setEnabled(self.classNameCombo.count() > 0)
         
@@ -136,8 +142,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("uic error"),
-                self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, str(err)))
+                self.trUtf8(
+                    """<p>There was an error loading the form <b>{0}</b>"""
+                    """.</p><p>{1}</p>""").format(self.formFile, str(err)))
             return ""
         
     def __className(self):
@@ -152,8 +159,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("uic error"),
-                self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, str(err)))
+                self.trUtf8(
+                    """<p>There was an error loading the form <b>{0}</b>"""
+                    """.</p><p>{1}</p>""").format(self.formFile, str(err)))
             return ""
         
     def __signatures(self):
@@ -172,8 +180,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             for meth in list(cls.methods.values()):
                 if meth.name.startswith("on_"):
                     if meth.pyqtSignature is not None:
-                        sig = ", ".join([bytes(QMetaObject.normalizedType(t)).decode() \
-                                         for t in meth.pyqtSignature.split(",")])
+                        sig = ", ".join(
+                            [bytes(QMetaObject.normalizedType(t)).decode() 
+                             for t in meth.pyqtSignature.split(",")])
                         signatures.append("{0}({1})".format(meth.name, sig))
                     else:
                         signatures.append(meth.name)
@@ -198,7 +207,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             mapped = mapped.replace("*", "")
             
             # 3. replace QString and QStringList
-            mapped = mapped.replace("QStringList", "list").replace("QString", "str")
+            mapped = mapped.replace("QStringList", "list")\
+                           .replace("QString", "str")
             
             # 4. replace double by float
             mapped = mapped.replace("double", "float")
@@ -233,7 +243,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     if metaMethod.methodType() == QMetaMethod.Signal:
                         if qVersion() >= "5.0.0":
                             itm2 = QStandardItem("on_{0}_{1}".format(
-                                name, bytes(metaMethod.methodSignature()).decode()))
+                                name,
+                                bytes(metaMethod.methodSignature()).decode()))
                         else:
                             itm2 = QStandardItem("on_{0}_{1}".format(
                                 name, metaMethod.signature()))
@@ -241,16 +252,19 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         if self.__module is not None:
                             if qVersion() >= "5.0.0":
                                 method = "on_{0}_{1}".format(
-                                    name, bytes(metaMethod.methodSignature()).decode()\
-                                        .split("(")[0])
+                                    name,
+                                    bytes(metaMethod.methodSignature())\
+                                        .decode().split("(")[0])
                             else:
                                 method = "on_{0}_{1}".format(
                                     name, metaMethod.signature().split("(")[0])
                             method2 = "{0}({1})".format(method,
-                                ", ".join([self.__mapType(t)
-                                           for t in metaMethod.parameterTypes()]))
+                                ", ".join(
+                                    [self.__mapType(t)
+                                     for t in metaMethod.parameterTypes()]))
                             
-                            if method2 in signatureList or method in signatureList:
+                            if method2 in signatureList or \
+                                    method in signatureList:
                                 itm2.setFlags(Qt.ItemFlags(Qt.ItemIsEnabled))
                                 itm2.setCheckState(Qt.Checked)
                                 itm2.setForeground(QBrush(Qt.blue))
@@ -267,26 +281,29 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                     parameterNames[index] = \
                                         QByteArray("p{0:d}".format(index))
                         methNamesSig = \
-                            ", ".join([bytes(n).decode() for n in parameterNames])
+                            ", ".join(
+                                [bytes(n).decode() for n in parameterNames])
                         
                         if methNamesSig:
                             if qVersion() >= "5.0.0":
-                                pythonSignature = "on_{0}_{1}(self, {2})".format(
-                                    name,
-                                    bytes(metaMethod.methodSignature()).decode()\
-                                        .split("(")[0],
-                                    methNamesSig)
+                                pythonSignature = \
+                                    "on_{0}_{1}(self, {2})".format(
+                                        name,
+                                        bytes(metaMethod.methodSignature())\
+                                            .decode().split("(")[0],
+                                        methNamesSig)
                             else:
-                                pythonSignature = "on_{0}_{1}(self, {2})".format(
-                                    name,
-                                    metaMethod.signature().split("(")[0],
-                                    methNamesSig)
+                                pythonSignature = \
+                                        "on_{0}_{1}(self, {2})".format(
+                                        name,
+                                        metaMethod.signature().split("(")[0],
+                                        methNamesSig)
                         else:
                             if qVersion() >= "5.0.0":
                                 pythonSignature = "on_{0}_{1}(self)".format(
                                     name,
-                                    bytes(metaMethod.methodSignature()).decode()\
-                                        .split("(")[0])
+                                    bytes(metaMethod.methodSignature())\
+                                        .decode().split("(")[0])
                             else:
                                 pythonSignature = "on_{0}_{1}(self)".format(
                                     name,
@@ -305,8 +322,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("uic error"),
-                self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, str(err)))
+                self.trUtf8(
+                    """<p>There was an error loading the form <b>{0}</b>"""
+                    """.</p><p>{1}</p>""").format(self.formFile, str(err)))
         
     def __generateCode(self):
         """
@@ -342,40 +360,48 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             try:
                 if self.project.getProjectLanguage() == "Python2":
                     if self.project.getProjectType() == "PySide":
-                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                                "impl_pyside.py2.tmpl")
+                        tmplName = os.path.join(
+                            getConfig('ericCodeTemplatesDir'),
+                            "impl_pyside.py2.tmpl")
                     elif self.project.getProjectType() == "PyQt5":
-                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                                "impl_pyqt5.py2.tmpl")
+                        tmplName = os.path.join(
+                            getConfig('ericCodeTemplatesDir'),
+                            "impl_pyqt5.py2.tmpl")
                     else:
-                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                                "impl_pyqt.py2.tmpl")
+                        tmplName = os.path.join(
+                            getConfig('ericCodeTemplatesDir'),
+                            "impl_pyqt.py2.tmpl")
                 else:
                     if self.project.getProjectType() == "PySide":
-                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                                "impl_pyside.py.tmpl")
+                        tmplName = os.path.join(
+                            getConfig('ericCodeTemplatesDir'),
+                            "impl_pyside.py.tmpl")
                     elif self.project.getProjectType() == "PyQt5":
-                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                                "impl_pyqt5.py.tmpl")
+                        tmplName = os.path.join(
+                            getConfig('ericCodeTemplatesDir'),
+                            "impl_pyqt5.py.tmpl")
                     else:
-                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                                "impl_pyqt.py.tmpl")
+                        tmplName = os.path.join(
+                            getConfig('ericCodeTemplatesDir'),
+                            "impl_pyqt.py.tmpl")
                 tmplFile = open(tmplName, 'r', encoding="utf-8")
                 template = tmplFile.read()
                 tmplFile.close()
             except IOError as why:
                 E5MessageBox.critical(self,
                     self.trUtf8("Code Generation"),
-                    self.trUtf8("""<p>Could not open the code template file "{0}".</p>"""
-                                """<p>Reason: {1}</p>""")\
+                    self.trUtf8(
+                        """<p>Could not open the code template file"""
+                        """ "{0}".</p><p>Reason: {1}</p>""")\
                         .format(tmplName, str(why)))
                 return
             
             objName = self.__objectName()
             if objName:
                 template = template\
-                    .replace("$FORMFILE$",
-                             os.path.splitext(os.path.basename(self.formFile))[0])\
+                    .replace(
+                        "$FORMFILE$",
+                        os.path.splitext(os.path.basename(self.formFile))[0])\
                     .replace("$FORMCLASS$", objName)\
                     .replace("$CLASSNAME$", self.classNameCombo.currentText())\
                     .replace("$SUPERCLASS$", self.__className())
@@ -399,8 +425,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             except IOError as why:
                 E5MessageBox.critical(self,
                     self.trUtf8("Code Generation"),
-                    self.trUtf8("""<p>Could not open the source file "{0}".</p>"""
-                                """<p>Reason: {1}</p>""")\
+                    self.trUtf8(
+                        """<p>Could not open the source file "{0}".</p>"""
+                        """<p>Reason: {1}</p>""")\
                         .format(self.srcFile, str(why)))
                 return
             
@@ -444,12 +471,14 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     slotsCode.append('{0}\n'.format(indentStr))
                     slotsCode.append('{0}{1}\n'.format(
                         indentStr,
-                        pyqtSignatureFormat.format(child.data(pyqtSignatureRole))))
+                        pyqtSignatureFormat.format(
+                            child.data(pyqtSignatureRole))))
                     slotsCode.append('{0}def {1}:\n'.format(
                         indentStr, child.data(pythonSignatureRole)))
                     slotsCode.append('{0}"""\n'.format(indentStr * 2))
-                    slotsCode.append('{0}Slot documentation goes here.\n'.format(
-                        indentStr * 2))
+                    slotsCode.append(
+                        '{0}Slot documentation goes here.\n'.format(
+                            indentStr * 2))
                     slotsCode.append('{0}"""\n'.format(indentStr * 2))
                     slotsCode.append('{0}# {1}: not implemented yet\n'.format(
                         indentStr * 2, "TODO"))
@@ -488,7 +517,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         @param index index of the activated item (integer)
         """
-        if self.classNameCombo.currentText() == CreateDialogCodeDialog.Separator:
+        if (self.classNameCombo.currentText() == 
+                CreateDialogCodeDialog.Separator):
             self.okButton.setEnabled(False)
             self.filterEdit.clear()
             self.slotsModel.clear()
@@ -531,7 +561,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         """
         Private slot to handle the buttonBox clicked signal.
         
-        @param button reference to the button that was clicked (QAbstractButton)
+        @param button reference to the button that was clicked
+            (QAbstractButton)
         """
         if button == self.okButton:
             self.__generateCode()

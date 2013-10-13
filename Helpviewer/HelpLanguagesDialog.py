@@ -30,7 +30,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         
         self.__model = QStringListModel()
         self.languagesList.setModel(self.__model)
-        self.languagesList.selectionModel().currentChanged.connect(self.__currentChanged)
+        self.languagesList.selectionModel().currentChanged.connect(
+            self.__currentChanged)
         
         languages = Preferences.toList(Preferences.Prefs.settings.value(
             "Help/AcceptLanguages", self.defaultAcceptLanguages()))
@@ -53,7 +54,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         self.removeButton.setEnabled(current.isValid())
         row = current.row()
         self.upButton.setEnabled(row > 0)
-        self.downButton.setEnabled(row != -1 and row < self.__model.rowCount() - 1)
+        self.downButton.setEnabled(
+            row != -1 and row < self.__model.rowCount() - 1)
 
     @pyqtSlot()
     def on_upButton_clicked(self):
@@ -82,7 +84,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
     @pyqtSlot()
     def on_removeButton_clicked(self):
         """
-        Private slot to remove a language from the list of acceptable languages.
+        Private slot to remove a language from the list of acceptable
+        languages.
         """
         currentRow = self.languagesList.currentIndex().row()
         self.__model.removeRow(currentRow)
@@ -116,8 +119,11 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
     @classmethod
     def httpString(cls, languages):
         """
-        Class method to convert a list of acceptable languages into a byte array that
-        can be sent along with the Accept-Language http header (see RFC 2616).
+        Class method to convert a list of acceptable languages into a byte
+        array.
+       
+        The byte array can be sent along with the Accept-Language http header
+        (see RFC 2616).
         
         @param languages list of acceptable languages (list of strings)
         @return converted list (QByteArray)
@@ -168,7 +174,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             languageString = "{0}/{1} [{2}]"\
                 .format(QLocale.languageToString(language),
                         QLocale.countryToString(country),
-                        '-'.join(QLocale(language, country).name().split('_')).lower())
+                        '-'.join(QLocale(language, country).name()
+                                 .split('_')).lower())
             if languageString not in allLanguages:
                 allLanguages.append(languageString)
         

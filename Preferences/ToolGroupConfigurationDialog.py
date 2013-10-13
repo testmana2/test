@@ -61,7 +61,8 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
                 self.trUtf8("You have to give a name for the group to add."))
             return
         
-        if len(self.groupsList.findItems(groupName, Qt.MatchFlags(Qt.MatchExactly))):
+        if len(self.groupsList.findItems(
+                groupName, Qt.MatchFlags(Qt.MatchExactly))):
             E5MessageBox.critical(self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")\
@@ -88,7 +89,8 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
                 self.trUtf8("You have to give a name for the group to add."))
             return
         
-        if len(self.groupsList.findItems(groupName, Qt.MatchFlags(Qt.MatchExactly))):
+        if len(self.groupsList.findItems(
+                groupName, Qt.MatchFlags(Qt.MatchExactly))):
             E5MessageBox.critical(self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")\

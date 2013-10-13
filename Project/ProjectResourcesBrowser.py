@@ -31,12 +31,12 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     A class used to display the resources part of the project.
     
     @signal appendStderr(str) emitted after something was received from
-            a QProcess on stderr
+        a QProcess on stderr
     @signal sourceFile(str) emitted to open a resources file in an editor
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
-            from the project
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+    @signal closeSourceWindow(str) emitted after a file has been
+        removed/deleted from the project
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown.
+        The name of the menu and a reference to the menu are given.
     """
     appendStderr = pyqtSignal(str)
     showMenu = pyqtSignal(str, QMenu)
@@ -51,7 +51,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         @param project reference to the project object
         @param parent parent widget of this browser (QWidget)
         """
-        ProjectBaseBrowser.__init__(self, project, ProjectBrowserResourceType, parent)
+        ProjectBaseBrowser.__init__(self, project, ProjectBrowserResourceType,
+                                    parent)
         
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
@@ -60,8 +61,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         self.setWhatsThis(self.trUtf8(
             """<b>Project Resources Browser</b>"""
-            """<p>This allows to easily see all resources contained in the current"""
-            """ project. Several actions can be executed via the context menu.</p>"""
+            """<p>This allows to easily see all resources contained in the"""
+            """ current project. Several actions can be executed via the"""
+            """ context menu.</p>"""
         ))
         
         self.compileProc = None
@@ -76,7 +78,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenuActions = []
         
         self.menu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(self.trUtf8('Compile resource'),
                 self.__compileResource)
             self.menu.addAction(self.trUtf8('Compile all resources'),
@@ -100,19 +103,23 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.menu.addSeparator()
         act = self.menu.addAction(self.trUtf8('Rename file'), self._renameFile)
         self.menuActions.append(act)
-        act = self.menu.addAction(self.trUtf8('Remove from project'), self._removeFile)
+        act = self.menu.addAction(
+            self.trUtf8('Remove from project'), self._removeFile)
         self.menuActions.append(act)
         act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.menu.addAction(self.trUtf8('New resource...'), self.__newResource)
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+            self.menu.addAction(
+                self.trUtf8('New resource...'), self.__newResource)
         else:
             if self.hooks["newResource"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get("newResource",
                         self.trUtf8('New resource...')), self.__newResource)
-        self.menu.addAction(self.trUtf8('Add resources...'), self.__addResourceFiles)
+        self.menu.addAction(
+            self.trUtf8('Add resources...'), self.__addResourceFiles)
         self.menu.addAction(self.trUtf8('Add resources directory...'),
             self.__addResourcesDirectory)
         self.menu.addSeparator()
@@ -127,11 +134,13 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.backMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.backMenu.addSeparator()
-            self.backMenu.addAction(self.trUtf8('New resource...'), self.__newResource)
+            self.backMenu.addAction(
+                self.trUtf8('New resource...'), self.__newResource)
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.backMenu.addAction(
@@ -158,7 +167,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             act = self.multiMenu.addAction(self.trUtf8('Compile resources'),
                 self.__compileSelectedResources)
             self.multiMenu.addSeparator()
@@ -174,7 +184,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Expand all directories'),
@@ -185,7 +196,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMenu.addSeparator()
@@ -196,13 +208,17 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMenu.addSeparator()
-        act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
-        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('New resource...'), self.__newResource)
-        self.dirMenu.addAction(self.trUtf8('Add resources...'), self.__addResourceFiles)
+        self.dirMenu.addAction(
+            self.trUtf8('New resource...'), self.__newResource)
+        self.dirMenu.addAction(
+            self.trUtf8('Add resources...'), self.__addResourceFiles)
         self.dirMenu.addAction(self.trUtf8('Add resources directory...'),
             self.__addResourcesDirectory)
         self.dirMenu.addSeparator()
@@ -217,7 +233,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMultiMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMultiMenu.addSeparator()
@@ -238,7 +255,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         
         self.menu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -265,7 +283,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if index.isValid():
                     self._selectSingleItem(index)
                     categories = self.getSelectedItemsCountCategorized(
-                        [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
+                        [ProjectBrowserFileItem,
+                         ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
                         
             bfcnt = categories[str(ProjectBrowserFileItem)]
@@ -454,10 +473,13 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete resources"),
-            self.trUtf8("Do you really want to delete these resources from the project?"),
+            self.trUtf8(
+                "Do you really want to delete these resources from the"
+                " project?"),
             files)
         
         if dlg.exec_() == QDialog.Accepted:
@@ -465,9 +487,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
-    ############################################################################
+    ###########################################################################
     ##  Methods to handle the various compile commands
-    ############################################################################
+    ###########################################################################
     
     def __readStdout(self):
         """
@@ -539,17 +561,21 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if not self.noDialog:
                     E5MessageBox.information(self,
                         self.trUtf8("Resource Compilation"),
-                        self.trUtf8("<p>The compilation of the resource file failed.</p>"
-                            "<p>Reason: {0}</p>").format(str(msg)))
+                        self.trUtf8(
+                            "<p>The compilation of the resource file"
+                            " failed.</p><p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
                 E5MessageBox.information(self,
                     self.trUtf8("Resource Compilation"),
-                    self.trUtf8("The compilation of the resource file failed."))
+                    self.trUtf8(
+                        "The compilation of the resource file failed."))
             else:
-                ui.showNotification(UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
+                ui.showNotification(
+                    UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
                     self.trUtf8("Resource Compilation"),
-                    self.trUtf8("The compilation of the resource file failed."))
+                    self.trUtf8(
+                        "The compilation of the resource file failed."))
         self.compileProc = None
         
     def __compileQRC(self, fn, noDialog=False, progress=None):
@@ -565,13 +591,15 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         args = []
         self.buf = ""
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+                ["Python", "Python2", "Python3"]:
             if self.project.getProjectType() in ["Qt4", "E4Plugin"]:
                 self.rccCompiler = 'pyrcc4'
                 if Utilities.isWindowsPlatform():
                     self.rccCompiler += '.exe'
                 if PYQT_VERSION >= 0x040500:
-                    if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
+                    if self.project.pdata["PROGLANGUAGE"][0] in \
+                            ["Python", "Python2"]:
                         args.append("-py2")
                     else:
                         args.append("-py3")
@@ -580,8 +608,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if Utilities.isWindowsPlatform():
                     self.rccCompiler += '.exe'
             elif self.project.getProjectType() == "PySide":
-                self.rccCompiler = Utilities.generatePySideToolPath('pyside-rcc')
-                if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
+                self.rccCompiler = Utilities.generatePySideToolPath(
+                    'pyside-rcc')
+                if self.project.pdata["PROGLANGUAGE"][0] in \
+                        ["Python", "Python2"]:
                     args.append("-py2")
                 else:
                     args.append("-py3")
@@ -603,12 +633,13 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         fn = os.path.join(self.project.ppath, fn)
         
         dirname, filename = os.path.split(ofn)
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
-            self.compiledFile = os.path.join(dirname,
-                                self.RCFilenameFormatPython.format(filename))
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+                ["Python", "Python2", "Python3"]:
+            self.compiledFile = os.path.join(
+                dirname, self.RCFilenameFormatPython.format(filename))
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.compiledFile = os.path.join(
-                                dirname, self.RCFilenameFormatRuby.format(filename))
+                dirname, self.RCFilenameFormatRuby.format(filename))
         
         args.append(fn)
         self.compileProc.finished.connect(self.__compileQRCDone)
@@ -731,7 +762,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         lbuf = ""
         for line in buf.splitlines():
             line = line.strip()
-            if line.lower().startswith("<file>") or line.lower().startswith("<file "):
+            if line.lower().startswith("<file>") or \
+                    line.lower().startswith("<file "):
                 lbuf = line
             elif lbuf:
                 lbuf = "{0}{1}".format(lbuf, line)
@@ -752,9 +784,11 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         Public method to compile all changed resources to source files.
         """
         if self.hooks["compileChangedResources"] is not None:
-            self.hooks["compileChangedResources"](self.project.pdata["RESOURCES"])
+            self.hooks["compileChangedResources"](
+                self.project.pdata["RESOURCES"])
         else:
-            progress = QProgressDialog(self.trUtf8("Determining changed resources..."),
+            progress = QProgressDialog(
+                self.trUtf8("Determining changed resources..."),
                 None, 0, 100)
             progress.setMinimumDuration(0)
             i = 0
@@ -769,12 +803,12 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if self.project.pdata["PROGLANGUAGE"][0] in \
                    ["Python", "Python2", "Python3"]:
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
-                    ofn = os.path.join(dirname,
-                                       self.RCFilenameFormatPython.format(filename))
+                    ofn = os.path.join(
+                        dirname, self.RCFilenameFormatPython.format(filename))
                 elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
-                    ofn = os.path.join(dirname,
-                                       self.RCFilenameFormatRuby.format(filename))
+                    ofn = os.path.join(
+                        dirname, self.RCFilenameFormatRuby.format(filename))
                 else:
                     return
                 if not os.path.exists(ofn) or \
@@ -787,7 +821,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             QApplication.processEvents()
             
             if changedResources:
-                progress.setLabelText(self.trUtf8("Compiling changed resources..."))
+                progress.setLabelText(
+                    self.trUtf8("Compiling changed resources..."))
                 progress.setMaximum(len(changedResources))
                 i = 0
                 progress.setValue(i)
@@ -812,9 +847,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser.handlePreferencesChanged(self)
     
-    ############################################################################
+    ###########################################################################
     ## Support for hooks below
-    ############################################################################
+    ###########################################################################
     
     def _initHookMethods(self):
         """
@@ -825,8 +860,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         <li>compileResource: takes filename as parameter</li>
         <li>compileAllResources: takes list of filenames as parameter</li>
         <li>compileChangedResources: takes list of filenames as parameter</li>
-        <li>compileSelectedResources: takes list of all form filenames as parameter</li>
-        <li>newResource: takes full directory path of new file as parameter</li>
+        <li>compileSelectedResources: takes list of all form filenames as
+            parameter</li>
+        <li>newResource: takes full directory path of new file as
+            parameter</li>
         </ul>
         
         <b>Note</b>: Filenames are relative to the project directory, if not

@@ -50,7 +50,8 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         if reposURL is None:
             E5MessageBox.critical(self,
                 self.trUtf8("Subversion Error"),
-                self.trUtf8("""The URL of the project repository could not be"""
+                self.trUtf8(
+                    """The URL of the project repository could not be"""
                     """ retrieved from the working copy. The operation will"""
                     """ be aborted"""))
             self.reject()

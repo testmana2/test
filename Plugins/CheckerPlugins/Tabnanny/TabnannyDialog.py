@@ -4,15 +4,16 @@
 #
 
 """
-Module implementing a dialog to show the output of the tabnanny command process.
+Module implementing a dialog to show the output of the tabnanny command
+process.
 """
 
 import os
 import fnmatch
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, QApplication, \
-    QHeaderView
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, \
+    QApplication, QHeaderView
 
 from E5Gui.E5Application import e5App
 
@@ -54,8 +55,9 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         """
         Private method to resort the tree.
         """
-        self.resultList.sortItems(self.resultList.sortColumn(),
-                                  self.resultList.header().sortIndicatorOrder())
+        self.resultList.sortItems(
+            self.resultList.sortColumn(),
+            self.resultList.header().sortIndicatorOrder())
         
     def __createResultItem(self, file, line, sourcecode):
         """
@@ -113,15 +115,19 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         elif os.path.isdir(fn):
             files = []
             for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+                files.extend(
+                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
             for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+                files.extend(
+                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
-        py3files = [f for f in files \
-                    if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files \
-                    if f.endswith(tuple(Preferences.getPython("PythonExtensions")))]
+        py3files = [f for f in files
+                    if f.endswith(
+                        tuple(Preferences.getPython("Python3Extensions")))]
+        py2files = [f for f in files
+                    if f.endswith(
+                        tuple(Preferences.getPython("PythonExtensions")))]
         
         if len(py3files) + len(py2files) > 0:
             self.checkProgress.setMaximum(len(py3files) + len(py2files))
@@ -157,7 +163,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     Preferences.getProject("DeterminePyFromProject") and \
                     self.__project.isOpen() and \
                     self.__project.isProjectFile(file) and \
-                    self.__project.getProjectLanguage() in ["Python", "Python2"]):
+                    self.__project.getProjectLanguage() in ["Python",
+                                                            "Python2"]):
                     nok, fname, line, error = self.__py2check(file)
                 else:
                     from . import Tabnanny
@@ -185,7 +192,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         if self.noResults:
-            self.__createResultItem(self.trUtf8('No indentation errors found.'), "", "")
+            self.__createResultItem(
+                self.trUtf8('No indentation errors found.'), "", "")
             QApplication.processEvents()
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
@@ -240,9 +248,9 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         e5App().getObject("ViewManager").openSourceFile(fn, lineno)
     
-    ############################################################################
+    ###########################################################################
     ## Python 2 interface below
-    ############################################################################
+    ###########################################################################
     
     def __py2check(self, filename):
         """

@@ -66,7 +66,8 @@ class HistoryTreeModel(QAbstractProxyModel):
                     return date.toString("yyyy-MM-dd")
                 if index.column() == 1:
                     return self.trUtf8(
-                        "%n item(s)", "", self.rowCount(index.sibling(index.row(), 0)))
+                        "%n item(s)", "",
+                        self.rowCount(index.sibling(index.row(), 0)))
         
         elif role == Qt.DecorationRole:
             if index.column() == 0 and not index.parent().isValid():
@@ -111,8 +112,8 @@ class HistoryTreeModel(QAbstractProxyModel):
             totalRows = self.sourceModel().rowCount()
             
             for row in range(totalRows):
-                rowDate = \
-                    self.sourceModel().index(row, 0).data(HistoryModel.DateRole)
+                rowDate = self.sourceModel().index(row, 0)\
+                    .data(HistoryModel.DateRole)
                 if rowDate != currentDate:
                     self.__sourceRowCache.append(row)
                     currentDate = rowDate
@@ -211,7 +212,8 @@ class HistoryTreeModel(QAbstractProxyModel):
         """
         if not index.isValid():
             return Qt.ItemFlags(Qt.NoItemFlags)
-        return Qt.ItemFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled | Qt.ItemIsDragEnabled)
+        return Qt.ItemFlags(
+            Qt.ItemIsSelectable | Qt.ItemIsEnabled | Qt.ItemIsDragEnabled)
     
     def setSourceModel(self, sourceModel):
         """
@@ -222,7 +224,8 @@ class HistoryTreeModel(QAbstractProxyModel):
         if self.sourceModel() is not None:
             self.sourceModel().modelReset.disconnect(self.__sourceReset)
             self.sourceModel().layoutChanged.disconnect(self.__sourceReset)
-            self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
+            self.sourceModel().rowsInserted.disconnect(
+                self.__sourceRowsInserted)
             self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
         super().setSourceModel(sourceModel)
@@ -264,7 +267,8 @@ class HistoryTreeModel(QAbstractProxyModel):
                 self.beginInsertRows(QModelIndex(), 0, 0)
                 self.endInsertRows()
             else:
-                self.beginInsertRows(treeParent, treeIndex.row(), treeIndex.row())
+                self.beginInsertRows(treeParent, treeIndex.row(),
+                                     treeIndex.row())
                 self.endInsertRows()
     
     def mapFromSource(self, sourceIndex):
@@ -319,7 +323,8 @@ class HistoryTreeModel(QAbstractProxyModel):
             for i in range(row + count - 1, row - 1, -1):
                 dateParent = self.index(i, 0)
                 offset = self.__sourceDateRow(dateParent.row())
-                if not self.sourceModel().removeRows(offset, self.rowCount(dateParent)):
+                if not self.sourceModel().removeRows(
+                        offset, self.rowCount(dateParent)):
                     return False
         return True
     

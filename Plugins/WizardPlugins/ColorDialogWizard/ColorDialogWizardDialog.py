@@ -33,8 +33,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.bTest = \
-            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        self.bTest = self.buttonBox.addButton(
+            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -66,7 +66,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 except:
                     E5MessageBox.critical(self,
                         self.trUtf8("QColorDialog Wizard Error"),
-                        self.trUtf8("""<p>The colour <b>{0}</b> is not valid.</p>""")
+                        self.trUtf8(
+                            """<p>The colour <b>{0}</b> is not valid.</p>""")
                             .format(coStr))
             
         elif self.rRGBA.isChecked():
@@ -132,9 +133,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             code += ', None,{0}'.format(os.linesep)
             code += '{0}self.trUtf8("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
-            code += \
-                '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
-                    .format(istring)
+            code += '{0}QColorDialog.ColorDialogOptions(' \
+                'QColorDialog.ShowAlphaChannel)'.format(istring)
             code += '){0}'.format(estring)
         elif self.rRGBA.isChecked():
             code += 'getColor('
@@ -147,9 +147,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             code += '{0}None,{1}'.format(istring, os.linesep)
             code += '{0}self.trUtf8("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
-            code += \
-                '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
-                    .format(istring)
+            code += '{0}QColorDialog.ColorDialogOptions(' \
+                'QColorDialog.ShowAlphaChannel)'.format(istring)
             code += '){0}'.format(estring)
         
         return code

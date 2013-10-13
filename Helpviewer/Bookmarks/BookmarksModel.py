@@ -7,8 +7,8 @@
 Module implementing the bookmark model class.
 """
 
-from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, QByteArray, \
-    QDataStream, QIODevice, QBuffer, QMimeData
+from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, \
+    QByteArray, QDataStream, QIODevice, QBuffer, QMimeData
 
 import UI.PixmapCache
 
@@ -28,7 +28,8 @@ class BookmarksModel(QAbstractItemModel):
         """
         Constructor
         
-        @param manager reference to the bookmark manager object (BookmarksManager)
+        @param manager reference to the bookmark manager object
+            (BookmarksManager)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
@@ -255,7 +256,8 @@ class BookmarksModel(QAbstractItemModel):
         else:
             parentNode = itemNode.parent()
         
-        if parentNode is None or parentNode == self.__bookmarksManager.bookmarks():
+        if parentNode is None or \
+                parentNode == self.__bookmarksManager.bookmarks():
             return QModelIndex()
         
         # get the parent's row
@@ -409,7 +411,8 @@ class BookmarksModel(QAbstractItemModel):
             for bookmarkNode in rootNode.children():
                 rootNode.remove(bookmarkNode)
                 row = max(0, row)
-                self.__bookmarksManager.addBookmark(parentNode, bookmarkNode, row)
+                self.__bookmarksManager.addBookmark(
+                    parentNode, bookmarkNode, row)
                 self.__endMacro = True
         
         return True

@@ -39,7 +39,8 @@ class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
         self.__proxyModel.setSourceModel(self.__model)
         self.whitelist.setModel(self.__proxyModel)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         
         self.removeButton.clicked[()].connect(self.whitelist.removeSelected)
         self.removeAllButton.clicked[()].connect(self.whitelist.removeAll)

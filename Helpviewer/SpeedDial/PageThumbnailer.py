@@ -18,7 +18,8 @@ class PageThumbnailer(QObject):
     """
     Class implementing a thumbnail creator for web sites.
     
-    @signal thumbnailCreated(QPixmap) emitted after the thumbnail has been created
+    @signal thumbnailCreated(QPixmap) emitted after the thumbnail has been
+        created
     """
     thumbnailCreated = pyqtSignal(QPixmap)
     
@@ -42,8 +43,10 @@ class PageThumbnailer(QObject):
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.__page.setNetworkAccessManager(self.__proxy)
         
-        self.__page.mainFrame().setScrollBarPolicy(Qt.Horizontal, Qt.ScrollBarAlwaysOff)
-        self.__page.mainFrame().setScrollBarPolicy(Qt.Vertical, Qt.ScrollBarAlwaysOff)
+        self.__page.mainFrame().setScrollBarPolicy(
+            Qt.Horizontal, Qt.ScrollBarAlwaysOff)
+        self.__page.mainFrame().setScrollBarPolicy(
+            Qt.Vertical, Qt.ScrollBarAlwaysOff)
         
         # Full HD
         # Every page should fit in this resolution
@@ -111,7 +114,8 @@ class PageThumbnailer(QObject):
         """
         Private slot creating the thumbnail of the web site.
         
-        @param status flag indicating a successful load of the web site (boolean)
+        @param status flag indicating a successful load of the web site
+            (boolean)
         """
         if not status:
             self.thumbnailCreated.emit(QPixmap())

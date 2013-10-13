@@ -23,19 +23,24 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "html":
         return (
             UI.PixmapCache.getPixmap("html.png"),
             "HTML Netscape Bookmarks",
-            QCoreApplication.translate("HtmlImporter",
+            QCoreApplication.translate(
+                "HtmlImporter",
                 "HTML Netscape Bookmarks") + " (*.htm *.html)",
-            QCoreApplication.translate("HtmlImporter",
-                """You can import bookmarks from any browser that supports HTML """
-                """exporting. This file has usually the extension .htm or .html."""),
-            QCoreApplication.translate("HtmlImporter",
+            QCoreApplication.translate(
+                "HtmlImporter",
+                """You can import bookmarks from any browser that supports"""
+                """ HTML exporting. This file has usually the extension"""
+                """ .htm or .html."""),
+            QCoreApplication.translate(
+                "HtmlImporter",
                 """Please choose the file to begin importing bookmarks."""),
             "",
         )

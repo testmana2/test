@@ -8,8 +8,8 @@ Module implementing the log viewer widget and the log widget.
 """
 
 from PyQt4.QtCore import Qt, pyqtSignal
-from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, QWidget, \
-    QHBoxLayout, QTextDocument
+from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, \
+    QWidget, QHBoxLayout, QTextDocument
 
 from E5Gui.E5Application import e5App
 
@@ -43,7 +43,8 @@ class LogViewer(QWidget):
         
         self.__searchWidget.searchNext.connect(self.__logViewer.searchNext)
         self.__searchWidget.searchPrevious.connect(self.__logViewer.searchPrev)
-        self.__logViewer.searchStringFound.connect(self.__searchWidget.searchStringFound)
+        self.__logViewer.searchStringFound.connect(
+            self.__searchWidget.searchStringFound)
         
     def appendToStdout(self, txt):
         """
@@ -80,7 +81,8 @@ class LogViewerEdit(QTextEdit):
     """
     Class providing a specialized text edit for displaying logging information.
     
-    @signal searchStringFound(found) emitted to indicate the search result (boolean)
+    @signal searchStringFound(found) emitted to indicate the search result
+        (boolean)
     """
     searchStringFound = pyqtSignal(bool)
     
@@ -114,7 +116,8 @@ class LogViewerEdit(QTextEdit):
         
         self.cNormalFormat = self.currentCharFormat()
         self.cErrorFormat = self.currentCharFormat()
-        self.cErrorFormat.setForeground(QBrush(Preferences.getUI("LogStdErrColour")))
+        self.cErrorFormat.setForeground(
+            QBrush(Preferences.getUI("LogStdErrColour")))
         
     def __handleShowContextMenu(self, coord):
         """
@@ -164,7 +167,8 @@ class LogViewerEdit(QTextEdit):
         """
         Public slot to handle a change of the preferences.
         """
-        self.cErrorFormat.setForeground(QBrush(Preferences.getUI("LogStdErrColour")))
+        self.cErrorFormat.setForeground(
+            QBrush(Preferences.getUI("LogStdErrColour")))
         
     def __configure(self):
         """

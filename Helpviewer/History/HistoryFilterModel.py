@@ -42,8 +42,8 @@ class HistoryData(object):
         """
         Special method determining less relation.
         
-        Note: Like the actual history entries the index mapping is sorted in reverse
-        order by offset
+        Note: Like the actual history entries the index mapping is sorted in
+        reverse order by offset
         
         @param other reference to the history data object to compare against
             (HistoryEntry)
@@ -120,7 +120,8 @@ class HistoryFilterModel(QAbstractProxyModel):
         if self.sourceModel() is not None:
             self.sourceModel().modelReset.disconnect(self.__sourceReset)
             self.sourceModel().dataChanged.disconnect(self.__sourceDataChanged)
-            self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
+            self.sourceModel().rowsInserted.disconnect(
+                self.__sourceRowsInserted)
             self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
         super().setSourceModel(sourceModel)
@@ -233,7 +234,8 @@ class HistoryFilterModel(QAbstractProxyModel):
            column < 0 or column >= self.columnCount(parent):
             return QModelIndex()
         
-        return self.createIndex(row, column, self.__filteredRows[row].tailOffset)
+        return self.createIndex(row, column,
+                                self.__filteredRows[row].tailOffset)
 
     def parent(self, index):
         """
@@ -265,8 +267,10 @@ class HistoryFilterModel(QAbstractProxyModel):
                 self.__historyDict[url] = sourceOffset
             else:
                 # the url is known already, so just update the frequency score
-                row = self.__filteredRows.index(HistoryData(self.__historyDict[url], -1))
-                self.__filteredRows[row].frequency += self.__frequencyScore(idx)
+                row = self.__filteredRows.index(
+                    HistoryData(self.__historyDict[url], -1))
+                self.__filteredRows[row].frequency += \
+                    self.__frequencyScore(idx)
         
         self.__loaded = True
     
@@ -286,7 +290,8 @@ class HistoryFilterModel(QAbstractProxyModel):
             url = idx.data(HistoryModel.UrlStringRole)
             currentFrequency = 0
             if url in self.__historyDict:
-                row = self.__filteredRows.index(HistoryData(self.__historyDict[url], -1))
+                row = self.__filteredRows.index(
+                    HistoryData(self.__historyDict[url], -1))
                 currentFrequency = self.__filteredRows[row].frequency
                 self.beginRemoveRows(QModelIndex(), row, row)
                 del self.__filteredRows[row]
@@ -294,7 +299,8 @@ class HistoryFilterModel(QAbstractProxyModel):
                 self.endRemoveRows()
             
             self.beginInsertRows(QModelIndex(), 0, 0)
-            self.__filteredRows.insert(0, HistoryData(self.sourceModel().rowCount(),
+            self.__filteredRows.insert(
+                0, HistoryData(self.sourceModel().rowCount(),
                 self.__frequencyScore(idx) + currentFrequency))
             self.__historyDict[url] = self.sourceModel().rowCount()
             self.endInsertRows()
@@ -328,8 +334,10 @@ class HistoryFilterModel(QAbstractProxyModel):
         self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         self.beginRemoveRows(parent, row, lastRow)
         oldCount = self.rowCount()
-        start = self.sourceModel().rowCount() - self.__filteredRows[row].tailOffset
-        end = self.sourceModel().rowCount() - self.__filteredRows[lastRow].tailOffset
+        start = self.sourceModel().rowCount() - \
+            self.__filteredRows[row].tailOffset
+        end = self.sourceModel().rowCount() - \
+            self.__filteredRows[lastRow].tailOffset
         self.sourceModel().removeRows(start, end - start + 1)
         self.endRemoveRows()
         self.sourceModel().rowsRemoved.connect(self.__sourceRowsRemoved)

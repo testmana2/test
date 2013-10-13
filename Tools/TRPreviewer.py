@@ -11,8 +11,9 @@ import os
 
 from PyQt4.QtCore import QDir, QTimer, QFileInfo, pyqtSignal, QEvent, QSize, \
     QTranslator, QObject, Qt
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QKeySequence, \
-    QWhatsThis, QMdiArea, qApp, QApplication, QComboBox, QVBoxLayout, QAction, QLabel
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QKeySequence, QWhatsThis, QMdiArea, qApp, QApplication, QComboBox, \
+    QVBoxLayout, QAction, QLabel
 from PyQt4 import uic
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -48,7 +49,8 @@ class TRPreviewer(E5MainWindow):
         else:
             self.setObjectName(name)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(Preferences.getUI("Style"),
+                      Preferences.getUI("StyleSheet"))
         
         self.resize(QSize(800, 600).expandedTo(self.minimumSizeHint()))
         self.setAttribute(Qt.WA_DeleteOnClose)
@@ -70,7 +72,8 @@ class TRPreviewer(E5MainWindow):
         self.languageLayout.setSpacing(6)
         self.languageLayout.setObjectName("languageLayout")
 
-        self.languageLabel = QLabel(self.trUtf8("Select language file"), self.cw)
+        self.languageLabel = QLabel(
+            self.trUtf8("Select language file"), self.cw)
         self.languageLabel.setObjectName("languageLabel")
         self.languageLayout.addWidget(self.languageLabel)
 
@@ -78,10 +81,12 @@ class TRPreviewer(E5MainWindow):
         self.languageCombo.setObjectName("languageCombo")
         self.languageCombo.setEditable(False)
         self.languageCombo.setToolTip(self.trUtf8("Select language file"))
-        self.languageCombo.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        self.languageCombo.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Preferred)
         self.languageLayout.addWidget(self.languageCombo)
         
-        languageSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        languageSpacer = QSpacerItem(
+            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.languageLayout.addItem(languageSpacer)
         self.TRPreviewerLayout.addLayout(self.languageLayout)
 
@@ -95,7 +100,8 @@ class TRPreviewer(E5MainWindow):
         self.languageCombo.activated[str].connect(self.setTranslation)
         
         self.translations = TranslationsDict(self.languageCombo, self)
-        self.translations.translationChanged.connect(self.preview.rebuildWidgets)
+        self.translations.translationChanged.connect(
+            self.preview.rebuildWidgets)
         
         self.__initActions()
         self.__initMenus()
@@ -160,7 +166,8 @@ class TRPreviewer(E5MainWindow):
         
         self.openQMAct = QAction(UI.PixmapCache.getIcon("openQM.png"),
                         self.trUtf8('Open &Translation Files...'), self)
-        self.openQMAct.setStatusTip(self.trUtf8('Open Translation files for display'))
+        self.openQMAct.setStatusTip(self.trUtf8(
+            'Open Translation files for display'))
         self.openQMAct.setWhatsThis(self.trUtf8(
                 """<b>Open Translation Files</b>"""
                 """<p>This opens some translation files for display.</p>"""
@@ -169,16 +176,19 @@ class TRPreviewer(E5MainWindow):
         
         self.reloadAct = QAction(UI.PixmapCache.getIcon("reload.png"),
                         self.trUtf8('&Reload Translations'), self)
-        self.reloadAct.setStatusTip(self.trUtf8('Reload the loaded translations'))
+        self.reloadAct.setStatusTip(self.trUtf8(
+            'Reload the loaded translations'))
         self.reloadAct.setWhatsThis(self.trUtf8(
-                """<b>Reload Translations</b>"""
-                """<p>This reloads the translations for the loaded languages.</p>"""
+            """<b>Reload Translations</b>"""
+            """<p>This reloads the translations for the loaded"""
+            """ languages.</p>"""
         ))
         self.reloadAct.triggered[()].connect(self.translations.reload)
         
         self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"),
                         self.trUtf8('&Quit'), self)
-        self.exitAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
+        self.exitAct.setShortcut(QKeySequence(
+            self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
         self.exitAct.setWhatsThis(self.trUtf8(
                 """<b>Quit</b>"""
@@ -191,17 +201,18 @@ class TRPreviewer(E5MainWindow):
         self.whatsThisAct.setShortcut(QKeySequence(self.trUtf8("Shift+F1")))
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
-                """<b>Display context sensitive help</b>"""
-                """<p>In What's This? mode, the mouse cursor shows an arrow with a"""
-                """ question mark, and you can click on the interface elements to get"""
-                """ a short description of what they do and how to use them. In"""
-                """ dialogs, this feature can be accessed using the context help"""
-                """ button in the titlebar.</p>"""
+            """<b>Display context sensitive help</b>"""
+            """<p>In What's This? mode, the mouse cursor shows an arrow"""
+            """ with a question mark, and you can click on the interface"""
+            """ elements to get a short description of what they do and"""
+            """ how to use them. In dialogs, this feature can be accessed"""
+            """ using the context help button in the titlebar.</p>"""
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
 
         self.aboutAct = QAction(self.trUtf8('&About'), self)
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
                 """<b>About</b>"""
                 """<p>Display some information about this software.</p>"""
@@ -220,22 +231,25 @@ class TRPreviewer(E5MainWindow):
         self.tileAct = QAction(self.trUtf8('&Tile'), self)
         self.tileAct.setStatusTip(self.trUtf8('Tile the windows'))
         self.tileAct.setWhatsThis(self.trUtf8(
-                """<b>Tile the windows</b>"""
-                """<p>Rearrange and resize the windows so that they are tiled.</p>"""
+            """<b>Tile the windows</b>"""
+            """<p>Rearrange and resize the windows so that they are"""
+            """ tiled.</p>"""
         ))
         self.tileAct.triggered[()].connect(self.preview.tileSubWindows)
         
         self.cascadeAct = QAction(self.trUtf8('&Cascade'), self)
         self.cascadeAct.setStatusTip(self.trUtf8('Cascade the windows'))
         self.cascadeAct.setWhatsThis(self.trUtf8(
-                """<b>Cascade the windows</b>"""
-                """<p>Rearrange and resize the windows so that they are cascaded.</p>"""
+            """<b>Cascade the windows</b>"""
+            """<p>Rearrange and resize the windows so that they are"""
+            """ cascaded.</p>"""
         ))
         self.cascadeAct.triggered[()].connect(self.preview.cascadeSubWindows)
         
         self.closeAct = QAction(UI.PixmapCache.getIcon("close.png"),
                             self.trUtf8('&Close'), self)
-        self.closeAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+W", "File|Close")))
+        self.closeAct.setShortcut(QKeySequence(self.trUtf8(
+            "Ctrl+W", "File|Close")))
         self.closeAct.setStatusTip(self.trUtf8('Close the current window'))
         self.closeAct.setWhatsThis(self.trUtf8(
                 """<b>Close Window</b>"""
@@ -332,8 +346,9 @@ class TRPreviewer(E5MainWindow):
         """
         E5MessageBox.about(self, self.trUtf8("TR Previewer"), self.trUtf8(
             """<h3> About TR Previewer </h3>"""
-            """<p>The TR Previewer loads and displays Qt User-Interface files"""
-            """ and translation files and shows dialogs for a selected language.</p>"""
+            """<p>The TR Previewer loads and displays Qt User-Interface"""
+            """ files and translation files and shows dialogs for a"""
+            """ selected language.</p>"""
         ))
     
     def __aboutQt(self):
@@ -444,8 +459,8 @@ class TranslationsDict(QObject):
         be loaded automatically.
         
         @param fileName name of the translation file to be added (string)
-        @param setTranslation flag indicating, if this should be set as the active
-            translation (boolean)
+        @param setTranslation flag indicating, if this should be set as
+            the active translation (boolean)
         """
         if not self.__haveFileName(fileName):
             ntr = Translation()
@@ -482,7 +497,8 @@ class TranslationsDict(QObject):
             if trans is None:
                 E5MessageBox.warning(self.parent(),
                     self.trUtf8("Set Translator"),
-                    self.trUtf8("""<p>The translator <b>{0}</b> is not known.</p>""")\
+                    self.trUtf8(
+                        """<p>The translator <b>{0}</b> is not known.</p>""")\
                         .format(name))
                 return
                 
@@ -592,7 +608,8 @@ class TranslationsDict(QObject):
     
     def __del(self, name):
         """
-        Private method to delete a translator from the list of available translators.
+        Private method to delete a translator from the list of available
+        translators.
         
         @param name name of the translator to delete (string)
         """
@@ -695,7 +712,8 @@ class WidgetView(QWidget):
         if not self.__widget:
             E5MessageBox.warning(self,
                 self.trUtf8("Load UI File"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be loaded.</p>""")\
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> could not be loaded.</p>""")\
                     .format(self.__uiFileName))
             self.__valid = False
             return
@@ -749,7 +767,8 @@ class WidgetArea(QMdiArea):
             if not name:
                 E5MessageBox.warning(self,
                     self.trUtf8("Load UI File"),
-                    self.trUtf8("""<p>The file <b>{0}</b> could not be loaded.</p>""")\
+                    self.trUtf8(
+                        """<p>The file <b>{0}</b> could not be loaded.</p>""")\
                         .format(uiFileName))
                 return
             

@@ -177,8 +177,8 @@ class UMLDialog(E5MainWindow):
                 self, self.umlView, self.__project, path, **kwargs)
         elif diagramType == UMLDialog.ApplicationDiagram:
             from .ApplicationDiagramBuilder import ApplicationDiagramBuilder
-            return ApplicationDiagramBuilder(self, self.umlView, self.__project,
-                                             **kwargs)
+            return ApplicationDiagramBuilder(
+                self, self.umlView, self.__project, **kwargs)
         elif diagramType == UMLDialog.NoDiagram:
             return None
         else:

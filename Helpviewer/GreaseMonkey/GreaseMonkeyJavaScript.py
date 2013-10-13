@@ -21,7 +21,9 @@ if(typeof GM_xmlhttpRequest === "undefined") {
         // run it
         if(oXhr) {
             if("onreadystatechange" in details)
-                oXhr.onreadystatechange = function() { details.onreadystatechange(oXhr) };
+                oXhr.onreadystatechange = function() {
+                    details.onreadystatechange(oXhr)
+                };
             if("onload" in details)
                 oXhr.onload = function() { details.onload(oXhr) };
             if("onerror" in details)
@@ -48,10 +50,10 @@ if(typeof GM_addStyle === "undefined") {
         if (head === undefined) {
             document.onreadystatechange = function() {
                 if (document.readyState == "interactive") {
-                    var oStyle = document.createElement("style");
-                    oStyle.setAttribute("type", "text\/css");
-                    oStyle.appendChild(document.createTextNode(styles));
-                    document.getElementsByTagName("head")[0].appendChild(oStyle);
+                  var oStyle = document.createElement("style");
+                  oStyle.setAttribute("type", "text\/css");
+                  oStyle.appendChild(document.createTextNode(styles));
+                  document.getElementsByTagName("head")[0].appendChild(oStyle);
                 }
             }
         }

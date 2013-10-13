@@ -96,8 +96,10 @@ class SyntaxCheckerPlugin(QObject):
         e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
             .showMenu.connect(self.__projectBrowserShowMenu)
-        e5App().getObject("ViewManager").editorOpenedEd.connect(self.__editorOpened)
-        e5App().getObject("ViewManager").editorClosedEd.connect(self.__editorClosed)
+        e5App().getObject("ViewManager").editorOpenedEd.connect(
+            self.__editorOpened)
+        e5App().getObject("ViewManager").editorClosedEd.connect(
+            self.__editorClosed)
         
         for editor in e5App().getObject("ViewManager").getOpenEditors():
             self.__editorOpened(editor)
@@ -108,11 +110,14 @@ class SyntaxCheckerPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        e5App().getObject("Project").showMenu.disconnect(self.__projectShowMenu)
+        e5App().getObject("Project").showMenu.disconnect(
+            self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
             .showMenu.disconnect(self.__projectBrowserShowMenu)
-        e5App().getObject("ViewManager").editorOpenedEd.disconnect(self.__editorOpened)
-        e5App().getObject("ViewManager").editorClosedEd.disconnect(self.__editorClosed)
+        e5App().getObject("ViewManager").editorOpenedEd.disconnect(
+            self.__editorOpened)
+        e5App().getObject("ViewManager").editorClosedEd.disconnect(
+            self.__editorClosed)
         
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
@@ -120,7 +125,8 @@ class SyntaxCheckerPlugin(QObject):
         
         if self.__projectBrowserMenu:
             if self.__projectBrowserAct:
-                self.__projectBrowserMenu.removeAction(self.__projectBrowserAct)
+                self.__projectBrowserMenu.removeAction(
+                    self.__projectBrowserAct)
         
         for editor in self.__editors:
             editor.showMenu.disconnect(self.__editorShowMenu)
@@ -156,9 +162,10 @@ class SyntaxCheckerPlugin(QObject):
                 ["Python3", "Python2", "Python"]:
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
-                self.__projectBrowserAct = E5Action(self.trUtf8('Check Syntax'),
-                        self.trUtf8('&Syntax...'), 0, 0,
-                        self, "")
+                self.__projectBrowserAct = E5Action(
+                    self.trUtf8('Check Syntax'),
+                    self.trUtf8('&Syntax...'), 0, 0,
+                    self, "")
                 self.__projectBrowserAct.setWhatsThis(self.trUtf8(
                     """<b>Check Syntax...</b>"""
                     """<p>This checks Python files for syntax errors.</p>"""
@@ -177,27 +184,31 @@ class SyntaxCheckerPlugin(QObject):
         ppath = project.getProjectPath()
         files = [os.path.join(ppath, file) \
             for file in project.pdata["SOURCES"] \
-                if file.endswith(tuple(Preferences.getPython("Python3Extensions")) +
-                                 tuple(Preferences.getPython("PythonExtensions")))]
+                if file.endswith(
+                    tuple(Preferences.getPython("Python3Extensions")) +
+                    tuple(Preferences.getPython("PythonExtensions")))]
         
-        from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
+        from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
+            SyntaxCheckerDialog
         self.__projectSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectSyntaxCheckerDialog.show()
         self.__projectSyntaxCheckerDialog.prepare(files, project)
     
     def __projectBrowserSyntaxCheck(self):
         """
-        Private method to handle the syntax check context menu action of the project
-        sources browser.
+        Private method to handle the syntax check context menu action of the
+        project sources browser.
         """
-        browser = e5App().getObject("ProjectBrowser").getProjectBrowser("sources")
+        browser = e5App().getObject("ProjectBrowser").getProjectBrowser(
+            "sources")
         itm = browser.model().item(browser.currentIndex())
         try:
             fn = itm.fileName()
         except AttributeError:
             fn = itm.dirName()
         
-        from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
+        from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
+            SyntaxCheckerDialog
         self.__projectBrowserSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectBrowserSyntaxCheckerDialog.show()
         self.__projectBrowserSyntaxCheckerDialog.start(fn)
@@ -237,11 +248,13 @@ class SyntaxCheckerPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.isPy3File() or editor.isPy2File())
+            self.__editorAct.setEnabled(
+                editor.isPy3File() or editor.isPy2File())
     
     def __editorSyntaxCheck(self):
         """
-        Private slot to handle the syntax check context menu action of the editors.
+        Private slot to handle the syntax check context menu action of the
+        editors.
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:

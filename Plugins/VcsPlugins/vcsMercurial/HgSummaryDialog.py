@@ -37,9 +37,10 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.refreshButton = \
-            self.buttonBox.addButton(self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
-        self.refreshButton.setToolTip(self.trUtf8("Press to refresh the summary display"))
+        self.refreshButton = self.buttonBox.addButton(
+            self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.trUtf8("Press to refresh the summary display"))
         self.refreshButton.setEnabled(False)
         
         self.process = None
@@ -89,7 +90,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.process.kill()
         else:
             self.process = QProcess()
-            prepareProcess(self.process, Preferences.getSystem("IOEncoding"), "C")
+            prepareProcess(self.process, Preferences.getSystem("IOEncoding"),
+                           "C")
             self.process.finished.connect(self.__procFinished)
             self.process.readyReadStandardOutput.connect(self.__readStdout)
             self.process.readyReadStandardError.connect(self.__readStderr)
@@ -110,7 +112,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -313,19 +316,20 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 pindex += 1
                 changeset = "{0}:{1}".format(rev, node)
                 if len(infoDict["parent"]) > 1:
-                    info.append(
-                        self.trUtf8("<tr><td><b>Parent #{0}</b></td><td>{1}</td></tr>")
+                    info.append(self.trUtf8(
+                        "<tr><td><b>Parent #{0}</b></td><td>{1}</td></tr>")
                         .format(pindex, changeset))
                 else:
-                    info.append(
-                        self.trUtf8("<tr><td><b>Parent</b></td><td>{0}</td></tr>")
+                    info.append(self.trUtf8(
+                        "<tr><td><b>Parent</b></td><td>{0}</td></tr>")
                         .format(changeset))
                 if tags:
-                    info.append(self.trUtf8("<tr><td><b>Tags</b></td><td>{0}</td></tr>")
-                                .format('<br/>'.join(tags.split())))
+                    info.append(self.trUtf8(
+                        "<tr><td><b>Tags</b></td><td>{0}</td></tr>")
+                        .format('<br/>'.join(tags.split())))
                 if message:
-                    info.append(
-                        self.trUtf8("<tr><td><b>Commit Message</b></td><td>{0}</td></tr>")
+                    info.append(self.trUtf8(
+                        "<tr><td><b>Commit Message</b></td><td>{0}</td></tr>")
                         .format(message))
                 if remarks:
                     rem = []
@@ -333,19 +337,21 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                         rem.append(self.trUtf8("empty repository"))
                     if "@NO_REVISION@" in remarks:
                         rem.append(self.trUtf8("no revision checked out"))
-                    info.append(
-                        self.trUtf8("<tr><td><b>Remarks</b></td><td>{0}</td></tr>")
+                    info.append(self.trUtf8(
+                        "<tr><td><b>Remarks</b></td><td>{0}</td></tr>")
                         .format(", ".join(rem)))
             if "branch" in infoDict:
-                info.append(self.trUtf8("<tr><td><b>Branch</b></td><td>{0}</td></tr>")
-                            .format(infoDict["branch"]))
+                info.append(self.trUtf8(
+                    "<tr><td><b>Branch</b></td><td>{0}</td></tr>")
+                    .format(infoDict["branch"]))
             if "bookmarks" in infoDict:
                 bookmarks = infoDict["bookmarks"].split()
                 for i in range(len(bookmarks)):
                     if bookmarks[i].startswith("*"):
                         bookmarks[i] = "<b>{0}</b>".format(bookmarks[i])
-                info.append(self.trUtf8("<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>")
-                            .format('<br/>'.join(bookmarks)))
+                info.append(self.trUtf8(
+                    "<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>")
+                    .format('<br/>'.join(bookmarks)))
             if "commit" in infoDict:
                 cinfo = []
                 for category, count in infoDict["commit"][0].items():
@@ -366,7 +372,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                     elif category == "ignored":
                         cinfo.append(self.trUtf8("{0} ignored").format(count))
                     elif category == "unresolved":
-                        cinfo.append(self.trUtf8("{0} unresolved").format(count))
+                        cinfo.append(
+                            self.trUtf8("{0} unresolved").format(count))
                     elif category == "subrepos":
                         cinfo.append(self.trUtf8("{0} subrepos").format(count))
                 remark = infoDict["commit"][1]
@@ -380,25 +387,29 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                     cinfo.append(self.trUtf8("No commit required"))
                 elif remark == "new branch head":
                     cinfo.append(self.trUtf8("New Branch Head"))
-                info.append(
-                    self.trUtf8("<tr><td><b>Commit Status</b></td><td>{0}</td></tr>")
+                info.append(self.trUtf8(
+                    "<tr><td><b>Commit Status</b></td><td>{0}</td></tr>")
                     .format("<br/>".join(cinfo)))
             if "update" in infoDict:
                 if infoDict["update"][0] == "@CURRENT@":
                     uinfo = self.trUtf8("current")
                 elif infoDict["update"][0] == "@UPDATE@":
-                    uinfo = self.trUtf8("%n new changeset(s)<br/>Update required", "",
+                    uinfo = self.trUtf8(
+                        "%n new changeset(s)<br/>Update required", "",
                         infoDict["update"][1])
                 elif infoDict["update"][0] == "@MERGE@":
-                    uinfo1 = self.trUtf8("%n new changeset(s)", "", infoDict["update"][1])
-                    uinfo2 = self.trUtf8("%n branch head(s)", "", infoDict["update"][2])
-                    uinfo = self.trUtf8("{0}<br/>{1}<br/>Merge required",
+                    uinfo1 = self.trUtf8(
+                        "%n new changeset(s)", "", infoDict["update"][1])
+                    uinfo2 = self.trUtf8(
+                        "%n branch head(s)", "", infoDict["update"][2])
+                    uinfo = self.trUtf8(
+                        "{0}<br/>{1}<br/>Merge required",
                         "0 is changesets, 1 is branch heads")\
                         .format(uinfo1, uinfo2)
                 else:
                     uinfo = self.trUtf8("unknown status")
-                info.append(
-                    self.trUtf8("<tr><td><b>Update Status</b></td><td>{0}</td></tr>")
+                info.append(self.trUtf8(
+                    "<tr><td><b>Update Status</b></td><td>{0}</td></tr>")
                     .format(uinfo))
             if "remote" in infoDict:
                 if infoDict["remote"] == (0, 0, 0, 0):
@@ -417,8 +428,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                         l.append(self.trUtf8("%n outgoing bookmark(s)", "",
                                  infoDict["remote"][3]))
                     rinfo = "<br/>".join(l)
-                info.append(
-                    self.trUtf8("<tr><td><b>Remote Status</b></td><td>{0}</td></tr>")
+                info.append(self.trUtf8(
+                    "<tr><td><b>Remote Status</b></td><td>{0}</td></tr>")
                     .format(rinfo))
             if "mq" in infoDict:
                 if infoDict["mq"] == (0, 0):
@@ -426,12 +437,14 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 else:
                     l = []
                     if infoDict["mq"][0]:
-                        l.append(self.trUtf8("{0} applied").format(infoDict["mq"][0]))
+                        l.append(self.trUtf8("{0} applied")
+                                 .format(infoDict["mq"][0]))
                     if infoDict["mq"][1]:
-                        l.append(self.trUtf8("{0} unapplied").format(infoDict["mq"][1]))
+                        l.append(self.trUtf8("{0} unapplied")
+                                 .format(infoDict["mq"][1]))
                     qinfo = "<br/>".join(l)
-                info.append(
-                    self.trUtf8("<tr><td><b>Queues Status</b></td><td>{0}</td></tr>")
+                info.append(self.trUtf8(
+                    "<tr><td><b>Queues Status</b></td><td>{0}</td></tr>")
                     .format(qinfo))
             info.append("</table>")
         else:

@@ -10,8 +10,8 @@ Module implementing a dialog to show a list of incoming or outgoing bookmarks.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QLineEdit
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QLineEdit
 
 from E5Gui import E5MessageBox
 
@@ -22,7 +22,8 @@ import Preferences
 
 class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
     """
-    Class implementing a dialog to show a list of incoming or outgoing bookmarks.
+    Class implementing a dialog to show a list of incoming or outgoing
+    bookmarks.
     """
     INCOMING = 0
     OUTGOING = 1
@@ -55,7 +56,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         self.mode = mode
         self.__hgClient = vcs.getClient()
         
-        self.bookmarksList.headerItem().setText(self.bookmarksList.columnCount(), "")
+        self.bookmarksList.headerItem().setText(
+            self.bookmarksList.columnCount(), "")
         self.bookmarksList.header().setSortIndicator(3, Qt.AscendingOrder)
         
         self.process.finished.connect(self.__procFinished)
@@ -147,7 +149,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -161,7 +164,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
         
@@ -205,7 +209,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         """
         Private method to resize the list columns.
         """
-        self.bookmarksList.header().resizeSections(QHeaderView.ResizeToContents)
+        self.bookmarksList.header().resizeSections(
+            QHeaderView.ResizeToContents)
         self.bookmarksList.header().setStretchLastSection(True)
     
     def __generateItem(self, changeset, name):

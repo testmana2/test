@@ -42,7 +42,8 @@ class HelpTocWidget(QWidget):
         self.__layout = QVBoxLayout(self)
         self.__layout.addWidget(self.__tocWidget)
         
-        self.__tocWidget.customContextMenuRequested.connect(self.__showContextMenu)
+        self.__tocWidget.customContextMenuRequested.connect(
+            self.__showContextMenu)
         self.__tocWidget.linkActivated.connect(self.linkActivated)
         
         model = self.__tocWidget.model()

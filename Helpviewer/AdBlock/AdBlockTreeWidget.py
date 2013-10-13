@@ -8,8 +8,8 @@ Module implementing a tree widget for the AdBlock configuration dialog.
 """
 
 from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QAbstractItemView, QFont, QTreeWidgetItem, QInputDialog, \
-    QLineEdit, QMenu, QApplication, QColor
+from PyQt4.QtGui import QAbstractItemView, QFont, QTreeWidgetItem, \
+    QInputDialog, QLineEdit, QMenu, QApplication, QColor
 
 from E5Gui.E5TreeWidget import E5TreeWidget
 
@@ -219,7 +219,8 @@ class AdBlockTreeWidget(E5TreeWidget):
         
         self.__itemChangingBlock = True
         self.__topItem.setText(0,
-            self.trUtf8("{0} (recently updated)").format(self.__subscription.title()))
+            self.trUtf8("{0} (recently updated)").format(
+                self.__subscription.title()))
         self.__itemChangingBlock = False
     
     def __adjustItemFeatures(self, itm, rule):

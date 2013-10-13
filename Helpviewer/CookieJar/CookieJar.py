@@ -9,8 +9,8 @@ Module implementing a QNetworkCookieJar subclass with various accept policies.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray, QDataStream, QIODevice, QSettings, \
-    QDateTime
+from PyQt4.QtCore import pyqtSignal, QByteArray, QDataStream, QIODevice, \
+    QSettings, QDateTime
 from PyQt4.QtNetwork import QNetworkCookieJar, QNetworkCookie
 from PyQt4.QtWebKit import QWebSettings
 
@@ -21,7 +21,8 @@ import Preferences
 
 class CookieJar(QNetworkCookieJar):
     """
-    Class implementing a QNetworkCookieJar subclass with various accept policies.
+    Class implementing a QNetworkCookieJar subclass with various accept
+    policies.
     
     @signal cookiesChanged() emitted after the cookies have been changed
     """
@@ -186,7 +187,8 @@ class CookieJar(QNetworkCookieJar):
         
         Preferences.setHelp("AcceptCookies", self.__acceptCookies)
         Preferences.setHelp("KeepCookiesUntil", self.__keepCookies)
-        Preferences.setHelp("FilterTrackingCookies", self.__filterTrackingCookies)
+        Preferences.setHelp("FilterTrackingCookies",
+                            self.__filterTrackingCookies)
     
     def __purgeOldCookies(self):
         """
@@ -244,7 +246,8 @@ class CookieJar(QNetworkCookieJar):
                  self.__isOnDomainList(self.__exceptionsAllow, host)
         eAllowSession = not eBlock and \
                         not eAllow and \
-                        self.__isOnDomainList(self.__exceptionsAllowForSession, host)
+                        self.__isOnDomainList(
+                            self.__exceptionsAllowForSession, host)
         
         addedCookies = False
         acceptInitially = self.__acceptCookies != self.AcceptNever
@@ -463,7 +466,8 @@ class CookieJar(QNetworkCookieJar):
             if self.__isOnDomainList(self.__exceptionsBlock, cookie.domain()):
                 del cookiesList[index]
                 changed = True
-            elif self.__isOnDomainList(self.__exceptionsAllowForSession, cookie.domain()):
+            elif self.__isOnDomainList(self.__exceptionsAllowForSession,
+                                       cookie.domain()):
                 cookie.setExpirationDate(QDateTime())
                 changed = True
         

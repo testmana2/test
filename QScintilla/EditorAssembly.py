@@ -4,8 +4,8 @@
 #
 
 """
-Module implementing the editor assembly widget containing the navigation combos and
-the editor widget.
+Module implementing the editor assembly widget containing the navigation
+combos and the editor widget.
 """
 
 from PyQt4.QtCore import QTimer
@@ -16,17 +16,19 @@ import UI.PixmapCache
 
 class EditorAssembly(QWidget):
     """
-    Class implementing the editor assembly widget containing the navigation combos and
-    the editor widget.
+    Class implementing the editor assembly widget containing the navigation
+    combos and the editor widget.
     """
-    def __init__(self, dbs, fn=None, vm=None, filetype="", editor=None, tv=None):
+    def __init__(self, dbs, fn=None, vm=None, filetype="", editor=None,
+                 tv=None):
         """
         Constructor
         
         @param dbs reference to the debug server object
         @param fn name of the file to be opened (string). If it is None,
-                a new (empty) editor is opened
-        @param vm reference to the view manager object (ViewManager.ViewManager)
+            a new (empty) editor is opened
+        @param vm reference to the view manager object
+            (ViewManager.ViewManager)
         @param filetype type of the source file (string)
         @param editor reference to an Editor object, if this is a cloned view
         @param tv reference to the task viewer object
@@ -85,11 +87,12 @@ class EditorAssembly(QWidget):
     
     def __globalsActivated(self, index, moveCursor=True):
         """
-        Private method to jump to the line of the selected global entry and to populate
-        the members combo box.
+        Private method to jump to the line of the selected global entry and to
+        populate the members combo box.
         
         @param index index of the selected entry (integer)
-        @keyparam moveCursor flag indicating to move the editor cursor (boolean)
+        @keyparam moveCursor flag indicating to move the editor cursor
+            (boolean)
         """
         # step 1: go to the line of the selected entry
         lineno = self.__globalsCombo.itemData(index)
@@ -97,7 +100,8 @@ class EditorAssembly(QWidget):
             if moveCursor:
                 txt = self.__editor.text(lineno - 1).rstrip()
                 pos = len(txt.replace(txt.strip(), ""))
-                self.__editor.gotoLine(lineno, pos if pos == 0 else pos + 1, True)
+                self.__editor.gotoLine(
+                    lineno, pos if pos == 0 else pos + 1, True)
                 self.__editor.setFocus()
             
             # step 2: populate the members combo, if the entry is a class
@@ -117,7 +121,8 @@ class EditorAssembly(QWidget):
                         if cl.isPrivate():
                             icon = UI.PixmapCache.getIcon("class_private.png")
                         elif cl.isProtected():
-                            icon = UI.PixmapCache.getIcon("class_protected.png")
+                            icon = UI.PixmapCache.getIcon(
+                                "class_protected.png")
                         else:
                             icon = UI.PixmapCache.getIcon("class.png")
                         items[cl.name] = (icon, cl.lineno, cl.endlineno)
@@ -125,7 +130,8 @@ class EditorAssembly(QWidget):
                         itm = items[key]
                         self.__membersCombo.addItem(itm[0], key, itm[1])
                         memberIndex += 1
-                        self.__membersBoundaries[(itm[1], itm[2])] = memberIndex
+                        self.__membersBoundaries[(itm[1], itm[2])] = \
+                            memberIndex
                 else:
                     return
                 
@@ -156,7 +162,8 @@ class EditorAssembly(QWidget):
                     if attr.isPrivate():
                         icon = UI.PixmapCache.getIcon("attribute_private.png")
                     elif attr.isProtected():
-                        icon = UI.PixmapCache.getIcon("attribute_protected.png")
+                        icon = UI.PixmapCache.getIcon(
+                            "attribute_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("attribute.png")
                     items[attr.name] = (icon, attr.lineno)
@@ -178,7 +185,8 @@ class EditorAssembly(QWidget):
         Private method to jump to the line of the selected members entry.
         
         @param index index of the selected entry (integer)
-        @keyparam moveCursor flag indicating to move the editor cursor (boolean)
+        @keyparam moveCursor flag indicating to move the editor cursor
+            (boolean)
         """
         lineno = self.__membersCombo.itemData(index)
         if lineno is not None and moveCursor:
@@ -196,7 +204,8 @@ class EditorAssembly(QWidget):
     
     def __parseEditor(self):
         """
-        Private method to parse the editor source and repopulate the globals combo.
+        Private method to parse the editor source and repopulate the globals
+        combo.
         """
         from Utilities.ModuleParser import Module, getTypeFromTypeName
         
@@ -272,7 +281,8 @@ class EditorAssembly(QWidget):
                     if glob.isPrivate():
                         icon = UI.PixmapCache.getIcon("attribute_private.png")
                     elif glob.isProtected():
-                        icon = UI.PixmapCache.getIcon("attribute_protected.png")
+                        icon = UI.PixmapCache.getIcon(
+                            "attribute_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("attribute.png")
                     items[glob.name] = (icon, glob.lineno)
@@ -280,7 +290,8 @@ class EditorAssembly(QWidget):
                     itm = items[key]
                     self.__globalsCombo.addItem(itm[0], key, itm[1])
                 
-                # reset the currently selected entries without moving the text cursor
+                # reset the currently selected entries without moving the
+                # text cursor
                 index = self.__globalsCombo.findText(self.__selectedGlobal)
                 if index != -1:
                     self.__globalsCombo.setCurrentIndex(index)

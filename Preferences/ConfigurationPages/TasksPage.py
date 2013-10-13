@@ -50,15 +50,16 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         """
         Public slot to save the Tasks configuration.
         """
-        Preferences.setTasks("TasksFixmeMarkers",
-            self.tasksMarkerFixmeEdit.text())
-        Preferences.setTasks("TasksWarningMarkers",
-            self.tasksMarkerWarningEdit.text())
-        Preferences.setTasks("TasksTodoMarkers",
-            self.tasksMarkerTodoEdit.text())
-        Preferences.setTasks("TasksNoteMarkers",
-            self.tasksMarkerNoteEdit.text())
-        Preferences.setTasks("ClearOnFileClose", self.clearCheckBox.isChecked())
+        Preferences.setTasks(
+            "TasksFixmeMarkers", self.tasksMarkerFixmeEdit.text())
+        Preferences.setTasks(
+            "TasksWarningMarkers", self.tasksMarkerWarningEdit.text())
+        Preferences.setTasks(
+            "TasksTodoMarkers", self.tasksMarkerTodoEdit.text())
+        Preferences.setTasks(
+            "TasksNoteMarkers", self.tasksMarkerNoteEdit.text())
+        Preferences.setTasks(
+            "ClearOnFileClose", self.clearCheckBox.isChecked())
         
         self.saveColours(Preferences.setTasks)
     

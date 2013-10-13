@@ -15,7 +15,8 @@ from .Ui_SvnRevisionSelectionDialog import Ui_SvnRevisionSelectionDialog
 
 class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
     """
-    Class implementing a dialog to enter the revisions for the svn diff command.
+    Class implementing a dialog to enter the revisions for the svn diff
+    command.
     """
     def __init__(self, parent=None):
         """
@@ -63,7 +64,8 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
             return numberSpinBox.value()
         elif dateButton.isChecked():
             return "{{{0}}}".format(
-                QDateTime(dateEdit.date(), timeEdit.time()).toString(Qt.ISODate))
+                QDateTime(dateEdit.date(), timeEdit.time())\
+                    .toString(Qt.ISODate))
         elif headButton.isChecked():
             return "HEAD"
         elif workingButton.isChecked():

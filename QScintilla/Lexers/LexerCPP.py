@@ -58,7 +58,8 @@ class LexerCPP(QsciLexerCPP, Lexer):
         except AttributeError:
             pass
         try:
-            self.setStylePreprocessor(Preferences.getEditor("CppStylePreprocessor"))
+            self.setStylePreprocessor(
+                Preferences.getEditor("CppStylePreprocessor"))
         except AttributeError:
             pass
         try:

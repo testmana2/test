@@ -36,24 +36,26 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("No FTP Proxy"),
-                                       E5FtpProxyType.NoProxy)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("No Proxy Authentication required"),
-                                       E5FtpProxyType.NonAuthorizing)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("User@Server"),
-                                       E5FtpProxyType.UserAtServer)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("SITE"),
-                                       E5FtpProxyType.Site)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("OPEN"),
-                                       E5FtpProxyType.Open)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("User@Proxyuser@Server"),
-                                       E5FtpProxyType.UserAtProxyuserAtServer)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("Proxyuser@Server"),
-                                       E5FtpProxyType.ProxyuserAtServer)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("AUTH and RESP"),
-                                       E5FtpProxyType.AuthResp)
-        self.ftpProxyTypeCombo.addItem(self.trUtf8("Bluecoat Proxy"),
-                                       E5FtpProxyType.Bluecoat)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("No FTP Proxy"), E5FtpProxyType.NoProxy)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("No Proxy Authentication required"),
+            E5FtpProxyType.NonAuthorizing)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("User@Server"), E5FtpProxyType.UserAtServer)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("SITE"), E5FtpProxyType.Site)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("OPEN"), E5FtpProxyType.Open)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("User@Proxyuser@Server"),
+            E5FtpProxyType.UserAtProxyuserAtServer)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("Proxyuser@Server"), E5FtpProxyType.ProxyuserAtServer)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("AUTH and RESP"), E5FtpProxyType.AuthResp)
+        self.ftpProxyTypeCombo.addItem(
+            self.trUtf8("Bluecoat Proxy"), E5FtpProxyType.Bluecoat)
         
         # set initial values
         self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
@@ -191,11 +193,14 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.ftpProxyHostEdit.setEnabled(proxyType != E5FtpProxyType.NoProxy)
         self.ftpProxyPortSpin.setEnabled(proxyType != E5FtpProxyType.NoProxy)
         self.ftpProxyUserEdit.setEnabled(
-            proxyType not in [E5FtpProxyType.NoProxy, E5FtpProxyType.NonAuthorizing])
+            proxyType not in [E5FtpProxyType.NoProxy,
+                              E5FtpProxyType.NonAuthorizing])
         self.ftpProxyPasswordEdit.setEnabled(
-            proxyType not in [E5FtpProxyType.NoProxy, E5FtpProxyType.NonAuthorizing])
+            proxyType not in [E5FtpProxyType.NoProxy,
+                              E5FtpProxyType.NonAuthorizing])
         self.ftpProxyAccountEdit.setEnabled(
-            proxyType not in [E5FtpProxyType.NoProxy, E5FtpProxyType.NonAuthorizing])
+            proxyType not in [E5FtpProxyType.NoProxy,
+                              E5FtpProxyType.NonAuthorizing])
     
 
 def create(dlg):

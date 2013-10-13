@@ -11,9 +11,9 @@ values for all configuration items and stores the actual values. These
 values are read and written to the eric5 preferences file by module
 functions. The data is stored in a file in a subdirectory of the users home
 directory. The individual configuration data is accessed by accessor functions
-defined on the module level. The module is simply imported wherever it is needed
-with the statement 'import Preferences'. Do not use 'from Preferences import *'
-to import it.
+defined on the module level. The module is simply imported wherever it is
+needed with the statement 'import Preferences'. Do not use
+'from Preferences import *' to import it.
 """
 
 import os
@@ -21,8 +21,8 @@ import fnmatch
 import shutil
 import json
 
-from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, QCoreApplication, \
-    QByteArray, QSize, QUrl, Qt, QLibraryInfo
+from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, \
+    QCoreApplication, QByteArray, QSize, QUrl, Qt, QLibraryInfo
 from PyQt4.QtGui import QColor, QFont, QInputDialog, QPalette, QApplication
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
@@ -32,8 +32,9 @@ from E5Gui import E5FileDialog
 
 from E5Network.E5Ftp import E5FtpProxyType
 
-from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPython2Interpreters, getPyQt4ModulesDirectory
+from Globals import settingsNameOrganization, settingsNameGlobal, \
+    settingsNameRecent, isWindowsPlatform, findPython2Interpreters, \
+    getPyQt4ModulesDirectory
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -67,14 +68,16 @@ class Prefs(object):
         "Python3Interpreter": "",
         "CustomPython3Interpreter": False,
         "RubyInterpreter": "/usr/bin/ruby",
-        "DebugClientType": "standard",     # supported "standard", "threaded", "custom"
+        "DebugClientType": "standard",      # supported "standard", "threaded",
+                                            # "custom"
         "DebugClient": "",
-        "DebugClientType3": "standard",    # supported "standard", "threaded", "custom"
+        "DebugClientType3": "standard",     # supported "standard", "threaded",
+                                            # "custom"
         "DebugClient3": "",
-        "PythonExtensions": ".py2 .pyw2 .ptl",
-                                            # space separated list of Python extensions
-        "Python3Extensions": ".py .pyw .py3 .pyw3",
-                                            # space separated list of Python3 extensions
+        "PythonExtensions": ".py2 .pyw2 .ptl",  # space separated list of
+                                                # Python extensions
+        "Python3Extensions": ".py .pyw .py3 .pyw3", # space separated list of
+                                                    # Python3 extensions
         "DebugEnvironmentReplace": False,
         "DebugEnvironment": "",
         "PythonRedirect": True,
@@ -137,8 +140,10 @@ class Prefs(object):
                     # saved state main window with dock windows (1) OBSOLETE
                     b"",
                     # saved states floating windows (2) OBSOLETE
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                    # saved state main window with floating windows (3) OBSOLETE
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"",
+                     b""],
+                    # saved state main window with floating windows (3)
+                    # OBSOLETE
                     b"",
                     # saved state main window with toolbox windows (4)
                     b"",
@@ -147,8 +152,8 @@ class Prefs(object):
                     [True,  True, True],
                     # saved states of the splitters and sidebars of the
                     # sidebars layout (6)
-                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
-                    # right splitter, right sidebar
+                    # left splitter, vertical splitter, left sidebar,
+                    # bottom sidebar, right splitter, right sidebar
                     [b"", b"", b"", b"", b"", b""],
                 ],
             "debug": [
@@ -158,8 +163,10 @@ class Prefs(object):
                     # saved state main window with dock windows (1) OBSOLETE
                     b"",
                     # saved states floating windows (2) OBSOLETE
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                    # saved state main window with floating windows (3) OBSOLETE
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"",
+                     b""],
+                    # saved state main window with floating windows (3)
+                    # OBSOLETE
                     b"",
                     # saved state main window with toolbox windows (4)
                     b"",
@@ -168,8 +175,8 @@ class Prefs(object):
                     [False,  True, True],
                     # saved states of the splitters and sidebars of the
                     # sidebars layout (6)
-                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
-                    # right splitter, right sidebar
+                    # left splitter, vertical splitter, left sidebar,
+                    # bottom sidebar, right splitter, right sidebar
                     [b"", b"", b"", b"", b"", b""],
                 ],
         },
@@ -182,8 +189,8 @@ class Prefs(object):
                     [True,  True, True],
                     # saved states of the splitters and sidebars of the
                     # sidebars layout (2)
-                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
-                    # right splitter, right sidebar
+                    # left splitter, vertical splitter, left sidebar,
+                    # bottom sidebar, right splitter, right sidebar
                     [QByteArray(), QByteArray(), QByteArray(),
                      QByteArray(), QByteArray(), QByteArray()],
                 ],
@@ -195,8 +202,8 @@ class Prefs(object):
                     [False,  True, True],
                     # saved states of the splitters and sidebars of the
                     # sidebars layout (2)
-                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
-                    # right splitter, right sidebar
+                    # left splitter, vertical splitter, left sidebar,
+                    # bottom sidebar, right splitter, right sidebar
                     [QByteArray(), QByteArray(), QByteArray(),
                      QByteArray(), QByteArray(), QByteArray()],
                 ],
@@ -232,7 +239,8 @@ class Prefs(object):
         "PluginRepositoryUrl5": \
             "http://eric-ide.python-projects.org/plugins5/repository.xml",
         "VersionsUrls5": [
-            "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/versions",
+            "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/"
+            "versions",
             "http://eric-ide.python-projects.org/snapshots5/versions",
         ],
         
@@ -248,7 +256,8 @@ class Prefs(object):
         
         "LogStdErrColour": QColor(Qt.red),
         "NotificationsEnabled": True,
-        "NotificationTimeout": 5,      # time in seconds the notification is shown
+        "NotificationTimeout": 5,       # time in seconds the notification
+                                        # is shown
         "NotificationPosition": QPoint(10, 10),
     }
     viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][0])
@@ -350,10 +359,10 @@ class Prefs(object):
         "SpellCheckingPersonalExcludeList": "",
         
         "DefaultEncoding": "utf-8",
-        "DefaultOpenFilter": QApplication.translate('Lexers',
-                                                    'Python Files (*.py *.py2 *.py3)'),
-        "DefaultSaveFilter": QApplication.translate('Lexers',
-                                                    "Python3 Files (*.py)"),
+        "DefaultOpenFilter": QApplication.translate(
+            'Lexers', 'Python Files (*.py *.py2 *.py3)'),
+        "DefaultSaveFilter": QApplication.translate(
+            'Lexers', "Python3 Files (*.py)"),
         "AdditionalOpenFilters": [],
         "AdditionalSaveFilters": [],
         
@@ -706,12 +715,13 @@ class Prefs(object):
         "HelpViewerState": QByteArray(),
         "WebSearchSuggestions": True,
         "WebSearchEngine": "Google",
-        "WebSearchKeywords": [],   # array of two tuples (keyword, search engine name)
+        "WebSearchKeywords": [],    # array of two tuples (keyword,
+                                    # search engine name)
         "DiskCacheEnabled": True,
-        "DiskCacheSize": 50,       # 50 MB
+        "DiskCacheSize": 50,        # 50 MB
         "CachePolicy": QNetworkRequest.PreferNetwork,
-        "AcceptCookies": 2,        # CookieJar.AcceptOnlyFromSitesNavigatedTo
-        "KeepCookiesUntil": 0,     # CookieJar.KeepUntilExpire
+        "AcceptCookies": 2,         # CookieJar.AcceptOnlyFromSitesNavigatedTo
+        "KeepCookiesUntil": 0,      # CookieJar.KeepUntilExpire
         "FilterTrackingCookies": True,
         "PrintBackgrounds": False,
         "StartupBehavior": 1,      # show speed dial
@@ -787,7 +797,8 @@ class Prefs(object):
         websettings = QWebSettings.globalSettings()
         fontFamily = websettings.fontFamily(QWebSettings.StandardFont)
         fontSize = websettings.fontSize(QWebSettings.DefaultFontSize)
-        cls.helpDefaults["StandardFont"] = QFont(fontFamily, fontSize).toString()
+        cls.helpDefaults["StandardFont"] = \
+            QFont(fontFamily, fontSize).toString()
         fontFamily = websettings.fontFamily(QWebSettings.FixedFont)
         fontSize = websettings.fontSize(QWebSettings.DefaultFixedFontSize)
         cls.helpDefaults["FixedFont"] = QFont(fontFamily, fontSize).toString()
@@ -801,13 +812,16 @@ class Prefs(object):
             "JavaScriptEnabled":
                 websettings.testAttribute(QWebSettings.JavascriptEnabled),
             "JavaScriptCanOpenWindows":
-                websettings.testAttribute(QWebSettings.JavascriptCanOpenWindows),
+                websettings.testAttribute(
+                    QWebSettings.JavascriptCanOpenWindows),
             "JavaScriptCanAccessClipboard":
-                websettings.testAttribute(QWebSettings.JavascriptCanAccessClipboard),
+                websettings.testAttribute(
+                    QWebSettings.JavascriptCanAccessClipboard),
             "PluginsEnabled":
                 websettings.testAttribute(QWebSettings.PluginsEnabled),
             "OfflineStorageDatabaseEnabled":
-                websettings.testAttribute(QWebSettings.OfflineStorageDatabaseEnabled),
+                websettings.testAttribute(
+                    QWebSettings.OfflineStorageDatabaseEnabled),
         })
         if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
             cls.helpDefaults.update({
@@ -827,22 +841,27 @@ class Prefs(object):
                 websettings.defaultTextEncoding()
         if hasattr(QWebSettings, "SpatialNavigationEnabled"):
             cls.helpDefaults["SpatialNavigationEnabled"] = \
-                websettings.testAttribute(QWebSettings.SpatialNavigationEnabled)
+                websettings.testAttribute(
+                    QWebSettings.SpatialNavigationEnabled)
         if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
             cls.helpDefaults["LinksIncludedInFocusChain"] = \
-                websettings.testAttribute(QWebSettings.LinksIncludedInFocusChain)
+                websettings.testAttribute(
+                    QWebSettings.LinksIncludedInFocusChain)
         if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
             cls.helpDefaults["LocalContentCanAccessRemoteUrls"] = \
-                websettings.testAttribute(QWebSettings.LocalContentCanAccessRemoteUrls)
+                websettings.testAttribute(
+                    QWebSettings.LocalContentCanAccessRemoteUrls)
         if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
             cls.helpDefaults["LocalContentCanAccessFileUrls"] = \
-                websettings.testAttribute(QWebSettings.LocalContentCanAccessFileUrls)
+                websettings.testAttribute(
+                    QWebSettings.LocalContentCanAccessFileUrls)
         if hasattr(QWebSettings, "XSSAuditingEnabled"):
             cls.helpDefaults["XSSAuditingEnabled"] = \
                 websettings.testAttribute(QWebSettings.XSSAuditingEnabled)
         if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
             cls.helpDefaults["SiteSpecificQuirksEnabled"] = \
-                websettings.testAttribute(QWebSettings.SiteSpecificQuirksEnabled)
+                websettings.testAttribute(
+                    QWebSettings.SiteSpecificQuirksEnabled)
         
         cls.webSettingsIntitialized = True
     
@@ -1033,8 +1052,8 @@ def readToolGroups(prefClass=Prefs):
     toolGroups = []
     groups = int(prefClass.settings.value("Toolgroups/Groups", 0))
     for groupIndex in range(groups):
-        groupName = \
-            prefClass.settings.value("Toolgroups/{0:02d}/Name".format(groupIndex))
+        groupName = prefClass.settings.value(
+            "Toolgroups/{0:02d}/Name".format(groupIndex))
         group = [groupName, []]
         items = int(prefClass.settings.value(
             "Toolgroups/{0:02d}/Items".format(groupIndex), 0))
@@ -1044,7 +1063,8 @@ def readToolGroups(prefClass=Prefs):
             icon = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Icon".format(groupIndex, ind))
             executable = prefClass.settings.value(
-                "Toolgroups/{0:02d}/{1:02d}/Executable".format(groupIndex, ind))
+                "Toolgroups/{0:02d}/{1:02d}/Executable".format(
+                    groupIndex, ind))
             arguments = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Arguments".format(groupIndex, ind))
             redirect = prefClass.settings.value(
@@ -1070,7 +1090,8 @@ def readToolGroups(prefClass=Prefs):
                     }
                     group[1].append(tool)
         toolGroups.append(group)
-    currentGroup = int(prefClass.settings.value("Toolgroups/Current Group", -1))
+    currentGroup = int(
+        prefClass.settings.value("Toolgroups/Current Group", -1))
     return toolGroups, currentGroup
     
 
@@ -1102,7 +1123,8 @@ def saveToolGroups(toolGroups, currentGroup, prefClass=Prefs):
                 "Toolgroups/{0:02d}/{1:02d}/Icon".format(groupIndex, ind),
                 tool['icon'])
             prefClass.settings.setValue(
-                "Toolgroups/{0:02d}/{1:02d}/Executable".format(groupIndex, ind),
+                "Toolgroups/{0:02d}/{1:02d}/Executable".format(
+                    groupIndex, ind),
                 tool['executable'])
             prefClass.settings.setValue(
                 "Toolgroups/{0:02d}/{1:02d}/Arguments".format(groupIndex, ind),
@@ -1134,7 +1156,8 @@ def syncPreferences(prefClass=Prefs):
     """
     Module function to sync the preferences to disk.
     
-    In addition to syncing, the central configuration store is reinitialized as well.
+    In addition to syncing, the central configuration store is reinitialized
+    as well.
     
     @param prefClass preferences class used as the storage area
     """
@@ -1257,13 +1280,16 @@ def getDebugger(key, prefClass=Prefs):
             prefClass.debuggerDefaults[key]))
     elif key in ["PassiveDbgPort"]:
         return int(
-            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key]))
+            prefClass.settings.value("Debugger/" + key,
+                                     prefClass.debuggerDefaults[key]))
     elif key in ["AllowedHosts"]:
         return toList(
-            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key]))
+            prefClass.settings.value("Debugger/" + key,
+                                     prefClass.debuggerDefaults[key]))
     elif key == "PythonInterpreter":
         interpreter = \
-            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key])
+            prefClass.settings.value("Debugger/" + key,
+                                     prefClass.debuggerDefaults[key])
         if not interpreter:
             interpreters = findPython2Interpreters()
             if interpreters:
@@ -1284,8 +1310,8 @@ def getDebugger(key, prefClass=Prefs):
                     setDebugger("PythonInterpreter", interpreter)
         return interpreter
     else:
-        return \
-            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key])
+        return prefClass.settings.value("Debugger/" + key,
+                                        prefClass.debuggerDefaults[key])
     
 
 def setDebugger(key, value, prefClass=Prefs):
@@ -1336,8 +1362,8 @@ def getUILanguage(prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the language for the UI
     """
-    lang = \
-        prefClass.settings.value("UI/Language", prefClass.uiDefaults["Language"])
+    lang = prefClass.settings.value("UI/Language",
+                                    prefClass.uiDefaults["Language"])
     if lang == "None" or lang == "" or lang is None:
         return None
     else:
@@ -1463,7 +1489,8 @@ def getUI(key, prefClass=Prefs):
                 vpLength = len(viewProfiles[name][0])
                 if vpLength < prefClass.viewProfilesLength:
                     viewProfiles[name][0].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][0][vpLength:])
+                        prefClass.uiDefaults["ViewProfiles"][name][0]
+                            [vpLength:])
                 
                 # adjust profile
                 vpLength = len(viewProfiles[name])
@@ -1473,13 +1500,17 @@ def getUI(key, prefClass=Prefs):
                 
                 # adjust entries for toolboxes and sidebars
                 vpLength = len(viewProfiles[name][5])
-                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][5]):
+                if vpLength < len(
+                        prefClass.uiDefaults["ViewProfiles"][name][5]):
                     viewProfiles[name][5].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][5][vpLength:])
+                        prefClass.uiDefaults["ViewProfiles"][name][5]
+                            [vpLength:])
                 vpLength = len(viewProfiles[name][6])
-                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][6]):
+                if vpLength < len(
+                        prefClass.uiDefaults["ViewProfiles"][name][6]):
                     viewProfiles[name][6].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][6][vpLength:])
+                        prefClass.uiDefaults["ViewProfiles"][name][6]
+                            [vpLength:])
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]
         return viewProfiles
@@ -1495,7 +1526,8 @@ def getUI(key, prefClass=Prefs):
                     []
                 ]
                 for bs in profiles[name][2]:
-                    viewProfiles[name][2].append(QByteArray.fromBase64(bs.encode()))
+                    viewProfiles[name][2].append(
+                        QByteArray.fromBase64(bs.encode()))
         else:
             # migrate from the old ViewProfiles settings
             try:
@@ -1523,7 +1555,8 @@ def getUI(key, prefClass=Prefs):
         else:
             return prefClass.uiDefaults[key]
     elif key in ["VersionsUrls5"]:
-        urls = toList(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
+        urls = toList(
+            prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
         if len(urls) == 0:
             return prefClass.uiDefaults[key]
         else:
@@ -1633,11 +1666,13 @@ def getEditor(key, prefClass=Prefs):
     if key in ["DefaultEncoding", "DefaultOpenFilter", "DefaultSaveFilter",
                "SpellCheckingDefaultLanguage", "SpellCheckingPersonalWordList",
                "SpellCheckingPersonalExcludeList"]:
-        return prefClass.settings.value("Editor/" + key, prefClass.editorDefaults[key])
+        return prefClass.settings.value("Editor/" + key,
+                                        prefClass.editorDefaults[key])
     elif key in ["AutosaveInterval", "TabWidth", "IndentWidth",
                  "FoldingStyle", "WarnFilesize", "EdgeMode", "EdgeColumn",
-                 "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold",
-                 "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout",
+                 "CaretWidth", "AutoCompletionSource",
+                 "AutoCompletionThreshold", "CallTipsVisible",
+                 "CallTipsStyle", "MarkOccurrencesTimeout",
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
                  "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval",
@@ -1646,7 +1681,8 @@ def getEditor(key, prefClass=Prefs):
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
-                 "PreviewMarkdownFileNameExtensions", "PreviewRestFileNameExtensions",
+                 "PreviewMarkdownFileNameExtensions",
+                 "PreviewRestFileNameExtensions",
                  "PreviewHtmlFileNameExtensions"]:
         return toList(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
@@ -1708,7 +1744,8 @@ def setEditorColour(key, value, prefClass=Prefs):
 
 def getEditorOtherFonts(key, prefClass=Prefs):
     """
-    Module function to retrieve the various editor fonts except the lexer fonts.
+    Module function to retrieve the various editor fonts except the lexer
+    fonts.
     
     @param key the key of the value to get
     @param prefClass preferences class used as the storage area
@@ -1812,8 +1849,8 @@ def getEditorLexerAssocs(prefClass=Prefs):
                 defaultValue = editorLexerAssocDefaults[key]
             else:
                 defaultValue = ""
-            editorLexerAssoc[key] = \
-                prefClass.settings.value("Editor/LexerAssociations/" + key, defaultValue)
+            editorLexerAssoc[key] = prefClass.settings.value(
+                "Editor/LexerAssociations/" + key, defaultValue)
         
         # check for new default lexer associations
         for key in list(editorLexerAssocDefaults.keys()):
@@ -1837,14 +1874,16 @@ def setEditorLexerAssocs(assocs, prefClass=Prefs):
         if key not in assocs:
             prefClass.settings.remove("Editor/LexerAssociations/" + key)
     for key in assocs:
-        prefClass.settings.setValue("Editor/LexerAssociations/" + key, assocs[key])
+        prefClass.settings.setValue("Editor/LexerAssociations/" + key,
+                                    assocs[key])
     
 
 def getEditorLexerAssoc(filename, prefClass=Prefs):
     """
     Module function to retrieve a lexer association.
     
-    @param filename filename used to determine the associated lexer language (string)
+    @param filename filename used to determine the associated lexer language
+        (string)
     @param prefClass preferences class used as the storage area
     @return the requested lexer language (string)
     """
@@ -1915,7 +1954,8 @@ def setEditorExporter(key, value, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["RTF/Font"]:
-        prefClass.settings.setValue("Editor/Exporters/" + key, value.toString())
+        prefClass.settings.setValue("Editor/Exporters/" + key,
+                                    value.toString())
     else:
         prefClass.settings.setValue("Editor/Exporters/" + key, value)
     
@@ -2036,7 +2076,8 @@ def getProjectBrowserFlags(key, prefClass=Prefs):
     except KeyError:
         default = AllBrowsersFlag
     
-    return int(prefClass.settings.value("Project/BrowserFlags/" + key, default))
+    return int(prefClass.settings.value("Project/BrowserFlags/" + key,
+                                        default))
     
 
 def setProjectBrowserFlags(key, value, prefClass=Prefs):
@@ -2139,7 +2180,8 @@ def getQt4DocDir(prefClass=Prefs):
     if s == "":
         s = os.getenv("QT4DOCDIR", "")
     if s == "":
-        s = os.path.join(QLibraryInfo.location(QLibraryInfo.DocumentationPath), "html")
+        s = os.path.join(
+            QLibraryInfo.location(QLibraryInfo.DocumentationPath), "html")
     return s
     
 
@@ -2155,7 +2197,8 @@ def getQt5DocDir(prefClass=Prefs):
     if s == "":
         s = os.getenv("QT5DOCDIR", "")
     if s == "":
-        s = os.path.join(QLibraryInfo.location(QLibraryInfo.DocumentationPath), "qtdoc")
+        s = os.path.join(
+            QLibraryInfo.location(QLibraryInfo.DocumentationPath), "qtdoc")
     return s
 
 
@@ -2225,36 +2268,42 @@ def getHelp(key, prefClass=Prefs):
             prefClass.helpDefaults[key]), encode=False)
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies",
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
-                 "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
-                 "CachePolicy", "DownloadManagerRemovePolicy", "AdBlockUpdatePeriod",
-                 "SearchLanguage", "SyncType", "SyncFtpPort", "SyncFtpIdleTimeout",
-                 "SyncEncryptionKeyLength"]:
+                 "OfflineStorageDatabaseQuota",
+                 "OfflineWebApplicationCacheQuota", "CachePolicy",
+                 "DownloadManagerRemovePolicy", "AdBlockUpdatePeriod",
+                 "SearchLanguage", "SyncType", "SyncFtpPort",
+                 "SyncFtpIdleTimeout", "SyncEncryptionKeyLength"]:
         return int(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",
-                 "DiskCacheEnabled", "FilterTrackingCookies", "PrintBackgrounds",
-                 "AdBlockEnabled", "AutoLoadImages",
-                 "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows",
-                 "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled",
-                 "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled",
-                 "LocalStorageEnabled", "ShowPreview", "AccessKeysEnabled",
-                 "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack", "SendReferer",
+                 "DiskCacheEnabled", "FilterTrackingCookies",
+                 "PrintBackgrounds", "AdBlockEnabled", "AutoLoadImages",
+                 "JavaEnabled", "JavaScriptEnabled",
+                 "JavaScriptCanOpenWindows", "JavaScriptCanAccessClipboard",
+                 "PluginsEnabled", "DnsPrefetchEnabled",
+                 "OfflineStorageDatabaseEnabled",
+                 "OfflineWebApplicationCacheEnabled", "LocalStorageEnabled",
+                 "ShowPreview", "AccessKeysEnabled", "VirusTotalEnabled",
+                 "VirusTotalSecure", "DoNotTrack", "SendReferer",
                  "SpatialNavigationEnabled", "LinksIncludedInFocusChain",
-                 "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
-                 "XSSAuditingEnabled", "SiteSpecificQuirksEnabled", "SyncEnabled",
-                 "SyncBookmarks", "SyncHistory", "SyncPasswords", "SyncUserAgents",
-                 "SyncSpeedDial", "SyncEncryptData", "SyncEncryptPasswordsOnly",
+                 "LocalContentCanAccessRemoteUrls",
+                 "LocalContentCanAccessFileUrls", "XSSAuditingEnabled",
+                 "SiteSpecificQuirksEnabled", "SyncEnabled", "SyncBookmarks",
+                 "SyncHistory", "SyncPasswords", "SyncUserAgents",
+                 "SyncSpeedDial", "SyncEncryptData",
+                 "SyncEncryptPasswordsOnly",
                  "WarnOnMultipleClose", "ClickToFlashEnabled"
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
-    elif key in ["AdBlockSubscriptions", "AdBlockExceptions", "ClickToFlashWhitelist",
-                 "SendRefererWhitelist", "GreaseMonkeyDisabledScripts",
-                 "NoCacheHosts"]:
+    elif key in ["AdBlockSubscriptions", "AdBlockExceptions",
+                 "ClickToFlashWhitelist", "SendRefererWhitelist",
+                 "GreaseMonkeyDisabledScripts", "NoCacheHosts"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:
-        return prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key])
+        return prefClass.settings.value("Help/" + key,
+                                        prefClass.helpDefaults[key])
     
 
 def setHelp(key, value, prefClass=Prefs):
@@ -2394,7 +2443,8 @@ def getCorba(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested corba setting
     """
-    return prefClass.settings.value("Corba/" + key, prefClass.corbaDefaults[key])
+    return prefClass.settings.value("Corba/" + key,
+                                    prefClass.corbaDefaults[key])
     
 
 def setCorba(key, value, prefClass=Prefs):
@@ -2429,7 +2479,8 @@ def getUser(key, prefClass=Prefs):
         return toBool(prefClass.settings.value("User/" + key,
             prefClass.userDefaults[key]))
     else:
-        return prefClass.settings.value("User/" + key, prefClass.userDefaults[key])
+        return prefClass.settings.value("User/" + key,
+                                        prefClass.userDefaults[key])
     
 
 def setUser(key, value, prefClass=Prefs):
@@ -2461,9 +2512,11 @@ def getVCS(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["StatusMonitorInterval"]:
-        return int(prefClass.settings.value("VCS/" + key, prefClass.vcsDefaults[key]))
+        return int(prefClass.settings.value("VCS/" + key,
+                                            prefClass.vcsDefaults[key]))
     else:
-        return toBool(prefClass.settings.value("VCS/" + key, prefClass.vcsDefaults[key]))
+        return toBool(prefClass.settings.value("VCS/" + key,
+                                               prefClass.vcsDefaults[key]))
     
 
 def setVCS(key, value, prefClass=Prefs):
@@ -2688,15 +2741,17 @@ def getIrc(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["TimestampIncludeDate", "ShowTimestamps", "ShowNotifications",
-               "NotifyJoinPart", "NotifyMessage", "NotifyNick", "EnableIrcColours",
-               "AutoUserInfoLookup", "MarkPositionWhenHidden", "AskOnShutdown"]:
+               "NotifyJoinPart", "NotifyMessage", "NotifyNick",
+               "EnableIrcColours", "AutoUserInfoLookup",
+               "MarkPositionWhenHidden", "AskOnShutdown"]:
         return toBool(prefClass.settings.value("IRC/" + key,
                 prefClass.ircDefaults[key]))
     elif key in ["AutoUserInfoMax", "AutoUserInfoInterval"]:
         return int(prefClass.settings.value("IRC/" + key,
                 prefClass.ircDefaults[key]))
     else:
-        return prefClass.settings.value("IRC/" + key, prefClass.ircDefaults[key])
+        return prefClass.settings.value("IRC/" + key,
+                                        prefClass.ircDefaults[key])
 
 
 def setIrc(key, value, prefClass=Prefs):
@@ -2845,20 +2900,38 @@ def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
     from Utilities.crypto import pwRecode
     for key in ["ProxyPassword/Http", "ProxyPassword/Https",
                 "ProxyPassword/Ftp", ]:
-        prefClass.settings.setValue("UI/" + key, pwRecode(
-            prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]),
-            oldPassword,
-            newPassword))
+        prefClass.settings.setValue(
+            "UI/" + key,
+            pwRecode(
+                prefClass.settings.value("UI/" + key,
+                                         prefClass.uiDefaults[key]
+                ),
+                oldPassword,
+                newPassword
+            )
+        )
     for key in ["MailServerPassword"]:
-        prefClass.settings.setValue("User/" + key, pwRecode(
-            prefClass.settings.value("User/" + key, prefClass.userDefaults[key]),
-            oldPassword,
-            newPassword))
+        prefClass.settings.setValue(
+            "User/" + key,
+            pwRecode(
+                prefClass.settings.value("User/" + key,
+                                         prefClass.userDefaults[key]
+                ),
+                oldPassword,
+                newPassword
+            )
+        )
     for key in ["SyncFtpPassword", "SyncEncryptionKey"]:
-        prefClass.settings.setValue("Help/" + key, pwRecode(
-            prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key]),
-            oldPassword,
-            newPassword))
+        prefClass.settings.setValue(
+            "Help/" + key,
+            pwRecode(
+                prefClass.settings.value("Help/" + key,
+                                         prefClass.helpDefaults[key]
+                ),
+                oldPassword,
+                newPassword
+            )
+        )
 
 
 initPreferences()

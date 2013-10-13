@@ -58,10 +58,12 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         self.__ignoreExpand = False
         self.intercept = False
         
-        self.__rx_dir = \
-            QRegExp(r"""\s*([0-9]+)\s+(\w+)\s+((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)\s*""")
-        self.__rx_file = \
-            QRegExp(r"""\s*([0-9]+)\s+(\w+)\s+([0-9]+)\s((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)\s*""")
+        self.__rx_dir = QRegExp(
+            r"""\s*([0-9]+)\s+(\w+)\s+"""
+            r"""((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)\s*""")
+        self.__rx_file = QRegExp(
+            r"""\s*([0-9]+)\s+(\w+)\s+([0-9]+)\s"""
+            r"""((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)\s*""")
     
     def closeEvent(self, e):
         """
@@ -163,11 +165,13 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             finished = process.waitForFinished(30000)
             if finished:
                 if process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(), ioEncoding,
+                                 'replace')
                     for line in output.splitlines():
                         line = line.strip()
                         if line.startswith('<root>'):
-                            repoRoot = line.replace('<root>', '').replace('</root>', '')
+                            repoRoot = line.replace('<root>', '')\
+                                .replace('</root>', '')
                             break
                 else:
                     error = str(process.readAllStandardError(),
@@ -209,14 +213,16 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                 self.__finish()
                 return
             self.__ignoreExpand = True
-            itm = self.__generateItem(repoRoot, "", "", "", "", "dir", repoRoot)
+            itm = self.__generateItem(
+                repoRoot, "", "", "", "", "dir", repoRoot)
             itm.setExpanded(True)
             self.parentItem = itm
             urlPart = repoRoot
             for element in url.replace(repoRoot, "").split("/"):
                 if element:
                     urlPart = "{0}/{1}".format(urlPart, element)
-                    itm = self.__generateItem(element, "", "", "", "", "dir", urlPart)
+                    itm = self.__generateItem(
+                        element, "", "", "", "", "dir", urlPart)
                     itm.setExpanded(True)
                     self.parentItem = itm
             itm.setExpanded(False)
@@ -343,7 +349,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed the
+        button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -400,7 +407,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                 else:
                     continue
                 url = "{0}/{1}".format(self.repoUrl, name)
-                self.__generateItem(name, revision, author, size, date, nodekind, url)
+                self.__generateItem(
+                    name, revision, author, size, date, nodekind, url)
    
     def __readStderr(self):
         """

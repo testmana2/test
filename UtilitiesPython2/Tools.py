@@ -99,7 +99,8 @@ def normalizeCode(codestring):
 
 def extractLineFlags(line, startComment="#", endComment=""):
     """
-    Function to extract flags starting and ending with '__' from a line comment.
+    Function to extract flags starting and ending with '__' from a line
+    comment.
     
     @param line line to extract flags from (string)
     @keyparam startComment string identifying the start of the comment (string)

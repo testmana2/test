@@ -23,14 +23,16 @@ class EricAccessHandler(SchemeAccessHandler):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
         from .NetworkReply import NetworkReply
-        from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+        from .NetworkProtocolUnknownErrorReply import \
+            NetworkProtocolUnknownErrorReply
 
         if request.url().toString() == "eric:home":
             return NetworkReply(request, self.__createHomePage(),
@@ -90,10 +92,13 @@ class EricAccessHandler(SchemeAccessHandler):
             html.replace("@TITLE-EDIT@", self.trUtf8("Edit"))
             html.replace("@TITLE-REMOVE@", self.trUtf8("Remove"))
             html.replace("@TITLE-RELOAD@", self.trUtf8("Reload"))
-            html.replace("@TITLE-FETCHTITLE@", self.trUtf8("Load title from page"))
-            html.replace("@SETTINGS-TITLE@", self.trUtf8("Speed Dial Settings"))
+            html.replace(
+                "@TITLE-FETCHTITLE@", self.trUtf8("Load title from page"))
+            html.replace(
+                "@SETTINGS-TITLE@", self.trUtf8("Speed Dial Settings"))
             html.replace("@ADD-TITLE@", self.trUtf8("Add New Page"))
-            html.replace("@TXT_NRROWS@", self.trUtf8("Maximum pages in a row:"))
+            html.replace(
+                "@TXT_NRROWS@", self.trUtf8("Maximum pages in a row:"))
             html.replace("@TXT_SDSIZE@", self.trUtf8("Change size of pages:"))
             
             self._speedDialPage = html

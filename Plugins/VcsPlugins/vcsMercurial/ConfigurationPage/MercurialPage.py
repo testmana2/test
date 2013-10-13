@@ -12,7 +12,8 @@ import os
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
-from Preferences.ConfigurationPages.ConfigurationPageBase import ConfigurationPageBase
+from Preferences.ConfigurationPages.ConfigurationPageBase import \
+    ConfigurationPageBase
 from .Ui_MercurialPage import Ui_MercurialPage
 
 
@@ -33,27 +34,39 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         self.__plugin = plugin
         
         # set initial values
-        self.logSpinBox.setValue(self.__plugin.getPreferences("LogLimit"))
-        self.commitSpinBox.setValue(self.__plugin.getPreferences("CommitMessages"))
-        self.logBrowserCheckBox.setChecked(self.__plugin.getPreferences("UseLogBrowser"))
-        self.pullUpdateCheckBox.setChecked(self.__plugin.getPreferences("PullUpdate"))
+        self.logSpinBox.setValue(
+            self.__plugin.getPreferences("LogLimit"))
+        self.commitSpinBox.setValue(
+            self.__plugin.getPreferences("CommitMessages"))
+        self.logBrowserCheckBox.setChecked(
+            self.__plugin.getPreferences("UseLogBrowser"))
+        self.pullUpdateCheckBox.setChecked(
+            self.__plugin.getPreferences("PullUpdate"))
         self.preferUnbundleCheckBox.setChecked(
             self.__plugin.getPreferences("PreferUnbundle"))
-        self.cleanupPatternEdit.setText(self.__plugin.getPreferences("CleanupPatterns"))
-        self.backupCheckBox.setChecked(self.__plugin.getPreferences("CreateBackup"))
+        self.cleanupPatternEdit.setText(
+            self.__plugin.getPreferences("CleanupPatterns"))
+        self.backupCheckBox.setChecked(
+            self.__plugin.getPreferences("CreateBackup"))
     
     def save(self):
         """
         Public slot to save the Mercurial configuration.
         """
-        self.__plugin.setPreferences("LogLimit", self.logSpinBox.value())
-        self.__plugin.setPreferences("CommitMessages", self.commitSpinBox.value())
-        self.__plugin.setPreferences("UseLogBrowser", self.logBrowserCheckBox.isChecked())
-        self.__plugin.setPreferences("PullUpdate", self.pullUpdateCheckBox.isChecked())
-        self.__plugin.setPreferences("PreferUnbundle",
-            self.preferUnbundleCheckBox.isChecked())
-        self.__plugin.setPreferences("CleanupPatterns", self.cleanupPatternEdit.text())
-        self.__plugin.setPreferences("CreateBackup", self.backupCheckBox.isChecked())
+        self.__plugin.setPreferences(
+            "LogLimit", self.logSpinBox.value())
+        self.__plugin.setPreferences(
+            "CommitMessages", self.commitSpinBox.value())
+        self.__plugin.setPreferences(
+            "UseLogBrowser", self.logBrowserCheckBox.isChecked())
+        self.__plugin.setPreferences(
+            "PullUpdate", self.pullUpdateCheckBox.isChecked())
+        self.__plugin.setPreferences(
+            "PreferUnbundle", self.preferUnbundleCheckBox.isChecked())
+        self.__plugin.setPreferences(
+            "CleanupPatterns", self.cleanupPatternEdit.text())
+        self.__plugin.setPreferences(
+            "CreateBackup", self.backupCheckBox.isChecked())
     
     @pyqtSlot()
     def on_configButton_clicked(self):
@@ -76,7 +89,8 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
                     username = email
             try:
                 f = open(cfgFile, "w")
-                f.write(os.linesep.join(["[ui]", "username = {0}".format(username), ""]))
+                f.write(os.linesep.join(["[ui]",
+                        "username = {0}".format(username), ""]))
                 f.close()
             except (IOError, OSError):
                 # ignore these

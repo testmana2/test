@@ -41,7 +41,8 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
             """<b>Purge Files</b>"""
             """<p>This deletes files and directories not known to Mercurial."""
             """ That means that purge will delete:<ul>"""
-            """<li>unknown files (marked with "not tracked" in the status dialog)</li>"""
+            """<li>unknown files (marked with "not tracked" in the status"""
+            """ dialog)</li>"""
             """<li>empty directories</li>"""
             """</ul>Note that ignored files will be left untouched.</p>"""
         ))
@@ -52,13 +53,15 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
                 self.trUtf8('Purge All Files'),
                 0, 0, self, 'mercurial_purge_all')
         self.hgPurgeAllAct.setStatusTip(self.trUtf8(
-            'Delete files and directories not known to Mercurial including ignored ones'
+            'Delete files and directories not known to Mercurial including'
+            ' ignored ones'
         ))
         self.hgPurgeAllAct.setWhatsThis(self.trUtf8(
             """<b>Purge All Files</b>"""
             """<p>This deletes files and directories not known to Mercurial."""
             """ That means that purge will delete:<ul>"""
-            """<li>unknown files (marked with "not tracked" in the status dialog)</li>"""
+            """<li>unknown files (marked with "not tracked" in the status"""
+            """ dialog)</li>"""
             """<li>empty directories</li>"""
             """<li>ignored files and directories</li>"""
             """</ul></p>"""
@@ -81,17 +84,19 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         self.hgPurgeListAct.triggered[()].connect(self.__hgPurgeList)
         self.actions.append(self.hgPurgeListAct)
         
-        self.hgPurgeAllListAct = E5Action(self.trUtf8('List All Files to be Purged'),
-                self.trUtf8('List All Files to be Purged...'),
-                0, 0, self, 'mercurial_purge_all_list')
+        self.hgPurgeAllListAct = E5Action(
+            self.trUtf8('List All Files to be Purged'),
+            self.trUtf8('List All Files to be Purged...'),
+            0, 0, self, 'mercurial_purge_all_list')
         self.hgPurgeAllListAct.setStatusTip(self.trUtf8(
-            'List files and directories not known to Mercurial including ignored ones'
+            'List files and directories not known to Mercurial including'
+            ' ignored ones'
         ))
         self.hgPurgeAllListAct.setWhatsThis(self.trUtf8(
             """<b>List All Files to be Purged</b>"""
-            """<p>This lists files and directories not known to Mercurial including"""
-            """ ignored ones. These would be deleted by the "Purge All Files" menu"""
-            """ entry.</p>"""
+            """<p>This lists files and directories not known to Mercurial"""
+            """ including ignored ones. These would be deleted by the"""
+            """ "Purge All Files" menu entry.</p>"""
         ))
         self.hgPurgeAllListAct.triggered[()].connect(self.__hgPurgeAllList)
         self.actions.append(self.hgPurgeAllListAct)

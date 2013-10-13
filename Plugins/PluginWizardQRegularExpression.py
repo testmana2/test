@@ -74,8 +74,8 @@ class QRegularExpressionWizard(QObject):
         self.action.setWhatsThis(self.trUtf8(
             """<b>QRegularExpression Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
-            """ needed to create a QRegularExpression string. The generated code"""
-            """ is inserted at the current cursor position.</p>"""
+            """ needed to create a QRegularExpression string. The generated"""
+            """ code is inserted at the current cursor position.</p>"""
         ))
         self.action.triggered[()].connect(self.__handle)
         
@@ -96,7 +96,8 @@ class QRegularExpressionWizard(QObject):
         @param editor reference to the current editor
         @return the generated code (string)
         """
-        from WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog import \
+        from WizardPlugins.QRegularExpressionWizard\
+            .QRegularExpressionWizardDialog import \
             QRegularExpressionWizardDialog
         dlg = QRegularExpressionWizardDialog(None, True)
         if dlg.exec_() == QDialog.Accepted:

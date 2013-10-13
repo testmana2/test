@@ -21,7 +21,8 @@ import Preferences
 
 class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
     """
-    Class implementing a dialog to show the commit message of the current patch.
+    Class implementing a dialog to show the commit message of the current
+    patch.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -112,7 +113,8 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -123,7 +125,8 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
     

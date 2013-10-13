@@ -26,7 +26,8 @@ class TaskFilter(object):
         self.filenameFilter = None
         self.typeFilter = Task.TypeNone     # task type
         self.scopeFilter = None             # global (False) or project (True)
-        self.statusFilter = None            # uncompleted (False) or completed (True)
+        self.statusFilter = None            # uncompleted (False) or
+                                            # completed (True)
         self.prioritiesFilter = None        # list of priorities
                                             # [0 (high), 1 (normal), 2 (low)]
     

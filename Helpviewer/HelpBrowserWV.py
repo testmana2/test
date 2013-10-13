@@ -8,12 +8,12 @@
 Module implementing the helpbrowser using QWebView.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
-    QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, QPoint, \
-    QByteArray, qVersion
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
+    QUrl, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, \
+    QPoint, QByteArray, qVersion
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
-    QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
-    QPalette, QFrame, QPrinter, QPrintDialog, QDialog
+    QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, \
+    QColor, QPalette, QFrame, QPrinter, QPrintDialog, QDialog
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
 try:
     from PyQt4.QtWebKit import QWebElement
@@ -33,7 +33,7 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
-##########################################################################################
+###############################################################################
 
 
 class JavaScriptExternalObject(QObject):
@@ -74,16 +74,19 @@ class LinkedResource(object):
         self.href = ""
         self.title = ""
 
-##########################################################################################
+###############################################################################
 
 
 class JavaScriptEricObject(QObject):
     """
-    Class implementing an external javascript object to search via the startpage.
+    Class implementing an external javascript object to search via the
+    startpage.
     """
-    # these must be in line with the strings used by the javascript part of the start page
+    # these must be in line with the strings used by the javascript part of
+    # the start page
     translations = [
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Welcome to eric5 Web Browser!"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject",
+                          "Welcome to eric5 Web Browser!"),
         QT_TRANSLATE_NOOP("JavaScriptEricObject", "eric5 Web Browser"),
         QT_TRANSLATE_NOOP("JavaScriptEricObject", "Search!"),
         QT_TRANSLATE_NOOP("JavaScriptEricObject", "About eric5"),
@@ -139,7 +142,7 @@ class JavaScriptEricObject(QObject):
             self.__mw.openSearchManager().currentEngine()\
             .searchUrl(searchStr).toEncoded()).decode()
 
-##########################################################################################
+###############################################################################
 
 
 class HelpWebPage(QWebPage):
@@ -162,7 +165,8 @@ class HelpWebPage(QWebPage):
         self.__lastRequestType = QWebPage.NavigationTypeOther
         
         import Helpviewer.HelpWindow
-        from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
+        from .Network.NetworkAccessManagerProxy import \
+            NetworkAccessManagerProxy
         self.__proxy = NetworkAccessManagerProxy(self)
         self.__proxy.setWebPage(self)
         self.__proxy.setPrimaryNetworkAccessManager(
@@ -197,11 +201,12 @@ class HelpWebPage(QWebPage):
         if type_ == QWebPage.NavigationTypeFormResubmitted:
             res = E5MessageBox.yesNo(self.view(),
                 self.trUtf8("Resending POST request"),
-                self.trUtf8("""In order to display the site, the request along with"""
-                            """ all the data must be sent once again, which may lead"""
-                            """ to some unexpected behaviour of the site e.g. the"""
-                            """ same action might be performed once again. Do you want"""
-                            """ to continue anyway?"""),
+                self.trUtf8(
+                    """In order to display the site, the request along with"""
+                    """ all the data must be sent once again, which may lead"""
+                    """ to some unexpected behaviour of the site e.g. the"""
+                    """ same action might be performed once again. Do you"""
+                    """ want to continue anyway?"""),
                 icon=E5MessageBox.Warning)
             if not res:
                 return False
@@ -212,14 +217,18 @@ class HelpWebPage(QWebPage):
         """
         Public method to add data to a network request.
         
-        @param request reference to the network request object (QNetworkRequest)
+        @param request reference to the network request object
+            (QNetworkRequest)
         """
         try:
             request.setAttribute(QNetworkRequest.User + 100, self)
             if self.__lastRequest.url() == request.url():
-                request.setAttribute(QNetworkRequest.User + 101, self.__lastRequestType)
-                if self.__lastRequestType == QWebPage.NavigationTypeLinkClicked:
-                    request.setRawHeader("X-Eric5-UserLoadAction", QByteArray("1"))
+                request.setAttribute(QNetworkRequest.User + 101,
+                                     self.__lastRequestType)
+                if self.__lastRequestType == \
+                        QWebPage.NavigationTypeLinkClicked:
+                    request.setRawHeader("X-Eric5-UserLoadAction",
+                                         QByteArray("1"))
         except TypeError:
             pass
     
@@ -252,13 +261,16 @@ class HelpWebPage(QWebPage):
         Public method to implement a specific extension.
         
         @param extension extension to be executed (QWebPage.Extension)
-        @param option provides input to the extension (QWebPage.ExtensionOption)
+        @param option provides input to the extension
+            (QWebPage.ExtensionOption)
         @param output stores the output results (QWebPage.ExtensionReturn)
         @return flag indicating a successful call of the extension (boolean)
         """
         if extension == QWebPage.ChooseMultipleFilesExtension:
-            info = sip.cast(option, QWebPage.ChooseMultipleFilesExtensionOption)
-            files = sip.cast(output, QWebPage.ChooseMultipleFilesExtensionReturn)
+            info = sip.cast(option,
+                            QWebPage.ChooseMultipleFilesExtensionOption)
+            files = sip.cast(output,
+                             QWebPage.ChooseMultipleFilesExtensionReturn)
             if info is None or files is None:
                 return super().extension(extension, option, output)
             
@@ -275,7 +287,8 @@ class HelpWebPage(QWebPage):
         if extension == QWebPage.ErrorPageExtension:
             info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
             if info.error == 102:
-                # this is something of a hack; hopefully it will work in the future
+                # this is something of a hack; hopefully it will work in
+                # the future
                 return False
             
             errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
@@ -286,7 +299,8 @@ class HelpWebPage(QWebPage):
                info.errorString.startswith("AdBlockRule:"):
                 if info.frame != info.frame.page().mainFrame():
                     # content in <iframe>
-                    docElement = info.frame.page().mainFrame().documentElement()
+                    docElement = info.frame.page().mainFrame()\
+                        .documentElement()
                     for element in docElement.findAll("iframe"):
                         src = element.attribute("src")
                         if src in info.url.toString():
@@ -296,13 +310,16 @@ class HelpWebPage(QWebPage):
                     # the whole page is blocked
                     rule = info.errorString.replace("AdBlockRule:", "")
                     title = self.trUtf8("Content blocked by AdBlock Plus")
-                    message = self.trUtf8("Blocked by rule: <i>{0}</i>").format(rule)
+                    message = self.trUtf8(
+                        "Blocked by rule: <i>{0}</i>").format(rule)
                     
                     htmlFile = QFile(":/html/adblockPage.html")
                     htmlFile.open(QFile.ReadOnly)
                     html = htmlFile.readAll()
-                    html = html.replace("@FAVICON@", "qrc:icons/adBlockPlus16.png")
-                    html = html.replace("@IMAGE@", "qrc:icons/adBlockPlus64.png")
+                    html = html.replace(
+                        "@FAVICON@", "qrc:icons/adBlockPlus16.png")
+                    html = html.replace(
+                        "@IMAGE@", "qrc:icons/adBlockPlus64.png")
                     html = html.replace("@TITLE@", title.encode("utf8"))
                     html = html.replace("@MESSAGE@", message.encode("utf8"))
                     errorPage.content = html
@@ -328,27 +345,32 @@ class HelpWebPage(QWebPage):
             imageBuffer = QBuffer()
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
-                html = html.replace("@FAVICON@", imageBuffer.buffer().toBase64())
+                html = html.replace(
+                    "@FAVICON@", imageBuffer.buffer().toBase64())
             html = html.replace("@TITLE@", title.encode("utf8"))
             html = html.replace("@H1@", info.errorString.encode("utf8"))
-            html = html.replace("@H2@", self.trUtf8("When connecting to: {0}.")\
+            html = html.replace(
+                "@H2@", self.trUtf8("When connecting to: {0}.")\
                 .format(urlString).encode("utf8"))
             html = html.replace("@LI-1@",
                 self.trUtf8("Check the address for errors such as "
                             "<b>ww</b>.example.org instead of "
                             "<b>www</b>.example.org").encode("utf8"))
             html = html.replace("@LI-2@",
-                self.trUtf8("If the address is correct, try checking the network "
-                            "connection.").encode("utf8"))
+                self.trUtf8(
+                    "If the address is correct, try checking the network "
+                    "connection.").encode("utf8"))
             html = html.replace("@LI-3@",
-                self.trUtf8("If your computer or network is protected by a firewall "
-                            "or proxy, make sure that the browser is permitted to "
-                            "access the network.").encode("utf8"))
+                self.trUtf8(
+                    "If your computer or network is protected by a firewall "
+                    "or proxy, make sure that the browser is permitted to "
+                    "access the network.").encode("utf8"))
             html = html.replace("@LI-4@",
                 self.trUtf8("If your cache policy is set to offline browsing,"
                             "only pages in the local cache are available.")\
                 .encode("utf8"))
-            html = html.replace("@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+            html = html.replace(
+                "@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
             errorPage.content = html
             return True
         
@@ -417,7 +439,8 @@ class HelpWebPage(QWebPage):
         @return user agent string (string)
         """
         import Helpviewer.HelpWindow
-        agent = Helpviewer.HelpWindow.HelpWindow.userAgentsManager().userAgentForUrl(url)
+        agent = Helpviewer.HelpWindow.HelpWindow.userAgentsManager()\
+            .userAgentForUrl(url)
         if agent == "":
             # no agent string specified for the given host -> use global one
             agent = Preferences.getHelp("UserAgent")
@@ -463,7 +486,8 @@ class HelpWebPage(QWebPage):
                 manager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
                 from .Bookmarks.BookmarkNode import BookmarkNode
                 for bookmark in manager.bookmarksForUrl(reply.url()):
-                    manager.setTimestamp(bookmark, BookmarkNode.TsModified, modified)
+                    manager.setTimestamp(bookmark, BookmarkNode.TsModified,
+                                         modified)
     
     def getSslCertificate(self):
         """
@@ -506,8 +530,8 @@ class HelpWebPage(QWebPage):
         """
         if SSL_AVAILABLE and self.__sslConfiguration is not None:
             from E5Network.E5SslInfoWidget import E5SslInfoWidget
-            widget = E5SslInfoWidget(self.mainFrame().url(), self.__sslConfiguration,
-                self.view())
+            widget = E5SslInfoWidget(
+                self.mainFrame().url(), self.__sslConfiguration, self.view())
             widget.showAt(pos)
         else:
             E5MessageBox.warning(self.view(),
@@ -576,7 +600,7 @@ class HelpWebPage(QWebPage):
         
         return super().event(evt)
 
-##########################################################################################
+###############################################################################
 
 
 class HelpBrowser(QWebView):
@@ -618,8 +642,8 @@ class HelpBrowser(QWebView):
         super().__init__(parent)
         self.setObjectName(name)
         self.setWhatsThis(self.trUtf8(
-                """<b>Help Window</b>"""
-                """<p>This window displays the selected help information.</p>"""
+            """<b>Help Window</b>"""
+            """<p>This window displays the selected help information.</p>"""
         ))
         
         import Helpviewer.HelpWindow
@@ -689,7 +713,8 @@ class HelpBrowser(QWebView):
         
         @param frame reference to the web frame (QWebFrame)
         """
-        self.page().settings().setAttribute(QWebSettings.JavascriptEnabled, True)
+        self.page().settings().setAttribute(QWebSettings.JavascriptEnabled,
+                                            True)
         if self.__javaScriptBinding is None:
             self.__javaScriptBinding = JavaScriptExternalObject(self.mw, self)
         
@@ -700,14 +725,19 @@ class HelpBrowser(QWebView):
                 frame = frame.mainFrame()
             if frame.url().scheme() == "eric" and frame.url().path() == "home":
                 if self.__javaScriptEricObject is None:
-                    self.__javaScriptEricObject = JavaScriptEricObject(self.mw, self)
-                frame.addToJavaScriptWindowObject("eric", self.__javaScriptEricObject)
-            elif frame.url().scheme() == "eric" and frame.url().path() == "speeddial":
-                frame.addToJavaScriptWindowObject("speeddial", self.__speedDial)
+                    self.__javaScriptEricObject = JavaScriptEricObject(
+                        self.mw, self)
+                frame.addToJavaScriptWindowObject(
+                    "eric", self.__javaScriptEricObject)
+            elif frame.url().scheme() == "eric" and \
+                    frame.url().path() == "speeddial":
+                frame.addToJavaScriptWindowObject(
+                    "speeddial", self.__speedDial)
                 self.__speedDial.addWebFrame(frame)
         else:
             # called from QWebPage.frameCreated
-            frame.javaScriptWindowObjectCleared.connect(self.__addExternalBinding)
+            frame.javaScriptWindowObjectCleared.connect(
+                self.__addExternalBinding)
         frame.addToJavaScriptWindowObject("external", self.__javaScriptBinding)
     
     def linkedResources(self, relation=""):
@@ -721,7 +751,8 @@ class HelpBrowser(QWebView):
         
         baseUrl = self.page().mainFrame().baseUrl()
         
-        linkElements = self.page().mainFrame().findAllElements("html > head > link")
+        linkElements = self.page().mainFrame().findAllElements(
+            "html > head > link")
         
         for linkElement in linkElements.toList():
             rel = linkElement.attribute("rel")
@@ -784,7 +815,8 @@ class HelpBrowser(QWebView):
             if not QFileInfo(name.toLocalFile()).exists():
                 E5MessageBox.critical(self,
                     self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8("""<p>The file <b>{0}</b> does not exist.</p>""")\
+                    self.trUtf8(
+                        """<p>The file <b>{0}</b> does not exist.</p>""")\
                         .format(name.toLocalFile()))
                 return
 
@@ -983,7 +1015,8 @@ class HelpBrowser(QWebView):
         @param case flag indicating a case sensitive search (boolean)
         @param backwards flag indicating a backwards search (boolean)
         @param wrap flag indicating to wrap around (boolean)
-        @param highlightAll flag indicating to highlight all occurrences (boolean)
+        @param highlightAll flag indicating to highlight all occurrences
+            (boolean)
         @return flag indicating that a match was found (boolean)
         """
         findFlags = QWebPage.FindFlags()
@@ -1016,7 +1049,8 @@ class HelpBrowser(QWebView):
         
         This method is overridden from QWebView.
         
-        @param evt reference to the context menu event object (QContextMenuEvent)
+        @param evt reference to the context menu event object
+            (QContextMenuEvent)
         """
         from .UserAgent.UserAgentMenu import UserAgentMenu
         menu = QMenu(self)
@@ -1036,13 +1070,16 @@ class HelpBrowser(QWebView):
             menu.addSeparator()
             menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
-            menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
-                self.trUtf8("Send Link"), self.__sendLink).setData(hit.linkUrl())
+            menu.addAction(
+                UI.PixmapCache.getIcon("mailSend.png"),
+                self.trUtf8("Send Link"),
+                self.__sendLink).setData(hit.linkUrl())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
-                menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
-                    self.trUtf8("Scan Link with VirusTotal"), self.__virusTotal)\
-                    .setData(hit.linkUrl())
+                menu.addAction(
+                    UI.PixmapCache.getIcon("virustotal.png"),
+                    self.trUtf8("Scan Link with VirusTotal"),
+                    self.__virusTotal).setData(hit.linkUrl())
         
         if not hit.imageUrl().isEmpty():
             if not menu.isEmpty():
@@ -1053,21 +1090,25 @@ class HelpBrowser(QWebView):
             menu.addSeparator()
             menu.addAction(UI.PixmapCache.getIcon("download.png"),
                 self.trUtf8("Save Image"), self.__downloadImage)
-            menu.addAction(self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
+            menu.addAction(
+                self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
             menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy Image Location to Clipboard"),
                 self.__copyLocation).setData(hit.imageUrl().toString())
-            menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
-                self.trUtf8("Send Image Link"), self.__sendLink).setData(hit.imageUrl())
+            menu.addAction(
+                UI.PixmapCache.getIcon("mailSend.png"),
+                self.trUtf8("Send Image Link"),
+                self.__sendLink).setData(hit.imageUrl())
             menu.addSeparator()
             menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
                 self.trUtf8("Block Image"), self.__blockImage)\
                 .setData(hit.imageUrl().toString())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
-                menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
-                    self.trUtf8("Scan Image with VirusTotal"), self.__virusTotal)\
-                    .setData(hit.imageUrl())
+                menu.addAction(
+                    UI.PixmapCache.getIcon("virustotal.png"),
+                    self.trUtf8("Scan Image with VirusTotal"),
+                    self.__virusTotal).setData(hit.imageUrl())
         
         element = hit.element()
         if not element.isNull():
@@ -1082,16 +1123,20 @@ class HelpBrowser(QWebView):
                 videoUrl = QUrl(element.evaluateJavaScript("this.currentSrc"))
                 
                 if paused:
-                    menu.addAction(UI.PixmapCache.getIcon("mediaPlaybackStart.png"),
+                    menu.addAction(
+                        UI.PixmapCache.getIcon("mediaPlaybackStart.png"),
                         self.trUtf8("Play"), self.__pauseMedia)
                 else:
-                    menu.addAction(UI.PixmapCache.getIcon("mediaPlaybackPause.png"),
+                    menu.addAction(
+                        UI.PixmapCache.getIcon("mediaPlaybackPause.png"),
                         self.trUtf8("Pause"), self.__pauseMedia)
                 if muted:
-                    menu.addAction(UI.PixmapCache.getIcon("audioVolumeHigh.png"),
+                    menu.addAction(
+                        UI.PixmapCache.getIcon("audioVolumeHigh.png"),
                         self.trUtf8("Unmute"), self.__muteMedia)
                 else:
-                    menu.addAction(UI.PixmapCache.getIcon("audioVolumeMuted.png"),
+                    menu.addAction(
+                        UI.PixmapCache.getIcon("audioVolumeMuted.png"),
                         self.trUtf8("Mute"), self.__muteMedia)
                 menu.addSeparator()
                 menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
@@ -1107,14 +1152,16 @@ class HelpBrowser(QWebView):
             if element.tagName().lower() in ["input", "textarea"]:
                 if menu.isEmpty():
                     pageMenu = self.page().createStandardContextMenu()
-                    directionFound = False  # used to detect double direction entry
+                    directionFound = False  # used to detect double
+                                            # direction entry
                     for act in pageMenu.actions():
                         if act.isSeparator():
                             menu.addSeparator()
                             continue
                         if act.menu():
-                            if self.pageAction(QWebPage.SetTextDirectionDefault) in \
-                               act.menu().actions():
+                            if self.pageAction(
+                                    QWebPage.SetTextDirectionDefault) in \
+                                    act.menu().actions():
                                 if directionFound:
                                     act.setVisible(False)
                                 directionFound = True
@@ -1174,7 +1221,8 @@ class HelpBrowser(QWebView):
         menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
             self.trUtf8("Send Page Link"), self.__sendLink).setData(self.url())
         menu.addSeparator()
-        self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"), url=self.url())
+        self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"),
+                                             url=self.url())
         menu.addMenu(self.__userAgentMenu)
         menu.addSeparator()
         menu.addAction(self.mw.backAct)
@@ -1187,14 +1235,17 @@ class HelpBrowser(QWebView):
         menu.addSeparator()
         if self.selectedText():
             menu.addAction(self.mw.copyAct)
-            menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
-                self.trUtf8("Send Text"), self.__sendLink).setData(self.selectedText())
+            menu.addAction(
+                UI.PixmapCache.getIcon("mailSend.png"),
+                self.trUtf8("Send Text"),
+                self.__sendLink).setData(self.selectedText())
         menu.addAction(self.mw.findAct)
         menu.addSeparator()
         if self.selectedText():
             self.__searchMenu = menu.addMenu(self.trUtf8("Search with..."))
             
-            from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
+            from .OpenSearch.OpenSearchEngineAction import \
+                OpenSearchEngineAction
             engineNames = self.mw.openSearchManager().allEnginesNames()
             for engineName in engineNames:
                 engine = self.mw.openSearchManager().engine(engineName)
@@ -1219,8 +1270,8 @@ class HelpBrowser(QWebView):
                     self.trUtf8("Google Translate"), self.__openLinkInNewTab)\
                     .setData(googleTranslatorUrl)
                 wiktionaryUrl = QUrl(
-                    "http://{0}.wiktionary.org/wiki/Special:Search?search={1}".format(
-                        langCode, self.selectedText()))
+                    "http://{0}.wiktionary.org/wiki/Special:Search?search={1}"
+                    .format(langCode, self.selectedText()))
                 menu.addAction(UI.PixmapCache.getIcon("wikipedia.png"),
                     self.trUtf8("Dictionary"), self.__openLinkInNewTab)\
                     .setData(wiktionaryUrl)
@@ -1228,8 +1279,9 @@ class HelpBrowser(QWebView):
             
             guessedUrl = QUrl.fromUserInput(self.selectedText().strip())
             if self.__isUrlValid(guessedUrl):
-                menu.addAction(self.trUtf8("Go to web address"), self.__openLinkInNewTab)\
-                    .setData(guessedUrl)
+                menu.addAction(
+                    self.trUtf8("Go to web address"),
+                    self.__openLinkInNewTab).setData(guessedUrl)
                 menu.addSeparator()
         
         element = hit.element()
@@ -1259,7 +1311,8 @@ class HelpBrowser(QWebView):
     
     def __openLinkInNewTab(self):
         """
-        Private method called by the context menu to open a link in a new window.
+        Private method called by the context menu to open a link in a new
+        window.
         """
         act = self.sender()
         url = act.data()
@@ -1415,7 +1468,8 @@ class HelpBrowser(QWebView):
         if method != "get":
             E5MessageBox.warning(self,
                 self.trUtf8("Method not supported"),
-                self.trUtf8("""{0} method is not supported.""").format(method.upper()))
+                self.trUtf8(
+                    """{0} method is not supported.""").format(method.upper()))
             return
         
         searchUrl = QUrl(self.page().mainFrame().baseUrl().resolved(
@@ -1445,7 +1499,8 @@ class HelpBrowser(QWebView):
         selectFields = formElement.findAll("select")
         for selectField in selectFields.toList():
             name = selectField.attribute("name")
-            selectedIndex = selectField.evaluateJavaScript("this.selectedIndex")
+            selectedIndex = selectField.evaluateJavaScript(
+                "this.selectedIndex")
             if selectedIndex == -1:
                 continue
             
@@ -1465,7 +1520,8 @@ class HelpBrowser(QWebView):
                 return
             
             if searchEngines[searchEngine] != "":
-                searchUrl.addQueryItem(searchEngines[searchEngine], searchEngine)
+                searchUrl.addQueryItem(
+                    searchEngines[searchEngine], searchEngine)
         
         engineName = ""
         labels = formElement.findAll('label[for="{0}"]'.format(elementName))
@@ -1698,9 +1754,9 @@ class HelpBrowser(QWebView):
         self.history().clear()
         self.__urlChanged(self.history().currentItem().url())
     
-    ############################################################################
+    ###########################################################################
     ## Signal converters below
-    ############################################################################
+    ###########################################################################
     
     def __urlChanged(self, url):
         """
@@ -1731,9 +1787,9 @@ class HelpBrowser(QWebView):
         """
         self.highlighted.emit(link)
     
-    ############################################################################
+    ###########################################################################
     ## Signal handlers below
-    ############################################################################
+    ###########################################################################
     
     def __loadStarted(self):
         """
@@ -1794,7 +1850,8 @@ class HelpBrowser(QWebView):
         
         self.mw.downloadManager().download(url, True, mainWindow=self.mw)
     
-    def __unsupportedContent(self, reply, requestFilename=None, download=False):
+    def __unsupportedContent(self, reply, requestFilename=None,
+                             download=False):
         """
         Private slot to handle the unsupportedContent signal.
         
@@ -1861,14 +1918,16 @@ class HelpBrowser(QWebView):
             self.trUtf8("If the address is correct, try checking the network "
                         "connection.").encode("utf8"))
         html = html.replace("@LI-3@",
-            self.trUtf8("If your computer or network is protected by a firewall "
-                        "or proxy, make sure that the browser is permitted to "
-                        "access the network.").encode("utf8"))
+            self.trUtf8(
+                "If your computer or network is protected by a firewall "
+                "or proxy, make sure that the browser is permitted to "
+                "access the network.").encode("utf8"))
         html = html.replace("@LI-4@",
             self.trUtf8("If your cache policy is set to offline browsing,"
                         "only pages in the local cache are available.")\
             .encode("utf8"))
-        html = html.replace("@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+        html = html.replace(
+            "@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
         notFoundFrame.setHtml(bytes(html).decode("utf8"), replyUrl)
         self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
         self.loadFinished.emit(False)
@@ -1897,20 +1956,25 @@ class HelpBrowser(QWebView):
         
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Web Database Quota"),
-            self.trUtf8("""<p>The database quota of <strong>{0}</strong> has"""
-                        """ been exceeded while accessing database <strong>{1}"""
-                        """</strong>.</p><p>Shall it be changed?</p>""")\
-                .format(self.__dataString(securityOrigin.databaseQuota()), databaseName),
+            self.trUtf8(
+                """<p>The database quota of <strong>{0}</strong> has"""
+                """ been exceeded while accessing database <strong>{1}"""
+                """</strong>.</p><p>Shall it be changed?</p>""")\
+                .format(self.__dataString(securityOrigin.databaseQuota()),
+                        databaseName),
             yesDefault=True)
         if res:
             newQuota, ok = QInputDialog.getInt(
                 self,
                 self.trUtf8("New Web Database Quota"),
-                self.trUtf8("Enter the new quota in MB (current = {0}, used = {1}; "
-                            "step size = 5 MB):"\
-                    .format(self.__dataString(securityOrigin.databaseQuota()),
-                            self.__dataString(securityOrigin.databaseUsage()))),
-                securityOrigin.databaseQuota() // (1024 * 1024), 0, 2147483647, 5)
+                self.trUtf8(
+                    "Enter the new quota in MB (current = {0}, used = {1}; "
+                    "step size = 5 MB):"\
+                    .format(
+                        self.__dataString(securityOrigin.databaseQuota()),
+                        self.__dataString(securityOrigin.databaseUsage()))),
+                securityOrigin.databaseQuota() // (1024 * 1024),
+                0, 2147483647, 5)
             if ok:
                 securityOrigin.setDatabaseQuota(newQuota * 1024 * 1024)
     
@@ -1932,9 +1996,9 @@ class HelpBrowser(QWebView):
             unit = self.trUtf8("MB")
         return "{0:.1f} {1}".format(size, unit)
     
-    ############################################################################
+    ###########################################################################
     ## Access key related methods below
-    ############################################################################
+    ###########################################################################
     
     def __accessKeyShortcut(self):
         """
@@ -1978,11 +2042,15 @@ class HelpBrowser(QWebView):
             while frame and frame != self.page().mainFrame():
                 p -= frame.scrollPosition()
                 frame = frame.parentFrame()
-            pevent = QMouseEvent(QEvent.MouseButtonPress, p, Qt.LeftButton,
-                Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
+            pevent = QMouseEvent(
+                QEvent.MouseButtonPress, p, Qt.LeftButton,
+                Qt.MouseButtons(Qt.NoButton),
+                Qt.KeyboardModifiers(Qt.NoModifier))
             qApp.sendEvent(self, pevent)
-            revent = QMouseEvent(QEvent.MouseButtonRelease, p, Qt.LeftButton,
-                Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
+            revent = QMouseEvent(
+                QEvent.MouseButtonRelease, p, Qt.LeftButton,
+                Qt.MouseButtons(Qt.NoButton),
+                Qt.KeyboardModifiers(Qt.NoModifier))
             qApp.sendEvent(self, revent)
             handled = True
         
@@ -2015,7 +2083,8 @@ class HelpBrowser(QWebView):
         # Priority first goes to elements with accesskey attributes
         alreadyLabeled = []
         for elementType in supportedElements:
-            result = self.page().mainFrame().findAllElements(elementType).toList()
+            result = self.page().mainFrame().findAllElements(elementType)\
+                .toList()
             for element in result:
                 geometry = element.geometry()
                 if geometry.size().isEmpty() or \
@@ -2039,10 +2108,11 @@ class HelpBrowser(QWebView):
                 self.__makeAccessLabel(accessKey, element)
                 alreadyLabeled.append(element)
         
-        # Pick an access key first from the letters in the text and then from the
-        # list of unused access keys
+        # Pick an access key first from the letters in the text and then
+        # from the list of unused access keys
         for elementType in supportedElements:
-            result = self.page().mainFrame().findAllElements(elementType).toList()
+            result = self.page().mainFrame().findAllElements(elementType)\
+                .toList()
             for element in result:
                 geometry = element.geometry()
                 if not unusedKeys or \
@@ -2159,9 +2229,9 @@ class HelpBrowser(QWebView):
         """
         return len(self.__rss) > 0
     
-    ############################################################################
+    ###########################################################################
     ## Clicked Frame slots
-    ############################################################################
+    ###########################################################################
     
     def __loadClickedFrame(self):
         """
@@ -2198,8 +2268,9 @@ class HelpBrowser(QWebView):
             except AttributeError:
                 E5MessageBox.critical(self,
                     self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                                """Please upgrade.</p>"""))
+                    self.trUtf8(
+                        """<p>Printing is not available due to a bug in"""
+                        """ PyQt4. Please upgrade.</p>"""))
     
     def __printPreviewClickedFrame(self):
         """
@@ -2240,8 +2311,9 @@ class HelpBrowser(QWebView):
         except AttributeError:
             E5MessageBox.critical(self,
                 self.trUtf8("eric5 Web Browser"),
-                self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                            """Please upgrade.</p>"""))
+                self.trUtf8(
+                    """<p>Printing is not available due to a bug in PyQt4."""
+                    """Please upgrade.</p>"""))
             return
     
     def __printPdfClickedFrame(self):
@@ -2268,17 +2340,20 @@ class HelpBrowser(QWebView):
             except AttributeError:
                 E5MessageBox.critical(self,
                     self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                                """Please upgrade.</p>"""))
+                    self.trUtf8(
+                        """<p>Printing is not available due to a bug in"""
+                        """ PyQt4. Please upgrade.</p>"""))
                 return
     
     def __zoomInClickedFrame(self):
         """
         Private slot to zoom into the clicked frame.
         """
-        index = self.__levelForZoom(int(self.__clickedFrame.zoomFactor() * 100))
+        index = self.__levelForZoom(
+            int(self.__clickedFrame.zoomFactor() * 100))
         if index < len(self.__zoomLevels) - 1:
-            self.__clickedFrame.setZoomFactor(self.__zoomLevels[index + 1] / 100)
+            self.__clickedFrame.setZoomFactor(
+                self.__zoomLevels[index + 1] / 100)
     
     def __zoomResetClickedFrame(self):
         """
@@ -2290,9 +2365,11 @@ class HelpBrowser(QWebView):
         """
         Private slot to zoom out of the clicked frame.
         """
-        index = self.__levelForZoom(int(self.__clickedFrame.zoomFactor() * 100))
+        index = self.__levelForZoom(
+            int(self.__clickedFrame.zoomFactor() * 100))
         if index > 0:
-            self.__clickedFrame.setZoomFactor(self.__zoomLevels[index - 1] / 100)
+            self.__clickedFrame.setZoomFactor(
+                self.__zoomLevels[index - 1] / 100)
     
     def __showClickedFrameSource(self):
         """

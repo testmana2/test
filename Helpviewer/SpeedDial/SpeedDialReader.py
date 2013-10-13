@@ -27,8 +27,8 @@ class SpeedDialReader(QXmlStreamReader):
         
         @param fileNameOrDevice name of the file to read (string)
             or reference to the device to read (QIODevice)
-        @return list of speed dial pages (list of Page), number of pages per row (integer)
-            and size of the speed dial pages (integer)
+        @return list of speed dial pages (list of Page), number of pages per
+            row (integer) and size of the speed dial pages (integer)
         """
         self.__pages = []
         self.__pagesPerRow = 0

@@ -7,8 +7,9 @@
 Module implementing a class to read XBEL bookmark files.
 """
 
-from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, QIODevice, \
-    QFile, QCoreApplication, QXmlStreamNamespaceDeclaration, QDateTime, Qt
+from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, \
+    QIODevice, QFile, QCoreApplication, QXmlStreamNamespaceDeclaration, \
+    QDateTime, Qt
 
 from .BookmarkNode import BookmarkNode
 
@@ -69,7 +70,8 @@ class XbelReader(QXmlStreamReader):
                     self.__readXBEL(root)
                 else:
                     self.raiseError(QCoreApplication.translate(
-                        "XbelReader", "The file is not an XBEL version 1.0 file."))
+                        "XbelReader",
+                        "The file is not an XBEL version 1.0 file."))
         
         return root
     
@@ -108,7 +110,8 @@ class XbelReader(QXmlStreamReader):
         
         folder = BookmarkNode(BookmarkNode.Folder, node)
         folder.expanded = self.attributes().value("folded") == "no"
-        folder.added = QDateTime.fromString(self.attributes().value("added"), Qt.ISODate)
+        folder.added = QDateTime.fromString(
+            self.attributes().value("added"), Qt.ISODate)
         
         while not self.atEnd():
             self.readNext()
@@ -135,7 +138,8 @@ class XbelReader(QXmlStreamReader):
         """
         Private method to read the title element.
         
-        @param node reference to the bookmark node title belongs to (BookmarkNode)
+        @param node reference to the bookmark node title belongs to
+            (BookmarkNode)
         """
         if not self.isStartElement() and self.name() != "title":
             return
@@ -146,7 +150,8 @@ class XbelReader(QXmlStreamReader):
         """
         Private method to read the desc element.
         
-        @param node reference to the bookmark node desc belongs to (BookmarkNode)
+        @param node reference to the bookmark node desc belongs to
+            (BookmarkNode)
         """
         if not self.isStartElement() and self.name() != "desc":
             return
@@ -157,10 +162,12 @@ class XbelReader(QXmlStreamReader):
         """
         Private method to read a separator element.
         
-        @param node reference to the bookmark node the separator belongs to (BookmarkNode)
+        @param node reference to the bookmark node the separator belongs to
+            (BookmarkNode)
         """
         sep = BookmarkNode(BookmarkNode.Separator, node)
-        sep.added = QDateTime.fromString(self.attributes().value("added"), Qt.ISODate)
+        sep.added = QDateTime.fromString(
+            self.attributes().value("added"), Qt.ISODate)
         
         # empty elements have a start and end element
         while not self.atEnd():
@@ -208,14 +215,15 @@ class XbelReader(QXmlStreamReader):
                     self.__skipUnknownElement()
         
         if not bookmark.title:
-            bookmark.title = QCoreApplication.translate("XbelReader", "Unknown title")
+            bookmark.title = QCoreApplication.translate(
+                "XbelReader", "Unknown title")
     
     def __readInfo(self):
         """
         Private method to read and parse an info subtree.
         """
-        self.addExtraNamespaceDeclaration(
-            QXmlStreamNamespaceDeclaration("bookmark", "http://www.python.org"))
+        self.addExtraNamespaceDeclaration(QXmlStreamNamespaceDeclaration(
+            "bookmark", "http://www.python.org"))
         self.skipCurrentElement()
     
     def __skipUnknownElement(self):

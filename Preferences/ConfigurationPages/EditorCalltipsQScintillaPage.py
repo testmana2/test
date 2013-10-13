@@ -42,14 +42,14 @@ class EditorCalltipsQScintillaPage(ConfigurationPageBase,
         Public slot to save the EditorCalltips configuration.
         """
         if self.ctNoContextButton.isChecked():
-            Preferences.setEditor("CallTipsStyle",
-                                  QsciScintilla.CallTipsNoContext)
+            Preferences.setEditor(
+                "CallTipsStyle", QsciScintilla.CallTipsNoContext)
         elif self.ctNoAutoCompletionButton.isChecked():
-            Preferences.setEditor("CallTipsStyle",
-                                  QsciScintilla.CallTipsNoAutoCompletionContext)
+            Preferences.setEditor(
+                "CallTipsStyle", QsciScintilla.CallTipsNoAutoCompletionContext)
         elif self.ctContextButton.isChecked():
-            Preferences.setEditor("CallTipsStyle",
-                                  QsciScintilla.CallTipsContext)
+            Preferences.setEditor(
+                "CallTipsStyle", QsciScintilla.CallTipsContext)
 
 
 def create(dlg):

@@ -8,8 +8,9 @@ Module implementing a dialog for entering multiple template variables.
 """
 
 from PyQt4.QtCore import QSize, Qt
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QLineEdit, \
-    QPushButton, QTextEdit, QDialog, QScrollArea, QFrame, QGridLayout, QVBoxLayout, QLabel
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QLineEdit, QPushButton, QTextEdit, QDialog, QScrollArea, QFrame, \
+    QGridLayout, QVBoxLayout, QLabel
 
 
 class TemplateMultipleVariablesDialog(QDialog):
@@ -26,7 +27,8 @@ class TemplateMultipleVariablesDialog(QDialog):
         super().__init__(parent)
 
         self.TemplateMultipleVariablesDialogLayout = QVBoxLayout(self)
-        self.TemplateMultipleVariablesDialogLayout.setContentsMargins(6, 6, 6, 6)
+        self.TemplateMultipleVariablesDialogLayout.setContentsMargins(
+            6, 6, 6, 6)
         self.TemplateMultipleVariablesDialogLayout.setSpacing(6)
         self.TemplateMultipleVariablesDialogLayout.setObjectName(
             "TemplateMultipleVariablesDialogLayout")
@@ -35,7 +37,8 @@ class TemplateMultipleVariablesDialog(QDialog):
         # generate the scrollarea
         self.variablesView = QScrollArea(self)
         self.variablesView.setObjectName("variablesView")
-        self.TemplateMultipleVariablesDialogLayout.addWidget(self.variablesView)
+        self.TemplateMultipleVariablesDialogLayout.addWidget(
+            self.variablesView)
         
         self.variablesView.setWidgetResizable(True)
         self.variablesView.setFrameStyle(QFrame.NoFrame)
@@ -66,7 +69,8 @@ class TemplateMultipleVariablesDialog(QDialog):
             self.variablesEntries[var] = t
             row += 1
         # add a spacer to make the entries aligned at the top
-        spacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        spacer = QSpacerItem(
+            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.grid.addItem(spacer, row, 1)
         self.variablesEntries[variables[0]].setFocus()
         self.top.adjustSize()
@@ -77,7 +81,8 @@ class TemplateMultipleVariablesDialog(QDialog):
         layout1.setSpacing(6)
         layout1.setObjectName("layout1")
         
-        spacer1 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        spacer1 = QSpacerItem(
+            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         layout1.addItem(spacer1)
 
         self.okButton = QPushButton(self)
@@ -89,7 +94,8 @@ class TemplateMultipleVariablesDialog(QDialog):
         self.cancelButton.setObjectName("cancelButton")
         layout1.addWidget(self.cancelButton)
         
-        spacer2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        spacer2 = QSpacerItem(
+            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         layout1.addItem(spacer2)
         
         self.TemplateMultipleVariablesDialogLayout.addLayout(layout1)

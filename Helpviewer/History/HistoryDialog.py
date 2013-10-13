@@ -40,7 +40,8 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         self.__historyManager = manager
         if self.__historyManager is None:
             import Helpviewer.HelpWindow
-            self.__historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
+            self.__historyManager = \
+                Helpviewer.HelpWindow.HelpWindow.historyManager()
         
         self.__model = self.__historyManager.historyTreeModel()
         self.__proxyModel = E5TreeSortFilterProxyModel(self)
@@ -59,7 +60,8 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         self.historyTree.customContextMenuRequested.connect(
             self.__customContextMenuRequested)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         self.removeButton.clicked[()].connect(self.historyTree.removeSelected)
         self.removeAllButton.clicked[()].connect(self.__historyManager.clear)
         
@@ -81,8 +83,10 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         idx = self.historyTree.indexAt(pos)
         idx = idx.sibling(idx.row(), 0)
         if idx.isValid() and not self.historyTree.model().hasChildren(idx):
-            menu.addAction(self.trUtf8("&Open"), self.__openHistoryInCurrentTab)
-            menu.addAction(self.trUtf8("Open in New &Tab"), self.__openHistoryInNewTab)
+            menu.addAction(
+                self.trUtf8("&Open"), self.__openHistoryInCurrentTab)
+            menu.addAction(
+                self.trUtf8("Open in New &Tab"), self.__openHistoryInNewTab)
             menu.addSeparator()
             menu.addAction(self.trUtf8("&Copy"), self.__copyHistory)
         menu.addAction(self.trUtf8("&Remove"), self.historyTree.removeSelected)
@@ -94,7 +98,8 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         
         @param idx reference to the entry index (QModelIndex)
         """
-        self.__openHistory(QApplication.keyboardModifiers() & Qt.ControlModifier)
+        self.__openHistory(
+            QApplication.keyboardModifiers() & Qt.ControlModifier)
         
     def __openHistoryInCurrentTab(self):
         """
@@ -112,7 +117,8 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         """
         Private method to open a history entry.
         
-        @param newTab flag indicating to open the history entry in a new tab (boolean)
+        @param newTab flag indicating to open the history entry in a new tab
+            (boolean)
         """
         idx = self.historyTree.currentIndex()
         if newTab:

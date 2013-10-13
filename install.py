@@ -387,10 +387,10 @@ def cleanUp():
                 os.remove(f)
             
         # Cleanup the install directories
-        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
-                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
-                     'ericDir']:
+        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir',
+                     'ericCSSDir', 'ericIconDir', 'ericPixDir',
+                     'ericTemplatesDir', 'ericCodeTemplatesDir',
+                     'ericOthersDir', 'ericStylesDir', 'ericDir']:
             if os.path.exists(getConfig(name)):
                 shutil.rmtree(getConfig(name), True)
         
@@ -496,7 +496,8 @@ def installEric():
                 shutilCopy(configName + 'c', modDir)
         
         # copy the various parts of eric5
-        copyTree(sourceDir, cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'],
+        copyTree(sourceDir, cfg['ericDir'],
+                 ['*.py', '*.pyc', '*.pyo', '*.pyw'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)],
             excludePatterns=["eric5config.py*"])
         copyTree(sourceDir, cfg['ericDir'], ['*.rb'],

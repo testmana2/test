@@ -30,7 +30,8 @@ className = "EricapiPlugin"
 packageName = "__core__"
 shortDescription = "Show the Ericapi dialogs."
 longDescription = """This plugin implements the Ericapi dialogs.""" \
- """ Ericapi is used to generate a QScintilla API file for Python and Ruby projects."""
+ """ Ericapi is used to generate a QScintilla API file for Python and Ruby"""\
+ """ projects."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -91,11 +92,12 @@ class EricapiPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
-            self.__projectAct = E5Action(self.trUtf8('Generate API file (eric5_api)'),
-                    self.trUtf8('Generate &API file (eric5_api)'), 0, 0,
-                    self, 'doc_eric5_api')
-            self.__projectAct.setStatusTip(
-                self.trUtf8('Generate an API file using eric5_api'))
+            self.__projectAct = E5Action(
+                self.trUtf8('Generate API file (eric5_api)'),
+                self.trUtf8('Generate &API file (eric5_api)'), 0, 0,
+                self, 'doc_eric5_api')
+            self.__projectAct.setStatusTip(self.trUtf8(
+                'Generate an API file using eric5_api'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate API file</b>"""
                 """<p>Generate an API file using eric5_api.</p>"""
@@ -112,7 +114,8 @@ class EricapiPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        e5App().getObject("Project").showMenu.disconnect(self.__projectShowMenu)
+        e5App().getObject("Project").showMenu.disconnect(
+            self.__projectShowMenu)
         
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
@@ -138,7 +141,8 @@ class EricapiPlugin(QObject):
         """
         Private slot to perform the eric5_api api generation.
         """
-        from DocumentationPlugins.Ericapi.EricapiConfigDialog import EricapiConfigDialog
+        from DocumentationPlugins.Ericapi.EricapiConfigDialog import \
+            EricapiConfigDialog
         eolTranslation = {
             '\r': 'cr',
             '\n': 'lf',
@@ -153,10 +157,12 @@ class EricapiPlugin(QObject):
             
             # add parameter for the eol setting
             if not project.useSystemEol():
-                args.append("--eol={0}".format(eolTranslation[project.getEolString()]))
+                args.append(
+                    "--eol={0}".format(eolTranslation[project.getEolString()]))
             
             # now do the call
-            from DocumentationPlugins.Ericapi.EricapiExecDialog import EricapiExecDialog
+            from DocumentationPlugins.Ericapi.EricapiExecDialog import \
+                EricapiExecDialog
             dia = EricapiExecDialog("Ericapi")
             res = dia.start(args, project.ppath)
             if res:
@@ -173,7 +179,8 @@ class EricapiPlugin(QObject):
                         outfile = outputFileName
                     else:
                         root, ext = os.path.splitext(outputFileName)
-                        outfile = "{0}-{1}{2}".format(root, progLanguage.lower(), ext)
+                        outfile = "{0}-{1}{2}".format(
+                            root, progLanguage.lower(), ext)
                 
                 outfile = project.getRelativePath(outfile)
                 if outfile not in project.pdata['OTHERS']:

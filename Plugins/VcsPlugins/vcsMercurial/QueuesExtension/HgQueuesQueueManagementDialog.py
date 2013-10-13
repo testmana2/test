@@ -8,8 +8,8 @@ Module implementing a dialog used by the queue management functions.
 """
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, QListWidgetItem, \
-    QAbstractButton
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, \
+    QListWidgetItem, QAbstractButton
 
 from .Ui_HgQueuesQueueManagementDialog import Ui_HgQueuesQueueManagementDialog
 
@@ -32,8 +32,8 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             HgQueuesQueueManagementDialog.NAME_INPUT,
             HgQueuesQueueManagementDialog.QUEUE_INPUT)
         @param title title for the dialog (string)
-        @param suppressActive flag indicating to not show the name of the active
-            queue (boolean)
+        @param suppressActive flag indicating to not show the name of the
+            active queue (boolean)
         @param repodir name of the repository directory (string)
         @param vcs reference to the vcs object
         @param parent reference to the parent widget (QWidget)
@@ -52,21 +52,26 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         self.__suppressActive = suppressActive
         self.__hgClient = vcs.getClient()
         
-        self.inputFrame.setHidden(mode != HgQueuesQueueManagementDialog.NAME_INPUT)
-        self.selectLabel.setHidden(mode != HgQueuesQueueManagementDialog.QUEUE_INPUT)
+        self.inputFrame.setHidden(
+            mode != HgQueuesQueueManagementDialog.NAME_INPUT)
+        self.selectLabel.setHidden(
+            mode != HgQueuesQueueManagementDialog.QUEUE_INPUT)
         if mode != HgQueuesQueueManagementDialog.QUEUE_INPUT:
             self.queuesList.setSelectionMode(QAbstractItemView.NoSelection)
         
         if mode == HgQueuesQueueManagementDialog.NO_INPUT:
-            self.buttonBox.removeButton(self.buttonBox.button(QDialogButtonBox.Ok))
-            self.buttonBox.removeButton(self.buttonBox.button(QDialogButtonBox.Cancel))
+            self.buttonBox.removeButton(
+                self.buttonBox.button(QDialogButtonBox.Ok))
+            self.buttonBox.removeButton(
+                self.buttonBox.button(QDialogButtonBox.Cancel))
             self.refreshButton = self.buttonBox.addButton(
                 self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
             self.refreshButton.setToolTip(
                 self.trUtf8("Press to refresh the queues list"))
             self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         else:
-            self.buttonBox.removeButton(self.buttonBox.button(QDialogButtonBox.Close))
+            self.buttonBox.removeButton(
+                self.buttonBox.button(QDialogButtonBox.Close))
             self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
             self.refreshButton = None
         
@@ -79,10 +84,11 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
     
     def __getQueuesList(self):
         """
-        Public method to get a list of all queues and the name of the active queue.
+        Public method to get a list of all queues and the name of the active
+        queue.
         
-        @return tuple with a list of all queues and the name of the active queue
-            (list of strings, string)
+        @return tuple with a list of all queues and the name of the active
+            queue (list of strings, string)
         """
         queuesList = []
         activeQueue = ""
@@ -103,8 +109,8 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(
+                        process.readAllStandardOutput(), ioEncoding, 'replace')
         
         for queue in output.splitlines():
             queue = queue.strip()

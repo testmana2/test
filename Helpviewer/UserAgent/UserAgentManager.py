@@ -22,7 +22,8 @@ class UserAgentManager(QObject):
     Class implementing a user agent manager.
     
     @signal changed() emitted to indicate a change
-    @signal userAgentSettingsSaved() emitted after the user agent settings were saved
+    @signal userAgentSettingsSaved() emitted after the user agent settings
+        were saved
     """
     changed = pyqtSignal()
     userAgentSettingsSaved = pyqtSignal()
@@ -35,7 +36,8 @@ class UserAgentManager(QObject):
         """
         super().__init__(parent)
         
-        self.__agents = {}      # dictionary with agent strings indexed by host name
+        self.__agents = {}      # dictionary with agent strings indexed
+                                # by host name
         self.__loaded = False
         self.__saveTimer = AutoSaver(self, self.save)
         
@@ -47,7 +49,8 @@ class UserAgentManager(QObject):
         
         @return name of the user agents file (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "userAgentSettings.xml")
+        return os.path.join(
+            Utilities.getConfigDir(), "browser", "userAgentSettings.xml")
     
     def save(self):
         """
@@ -62,8 +65,9 @@ class UserAgentManager(QObject):
         if not writer.write(agentFile, self.__agents):
             E5MessageBox.critical(None,
                 self.trUtf8("Saving user agent data"),
-                self.trUtf8("""<p>User agent data could not be saved to <b>{0}</b></p>"""
-                            ).format(agentFile))
+                self.trUtf8(
+                    """<p>User agent data could not be saved to"""
+                    """ <b>{0}</b></p>""").format(agentFile))
         else:
             self.userAgentSettingsSaved.emit()
     
@@ -156,7 +160,8 @@ class UserAgentManager(QObject):
     
     def allHostNames(self):
         """
-        Public method to get a list of all host names we a user agent setting for.
+        Public method to get a list of all host names we a user agent setting
+        for.
         
         @return sorted list of all host names (list of strings)
         """

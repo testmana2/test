@@ -44,7 +44,8 @@ class NsHtmlReader(QObject):
         self.__addedRx = QRegExp('ADD_DATE="(\d*)"', Qt.CaseInsensitive)
         self.__addedRx.setMinimal(True)
         
-        self.__modifiedRx = QRegExp('LAST_MODIFIED="(\d*)"', Qt.CaseInsensitive)
+        self.__modifiedRx = QRegExp(
+            'LAST_MODIFIED="(\d*)"', Qt.CaseInsensitive)
         self.__modifiedRx.setMinimal(True)
         
         self.__visitedRx = QRegExp('LAST_VISIT="(\d*)"', Qt.CaseInsensitive)
@@ -85,7 +86,8 @@ class NsHtmlReader(QObject):
                 node.title = Utilities.html_udecode(name)
                 node.expanded = self.__foldedRx.indexIn(arguments) == -1
                 if self.__addedRx.indexIn(arguments) != -1:
-                    node.added = QDateTime.fromTime_t(int(self.__addedRx.cap(1)))
+                    node.added = QDateTime.fromTime_t(
+                        int(self.__addedRx.cap(1)))
                 folders.append(node)
                 lastNode = node
             
@@ -102,17 +104,21 @@ class NsHtmlReader(QObject):
                 if self.__urlRx.indexIn(arguments) != -1:
                     node.url = self.__urlRx.cap(1)
                 if self.__addedRx.indexIn(arguments) != -1:
-                    node.added = QDateTime.fromTime_t(int(self.__addedRx.cap(1)))
+                    node.added = QDateTime.fromTime_t(
+                        int(self.__addedRx.cap(1)))
                 if self.__modifiedRx.indexIn(arguments) != -1:
-                    node.modified = QDateTime.fromTime_t(int(self.__modifiedRx.cap(1)))
+                    node.modified = QDateTime.fromTime_t(
+                        int(self.__modifiedRx.cap(1)))
                 if self.__visitedRx.indexIn(arguments) != -1:
-                    node.visited = QDateTime.fromTime_t(int(self.__visitedRx.cap(1)))
+                    node.visited = QDateTime.fromTime_t(
+                        int(self.__visitedRx.cap(1)))
                 lastNode = node
             
             elif self.__descRx.indexIn(line) != -1:
                 # description
                 if lastNode:
-                    lastNode.desc = Utilities.html_udecode(self.__descRx.cap(1))
+                    lastNode.desc = Utilities.html_udecode(
+                        self.__descRx.cap(1))
             
             elif self.__separatorRx.indexIn(line) != -1:
                 # separator definition

@@ -572,7 +572,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/OpenSearch/__init__.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEngineAction.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchManager.py</Source>
-    <Source>Helpviewer/OpenSearch/OpenSearchDefaultEngines.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEngine.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchReader.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchWriter.py</Source>
@@ -589,7 +588,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Bookmarks/XbelReader.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksModel.py</Source>
     <Source>Utilities/AutoSaver.py</Source>
-    <Source>Helpviewer/Bookmarks/DefaultBookmarks.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksManager.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksMenu.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksToolBar.py</Source>
@@ -757,7 +755,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Gui/E5TextSpinBox.py</Source>
     <Source>Helpviewer/UserAgent/__init__.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentMenu.py</Source>
-    <Source>Helpviewer/UserAgent/UserAgentDefaults.py</Source>
     <Source>E5Gui/E5FileDialog.py</Source>
     <Source>QScintilla/Exporters/ExporterODT.py</Source>
     <Source>E5Gui/E5MessageBox.py</Source>
@@ -1110,6 +1107,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UtilitiesPython2/CodeStyleChecker.py</Source>
     <Source>UtilitiesPython2/DocStyleCheckerPy2.py</Source>
     <Source>UtilitiesPython2/NamingStyleCheckerPy2.py</Source>
+    <Source>Helpviewer/Bookmarks/DefaultBookmarks_rc.py</Source>
+    <Source>Helpviewer/OpenSearch/DefaultSearchEngines/__init__.py</Source>
+    <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
+    <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1456,6 +1457,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Resource>Helpviewer/data/icons.qrc</Resource>
     <Resource>Helpviewer/data/html.qrc</Resource>
     <Resource>Helpviewer/data/javascript.qrc</Resource>
+    <Resource>Helpviewer/Bookmarks/DefaultBookmarks.qrc</Resource>
+    <Resource>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines.qrc</Resource>
+    <Resource>Helpviewer/UserAgent/UserAgentDefaults.qrc</Resource>
   </Resources>
   <Interfaces/>
   <Others>
@@ -1555,6 +1559,23 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>APIs/Python3/QScintilla2.bas</Other>
     <Other>ThirdParty/Jasy/jasy/license.md</Other>
+    <Other>Helpviewer/Bookmarks/DefaultBookmarks.xbel</Other>
+    <Other>Helpviewer/UserAgent/UserAgentDefaults.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Yahoo.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/YouTube.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Amazoncom.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Bing.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/DeEn_Beolingus.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Facebook.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Google_Im_Feeling_Lucky.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Google.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/LEO_DeuEng.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/LinuxMagazin.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Reddit.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikia_en.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikia.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikipedia.xml</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wiktionary.xml</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

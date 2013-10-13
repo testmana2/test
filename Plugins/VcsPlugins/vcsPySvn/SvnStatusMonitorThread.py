@@ -64,11 +64,9 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         cwd = os.getcwd()
         os.chdir(self.projectDir)
         try:
-            allFiles = client.status('.',
-                                     recurse=True,
-                                     get_all=True,
-                                     ignore=True,
-                                     update=not Preferences.getVCS("MonitorLocalStatus"))
+            allFiles = client.status(
+                '.', recurse=True, get_all=True, ignore=True,
+                update=not Preferences.getVCS("MonitorLocalStatus"))
             states = {}
             for file in allFiles:
                 uptodate = True
@@ -102,16 +100,18 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     states[file.path] = status
                     try:
                         if self.reportedStates[file.path] != status:
-                            self.statusList.append("{0} {1}".format(status, file.path))
+                            self.statusList.append(
+                                "{0} {1}".format(status, file.path))
                     except KeyError:
-                        self.statusList.append("{0} {1}".format(status, file.path))
+                        self.statusList.append(
+                            "{0} {1}".format(status, file.path))
             for name in list(self.reportedStates.keys()):
                 if name not in states:
                     self.statusList.append("  {0}".format(name))
             self.reportedStates = states
             res = True
-            statusStr = \
-                self.trUtf8("Subversion status checked successfully (using pysvn)")
+            statusStr = self.trUtf8(
+                "Subversion status checked successfully (using pysvn)")
         except pysvn.ClientError as e:
             res = False
             statusStr = e.args[0]

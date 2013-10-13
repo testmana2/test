@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog for the configuration of eric5s keyboard shortcuts.
+Module implementing a dialog for the configuration of eric5's keyboard
+shortcuts.
 """
 
 from PyQt4.QtCore import pyqtSignal, QRegExp, Qt, pyqtSlot
@@ -21,9 +22,11 @@ from Preferences import Shortcuts
 
 class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
     """
-    Class implementing a dialog for the configuration of eric5s keyboard shortcuts.
+    Class implementing a dialog for the configuration of eric5's keyboard
+    shortcuts.
     
-    @signal updateShortcuts() emitted when the user pressed the dialogs OK button
+    @signal updateShortcuts() emitted when the user pressed the dialogs OK
+        button
     """
     updateShortcuts = pyqtSignal()
     
@@ -45,7 +48,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         self.setModal(modal)
         self.setupUi(self)
         
-        self.shortcutsList.headerItem().setText(self.shortcutsList.columnCount(), "")
+        self.shortcutsList.headerItem().setText(
+            self.shortcutsList.columnCount(), "")
         self.shortcutsList.header().setSortIndicator(0, Qt.AscendingOrder)
         
         from .ShortcutDialog import ShortcutDialog
@@ -63,7 +67,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         Private method to resize the list columns.
         """
-        self.shortcutsList.header().resizeSections(QHeaderView.ResizeToContents)
+        self.shortcutsList.header().resizeSections(
+            QHeaderView.ResizeToContents)
         self.shortcutsList.header().setStretchLastSection(True)
         
     def __generateCategoryItem(self, title):
@@ -86,8 +91,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         @param action reference to the keyboard action (E5Action)
         @keyparam noCheck flag indicating that no uniqueness check should
             be performed (boolean)
-        @keyparam objectType type of the object (string). Objects of the same type
-            are not checked for duplicate shortcuts.
+        @keyparam objectType type of the object (string). Objects of the same
+            type are not checked for duplicate shortcuts.
         """
         itm = QTreeWidgetItem(category,
             [action.iconText(), action.shortcut().toString(),
@@ -150,17 +155,20 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         for act in e5App().getObject("ViewManager").getActions('macro'):
             self.__generateShortcutItem(self.macroItem, act)
         
-        self.bookmarkItem = self.__generateCategoryItem(self.trUtf8("Bookmarks"))
+        self.bookmarkItem = self.__generateCategoryItem(
+            self.trUtf8("Bookmarks"))
         for act in e5App().getObject("ViewManager").getActions('bookmark'):
             self.__generateShortcutItem(self.bookmarkItem, act)
         
-        self.spellingItem = self.__generateCategoryItem(self.trUtf8("Spelling"))
+        self.spellingItem = self.__generateCategoryItem(
+            self.trUtf8("Spelling"))
         for act in e5App().getObject("ViewManager").getActions('spelling'):
             self.__generateShortcutItem(self.spellingItem, act)
         
         actions = e5App().getObject("ViewManager").getActions('window')
         if actions:
-            self.windowItem = self.__generateCategoryItem(self.trUtf8("Window"))
+            self.windowItem = self.__generateCategoryItem(
+                self.trUtf8("Window"))
             for act in actions:
                 self.__generateShortcutItem(self.windowItem, act)
         
@@ -196,7 +204,9 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         
         self.__editTopItem = itm.parent()
         
-        self.shortcutDialog.setKeys(QKeySequence(itm.text(1)), QKeySequence(itm.text(2)),
+        self.shortcutDialog.setKeys(
+            QKeySequence(itm.text(1)),
+            QKeySequence(itm.text(2)),
             itm.data(0, self.noCheckRole),
             itm.data(0, self.objectTypeRole))
         self.shortcutDialog.show()
@@ -231,9 +241,11 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 itm.setText(column, keystr)
             self.shortcutsList.closePersistentEditor(itm, column)
 
-    def __shortcutChanged(self, keysequence, altKeysequence, noCheck, objectType):
+    def __shortcutChanged(self, keysequence, altKeysequence, noCheck,
+                          objectType):
         """
-        Private slot to handle the shortcutChanged signal of the shortcut dialog.
+        Private slot to handle the shortcutChanged signal of the shortcut
+        dialog.
         
         @param keysequence the keysequence of the changed action (QKeySequence)
         @param altKeysequence the alternative keysequence of the changed
@@ -243,8 +255,10 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         @param objectType type of the object (string).
         """
         if not noCheck and \
-           (not self.__checkShortcut(keysequence, objectType, self.__editTopItem) or \
-            not self.__checkShortcut(altKeysequence, objectType, self.__editTopItem)):
+                (not self.__checkShortcut(
+                    keysequence, objectType, self.__editTopItem) or \
+                 not self.__checkShortcut(
+                    altKeysequence, objectType, self.__editTopItem)):
             return
         
         self.shortcutsList.currentItem().setText(1, keysequence.toString())
@@ -287,15 +301,16 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 
                 # 3. check key name
                 if itm.text(0) != keyname:
-                    for col in [1, 2]:  # check against primary, then alternative binding
+                    for col in [1, 2]:  # check against primary,
+                                        # then alternative binding
                         itmseq = itm.text(col)
                         # step 1: check if shortcut is already allocated
                         if keystr == itmseq:
                             res = E5MessageBox.yesNo(self,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(
-                                    """<p><b>{0}</b> has already been allocated"""
-                                    """ to the <b>{1}</b> action. """
+                                    """<p><b>{0}</b> has already been"""
+                                    """ allocated to the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
                                 icon=E5MessageBox.Warning)
@@ -313,8 +328,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                             res = E5MessageBox.yesNo(self,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(
-                                    """<p><b>{0}</b> hides the <b>{1}</b> action. """
-                                    """Remove this binding?</p>""")
+                                    """<p><b>{0}</b> hides the <b>{1}</b>"""
+                                    """ action. Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
                                 icon=E5MessageBox.Warning)
                             if res:
@@ -323,7 +338,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                             else:
                                 return False
                         
-                        # step 3: check if shortcut is hidden by an already allocated
+                        # step 3: check if shortcut is hidden by an
+                        #         already allocated
                         if keystr.startswith("{0}+".format(itmseq)):
                             res = E5MessageBox.yesNo(self,
                                 self.trUtf8("Edit shortcuts"),
@@ -354,7 +370,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             for act in actions:
                 if txt == act.objectName():
                     act.setShortcut(QKeySequence(itm.text(1)))
-                    act.setAlternateShortcut(QKeySequence(itm.text(2)), removeEmpty=True)
+                    act.setAlternateShortcut(
+                        QKeySequence(itm.text(2)), removeEmpty=True)
                     break
         
     def on_buttonBox_accepted(self):
@@ -416,7 +433,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             for index in range(topItem.childCount()):
                 itm = topItem.child(index)
                 if (self.actionButton.isChecked() and \
-                    not QRegExp(txt, Qt.CaseInsensitive).indexIn(itm.text(0)) > -1) or \
+                    not QRegExp(txt, Qt.CaseInsensitive).indexIn(itm.text(0)) >
+                        -1) or \
                    (self.shortcutButton.isChecked() and \
                     not txt.lower() in itm.text(1).lower() and \
                     not txt.lower() in itm.text(2).lower()):

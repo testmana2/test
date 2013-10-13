@@ -22,7 +22,8 @@ import Utilities
 
 class HgCopyDialog(QDialog, Ui_HgCopyDialog):
     """
-    Class implementing a dialog to enter the data for a copy or rename operation.
+    Class implementing a dialog to enter the data for a copy or rename
+    operation.
     """
     def __init__(self, source, parent=None, move=False, force=False):
         """
@@ -63,7 +64,8 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         if not os.path.isabs(target):
             sourceDir = os.path.dirname(self.sourceEdit.text())
             target = os.path.join(sourceDir, target)
-        return Utilities.toNativeSeparators(target), self.forceCheckBox.isChecked()
+        return Utilities.toNativeSeparators(target), \
+            self.forceCheckBox.isChecked()
     
     @pyqtSlot()
     def on_dirButton_clicked(self):

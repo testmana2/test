@@ -17,7 +17,8 @@ class HgRebaseDialog(QDialog, Ui_HgRebaseDialog):
     """
     Class implementing a dialog to enter the data for a rebase session.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 parent=None):
         """
         Constructor
         
@@ -261,11 +262,12 @@ class HgRebaseDialog(QDialog, Ui_HgRebaseDialog):
         """
         Private method to retrieve the data for the rebase session.
         
-        @return tuple with a source indicator of "S" or "B", the source revision, the
-            destination revision, a flag indicating to collapse, a flag indicating to
-            keep the original changesets, a flag indicating to keep the original branch
-            name and a flag indicating to detach the source (string, string, string,
-            boolean, boolean, boolean, boolean)
+        @return tuple with a source indicator of "S" or "B", the source
+            revision, the destination revision, a flag indicating to collapse,
+            a flag indicating to keep the original changesets, a flag
+            indicating to keep the original branch name and a flag indicating
+            to detach the source (string, string, string, boolean, boolean,
+            boolean, boolean)
         """
         if self.sourceButton.isChecked():
             indicator = "S"

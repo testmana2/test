@@ -19,7 +19,8 @@ class OpenSearchEngineAction(QAction):
         """
         Constructor
         
-        @param engine reference to the open search engine object (OpenSearchEngine)
+        @param engine reference to the open search engine object
+            (OpenSearchEngine)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
@@ -43,6 +44,7 @@ class OpenSearchEngineAction(QAction):
         if image.isNull():
             import Helpviewer.HelpWindow
             self.setIcon(
-                Helpviewer.HelpWindow.HelpWindow.icon(QUrl(self.__engine.imageUrl())))
+                Helpviewer.HelpWindow.HelpWindow.icon(
+                    QUrl(self.__engine.imageUrl())))
         else:
             self.setIcon(QIcon(QPixmap.fromImage(image)))

@@ -40,7 +40,8 @@ class LexerSQL(QsciLexerSQL, Lexer):
             self.setFoldAtElse(Preferences.getEditor("SqlFoldAtElse"))
             self.setFoldOnlyBegin(Preferences.getEditor("SqlFoldOnlyBegin"))
             self.setHashComments(Preferences.getEditor("SqlHashComments"))
-            self.setQuotedIdentifiers(Preferences.getEditor("SqlQuotedIdentifiers"))
+            self.setQuotedIdentifiers(
+                Preferences.getEditor("SqlQuotedIdentifiers"))
         except AttributeError:
             pass
     

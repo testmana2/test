@@ -51,7 +51,8 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         
     def on_iconDirectoryList_currentRowChanged(self, row):
         """
-        Private slot to handle the currentRowChanged signal of the icons directory list.
+        Private slot to handle the currentRowChanged signal of the icons
+        directory list.
         
         @param row the current row (integer)
         """

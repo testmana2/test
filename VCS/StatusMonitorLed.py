@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a LED to indicate the status of the VCS status monitor thread.
+Module implementing a LED to indicate the status of the VCS status monitor
+thread.
 """
 
 from PyQt4.QtCore import Qt
@@ -17,7 +18,8 @@ import Preferences
 
 class StatusMonitorLed(E5Led):
     """
-    Class implementing a LED to indicate the status of the VCS status monitor thread.
+    Class implementing a LED to indicate the status of the VCS status monitor
+    thread.
     """
     def __init__(self, project, parent):
         """
@@ -43,9 +45,9 @@ class StatusMonitorLed(E5Led):
         self.setWhatsThis(self.trUtf8(
             """<p>This LED indicates the operating"""
             """ status of the VCS monitor thread (off = monitoring off,"""
-            """ green = monitoring on and ok, red = monitoring on, but not ok,"""
-            """ yellow = checking VCS status). A status description is given"""
-            """ in the tooltip.</p>"""
+            """ green = monitoring on and ok, red = monitoring on, but"""
+            """ not ok, yellow = checking VCS status). A status description"""
+            """ is given in the tooltip.</p>"""
         ))
         self.setToolTip(
             self.trUtf8("Repository status checking is switched off")
@@ -54,33 +56,37 @@ class StatusMonitorLed(E5Led):
         
         # define a context menu
         self.__menu = QMenu(self)
-        self.__checkAct = \
-            self.__menu.addAction(self.trUtf8("Check status"), self.__checkStatus)
-        self.__intervalAct = \
-            self.__menu.addAction(self.trUtf8("Set interval..."), self.__setInterval)
+        self.__checkAct = self.__menu.addAction(
+            self.trUtf8("Check status"), self.__checkStatus)
+        self.__intervalAct = self.__menu.addAction(
+            self.trUtf8("Set interval..."), self.__setInterval)
         self.__menu.addSeparator()
-        self.__onAct = \
-            self.__menu.addAction(self.trUtf8("Switch on"), self.__switchOn)
-        self.__offAct = \
-            self.__menu.addAction(self.trUtf8("Switch off"), self.__switchOff)
+        self.__onAct = self.__menu.addAction(
+            self.trUtf8("Switch on"), self.__switchOn)
+        self.__offAct = self.__menu.addAction(
+            self.trUtf8("Switch off"), self.__switchOff)
         self.__checkActions()
         
         # connect signals to our slots
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self._showContextMenu)
-        self.project.vcsStatusMonitorStatus.connect(self.__projectVcsMonitorStatus)
+        self.project.vcsStatusMonitorStatus.connect(
+            self.__projectVcsMonitorStatus)
     
     def __checkActions(self):
         """
         Private method to set the enabled status of the context menu actions.
         """
         if self.project.pudata["VCSSTATUSMONITORINTERVAL"]:
-            vcsStatusMonitorInterval = self.project.pudata["VCSSTATUSMONITORINTERVAL"][0]
+            vcsStatusMonitorInterval = \
+                self.project.pudata["VCSSTATUSMONITORINTERVAL"][0]
         else:
-            vcsStatusMonitorInterval = Preferences.getVCS("StatusMonitorInterval")
+            vcsStatusMonitorInterval = \
+                Preferences.getVCS("StatusMonitorInterval")
         self.__checkAct.setEnabled(self.__on)
         self.__intervalAct.setEnabled(self.__on)
-        self.__onAct.setEnabled((not self.__on) and vcsStatusMonitorInterval > 0)
+        self.__onAct.setEnabled(
+            (not self.__on) and vcsStatusMonitorInterval > 0)
         self.__offAct.setEnabled(self.__on)
         
     def __projectVcsMonitorStatus(self, status, statusMsg):

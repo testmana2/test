@@ -22,7 +22,8 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
     """
     Class implementing a dialog to ente the data for a new dialog class file.
     """
-    def __init__(self, defaultClassName, defaultFile, defaultPath, parent=None):
+    def __init__(self, defaultClassName, defaultFile, defaultPath,
+                 parent=None):
         """
         Constructor
         

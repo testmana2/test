@@ -24,7 +24,8 @@ import Preferences
 
 class HgDiffDialog(QWidget, Ui_HgDiffDialog):
     """
-    Class implementing a dialog to show the output of the hg diff command process.
+    Class implementing a dialog to show the output of the hg diff command
+    process.
     """
     def __init__(self, vcs, parent=None):
         """
@@ -94,7 +95,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         Public slot to start the hg diff command.
         
         @param fn filename to be diffed (string)
-        @param versions list of versions to be diffed (list of up to 2 strings or None)
+        @param versions list of versions to be diffed (list of up to 2 strings
+            or None)
         @param bundle name of a bundle file (string)
         @param qdiff flag indicating qdiff command shall be used (boolean)
         """
@@ -208,7 +210,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         QApplication.restoreOverrideCursor()
         self.inputGroup.setEnabled(False)
@@ -221,7 +224,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
@@ -232,7 +236,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.filesCombo.addItem(self.trUtf8("<End>"), -1)
         for oldFile, newFile, pos in sorted(self.__fileSeparators):
             if oldFile != newFile:
-                self.filesCombo.addItem("{0}\n{1}".format(oldFile, newFile), pos)
+                self.filesCombo.addItem(
+                    "{0}\n{1}".format(oldFile, newFile), pos)
             else:
                 self.filesCombo.addItem(oldFile, pos)
     
@@ -272,7 +277,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.__oldFile = self.__extractFileName(line)
         else:
             self.__fileSeparators.append(
-                (self.__oldFile, self.__extractFileName(line), self.__oldFileLine))
+                (self.__oldFile, self.__extractFileName(line),
+                 self.__oldFileLine))
     
     def __processOutputLine(self, line):
         """
@@ -371,7 +377,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             # step 2: move cursor to desired line
             tc = self.contents.textCursor()
             delta = tc.blockNumber() - para
-            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor, delta)
+            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor,
+                            delta)
             self.contents.setTextCursor(tc)
             self.contents.ensureCursorVisible()
     

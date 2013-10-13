@@ -12,8 +12,8 @@ import re
 import hashlib
 import base64
 
-from PyQt4.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, QUrl, \
-    QCryptographicHash, QFile, QIODevice, QTextStream, QDate, QTime
+from PyQt4.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, \
+    QUrl, QCryptographicHash, QFile, QIODevice, QTextStream, QDate, QTime
 from PyQt4.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
@@ -69,7 +69,8 @@ class AdBlockSubscription(QObject):
         self.__documentRules = []
         self.__elemhideRules = []
         
-        self.__checksumRe = re.compile(r"""^\s*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n""",
+        self.__checksumRe = re.compile(
+            r"""^\s*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n""",
             re.IGNORECASE | re.MULTILINE)
         self.__expiresRe = re.compile(
             r"""(?:expires:|expires after)\s*(\d+)\s*(hour|h)?""",
@@ -111,20 +112,21 @@ class AdBlockSubscription(QObject):
         
         self.__title = \
             QUrl.fromPercentEncoding(url.encodedQueryItemValue("title"))
-        self.__enabled = \
-            QUrl.fromPercentEncoding(url.encodedQueryItemValue("enabled")) != "false"
-        self.__location = \
-            QByteArray(QUrl.fromPercentEncoding(url.encodedQueryItemValue("location")))
+        self.__enabled = QUrl.fromPercentEncoding(
+            url.encodedQueryItemValue("enabled")) != "false"
+        self.__location = QByteArray(QUrl.fromPercentEncoding(
+            url.encodedQueryItemValue("location")))
         
         # Check for required subscription
-        self.__requiresLocation = \
-            QUrl.fromPercentEncoding(url.encodedQueryItemValue("requiresLocation"))
-        self.__requiresTitle = \
-            QUrl.fromPercentEncoding(url.encodedQueryItemValue("requiresTitle"))
+        self.__requiresLocation = QUrl.fromPercentEncoding(
+            url.encodedQueryItemValue("requiresLocation"))
+        self.__requiresTitle = QUrl.fromPercentEncoding(
+            url.encodedQueryItemValue("requiresTitle"))
         if self.__requiresLocation and self.__requiresTitle:
             import Helpviewer.HelpWindow
-            Helpviewer.HelpWindow.HelpWindow.adBlockManager().loadRequiredSubscription(
-                self.__requiresLocation, self.__requiresTitle)
+            Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
+                .loadRequiredSubscription(self.__requiresLocation,
+                                          self.__requiresTitle)
         
         lastUpdateByteArray = url.encodedQueryItemValue("lastUpdate")
         lastUpdateString = QUrl.fromPercentEncoding(lastUpdateByteArray)
@@ -245,13 +247,14 @@ class AdBlockSubscription(QObject):
         if self.__location.isEmpty():
             return ""
         
-        sha1 = bytes(
-            QCryptographicHash.hash(self.__location, QCryptographicHash.Sha1).toHex())\
-            .decode()
-        dataDir = os.path.join(Utilities.getConfigDir(), "browser", "subscriptions")
+        sha1 = bytes(QCryptographicHash.hash(
+            self.__location, QCryptographicHash.Sha1).toHex()).decode()
+        dataDir = os.path.join(
+            Utilities.getConfigDir(), "browser", "subscriptions")
         if not os.path.exists(dataDir):
             os.makedirs(dataDir)
-        fileName = os.path.join(dataDir, "adblock_subscription_{0}".format(sha1))
+        fileName = os.path.join(
+            dataDir, "adblock_subscription_{0}".format(sha1))
         return fileName
     
     def __loadRules(self):
@@ -264,7 +267,8 @@ class AdBlockSubscription(QObject):
             if not f.open(QIODevice.ReadOnly):
                 E5MessageBox.warning(None,
                     self.trUtf8("Load subscription rules"),
-                    self.trUtf8("""Unable to open adblock file '{0}' for reading.""")\
+                    self.trUtf8(
+                        """Unable to open adblock file '{0}' for reading.""")\
                         .format(fileName))
             else:
                 textStream = QTextStream(f)
@@ -299,10 +303,13 @@ class AdBlockSubscription(QObject):
                                 self.__updatePeriod = int(period) * 24
                         remoteModified = self.__remoteModifiedRe.search(line)
                         if remoteModified:
-                            day, month, year, time, hour, minute = remoteModified.groups()
+                            day, month, year, time, hour, minute = \
+                                remoteModified.groups()
                             self.__remoteModified.setDate(
-                                QDate(int(year), self.__monthNameToNumber[month],
-                                      int(day)))
+                                QDate(int(year),
+                                      self.__monthNameToNumber[month],
+                                      int(day))
+                            )
                             if time:
                                 self.__remoteModified.setTime(
                                     QTime(int(hour), int(minute)))
@@ -365,8 +372,10 @@ class AdBlockSubscription(QObject):
                 # don't show error if we try to load the default
                 E5MessageBox.warning(None,
                     self.trUtf8("Downloading subscription rules"),
-                    self.trUtf8("""<p>Subscription rules could not be downloaded.</p>"""
-                                """<p>Error: {0}</p>""").format(reply.errorString()))
+                    self.trUtf8(
+                        """<p>Subscription rules could not be"""
+                        """ downloaded.</p><p>Error: {0}</p>""")
+                        .format(reply.errorString()))
             else:
                 # reset after first download attempt
                 self.__defaultSubscription = False
@@ -384,7 +393,8 @@ class AdBlockSubscription(QObject):
         if not f.open(QIODevice.ReadWrite):
             E5MessageBox.warning(None,
                 self.trUtf8("Downloading subscription rules"),
-                self.trUtf8("""Unable to open adblock file '{0}' for writing.""")\
+                self.trUtf8(
+                    """Unable to open adblock file '{0}' for writing.""")\
                     .file(fileName))
             return
         f.write(response)
@@ -427,18 +437,21 @@ class AdBlockSubscription(QObject):
         # calculate checksum
         md5 = hashlib.md5()
         md5.update(data.encode("utf-8"))
-        calculatedChecksum = base64.b64encode(md5.digest()).decode().rstrip("=")
+        calculatedChecksum = base64.b64encode(md5.digest()).decode()\
+            .rstrip("=")
         if calculatedChecksum == expectedChecksum:
             return True
         else:
             res = E5MessageBox.yesNo(None,
                 self.trUtf8("Downloading subscription rules"),
-                self.trUtf8("""<p>AdBlock subscription <b>{0}</b> has a wrong"""
-                            """ checksum.<br/>"""
-                            """Found: {1}<br/>"""
-                            """Calculated: {2}<br/>"""
-                            """Use it anyway?</p>""")\
-                    .format(self.__title, expectedChecksum, calculatedChecksum))
+                self.trUtf8(
+                    """<p>AdBlock subscription <b>{0}</b> has a wrong"""
+                    """ checksum.<br/>"""
+                    """Found: {1}<br/>"""
+                    """Calculated: {2}<br/>"""
+                    """Use it anyway?</p>""")\
+                    .format(self.__title, expectedChecksum,
+                            calculatedChecksum))
             return res
     
     def saveRules(self):
@@ -453,7 +466,8 @@ class AdBlockSubscription(QObject):
         if not f.open(QIODevice.ReadWrite | QIODevice.Truncate):
             E5MessageBox.warning(None,
                 self.trUtf8("Saving subscription rules"),
-                self.trUtf8("""Unable to open adblock file '{0}' for writing.""")\
+                self.trUtf8(
+                    """Unable to open adblock file '{0}' for writing.""")\
                     .format(fileName))
             return
         
@@ -497,7 +511,8 @@ class AdBlockSubscription(QObject):
     
     def elemHideDisabledForUrl(self, url):
         """
-        Public method to check, if element hiding is disabled for the given URL.
+        Public method to check, if element hiding is disabled for the given
+        URL.
         
         @param url URL to check (QUrl)
         @return flag indicating disabled state (boolean)
@@ -658,6 +673,7 @@ class AdBlockSubscription(QObject):
         if rule.isCSSRule():
             import Helpviewer.HelpWindow
             self.__populateCache()
-            Helpviewer.HelpWindow.HelpWindow.mainWindow().reloadUserStyleSheet()
+            Helpviewer.HelpWindow.HelpWindow.mainWindow()\
+                .reloadUserStyleSheet()
         
         return rule

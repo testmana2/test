@@ -32,18 +32,20 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         self.__hidePasswordsText = self.trUtf8("Hide Passwords")
         self.passwordsButton.setText(self.__showPasswordsText)
         
-        self.removeButton.clicked[()].connect(self.passwordsTable.removeSelected)
+        self.removeButton.clicked[()].connect(
+            self.passwordsTable.removeSelected)
         self.removeAllButton.clicked[()].connect(self.passwordsTable.removeAll)
         
         import Helpviewer.HelpWindow
         from .PasswordModel import PasswordModel
         
         self.passwordsTable.verticalHeader().hide()
-        self.__passwordModel = \
-            PasswordModel(Helpviewer.HelpWindow.HelpWindow.passwordManager(), self)
+        self.__passwordModel = PasswordModel(
+            Helpviewer.HelpWindow.HelpWindow.passwordManager(), self)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(self.__passwordModel)
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(
+            self.__proxyModel.setFilterFixedString)
         self.passwordsTable.setModel(self.__proxyModel)
         
         fm = QFontMetrics(QFont())
@@ -59,7 +61,8 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         """
         fm = QFontMetrics(QFont())
         for section in range(self.__passwordModel.columnCount()):
-            header = self.passwordsTable.horizontalHeader().sectionSizeHint(section)
+            header = self.passwordsTable.horizontalHeader()\
+                .sectionSizeHint(section)
             if section == 0:
                 header = fm.width("averagebiglongsitename")
             elif section == 1:
@@ -68,7 +71,8 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
                 header = fm.width("averagelongpassword")
             buffer = fm.width("mm")
             header += buffer
-            self.passwordsTable.horizontalHeader().resizeSection(section, header)
+            self.passwordsTable.horizontalHeader()\
+                .resizeSection(section, header)
         self.passwordsTable.horizontalHeader().setStretchLastSection(True)
     
     @pyqtSlot()

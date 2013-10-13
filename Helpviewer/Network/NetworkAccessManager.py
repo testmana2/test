@@ -11,7 +11,8 @@ import os
 
 from PyQt4.QtCore import pyqtSignal, QByteArray, qVersion
 from PyQt4.QtGui import QDialog
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
+    QNetworkReply
 
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
@@ -30,7 +31,8 @@ class NetworkAccessManager(QNetworkAccessManager):
     """
     Class implementing a QNetworkAccessManager subclass.
     
-    @signal requestCreated(QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)
+    @signal requestCreated(QNetworkAccessManager.Operation, QNetworkRequest,
+        QNetworkReply)
         emitted after the request has been created
     """
     requestCreated = pyqtSignal(
@@ -76,7 +78,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         from .AboutAccessHandler import AboutAccessHandler
         self.setSchemeHandler("about", AboutAccessHandler(self))
         
-        from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
+        from Helpviewer.AdBlock.AdBlockAccessHandler import \
+            AdBlockAccessHandler
         self.setSchemeHandler("abp", AdBlockAccessHandler(self))
         
         from .FtpAccessHandler import FtpAccessHandler
@@ -90,7 +93,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         Public method to register a scheme handler.
         
         @param scheme access scheme (string)
-        @param handler reference to the scheme handler object (SchemeAccessHandler)
+        @param handler reference to the scheme handler object
+            (SchemeAccessHandler)
         """
         self.__schemeHandlers[scheme] = handler
     
@@ -98,20 +102,24 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
         scheme = request.url().scheme()
-        if scheme == "https" and (not SSL_AVAILABLE or not QSslSocket.supportsSsl()):
-            from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+        if scheme == "https" and \
+                (not SSL_AVAILABLE or not QSslSocket.supportsSsl()):
+            from .NetworkProtocolUnknownErrorReply import \
+                NetworkProtocolUnknownErrorReply
             return NetworkProtocolUnknownErrorReply(scheme, self)
         
         import Helpviewer.HelpWindow
         
-        if op == QNetworkAccessManager.PostOperation and outgoingData is not None:
+        if op == QNetworkAccessManager.PostOperation and \
+                outgoingData is not None:
             outgoingDataByteArray = outgoingData.peek(1024 * 1024)
             Helpviewer.HelpWindow.HelpWindow.passwordManager().post(
                 request, outgoingDataByteArray)
@@ -124,8 +132,8 @@ class NetworkAccessManager(QNetworkAccessManager):
             return reply
         
         # give GreaseMonkey the chance to create a request
-        reply = Helpviewer.HelpWindow.HelpWindow.greaseMonkeyManager().createRequest(
-            op, request, outgoingData)
+        reply = Helpviewer.HelpWindow.HelpWindow.greaseMonkeyManager()\
+            .createRequest(op, request, outgoingData)
         if reply is not None:
             return reply
         
@@ -134,10 +142,12 @@ class NetworkAccessManager(QNetworkAccessManager):
             req.setRawHeader("X-Eric5-UserLoadAction", QByteArray())
             req.setAttribute(QNetworkRequest.User + 200, "")
         else:
-            req.setAttribute(QNetworkRequest.User + 200, req.rawHeader("Referer"))
+            req.setAttribute(
+                QNetworkRequest.User + 200, req.rawHeader("Referer"))
         
         if hasattr(QNetworkRequest, 'HttpPipeliningAllowedAttribute'):
-            req.setAttribute(QNetworkRequest.HttpPipeliningAllowedAttribute, True)
+            req.setAttribute(
+                QNetworkRequest.HttpPipeliningAllowedAttribute, True)
         if not self.__acceptLanguage.isEmpty():
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         
@@ -175,7 +185,8 @@ class NetworkAccessManager(QNetworkAccessManager):
            req.url().host() not in Preferences.getHelp("SendRefererWhitelist"):
             req.setRawHeader("Referer", "")
         
-        reply = QNetworkAccessManager.createRequest(self, op, req, outgoingData)
+        reply = QNetworkAccessManager.createRequest(
+            self, op, req, outgoingData)
         self.requestCreated.emit(op, req, reply)
         
         return reply
@@ -246,8 +257,9 @@ class NetworkAccessManager(QNetworkAccessManager):
             from PyQt4.QtWebKit import qWebKitVersion
             from .NetworkDiskCache import NetworkDiskCache
             diskCache = NetworkDiskCache(self)
-            location = os.path.join(Utilities.getConfigDir(), "browser", 'cache',
-                                    "{0}-Qt{1}".format(qWebKitVersion(), qVersion()))
+            location = os.path.join(
+                Utilities.getConfigDir(), "browser", 'cache',
+                "{0}-Qt{1}".format(qWebKitVersion(), qVersion()))
             size = Preferences.getHelp("DiskCacheSize") * 1024 * 1024
             diskCache.setCacheDirectory(location)
             diskCache.setMaximumCacheSize(size)

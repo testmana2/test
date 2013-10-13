@@ -9,14 +9,15 @@ Module implementing the helpviewer main window.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, QUrl, \
-    QThread, QTextCodec
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, \
+    QUrl, QThread, QTextCodec
 from PyQt4.QtGui import QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
     QDesktopServices, QKeySequence, QComboBox, QFont, QFontMetrics, QLabel, \
-    QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
-    QHBoxLayout, QProgressBar, QAction, QIcon
+    QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, \
+    QDialog, QHBoxLayout, QProgressBar, QAction, QIcon
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
+from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, \
+    QWebPage
 try:
     from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
     QTHELP_AVAILABLE = True
@@ -50,8 +51,8 @@ class HelpWindow(E5MainWindow):
     Class implementing the web browser main window.
     
     @signal helpClosed() emitted after the window was requested to close down
-    @signal zoomTextOnlyChanged(bool) emitted after the zoom text only setting was
-            changed
+    @signal zoomTextOnlyChanged(bool) emitted after the zoom text only setting
+        was changed
     """
     zoomTextOnlyChanged = pyqtSignal(bool)
     helpClosed = pyqtSignal()
@@ -89,9 +90,10 @@ class HelpWindow(E5MainWindow):
         @param path the path of the working dir (usually '.') (string)
         @param parent parent widget of this window (QWidget)
         @param name name of this window (string)
-        @param fromEric flag indicating whether it was called from within eric5 (boolean)
-        @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
-            shortcuts (boolean)
+        @param fromEric flag indicating whether it was called from within
+            eric5 (boolean)
+        @keyparam initShortcutsOnly flag indicating to just initialize the
+            keyboard shortcuts (boolean)
         @keyparam searchWord word to search for (string)
         """
         super().__init__(parent)
@@ -124,7 +126,8 @@ class HelpWindow(E5MainWindow):
             HelpWindow.setUseQtHelp(self.fromEric)
             
             if not self.fromEric:
-                self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+                self.setStyle(Preferences.getUI("Style"),
+                              Preferences.getUI("StyleSheet"))
             
             if self.useQtHelp:
                 self.__helpEngine = \
@@ -136,7 +139,8 @@ class HelpWindow(E5MainWindow):
                 self.__helpEngine = None
             self.__helpInstaller = None
             
-            self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+            self.__zoomWidget = E5ZoomWidget(
+                UI.PixmapCache.getPixmap("zoomOut.png"),
                 UI.PixmapCache.getPixmap("zoomIn.png"),
                 UI.PixmapCache.getPixmap("zoomReset.png"), self)
             self.statusBar().addPermanentWidget(self.__zoomWidget)
@@ -149,7 +153,8 @@ class HelpWindow(E5MainWindow):
             self.tabWidget.titleChanged.connect(self.__titleChanged)
             self.tabWidget.showMessage.connect(self.statusBar().showMessage)
             self.tabWidget.browserClosed.connect(self.__browserClosed)
-            self.tabWidget.browserZoomValueChanged.connect(self.__zoomWidget.setValue)
+            self.tabWidget.browserZoomValueChanged.connect(
+                self.__zoomWidget.setValue)
             
             self.findDlg = SearchWidget(self, self)
             centralWidget = QWidget()
@@ -183,9 +188,12 @@ class HelpWindow(E5MainWindow):
                 self.__indexing = False
                 self.__indexingProgress = None
                 self.__searchEngine = self.__helpEngine.searchEngine()
-                self.__searchEngine.indexingStarted.connect(self.__indexingStarted)
-                self.__searchEngine.indexingFinished.connect(self.__indexingFinished)
-                self.__searchWindow = HelpSearchWidget(self.__searchEngine, self)
+                self.__searchEngine.indexingStarted.connect(
+                    self.__indexingStarted)
+                self.__searchEngine.indexingFinished.connect(
+                    self.__indexingFinished)
+                self.__searchWindow = HelpSearchWidget(
+                    self.__searchEngine, self)
                 self.__searchDock = QDockWidget(self.trUtf8("Search"), self)
                 self.__searchDock.setObjectName("SearchWindow")
                 self.__searchDock.setWidget(self.__searchWindow)
@@ -221,9 +229,12 @@ class HelpWindow(E5MainWindow):
             
             self.__adBlockIcon = AdBlockIcon(self)
             self.statusBar().addPermanentWidget(self.__adBlockIcon)
-            self.__adBlockIcon.setEnabled(Preferences.getHelp("AdBlockEnabled"))
-            self.tabWidget.currentChanged[int].connect(self.__adBlockIcon.currentChanged)
-            self.tabWidget.sourceChanged.connect(self.__adBlockIcon.sourceChanged)
+            self.__adBlockIcon.setEnabled(
+                Preferences.getHelp("AdBlockEnabled"))
+            self.tabWidget.currentChanged[int].connect(
+                self.__adBlockIcon.currentChanged)
+            self.tabWidget.sourceChanged.connect(
+                self.__adBlockIcon.sourceChanged)
             
             QDesktopServices.setUrlHandler("http", self.__linkActivated)
             QDesktopServices.setUrlHandler("https", self.__linkActivated)
@@ -233,14 +244,19 @@ class HelpWindow(E5MainWindow):
             if self.useQtHelp:
                 # TOC window
                 self.__tocWindow.linkActivated.connect(self.__linkActivated)
-                self.__tocWindow.escapePressed.connect(self.__activateCurrentBrowser)
+                self.__tocWindow.escapePressed.connect(
+                    self.__activateCurrentBrowser)
                 # index window
                 self.__indexWindow.linkActivated.connect(self.__linkActivated)
-                self.__indexWindow.linksActivated.connect(self.__linksActivated)
-                self.__indexWindow.escapePressed.connect(self.__activateCurrentBrowser)
+                self.__indexWindow.linksActivated.connect(
+                    self.__linksActivated)
+                self.__indexWindow.escapePressed.connect(
+                    self.__activateCurrentBrowser)
                 # search window
-                self.__searchWindow.linkActivated.connect(self.__linkActivated)
-                self.__searchWindow.escapePressed.connect(self.__activateCurrentBrowser)
+                self.__searchWindow.linkActivated.connect(
+                    self.__linkActivated)
+                self.__searchWindow.escapePressed.connect(
+                    self.__activateCurrentBrowser)
             
             state = Preferences.getHelp("HelpViewerState")
             self.restoreState(state)
@@ -248,9 +264,12 @@ class HelpWindow(E5MainWindow):
             self.__initHelpDb()
             
             self.__virusTotal = VirusTotalAPI(self)
-            self.__virusTotal.submitUrlError.connect(self.__virusTotalSubmitUrlError)
-            self.__virusTotal.urlScanReport.connect(self.__virusTotalUrlScanReport)
-            self.__virusTotal.fileScanReport.connect(self.__virusTotalFileScanReport)
+            self.__virusTotal.submitUrlError.connect(
+                self.__virusTotalSubmitUrlError)
+            self.__virusTotal.urlScanReport.connect(
+                self.__virusTotalUrlScanReport)
+            self.__virusTotal.fileScanReport.connect(
+                self.__virusTotalFileScanReport)
             
             self.__previewer = None
             self.__shutdownCalled = False
@@ -287,10 +306,13 @@ class HelpWindow(E5MainWindow):
         settings = QWebSettings.globalSettings()
         settings.setAttribute(QWebSettings.DeveloperExtrasEnabled, True)
         
-        settings.setFontFamily(QWebSettings.StandardFont, standardFont.family())
-        settings.setFontSize(QWebSettings.DefaultFontSize, standardFont.pointSize())
+        settings.setFontFamily(QWebSettings.StandardFont,
+                               standardFont.family())
+        settings.setFontSize(QWebSettings.DefaultFontSize,
+                             standardFont.pointSize())
         settings.setFontFamily(QWebSettings.FixedFont, fixedFont.family())
-        settings.setFontSize(QWebSettings.DefaultFixedFontSize, fixedFont.pointSize())
+        settings.setFontSize(QWebSettings.DefaultFixedFontSize,
+                             fixedFont.pointSize())
         
         styleSheet = Preferences.getHelp("UserStyleSheet")
         settings.setUserStyleSheetUrl(self.__userStyleSheet(styleSheet))
@@ -321,10 +343,12 @@ class HelpWindow(E5MainWindow):
                 os.makedirs(webDatabaseDir)
             settings.setOfflineStoragePath(webDatabaseDir)
             settings.setOfflineStorageDefaultQuota(
-                Preferences.getHelp("OfflineStorageDatabaseQuota") * 1024 * 1024)
+                Preferences.getHelp("OfflineStorageDatabaseQuota") * \
+                1024 * 1024)
         
         if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
-            settings.setAttribute(QWebSettings.OfflineWebApplicationCacheEnabled,
+            settings.setAttribute(
+                QWebSettings.OfflineWebApplicationCacheEnabled,
                 Preferences.getHelp("OfflineWebApplicationCacheEnabled"))
             appCacheDir = os.path.join(
                 Utilities.getConfigDir(), "browser", "webappcaches")
@@ -332,7 +356,8 @@ class HelpWindow(E5MainWindow):
                 os.makedirs(appCacheDir)
             settings.setOfflineWebApplicationCachePath(appCacheDir)
             settings.setOfflineWebApplicationCacheQuota(
-                Preferences.getHelp("OfflineWebApplicationCacheQuota") * 1024 * 1024)
+                Preferences.getHelp("OfflineWebApplicationCacheQuota") * \
+                1024 * 1024)
         
         if hasattr(QWebSettings, "LocalStorageEnabled"):
             settings.setAttribute(QWebSettings.LocalStorageEnabled,
@@ -467,15 +492,18 @@ class HelpWindow(E5MainWindow):
             self.savePageScreenAct.triggered[()].connect(self.__savePageScreen)
         self.__actions.append(self.savePageScreenAct)
         
-        self.saveVisiblePageScreenAct = E5Action(self.trUtf8('Save Visible Page Screen'),
+        self.saveVisiblePageScreenAct = E5Action(
+            self.trUtf8('Save Visible Page Screen'),
             UI.PixmapCache.getIcon("fileSaveVisiblePixmap.png"),
             self.trUtf8('Save Visible Page Screen...'),
             0, 0, self, 'help_file_save_visible_page_screen')
         self.saveVisiblePageScreenAct.setStatusTip(
-            self.trUtf8('Save the visible part of the current page as a screen shot'))
+            self.trUtf8('Save the visible part of the current page as a'
+                        ' screen shot'))
         self.saveVisiblePageScreenAct.setWhatsThis(self.trUtf8(
-                """<b>Save Visible Page Screen...</b>"""
-                """<p>Saves the visible part of the current page as a screen shot.</p>"""
+            """<b>Save Visible Page Screen...</b>"""
+            """<p>Saves the visible part of the current page as a"""
+            """ screen shot.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.saveVisiblePageScreenAct.triggered[()].connect(
@@ -529,13 +557,15 @@ class HelpWindow(E5MainWindow):
             UI.PixmapCache.getIcon("printPdf.png"),
             self.trUtf8('Print as PDF'),
             0, 0, self, 'help_file_print_pdf')
-        self.printPdfAct.setStatusTip(self.trUtf8('Print the displayed help as PDF'))
+        self.printPdfAct.setStatusTip(self.trUtf8(
+            'Print the displayed help as PDF'))
         self.printPdfAct.setWhatsThis(self.trUtf8(
-                """<b>Print as PDF</b>"""
-                """<p>Print the displayed help text as a PDF file.</p>"""
+            """<b>Print as PDF</b>"""
+            """<p>Print the displayed help text as a PDF file.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.printPdfAct.triggered[()].connect(self.tabWidget.printBrowserPdf)
+            self.printPdfAct.triggered[()].connect(
+                self.tabWidget.printBrowserPdf)
         self.__actions.append(self.printPdfAct)
         
         self.printPreviewAct = E5Action(self.trUtf8('Print Preview'),
@@ -549,7 +579,8 @@ class HelpWindow(E5MainWindow):
                 """<p>Print preview of the displayed help text.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.printPreviewAct.triggered[()].connect(self.tabWidget.printPreviewBrowser)
+            self.printPreviewAct.triggered[()].connect(
+                self.tabWidget.printPreviewBrowser)
         self.__actions.append(self.printPreviewAct)
         
         self.closeAct = E5Action(self.trUtf8('Close'),
@@ -557,10 +588,11 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('&Close'),
             QKeySequence(self.trUtf8("Ctrl+W", "File|Close")),
             0, self, 'help_file_close')
-        self.closeAct.setStatusTip(self.trUtf8('Close the current help window'))
+        self.closeAct.setStatusTip(self.trUtf8(
+            'Close the current help window'))
         self.closeAct.setWhatsThis(self.trUtf8(
-                """<b>Close</b>"""
-                """<p>Closes the current help window.</p>"""
+            """<b>Close</b>"""
+            """<p>Closes the current help window.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.closeAct.triggered[()].connect(self.tabWidget.closeBrowser)
@@ -575,7 +607,8 @@ class HelpWindow(E5MainWindow):
                 """<p>Closes all help windows except the first one.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.closeAllAct.triggered[()].connect(self.tabWidget.closeAllBrowsers)
+            self.closeAllAct.triggered[()].connect(
+                self.tabWidget.closeAllBrowsers)
         self.__actions.append(self.closeAllAct)
         
         self.privateBrowsingAct = E5Action(self.trUtf8('Private Browsing'),
@@ -589,7 +622,8 @@ class HelpWindow(E5MainWindow):
                 """ recorded anymore.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.privateBrowsingAct.triggered[()].connect(self.__privateBrowsing)
+            self.privateBrowsingAct.triggered[()].connect(
+                self.__privateBrowsing)
         self.privateBrowsingAct.setCheckable(True)
         self.__actions.append(self.privateBrowsingAct)
         
@@ -632,11 +666,12 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.trUtf8("Alt+Right", "Go|Forward")),
             QKeySequence(self.trUtf8("Shift+Backspace", "Go|Forward")),
             self, 'help_go_foreward')
-        self.forwardAct.setStatusTip(self.trUtf8('Move one help screen forward'))
+        self.forwardAct.setStatusTip(self.trUtf8(
+            'Move one help screen forward'))
         self.forwardAct.setWhatsThis(self.trUtf8(
-                """<b>Forward</b>"""
-                """<p>Moves one help screen forward. If none is"""
-                """ available, this action is disabled.</p>"""
+            """<b>Forward</b>"""
+            """<p>Moves one help screen forward. If none is"""
+            """ available, this action is disabled.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.forwardAct.triggered[()].connect(self.__forward)
@@ -647,10 +682,11 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('&Home'),
             QKeySequence(self.trUtf8("Ctrl+Home", "Go|Home")),
             0, self, 'help_go_home')
-        self.homeAct.setStatusTip(self.trUtf8('Move to the initial help screen'))
+        self.homeAct.setStatusTip(self.trUtf8(
+            'Move to the initial help screen'))
         self.homeAct.setWhatsThis(self.trUtf8(
-                """<b>Home</b>"""
-                """<p>Moves to the initial help screen.</p>"""
+            """<b>Home</b>"""
+            """<p>Moves to the initial help screen.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.homeAct.triggered[()].connect(self.__home)
@@ -662,10 +698,11 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+R", "Go|Reload")),
             QKeySequence(self.trUtf8("F5", "Go|Reload")),
             self, 'help_go_reload')
-        self.reloadAct.setStatusTip(self.trUtf8('Reload the current help screen'))
+        self.reloadAct.setStatusTip(self.trUtf8(
+            'Reload the current help screen'))
         self.reloadAct.setWhatsThis(self.trUtf8(
-                """<b>Reload</b>"""
-                """<p>Reloads the current help screen.</p>"""
+            """<b>Reload</b>"""
+            """<p>Reloads the current help screen.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.reloadAct.triggered[()].connect(self.__reload)
@@ -719,10 +756,11 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Find &next'),
             QKeySequence(self.trUtf8("F3", "Edit|Find next")),
             0, self, 'help_edit_find_next')
-        self.findNextAct.setStatusTip(self.trUtf8('Find next occurrence of text in page'))
+        self.findNextAct.setStatusTip(self.trUtf8(
+            'Find next occurrence of text in page'))
         self.findNextAct.setWhatsThis(self.trUtf8(
-                """<b>Find next</b>"""
-                """<p>Find the next occurrence of text in the current page.</p>"""
+            """<b>Find next</b>"""
+            """<p>Find the next occurrence of text in the current page.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.findNextAct.triggered[()].connect(self.findDlg.findNext)
@@ -736,8 +774,9 @@ class HelpWindow(E5MainWindow):
         self.findPrevAct.setStatusTip(
             self.trUtf8('Find previous occurrence of text in page'))
         self.findPrevAct.setWhatsThis(self.trUtf8(
-                """<b>Find previous</b>"""
-                """<p>Find the previous occurrence of text in the current page.</p>"""
+            """<b>Find previous</b>"""
+            """<p>Find the previous occurrence of text in the current"""
+            """ page.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.findPrevAct.triggered[()].connect(self.findDlg.findPrevious)
@@ -754,7 +793,8 @@ class HelpWindow(E5MainWindow):
                 """<p>Open a dialog to manage the bookmarks.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.bookmarksManageAct.triggered[()].connect(self.__showBookmarksDialog)
+            self.bookmarksManageAct.triggered[()].connect(
+                self.__showBookmarksDialog)
         self.__actions.append(self.bookmarksManageAct)
         
         self.bookmarksAddAct = E5Action(self.trUtf8('Add Bookmark'),
@@ -763,10 +803,11 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+D", "Help|Add bookmark")),
             0, self, 'help_bookmark_add')
         self.bookmarksAddAct.setIconVisibleInMenu(False)
-        self.bookmarksAddAct.setStatusTip(self.trUtf8('Open a dialog to add a bookmark.'))
+        self.bookmarksAddAct.setStatusTip(self.trUtf8(
+            'Open a dialog to add a bookmark.'))
         self.bookmarksAddAct.setWhatsThis(self.trUtf8(
-                """<b>Add Bookmark</b>"""
-                """<p>Open a dialog to add the current URL as a bookmark.</p>"""
+            """<b>Add Bookmark</b>"""
+            """<p>Open a dialog to add the current URL as a bookmark.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.bookmarksAddAct.triggered[()].connect(self.__addBookmark)
@@ -782,7 +823,8 @@ class HelpWindow(E5MainWindow):
                 """<p>Open a dialog to add a new bookmarks folder.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.bookmarksAddFolderAct.triggered[()].connect(self.__addBookmarkFolder)
+            self.bookmarksAddFolderAct.triggered[()].connect(
+                self.__addBookmarkFolder)
         self.__actions.append(self.bookmarksAddFolderAct)
         
         self.bookmarksAllTabsAct = E5Action(self.trUtf8('Bookmark All Tabs'),
@@ -806,12 +848,12 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_help_whats_this')
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
-                """<b>Display context sensitive help</b>"""
-                """<p>In What's This? mode, the mouse cursor shows an arrow with a"""
-                """ question mark, and you can click on the interface elements to get"""
-                """ a short description of what they do and how to use them. In"""
-                """ dialogs, this feature can be accessed using the context help button"""
-                """ in the titlebar.</p>"""
+            """<b>Display context sensitive help</b>"""
+            """<p>In What's This? mode, the mouse cursor shows an arrow"""
+            """ with a question mark, and you can click on the interface"""
+            """ elements to get a short description of what they do and how"""
+            """ to use them. In dialogs, this feature can be accessed using"""
+            """ the context help button in the titlebar.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.whatsThisAct.triggered[()].connect(self.__whatsThis)
@@ -820,10 +862,11 @@ class HelpWindow(E5MainWindow):
         self.aboutAct = E5Action(self.trUtf8('About'),
             self.trUtf8('&About'),
             0, 0, self, 'help_help_about')
-        self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
+        self.aboutAct.setStatusTip(self.trUtf8(
+            'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
-                """<b>About</b>"""
-                """<p>Display some information about this software.</p>"""
+            """<b>About</b>"""
+            """<p>Display some information about this software.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.aboutAct.triggered[()].connect(self.__about)
@@ -877,11 +920,12 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Zoom &reset'),
             QKeySequence(self.trUtf8("Ctrl+0", "View|Zoom reset")),
             0, self, 'help_view_zoom_reset')
-        self.zoomResetAct.setStatusTip(self.trUtf8('Reset the zoom of the text'))
+        self.zoomResetAct.setStatusTip(self.trUtf8(
+            'Reset the zoom of the text'))
         self.zoomResetAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom reset</b>"""
-                """<p>Reset the zoom of the text. """
-                """This sets the zoom factor to 100%.</p>"""
+            """<b>Zoom reset</b>"""
+            """<p>Reset the zoom of the text. """
+            """This sets the zoom factor to 100%.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.zoomResetAct.triggered[()].connect(self.__zoomReset)
@@ -899,7 +943,8 @@ class HelpWindow(E5MainWindow):
                     """<p>Zoom text only; pictures remain constant.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.zoomTextOnlyAct.triggered[bool].connect(self.__zoomTextOnly)
+                self.zoomTextOnlyAct.triggered[bool].connect(
+                    self.__zoomTextOnly)
             self.__actions.append(self.zoomTextOnlyAct)
         else:
             self.zoomTextOnlyAct = None
@@ -908,10 +953,11 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Show page source'),
             QKeySequence(self.trUtf8('Ctrl+U')), 0,
             self, 'help_show_page_source')
-        self.pageSourceAct.setStatusTip(self.trUtf8('Show the page source in an editor'))
+        self.pageSourceAct.setStatusTip(self.trUtf8(
+            'Show the page source in an editor'))
         self.pageSourceAct.setWhatsThis(self.trUtf8(
-                """<b>Show page source</b>"""
-                """<p>Show the page source in an editor.</p>"""
+            """<b>Show page source</b>"""
+            """<p>Show the page source in an editor.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.pageSourceAct.triggered[()].connect(self.__showPageSource)
@@ -958,7 +1004,8 @@ class HelpWindow(E5MainWindow):
         self.prefAct = E5Action(self.trUtf8('Preferences'),
             UI.PixmapCache.getIcon("configure.png"),
             self.trUtf8('&Preferences...'), 0, 0, self, 'help_preferences')
-        self.prefAct.setStatusTip(self.trUtf8('Set the prefered configuration'))
+        self.prefAct.setStatusTip(self.trUtf8(
+            'Set the prefered configuration'))
         self.prefAct.setWhatsThis(self.trUtf8(
             """<b>Preferences</b>"""
             """<p>Set the configuration items of the application"""
@@ -968,9 +1015,11 @@ class HelpWindow(E5MainWindow):
             self.prefAct.triggered[()].connect(self.__showPreferences)
         self.__actions.append(self.prefAct)
 
-        self.acceptedLanguagesAct = E5Action(self.trUtf8('Languages'),
+        self.acceptedLanguagesAct = E5Action(
+            self.trUtf8('Languages'),
             UI.PixmapCache.getIcon("flag.png"),
-            self.trUtf8('&Languages...'), 0, 0, self, 'help_accepted_languages')
+            self.trUtf8('&Languages...'), 0, 0,
+            self, 'help_accepted_languages')
         self.acceptedLanguagesAct.setStatusTip(self.trUtf8(
             'Configure the accepted languages for web pages'))
         self.acceptedLanguagesAct.setWhatsThis(self.trUtf8(
@@ -978,7 +1027,8 @@ class HelpWindow(E5MainWindow):
             """<p>Configure the accepted languages for web pages.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.acceptedLanguagesAct.triggered[()].connect(self.__showAcceptedLanguages)
+            self.acceptedLanguagesAct.triggered[()].connect(
+                self.__showAcceptedLanguages)
         self.__actions.append(self.acceptedLanguagesAct)
         
         self.cookiesAct = E5Action(self.trUtf8('Cookies'),
@@ -991,12 +1041,14 @@ class HelpWindow(E5MainWindow):
             """<p>Configure cookies handling.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.cookiesAct.triggered[()].connect(self.__showCookiesConfiguration)
+            self.cookiesAct.triggered[()].connect(
+                self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
         self.offlineStorageAct = E5Action(self.trUtf8('Offline Storage'),
             UI.PixmapCache.getIcon("preferences-html5.png"),
-            self.trUtf8('Offline &Storage...'), 0, 0, self, 'help_offline_storage')
+            self.trUtf8('Offline &Storage...'), 0, 0,
+            self, 'help_offline_storage')
         self.offlineStorageAct.setStatusTip(self.trUtf8(
             'Configure offline storage'))
         self.offlineStorageAct.setWhatsThis(self.trUtf8(
@@ -1017,8 +1069,8 @@ class HelpWindow(E5MainWindow):
             'Configure personal information for completing form fields'))
         self.personalDataAct.setWhatsThis(self.trUtf8(
             """<b>Personal Information...</b>"""
-            """<p>Opens a dialog to configure the personal information used for"""
-            """ completing form fields.</p>"""
+            """<p>Opens a dialog to configure the personal information"""
+            """ used for completing form fields.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.personalDataAct.triggered[()].connect(
@@ -1034,23 +1086,26 @@ class HelpWindow(E5MainWindow):
             'Configure the GreaseMonkey Scripts'))
         self.greaseMonkeyAct.setWhatsThis(self.trUtf8(
             """<b>GreaseMonkey Scripts...</b>"""
-            """<p>Opens a dialog to configure the available GreaseMonkey Scripts.</p>"""
+            """<p>Opens a dialog to configure the available GreaseMonkey"""
+            """ Scripts.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.greaseMonkeyAct.triggered[()].connect(
                 self.__showGreaseMonkeyConfigDialog)
         self.__actions.append(self.greaseMonkeyAct)
         
-        self.editMessageFilterAct = E5Action(self.trUtf8('Edit Message Filters'),
-                UI.PixmapCache.getIcon("warning.png"),
-                self.trUtf8('Edit Message Filters...'), 0, 0, self,
-                'help_manage_message_filters')
+        self.editMessageFilterAct = E5Action(
+            self.trUtf8('Edit Message Filters'),
+            UI.PixmapCache.getIcon("warning.png"),
+            self.trUtf8('Edit Message Filters...'), 0, 0, self,
+            'help_manage_message_filters')
         self.editMessageFilterAct.setStatusTip(self.trUtf8(
             'Edit the message filters used to suppress unwanted messages'))
         self.editMessageFilterAct.setWhatsThis(self.trUtf8(
             """<b>Edit Message Filters</b>"""
-            """<p>Opens a dialog to edit the message filters used to suppress"""
-            """ unwanted messages been shown in an error window.</p>"""
+            """<p>Opens a dialog to edit the message filters used to"""
+            """ suppress unwanted messages been shown in an error"""
+            """ window.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.editMessageFilterAct.triggered[()].connect(
@@ -1058,15 +1113,17 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.editMessageFilterAct)
 
         if self.useQtHelp or self.initShortcutsOnly:
-            self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
+            self.syncTocAct = E5Action(
+                self.trUtf8('Sync with Table of Contents'),
                 UI.PixmapCache.getIcon("syncToc.png"),
                 self.trUtf8('Sync with Table of Contents'),
                 0, 0, self, 'help_sync_toc')
             self.syncTocAct.setStatusTip(self.trUtf8(
                     'Synchronizes the table of contents with current page'))
             self.syncTocAct.setWhatsThis(self.trUtf8(
-                    """<b>Sync with Table of Contents</b>"""
-                    """<p>Synchronizes the table of contents with current page.</p>"""
+                """<b>Sync with Table of Contents</b>"""
+                """<p>Synchronizes the table of contents with current"""
+                """ page.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.syncTocAct.triggered[()].connect(self.__syncTOC)
@@ -1108,24 +1165,28 @@ class HelpWindow(E5MainWindow):
                     """<p>Shows the search window.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.showSearchAct.triggered[()].connect(self.__showSearchWindow)
+                self.showSearchAct.triggered[()].connect(
+                    self.__showSearchWindow)
             self.__actions.append(self.showSearchAct)
             
-            self.manageQtHelpDocsAct = E5Action(self.trUtf8('Manage QtHelp Documents'),
+            self.manageQtHelpDocsAct = E5Action(
+                self.trUtf8('Manage QtHelp Documents'),
                 self.trUtf8('Manage QtHelp &Documents'),
                 0, 0, self, 'help_qthelp_documents')
             self.manageQtHelpDocsAct.setStatusTip(self.trUtf8(
-                    'Shows a dialog to manage the QtHelp documentation set'))
+                'Shows a dialog to manage the QtHelp documentation set'))
             self.manageQtHelpDocsAct.setWhatsThis(self.trUtf8(
-                    """<b>Manage QtHelp Documents</b>"""
-                    """<p>Shows a dialog to manage the QtHelp documentation set.</p>"""
+                """<b>Manage QtHelp Documents</b>"""
+                """<p>Shows a dialog to manage the QtHelp documentation"""
+                """ set.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.manageQtHelpDocsAct.triggered[()].connect(
                     self.__manageQtHelpDocumentation)
             self.__actions.append(self.manageQtHelpDocsAct)
             
-            self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'),
+            self.manageQtHelpFiltersAct = E5Action(
+                self.trUtf8('Manage QtHelp Filters'),
                 self.trUtf8('Manage QtHelp &Filters'),
                 0, 0, self, 'help_qthelp_filters')
             self.manageQtHelpFiltersAct.setStatusTip(self.trUtf8(
@@ -1139,7 +1200,8 @@ class HelpWindow(E5MainWindow):
                     self.__manageQtHelpFilters)
             self.__actions.append(self.manageQtHelpFiltersAct)
             
-            self.reindexDocumentationAct = E5Action(self.trUtf8('Reindex Documentation'),
+            self.reindexDocumentationAct = E5Action(
+                self.trUtf8('Reindex Documentation'),
                 self.trUtf8('&Reindex Documentation'),
                 0, 0, self, 'help_qthelp_reindex')
             self.reindexDocumentationAct.setStatusTip(self.trUtf8(
@@ -1157,38 +1219,44 @@ class HelpWindow(E5MainWindow):
                       self.trUtf8('&Clear private data'),
                       0, 0,
                       self, 'help_clear_private_data')
-        self.clearPrivateDataAct.setStatusTip(self.trUtf8('Clear private data'))
+        self.clearPrivateDataAct.setStatusTip(self.trUtf8(
+            'Clear private data'))
         self.clearPrivateDataAct.setWhatsThis(self.trUtf8(
-                """<b>Clear private data</b>"""
-                """<p>Clears the private data like browsing history, search history"""
-                """ or the favicons database.</p>"""
+            """<b>Clear private data</b>"""
+            """<p>Clears the private data like browsing history, search"""
+            """ history or the favicons database.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.clearPrivateDataAct.triggered[()].connect(self.__clearPrivateData)
+            self.clearPrivateDataAct.triggered[()].connect(
+                self.__clearPrivateData)
         self.__actions.append(self.clearPrivateDataAct)
         
         self.clearIconsAct = E5Action(self.trUtf8('Clear icons database'),
                       self.trUtf8('Clear &icons database'),
                       0, 0,
                       self, 'help_clear_icons_db')
-        self.clearIconsAct.setStatusTip(self.trUtf8('Clear the database of favicons'))
+        self.clearIconsAct.setStatusTip(self.trUtf8(
+            'Clear the database of favicons'))
         self.clearIconsAct.setWhatsThis(self.trUtf8(
-                """<b>Clear icons database</b>"""
-                """<p>Clears the database of favicons of previously visited URLs.</p>"""
+            """<b>Clear icons database</b>"""
+            """<p>Clears the database of favicons of previously visited"""
+            """ URLs.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.clearIconsAct.triggered[()].connect(self.__clearIconsDatabase)
         self.__actions.append(self.clearIconsAct)
         
-        self.searchEnginesAct = E5Action(self.trUtf8('Configure Search Engines'),
-                      self.trUtf8('Configure Search &Engines...'),
-                      0, 0,
-                      self, 'help_search_engines')
+        self.searchEnginesAct = E5Action(
+            self.trUtf8('Configure Search Engines'),
+            self.trUtf8('Configure Search &Engines...'),
+            0, 0,
+            self, 'help_search_engines')
         self.searchEnginesAct.setStatusTip(self.trUtf8(
-                'Configure the available search engines'))
+            'Configure the available search engines'))
         self.searchEnginesAct.setWhatsThis(self.trUtf8(
-                """<b>Configure Search Engines...</b>"""
-                """<p>Opens a dialog to configure the available search engines.</p>"""
+            """<b>Configure Search Engines...</b>"""
+            """<p>Opens a dialog to configure the available search"""
+            """ engines.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.searchEnginesAct.triggered[()].connect(
@@ -1216,10 +1284,11 @@ class HelpWindow(E5MainWindow):
                       0, 0,
                       self, 'help_adblock')
         self.adblockAct.setStatusTip(self.trUtf8(
-                'Configure AdBlock subscriptions and rules'))
+            'Configure AdBlock subscriptions and rules'))
         self.adblockAct.setWhatsThis(self.trUtf8(
-                """<b>Ad Block...</b>"""
-                """<p>Opens a dialog to configure AdBlock subscriptions and rules.</p>"""
+            """<b>Ad Block...</b>"""
+            """<p>Opens a dialog to configure AdBlock subscriptions and"""
+            """ rules.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
@@ -1231,42 +1300,49 @@ class HelpWindow(E5MainWindow):
                       0, 0,
                       self, 'help_flashblock')
         self.flashblockAct.setStatusTip(self.trUtf8(
-                'Configure ClickToFlash whitelist'))
+            'Configure ClickToFlash whitelist'))
         self.flashblockAct.setWhatsThis(self.trUtf8(
-                """<b>ClickToFlash...</b>"""
-                """<p>Opens a dialog to configure the ClickToFlash whitelist.</p>"""
+            """<b>ClickToFlash...</b>"""
+            """<p>Opens a dialog to configure the ClickToFlash"""
+            """ whitelist.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.flashblockAct.triggered[()].connect(self.__showClickToFlashDialog)
+            self.flashblockAct.triggered[()].connect(
+                self.__showClickToFlashDialog)
         self.__actions.append(self.flashblockAct)
         
         if SSL_AVAILABLE:
-            self.certificatesAct = E5Action(self.trUtf8('Manage SSL Certificates'),
-                          UI.PixmapCache.getIcon("certificates.png"),
-                          self.trUtf8('Manage SSL Certificates...'),
-                          0, 0,
-                          self, 'help_manage_certificates')
+            self.certificatesAct = E5Action(
+                self.trUtf8('Manage SSL Certificates'),
+                UI.PixmapCache.getIcon("certificates.png"),
+                self.trUtf8('Manage SSL Certificates...'),
+                0, 0,
+                self, 'help_manage_certificates')
             self.certificatesAct.setStatusTip(self.trUtf8(
-                    'Manage the saved SSL certificates'))
+                'Manage the saved SSL certificates'))
             self.certificatesAct.setWhatsThis(self.trUtf8(
-                    """<b>Manage SSL Certificates...</b>"""
-                    """<p>Opens a dialog to manage the saved SSL certificates.</p>"""
+                """<b>Manage SSL Certificates...</b>"""
+                """<p>Opens a dialog to manage the saved SSL"""
+                """ certificates.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
+                self.certificatesAct.triggered[()].connect(
+                    self.__showCertificatesDialog)
             self.__actions.append(self.certificatesAct)
         
         self.toolsMonitorAct = E5Action(self.trUtf8('Network Monitor'),
                       self.trUtf8('&Network Monitor...'),
                       0, 0,
                       self, 'help_tools_network_monitor')
-        self.toolsMonitorAct.setStatusTip(self.trUtf8('Show the network monitor dialog'))
+        self.toolsMonitorAct.setStatusTip(self.trUtf8(
+            'Show the network monitor dialog'))
         self.toolsMonitorAct.setWhatsThis(self.trUtf8(
-                """<b>Network Monitor...</b>"""
-                """<p>Shows the network monitor dialog.</p>"""
+            """<b>Network Monitor...</b>"""
+            """<p>Shows the network monitor dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.toolsMonitorAct.triggered[()].connect(self.__showNetworkMonitor)
+            self.toolsMonitorAct.triggered[()].connect(
+                self.__showNetworkMonitor)
         self.__actions.append(self.toolsMonitorAct)
         
         self.showDownloadManagerAct = E5Action(self.trUtf8('Downloads'),
@@ -1279,7 +1355,8 @@ class HelpWindow(E5MainWindow):
                 """<p>Shows the downloads window.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.showDownloadManagerAct.triggered[()].connect(self.__showDownloadsWindow)
+            self.showDownloadManagerAct.triggered[()].connect(
+                self.__showDownloadsWindow)
         self.__actions.append(self.showDownloadManagerAct)
         
         self.feedsManagerAct = E5Action(self.trUtf8('RSS Feeds Dialog'),
@@ -1288,11 +1365,12 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+Shift+F", "Help|RSS Feeds Dialog")),
             0, self, 'help_rss_feeds')
         self.feedsManagerAct.setStatusTip(self.trUtf8(
-                'Open a dialog showing the configured RSS feeds.'))
+            'Open a dialog showing the configured RSS feeds.'))
         self.feedsManagerAct.setWhatsThis(self.trUtf8(
-                """<b>RSS Feeds Dialog...</b>"""
-                """<p>Open a dialog to show the configured RSS feeds."""
-                """ It can be used to mange the feeds and to show their contents.</p>"""
+            """<b>RSS Feeds Dialog...</b>"""
+            """<p>Open a dialog to show the configured RSS feeds."""
+            """ It can be used to mange the feeds and to show their"""
+            """ contents.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.feedsManagerAct.triggered[()].connect(self.__showFeedsManager)
@@ -1304,17 +1382,18 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+Shift+I", "Help|Siteinfo Dialog")),
             0, self, 'help_siteinfo')
         self.siteInfoAct.setStatusTip(self.trUtf8(
-                'Open a dialog showing some information about the current site.'))
+            'Open a dialog showing some information about the current site.'))
         self.siteInfoAct.setWhatsThis(self.trUtf8(
-                """<b>Siteinfo Dialog...</b>"""
-                """<p>Opens a dialog showing some information about the current"""
-                """ site.</p>"""
+            """<b>Siteinfo Dialog...</b>"""
+            """<p>Opens a dialog showing some information about the current"""
+            """ site.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.siteInfoAct.triggered[()].connect(self.__showSiteinfoDialog)
         self.__actions.append(self.siteInfoAct)
         
-        self.userAgentManagerAct = E5Action(self.trUtf8('Manage User Agent Settings'),
+        self.userAgentManagerAct = E5Action(
+            self.trUtf8('Manage User Agent Settings'),
             self.trUtf8('Manage &User Agent Settings'),
             0, 0, self, 'help_user_agent_settings')
         self.userAgentManagerAct.setStatusTip(self.trUtf8(
@@ -1333,10 +1412,11 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('&Synchronize Data...'),
             0, 0, self, 'help_synchronize_data')
         self.synchronizationAct.setStatusTip(self.trUtf8(
-                'Shows a dialog to synchronize data via the network'))
+            'Shows a dialog to synchronize data via the network'))
         self.synchronizationAct.setWhatsThis(self.trUtf8(
-                """<b>Synchronize Data...</b>"""
-                """<p>This shows a dialog to synchronize data via the network.</p>"""
+            """<b>Synchronize Data...</b>"""
+            """<p>This shows a dialog to synchronize data via the"""
+            """ network.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.synchronizationAct.triggered[()].connect(
@@ -1404,7 +1484,8 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.pageSourceAct)
         menu.addAction(self.fullScreenAct)
         if hasattr(QWebSettings, 'defaultTextEncoding'):
-            self.__textEncodingMenu = menu.addMenu(self.trUtf8("Text Encoding"))
+            self.__textEncodingMenu = menu.addMenu(
+                self.trUtf8("Text Encoding"))
             self.__textEncodingMenu.aboutToShow.connect(
                 self.__aboutToShowTextEncodingMenu)
             self.__textEncodingMenu.triggered.connect(self.__setTextEncoding)
@@ -1571,7 +1652,8 @@ class HelpWindow(E5MainWindow):
             filtertb.addWidget(QLabel(self.trUtf8("Filtered by: ")))
             filtertb.addWidget(self.filterCombo)
             self.__helpEngine.setupFinished.connect(self.__setupFilterCombo)
-            self.filterCombo.activated[str].connect(self.__filterQtHelpDocumentation)
+            self.filterCombo.activated[str].connect(
+                self.__filterQtHelpDocumentation)
             self.__setupFilterCombo()
         
         settingstb = self.addToolBar(self.trUtf8("Settings"))
@@ -1635,7 +1717,8 @@ class HelpWindow(E5MainWindow):
         
         self.forwardMenu = QMenu(self)
         self.forwardMenu.aboutToShow.connect(self.__showForwardMenu)
-        self.forwardMenu.triggered.connect(self.__navigationMenuActionTriggered)
+        self.forwardMenu.triggered.connect(
+            self.__navigationMenuActionTriggered)
         forwardButton = gotb.widgetForAction(self.forwardAct)
         forwardButton.setMenu(self.forwardMenu)
         forwardButton.setPopupMode(QToolButton.MenuButtonPopup)
@@ -1659,24 +1742,26 @@ class HelpWindow(E5MainWindow):
         self.virustotalSearchEdit.setMaximumWidth(250)
         self.virustotalSearchEdit.setWhatsThis(self.trUtf8(
             """<h2>File search</h2>"""
-            """<p>In order to search for the last VirusTotal report on a given file"""
-            """ just enter its hash. Currently the allowed hashes are MD5, SHA1 and"""
-            """ SHA256. You can also search for a particular file report by typing"""
-            """ in its permalink id.</p>"""
+            """<p>In order to search for the last VirusTotal report on a"""
+            """ given file just enter its hash. Currently the allowed"""
+            """ hashes are MD5, SHA1 and SHA256. You can also search for"""
+            """ a particular file report by typing in its permalink id.</p>"""
             """<h2>URL search</h2>"""
-            """<p>URL searches are simple, just type in the given URL, the application"""
-            """ will normalize it and compare it with the entries in VirusTotal's"""
-            """ database. Alternatively you may enter the MD5 hash of an URL preceded"""
-            """ by "url:", e.g. url:7f911bbcf618f052ac6b9928600d2820.</p>"""
+            """<p>URL searches are simple, just type in the given URL, the"""
+            """ application will normalize it and compare it with the"""
+            """ entries in VirusTotal's database. Alternatively you may"""
+            """ enter the MD5 hash of an URL preceded by "url:", e.g."""
+            """ url:7f911bbcf618f052ac6b9928600d2820.</p>"""
             """<h2>User search</h2>"""
-            """<p>Do you want to know whether a friend has a VT Community account?"""
-            """ Simply type in his nick preceded by the symbol "@", e.g."""
-            """ @EmilianoMartinez.</p>"""
+            """<p>Do you want to know whether a friend has a VT Community"""
+            """ account? Simply type in his nick preceded by the symbol"""
+            """ "@", e.g. @EmilianoMartinez.</p>"""
             """<h2>Search through comments</h2>"""
-            """<p>The comments in VT Community may often help in disinfecting your PC"""
-            """ or may proof themselves useful when analysing a particular malware"""
-            """ sample, comment tags enable users to search through the VT Community"""
-            """ reviews. The standard file tags are: {0} The standard URL tags are: {1}"""
+            """<p>The comments in VT Community may often help in"""
+            """ disinfecting your PC or may proof themselves useful when"""
+            """ analysing a particular malware sample, comment tags enable"""
+            """ users to search through the VT Community reviews. The"""
+            """ standard file tags are: {0} The standard URL tags are: {1}"""
             """User generated tags are preceded by the symbol "#", e.g."""
             """ #disinfect.</p>"""
         ).format(
@@ -1698,8 +1783,10 @@ class HelpWindow(E5MainWindow):
             """<li>spamlink</li>"""
             """</ul>""",
         ))
-        self.virustotalSearchEdit.textChanged.connect(self.__virusTotalSearchChanged)
-        self.virustotalSearchEdit.returnPressed.connect(self.__virusTotalSearch)
+        self.virustotalSearchEdit.textChanged.connect(
+            self.__virusTotalSearchChanged)
+        self.virustotalSearchEdit.returnPressed.connect(
+            self.__virusTotalSearch)
         vttb.addWidget(self.virustotalSearchEdit)
         self.virustotalSearchAct = vttb.addAction(
             UI.PixmapCache.getIcon("virustotal.png"),
@@ -1738,7 +1825,8 @@ class HelpWindow(E5MainWindow):
         
     def __switchTab(self):
         """
-        Private slot used to switch between the current and the previous current tab.
+        Private slot used to switch between the current and the previous
+        current tab.
         """
         fwidget = QApplication.focusWidget()
         while fwidget and not hasattr(fwidget, 'switchTab'):
@@ -1873,7 +1961,8 @@ class HelpWindow(E5MainWindow):
         
     def __saveVisiblePageScreen(self):
         """
-        Private slot to save the visible part of the current page as a screen shot.
+        Private slot to save the visible part of the current page as a screen
+        shot.
         """
         self.__savePageScreen(visibleOnly=True)
         
@@ -1883,8 +1972,8 @@ class HelpWindow(E5MainWindow):
         """
         E5MessageBox.about(self, self.trUtf8("eric5 Web Browser"), self.trUtf8(
             """<b>eric5 Web Browser - {0}</b>"""
-            """<p>The eric5 Web Browser is a combined help file and HTML browser."""
-            """ It is part of the eric5 development toolset.</p>"""
+            """<p>The eric5 Web Browser is a combined help file and HTML"""
+            """ browser. It is part of the eric5 development toolset.</p>"""
         ).format(Version))
         
     def __aboutQt(self):
@@ -1905,7 +1994,8 @@ class HelpWindow(E5MainWindow):
         """
         Public slot called when forward references are available.
         
-        @param b flag indicating the availability of the forwards action (boolean)
+        @param b flag indicating the availability of the forwards action
+            (boolean)
         """
         self.forwardAct.setEnabled(b)
         
@@ -2074,13 +2164,15 @@ class HelpWindow(E5MainWindow):
 
         if Preferences.getHelp("SaveGeometry"):
             if not self.__isFullScreen():
-                Preferences.setGeometry("HelpViewerGeometry", self.saveGeometry())
+                Preferences.setGeometry("HelpViewerGeometry",
+                                        self.saveGeometry())
         else:
             Preferences.setGeometry("HelpViewerGeometry", QByteArray())
         
         try:
             if self.fromEric or len(self.__class__.helpwindows) > 1:
-                del self.__class__.helpwindows[self.__class__.helpwindows.index(self)]
+                del self.__class__.helpwindows[
+                    self.__class__.helpwindows.index(self)]
         except ValueError:
             pass
         
@@ -2155,7 +2247,8 @@ class HelpWindow(E5MainWindow):
         
         @param textOnly flag indicating to zoom text only (boolean)
         """
-        QWebSettings.globalSettings().setAttribute(QWebSettings.ZoomTextOnly, textOnly)
+        QWebSettings.globalSettings().setAttribute(
+            QWebSettings.ZoomTextOnly, textOnly)
         self.zoomTextOnlyChanged.emit(textOnly)
     
     def __viewFullScreen(self,):
@@ -2166,13 +2259,15 @@ class HelpWindow(E5MainWindow):
             # switch back to normal
             self.setWindowState(self.windowState() & ~Qt.WindowFullScreen)
             self.menuBar().show()
-            self.fullScreenAct.setIcon(UI.PixmapCache.getIcon("windowFullscreen.png"))
+            self.fullScreenAct.setIcon(
+                UI.PixmapCache.getIcon("windowFullscreen.png"))
             self.fullScreenAct.setIconText(self.trUtf8('Full Screen'))
         else:
             # switch to full screen
             self.setWindowState(self.windowState() | Qt.WindowFullScreen)
             self.menuBar().hide()
-            self.fullScreenAct.setIcon(UI.PixmapCache.getIcon("windowRestore.png"))
+            self.fullScreenAct.setIcon(
+                UI.PixmapCache.getIcon("windowRestore.png"))
             self.fullScreenAct.setIconText(self.trUtf8('Restore Window'))
     
     def __isFullScreen(self):
@@ -2196,15 +2291,16 @@ class HelpWindow(E5MainWindow):
         settings = QWebSettings.globalSettings()
         pb = settings.testAttribute(QWebSettings.PrivateBrowsingEnabled)
         if not pb:
-            txt = self.trUtf8("""<b>Are you sure you want to turn on private"""
-                              """ browsing?</b><p>When private browsing is turned on,"""
-                              """ web pages are not added to the history, searches"""
-                              """ are not added to the list of recent searches and"""
-                              """ web site icons and cookies are not stored."""
-                              """ HTML5 offline storage will be deactivated."""
-                              """ Until you close the window, you can still click"""
-                              """ the Back and Forward buttons to return to the"""
-                              """ web pages you have opened.</p>""")
+            txt = self.trUtf8(
+                """<b>Are you sure you want to turn on private"""
+                """ browsing?</b><p>When private browsing is turned on,"""
+                """ web pages are not added to the history, searches"""
+                """ are not added to the list of recent searches and"""
+                """ web site icons and cookies are not stored."""
+                """ HTML5 offline storage will be deactivated."""
+                """ Until you close the window, you can still click"""
+                """ the Back and Forward buttons to return to the"""
+                """ web pages you have opened.</p>""")
             res = E5MessageBox.yesNo(self, "", txt)
             if res:
                 self.setPrivateMode(True)
@@ -2236,7 +2332,8 @@ class HelpWindow(E5MainWindow):
     
     def browserAt(self, index):
         """
-        Public method to get a reference to the help browser with the given index.
+        Public method to get a reference to the help browser with the given
+        index.
         
         @param index index of the browser to get (integer)
         @return reference to the indexed help browser (HelpBrowser)
@@ -2272,9 +2369,9 @@ class HelpWindow(E5MainWindow):
         Private slot to set the preferences.
         """
         from Preferences.ConfigurationDialog import ConfigurationDialog
-        dlg = ConfigurationDialog(self, 'Configuration', True,
-                                  fromEric=self.fromEric,
-                                  displayMode=ConfigurationDialog.HelpBrowserMode)
+        dlg = ConfigurationDialog(
+            self, 'Configuration', True, fromEric=self.fromEric,
+            displayMode=ConfigurationDialog.HelpBrowserMode)
         dlg.preferencesChanged.connect(self.preferencesChanged)
         dlg.masterPasswordChanged.connect(self.masterPasswordChanged)
         dlg.show()
@@ -2295,7 +2392,8 @@ class HelpWindow(E5MainWindow):
         Public slot to handle a change of preferences.
         """
         if not self.fromEric:
-            self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+            self.setStyle(Preferences.getUI("Style"),
+                          Preferences.getUI("StyleSheet"))
         
         self.__initWebSettings()
         
@@ -2344,7 +2442,8 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to configure the cookies handling.
         """
-        from .CookieJar.CookiesConfigurationDialog import CookiesConfigurationDialog
+        from .CookieJar.CookiesConfigurationDialog import \
+            CookiesConfigurationDialog
         dlg = CookiesConfigurationDialog(self)
         dlg.exec_()
     
@@ -2352,7 +2451,8 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to configure the offline storage.
         """
-        from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
+        from .OfflineStorage.OfflineStorageConfigDialog import \
+            OfflineStorageConfigDialog
         dlg = OfflineStorageConfigDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
@@ -2584,7 +2684,8 @@ class HelpWindow(E5MainWindow):
                 self.__indexingProgress = QWidget()
                 layout = QHBoxLayout(self.__indexingProgress)
                 layout.setContentsMargins(0, 0, 0, 0)
-                sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+                sizePolicy = QSizePolicy(QSizePolicy.Preferred,
+                                         QSizePolicy.Maximum)
                 
                 label = QLabel(self.trUtf8("Updating search index"))
                 label.setSizePolicy(sizePolicy)
@@ -2597,7 +2698,8 @@ class HelpWindow(E5MainWindow):
                 progressBar.setSizePolicy(sizePolicy)
                 layout.addWidget(progressBar)
                 
-                self.statusBar().insertPermanentWidget(0, self.__indexingProgress)
+                self.statusBar().insertPermanentWidget(
+                    0, self.__indexingProgress)
         
     def __indexingFinished(self):
         """
@@ -2614,10 +2716,12 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to search for a word.
         """
-        if self.useQtHelp and not self.__indexing and self.__searchWord is not None:
+        if self.useQtHelp and not self.__indexing and \
+                self.__searchWord is not None:
             self.__searchDock.show()
             self.__searchDock.raise_()
-            query = QHelpSearchQuery(QHelpSearchQuery.DEFAULT, [self.__searchWord])
+            query = QHelpSearchQuery(QHelpSearchQuery.DEFAULT,
+                                     [self.__searchWord])
             self.__searchEngine.search([query])
             self.__searchWord = None
         
@@ -2647,11 +2751,14 @@ class HelpWindow(E5MainWindow):
         """
         if self.useQtHelp:
             from .HelpDocsInstaller import HelpDocsInstaller
-            self.__helpInstaller = HelpDocsInstaller(self.__helpEngine.collectionFile())
-            self.__helpInstaller.errorMessage.connect(self.__showInstallationError)
+            self.__helpInstaller = HelpDocsInstaller(
+                self.__helpEngine.collectionFile())
+            self.__helpInstaller.errorMessage.connect(
+                self.__showInstallationError)
             self.__helpInstaller.docsInstalled.connect(self.__docsInstalled)
             
-            self.statusBar().showMessage(self.trUtf8("Looking for Documentation..."))
+            self.statusBar().showMessage(
+                self.trUtf8("Looking for Documentation..."))
             self.__helpInstaller.installDocs()
         
     def __showInstallationError(self, message):
@@ -2668,7 +2775,8 @@ class HelpWindow(E5MainWindow):
         """
         Private slot handling the end of documentation installation.
         
-        @param installed flag indicating that documents were installed (boolean)
+        @param installed flag indicating that documents were installed
+            (boolean)
         """
         if self.useQtHelp:
             if installed:
@@ -2709,7 +2817,8 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show the Settings menu.
         """
-        self.editMessageFilterAct.setEnabled(E5ErrorMessage.messageHandlerInstalled())
+        self.editMessageFilterAct.setEnabled(
+            E5ErrorMessage.messageHandlerInstalled())
         
     def __showBackMenu(self):
         """
@@ -2749,7 +2858,8 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to go to the selected page.
         
-        @param act reference to the action selected in the navigation menu (QAction)
+        @param act reference to the action selected in the navigation menu
+            (QAction)
         """
         offset = act.data()
         history = self.currentBrowser().history()
@@ -2806,9 +2916,10 @@ class HelpWindow(E5MainWindow):
                 if languages:
                     language = languages[0]
                     langCode = language.split("[")[1][:2]
-                self.newTab("http://www.macromedia.com/support/documentation/"
-                            "{0}/flashplayer/help/settings_manager07.html".format(
-                            langCode))
+                self.newTab(
+                    "http://www.macromedia.com/support/documentation/"
+                    "{0}/flashplayer/help/settings_manager07.html".format(
+                        langCode))
         
     def __showEnginesConfigurationDialog(self):
         """
@@ -2821,7 +2932,8 @@ class HelpWindow(E5MainWindow):
         
     def searchEnginesAction(self):
         """
-        Public method to get a reference to the search engines configuration action.
+        Public method to get a reference to the search engines configuration
+        action.
         
         @return reference to the search engines configuration action (QAction)
         """
@@ -2918,10 +3030,12 @@ class HelpWindow(E5MainWindow):
             icon = HelpWindow.__getWebIcon(hostUrl)
         
         if icon.isNull():
-            pixmap = QWebSettings.webGraphic(QWebSettings.DefaultFrameIconGraphic)
+            pixmap = QWebSettings.webGraphic(
+                QWebSettings.DefaultFrameIconGraphic)
             if pixmap.isNull():
                 pixmap = UI.PixmapCache.getPixmap("defaultIcon.png")
-                QWebSettings.setWebGraphic(QWebSettings.DefaultFrameIconGraphic, pixmap)
+                QWebSettings.setWebGraphic(
+                    QWebSettings.DefaultFrameIconGraphic, pixmap)
             return QIcon(pixmap)
         
         return icon
@@ -3053,11 +3167,12 @@ class HelpWindow(E5MainWindow):
         """
         Class method to get a reference to the personal information manager.
         
-        @return reference to the personal information manager (PersonalInformationManager)
+        @return reference to the personal information manager
+            (PersonalInformationManager)
         """
         if cls._personalInformationManager is None:
-            from .PersonalInformationManager.PersonalInformationManager import \
-                PersonalInformationManager
+            from .PersonalInformationManager.PersonalInformationManager \
+                import PersonalInformationManager
             cls._personalInformationManager = PersonalInformationManager()
         
         return cls._personalInformationManager
@@ -3115,7 +3230,8 @@ class HelpWindow(E5MainWindow):
             codecs.append(str(codec, encoding="utf-8").lower())
         codecs.sort()
         
-        defaultTextEncoding = QWebSettings.globalSettings().defaultTextEncoding().lower()
+        defaultTextEncoding = \
+            QWebSettings.globalSettings().defaultTextEncoding().lower()
         if defaultTextEncoding in codecs:
             currentCodec = defaultTextEncoding
         else:
@@ -3149,7 +3265,8 @@ class HelpWindow(E5MainWindow):
                 act.setChecked(True)
                 isDefaultEncodingUsed = False
         
-        act = self.__textEncodingMenu.addAction(self.trUtf8("Default Encoding"))
+        act = self.__textEncodingMenu.addAction(
+            self.trUtf8("Default Encoding"))
         act.setData("")
         act.setCheckable(True)
         act.setChecked(isDefaultEncodingUsed)
@@ -3384,7 +3501,8 @@ class HelpWindow(E5MainWindow):
     
     def __virusTotalScanCurrentSite(self):
         """
-        Private slot to ask VirusTotal for a scan of the URL of the current browser.
+        Private slot to ask VirusTotal for a scan of the URL of the current
+        browser.
         """
         cb = self.currentBrowser()
         if cb is not None:
@@ -3456,7 +3574,8 @@ class HelpWindow(E5MainWindow):
                 pass
         
         encodedStyle = bytes(QByteArray(userStyle).toBase64()).decode()
-        dataString = "data:text/css;charset=utf-8;base64,{0}".format(encodedStyle)
+        dataString = "data:text/css;charset=utf-8;base64,{0}".format(
+            encodedStyle)
         
         return QUrl(dataString)
     
@@ -3474,7 +3593,8 @@ class HelpWindow(E5MainWindow):
         @param text text of the notification (string)
         """
         if cls._fromEric:
-            e5App().getObject("UserInterface").showNotification(icon, heading, text)
+            e5App().getObject("UserInterface").showNotification(
+                icon, heading, text)
         else:
             if Preferences.getUI("NotificationsEnabled"):
                 if cls._notification is None:
@@ -3483,8 +3603,10 @@ class HelpWindow(E5MainWindow):
                 cls._notification.setPixmap(icon)
                 cls._notification.setHeading(heading)
                 cls._notification.setText(text)
-                cls._notification.setTimeout(Preferences.getUI("NotificationTimeout"))
-                cls._notification.move(Preferences.getUI("NotificationPosition"))
+                cls._notification.setTimeout(
+                    Preferences.getUI("NotificationTimeout"))
+                cls._notification.move(
+                    Preferences.getUI("NotificationPosition"))
                 cls._notification.show()
     
     @classmethod

@@ -26,7 +26,8 @@ def getImporterInfo(id):
     @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks file
+        (string)
     @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "safari":
@@ -41,9 +42,11 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("safari.png"),
             "Apple Safari",
             "Bookmarks.plist",
-            QCoreApplication.translate("SafariImporter",
-                """Apple Safari stores its bookmarks in the <b>Bookmarks.plist</b> """
-                """file. This file is usually located in"""),
+            QCoreApplication.translate(
+                "SafariImporter",
+                """Apple Safari stores its bookmarks in the"""
+                """ <b>Bookmarks.plist</b> file. This file is usually"""
+                """ located in"""),
             QCoreApplication.translate("SafariImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
@@ -136,4 +139,5 @@ class SafariImporter(BookmarksImporter):
                 
                 bookmark = BookmarkNode(BookmarkNode.Bookmark, rootNode)
                 bookmark.url = url
-                bookmark.title = child["URIDictionary"]["title"].replace("&", "&&")
+                bookmark.title = child["URIDictionary"]["title"]\
+                    .replace("&", "&&")

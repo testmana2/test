@@ -29,6 +29,7 @@ class MercurialUserDataDialog(QDialog, Ui_MercurialUserDataDialog):
         """
         Public method to retrieve the data.
         
-        @return tuple containing the user name and the user email address (string, string)
+        @return tuple containing the user name and the user email address
+            (string, string)
         """
         return self.usernameEdit.text(), self.emailEdit.text()

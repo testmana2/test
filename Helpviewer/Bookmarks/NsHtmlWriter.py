@@ -16,7 +16,8 @@ import Utilities
 
 class NsHtmlWriter(QObject):
     """
-    Class implementing a writer object to generate Netscape HTML bookmark files.
+    Class implementing a writer object to generate Netscape HTML bookmark
+    files.
     """
     indentSize = 4
     
@@ -56,7 +57,8 @@ class NsHtmlWriter(QObject):
             "<!-- This is an automatically generated file.\n"
             "     It will be read and overwritten.\n"
             "     DO NOT EDIT! -->\n"
-            "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n"
+            "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html;"
+            " charset=UTF-8\">\n"
             "<TITLE>Bookmarks</TITLE>\n"
             "<H1>Bookmarks</H1>\n"
             "\n"
@@ -104,7 +106,8 @@ class NsHtmlWriter(QObject):
         else:
             added = ""
         if node.modified.isValid():
-            modified = " LAST_MODIFIED=\"{0}\"".format(node.modified.toTime_t())
+            modified = " LAST_MODIFIED=\"{0}\"".format(
+                node.modified.toTime_t())
         else:
             modified = ""
         if node.visited.isValid():
@@ -114,7 +117,8 @@ class NsHtmlWriter(QObject):
         
         self.__dev.write(" " * indent)
         self.__dev.write("<DT><A HREF=\"{0}\"{1}{2}{3}>{4}</A>\n".format(
-            node.url, added, modified, visited, Utilities.html_uencode(node.title)
+            node.url, added, modified, visited,
+            Utilities.html_uencode(node.title)
         ))
         
         if node.desc:
@@ -146,7 +150,8 @@ class NsHtmlWriter(QObject):
         
         if node.desc:
             self.__dev.write(" " * indent)
-            self.__dev.write("<DD>{0}\n".format("".join(node.desc.splitlines())))
+            self.__dev.write("<DD>{0}\n".format(
+                "".join(node.desc.splitlines())))
         
         self.__dev.write(" " * indent)
         self.__dev.write("<DL><p>\n")

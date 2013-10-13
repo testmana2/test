@@ -11,7 +11,8 @@ import sys
 import os
 import fnmatch
 
-from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, QFileSystemWatcher, Qt
+from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, \
+    QFileSystemWatcher, Qt
 from PyQt4.QtGui import QImageReader, QApplication, QFont
 
 import UI.PixmapCache
@@ -38,7 +39,8 @@ class BrowserModel(QAbstractItemModel):
         Constructor
         
         @param parent reference to parent object (QObject)
-        @keyparam nopopulate flag indicating to not populate the model (boolean)
+        @keyparam nopopulate flag indicating to not populate the model
+            (boolean)
         """
         super().__init__(parent)
         
@@ -84,8 +86,8 @@ class BrowserModel(QAbstractItemModel):
                 return item.data(index.column())
             elif index.column() == item.columnCount() and \
                  index.column() < self.columnCount(self.parent(index)):
-                # This is for the case where an item under a multi-column parent
-                # doesn't have a value for all the columns
+                # This is for the case where an item under a multi-column
+                # parent doesn't have a value for all the columns
                 return ""
         elif role == Qt.DecorationRole:
             if index.column() == 0:
@@ -284,7 +286,8 @@ class BrowserModel(QAbstractItemModel):
             return
         
         if Preferences.getUI("BrowsersListHiddenFiles"):
-            filter = QDir.Filters(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(
+                QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
         else:
             filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
         
@@ -352,7 +355,8 @@ class BrowserModel(QAbstractItemModel):
         if tdp:
             self.toplevelDirs = tdp
         else:
-            self.toplevelDirs.append(Utilities.toNativeSeparators(QDir.homePath()))
+            self.toplevelDirs.append(
+                Utilities.toNativeSeparators(QDir.homePath()))
             for d in QDir.drives():
                 self.toplevelDirs.append(Utilities.toNativeSeparators(
                     d.absoluteFilePath()))
@@ -363,7 +367,8 @@ class BrowserModel(QAbstractItemModel):
     
     def programChange(self, dirname):
         """
-        Public method to change the entry for the directory of file being debugged.
+        Public method to change the entry for the directory of file being
+        debugged.
         
         @param dirname name of the directory containing the file (string)
         """
@@ -373,7 +378,8 @@ class BrowserModel(QAbstractItemModel):
             
             # remove old entry
             self._removeWatchedItem(self.progDir)
-            self.beginRemoveRows(QModelIndex(), self.progDir.row(), self.progDir.row())
+            self.beginRemoveRows(
+                QModelIndex(), self.progDir.row(), self.progDir.row())
             self.rootItem.removeChild(self.progDir)
             self.endRemoveRows()
             self.progDir = None
@@ -397,7 +403,8 @@ class BrowserModel(QAbstractItemModel):
         """
         Public method to remove a toplevel directory.
         
-        @param index index of the toplevel directory to be removed (QModelIndex)
+        @param index index of the toplevel directory to be removed
+            (QModelIndex)
         """
         if not index.isValid():
             return
@@ -475,13 +482,15 @@ class BrowserModel(QAbstractItemModel):
         qdir = QDir(parentItem.dirName())
         
         if Preferences.getUI("BrowsersListHiddenFiles"):
-            filter = QDir.Filters(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(
+                QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
         else:
             filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
         entryInfoList = qdir.entryInfoList(filter)
         if len(entryInfoList) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(
+                    self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(entryInfoList) - 1)
             for f in entryInfoList:
                 if f.isDir():
@@ -489,7 +498,8 @@ class BrowserModel(QAbstractItemModel):
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         False)
                 else:
-                    fileFilters = Preferences.getUI("BrowsersFileFilters").split(";")
+                    fileFilters = \
+                        Preferences.getUI("BrowsersFileFilters").split(";")
                     if fileFilters:
                         fn = f.fileName()
                         if any([fnmatch.fnmatch(fn, ff.strip())
@@ -510,7 +520,8 @@ class BrowserModel(QAbstractItemModel):
         """
         if len(sys.path) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(
+                    self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(sys.path) - 1)
             for p in sys.path:
                 if p == '':
@@ -541,7 +552,8 @@ class BrowserModel(QAbstractItemModel):
         keys = list(dict.keys())
         if len(keys) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(
+                    self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(keys) - 1)
             for key in keys:
                 if key.startswith("@@"):
@@ -589,13 +601,15 @@ class BrowserModel(QAbstractItemModel):
         
         if len(keys) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(
+                    self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(keys) - 1)
             for key, kind in keys:
                 if kind == 'c':
                     node = BrowserClassItem(parentItem, cl.classes[key], file_)
                 elif kind == 'm':
-                    node = BrowserMethodItem(parentItem, cl.methods[key], file_)
+                    node = BrowserMethodItem(parentItem, cl.methods[key],
+                                             file_)
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
@@ -643,13 +657,15 @@ class BrowserModel(QAbstractItemModel):
         
         if len(keys) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(
+                    self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(keys) - 1)
             for key, kind in keys:
                 if kind == 'c':
                     node = BrowserClassItem(parentItem, fn.classes[key], file_)
                 elif kind == 'm':
-                    node = BrowserMethodItem(parentItem, fn.methods[key], file_)
+                    node = BrowserMethodItem(parentItem, fn.methods[key],
+                                             file_)
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
@@ -658,7 +674,8 @@ class BrowserModel(QAbstractItemModel):
         """
         Public method to populate a class attributes item's subtree.
         
-        @param parentItem reference to the class attributes item to be populated
+        @param parentItem reference to the class attributes item to be
+            populated
         @param repopulate flag indicating a repopulation (boolean)
         """
         classAttributes = parentItem.isClassAttributes()
@@ -669,7 +686,8 @@ class BrowserModel(QAbstractItemModel):
         keys = list(attributes.keys())
         if len(keys) > 0:
             if repopulate:
-                self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
+                self.beginInsertRows(
+                    self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(keys) - 1)
             for key in keys:
                 node = BrowserClassAttributeItem(parentItem, attributes[key],
@@ -1083,7 +1101,8 @@ class BrowserFileItem(BrowserItem):
         @return flag indicating a Python file (boolean)
         """
         return self.fileext in Preferences.getPython("PythonExtensions") or \
-               (self.fileext == "" and self.sourceLanguage in ["Python", "Python2"])
+               (self.fileext == "" and self.sourceLanguage in ["Python",
+                                                               "Python2"])
     
     def isPython3File(self):
         """
@@ -1199,7 +1218,8 @@ class BrowserFileItem(BrowserItem):
         
         if issubclass(other.__class__, BrowserFileItem):
             sinit = os.path.basename(self._filename).startswith('__init__.py')
-            oinit = os.path.basename(other.fileName()).startswith('__init__.py')
+            oinit = \
+                os.path.basename(other.fileName()).startswith('__init__.py')
             if sinit and not oinit:
                 return order == Qt.AscendingOrder
             if not sinit and oinit:
@@ -1241,10 +1261,12 @@ class BrowserClassItem(BrowserItem):
         self._filename = filename
         
         import Utilities.ClassBrowsers.ClbrBaseClasses
-        self.isfunction = isinstance(self._classObject,
-                                     Utilities.ClassBrowsers.ClbrBaseClasses.Function)
-        self.ismodule = isinstance(self._classObject,
-                                   Utilities.ClassBrowsers.ClbrBaseClasses.Module)
+        self.isfunction = isinstance(
+            self._classObject,
+            Utilities.ClassBrowsers.ClbrBaseClasses.Function)
+        self.ismodule = isinstance(
+            self._classObject,
+            Utilities.ClassBrowsers.ClbrBaseClasses.Module)
         if self.isfunction:
             if cl.isPrivate():
                 self.icon = UI.PixmapCache.getIcon("method_private.png")
@@ -1255,8 +1277,9 @@ class BrowserClassItem(BrowserItem):
             self.itemData[0] = "{0}({1})".format(
                 name, ", ".join(self._classObject.parameters))
             # if no defaults are wanted
-            # ....format(name, ", ".join([e.split('=')[0].strip() \
-            #                             for e in self._classObject.parameters]))
+            # ....format(name,
+            #            ", ".join([e.split('=')[0].strip() \
+            #                       for e in self._classObject.parameters]))
         elif self.ismodule:
             self.icon = UI.PixmapCache.getIcon("module.png")
         else:
@@ -1318,7 +1341,8 @@ class BrowserClassItem(BrowserItem):
            issubclass(other.__class__, BrowserClassAttributesItem):
             return order == Qt.DescendingOrder
         
-        if Preferences.getUI("BrowsersListContentsByOccurrence") and column == 0:
+        if Preferences.getUI("BrowsersListContentsByOccurrence") and \
+                column == 0:
             if order == Qt.AscendingOrder:
                 return self.lineno() < other.lineno()
             else:
@@ -1370,8 +1394,9 @@ class BrowserMethodItem(BrowserItem):
         self.itemData[0] = "{0}({1})".format(
             name, ", ".join(self._functionObject.parameters))
         # if no defaults are wanted
-        # ....format(name, ", ".join(
-        #            [e.split('=')[0].strip() for e in self._functionObject.parameters]))
+        # ....format(name,
+        #            ", ".join([e.split('=')[0].strip()
+        #                       for e in self._functionObject.parameters]))
         if self._functionObject and \
            (self._functionObject.methods or self._functionObject.classes):
             self._populated = False
@@ -1426,7 +1451,8 @@ class BrowserMethodItem(BrowserItem):
         elif issubclass(other.__class__, BrowserClassAttributesItem):
             return order == Qt.DescendingOrder
         
-        if Preferences.getUI("BrowsersListContentsByOccurrence") and column == 0:
+        if Preferences.getUI("BrowsersListContentsByOccurrence") and \
+                column == 0:
             if order == Qt.AscendingOrder:
                 return self.lineno() < other.lineno()
             else:
@@ -1577,7 +1603,8 @@ class BrowserClassAttributeItem(BrowserItem):
         @param order sort order (Qt.SortOrder) (for special sorting)
         @return true, if this item is less than other (boolean)
         """
-        if Preferences.getUI("BrowsersListContentsByOccurrence") and column == 0:
+        if Preferences.getUI("BrowsersListContentsByOccurrence") and \
+                column == 0:
             if order == Qt.AscendingOrder:
                 return self.lineno() < other.lineno()
             else:

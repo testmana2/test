@@ -8,7 +8,8 @@ Module implementing an exporter for ODT.
 """
 
 from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QApplication, QCursor, QTextDocument, QTextDocumentWriter
+from PyQt4.QtGui import QApplication, QCursor, QTextDocument, \
+    QTextDocumentWriter
 
 from E5Gui import E5MessageBox
 
@@ -67,8 +68,9 @@ class ExporterODT(ExporterBase):
         ok = writer.write(doc)
         QApplication.restoreOverrideCursor()
         if not ok:
-            E5MessageBox.critical(self.editor,
+            E5MessageBox.critical(
+                self.editor,
                 self.trUtf8("Export source"),
                 self.trUtf8(
-                    """<p>The source could not be exported to <b>{0}</b>.</p>""")\
-                    .format(filename))
+                    """<p>The source could not be exported to"""
+                    """ <b>{0}</b>.</p>""").format(filename))

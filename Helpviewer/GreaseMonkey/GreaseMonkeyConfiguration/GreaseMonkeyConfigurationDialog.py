@@ -12,12 +12,14 @@ from PyQt4.QtGui import QDialog, QListWidgetItem, QDesktopServices
 
 from E5Gui import E5MessageBox
 
-from .Ui_GreaseMonkeyConfigurationDialog import Ui_GreaseMonkeyConfigurationDialog
+from .Ui_GreaseMonkeyConfigurationDialog import \
+    Ui_GreaseMonkeyConfigurationDialog
 
 import UI.PixmapCache
 
 
-class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialog):
+class GreaseMonkeyConfigurationDialog(
+    QDialog, Ui_GreaseMonkeyConfigurationDialog):
     """
     Class implementing the GreaseMonkey scripts configuration dialog.
     """
@@ -35,7 +37,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         super().__init__(parent)
         self.setupUi(self)
         
-        self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("greaseMonkey48.png"))
+        self.iconLabel.setPixmap(
+            UI.PixmapCache.getPixmap("greaseMonkey48.png"))
         
         self.__manager = manager
         
@@ -49,7 +52,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         """
         Private slot to open the GreaseMonkey scripts directory.
         """
-        QDesktopServices.openUrl(QUrl.fromLocalFile(self.__manager.scriptsDirectory()))
+        QDesktopServices.openUrl(
+            QUrl.fromLocalFile(self.__manager.scriptsDirectory()))
     
     @pyqtSlot(str)
     def on_downloadLabel_linkActivated(self, link):
@@ -139,7 +143,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         
         removeIt = E5MessageBox.yesNo(self,
             self.trUtf8("Remove Script"),
-            self.trUtf8("""<p>Are you sure you want to remove <b>{0}</b>?</p>""")
+            self.trUtf8(
+                """<p>Are you sure you want to remove <b>{0}</b>?</p>""")
                 .format(script.name()))
         if removeIt and self.__manager.removeScript(script):
             self.scriptsList.takeItem(self.scriptsList.row(itm))

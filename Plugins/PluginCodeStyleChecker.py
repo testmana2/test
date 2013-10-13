@@ -87,7 +87,8 @@ class CodeStyleCheckerPlugin(QObject):
                 """<p>This checks Python files for compliance to the"""
                 """ code style conventions given in various PEPs.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__projectCodeStyleCheck)
+            self.__projectAct.triggered[()].connect(
+                self.__projectCodeStyleCheck)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
@@ -276,8 +277,8 @@ class CodeStyleCheckerPlugin(QObject):
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
             if editor.checkDirty() and editor.getFileName() is not None:
-                from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
-                    CodeStyleCheckerDialog
+                from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog \
+                    import CodeStyleCheckerDialog
                 self.__editorCodeStyleCheckerDialog = CodeStyleCheckerDialog()
                 self.__editorCodeStyleCheckerDialog.show()
                 self.__editorCodeStyleCheckerDialog.start(

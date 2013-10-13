@@ -12,8 +12,8 @@ import os
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, QDate, QRegExp, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, QDialogButtonBox, \
-    QTreeWidgetItem
+from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
@@ -58,9 +58,12 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         self.toDate.setDisplayFormat("yyyy-MM-dd")
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(self.trUtf8("Message")))
-        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences("LogLimit"))
-        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
+        self.fieldCombo.setCurrentIndex(
+            self.fieldCombo.findText(self.trUtf8("Message")))
+        self.limitSpinBox.setValue(
+            self.vcs.getPlugin().getPreferences("LogLimit"))
+        self.stopCheckBox.setChecked(
+            self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
@@ -165,7 +168,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             if changedPath["copyfrom_revision"] is None:
                 copyRev = ""
             else:
-                copyRev = "{0:7d}".format(changedPath["copyfrom_revision"].number)
+                copyRev = "{0:7d}".format(
+                    changedPath["copyfrom_revision"].number)
             change = {
                 "action": changedPath["action"],
                 "path": changedPath["path"],
@@ -219,7 +223,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             start = pysvn.Revision(pysvn.opt_revision_kind.head)
         else:
             try:
-                start = pysvn.Revision(pysvn.opt_revision_kind.number, int(startRev))
+                start = pysvn.Revision(pysvn.opt_revision_kind.number,
+                                       int(startRev))
             except TypeError:
                 start = pysvn.Revision(pysvn.opt_revision_kind.head)
         
@@ -255,7 +260,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
                 self.__generateLogItem(log["author"], log["date"],
                     log["message"], log["revision"], log['changed_paths'])
                 dt = dateFromTime_t(log["date"])
-                if not self.__maxDate.isValid() and not self.__minDate.isValid():
+                if not self.__maxDate.isValid() and \
+                        not self.__minDate.isValid():
                     self.__maxDate = dt
                     self.__minDate = dt
                 else:
@@ -321,7 +327,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param peg_rev revision number to use as a reference (integer)
         """
         if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
-            self.vcs.svnSbsDiff(self.filename, revisions=(str(rev1), str(rev2)))
+            self.vcs.svnSbsDiff(self.filename,
+                                revisions=(str(rev1), str(rev2)))
         else:
             if self.diff is None:
                 from .SvnDiffDialog import SvnDiffDialog
@@ -363,14 +370,16 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             self.__resortFiles()
         
         self.diffPreviousButton.setEnabled(
-            current != self.logTree.topLevelItem(self.logTree.topLevelItemCount() - 1))
+            current != self.logTree.topLevelItem(
+                self.logTree.topLevelItemCount() - 1))
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
         """
         Private slot called, when the selection has changed.
         """
-        self.diffRevisionsButton.setEnabled(len(self.logTree.selectedItems()) == 2)
+        self.diffRevisionsButton.setEnabled(
+            len(self.logTree.selectedItems()) == 2)
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -397,7 +406,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             return
         rev2 = int(itm.text(0))
         
-        itm = self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) + 1)
+        itm = self.logTree.topLevelItem(
+            self.logTree.indexOfTopLevelItem(itm) + 1)
         if itm is None:
             self.diffPreviousButton.setEnabled(False)
             return
@@ -487,7 +497,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
                 fieldIndex = 0
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
+                    searchRx = QRegExp(
+                        "^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:

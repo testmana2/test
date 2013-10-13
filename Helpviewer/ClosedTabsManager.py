@@ -43,8 +43,8 @@ class ClosedTabsManager(QObject):
     """
     Class implementing a manager for closed tabs.
     
-    @signal closedTabAvailable(boolean) emitted to signal a change in availability
-        of closed tabs
+    @signal closedTabAvailable(boolean) emitted to signal a change of
+        availability of closed tabs
     """
     closedTabAvailable = pyqtSignal(bool)
     

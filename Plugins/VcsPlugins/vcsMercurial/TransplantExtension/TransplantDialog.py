@@ -21,7 +21,8 @@ class RevisionsValidator(QValidator):
         """
         Constructor
         
-        @param multiRevsAllowed flag indicating, if multi revs are allowed (boolean)
+        @param multiRevsAllowed flag indicating, if multi revs are allowed
+            (boolean)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
@@ -93,7 +94,8 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
         Private slot to update the state of the OK button.
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
-            self.revisionsEdit.toPlainText() != "" or self.allCheckBox.isChecked())
+            self.revisionsEdit.toPlainText() != "" or 
+            self.allCheckBox.isChecked())
     
     @pyqtSlot()
     def on_revisionsEdit_textChanged(self):

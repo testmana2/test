@@ -1,13 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Copyright (c) 2009 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
-#
-
-"""
-Module defining the default bookmarks.
-"""
-
-DefaultBookmarks = """<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xbel>
 <xbel version="1.0">
     <folder folded="no">
@@ -64,4 +55,4 @@ DefaultBookmarks = """<?xml version="1.0" encoding="UTF-8"?>
             <title>Send Link</title>
         </bookmark>
     </folder>
-</xbel>"""
+</xbel>

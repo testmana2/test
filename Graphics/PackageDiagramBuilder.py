@@ -82,7 +82,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         moduleDict = {}
         modules = []
         for ext in supportedExt:
-            modules.extend(glob.glob(Utilities.normjoinpath(self.package, ext)))
+            modules.extend(glob.glob(
+                Utilities.normjoinpath(self.package, ext)))
         tot = len(modules)
         try:
             prog = 0

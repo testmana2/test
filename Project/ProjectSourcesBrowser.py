@@ -14,8 +14,8 @@ from PyQt4.QtGui import QDialog, QInputDialog, QMenu
 
 from E5Gui import E5MessageBox
 
-from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
-    BrowserClassAttributeItem
+from UI.BrowserModel import BrowserFileItem, BrowserClassItem, \
+    BrowserMethodItem, BrowserClassAttributeItem
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -30,14 +30,15 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
     """
     A class used to display the Sources part of the project.
     
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
-            from the project
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+    @signal closeSourceWindow(str) emitted after a file has been
+        removed/deleted from the project
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown.
+        The name of the menu and a reference to the menu are given.
     @signal sourceFile(str) emitted to open the given file.
-    @signal sourceFile(str, int) emitted to open the given file at the given line.
-    @signal sourceFile(str, int, str) emitted to open the given file as the given type
-            at the given line.
+    @signal sourceFile(str, int) emitted to open the given file at the given
+        line.
+    @signal sourceFile(str, int, str) emitted to open the given file as the
+        given type at the given line.
     """
     showMenu = pyqtSignal(str, QMenu)
     
@@ -48,7 +49,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         @param project reference to the project object
         @param parent parent widget of this browser (QWidget)
         """
-        ProjectBaseBrowser.__init__(self, project, ProjectBrowserSourceType, parent)
+        ProjectBaseBrowser.__init__(self, project, ProjectBrowserSourceType,
+                                    parent)
         
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
@@ -57,8 +59,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
 
         self.setWhatsThis(self.trUtf8(
             """<b>Project Sources Browser</b>"""
-            """<p>This allows to easily see all sources contained in the current"""
-            """ project. Several actions can be executed via the context menu.</p>"""
+            """<p>This allows to easily see all sources contained in the"""
+            """ current project. Several actions can be executed via the"""
+            """ context menu.</p>"""
         ))
         
         project.prepareRepopulateItem.connect(self._prepareRepopulateItem)
@@ -100,7 +103,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         ProjectBaseBrowser._createPopupMenus(self)
         self.sourceMenuActions = {}
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+            ["Python", "Python2", "Python3"]:
             self.__createPythonPopupMenus()
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.__createRubyPopupMenus()
@@ -113,7 +117,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
         self.menuShow = QMenu(self.trUtf8('Show'))
-        self.menuShow.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
+        self.menuShow.addAction(
+            self.trUtf8('Code metrics...'), self.__showCodeMetrics)
         self.coverageMenuAction = self.menuShow.addAction(
             self.trUtf8('Code coverage...'), self.__showCodeCoverage)
         self.profileMenuAction = self.menuShow.addAction(
@@ -128,7 +133,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.importsDiagramAction = self.graphicsMenu.addAction(
             self.trUtf8("Imports Diagram..."), self.__showImportsDiagram)
         self.graphicsMenu.addAction(
-            self.trUtf8("Application Diagram..."), self.__showApplicationDiagram)
+            self.trUtf8("Application Diagram..."),
+            self.__showApplicationDiagram)
         self.graphicsMenu.addSeparator()
         self.graphicsMenu.addAction(UI.PixmapCache.getIcon("open.png"),
             self.trUtf8("Load Diagram..."), self.__loadDiagram)
@@ -137,12 +143,14 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.unittestAction = self.sourceMenu.addAction(
             self.trUtf8('Run unittest...'), self.handleUnittest)
         self.sourceMenu.addSeparator()
-        act = self.sourceMenu.addAction(self.trUtf8('Rename file'), self._renameFile)
+        act = self.sourceMenu.addAction(
+            self.trUtf8('Rename file'), self._renameFile)
         self.menuActions.append(act)
         act = self.sourceMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.menuActions.append(act)
-        act = self.sourceMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.sourceMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(self.trUtf8('New package...'),
@@ -204,7 +212,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.attributeMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.attributeMenu.addSeparator()
-        self.attributeMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.attributeMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         
         self.backMenu = QMenu(self)
         self.backMenu.addAction(self.trUtf8('New package...'),
@@ -226,7 +235,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Expand all directories'),
@@ -237,13 +247,17 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMenu = QMenu(self)
-        act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
-        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('New package...'), self.__addNewPackage)
-        self.dirMenu.addAction(self.trUtf8('Add source files...'), self.__addSourceFiles)
+        self.dirMenu.addAction(
+            self.trUtf8('New package...'), self.__addNewPackage)
+        self.dirMenu.addAction(
+            self.trUtf8('Add source files...'), self.__addSourceFiles)
         self.dirMenu.addAction(self.trUtf8('Add source directory...'),
             self.__addSourceDirectory)
         self.dirMenu.addSeparator()
@@ -267,7 +281,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         
         self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -292,12 +307,14 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Load Diagram..."), self.__loadDiagram)
         
         self.sourceMenu.addSeparator()
-        act = self.sourceMenu.addAction(self.trUtf8('Rename file'), self._renameFile)
+        act = self.sourceMenu.addAction(
+            self.trUtf8('Rename file'), self._renameFile)
         self.menuActions.append(act)
         act = self.sourceMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.menuActions.append(act)
-        act = self.sourceMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.sourceMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(self.trUtf8('Add source files...'),
@@ -315,7 +332,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.sourceMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Add source files...'), self.__addSourceFiles)
+        self.menu.addAction(
+            self.trUtf8('Add source files...'), self.__addSourceFiles)
         self.menu.addAction(self.trUtf8('Add source directory...'),
             self.__addSourceDirectory)
         self.menu.addSeparator()
@@ -346,7 +364,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.attributeMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.attributeMenu.addSeparator()
-        self.attributeMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.attributeMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         
         self.backMenu = QMenu(self)
         self.backMenu.addAction(self.trUtf8('Add source files...'),
@@ -366,7 +385,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Expand all directories'),
@@ -377,10 +397,12 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMenu = QMenu(self)
-        act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Add source files...'), self.__addSourceFiles)
+        self.dirMenu.addAction(
+            self.trUtf8('Add source files...'), self.__addSourceFiles)
         self.dirMenu.addAction(self.trUtf8('Add source directory...'),
             self.__addSourceDirectory)
         self.dirMenu.addSeparator()
@@ -399,7 +421,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         
         self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -452,26 +475,31 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                             if self.project.pdata["PROGLANGUAGE"][0] in \
                                ["Python", "Python2", "Python3"]:
                                 if fn.endswith('.ptl'):
-                                    for act in list(self.sourceMenuActions.values()):
+                                    for act in self.sourceMenuActions.values():
                                         act.setEnabled(False)
                                     self.classDiagramAction.setEnabled(True)
                                     self.importsDiagramAction.setEnabled(True)
                                     self.unittestAction.setEnabled(False)
-                                    self.checksMenu.menuAction().setEnabled(False)
-                                elif fn.endswith('.rb'):  # entry for mixed mode programs
-                                    for act in list(self.sourceMenuActions.values()):
+                                    self.checksMenu.menuAction().setEnabled(
+                                        False)
+                                elif fn.endswith('.rb'):  # entry for mixed
+                                                          # mode programs
+                                    for act in self.sourceMenuActions.values():
                                         act.setEnabled(False)
                                     self.classDiagramAction.setEnabled(True)
                                     self.importsDiagramAction.setEnabled(False)
                                     self.unittestAction.setEnabled(False)
-                                    self.checksMenu.menuAction().setEnabled(False)
-                                else:  # assume the source file is a Python file
-                                    for act in list(self.sourceMenuActions.values()):
+                                    self.checksMenu.menuAction().setEnabled(
+                                        False)
+                                else:  # assume the source file is a
+                                       # Python file
+                                    for act in self.sourceMenuActions.values():
                                         act.setEnabled(True)
                                     self.classDiagramAction.setEnabled(True)
                                     self.importsDiagramAction.setEnabled(True)
                                     self.unittestAction.setEnabled(True)
-                                    self.checksMenu.menuAction().setEnabled(True)
+                                    self.checksMenu.menuAction().setEnabled(
+                                        True)
                             self.sourceMenu.popup(self.mapToGlobal(coord))
                         elif isinstance(itm, BrowserClassItem) or \
                                 isinstance(itm, BrowserMethodItem):
@@ -583,13 +611,16 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 elif itm.isPython3File():
                     self.sourceFile[str].emit(itm.fileName())
                 elif itm.isRubyFile():
-                    self.sourceFile[str, int, str].emit(itm.fileName(), -1, "Ruby")
+                    self.sourceFile[str, int, str].emit(
+                        itm.fileName(), -1, "Ruby")
                 elif itm.isDFile():
-                    self.sourceFile[str, int, str].emit(itm.fileName(), -1, "D")
+                    self.sourceFile[str, int, str].emit(
+                        itm.fileName(), -1, "D")
                 else:
                     self.sourceFile[str].emit(itm.fileName())
             elif isinstance(itm, BrowserClassItem):
-                self.sourceFile[str, int].emit(itm.fileName(), itm.classObject().lineno)
+                self.sourceFile[str, int].emit(
+                    itm.fileName(), itm.classObject().lineno)
             elif isinstance(itm, BrowserMethodItem):
                 self.sourceFile[str, int].emit(
                     itm.fileName(), itm.functionObject().lineno)
@@ -630,9 +661,10 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                     except OSError as err:
                         E5MessageBox.critical(self,
                             self.trUtf8("Add new Python package"),
-                            self.trUtf8("""<p>The package directory <b>{0}</b> could"""
-                                        """ not be created. Aborting...</p>"""
-                                        """<p>Reason: {1}</p>""")\
+                            self.trUtf8(
+                                """<p>The package directory <b>{0}</b> could"""
+                                """ not be created. Aborting...</p>"""
+                                """<p>Reason: {1}</p>""")\
                                 .format(packagePath, str(err)))
                         return
                 packageFile = os.path.join(packagePath, "__init__.py")
@@ -643,9 +675,10 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                     except IOError as err:
                         E5MessageBox.critical(self,
                             self.trUtf8("Add new Python package"),
-                            self.trUtf8("""<p>The package file <b>{0}</b> could"""
-                                        """ not be created. Aborting...</p>"""
-                                        """<p>Reason: {1}</p>""")\
+                            self.trUtf8(
+                                """<p>The package file <b>{0}</b> could"""
+                                """ not be created. Aborting...</p>"""
+                                """<p>Reason: {1}</p>""")\
                                 .format(packageFile, str(err)))
                         return
                 self.project.appendFile(packageFile)
@@ -698,10 +731,12 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete files"),
-            self.trUtf8("Do you really want to delete these files from the project?"),
+            self.trUtf8(
+                "Do you really want to delete these files from the project?"),
             files)
         
         if dlg.exec_() == QDialog.Accepted:
@@ -709,9 +744,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
-    ############################################################################
+    ###########################################################################
     ## Methods for the Checks submenu
-    ############################################################################
+    ###########################################################################
     
     def __showContextMenuCheck(self):
         """
@@ -719,9 +754,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         self.showMenu.emit("Checks", self.checksMenu)
     
-    ############################################################################
+    ###########################################################################
     ## Methods for the Show submenu
-    ############################################################################
+    ###########################################################################
     
     def __showCodeMetrics(self):
         """
@@ -843,9 +878,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.profiledata.show()
         self.profiledata.start(pfn, fn)
     
-    ############################################################################
+    ###########################################################################
     ## Methods for the Graphics submenu
-    ############################################################################
+    ###########################################################################
     
     def __showContextMenuGraphics(self):
         """
@@ -885,8 +920,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
         from Graphics.UMLDialog import UMLDialog
-        self.importsDiagram = UMLDialog(UMLDialog.ImportsDiagram, self.project, package,
-                                        self, showExternalImports=res)
+        self.importsDiagram = UMLDialog(
+            UMLDialog.ImportsDiagram, self.project, package,
+            self, showExternalImports=res)
         self.importsDiagram.show()
         
     def __showPackageDiagram(self):
@@ -904,8 +940,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
         from Graphics.UMLDialog import UMLDialog
-        self.packageDiagram = UMLDialog(UMLDialog.PackageDiagram, self.project, package,
-                                        self, noAttrs=not res)
+        self.packageDiagram = UMLDialog(
+            UMLDialog.PackageDiagram, self.project, package,
+            self, noAttrs=not res)
         self.packageDiagram.show()
         
     def __showApplicationDiagram(self):
@@ -917,8 +954,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
         from Graphics.UMLDialog import UMLDialog
-        self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
-                                            self, noModules=not res)
+        self.applicationDiagram = UMLDialog(
+            UMLDialog.ApplicationDiagram, self.project,
+            self, noModules=not res)
         self.applicationDiagram.show()
     
     def __loadDiagram(self):
@@ -927,7 +965,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         from Graphics.UMLDialog import UMLDialog
         self.loadedDiagram = None
-        loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self.project, parent=self)
+        loadedDiagram = UMLDialog(
+            UMLDialog.NoDiagram, self.project, parent=self)
         if loadedDiagram.load():
             self.loadedDiagram = loadedDiagram
             self.loadedDiagram.show(fromFile=True)

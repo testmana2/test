@@ -63,7 +63,8 @@ class BookmarksToolBar(E5ModelToolBar):
         Private slot to rebuild the toolbar.
         """
         self.__bookmarksModel = \
-            Helpviewer.HelpWindow.HelpWindow.bookmarksManager().bookmarksModel()
+            Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+            .bookmarksModel()
         self.setModel(self.__bookmarksModel)
         self.setRootIndex(self.__bookmarksModel.nodeIndex(
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().toolbar()))
@@ -82,18 +83,22 @@ class BookmarksToolBar(E5ModelToolBar):
             v = act.data()
             
             if act.menu() is None:
-                menuAction = menu.addAction(self.trUtf8("&Open"), self.__openBookmark)
+                menuAction = menu.addAction(
+                    self.trUtf8("&Open"), self.__openBookmark)
                 menuAction.setData(v)
-                menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"),
+                menuAction = menu.addAction(
+                    self.trUtf8("Open in New &Tab\tCtrl+LMB"),
                     self.__openBookmarkInNewTab)
                 menuAction.setData(v)
                 menu.addSeparator()
             
-            menuAction = menu.addAction(self.trUtf8("&Remove"), self.__removeBookmark)
+            menuAction = menu.addAction(
+                self.trUtf8("&Remove"), self.__removeBookmark)
             menuAction.setData(v)
             menu.addSeparator()
             
-            menuAction = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
+            menuAction = menu.addAction(
+                self.trUtf8("&Properties..."), self.__edit)
             menuAction.setData(v)
             menu.addSeparator()
         

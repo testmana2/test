@@ -34,8 +34,10 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         
         self.registerField("ReencryptData", self.reencryptCheckBox)
         
-        self.encryptionGroupBox.setChecked(Preferences.getHelp("SyncEncryptData"))
-        self.encryptionKeyEdit.setText(Preferences.getHelp("SyncEncryptionKey"))
+        self.encryptionGroupBox.setChecked(
+            Preferences.getHelp("SyncEncryptData"))
+        self.encryptionKeyEdit.setText(
+            Preferences.getHelp("SyncEncryptionKey"))
         self.encryptionKeyAgainEdit.setEnabled(False)
         self.keySizeComboBox.setCurrentIndex(self.keySizeComboBox.findData(
             Preferences.getHelp("SyncEncryptionKeyLength")))
@@ -48,12 +50,15 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         
         @return next wizard page ID (integer)
         """
-        Preferences.setHelp("SyncEncryptData", self.encryptionGroupBox.isChecked())
-        Preferences.setHelp("SyncEncryptionKey", self.encryptionKeyEdit.text())
-        Preferences.setHelp("SyncEncryptionKeyLength", self.keySizeComboBox.itemData(
-            self.keySizeComboBox.currentIndex()))
-        Preferences.setHelp("SyncEncryptPasswordsOnly",
-            self.loginsOnlyCheckBox.isChecked())
+        Preferences.setHelp(
+            "SyncEncryptData", self.encryptionGroupBox.isChecked())
+        Preferences.setHelp(
+            "SyncEncryptionKey", self.encryptionKeyEdit.text())
+        Preferences.setHelp(
+            "SyncEncryptionKeyLength", self.keySizeComboBox.itemData(
+                self.keySizeComboBox.currentIndex()))
+        Preferences.setHelp(
+            "SyncEncryptPasswordsOnly", self.loginsOnlyCheckBox.isChecked())
         
         from . import SyncGlobals
         return SyncGlobals.PageType
@@ -89,12 +94,15 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
                 self.reencryptCheckBox.isChecked())
             
             if self.encryptionKeyEdit.text() == "":
-                error = error or self.trUtf8("Encryption key must not be empty.")
+                error = error or self.trUtf8(
+                    "Encryption key must not be empty.")
             
             if self.encryptionKeyEdit.text() != "" and \
-               self.reencryptCheckBox.isChecked() and \
-               self.encryptionKeyEdit.text() != self.encryptionKeyAgainEdit.text():
-                error = error or self.trUtf8("Repeated encryption key is wrong.")
+                    self.reencryptCheckBox.isChecked() and \
+                    (self.encryptionKeyEdit.text() != 
+                     self.encryptionKeyAgainEdit.text()):
+                error = error or self.trUtf8(
+                    "Repeated encryption key is wrong.")
         
         self.errorLabel.setText(error)
         self.completeChanged.emit()

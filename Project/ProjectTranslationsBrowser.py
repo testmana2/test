@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a class used to display the translations part of the project.
+Module implementing a class used to display the translations part of the
+project.
 """
 
 import os
@@ -33,18 +34,18 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
     A class used to display the translations part of the project.
     
     @signal linguistFile(str) emitted to open a translation file with
-            Qt-Linguist
+        Qt-Linguist
     @signal appendStdout(str) emitted after something was received from
-            a QProcess on stdout
+        a QProcess on stdout
     @signal appendStderr(str) emitted after something was received from
-            a QProcess on stderr
+        a QProcess on stderr
     @signal sourceFile(str) emitted to open a translation file in an editor
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
-            from the project
-    @signal trpreview(list of str, bool = False) emitted to preview translations in the
-            translations previewer
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+    @signal closeSourceWindow(str) emitted after a file has been
+        removed/deleted from the project
+    @signal trpreview(list of str, bool = False) emitted to preview
+        translations in the translations previewer
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown.
+        The name of the menu and a reference to the menu are given.
     """
     appendStdout = pyqtSignal(str)
     appendStderr = pyqtSignal(str)
@@ -57,7 +58,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         @param project reference to the project object
         @param parent parent widget of this browser (QWidget)
         """
-        ProjectBaseBrowser.__init__(self, project, ProjectBrowserTranslationType, parent)
+        ProjectBaseBrowser.__init__(self, project, 
+                                    ProjectBrowserTranslationType, parent)
         self.isTranslationsBrowser = True
         
         self.selectedItemsFilter = \
@@ -67,8 +69,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
 
         self.setWhatsThis(self.trUtf8(
             """<b>Project Translations Browser</b>"""
-            """<p>This allows to easily see all translations contained in the current"""
-            """ project. Several actions can be executed via the context menu.</p>"""
+            """<p>This allows to easily see all translations contained in"""
+            """ the current project. Several actions can be executed via"""
+            """ the context menu.</p>"""
         ))
         
         self.__lreleaseProcesses = []
@@ -104,7 +107,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
             act = self.menu.addAction(self.trUtf8('Generate translation'),
                 self.__generateSelected)
             self.tsMenuActions.append(act)
@@ -174,7 +178,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.hooks["generateAllWithObsolete"] is not None:
                 act = self.menu.addAction(
                     self.hooksMenuEntries.get("generateAllWithObsolete",
-                        self.trUtf8('Generate all translations (with obsolete)')),
+                        self.trUtf8(
+                            'Generate all translations (with obsolete)')),
                     self.__generateObsoleteAll)
                 self.tsprocMenuActions.append(act)
             self.menu.addSeparator()
@@ -205,7 +210,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         act = self.menu.addAction(self.trUtf8('Remove from project'),
             self.__removeLanguageFile)
         self.menuActions.append(act)
-        act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteLanguageFile)
+        act = self.menu.addAction(
+            self.trUtf8('Delete'), self.__deleteLanguageFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
         self.__addTranslationAct = self.menu.addAction(
@@ -220,19 +226,23 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
-            act = self.backMenu.addAction(self.trUtf8('Generate all translations'),
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
+            act = self.backMenu.addAction(
+                self.trUtf8('Generate all translations'),
                 self.__generateAll)
             self.tsprocBackMenuActions.append(act)
             act = self.backMenu.addAction(
                 self.trUtf8('Generate all translations (with obsolete)'),
                 self.__generateObsoleteAll)
             self.tsprocBackMenuActions.append(act)
-            act = self.backMenu.addAction(self.trUtf8('Release all translations'),
+            act = self.backMenu.addAction(
+                self.trUtf8('Release all translations'),
                 self.__releaseAll)
             self.qmprocBackMenuActions.append(act)
             self.backMenu.addSeparator()
-            act = self.backMenu.addAction(self.trUtf8('Preview all translations'),
+            act = self.backMenu.addAction(
+                self.trUtf8('Preview all translations'),
                 self.__TRPreview)
         else:
             if self.hooks["extractMessages"] is not None:
@@ -250,7 +260,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.hooks["generateAllWithObsolete"] is not None:
                 act = self.backMenu.addAction(
                     self.hooksMenuEntries.get("generateAllWithObsolete",
-                        self.trUtf8('Generate all translations (with obsolete)')),
+                        self.trUtf8(
+                            'Generate all translations (with obsolete)')),
                     self.__generateObsoleteAll)
                 self.tsprocBackMenuActions.append(act)
             if self.hooks["releaseAll"] is not None:
@@ -271,8 +282,10 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
-            act = self.multiMenu.addAction(self.trUtf8('Generate translations'),
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
+            act = self.multiMenu.addAction(
+                self.trUtf8('Generate translations'),
                 self.__generateSelected)
             self.tsMultiMenuActions.append(act)
             self.tsprocMultiMenuActions.append(act)
@@ -341,26 +354,31 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self.__removeLanguageFile)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteLanguageFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteLanguageFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
-            act = self.dirMenu.addAction(self.trUtf8('Generate all translations'),
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
+            act = self.dirMenu.addAction(
+                self.trUtf8('Generate all translations'),
                 self.__generateAll)
             self.tsprocDirMenuActions.append(act)
             act = self.dirMenu.addAction(
                 self.trUtf8('Generate all translations (with obsolete)'),
                 self.__generateObsoleteAll)
             self.tsprocDirMenuActions.append(act)
-            act = self.dirMenu.addAction(self.trUtf8('Release all translations'),
+            act = self.dirMenu.addAction(
+                self.trUtf8('Release all translations'),
                 self.__releaseAll)
             self.qmprocDirMenuActions.append(act)
             self.dirMenu.addSeparator()
-            act = self.dirMenu.addAction(self.trUtf8('Preview all translations'),
+            act = self.dirMenu.addAction(
+                self.trUtf8('Preview all translations'),
                 self.__TRPreview)
         else:
             if self.hooks["extractMessages"] is not None:
@@ -379,7 +397,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.hooks["generateAllWithObsolete"] is not None:
                 act = self.dirMenu.addAction(
                     self.hooksMenuEntries.get("generateAllWithObsolete",
-                        self.trUtf8('Generate all translations (with obsolete)')),
+                        self.trUtf8(
+                            'Generate all translations (with obsolete)')),
                     self.__generateObsoleteAll)
                 self.tsprocDirMenuActions.append(act)
             if self.hooks["releaseAll"] is not None:
@@ -389,7 +408,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.__releaseAll)
                 self.qmprocDirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         self.__addTranslationDirAct = self.dirMenu.addAction(
@@ -428,7 +448,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 if index.isValid():
                     self._selectSingleItem(index)
                     categories = self.getSelectedItemsCountCategorized(
-                        [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
+                        [ProjectBrowserFileItem,
+                         ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
                         
             bfcnt = categories[str(ProjectBrowserFileItem)]
@@ -454,7 +475,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the menu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
             tsFiles = 0
             qmFiles = 0
             itmList = self.getSelectedItems()
@@ -483,7 +505,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.lreleaseProcRunning:
                 for act in self.qmprocMenuActions:
                     act.setEnabled(True)
-        self.__addTranslationAct.setEnabled(self.project.getTranslationPattern() != "")
+        self.__addTranslationAct.setEnabled(
+            self.project.getTranslationPattern() != "")
         
         ProjectBaseBrowser._showContextMenu(self, self.menu)
         
@@ -494,7 +517,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the multiMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
             tsFiles = 0
             qmFiles = 0
             itmList = self.getSelectedItems()
@@ -533,14 +557,16 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the dirMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
             if self.pylupdateProcRunning:
                 for act in self.tsprocDirMenuActions:
                     act.setEnabled(False)
             if self.lreleaseProcRunning:
                 for act in self.qmprocDirMenuActions:
                     act.setEnabled(True)
-        self.__addTranslationDirAct.setEnabled(self.project.getTranslationPattern() != "")
+        self.__addTranslationDirAct.setEnabled(
+            self.project.getTranslationPattern() != "")
         
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
@@ -551,7 +577,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the backMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
             if self.pylupdateProcRunning:
                 for act in self.tsprocBackMenuActions:
                     act.setEnabled(False)
@@ -622,7 +649,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         translationFiles = [itm.fileName() for itm in itmList]
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete translation files"),
             self.trUtf8("Do you really want to delete these translation files"
@@ -651,7 +679,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     for trfile in trfiles:
                         if trfile.startswith(dname):
                             if trfile not in fileNames:
-                                fileNames.append(os.path.join(self.project.ppath, trfile))
+                                fileNames.append(
+                                    os.path.join(self.project.ppath, trfile))
                 else:
                     fn = itm.fileName()
                     if fn not in fileNames:
@@ -669,17 +698,17 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         self.__TRPreview(True)
     
-    ############################################################################
+    ###########################################################################
     ##  Methods to support the generation and release commands
-    ############################################################################
+    ###########################################################################
     
     def __writeTempProjectFile(self, langs, filter):
         """
-        Private method to write a temporary project file suitable for pylupdate and
-        lrelease.
+        Private method to write a temporary project file suitable for
+        pylupdate and lrelease.
         
-        @param langs list of languages to include in the process. An empty list (default)
-            means that all translations should be included.
+        @param langs list of languages to include in the process. An empty
+            list (default) means that all translations should be included.
             (list of ProjectBrowserFileItem)
         @param filter list of source file extension that should be considered
             (list of strings)
@@ -771,7 +800,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             except IOError:
                 E5MessageBox.critical(self,
                     self.trUtf8("Write temporary project file"),
-                    self.trUtf8("<p>The temporary project file <b>{0}</b> could not"
+                    self.trUtf8(
+                        "<p>The temporary project file <b>{0}</b> could not"
                         " be written.</p>").format(outFile))
         
         if len(self.__tmpProjects) == 0:
@@ -855,9 +885,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             s += error
             self.appendStderr.emit(s)
     
-    ############################################################################
+    ###########################################################################
     ##  Methods for the generation commands
-    ############################################################################
+    ###########################################################################
     
     def __extractMessages(self):
         """
@@ -878,23 +908,28 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if ui.notificationsEnabled():
                 ui.showNotification(UI.PixmapCache.getPixmap("linguist48.png"),
                     self.trUtf8("Translation file generation"),
-                    self.trUtf8("The generation of the translation files (*.ts)"
+                    self.trUtf8(
+                        "The generation of the translation files (*.ts)"
                         " was successful."))
             else:
                 E5MessageBox.information(self,
                     self.trUtf8("Translation file generation"),
-                    self.trUtf8("The generation of the translation files (*.ts)"
+                    self.trUtf8(
+                        "The generation of the translation files (*.ts)"
                         " was successful."))
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Translation file generation"),
-                self.trUtf8("The generation of the translation files (*.ts) has failed."))
+                self.trUtf8(
+                    "The generation of the translation files (*.ts) has"
+                    " failed."))
         
         proc = self.sender()
         for index in range(len(self.__pylupdateProcesses)):
             if proc == self.__pylupdateProcesses[index][0]:
                 try:
-                    self.__tmpProjects.remove(self.__pylupdateProcesses[index][1])
+                    self.__tmpProjects.remove(
+                        self.__pylupdateProcesses[index][1])
                     os.remove(self.__pylupdateProcesses[index][1])
                 except EnvironmentError:
                     pass
@@ -906,7 +941,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
     def __generateTSFile(self, noobsolete=False, generateAll=True):
         """
-        Private method used to run pylupdate/pylupdate4 to generate the .ts files.
+        Private method used to run pylupdate/pylupdate4 to generate the .ts
+        files.
         
         @param noobsolete flag indicating whether obsolete entries should be
             kept (boolean)
@@ -922,7 +958,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if generateAll:
             if noobsolete:
                 if self.hooks["generateAll"] is not None:
-                    self.hooks["generateAll"](self.project.pdata["TRANSLATIONS"])
+                    self.hooks["generateAll"](
+                        self.project.pdata["TRANSLATIONS"])
                     return
             else:
                 if self.hooks["generateAllWithObsolete"] is not None:
@@ -945,7 +982,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         # generate a minimal temporary projectfile suitable for pylupdate
         self.__tmpProjects = []
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+                ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
             ok = False
@@ -1019,7 +1057,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
     def __generateSelected(self):
         """
-        Private method to generate selected translation files (.ts) for Qt Linguist.
+        Private method to generate selected translation files (.ts) for
+        Qt Linguist.
         
         All obsolete strings are removed from the .ts file.
         """
@@ -1027,15 +1066,16 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
     def __generateObsoleteSelected(self):
         """
-        Private method to generate selected translation files (.ts) for Qt Linguist.
+        Private method to generate selected translation files (.ts) for
+        Qt Linguist.
         
         Obsolete strings are kept.
         """
         self.__generateTSFile(noobsolete=False, generateAll=False)
     
-    ############################################################################
+    ###########################################################################
     ##  Methods for the release commands
-    ############################################################################
+    ###########################################################################
     
     def __releaseTSFileDone(self, exitCode, exitStatus):
         """
@@ -1058,8 +1098,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.trUtf8("The release of the translation files (*.qm)"
                         " was successful."))
             if self.project.pdata["TRANSLATIONSBINPATH"]:
-                target = os.path.join(self.project.ppath,
-                                      self.project.pdata["TRANSLATIONSBINPATH"][0])
+                target = os.path.join(
+                    self.project.ppath,
+                    self.project.pdata["TRANSLATIONSBINPATH"][0])
                 for langFile in self.project.pdata["TRANSLATIONS"][:]:
                     if langFile.endswith('.ts'):
                         qmFile = os.path.join(self.project.ppath,
@@ -1069,13 +1110,15 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Translation file release"),
-                self.trUtf8("The release of the translation files (*.qm) has failed."))
+                self.trUtf8(
+                    "The release of the translation files (*.qm) has failed."))
         
         proc = self.sender()
         for index in range(len(self.__lreleaseProcesses)):
             if proc == self.__lreleaseProcesses[index][0]:
                 try:
-                    self.__tmpProjects.remove(self.__lreleaseProcesses[index][1])
+                    self.__tmpProjects.remove(
+                        self.__lreleaseProcesses[index][1])
                     os.remove(self.__lreleaseProcesses[index][1])
                 except EnvironmentError:
                     pass
@@ -1112,7 +1155,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         # generate a minimal temporary projectfile suitable for lrelease
         self.__tmpProjects = []
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+                ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
             ok = False
@@ -1120,7 +1164,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             return
         
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                 "PySide", "PySideC"]:
             lrelease = os.path.join(
                     Utilities.getQtBinariesPath(),
                     Utilities.generateQtToolName("lrelease"))
@@ -1174,9 +1219,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         self.__releaseTSFile(generateAll=True)
     
-    ############################################################################
+    ###########################################################################
     ## Support for hooks below
-    ############################################################################
+    ###########################################################################
     
     def _initHookMethods(self):
         """
@@ -1188,7 +1233,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         <li>generateAll: takes list of filenames as parameter</li>
         <li>generateAllWithObsolete: takes list of filenames as parameter</li>
         <li>generateSelected: takes list of filenames as parameter</li>
-        <li>generateSelectedWithObsolete: takes list of filenames as parameter</li>
+        <li>generateSelectedWithObsolete: takes list of filenames as
+            parameter</li>
         <li>releaseAll: takes list of filenames as parameter</li>
         <li>releaseSelected: takes list of filenames as parameter</li>
         <li>open: takes a filename as parameter</li>

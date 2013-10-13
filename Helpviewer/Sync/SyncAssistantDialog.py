@@ -38,12 +38,16 @@ class SyncAssistantDialog(QWizard):
         self.setPage(SyncGlobals.PageEncryption, SyncEncryptionPage(self))
         self.setPage(SyncGlobals.PageType, SyncHostTypePage(self))
         self.setPage(SyncGlobals.PageFTPSettings, SyncFtpSettingsPage(self))
-        self.setPage(SyncGlobals.PageDirectorySettings, SyncDirectorySettingsPage(self))
+        self.setPage(SyncGlobals.PageDirectorySettings,
+                     SyncDirectorySettingsPage(self))
         self.setPage(SyncGlobals.PageCheck, SyncCheckPage(self))
         
-        self.setPixmap(QWizard.LogoPixmap, UI.PixmapCache.getPixmap("ericWeb48.png"))
-        self.setPixmap(QWizard.WatermarkPixmap, UI.PixmapCache.getPixmap("eric256.png"))
-        self.setPixmap(QWizard.BackgroundPixmap, UI.PixmapCache.getPixmap("eric256.png"))
+        self.setPixmap(QWizard.LogoPixmap,
+                       UI.PixmapCache.getPixmap("ericWeb48.png"))
+        self.setPixmap(QWizard.WatermarkPixmap,
+                       UI.PixmapCache.getPixmap("eric256.png"))
+        self.setPixmap(QWizard.BackgroundPixmap,
+                       UI.PixmapCache.getPixmap("eric256.png"))
         
         self.setMinimumSize(650, 450)
         if Globals.isWindowsPlatform():

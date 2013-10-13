@@ -31,19 +31,22 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         
         # set initial values
         self.pluginManager = e5App().getObject("PluginManager")
-        self.viewmanagers = self.pluginManager.getPluginDisplayStrings("viewmanager")
+        self.viewmanagers = \
+            self.pluginManager.getPluginDisplayStrings("viewmanager")
         self.windowComboBox.clear()
         currentVm = Preferences.getViewManager()
         
         keys = sorted(self.viewmanagers.keys())
         for key in keys:
-            self.windowComboBox.addItem(self.trUtf8(self.viewmanagers[key]), key)
+            self.windowComboBox.addItem(
+                self.trUtf8(self.viewmanagers[key]), key)
         currentIndex = self.windowComboBox.findText(
             self.trUtf8(self.viewmanagers[currentVm]))
         self.windowComboBox.setCurrentIndex(currentIndex)
         self.on_windowComboBox_activated(currentIndex)
         
-        self.tabViewGroupBox.setTitle(self.trUtf8(self.viewmanagers["tabview"]))
+        self.tabViewGroupBox.setTitle(
+            self.trUtf8(self.viewmanagers["tabview"]))
         
         self.filenameLengthSpinBox.setValue(
             Preferences.getUI("TabViewManagerFilenameLength"))
@@ -75,7 +78,8 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         """
         workspace = \
             self.windowComboBox.itemData(self.windowComboBox.currentIndex())
-        pixmap = self.pluginManager.getPluginPreviewPixmap("viewmanager", workspace)
+        pixmap = \
+            self.pluginManager.getPluginPreviewPixmap("viewmanager", workspace)
         
         self.previewPixmap.setPixmap(pixmap)
         self.tabViewGroupBox.setEnabled(workspace == "tabview")

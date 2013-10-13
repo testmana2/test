@@ -11,8 +11,8 @@ import sys
 import unicodedata
 import html.entities
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, QModelIndex, Qt, \
-    qVersion
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, \
+    QModelIndex, Qt, qVersion
 from PyQt4.QtGui import QWidget, QHeaderView, QAbstractItemView, QColor, \
     QItemSelectionModel
 
@@ -83,7 +83,8 @@ class SymbolsModel(QAbstractTableModel):
             (0x1200, 0x137f, self.trUtf8("Ethiopic")),
             (0x1380, 0x139f, self.trUtf8("Ethiopic Supplement")),
             (0x13a0, 0x13ff, self.trUtf8("Cherokee")),
-            (0x1400, 0x167f, self.trUtf8("Unified Canadian Aboriginal Syllabics")),
+            (0x1400, 0x167f,
+             self.trUtf8("Unified Canadian Aboriginal Syllabics")),
             (0x1680, 0x169f, self.trUtf8("Ogham")),
             (0x16a0, 0x16ff, self.trUtf8("Runic")),
             (0x1700, 0x171f, self.trUtf8("Tagalog")),
@@ -92,7 +93,8 @@ class SymbolsModel(QAbstractTableModel):
             (0x1760, 0x177f, self.trUtf8("Tagbanwa")),
             (0x1780, 0x17ff, self.trUtf8("Khmer")),
             (0x1800, 0x18af, self.trUtf8("Mongolian")),
-            (0x18b0, 0x18ff, self.trUtf8("Unified Canadian Aboriginal Syllabics Extended")),
+            (0x18b0, 0x18ff,
+             self.trUtf8("Unified Canadian Aboriginal Syllabics Extended")),
             (0x1900, 0x194f, self.trUtf8("Limbu")),
             (0x1950, 0x197f, self.trUtf8("Tai Le")),
             (0x19e0, 0x19ff, self.trUtf8("Khmer Symbols")),
@@ -107,7 +109,8 @@ class SymbolsModel(QAbstractTableModel):
             (0x1cd0, 0x1cff, self.trUtf8("Vedic Extensions")),
             (0x1d00, 0x1d7f, self.trUtf8("Phonetic Extensions")),
             (0x1d80, 0x1dbf, self.trUtf8("Phonetic Extensions Supplement")),
-            (0x1dc0, 0x1dff, self.trUtf8("Combining Diacritical Marks Supplement")),
+            (0x1dc0, 0x1dff,
+             self.trUtf8("Combining Diacritical Marks Supplement")),
             (0x1e00, 0x1eff, self.trUtf8("Latin Extended Additional")),
             (0x1f00, 0x1fff, self.trUtf8("Greek Extended")),
             (0x2000, 0x206f, self.trUtf8("General Punctuation")),
@@ -127,13 +130,17 @@ class SymbolsModel(QAbstractTableModel):
             (0x25A0, 0x25ff, self.trUtf8("Geometric Shapes")),
             (0x2600, 0x26ff, self.trUtf8("Miscellaneous Symbols")),
             (0x2700, 0x27bf, self.trUtf8("Dingbats")),
-            (0x27c0, 0x27ef, self.trUtf8("Miscellaneous Mathematical Symbols-A")),
+            (0x27c0, 0x27ef,
+             self.trUtf8("Miscellaneous Mathematical Symbols-A")),
             (0x27f0, 0x27ff, self.trUtf8("Supplement Arcolumns-A")),
             (0x2800, 0x28ff, self.trUtf8("Braille Patterns")),
             (0x2900, 0x297f, self.trUtf8("Supplement Arcolumns-B")),
-            (0x2980, 0x29ff, self.trUtf8("Miscellaneous Mathematical Symbols-B")),
-            (0x2a00, 0x2aff, self.trUtf8("Supplemental Mathematical Operators")),
-            (0x2b00, 0x2bff, self.trUtf8("Miscellaneous Symbols and Arcolumns")),
+            (0x2980, 0x29ff,
+             self.trUtf8("Miscellaneous Mathematical Symbols-B")),
+            (0x2a00, 0x2aff,
+             self.trUtf8("Supplemental Mathematical Operators")),
+            (0x2b00, 0x2bff,
+             self.trUtf8("Miscellaneous Symbols and Arcolumns")),
             (0x2c00, 0x2c5f, self.trUtf8("Glagolitic")),
             (0x2c60, 0x2c7f, self.trUtf8("Latin Extended-C")),
             (0x2c80, 0x2cff, self.trUtf8("Coptic")),
@@ -237,35 +244,49 @@ class SymbolsModel(QAbstractTableModel):
                 (0x11180, 0x111df, self.trUtf8("Sharada")),
                 (0x11680, 0x116cf, self.trUtf8("Takri")),
                 (0x12000, 0x123ff, self.trUtf8("Cuneiform")),
-                (0x12400, 0x1247f, self.trUtf8("Cuneiform Numbers and Punctuation")),
+                (0x12400, 0x1247f,
+                 self.trUtf8("Cuneiform Numbers and Punctuation")),
                 (0x13000, 0x1342f, self.trUtf8("Egyptian Hieroglyphs")),
                 (0x16800, 0x16a3f, self.trUtf8("Bamum Supplement")),
                 (0x16f00, 0x16f9f, self.trUtf8("Miao")),
                 (0x1b000, 0x1b0ff, self.trUtf8("Kana Supplement")),
                 (0x1d000, 0x1d0ff, self.trUtf8("Byzantine Musical Symbols")),
                 (0x1d100, 0x1d1ff, self.trUtf8("Musical Symbols")),
-                (0x1d200, 0x1d24f, self.trUtf8("Ancient Greek Musical Notation")),
+                (0x1d200, 0x1d24f,
+                 self.trUtf8("Ancient Greek Musical Notation")),
                 (0x1d300, 0x1d35f, self.trUtf8("Tai Xuan Jing Symbols")),
-                (0x1d360, 0x1d37f, self.trUtf8("Counting Rod Numerals")),
-                (0x1d400, 0x1d7ff, self.trUtf8("Mathematical Alphanumeric Symbols")),
-                (0x1ee00, 0x1eeff, self.trUtf8("Arabic Mathematical Alphabetic Symbols")),
+                (0x1d360, 0x1d37f,
+                 self.trUtf8("Counting Rod Numerals")),
+                (0x1d400, 0x1d7ff,
+                 self.trUtf8("Mathematical Alphanumeric Symbols")),
+                (0x1ee00, 0x1eeff,
+                 self.trUtf8("Arabic Mathematical Alphabetic Symbols")),
                 (0x1f000, 0x1f02f, self.trUtf8("Mahjong Tiles")),
                 (0x1f030, 0x1f09f, self.trUtf8("Domino Tiles")),
                 (0x1f0a0, 0x1f0ff, self.trUtf8("Playing Cards")),
-                (0x1f100, 0x1f1ff, self.trUtf8("Enclosed Alphanumeric Supplement")),
-                (0x1f200, 0x1f2ff, self.trUtf8("Enclosed Ideographic Supplement")),
-                (0x1f300, 0x1f5ff, self.trUtf8("Miscellaneous Symbols And Pictographs")),
+                (0x1f100, 0x1f1ff,
+                 self.trUtf8("Enclosed Alphanumeric Supplement")),
+                (0x1f200, 0x1f2ff,
+                 self.trUtf8("Enclosed Ideographic Supplement")),
+                (0x1f300, 0x1f5ff,
+                 self.trUtf8("Miscellaneous Symbols And Pictographs")),
                 (0x1f600, 0x1f64f, self.trUtf8("Emoticons")),
                 (0x1f680, 0x1f6ff, self.trUtf8("Transport And Map Symbols")),
                 (0x1f700, 0x1f77f, self.trUtf8("Alchemical Symbols")),
                 (0x20000, 0x2a6df, self.trUtf8("CJK Unified Ideogr. Ext. B")),
-                (0x2a700, 0x2b73f, self.trUtf8("CJK Unified Ideographs Extension C")),
-                (0x2b740, 0x2b81f, self.trUtf8("CJK Unified Ideographs Extension D")),
-                (0x2f800, 0x2fa1f, self.trUtf8("CJK Compatapility Ideogr. Suppl.")),
+                (0x2a700, 0x2b73f,
+                 self.trUtf8("CJK Unified Ideographs Extension C")),
+                (0x2b740, 0x2b81f,
+                 self.trUtf8("CJK Unified Ideographs Extension D")),
+                (0x2f800, 0x2fa1f,
+                 self.trUtf8("CJK Compatapility Ideogr. Suppl.")),
                 (0xe0000, 0xe007f, self.trUtf8("Tags")),
-                (0xe0100, 0xe01ef, self.trUtf8("Variation Selectors Supplement")),
-                (0xf0000, 0xfffff, self.trUtf8("Supplementary Private Use Area-A")),
-                (0x100000, 0x10ffff, self.trUtf8("Supplementary Private Use Area-B")),
+                (0xe0100, 0xe01ef,
+                 self.trUtf8("Variation Selectors Supplement")),
+                (0xf0000, 0xfffff,
+                 self.trUtf8("Supplementary Private Use Area-A")),
+                (0x100000, 0x10ffff,
+                 self.trUtf8("Supplementary Private Use Area-B")),
             ])
         self.__currentTableIndex = 0
     
@@ -435,7 +456,8 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a punctuation character (boolean)
         """
-        return unicodedata.category(char) in ["Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"]
+        return unicodedata.category(char) in ["Pc", "Pd", "Ps", "Pe", "Pi",
+                                              "Pf", "Po"]
 
 
 class SymbolsWidget(QWidget, Ui_SymbolsWidget):
@@ -463,9 +485,11 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
             self.__currentRowChanged)
         
         if qVersion() >= "5.0.0":
-            self.symbolsTable.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+            self.symbolsTable.horizontalHeader().setSectionResizeMode(
+                QHeaderView.Fixed)
         else:
-            self.symbolsTable.horizontalHeader().setResizeMode(QHeaderView.Fixed)
+            self.symbolsTable.horizontalHeader().setResizeMode(
+                QHeaderView.Fixed)
         fm = self.fontMetrics()
         em = fm.width("M")
         self.symbolsTable.horizontalHeader().resizeSection(0, em * 5)
@@ -473,9 +497,11 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         self.symbolsTable.horizontalHeader().resizeSection(2, em * 6)
         self.symbolsTable.horizontalHeader().resizeSection(3, em * 8)
         self.symbolsTable.horizontalHeader().resizeSection(4, em * 85)
-        self.symbolsTable.verticalHeader().setDefaultSectionSize(fm.height() + 4)
+        self.symbolsTable.verticalHeader().setDefaultSectionSize(
+            fm.height() + 4)
         
-        tableIndex = int(Preferences.Prefs.settings.value("Symbols/CurrentTable", 1))
+        tableIndex = int(
+            Preferences.Prefs.settings.value("Symbols/CurrentTable", 1))
         self.tableCombo.addItems(self.__model.getTableNames())
         self.tableCombo.setCurrentIndex(tableIndex)
         
@@ -503,7 +529,8 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         Private slot to move the table to the entered symbol id.
         """
         id = self.symbolSpinBox.value()
-        first, last = self.__model.getTableBoundaries(self.__model.getTableIndex())
+        first, last = self.__model.getTableBoundaries(
+            self.__model.getTableIndex())
         row = id - first
         self.symbolsTable.selectRow(row)
         self.symbolsTable.scrollTo(

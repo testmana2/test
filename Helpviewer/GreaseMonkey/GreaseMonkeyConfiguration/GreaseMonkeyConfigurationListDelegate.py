@@ -4,12 +4,13 @@
 #
 
 """
-Module implementing a delegate for the special list widget for GreaseMonkey scripts.
+Module implementing a delegate for the special list widget for GreaseMonkey
+scripts.
 """
 
 from PyQt4.QtCore import Qt, QSize, QRect
-from PyQt4.QtGui import QStyle, QStyledItemDelegate, QApplication, QFontMetrics, \
-    QPalette, QFont, QStyleOptionViewItemV4
+from PyQt4.QtGui import QStyle, QStyledItemDelegate, QApplication, \
+    QFontMetrics, QPalette, QFont, QStyleOptionViewItemV4
 
 import UI.PixmapCache
 import Globals
@@ -17,7 +18,8 @@ import Globals
 
 class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
     """
-    Class implementing a delegate for the special list widget for GreaseMonkey scripts.
+    Class implementing a delegate for the special list widget for GreaseMonkey
+    scripts.
     """
     IconSize = 32
     RemoveIconSize = 16
@@ -33,8 +35,9 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         """
         super().__init__(parent)
         
-        self.__removePixmap = UI.PixmapCache.getIcon("greaseMonkeyTrash.png").pixmap(
-            GreaseMonkeyConfigurationListDelegate.RemoveIconSize)
+        self.__removePixmap = \
+            UI.PixmapCache.getIcon("greaseMonkeyTrash.png").pixmap(
+                GreaseMonkeyConfigurationListDelegate.RemoveIconSize)
         self.__rowHeight = 0
         self.__padding = 0
     
@@ -82,7 +85,8 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         style.drawPrimitive(QStyle.PE_PanelItemViewItem, opt, painter, widget)
         
         # Draw checkbox
-        checkBoxYPos = center - GreaseMonkeyConfigurationListDelegate.CheckBoxSize // 2
+        checkBoxYPos = center - \
+            GreaseMonkeyConfigurationListDelegate.CheckBoxSize // 2
         opt2 = QStyleOptionViewItemV4(opt)
         if opt2.checkState == Qt.Checked:
             opt2.state |= QStyle.State_On
@@ -92,7 +96,8 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
             QStyle.SE_ViewItemCheckIndicator, opt2, widget)
         opt2.rect = QRect(leftPos, checkBoxYPos,
             styleCheckBoxRect.width(), styleCheckBoxRect.height())
-        style.drawPrimitive(QStyle.PE_IndicatorViewItemCheck, opt2, painter, widget)
+        style.drawPrimitive(QStyle.PE_IndicatorViewItemCheck, opt2, painter,
+                            widget)
         leftPos = opt2.rect.right() + self.__padding
         
         # Draw icon
@@ -122,15 +127,15 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
             rightTitleEdge - leftTitleEdge, titleMetrics.height())
         versionFont = titleFont
         painter.setFont(versionFont)
-        style.drawItemText(painter, versionRect, Qt.AlignLeft, opt.palette, True,
-            version, colorRole)
+        style.drawItemText(painter, versionRect, Qt.AlignLeft, opt.palette,
+                           True, version, colorRole)
         
         # Draw description
         infoYPos = nameRect.bottom() + opt.fontMetrics.leading()
         infoRect = QRect(nameRect.x(), infoYPos,
             nameRect.width(), opt.fontMetrics.height())
-        info = opt.fontMetrics.elidedText(index.data(Qt.UserRole + 1), Qt.ElideRight,
-            infoRect.width())
+        info = opt.fontMetrics.elidedText(
+            index.data(Qt.UserRole + 1), Qt.ElideRight, infoRect.width())
         painter.setFont(opt.font)
         style.drawItemText(painter, infoRect, Qt.AlignLeft | Qt.TextSingleLine,
             opt.palette, True, info, colorRole)
@@ -156,7 +161,8 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
             self.initStyleOption(opt, index)
             
             widget = opt.widget
-            style = widget.style() if widget is not None else QApplication.style()
+            style = widget.style() if widget is not None \
+                else QApplication.style()
             padding = style.pixelMetric(QStyle.PM_FocusFrameHMargin) + 1
             
             titleFont = opt.font
@@ -164,8 +170,8 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
             titleFont.setPointSize(titleFont.pointSize() + 1)
             
             self.__padding = padding \
-                if padding > GreaseMonkeyConfigurationListDelegate.MinPadding else \
-                GreaseMonkeyConfigurationListDelegate.MinPadding
+                if padding > GreaseMonkeyConfigurationListDelegate.MinPadding \
+                else GreaseMonkeyConfigurationListDelegate.MinPadding
             
             titleMetrics = QFontMetrics(titleFont)
             
@@ -174,4 +180,5 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
                                 opt.fontMetrics.height() + \
                                 titleMetrics.height()
         
-        return QSize(GreaseMonkeyConfigurationListDelegate.ItemWidth, self.__rowHeight)
+        return QSize(GreaseMonkeyConfigurationListDelegate.ItemWidth,
+                     self.__rowHeight)

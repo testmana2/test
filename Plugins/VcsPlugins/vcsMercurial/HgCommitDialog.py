@@ -85,7 +85,8 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     
     def commitSubrepositories(self):
         """
-        Public method to retrieve the state of the commit sub-repositories flag.
+        Public method to retrieve the state of the commit sub-repositories
+        flag.
         
         @return state of the sub-repositories flag (boolean)
         """

@@ -33,13 +33,14 @@ class HelpTabWidget(E5TabWidget):
     Class implementing the central widget showing the web pages.
     
     @signal sourceChanged(HelpBrowser, QUrl) emitted after the URL of a browser
-            has changed
+        has changed
     @signal titleChanged(HelpBrowser, str) emitted after the title of a browser
-            has changed
-    @signal showMessage(str) emitted to show a message in the main window status bar
+        has changed
+    @signal showMessage(str) emitted to show a message in the main window
+        status bar
     @signal browserClosed(QWidget) emitted after a browser was closed
-    @signal browserZoomValueChanged(int) emitted to signal a change of the current
-            browser's zoom level
+    @signal browserZoomValueChanged(int) emitted to signal a change of the
+        current browser's zoom level
     """
     sourceChanged = pyqtSignal(HelpBrowser, QUrl)
     titleChanged = pyqtSignal(HelpBrowser, str)
@@ -67,7 +68,8 @@ class HelpTabWidget(E5TabWidget):
         
         from .ClosedTabsManager import ClosedTabsManager
         self.__closedTabsManager = ClosedTabsManager(self)
-        self.__closedTabsManager.closedTabAvailable.connect(self.__closedTabAvailable)
+        self.__closedTabsManager.closedTabAvailable.connect(
+            self.__closedTabAvailable)
         
         from .UrlBar.StackedUrlBar import StackedUrlBar
         self.__stackedUrlBar = StackedUrlBar(self)
@@ -88,15 +90,18 @@ class HelpTabWidget(E5TabWidget):
         self.__navigationMenu.triggered.connect(self.__navigationMenuTriggered)
         
         self.__navigationButton = QToolButton(self)
-        self.__navigationButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
-        self.__navigationButton.setToolTip(self.trUtf8("Show a navigation menu"))
+        self.__navigationButton.setIcon(
+            UI.PixmapCache.getIcon("1downarrow.png"))
+        self.__navigationButton.setToolTip(
+            self.trUtf8("Show a navigation menu"))
         self.__navigationButton.setPopupMode(QToolButton.InstantPopup)
         self.__navigationButton.setMenu(self.__navigationMenu)
         self.__navigationButton.setEnabled(False)
         self.__rightCornerWidgetLayout.addWidget(self.__navigationButton)
         
         self.__closedTabsMenu = QMenu(self)
-        self.__closedTabsMenu.aboutToShow.connect(self.__aboutToShowClosedTabsMenu)
+        self.__closedTabsMenu.aboutToShow.connect(
+            self.__aboutToShowClosedTabsMenu)
         
         self.__closedTabsButton = QToolButton(self)
         self.__closedTabsButton.setIcon(UI.PixmapCache.getIcon("trash.png"))
@@ -109,7 +114,8 @@ class HelpTabWidget(E5TabWidget):
         
         self.__closeButton = QToolButton(self)
         self.__closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
-        self.__closeButton.setToolTip(self.trUtf8("Close the current help window"))
+        self.__closeButton.setToolTip(
+            self.trUtf8("Close the current help window"))
         self.__closeButton.setEnabled(False)
         self.__closeButton.clicked[bool].connect(self.closeBrowser)
         self.__rightCornerWidgetLayout.addWidget(self.__closeButton)
@@ -125,7 +131,8 @@ class HelpTabWidget(E5TabWidget):
         
         self.__newTabButton = QToolButton(self)
         self.__newTabButton.setIcon(UI.PixmapCache.getIcon("plus.png"))
-        self.__newTabButton.setToolTip(self.trUtf8("Open a new help window tab"))
+        self.__newTabButton.setToolTip(
+            self.trUtf8("Open a new help window tab"))
         self.setCornerWidget(self.__newTabButton, Qt.TopLeftCorner)
         self.__newTabButton.clicked[bool].connect(self.newBrowser)
         
@@ -138,49 +145,55 @@ class HelpTabWidget(E5TabWidget):
         Private method to create the tab context menu.
         """
         self.__tabContextMenu = QMenu(self)
-        self.tabContextNewAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("tabNew.png"),
+        self.tabContextNewAct = self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("tabNew.png"),
             self.trUtf8('New Tab'), self.newBrowser)
         self.__tabContextMenu.addSeparator()
-        self.leftMenuAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("1leftarrow.png"),
+        self.leftMenuAct = self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("1leftarrow.png"),
             self.trUtf8('Move Left'), self.__tabContextMenuMoveLeft)
-        self.rightMenuAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("1rightarrow.png"),
+        self.rightMenuAct = self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("1rightarrow.png"),
             self.trUtf8('Move Right'), self.__tabContextMenuMoveRight)
         self.__tabContextMenu.addSeparator()
-        self.tabContextCloneAct = \
-            self.__tabContextMenu.addAction(self.trUtf8("Duplicate Page"),
-                self.__tabContextMenuClone)
+        self.tabContextCloneAct = self.__tabContextMenu.addAction(
+            self.trUtf8("Duplicate Page"), self.__tabContextMenuClone)
         self.__tabContextMenu.addSeparator()
-        self.tabContextCloseAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
-                self.trUtf8('Close'), self.__tabContextMenuClose)
-        self.tabContextCloseOthersAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("tabCloseOther.png"),
-                self.trUtf8("Close Others"), self.__tabContextMenuCloseOthers)
+        self.tabContextCloseAct = self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("tabClose.png"),
+            self.trUtf8('Close'), self.__tabContextMenuClose)
+        self.tabContextCloseOthersAct = self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("tabCloseOther.png"),
+            self.trUtf8("Close Others"), self.__tabContextMenuCloseOthers)
         self.__tabContextMenu.addAction(self.trUtf8('Close All'),
             self.closeAllBrowsers)
         self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
+        self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("printPreview.png"),
             self.trUtf8('Print Preview'), self.__tabContextMenuPrintPreview)
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("print.png"),
+        self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__tabContextMenuPrint)
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
+        self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("printPdf.png"),
             self.trUtf8('Print as PDF'), self.__tabContextMenuPrintPdf)
         self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("reload.png"),
+        self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('Reload All'), self.reloadAllBrowsers)
         self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("addBookmark.png"),
+        self.__tabContextMenu.addAction(
+            UI.PixmapCache.getIcon("addBookmark.png"),
             self.trUtf8('Bookmark All Tabs'), self.__mainWindow.bookmarkAll)
         
         self.__tabBackContextMenu = QMenu(self)
         self.__tabBackContextMenu.addAction(self.trUtf8('Close All'),
             self.closeAllBrowsers)
-        self.__tabBackContextMenu.addAction(UI.PixmapCache.getIcon("reload.png"),
+        self.__tabBackContextMenu.addAction(
+            UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('Reload All'), self.reloadAllBrowsers)
-        self.__tabBackContextMenu.addAction(UI.PixmapCache.getIcon("addBookmark.png"),
+        self.__tabBackContextMenu.addAction(
+            UI.PixmapCache.getIcon("addBookmark.png"),
             self.trUtf8('Bookmark All Tabs'), self.__mainWindow.bookmarkAll)
         self.__tabBackContextMenu.addSeparator()
         self.__restoreClosedTabAct = self.__tabBackContextMenu.addAction(
@@ -212,13 +225,15 @@ class HelpTabWidget(E5TabWidget):
         """
         Private method to move a tab one position to the left.
         """
-        self.moveTab(self.__tabContextMenuIndex, self.__tabContextMenuIndex - 1)
+        self.moveTab(self.__tabContextMenuIndex,
+                     self.__tabContextMenuIndex - 1)
     
     def __tabContextMenuMoveRight(self):
         """
         Private method to move a tab one position to the right.
         """
-        self.moveTab(self.__tabContextMenuIndex, self.__tabContextMenuIndex + 1)
+        self.moveTab(self.__tabContextMenuIndex,
+                     self.__tabContextMenuIndex + 1)
     
     def __tabContextMenuClone(self):
         """
@@ -277,8 +292,8 @@ class HelpTabWidget(E5TabWidget):
         @param link link to be shown (string or QUrl)
         @param requestData tuple containing the request data (QNetworkRequest,
             QNetworkAccessManager.Operation, QByteArray)
-        @keyparam position position to create the new tab at or -1 to add it to the end
-            (integer)
+        @keyparam position position to create the new tab at or -1 to add it
+            to the end (integer)
         """
         if link is None:
             linkName = ""
@@ -291,10 +306,12 @@ class HelpTabWidget(E5TabWidget):
         urlbar = UrlBar(self.__mainWindow, self)
         if self.__historyCompleter is None:
             import Helpviewer.HelpWindow
-            from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
+            from .History.HistoryCompleter import HistoryCompletionModel, \
+                HistoryCompleter
             self.__historyCompletionModel = HistoryCompletionModel(self)
             self.__historyCompletionModel.setSourceModel(
-                Helpviewer.HelpWindow.HelpWindow.historyManager().historyFilterModel())
+                Helpviewer.HelpWindow.HelpWindow.historyManager()
+                .historyFilterModel())
             self.__historyCompleter = HistoryCompleter(
                 self.__historyCompletionModel, self)
             self.__historyCompleter.activated[str].connect(self.__pathSelected)
@@ -311,13 +328,15 @@ class HelpTabWidget(E5TabWidget):
         browser.sourceChanged.connect(self.__sourceChanged)
         browser.titleChanged.connect(self.__titleChanged)
         browser.highlighted.connect(self.showMessage)
-        browser.backwardAvailable.connect(self.__mainWindow.setBackwardAvailable)
+        browser.backwardAvailable.connect(
+            self.__mainWindow.setBackwardAvailable)
         browser.forwardAvailable.connect(self.__mainWindow.setForwardAvailable)
         browser.loadStarted.connect(self.__loadStarted)
         browser.loadFinished.connect(self.__loadFinished)
         browser.iconChanged.connect(self.__iconChanged)
         browser.search.connect(self.newBrowser)
-        browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
+        browser.page().windowCloseRequested.connect(
+            self.__windowCloseRequested)
         browser.page().printRequested.connect(self.__printRequested)
         browser.zoomValueChanged.connect(self.browserZoomValueChanged)
         
@@ -502,8 +521,9 @@ class HelpTabWidget(E5TabWidget):
             except AttributeError:
                 E5MessageBox.critical(self,
                     self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                                """Please upgrade.</p>"""))
+                    self.trUtf8(
+                        """<p>Printing is not available due to a bug in"""
+                        """ PyQt4. Please upgrade.</p>"""))
                 return
     
     def printBrowserPdf(self, browser=None):
@@ -543,8 +563,9 @@ class HelpTabWidget(E5TabWidget):
             except AttributeError:
                 E5MessageBox.critical(self,
                     self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                                """Please upgrade.</p>"""))
+                    self.trUtf8(
+                        """<p>Printing is not available due to a bug in"""
+                        """ PyQt4. Please upgrade.</p>"""))
                 return
     
     def printPreviewBrowser(self, browser=None):
@@ -592,8 +613,9 @@ class HelpTabWidget(E5TabWidget):
         except AttributeError:
             E5MessageBox.critical(self,
                 self.trUtf8("eric5 Web Browser"),
-                self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                            """Please upgrade.</p>"""))
+                self.trUtf8(
+                    """<p>Printing is not available due to a bug in PyQt4."""
+                    """Please upgrade.</p>"""))
             return
     
     def __sourceChanged(self, url):
@@ -679,9 +701,11 @@ class HelpTabWidget(E5TabWidget):
         if browser is not None:
             index = self.indexOf(browser)
             anim = self.animationLabel(
-                index, os.path.join(getConfig("ericPixDir"), "loading.gif"), 100)
+                index, os.path.join(getConfig("ericPixDir"), "loading.gif"),
+                100)
             if not anim:
-                loading = QIcon(os.path.join(getConfig("ericPixDir"), "loading.gif"))
+                loading = QIcon(os.path.join(getConfig("ericPixDir"),
+                                "loading.gif"))
                 self.setTabIcon(index, loading)
             else:
                 self.setTabIcon(index, QIcon())
@@ -705,7 +729,8 @@ class HelpTabWidget(E5TabWidget):
             import Helpviewer.HelpWindow
             index = self.indexOf(browser)
             self.resetAnimation(index)
-            self.setTabIcon(index, Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
+            self.setTabIcon(
+                index, Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
             if ok:
                 self.showMessage.emit(self.trUtf8("Finished loading"))
             else:
@@ -723,7 +748,8 @@ class HelpTabWidget(E5TabWidget):
             import Helpviewer.HelpWindow
             self.setTabIcon(self.indexOf(browser),
                 Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
-            Helpviewer.HelpWindow.HelpWindow.bookmarksManager().iconChanged(browser.url())
+            Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                .iconChanged(browser.url())
     
     def getSourceFileList(self):
         """
@@ -754,10 +780,12 @@ class HelpTabWidget(E5TabWidget):
                 modal=True,
                 parent=self)
             if self.__mainWindow.fromEric:
-                quitButton = mb.addButton(self.trUtf8("&Close"), E5MessageBox.AcceptRole)
+                quitButton = mb.addButton(
+                    self.trUtf8("&Close"), E5MessageBox.AcceptRole)
                 quitButton.setIcon(UI.PixmapCache.getIcon("close.png"))
             else:
-                quitButton = mb.addButton(self.trUtf8("&Quit"), E5MessageBox.AcceptRole)
+                quitButton = mb.addButton(
+                    self.trUtf8("&Quit"), E5MessageBox.AcceptRole)
                 quitButton.setIcon(UI.PixmapCache.getIcon("exit.png"))
             closeTabButton = mb.addButton(self.trUtf8("C&lose Current Tab"),
                 E5MessageBox.AcceptRole)
@@ -798,7 +826,8 @@ class HelpTabWidget(E5TabWidget):
         request = QNetworkRequest(url)
         request.setRawHeader("X-Eric5-UserLoadAction", b"1")
         if e5App().keyboardModifiers() == Qt.AltModifier:
-            self.newBrowser(None, (request, QNetworkAccessManager.GetOperation, b""))
+            self.newBrowser(
+                None, (request, QNetworkAccessManager.GetOperation, b""))
         else:
             self.currentBrowser().setSource(None,
                 (request, QNetworkAccessManager.GetOperation, b""))
@@ -910,7 +939,8 @@ class HelpTabWidget(E5TabWidget):
         index = 0
         for tab in self.__closedTabsManager.allClosedTabs():
             title = fm.elidedText(tab.title, Qt.ElideRight, maxWidth)
-            self.__closedTabsMenu.addAction(self.__mainWindow.icon(tab.url), title,
+            self.__closedTabsMenu.addAction(
+                self.__mainWindow.icon(tab.url), title,
                 self.restoreClosedTab).setData(index)
             index += 1
         self.__closedTabsMenu.addSeparator()

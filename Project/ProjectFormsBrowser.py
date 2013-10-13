@@ -12,7 +12,8 @@ import sys
 import shutil
 
 from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, QProcess
-from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QProgressDialog
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, \
+    QProgressDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -35,17 +36,17 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
     A class used to display the forms part of the project.
     
     @signal appendStderr(str) emitted after something was received from
-            a QProcess on stderr
+        a QProcess on stderr
     @signal sourceFile(str) emitted to open a forms file in an editor
     @signal uipreview(str) emitted to preview a forms file
     @signal trpreview(list of str) emitted to preview form files in the
-            translations previewer
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
-            from the project
-    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
-            of the menu and a reference to the menu are given.
+        translations previewer
+    @signal closeSourceWindow(str) emitted after a file has been
+        removed/deleted from the project
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The
+        name of the menu and a reference to the menu are given.
     @signal menusAboutToBeCreated() emitted when the context menus are about to
-            be created. This is the right moment to add or remove hook methods.
+        be created. This is the right moment to add or remove hook methods.
     """
     appendStderr = pyqtSignal(str)
     uipreview = pyqtSignal(str)
@@ -59,7 +60,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         @param project reference to the project object
         @param parent parent widget of this browser (QWidget)
         """
-        ProjectBaseBrowser.__init__(self, project, ProjectBrowserFormType, parent)
+        ProjectBaseBrowser.__init__(self, project, ProjectBrowserFormType,
+                                    parent)
         
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
@@ -68,8 +70,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
 
         self.setWhatsThis(self.trUtf8(
             """<b>Project Forms Browser</b>"""
-            """<p>This allows to easily see all forms contained in the current"""
-            """ project. Several actions can be executed via the context menu.</p>"""
+            """<p>This allows to easily see all forms contained in the"""
+            """ current project. Several actions can be executed via the"""
+            """ context menu.</p>"""
         ))
         
         # templates for Qt4
@@ -117,18 +120,23 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menusAboutToBeCreated.emit()
         
         self.menu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.menu.addAction(self.trUtf8('Compile form'), self.__compileForm)
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+            self.menu.addAction(
+                self.trUtf8('Compile form'), self.__compileForm)
             self.menu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.menu.addAction(self.trUtf8('Generate Dialog Code...'),
                 self.__generateDialogCode)
             self.menu.addSeparator()
-            self.menu.addAction(self.trUtf8('Open in Qt-Designer'), self.__openFile)
-            self.menu.addAction(self.trUtf8('Open in Editor'), self.__openFileInEditor)
+            self.menu.addAction(
+                self.trUtf8('Open in Qt-Designer'), self.__openFile)
+            self.menu.addAction(
+                self.trUtf8('Open in Editor'), self.__openFileInEditor)
             self.menu.addSeparator()
             self.menu.addAction(self.trUtf8('Preview form'), self.__UIPreview)
-            self.menu.addAction(self.trUtf8('Preview translations'), self.__TRPreview)
+            self.menu.addAction(
+                self.trUtf8('Preview translations'), self.__TRPreview)
         else:
             if self.hooks["compileForm"] is not None:
                 self.menu.addAction(
@@ -156,12 +164,14 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menu.addSeparator()
         act = self.menu.addAction(self.trUtf8('Rename file'), self._renameFile)
         self.menuActions.append(act)
-        act = self.menu.addAction(self.trUtf8('Remove from project'), self._removeFile)
+        act = self.menu.addAction(
+            self.trUtf8('Remove from project'), self._removeFile)
         self.menuActions.append(act)
         act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(self.trUtf8('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -183,8 +193,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"] or \
-           self.hooks["compileAllForms"] is not None:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"] or \
+                self.hooks["compileAllForms"] is not None:
             self.backMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.backMenu.addSeparator()
@@ -194,7 +205,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.backMenu.addAction(
                     self.hooksMenuEntries.get("newForm",
                         self.trUtf8('New form...')), self.__newForm)
-        self.backMenu.addAction(self.trUtf8('Add forms...'), self.project.addUiFiles)
+        self.backMenu.addAction(
+            self.trUtf8('Add forms...'), self.project.addUiFiles)
         self.backMenu.addAction(self.trUtf8('Add forms directory...'),
             self.project.addUiDir)
         self.backMenu.addSeparator()
@@ -208,7 +220,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             act = self.multiMenu.addAction(self.trUtf8('Compile forms'),
                 self.__compileSelectedForms)
             self.multiMenu.addSeparator()
@@ -230,12 +243,14 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.multiMenu.addAction(
                     self.hooksMenuEntries.get("open", self.trUtf8('Open')),
                     self.__openFile)
-            self.multiMenu.addAction(self.trUtf8('Open'), self.__openFileInEditor)
+            self.multiMenu.addAction(
+                self.trUtf8('Open'), self.__openFileInEditor)
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.multiMenuActions.append(act)
-        act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Expand all directories'),
@@ -246,7 +261,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.dirMenu.addSeparator()
@@ -257,19 +273,23 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8('Compile all forms')),
                     self.__compileAllForms)
                 self.dirMenu.addSeparator()
-        act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
-        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        act = self.dirMenu.addAction(
+            self.trUtf8('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
                 self.dirMenu.addAction(
                     self.hooksMenuEntries.get("newForm",
                         self.trUtf8('New form...')), self.__newForm)
-        self.dirMenu.addAction(self.trUtf8('Add forms...'), self.__addFormFiles)
+        self.dirMenu.addAction(
+            self.trUtf8('Add forms...'), self.__addFormFiles)
         self.dirMenu.addAction(self.trUtf8('Add forms directory...'),
             self.__addFormsDirectory)
         self.dirMenu.addSeparator()
@@ -284,7 +304,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in \
+                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMultiMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.dirMultiMenu.addSeparator()
@@ -305,7 +326,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Configure...'), self._configure)
         
         self.menu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -332,7 +354,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 if index.isValid():
                     self._selectSingleItem(index)
                     categories = self.getSelectedItemsCountCategorized(
-                        [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
+                        [ProjectBrowserFileItem,
+                         ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
             
             bfcnt = categories[str(ProjectBrowserFileItem)]
@@ -498,12 +521,14 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if self.hooks["newForm"] is not None:
             self.hooks["newForm"](path)
         else:
-            if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+            if self.project.getProjectType() in \
+                    ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
                 self.__newUiForm(path)
         
     def __newUiForm(self, path):
         """
-        Private slot to handle the New Form menu action for Qt-related projects.
+        Private slot to handle the New Form menu action for Qt-related
+        projects.
         
         @param path full directory path for the new form file (string)
         """
@@ -553,7 +578,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         except IOError as e:
             E5MessageBox.critical(self,
                 self.trUtf8("New Form"),
-                self.trUtf8("<p>The new form file <b>{0}</b> could not be created.<br>"
+                self.trUtf8(
+                    "<p>The new form file <b>{0}</b> could not be created.<br>"
                     "Problem: {1}</p>").format(fname, str(e)))
             return
         
@@ -574,10 +600,12 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete forms"),
-            self.trUtf8("Do you really want to delete these forms from the project?"),
+            self.trUtf8(
+                "Do you really want to delete these forms from the project?"),
             files)
         
         if dlg.exec_() == QDialog.Accepted:
@@ -585,9 +613,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
-    ############################################################################
+    ###########################################################################
     ##  Methods to handle the various compile commands
-    ############################################################################
+    ###########################################################################
     
     def __readStdout(self):
         """
@@ -649,7 +677,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
                 else:
-                    ui.showNotification(UI.PixmapCache.getPixmap("designer48.png"),
+                    ui.showNotification(
+                        UI.PixmapCache.getPixmap("designer48.png"),
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
@@ -658,12 +687,15 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 if not self.noDialog:
                     E5MessageBox.information(self,
                         self.trUtf8("Form Compilation"),
-                        self.trUtf8("<p>The compilation of the form file failed.</p>"
+                        self.trUtf8(
+                            "<p>The compilation of the form file failed.</p>"
                             "<p>Reason: {0}</p>").format(str(msg)))
                 else:
-                    ui.showNotification(UI.PixmapCache.getPixmap("designer48.png"),
+                    ui.showNotification(
+                        UI.PixmapCache.getPixmap("designer48.png"),
                         self.trUtf8("Form Compilation"),
-                        self.trUtf8("<p>The compilation of the form file failed.</p>"
+                        self.trUtf8(
+                            "<p>The compilation of the form file failed.</p>"
                             "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
@@ -689,7 +721,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         args = []
         self.buf = ""
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+                ["Python", "Python2", "Python3"]:
             if self.project.getProjectType() in ["Qt4", "E4Plugin"]:
                 self.uicompiler = 'pyuic4'
                 if Utilities.isWindowsPlatform():
@@ -722,7 +755,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         ofn, ext = os.path.splitext(fn)
         fn = os.path.join(self.project.ppath, fn)
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in \
+                ["Python", "Python2", "Python3"]:
             dirname, filename = os.path.split(ofn)
             self.compiledFile = os.path.join(dirname, "Ui_" + filename + ".py")
             args.append("-x")
@@ -869,7 +903,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 # ignore the request for non Qt GUI projects
                 return
             
-            progress = QProgressDialog(self.trUtf8("Determining changed forms..."),
+            progress = QProgressDialog(
+                self.trUtf8("Determining changed forms..."),
                 None, 0, 100)
             progress.setMinimumDuration(0)
             i = 0
@@ -896,7 +931,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             QApplication.processEvents()
             
             if changedForms:
-                progress.setLabelText(self.trUtf8("Compiling changed forms..."))
+                progress.setLabelText(
+                    self.trUtf8("Compiling changed forms..."))
                 progress.setMaximum(len(changedForms))
                 i = 0
                 progress.setValue(i)
@@ -921,9 +957,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser.handlePreferencesChanged(self)
     
-    ############################################################################
+    ###########################################################################
     ## Support for hooks below
-    ############################################################################
+    ###########################################################################
     
     def _initHookMethods(self):
         """

@@ -22,21 +22,22 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     """
     Class implementing the VCS project browser helper for Mercurial.
     """
-    def __init__(self, vcsObject, browserObject, projectObject, isTranslationsBrowser,
-        parent=None, name=None):
+    def __init__(self, vcsObject, browserObject, projectObject,
+                 isTranslationsBrowser, parent=None, name=None):
         """
         Constructor
         
         @param vcsObject reference to the vcs object
         @param browserObject reference to the project browser object
         @param projectObject reference to the project object
-        @param isTranslationsBrowser flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+        @param isTranslationsBrowser flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
         @param parent parent widget (QWidget)
         @param name name of this object (string)
         """
-        VcsProjectBrowserHelper.__init__(self, vcsObject, browserObject, projectObject,
-            isTranslationsBrowser, parent, name)
+        VcsProjectBrowserHelper.__init__(self, vcsObject, browserObject,
+                                         projectObject, isTranslationsBrowser,
+                                         parent, name)
     
     def showContextMenu(self, menu, standardItems):
         """
@@ -46,8 +47,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the file status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         if self.browser.currentItem().data(1) == self.vcs.vcsName():
             for act in self.vcsMenuActions:
@@ -74,8 +75,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the files status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         vcsName = self.vcs.vcsName()
         items = self.browser.getSelectedItems()
@@ -112,8 +113,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         if self.browser.currentItem().data(1) == self.vcs.vcsName():
             for act in self.vcsDirMenuActions:
@@ -138,8 +139,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need activation/deactivation
-            depending on the overall VCS status
+        @param standardItems array of standard items that need
+            activation/deactivation depending on the overall VCS status
         """
         vcsName = self.vcs.vcsName()
         items = self.browser.getSelectedItems()
@@ -168,9 +169,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             for act in standardItems:
                 act.setEnabled(True)
 
-    ############################################################################
+    ###########################################################################
     # Protected menu generation methods below
-    ############################################################################
+    ###########################################################################
 
     def _addVCSMenu(self, mainMenu):
         """
@@ -185,7 +186,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -247,7 +249,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -278,7 +281,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -317,7 +321,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -344,7 +349,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -381,7 +387,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -428,7 +435,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -461,7 +469,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -496,7 +505,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsDirMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
+        act = menu.addAction(
+            self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -513,9 +523,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         mainMenu.addMenu(menu)
         self.menuDirMulti = menu
     
-    ############################################################################
+    ###########################################################################
     # Menu handling methods below
-    ############################################################################
+    ###########################################################################
     
     def __HgRevert(self):
         """
@@ -561,8 +571,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __HgExtendedDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file to
-        the repository.
+        Private slot called by the context menu to show the difference of a
+        file to the repository.
         
         This gives the chance to enter the revisions to compare.
         """
@@ -576,8 +586,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __HgSbsDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file to
-        the repository side-by-side.
+        Private slot called by the context menu to show the difference of a
+        file to the repository side-by-side.
         """
         itm = self.browser.currentItem()
         fn = itm.fileName()
@@ -585,8 +595,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __HgSbsExtendedDiff(self):
         """
-        Private slot called by the context menu to show the difference of a file to
-        the repository side-by-side allowing the selection of revisions to compare.
+        Private slot called by the context menu to show the difference of a
+        file to the repository side-by-side.
+       
+        It allows the selection of revisions to compare.
         """
         itm = self.browser.currentItem()
         fn = itm.fileName()
@@ -594,7 +606,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __HgAnnotate(self):
         """
-        Private slot called by the context menu to show the annotations of a file.
+        Private slot called by the context menu to show the annotations of a
+        file.
         """
         itm = self.browser.currentItem()
         fn = itm.fileName()
@@ -602,7 +615,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __HgLogBrowser(self):
         """
-        Private slot called by the context menu to show the log browser for a file.
+        Private slot called by the context menu to show the log browser for a
+        file.
         """
         itm = self.browser.currentItem()
         try:
@@ -627,18 +641,19 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
     def __HgForget(self):
         """
-        Private slot called by the context menu to remove the selected file from the
-        Mercurial repository leaving a copy in the project directory.
+        Private slot called by the context menu to remove the selected file
+        from the Mercurial repository leaving a copy in the project directory.
         """
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         if self.isTranslationsBrowser:
             items = self.browser.getSelectedItems([ProjectBrowserFileItem])
             names = [itm.fileName() for itm in items]
             
             dlg = DeleteFilesConfirmationDialog(self.parent(),
                 self.trUtf8("Remove from repository only"),
-                self.trUtf8("Do you really want to remove these translation files from"
-                    " the repository?"),
+                self.trUtf8("Do you really want to remove these files"
+                    " from the repository?"),
                 names)
         else:
             items = self.browser.getSelectedItems()

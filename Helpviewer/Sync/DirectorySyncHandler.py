@@ -23,13 +23,15 @@ class DirectorySyncHandler(SyncHandler):
     Class implementing a synchronization handler using a shared directory.
     
     @signal syncStatus(type_, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", string)
-    @signal syncError(message) emitted for a general error with the error message (string)
-    @signal syncMessage(message) emitted to send a message about synchronization (string)
-    @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords", "useragents" or
-        "speeddial", boolean, boolean)
+        status (string one of "bookmarks", "history", "passwords",
+        "useragents" or "speeddial", string)
+    @signal syncError(message) emitted for a general error with the error
+        message (string)
+    @signal syncMessage(message) emitted to send a message about
+        synchronization (string)
+    @signal syncFinished(type_, done, download) emitted after a
+        synchronization has finished (string one of "bookmarks", "history",
+        "passwords", "useragents" or "speeddial", boolean, boolean)
     """
     syncStatus = pyqtSignal(str, str)
     syncError = pyqtSignal(str)
@@ -51,7 +53,8 @@ class DirectorySyncHandler(SyncHandler):
         """
         Public method to do the initial check.
         
-        @keyparam forceUpload flag indicating a forced upload of the files (boolean)
+        @keyparam forceUpload flag indicating a forced upload of the files
+            (boolean)
         """
         if not Preferences.getHelp("SyncEnabled"):
             return
@@ -60,7 +63,8 @@ class DirectorySyncHandler(SyncHandler):
         
         self.__remoteFilesFound = []
         
-        # check the existence of the shared directory; create it, if it is not there
+        # check the existence of the shared directory; create it, if it is 
+        # not there
         if not os.path.exists(Preferences.getHelp("SyncDirectoryPath")):
             try:
                 os.makedirs(Preferences.getHelp("SyncDirectoryPath"))
@@ -77,9 +81,11 @@ class DirectorySyncHandler(SyncHandler):
         Private method to downlaod the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be downloaded (string)
-        @param timestamp time stamp in seconds of the file to be downloaded (int)
+        @param timestamp time stamp in seconds of the file to be downloaded
+            (integer)
         """
         self.syncStatus.emit(type_, self._messages[type_]["RemoteExists"])
         try:
@@ -94,7 +100,8 @@ class DirectorySyncHandler(SyncHandler):
             return
         
         QCoreApplication.processEvents()
-        ok, error = self.writeFile(QByteArray(data), fileName, type_, timestamp)
+        ok, error = self.writeFile(QByteArray(data), fileName, type_,
+                                   timestamp)
         if not ok:
             self.syncStatus.emit(type_, error)
         self.syncFinished.emit(type_, ok, True)
@@ -104,7 +111,8 @@ class DirectorySyncHandler(SyncHandler):
         Private method to upload the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be uploaded (string)
         """
         QCoreApplication.processEvents()
@@ -120,8 +128,10 @@ class DirectorySyncHandler(SyncHandler):
                 f.write(bytes(data))
                 f.close()
             except IOError as err:
-                self.syncStatus.emit(type_,
-                    self.trUtf8("Cannot write remote file.\n{0}").format(str(err)))
+                self.syncStatus.emit(
+                    type_,
+                    self.trUtf8("Cannot write remote file.\n{0}").format(
+                        str(err)))
                 self.syncFinished.emit(type_, False, False)
                 return
             
@@ -132,24 +142,30 @@ class DirectorySyncHandler(SyncHandler):
         Private method to do the initial synchronization of the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         if not self.__forceUpload and \
-           os.path.exists(os.path.join(Preferences.getHelp("SyncDirectoryPath"),
-                                       self._remoteFiles[type_])) and \
-           QFileInfo(fileName).lastModified() <= \
-                QFileInfo(os.path.join(Preferences.getHelp("SyncDirectoryPath"),
-                                       self._remoteFiles[type_])).lastModified():
+                os.path.exists(
+                    os.path.join(Preferences.getHelp("SyncDirectoryPath"),
+                                 self._remoteFiles[type_])) and \
+                QFileInfo(fileName).lastModified() <= QFileInfo(
+                    os.path.join(Preferences.getHelp("SyncDirectoryPath"),
+                                 self._remoteFiles[type_])).lastModified():
             self.__downloadFile(type_, fileName,
-                QFileInfo(os.path.join(Preferences.getHelp("SyncDirectoryPath"),
+                QFileInfo(os.path.join(
+                    Preferences.getHelp("SyncDirectoryPath"),
                     self._remoteFiles[type_])).lastModified().toTime_t())
         else:
-            if os.path.exists(os.path.join(Preferences.getHelp("SyncDirectoryPath"),
-                                           self._remoteFiles[type_])):
-                self.syncStatus.emit(type_, self._messages[type_]["RemoteMissing"])
+            if os.path.exists(
+                    os.path.join(Preferences.getHelp("SyncDirectoryPath"),
+                                 self._remoteFiles[type_])):
+                self.syncStatus.emit(
+                    type_, self._messages[type_]["RemoteMissing"])
             else:
-                self.syncStatus.emit(type_, self._messages[type_]["LocalNewer"])
+                self.syncStatus.emit(
+                    type_, self._messages[type_]["LocalNewer"])
             self.__uploadFile(type_, fileName)
     
     def __initialSync(self):
@@ -159,26 +175,34 @@ class DirectorySyncHandler(SyncHandler):
         QCoreApplication.processEvents()
         # Bookmarks
         if Preferences.getHelp("SyncBookmarks"):
-            self.__initialSyncFile("bookmarks",
-                Helpviewer.HelpWindow.HelpWindow.bookmarksManager().getFileName())
+            self.__initialSyncFile(
+                "bookmarks",
+                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                    .getFileName())
         
         QCoreApplication.processEvents()
         # History
         if Preferences.getHelp("SyncHistory"):
-            self.__initialSyncFile("history",
-                Helpviewer.HelpWindow.HelpWindow.historyManager().getFileName())
+            self.__initialSyncFile(
+                "history",
+                Helpviewer.HelpWindow.HelpWindow.historyManager()\
+                    .getFileName())
         
         QCoreApplication.processEvents()
         # Passwords
         if Preferences.getHelp("SyncPasswords"):
-            self.__initialSyncFile("passwords",
-                Helpviewer.HelpWindow.HelpWindow.passwordManager().getFileName())
+            self.__initialSyncFile(
+                "passwords",
+                Helpviewer.HelpWindow.HelpWindow.passwordManager()
+                    .getFileName())
         
         QCoreApplication.processEvents()
         # User Agent Settings
         if Preferences.getHelp("SyncUserAgents"):
-            self.__initialSyncFile("useragents",
-                Helpviewer.HelpWindow.HelpWindow.userAgentsManager().getFileName())
+            self.__initialSyncFile(
+                "useragents",
+                Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
+                    .getFileName())
         
         QCoreApplication.processEvents()
         # Speed Dial Settings
@@ -194,7 +218,8 @@ class DirectorySyncHandler(SyncHandler):
         Private method to synchronize the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+            of "bookmarks", "history", "passwords", "useragents" or
+            "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         self.syncStatus.emit(type_, self._messages[type_]["Uploading"])

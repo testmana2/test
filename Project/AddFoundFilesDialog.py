@@ -25,7 +25,8 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
         """
         Constructor
         
-        @param files list of files, that have been found for addition (list of strings)
+        @param files list of files, that have been found for addition
+            (list of strings)
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
@@ -39,7 +40,8 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
         self.addAllButton.setToolTip(self.trUtf8("Add all files."))
         self.addSelectedButton = self.buttonBox.addButton(
             self.trUtf8("Add Selected"), QDialogButtonBox.AcceptRole)
-        self.addSelectedButton.setToolTip(self.trUtf8("Add selected files only."))
+        self.addSelectedButton.setToolTip(
+            self.trUtf8("Add selected files only."))
         
         self.fileList.addItems(files)
         

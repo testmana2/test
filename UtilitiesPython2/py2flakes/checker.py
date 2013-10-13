@@ -22,8 +22,8 @@ try:
 except (ImportError, AttributeError):
     def iter_child_nodes(node, astcls=_ast.AST):
         """
-        Yield all direct child nodes of *node*, that is, all fields that are nodes
-        and all items of fields that are lists of nodes.
+        Yield all direct child nodes of *node*, that is, all fields that are
+        nodes and all items of fields that are lists of nodes.
         """
         for name in node._fields:
             field = getattr(node, name, None)
@@ -291,7 +291,8 @@ class Checker(object):
                 print '  ' * self.nodeDepth + node.__class__.__name__
             self.nodeDepth += 1
             if self.futuresAllowed and not \
-                   (isinstance(node, _ast.ImportFrom) or self.isDocstring(node)):
+                   (isinstance(node, _ast.ImportFrom) or 
+                    self.isDocstring(node)):
                 self.futuresAllowed = False
             nodeType = node.__class__.__name__.upper()
             try:
@@ -337,7 +338,8 @@ class Checker(object):
         '''
         Called when a binding is altered.
 
-        @param lineno line of the statement responsible for the change (integer)
+        @param lineno line of the statement responsible for the change
+            (integer)
         @param value the optional new value, a Binding instance, associated
             with the binding; if None, the binding is deleted if it exists
         @param reportRedef flag indicating if rebinding while unused will be
@@ -346,7 +348,8 @@ class Checker(object):
         if (isinstance(self.scope.get(value.name), FunctionDefinition)
                     and isinstance(value, FunctionDefinition)):
             self.report(messages.RedefinedFunction,
-                        lineno, value.name, self.scope[value.name].source.lineno)
+                        lineno, value.name,
+                        self.scope[value.name].source.lineno)
 
         if not isinstance(self.scope, ClassScope):
             for scope in self.scopeStack[::-1]:
@@ -358,7 +361,8 @@ class Checker(object):
                     and reportRedef):
 
                     self.report(messages.RedefinedWhileUnused,
-                                lineno, value.name, scope[value.name].source.lineno)
+                                lineno, value.name,
+                                scope[value.name].source.lineno)
 
         if isinstance(value, UnBinding):
             try:
@@ -456,10 +460,12 @@ class Checker(object):
                         # the special name __path__ is valid only in packages
                         pass
                     else:
-                        self.report(messages.UndefinedName, node.lineno, node.id)
+                        self.report(messages.UndefinedName,
+                                    node.lineno, node.id)
         elif isinstance(node.ctx, (_ast.Store, _ast.AugStore)):
             # if the name hasn't already been defined in the current scope
-            if isinstance(self.scope, FunctionScope) and node.id not in self.scope:
+            if isinstance(self.scope, FunctionScope) and \
+                    node.id not in self.scope:
                 # for each function or module scope above us
                 for scope in self.scopeStack[:-1]:
                     if not isinstance(scope, (FunctionScope, ModuleScope)):
@@ -479,7 +485,8 @@ class Checker(object):
                         break
 
             if isinstance(node.parent,
-                          (_ast.For, _ast.comprehension, _ast.Tuple, _ast.List)):
+                          (_ast.For, _ast.comprehension, _ast.Tuple,
+                           _ast.List)):
                 binding = Binding(node.id, node)
             elif (node.id == '__all__' and
                   isinstance(self.scope, ModuleScope)):
@@ -496,8 +503,8 @@ class Checker(object):
             else:
                 self.addBinding(node.lineno, UnBinding(node.id, node))
         else:
-            # must be a Param context -- this only happens for names in function
-            # arguments, but these aren't dispatched through here
+            # must be a Param context -- this only happens for names in
+            # function arguments, but these aren't dispatched through here
             raise RuntimeError(
                 "Got impossible expression context: %r" % (node.ctx,))
 
@@ -524,7 +531,8 @@ class Checker(object):
                         addArgs(arg.elts)
                     else:
                         if arg.id in args:
-                            self.report(messages.DuplicateArgument, node.lineno, arg.id)
+                            self.report(messages.DuplicateArgument,
+                                        node.lineno, arg.id)
                         args.append(arg.id)
 
             self.pushFunctionScope()
@@ -535,7 +543,8 @@ class Checker(object):
             if node.args.kwarg:
                 args.append(node.args.kwarg)
             for name in args:
-                self.addBinding(node.lineno, Argument(name, node), reportRedef=False)
+                self.addBinding(node.lineno, Argument(name, node),
+                                reportRedef=False)
             if isinstance(node.body, list):
                 # case for FunctionDefs
                 for stmt in node.body:
@@ -581,8 +590,8 @@ class Checker(object):
             self.handleNode(target, node)
 
     def AUGASSIGN(self, node):
-        # AugAssign is awkward: must set the context explicitly and visit twice,
-        # once with AugLoad context, once with AugStore context
+        # AugAssign is awkward: must set the context explicitly and visit
+        # twice, once with AugLoad context, once with AugStore context
         node.target.ctx = _ast.AugLoad()
         self.handleNode(node.target, node)
         self.handleNode(node.value, node)

@@ -10,22 +10,26 @@ Module implementing a dialog to select revisions.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
-from .Ui_HgMultiRevisionSelectionDialog import Ui_HgMultiRevisionSelectionDialog
+from .Ui_HgMultiRevisionSelectionDialog import \
+    Ui_HgMultiRevisionSelectionDialog
 
 
-class HgMultiRevisionSelectionDialog(QDialog, Ui_HgMultiRevisionSelectionDialog):
+class HgMultiRevisionSelectionDialog(
+    QDialog, Ui_HgMultiRevisionSelectionDialog):
     """
     Class implementing a dialog to select revisions.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, emptyRevsOk=False,
-                 showLimit=False, limitDefault=100, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
+                 emptyRevsOk=False, showLimit=False, limitDefault=100,
+                 parent=None):
         """
         Constructor
         
         @param tagsList list of tags (list of strings)
         @param branchesList list of branches (list of strings)
         @param bookmarksList list of bookmarks (list of strings)
-        @param emptyRevsOk flag indicating that it is ok to not enter revisions (boolean)
+        @param emptyRevsOk flag indicating that it is ok to not enter
+            revisions (boolean)
         @param showLimit flag indicating to show the limit entry (boolean)
         @param limitDefault default value for the limit (integer)
         @param parent parent widget (QWidget)

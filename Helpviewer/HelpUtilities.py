@@ -58,7 +58,8 @@ def ensureUniqueFilename(name, appendFormat="({0})"):
     Module function to generate an unique file name based on a pattern.
     
     @param name desired file name (string)
-    @param appendFormat format pattern to be used to make the unique name (string)
+    @param appendFormat format pattern to be used to make the unique name
+        (string)
     @return unique file name
     """
     if not os.path.exists(name):
@@ -74,7 +75,8 @@ def ensureUniqueFilename(name, appendFormat="({0})"):
         if index == -1:
             tmpFileName += appendString
         else:
-            tmpFileName = tmpFileName[:index] + appendString + tmpFileName[index:]
+            tmpFileName = tmpFileName[:index] + appendString + \
+                tmpFileName[index:]
         i += 1
     
     return tmpFileName

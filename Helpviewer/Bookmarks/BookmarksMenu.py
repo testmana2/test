@@ -20,8 +20,8 @@ class BookmarksMenu(E5ModelMenu):
     """
     Class implementing the bookmarks menu base class.
     
-    @signal openUrl(QUrl, str) emitted to open a URL with the given title in the
-        current tab
+    @signal openUrl(QUrl, str) emitted to open a URL with the given title in
+        the current tab
     @signal newUrl(QUrl, str) emitted to open a URL with the given title in a
         new tab
     """
@@ -130,22 +130,28 @@ class BookmarksMenu(E5ModelMenu):
         """
         act = self.actionAt(pos)
         
-        if act is not None and act.menu() is None and self.index(act).isValid():
+        if act is not None and \
+                act.menu() is None and \
+                self.index(act).isValid():
             menu = QMenu()
             v = act.data()
             
-            menuAction = menu.addAction(self.trUtf8("&Open"), self.__openBookmark)
+            menuAction = menu.addAction(
+                self.trUtf8("&Open"), self.__openBookmark)
             menuAction.setData(v)
-            menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"),
+            menuAction = menu.addAction(
+                self.trUtf8("Open in New &Tab\tCtrl+LMB"),
                 self.__openBookmarkInNewTab)
             menuAction.setData(v)
             menu.addSeparator()
             
-            menuAction = menu.addAction(self.trUtf8("&Remove"), self.__removeBookmark)
+            menuAction = menu.addAction(
+                self.trUtf8("&Remove"), self.__removeBookmark)
             menuAction.setData(v)
             menu.addSeparator()
             
-            menuAction = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
+            menuAction = menu.addAction(
+                self.trUtf8("&Properties..."), self.__edit)
             menuAction.setData(v)
             
             execAct = menu.exec_(QCursor.pos())
@@ -194,15 +200,15 @@ class BookmarksMenu(E5ModelMenu):
         dlg = BookmarkPropertiesDialog(node)
         dlg.exec_()
 
-##########################################################################################
+##############################################################################
 
 
 class BookmarksMenuBarMenu(BookmarksMenu):
     """
     Class implementing a dynamically populated menu for bookmarks.
     
-    @signal openUrl(QUrl, str) emitted to open a URL with the given title in the
-        current tab
+    @signal openUrl(QUrl, str) emitted to open a URL with the given title in
+        the current tab
     """
     openUrl = pyqtSignal(QUrl, str)
     
@@ -225,7 +231,8 @@ class BookmarksMenuBarMenu(BookmarksMenu):
         """
         import Helpviewer.HelpWindow
         
-        self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+        self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow\
+            .bookmarksManager()
         self.setModel(self.__bookmarksManager.bookmarksModel())
         self.setRootIndex(self.__bookmarksManager.bookmarksModel()\
                             .nodeIndex(self.__bookmarksManager.menu()))
@@ -279,7 +286,8 @@ class BookmarksMenuBarMenu(BookmarksMenu):
     
     def setInitialActions(self, actions):
         """
-        Public method to set the list of actions that should appear first in the menu.
+        Public method to set the list of actions that should appear first in
+        the menu.
         
         @param actions list of initial actions (list of QAction)
         """

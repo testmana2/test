@@ -57,8 +57,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         self.__extensionMenuTitles = {}
         for extension in self.__extensions:
-            self.__extensionMenuTitles[self.__extensions[extension].menuTitle()] = \
-                extension
+            self.__extensionMenuTitles[
+                self.__extensions[extension].menuTitle()] = extension
     
     def setObjects(self, vcsObject, projectObject):
         """
@@ -98,7 +98,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         self.vcsNewAct = E5Action(self.trUtf8('New from repository'),
                 UI.PixmapCache.getIcon("vcsCheckout.png"),
-                self.trUtf8('&New from repository...'), 0, 0, self, 'mercurial_new')
+                self.trUtf8('&New from repository...'), 0, 0,
+                self, 'mercurial_new')
         self.vcsNewAct.setStatusTip(self.trUtf8(
             'Create (clone) a new project from a Mercurial repository'
         ))
@@ -119,7 +120,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgIncomingAct.setWhatsThis(self.trUtf8(
             """<b>Show incoming log</b>"""
-            """<p>This shows the log of changes coming into the repository.</p>"""
+            """<p>This shows the log of changes coming into the"""
+            """ repository.</p>"""
         ))
         self.hgIncomingAct.triggered[()].connect(self.__hgIncoming)
         self.actions.append(self.hgIncomingAct)
@@ -148,15 +150,17 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsUpdateAct.setWhatsThis(self.trUtf8(
             """<b>Update from repository</b>"""
-            """<p>This updates the local project from the Mercurial repository.</p>"""
+            """<p>This updates the local project from the Mercurial"""
+            """ repository.</p>"""
         ))
         self.vcsUpdateAct.triggered[()].connect(self._vcsUpdate)
         self.actions.append(self.vcsUpdateAct)
         
-        self.vcsCommitAct = E5Action(self.trUtf8('Commit changes to repository'),
-                UI.PixmapCache.getIcon("vcsCommit.png"),
-                self.trUtf8('&Commit changes to repository...'), 0, 0, self,
-                'mercurial_commit')
+        self.vcsCommitAct = E5Action(
+            self.trUtf8('Commit changes to repository'),
+            UI.PixmapCache.getIcon("vcsCommit.png"),
+            self.trUtf8('&Commit changes to repository...'), 0, 0, self,
+            'mercurial_commit')
         self.vcsCommitAct.setStatusTip(self.trUtf8(
             'Commit changes to the local project to the Mercurial repository'
         ))
@@ -177,7 +181,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgOutgoingAct.setWhatsThis(self.trUtf8(
             """<b>Show outgoing log</b>"""
-            """<p>This shows the log of changes outgoing out of the repository.</p>"""
+            """<p>This shows the log of changes outgoing out of the"""
+            """ repository.</p>"""
         ))
         self.hgOutgoingAct.triggered[()].connect(self.__hgOutgoing)
         self.actions.append(self.hgOutgoingAct)
@@ -249,9 +254,9 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgLogBrowserAct.setWhatsThis(self.trUtf8(
             """<b>Show log browser</b>"""
-            """<p>This shows a dialog to browse the log of the local project."""
-            """ A limited number of entries is shown first. More can be"""
-            """ retrieved later on.</p>"""
+            """<p>This shows a dialog to browse the log of the local"""
+            """ project. A limited number of entries is shown first."""
+            """ More can be retrieved later on.</p>"""
         ))
         self.hgLogBrowserAct.triggered[()].connect(self.__hgLogBrowser)
         self.actions.append(self.hgLogBrowserAct)
@@ -265,7 +270,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsDiffAct.setWhatsThis(self.trUtf8(
             """<b>Show difference</b>"""
-            """<p>This shows the difference of the local project to the repository.</p>"""
+            """<p>This shows the difference of the local project to the"""
+            """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered[()].connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
@@ -279,7 +285,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgExtDiffAct.setWhatsThis(self.trUtf8(
             """<b>Show difference (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of the project.</p>"""
+            """<p>This shows the difference of selectable revisions of the"""
+            """ project.</p>"""
         ))
         self.hgExtDiffAct.triggered[()].connect(self.__hgExtendedDiff)
         self.actions.append(self.hgExtDiffAct)
@@ -376,7 +383,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsMergeAct.setWhatsThis(self.trUtf8(
             """<b>Merge</b>"""
-            """<p>This merges changes of a revision into the local project.</p>"""
+            """<p>This merges changes of a revision into the local"""
+            """ project.</p>"""
         ))
         self.vcsMergeAct.triggered[()].connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
@@ -389,7 +397,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsResolveAct.setWhatsThis(self.trUtf8(
             """<b>Conflicts resolved</b>"""
-            """<p>This marks all conflicts of the local project as resolved.</p>"""
+            """<p>This marks all conflicts of the local project as"""
+            """ resolved.</p>"""
         ))
         self.vcsResolveAct.triggered[()].connect(self.__hgResolve)
         self.actions.append(self.vcsResolveAct)
@@ -453,7 +462,8 @@ class HgProjectHelper(VcsProjectHelper):
                 self.trUtf8('Push new branch'),
                 0, 0, self, 'mercurial_push_branch')
         self.hgPushBranchAct.setStatusTip(self.trUtf8(
-            'Push the current branch of the local project as a new named branch'
+            'Push the current branch of the local project as a new named'
+            ' branch'
         ))
         self.hgPushBranchAct.setWhatsThis(self.trUtf8(
             """<b>Push new branch</b>"""
@@ -498,7 +508,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsSwitchAct.setWhatsThis(self.trUtf8(
             """<b>Switch</b>"""
-            """<p>This switches the working directory to another revision.</p>"""
+            """<p>This switches the working directory to another"""
+            """ revision.</p>"""
         ))
         self.vcsSwitchAct.triggered[()].connect(self._vcsSwitch)
         self.actions.append(self.vcsSwitchAct)
@@ -524,7 +535,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsCommandAct.setWhatsThis(self.trUtf8(
             """<b>Execute command</b>"""
-            """<p>This opens a dialog to enter an arbitrary Mercurial command.</p>"""
+            """<p>This opens a dialog to enter an arbitrary Mercurial"""
+            """ command.</p>"""
         ))
         self.vcsCommandAct.triggered[()].connect(self._vcsCommand)
         self.actions.append(self.vcsCommandAct)
@@ -532,10 +544,12 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsPropsAct = E5Action(self.trUtf8('Command options'),
                 self.trUtf8('Command &options...'), 0, 0, self,
                 'mercurial_options')
-        self.vcsPropsAct.setStatusTip(self.trUtf8('Show the Mercurial command options'))
+        self.vcsPropsAct.setStatusTip(self.trUtf8(
+            'Show the Mercurial command options'))
         self.vcsPropsAct.setWhatsThis(self.trUtf8(
             """<b>Command options...</b>"""
-            """<p>This shows a dialog to edit the Mercurial command options.</p>"""
+            """<p>This shows a dialog to edit the Mercurial command"""
+            """ options.</p>"""
         ))
         self.vcsPropsAct.triggered[()].connect(self._vcsCommandOptions)
         self.actions.append(self.vcsPropsAct)
@@ -548,14 +562,16 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgConfigAct.setWhatsThis(self.trUtf8(
             """<b>Configure</b>"""
-            """<p>Show the configuration dialog with the Mercurial page selected.</p>"""
+            """<p>Show the configuration dialog with the Mercurial page"""
+            """ selected.</p>"""
         ))
         self.hgConfigAct.triggered[()].connect(self.__hgConfigure)
         self.actions.append(self.hgConfigAct)
         
-        self.hgEditUserConfigAct = E5Action(self.trUtf8('Edit user configuration'),
-                self.trUtf8('Edit user configuration...'),
-                0, 0, self, 'mercurial_user_configure')
+        self.hgEditUserConfigAct = E5Action(
+            self.trUtf8('Edit user configuration'),
+            self.trUtf8('Edit user configuration...'),
+            0, 0, self, 'mercurial_user_configure')
         self.hgEditUserConfigAct.setStatusTip(self.trUtf8(
             'Show an editor to edit the user configuration file'
         ))
@@ -566,15 +582,17 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgEditUserConfigAct.triggered[()].connect(self.__hgEditUserConfig)
         self.actions.append(self.hgEditUserConfigAct)
         
-        self.hgRepoConfigAct = E5Action(self.trUtf8('Edit repository configuration'),
-                self.trUtf8('Edit repository configuration...'),
-                0, 0, self, 'mercurial_repo_configure')
+        self.hgRepoConfigAct = E5Action(
+            self.trUtf8('Edit repository configuration'),
+            self.trUtf8('Edit repository configuration...'),
+            0, 0, self, 'mercurial_repo_configure')
         self.hgRepoConfigAct.setStatusTip(self.trUtf8(
             'Show an editor to edit the repository configuration file'
         ))
         self.hgRepoConfigAct.setWhatsThis(self.trUtf8(
             """<b>Edit repository configuration</b>"""
-            """<p>Show an editor to edit the repository configuration file.</p>"""
+            """<p>Show an editor to edit the repository configuration"""
+            """ file.</p>"""
         ))
         self.hgRepoConfigAct.triggered[()].connect(self.__hgEditRepoConfig)
         self.actions.append(self.hgRepoConfigAct)
@@ -584,7 +602,8 @@ class HgProjectHelper(VcsProjectHelper):
                 self.trUtf8('Show combined configuration settings...'),
                 0, 0, self, 'mercurial_show_config')
         self.hgShowConfigAct.setStatusTip(self.trUtf8(
-            'Show the combined configuration settings from all configuration files'
+            'Show the combined configuration settings from all configuration'
+            ' files'
         ))
         self.hgShowConfigAct.setWhatsThis(self.trUtf8(
             """<b>Show combined configuration settings</b>"""
@@ -667,8 +686,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgBundleAct.setWhatsThis(self.trUtf8(
             """<b>Create changegroup</b>"""
-            """<p>This creates a changegroup file collecting selected changesets"""
-            """ (hg bundle).</p>"""
+            """<p>This creates a changegroup file collecting selected"""
+            """ changesets (hg bundle).</p>"""
         ))
         self.hgBundleAct.triggered[()].connect(self.__hgBundle)
         self.actions.append(self.hgBundleAct)
@@ -681,22 +700,23 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgPreviewBundleAct.setWhatsThis(self.trUtf8(
             """<b>Preview changegroup</b>"""
-            """<p>This previews a changegroup file containing a collection of"""
-            """ changesets.</p>"""
+            """<p>This previews a changegroup file containing a collection"""
+            """ of changesets.</p>"""
         ))
         self.hgPreviewBundleAct.triggered[()].connect(self.__hgPreviewBundle)
         self.actions.append(self.hgPreviewBundleAct)
         
-        self.hgIdentifyBundleAct = E5Action(self.trUtf8('Identify changegroup'),
-                self.trUtf8('Identify changegroup...'),
-                0, 0, self, 'mercurial_identify_bundle')
+        self.hgIdentifyBundleAct = E5Action(
+            self.trUtf8('Identify changegroup'),
+            self.trUtf8('Identify changegroup...'),
+            0, 0, self, 'mercurial_identify_bundle')
         self.hgIdentifyBundleAct.setStatusTip(self.trUtf8(
             'Identify a changegroup file containing a collection of changesets'
         ))
         self.hgIdentifyBundleAct.setWhatsThis(self.trUtf8(
             """<b>Identify changegroup</b>"""
-            """<p>This identifies a changegroup file containing a collection of"""
-            """ changesets.</p>"""
+            """<p>This identifies a changegroup file containing a"""
+            """ collection of changesets.</p>"""
         ))
         self.hgIdentifyBundleAct.triggered[()].connect(self.__hgIdentifyBundle)
         self.actions.append(self.hgIdentifyBundleAct)
@@ -788,19 +808,20 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgRollbackAct.setWhatsThis(self.trUtf8(
             """<b>Rollback last transaction</b>"""
-            """<p>This performs a rollback of the last transaction. Transactions"""
-            """ are used to encapsulate the effects of all commands that create new"""
-            """ changesets or propagate existing changesets into a repository."""
-            """ For example, the following commands are transactional, and"""
-            """ their effects can be rolled back:<ul>"""
+            """<p>This performs a rollback of the last transaction."""
+            """ Transactions are used to encapsulate the effects of all"""
+            """ commands that create new changesets or propagate existing"""
+            """ changesets into a repository. For example, the following"""
+            """ commands are transactional, and their effects can be"""
+            """ rolled back:<ul>"""
             """<li>commit</li>"""
             """<li>import</li>"""
             """<li>pull</li>"""
             """<li>push (with this repository as the destination)</li>"""
             """<li>unbundle</li>"""
             """</ul>"""
-            """</p><p><strong>This command is dangerous. Please use with care."""
-            """</strong></p>"""
+            """</p><p><strong>This command is dangerous. Please use with"""
+            """ care. </strong></p>"""
         ))
         self.hgRollbackAct.triggered[()].connect(self.__hgRollback)
         self.actions.append(self.hgRollbackAct)
@@ -826,7 +847,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgImportAct.setWhatsThis(self.trUtf8(
             """<b>Import Patch</b>"""
-            """<p>This imports a patch from a patch file into the project.</p>"""
+            """<p>This imports a patch from a patch file into the"""
+            """ project.</p>"""
         ))
         self.hgImportAct.triggered[()].connect(self.__hgImport)
         self.actions.append(self.hgImportAct)
@@ -867,8 +889,8 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgGraftAct.setWhatsThis(self.trUtf8(
             """<b>Copy Changesets</b>"""
             """<p>This copies changesets from another branch on top of the"""
-            """ current working directory with the user, date and description"""
-            """ of the original changeset.</p>"""
+            """ current working directory with the user, date and"""
+            """ description of the original changeset.</p>"""
         ))
         self.hgGraftAct.triggered[()].connect(self.__hgGraft)
         self.actions.append(self.hgGraftAct)
@@ -882,8 +904,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgGraftContinueAct.setWhatsThis(self.trUtf8(
             """<b>Continue Copying Session</b>"""
-            """<p>This continues the last copying session after conflicts were"""
-            """ resolved.</p>"""
+            """<p>This continues the last copying session after conflicts"""
+            """ were resolved.</p>"""
         ))
         self.hgGraftContinueAct.triggered[()].connect(self.__hgGraftContinue)
         self.actions.append(self.hgGraftContinueAct)
@@ -915,7 +937,8 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Remove...</b>"""
             """<p>Remove sub-repositories from the project.</p>"""
         ))
-        self.hgRemoveSubreposAct.triggered[()].connect(self.__hgRemoveSubrepositories)
+        self.hgRemoveSubreposAct.triggered[()].connect(
+            self.__hgRemoveSubrepositories)
         self.actions.append(self.hgRemoveSubreposAct)
         
         self.hgArchiveAct = E5Action(self.trUtf8('Create unversioned archive'),
@@ -927,7 +950,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgArchiveAct.setWhatsThis(self.trUtf8(
             """<b>Create unversioned archive...</b>"""
-            """<p>This creates an unversioned archive from the repository.</p>"""
+            """<p>This creates an unversioned archive from the"""
+            """ repository.</p>"""
         ))
         self.hgArchiveAct.triggered[()].connect(self.__hgArchive)
         self.actions.append(self.hgArchiveAct)
@@ -1003,7 +1027,8 @@ class HgProjectHelper(VcsProjectHelper):
         for extensionMenuTitle in sorted(self.__extensionMenuTitles):
             extensionName = self.__extensionMenuTitles[extensionMenuTitle]
             self.extensionMenus[extensionName] = self.__extensionsMenu.addMenu(
-                self.__extensions[extensionName].initMenu(self.__extensionsMenu))
+                self.__extensions[extensionName].initMenu(
+                    self.__extensionsMenu))
         self.vcs.activeExtensionsChanged.connect(self.__showExtensionMenu)
         
         if self.vcs.version >= (2, 0):
@@ -1025,7 +1050,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
+                os.path.join("VcsPlugins", "vcsMercurial", "icons",
+                             "mercurial.png")),
             self.vcs.vcsName(), self._vcsInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -1122,7 +1148,8 @@ class HgProjectHelper(VcsProjectHelper):
             self.extensionMenus[extensionName].setEnabled(
                 self.vcs.isExtensionActive(extensionName))
             if not self.extensionMenus[extensionName].isEnabled() and \
-               self.extensionMenus[extensionName].menu().isTearOffMenuVisible():
+                    self.extensionMenus[extensionName].menu()\
+                        .isTearOffMenuVisible():
                 self.extensionMenus[extensionName].menu().hideTearOffMenu()
     
     def __hgExtendedDiff(self):
@@ -1139,13 +1166,15 @@ class HgProjectHelper(VcsProjectHelper):
     
     def __hgIncoming(self):
         """
-        Private slot used to show the log of changes coming into the repository.
+        Private slot used to show the log of changes coming into the
+        repository.
         """
         self.vcs.hgIncoming(self.project.ppath)
     
     def __hgOutgoing(self):
         """
-        Private slot used to show the log of changes going out of the repository.
+        Private slot used to show the log of changes going out of the
+        repository.
         """
         self.vcs.hgOutgoing(self.project.ppath)
     

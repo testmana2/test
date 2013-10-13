@@ -89,13 +89,13 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
             if procStarted:
                 finished = process.waitForFinished(300000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(), self.__ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.__ioEncoding, 'replace')
                 else:
                     process.kill()
                     process.waitForFinished()
-                    error = \
-                        str(process.readAllStandardError(), self.__ioEncoding, 'replace')
+                    error = str(process.readAllStandardError(),
+                                self.__ioEncoding, 'replace')
             else:
                 process.kill()
                 process.waitForFinished()
@@ -132,7 +132,8 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 finished = process.waitForFinished(300000)
                 if finished and process.exitCode() == 0:
                     output = str(
-                        process.readAllStandardOutput(), self.__ioEncoding, 'replace')
+                        process.readAllStandardOutput(),
+                        self.__ioEncoding, 'replace')
         
         for line in output.splitlines():
             flag, name = line.split(" ", 1)
@@ -143,7 +144,8 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         for name in states:
             try:
                 if self.reportedStates[name] != states[name]:
-                    self.statusList.append("{0} {1}".format(states[name], name))
+                    self.statusList.append(
+                        "{0} {1}".format(states[name], name))
             except KeyError:
                 self.statusList.append("{0} {1}".format(states[name], name))
         for name in self.reportedStates.keys():

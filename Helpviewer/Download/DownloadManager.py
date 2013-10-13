@@ -5,7 +5,8 @@ Module implementing the download manager class.
 """
 
 from PyQt4.QtCore import pyqtSlot, Qt, QModelIndex, QFileInfo
-from PyQt4.QtGui import QDialog, QStyle, QFileIconProvider, QMenu, QCursor, QApplication
+from PyQt4.QtGui import QDialog, QStyle, QFileIconProvider, QMenu, QCursor, \
+    QApplication
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
 
@@ -42,7 +43,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         self.__saveTimer = AutoSaver(self, self.save)
         
         self.__model = DownloadModel(self)
-        self.__manager = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
+        self.__manager = Helpviewer.HelpWindow.HelpWindow\
+            .networkAccessManager()
         
         self.__iconProvider = None
         self.__downloads = []
@@ -71,7 +73,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         """
         menu = QMenu()
         
-        selectedRowsCount = len(self.downloadsView.selectionModel().selectedRows())
+        selectedRowsCount = len(
+            self.downloadsView.selectionModel().selectedRows())
         
         if selectedRowsCount == 1:
             row = self.downloadsView.selectionModel().selectedRows()[0].row()
@@ -285,7 +288,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             (DownloadManager.RemoveExit, DownloadManager.RemoveNever,
              DownloadManager.RemoveSuccessFullDownload)
         """
-        assert policy in (DownloadManager.RemoveExit, DownloadManager.RemoveNever,
+        assert policy in (DownloadManager.RemoveExit,
+                          DownloadManager.RemoveNever,
                           DownloadManager.RemoveSuccessFullDownload)
         
         if policy == self.removePolicy():
@@ -372,7 +376,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         """
         count = self.activeDownloads()
         if count > 0:
-            self.setWindowTitle(self.trUtf8("Downloading %n file(s)", "", count))
+            self.setWindowTitle(
+                self.trUtf8("Downloading %n file(s)", "", count))
         else:
             self.setWindowTitle(self.trUtf8("Downloads"))
     
@@ -425,9 +430,9 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         self.__saveTimer.changeOccurred()
         self.__updateItemCount()
     
-    ############################################################################
+    ###########################################################################
     ## Context menu related methods below
-    ############################################################################
+    ###########################################################################
     
     def __currentItem(self):
         """

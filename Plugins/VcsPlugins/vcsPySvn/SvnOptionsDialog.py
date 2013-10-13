@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to enter options used to start a project in the VCS.
+Module implementing a dialog to enter options used to start a project in the
+VCS.
 """
 
 import os
@@ -66,11 +67,13 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
             if directory:
-                self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
+                self.vcsUrlEdit.setText(
+                    Utilities.toNativeSeparators(directory))
         else:
             from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
             dlg = SvnRepoBrowserDialog(self.vcs, mode="select", parent=self)
-            dlg.start(self.protocolCombo.currentText() + self.vcsUrlEdit.text())
+            dlg.start(
+                self.protocolCombo.currentText() + self.vcsUrlEdit.text())
             if dlg.exec_() == QDialog.Accepted:
                 url = dlg.getSelectedUrl()
                 if url:

@@ -29,7 +29,8 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        pixmap = self.style().standardIcon(QStyle.SP_MessageBoxQuestion).pixmap(32, 32)
+        pixmap = self.style().standardIcon(QStyle.SP_MessageBoxQuestion)\
+            .pixmap(32, 32)
         self.icon.setPixmap(pixmap)
         
         self.__ui = parent

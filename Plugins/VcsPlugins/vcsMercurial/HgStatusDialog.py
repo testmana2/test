@@ -4,14 +4,15 @@
 #
 
 """
-Module implementing a dialog to show the output of the hg status command process.
+Module implementing a dialog to show the output of the hg status command
+process.
 """
 
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QTimer
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
-    QLineEdit
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, \
+    QTreeWidgetItem, QLineEdit
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -23,7 +24,8 @@ import Preferences
 
 class HgStatusDialog(QWidget, Ui_HgStatusDialog):
     """
-    Class implementing a dialog to show the output of the hg status command process.
+    Class implementing a dialog to show the output of the hg status command
+    process.
     """
     def __init__(self, vcs, mq=False, parent=None):
         """
@@ -41,9 +43,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.__pathColumn = 2
         self.__lastColumn = self.statusList.columnCount()
         
-        self.refreshButton = \
-            self.buttonBox.addButton(self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
-        self.refreshButton.setToolTip(self.trUtf8("Press to refresh the status display"))
+        self.refreshButton = self.buttonBox.addButton(
+            self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.trUtf8("Press to refresh the status display"))
         self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -56,7 +59,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.__mq = mq
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
-        self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)
+        self.statusList.header().setSortIndicator(
+            self.__pathColumn, Qt.AscendingOrder)
         
         if mq:
             self.buttonsLine.setVisible(False)
@@ -75,7 +79,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Select all for commit"), self.__commitSelectAll))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Deselect all from commit"), self.__commitDeselectAll))
+                self.trUtf8("Deselect all from commit"),
+                self.__commitDeselectAll))
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Add to repository"), self.__add))
@@ -96,7 +101,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 act.setEnabled(False)
             
             self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
-            self.statusList.customContextMenuRequested.connect(self.__showContextMenu)
+            self.statusList.customContextMenuRequested.connect(
+                self.__showContextMenu)
         
         self.modifiedIndicators = [
             self.trUtf8('added'),
@@ -206,7 +212,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.__statusFilters = []
         
         if self.__mq:
-            self.setWindowTitle(self.trUtf8("Mercurial Queue Repository Status"))
+            self.setWindowTitle(
+                self.trUtf8("Mercurial Queue Repository Status"))
         else:
             self.setWindowTitle(self.trUtf8('Mercurial Status'))
         
@@ -280,7 +287,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -295,7 +303,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.__statusFilters.sort()
         self.__statusFilters.insert(0, "<{0}>".format(self.trUtf8("all")))
@@ -558,9 +567,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         self.__restoreMissing()
     
-    ############################################################################
+    ###########################################################################
     ## Context menu handling methods
-    ############################################################################
+    ###########################################################################
     
     def __showContextMenu(self, coord):
         """
@@ -756,7 +765,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
     
     def __getUnversionedItems(self):
         """
-        Private method to retrieve all entries, that have an unversioned status.
+        Private method to retrieve all entries, that have an unversioned
+        status.
         
         @return list of all items with an unversioned status
         """

@@ -9,9 +9,10 @@ Module implementing a tabbed viewmanager class.
 
 import os
 
-from PyQt4.QtCore import QPoint, QFileInfo, pyqtSignal, QEvent, QByteArray, QMimeData, Qt
-from PyQt4.QtGui import QWidget, QColor, QHBoxLayout, QDrag, QPixmap, QSplitter, \
-    QTabBar, QApplication, QToolButton, QMenu, QLabel
+from PyQt4.QtCore import QPoint, QFileInfo, pyqtSignal, QEvent, QByteArray, \
+    QMimeData, Qt
+from PyQt4.QtGui import QWidget, QColor, QHBoxLayout, QDrag, QPixmap, \
+    QSplitter, QTabBar, QApplication, QToolButton, QMenu, QLabel
 
 from E5Gui.E5Application import e5App
 
@@ -35,11 +36,11 @@ class TabBar(E5WheelTabBar):
     """
     Class implementing a customized tab bar supporting drag & drop.
     
-    @signal tabMoveRequested(int, int) emitted to signal a tab move request giving
-        the old and new index position
-    @signal tabRelocateRequested(str, int, int) emitted to signal a tab relocation
-        request giving the string encoded id of the old tab widget, the index in
-        the old tab widget and the new index position
+    @signal tabMoveRequested(int, int) emitted to signal a tab move request
+        giving the old and new index position
+    @signal tabRelocateRequested(str, int, int) emitted to signal a tab
+        relocation request giving the string encoded id of the old tab widget,
+        the index in the old tab widget and the new index position
     @signal tabCopyRequested(str, int, int) emitted to signal a clone request
         giving the string encoded id of the source tab widget, the index in the
         source tab widget and the new index position
@@ -86,8 +87,9 @@ class TabBar(E5WheelTabBar):
             mimeData.setText(self.tabText(index))
             mimeData.setData("action", "tab-reordering")
             mimeData.setData("tabbar-id", str(id(self)))
-            mimeData.setData("source-index",
-                             QByteArray.number(self.tabAt(self.__dragStartPos)))
+            mimeData.setData(
+                "source-index",
+                QByteArray.number(self.tabAt(self.__dragStartPos)))
             mimeData.setData("tabwidget-id", str(id(self.parentWidget())))
             drag.setMimeData(mimeData)
             if event.modifiers() == Qt.KeyboardModifiers(Qt.ShiftModifier):
@@ -125,7 +127,8 @@ class TabBar(E5WheelTabBar):
         if oldID != id(self):
             parentID = int(mimeData.data("tabwidget-id"))
             if event.proposedAction() == Qt.MoveAction:
-                self.tabRelocateRequested.emit(str(parentID), fromIndex, toIndex)
+                self.tabRelocateRequested.emit(
+                    str(parentID), fromIndex, toIndex)
                 event.acceptProposedAction()
             elif event.proposedAction() == Qt.CopyAction:
                 self.tabCopyRequested[str, int, int].emit(
@@ -165,7 +168,8 @@ class TabWidget(E5TabWidget):
         
         self.__tabBar.tabMoveRequested.connect(self.moveTab)
         self.__tabBar.tabRelocateRequested.connect(self.__relocateTab)
-        self.__tabBar.tabCopyRequested[str, int, int].connect(self.__copyTabOther)
+        self.__tabBar.tabCopyRequested[str, int, int].connect(
+            self.__copyTabOther)
         self.__tabBar.tabCopyRequested[int, int].connect(self.__copyTab)
         
         self.vm = vm
@@ -195,7 +199,8 @@ class TabWidget(E5TabWidget):
            not hasattr(self, 'setTabsClosable'):
             self.closeButton = QToolButton(self)
             self.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
-            self.closeButton.setToolTip(self.trUtf8("Close the current editor"))
+            self.closeButton.setToolTip(
+                self.trUtf8("Close the current editor"))
             self.closeButton.setEnabled(False)
             self.closeButton.clicked[bool].connect(self.__closeButtonClicked)
             self.rightCornerWidgetLayout.addWidget(self.closeButton)
@@ -212,11 +217,13 @@ class TabWidget(E5TabWidget):
         self.setTabContextMenuPolicy(Qt.CustomContextMenu)
         self.customTabContextMenuRequested.connect(self.__showContextMenu)
         
-        ericPic = QPixmap(os.path.join(getConfig('ericPixDir'), 'eric_small.png'))
+        ericPic = QPixmap(
+            os.path.join(getConfig('ericPixDir'), 'eric_small.png'))
         self.emptyLabel = QLabel()
         self.emptyLabel.setPixmap(ericPic)
         self.emptyLabel.setAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
-        super().addTab(self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
+        super().addTab(self.emptyLabel,
+                       UI.PixmapCache.getIcon("empty.png"), "")
         
     def __initMenu(self):
         """
@@ -239,9 +246,10 @@ class TabWidget(E5TabWidget):
         self.__menu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
             self.trUtf8('Close'), self.__contextMenuClose)
         self.closeOthersMenuAct = self.__menu.addAction(
-            UI.PixmapCache.getIcon("tabCloseOther.png"), self.trUtf8("Close Others"),
-            self.__contextMenuCloseOthers)
-        self.__menu.addAction(self.trUtf8('Close All'), self.__contextMenuCloseAll)
+            UI.PixmapCache.getIcon("tabCloseOther.png"),
+            self.trUtf8("Close Others"), self.__contextMenuCloseOthers)
+        self.__menu.addAction(
+            self.trUtf8('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
         self.saveMenuAct = \
             self.__menu.addAction(UI.PixmapCache.getIcon("fileSave.png"),
@@ -258,7 +266,8 @@ class TabWidget(E5TabWidget):
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
-        self.copyPathAct = self.__menu.addAction(self.trUtf8("Copy Path to Clipboard"),
+        self.copyPathAct = self.__menu.addAction(
+            self.trUtf8("Copy Path to Clipboard"),
             self.__contextMenuCopyPathToClipboard)
         
     def __showContextMenu(self, coord, index):
@@ -271,7 +280,8 @@ class TabWidget(E5TabWidget):
         if self.editors:
             self.contextMenuEditor = self.widget(index).getEditor()
             if self.contextMenuEditor:
-                self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
+                self.saveMenuAct.setEnabled(
+                    self.contextMenuEditor.isModified())
                 fileName = self.contextMenuEditor.getFileName()
                 self.copyPathAct.setEnabled(bool(fileName))
                 if fileName:
@@ -381,7 +391,8 @@ class TabWidget(E5TabWidget):
         """
         Private slot to handle Caption change signals from the editor.
         
-        Updates the tab text and tooltip text to reflect the new caption information.
+        Updates the tab text and tooltip text to reflect the new caption
+        information.
         
         @param cap Caption for the editor
         @param editor Editor to update the caption for
@@ -393,7 +404,8 @@ class TabWidget(E5TabWidget):
             else:
                 txt = e5App().getObject("Project").getRelativePath(fn)
             
-            maxFileNameChars = Preferences.getUI("TabViewManagerFilenameLength")
+            maxFileNameChars = Preferences.getUI(
+                "TabViewManagerFilenameLength")
             if len(txt) > maxFileNameChars:
                 txt = "...{0}".format(txt[-maxFileNameChars:])
             if editor.isReadOnly():
@@ -412,7 +424,7 @@ class TabWidget(E5TabWidget):
         @param lineno line number of the current editor's cursor (zero based)
         """
         editor = self.sender()
-        if editor:
+        if editor and isinstance(editor, QScintilla.Editor.Editor):
             fn = editor.getFileName()
             if fn:
                 self.vm.editorLineChanged.emit(fn, lineno + 1)
@@ -434,7 +446,8 @@ class TabWidget(E5TabWidget):
             self.removeTab(index)
         
         if not self.editors:
-            super().addTab(self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
+            super().addTab(
+                self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
             self.emptyLabel.show()
             if self.closeButton:
                 self.closeButton.setEnabled(False)
@@ -482,8 +495,8 @@ class TabWidget(E5TabWidget):
         tw = self.vm.getTabWidgetById(int(sourceId))
         if tw is not None:
             editor = tw.widget(sourceIndex).getEditor()
-            newEditor, assembly = self.vm.cloneEditor(editor, editor.getFileType(),
-                                            editor.getFileName())
+            newEditor, assembly = self.vm.cloneEditor(
+                editor, editor.getFileType(), editor.getFileName())
             self.vm.insertView(assembly, self, targetIndex,
                                editor.getFileName(), editor.getNoName())
         
@@ -596,7 +609,8 @@ class TabWidget(E5TabWidget):
         
     def __contextMenuOpenRejections(self):
         """
-        Private slot to open a rejections file associated with the selected tab.
+        Private slot to open a rejections file associated with the selected
+        tab.
         """
         if self.contextMenuEditor:
             fileName = self.contextMenuEditor.getFileName()
@@ -614,7 +628,8 @@ class TabWidget(E5TabWidget):
     
     def __contextMenuCopyPathToClipboard(self):
         """
-        Private method to copy the file name of the selected tab to the clipboard.
+        Private method to copy the file name of the selected tab to the
+        clipboard.
         """
         if self.contextMenuEditor:
             fn = self.contextMenuEditor.getFileName()
@@ -681,21 +696,24 @@ class Tabview(QSplitter, ViewManager):
     @signal editorOpened(str) emitted after an editor window was opened
     @signal editorOpenedEd(Editor) emitted after an editor window was opened
     @signal editorClosed(str) emitted just before an editor window gets closed
-    @signal editorClosedEd(Editor) emitted just before an editor window gets closed
+    @signal editorClosedEd(Editor) emitted just before an editor window gets
+        closed
     @signal editorSaved(str) emitted after an editor window was saved
     @signal checkActions(Editor) emitted when some actions should be checked
-            for their status
-    @signal cursorChanged(Editor) emitted after the cursor position of the active
-            window has changed
+        for their status
+    @signal cursorChanged(Editor) emitted after the cursor position of the
+        active window has changed
     @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
     @signal syntaxerrorToggled(Editor) emitted when a syntax error is toggled.
-    @signal previewStateChanged(bool) emitted to signal a change in the preview state
+    @signal previewStateChanged(bool) emitted to signal a change in the
+        preview state
     @signal editorLanguageChanged(Editor) emitted to signal a change of an
-            editors language
-    @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
-    @signal editorLineChanged(str,int) emitted to signal a change of an editor's
-            current line (line is given one based)
+        editors language
+    @signal editorTextChanged(Editor) emitted to signal a change of an
+        editor's text
+    @signal editorLineChanged(str,int) emitted to signal a change of an
+        editor's current line (line is given one based)
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -737,7 +755,8 @@ class Tabview(QSplitter, ViewManager):
         self.setOrientation(Qt.Vertical)
         self.__inRemoveView = False
         
-        self.maxFileNameChars = Preferences.getUI("TabViewManagerFilenameLength")
+        self.maxFileNameChars = Preferences.getUI(
+            "TabViewManagerFilenameLength")
         self.filenameOnly = Preferences.getUI("TabViewManagerFilenameOnly")
         
     def canCascade(self):
@@ -800,7 +819,8 @@ class Tabview(QSplitter, ViewManager):
         # if this was the last editor in this view, switch to the next, that
         # still has open editors
         for i in list(range(self.tabWidgets.index(tw), -1, -1)) + \
-                 list(range(self.tabWidgets.index(tw) + 1, len(self.tabWidgets))):
+                 list(range(self.tabWidgets.index(tw) + 1,
+                            len(self.tabWidgets))):
             if self.tabWidgets[i].hasEditors():
                 self.currentTabWidget.showIndicator(False)
                 self.currentTabWidget = self.tabWidgets[i]
@@ -861,7 +881,8 @@ class Tabview(QSplitter, ViewManager):
         Protected method to add a view (i.e. window).
         
         @param win editor assembly to be inserted
-        @param tabWidget reference to the tab widget to insert the editor into (TabWidget)
+        @param tabWidget reference to the tab widget to insert the editor into
+            (TabWidget)
         @param index index position to insert at (integer)
         @param fn filename of this editor (string)
         @param noName name to be used for an unnamed editor (string)
@@ -938,7 +959,8 @@ class Tabview(QSplitter, ViewManager):
         
     def _initWindowActions(self):
         """
-        Protected method to define the user interface actions for window handling.
+        Protected method to define the user interface actions for window
+        handling.
         """
         pass
         
@@ -1021,7 +1043,8 @@ class Tabview(QSplitter, ViewManager):
             size = self.width()
         else:
             size = self.height()
-        self.setSizes([int(size / len(self.tabWidgets))] * len(self.tabWidgets))
+        self.setSizes(
+            [int(size / len(self.tabWidgets))] * len(self.tabWidgets))
         self.splitRemoveAct.setEnabled(True)
         self.nextSplitAct.setEnabled(True)
         self.prevSplitAct.setEnabled(True)
@@ -1122,7 +1145,8 @@ class Tabview(QSplitter, ViewManager):
             self.changeCaption.emit(fn)
             if not self.__inRemoveView:
                 self.editorChanged.emit(fn)
-                self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
+                self.editorLineChanged.emit(
+                    fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -1146,7 +1170,8 @@ class Tabview(QSplitter, ViewManager):
                 self.currentTabWidget = watched.parent()
                 if switched:
                     index = self.currentTabWidget.selectTab(event.pos())
-                    switched = self.currentTabWidget.widget(index) is self.activeWindow()
+                    switched = self.currentTabWidget.widget(index) is \
+                        self.activeWindow()
             elif isinstance(watched, QScintilla.Editor.Editor):
                 for tw in self.tabWidgets:
                     if tw.hasEditor(watched):
@@ -1164,7 +1189,8 @@ class Tabview(QSplitter, ViewManager):
                     self.changeCaption.emit(fn)
                     if switched:
                         self.editorChanged.emit(fn)
-                        self.editorLineChanged.emit(fn, aw.getCursorPosition()[0] + 1)
+                        self.editorLineChanged.emit(
+                            fn, aw.getCursorPosition()[0] + 1)
                 else:
                     self.changeCaption.emit("")
                 self.editorChangedEd.emit(aw)
@@ -1177,7 +1203,8 @@ class Tabview(QSplitter, ViewManager):
         """
         ViewManager.preferencesChanged(self)
         
-        self.maxFileNameChars = Preferences.getUI("TabViewManagerFilenameLength")
+        self.maxFileNameChars = Preferences.getUI(
+            "TabViewManagerFilenameLength")
         self.filenameOnly = Preferences.getUI("TabViewManagerFilenameOnly")
         
         for tabWidget in self.tabWidgets:
@@ -1189,7 +1216,8 @@ class Tabview(QSplitter, ViewManager):
                         if self.filenameOnly:
                             txt = os.path.basename(fn)
                         else:
-                            txt = e5App().getObject("Project").getRelativePath(fn)
+                            txt = e5App().getObject("Project")\
+                                .getRelativePath(fn)
                         if len(txt) > self.maxFileNameChars:
                             txt = "...{0}".format(txt[-self.maxFileNameChars:])
                         if not QFileInfo(fn).isWritable():

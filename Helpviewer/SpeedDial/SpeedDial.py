@@ -9,8 +9,8 @@ Module implementing the speed dial.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, QObject, QCryptographicHash, QByteArray, \
-    QUrl, qWarning
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, QObject, QCryptographicHash, \
+    QByteArray, QUrl, qWarning
 from PyQt4.QtWebKit import QWebPage
 
 from E5Gui import E5MessageBox
@@ -129,8 +129,9 @@ class SpeedDial(QObject):
                     else:
                         imgSource = QUrl.fromLocalFile(imgSource).toString()
                 
-                self.__initialScript += "addBox('{0}', '{1}', '{2}');\n".format(
-                    page.url, page.title, imgSource)
+                self.__initialScript += \
+                    "addBox('{0}', '{1}', '{2}');\n".format(
+                        page.url, page.title, imgSource)
         
         return self.__initialScript
     
@@ -140,7 +141,8 @@ class SpeedDial(QObject):
         
         @return name of the user agents file (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "speedDial.xml")
+        return os.path.join(
+            Utilities.getConfigDir(), "browser", "speedDial.xml")
     
     def __initialize(self):
         """
@@ -180,8 +182,10 @@ class SpeedDial(QObject):
             self.pagesChanged.emit()
         else:
             allPages = \
-                'url:"http://eric-ide.python-projects.org/"|title:"Eric Web Site";'\
-                'url:"http://www.riverbankcomputing.com/"|title:"PyQt4 Web Site";'\
+                'url:"http://eric-ide.python-projects.org/"|'\
+                'title:"Eric Web Site";'\
+                'url:"http://www.riverbankcomputing.com/"|'\
+                'title:"PyQt4 Web Site";'\
                 'url:"http://qt.digia.com/"|title:"Qt Web Site";'\
                 'url:"http://blog.qt.digia.com/"|title:"Qt Blog";'\
                 'url:"http://www.python.org"|title:"Python Language Website";'\
@@ -199,8 +203,9 @@ class SpeedDial(QObject):
                 self.__webPages, self.__pagesPerRow, self.__speedDialSize):
             E5MessageBox.critical(None,
                 self.trUtf8("Saving Speed Dial data"),
-                self.trUtf8("""<p>Speed Dial data could not be saved to <b>{0}</b></p>"""
-                            ).format(speedDialFile))
+                self.trUtf8(
+                    """<p>Speed Dial data could not be saved to"""
+                    """ <b>{0}</b></p>""").format(speedDialFile))
         else:
             self.speedDialSaved.emit()
     
@@ -372,8 +377,9 @@ class SpeedDial(QObject):
             page.broken = True
         else:
             if not image.save(fileName):
-                qWarning("SpeedDial.__thumbnailCreated: Cannot save thumbnail to {0}"
-                         .format(fileName))
+                qWarning(
+                    "SpeedDial.__thumbnailCreated: Cannot save thumbnail"
+                    " to {0}".format(fileName))
             
             fileName = QUrl.fromLocalFile(fileName).toString()
         
@@ -386,7 +392,6 @@ class SpeedDial(QObject):
                 frame.evaluateJavaScript("setTitleToUrl('{0}', '{1}');".format(
                                          url, title))
         
-##        thumbnailer.thumbnailCreated.disconnect(self.__thumbnailCreated)
         thumbnailer.deleteLater()
         self.__thumbnailers.remove(thumbnailer)
     

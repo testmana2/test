@@ -186,7 +186,8 @@ class GreaseMonkeyScript(object):
     
     def __parseScript(self, path):
         """
-        Private method to parse the given script and populate the data structure.
+        Private method to parse the given script and populate the data
+        structure.
         
         @param path path of the Javascript file (string)
         """

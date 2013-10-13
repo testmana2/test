@@ -31,7 +31,8 @@ class FtpAccessHandler(SchemeAccessHandler):
         """
         Protected method to create a request.
         
-        @param op the operation to be performed (QNetworkAccessManager.Operation)
+        @param op the operation to be performed
+            (QNetworkAccessManager.Operation)
         @param request reference to the request object (QNetworkRequest)
         @param outgoingData reference to an IODevice containing data to be sent
             (QIODevice)
@@ -48,8 +49,9 @@ class FtpAccessHandler(SchemeAccessHandler):
         Public method to add or change an authenticator in our cache.
         
         @param realm name of the realm the authenticator belongs to (string)
-        @param authenticator authenticator to add to the cache (QAuthenticator).
-            If it is None, the entry will be deleted from the cache.
+        @param authenticator authenticator to add to the cache
+            (QAuthenticator). If it is None, the entry will be deleted from
+            the cache.
         """
         if realm:
             if authenticator:

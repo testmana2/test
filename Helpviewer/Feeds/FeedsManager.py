@@ -8,7 +8,8 @@ Module implementing a RSS feeds manager dialog.
 """
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QUrl, QXmlStreamReader
-from PyQt4.QtGui import QDialog, QIcon, QTreeWidgetItem, QMenu, QCursor, QApplication
+from PyQt4.QtGui import QDialog, QIcon, QTreeWidgetItem, QMenu, QCursor, \
+    QApplication
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 from PyQt4.QtWebKit import QWebSettings
 
@@ -86,7 +87,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         
         # step 2: add the feed
         if icon.isNull() or \
-           icon == QIcon(QWebSettings.webGraphic(QWebSettings.DefaultFrameIconGraphic)):
+                icon == QIcon(QWebSettings.webGraphic(
+                    QWebSettings.DefaultFrameIconGraphic)):
             icon = UI.PixmapCache.getIcon("rss16.png")
         feed = (urlString, title, icon)
         self.__feeds.append(feed)
@@ -172,8 +174,9 @@ class FeedsManager(QDialog, Ui_FeedsManager):
                     if feed[0] == urlString:
                         E5MessageBox.critical(self,
                             self.trUtf8("Duplicate Feed URL"),
-                            self.trUtf8("""A feed with the URL {0} exists already."""
-                                        """ Aborting...""".format(urlString)))
+                            self.trUtf8(
+                                """A feed with the URL {0} exists already."""
+                                """ Aborting...""".format(urlString)))
                         return
                 
                 self.__feeds[feedIndex] = (urlString, title, feedToChange[2])
@@ -193,8 +196,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Delete Feed"),
             self.trUtf8(
-                """<p>Do you really want to delete the feed <b>{0}</b>?</p>""".format(
-                title)))
+                """<p>Do you really want to delete the feed"""
+                """ <b>{0}</b>?</p>""".format(title)))
         if res:
             urlString = itm.data(0, FeedsManager.UrlStringRole)
             if urlString:
@@ -249,7 +252,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         
         import Helpviewer.HelpWindow
         request = QNetworkRequest(QUrl(urlString))
-        reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(request)
+        reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()\
+            .get(request)
         reply.finished[()].connect(self.__feedLoaded)
         self.__replies[id(reply)] = (reply, itm)
     
@@ -299,7 +303,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
                 itm = QTreeWidgetItem(topItem)
                 itm.setText(0, self.trUtf8("Error fetching feed"))
                 itm.setData(0, FeedsManager.UrlStringRole, "")
-                itm.setData(0, FeedsManager.ErrorDataRole, str(xmlData, encoding="utf-8"))
+                itm.setData(0, FeedsManager.ErrorDataRole,
+                            str(xmlData, encoding="utf-8"))
             
             topItem.setExpanded(True)
         else:
@@ -326,8 +331,10 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         urlString = itm.data(0, FeedsManager.UrlStringRole)
         if urlString:
             menu = QMenu()
-            menu.addAction(self.trUtf8("&Open"), self.__openMessageInCurrentTab)
-            menu.addAction(self.trUtf8("Open in New &Tab"), self.__openMessageInNewTab)
+            menu.addAction(
+                self.trUtf8("&Open"), self.__openMessageInCurrentTab)
+            menu.addAction(
+                self.trUtf8("Open in New &Tab"), self.__openMessageInNewTab)
             menu.addSeparator()
             menu.addAction(self.trUtf8("&Copy URL to Clipboard"),
                            self.__copyUrlToClipboard)
@@ -336,7 +343,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
             errorString = itm.data(0, FeedsManager.ErrorDataRole)
             if errorString:
                 menu = QMenu()
-                menu.addAction(self.trUtf8("&Show error data"), self.__showError)
+                menu.addAction(
+                    self.trUtf8("&Show error data"), self.__showError)
                 menu.exec_(QCursor.pos())
     
     def __itemActivated(self, itm, column):
@@ -350,7 +358,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
             return
         
         self.__openMessage(
-            QApplication.keyboardModifiers() & Qt.ControlModifier == Qt.ControlModifier)
+            QApplication.keyboardModifiers() & 
+            Qt.ControlModifier == Qt.ControlModifier)
         
     def __openMessageInCurrentTab(self):
         """
@@ -368,7 +377,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         """
         Private method to open a feed message.
         
-        @param newTab flag indicating to open the feed message in a new tab (boolean)
+        @param newTab flag indicating to open the feed message in a new tab
+            (boolean)
         """
         itm = self.feedsTree.currentItem()
         if itm is None:
