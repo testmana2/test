@@ -76,19 +76,22 @@ def __getMasterPassword():
                 if verifyPassword(pw, masterPassword):
                     MasterPassword = pwEncode(pw)
                 else:
-                    E5MessageBox.warning(None,
+                    E5MessageBox.warning(
+                        None,
                         QCoreApplication.translate(
                             "Crypto", "Master Password"),
                         QCoreApplication.translate(
                             "Crypto",
                             """The given password is incorrect."""))
             else:
-                E5MessageBox.critical(None,
+                E5MessageBox.critical(
+                    None,
                     QCoreApplication.translate("Crypto", "Master Password"),
                     QCoreApplication.translate("Crypto",
                         """There is no master password registered."""))
         except ValueError as why:
-            E5MessageBox.warning(None,
+            E5MessageBox.warning(
+                None,
                 QCoreApplication.translate("Crypto", "Master Password"),
                 QCoreApplication.translate("Crypto",
                     """<p>The given password cannot be verified.</p>"""

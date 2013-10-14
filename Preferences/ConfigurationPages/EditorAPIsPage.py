@@ -180,7 +180,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
                     QFileInfo(QDir(installedAPIFilesPath), file)
                         .absoluteFilePath()))
         else:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Add from installed APIs"),
                 self.trUtf8("""There are no APIs installed yet."""
                             """ Selection is not available."""))

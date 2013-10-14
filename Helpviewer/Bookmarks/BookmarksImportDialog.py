@@ -140,7 +140,8 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
             if importer.open():
                 self.__topLevelBookmarkNode = importer.importedBookmarks()
             if importer.error():
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error importing bookmarks"),
                     importer.errorString())
                 return

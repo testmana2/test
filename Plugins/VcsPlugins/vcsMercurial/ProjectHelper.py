@@ -1184,7 +1184,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         shouldReopen = self.vcs.hgPull(self.project.ppath)
         if shouldReopen:
-            res = E5MessageBox.yesNo(self.parent(),
+            res = E5MessageBox.yesNo(
+                self.parent(),
                 self.trUtf8("Pull"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -1346,7 +1347,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         shouldReopen = self.vcs.hgUnbundle(self.project.ppath)
         if shouldReopen:
-            res = E5MessageBox.yesNo(self.parent(),
+            res = E5MessageBox.yesNo(
+                self.parent(),
                 self.trUtf8("Apply changegroups"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -1401,7 +1403,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         shouldReopen = self.vcs.hgImport(self.project.ppath)
         if shouldReopen:
-            res = E5MessageBox.yesNo(self.parent(),
+            res = E5MessageBox.yesNo(
+                self.parent(),
                 self.trUtf8("Import Patch"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -1420,7 +1423,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         shouldReopen = self.vcs.hgRevert(self.project.ppath)
         if shouldReopen:
-            res = E5MessageBox.yesNo(self.parent(),
+            res = E5MessageBox.yesNo(
+                self.parent(),
                 self.trUtf8("Revert Changes"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -1439,7 +1443,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         shouldReopen = self.vcs.hgGraft(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Copy Changesets"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -1453,7 +1458,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         shouldReopen = self.vcs.hgGraftContinue(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Copy Changesets (Continue)"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)

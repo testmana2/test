@@ -889,7 +889,8 @@ class IconEditorGrid(QWidget):
         if ok:
             if img.width() > self.__image.width() or \
                     img.height() > self.__image.height():
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Paste"),
                     self.trUtf8(
                         """<p>The clipboard image is larger than the"""
@@ -919,7 +920,8 @@ class IconEditorGrid(QWidget):
                     self.__pasteRect.topLeft(),
                     self.__pasteRect.bottomRight() + QPoint(1, 1))
         else:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Pasting Image"),
                 self.trUtf8("""Invalid image data in clipboard."""))
     

@@ -56,14 +56,16 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         groupName = self.nameEdit.text()
         
         if not groupName:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("You have to give a name for the group to add."))
             return
         
         if len(self.groupsList.findItems(
                 groupName, Qt.MatchFlags(Qt.MatchExactly))):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")\
                     .format(groupName))
@@ -84,14 +86,16 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         groupName = self.nameEdit.text()
         
         if not groupName:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("You have to give a name for the group to add."))
             return
         
         if len(self.groupsList.findItems(
                 groupName, Qt.MatchFlags(Qt.MatchExactly))):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")\
                     .format(groupName))
@@ -109,7 +113,8 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         if row < 0:
             return
         
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Delete tool group entry"),
             self.trUtf8("""<p>Do you really want to delete the tool group"""
                         """ <b>"{0}"</b>?</p>""")\

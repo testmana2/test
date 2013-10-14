@@ -91,7 +91,8 @@ class TemplateGroup(QTreeWidgetItem):
         """
         if name in self.entries:
             if not quiet:
-                E5MessageBox.critical(None,
+                E5MessageBox.critical(
+                    None,
                     QApplication.translate("TemplateGroup", "Add Template"),
                     QApplication.translate(
                         "TemplateGroup",
@@ -520,7 +521,8 @@ class TemplateViewer(QTreeWidget):
         Private slot to handle the Remove context menu action.
         """
         itm = self.currentItem()
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Remove Template"),
             self.trUtf8("""<p>Do you really want to remove <b>{0}</b>?</p>""")\
                 .format(itm.getName()))
@@ -581,7 +583,8 @@ class TemplateViewer(QTreeWidget):
         Private slot to reload the templates.
         """
         if self.__dirty:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Reload Templates"),
                 self.trUtf8(
                     """The templates contain unsaved changes. Shall these"""
@@ -599,7 +602,8 @@ class TemplateViewer(QTreeWidget):
         """
         Private method to show some help.
         """
-        E5MessageBox.information(self,
+        E5MessageBox.information(
+            self,
             self.trUtf8("Template Help"),
             self.trUtf8(
                 """<p><b>Template groups</b> are a means of grouping"""
@@ -842,7 +846,8 @@ class TemplateViewer(QTreeWidget):
         """
         if oldname != newname:
             if newname in self.groups:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Edit Template Group"),
                     self.trUtf8("""<p>A template group with the name"""
                                 """ <b>{0}</b> already exists.</p>""")\
@@ -935,7 +940,8 @@ class TemplateViewer(QTreeWidget):
         f = QFile(filename)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save templates"),
                 self.trUtf8(
                     "<p>The templates file <b>{0}</b> could not be"
@@ -968,7 +974,8 @@ class TemplateViewer(QTreeWidget):
             reader.readXML()
             f.close()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Read templates"),
                 self.trUtf8(
                     "<p>The templates file <b>{0}</b> could not be read.</p>")

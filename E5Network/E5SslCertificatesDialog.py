@@ -147,7 +147,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to delete the selected server certificate.
         """
         itm = self.serversCertificatesTree.currentItem()
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Delete Server Certificate"),
             self.trUtf8("""<p>Shall the server certificate really be"""
                         """ deleted?</p><p>{0}</p>"""
@@ -213,7 +214,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                     else:
                         commonStr = cert.subjectInfo(
                             QSslCertificate.CommonName)
-                    E5MessageBox.warning(self,
+                    E5MessageBox.warning(
+                        self,
                         self.trUtf8("Import Certificate"),
                         self.trUtf8(
                             """<p>The certificate <b>{0}</b> already exists."""
@@ -351,7 +353,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to delete the selected CA certificate.
         """
         itm = self.caCertificatesTree.currentItem()
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Delete CA Certificate"),
             self.trUtf8(
                 """<p>Shall the CA certificate really be deleted?</p>"""
@@ -399,7 +402,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                     else:
                         commonStr = cert.subjectInfo(
                             QSslCertificate.CommonName)
-                    E5MessageBox.warning(self,
+                    E5MessageBox.warning(
+                        self,
                         self.trUtf8("Import Certificate"),
                         self.trUtf8(
                             """<p>The certificate <b>{0}</b> already exists."""
@@ -453,7 +457,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                     if ex:
                         fname += ex
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Export Certificate"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
@@ -463,7 +468,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                 
                 f = QFile(fname)
                 if not f.open(QIODevice.WriteOnly):
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Export Certificate"),
                         self.trUtf8(
                             """<p>The certificate could not be written"""
@@ -494,7 +500,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         if fname:
             f = QFile(fname)
             if not f.open(QIODevice.ReadOnly):
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Export Certificate"),
                     self.trUtf8(
                         """<p>The certificate could not be read from file"""

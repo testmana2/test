@@ -205,7 +205,8 @@ class MultiProject(QObject):
                 return False
         else:
             QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Read multiproject file"),
                 self.trUtf8(
                     "<p>The multiproject file <b>{0}</b> could not be"
@@ -247,7 +248,8 @@ class MultiProject(QObject):
                 .writeXML()
             res = True
         else:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Save multiproject file"),
                 self.trUtf8("<p>The multiproject file <b>{0}</b> could not be "
                     "written.</p>").format(fn))
@@ -488,7 +490,8 @@ class MultiProject(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = E5MessageBox.yesNo(self.parent(),
+                res = E5MessageBox.yesNo(
+                    self.parent(),
                     self.trUtf8("Save File"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fn),
@@ -512,7 +515,8 @@ class MultiProject(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = E5MessageBox.okToClearData(self.parent(),
+            res = E5MessageBox.okToClearData(
+                self.parent(),
                 self.trUtf8("Close Multiproject"),
                 self.trUtf8("The current multiproject has unsaved changes."),
                 self.saveMultiProject)

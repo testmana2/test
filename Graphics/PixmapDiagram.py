@@ -149,7 +149,8 @@ class PixmapDiagram(E5MainWindow):
         """
         image = QImage(filename)
         if image.isNull():
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Pixmap-Viewer"),
                 self.trUtf8("""<p>The file <b>{0}</b> cannot be displayed."""
                     """ The format is not supported.</p>""").format(filename))

@@ -201,7 +201,8 @@ class SpeedDial(QObject):
         writer = SpeedDialWriter()
         if not writer.write(speedDialFile,
                 self.__webPages, self.__pagesPerRow, self.__speedDialSize):
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8("Saving Speed Dial data"),
                 self.trUtf8(
                     """<p>Speed Dial data could not be saved to"""

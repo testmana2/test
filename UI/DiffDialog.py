@@ -300,7 +300,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             if ex:
                 fname += ex
         if QFileInfo(fname).exists():
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Save Diff"),
                 self.trUtf8("<p>The patch file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
@@ -339,7 +340,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             lines1 = f1.readlines()
             f1.close()
         except IOError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
@@ -356,7 +358,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             lines2 = f2.readlines()
             f2.close()
         except IOError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")

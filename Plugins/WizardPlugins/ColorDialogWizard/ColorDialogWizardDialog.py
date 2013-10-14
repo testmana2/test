@@ -64,7 +64,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                          ' QColorDialog.getColor({0}, None, "{1}")'.format(
                         coStr, self.eTitle.text()))
                 except:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("QColorDialog Wizard Error"),
                         self.trUtf8(
                             """<p>The colour <b>{0}</b> is not valid.</p>""")

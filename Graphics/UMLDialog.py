@@ -230,7 +230,8 @@ class UMLDialog(E5MainWindow):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Save Diagram"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fname),
@@ -256,7 +257,8 @@ class UMLDialog(E5MainWindow):
             f.write("\n".join(lines))
             f.close()
         except (IOError, OSError) as err:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save Diagram"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be saved.</p>"""
@@ -285,7 +287,8 @@ class UMLDialog(E5MainWindow):
             data = f.read()
             f.close()
         except (IOError, OSError) as err:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Load Diagram"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>"""

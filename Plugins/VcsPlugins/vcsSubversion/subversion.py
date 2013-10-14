@@ -205,7 +205,8 @@ class Subversion(VersionControl):
         """
         success = self.vcsImport(vcsDataDict, project.ppath)[0]
         if not success:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Create project in repository"),
                 self.trUtf8(
                     """The project could not be created in the repository."""
@@ -228,7 +229,8 @@ class Subversion(VersionControl):
             if not os.path.isfile(pfn):
                 pfn += "z"
             if not os.path.isfile(pfn):
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("New project"),
                     self.trUtf8(
                         """The project could not be checked out of the"""
@@ -486,7 +488,8 @@ class Subversion(VersionControl):
                     break
             
             if not ok:
-                res = E5MessageBox.yesNo(self.__ui,
+                res = E5MessageBox.yesNo(
+                    self.__ui,
                     self.trUtf8("Commit Changes"),
                     self.trUtf8(
                         """The commit affects files, that have unsaved"""
@@ -946,7 +949,8 @@ class Subversion(VersionControl):
         
         reposURL = self.svnGetReposName(dname)
         if reposURL is None:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8(
                     """The URL of the project repository could not be"""
@@ -972,7 +976,8 @@ class Subversion(VersionControl):
         if self.otherData["standardLayout"]:
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The tag operation will"""
@@ -1041,7 +1046,8 @@ class Subversion(VersionControl):
                 names)
             yes = dlg.exec_() == QDialog.Accepted
         else:
-            yes = E5MessageBox.yesNo(None,
+            yes = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Revert changes"),
                 self.trUtf8("""Do you really want to revert all changes of"""
                             """ the project?"""))
@@ -1063,7 +1069,8 @@ class Subversion(VersionControl):
         
         reposURL = self.svnGetReposName(dname)
         if reposURL is None:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8(
                     """The URL of the project repository could not be"""
@@ -1089,7 +1096,8 @@ class Subversion(VersionControl):
         if self.otherData["standardLayout"]:
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
@@ -1719,7 +1727,8 @@ class Subversion(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             propName, fileFlag, propValue = dlg.getData()
             if not propName:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Subversion Set Property"),
                     self.trUtf8("""You have to supply a property name."""
                                 """ Aborting."""))
@@ -1763,7 +1772,8 @@ class Subversion(VersionControl):
             return
         
         if not propName:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Subversion Delete Property"),
                 self.trUtf8("""You have to supply a property name."""
                             """ Aborting."""))
@@ -1974,7 +1984,8 @@ class Subversion(VersionControl):
         
         output1, error = self.__svnGetFileForRevision(name, rev=rev1)
         if error:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Subversion Side-by-Side Difference"),
                 error)
             return
@@ -1983,7 +1994,8 @@ class Subversion(VersionControl):
         if rev2:
             output2, error = self.__svnGetFileForRevision(name, rev=rev2)
             if error:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Subversion Side-by-Side Difference"),
                     error)
                 return
@@ -1995,7 +2007,8 @@ class Subversion(VersionControl):
                 f1.close()
                 name2 = name
             except IOError:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Subversion Side-by-Side Difference"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be read.</p>""")

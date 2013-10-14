@@ -2880,7 +2880,8 @@ class UserInterface(E5MainWindow):
         else:
             if Preferences.getUser("Email") == "" or \
                Preferences.getUser("MailServer") == "":
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Report Bug"),
                     self.trUtf8(
                         """Email address or mail server address is empty."""
@@ -3898,7 +3899,8 @@ class UserInterface(E5MainWindow):
             else:
                 prog = fn
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Unittest Project"),
                 self.trUtf8("There is no main script defined for the"
                     " current project. Aborting"))
@@ -3959,7 +3961,8 @@ class UserInterface(E5MainWindow):
                 pass
         
         if version == 3:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Qt 3 support"),
                 self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
@@ -3970,14 +3973,16 @@ class UserInterface(E5MainWindow):
                 if os.path.isfile(fn) and os.path.getsize(fn):
                     args.append(fn)
                 else:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8('Problem'),
                         self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
                             .format(fn))
                     return
             except EnvironmentError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Problem'),
                     self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
@@ -3997,7 +4002,8 @@ class UserInterface(E5MainWindow):
         
         proc = QProcess()
         if not proc.startDetached(designer, args):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Qt-Designer.<br>'
@@ -4018,7 +4024,8 @@ class UserInterface(E5MainWindow):
         @param version indication for the requested version (Qt 4) (integer)
         """
         if version < 4:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Qt 3 support"),
                 self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
@@ -4031,14 +4038,16 @@ class UserInterface(E5MainWindow):
                         fn not in args:
                     args.append(fn)
                 else:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8('Problem'),
                         self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
                             .format(fn))
                     return
             except EnvironmentError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Problem'),
                     self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
@@ -4058,7 +4067,8 @@ class UserInterface(E5MainWindow):
         
         proc = QProcess()
         if not proc.startDetached(linguist, args):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Qt-Linguist.<br>'
@@ -4081,7 +4091,8 @@ class UserInterface(E5MainWindow):
         @param version indication for the requested version (Qt 4) (integer)
         """
         if version < 4:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Qt 3 support"),
                 self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
@@ -4105,7 +4116,8 @@ class UserInterface(E5MainWindow):
         
         proc = QProcess()
         if not proc.startDetached(assistant, args):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Qt-Assistant.<br>'
@@ -4132,7 +4144,8 @@ class UserInterface(E5MainWindow):
         """
         customViewer = Preferences.getHelp("CustomViewer")
         if not customViewer:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Help"),
                 self.trUtf8(
                     """Currently no custom viewer is selected."""
@@ -4145,7 +4158,8 @@ class UserInterface(E5MainWindow):
             args.append(home)
         
         if not proc.startDetached(customViewer, args):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start custom viewer.<br>'
@@ -4164,7 +4178,8 @@ class UserInterface(E5MainWindow):
             args.append(home)
             
             if not proc.startDetached("hh", args):
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         '<p>Could not start the help viewer.<br>'
@@ -4189,14 +4204,16 @@ class UserInterface(E5MainWindow):
                 if os.path.isfile(fn) and os.path.getsize(fn):
                     args.append(fn)
                 else:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8('Problem'),
                         self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
                             .format(fn))
                     return
             except EnvironmentError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Problem'),
                     self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
@@ -4236,7 +4253,8 @@ class UserInterface(E5MainWindow):
                         args.append(fn)
                     else:
                         if not ignore:
-                            E5MessageBox.critical(self,
+                            E5MessageBox.critical(
+                                self,
                                 self.trUtf8('Problem'),
                                 self.trUtf8(
                                     '<p>The file <b>{0}</b> does not exist or'
@@ -4245,7 +4263,8 @@ class UserInterface(E5MainWindow):
                             return
                 except EnvironmentError:
                     if not ignore:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8('Problem'),
                             self.trUtf8(
                                 '<p>The file <b>{0}</b> does not exist or'
@@ -4413,7 +4432,8 @@ class UserInterface(E5MainWindow):
         
         proc.start(program, args)
         if not proc.waitForStarted():
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the tool entry <b>{0}</b>.<br>'
@@ -4520,7 +4540,8 @@ class UserInterface(E5MainWindow):
                 home = pythonDocDir
             
             if not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4575,7 +4596,8 @@ class UserInterface(E5MainWindow):
                 home = pythonDocDir
             
             if not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4643,7 +4665,8 @@ class UserInterface(E5MainWindow):
                 home = qtDocDir
             
             if not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4674,7 +4697,8 @@ class UserInterface(E5MainWindow):
             pyqt4DocDir = Utilities.getEnvironmentEntry("PYQT4DOCDIR", None)
         
         if not pyqt4DocDir:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Documentation"),
                 self.trUtf8("""<p>The PyQt4 documentation starting point"""
                             """ has not been configured.</p>"""))
@@ -4699,7 +4723,8 @@ class UserInterface(E5MainWindow):
                     home = pyqt4DocDir
             
             if not home or not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4732,7 +4757,8 @@ class UserInterface(E5MainWindow):
             pyqt5DocDir = Utilities.getEnvironmentEntry("PYQT5DOCDIR", None)
         
         if not pyqt5DocDir:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Documentation"),
                 self.trUtf8("""<p>The PyQt5 documentation starting point"""
                             """ has not been configured.</p>"""))
@@ -4759,7 +4785,8 @@ class UserInterface(E5MainWindow):
                     home = pyqt5DocDir
             
             if not home or not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4794,7 +4821,8 @@ class UserInterface(E5MainWindow):
            not home.startswith("https://") and \
            not home.startswith("qthelp://"):
             if not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4825,7 +4853,8 @@ class UserInterface(E5MainWindow):
             pysideDocDir = Utilities.getEnvironmentEntry("PYSIDEDOCDIR", None)
         
         if not pysideDocDir:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Documentation"),
                 self.trUtf8("""<p>The PySide documentation starting point"""
                             """ has not been configured.</p>"""))
@@ -4840,7 +4869,8 @@ class UserInterface(E5MainWindow):
             else:
                 home = pysideDocDir
             if not os.path.exists(home):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4932,7 +4962,8 @@ class UserInterface(E5MainWindow):
         """
         started = QDesktopServices.openUrl(QUrl(home))
         if not started:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Open Browser'),
                 self.trUtf8('Could not start a web browser'))
 
@@ -5264,7 +5295,8 @@ class UserInterface(E5MainWindow):
         f = QFile(fn)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be written.</p>")
@@ -5289,7 +5321,8 @@ class UserInterface(E5MainWindow):
             reader.readXML()
             f.close()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Read tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be read.</p>")
@@ -5306,7 +5339,8 @@ class UserInterface(E5MainWindow):
             SessionWriter(f, None).writeXML()
             f.close()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save session"),
                 self.trUtf8(
                     "<p>The session file <b>{0}</b> could not be written.</p>")
@@ -5318,7 +5352,8 @@ class UserInterface(E5MainWindow):
         """
         fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
         if not os.path.exists(fn):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Read session"),
                 self.trUtf8(
                     "<p>The session file <b>{0}</b> could not be read.</p>")\
@@ -5332,7 +5367,8 @@ class UserInterface(E5MainWindow):
             reader.readXML()
             f.close()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Read session"),
                 self.trUtf8(
                     "<p>The session file <b>{0}</b> could not be read.</p>")\
@@ -5514,7 +5550,8 @@ class UserInterface(E5MainWindow):
                     if QFileInfo(fname).isFile():
                         self.viewmanager.openSourceFile(fname)
                     else:
-                        E5MessageBox.information(self,
+                        E5MessageBox.information(
+                            self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
                                 .format(fname))
@@ -5704,13 +5741,15 @@ class UserInterface(E5MainWindow):
                 Preferences.Prefs.settings.setValue(
                     "Updates/FirstFailedCheckDate", firstFailure)
                 if self.manualUpdatesCheck:
-                    E5MessageBox.warning(self,
+                    E5MessageBox.warning(
+                        self,
                         self.trUtf8("Error getting versions information"),
                         self.trUtf8("""The versions information could not be"""
                                     """ downloaded."""
                                     """ Please go online and try again."""))
                 elif failedDuration > 7:
-                    E5MessageBox.warning(self,
+                    E5MessageBox.warning(
+                        self,
                         self.trUtf8("Error getting versions information"),
                         self.trUtf8("""The versions information could not be"""
                                     """ downloaded for the last 7 days."""
@@ -5815,7 +5854,8 @@ class UserInterface(E5MainWindow):
                                 """You are using the latest version of"""
                                 """ eric5"""))
         except IndexError:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Error during updates check"),
                 self.trUtf8("""Could not perform updates check."""))
         
@@ -5878,7 +5918,8 @@ class UserInterface(E5MainWindow):
         if not Preferences.isConfigured():
             self.__initDebugToolbarsLayout()
             
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("First time usage"),
                 self.trUtf8("""eric5 has not been configured yet. """
                             """The configuration dialog will be started."""))

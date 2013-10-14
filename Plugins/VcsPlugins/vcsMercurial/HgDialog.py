@@ -143,7 +143,8 @@ class HgDialog(QDialog, Ui_HgDialog):
             if not procStarted:
                 self.buttonBox.setFocus()
                 self.inputGroup.setEnabled(False)
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         'The process {0} could not be started. '

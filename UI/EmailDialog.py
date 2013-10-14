@@ -118,7 +118,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @param ev key event (QKeyEvent)
         """
         if ev.key() == Qt.Key_Escape:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Close dialog"),
                 self.trUtf8("""Do you really want to close the dialog?"""))
             if res:
@@ -137,7 +138,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         Private slot to handle the rejected signal of the button box.
         """
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Close dialog"),
             self.trUtf8("""Do you really want to close the dialog?"""))
         if res:
@@ -301,7 +303,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                         errorStr = e[1]
                     else:
                         errorStr = str(e)
-                    res = E5MessageBox.retryAbort(self,
+                    res = E5MessageBox.retryAbort(
+                        self,
                         self.trUtf8("Send bug report"),
                         self.trUtf8(
                             """<p>Authentication failed.<br>Reason: {0}</p>""")
@@ -326,7 +329,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 errorStr = e[1]
             else:
                 errorStr = str(e)
-            res = E5MessageBox.retryAbort(self,
+            res = E5MessageBox.retryAbort(
+                self,
                 self.trUtf8("Send bug report"),
                 self.trUtf8(
                     """<p>Message could not be sent.<br>Reason: {0}</p>""")

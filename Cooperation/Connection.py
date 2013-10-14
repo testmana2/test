@@ -208,7 +208,8 @@ class Connection(QTcpSocket):
                not Preferences.getCooperation("AutoAcceptConnections"):
                 # don't ask for reverse connections or
                 # if we shall accept automatically
-                res = E5MessageBox.yesNo(None,
+                res = E5MessageBox.yesNo(
+                    None,
                     self.trUtf8("New Connection"),
                     self.trUtf8("""<p>Accept connection from """
                                 """<strong>{0}@{1}</strong>?</p>""").format(

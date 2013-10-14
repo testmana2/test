@@ -84,7 +84,8 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process.start(program, args)
         procStarted = self.process.waitForStarted(5000)
         if not procStarted:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

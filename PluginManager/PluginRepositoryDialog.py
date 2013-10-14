@@ -278,7 +278,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             self.closeAndInstall.emit()
         else:
             if ui is None or not ui.notificationsEnabled():
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Download Plugin Files"),
                     self.trUtf8("""The requested plugins were downloaded."""))
             self.downloadProgress.setValue(0)
@@ -320,14 +321,16 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 url = Preferences.getUI("PluginRepositoryUrl5")
                 if url != self.repositoryUrlEdit.text():
                     self.repositoryUrlEdit.setText(url)
-                    E5MessageBox.warning(self,
+                    E5MessageBox.warning(
+                        self,
                         self.trUtf8("Plugins Repository URL Changed"),
                         self.trUtf8(
                             """The URL of the Plugins Repository has"""
                             """ changed. Select the "Update" button to get"""
                             """ the new repository file."""))
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Read plugins repository file"),
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
                                 "could not be read. Select Update</p>")\
@@ -385,7 +388,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if reply.error() != QNetworkReply.NoError:
             ok = False
             if not self.__downloadCancelled:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Error downloading file"),
                     self.trUtf8(
                         """<p>Could not download the requested file"""
@@ -622,7 +626,8 @@ class PluginRepositoryWindow(E5MainWindow):
         
         if not os.path.isfile(applPath) or \
                 not proc.startDetached(sys.executable, args):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the process.<br>'

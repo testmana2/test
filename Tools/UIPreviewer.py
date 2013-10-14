@@ -294,12 +294,16 @@ class UIPreviewer(E5MainWindow):
         """
         Private slot to show the about information.
         """
-        E5MessageBox.about(self, self.trUtf8("UI Previewer"), self.trUtf8(
-            """<h3> About UI Previewer </h3>"""
-            """<p>The UI Previewer loads and displays Qt User-Interface"""
-            """ files with various styles, which are selectable via a"""
-            """ selection list.</p>"""
-        ))
+        E5MessageBox.about(
+            self,
+            self.trUtf8("UI Previewer"),
+            self.trUtf8(
+                """<h3> About UI Previewer </h3>"""
+                """<p>The UI Previewer loads and displays Qt User-Interface"""
+                """ files with various styles, which are selectable via a"""
+                """ selection list.</p>"""
+            )
+        )
     
     def __aboutQt(self):
         """
@@ -348,7 +352,8 @@ class UIPreviewer(E5MainWindow):
                 self.previewSV.setWidget(self.mainWidget)
                 self.mainWidget.show()
         else:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Load UI File"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be loaded.</p>""")\
@@ -436,7 +441,8 @@ class UIPreviewer(E5MainWindow):
         Private slot to handle the Save Image menu action.
         """
         if self.mainWidget is None:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save Image"),
                 self.trUtf8("""There is no UI file loaded."""))
             return
@@ -468,7 +474,8 @@ class UIPreviewer(E5MainWindow):
             pix = QPixmap.grabWidget(self.mainWidget)
         self.__updateChildren(self.lastStyle)
         if not pix.save(fname, str(ext)):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save Image"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be saved.</p>""")
@@ -479,7 +486,8 @@ class UIPreviewer(E5MainWindow):
         Private slot to handle the Copy Image menu action.
         """
         if self.mainWidget is None:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save Image"),
                 self.trUtf8("""There is no UI file loaded."""))
             return
@@ -496,7 +504,8 @@ class UIPreviewer(E5MainWindow):
         Private slot to handle the Print Image menu action.
         """
         if self.mainWidget is None:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Print Image"),
                 self.trUtf8("""There is no UI file loaded."""))
             return
@@ -536,7 +545,8 @@ class UIPreviewer(E5MainWindow):
         from PyQt4.QtGui import QPrintPreviewDialog
         
         if self.mainWidget is None:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Print Preview"),
                 self.trUtf8("""There is no UI file loaded."""))
             return

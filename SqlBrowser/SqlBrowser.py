@@ -79,7 +79,8 @@ class SqlBrowser(E5MainWindow):
         loop is up.
         """
         for warning in self.__warnings:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("SQL Browser startup problem"),
                 warning)
         
@@ -178,12 +179,16 @@ class SqlBrowser(E5MainWindow):
         """
         Private slot to show the about information.
         """
-        E5MessageBox.about(self, self.trUtf8("SQL Browser"), self.trUtf8(
-            """<h3>About SQL Browser</h3>"""
-            """<p>The SQL browser window is a little tool to examine """
-            """the data and the schema of a database and to execute """
-            """queries on a database.</p>"""
-        ))
+        E5MessageBox.about(
+            self,
+            self.trUtf8("SQL Browser"),
+            self.trUtf8(
+                """<h3>About SQL Browser</h3>"""
+                """<p>The SQL browser window is a little tool to examine """
+                """the data and the schema of a database and to execute """
+                """queries on a database.</p>"""
+            )
+        )
     
     def __aboutQt(self):
         """

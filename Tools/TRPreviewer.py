@@ -344,12 +344,16 @@ class TRPreviewer(E5MainWindow):
         """
         Private slot to show the about information.
         """
-        E5MessageBox.about(self, self.trUtf8("TR Previewer"), self.trUtf8(
-            """<h3> About TR Previewer </h3>"""
-            """<p>The TR Previewer loads and displays Qt User-Interface"""
-            """ files and translation files and shows dialogs for a"""
-            """ selected language.</p>"""
-        ))
+        E5MessageBox.about(
+            self,
+            self.trUtf8("TR Previewer"),
+            self.trUtf8(
+                """<h3> About TR Previewer </h3>"""
+                """<p>The TR Previewer loads and displays Qt User-Interface"""
+                """ files and translation files and shows dialogs for a"""
+                """ selected language.</p>"""
+            )
+        )
     
     def __aboutQt(self):
         """
@@ -467,7 +471,8 @@ class TranslationsDict(QObject):
             ntr.fileName = fileName
             ntr.name = self.__uniqueName(fileName)
             if ntr.name is None:
-                E5MessageBox.warning(self.parent(),
+                E5MessageBox.warning(
+                    self.parent(),
                     self.trUtf8("Set Translator"),
                     self.trUtf8("""<p>The translation filename <b>{0}</b>"""
                         """ is invalid.</p>""").format(fileName))
@@ -495,7 +500,8 @@ class TranslationsDict(QObject):
         if name != noTranslationName:
             trans = self.__findName(name)
             if trans is None:
-                E5MessageBox.warning(self.parent(),
+                E5MessageBox.warning(
+                    self.parent(),
                     self.trUtf8("Set Translator"),
                     self.trUtf8(
                         """<p>The translator <b>{0}</b> is not known.</p>""")\
@@ -637,7 +643,8 @@ class TranslationsDict(QObject):
         if tr.load(transFileName):
             return tr
         
-        E5MessageBox.warning(self.parent(),
+        E5MessageBox.warning(
+            self.parent(),
             self.trUtf8("Load Translator"),
             self.trUtf8("""<p>The translation file <b>{0}</b> could"""
                         """ not be loaded.</p>""").format(transFileName))
@@ -710,7 +717,8 @@ class WidgetView(QWidget):
             pass
         
         if not self.__widget:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Load UI File"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be loaded.</p>""")\
@@ -765,7 +773,8 @@ class WidgetArea(QMdiArea):
         if wview is None:
             name = os.path.basename(uiFileName)
             if not name:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Load UI File"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be loaded.</p>""")\

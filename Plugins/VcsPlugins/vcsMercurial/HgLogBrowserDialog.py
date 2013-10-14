@@ -424,7 +424,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     errMsg = self.trUtf8("Could not start the hg executable.")
             
             if errMsg:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Mercurial Error"),
                     errMsg)
             
@@ -466,7 +467,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
         
@@ -512,7 +514,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
         
@@ -707,7 +710,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         'The process {0} could not be started. '
@@ -1385,7 +1389,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if revs:
             shouldReopen = self.vcs.hgGraft(self.repodir, revs)
             if shouldReopen:
-                res = E5MessageBox.yesNo(None,
+                res = E5MessageBox.yesNo(
+                    None,
                     self.trUtf8("Copy Changesets"),
                     self.trUtf8(
                         """The project should be reread. Do this now?"""),

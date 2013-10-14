@@ -41,7 +41,8 @@ class AdBlockAccessHandler(SchemeAccessHandler):
         title = QUrl.fromPercentEncoding(url.encodedQueryItemValue("title"))
         if not title:
             return None
-        res = E5MessageBox.yesNo(None,
+        res = E5MessageBox.yesNo(
+            None,
             self.trUtf8("Subscribe?"),
             self.trUtf8(
                 """<p>Subscribe to this AdBlock subscription?</p>"""

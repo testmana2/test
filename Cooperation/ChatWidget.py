@@ -565,7 +565,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                     if ex:
                         fname += ex
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Save Chat"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
@@ -579,7 +580,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                     f.write(txt)
                     f.close()
                 except IOError as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Error saving Chat"),
                         self.trUtf8("""<p>The chat contents could not be"""
                                     """ written to <b>{0}</b></p>"""

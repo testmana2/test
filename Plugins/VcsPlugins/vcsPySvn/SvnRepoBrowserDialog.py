@@ -271,7 +271,8 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         
         @param msg error message to show (string)
         """
-        E5MessageBox.critical(self,
+        E5MessageBox.critical(
+            self,
             self.trUtf8("Subversion Error"),
             msg)
     

@@ -565,7 +565,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 fname += ex
         
         if os.path.exists(fname):
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("New Form"),
                 self.trUtf8("The file already exists! Overwrite it?"),
                 icon=E5MessageBox.Warning)
@@ -576,7 +577,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         try:
             shutil.copy(templateFile, fname)
         except IOError as e:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("New Form"),
                 self.trUtf8(
                     "<p>The new form file <b>{0}</b> could not be created.<br>"
@@ -672,7 +674,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
                 if not self.noDialog and not ui.notificationsEnabled():
-                    E5MessageBox.information(self,
+                    E5MessageBox.information(
+                        self,
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
@@ -685,7 +688,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.project.projectFormCompiled.emit(self.compiledFile)
             except IOError as msg:
                 if not self.noDialog:
-                    E5MessageBox.information(self,
+                    E5MessageBox.information(
+                        self,
                         self.trUtf8("Form Compilation"),
                         self.trUtf8(
                             "<p>The compilation of the form file failed.</p>"
@@ -699,7 +703,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                             "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Form Compilation"),
                     self.trUtf8("The compilation of the form file failed."))
             else:
@@ -780,7 +785,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.compileRunning = False
             if progress is not None:
                 progress.cancel()
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'Could not start {0}.<br>'

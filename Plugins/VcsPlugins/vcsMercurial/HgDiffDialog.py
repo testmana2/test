@@ -192,7 +192,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
                 QApplication.restoreOverrideCursor()
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         'The process {0} could not be started. '
@@ -419,7 +420,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             if ex:
                 fname += ex
         if QFileInfo(fname).exists():
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Save Diff"),
                 self.trUtf8("<p>The patch file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
@@ -434,7 +436,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             f.write(eol.join(self.contents.toPlainText().splitlines()))
             f.close()
         except IOError as why:
-            E5MessageBox.critical(self, self.trUtf8('Save Diff'),
+            E5MessageBox.critical(
+                self, self.trUtf8('Save Diff'),
                 self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                     .format(fname, str(why)))

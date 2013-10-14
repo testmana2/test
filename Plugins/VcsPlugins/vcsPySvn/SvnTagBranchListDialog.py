@@ -75,7 +75,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         
         reposURL = self.vcs.svnGetReposName(dname)
         if reposURL is None:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8(
                     """The URL of the project repository could not be"""
@@ -88,7 +89,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
             # determine the base path of the project in the repository
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
@@ -113,7 +115,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
                 self.close()
                 return False
             if not reposPath:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Subversion List"),
                     self.trUtf8(
                         """The repository URL is empty. Aborting..."""))

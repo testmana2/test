@@ -91,7 +91,8 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
                 path = path.replace(self.__projectPath, "")[1:]
                 self.pathEdit.setText(path)
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Add Sub-repository"),
                     self.trUtf8("""The sub-repository path must be inside"""
                                 """ the project."""))

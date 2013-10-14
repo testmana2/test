@@ -128,7 +128,8 @@ class E5SslErrorHandler(QObject):
             return E5SslErrorHandler.SystemIgnored, False
         
         errorString = '.</li><li>'.join(errorStrings)
-        ret = E5MessageBox.yesNo(None,
+        ret = E5MessageBox.yesNo(
+            None,
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
                         """<ul><li>{1}</li></ul></p>"""
@@ -142,7 +143,8 @@ class E5SslErrorHandler(QObject):
                 certinfos = []
                 for cert in caNew:
                     certinfos.append(self.__certToString(cert))
-                caRet = E5MessageBox.yesNo(None,
+                caRet = E5MessageBox.yesNo(
+                    None,
                     self.trUtf8("Certificates"),
                     self.trUtf8(
                         """<p>Certificates:<br/>{0}<br/>"""

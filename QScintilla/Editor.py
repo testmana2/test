@@ -312,7 +312,8 @@ class Editor(QsciScintillaCompat):
             if self.fileName is not None:
                 if (QFileInfo(self.fileName).size() // 1024) > \
                    Preferences.getEditor("WarnFilesize"):
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Open File"),
                         self.trUtf8("""<p>The size of the file <b>{0}</b>"""
                                     """ is <b>{1} KB</b>."""
@@ -1194,14 +1195,16 @@ class Editor(QsciScintillaCompat):
             if exporter:
                 exporter.exportSource()
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>No exporter available for the """
                         """export format <b>{0}</b>. Aborting...</p>""")\
                         .format(exporterFormat))
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Export source"),
                 self.trUtf8("""No export format given. Aborting..."""))
         
@@ -1664,7 +1667,8 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to handle the modificationAttempted signal.
         """
-        E5MessageBox.warning(self,
+        E5MessageBox.warning(
+            self,
             self.trUtf8("Modification of Read Only file"),
             self.trUtf8("""You are attempting to change a read only file. """
                         """Please save to a different file first."""))
@@ -2700,7 +2704,8 @@ class Editor(QsciScintillaCompat):
             fn = self.fileName
             if fn is None:
                 fn = self.noName
-            res = E5MessageBox.okToClearData(self,
+            res = E5MessageBox.okToClearData(
+                self,
                 self.trUtf8("File Modified"),
                 self.trUtf8("<p>The file <b>{0}</b> has unsaved changes.</p>")
                     .format(fn),
@@ -2748,7 +2753,9 @@ class Editor(QsciScintillaCompat):
             txt, self.encoding = Utilities.readEncodedFile(fn)
         except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.vm, self.trUtf8('Open File'),
+            E5MessageBox.critical(
+                self.vm,
+                self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
                             '<p>Reason: {1}</p>')
                     .format(fn, str(why)))
@@ -2849,7 +2856,9 @@ class Editor(QsciScintillaCompat):
                 os.chmod(fn, permissions)
             return True
         except (IOError, Utilities.CodingError, UnicodeError) as why:
-            E5MessageBox.critical(self, self.trUtf8('Save File'),
+            E5MessageBox.critical(
+                self,
+                self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
                     .format(fn, str(why)))
@@ -2914,7 +2923,8 @@ class Editor(QsciScintillaCompat):
                     if ex:
                         fn += ex
                 if QFileInfo(fn).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Save File"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fn),
@@ -4215,7 +4225,8 @@ class Editor(QsciScintillaCompat):
         elif acs == QsciScintilla.AcsAll:
             self.autoCompleteFromAll()
         else:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Autocompletion"),
                 self.trUtf8("""Autocompletion is not available because"""
                     """ there is no autocompletion source set."""))
@@ -4314,7 +4325,8 @@ class Editor(QsciScintillaCompat):
         """
         if self.__acHookFunction is not None:
             # there is another provider registered already
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Activating Auto-Completion Provider"),
                 self.trUtf8("""Auto-completion provider cannot be connected"""
                             """ because there is already another one active."""
@@ -4502,7 +4514,8 @@ class Editor(QsciScintillaCompat):
         """
         if self.__ctHookFunction is not None:
             # there is another provider registered already
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Activating Calltip Provider"),
                 self.trUtf8("""Calltip provider cannot be connected"""
                             """ because there is already another one active."""
@@ -5127,13 +5140,15 @@ class Editor(QsciScintillaCompat):
                     self.coverageMarkersShown.emit(True)
             else:
                 if not silent:
-                    E5MessageBox.information(self,
+                    E5MessageBox.information(
+                        self,
                         self.trUtf8("Show Code Coverage Annotations"),
                         self.trUtf8("""All lines have been covered."""))
             self.showingNotcoveredMarkers = True
         else:
             if not silent:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Show Code Coverage Annotations"),
                     self.trUtf8("""There is no coverage file available."""))
         
@@ -5364,12 +5379,14 @@ class Editor(QsciScintillaCompat):
         for handle in list(self.syntaxerrors.keys()):
             if self.markerLine(handle) == line:
                 errors = [e[0] for e in self.syntaxerrors[handle]]
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Syntax Error"),
                     "\n".join(errors))
                 break
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Syntax Error"),
                 self.trUtf8("No syntax error message available."))
     
@@ -5494,12 +5511,14 @@ class Editor(QsciScintillaCompat):
         
         for handle in list(self.warnings.keys()):
             if self.markerLine(handle) == line:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Warning"),
                     '\n'.join([w[0] for w in self.warnings[handle]]))
                 break
         else:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Warning"),
                 self.trUtf8("No warning messages available."))
     
@@ -5665,7 +5684,8 @@ class Editor(QsciScintillaCompat):
             lines = f.readlines()
             f.close()
         except IOError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error loading macro"),
                 self.trUtf8(
                     "<p>The macro file <b>{0}</b> could not be read.</p>")
@@ -5673,7 +5693,8 @@ class Editor(QsciScintillaCompat):
             return
         
         if len(lines) != 2:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error loading macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> is corrupt.</p>")
                     .format(fname))
@@ -5709,7 +5730,8 @@ class Editor(QsciScintillaCompat):
             if ex:
                 fname += ex
         if QFileInfo(fname).exists():
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Save macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
@@ -5724,7 +5746,8 @@ class Editor(QsciScintillaCompat):
             f.write(self.macros[name].save())
             f.close()
         except IOError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error saving macro"),
                 self.trUtf8(
                     "<p>The macro file <b>{0}</b> could not be written.</p>")
@@ -5736,7 +5759,8 @@ class Editor(QsciScintillaCompat):
         Public method to start macro recording.
         """
         if self.recording:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Start Macro Recording"),
                 self.trUtf8("Macro recording is already active. Start new?"),
                 icon=E5MessageBox.Warning,
@@ -5893,7 +5917,8 @@ class Editor(QsciScintillaCompat):
                         """<br><b>Warning:</b> You will lose"""
                         """ your changes upon reopening it.""")
                     yesDefault = False
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("File changed"), msg,
                     icon=E5MessageBox.Warning,
                     yesDefault=yesDefault)
@@ -6153,7 +6178,8 @@ class Editor(QsciScintillaCompat):
                     if not QFileInfo(fname).isDir():
                         self.vm.openSourceFile(fname)
                     else:
-                        E5MessageBox.information(self,
+                        E5MessageBox.information(
+                            self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
                                 .format(fname))
@@ -6310,7 +6336,8 @@ class Editor(QsciScintillaCompat):
         
         package = os.path.isdir(self.fileName) and \
             self.fileName or os.path.dirname(self.fileName)
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
@@ -6329,7 +6356,8 @@ class Editor(QsciScintillaCompat):
         
         package = os.path.isdir(self.fileName) and self.fileName \
             or os.path.dirname(self.fileName)
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
         self.importsDiagram = UMLDialog(
@@ -6342,7 +6370,8 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Imports Diagram context menu action.
         """
         from Graphics.UMLDialog import UMLDialog
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
@@ -7038,7 +7067,8 @@ class Editor(QsciScintillaCompat):
                     try:
                         txt = float(txt)
                     except ValueError:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("Sort Lines"),
                             self.trUtf8(
                                 """The selection contains illegal data for a"""

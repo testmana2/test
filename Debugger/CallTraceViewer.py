@@ -132,7 +132,8 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
                     if ex:
                         fname += ex
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Save Call Trace Info"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
@@ -155,7 +156,8 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
                         itm = self.callTrace.itemBelow(itm)
                     f.close()
                 except IOError as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Error saving Call Trace Info"),
                         self.trUtf8("""<p>The call trace info could not"""
                                     """ be written to <b>{0}</b></p>"""

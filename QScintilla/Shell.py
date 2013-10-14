@@ -1539,7 +1539,8 @@ class Shell(QsciScintillaCompat):
                     if not QFileInfo(fname).isDir():
                         self.vm.openSourceFile(fname)
                     else:
-                        E5MessageBox.information(self,
+                        E5MessageBox.information(
+                            self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
                                 .format(fname))

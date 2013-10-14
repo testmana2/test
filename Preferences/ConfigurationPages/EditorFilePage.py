@@ -186,7 +186,8 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         """
         if not self.__showsOpenFilters and \
            filter.count("*") != 1:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Add File Filter"),
                 self.trUtf8("""A Save File Filter must contain exactly one"""
                             """ wildcard pattern. Yours contains {0}.""")\
@@ -194,7 +195,8 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             return False
         
         if filter.count("*") == 0:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Add File Filter"),
                 self.trUtf8("""A File Filter must contain at least one"""
                             """ wildcard pattern."""))

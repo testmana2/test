@@ -557,7 +557,8 @@ class ConfigurationWidget(QWidget):
                 mod = getattr(mod, comp)
             return mod
         except ImportError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Configuration Page Error"),
                 self.trUtf8("""<p>The configuration page <b>{0}</b>"""
                             """ could not be loaded.</p>""").format(name))

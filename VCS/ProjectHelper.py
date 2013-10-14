@@ -166,7 +166,8 @@ class VcsProjectHelper(QObject):
                 self.project.pdata["VCS"] = [vcsSystem]
                 self.project.vcs = self.project.initVCS(vcsSystem)
                 # edit VCS command options
-                vcores = E5MessageBox.yesNo(self.parent(),
+                vcores = E5MessageBox.yesNo(
+                    self.parent(),
                     self.trUtf8("New Project"),
                     self.trUtf8(
                         """Would you like to edit the VCS command options?"""))
@@ -181,7 +182,8 @@ class VcsProjectHelper(QObject):
                     try:
                         os.makedirs(projectdir)
                     except EnvironmentError:
-                        E5MessageBox.critical(self.parent(),
+                        E5MessageBox.critical(
+                            self.parent(),
                             self.trUtf8("Create project directory"),
                             self.trUtf8(
                                 "<p>The project directory <b>{0}</b> could not"
@@ -224,7 +226,8 @@ class VcsProjectHelper(QObject):
                             self.project.setDirty(True)
                             self.project.saveProject()
                     else:
-                        res = E5MessageBox.yesNo(self.parent(),
+                        res = E5MessageBox.yesNo(
+                            self.parent(),
                             self.trUtf8("New project from repository"),
                             self.trUtf8(
                                 "The project retrieved from the repository"
@@ -342,7 +345,8 @@ class VcsProjectHelper(QObject):
             if vcsdlg.exec_() == QDialog.Accepted:
                 vcsDataDict = vcsdlg.getData()
                 # edit VCS command options
-                vcores = E5MessageBox.yesNo(self.parent(),
+                vcores = E5MessageBox.yesNo(
+                    self.parent(),
                     self.trUtf8("Import Project"),
                     self.trUtf8(
                         """Would you like to edit the VCS command options?"""))
@@ -373,7 +377,8 @@ class VcsProjectHelper(QObject):
         """
         shouldReopen = self.vcs.vcsUpdate(self.project.ppath)
         if shouldReopen:
-            res = E5MessageBox.yesNo(self.parent(),
+            res = E5MessageBox.yesNo(
+                self.parent(),
                 self.trUtf8("Update"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -398,7 +403,8 @@ class VcsProjectHelper(QObject):
         Depending on the parameters set in the vcs object the project
         may be removed from the local disk as well.
         """
-        res = E5MessageBox.yesNo(self.parent(),
+        res = E5MessageBox.yesNo(
+            self.parent(),
             self.trUtf8("Remove project from repository"),
             self.trUtf8("Dou you really want to remove this project from"
                 " the repository (and disk)?"))
@@ -458,7 +464,8 @@ class VcsProjectHelper(QObject):
         """
         shouldReopen = self.vcs.vcsSwitch(self.project.ppath)
         if shouldReopen:
-            res = E5MessageBox.yesNo(self.parent(),
+            res = E5MessageBox.yesNo(
+                self.parent(),
                 self.trUtf8("Switch"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)

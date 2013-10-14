@@ -306,7 +306,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         itmseq = itm.text(col)
                         # step 1: check if shortcut is already allocated
                         if keystr == itmseq:
-                            res = E5MessageBox.yesNo(self,
+                            res = E5MessageBox.yesNo(
+                                self,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(
                                     """<p><b>{0}</b> has already been"""
@@ -325,7 +326,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         
                         # step 2: check if shortcut hides an already allocated
                         if itmseq.startswith("{0}+".format(keystr)):
-                            res = E5MessageBox.yesNo(self,
+                            res = E5MessageBox.yesNo(
+                                self,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(
                                     """<p><b>{0}</b> hides the <b>{1}</b>"""
@@ -341,7 +343,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         # step 3: check if shortcut is hidden by an
                         #         already allocated
                         if keystr.startswith("{0}+".format(itmseq)):
-                            res = E5MessageBox.yesNo(self,
+                            res = E5MessageBox.yesNo(
+                                self,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(
                                     """<p><b>{0}</b> is hidden by the """

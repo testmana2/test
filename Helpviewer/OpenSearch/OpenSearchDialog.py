@@ -61,7 +61,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         osm = self.__mw.openSearchManager()
         for fileName in fileNames:
             if not osm.addEngine(fileName):
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Add search engine"),
                     self.trUtf8(
                         """{0} is not a valid OpenSearch 1.1 description or"""
@@ -73,7 +74,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         Private slot to delete the selected search engines.
         """
         if self.enginesTable.model().rowCount() == 1:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Delete selected engines"),
                 self.trUtf8("""You must have at least one search engine."""))
         

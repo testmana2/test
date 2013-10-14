@@ -66,7 +66,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         for fileName in fileNames:
             ns = QHelpEngineCore.namespaceName(fileName)
             if not ns:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Add Documentation"),
                     self.trUtf8(
                         """The file <b>{0}</b> is not a valid"""
@@ -75,7 +76,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                 continue
             
             if len(self.documentsList.findItems(ns, Qt.MatchFixedString)):
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Add Documentation"),
                     self.trUtf8(
                         """The namespace <b>{0}</b> is already registered.""")\
@@ -94,7 +96,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         Private slot to remove a document from the help database.
         """
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.question(
+            self,
             self.trUtf8("Remove Documentation"),
             self.trUtf8(
                 """Do you really want to remove the selected documentation """
@@ -108,7 +111,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         for item in items:
             ns = item.text()
             if ns in list(openedDocs.values()):
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Remove Documentation"),
                     self.trUtf8(
                         """Some documents currently opened reference the """

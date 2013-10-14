@@ -135,7 +135,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         if self.__server:
             if Preferences.getIrc("AskOnShutdown"):
-                ok = E5MessageBox.yesNo(self,
+                ok = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Disconnect from Server"),
                     self.trUtf8(
                         """<p>Do you really want to disconnect from"""
@@ -184,7 +185,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 if self.__server:
                     useSSL = self.__server.useSSL()
                     if useSSL and not SSL_AVAILABLE:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("SSL Connection"),
                             self.trUtf8(
                                 """An encrypted connection to the IRC"""
@@ -230,7 +232,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             if silent:
                 ok = True
             else:
-                ok = E5MessageBox.yesNo(self,
+                ok = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Disconnect from Server"),
                     self.trUtf8("""<p>Do you really want to disconnect from"""
                                 """ <b>{0}</b>?</p><p>All channels will be"""

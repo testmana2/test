@@ -162,7 +162,8 @@ class DebuggerInterfaceRuby(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
                 if process is None:
-                    E5MessageBox.critical(None,
+                    E5MessageBox.critical(
+                        None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
                             """<p>The debugger backend could not be"""
@@ -208,7 +209,8 @@ class DebuggerInterfaceRuby(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)
                 if process is None:
-                    E5MessageBox.critical(None,
+                    E5MessageBox.critical(
+                        None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
                             """<p>The debugger backend could not be"""
@@ -219,7 +221,8 @@ class DebuggerInterfaceRuby(QObject):
             [debugClient, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8("Start Debugger"),
                 self.trUtf8(
                     """<p>The debugger backend could not be started.</p>"""))
@@ -258,7 +261,8 @@ class DebuggerInterfaceRuby(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
                 if process is None:
-                    E5MessageBox.critical(None,
+                    E5MessageBox.critical(
+                        None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
                             """<p>The debugger backend could not be"""
@@ -304,7 +308,8 @@ class DebuggerInterfaceRuby(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)
                 if process is None:
-                    E5MessageBox.critical(None,
+                    E5MessageBox.critical(
+                        None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(
                             """<p>The debugger backend could not be"""
@@ -315,7 +320,8 @@ class DebuggerInterfaceRuby(QObject):
             [debugClient, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8("Start Debugger"),
                 self.trUtf8(
                     """<p>The debugger backend could not be started.</p>"""))

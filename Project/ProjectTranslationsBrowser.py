@@ -753,7 +753,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             except IndexError:
                 langs = []
         if not langs:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Write temporary project file"),
                 self.trUtf8("""No translation files (*.ts) selected."""))
             return False
@@ -798,7 +799,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 pf.close()
                 self.__tmpProjects.append(outFile)
             except IOError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Write temporary project file"),
                     self.trUtf8(
                         "<p>The temporary project file <b>{0}</b> could not"
@@ -912,13 +914,15 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         "The generation of the translation files (*.ts)"
                         " was successful."))
             else:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Translation file generation"),
                     self.trUtf8(
                         "The generation of the translation files (*.ts)"
                         " was successful."))
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Translation file generation"),
                 self.trUtf8(
                     "The generation of the translation files (*.ts) has"
@@ -1025,7 +1029,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.pylupdateProcRunning = True
                 self.__pylupdateProcesses.append((proc, tempProjectFile))
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         'Could not start {0}.<br>'
@@ -1093,7 +1098,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.trUtf8("The release of the translation files (*.qm)"
                         " was successful."))
             else:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Translation file release"),
                     self.trUtf8("The release of the translation files (*.qm)"
                         " was successful."))
@@ -1108,7 +1114,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         if os.path.exists(qmFile):
                             shutil.move(qmFile, target)
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Translation file release"),
                 self.trUtf8(
                     "The release of the translation files (*.qm) has failed."))
@@ -1193,7 +1200,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.lreleaseProcRunning = True
                 self.__lreleaseProcesses.append((proc, tempProjectFile))
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         '<p>Could not start lrelease.<br>'

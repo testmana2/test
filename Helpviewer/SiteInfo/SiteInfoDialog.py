@@ -244,7 +244,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         else:
             cacheData = None
         if not cacheData:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save Image"),
                 self.trUtf8("""This image is not available."""))
             return
@@ -264,7 +265,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         
         f = QFile(filename)
         if not f.open(QFile.WriteOnly):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Save Image"),
                 self.trUtf8(
                     """<p>Cannot write to file <b>{0}</b>.</p>""")

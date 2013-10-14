@@ -403,7 +403,8 @@ class Queues(HgExtension):
                 else:
                     return False
             else:
-                E5MessageBox.information(None,
+                E5MessageBox.information(
+                    None,
                     self.trUtf8("Select Patch"),
                     self.trUtf8("""No patches to select from."""))
                 return False
@@ -515,7 +516,8 @@ class Queues(HgExtension):
                 if res:
                     dia.exec_()
         else:
-            E5MessageBox.information(None,
+            E5MessageBox.information(
+                None,
                 self.trUtf8("Select Patch"),
                 self.trUtf8("""No patches to select from."""))
     
@@ -553,11 +555,13 @@ class Queues(HgExtension):
                     if res:
                         dia.exec_()
                 else:
-                    E5MessageBox.information(None,
+                    E5MessageBox.information(
+                        None,
                         self.trUtf8("Fold Patches"),
                         self.trUtf8("""No patches selected."""))
         else:
-            E5MessageBox.information(None,
+            E5MessageBox.information(
+                None,
                 self.trUtf8("Fold Patches"),
                 self.trUtf8("""No patches available to be folded."""))
     
@@ -583,7 +587,8 @@ class Queues(HgExtension):
             self.queuesListGuardsDialog.show()
             self.queuesListGuardsDialog.start(name)
         else:
-            E5MessageBox.information(None,
+            E5MessageBox.information(
+                None,
                 self.trUtf8("List Guards"),
                 self.trUtf8("""No patches available to list guards for."""))
     
@@ -620,7 +625,8 @@ class Queues(HgExtension):
             self.queuesDefineGuardsDialog.show()
             self.queuesDefineGuardsDialog.start(name)
         else:
-            E5MessageBox.information(None,
+            E5MessageBox.information(
+                None,
                 self.trUtf8("Define Guards"),
                 self.trUtf8("""No patches available to define guards for."""))
     
@@ -665,7 +671,8 @@ class Queues(HgExtension):
                     if procStarted:
                         process.waitForFinished(30000)
         else:
-            E5MessageBox.information(None,
+            E5MessageBox.information(
+                None,
                 self.trUtf8("Drop All Guards"),
                 self.trUtf8("""No patches available to define guards for."""))
     
@@ -701,7 +708,8 @@ class Queues(HgExtension):
                     if res:
                         dia.exec_()
         else:
-            E5MessageBox.information(None,
+            E5MessageBox.information(
+                None,
                 self.trUtf8("Set Active Guards"),
                 self.trUtf8("""No guards available to select from."""))
             return
@@ -807,7 +815,8 @@ class Queues(HgExtension):
                     else:
                         errMsg = self.trUtf8(
                             "Error while renaming the active queue.")
-                    E5MessageBox.warning(None,
+                    E5MessageBox.warning(
+                        None,
                         title,
                         """<p>{0}</p><p>{1}</p>""".format(errMsg, error))
                 else:
@@ -883,7 +892,8 @@ class Queues(HgExtension):
                     elif operation == Queues.QUEUE_ACTIVATE:
                         errMsg = self.trUtf8(
                             "Error while setting the active queue.")
-                    E5MessageBox.warning(None,
+                    E5MessageBox.warning(
+                        None,
                         title,
                         """<p>{0}</p><p>{1}</p>""".format(errMsg, error))
                 else:

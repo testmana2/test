@@ -241,7 +241,8 @@ and so on.</td></tr>
                 self.ui.replaceButton.setEnabled(True)
                 self.ui.replaceSearchButton.setEnabled(True)
         else:
-            E5MessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(
+                self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(txt))
 
     @pyqtSlot()
@@ -277,7 +278,8 @@ and so on.</td></tr>
                 self.ui.replaceButton.setEnabled(True)
                 self.ui.replaceSearchButton.setEnabled(True)
         else:
-            E5MessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(
+                self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(txt))
     
     def __findByReturnPressed(self):
@@ -626,8 +628,9 @@ and so on.</td></tr>
             if not ok:
                 self.ui.replaceButton.setEnabled(False)
                 self.ui.replaceSearchButton.setEnabled(False)
-                E5MessageBox.information(self, self.windowTitle(),
-                self.trUtf8("'{0}' was not found.").format(ftxt))
+                E5MessageBox.information(
+                    self, self.windowTitle(),
+                    self.trUtf8("'{0}' was not found.").format(ftxt))
         else:
             self.ui.replaceButton.setEnabled(False)
             self.ui.replaceSearchButton.setEnabled(False)
@@ -744,11 +747,13 @@ and so on.</td></tr>
         self.ui.replaceSearchButton.setEnabled(False)
         
         if found:
-            E5MessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(
+                self, self.windowTitle(),
                 self.trUtf8("Replaced {0} occurrences.")
                     .format(replacements))
         else:
-            E5MessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(
+                self, self.windowTitle(),
                 self.trUtf8("Nothing replaced because '{0}' was not found.")
                     .format(ftxt))
         

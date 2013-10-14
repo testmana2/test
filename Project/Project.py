@@ -310,7 +310,8 @@ class Project(QObject):
         if progLanguages:
             for progLanguage in progLanguages:
                 if progLanguage not in self.__projectProgLanguages:
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Registering Project Type"),
                         self.trUtf8(
                             """<p>The Programming Language <b>{0}</b> is not"""
@@ -320,7 +321,8 @@ class Project(QObject):
                     return
                 
                 if type_ in self.__projectProgLanguages[progLanguage]:
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Registering Project Type"),
                         self.trUtf8(
                             """<p>The Project type <b>{0}</b> is already"""
@@ -331,7 +333,8 @@ class Project(QObject):
                     return
             
         if type_ in self.__projectTypes:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Registering Project Type"),
                 self.trUtf8("""<p>The Project type <b>{0}</b> is already"""
                             """ registered.</p>""").format(type_)
@@ -664,7 +667,8 @@ class Project(QObject):
             f.close()
         else:
             QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8(
                     "<p>The project file <b>{0}</b> could not be read.</p>")\
@@ -763,7 +767,8 @@ class Project(QObject):
                 os.path.basename(fn))[0]).writeXML()
             res = True
         else:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Save project file"),
                 self.trUtf8(
                     "<p>The project file <b>{0}</b> could not be"
@@ -798,7 +803,8 @@ class Project(QObject):
                 reader.readXML()
                 f.close()
             else:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Read user project properties"),
                     self.trUtf8(
                         "<p>The user specific project properties file"
@@ -821,7 +827,8 @@ class Project(QObject):
                 f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             f.close()
         else:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Save user project properties"),
                 self.trUtf8(
                     "<p>The user specific project properties file <b>{0}</b>"
@@ -854,7 +861,8 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8("Please save the project first."))
             return
@@ -871,7 +879,8 @@ class Project(QObject):
             f.close()
         else:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8(
                         "<p>The project session file <b>{0}</b> could not be"
@@ -887,7 +896,8 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Save project session"),
                     self.trUtf8("Please save the project first."))
             return
@@ -904,7 +914,8 @@ class Project(QObject):
             f.close()
         else:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Save project session"),
                     self.trUtf8(
                         "<p>The project session file <b>{0}</b> could not be"
@@ -915,7 +926,8 @@ class Project(QObject):
         Private method to delete the session file.
         """
         if self.pfile is None:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Delete project session"),
                 self.trUtf8("Please save the project first."))
             return
@@ -928,7 +940,8 @@ class Project(QObject):
                 try:
                     os.remove(fn)
                 except OSError:
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Delete project session"),
                         self.trUtf8(
                             "<p>The project session file <b>{0}</b> could"
@@ -939,7 +952,8 @@ class Project(QObject):
         Private method to read in the project tasks file (.e4t).
         """
         if self.pfile is None:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("Please save the project first."))
             return
@@ -955,7 +969,8 @@ class Project(QObject):
             reader.readXML()
             f.close()
         else:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be read.</p>")\
@@ -974,7 +989,8 @@ class Project(QObject):
         f = QFile(fn)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Save tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be written.</p>")
@@ -1012,7 +1028,8 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1028,7 +1045,8 @@ class Project(QObject):
             f.close()
         else:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8(
                         "<p>The project debugger properties file <b>{0}</b>"
@@ -1043,7 +1061,8 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Save debugger properties"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1059,7 +1078,8 @@ class Project(QObject):
             f.close()
         else:
             if not quiet:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Save debugger properties"),
                     self.trUtf8(
                         "<p>The project debugger properties file <b>{0}</b>"
@@ -1070,7 +1090,8 @@ class Project(QObject):
         Private method to delete the project debugger properties file (.e4d).
         """
         if self.pfile is None:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Delete debugger properties"),
                 self.trUtf8("Please save the project first."))
             return
@@ -1083,7 +1104,8 @@ class Project(QObject):
                 try:
                     os.remove(fn)
                 except OSError:
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Delete debugger properties"),
                         self.trUtf8(
                             "<p>The project debugger properties file"
@@ -1178,7 +1200,8 @@ class Project(QObject):
         """
         if len(self.pdata["TRANSLATIONPATTERN"]) == 0 or \
            self.pdata["TRANSLATIONPATTERN"][0] == '':
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Add Language"),
                 self.trUtf8(
                     "You have to specify a translation pattern first."))
@@ -1272,7 +1295,8 @@ class Project(QObject):
             if os.path.exists(fn):
                 os.remove(fn)
         except IOError:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Delete translation"),
                 self.trUtf8(
                     "<p>The selected translation file <b>{0}</b> could not be"
@@ -1292,7 +1316,8 @@ class Project(QObject):
                 if os.path.exists(fn):
                     os.remove(fn)
             except IOError:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Delete translation"),
                     self.trUtf8(
                         "<p>The selected translation file <b>{0}</b> could"
@@ -1416,7 +1441,8 @@ class Project(QObject):
                                 os.makedirs(target)
                                 
                             if os.path.exists(targetfile):
-                                res = E5MessageBox.yesNo(self.ui,
+                                res = E5MessageBox.yesNo(
+                                    self.ui,
                                     self.trUtf8("Add file"),
                                     self.trUtf8(
                                         "<p>The file <b>{0}</b> already"
@@ -1428,7 +1454,8 @@ class Project(QObject):
                                     
                             shutil.copy(fn, target)
                         except IOError as why:
-                            E5MessageBox.critical(self.ui,
+                            E5MessageBox.critical(
+                                self.ui,
                                 self.trUtf8("Add file"),
                                 self.trUtf8(
                                     "<p>The selected file <b>{0}</b> could"
@@ -1439,7 +1466,8 @@ class Project(QObject):
                     
                     self.appendFile(targetfile, isSource or filter == 'source')
             else:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Add file"),
                     self.trUtf8("The target directory must not be empty."))
         
@@ -1469,7 +1497,8 @@ class Project(QObject):
         
         if len(files) == 0:
             if not quiet:
-                E5MessageBox.information(self.ui,
+                E5MessageBox.information(
+                    self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The source directory doesn't contain"
                         " any files belonging to the selected category.</p>"))
@@ -1480,7 +1509,8 @@ class Project(QObject):
             try:
                 os.makedirs(target)
             except IOError as why:
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8(
                         "<p>The target directory <b>{0}</b> could not be"
@@ -1497,7 +1527,8 @@ class Project(QObject):
             if not Utilities.samepath(target, source):
                 try:
                     if os.path.exists(targetfile):
-                        res = E5MessageBox.yesNo(self.ui,
+                        res = E5MessageBox.yesNo(
+                            self.ui,
                             self.trUtf8("Add directory"),
                             self.trUtf8(
                                 "<p>The file <b>{0}</b> already exists.</p>"
@@ -1550,7 +1581,8 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             filetype, source, target, recursive = dlg.getData()
             if target == '':
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("The target directory must not be empty."))
                 return
@@ -1560,7 +1592,8 @@ class Project(QObject):
                 return
             
             if source == '':
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("The source directory must not be empty."))
                 return
@@ -1694,7 +1727,8 @@ class Project(QObject):
             newfn = Utilities.toNativeSeparators(newfn)
         
         if os.path.exists(newfn):
-            res = E5MessageBox.yesNo(self.ui,
+            res = E5MessageBox.yesNo(
+                self.ui,
                 self.trUtf8("Rename File"),
                 self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                             """ Overwrite it?</p>""")
@@ -1706,7 +1740,8 @@ class Project(QObject):
         try:
             os.rename(oldfn, newfn)
         except OSError as msg:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Rename File"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be renamed.<br />"""
@@ -1897,7 +1932,8 @@ class Project(QObject):
                 for f in glob.glob(pat):
                     os.remove(f)
         except EnvironmentError:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Delete file"),
                 self.trUtf8(
                     "<p>The selected file <b>{0}</b> could not be"
@@ -1921,7 +1957,8 @@ class Project(QObject):
         try:
             shutil.rmtree(dn, True)
         except EnvironmentError:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Delete directory"),
                 self.trUtf8("<p>The selected directory <b>{0}</b> could not be"
                     " deleted.</p>").format(dn))
@@ -2002,7 +2039,8 @@ class Project(QObject):
                 try:
                     os.makedirs(self.ppath)
                 except EnvironmentError:
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Create project directory"),
                         self.trUtf8(
                             "<p>The project directory <b>{0}</b> could not"
@@ -2059,7 +2097,8 @@ class Project(QObject):
                             f = open(ms, "w")
                             f.close()
                         except IOError as err:
-                            E5MessageBox.critical(self.ui,
+                            E5MessageBox.critical(
+                                self.ui,
                                 self.trUtf8("Create main script"),
                                 self.trUtf8(
                                     "<p>The mainscript <b>{0}</b> could not"
@@ -2070,7 +2109,8 @@ class Project(QObject):
                     ms = ""
                 
                 # add existing files to the project
-                res = E5MessageBox.yesNo(self.ui,
+                res = E5MessageBox.yesNo(
+                    self.ui,
                     self.trUtf8("New Project"),
                     self.trUtf8("""Add existing files to the project?"""),
                     yesDefault=True)
@@ -2119,7 +2159,8 @@ class Project(QObject):
                         self.setDirty(True)
                         if self.vcs is not None:
                             # edit VCS command options
-                            vcores = E5MessageBox.yesNo(self.ui,
+                            vcores = E5MessageBox.yesNo(
+                                self.ui,
                                 self.trUtf8("New Project"),
                                 self.trUtf8(
                                     """Would you like to edit the VCS"""
@@ -2132,7 +2173,8 @@ class Project(QObject):
                                     self.vcs.vcsSetOptions(codlg.getOptions())
                             # add project file to repository
                             if res == 0:
-                                apres = E5MessageBox.yesNo(self.ui,
+                                apres = E5MessageBox.yesNo(
+                                    self.ui,
                                     self.trUtf8("New project"),
                                     self.trUtf8(
                                         "Shall the project file be added"
@@ -2182,7 +2224,8 @@ class Project(QObject):
                 self.setDirty(True)
                 if self.vcs is not None:
                     # edit VCS command options
-                    vcores = E5MessageBox.yesNo(self.ui,
+                    vcores = E5MessageBox.yesNo(
+                        self.ui,
                         self.trUtf8("New Project"),
                         self.trUtf8(
                             """Would you like to edit the VCS command"""
@@ -2640,7 +2683,8 @@ class Project(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = E5MessageBox.yesNo(self.ui,
+                res = E5MessageBox.yesNo(
+                    self.ui,
                     self.trUtf8("Save File"),
                     self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                                 """ Overwrite it?</p>""").format(fn),
@@ -2677,7 +2721,8 @@ class Project(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = E5MessageBox.okToClearData(self.parent(),
+            res = E5MessageBox.okToClearData(
+                self.parent(),
                 self.trUtf8("Close Project"),
                 self.trUtf8("The current project has unsaved changes."),
                 self.saveProject)
@@ -2806,7 +2851,8 @@ class Project(QObject):
                     filesWithSyntaxErrors += 1
         
         if reportSyntaxErrors and filesWithSyntaxErrors > 0:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Syntax errors detected"),
                 self.trUtf8(
                     """The project contains %n file(s) with syntax errors.""",
@@ -2837,7 +2883,8 @@ class Project(QObject):
                     filesWithSyntaxErrors += 1
         
         if reportSyntaxErrors and filesWithSyntaxErrors > 0:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Syntax errors detected"),
                 self.trUtf8(
                     """The project contains %n file(s) with syntax errors.""",
@@ -3923,7 +3970,8 @@ class Project(QObject):
         # if newfiles is empty, put up message box informing user nothing found
         if not newFiles:
             if onUserDemand:
-                E5MessageBox.information(self.ui,
+                E5MessageBox.information(
+                    self.ui,
                     self.trUtf8("Search New Files"),
                     self.trUtf8("There were no new files found to be added."))
             return
@@ -4057,7 +4105,8 @@ class Project(QObject):
                 if override:
                     # override failed, revert to original
                     QApplication.restoreOverrideCursor()
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Version Control System"),
                         self.trUtf8(
                             "<p>The selected VCS <b>{0}</b> could not be"
@@ -4067,7 +4116,8 @@ class Project(QObject):
                     return self.initVCS(nooverride=True)
                 
                 QApplication.restoreOverrideCursor()
-                E5MessageBox.critical(self.ui,
+                E5MessageBox.critical(
+                    self.ui,
                     self.trUtf8("Version Control System"),
                     self.trUtf8(
                         "<p>The selected VCS <b>{0}</b> could not be"
@@ -4183,7 +4233,8 @@ class Project(QObject):
         """
         fn = self.getMainScript(True)
         if fn is None:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Coverage Data"),
                 self.trUtf8("There is no main script defined for the"
                     " current project. Aborting"))
@@ -4230,7 +4281,8 @@ class Project(QObject):
         """
         fn = self.getMainScript(True)
         if fn is None:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Profile Data"),
                 self.trUtf8("There is no main script defined for the"
                     " current project. Aborting"))
@@ -4305,7 +4357,8 @@ class Project(QObject):
         """
         Private method to handle the application diagram context menu action.
         """
-        res = E5MessageBox.yesNo(self.ui,
+        res = E5MessageBox.yesNo(
+            self.ui,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
@@ -4422,7 +4475,8 @@ class Project(QObject):
         """
         pkglist = os.path.join(self.ppath, "PKGLIST")
         if os.path.exists(pkglist):
-            res = E5MessageBox.yesNo(self.ui,
+            res = E5MessageBox.yesNo(
+                self.ui,
                 self.trUtf8("Create Package List"),
                 self.trUtf8("<p>The file <b>PKGLIST</b> already"
                     " exists.</p><p>Overwrite it?</p>"),
@@ -4459,7 +4513,8 @@ class Project(QObject):
             pkglistFile.write("\n")  # ensure the file ends with an empty line
             pkglistFile.close()
         except IOError as why:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Package List"),
                 self.trUtf8(
                     """<p>The file <b>PKGLIST</b> could not be created.</p>"""
@@ -4477,7 +4532,8 @@ class Project(QObject):
         """
         pkglist = os.path.join(self.ppath, "PKGLIST")
         if not os.path.exists(pkglist):
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> does not exist. """
                             """Aborting...</p>"""))
@@ -4485,7 +4541,8 @@ class Project(QObject):
         
         if len(self.pdata["MAINSCRIPT"]) == 0 or \
            len(self.pdata["MAINSCRIPT"][0]) == 0:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8(
                     """The project does not have a main script defined. """
@@ -4498,7 +4555,8 @@ class Project(QObject):
             pkglistFile.close()
             names = sorted(names.splitlines())
         except IOError as why:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8(
                     """<p>The file <b>PKGLIST</b> could not be read.</p>"""
@@ -4510,7 +4568,8 @@ class Project(QObject):
         try:
             archiveFile = zipfile.ZipFile(archive, "w")
         except IOError as why:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8(
                     """<p>The eric5 plugin archive file <b>{0}</b> could """
@@ -4535,7 +4594,8 @@ class Project(QObject):
                                 os.path.join(self.ppath,
                                              self.pdata["MAINSCRIPT"][0]))
                 except OSError as why:
-                    E5MessageBox.critical(self.ui,
+                    E5MessageBox.critical(
+                        self.ui,
                         self.trUtf8("Create Plugin Archive"),
                         self.trUtf8(
                             """<p>The file <b>{0}</b> could not be stored """
@@ -4557,7 +4617,8 @@ class Project(QObject):
                     """created successfully.</p>""")\
                     .format(os.path.basename(archive)))
         else:
-            E5MessageBox.information(self.ui,
+            E5MessageBox.information(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8(
                     """<p>The eric5 plugin archive file <b>{0}</b> was """
@@ -4601,7 +4662,8 @@ class Project(QObject):
             sourcelines, encoding = Utilities.readEncodedFile(filename)
             sourcelines = sourcelines.splitlines(True)
         except (IOError, UnicodeError) as why:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
@@ -4640,7 +4702,8 @@ class Project(QObject):
             sourcelines = Utilities.readEncodedFile(filename)[0]
             sourcelines = sourcelines.splitlines(True)
         except (IOError, UnicodeError) as why:
-            E5MessageBox.critical(self.ui,
+            E5MessageBox.critical(
+                self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8(
                     """<p>The plugin file <b>{0}</b> could """

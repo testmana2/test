@@ -54,7 +54,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
                     self.device().fileName(),
                     self.lineNumber(), self.columnNumber(),
                     self.errorString())
-            E5MessageBox.warning(None,
+            E5MessageBox.warning(
+                None,
                 QCoreApplication.translate(
                 "XMLStreamReaderBase", "XML parse error"),
                 msg)

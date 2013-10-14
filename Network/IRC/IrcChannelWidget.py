@@ -353,7 +353,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 ircTimestamp(), self.__userName, Utilities.html_encode(msg)))
             if msg.startswith("/"):
                 if self.__private:
-                    E5MessageBox.information(self,
+                    E5MessageBox.information(
+                        self,
                         self.trUtf8("Send Message"),
                         self.trUtf8(
                             """Messages starting with a '/' are not allowed"""
@@ -379,7 +380,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         Public method to leave the channel.
         """
-        ok = E5MessageBox.yesNo(self,
+        ok = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Leave IRC channel"),
             self.trUtf8(
                 """Do you really want to leave the IRC channel <b>{0}</b>?""")
@@ -1191,7 +1193,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                         fname += ex
                     ext = QFileInfo(fname).suffix()
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Save Messages"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
@@ -1209,7 +1212,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                     f.write(txt)
                     f.close()
                 except IOError as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Error saving Messages"),
                         self.trUtf8(
                             """<p>The messages contents could not be written"""

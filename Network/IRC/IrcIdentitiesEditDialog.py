@@ -166,7 +166,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         @return flag indicating a successful check (boolean)
         """
         if self.nicknamesList.count() == 0:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Edit Identity"),
                 self.trUtf8(
                     """The identity must contain at least one nick name."""))
@@ -182,7 +183,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             return False
         
         if not self.realnameEdit.text():
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Edit Identity"),
                 self.trUtf8("""The identity must have a real name."""))
             block = self.identitiesCombo.blockSignals(True)
@@ -212,7 +214,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if ok:
             if name:
                 if name in self.__identities:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Add Identity"),
                         self.trUtf8(
                             """An identity named <b>{0}</b> already exists."""
@@ -228,7 +231,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                     self.identitiesCombo.setCurrentIndex(
                         self.identitiesCombo.count() - 1)
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Add Identity"),
                     self.trUtf8("""The identity has to have a name."""))
                 self.on_addButton_clicked()
@@ -249,7 +253,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if ok:
             if name:
                 if name in self.__identities:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Copy Identity"),
                         self.trUtf8(
                             """An identity named <b>{0}</b> already exists."""
@@ -264,7 +269,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                     self.identitiesCombo.setCurrentIndex(
                         self.identitiesCombo.count() - 1)
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Copy Identity"),
                     self.trUtf8("""The identity has to have a name."""))
                 self.on_copyButton_clicked()
@@ -285,7 +291,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if ok and name != currentIdentity:
             if name:
                 if name in self.__identities:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Rename Identity"),
                         self.trUtf8(
                             """An identity named <b>{0}</b> already exists."""
@@ -299,7 +306,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                     self.identitiesCombo.setItemText(
                         self.identitiesCombo.currentIndex(), name)
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Copy Identity"),
                     self.trUtf8("""The identity has to have a name."""))
                 self.on_renameButton_clicked()
@@ -330,7 +338,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             msg = self.trUtf8(
                 """Do you really want to delete all information for"""
                 """ this identity?""")
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Delete Identity"),
             msg,
             icon=E5MessageBox.Warning)

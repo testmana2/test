@@ -367,7 +367,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         try:
             search = re.compile(txt, flags)
         except re.error as why:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Invalid search expression"),
                 self.trUtf8("""<p>The search expression is not valid.</p>"""
                             """<p>Error: {0}</p>""").format(str(why)))
@@ -602,7 +603,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         Utilities.readEncodedFileWithHash(fn)
                     lines = text.splitlines(True)
                 except (UnicodeError, IOError) as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(
                             """<p>Could not read the file <b>{0}</b>."""
@@ -616,7 +618,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 # Check the original and the current hash. Skip the file,
                 # if hashes are different.
                 if origHash != hash:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(
                             """<p>The current and the original hash of the"""
@@ -641,7 +644,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 try:
                     Utilities.writeEncodedFile(fn, txt, encoding)
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(
                             """<p>Could not save the file <b>{0}</b>."""

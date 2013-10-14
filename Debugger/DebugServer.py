@@ -632,7 +632,8 @@ class DebugServer(QTcpServer):
         peerAddress = sock.peerAddress().toString()
         if peerAddress not in Preferences.getDebugger("AllowedHosts"):
             # the peer is not allowed to connect
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Connection from illegal host"),
                 self.trUtf8(
                     """<p>A connection was attempted by the illegal host"""

@@ -267,7 +267,8 @@ class ExporterTEX(ExporterBase):
                 f.close()
             except IOError as err:
                 QApplication.restoreOverrideCursor()
-                E5MessageBox.critical(self.editor,
+                E5MessageBox.critical(
+                    self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>The source could not be exported to"""

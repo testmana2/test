@@ -98,6 +98,7 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
                 self.trUtf8("GreaseMonkey Script Installation"),
                 msg)
         else:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("GreaseMonkey Script Installation"),
                 msg)

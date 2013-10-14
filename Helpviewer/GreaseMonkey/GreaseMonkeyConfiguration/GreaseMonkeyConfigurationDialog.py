@@ -141,7 +141,8 @@ class GreaseMonkeyConfigurationDialog(
         if script is None:
             return
         
-        removeIt = E5MessageBox.yesNo(self,
+        removeIt = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Remove Script"),
             self.trUtf8(
                 """<p>Are you sure you want to remove <b>{0}</b>?</p>""")

@@ -247,7 +247,9 @@ class MiniEditor(E5MainWindow):
         """
         Private slot to show a little About message.
         """
-        E5MessageBox.about(self, self.trUtf8("About eric5 Mini Editor"),
+        E5MessageBox.about(
+            self,
+            self.trUtf8("About eric5 Mini Editor"),
             self.trUtf8("The eric5 Mini Editor is an editor component"
                 " based on QScintilla. It may be used for simple"
                 " editing tasks, that don't need the power of"
@@ -2076,10 +2078,11 @@ class MiniEditor(E5MainWindow):
         @return flag indicating, if it is ok to continue (boolean)
         """
         if self.__textEdit.isModified():
-            ret = E5MessageBox.okToClearData(self,
-                    self.trUtf8("eric5 Mini Editor"),
-                    self.trUtf8("The document has unsaved changes."),
-                    self.__save)
+            ret = E5MessageBox.okToClearData(
+                self,
+                self.trUtf8("eric5 Mini Editor"),
+                self.trUtf8("The document has unsaved changes."),
+                self.__save)
             return ret
         return True
     
@@ -2096,7 +2099,8 @@ class MiniEditor(E5MainWindow):
             txt, self.encoding = Utilities.readEncodedFile(fileName)
         except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self, self.trUtf8('Open File'),
+            E5MessageBox.critical(
+                self, self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
                             '<p>Reason: {1}</p>')
                     .format(fileName, str(why)))
@@ -2130,7 +2134,8 @@ class MiniEditor(E5MainWindow):
             self.encoding = Utilities.writeEncodedFile(
                 fileName, txt, self.encoding)
         except (IOError, Utilities.CodingError, UnicodeError) as why:
-            E5MessageBox.critical(self, self.trUtf8('Save File'),
+            E5MessageBox.critical(
+                self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
                     .format(fileName, str(why)))

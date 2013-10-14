@@ -92,7 +92,8 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         @param ev key event (QKeyEvent)
         """
         if ev.key() == Qt.Key_Escape:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Close dialog"),
                 self.trUtf8("""Do you really want to close the dialog?"""))
             if not res:
@@ -103,7 +104,8 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         """
         Public slot to show some help.
         """
-        E5MessageBox.information(self,
+        E5MessageBox.information(
+            self,
             self.trUtf8("Template Help"),
             self.trUtf8(
                 """<p>To use variables in a template, you just have to"""

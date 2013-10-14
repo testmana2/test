@@ -198,7 +198,8 @@ def exportShortcuts(fn):
         ShortcutsWriter(f).writeXML()
         f.close()
     else:
-        E5MessageBox.critical(None,
+        E5MessageBox.critical(
+            None,
             QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
             QApplication.translate(
                 "Shortcuts",
@@ -229,7 +230,8 @@ def importShortcuts(fn):
             saveShortcuts()
             syncPreferences()
     else:
-        E5MessageBox.critical(None,
+        E5MessageBox.critical(
+            None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
             QApplication.translate(
                 "Shortcuts",

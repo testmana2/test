@@ -40,7 +40,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         self.table.addAction(self.deleteRowAction)
         
         if len(QSqlDatabase.drivers()) == 0:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("No database drivers found"),
                 self.trUtf8(
                     """This tool requires at least one Qt database driver. """
@@ -156,7 +157,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
                 driver, dbName, user, password, host, port)
             
             if err.type() != QSqlError.NoError:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Unable to open database"),
                     self.trUtf8(
                         """An error occurred while opening the connection."""))

@@ -992,7 +992,8 @@ class PluginManager(QObject):
                     try:
                         os.mkdir(downloadDir, 0o755)
                     except (OSError, IOError) as err:
-                        E5MessageBox.critical(self.__ui,
+                        E5MessageBox.critical(
+                            self.__ui,
                             self.trUtf8("Plugin Manager Error"),
                             self.trUtf8(
                                 """<p>The plugin download directory"""

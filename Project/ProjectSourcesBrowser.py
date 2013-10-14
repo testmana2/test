@@ -659,7 +659,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                     try:
                         os.mkdir(packagePath)
                     except OSError as err:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8(
                                 """<p>The package directory <b>{0}</b> could"""
@@ -673,7 +674,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         f = open(packageFile, "w", encoding="utf-8")
                         f.close()
                     except IOError as err:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8(
                                 """<p>The package file <b>{0}</b> could"""
@@ -897,7 +899,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             fn = itm.fileName()
         except AttributeError:
             fn = itm.dirName()
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Class Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
@@ -916,7 +919,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         except AttributeError:
             fn = itm.dirName()
         package = os.path.isdir(fn) and fn or os.path.dirname(fn)
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
         from Graphics.UMLDialog import UMLDialog
@@ -935,7 +939,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         except AttributeError:
             fn = itm.dirName()
         package = os.path.isdir(fn) and fn or os.path.dirname(fn)
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
@@ -949,7 +954,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Private method to handle the application diagram context menu action.
         """
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)

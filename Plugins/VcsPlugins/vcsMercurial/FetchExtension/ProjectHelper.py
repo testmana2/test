@@ -79,7 +79,8 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         shouldReopen = self.vcs.getExtensionObject("fetch")\
             .hgFetch(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Fetch"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)

@@ -133,7 +133,8 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                     protocolKey = query.protocolTag().capitalize()
                 host = Preferences.getUI("ProxyHost/{0}".format(protocolKey))
                 if not host:
-                    E5MessageBox.critical(None,
+                    E5MessageBox.critical(
+                        None,
                         QCoreApplication.translate("E5NetworkProxyFactory",
                             "Proxy Configuration Error"),
                         QCoreApplication.translate("E5NetworkProxyFactory",

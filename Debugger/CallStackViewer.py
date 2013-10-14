@@ -166,7 +166,8 @@ class CallStackViewer(QTreeWidget):
                     if ex:
                         fname += ex
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Save Call Stack Info"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
@@ -184,7 +185,8 @@ class CallStackViewer(QTreeWidget):
                         itm = self.itemBelow(itm)
                     f.close()
                 except IOError as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Error saving Call Stack Info"),
                         self.trUtf8("""<p>The call stack info could not be"""
                                     """ written to <b>{0}</b></p>"""

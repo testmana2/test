@@ -199,7 +199,8 @@ class HelpWebPage(QWebPage):
             return False
         
         if type_ == QWebPage.NavigationTypeFormResubmitted:
-            res = E5MessageBox.yesNo(self.view(),
+            res = E5MessageBox.yesNo(
+                self.view(),
                 self.trUtf8("Resending POST request"),
                 self.trUtf8(
                     """In order to display the site, the request along with"""
@@ -534,7 +535,8 @@ class HelpWebPage(QWebPage):
                 self.mainFrame().url(), self.__sslConfiguration, self.view())
             widget.showAt(pos)
         else:
-            E5MessageBox.warning(self.view(),
+            E5MessageBox.warning(
+                self.view(),
                 self.trUtf8("SSL Info"),
                 self.trUtf8("""This site does not contain SSL information."""))
     
@@ -813,7 +815,8 @@ class HelpBrowser(QWebView):
                 name = QUrl.fromLocalFile(name.toString())
             
             if not QFileInfo(name.toLocalFile()).exists():
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> does not exist.</p>""")\
@@ -826,7 +829,8 @@ class HelpBrowser(QWebView):
                name.toLocalFile().endswith(".CHM"):
                 started = QDesktopServices.openUrl(name)
                 if not started:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("eric5 Web Browser"),
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
@@ -834,7 +838,8 @@ class HelpBrowser(QWebView):
         elif name.scheme() in ["mailto"]:
             started = QDesktopServices.openUrl(name)
             if not started:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8("""<p>Could not start an application"""
                     """ for URL <b>{0}</b>.</p>""").format(name.toString()))
@@ -851,7 +856,8 @@ class HelpBrowser(QWebView):
                name.toString().endswith(".CHM"):
                 started = QDesktopServices.openUrl(name)
                 if not started:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("eric5 Web Browser"),
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
@@ -1466,7 +1472,8 @@ class HelpBrowser(QWebView):
         
         method = formElement.attribute("method", "get").lower()
         if method != "get":
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Method not supported"),
                 self.trUtf8(
                     """{0} method is not supported.""").format(method.upper()))
@@ -1954,7 +1961,8 @@ class HelpBrowser(QWebView):
             # accessed for the first time
             return
         
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Web Database Quota"),
             self.trUtf8(
                 """<p>The database quota of <strong>{0}</strong> has"""
@@ -2266,7 +2274,8 @@ class HelpBrowser(QWebView):
             try:
                 self.__clickedFrame.print_(printer)
             except AttributeError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
                         """<p>Printing is not available due to a bug in"""
@@ -2309,7 +2318,8 @@ class HelpBrowser(QWebView):
         try:
             self.__clickedFrame.print_(printer)
         except AttributeError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("eric5 Web Browser"),
                 self.trUtf8(
                     """<p>Printing is not available due to a bug in PyQt4."""
@@ -2338,7 +2348,8 @@ class HelpBrowser(QWebView):
             try:
                 self.__clickedFrame.print_(printer)
             except AttributeError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
                         """<p>Printing is not available due to a bug in"""

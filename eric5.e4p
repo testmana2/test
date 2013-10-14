@@ -1929,7 +1929,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>E24, W293, N, E, W, D</string>
+              <string>E24, D, W293, N802, N803, N807, N808, N821</string>
             </value>
             <key>
               <string>FixCodes</string>
@@ -1953,7 +1953,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>IncludeMessages</string>
             </key>
             <value>
-              <string>E501</string>
+              <string></string>
             </value>
             <key>
               <string>MaxLineLength</string>

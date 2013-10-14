@@ -519,7 +519,8 @@ class HelpTabWidget(E5TabWidget):
             try:
                 frame.print_(printer)
             except AttributeError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
                         """<p>Printing is not available due to a bug in"""
@@ -561,7 +562,8 @@ class HelpTabWidget(E5TabWidget):
             try:
                 frame.print_(printer)
             except AttributeError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
                         """<p>Printing is not available due to a bug in"""
@@ -611,7 +613,8 @@ class HelpTabWidget(E5TabWidget):
         try:
             self.__printPreviewBrowser.print_(printer)
         except AttributeError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("eric5 Web Browser"),
                 self.trUtf8(
                     """<p>Printing is not available due to a bug in PyQt4."""
@@ -773,7 +776,8 @@ class HelpTabWidget(E5TabWidget):
         @return flag indicating a shut down (boolean)
         """
         if self.count() > 1 and Preferences.getHelp("WarnOnMultipleClose"):
-            mb = E5MessageBox.E5MessageBox(E5MessageBox.Information,
+            mb = E5MessageBox.E5MessageBox(
+                E5MessageBox.Information,
                 self.trUtf8("Are you sure you want to close the window?"),
                 self.trUtf8("""Are you sure you want to close the window?\n"""
                             """You have %n tab(s) open.""", "", self.count()),
@@ -787,8 +791,8 @@ class HelpTabWidget(E5TabWidget):
                 quitButton = mb.addButton(
                     self.trUtf8("&Quit"), E5MessageBox.AcceptRole)
                 quitButton.setIcon(UI.PixmapCache.getIcon("exit.png"))
-            closeTabButton = mb.addButton(self.trUtf8("C&lose Current Tab"),
-                E5MessageBox.AcceptRole)
+            closeTabButton = mb.addButton(
+                self.trUtf8("C&lose Current Tab"), E5MessageBox.AcceptRole)
             closeTabButton.setIcon(UI.PixmapCache.getIcon("tabClose.png"))
             mb.addButton(E5MessageBox.Cancel)
             mb.exec_()

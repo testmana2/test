@@ -55,7 +55,8 @@ class ExporterBase(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = E5MessageBox.yesNo(self.editor,
+                res = E5MessageBox.yesNo(
+                    self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fn),

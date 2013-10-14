@@ -260,7 +260,8 @@ class Hg(VersionControl):
         """
         success = self.vcsImport(vcsDataDict, project.ppath)[0]
         if not success:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Create project repository"),
                 self.trUtf8(
                     """The project repository could not be created."""))
@@ -450,7 +451,8 @@ class Hg(VersionControl):
                     break
             
             if not ok:
-                res = E5MessageBox.yesNo(self.__ui,
+                res = E5MessageBox.yesNo(
+                    self.__ui,
                     self.trUtf8("Commit Changes"),
                     self.trUtf8(
                         """The commit affects files, that have unsaved"""
@@ -963,7 +965,8 @@ class Hg(VersionControl):
                 names)
             yes = dlg.exec_() == QDialog.Accepted
         else:
-            yes = E5MessageBox.yesNo(None,
+            yes = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Revert changes"),
                 self.trUtf8("""Do you really want to revert all changes of"""
                             """ the project?"""))
@@ -1771,7 +1774,8 @@ class Hg(VersionControl):
         
         output1, error = self.__hgGetFileForRevision(name, rev=rev1)
         if error:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Mercurial Side-by-Side Difference"),
                 error)
             return
@@ -1780,7 +1784,8 @@ class Hg(VersionControl):
         if rev2:
             output2, error = self.__hgGetFileForRevision(name, rev=rev2)
             if error:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Mercurial Side-by-Side Difference"),
                     error)
                 return
@@ -1792,7 +1797,8 @@ class Hg(VersionControl):
                 f1.close()
                 name2 = name
             except IOError:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Mercurial Side-by-Side Difference"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be read.</p>""")
@@ -2305,7 +2311,8 @@ class Hg(VersionControl):
         
         ignoreName = os.path.join(name, Hg.IgnoreFileName)
         if os.path.exists(ignoreName):
-            res = E5MessageBox.yesNo(self.__ui,
+            res = E5MessageBox.yesNo(
+                self.__ui,
                 self.trUtf8("Create .hgignore file"),
                 self.trUtf8("""<p>The file <b>{0}</b> exists already."""
                             """ Overwrite it?</p>""").format(ignoreName),
@@ -2375,7 +2382,8 @@ class Hg(VersionControl):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self.__ui,
+                res = E5MessageBox.yesNo(
+                    self.__ui,
                     self.trUtf8("Create changegroup"),
                     self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
                                 "already exists. Overwrite it?</p>")
@@ -2500,7 +2508,8 @@ class Hg(VersionControl):
         if files:
             self.__lastChangeGroupPath = os.path.dirname(files[0])
             
-            update = E5MessageBox.yesNo(self.__ui,
+            update = E5MessageBox.yesNo(
+                self.__ui,
                 self.trUtf8("Apply changegroups"),
                 self.trUtf8("""Shall the working directory be updated?"""),
                 yesDefault=True)
@@ -2641,7 +2650,8 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             rev, merge, date, user, message = dlg.getParameters()
             if not rev:
-                E5MessageBox.warning(self.__ui,
+                E5MessageBox.warning(
+                    self.__ui,
                     self.trUtf8("Backing out changeset"),
                     self.trUtf8("""No revision given. Aborting..."""))
                 return
@@ -3023,7 +3033,8 @@ class Hg(VersionControl):
                     contents = f.readlines()
                     f.close()
                 except IOError as err:
-                    E5MessageBox.critical(self.__ui,
+                    E5MessageBox.critical(
+                        self.__ui,
                         self.trUtf8("Add Sub-repository"),
                         self.trUtf8(
                             """<p>The sub-repositories file .hgsub could not"""
@@ -3032,7 +3043,8 @@ class Hg(VersionControl):
                     return
                 
                 if entry in contents:
-                    E5MessageBox.critical(self.__ui,
+                    E5MessageBox.critical(
+                        self.__ui,
                         self.trUtf8("Add Sub-repository"),
                         self.trUtf8(
                             """<p>The sub-repositories file .hgsub already"""
@@ -3050,7 +3062,8 @@ class Hg(VersionControl):
                 f.writelines(contents)
                 f.close()
             except IOError as err:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Add Sub-repository"),
                     self.trUtf8(
                         """<p>The sub-repositories file .hgsub could not"""
@@ -3070,7 +3083,8 @@ class Hg(VersionControl):
         
         subrepositories = []
         if not os.path.isfile(hgsub):
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Remove Sub-repositories"),
                 self.trUtf8("""<p>The sub-repositories file .hgsub does not"""
                             """ exist. Aborting...</p>"""))
@@ -3081,7 +3095,8 @@ class Hg(VersionControl):
             subrepositories = [line.strip() for line in f.readlines()]
             f.close()
         except IOError as err:
-            E5MessageBox.critical(self.__ui,
+            E5MessageBox.critical(
+                self.__ui,
                 self.trUtf8("Remove Sub-repositories"),
                 self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
                             """ be read.</p><p>Reason: {0}</p>""")
@@ -3099,7 +3114,8 @@ class Hg(VersionControl):
                 f.write(contents)
                 f.close()
             except IOError as err:
-                E5MessageBox.critical(self.__ui,
+                E5MessageBox.critical(
+                    self.__ui,
                     self.trUtf8("Remove Sub-repositories"),
                     self.trUtf8(
                         """<p>The sub-repositories file .hgsub could not"""
@@ -3129,7 +3145,8 @@ class Hg(VersionControl):
         if self.__client:
             ok, err = self.__client.restartServer()
             if not ok:
-                E5MessageBox.warning(None,
+                E5MessageBox.warning(
+                    None,
                     self.trUtf8("Mercurial Command Server"),
                     self.trUtf8(
                         """<p>The Mercurial Command Server could not be"""
@@ -3265,7 +3282,8 @@ class Hg(VersionControl):
                 if ok:
                     self.__client = client
                 else:
-                    E5MessageBox.warning(None,
+                    E5MessageBox.warning(
+                        None,
                         self.trUtf8("Mercurial Command Server"),
                         self.trUtf8(
                             """<p>The Mercurial Command Server could not be"""

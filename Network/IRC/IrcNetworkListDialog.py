@@ -154,7 +154,8 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         itm = self.networksList.selectedItems()[0]
         if itm.parent() is None:
             networkName = itm.text(0)
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Delete Irc Network"),
                 self.trUtf8(
                     """Do you really want to delete IRC network <b>{0}</b>?""")

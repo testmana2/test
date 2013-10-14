@@ -275,7 +275,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         'The process {0} could not be started. '
@@ -589,7 +590,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                      for itm in self.__getCommitableItems()]
             if not names:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Commit"),
                     self.trUtf8("""There are no entries selected to be"""
                                 """ committed."""))
@@ -628,7 +630,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getUnversionedItems()]
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Add"),
                 self.trUtf8("""There are no unversioned entries"""
                             """ available/selected."""))
@@ -649,7 +652,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getMissingItems()]
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Remove"),
                 self.trUtf8("""There are no missing entries"""
                             """ available/selected."""))
@@ -665,7 +669,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getModifiedItems()]
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Revert"),
                 self.trUtf8("""There are no uncommitted changes"""
                             """ available/selected."""))
@@ -688,7 +693,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getMissingItems()]
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Revert"),
                 self.trUtf8("""There are no missing entries"""
                             """ available/selected."""))
@@ -705,7 +711,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getModifiedItems()]
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Differences"),
                 self.trUtf8("""There are no uncommitted changes"""
                             """ available/selected."""))
@@ -724,13 +731,15 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getModifiedItems()]
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Side-by-Side Diff"),
                 self.trUtf8("""There are no uncommitted changes"""
                             """ available/selected."""))
             return
         elif len(names) > 1:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Side-by-Side Diff"),
                 self.trUtf8("""Only one file with uncommitted changes"""
                             """ must be selected."""))

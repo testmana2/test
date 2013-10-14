@@ -67,7 +67,8 @@ class E5MessageBoxWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('E5MessageBox Wizard'),
+        self.action = E5Action(
+            self.trUtf8('E5MessageBox Wizard'),
              self.trUtf8('&E5MessageBox Wizard...'), 0, 0, self,
              'wizards_e5messagebox')
         self.action.setStatusTip(self.trUtf8('E5MessageBox Wizard'))
@@ -117,9 +118,10 @@ class E5MessageBoxWizard(QObject):
         editor = e5App().getObject("ViewManager").activeWindow()
         
         if editor == None:
-                E5MessageBox.critical(self.__ui,
-                self.trUtf8('No current editor'),
-                self.trUtf8('Please open or create a file first.'))
+                E5MessageBox.critical(
+                    self.__ui,
+                    self.trUtf8('No current editor'),
+                    self.trUtf8('Please open or create a file first.'))
         else:
             code, ok = self.__callForm(editor)
             if ok:

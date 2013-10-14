@@ -474,7 +474,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             for file in fileList:
                 self.project.appendFile(file)
             if not self.noDialog and not ui.notificationsEnabled():
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Interface Compilation"),
                     self.trUtf8(
                         "The compilation of the interface file was"
@@ -487,7 +488,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                         " successful."))
         else:
             if not self.noDialog:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Interface Compilation"),
                     self.trUtf8(
                         "The compilation of the interface file failed."))
@@ -532,7 +534,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self.compileRunning = False
             if progress is not None:
                 progress.cancel()
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start {0}.<br>'

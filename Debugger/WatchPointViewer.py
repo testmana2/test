@@ -243,7 +243,8 @@ class WatchPointViewer(QTreeView):
                     """<p>A watch expression '<b>{0}</b>'"""
                     """ for the variable <b>{1}</b> already exists.</p>""")\
                     .format(special, Utilities.html_encode(cond))
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Watch expression already exists"),
                 msg)
         

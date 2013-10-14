@@ -384,7 +384,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                         fname += ex
                     ext = QFileInfo(fname).suffix()
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.yesNo(self,
+                    res = E5MessageBox.yesNo(
+                        self,
                         self.trUtf8("Save Messages"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
@@ -402,7 +403,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                     f.write(txt)
                     f.close()
                 except IOError as err:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Error saving Messages"),
                         self.trUtf8(
                             """<p>The messages contents could not be written"""

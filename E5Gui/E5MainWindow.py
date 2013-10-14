@@ -51,7 +51,8 @@ class E5MainWindow(QMainWindow):
                 styleSheet = f.read()
                 f.close()
             except (IOError, OSError) as msg:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Loading Style Sheet"),
                     self.trUtf8(
                         """<p>The Qt Style Sheet file <b>{0}</b> could"""

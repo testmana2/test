@@ -1970,11 +1970,15 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show the about information.
         """
-        E5MessageBox.about(self, self.trUtf8("eric5 Web Browser"), self.trUtf8(
-            """<b>eric5 Web Browser - {0}</b>"""
-            """<p>The eric5 Web Browser is a combined help file and HTML"""
-            """ browser. It is part of the eric5 development toolset.</p>"""
-        ).format(Version))
+        E5MessageBox.about(
+            self,
+            self.trUtf8("eric5 Web Browser"),
+            self.trUtf8(
+                """<b>eric5 Web Browser - {0}</b>"""
+                """<p>The eric5 Web Browser is a combined help file and HTML"""
+                """ browser. It is part of the eric5 development"""
+                """ toolset.</p>"""
+            ).format(Version))
         
     def __aboutQt(self):
         """
@@ -2767,7 +2771,8 @@ class HelpWindow(E5MainWindow):
         
         @param message message to be shown (string)
         """
-        E5MessageBox.warning(self,
+        E5MessageBox.warning(
+            self,
             self.trUtf8("eric5 Web Browser"),
             message)
         
@@ -2810,7 +2815,8 @@ class HelpWindow(E5MainWindow):
         
         @param msg message sent by the help  engine (string)
         """
-        E5MessageBox.warning(self,
+        E5MessageBox.warning(
+            self,
             self.trUtf8("Help Engine"), msg)
         
     def __aboutToShowSettingsMenu(self):
@@ -3524,7 +3530,8 @@ class HelpWindow(E5MainWindow):
         
         @param msg error message (str)
         """
-        E5MessageBox.critical(self,
+        E5MessageBox.critical(
+            self,
             self.trUtf8("VirusTotal Scan"),
             self.trUtf8("""<p>The VirusTotal scan could not be"""
                         """ scheduled.<p>\n<p>Reason: {0}</p>""").format(msg))

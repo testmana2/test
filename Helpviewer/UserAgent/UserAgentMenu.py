@@ -177,7 +177,8 @@ class UserAgentMenu(QMenu):
                 menuStack.pop()
         
         if xml.hasError():
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Parsing default user agents"),
                 self.trUtf8(
                     """<p>Error parsing default user agents.</p><p>{0}</p>""")

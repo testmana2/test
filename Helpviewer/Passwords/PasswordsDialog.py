@@ -84,7 +84,8 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
             self.__passwordModel.setShowPasswords(False)
             self.passwordsButton.setText(self.__showPasswordsText)
         else:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Saved Passwords"),
                 self.trUtf8("""Do you really want to show passwords?"""))
             if res:

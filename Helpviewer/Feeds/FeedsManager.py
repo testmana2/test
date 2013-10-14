@@ -172,7 +172,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
                 urlString, title = dlg.getData()
                 for feed in self.__feeds:
                     if feed[0] == urlString:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("Duplicate Feed URL"),
                             self.trUtf8(
                                 """A feed with the URL {0} exists already."""
@@ -193,7 +194,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         """
         itm = self.feedsTree.selectedItems()[0]
         title = itm.text(0)
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Delete Feed"),
             self.trUtf8(
                 """<p>Do you really want to delete the feed"""
@@ -422,6 +424,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         
         errorStr = itm.data(0, FeedsManager.ErrorDataRole)
         if errorStr:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error loading feed"),
                 "{0}".format(errorStr))

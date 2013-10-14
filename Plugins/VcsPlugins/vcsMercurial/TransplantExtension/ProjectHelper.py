@@ -113,7 +113,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         shouldReopen = self.vcs.getExtensionObject("transplant")\
             .hgTransplant(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Transplant Changesets"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -127,7 +128,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         shouldReopen = self.vcs.getExtensionObject("transplant")\
             .hgTransplantContinue(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Transplant Changesets (Continue)"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)

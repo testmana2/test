@@ -181,7 +181,8 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         itm = self.channelList.selectedItems()[0]
         if itm:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Delete Channel"),
                 self.trUtf8(
                     """Do you really want to delete channel <b>{0}</b>?""")

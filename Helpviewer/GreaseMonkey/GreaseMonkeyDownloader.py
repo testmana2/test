@@ -64,7 +64,8 @@ class GreaseMonkeyDownloader(QObject):
             try:
                 f = open(self.__fileName, "w", encoding="utf-8")
             except (IOError, OSError) as err:
-                E5MessageBox.critical(None,
+                E5MessageBox.critical(
+                    None,
                     self.trUtf8("GreaseMonkey Download"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be opened"""
@@ -114,7 +115,8 @@ class GreaseMonkeyDownloader(QObject):
             try:
                 f = open(fileName, "w", encoding="utf-8")
             except (IOError, OSError) as err:
-                E5MessageBox.critical(None,
+                E5MessageBox.critical(
+                    None,
                     self.trUtf8("GreaseMonkey Download"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be opened"""
@@ -157,7 +159,8 @@ class GreaseMonkeyDownloader(QObject):
                     dlg = GreaseMonkeyAddScriptDialog(self.__manager, script)
                     deleteScript = dlg.exec_() != QDialog.Accepted
                 else:
-                    E5MessageBox.information(None,
+                    E5MessageBox.information(
+                        None,
                         self.trUtf8("GreaseMonkey Download"),
                         self.trUtf8(
                             """<p><b>{0}</b> is already installed.</p>""")

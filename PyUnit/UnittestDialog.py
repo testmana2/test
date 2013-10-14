@@ -254,9 +254,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         prog = self.testsuiteComboBox.currentText()
         if not prog:
-            E5MessageBox.critical(self,
-                    self.trUtf8("Unittest"),
-                    self.trUtf8("You must enter a test suite file."))
+            E5MessageBox.critical(
+                self,
+                self.trUtf8("Unittest"),
+                self.trUtf8("You must enter a test suite file."))
             return
         
         # prepend the selected file to the testsuite combobox
@@ -328,13 +329,14 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                         module)
             except:
                 exc_type, exc_value, exc_tb = sys.exc_info()
-                E5MessageBox.critical(self,
-                        self.trUtf8("Unittest"),
-                        self.trUtf8(
-                            "<p>Unable to run test <b>{0}</b>.<br>"
-                            "{1}<br>{2}</p>")
-                            .format(self.testName, str(exc_type),
-                                    str(exc_value)))
+                E5MessageBox.critical(
+                    self,
+                    self.trUtf8("Unittest"),
+                    self.trUtf8(
+                        "<p>Unable to run test <b>{0}</b>.<br>"
+                        "{1}<br>{2}</p>")
+                        .format(self.testName, str(exc_type),
+                                str(exc_value)))
                 return
                 
             # now set up the coverage stuff
@@ -386,11 +388,12 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param exc_value value of exception occured during preparation (string)
         """
         if nrTests == 0:
-            E5MessageBox.critical(self,
-                    self.trUtf8("Unittest"),
-                    self.trUtf8(
-                        "<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
-                        .format(self.testName, exc_type, exc_value))
+            E5MessageBox.critical(
+                self,
+                self.trUtf8("Unittest"),
+                self.trUtf8(
+                    "<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
+                    .format(self.testName, exc_type, exc_value))
             return
             
         self.totalTests = nrTests

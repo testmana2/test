@@ -397,7 +397,8 @@ class OpenSearchManager(QObject):
         
         host = QUrl(engine.searchUrlTemplate()).host()
         
-        res = E5MessageBox.yesNo(None,
+        res = E5MessageBox.yesNo(
+            None,
             "",
             self.trUtf8(
                 """<p>Do you want to add the following engine to your"""

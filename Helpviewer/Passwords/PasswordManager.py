@@ -140,7 +140,8 @@ class PasswordManager(QObject):
         writer = PasswordWriter()
         if not writer.write(
                 loginFile, self.__logins, self.__loginForms, self.__never):
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8("Saving login data"),
                 self.trUtf8(
                     """<p>Login data could not be saved to <b>{0}</b></p>"""
@@ -161,7 +162,8 @@ class PasswordManager(QObject):
             self.__logins, self.__loginForms, self.__never = \
                 reader.read(loginFile)
             if reader.error() != QXmlStreamReader.NoError:
-                E5MessageBox.warning(None,
+                E5MessageBox.warning(
+                    None,
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""Error when loading login data on"""
                                 """ line {0}, column {1}:\n{2}""")\
@@ -186,7 +188,8 @@ class PasswordManager(QObject):
                 lines = f.read()
                 f.close()
             except IOError as err:
-                E5MessageBox.critical(None,
+                E5MessageBox.critical(
+                    None,
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""<p>Login data could not be loaded """
                                 """from <b>{0}</b></p>"""
@@ -210,7 +213,8 @@ class PasswordManager(QObject):
                         data.append(line)
                     else:
                         if len(data) != 3:
-                            E5MessageBox.critical(None,
+                            E5MessageBox.critical(
+                                None,
                                 self.trUtf8("Loading login data"),
                                 self.trUtf8(
                                     """<p>Login data could not be loaded """
@@ -377,7 +381,8 @@ class PasswordManager(QObject):
         # prompt, if the form has never be seen
         key = self.__createKey(url, "")
         if key not in self.__loginForms:
-            mb = E5MessageBox.E5MessageBox(E5MessageBox.Question,
+            mb = E5MessageBox.E5MessageBox(
+                E5MessageBox.Question,
                 self.trUtf8("Save password"),
                 self.trUtf8(
                     """<b>Would you like to save this password?</b><br/>"""

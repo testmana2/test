@@ -135,7 +135,8 @@ class HgServeDialog(E5MainWindow):
             self.vcs.getPlugin().setPreferences("ServerPort", port)
             self.vcs.getPlugin().setPreferences("ServerStyle", style)
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

@@ -139,11 +139,13 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         if ok and name:
             if self.toolbarComboBox.findText(name) != -1:
                 # toolbar with this name already exists
-                E5MessageBox.critical(self,
-                self.trUtf8("New Toolbar"),
-                self.trUtf8(
-                    """A toolbar with the name <b>{0}</b> already exists.""")
-                    .format(name))
+                E5MessageBox.critical(
+                    self,
+                    self.trUtf8("New Toolbar"),
+                    self.trUtf8(
+                        """A toolbar with the name <b>{0}</b> already"""
+                        """ exists.""")
+                        .format(name))
                 return
             
             tbItem = E5ToolBarItem(None, [], False)
@@ -162,7 +164,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         Private slot to remove a custom toolbar.
         """
         name = self.toolbarComboBox.currentText()
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Remove Toolbar"),
             self.trUtf8(
                 """Should the toolbar <b>{0}</b> really be removed?""")
@@ -197,11 +200,13 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 return
             if self.toolbarComboBox.findText(newName) != -1:
                 # toolbar with this name already exists
-                E5MessageBox.critical(self,
-                self.trUtf8("Rename Toolbar"),
-                self.trUtf8(
-                    """A toolbar with the name <b>{0}</b> already exists.""")
-                    .format(newName))
+                E5MessageBox.critical(
+                    self,
+                    self.trUtf8("Rename Toolbar"),
+                    self.trUtf8(
+                        """A toolbar with the name <b>{0}</b> already"""
+                        """ exists.""")
+                        .format(newName))
                 return
             index = self.toolbarComboBox.currentIndex()
             self.toolbarComboBox.setItemText(index, newName)

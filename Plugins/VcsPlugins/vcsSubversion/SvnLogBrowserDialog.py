@@ -249,7 +249,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

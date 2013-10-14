@@ -1051,7 +1051,8 @@ class IconEditorWindow(E5MainWindow):
             if ex:
                 fileName += ex
         if QFileInfo(fileName).exists():
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Save icon file"),
                 self.trUtf8("<p>The file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fileName),
@@ -1173,7 +1174,8 @@ class IconEditorWindow(E5MainWindow):
         @return flag indicating, if it is ok to continue (boolean)
         """
         if self.__editor.isDirty():
-            ret = E5MessageBox.okToClearData(self,
+            ret = E5MessageBox.okToClearData(
+                self,
                 self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("""The icon image has unsaved changes."""),
                 self.__saveIcon)

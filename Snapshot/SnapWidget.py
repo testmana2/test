@@ -215,7 +215,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         @return flag indicating success (boolean)
         """
         if QFileInfo(fileName).exists():
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Save Snapshot"),
                 self.trUtf8("<p>The file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fileName),
@@ -225,18 +226,20 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
-            E5MessageBox.warning(self, self.trUtf8("Save Snapshot"),
-                                self.trUtf8("Cannot write file '{0}:\n{1}.")\
-                                    .format(fileName, file.errorString()))
+            E5MessageBox.warning(
+                self, self.trUtf8("Save Snapshot"),
+                self.trUtf8("Cannot write file '{0}:\n{1}.")\
+                    .format(fileName, file.errorString()))
             return False
         
         ok = self.__snapshot.save(file)
         file.close()
         
         if not ok:
-            E5MessageBox.warning(self, self.trUtf8("Save Snapshot"),
-                                self.trUtf8("Cannot write file '{0}:\n{1}.")\
-                                    .format(fileName, file.errorString()))
+            E5MessageBox.warning(
+                self, self.trUtf8("Save Snapshot"),
+                self.trUtf8("Cannot write file '{0}:\n{1}.")\
+                    .format(fileName, file.errorString()))
         
         return ok
     
@@ -473,7 +476,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         @param evt close event (QCloseEvent)
         """
         if self.__modified:
-            res = E5MessageBox.question(self,
+            res = E5MessageBox.question(
+                self,
                 self.trUtf8("eric5 Snapshot"),
                 self.trUtf8(
                     """The application contains an unsaved snapshot."""),

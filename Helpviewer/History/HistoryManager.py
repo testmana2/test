@@ -382,7 +382,8 @@ class HistoryManager(QWebHistoryInterface):
         if not historyFile.exists():
             return
         if not historyFile.open(QIODevice.ReadOnly):
-            E5MessageBox.warning(None,
+            E5MessageBox.warning(
+                None,
                 self.trUtf8("Loading History"),
                 self.trUtf8(
                     """<p>Unable to open history file <b>{0}</b>.<br/>"""
@@ -461,7 +462,8 @@ class HistoryManager(QWebHistoryInterface):
             opened = f.open(QIODevice.Append)
         
         if not opened:
-            E5MessageBox.warning(None,
+            E5MessageBox.warning(
+                None,
                 self.trUtf8("Saving History"),
                 self.trUtf8(
                     """<p>Unable to open history file <b>{0}</b>.<br/>"""
@@ -483,7 +485,8 @@ class HistoryManager(QWebHistoryInterface):
         f.close()
         if saveAll:
             if historyFile.exists() and not historyFile.remove():
-                E5MessageBox.warning(None,
+                E5MessageBox.warning(
+                    None,
                     self.trUtf8("Saving History"),
                     self.trUtf8(
                         """<p>Error removing old history file <b>{0}</b>."""
@@ -491,7 +494,8 @@ class HistoryManager(QWebHistoryInterface):
                         .format(historyFile.fileName(),
                                 historyFile.errorString()))
             if not f.copy(historyFile.fileName()):
-                E5MessageBox.warning(None,
+                E5MessageBox.warning(
+                    None,
                     self.trUtf8("Saving History"),
                     self.trUtf8(
                         """<p>Error moving new history file over old one """

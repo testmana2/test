@@ -218,7 +218,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
             message = self.trUtf8(
                 "<p>Do you really want to remove subscription"
                 " <b>{0}</b>?</p>").format(self.__currentSubscription.title())
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Remove Subscription"),
             message)
         

@@ -71,7 +71,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                 self.process.waitForFinished(3000)
         
         if self.__dirtyList:
-            res = E5MessageBox.question(self,
+            res = E5MessageBox.question(
+                self,
                 self.trUtf8("Unsaved Changes"),
                 self.trUtf8("""The guards list has been changed."""
                             """ Shall the changes be applied?"""),
@@ -113,7 +114,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         @param patch selected patch name (empty for current patch)
         """
         if self.__dirtyList:
-            res = E5MessageBox.question(self,
+            res = E5MessageBox.question(
+                self,
                 self.trUtf8("Unsaved Changes"),
                 self.trUtf8("""The guards list has been changed."""
                             """ Shall the changes be applied?"""),
@@ -235,7 +237,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         """
         Private slot to remove guard definitions from the list.
         """
-        res = E5MessageBox.yesNo(self,
+        res = E5MessageBox.yesNo(
+            self,
             self.trUtf8("Remove Guards"),
             self.trUtf8(
                 """Do you really want to remove the selected guards?"""))
@@ -297,14 +300,16 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                                 process.readAllStandardError(), ioEncoding,
                                 'replace')
                     else:
-                        E5MessageBox.warning(self,
+                        E5MessageBox.warning(
+                            self,
                             self.trUtf8("Apply Guard Definitions"),
                             self.trUtf8(
                                 """The Mercurial process did not finish"""
                                 """ in time."""))
             
             if error:
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.trUtf8("Apply Guard Definitions"),
                     self.trUtf8("""<p>The defined guards could not be"""
                                 """ applied.</p><p>Reason: {0}</p>""")\

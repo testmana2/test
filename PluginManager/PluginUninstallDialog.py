@@ -101,7 +101,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                 .itemData(self.pluginNameCombo.currentIndex())
         
         if not self.__pluginManager.unloadPlugin(pluginName):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8(
                     """<p>The plugin <b>{0}</b> could not be unloaded."""
@@ -112,7 +113,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             sys.path.insert(2, pluginDirectory)
         module = imp.load_source(pluginName, pluginFile)
         if not hasattr(module, "packageName"):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8(
                     """<p>The plugin <b>{0}</b> has no 'packageName'"""
@@ -164,7 +166,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             
             os.remove(pluginFile)
         except OSError as err:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8(
                     """<p>The plugin package <b>{0}</b> could not be"""
@@ -183,7 +186,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                     .format(pluginName, pluginDirectory))
                 return True
         
-        E5MessageBox.information(self,
+        E5MessageBox.information(
+            self,
             self.trUtf8("Plugin Uninstallation"),
             self.trUtf8(
                 """<p>The plugin <b>{0}</b> was uninstalled successfully"""

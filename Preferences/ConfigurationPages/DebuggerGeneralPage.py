@@ -227,7 +227,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                [QAbstractSocket.IPv4Protocol, QAbstractSocket.IPv6Protocol]:
                 self.allowedHostsList.addItem(allowedHost)
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Add allowed host"),
                     self.trUtf8(
                         """<p>The entered address <b>{0}</b> is not"""
@@ -259,7 +260,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                [QAbstractSocket.IPv4Protocol, QAbstractSocket.IPv6Protocol]:
                 self.allowedHostsList.currentItem().setText(allowedHost)
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Edit allowed host"),
                     self.trUtf8(
                         """<p>The entered address <b>{0}</b> is not"""

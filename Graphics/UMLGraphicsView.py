@@ -341,7 +341,8 @@ class UMLGraphicsView(E5GraphicsView):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Save Diagram"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fname),
@@ -352,7 +353,8 @@ class UMLGraphicsView(E5GraphicsView):
             success = super().saveImage(
                 fname, QFileInfo(fname).suffix().upper())
             if not success:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Save Diagram"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be saved.</p>""")

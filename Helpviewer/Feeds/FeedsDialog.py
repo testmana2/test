@@ -83,11 +83,13 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
                     self.trUtf8("Add RSS Feed"),
                     self.trUtf8("""The feed was added successfully."""))
             else:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Add RSS Feed"),
                     self.trUtf8("""The feed was added successfully."""))
         else:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Add RSS Feed"),
                 self.trUtf8("""The feed was already added before."""))
             

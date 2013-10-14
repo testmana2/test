@@ -398,7 +398,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             HighlightingStylesWriter(f, lexers).writeXML()
             f.close()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Export Highlighting Styles"),
                 self.trUtf8(
                     """<p>The highlighting styles could not be exported"""
@@ -429,7 +430,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             reader.readXML()
             f.close()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8(
                     """<p>The highlighting styles could not be read"""

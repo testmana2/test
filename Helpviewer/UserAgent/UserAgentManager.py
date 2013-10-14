@@ -63,7 +63,8 @@ class UserAgentManager(QObject):
         agentFile = self.getFileName()
         writer = UserAgentWriter()
         if not writer.write(agentFile, self.__agents):
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8("Saving user agent data"),
                 self.trUtf8(
                     """<p>User agent data could not be saved to"""
@@ -83,7 +84,8 @@ class UserAgentManager(QObject):
             reader = UserAgentReader()
             self.__agents = reader.read(agentFile)
             if reader.error() != QXmlStreamReader.NoError:
-                E5MessageBox.warning(None,
+                E5MessageBox.warning(
+                    None,
                     self.trUtf8("Loading user agent data"),
                     self.trUtf8("""Error when loading user agent data on"""
                                 """ line {0}, column {1}:\n{2}""")\
@@ -108,7 +110,8 @@ class UserAgentManager(QObject):
                 lines = f.read()
                 f.close()
             except IOError as err:
-                E5MessageBox.critical(None,
+                E5MessageBox.critical(
+                    None,
                     self.trUtf8("Loading user agent data"),
                     self.trUtf8("""<p>User agent data could not be loaded """
                                 """from <b>{0}</b></p>"""

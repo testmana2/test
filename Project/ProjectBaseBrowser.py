@@ -523,10 +523,11 @@ class ProjectBaseBrowser(Browser):
         QApplication.processEvents()
         
         if selectedEntries == 0:
-            E5MessageBox.information(self,
-            QApplication.translate('ProjectBaseBrowser', "Select entries"),
-            QApplication.translate('ProjectBaseBrowser',
-                """There were no matching entries found."""))
+            E5MessageBox.information(
+                self,
+                QApplication.translate('ProjectBaseBrowser', "Select entries"),
+                QApplication.translate('ProjectBaseBrowser',
+                    """There were no matching entries found."""))
         
     def selectLocalEntries(self):
         """

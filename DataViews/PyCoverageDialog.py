@@ -237,7 +237,8 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             self.summaryGroup.hide()
         
         if total_exceptions:
-            E5MessageBox.warning(self,
+            E5MessageBox.warning(
+                self,
                 self.trUtf8("Parse Error"),
                 self.trUtf8("""%n file(s) could not be parsed. Coverage"""
                             """ info for these is not available.""", "",

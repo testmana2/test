@@ -274,7 +274,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         
         projectFile = parts[0].split("=", 1)[1].strip()
         if projectFile != self.project.getProjectFile():
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Load Diagram"),
                 self.trUtf8(
                     """<p>The diagram belongs to the project <b>{0}</b>."""

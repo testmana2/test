@@ -474,7 +474,8 @@ class TaskViewer(QTreeWidget):
         @param on flag indicating the filter state (boolean)
         """
         if on and not self.taskFilter.hasActiveFilter():
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8("Activate task filter"),
                 self.trUtf8(
                     """The task filter doesn't have any active filters."""

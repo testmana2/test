@@ -92,7 +92,8 @@ class SvnDialogMixin(object):
         if cursor is not None:
             QApplication.restoreOverrideCursor()
         parent = isinstance(self, QWidget) and self or None
-        msgBox = E5MessageBox.E5MessageBox(E5MessageBox.Question,
+        msgBox = E5MessageBox.E5MessageBox(
+            E5MessageBox.Question,
             self.trUtf8("Subversion SSL Server Certificate"),
             self.trUtf8("""<p>Accept the following SSL certificate?</p>"""
                         """<table>"""

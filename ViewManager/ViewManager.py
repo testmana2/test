@@ -3999,7 +3999,8 @@ class ViewManager(QObject):
             if autosave:
                 res = editor.saveFile()
             else:
-                res = E5MessageBox.okToClearData(self.ui,
+                res = E5MessageBox.okToClearData(
+                    self.ui,
                     QApplication.translate('ViewManager', "File Modified"),
                     QApplication.translate('ViewManager',
                         """<p>The file <b>{0}</b> has unsaved changes.</p>""")

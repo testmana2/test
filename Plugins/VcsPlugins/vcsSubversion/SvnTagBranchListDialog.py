@@ -93,7 +93,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         reposURL = self.vcs.svnGetReposName(dname)
         if reposURL is None:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8(
                     """The URL of the project repository could not be"""
@@ -111,7 +112,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             # determine the base path of the project in the repository
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
@@ -154,7 +156,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

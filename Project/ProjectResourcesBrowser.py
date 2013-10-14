@@ -428,7 +428,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     fname += ex
             
             if os.path.exists(fname):
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("New Resource"),
                     self.trUtf8("The file already exists! Overwrite it?"),
                     icon=E5MessageBox.Warning)
@@ -449,7 +450,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 rcfile.write('</RCC>\n')
                 rcfile.close()
             except IOError as e:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("New Resource"),
                     self.trUtf8("<p>The new resource file <b>{0}</b> could not"
                         " be created.<br>Problem: {1}</p>")\
@@ -547,7 +549,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
                 if not self.noDialog and not ui.notificationsEnabled():
-                    E5MessageBox.information(self,
+                    E5MessageBox.information(
+                        self,
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8("The compilation of the resource file"
                             " was successful."))
@@ -559,14 +562,16 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                             " was successful."))
             except IOError as msg:
                 if not self.noDialog:
-                    E5MessageBox.information(self,
+                    E5MessageBox.information(
+                        self,
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8(
                             "<p>The compilation of the resource file"
                             " failed.</p><p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Resource Compilation"),
                     self.trUtf8(
                         "The compilation of the resource file failed."))
@@ -657,7 +662,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.compileRunning = False
             if progress is not None:
                 progress.cancel()
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'Could not start {0}.<br>'

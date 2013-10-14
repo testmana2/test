@@ -219,7 +219,8 @@ class TrayStarter(QSystemTrayIcon):
         
         if not os.path.isfile(applPath) or \
                 not proc.startDetached(sys.executable, args):
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the process.<br>'

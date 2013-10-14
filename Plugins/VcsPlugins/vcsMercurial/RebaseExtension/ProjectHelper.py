@@ -105,7 +105,8 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         shouldReopen = self.vcs.getExtensionObject("rebase")\
             .hgRebase(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Rebase Changesets"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -119,7 +120,8 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         shouldReopen = self.vcs.getExtensionObject("rebase")\
             .hgRebaseContinue(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Rebase Changesets (Continue)"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
@@ -133,7 +135,8 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         shouldReopen = self.vcs.getExtensionObject("rebase")\
             .hgRebaseAbort(self.project.getProjectPath())
         if shouldReopen:
-            res = E5MessageBox.yesNo(None,
+            res = E5MessageBox.yesNo(
+                None,
                 self.trUtf8("Rebase Changesets (Abort)"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)

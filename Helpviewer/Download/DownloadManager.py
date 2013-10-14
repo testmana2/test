@@ -138,7 +138,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         @return flag indicating allowance to quit (boolean)
         """
         if self.activeDownloads() > 0:
-            res = E5MessageBox.yesNo(self,
+            res = E5MessageBox.yesNo(
+                self,
                 self.trUtf8(""),
                 self.trUtf8("""There are %n downloads in progress.\n"""
                             """Do you want to quit anyway?""", "",

@@ -229,7 +229,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             lines1 = f1.readlines()
             f1.close()
         except IOError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
@@ -242,7 +243,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             lines2 = f2.readlines()
             f2.close()
         except IOError:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
