@@ -83,7 +83,8 @@ class DebugViewer(QWidget):
             # add the interpreter shell
             self.shellAssembly = ShellAssembly(debugServer, vm, False)
             self.shell = self.shellAssembly.shell()
-            index = self.__tabWidget.addTab(self.shellAssembly,
+            index = self.__tabWidget.addTab(
+                self.shellAssembly,
                 UI.PixmapCache.getIcon("shell.png"), '')
             self.__tabWidget.setTabToolTip(index, self.shell.windowTitle())
         
@@ -92,7 +93,8 @@ class DebugViewer(QWidget):
             from UI.Browser import Browser
             # add the browser
             self.browser = Browser()
-            index = self.__tabWidget.addTab(self.browser,
+            index = self.__tabWidget.addTab(
+                self.browser,
                 UI.PixmapCache.getIcon("browser.png"), '')
             self.__tabWidget.setTabToolTip(index, self.browser.windowTitle())
         
@@ -128,7 +130,8 @@ class DebugViewer(QWidget):
         self.glvWidgetHLayout.addWidget(self.setGlobalsFilterButton)
         self.glvWidgetVLayout.addLayout(self.glvWidgetHLayout)
         
-        index = self.__tabWidget.addTab(self.glvWidget,
+        index = self.__tabWidget.addTab(
+            self.glvWidget,
             UI.PixmapCache.getIcon("globalVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.globalsViewer.windowTitle())
         
@@ -181,7 +184,8 @@ class DebugViewer(QWidget):
         self.lvWidgetHLayout2.addWidget(self.setLocalsFilterButton)
         self.lvWidgetVLayout.addLayout(self.lvWidgetHLayout2)
         
-        index = self.__tabWidget.addTab(self.lvWidget,
+        index = self.__tabWidget.addTab(
+            self.lvWidget,
             UI.PixmapCache.getIcon("localVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.localsViewer.windowTitle())
         
@@ -194,7 +198,8 @@ class DebugViewer(QWidget):
         from .CallStackViewer import CallStackViewer
         # add the call stack viewer
         self.callStackViewer = CallStackViewer(self.debugServer)
-        index = self.__tabWidget.addTab(self.callStackViewer,
+        index = self.__tabWidget.addTab(
+            self.callStackViewer,
             UI.PixmapCache.getIcon("step.png"), "")
         self.__tabWidget.setTabToolTip(
             index, self.callStackViewer.windowTitle())
@@ -205,7 +210,8 @@ class DebugViewer(QWidget):
         from .CallTraceViewer import CallTraceViewer
         # add the call trace viewer
         self.callTraceViewer = CallTraceViewer(self.debugServer)
-        index = self.__tabWidget.addTab(self.callTraceViewer,
+        index = self.__tabWidget.addTab(
+            self.callTraceViewer,
             UI.PixmapCache.getIcon("callTrace.png"), "")
         self.__tabWidget.setTabToolTip(
             index, self.callTraceViewer.windowTitle())
@@ -215,7 +221,8 @@ class DebugViewer(QWidget):
         # add the breakpoint viewer
         self.breakpointViewer = BreakPointViewer()
         self.breakpointViewer.setModel(self.debugServer.getBreakPointModel())
-        index = self.__tabWidget.addTab(self.breakpointViewer,
+        index = self.__tabWidget.addTab(
+            self.breakpointViewer,
             UI.PixmapCache.getIcon("breakpoints.png"), '')
         self.__tabWidget.setTabToolTip(
             index, self.breakpointViewer.windowTitle())
@@ -225,7 +232,8 @@ class DebugViewer(QWidget):
         # add the watch expression viewer
         self.watchpointViewer = WatchPointViewer()
         self.watchpointViewer.setModel(self.debugServer.getWatchPointModel())
-        index = self.__tabWidget.addTab(self.watchpointViewer,
+        index = self.__tabWidget.addTab(
+            self.watchpointViewer,
             UI.PixmapCache.getIcon("watchpoints.png"), '')
         self.__tabWidget.setTabToolTip(
             index, self.watchpointViewer.windowTitle())
@@ -233,7 +241,8 @@ class DebugViewer(QWidget):
         from .ExceptionLogger import ExceptionLogger
         # add the exception logger
         self.exceptionLogger = ExceptionLogger()
-        index = self.__tabWidget.addTab(self.exceptionLogger,
+        index = self.__tabWidget.addTab(
+            self.exceptionLogger,
             UI.PixmapCache.getIcon("exceptions.png"), '')
         self.__tabWidget.setTabToolTip(
             index, self.exceptionLogger.windowTitle())

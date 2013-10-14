@@ -27,9 +27,9 @@ class StartDialog(QDialog):
     whether exception reporting should be disabled.
     """
     def __init__(self, caption, argvList, wdList, envList, exceptions,
-        parent=None, type=0, modfuncList=None, tracePython=False,
-        autoClearShell=True, autoContinue=True, autoFork=False,
-        forkChild=False):
+                 parent=None, type=0, modfuncList=None, tracePython=False,
+                 autoClearShell=True, autoContinue=True, autoFork=False,
+                 forkChild=False):
         """
         Constructor
         

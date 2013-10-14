@@ -153,7 +153,7 @@ class PyProfile(profile.Profile):
                                                         self.cur[-3])
         fcode = frame.f_code
         fn = (self.fix_frame_filename(frame),
-            fcode.co_firstlineno, fcode.co_name)
+              fcode.co_firstlineno, fcode.co_name)
         self.cur = (t, 0, 0, fn, frame, self.cur)
         timings = self.timings
         if fn in timings:

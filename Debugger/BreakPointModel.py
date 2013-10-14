@@ -210,8 +210,8 @@ class BreakPointModel(QAbstractItemModel):
         if index.isValid():
             row = index.row()
             index1 = self.createIndex(row, 0, self.breakpoints[row])
-            index2 = self.createIndex(row, len(self.breakpoints[row]),
-                     self.breakpoints[row])
+            index2 = self.createIndex(
+                row, len(self.breakpoints[row]), self.breakpoints[row])
             self.dataAboutToBeChanged.emit(index1, index2)
             self.breakpoints[row] = [fn, line] + list(properties)
             self.dataChanged.emit(index1, index2)

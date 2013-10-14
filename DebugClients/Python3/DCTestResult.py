@@ -40,7 +40,8 @@ class DCTestResult(TestResult):
         """
         TestResult.addFailure(self, test, err)
         tracebackLines = self._exc_info_to_string(err, test)
-        self.parent.write('{0}{1}\n'.format(ResponseUTTestFailed,
+        self.parent.write('{0}{1}\n'.format(
+            ResponseUTTestFailed,
             str((str(test), tracebackLines, test.id()))))
         
     def addError(self, test, err):
@@ -52,7 +53,8 @@ class DCTestResult(TestResult):
         """
         TestResult.addError(self, test, err)
         tracebackLines = self._exc_info_to_string(err, test)
-        self.parent.write('{0}{1}\n'.format(ResponseUTTestErrored,
+        self.parent.write('{0}{1}\n'.format(
+            ResponseUTTestErrored,
             str((str(test), tracebackLines, test.id()))))
         
     def addSkip(self, test, reason):
@@ -63,7 +65,8 @@ class DCTestResult(TestResult):
         @param reason reason for skipping the test (string)
         """
         TestResult.addSkip(self, test, reason)
-        self.parent.write('{0}{1}\n'.format(ResponseUTTestSkipped,
+        self.parent.write('{0}{1}\n'.format(
+            ResponseUTTestSkipped,
             str((str(test), reason, test.id()))))
         
     def addExpectedFailure(self, test, err):
@@ -75,7 +78,8 @@ class DCTestResult(TestResult):
         """
         TestResult.addExpectedFailure(self, test, err)
         tracebackLines = self._exc_info_to_string(err, test)
-        self.parent.write('{0}{1}\n'.format(ResponseUTTestFailedExpected,
+        self.parent.write('{0}{1}\n'.format(
+            ResponseUTTestFailedExpected,
             str((str(test), tracebackLines, test.id()))))
         
     def addUnexpectedSuccess(self, test):
@@ -85,7 +89,8 @@ class DCTestResult(TestResult):
         @param test reference to the test object
         """
         TestResult.addUnexpectedSuccess(self, test)
-        self.parent.write('{0}{1}\n'.format(ResponseUTTestSucceededUnexpected,
+        self.parent.write('{0}{1}\n'.format(
+            ResponseUTTestSucceededUnexpected,
             str((str(test), test.id()))))
         
     def startTest(self, test):
@@ -95,7 +100,8 @@ class DCTestResult(TestResult):
         @param test Reference to the test object
         """
         TestResult.startTest(self, test)
-        self.parent.write('{0}{1}\n'.format(ResponseUTStartTest,
+        self.parent.write('{0}{1}\n'.format(
+            ResponseUTStartTest,
             str((str(test), test.shortDescription()))))
 
     def stopTest(self, test):

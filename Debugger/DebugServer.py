@@ -351,8 +351,8 @@ class DebugServer(QTcpServer):
         """
         if clType is not None and clType in self.getSupportedLanguages():
             self.clientType = clType
-            Preferences.Prefs.settings.setValue('DebugClient/Type',
-                self.clientType)
+            Preferences.Prefs.settings.setValue(
+                'DebugClient/Type', self.clientType)
         
     def startClient(self, unplanned=True, clType=None, forProject=False,
                     runInConsole=False):
@@ -1323,7 +1323,8 @@ class DebugServer(QTcpServer):
         @param toLine line number in the target file (string)
         @param toFunction name of the target function (string)
         """
-        self.callTraceInfo.emit(isCall, fromFile, fromLine, fromFunction,
+        self.callTraceInfo.emit(
+            isCall, fromFile, fromLine, fromFunction,
             toFile, toLine, toFunction)
         
     def clientUtPrepared(self, result, exceptionType, exceptionValue):

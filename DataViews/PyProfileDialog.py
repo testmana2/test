@@ -83,10 +83,10 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
             self.trUtf8('Exclude Python Library'),
             self.__filter)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8('Erase Profiling Info'),
-            self.__eraseProfile)
-        self.__menu.addAction(self.trUtf8('Erase Timing Info'),
-                              self.__eraseTiming)
+        self.__menu.addAction(
+            self.trUtf8('Erase Profiling Info'), self.__eraseProfile)
+        self.__menu.addAction(
+            self.trUtf8('Erase Timing Info'), self.__eraseTiming)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8('Erase All Infos'), self.__eraseAll)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
@@ -170,7 +170,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                 if self.cancelled:
                     return
                 
-                if not (self.ericpath and 
+                if not (self.ericpath and
                         func[0].startswith(self.ericpath)) and \
                    not func[0].startswith("DebugClients") and \
                    func[0] != "profile" and \
@@ -232,7 +232,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                 self.trUtf8("Profile Results"),
                 self.trUtf8("""<p>There is no profiling data"""
                             """ available for <b>{0}</b>.</p>""")
-                    .format(pfn))
+                .format(pfn))
             self.close()
             return
         try:
@@ -245,7 +245,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                 self.trUtf8("Loading Profiling Data"),
                 self.trUtf8("""<p>The profiling data could not be"""
                             """ read from file <b>{0}</b>.</p>""")
-                    .format(fname))
+                .format(fname))
             self.close()
             return
         

@@ -87,4 +87,4 @@ def startDebugger(enableTrace=True, exceptions=True,
     global debugger
     if debugger:
         debugger.startDebugger(enableTrace=enableTrace, exceptions=exceptions,
-            tracePython=tracePython, redirect=redirect)
+                               tracePython=tracePython, redirect=redirect)

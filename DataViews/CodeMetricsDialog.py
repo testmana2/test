@@ -184,7 +184,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         
         # now do the summary stuff
         docstrings = total['lines'] - total['comments'] - \
-                     total['empty lines'] - total['non-commentary lines']
+            total['empty lines'] - total['non-commentary lines']
         self.__createSummaryItem(self.trUtf8("files"),
                                  loc.toString(total['files']))
         self.__createSummaryItem(self.trUtf8("lines"),
@@ -266,7 +266,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         filterList = filterString.split(",")
         if filterList:
             for filter in filterList:
-                fileList = [f for f in fileList 
+                fileList = [f for f in fileList
                             if not fnmatch.fnmatch(f, filter.strip())]
         
         self.resultList.clear()

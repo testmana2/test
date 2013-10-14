@@ -51,14 +51,14 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         self.__menu = QMenu(self)
         self.__menu.addSeparator()
-        self.openAct = self.__menu.addAction(self.trUtf8("Open"),
-            self.__openFile)
+        self.openAct = self.__menu.addAction(
+            self.trUtf8("Open"), self.__openFile)
         self.__menu.addSeparator()
-        self.annotate = self.__menu.addAction(self.trUtf8('Annotate'),
-            self.__annotate)
+        self.annotate = self.__menu.addAction(
+            self.trUtf8('Annotate'), self.__annotate)
         self.__menu.addAction(self.trUtf8('Annotate all'), self.__annotateAll)
-        self.__menu.addAction(self.trUtf8('Delete annotated files'),
-            self.__deleteAnnotated)
+        self.__menu.addAction(
+            self.trUtf8('Delete annotated files'), self.__deleteAnnotated)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8('Erase Coverage Info'), self.__erase)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
@@ -342,7 +342,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         # now process them
         progress = QProgressDialog(self.trUtf8("Annotating files..."),
-            self.trUtf8("Abort"), 0, len(files), self)
+                                   self.trUtf8("Abort"), 0, len(files), self)
         progress.setMinimumDuration(0)
         count = 0
         

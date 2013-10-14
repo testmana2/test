@@ -122,5 +122,5 @@ if __name__ == "__main__":
         print("""
 An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
-""")
+        """)
         raise

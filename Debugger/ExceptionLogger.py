@@ -96,9 +96,9 @@ class ExceptionLogger(QTreeWidget):
         """
         itm = QTreeWidgetItem(self)
         if exceptionType is None:
-            itm.setText(0,
-                self.trUtf8('An unhandled exception occured.'
-                            ' See the shell window for details.'))
+            itm.setText(
+                0, self.trUtf8('An unhandled exception occured.'
+                               ' See the shell window for details.'))
             return
         
         if exceptionMessage == '':

@@ -17,7 +17,8 @@ import re
 from Utilities import html_uencode
 from Utilities.ModuleParser import RB_SOURCE, Function
 
-_signal = re.compile(r"""
+_signal = re.compile(
+r"""
     ^@signal [ \t]+
     (?P<SignalName1>
         [a-zA-Z_] \w* [ \t]* \( [^)]* \)
@@ -31,7 +32,8 @@ _signal = re.compile(r"""
     [ \t]+ (?P<SignalDescription2> .*)
 """, re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
-_event = re.compile(r"""
+_event = re.compile(
+r"""
     ^@event [ \t]+
     (?P<EventName1>
         [a-zA-Z_] \w* [ \t]* \( [^)]* \)
@@ -545,8 +547,9 @@ class ModuleDocument(object):
                 methBody = ""
             methBodies.append(methBody)
             
-        methList = self.__genMethodsListSection(methods, obj.methods,
-            className, obj.name, includeInit=filter == Function.General)
+        methList = self.__genMethodsListSection(
+            methods, obj.methods, className, obj.name,
+            includeInit=filter == Function.General)
         
         if not methList:
             methList = self.listEntryNoneTemplate
@@ -1048,8 +1051,8 @@ class ModuleDocument(object):
         
         if paramList:
             parameterSect = self.parametersListTemplate.format(**{ \
-                'Parameters': self.__genParamDescriptionListSection(paramList,
-                               self.parametersListEntryTemplate)
+                'Parameters': self.__genParamDescriptionListSection(
+                    paramList, self.parametersListEntryTemplate)
             })
         else:
             parameterSect = ""
@@ -1062,24 +1065,24 @@ class ModuleDocument(object):
         
         if exceptionDict:
             exceptionSect = self.exceptionsListTemplate.format(**{ \
-                'Exceptions': self.__genDescriptionListSection(exceptionDict,
-                               self.exceptionsListEntryTemplate)
+                'Exceptions': self.__genDescriptionListSection(
+                    exceptionDict, self.exceptionsListEntryTemplate)
             })
         else:
             exceptionSect = ""
         
         if signalDict:
             signalSect = self.signalsListTemplate.format(**{ \
-                'Signals': self.__genDescriptionListSection(signalDict,
-                               self.signalsListEntryTemplate)
+                'Signals': self.__genDescriptionListSection(
+                    signalDict, self.signalsListEntryTemplate)
             })
         else:
             signalSect = ""
         
         if eventDict:
             eventSect = self.eventsListTemplate.format(**{ \
-                'Events': self.__genDescriptionListSection(eventDict,
-                               self.eventsListEntryTemplate)
+                'Events': self.__genDescriptionListSection(
+                    eventDict, self.eventsListEntryTemplate)
             })
         else:
             eventSect = ""

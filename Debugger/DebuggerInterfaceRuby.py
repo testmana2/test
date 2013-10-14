@@ -144,8 +144,8 @@ class DebuggerInterfaceRuby(QObject):
         interpreter = Preferences.getDebugger("RubyInterpreter")
         if interpreter == "":
             interpreter = "/usr/bin/ruby"
-        debugClient = os.path.join(getConfig('ericDir'),
-            "DebugClients", "Ruby", "DebugClient.rb")
+        debugClient = os.path.join(
+            getConfig('ericDir'), "DebugClients", "Ruby", "DebugClient.rb")
         
         redirect = str(Preferences.getDebugger("RubyRedirect"))
         
@@ -217,7 +217,8 @@ class DebuggerInterfaceRuby(QObject):
                             """ started.</p>"""))
                 return process, self.__isNetworked
         
-        process = self.__startProcess(interpreter,
+        process = self.__startProcess(
+            interpreter,
             [debugClient, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
@@ -316,7 +317,8 @@ class DebuggerInterfaceRuby(QObject):
                             """ started.</p>"""))
                 return process, self.__isNetworked
         
-        process = self.__startProcess(interpreter,
+        process = self.__startProcess(
+            interpreter,
             [debugClient, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:

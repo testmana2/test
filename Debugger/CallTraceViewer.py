@@ -151,7 +151,8 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
                             call = "->"
                         else:
                             call = "<-"
-                        f.write("{0} {1} || {2}\n".format(call,
+                        f.write("{0} {1} || {2}\n".format(
+                            call,
                             itm.text(1), itm.text(2)))
                         itm = self.callTrace.itemBelow(itm)
                     f.close()
@@ -229,9 +230,11 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
             fromFile = self.__project.getRelativePath(fromFile)
             toFile = self.__project.getRelativePath(toFile)
         
-        itm = QTreeWidgetItem(parentItem, ["",
-            self.__entryFormat.format(fromFile, fromLine, fromFunction),
-            self.__entryFormat.format(toFile, toLine, toFunction)])
+        itm = QTreeWidgetItem(
+            parentItem,
+            ["",
+             self.__entryFormat.format(fromFile, fromLine, fromFunction),
+             self.__entryFormat.format(toFile, toLine, toFunction)])
         itm.setIcon(0, icon)
         itm.setData(0, Qt.UserRole, isCall)
         itm.setExpanded(True)

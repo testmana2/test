@@ -161,7 +161,8 @@ class DebugBase(bdb.Bdb):
             self.cFrame = frame
             self.__recursionDepth += 1
             if self.__recursionDepth > gRecursionLimit:
-                raise RuntimeError('maximum recursion depth exceeded\n'
+                raise RuntimeError(
+                    'maximum recursion depth exceeded\n'
                     '(offending frame is two down the stack)')
     
     def __sendCallTrace(self, event, fromFrame, toFrame):

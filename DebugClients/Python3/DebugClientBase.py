@@ -630,7 +630,8 @@ class DebugClientBase(object):
                 sys.excepthook = self.__unhandled_exception
                 
                 # generate a coverage object
-                self.cover = coverage(auto_data=True,
+                self.cover = coverage(
+                    auto_data=True,
                     data_file="{0}.coverage".format(
                         os.path.splitext(sys.argv[0])[0]))
                 self.cover.use_cache(True)
@@ -823,8 +824,8 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestBanner:
                 self.write('{0}{1}\n'.format(DebugProtocol.ResponseBanner,
-                    str(("Python {0}".format(sys.version),
-                         socket.gethostname(), self.variant))))
+                           str(("Python {0}".format(sys.version),
+                                socket.gethostname(), self.variant))))
                 return
             
             if cmd == DebugProtocol.RequestCapabilities:
@@ -876,7 +877,8 @@ class DebugClientBase(object):
                 # generate a coverage object
                 if int(cov):
                     from coverage import coverage
-                    self.cover = coverage(auto_data=True,
+                    self.cover = coverage(
+                        auto_data=True,
                         data_file="{0}.coverage".format(
                             os.path.splitext(covname)[0]))
                     self.cover.use_cache(True)
@@ -885,7 +887,8 @@ class DebugClientBase(object):
                 else:
                     self.cover = None
                 
-                self.write('{0}{1}\n'.format(DebugProtocol.ResponseUTPrepared,
+                self.write('{0}{1}\n'.format(
+                    DebugProtocol.ResponseUTPrepared,
                     str((self.test.countTestCases(), "", ""))))
                 return
             
@@ -1893,8 +1896,8 @@ class DebugClientBase(object):
                                           str(completions), text))
 
     def startDebugger(self, filename=None, host=None, port=None,
-            enableTrace=True, exceptions=True, tracePython=False,
-            redirect=True):
+                      enableTrace=True, exceptions=True, tracePython=False,
+                      redirect=True):
         """
         Public method used to start the remote debugger.
         
@@ -1950,7 +1953,8 @@ class DebugClientBase(object):
             self.mainThread.set_trace()
     
     def startProgInDebugger(self, progargs, wd='', host=None,
-            port=None, exceptions=True, tracePython=False, redirect=True):
+                            port=None, exceptions=True, tracePython=False,
+                            redirect=True):
         """
         Public method used to start the remote debugger.
         

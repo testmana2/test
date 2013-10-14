@@ -107,9 +107,10 @@ class DebugUI(QObject):
         self.lastStartAction = 0    # 0=None, 1=Script, 2=Project
         self.clientType = ""
         self.lastAction = -1
-        self.debugActions = [self.__continue, self.__step,\
-                        self.__stepOver, self.__stepOut,\
-                        self.__stepQuit, self.__runToCursor]
+        self.debugActions = [
+            self.__continue, self.__step, self.__stepOver, self.__stepOut,
+            self.__stepQuit, self.__runToCursor
+        ]
         self.localsVarFilter, self.globalsVarFilter = \
             Preferences.getVarFilters()
         self.debugViewer.setVariablesFilter(
@@ -167,10 +168,11 @@ class DebugUI(QObject):
         """
         self.actions = []
         
-        self.runAct = E5Action(self.trUtf8('Run Script'),
-                UI.PixmapCache.getIcon("runScript.png"),
-                self.trUtf8('&Run Script...'),
-                Qt.Key_F2, 0, self, 'dbg_run_script')
+        self.runAct = E5Action(
+            self.trUtf8('Run Script'),
+            UI.PixmapCache.getIcon("runScript.png"),
+            self.trUtf8('&Run Script...'),
+            Qt.Key_F2, 0, self, 'dbg_run_script')
         self.runAct.setStatusTip(self.trUtf8('Run the current Script'))
         self.runAct.setWhatsThis(self.trUtf8(
             """<b>Run Script</b>"""
@@ -181,10 +183,11 @@ class DebugUI(QObject):
         self.runAct.triggered[()].connect(self.__runScript)
         self.actions.append(self.runAct)
 
-        self.runProjectAct = E5Action(self.trUtf8('Run Project'),
-                UI.PixmapCache.getIcon("runProject.png"),
-                self.trUtf8('Run &Project...'), Qt.SHIFT + Qt.Key_F2, 0, self,
-                'dbg_run_project')
+        self.runProjectAct = E5Action(
+            self.trUtf8('Run Project'),
+            UI.PixmapCache.getIcon("runProject.png"),
+            self.trUtf8('Run &Project...'), Qt.SHIFT + Qt.Key_F2, 0, self,
+            'dbg_run_project')
         self.runProjectAct.setStatusTip(self.trUtf8('Run the current Project'))
         self.runProjectAct.setWhatsThis(self.trUtf8(
             """<b>Run Project</b>"""
@@ -196,10 +199,11 @@ class DebugUI(QObject):
         self.runProjectAct.triggered[()].connect(self.__runProject)
         self.actions.append(self.runProjectAct)
 
-        self.coverageAct = E5Action(self.trUtf8('Coverage run of Script'),
-                UI.PixmapCache.getIcon("coverageScript.png"),
-                self.trUtf8('Coverage run of Script...'), 0, 0, self,
-                'dbg_coverage_script')
+        self.coverageAct = E5Action(
+            self.trUtf8('Coverage run of Script'),
+            UI.PixmapCache.getIcon("coverageScript.png"),
+            self.trUtf8('Coverage run of Script...'), 0, 0, self,
+            'dbg_coverage_script')
         self.coverageAct.setStatusTip(
             self.trUtf8('Perform a coverage run of the current Script'))
         self.coverageAct.setWhatsThis(self.trUtf8(
@@ -228,7 +232,8 @@ class DebugUI(QObject):
         self.coverageProjectAct.triggered[()].connect(self.__coverageProject)
         self.actions.append(self.coverageProjectAct)
 
-        self.profileAct = E5Action(self.trUtf8('Profile Script'),
+        self.profileAct = E5Action(
+            self.trUtf8('Profile Script'),
             UI.PixmapCache.getIcon("profileScript.png"),
             self.trUtf8('Profile Script...'), 0, 0, self, 'dbg_profile_script')
         self.profileAct.setStatusTip(self.trUtf8('Profile the current Script'))
@@ -240,7 +245,8 @@ class DebugUI(QObject):
         self.profileAct.triggered[()].connect(self.__profileScript)
         self.actions.append(self.profileAct)
 
-        self.profileProjectAct = E5Action(self.trUtf8('Profile Project'),
+        self.profileProjectAct = E5Action(
+            self.trUtf8('Profile Project'),
             UI.PixmapCache.getIcon("profileProject.png"),
             self.trUtf8('Profile Project...'), 0, 0, self,
             'dbg_profile_project')
@@ -255,7 +261,8 @@ class DebugUI(QObject):
         self.profileProjectAct.triggered[()].connect(self.__profileProject)
         self.actions.append(self.profileProjectAct)
 
-        self.debugAct = E5Action(self.trUtf8('Debug Script'),
+        self.debugAct = E5Action(
+            self.trUtf8('Debug Script'),
             UI.PixmapCache.getIcon("debugScript.png"),
             self.trUtf8('&Debug Script...'), Qt.Key_F5, 0, self,
             'dbg_debug_script')
@@ -270,7 +277,8 @@ class DebugUI(QObject):
         self.debugAct.triggered[()].connect(self.__debugScript)
         self.actions.append(self.debugAct)
 
-        self.debugProjectAct = E5Action(self.trUtf8('Debug Project'),
+        self.debugProjectAct = E5Action(
+            self.trUtf8('Debug Project'),
             UI.PixmapCache.getIcon("debugProject.png"),
             self.trUtf8('Debug &Project...'), Qt.SHIFT + Qt.Key_F5, 0, self,
             'dbg_debug_project')
@@ -286,7 +294,8 @@ class DebugUI(QObject):
         self.debugProjectAct.triggered[()].connect(self.__debugProject)
         self.actions.append(self.debugProjectAct)
 
-        self.restartAct = E5Action(self.trUtf8('Restart'),
+        self.restartAct = E5Action(
+            self.trUtf8('Restart'),
             UI.PixmapCache.getIcon("restart.png"),
             self.trUtf8('Restart'), Qt.Key_F4, 0, self, 'dbg_restart_script')
         self.restartAct.setStatusTip(self.trUtf8(
@@ -301,7 +310,8 @@ class DebugUI(QObject):
         self.restartAct.triggered[()].connect(self.__doRestart)
         self.actions.append(self.restartAct)
 
-        self.stopAct = E5Action(self.trUtf8('Stop'),
+        self.stopAct = E5Action(
+            self.trUtf8('Stop'),
             UI.PixmapCache.getIcon("stopScript.png"),
             self.trUtf8('Stop'), Qt.SHIFT + Qt.Key_F10, 0,
             self, 'dbg_stop_script')
@@ -315,7 +325,8 @@ class DebugUI(QObject):
 
         self.debugActGrp = createActionGroup(self)
 
-        act = E5Action(self.trUtf8('Continue'),
+        act = E5Action(
+            self.trUtf8('Continue'),
             UI.PixmapCache.getIcon("continue.png"),
             self.trUtf8('&Continue'), Qt.Key_F6, 0,
             self.debugActGrp, 'dbg_continue')
@@ -330,7 +341,8 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__continue)
         self.actions.append(act)
 
-        act = E5Action(self.trUtf8('Continue to Cursor'),
+        act = E5Action(
+            self.trUtf8('Continue to Cursor'),
             UI.PixmapCache.getIcon("continueToCursor.png"),
             self.trUtf8('Continue &To Cursor'), Qt.SHIFT + Qt.Key_F6, 0,
             self.debugActGrp, 'dbg_continue_to_cursor')
@@ -345,7 +357,8 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__runToCursor)
         self.actions.append(act)
 
-        act = E5Action(self.trUtf8('Single Step'),
+        act = E5Action(
+            self.trUtf8('Single Step'),
             UI.PixmapCache.getIcon("step.png"),
             self.trUtf8('Sin&gle Step'), Qt.Key_F7, 0,
             self.debugActGrp, 'dbg_single_step')
@@ -360,7 +373,8 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__step)
         self.actions.append(act)
 
-        act = E5Action(self.trUtf8('Step Over'),
+        act = E5Action(
+            self.trUtf8('Step Over'),
             UI.PixmapCache.getIcon("stepOver.png"),
             self.trUtf8('Step &Over'), Qt.Key_F8, 0,
             self.debugActGrp, 'dbg_step_over')
@@ -378,7 +392,8 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__stepOver)
         self.actions.append(act)
 
-        act = E5Action(self.trUtf8('Step Out'),
+        act = E5Action(
+            self.trUtf8('Step Out'),
             UI.PixmapCache.getIcon("stepOut.png"),
             self.trUtf8('Step Ou&t'), Qt.Key_F9, 0,
             self.debugActGrp, 'dbg_step_out')
@@ -396,7 +411,8 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__stepOut)
         self.actions.append(act)
 
-        act = E5Action(self.trUtf8('Stop'),
+        act = E5Action(
+            self.trUtf8('Stop'),
             UI.PixmapCache.getIcon("stepQuit.png"),
             self.trUtf8('&Stop'), Qt.Key_F10, 0,
             self.debugActGrp, 'dbg_stop')
@@ -410,7 +426,8 @@ class DebugUI(QObject):
         
         self.debugActGrp2 = createActionGroup(self)
 
-        act = E5Action(self.trUtf8('Evaluate'),
+        act = E5Action(
+            self.trUtf8('Evaluate'),
             self.trUtf8('E&valuate...'),
             0, 0, self.debugActGrp2, 'dbg_evaluate')
         act.setStatusTip(self.trUtf8('Evaluate in current context'))
@@ -423,9 +440,10 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__eval)
         self.actions.append(act)
         
-        act = E5Action(self.trUtf8('Execute'),
-                self.trUtf8('E&xecute...'),
-                0, 0, self.debugActGrp2, 'dbg_execute')
+        act = E5Action(
+            self.trUtf8('Execute'),
+            self.trUtf8('E&xecute...'),
+            0, 0, self.debugActGrp2, 'dbg_execute')
         act.setStatusTip(
             self.trUtf8('Execute a one line statement in the current context'))
         act.setWhatsThis(self.trUtf8(
@@ -436,7 +454,8 @@ class DebugUI(QObject):
         act.triggered[()].connect(self.__exec)
         self.actions.append(act)
         
-        self.dbgFilterAct = E5Action(self.trUtf8('Variables Type Filter'),
+        self.dbgFilterAct = E5Action(
+            self.trUtf8('Variables Type Filter'),
             self.trUtf8('Varia&bles Type Filter...'), 0, 0, self,
             'dbg_variables_filter')
         self.dbgFilterAct.setStatusTip(self.trUtf8(
@@ -451,7 +470,8 @@ class DebugUI(QObject):
             self.__configureVariablesFilters)
         self.actions.append(self.dbgFilterAct)
 
-        self.excFilterAct = E5Action(self.trUtf8('Exceptions Filter'),
+        self.excFilterAct = E5Action(
+            self.trUtf8('Exceptions Filter'),
             self.trUtf8('&Exceptions Filter...'), 0, 0, self,
             'dbg_exceptions_filter')
         self.excFilterAct.setStatusTip(self.trUtf8(
@@ -467,9 +487,10 @@ class DebugUI(QObject):
             self.__configureExceptionsFilter)
         self.actions.append(self.excFilterAct)
         
-        self.excIgnoreFilterAct = E5Action(self.trUtf8('Ignored Exceptions'),
-                self.trUtf8('&Ignored Exceptions...'), 0, 0,
-                self, 'dbg_ignored_exceptions')
+        self.excIgnoreFilterAct = E5Action(
+            self.trUtf8('Ignored Exceptions'),
+            self.trUtf8('&Ignored Exceptions...'), 0, 0,
+            self, 'dbg_ignored_exceptions')
         self.excIgnoreFilterAct.setStatusTip(self.trUtf8(
             'Configure ignored exceptions'))
         self.excIgnoreFilterAct.setWhatsThis(self.trUtf8(
@@ -485,7 +506,8 @@ class DebugUI(QObject):
 
         self.dbgSetBpActGrp = createActionGroup(self)
 
-        self.dbgToggleBpAct = E5Action(self.trUtf8('Toggle Breakpoint'),
+        self.dbgToggleBpAct = E5Action(
+            self.trUtf8('Toggle Breakpoint'),
             UI.PixmapCache.getIcon("breakpointToggle.png"),
             self.trUtf8('Toggle Breakpoint'),
             QKeySequence(self.trUtf8("Shift+F11", "Debug|Toggle Breakpoint")),
@@ -499,7 +521,8 @@ class DebugUI(QObject):
         self.dbgToggleBpAct.triggered[()].connect(self.__toggleBreakpoint)
         self.actions.append(self.dbgToggleBpAct)
         
-        self.dbgEditBpAct = E5Action(self.trUtf8('Edit Breakpoint'),
+        self.dbgEditBpAct = E5Action(
+            self.trUtf8('Edit Breakpoint'),
             UI.PixmapCache.getIcon("cBreakpointToggle.png"),
             self.trUtf8('Edit Breakpoint...'),
             QKeySequence(self.trUtf8("Shift+F12", "Debug|Edit Breakpoint")), 0,
@@ -513,7 +536,8 @@ class DebugUI(QObject):
         self.dbgEditBpAct.triggered[()].connect(self.__editBreakpoint)
         self.actions.append(self.dbgEditBpAct)
 
-        self.dbgNextBpAct = E5Action(self.trUtf8('Next Breakpoint'),
+        self.dbgNextBpAct = E5Action(
+            self.trUtf8('Next Breakpoint'),
             UI.PixmapCache.getIcon("breakpointNext.png"),
             self.trUtf8('Next Breakpoint'),
             QKeySequence(
@@ -527,7 +551,8 @@ class DebugUI(QObject):
         self.dbgNextBpAct.triggered[()].connect(self.__nextBreakpoint)
         self.actions.append(self.dbgNextBpAct)
 
-        self.dbgPrevBpAct = E5Action(self.trUtf8('Previous Breakpoint'),
+        self.dbgPrevBpAct = E5Action(
+            self.trUtf8('Previous Breakpoint'),
             UI.PixmapCache.getIcon("breakpointPrevious.png"),
             self.trUtf8('Previous Breakpoint'),
             QKeySequence(
@@ -541,7 +566,8 @@ class DebugUI(QObject):
         self.dbgPrevBpAct.triggered[()].connect(self.__previousBreakpoint)
         self.actions.append(self.dbgPrevBpAct)
 
-        act = E5Action(self.trUtf8('Clear Breakpoints'),
+        act = E5Action(
+            self.trUtf8('Clear Breakpoints'),
             self.trUtf8('Clear Breakpoints'),
             QKeySequence(
                 self.trUtf8("Ctrl+Shift+C", "Debug|Clear Breakpoints")), 0,
@@ -893,28 +919,28 @@ class DebugUI(QObject):
         del self.wdHistory[10:]
         del self.envHistory[10:]
         
-        Preferences.Prefs.settings.setValue('DebugInfo/ArgumentsHistory',
-            self.argvHistory)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/ArgumentsHistory', self.argvHistory)
         Preferences.Prefs.settings.setValue(
             'DebugInfo/WorkingDirectoryHistory', self.wdHistory)
-        Preferences.Prefs.settings.setValue('DebugInfo/EnvironmentHistory',
-            self.envHistory)
-        Preferences.Prefs.settings.setValue('DebugInfo/Exceptions',
-            self.excList)
-        Preferences.Prefs.settings.setValue('DebugInfo/IgnoredExceptions',
-            self.excIgnoreList)
-        Preferences.Prefs.settings.setValue('DebugInfo/ReportExceptions',
-            self.exceptions)
-        Preferences.Prefs.settings.setValue('DebugInfo/AutoClearShell',
-            self.autoClearShell)
-        Preferences.Prefs.settings.setValue('DebugInfo/TracePython',
-            self.tracePython)
-        Preferences.Prefs.settings.setValue('DebugInfo/AutoContinue',
-            self.autoContinue)
-        Preferences.Prefs.settings.setValue('DebugInfo/ForkAutomatically',
-            self.forkAutomatically)
-        Preferences.Prefs.settings.setValue('DebugInfo/ForkIntoChild',
-            self.forkIntoChild)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/EnvironmentHistory', self.envHistory)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/Exceptions', self.excList)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/IgnoredExceptions', self.excIgnoreList)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/ReportExceptions', self.exceptions)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/AutoClearShell', self.autoClearShell)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/TracePython', self.tracePython)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/AutoContinue', self.autoContinue)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/ForkAutomatically', self.forkAutomatically)
+        Preferences.Prefs.settings.setValue(
+            'DebugInfo/ForkIntoChild', self.forkIntoChild)
         
     def shutdownServer(self):
         """
@@ -1080,7 +1106,7 @@ class DebugUI(QObject):
         if (self.exceptions and \
             exceptionType not in self.excIgnoreList and \
             (not len(self.excList) or \
-            (len(self.excList) and exceptionType in self.excList)))\
+             (len(self.excList) and exceptionType in self.excList)))\
            or exceptionType.startswith('unhandled'):
             res = None
             if stackTrace:
@@ -1256,7 +1282,8 @@ class DebugUI(QObject):
         fn, line, cond, temp, enabled, count = bp[:6]
         
         from .EditBreakpointDialog import EditBreakpointDialog
-        dlg = EditBreakpointDialog((fn, line), (cond, temp, enabled, count),
+        dlg = EditBreakpointDialog(
+            (fn, line), (cond, temp, enabled, count),
             [], self.ui, modal=True)
         if dlg.exec_() == QDialog.Accepted:
             cond, temp, enabled, count = dlg.getData()
@@ -1305,11 +1332,12 @@ class DebugUI(QObject):
                                       """ already exists.</p>""")\
                             .format(Utilities.html_encode(cond))
                 else:
-                    msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
-                                """ for the variable <b>{1}</b> already"""
-                                """ exists.</p>""")\
-                            .format(special,
-                                    Utilities.html_encode(cond))
+                    msg = self.trUtf8(
+                        """<p>A watch expression '<b>{0}</b>'"""
+                        """ for the variable <b>{1}</b> already"""
+                        """ exists.</p>""")\
+                        .format(special,
+                                Utilities.html_encode(cond))
                 E5MessageBox.warning(
                     self.ui,
                     self.trUtf8("Watch expression already exists"),
@@ -1462,7 +1490,8 @@ class DebugUI(QObject):
             cap = self.trUtf8("Coverage of Project")
         else:
             cap = self.trUtf8("Coverage of Script")
-        dlg = StartDialog(cap, self.argvHistory, self.wdHistory,
+        dlg = StartDialog(
+            cap, self.argvHistory, self.wdHistory,
             self.envHistory, self.exceptions, self.ui, 2,
             autoClearShell=self.autoClearShell)
         if dlg.exec_() == QDialog.Accepted:
@@ -1476,7 +1505,8 @@ class DebugUI(QObject):
                     E5MessageBox.critical(
                         self.ui,
                         self.trUtf8("Coverage of Project"),
-                        self.trUtf8("There is no main script defined for the"
+                        self.trUtf8(
+                            "There is no main script defined for the"
                             " current project. Aborting"))
                     return
                     
@@ -1538,7 +1568,8 @@ class DebugUI(QObject):
                 self.debugViewer.initCallStackViewer(runProject)
                 
                 # Ask the client to open the new program.
-                self.debugServer.remoteCoverage(fn, argv, wd, env,
+                self.debugServer.remoteCoverage(
+                    fn, argv, wd, env,
                     autoClearShell=self.autoClearShell, erase=eraseCoverage,
                     forProject=runProject, runInConsole=console,
                     clientType=self.clientType)
@@ -1591,7 +1622,8 @@ class DebugUI(QObject):
                     E5MessageBox.critical(
                         self.ui,
                         self.trUtf8("Profile of Project"),
-                        self.trUtf8("There is no main script defined for the"
+                        self.trUtf8(
+                            "There is no main script defined for the"
                             " current project. Aborting"))
                     return
                     
@@ -1653,7 +1685,8 @@ class DebugUI(QObject):
                 self.debugViewer.initCallStackViewer(runProject)
                 
                 # Ask the client to open the new program.
-                self.debugServer.remoteProfile(fn, argv, wd, env,
+                self.debugServer.remoteProfile(
+                    fn, argv, wd, env,
                     autoClearShell=self.autoClearShell, erase=eraseTimings,
                     forProject=runProject, runInConsole=console,
                     clientType=self.clientType)
@@ -1708,7 +1741,8 @@ class DebugUI(QObject):
                     E5MessageBox.critical(
                         self.ui,
                         self.trUtf8("Run Project"),
-                        self.trUtf8("There is no main script defined for the"
+                        self.trUtf8(
+                            "There is no main script defined for the"
                             " current project. Aborting"))
                     return
                     
@@ -1771,7 +1805,8 @@ class DebugUI(QObject):
                 self.debugViewer.initCallStackViewer(runProject)
                 
                 # Ask the client to open the new program.
-                self.debugServer.remoteRun(fn, argv, wd, env,
+                self.debugServer.remoteRun(
+                    fn, argv, wd, env,
                     autoClearShell=self.autoClearShell, forProject=runProject,
                     runInConsole=console, autoFork=forkAutomatically,
                     forkChild=forkIntoChild, clientType=self.clientType)
@@ -1826,7 +1861,8 @@ class DebugUI(QObject):
                     E5MessageBox.critical(
                         self.ui,
                         self.trUtf8("Debug Project"),
-                        self.trUtf8("There is no main script defined for the"
+                        self.trUtf8(
+                            "There is no main script defined for the"
                             " current project. No debugging possible."))
                     return
                     
@@ -1903,7 +1939,8 @@ class DebugUI(QObject):
                 self.debugViewer.setCallTraceToProjectMode(debugProject)
                 
                 # Ask the client to open the new program.
-                self.debugServer.remoteLoad(fn, argv, wd, env,
+                self.debugServer.remoteLoad(
+                    fn, argv, wd, env,
                     autoClearShell=self.autoClearShell,
                     tracePython=tracePython,
                     autoContinue=autoContinue, forProject=debugProject,
@@ -1928,8 +1965,8 @@ class DebugUI(QObject):
         if self.lastStartAction in [1, 3, 5, 7, 9]:
             editor = self.viewmanager.getOpenEditor(self.lastDebuggedFile)
             if editor and \
-               not self.viewmanager.checkDirty(editor,
-               Preferences.getDebugger("Autosave")):
+               not self.viewmanager.checkDirty(
+                    editor, Preferences.getDebugger("Autosave")):
                 return
             forProject = False
         elif self.lastStartAction in [2, 4, 6, 8, 10]:
@@ -2097,8 +2134,8 @@ class DebugUI(QObject):
         aw = self.viewmanager.activeWindow()
         line = aw.getCursorPosition()[0] + 1
         self.__enterRemote()
-        self.debugServer.remoteBreakpoint(aw.getFileName(),
-            line, 1, None, 1)
+        self.debugServer.remoteBreakpoint(
+            aw.getFileName(), line, 1, None, 1)
         self.debugServer.remoteContinue()
     
     def __eval(self):

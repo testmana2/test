@@ -250,7 +250,8 @@ class DebuggerInterfacePython(QObject):
                             """ started.</p>"""))
                 return process, self.__isNetworked
         
-        process = self.__startProcess(interpreter,
+        process = self.__startProcess(
+            interpreter,
             [debugClient, noencoding, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
@@ -351,7 +352,8 @@ class DebuggerInterfacePython(QObject):
                             """ started.</p>"""))
                 return process, self.__isNetworked
         
-        process = self.__startProcess(interpreter,
+        process = self.__startProcess(
+            interpreter,
             [debugClient, noencoding, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
@@ -864,9 +866,11 @@ class DebuggerInterfacePython(QObject):
                     isCall = event.lower() == "c"
                     fromFile, fromLineno, fromFunc = fromStr.rsplit(":", 2)
                     toFile, toLineno, toFunc = toStr.rsplit(":", 2)
-                    self.debugServer.signalClientCallTrace(isCall,
-                        fromFile, fromLineno, fromFunc,
-                        toFile, toLineno, toFunc)
+                    self.debugServer.signalClientCallTrace(isCall, fromFile,
+                                                           fromLineno,
+                                                           fromFunc,
+                                                           toFile, toLineno,
+                                                           toFunc)
                     continue
                 
                 if resp == DebugProtocol.ResponseThreadList:

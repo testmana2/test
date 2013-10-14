@@ -186,6 +186,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                 UI.PixmapCache.getPixmap("cooperation48.png"),
                 self.trUtf8("New User"), self.trUtf8("{0} has joined.")
                     .format(nick))
+
     def __participantLeft(self, nick):
         """
         Private slot handling a participant leaving the session.
@@ -228,7 +229,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             return
         
         self.chatEdit.append(
-            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + \
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) +
             " <" + from_ + ">:")
         self.chatEdit.append(message + "\n")
         bar = self.chatEdit.verticalScrollBar()
@@ -302,7 +303,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.__client.close()
             self.serverButton.setText(self.trUtf8("Start Server"))
             self.serverPortSpin.setEnabled(True)
-            if (self.serverPortSpin.value() != 
+            if (self.serverPortSpin.value() !=
                     Preferences.getCooperation("ServerPort")):
                 self.serverPortSpin.setValue(
                     Preferences.getCooperation("ServerPort"))
@@ -318,7 +319,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             else:
                 self.__showErrorMessage(
                     self.trUtf8("! Server Error: {0}\n").format(
-                    self.__client.errorString())
+                        self.__client.errorString())
                 )
     
     def __setConnected(self, connected):
@@ -586,7 +587,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                         self.trUtf8("""<p>The chat contents could not be"""
                                     """ written to <b>{0}</b></p>"""
                                     """<p>Reason: {1}</p>""") .format(
-                                    fname, str(err)))
+                        fname, str(err)))
     
     def __copyChat(self):
         """
@@ -690,7 +691,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             ":")
         self.chatEdit.append(
             self.trUtf8("* {0} has been banned and kicked.\n")
-                .format( itm.text().split("@")[0]))
+                .format(itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)
     
     def shutdown(self):

@@ -595,7 +595,8 @@ class DebugClientBase(object):
                 sys.excepthook = self.__unhandled_exception
                 
                 # generate a coverage object
-                self.cover = coverage(auto_data=True,
+                self.cover = coverage(
+                    auto_data=True,
                     data_file="%s.coverage" % os.path.splitext(sys.argv[0])[0])
                 self.cover.use_cache(True)
                 
@@ -671,9 +672,10 @@ class DebugClientBase(object):
                         try:
                             compile(cond, '<string>', 'eval')
                         except SyntaxError:
-                            self.write('%s%s,%d\n' % \
-                                (DebugProtocol.ResponseBPConditionError, fn,
-                                 line))
+                            self.write(
+                                '%s%s,%d\n' % \
+                                    (DebugProtocol.ResponseBPConditionError,
+                                     fn, line))
                             return
                     self.mainThread.set_break(fn, line, temporary, cond)
                 else:
@@ -811,9 +813,12 @@ class DebugClientBase(object):
                 return
             
             if cmd == DebugProtocol.RequestBanner:
-                self.write('%s%s\n' % (DebugProtocol.ResponseBanner,
-                    unicode(("Python %s" % sys.version, socket.gethostname(),
-                             self.variant))))
+                self.write(
+                    '%s%s\n' % (
+                        DebugProtocol.ResponseBanner,
+                        unicode(("Python %s" % sys.version,
+                                 socket.gethostname(),
+                                 self.variant))))
                 return
             
             if cmd == DebugProtocol.RequestCapabilities:
@@ -856,15 +861,18 @@ class DebugClientBase(object):
                                     .loadTestsFromModule(utModule)
                 except:
                     exc_type, exc_value, exc_tb = sys.exc_info()
-                    self.write('%s%s\n' % (DebugProtocol.ResponseUTPrepared,
-                        unicode((0, str(exc_type), str(exc_value)))))
+                    self.write(
+                        '%s%s\n' % (
+                            DebugProtocol.ResponseUTPrepared,
+                            unicode((0, str(exc_type), str(exc_value)))))
                     self.__exceptionRaised()
                     return
                 
                 # generate a coverage object
                 if int(cov):
                     from coverage import coverage
-                    self.cover = coverage(auto_data=True,
+                    self.cover = coverage(
+                        auto_data=True,
                         data_file="%s.coverage" % os.path.splitext(covname)[0])
                     self.cover.use_cache(True)
                     if int(erase):
@@ -872,8 +880,10 @@ class DebugClientBase(object):
                 else:
                     self.cover = None
                 
-                self.write('%s%s\n' % (DebugProtocol.ResponseUTPrepared,
-                    unicode((self.test.countTestCases(), "", ""))))
+                self.write(
+                    '%s%s\n' % (
+                        DebugProtocol.ResponseUTPrepared,
+                        unicode((self.test.countTestCases(), "", ""))))
                 return
             
             if cmd == DebugProtocol.RequestUTRun:
@@ -1632,8 +1642,9 @@ class DebugClientBase(object):
                 varlist.append(("column", "int", "%s" % value.column()))
                 varlist.append(
                     ("internalId", "int", "%s" % value.internalId()))
-                varlist.append(("internalPointer", "void *", "%s" % \
-                    value.internalPointer()))
+                varlist.append(
+                    ("internalPointer", "void *", "%s" % \
+                     value.internalPointer()))
         elif qttype == 'QRegExp':
             varlist.append(("pattern", "str", "%s" % value.pattern()))
         
@@ -1829,7 +1840,7 @@ class DebugClientBase(object):
                                    unicode(completions), text))
 
     def startDebugger(self, filename=None, host=None, port=None,
-            enableTrace=1, exceptions=1, tracePython=0, redirect=1):
+                      enableTrace=1, exceptions=1, tracePython=0, redirect=1):
         """
         Public method used to start the remote debugger.
         
@@ -1885,7 +1896,8 @@ class DebugClientBase(object):
             self.mainThread.set_trace()
         
     def startProgInDebugger(self, progargs, wd='', host=None,
-            port=None, exceptions=1, tracePython=0, redirect=1):
+                            port=None, exceptions=1, tracePython=0,
+                            redirect=1):
         """
         Public method used to start the remote debugger.
         

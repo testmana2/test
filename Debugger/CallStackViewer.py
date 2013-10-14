@@ -113,12 +113,13 @@ class CallStackViewer(QTreeWidget):
                 dfname = fname
             if ffunc and not ffunc.startswith("<"):
                 # use normal format
-                itm = QTreeWidgetItem(self,
+                itm = QTreeWidgetItem(
+                    self,
                     [self.__entryFormat.format(dfname, fline, ffunc, fargs)])
             else:
                 # use short format
-                itm = QTreeWidgetItem(self,
-                    [self.__entryFormatShort.format(dfname, fline)])
+                itm = QTreeWidgetItem(
+                    self, [self.__entryFormatShort.format(dfname, fline)])
             itm.setData(0, self.FilenameRole, fname)
             itm.setData(0, self.LinenoRole, fline)
         

@@ -200,7 +200,7 @@ class Connection(QTcpSocket):
             if bannedName in Preferences.getCooperation("BannedUsers"):
                 self.rejected.emit(self.trUtf8(
                     "* Connection attempted by banned user '{0}'.")
-                        .format(bannedName))
+                    .format(bannedName))
                 self.abort()
                 return
             

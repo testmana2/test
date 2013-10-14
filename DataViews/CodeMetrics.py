@@ -173,8 +173,8 @@ class SourceStat(object):
         Public method used to format and print the collected statistics.
         """
         label_len = 79 - len(spacer) - 6 * 6
-        print(spacer + "FUNCTION / CLASS".ljust(label_len) + \
-            " START   END LINES  NLOC  COMM EMPTY")
+        print(spacer + "FUNCTION / CLASS".ljust(label_len) +
+              " START   END LINES  NLOC  COMM EMPTY")
         for id in self.identifiers + ['TOTAL ']:
             label = id
             counters = self.counters.get(id, {})

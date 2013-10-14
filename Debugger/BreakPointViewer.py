@@ -179,7 +179,7 @@ class BreakPointViewer(QTreeView):
         self.multiMenu.addAction(self.trUtf8("Add"), self.__addBreak)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8("Enable selected"),
-            self.__enableSelectedBreaks)
+                                 self.__enableSelectedBreaks)
         self.multiMenu.addAction(self.trUtf8("Enable all"),
                                  self.__enableAllBreaks)
         self.multiMenu.addSeparator()
@@ -229,8 +229,8 @@ class BreakPointViewer(QTreeView):
         from .EditBreakpointDialog import EditBreakpointDialog
         
         dlg = EditBreakpointDialog((self.fnHistory[0], None), None,
-            self.condHistory, self, modal=1, addMode=1,
-            filenameHistory=self.fnHistory)
+                                   self.condHistory, self, modal=1,
+                                   addMode=1, filenameHistory=self.fnHistory)
         if dlg.exec_() == QDialog.Accepted:
             fn, line, cond, temp, enabled, count = dlg.getAddData()
             if fn is not None:
@@ -289,8 +289,8 @@ class BreakPointViewer(QTreeView):
                         self.condHistory.remove(cond)
                     self.condHistory.insert(0, cond)
                 
-                self.__model.setBreakPointByIndex(sindex,
-                    fn, line, (cond, temp, enabled, count))
+                self.__model.setBreakPointByIndex(
+                    sindex, fn, line, (cond, temp, enabled, count))
                 self.__resizeColumns()
                 self.__resort()
 

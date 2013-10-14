@@ -188,8 +188,8 @@ class WatchPointModel(QAbstractItemModel):
         if index.isValid():
             row = index.row()
             index1 = self.createIndex(row, 0, self.watchpoints[row])
-            index2 = self.createIndex(row, len(self.watchpoints[row]),
-                     self.watchpoints[row])
+            index2 = self.createIndex(
+                row, len(self.watchpoints[row]), self.watchpoints[row])
             self.dataAboutToBeChanged.emit(index1, index2)
             i = 0
             for value in [cond, special] + list(properties):

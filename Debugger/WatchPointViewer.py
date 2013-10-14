@@ -301,8 +301,8 @@ class WatchPointViewer(QTreeView):
             if dlg.exec_() == QDialog.Accepted:
                 cond, temp, enabled, count, special = dlg.getData()
                 if not self.__findDuplicates(cond, special, True, sindex):
-                    self.__model.setWatchPointByIndex(sindex,
-                        cond, special, (temp, enabled, count))
+                    self.__model.setWatchPointByIndex(
+                        sindex, cond, special, (temp, enabled, count))
                     self.__resizeColumns()
                     self.__resort()
 
