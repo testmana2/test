@@ -6227,8 +6227,7 @@ class ViewManager(QObject):
         
     def __editorConfigChanged(self):
         """
-        Private slot to handle changes of an editor's configuration (e.g.
-        language).
+        Private slot to handle changes of an editor's configuration.
         """
         editor = self.sender()
         fn = editor.getFileName()

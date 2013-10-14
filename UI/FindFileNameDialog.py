@@ -194,8 +194,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     def on_searchDirButton_clicked(self):
         """
         Private slot to handle the clicked signal of the search directory
-        selection
-        button.
+        selection button.
         """
         searchDir = E5FileDialog.getExistingDirectory(
             None,

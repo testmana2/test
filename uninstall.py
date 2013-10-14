@@ -29,6 +29,8 @@ progLanguages = ["Python", "Ruby"]
 def exit(rcode=0):
     """
     Exit the uninstall script.
+    
+    @param rcode result code to report back (integer)
     """
     # restore the local eric5config.py
     if os.path.exists("eric5config.py.orig"):
@@ -41,7 +43,7 @@ def usage(rcode=2):
     """
     Display a usage message and exit.
 
-    rcode is the return code passed back to the calling process.
+    @param rcode return code passed back to the calling process (integer)
     """
     global progName
 
@@ -65,6 +67,10 @@ def initGlobals():
 def wrapperName(dname, wfile):
     """
     Create the platform specific name for the wrapper script.
+    
+    @param dname name of the directory to place the wrapper into
+    @param wfile basename (without extension) of the wrapper script
+    @return the name of the wrapper script
     """
     if sys.platform.startswith("win"):
         wname = dname + "\\" + wfile + ".bat"
@@ -166,7 +172,7 @@ def main(argv):
     """
     The main function of the script.
 
-    argv is the list of command line arguments.
+    @param argv list of command line arguments
     """
     import getopt
 

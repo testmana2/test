@@ -68,6 +68,8 @@ PlatformsBlackLists = {
 def exit(rcode=0):
     """
     Exit the install script.
+    
+    @param rcode result code to report back (integer)
     """
     global currDir
     

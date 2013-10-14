@@ -417,6 +417,11 @@ modified state (bytearray)
 <dd>
 data of size 4 (bytearray)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+rotated data (bytearray)
+</dd>
 </dl><a NAME="AES.__shiftRow" ID="AES.__shiftRow"></a>
 <h4>AES.__shiftRow</h4>
 <b>__shiftRow</b>(<i>state, statePointer, nbr, isInv</i>)
@@ -501,6 +506,11 @@ key size (16, 24 or 32)
 <dd>
 decrypted data (bytes)
 </dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+key size is invalid
+</dd>
 </dl><a NAME="AES.encrypt" ID="AES.encrypt"></a>
 <h4>AES.encrypt</h4>
 <b>encrypt</b>(<i>iput, key, size</i>)
@@ -522,6 +532,11 @@ key size (16, 24 or 32)
 <dt>Returns:</dt>
 <dd>
 encrypted data (bytes)
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+key size is invalid
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -588,9 +603,9 @@ extracted bytes (bytearray)
 <p>
         Public method to perform the decryption operation.
 </p><dl>
-<dt><i>input</i></dt>
+<dt><i>cipherIn</i></dt>
 <dd>
-data to be encrypted (bytes)
+data to be decrypted (bytes)
 </dd><dt><i>originalsize</i></dt>
 <dd>
 unencrypted string length (required for CBC)
@@ -612,6 +627,11 @@ initialisation vector (bytearray)
 <dt>Returns:</dt>
 <dd>
 decrypted data (bytes)
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+key size is invalid or decrypted data is invalid
 </dd>
 </dl><a NAME="AESModeOfOperation.encrypt" ID="AESModeOfOperation.encrypt"></a>
 <h4>AESModeOfOperation.encrypt</h4>
@@ -640,6 +660,11 @@ initialisation vector (bytearray)
 <dd>
 tuple with mode of operation, length of the input and
             the encrypted data (integer, integer, bytes)
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+key size is invalid or decrypted data is invalid
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -684,11 +709,6 @@ mode of operations (0, 1 or 2)
 <dd>
 decrypted data (bytes)
 </dd>
-</dl><dl>
-<dt>Raises <b>ValueError</b>:</dt>
-<dd>
-key size is invalid or decrypted data is invalid
-</dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -730,6 +750,11 @@ data to be stripped (bytes)
 <dt>Returns:</dt>
 <dd>
 stripped data (bytes)
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+data padding is invalid
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

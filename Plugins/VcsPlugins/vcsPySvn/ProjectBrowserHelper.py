@@ -798,8 +798,9 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     def __SVNSbsExtendedDiff(self):
         """
         Private slot called by the context menu to show the difference of a
-        file to the repository side-by-side allowing the selection of
-        revisions to compare.
+        file to the repository side-by-side.
+       
+        It allows the selection of revisions to compare.
         """
         itm = self.browser.currentItem()
         fn = itm.fileName()

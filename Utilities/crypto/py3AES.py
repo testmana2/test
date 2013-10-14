@@ -45,6 +45,7 @@ def strip_PKCS7_padding(b):
     
     @param b data to be stripped (bytes)
     @return stripped data (bytes)
+    @exception ValueError data padding is invalid
     """
     if len(b) % 16 or not b:
         raise ValueError(
@@ -171,6 +172,7 @@ class AES(object):
         rotate(1d2c3a4f) == 2c3a4f1d.
         
         @param data data of size 4 (bytearray)
+        @return rotated data (bytearray)
         """
         return data[1:] + data[:1]
 
@@ -489,6 +491,7 @@ class AES(object):
         @param key key to be used (bytes or bytearray)
         @param size key size (16, 24 or 32)
         @return encrypted data (bytes)
+        @exception ValueError key size is invalid
         """
         output = bytearray(16)
         # the number of rounds
@@ -545,6 +548,7 @@ class AES(object):
         @param key key to be used (bytes or bytearray)
         @param size key size (16, 24 or 32)
         @return decrypted data (bytes)
+        @exception ValueError key size is invalid
         """
         output = bytearray(16)
         # the number of rounds
@@ -639,6 +643,7 @@ class AESModeOfOperation(object):
         @param IV initialisation vector (bytearray)
         @return tuple with mode of operation, length of the input and
             the encrypted data (integer, integer, bytes)
+        @exception ValueError key size is invalid or decrypted data is invalid
         """
         if len(key) % size:
             raise ValueError("Illegal size ({0}) for key '{1}'.".format(
@@ -722,7 +727,7 @@ class AESModeOfOperation(object):
         """
         Public method to perform the decryption operation.
         
-        @param input data to be encrypted (bytes)
+        @param cipherIn data to be decrypted (bytes)
         @param originalsize unencrypted string length (required for CBC)
             (integer)
         @param mode mode of operation (0, 1 or 2)
@@ -730,6 +735,7 @@ class AESModeOfOperation(object):
         @param size length of the key (16, 24 or 32)
         @param IV initialisation vector (bytearray)
         @return decrypted data (bytes)
+        @exception ValueError key size is invalid or decrypted data is invalid
         """
         if len(key) % size:
             raise ValueError("Illegal size ({0}) for key '{1}'.".format(
@@ -840,7 +846,6 @@ def decryptData(key, data, mode=AESModeOfOperation.ModeOfOperation["CBC"]):
         (bytes)
     @param mode mode of operations (0, 1 or 2)
     @return decrypted data (bytes)
-    @exception ValueError key size is invalid or decrypted data is invalid
     """
     key = bytearray(key)
     keysize = len(key)

@@ -830,7 +830,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     def __SVNLock(self):
         """
         Private slot called by the context menu to lock files in the
-        repository. """
+        repository.
+        """
         names = []
         for itm in self.browser.getSelectedItems():
             try:
