@@ -107,8 +107,8 @@ class SyncHandler(QObject):
                 "LocalMissing": self.trUtf8(
                     "Local user agent settings file does NOT exist."
                     " Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local user agent"
-                    " settings file..."),
+                "Uploading": self.trUtf8(
+                    "Uploading local user agent settings file..."),
             },
             "speeddial": {
                 "RemoteExists": self.trUtf8(
@@ -123,8 +123,8 @@ class SyncHandler(QObject):
                 "LocalMissing": self.trUtf8(
                     "Local speed dial settings file does NOT exist."
                     " Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local speed dial"
-                    " settings file..."),
+                "Uploading": self.trUtf8(
+                    "Uploading local speed dial settings file..."),
             },
         }
     
@@ -222,7 +222,8 @@ class SyncHandler(QObject):
                 if not key:
                     return QByteArray()
                 
-                data, ok = dataEncrypt(data, key,
+                data, ok = dataEncrypt(
+                    data, key,
                     keyLength=Preferences.getHelp("SyncEncryptionKeyLength"),
                     hashIterations=100)
                 if not ok:
@@ -258,7 +259,8 @@ class SyncHandler(QObject):
             if not key:
                 return False, self.trUtf8("Invalid encryption key given.")
             
-            data, ok = dataDecrypt(data, key,
+            data, ok = dataDecrypt(
+                data, key,
                 keyLength=Preferences.getHelp("SyncEncryptionKeyLength"))
             if not ok:
                 return False, self.trUtf8("Data cannot be decrypted.")

@@ -71,9 +71,10 @@ class SyntaxCheckerPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
-            self.__projectAct = E5Action(self.trUtf8('Check Syntax'),
-                    self.trUtf8('&Syntax...'), 0, 0,
-                    self, 'project_check_syntax')
+            self.__projectAct = E5Action(
+                self.trUtf8('Check Syntax'),
+                self.trUtf8('&Syntax...'), 0, 0,
+                self, 'project_check_syntax')
             self.__projectAct.setStatusTip(
                 self.trUtf8('Check syntax.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
@@ -84,9 +85,10 @@ class SyntaxCheckerPlugin(QObject):
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
-        self.__editorAct = E5Action(self.trUtf8('Check Syntax'),
-                self.trUtf8('&Syntax...'), 0, 0,
-                self, "")
+        self.__editorAct = E5Action(
+            self.trUtf8('Check Syntax'),
+            self.trUtf8('&Syntax...'), 0, 0,
+            self, "")
         self.__editorAct.setWhatsThis(self.trUtf8(
                 """<b>Check Syntax...</b>"""
                 """<p>This checks Python files for syntax errors.</p>"""
@@ -183,8 +185,8 @@ class SyntaxCheckerPlugin(QObject):
         project.saveAllScripts()
         ppath = project.getProjectPath()
         files = [os.path.join(ppath, file) \
-            for file in project.pdata["SOURCES"] \
-                if file.endswith(
+                 for file in project.pdata["SOURCES"] \
+                 if file.endswith(
                     tuple(Preferences.getPython("Python3Extensions")) +
                     tuple(Preferences.getPython("PythonExtensions")))]
         

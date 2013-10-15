@@ -47,7 +47,8 @@ def getImporterInfo(id):
                 """Apple Safari stores its bookmarks in the"""
                 """ <b>Bookmarks.plist</b> file. This file is usually"""
                 """ located in"""),
-            QCoreApplication.translate("SafariImporter",
+            QCoreApplication.translate(
+                "SafariImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
         )

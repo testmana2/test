@@ -159,7 +159,8 @@ class PluginManager(QObject):
                     f = open(fname, "w")
                     f.close()
                 except IOError:
-                    return (False,
+                    return (
+                        False,
                         self.trUtf8("Could not create a package for {0}.")\
                             .format(self.__develPluginFile))
         
@@ -193,7 +194,8 @@ class PluginManager(QObject):
             del self.pluginDirs["global"]
         
         if not os.path.exists(self.pluginDirs["eric5"]):
-            return (False,
+            return (
+                False,
                 self.trUtf8(
                     "The internal plugin directory <b>{0}</b>"
                     " does not exits.").format(self.pluginDirs["eric5"]))
@@ -552,13 +554,16 @@ class PluginManager(QObject):
                     module.eric5PluginModuleName, className)
             pluginClass = getattr(module, className)
             if not hasattr(pluginClass, "__init__"):
-                raise PluginClassFormatError(module.eric5PluginModuleName,
+                raise PluginClassFormatError(
+                    module.eric5PluginModuleName,
                     className, "__init__")
             if not hasattr(pluginClass, "activate"):
-                raise PluginClassFormatError(module.eric5PluginModuleName,
+                raise PluginClassFormatError(
+                    module.eric5PluginModuleName,
                     className, "activate")
             if not hasattr(pluginClass, "deactivate"):
-                raise PluginClassFormatError(module.eric5PluginModuleName,
+                raise PluginClassFormatError(
+                    module.eric5PluginModuleName,
                     className, "deactivate")
             return True
         except PluginModuleFormatError as e:

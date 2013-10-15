@@ -218,8 +218,8 @@ class AdBlockTreeWidget(E5TreeWidget):
         self.refresh()
         
         self.__itemChangingBlock = True
-        self.__topItem.setText(0,
-            self.trUtf8("{0} (recently updated)").format(
+        self.__topItem.setText(
+            0, self.trUtf8("{0} (recently updated)").format(
                 self.__subscription.title()))
         self.__itemChangingBlock = False
     

@@ -40,7 +40,8 @@ class PluginRepositoryReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Plugins":
-                    self.version = self.attribute("version",
+                    self.version = self.attribute(
+                        "version",
                         pluginRepositoryFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)

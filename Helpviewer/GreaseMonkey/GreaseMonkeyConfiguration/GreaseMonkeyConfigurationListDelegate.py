@@ -94,7 +94,8 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
             opt2.state |= QStyle.State_Off
         styleCheckBoxRect = style.subElementRect(
             QStyle.SE_ViewItemCheckIndicator, opt2, widget)
-        opt2.rect = QRect(leftPos, checkBoxYPos,
+        opt2.rect = QRect(
+            leftPos, checkBoxYPos,
             styleCheckBoxRect.width(), styleCheckBoxRect.height())
         style.drawPrimitive(QStyle.PE_IndicatorViewItemCheck, opt2, painter,
                             widget)
@@ -103,8 +104,8 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         # Draw icon
         iconYPos = center - GreaseMonkeyConfigurationListDelegate.IconSize // 2
         iconRect = QRect(leftPos, iconYPos,
-            GreaseMonkeyConfigurationListDelegate.IconSize,
-            GreaseMonkeyConfigurationListDelegate.IconSize)
+                         GreaseMonkeyConfigurationListDelegate.IconSize,
+                         GreaseMonkeyConfigurationListDelegate.IconSize)
         pixmap = index.data(Qt.DecorationRole).pixmap(
             GreaseMonkeyConfigurationListDelegate.IconSize)
         painter.drawPixmap(iconRect, pixmap)
@@ -116,14 +117,15 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         rightTitleEdge = rightPos - self.__padding
         leftPosForVersion = titleMetrics.width(name) + self.__padding
         nameRect = QRect(leftTitleEdge, opt.rect.top() + self.__padding,
-            rightTitleEdge - leftTitleEdge, titleMetrics.height())
+                         rightTitleEdge - leftTitleEdge, titleMetrics.height())
         painter.setFont(titleFont)
         style.drawItemText(painter, nameRect, Qt.AlignLeft, opt.palette, True,
-            name, colorRole)
+                           name, colorRole)
         
         # Draw version
         version = index.data(Qt.UserRole)
-        versionRect = QRect(nameRect.x() + leftPosForVersion, nameRect.y(),
+        versionRect = QRect(
+            nameRect.x() + leftPosForVersion, nameRect.y(),
             rightTitleEdge - leftTitleEdge, titleMetrics.height())
         versionFont = titleFont
         painter.setFont(versionFont)
@@ -132,18 +134,20 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         
         # Draw description
         infoYPos = nameRect.bottom() + opt.fontMetrics.leading()
-        infoRect = QRect(nameRect.x(), infoYPos,
+        infoRect = QRect(
+            nameRect.x(), infoYPos,
             nameRect.width(), opt.fontMetrics.height())
         info = opt.fontMetrics.elidedText(
             index.data(Qt.UserRole + 1), Qt.ElideRight, infoRect.width())
         painter.setFont(opt.font)
         style.drawItemText(painter, infoRect, Qt.AlignLeft | Qt.TextSingleLine,
-            opt.palette, True, info, colorRole)
+                           opt.palette, True, info, colorRole)
         
         # Draw remove button
         removeIconYPos = center - \
             GreaseMonkeyConfigurationListDelegate.RemoveIconSize // 2
-        removeIconRect = QRect(rightPos, removeIconYPos,
+        removeIconRect = QRect(
+            rightPos, removeIconYPos,
             GreaseMonkeyConfigurationListDelegate.RemoveIconSize,
             GreaseMonkeyConfigurationListDelegate.RemoveIconSize)
         painter.drawPixmap(removeIconRect, self.__removePixmap)

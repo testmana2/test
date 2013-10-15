@@ -81,17 +81,21 @@ class AdBlockIcon(E5ClickableLabel):
         if manager.isEnabled() and \
            self.__mw.currentBrowser().page().url().host():
             if self.__isCurrentHostExcepted():
-                menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("adBlockPlus.png"),
                     self.trUtf8("Remove AdBlock Exception"),
                     self.__setException).setData(False)
             else:
-                menu.addAction(UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
                     self.trUtf8("Add AdBlock Exception"),
                     self.__setException).setData(True)
-        menu.addAction(UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
+        menu.addAction(
+            UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
             self.trUtf8("AdBlock Exceptions..."), manager.showExceptionsDialog)
         menu.addSeparator()
-        menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
+        menu.addAction(
+            UI.PixmapCache.getIcon("adBlockPlus.png"),
             self.trUtf8("AdBlock Configuration..."), manager.showDialog)
         menu.addSeparator()
         

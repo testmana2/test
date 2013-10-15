@@ -115,7 +115,8 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         if self.__engine.findFile(url).isValid():
             data = self.__engine.fileData(url)
         else:
-            data = QByteArray(self.trUtf8("""<title>Error 404...</title>"""
+            data = QByteArray(self.trUtf8(
+                """<title>Error 404...</title>"""
                 """<div align="center"><br><br>"""
                 """<h1>The page could not be found</h1><br>"""
                 """<h3>'{0}'</h3></div>""").format(strUrl).encode("utf-8"))

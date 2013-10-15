@@ -53,7 +53,8 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             
             dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
                 .showDialog()
-            subscription = AdBlockSubscription(url, False,
+            subscription = AdBlockSubscription(
+                url, False,
                 Helpviewer.HelpWindow.HelpWindow.adBlockManager())
             Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
                 .addSubscription(subscription)

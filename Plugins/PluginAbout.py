@@ -88,9 +88,10 @@ class AboutPlugin(QObject):
         self.aboutAct.setMenuRole(QAction.AboutRole)
         acts.append(self.aboutAct)
         
-        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
-                UI.PixmapCache.getIcon("helpAboutQt.png"),
-                self.trUtf8('About &Qt'), 0, 0, self, 'about_qt')
+        self.aboutQtAct = E5Action(
+            self.trUtf8('About Qt'),
+            UI.PixmapCache.getIcon("helpAboutQt.png"),
+            self.trUtf8('About &Qt'), 0, 0, self, 'about_qt')
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(

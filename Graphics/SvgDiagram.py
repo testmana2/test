@@ -349,10 +349,10 @@ class SvgDiagram(E5MainWindow):
         painter.setPen(tc)
         painter.drawRect(marginX, marginY, width, height)
         painter.drawLine(marginX, marginY + height + 2,
-                   marginX + width, marginY + height + 2)
+                         marginX + width, marginY + height + 2)
         painter.setFont(font)
         painter.drawText(marginX, marginY + height + 4, width,
-                   fontHeight, Qt.AlignRight, s)
+                         fontHeight, Qt.AlignRight, s)
 
         # render the diagram
         painter.setViewport(marginX, marginY, width, height)

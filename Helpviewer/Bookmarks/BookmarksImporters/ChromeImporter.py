@@ -48,7 +48,8 @@ def getImporterInfo(id):
                 """Google Chrome stores its bookmarks in the"""
                 """ <b>Bookmarks</b> text file. This file is usually"""
                 """ located in"""),
-            QCoreApplication.translate("ChromeImporter",
+            QCoreApplication.translate(
+                "ChromeImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
         )
@@ -67,7 +68,8 @@ def getImporterInfo(id):
                 "ChromeImporter",
                 """Chromium stores its bookmarks in the <b>Bookmarks</b>"""
                 """ text file. This file is usually located in"""),
-            QCoreApplication.translate("ChromeImporter",
+            QCoreApplication.translate(
+                "ChromeImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
         )

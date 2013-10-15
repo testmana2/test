@@ -19,7 +19,8 @@ import UI.Info
 
 titleText = "<b>{0} - {1}</b>".format(UI.Info.Program, UI.Info.Version)
 
-aboutText = QApplication.translate("AboutDialog",
+aboutText = QApplication.translate(
+    "AboutDialog",
     """<p>{0} is an Integrated Development Environment for the Python"""
     """ programming language. It is written using the PyQt Python bindings"""
     """ for the Qt GUI toolkit and the QScintilla editor widget.</p>"""

@@ -156,8 +156,8 @@ class SessionReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Breakpoint":
-                self.dbs.getBreakPointModel().addBreakPoint(filename, lineno,
-                    (bpCond, bpTemp, bpEnabled, bpCount))
+                self.dbs.getBreakPointModel().addBreakPoint(
+                    filename, lineno, (bpCond, bpTemp, bpEnabled, bpCount))
                 break
             
             if self.isStartElement():
@@ -206,8 +206,8 @@ class SessionReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Watchexpression":
-                self.dbs.getWatchPointModel().addWatchPoint(weCond,
-                    (weTemp, weEnabled, weCount, weSpecialCond))
+                self.dbs.getWatchPointModel().addWatchPoint(
+                    weCond, (weTemp, weEnabled, weCount, weSpecialCond))
                 break
             
             if self.isStartElement():

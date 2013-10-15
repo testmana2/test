@@ -83,14 +83,18 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         autoConnect = self.trUtf8("Yes") if network.autoConnect() \
                       else self.trUtf8("No")
         
-        QTreeWidgetItem(itm,
+        QTreeWidgetItem(
+            itm,
             [self.trUtf8("Identity"), identityName])
-        QTreeWidgetItem(itm,
+        QTreeWidgetItem(
+            itm,
             [self.trUtf8("Server"), "{0}:{1}".format(
              server.getName(), server.getPort())])
-        QTreeWidgetItem(itm,
+        QTreeWidgetItem(
+            itm,
             [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
-        QTreeWidgetItem(itm,
+        QTreeWidgetItem(
+            itm,
             [self.trUtf8("Auto-Connect"), autoConnect])
         
         self.__resizeColumns()

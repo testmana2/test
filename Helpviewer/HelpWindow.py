@@ -317,25 +317,33 @@ class HelpWindow(E5MainWindow):
         styleSheet = Preferences.getHelp("UserStyleSheet")
         settings.setUserStyleSheetUrl(self.__userStyleSheet(styleSheet))
         
-        settings.setAttribute(QWebSettings.AutoLoadImages,
+        settings.setAttribute(
+            QWebSettings.AutoLoadImages,
             Preferences.getHelp("AutoLoadImages"))
-        settings.setAttribute(QWebSettings.JavaEnabled,
+        settings.setAttribute(
+            QWebSettings.JavaEnabled,
             Preferences.getHelp("JavaEnabled"))
-        settings.setAttribute(QWebSettings.JavascriptEnabled,
+        settings.setAttribute(
+            QWebSettings.JavascriptEnabled,
             Preferences.getHelp("JavaScriptEnabled"))
-        settings.setAttribute(QWebSettings.JavascriptCanOpenWindows,
+        settings.setAttribute(
+            QWebSettings.JavascriptCanOpenWindows,
             Preferences.getHelp("JavaScriptCanOpenWindows"))
-        settings.setAttribute(QWebSettings.JavascriptCanAccessClipboard,
+        settings.setAttribute(
+            QWebSettings.JavascriptCanAccessClipboard,
             Preferences.getHelp("JavaScriptCanAccessClipboard"))
-        settings.setAttribute(QWebSettings.PluginsEnabled,
+        settings.setAttribute(
+            QWebSettings.PluginsEnabled,
             Preferences.getHelp("PluginsEnabled"))
         
         if hasattr(QWebSettings, "PrintElementBackgrounds"):
-            settings.setAttribute(QWebSettings.PrintElementBackgrounds,
+            settings.setAttribute(
+                QWebSettings.PrintElementBackgrounds,
                 Preferences.getHelp("PrintBackgrounds"))
         
         if hasattr(QWebSettings, "setOfflineStoragePath"):
-            settings.setAttribute(QWebSettings.OfflineStorageDatabaseEnabled,
+            settings.setAttribute(
+                QWebSettings.OfflineStorageDatabaseEnabled,
                 Preferences.getHelp("OfflineStorageDatabaseEnabled"))
             webDatabaseDir = os.path.join(
                 Utilities.getConfigDir(), "browser", "webdatabases")
@@ -360,7 +368,8 @@ class HelpWindow(E5MainWindow):
                 1024 * 1024)
         
         if hasattr(QWebSettings, "LocalStorageEnabled"):
-            settings.setAttribute(QWebSettings.LocalStorageEnabled,
+            settings.setAttribute(
+                QWebSettings.LocalStorageEnabled,
                 Preferences.getHelp("LocalStorageEnabled"))
             localStorageDir = os.path.join(
                 Utilities.getConfigDir(), "browser", "weblocalstorage")
@@ -369,7 +378,8 @@ class HelpWindow(E5MainWindow):
             settings.setLocalStoragePath(localStorageDir)
         
         if hasattr(QWebSettings, "DnsPrefetchEnabled"):
-            settings.setAttribute(QWebSettings.DnsPrefetchEnabled,
+            settings.setAttribute(
+                QWebSettings.DnsPrefetchEnabled,
                 Preferences.getHelp("DnsPrefetchEnabled"))
         
         if hasattr(QWebSettings, "defaultTextEncoding"):
@@ -377,22 +387,28 @@ class HelpWindow(E5MainWindow):
                 Preferences.getHelp("DefaultTextEncoding"))
         
         if hasattr(QWebSettings, "SpatialNavigationEnabled"):
-            settings.setAttribute(QWebSettings.SpatialNavigationEnabled,
+            settings.setAttribute(
+                QWebSettings.SpatialNavigationEnabled,
                 Preferences.getHelp("SpatialNavigationEnabled"))
         if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
-            settings.setAttribute(QWebSettings.LinksIncludedInFocusChain,
+            settings.setAttribute(
+                QWebSettings.LinksIncludedInFocusChain,
                 Preferences.getHelp("LinksIncludedInFocusChain"))
         if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
-            settings.setAttribute(QWebSettings.LocalContentCanAccessRemoteUrls,
+            settings.setAttribute(
+                QWebSettings.LocalContentCanAccessRemoteUrls,
                 Preferences.getHelp("LocalContentCanAccessRemoteUrls"))
         if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
-            settings.setAttribute(QWebSettings.LocalContentCanAccessFileUrls,
+            settings.setAttribute(
+                QWebSettings.LocalContentCanAccessFileUrls,
                 Preferences.getHelp("LocalContentCanAccessFileUrls"))
         if hasattr(QWebSettings, "XSSAuditingEnabled"):
-            settings.setAttribute(QWebSettings.XSSAuditingEnabled,
+            settings.setAttribute(
+                QWebSettings.XSSAuditingEnabled,
                 Preferences.getHelp("XSSAuditingEnabled"))
         if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
-            settings.setAttribute(QWebSettings.SiteSpecificQuirksEnabled,
+            settings.setAttribute(
+                QWebSettings.SiteSpecificQuirksEnabled,
                 Preferences.getHelp("SiteSpecificQuirksEnabled"))
         
         QWebSecurityOrigin.addLocalScheme("eric")
@@ -404,7 +420,8 @@ class HelpWindow(E5MainWindow):
         # list of all actions
         self.__actions = []
         
-        self.newTabAct = E5Action(self.trUtf8('New Tab'),
+        self.newTabAct = E5Action(
+            self.trUtf8('New Tab'),
             UI.PixmapCache.getIcon("tabNew.png"),
             self.trUtf8('&New Tab'),
             QKeySequence(self.trUtf8("Ctrl+T", "File|New Tab")),
@@ -418,7 +435,8 @@ class HelpWindow(E5MainWindow):
             self.newTabAct.triggered[()].connect(self.newTab)
         self.__actions.append(self.newTabAct)
         
-        self.newAct = E5Action(self.trUtf8('New Window'),
+        self.newAct = E5Action(
+            self.trUtf8('New Window'),
             UI.PixmapCache.getIcon("newWindow.png"),
             self.trUtf8('New &Window'),
             QKeySequence(self.trUtf8("Ctrl+N", "File|New Window")),
@@ -432,7 +450,8 @@ class HelpWindow(E5MainWindow):
             self.newAct.triggered[()].connect(self.newWindow)
         self.__actions.append(self.newAct)
         
-        self.openAct = E5Action(self.trUtf8('Open File'),
+        self.openAct = E5Action(
+            self.trUtf8('Open File'),
             UI.PixmapCache.getIcon("open.png"),
             self.trUtf8('&Open File'),
             QKeySequence(self.trUtf8("Ctrl+O", "File|Open")),
@@ -447,7 +466,8 @@ class HelpWindow(E5MainWindow):
             self.openAct.triggered[()].connect(self.__openFile)
         self.__actions.append(self.openAct)
         
-        self.openTabAct = E5Action(self.trUtf8('Open File in New Tab'),
+        self.openTabAct = E5Action(
+            self.trUtf8('Open File in New Tab'),
             UI.PixmapCache.getIcon("openNewTab.png"),
             self.trUtf8('Open File in New &Tab'),
             QKeySequence(self.trUtf8("Shift+Ctrl+O", "File|Open in new tab")),
@@ -463,7 +483,8 @@ class HelpWindow(E5MainWindow):
             self.openTabAct.triggered[()].connect(self.__openFileNewTab)
         self.__actions.append(self.openTabAct)
         
-        self.saveAsAct = E5Action(self.trUtf8('Save As'),
+        self.saveAsAct = E5Action(
+            self.trUtf8('Save As'),
             UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.trUtf8('&Save As...'),
             QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")),
@@ -478,7 +499,8 @@ class HelpWindow(E5MainWindow):
             self.saveAsAct.triggered[()].connect(self.__savePageAs)
         self.__actions.append(self.saveAsAct)
         
-        self.savePageScreenAct = E5Action(self.trUtf8('Save Page Screen'),
+        self.savePageScreenAct = E5Action(
+            self.trUtf8('Save Page Screen'),
             UI.PixmapCache.getIcon("fileSavePixmap.png"),
             self.trUtf8('Save Page Screen...'),
             0, 0, self, 'help_file_save_page_screen')
@@ -511,7 +533,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.saveVisiblePageScreenAct)
         
         bookmarksManager = self.bookmarksManager()
-        self.importBookmarksAct = E5Action(self.trUtf8('Import Bookmarks'),
+        self.importBookmarksAct = E5Action(
+            self.trUtf8('Import Bookmarks'),
             self.trUtf8('&Import Bookmarks...'),
             0, 0, self, 'help_file_import_bookmarks')
         self.importBookmarksAct.setStatusTip(
@@ -525,7 +548,8 @@ class HelpWindow(E5MainWindow):
                 bookmarksManager.importBookmarks)
         self.__actions.append(self.importBookmarksAct)
         
-        self.exportBookmarksAct = E5Action(self.trUtf8('Export Bookmarks'),
+        self.exportBookmarksAct = E5Action(
+            self.trUtf8('Export Bookmarks'),
             self.trUtf8('&Export Bookmarks...'),
             0, 0, self, 'help_file_export_bookmarks')
         self.exportBookmarksAct.setStatusTip(
@@ -539,7 +563,8 @@ class HelpWindow(E5MainWindow):
                 bookmarksManager.exportBookmarks)
         self.__actions.append(self.exportBookmarksAct)
         
-        self.printAct = E5Action(self.trUtf8('Print'),
+        self.printAct = E5Action(
+            self.trUtf8('Print'),
             UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('&Print'),
             QKeySequence(self.trUtf8("Ctrl+P", "File|Print")),
@@ -553,7 +578,8 @@ class HelpWindow(E5MainWindow):
             self.printAct.triggered[()].connect(self.tabWidget.printBrowser)
         self.__actions.append(self.printAct)
         
-        self.printPdfAct = E5Action(self.trUtf8('Print as PDF'),
+        self.printPdfAct = E5Action(
+            self.trUtf8('Print as PDF'),
             UI.PixmapCache.getIcon("printPdf.png"),
             self.trUtf8('Print as PDF'),
             0, 0, self, 'help_file_print_pdf')
@@ -568,7 +594,8 @@ class HelpWindow(E5MainWindow):
                 self.tabWidget.printBrowserPdf)
         self.__actions.append(self.printPdfAct)
         
-        self.printPreviewAct = E5Action(self.trUtf8('Print Preview'),
+        self.printPreviewAct = E5Action(
+            self.trUtf8('Print Preview'),
             UI.PixmapCache.getIcon("printPreview.png"),
             self.trUtf8('Print Preview'),
             0, 0, self, 'help_file_print_preview')
@@ -583,7 +610,8 @@ class HelpWindow(E5MainWindow):
                 self.tabWidget.printPreviewBrowser)
         self.__actions.append(self.printPreviewAct)
         
-        self.closeAct = E5Action(self.trUtf8('Close'),
+        self.closeAct = E5Action(
+            self.trUtf8('Close'),
             UI.PixmapCache.getIcon("close.png"),
             self.trUtf8('&Close'),
             QKeySequence(self.trUtf8("Ctrl+W", "File|Close")),
@@ -598,7 +626,8 @@ class HelpWindow(E5MainWindow):
             self.closeAct.triggered[()].connect(self.tabWidget.closeBrowser)
         self.__actions.append(self.closeAct)
         
-        self.closeAllAct = E5Action(self.trUtf8('Close All'),
+        self.closeAllAct = E5Action(
+            self.trUtf8('Close All'),
             self.trUtf8('Close &All'),
             0, 0, self, 'help_file_close_all')
         self.closeAllAct.setStatusTip(self.trUtf8('Close all help windows'))
@@ -611,7 +640,8 @@ class HelpWindow(E5MainWindow):
                 self.tabWidget.closeAllBrowsers)
         self.__actions.append(self.closeAllAct)
         
-        self.privateBrowsingAct = E5Action(self.trUtf8('Private Browsing'),
+        self.privateBrowsingAct = E5Action(
+            self.trUtf8('Private Browsing'),
             UI.PixmapCache.getIcon("privateBrowsing.png"),
             self.trUtf8('Private &Browsing'),
             0, 0, self, 'help_file_private_browsing')
@@ -627,7 +657,8 @@ class HelpWindow(E5MainWindow):
         self.privateBrowsingAct.setCheckable(True)
         self.__actions.append(self.privateBrowsingAct)
         
-        self.exitAct = E5Action(self.trUtf8('Quit'),
+        self.exitAct = E5Action(
+            self.trUtf8('Quit'),
             UI.PixmapCache.getIcon("exit.png"),
             self.trUtf8('&Quit'),
             QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
@@ -644,7 +675,8 @@ class HelpWindow(E5MainWindow):
                 self.exitAct.triggered[()].connect(self.__closeAllWindows)
         self.__actions.append(self.exitAct)
         
-        self.backAct = E5Action(self.trUtf8('Backward'),
+        self.backAct = E5Action(
+            self.trUtf8('Backward'),
             UI.PixmapCache.getIcon("back.png"),
             self.trUtf8('&Backward'),
             QKeySequence(self.trUtf8("Alt+Left", "Go|Backward")),
@@ -660,7 +692,8 @@ class HelpWindow(E5MainWindow):
             self.backAct.triggered[()].connect(self.__backward)
         self.__actions.append(self.backAct)
         
-        self.forwardAct = E5Action(self.trUtf8('Forward'),
+        self.forwardAct = E5Action(
+            self.trUtf8('Forward'),
             UI.PixmapCache.getIcon("forward.png"),
             self.trUtf8('&Forward'),
             QKeySequence(self.trUtf8("Alt+Right", "Go|Forward")),
@@ -677,7 +710,8 @@ class HelpWindow(E5MainWindow):
             self.forwardAct.triggered[()].connect(self.__forward)
         self.__actions.append(self.forwardAct)
         
-        self.homeAct = E5Action(self.trUtf8('Home'),
+        self.homeAct = E5Action(
+            self.trUtf8('Home'),
             UI.PixmapCache.getIcon("home.png"),
             self.trUtf8('&Home'),
             QKeySequence(self.trUtf8("Ctrl+Home", "Go|Home")),
@@ -692,7 +726,8 @@ class HelpWindow(E5MainWindow):
             self.homeAct.triggered[()].connect(self.__home)
         self.__actions.append(self.homeAct)
         
-        self.reloadAct = E5Action(self.trUtf8('Reload'),
+        self.reloadAct = E5Action(
+            self.trUtf8('Reload'),
             UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('&Reload'),
             QKeySequence(self.trUtf8("Ctrl+R", "Go|Reload")),
@@ -708,7 +743,8 @@ class HelpWindow(E5MainWindow):
             self.reloadAct.triggered[()].connect(self.__reload)
         self.__actions.append(self.reloadAct)
         
-        self.stopAct = E5Action(self.trUtf8('Stop'),
+        self.stopAct = E5Action(
+            self.trUtf8('Stop'),
             UI.PixmapCache.getIcon("stopLoading.png"),
             self.trUtf8('&Stop'),
             QKeySequence(self.trUtf8("Ctrl+.", "Go|Stop")),
@@ -723,7 +759,8 @@ class HelpWindow(E5MainWindow):
             self.stopAct.triggered[()].connect(self.__stopLoading)
         self.__actions.append(self.stopAct)
         
-        self.copyAct = E5Action(self.trUtf8('Copy'),
+        self.copyAct = E5Action(
+            self.trUtf8('Copy'),
             UI.PixmapCache.getIcon("editCopy.png"),
             self.trUtf8('&Copy'),
             QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")),
@@ -737,7 +774,8 @@ class HelpWindow(E5MainWindow):
             self.copyAct.triggered[()].connect(self.__copy)
         self.__actions.append(self.copyAct)
         
-        self.findAct = E5Action(self.trUtf8('Find...'),
+        self.findAct = E5Action(
+            self.trUtf8('Find...'),
             UI.PixmapCache.getIcon("find.png"),
             self.trUtf8('&Find...'),
             QKeySequence(self.trUtf8("Ctrl+F", "Edit|Find")),
@@ -751,7 +789,8 @@ class HelpWindow(E5MainWindow):
             self.findAct.triggered[()].connect(self.__find)
         self.__actions.append(self.findAct)
         
-        self.findNextAct = E5Action(self.trUtf8('Find next'),
+        self.findNextAct = E5Action(
+            self.trUtf8('Find next'),
             UI.PixmapCache.getIcon("findNext.png"),
             self.trUtf8('Find &next'),
             QKeySequence(self.trUtf8("F3", "Edit|Find next")),
@@ -766,7 +805,8 @@ class HelpWindow(E5MainWindow):
             self.findNextAct.triggered[()].connect(self.findDlg.findNext)
         self.__actions.append(self.findNextAct)
         
-        self.findPrevAct = E5Action(self.trUtf8('Find previous'),
+        self.findPrevAct = E5Action(
+            self.trUtf8('Find previous'),
             UI.PixmapCache.getIcon("findPrev.png"),
             self.trUtf8('Find &previous'),
             QKeySequence(self.trUtf8("Shift+F3", "Edit|Find previous")),
@@ -782,7 +822,8 @@ class HelpWindow(E5MainWindow):
             self.findPrevAct.triggered[()].connect(self.findDlg.findPrevious)
         self.__actions.append(self.findPrevAct)
         
-        self.bookmarksManageAct = E5Action(self.trUtf8('Manage Bookmarks'),
+        self.bookmarksManageAct = E5Action(
+            self.trUtf8('Manage Bookmarks'),
             self.trUtf8('&Manage Bookmarks...'),
             QKeySequence(self.trUtf8("Ctrl+Shift+B", "Help|Manage bookmarks")),
             0, self, 'help_bookmarks_manage')
@@ -797,7 +838,8 @@ class HelpWindow(E5MainWindow):
                 self.__showBookmarksDialog)
         self.__actions.append(self.bookmarksManageAct)
         
-        self.bookmarksAddAct = E5Action(self.trUtf8('Add Bookmark'),
+        self.bookmarksAddAct = E5Action(
+            self.trUtf8('Add Bookmark'),
             UI.PixmapCache.getIcon("addBookmark.png"),
             self.trUtf8('Add &Bookmark...'),
             QKeySequence(self.trUtf8("Ctrl+D", "Help|Add bookmark")),
@@ -813,7 +855,8 @@ class HelpWindow(E5MainWindow):
             self.bookmarksAddAct.triggered[()].connect(self.__addBookmark)
         self.__actions.append(self.bookmarksAddAct)
         
-        self.bookmarksAddFolderAct = E5Action(self.trUtf8('Add Folder'),
+        self.bookmarksAddFolderAct = E5Action(
+            self.trUtf8('Add Folder'),
             self.trUtf8('Add &Folder...'),
             0, 0, self, 'help_bookmark_show_all')
         self.bookmarksAddFolderAct.setStatusTip(self.trUtf8(
@@ -827,7 +870,8 @@ class HelpWindow(E5MainWindow):
                 self.__addBookmarkFolder)
         self.__actions.append(self.bookmarksAddFolderAct)
         
-        self.bookmarksAllTabsAct = E5Action(self.trUtf8('Bookmark All Tabs'),
+        self.bookmarksAllTabsAct = E5Action(
+            self.trUtf8('Bookmark All Tabs'),
             self.trUtf8('Bookmark All Tabs...'),
             0, 0, self, 'help_bookmark_all_tabs')
         self.bookmarksAllTabsAct.setStatusTip(self.trUtf8(
@@ -841,7 +885,8 @@ class HelpWindow(E5MainWindow):
             self.bookmarksAllTabsAct.triggered[()].connect(self.bookmarkAll)
         self.__actions.append(self.bookmarksAllTabsAct)
         
-        self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
+        self.whatsThisAct = E5Action(
+            self.trUtf8('What\'s This?'),
             UI.PixmapCache.getIcon("whatsThis.png"),
             self.trUtf8('&What\'s This?'),
             QKeySequence(self.trUtf8("Shift+F1", "Help|What's This?'")),
@@ -859,7 +904,8 @@ class HelpWindow(E5MainWindow):
             self.whatsThisAct.triggered[()].connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
         
-        self.aboutAct = E5Action(self.trUtf8('About'),
+        self.aboutAct = E5Action(
+            self.trUtf8('About'),
             self.trUtf8('&About'),
             0, 0, self, 'help_help_about')
         self.aboutAct.setStatusTip(self.trUtf8(
@@ -872,7 +918,8 @@ class HelpWindow(E5MainWindow):
             self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
         
-        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
+        self.aboutQtAct = E5Action(
+            self.trUtf8('About Qt'),
             self.trUtf8('About &Qt'),
             0, 0, self, 'help_help_about_qt')
         self.aboutQtAct.setStatusTip(
@@ -885,7 +932,8 @@ class HelpWindow(E5MainWindow):
             self.aboutQtAct.triggered[()].connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
-        self.zoomInAct = E5Action(self.trUtf8('Zoom in'),
+        self.zoomInAct = E5Action(
+            self.trUtf8('Zoom in'),
             UI.PixmapCache.getIcon("zoomIn.png"),
             self.trUtf8('Zoom &in'),
             QKeySequence(self.trUtf8("Ctrl++", "View|Zoom in")),
@@ -900,7 +948,8 @@ class HelpWindow(E5MainWindow):
             self.zoomInAct.triggered[()].connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
-        self.zoomOutAct = E5Action(self.trUtf8('Zoom out'),
+        self.zoomOutAct = E5Action(
+            self.trUtf8('Zoom out'),
             UI.PixmapCache.getIcon("zoomOut.png"),
             self.trUtf8('Zoom &out'),
             QKeySequence(self.trUtf8("Ctrl+-", "View|Zoom out")),
@@ -915,7 +964,8 @@ class HelpWindow(E5MainWindow):
             self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
-        self.zoomResetAct = E5Action(self.trUtf8('Zoom reset'),
+        self.zoomResetAct = E5Action(
+            self.trUtf8('Zoom reset'),
             UI.PixmapCache.getIcon("zoomReset.png"),
             self.trUtf8('Zoom &reset'),
             QKeySequence(self.trUtf8("Ctrl+0", "View|Zoom reset")),
@@ -932,7 +982,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.zoomResetAct)
         
         if hasattr(QWebSettings, 'ZoomTextOnly'):
-            self.zoomTextOnlyAct = E5Action(self.trUtf8('Zoom text only'),
+            self.zoomTextOnlyAct = E5Action(
+                self.trUtf8('Zoom text only'),
                 self.trUtf8('Zoom &text only'),
                 0, 0, self, 'help_view_zoom_text_only')
             self.zoomTextOnlyAct.setCheckable(True)
@@ -949,7 +1000,8 @@ class HelpWindow(E5MainWindow):
         else:
             self.zoomTextOnlyAct = None
         
-        self.pageSourceAct = E5Action(self.trUtf8('Show page source'),
+        self.pageSourceAct = E5Action(
+            self.trUtf8('Show page source'),
             self.trUtf8('Show page source'),
             QKeySequence(self.trUtf8('Ctrl+U')), 0,
             self, 'help_show_page_source')
@@ -964,7 +1016,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.pageSourceAct)
         self.addAction(self.pageSourceAct)
         
-        self.fullScreenAct = E5Action(self.trUtf8('Full Screen'),
+        self.fullScreenAct = E5Action(
+            self.trUtf8('Full Screen'),
             UI.PixmapCache.getIcon("windowFullscreen.png"),
             self.trUtf8('&Full Screen'),
             QKeySequence(self.trUtf8('F11')), 0,
@@ -974,7 +1027,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.fullScreenAct)
         self.addAction(self.fullScreenAct)
         
-        self.nextTabAct = E5Action(self.trUtf8('Show next tab'),
+        self.nextTabAct = E5Action(
+            self.trUtf8('Show next tab'),
             self.trUtf8('Show next tab'),
             QKeySequence(self.trUtf8('Ctrl+Alt+Tab')), 0,
             self, 'help_view_next_tab')
@@ -983,7 +1037,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
-        self.prevTabAct = E5Action(self.trUtf8('Show previous tab'),
+        self.prevTabAct = E5Action(
+            self.trUtf8('Show previous tab'),
             self.trUtf8('Show previous tab'),
             QKeySequence(self.trUtf8('Shift+Ctrl+Alt+Tab')), 0,
             self, 'help_view_previous_tab')
@@ -992,7 +1047,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
-        self.switchTabAct = E5Action(self.trUtf8('Switch between tabs'),
+        self.switchTabAct = E5Action(
+            self.trUtf8('Switch between tabs'),
             self.trUtf8('Switch between tabs'),
             QKeySequence(self.trUtf8('Ctrl+1')), 0,
             self, 'help_switch_tabs')
@@ -1001,7 +1057,8 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
-        self.prefAct = E5Action(self.trUtf8('Preferences'),
+        self.prefAct = E5Action(
+            self.trUtf8('Preferences'),
             UI.PixmapCache.getIcon("configure.png"),
             self.trUtf8('&Preferences...'), 0, 0, self, 'help_preferences')
         self.prefAct.setStatusTip(self.trUtf8(
@@ -1031,7 +1088,8 @@ class HelpWindow(E5MainWindow):
                 self.__showAcceptedLanguages)
         self.__actions.append(self.acceptedLanguagesAct)
         
-        self.cookiesAct = E5Action(self.trUtf8('Cookies'),
+        self.cookiesAct = E5Action(
+            self.trUtf8('Cookies'),
             UI.PixmapCache.getIcon("cookie.png"),
             self.trUtf8('C&ookies...'), 0, 0, self, 'help_cookies')
         self.cookiesAct.setStatusTip(self.trUtf8(
@@ -1045,7 +1103,8 @@ class HelpWindow(E5MainWindow):
                 self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
-        self.offlineStorageAct = E5Action(self.trUtf8('Offline Storage'),
+        self.offlineStorageAct = E5Action(
+            self.trUtf8('Offline Storage'),
             UI.PixmapCache.getIcon("preferences-html5.png"),
             self.trUtf8('Offline &Storage...'), 0, 0,
             self, 'help_offline_storage')
@@ -1060,7 +1119,8 @@ class HelpWindow(E5MainWindow):
                 self.__showOfflineStorageConfiguration)
         self.__actions.append(self.offlineStorageAct)
         
-        self.personalDataAct = E5Action(self.trUtf8('Personal Information'),
+        self.personalDataAct = E5Action(
+            self.trUtf8('Personal Information'),
             UI.PixmapCache.getIcon("pim.png"),
             self.trUtf8('Personal Information...'),
             0, 0,
@@ -1077,7 +1137,8 @@ class HelpWindow(E5MainWindow):
                 self.__showPersonalInformationDialog)
         self.__actions.append(self.personalDataAct)
         
-        self.greaseMonkeyAct = E5Action(self.trUtf8('GreaseMonkey Scripts'),
+        self.greaseMonkeyAct = E5Action(
+            self.trUtf8('GreaseMonkey Scripts'),
             UI.PixmapCache.getIcon("greaseMonkey.png"),
             self.trUtf8('GreaseMonkey Scripts...'),
             0, 0,
@@ -1129,7 +1190,8 @@ class HelpWindow(E5MainWindow):
                 self.syncTocAct.triggered[()].connect(self.__syncTOC)
             self.__actions.append(self.syncTocAct)
             
-            self.showTocAct = E5Action(self.trUtf8('Table of Contents'),
+            self.showTocAct = E5Action(
+                self.trUtf8('Table of Contents'),
                 self.trUtf8('Table of Contents'),
                 0, 0, self, 'help_show_toc')
             self.showTocAct.setStatusTip(self.trUtf8(
@@ -1142,7 +1204,8 @@ class HelpWindow(E5MainWindow):
                 self.showTocAct.triggered[()].connect(self.__showTocWindow)
             self.__actions.append(self.showTocAct)
             
-            self.showIndexAct = E5Action(self.trUtf8('Index'),
+            self.showIndexAct = E5Action(
+                self.trUtf8('Index'),
                 self.trUtf8('Index'),
                 0, 0, self, 'help_show_index')
             self.showIndexAct.setStatusTip(self.trUtf8(
@@ -1155,7 +1218,8 @@ class HelpWindow(E5MainWindow):
                 self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
             self.__actions.append(self.showIndexAct)
             
-            self.showSearchAct = E5Action(self.trUtf8('Search'),
+            self.showSearchAct = E5Action(
+                self.trUtf8('Search'),
                 self.trUtf8('Search'),
                 0, 0, self, 'help_show_search')
             self.showSearchAct.setStatusTip(self.trUtf8(
@@ -1215,10 +1279,11 @@ class HelpWindow(E5MainWindow):
                     self.__searchEngine.reindexDocumentation)
             self.__actions.append(self.reindexDocumentationAct)
         
-        self.clearPrivateDataAct = E5Action(self.trUtf8('Clear private data'),
-                      self.trUtf8('&Clear private data'),
-                      0, 0,
-                      self, 'help_clear_private_data')
+        self.clearPrivateDataAct = E5Action(
+            self.trUtf8('Clear private data'),
+            self.trUtf8('&Clear private data'),
+            0, 0,
+            self, 'help_clear_private_data')
         self.clearPrivateDataAct.setStatusTip(self.trUtf8(
             'Clear private data'))
         self.clearPrivateDataAct.setWhatsThis(self.trUtf8(
@@ -1231,10 +1296,11 @@ class HelpWindow(E5MainWindow):
                 self.__clearPrivateData)
         self.__actions.append(self.clearPrivateDataAct)
         
-        self.clearIconsAct = E5Action(self.trUtf8('Clear icons database'),
-                      self.trUtf8('Clear &icons database'),
-                      0, 0,
-                      self, 'help_clear_icons_db')
+        self.clearIconsAct = E5Action(
+            self.trUtf8('Clear icons database'),
+            self.trUtf8('Clear &icons database'),
+            0, 0,
+            self, 'help_clear_icons_db')
         self.clearIconsAct.setStatusTip(self.trUtf8(
             'Clear the database of favicons'))
         self.clearIconsAct.setWhatsThis(self.trUtf8(
@@ -1263,11 +1329,12 @@ class HelpWindow(E5MainWindow):
                 self.__showEnginesConfigurationDialog)
         self.__actions.append(self.searchEnginesAct)
         
-        self.passwordsAct = E5Action(self.trUtf8('Manage Saved Passwords'),
-                      UI.PixmapCache.getIcon("passwords.png"),
-                      self.trUtf8('Manage Saved Passwords...'),
-                      0, 0,
-                      self, 'help_manage_passwords')
+        self.passwordsAct = E5Action(
+            self.trUtf8('Manage Saved Passwords'),
+            UI.PixmapCache.getIcon("passwords.png"),
+            self.trUtf8('Manage Saved Passwords...'),
+            0, 0,
+            self, 'help_manage_passwords')
         self.passwordsAct.setStatusTip(self.trUtf8(
                 'Manage the saved passwords'))
         self.passwordsAct.setWhatsThis(self.trUtf8(
@@ -1278,11 +1345,12 @@ class HelpWindow(E5MainWindow):
             self.passwordsAct.triggered[()].connect(self.__showPasswordsDialog)
         self.__actions.append(self.passwordsAct)
         
-        self.adblockAct = E5Action(self.trUtf8('Ad Block'),
-                      UI.PixmapCache.getIcon("adBlockPlus.png"),
-                      self.trUtf8('&Ad Block...'),
-                      0, 0,
-                      self, 'help_adblock')
+        self.adblockAct = E5Action(
+            self.trUtf8('Ad Block'),
+            UI.PixmapCache.getIcon("adBlockPlus.png"),
+            self.trUtf8('&Ad Block...'),
+            0, 0,
+            self, 'help_adblock')
         self.adblockAct.setStatusTip(self.trUtf8(
             'Configure AdBlock subscriptions and rules'))
         self.adblockAct.setWhatsThis(self.trUtf8(
@@ -1294,11 +1362,12 @@ class HelpWindow(E5MainWindow):
             self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
-        self.flashblockAct = E5Action(self.trUtf8('ClickToFlash'),
-                      UI.PixmapCache.getIcon("flashBlock.png"),
-                      self.trUtf8('&ClickToFlash...'),
-                      0, 0,
-                      self, 'help_flashblock')
+        self.flashblockAct = E5Action(
+            self.trUtf8('ClickToFlash'),
+            UI.PixmapCache.getIcon("flashBlock.png"),
+            self.trUtf8('&ClickToFlash...'),
+            0, 0,
+            self, 'help_flashblock')
         self.flashblockAct.setStatusTip(self.trUtf8(
             'Configure ClickToFlash whitelist'))
         self.flashblockAct.setWhatsThis(self.trUtf8(
@@ -1330,10 +1399,11 @@ class HelpWindow(E5MainWindow):
                     self.__showCertificatesDialog)
             self.__actions.append(self.certificatesAct)
         
-        self.toolsMonitorAct = E5Action(self.trUtf8('Network Monitor'),
-                      self.trUtf8('&Network Monitor...'),
-                      0, 0,
-                      self, 'help_tools_network_monitor')
+        self.toolsMonitorAct = E5Action(
+            self.trUtf8('Network Monitor'),
+            self.trUtf8('&Network Monitor...'),
+            0, 0,
+            self, 'help_tools_network_monitor')
         self.toolsMonitorAct.setStatusTip(self.trUtf8(
             'Show the network monitor dialog'))
         self.toolsMonitorAct.setWhatsThis(self.trUtf8(
@@ -1345,7 +1415,8 @@ class HelpWindow(E5MainWindow):
                 self.__showNetworkMonitor)
         self.__actions.append(self.toolsMonitorAct)
         
-        self.showDownloadManagerAct = E5Action(self.trUtf8('Downloads'),
+        self.showDownloadManagerAct = E5Action(
+            self.trUtf8('Downloads'),
             self.trUtf8('Downloads'),
             0, 0, self, 'help_show_downloads')
         self.showDownloadManagerAct.setStatusTip(self.trUtf8(
@@ -1359,7 +1430,8 @@ class HelpWindow(E5MainWindow):
                 self.__showDownloadsWindow)
         self.__actions.append(self.showDownloadManagerAct)
         
-        self.feedsManagerAct = E5Action(self.trUtf8('RSS Feeds Dialog'),
+        self.feedsManagerAct = E5Action(
+            self.trUtf8('RSS Feeds Dialog'),
             UI.PixmapCache.getIcon("rss22.png"),
             self.trUtf8('&RSS Feeds Dialog...'),
             QKeySequence(self.trUtf8("Ctrl+Shift+F", "Help|RSS Feeds Dialog")),
@@ -1376,7 +1448,8 @@ class HelpWindow(E5MainWindow):
             self.feedsManagerAct.triggered[()].connect(self.__showFeedsManager)
         self.__actions.append(self.feedsManagerAct)
         
-        self.siteInfoAct = E5Action(self.trUtf8('Siteinfo Dialog'),
+        self.siteInfoAct = E5Action(
+            self.trUtf8('Siteinfo Dialog'),
             UI.PixmapCache.getIcon("helpAbout.png"),
             self.trUtf8('&Siteinfo Dialog...'),
             QKeySequence(self.trUtf8("Ctrl+Shift+I", "Help|Siteinfo Dialog")),
@@ -1407,7 +1480,8 @@ class HelpWindow(E5MainWindow):
                 self.__showUserAgentsDialog)
         self.__actions.append(self.userAgentManagerAct)
         
-        self.synchronizationAct = E5Action(self.trUtf8('Synchronize data'),
+        self.synchronizationAct = E5Action(
+            self.trUtf8('Synchronize data'),
             UI.PixmapCache.getIcon("sync.png"),
             self.trUtf8('&Synchronize Data...'),
             0, 0, self, 'help_synchronize_data')
@@ -2917,7 +2991,8 @@ class HelpWindow(E5MainWindow):
             if flashCookies:
                 from .HelpLanguagesDialog import HelpLanguagesDialog
                 languages = Preferences.toList(
-                    Preferences.Prefs.settings.value("Help/AcceptLanguages",
+                    Preferences.Prefs.settings.value(
+                        "Help/AcceptLanguages",
                         HelpLanguagesDialog.defaultAcceptLanguages()))
                 if languages:
                     language = languages[0]
@@ -3491,7 +3566,8 @@ class HelpWindow(E5MainWindow):
         
         @param txt contents of the search (string)
         """
-        self.virustotalSearchAct.setEnabled(txt != "" and \
+        self.virustotalSearchAct.setEnabled(
+            txt != "" and \
             Preferences.getHelp("VirusTotalEnabled") and \
             Preferences.getHelp("VirusTotalServiceKey") != "")
     

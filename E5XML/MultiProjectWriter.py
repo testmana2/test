@@ -64,7 +64,8 @@ class MultiProjectWriter(XMLStreamWriterBase):
             self.writeStartElement("Project")
             self.writeAttribute("isMaster", str(project['master']))
             self.writeTextElement("ProjectName", project['name'])
-            self.writeTextElement("ProjectFile",
+            self.writeTextElement(
+                "ProjectFile",
                 Utilities.fromNativeSeparators(project['file']))
             self.writeTextElement("ProjectDescription", project['description'])
             self.writeEndElement()

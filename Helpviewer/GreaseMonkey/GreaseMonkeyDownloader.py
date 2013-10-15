@@ -37,7 +37,8 @@ class GreaseMonkeyDownloader(QObject):
         
         self.__manager = manager
         
-        self.__reply = FollowRedirectReply(request.url(),
+        self.__reply = FollowRedirectReply(
+            request.url(),
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.__reply.finished.connect(self.__scriptDownloaded)
         
@@ -57,7 +58,8 @@ class GreaseMonkeyDownloader(QObject):
         if self.__reply.error() == QNetworkReply.NoError and \
            "// ==UserScript==" in response:
             from Helpviewer import HelpUtilities
-            filePath = os.path.join(self.__manager.scriptsDirectory(),
+            filePath = os.path.join(
+                self.__manager.scriptsDirectory(),
                 HelpUtilities.getFileNameFromUrl(self.__reply.url()))
             self.__fileName = HelpUtilities.ensureUniqueFilename(filePath)
             
@@ -144,7 +146,8 @@ class GreaseMonkeyDownloader(QObject):
         Private slot to initiate the download of required scripts.
         """
         if self.__requireUrls:
-            self.__reply = FollowRedirectReply(self.__requireUrls.pop(0),
+            self.__reply = FollowRedirectReply(
+                self.__requireUrls.pop(0),
                 Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
             self.__reply.finished.connect(self.__requireDownloaded)
         else:

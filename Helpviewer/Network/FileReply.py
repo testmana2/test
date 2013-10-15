@@ -177,7 +177,8 @@ class FileReply(QNetworkReply):
             pixmap.fill(Qt.transparent)
             imageBuffer.buffer().clear()
             pixmap.save(imageBuffer, "PNG")
-        return cssString.format(size + 4,
+        return cssString.format(
+            size + 4,
             str(imageBuffer.buffer().toBase64(), encoding="ascii"))
     
     def __loadDirectory(self):

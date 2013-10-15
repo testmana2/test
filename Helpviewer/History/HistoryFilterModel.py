@@ -300,8 +300,9 @@ class HistoryFilterModel(QAbstractProxyModel):
             
             self.beginInsertRows(QModelIndex(), 0, 0)
             self.__filteredRows.insert(
-                0, HistoryData(self.sourceModel().rowCount(),
-                self.__frequencyScore(idx) + currentFrequency))
+                0, HistoryData(
+                    self.sourceModel().rowCount(),
+                    self.__frequencyScore(idx) + currentFrequency))
             self.__historyDict[url] = self.sourceModel().rowCount()
             self.endInsertRows()
     

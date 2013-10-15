@@ -61,10 +61,12 @@ class ProjectWriter(XMLStreamWriterBase):
         # do the language (used for spell checking)
         self.writeTextElement("Language", self.pdata["SPELLLANGUAGE"][0])
         if len(self.pdata["SPELLWORDS"][0]) > 0:
-            self.writeTextElement("ProjectWordList",
+            self.writeTextElement(
+                "ProjectWordList",
                 Utilities.fromNativeSeparators(self.pdata["SPELLWORDS"][0]))
         if len(self.pdata["SPELLEXCLUDES"][0]) > 0:
-            self.writeTextElement("ProjectExcludeList",
+            self.writeTextElement(
+                "ProjectExcludeList",
                 Utilities.fromNativeSeparators(self.pdata["SPELLEXCLUDES"][0]))
         
         # do the hash
@@ -131,7 +133,8 @@ class ProjectWriter(XMLStreamWriterBase):
         if self.pdata["TRANSLATIONEXCEPTIONS"]:
             self.writeStartElement("TranslationExceptions")
             for name in self.pdata["TRANSLATIONEXCEPTIONS"]:
-                self.writeTextElement("TranslationException",
+                self.writeTextElement(
+                    "TranslationException",
                     Utilities.fromNativeSeparators(name))
             self.writeEndElement()
         
@@ -158,7 +161,8 @@ class ProjectWriter(XMLStreamWriterBase):
         
         # do the main script
         if self.pdata["MAINSCRIPT"]:
-            self.writeTextElement("MainScript",
+            self.writeTextElement(
+                "MainScript",
                 Utilities.fromNativeSeparators(self.pdata["MAINSCRIPT"][0]))
         
         # do the vcs stuff
@@ -192,7 +196,8 @@ class ProjectWriter(XMLStreamWriterBase):
         if len(self.pdata["PROJECTTYPESPECIFICDATA"]):
             self.writeStartElement("ProjectTypeSpecific")
             if self.pdata["PROJECTTYPESPECIFICDATA"]:
-                self.writeBasics("ProjectTypeSpecificData",
+                self.writeBasics(
+                    "ProjectTypeSpecificData",
                     self.pdata["PROJECTTYPESPECIFICDATA"])
             self.writeEndElement()
         
@@ -200,32 +205,32 @@ class ProjectWriter(XMLStreamWriterBase):
         if len(self.pdata["DOCUMENTATIONPARMS"]):
             self.writeStartElement("Documentation")
             if self.pdata["DOCUMENTATIONPARMS"]:
-                self.writeBasics("DocumentationParams",
-                    self.pdata["DOCUMENTATIONPARMS"])
+                self.writeBasics(
+                    "DocumentationParams", self.pdata["DOCUMENTATIONPARMS"])
             self.writeEndElement()
         
         # do the packagers stuff
         if len(self.pdata["PACKAGERSPARMS"]):
             self.writeStartElement("Packagers")
             if self.pdata["PACKAGERSPARMS"]:
-                self.writeBasics("PackagersParams",
-                    self.pdata["PACKAGERSPARMS"])
+                self.writeBasics(
+                    "PackagersParams", self.pdata["PACKAGERSPARMS"])
             self.writeEndElement()
         
         # do the checkers stuff
         if len(self.pdata["CHECKERSPARMS"]):
             self.writeStartElement("Checkers")
             if self.pdata["CHECKERSPARMS"]:
-                self.writeBasics("CheckersParams",
-                    self.pdata["CHECKERSPARMS"])
+                self.writeBasics(
+                    "CheckersParams", self.pdata["CHECKERSPARMS"])
             self.writeEndElement()
         
         # do the other tools stuff
         if len(self.pdata["OTHERTOOLSPARMS"]):
             self.writeStartElement("OtherTools")
             if self.pdata["OTHERTOOLSPARMS"]:
-                self.writeBasics("OtherToolsParams",
-                    self.pdata["OTHERTOOLSPARMS"])
+                self.writeBasics(
+                    "OtherToolsParams", self.pdata["OTHERTOOLSPARMS"])
             self.writeEndElement()
         
         self.writeEndElement()

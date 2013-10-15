@@ -53,7 +53,8 @@ class NsHtmlWriter(QObject):
         @param root root node of the bookmark tree (BookmarkNode)
         @return flag indicating success (boolean)
         """
-        self.__dev.write("<!DOCTYPE NETSCAPE-Bookmark-file-1>\n"
+        self.__dev.write(
+            "<!DOCTYPE NETSCAPE-Bookmark-file-1>\n"
             "<!-- This is an automatically generated file.\n"
             "     It will be read and overwritten.\n"
             "     DO NOT EDIT! -->\n"

@@ -93,7 +93,8 @@ class TasksReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Task":
-                self.viewer.addTask(task["summary"], priority=task["priority"],
+                self.viewer.addTask(
+                    task["summary"], priority=task["priority"],
                     filename=task["filename"], lineno=task["linenumber"],
                     completed=task["completed"], _time=task["created"],
                     isProjectTask=self.forProject, taskType=task["type"],

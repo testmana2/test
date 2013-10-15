@@ -53,8 +53,8 @@ def exeDisplayData():
     
     data = {
         "programEntry": True,
-        "header": QApplication.translate("VcsMercurialPlugin",
-                                "Version Control - Mercurial"),
+        "header": QApplication.translate(
+            "VcsMercurialPlugin", "Version Control - Mercurial"),
         "exe": exe,
         "versionCommand": 'version',
         "versionStartsWith": 'Mercurial',

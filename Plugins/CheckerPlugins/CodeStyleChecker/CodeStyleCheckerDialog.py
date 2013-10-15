@@ -156,7 +156,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         fixable = False
         code, message = message.split(None, 1)
-        itm = QTreeWidgetItem(self.__lastFileItem,
+        itm = QTreeWidgetItem(
+            self.__lastFileItem,
             ["{0:6}".format(line), code, message])
         if code.startswith("W"):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
@@ -395,7 +396,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         source = source.splitlines(True)
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", "1",
+                        self.__createResultItem(
+                            file, "1", "1",
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], False, False)
                         progress += 1
@@ -406,9 +408,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     ext = os.path.splitext(file)[1]
                     if fixIssues:
                         from .CodeStyleFixer import CodeStyleFixer
-                        fixer = CodeStyleFixer(self.__project, file, source,
-                                          fixCodes, noFixCodes, maxLineLength,
-                                          True)  # always fix in place
+                        fixer = CodeStyleFixer(
+                            self.__project, file, source, fixCodes, noFixCodes,
+                            maxLineLength, True)  # always fix in place
                     else:
                         fixer = None
                     if ("FileType" in flags and
@@ -421,7 +423,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
                         from .CodeStyleChecker import CodeStyleCheckerPy2
-                        report = CodeStyleCheckerPy2(file, [],
+                        report = CodeStyleCheckerPy2(
+                            file, [],
                             repeat=repeatMessages,
                             select=includeMessages,
                             ignore=excludeMessages,
@@ -738,26 +741,26 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Private slot to store the current configuration values as
         default values.
         """
-        Preferences.Prefs.settings.setValue("PEP8/ExcludeFilePatterns",
-            self.excludeFilesEdit.text())
-        Preferences.Prefs.settings.setValue("PEP8/ExcludeMessages",
-            self.excludeMessagesEdit.text())
-        Preferences.Prefs.settings.setValue("PEP8/IncludeMessages",
-            self.includeMessagesEdit.text())
-        Preferences.Prefs.settings.setValue("PEP8/RepeatMessages",
-            self.repeatCheckBox.isChecked())
-        Preferences.Prefs.settings.setValue("PEP8/FixCodes",
-            self.fixIssuesEdit.text())
-        Preferences.Prefs.settings.setValue("PEP8/NoFixCodes",
-            self.noFixIssuesEdit.text())
-        Preferences.Prefs.settings.setValue("PEP8/FixIssues",
-            self.fixIssuesCheckBox.isChecked())
-        Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
-            self.lineLengthSpinBox.value())
-        Preferences.Prefs.settings.setValue("PEP8/HangClosing",
-            self.hangClosingCheckBox.isChecked())
-        Preferences.Prefs.settings.setValue("PEP8/DocstringType",
-            self.docTypeComboBox.itemData(
+        Preferences.Prefs.settings.setValue(
+            "PEP8/ExcludeFilePatterns", self.excludeFilesEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/ExcludeMessages", self.excludeMessagesEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/IncludeMessages", self.includeMessagesEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/RepeatMessages", self.repeatCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/FixCodes", self.fixIssuesEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/NoFixCodes", self.noFixIssuesEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/FixIssues", self.fixIssuesCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/MaxLineLength", self.lineLengthSpinBox.value())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/HangClosing", self.hangClosingCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/DocstringType", self.docTypeComboBox.itemData(
                 self.docTypeComboBox.currentIndex()))
     
     @pyqtSlot()
@@ -766,15 +769,15 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Private slot to reset the configuration values to their default values.
         """
         Preferences.Prefs.settings.setValue("PEP8/ExcludeFilePatterns", "")
-        Preferences.Prefs.settings.setValue("PEP8/ExcludeMessages",
-            pep8.DEFAULT_IGNORE)
+        Preferences.Prefs.settings.setValue(
+            "PEP8/ExcludeMessages", pep8.DEFAULT_IGNORE)
         Preferences.Prefs.settings.setValue("PEP8/IncludeMessages", "")
         Preferences.Prefs.settings.setValue("PEP8/RepeatMessages", False)
         Preferences.Prefs.settings.setValue("PEP8/FixCodes", "")
         Preferences.Prefs.settings.setValue("PEP8/NoFixCodes", "E501")
         Preferences.Prefs.settings.setValue("PEP8/FixIssues", False)
-        Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
-            pep8.MAX_LINE_LENGTH)
+        Preferences.Prefs.settings.setValue(
+            "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)
         Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
         Preferences.Prefs.settings.setValue("PEP8/DocstringType", "pep257")
     
@@ -849,9 +852,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     continue
                 
                 deferredFixes = {}
-                fixer = CodeStyleFixer(self.__project, file, source,
-                                  fixCodes, noFixCodes, maxLineLength,
-                                  True)  # always fix in place
+                fixer = CodeStyleFixer(
+                    self.__project, file, source, fixCodes, noFixCodes,
+                    maxLineLength, True)  # always fix in place
                 errors = fixesDict[file]
                 errors.sort(key=lambda a: a[0][0])
                 for error in errors:

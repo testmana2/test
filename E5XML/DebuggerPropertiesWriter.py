@@ -67,42 +67,43 @@ class DebuggerPropertiesWriter(XMLStreamWriterBase):
             "DebugClient", self.project.debugProperties["DEBUGCLIENT"])
         
         self.writeStartElement("Environment")
-        self.writeAttribute("override",
+        self.writeAttribute(
+            "override",
             str(int(self.project.debugProperties["ENVIRONMENTOVERRIDE"])))
         self.writeCharacters(self.project.debugProperties["ENVIRONMENTSTRING"])
         self.writeEndElement()
         
         self.writeStartElement("RemoteDebugger")
-        self.writeAttribute("on",
-            str(int(self.project.debugProperties["REMOTEDEBUGGER"])))
-        self.writeTextElement("RemoteHost",
-            self.project.debugProperties["REMOTEHOST"])
-        self.writeTextElement("RemoteCommand",
-            self.project.debugProperties["REMOTECOMMAND"])
+        self.writeAttribute(
+            "on", str(int(self.project.debugProperties["REMOTEDEBUGGER"])))
+        self.writeTextElement(
+            "RemoteHost", self.project.debugProperties["REMOTEHOST"])
+        self.writeTextElement(
+            "RemoteCommand", self.project.debugProperties["REMOTECOMMAND"])
         self.writeEndElement()
         
         self.writeStartElement("PathTranslation")
-        self.writeAttribute("on",
-            str(int(self.project.debugProperties["PATHTRANSLATION"])))
-        self.writeTextElement("RemotePath",
-            self.project.debugProperties["REMOTEPATH"])
-        self.writeTextElement("LocalPath",
-            self.project.debugProperties["LOCALPATH"])
+        self.writeAttribute(
+            "on", str(int(self.project.debugProperties["PATHTRANSLATION"])))
+        self.writeTextElement(
+            "RemotePath", self.project.debugProperties["REMOTEPATH"])
+        self.writeTextElement(
+            "LocalPath", self.project.debugProperties["LOCALPATH"])
         self.writeEndElement()
         
         self.writeStartElement("ConsoleDebugger")
-        self.writeAttribute("on",
-            str(int(self.project.debugProperties["CONSOLEDEBUGGER"])))
+        self.writeAttribute(
+            "on", str(int(self.project.debugProperties["CONSOLEDEBUGGER"])))
         self.writeCharacters(self.project.debugProperties["CONSOLECOMMAND"])
         self.writeEndElement()
         
         self.writeEmptyElement("Redirect")
-        self.writeAttribute("on",
-            str(int(self.project.debugProperties["REDIRECT"])))
+        self.writeAttribute(
+            "on", str(int(self.project.debugProperties["REDIRECT"])))
         
         self.writeEmptyElement("Noencoding")
-        self.writeAttribute("on",
-            str(int(self.project.debugProperties["NOENCODING"])))
+        self.writeAttribute(
+            "on", str(int(self.project.debugProperties["NOENCODING"])))
         
         self.writeEndElement()
         self.writeEndDocument()

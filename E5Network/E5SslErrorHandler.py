@@ -41,8 +41,8 @@ class E5SslErrorHandler(QObject):
             # port old entries stored under 'Help'
             certificateDict = Preferences.toDict(
                 Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
-            Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
-                certificateDict)
+            Preferences.Prefs.settings.setValue(
+                "Ssl/CaCertificatesDict", certificateDict)
             Preferences.Prefs.settings.remove("Help/CaCertificatesDict")
         else:
             certificateDict = Preferences.toDict(

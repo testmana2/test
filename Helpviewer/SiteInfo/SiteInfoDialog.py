@@ -204,10 +204,12 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             return
         
         menu = QMenu()
-        act = menu.addAction(self.trUtf8("Copy Image Location to Clipboard"),
+        act = menu.addAction(
+            self.trUtf8("Copy Image Location to Clipboard"),
             self.__copyAction)
         act.setData(itm.text(1))
-        act = menu.addAction(self.trUtf8("Copy Image Name to Clipboard"),
+        act = menu.addAction(
+            self.trUtf8("Copy Image Name to Clipboard"),
             self.__copyAction)
         act.setData(itm.text(0))
         menu.addSeparator()

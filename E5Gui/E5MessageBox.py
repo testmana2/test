@@ -237,10 +237,11 @@ def yesNo(parent, title, text, icon=Question, yesDefault=False,
     """
     assert icon in [Critical, Information, Question, Warning]
     
-    res = __messageBox(parent, title, text, icon,
-            QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No),
-            yesDefault and QMessageBox.Yes or QMessageBox.No,
-            textFormat)
+    res = __messageBox(
+        parent, title, text, icon,
+        QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No),
+        yesDefault and QMessageBox.Yes or QMessageBox.No,
+        textFormat)
     return res == QMessageBox.Yes
 
 
@@ -258,10 +259,11 @@ def retryAbort(parent, title, text, icon=Question, textFormat=Qt.AutoText):
     """
     assert icon in [Critical, Information, Question, Warning]
     
-    res = __messageBox(parent, title, text, icon,
-            QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort),
-            QMessageBox.Retry,
-            textFormat)
+    res = __messageBox(
+        parent, title, text, icon,
+        QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort),
+        QMessageBox.Retry,
+        textFormat)
     return res == QMessageBox.Retry
 
 
@@ -277,11 +279,12 @@ def okToClearData(parent, title, text, saveFunc, textFormat=Qt.AutoText):
     @param textFormat format of the text (Qt.TextFormat)
     @return flag indicating that it is ok to clear the data (boolean)
     """
-    res = __messageBox(parent, title, text, QMessageBox.Warning,
-            QMessageBox.StandardButtons(
-                QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save),
-            QMessageBox.Save,
-            textFormat)
+    res = __messageBox(
+        parent, title, text, QMessageBox.Warning,
+        QMessageBox.StandardButtons(
+            QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save),
+        QMessageBox.Save,
+        textFormat)
     if res == QMessageBox.Abort:
         return False
     if res == QMessageBox.Save:

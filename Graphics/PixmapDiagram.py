@@ -152,7 +152,8 @@ class PixmapDiagram(E5MainWindow):
             E5MessageBox.warning(
                 self,
                 self.trUtf8("Pixmap-Viewer"),
-                self.trUtf8("""<p>The file <b>{0}</b> cannot be displayed."""
+                self.trUtf8(
+                    """<p>The file <b>{0}</b> cannot be displayed."""
                     """ The format is not supported.</p>""").format(filename))
             return False
         
@@ -381,15 +382,15 @@ class PixmapDiagram(E5MainWindow):
         painter.setPen(tc)
         painter.drawRect(marginX, marginY, width, height)
         painter.drawLine(marginX, marginY + height + 2,
-                   marginX + width, marginY + height + 2)
+                         marginX + width, marginY + height + 2)
         painter.setFont(font)
         painter.drawText(marginX, marginY + height + 4, width,
-                   fontHeight, Qt.AlignRight, s)
+                         fontHeight, Qt.AlignRight, s)
 
         # render the diagram
         size = self.pixmapLabel.pixmap().size()
         size.scale(QSize(width - 10, height - 10),  # 5 px inner margin
-            Qt.KeepAspectRatio)
+                   Qt.KeepAspectRatio)
         painter.setViewport(marginX + 5, marginY + 5,
                             size.width(), size.height())
         painter.setWindow(self.pixmapLabel.pixmap().rect())

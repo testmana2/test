@@ -355,7 +355,8 @@ class AdBlockSubscription(QObject):
         
         import Helpviewer.HelpWindow
         from Helpviewer.Network.FollowRedirectReply import FollowRedirectReply
-        self.__downloading = FollowRedirectReply(self.location(),
+        self.__downloading = FollowRedirectReply(
+            self.location(),
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.__downloading.finished[()].connect(self.__rulesDownloaded)
     

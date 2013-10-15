@@ -45,7 +45,8 @@ class E5ListView(QListView):
         idx = self.model().index(row, 0, self.rootIndex())
         if not idx.isValid():
             idx = self.model().index(row - 1, 0, self.rootIndex())
-        self.selectionModel().select(idx,
+        self.selectionModel().select(
+            idx,
             QItemSelectionModel.SelectCurrent | QItemSelectionModel.Rows)
         self.setCurrentIndex(idx)
     

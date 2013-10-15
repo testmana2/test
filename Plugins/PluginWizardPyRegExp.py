@@ -67,9 +67,10 @@ class PyRegExpWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('Python re Wizard'),
-             self.trUtf8('&Python re Wizard...'), 0, 0, self,
-             'wizards_python_re')
+        self.action = E5Action(
+            self.trUtf8('Python re Wizard'),
+            self.trUtf8('&Python re Wizard...'), 0, 0, self,
+            'wizards_python_re')
         self.action.setStatusTip(self.trUtf8('Python re Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>Python re Wizard</b>"""

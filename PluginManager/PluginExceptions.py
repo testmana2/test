@@ -52,9 +52,9 @@ class PluginPathError(PluginError):
         if msg:
             self._errorMessage = msg
         else:
-            self._errorMessage = \
-                QApplication.translate("PluginError",
-                    "Plugin paths not found or not creatable.")
+            self._errorMessage = QApplication.translate(
+                "PluginError",
+                "Plugin paths not found or not creatable.")
 
 
 class PluginModulesError(PluginError):

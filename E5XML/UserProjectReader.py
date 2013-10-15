@@ -49,7 +49,8 @@ class UserProjectReader(XMLStreamReaderBase):
                     self.project.pudata["VCSOVERRIDE"] = [
                         self.readElementText()]
                 elif self.name() == "VcsStatusMonitorInterval":
-                    interval = int(self.attribute("value",
+                    interval = int(self.attribute(
+                        "value",
                         Preferences.getVCS("StatusMonitorInterval")))
                     self.project.pudata["VCSSTATUSMONITORINTERVAL"] = [
                         interval]

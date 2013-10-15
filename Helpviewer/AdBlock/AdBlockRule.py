@@ -556,7 +556,8 @@ class AdBlockRule(object):
         # escape special symbols
         pattern = re.sub(r"(\W)", r"\\\1", pattern)
         # process extended anchor at expression start
-        pattern = re.sub(r"^\\\|\\\|",
+        pattern = re.sub(
+            r"^\\\|\\\|",
             r"^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?", pattern)
         # process separator placeholders
         pattern = re.sub(r"\\\^", r"(?:[^\w\d\-.%]|$)", pattern)

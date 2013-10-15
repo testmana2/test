@@ -167,14 +167,17 @@ class NetworkAccessManager(QNetworkAccessManager):
             urlHost = req.url().host()
             for host in Preferences.getHelp("NoCacheHosts"):
                 if host in urlHost:
-                    req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                    req.setAttribute(
+                        QNetworkRequest.CacheLoadControlAttribute,
                         QNetworkRequest.AlwaysNetwork)
                     break
             else:
-                req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                req.setAttribute(
+                    QNetworkRequest.CacheLoadControlAttribute,
                     Preferences.getHelp("CachePolicy"))
         else:
-            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+            req.setAttribute(
+                QNetworkRequest.CacheLoadControlAttribute,
                 QNetworkRequest.AlwaysNetwork)
         
         # Do Not Track feature
@@ -246,7 +249,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         from Helpviewer.HelpLanguagesDialog import HelpLanguagesDialog
         languages = Preferences.toList(
-            Preferences.Prefs.settings.value("Help/AcceptLanguages",
+            Preferences.Prefs.settings.value(
+                "Help/AcceptLanguages",
                 HelpLanguagesDialog.defaultAcceptLanguages()))
         self.__acceptLanguage = HelpLanguagesDialog.httpString(languages)
     

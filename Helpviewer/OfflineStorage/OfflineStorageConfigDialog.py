@@ -64,25 +64,32 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
         """
         Public slot to store the configuration data.
         """
-        Preferences.setHelp("OfflineStorageDatabaseEnabled",
+        Preferences.setHelp(
+            "OfflineStorageDatabaseEnabled",
             self.databaseEnabledCheckBox.isChecked())
-        Preferences.setHelp("OfflineStorageDatabaseQuota",
+        Preferences.setHelp(
+            "OfflineStorageDatabaseQuota",
             self.databaseQuotaSpinBox.value())
         
         if self.applicationCacheGroup.isEnabled():
-            Preferences.setHelp("OfflineWebApplicationCacheEnabled",
+            Preferences.setHelp(
+                "OfflineWebApplicationCacheEnabled",
                 self.applicationCacheEnabledCheckBox.isChecked())
-            Preferences.setHelp("OfflineWebApplicationCacheQuota",
+            Preferences.setHelp(
+                "OfflineWebApplicationCacheQuota",
                 self.applicationCacheQuotaSpinBox.value())
         
         if self.localStorageGroup.isEnabled():
-            Preferences.setHelp("LocalStorageEnabled",
+            Preferences.setHelp(
+                "LocalStorageEnabled",
                 self.localStorageEnabledCheckBox.isChecked())
             if self.localRemoteUrlsCheckBox.isVisible():
-                Preferences.setHelp("LocalContentCanAccessRemoteUrls",
+                Preferences.setHelp(
+                    "LocalContentCanAccessRemoteUrls",
                     self.localRemoteUrlsCheckBox.isChecked())
             if self.localFileUrlsCheckBox.isVisible():
-                Preferences.setHelp("LocalContentCanAccessFileUrls",
+                Preferences.setHelp(
+                    "LocalContentCanAccessFileUrls",
                     self.localFileUrlsCheckBox.isChecked())
     
     @pyqtSlot()

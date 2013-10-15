@@ -744,7 +744,7 @@ class UMLGraphicsView(E5GraphicsView):
                     AssociationItem.parseAssociationItemDataString(
                         value.strip())
                 assoc = AssociationItem(umlItems[srcId], umlItems[dstId],
-                    assocType, topToBottom)
+                                        assocType, topToBottom)
                 self.scene().addItem(assoc)
         
         return True, -1

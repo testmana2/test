@@ -149,7 +149,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     source = Utilities.convertLineEnds(source, "\n")
                 except (UnicodeError, IOError) as msg:
                     self.noResults = False
-                    self.__createResultItem(file, "1",
+                    self.__createResultItem(
+                        file, "1",
                         "Error: {0}".format(str(msg)).rstrip()[1:-1])
                     progress += 1
                     continue
@@ -265,7 +266,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
             return (True, filename, "1",
-                self.trUtf8("Python2 interpreter not configured."))
+                    self.trUtf8("Python2 interpreter not configured."))
         
         checker = os.path.join(getConfig('ericDir'),
                                "UtilitiesPython2", "TabnannyChecker.py")
@@ -290,4 +291,4 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                 return (False, None, None, None)
         
         return (True, filename, "1",
-            self.trUtf8("Python2 interpreter did not finish within 15s."))
+                self.trUtf8("Python2 interpreter did not finish within 15s."))

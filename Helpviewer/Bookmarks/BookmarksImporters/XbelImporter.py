@@ -39,7 +39,8 @@ def getImporterInfo(id):
                 """eric5 Web Browser stores its bookmarks in the"""
                 """ <b>{0}</b> XML file. This file is usually located in"""
             ).format(os.path.basename(bookmarksFile)),
-            QCoreApplication.translate("XbelImporter",
+            QCoreApplication.translate(
+                "XbelImporter",
                 """Please choose the file to begin importing bookmarks."""),
             os.path.dirname(bookmarksFile),
         )
@@ -59,7 +60,8 @@ def getImporterInfo(id):
                 """Konqueror stores its bookmarks in the"""
                 """ <b>bookmarks.xml</b> XML file. This file is usually"""
                 """ located in"""),
-            QCoreApplication.translate("XbelImporter",
+            QCoreApplication.translate(
+                "XbelImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
         )

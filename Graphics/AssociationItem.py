@@ -67,7 +67,7 @@ class AssociationItem(E5ArrowItem):
             arrowFilled = False
         
         E5ArrowItem.__init__(self, QPointF(0, 0), QPointF(100, 100),
-            arrowFilled, arrowType, parent)
+                             arrowFilled, arrowType, parent)
         
         self.setFlag(QGraphicsItem.ItemIsMovable, False)
         self.setFlag(QGraphicsItem.ItemIsSelectable, False)
@@ -128,7 +128,7 @@ class AssociationItem(E5ArrowItem):
                            rectB.y() + rectB.height())
         else:
             startP = QPointF(rectA.x() + rectA.width() / 2.0,
-                           rectA.y() + rectA.height())
+                             rectA.y() + rectA.height())
             endP = QPointF(rectB.x() + rectB.width() / 2.0, rectB.y())
         self.setPoints(startP.x(), startP.y(), endP.x(), endP.y())
     

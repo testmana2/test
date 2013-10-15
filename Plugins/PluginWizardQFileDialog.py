@@ -67,9 +67,10 @@ class FileDialogWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QFileDialog Wizard'),
-             self.trUtf8('Q&FileDialog Wizard...'), 0, 0, self,
-             'wizards_qfiledialog')
+        self.action = E5Action(
+            self.trUtf8('QFileDialog Wizard'),
+            self.trUtf8('Q&FileDialog Wizard...'), 0, 0, self,
+            'wizards_qfiledialog')
         self.action.setStatusTip(self.trUtf8('QFileDialog Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QFileDialog Wizard</b>"""

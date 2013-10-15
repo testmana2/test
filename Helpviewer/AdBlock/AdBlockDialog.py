@@ -140,7 +140,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         menu.addAction(
             self.trUtf8("Update Subscription"), self.__updateSubscription)\
             .setEnabled(not subscriptionEditable)
-        menu.addAction(self.trUtf8("Update All Subscriptions"),
+        menu.addAction(
+            self.trUtf8("Update All Subscriptions"),
             self.__updateAllSubscriptions)
         menu.addSeparator()
         menu.addAction(self.trUtf8("Learn more about writing rules..."),

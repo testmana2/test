@@ -122,8 +122,8 @@ def getOpenFileNamesAndFilter(parent=None, caption="", directory="",
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
     return QFileDialog.getOpenFileNamesAndFilter(parent, caption, directory,
-                                                newfilter, initialFilter,
-                                                options)
+                                                 newfilter, initialFilter,
+                                                 options)
 
 
 def getSaveFileName(parent=None, caption="", directory="",

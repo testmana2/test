@@ -53,8 +53,8 @@ def exeDisplayDataList():
         exe = os.path.join(getConfig("bindir"), exe + '.bat')
     dataList.append({
         "programEntry": True,
-        "header": QApplication.translate("EricdocPlugin",
-                                "Eric5 Documentation Generator"),
+        "header": QApplication.translate(
+            "EricdocPlugin", "Eric5 Documentation Generator"),
         "exe": exe,
         "versionCommand": '--version',
         "versionStartsWith": 'eric5_',
@@ -69,8 +69,8 @@ def exeDisplayDataList():
         exe += '.exe'
     dataList.append({
         "programEntry": True,
-        "header": QApplication.translate("EricdocPlugin",
-                                "Qt Help Tools"),
+        "header": QApplication.translate(
+            "EricdocPlugin", "Qt Help Tools"),
         "exe": exe,
         "versionCommand": '-v',
         "versionStartsWith": 'Qt',
@@ -85,8 +85,8 @@ def exeDisplayDataList():
         exe += '.exe'
     dataList.append({
         "programEntry": True,
-        "header": QApplication.translate("EricdocPlugin",
-                                "Qt Help Tools"),
+        "header": QApplication.translate(
+            "EricdocPlugin", "Qt Help Tools"),
         "exe": exe,
         "versionCommand": '-v',
         "versionStartsWith": 'Qt',
@@ -127,7 +127,8 @@ class EricdocPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = \
-                E5Action(self.trUtf8('Generate documentation (eric5_doc)'),
+                E5Action(
+                    self.trUtf8('Generate documentation (eric5_doc)'),
                     self.trUtf8('Generate &documentation (eric5_doc)'), 0, 0,
                     self, 'doc_eric5_doc')
             self.__projectAct.setStatusTip(

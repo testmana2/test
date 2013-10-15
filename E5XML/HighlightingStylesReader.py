@@ -41,7 +41,8 @@ class HighlightingStylesReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "HighlightingStyles":
-                    self.version = self.attribute("version",
+                    self.version = self.attribute(
+                        "version",
                         highlightingStylesFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)

@@ -42,11 +42,13 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("chrome.png"),
             "Mozilla Firefox",
             "places.sqlite",
-            QCoreApplication.translate("FirefoxImporter",
+            QCoreApplication.translate(
+                "FirefoxImporter",
                 """Mozilla Firefox stores its bookmarks in the"""
                 """ <b>places.sqlite</b> SQLite database. This file is"""
                 """ usually located in"""),
-            QCoreApplication.translate("FirefoxImporter",
+            QCoreApplication.translate(
+                "FirefoxImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
         )

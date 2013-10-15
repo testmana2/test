@@ -57,8 +57,8 @@ def exeDisplayData():
     
     data = {
         "programEntry": False,
-        "header": QApplication.translate("VcsPySvnPlugin",
-                            "Version Control - Subversion (pysvn)"),
+        "header": QApplication.translate(
+            "VcsPySvnPlugin", "Version Control - Subversion (pysvn)"),
         "text": text,
         "version": version,
     }
@@ -200,7 +200,8 @@ class VcsPySvnPlugin(QObject):
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Subversion/" + key, self.__subversionDefaults[key]))
         elif key in ["LogLimit", "CommitMessages"]:
-            return int(Preferences.Prefs.settings.value("Subversion/" + key,
+            return int(Preferences.Prefs.settings.value(
+                "Subversion/" + key,
                 self.__subversionDefaults[key]))
         elif key in ["Commits"]:
             return Preferences.toList(Preferences.Prefs.settings.value(

@@ -71,9 +71,10 @@ class TabnannyPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
-            self.__projectAct = E5Action(self.trUtf8('Check Indentations'),
-                    self.trUtf8('&Indentations...'), 0, 0,
-                    self, 'project_check_indentations')
+            self.__projectAct = E5Action(
+                self.trUtf8('Check Indentations'),
+                self.trUtf8('&Indentations...'), 0, 0,
+                self, 'project_check_indentations')
             self.__projectAct.setStatusTip(
                 self.trUtf8('Check indentations using tabnanny.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
@@ -85,9 +86,10 @@ class TabnannyPlugin(QObject):
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
-        self.__editorAct = E5Action(self.trUtf8('Check Indentations'),
-                self.trUtf8('&Indentations...'), 0, 0,
-                self, "")
+        self.__editorAct = E5Action(
+            self.trUtf8('Check Indentations'),
+            self.trUtf8('&Indentations...'), 0, 0,
+            self, "")
         self.__editorAct.setWhatsThis(self.trUtf8(
             """<b>Check Indentations...</b>"""
             """<p>This checks Python files"""
@@ -186,8 +188,8 @@ class TabnannyPlugin(QObject):
         project.saveAllScripts()
         ppath = project.getProjectPath()
         files = [os.path.join(ppath, file) \
-            for file in project.pdata["SOURCES"] \
-                if file.endswith(
+                 for file in project.pdata["SOURCES"] \
+                 if file.endswith(
                     tuple(Preferences.getPython("Python3Extensions")) +
                     tuple(Preferences.getPython("PythonExtensions")))]
         

@@ -242,8 +242,8 @@ class UMLDialog(E5MainWindow):
         
         lines = [
             "version: 1.0",
-            "diagram_type: {0} ({1})".format(self.__diagramType,
-                self.__diagramTypeString()),
+            "diagram_type: {0} ({1})".format(
+                self.__diagramType, self.__diagramTypeString()),
             "scene_size: {0};{1}".format(self.scene.width(),
                                          self.scene.height()),
         ]

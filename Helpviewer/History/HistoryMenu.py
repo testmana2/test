@@ -397,9 +397,11 @@ class HistoryMenu(E5ModelMenu):
                 self.__tabWidget.restoreClosedTab).setData(index)
             index += 1
         self.__closedTabsMenu.addSeparator()
-        self.__closedTabsMenu.addAction(self.trUtf8("Restore All Closed Tabs"),
+        self.__closedTabsMenu.addAction(
+            self.trUtf8("Restore All Closed Tabs"),
             self.__tabWidget.restoreAllClosedTabs)
-        self.__closedTabsMenu.addAction(self.trUtf8("Clear List"),
+        self.__closedTabsMenu.addAction(
+            self.trUtf8("Clear List"),
             self.__tabWidget.clearClosedTabsList)
     
     def __closedTabAvailable(self, avail):

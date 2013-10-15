@@ -87,7 +87,8 @@ class FtpSyncHandler(SyncHandler):
         else:
             proxyType = Preferences.getUI("ProxyType/Ftp")
         if proxyType != E5FtpProxyType.NoProxy:
-            self.__ftp.setProxy(proxyType,
+            self.__ftp.setProxy(
+                proxyType,
                 Preferences.getUI("ProxyHost/Ftp"),
                 Preferences.getUI("ProxyPort/Ftp"))
             if proxyType != E5FtpProxyType.NonAuthorizing:
@@ -345,35 +346,40 @@ class FtpSyncHandler(SyncHandler):
         """
         Public method to synchronize the bookmarks.
         """
-        self.__syncFile("bookmarks",
+        self.__syncFile(
+            "bookmarks",
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().getFileName())
     
     def syncHistory(self):
         """
         Public method to synchronize the history.
         """
-        self.__syncFile("history",
+        self.__syncFile(
+            "history",
             Helpviewer.HelpWindow.HelpWindow.historyManager().getFileName())
     
     def syncPasswords(self):
         """
         Public method to synchronize the passwords.
         """
-        self.__syncFile("passwords",
+        self.__syncFile(
+            "passwords",
             Helpviewer.HelpWindow.HelpWindow.passwordManager().getFileName())
     
     def syncUserAgents(self):
         """
         Public method to synchronize the user agents.
         """
-        self.__syncFile("useragents",
+        self.__syncFile(
+            "useragents",
             Helpviewer.HelpWindow.HelpWindow.userAgentsManager().getFileName())
     
     def syncSpeedDial(self):
         """
         Public method to synchronize the speed dial data.
         """
-        self.__syncFile("speeddial",
+        self.__syncFile(
+            "speeddial",
             Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
     
     def shutdown(self):

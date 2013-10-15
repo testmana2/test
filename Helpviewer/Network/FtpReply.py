@@ -140,7 +140,8 @@ class FtpReply(QNetworkReply):
         else:
             proxyType = Preferences.getUI("ProxyType/Ftp")
         if proxyType != E5FtpProxyType.NoProxy:
-            self.__ftp.setProxy(proxyType,
+            self.__ftp.setProxy(
+                proxyType,
                 Preferences.getUI("ProxyHost/Ftp"),
                 Preferences.getUI("ProxyPort/Ftp"))
             if proxyType != E5FtpProxyType.NonAuthorizing:
@@ -283,8 +284,8 @@ class FtpReply(QNetworkReply):
                             "<b>Connect to proxy '{0}' using:</b>")\
                             .format(Utilities.html_encode(
                                 Preferences.getUI("ProxyHost/Ftp")))
-                        dlg = AuthenticationDialog(info,
-                            Preferences.getUI("ProxyUser/Ftp"), True)
+                        dlg = AuthenticationDialog(
+                            info, Preferences.getUI("ProxyUser/Ftp"), True)
                         dlg.setData(Preferences.getUI("ProxyUser/Ftp"),
                                     Preferences.getUI("ProxyPassword/Ftp"))
                         if dlg.exec_() == QDialog.Accepted:
@@ -390,7 +391,8 @@ class FtpReply(QNetworkReply):
             pixmap.fill(Qt.transparent)
             imageBuffer.buffer().clear()
             pixmap.save(imageBuffer, "PNG")
-        return cssString.format(size + 4,
+        return cssString.format(
+            size + 4,
             str(imageBuffer.buffer().toBase64(), encoding="ascii"))
     
     def __setListContent(self):

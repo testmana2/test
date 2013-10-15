@@ -140,7 +140,8 @@ def main():
     import getopt
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "c:ehio:Rrt:Vx:",
+        opts, args = getopt.getopt(
+            sys.argv[1:], "c:ehio:Rrt:Vx:",
             ["exclude=", "extension=", "help", "noindex", "noempty", "outdir=",
              "recursive", "style-sheet=", "version",
              "exclude-file=", "eol=",

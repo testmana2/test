@@ -705,8 +705,8 @@ class DocStyleChecker(object):
                         end = line - 1, char
                         startLine = classContext.start() + start[0]
                         endLine = classContext.start() + end[0]
-                        contexts.append(
-                            DocStyleContext(self.__source[startLine:endLine],
+                        contexts.append(DocStyleContext(
+                            self.__source[startLine:endLine],
                                           startLine, "def"))
                 except StopIteration:
                     pass

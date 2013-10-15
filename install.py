@@ -100,10 +100,10 @@ def usage(rcode=2):
               " [-m name] [-p python]".format(progName))
     elif sys.platform.startswith("win"):
         print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file]"\
-        .format(progName))
+              .format(progName))
     else:
         print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"\
-        .format(progName))
+              .format(progName))
     print("where:")
     print("    -h        display this help message")
     print("    -a dir    where the API files will be installed")
@@ -238,20 +238,20 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         if not os.path.exists(pyexec):
             pyexec = "{0}/bin/python3".format(sys.exec_prefix)
         wname = wfile
-        wrapper = \
+        wrapper = (
 '''#!/bin/sh
 
 exec "{0}" "{1}/{2}.py" "$@"
-'''.format(pyexec, pydir, wfile)
+'''.format(pyexec, pydir, wfile))
 
     # *nix systems
     else:
         wname = wfile
-        wrapper = \
+        wrapper = (
 '''#!/bin/sh
 
 exec "{0}" "{1}/{2}.py" "$@"
-'''.format(sys.executable, pydir, wfile)
+'''.format(sys.executable, pydir, wfile))
 
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
@@ -498,21 +498,26 @@ def installEric():
                 shutilCopy(configName + 'c', modDir)
         
         # copy the various parts of eric5
-        copyTree(sourceDir, cfg['ericDir'],
+        copyTree(
+            sourceDir, cfg['ericDir'],
                  ['*.py', '*.pyc', '*.pyo', '*.pyw'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)],
             excludePatterns=["eric5config.py*"])
-        copyTree(sourceDir, cfg['ericDir'], ['*.rb'],
+        copyTree(
+            sourceDir, cfg['ericDir'], ['*.rb'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)])
-        copyTree('{1}{0}Plugins'.format(os.sep, sourceDir),
+        copyTree(
+            '{1}{0}Plugins'.format(os.sep, sourceDir),
             '{0}{1}Plugins'.format(cfg['ericDir'], os.sep),
             ['*.png', '*.style'])
         copyTree(
             '{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'],
             ['*.html', '*.qch'])
-        copyTree('{1}{0}DTDs'.format(os.sep, sourceDir), cfg['ericDTDDir'],
+        copyTree(
+            '{1}{0}DTDs'.format(os.sep, sourceDir), cfg['ericDTDDir'],
             ['*.dtd'])
-        copyTree('{1}{0}CSSs'.format(os.sep, sourceDir), cfg['ericCSSDir'],
+        copyTree(
+            '{1}{0}CSSs'.format(os.sep, sourceDir), cfg['ericCSSDir'],
             ['*.css'])
         copyTree(
             '{1}{0}Styles'.format(os.sep, sourceDir), cfg['ericStylesDir'],
@@ -520,14 +525,18 @@ def installEric():
         copyTree(
             '{1}{0}i18n'.format(os.sep, sourceDir), cfg['ericTranslationsDir'],
             ['*.qm'])
-        copyTree('{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'],
+        copyTree(
+            '{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'],
             ['*.png', 'LICENSE*.*', 'readme.txt'])
-        copyTree('{1}{0}pixmaps'.format(os.sep, sourceDir), cfg['ericPixDir'],
+        copyTree(
+            '{1}{0}pixmaps'.format(os.sep, sourceDir), cfg['ericPixDir'],
             ['*.png', '*.xpm', '*.ico', '*.gif'])
-        copyTree('{1}{0}DesignerTemplates'.format(os.sep, sourceDir),
+        copyTree(
+            '{1}{0}DesignerTemplates'.format(os.sep, sourceDir),
             cfg['ericTemplatesDir'],
             ['*.tmpl'])
-        copyTree('{1}{0}CodeTemplates'.format(os.sep, sourceDir),
+        copyTree(
+            '{1}{0}CodeTemplates'.format(os.sep, sourceDir),
             cfg['ericCodeTemplatesDir'],
             ['*.tmpl'])
         copyTree(
@@ -621,14 +630,17 @@ def installEric():
                 os.makedirs(dst)
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
         else:
-            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric.png"),
+            shutilCopy(os.path.join(
+                sourceDir, "icons", "default", "eric.png"),
                 "/usr/share/pixmaps/eric.png")
-            shutilCopy(os.path.join(sourceDir, "eric5.desktop"),
+            shutilCopy(os.path.join(
+                sourceDir, "eric5.desktop"),
                 "/usr/share/applications")
-            shutilCopy(
-                os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
+            shutilCopy(os.path.join(
+                sourceDir, "icons", "default", "ericWeb48.png"),
                 "/usr/share/pixmaps/ericWeb.png")
-            shutilCopy(os.path.join(sourceDir, "eric5_webbrowser.desktop"),
+            shutilCopy(os.path.join(
+                sourceDir, "eric5_webbrowser.desktop"),
                 "/usr/share/applications")
     
     # Create a Mac application bundle
@@ -669,25 +681,26 @@ def createMacAppBundle(pydir):
         if pybin not in pathlist:
             pathlist.insert(0, pybin)
         path = os.pathsep.join(pathlist)
-        wrapper = \
+        wrapper = (
 '''#!/bin/sh
 
 PATH={0}
 exec "{1}" "{2}/{3}.py" "$@"
-'''.format(path, starter, pydir, "eric5")
+'''.format(path, starter, pydir, "eric5"))
     else:
-        wrapper = \
+        wrapper = (
 '''#!/bin/sh
 
 exec "{0}" "{1}/{2}.py" "$@"
-'''.format(starter, pydir, "eric5")
+'''.format(starter, pydir, "eric5"))
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
     
     shutilCopy(os.path.join(sourceDir, "pixmaps", "eric_2.icns"),
                os.path.join(dirs["icns"], "eric.icns"))
     
-    copyToFile(os.path.join(dirs["contents"], "Info.plist"),
+    copyToFile(
+os.path.join(dirs["contents"], "Info.plist"),
 '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
           "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -710,9 +723,7 @@ exec "{0}" "{1}/{2}.py" "$@"
     <key>CFBundleVersion</key>
     <string>1.0</string>
 </dict>
-</plist>
-'''.format(macAppBundleName.replace(".app", ""))
-    )
+</plist>\n'''.format(macAppBundleName.replace(".app", "")))
 
 
 def createInstallConfig():
@@ -800,15 +811,15 @@ def getConfig(name):
         pass
 
     raise AttributeError('"{{0}}" is not a valid configuration value'.format(
-        name))
-""".format(cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
-           cfg['ericDTDDir'], cfg['ericCSSDir'],
-           cfg['ericStylesDir'], cfg['ericDocDir'],
-           cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
-           cfg['ericTemplatesDir'],
-           cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
-           cfg['bindir'], cfg['mdir'],
-           cfg['apidir'], apis)
+        name))\n""".format(
+    cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
+    cfg['ericDTDDir'], cfg['ericCSSDir'],
+    cfg['ericStylesDir'], cfg['ericDocDir'],
+    cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
+    cfg['ericTemplatesDir'],
+    cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
+    cfg['bindir'], cfg['mdir'],
+    cfg['apidir'], apis)
     copyToFile(fn, config)
 
 
@@ -1162,7 +1173,8 @@ def main(argv):
     if doCompile:
         print("\nCompiling source files ...")
         if distDir:
-            compileall.compile_dir(sourceDir,
+            compileall.compile_dir(
+                sourceDir,
                 ddir=os.path.join(distDir, modDir, cfg['ericDir']),
                 rx=re.compile(
                     r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
@@ -1171,7 +1183,8 @@ def main(argv):
                 configName,
                 dfile=os.path.join(distDir, modDir, "eric5config.py"))
         else:
-            compileall.compile_dir(sourceDir,
+            compileall.compile_dir(
+                sourceDir,
                 ddir=os.path.join(modDir, cfg['ericDir']),
                 rx=re.compile(
                     r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),

@@ -112,20 +112,22 @@ class ProjectReader(XMLStreamReaderBase):
                 elif self.name() == "LexerAssociations":
                     self.__readLexerAssociations()
                 elif self.name() == "ProjectTypeSpecific":
-                    self.__readBasicDataField("ProjectTypeSpecific",
-                        "ProjectTypeSpecificData", "PROJECTTYPESPECIFICDATA")
+                    self.__readBasicDataField(
+                        "ProjectTypeSpecific", "ProjectTypeSpecificData",
+                        "PROJECTTYPESPECIFICDATA")
                 elif self.name() == "Documentation":
-                    self.__readBasicDataField("Documentation",
-                        "DocumentationParams", "DOCUMENTATIONPARMS")
+                    self.__readBasicDataField(
+                        "Documentation", "DocumentationParams",
+                        "DOCUMENTATIONPARMS")
                 elif self.name() == "Packagers":
-                    self.__readBasicDataField("Packagers",
-                        "PackagersParams", "PACKAGERSPARMS")
+                    self.__readBasicDataField(
+                        "Packagers", "PackagersParams", "PACKAGERSPARMS")
                 elif self.name() == "Checkers":
-                    self.__readBasicDataField("Checkers",
-                        "CheckersParams", "CHECKERSPARMS")
+                    self.__readBasicDataField(
+                        "Checkers", "CheckersParams", "CHECKERSPARMS")
                 elif self.name() == "OtherTools":
-                    self.__readBasicDataField("OtherTools",
-                        "OtherToolsParams", "OTHERTOOLSPARMS")
+                    self.__readBasicDataField(
+                        "OtherTools", "OtherToolsParams", "OTHERTOOLSPARMS")
                 else:
                     self.raiseUnexpectedStartTag(self.name())
         

@@ -67,9 +67,10 @@ class QRegularExpressionWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QRegularExpression Wizard'),
-             self.trUtf8('QRegularE&xpression Wizard...'), 0, 0, self,
-             'wizards_qregularexpression')
+        self.action = E5Action(
+            self.trUtf8('QRegularExpression Wizard'),
+            self.trUtf8('QRegularE&xpression Wizard...'), 0, 0, self,
+            'wizards_qregularexpression')
         self.action.setStatusTip(self.trUtf8('QRegularExpression Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QRegularExpression Wizard</b>"""

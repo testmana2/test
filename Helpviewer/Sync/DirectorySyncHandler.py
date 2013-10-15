@@ -94,7 +94,8 @@ class DirectorySyncHandler(SyncHandler):
             data = f.read()
             f.close()
         except IOError as err:
-            self.syncStatus.emit(type_,
+            self.syncStatus.emit(
+                type_,
                 self.trUtf8("Cannot read remote file.\n{0}").format(str(err)))
             self.syncFinished.emit(type_, False, True)
             return
@@ -153,7 +154,8 @@ class DirectorySyncHandler(SyncHandler):
                 QFileInfo(fileName).lastModified() <= QFileInfo(
                     os.path.join(Preferences.getHelp("SyncDirectoryPath"),
                                  self._remoteFiles[type_])).lastModified():
-            self.__downloadFile(type_, fileName,
+            self.__downloadFile(
+                type_, fileName,
                 QFileInfo(os.path.join(
                     Preferences.getHelp("SyncDirectoryPath"),
                     self._remoteFiles[type_])).lastModified().toTime_t())
@@ -207,7 +209,8 @@ class DirectorySyncHandler(SyncHandler):
         QCoreApplication.processEvents()
         # Speed Dial Settings
         if Preferences.getHelp("SyncSpeedDial"):
-            self.__initialSyncFile("speeddial",
+            self.__initialSyncFile(
+                "speeddial",
                 Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
         
         self.__forceUpload = False
@@ -229,35 +232,40 @@ class DirectorySyncHandler(SyncHandler):
         """
         Public method to synchronize the bookmarks.
         """
-        self.__syncFile("bookmarks",
+        self.__syncFile(
+            "bookmarks",
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().getFileName())
     
     def syncHistory(self):
         """
         Public method to synchronize the history.
         """
-        self.__syncFile("history",
+        self.__syncFile(
+            "history",
             Helpviewer.HelpWindow.HelpWindow.historyManager().getFileName())
     
     def syncPasswords(self):
         """
         Public method to synchronize the passwords.
         """
-        self.__syncFile("passwords",
+        self.__syncFile(
+            "passwords",
             Helpviewer.HelpWindow.HelpWindow.passwordManager().getFileName())
     
     def syncUserAgents(self):
         """
         Public method to synchronize the user agents.
         """
-        self.__syncFile("useragents",
+        self.__syncFile(
+            "useragents",
             Helpviewer.HelpWindow.HelpWindow.userAgentsManager().getFileName())
     
     def syncSpeedDial(self):
         """
         Public method to synchronize the speed dial data.
         """
-        self.__syncFile("speeddial",
+        self.__syncFile(
+            "speeddial",
             Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
     
     def shutdown(self):

@@ -274,7 +274,8 @@ class E5Ftp(ftplib.FTP):
                         " given")
             
             if self.__proxyType in [E5FtpProxyType.NonAuthorizing,
-                    E5FtpProxyType.AuthResp, E5FtpProxyType.Bluecoat]:
+                                    E5FtpProxyType.AuthResp,
+                                    E5FtpProxyType.Bluecoat]:
                 user += "@" + self.__host
                 if self.__proxyType == E5FtpProxyType.Bluecoat:
                     user += " " + self.__proxyUser

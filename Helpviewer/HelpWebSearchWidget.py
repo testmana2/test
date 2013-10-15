@@ -332,8 +332,8 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         """
         Public method to save the recently performed web searches.
         """
-        Preferences.Prefs.settings.setValue('Help/WebSearches',
-            self.__recentSearches)
+        Preferences.Prefs.settings.setValue(
+            'Help/WebSearches', self.__recentSearches)
     
     def __loadSearches(self):
         """

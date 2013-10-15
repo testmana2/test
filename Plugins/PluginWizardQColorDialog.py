@@ -67,9 +67,10 @@ class ColorDialogWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QColorDialog Wizard'),
-             self.trUtf8('Q&ColorDialog Wizard...'), 0, 0, self,
-             'wizards_qcolordialog')
+        self.action = E5Action(
+            self.trUtf8('QColorDialog Wizard'),
+            self.trUtf8('Q&ColorDialog Wizard...'), 0, 0, self,
+            'wizards_qcolordialog')
         self.action.setStatusTip(self.trUtf8('QColorDialog Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QColorDialog Wizard</b>"""

@@ -18,8 +18,8 @@ from ..GreaseMonkeyScript import GreaseMonkeyScript
 import UI.PixmapCache
 
 
-class GreaseMonkeyConfigurationScriptInfoDialog(QDialog,
-        Ui_GreaseMonkeyConfigurationScriptInfoDialog):
+class GreaseMonkeyConfigurationScriptInfoDialog(
+    QDialog, Ui_GreaseMonkeyConfigurationScriptInfoDialog):
     """
     Class implementing a dialog to show GreaseMonkey script information.
     """

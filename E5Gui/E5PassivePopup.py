@@ -209,5 +209,6 @@ class E5PassivePopup(QFrame):
 
 DEFAULT_POPUP_TYPE = E5PassivePopup.Boxed
 DEFAULT_POPUP_TIME = 6 * 1000
-POPUP_FLAGS = Qt.WindowFlags(Qt.Tool | Qt.X11BypassWindowManagerHint | \
+POPUP_FLAGS = Qt.WindowFlags(
+    Qt.Tool | Qt.X11BypassWindowManagerHint | \
     Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)

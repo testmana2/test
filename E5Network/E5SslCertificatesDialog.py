@@ -100,7 +100,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
-        items = self.serversCertificatesTree.findItems(organisation,
+        items = self.serversCertificatesTree.findItems(
+            organisation,
             Qt.MatchFixedString | Qt.MatchCaseSensitive)
         if len(items) == 0:
             parent = QTreeWidgetItem(
@@ -184,7 +185,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                     certificateDict[server] = pems
                 else:
                     del certificateDict[server]
-            Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
+            Preferences.Prefs.settings.setValue(
+                "Ssl/CaCertificatesDict",
                 certificateDict)
             
             # delete the certificate from the default certificates
@@ -226,7 +228,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             if server not in certificateDict:
                 certificateDict[server] = QByteArray()
             certificateDict[server].append(pems)
-            Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
+            Preferences.Prefs.settings.setValue(
+                "Ssl/CaCertificatesDict",
                 certificateDict)
             
             self.serversCertificatesTree.clear()
@@ -308,7 +311,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
-        items = self.caCertificatesTree.findItems(organisation,
+        items = self.caCertificatesTree.findItems(
+            organisation,
             Qt.MatchFixedString | Qt.MatchCaseSensitive)
         if len(items) == 0:
             parent = QTreeWidgetItem(self.caCertificatesTree, [organisation])

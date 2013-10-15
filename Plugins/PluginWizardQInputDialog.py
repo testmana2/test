@@ -67,9 +67,10 @@ class InputDialogWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QInputDialog Wizard'),
-             self.trUtf8('Q&InputDialog Wizard...'), 0, 0, self,
-             'wizards_qinputdialog')
+        self.action = E5Action(
+            self.trUtf8('QInputDialog Wizard'),
+            self.trUtf8('Q&InputDialog Wizard...'), 0, 0, self,
+            'wizards_qinputdialog')
         self.action.setStatusTip(self.trUtf8('QInputDialog Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QInputDialog Wizard</b>"""

@@ -87,7 +87,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         tot = len(modules)
         try:
             prog = 0
-            progress = QProgressDialog(self.trUtf8("Parsing modules..."),
+            progress = QProgressDialog(
+                self.trUtf8("Parsing modules..."),
                 None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()

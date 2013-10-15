@@ -101,7 +101,8 @@ class SpeedDial(QObject):
         @param url URL to generate the file name from (string)
         @return name of the image file (string)
         """
-        return os.path.join(self.__thumbnailsDirectory,
+        return os.path.join(
+            self.__thumbnailsDirectory,
             str(QCryptographicHash.hash(QByteArray(url.encode("utf-8")),
                 QCryptographicHash.Md5).toHex(), encoding="utf-8") + ".png")
     
@@ -199,8 +200,8 @@ class SpeedDial(QObject):
         from .SpeedDialWriter import SpeedDialWriter
         speedDialFile = self.getFileName()
         writer = SpeedDialWriter()
-        if not writer.write(speedDialFile,
-                self.__webPages, self.__pagesPerRow, self.__speedDialSize):
+        if not writer.write(speedDialFile, self.__webPages,
+                            self.__pagesPerRow, self.__speedDialSize):
             E5MessageBox.critical(
                 None,
                 self.trUtf8("Saving Speed Dial data"),

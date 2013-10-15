@@ -36,8 +36,9 @@ class BookmarksToolBar(E5ModelToolBar):
         @param model reference to the bookmarks model (BookmarksModel)
         @param parent reference to the parent widget (QWidget)
         """
-        E5ModelToolBar.__init__(self,
-            QApplication.translate("BookmarksToolBar", "Bookmarks"), parent)
+        E5ModelToolBar.__init__(
+            self, QApplication.translate("BookmarksToolBar", "Bookmarks"),
+            parent)
         
         self.__mw = mainWindow
         self.__bookmarksModel = model

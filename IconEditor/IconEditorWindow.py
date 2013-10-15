@@ -183,7 +183,8 @@ class IconEditorWindow(E5MainWindow):
         """
         Private method to define the file related user interface actions.
         """
-        self.newAct = E5Action(self.trUtf8('New'),
+        self.newAct = E5Action(
+            self.trUtf8('New'),
             UI.PixmapCache.getIcon("new.png"),
             self.trUtf8('&New'),
             QKeySequence(self.trUtf8("Ctrl+N", "File|New")),
@@ -196,7 +197,8 @@ class IconEditorWindow(E5MainWindow):
         self.newAct.triggered[()].connect(self.__newIcon)
         self.__actions.append(self.newAct)
         
-        self.newWindowAct = E5Action(self.trUtf8('New Window'),
+        self.newWindowAct = E5Action(
+            self.trUtf8('New Window'),
             UI.PixmapCache.getIcon("newWindow.png"),
             self.trUtf8('New &Window'),
             0, 0, self, 'iconEditor_file_new_window')
@@ -209,7 +211,8 @@ class IconEditorWindow(E5MainWindow):
         self.newWindowAct.triggered[()].connect(self.__newWindow)
         self.__actions.append(self.newWindowAct)
         
-        self.openAct = E5Action(self.trUtf8('Open'),
+        self.openAct = E5Action(
+            self.trUtf8('Open'),
             UI.PixmapCache.getIcon("open.png"),
             self.trUtf8('&Open...'),
             QKeySequence(self.trUtf8("Ctrl+O", "File|Open")),
@@ -223,11 +226,12 @@ class IconEditorWindow(E5MainWindow):
         self.openAct.triggered[()].connect(self.__openIcon)
         self.__actions.append(self.openAct)
         
-        self.saveAct = E5Action(self.trUtf8('Save'),
-                UI.PixmapCache.getIcon("fileSave.png"),
-                self.trUtf8('&Save'),
-                QKeySequence(self.trUtf8("Ctrl+S", "File|Save")),
-                0, self, 'iconEditor_file_save')
+        self.saveAct = E5Action(
+            self.trUtf8('Save'),
+            UI.PixmapCache.getIcon("fileSave.png"),
+            self.trUtf8('&Save'),
+            QKeySequence(self.trUtf8("Ctrl+S", "File|Save")),
+            0, self, 'iconEditor_file_save')
         self.saveAct.setStatusTip(self.trUtf8('Save the current icon'))
         self.saveAct.setWhatsThis(self.trUtf8(
             """<b>Save File</b>"""
@@ -236,7 +240,8 @@ class IconEditorWindow(E5MainWindow):
         self.saveAct.triggered[()].connect(self.__saveIcon)
         self.__actions.append(self.saveAct)
         
-        self.saveAsAct = E5Action(self.trUtf8('Save As'),
+        self.saveAsAct = E5Action(
+            self.trUtf8('Save As'),
             UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.trUtf8('Save &As...'),
             QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")),
@@ -250,7 +255,8 @@ class IconEditorWindow(E5MainWindow):
         self.saveAsAct.triggered[()].connect(self.__saveIconAs)
         self.__actions.append(self.saveAsAct)
         
-        self.closeAct = E5Action(self.trUtf8('Close'),
+        self.closeAct = E5Action(
+            self.trUtf8('Close'),
             UI.PixmapCache.getIcon("close.png"),
             self.trUtf8('&Close'),
             QKeySequence(self.trUtf8("Ctrl+W", "File|Close")),
@@ -264,7 +270,8 @@ class IconEditorWindow(E5MainWindow):
         self.closeAct.triggered[()].connect(self.close)
         self.__actions.append(self.closeAct)
         
-        self.closeAllAct = E5Action(self.trUtf8('Close All'),
+        self.closeAllAct = E5Action(
+            self.trUtf8('Close All'),
             self.trUtf8('Close &All'),
             0, 0, self, 'iconEditor_file_close_all')
         self.closeAllAct.setStatusTip(self.trUtf8(
@@ -276,7 +283,8 @@ class IconEditorWindow(E5MainWindow):
         self.closeAllAct.triggered[()].connect(self.__closeAll)
         self.__actions.append(self.closeAllAct)
         
-        self.exitAct = E5Action(self.trUtf8('Quit'),
+        self.exitAct = E5Action(
+            self.trUtf8('Quit'),
             UI.PixmapCache.getIcon("exit.png"),
             self.trUtf8('&Quit'),
             QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
@@ -294,12 +302,13 @@ class IconEditorWindow(E5MainWindow):
         """
         Private method to create the Edit actions.
         """
-        self.undoAct = E5Action(self.trUtf8('Undo'),
-                UI.PixmapCache.getIcon("editUndo.png"),
-                self.trUtf8('&Undo'),
-                QKeySequence(self.trUtf8("Ctrl+Z", "Edit|Undo")),
-                QKeySequence(self.trUtf8("Alt+Backspace", "Edit|Undo")),
-                self, 'iconEditor_edit_undo')
+        self.undoAct = E5Action(
+            self.trUtf8('Undo'),
+            UI.PixmapCache.getIcon("editUndo.png"),
+            self.trUtf8('&Undo'),
+            QKeySequence(self.trUtf8("Ctrl+Z", "Edit|Undo")),
+            QKeySequence(self.trUtf8("Alt+Backspace", "Edit|Undo")),
+            self, 'iconEditor_edit_undo')
         self.undoAct.setStatusTip(self.trUtf8('Undo the last change'))
         self.undoAct.setWhatsThis(self.trUtf8(
             """<b>Undo</b>"""
@@ -308,11 +317,12 @@ class IconEditorWindow(E5MainWindow):
         self.undoAct.triggered[()].connect(self.__editor.editUndo)
         self.__actions.append(self.undoAct)
         
-        self.redoAct = E5Action(self.trUtf8('Redo'),
-                UI.PixmapCache.getIcon("editRedo.png"),
-                self.trUtf8('&Redo'),
-                QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")),
-                0, self, 'iconEditor_edit_redo')
+        self.redoAct = E5Action(
+            self.trUtf8('Redo'),
+            UI.PixmapCache.getIcon("editRedo.png"),
+            self.trUtf8('&Redo'),
+            QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")),
+            0, self, 'iconEditor_edit_redo')
         self.redoAct.setStatusTip(self.trUtf8('Redo the last change'))
         self.redoAct.setWhatsThis(self.trUtf8(
             """<b>Redo</b>"""
@@ -321,12 +331,13 @@ class IconEditorWindow(E5MainWindow):
         self.redoAct.triggered[()].connect(self.__editor.editRedo)
         self.__actions.append(self.redoAct)
         
-        self.cutAct = E5Action(self.trUtf8('Cut'),
-                UI.PixmapCache.getIcon("editCut.png"),
-                self.trUtf8('Cu&t'),
-                QKeySequence(self.trUtf8("Ctrl+X", "Edit|Cut")),
-                QKeySequence(self.trUtf8("Shift+Del", "Edit|Cut")),
-                self, 'iconEditor_edit_cut')
+        self.cutAct = E5Action(
+            self.trUtf8('Cut'),
+            UI.PixmapCache.getIcon("editCut.png"),
+            self.trUtf8('Cu&t'),
+            QKeySequence(self.trUtf8("Ctrl+X", "Edit|Cut")),
+            QKeySequence(self.trUtf8("Shift+Del", "Edit|Cut")),
+            self, 'iconEditor_edit_cut')
         self.cutAct.setStatusTip(self.trUtf8('Cut the selection'))
         self.cutAct.setWhatsThis(self.trUtf8(
             """<b>Cut</b>"""
@@ -335,12 +346,13 @@ class IconEditorWindow(E5MainWindow):
         self.cutAct.triggered[()].connect(self.__editor.editCut)
         self.__actions.append(self.cutAct)
         
-        self.copyAct = E5Action(self.trUtf8('Copy'),
-                UI.PixmapCache.getIcon("editCopy.png"),
-                self.trUtf8('&Copy'),
-                QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")),
-                QKeySequence(self.trUtf8("Ctrl+Ins", "Edit|Copy")),
-                self, 'iconEditor_edit_copy')
+        self.copyAct = E5Action(
+            self.trUtf8('Copy'),
+            UI.PixmapCache.getIcon("editCopy.png"),
+            self.trUtf8('&Copy'),
+            QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")),
+            QKeySequence(self.trUtf8("Ctrl+Ins", "Edit|Copy")),
+            self, 'iconEditor_edit_copy')
         self.copyAct.setStatusTip(self.trUtf8('Copy the selection'))
         self.copyAct.setWhatsThis(self.trUtf8(
             """<b>Copy</b>"""
@@ -349,12 +361,13 @@ class IconEditorWindow(E5MainWindow):
         self.copyAct.triggered[()].connect(self.__editor.editCopy)
         self.__actions.append(self.copyAct)
         
-        self.pasteAct = E5Action(self.trUtf8('Paste'),
-                UI.PixmapCache.getIcon("editPaste.png"),
-                self.trUtf8('&Paste'),
-                QKeySequence(self.trUtf8("Ctrl+V", "Edit|Paste")),
-                QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")),
-                self, 'iconEditor_edit_paste')
+        self.pasteAct = E5Action(
+            self.trUtf8('Paste'),
+            UI.PixmapCache.getIcon("editPaste.png"),
+            self.trUtf8('&Paste'),
+            QKeySequence(self.trUtf8("Ctrl+V", "Edit|Paste")),
+            QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")),
+            self, 'iconEditor_edit_paste')
         self.pasteAct.setStatusTip(self.trUtf8('Paste the clipboard image'))
         self.pasteAct.setWhatsThis(self.trUtf8(
             """<b>Paste</b>"""
@@ -363,9 +376,10 @@ class IconEditorWindow(E5MainWindow):
         self.pasteAct.triggered[()].connect(self.__editor.editPaste)
         self.__actions.append(self.pasteAct)
         
-        self.pasteNewAct = E5Action(self.trUtf8('Paste as New'),
-                self.trUtf8('Paste as &New'),
-                0, 0, self, 'iconEditor_edit_paste_as_new')
+        self.pasteNewAct = E5Action(
+            self.trUtf8('Paste as New'),
+            self.trUtf8('Paste as &New'),
+            0, 0, self, 'iconEditor_edit_paste_as_new')
         self.pasteNewAct.setStatusTip(self.trUtf8(
             'Paste the clipboard image replacing the current one'))
         self.pasteNewAct.setWhatsThis(self.trUtf8(
@@ -375,12 +389,13 @@ class IconEditorWindow(E5MainWindow):
         self.pasteNewAct.triggered[()].connect(self.__editor.editPasteAsNew)
         self.__actions.append(self.pasteNewAct)
         
-        self.deleteAct = E5Action(self.trUtf8('Clear'),
-                UI.PixmapCache.getIcon("editDelete.png"),
-                self.trUtf8('Cl&ear'),
-                QKeySequence(self.trUtf8("Alt+Shift+C", "Edit|Clear")),
-                0,
-                self, 'iconEditor_edit_clear')
+        self.deleteAct = E5Action(
+            self.trUtf8('Clear'),
+            UI.PixmapCache.getIcon("editDelete.png"),
+            self.trUtf8('Cl&ear'),
+            QKeySequence(self.trUtf8("Alt+Shift+C", "Edit|Clear")),
+            0,
+            self, 'iconEditor_edit_clear')
         self.deleteAct.setStatusTip(self.trUtf8('Clear the icon image'))
         self.deleteAct.setWhatsThis(self.trUtf8(
             """<b>Clear</b>"""
@@ -390,11 +405,12 @@ class IconEditorWindow(E5MainWindow):
         self.deleteAct.triggered[()].connect(self.__editor.editClear)
         self.__actions.append(self.deleteAct)
         
-        self.selectAllAct = E5Action(self.trUtf8('Select All'),
-                self.trUtf8('&Select All'),
-                QKeySequence(self.trUtf8("Ctrl+A", "Edit|Select All")),
-                0,
-                self, 'iconEditor_edit_select_all')
+        self.selectAllAct = E5Action(
+            self.trUtf8('Select All'),
+            self.trUtf8('&Select All'),
+            QKeySequence(self.trUtf8("Ctrl+A", "Edit|Select All")),
+            0,
+            self, 'iconEditor_edit_select_all')
         self.selectAllAct.setStatusTip(self.trUtf8(
             'Select the complete icon image'))
         self.selectAllAct.setWhatsThis(self.trUtf8(
@@ -404,11 +420,12 @@ class IconEditorWindow(E5MainWindow):
         self.selectAllAct.triggered[()].connect(self.__editor.editSelectAll)
         self.__actions.append(self.selectAllAct)
         
-        self.resizeAct = E5Action(self.trUtf8('Change Size'),
-                UI.PixmapCache.getIcon("transformResize.png"),
-                self.trUtf8('Change Si&ze...'),
-                0, 0,
-                self, 'iconEditor_edit_change_size')
+        self.resizeAct = E5Action(
+            self.trUtf8('Change Size'),
+            UI.PixmapCache.getIcon("transformResize.png"),
+            self.trUtf8('Change Si&ze...'),
+            0, 0,
+            self, 'iconEditor_edit_change_size')
         self.resizeAct.setStatusTip(self.trUtf8('Change the icon size'))
         self.resizeAct.setWhatsThis(self.trUtf8(
             """<b>Change Size...</b>"""
@@ -417,11 +434,12 @@ class IconEditorWindow(E5MainWindow):
         self.resizeAct.triggered[()].connect(self.__editor.editResize)
         self.__actions.append(self.resizeAct)
         
-        self.grayscaleAct = E5Action(self.trUtf8('Grayscale'),
-                UI.PixmapCache.getIcon("grayscale.png"),
-                self.trUtf8('&Grayscale'),
-                0, 0,
-                self, 'iconEditor_edit_grayscale')
+        self.grayscaleAct = E5Action(
+            self.trUtf8('Grayscale'),
+            UI.PixmapCache.getIcon("grayscale.png"),
+            self.trUtf8('&Grayscale'),
+            0, 0,
+            self, 'iconEditor_edit_grayscale')
         self.grayscaleAct.setStatusTip(self.trUtf8(
             'Change the icon to grayscale'))
         self.grayscaleAct.setWhatsThis(self.trUtf8(
@@ -453,7 +471,8 @@ class IconEditorWindow(E5MainWindow):
         """
         Private method to create the View actions.
         """
-        self.zoomInAct = E5Action(self.trUtf8('Zoom in'),
+        self.zoomInAct = E5Action(
+            self.trUtf8('Zoom in'),
             UI.PixmapCache.getIcon("zoomIn.png"),
             self.trUtf8('Zoom &in'),
             QKeySequence(self.trUtf8("Ctrl++", "View|Zoom in")),
@@ -466,7 +485,8 @@ class IconEditorWindow(E5MainWindow):
         self.zoomInAct.triggered[()].connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
-        self.zoomOutAct = E5Action(self.trUtf8('Zoom out'),
+        self.zoomOutAct = E5Action(
+            self.trUtf8('Zoom out'),
             UI.PixmapCache.getIcon("zoomOut.png"),
             self.trUtf8('Zoom &out'),
             QKeySequence(self.trUtf8("Ctrl+-", "View|Zoom out")),
@@ -479,7 +499,8 @@ class IconEditorWindow(E5MainWindow):
         self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
-        self.zoomResetAct = E5Action(self.trUtf8('Zoom reset'),
+        self.zoomResetAct = E5Action(
+            self.trUtf8('Zoom reset'),
             UI.PixmapCache.getIcon("zoomReset.png"),
             self.trUtf8('Zoom &reset'),
             QKeySequence(self.trUtf8("Ctrl+0", "View|Zoom reset")),
@@ -494,7 +515,8 @@ class IconEditorWindow(E5MainWindow):
         self.zoomResetAct.triggered[()].connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
-        self.showGridAct = E5Action(self.trUtf8('Show Grid'),
+        self.showGridAct = E5Action(
+            self.trUtf8('Show Grid'),
             UI.PixmapCache.getIcon("grid.png"),
             self.trUtf8('Show &Grid'),
             0, 0,
@@ -520,7 +542,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawingActGrp = createActionGroup(self)
         self.drawingActGrp.setExclusive(True)
         
-        self.drawPencilAct = E5Action(self.trUtf8('Freehand'),
+        self.drawPencilAct = E5Action(
+            self.trUtf8('Freehand'),
             UI.PixmapCache.getIcon("drawBrush.png"),
             self.trUtf8('&Freehand'),
             0, 0,
@@ -534,7 +557,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawPencilAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawPencilAct)
         
-        self.drawColorPickerAct = E5Action(self.trUtf8('Color Picker'),
+        self.drawColorPickerAct = E5Action(
+            self.trUtf8('Color Picker'),
             UI.PixmapCache.getIcon("colorPicker.png"),
             self.trUtf8('&Color Picker'),
             0, 0,
@@ -550,7 +574,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawColorPickerAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawColorPickerAct)
         
-        self.drawRectangleAct = E5Action(self.trUtf8('Rectangle'),
+        self.drawRectangleAct = E5Action(
+            self.trUtf8('Rectangle'),
             UI.PixmapCache.getIcon("drawRectangle.png"),
             self.trUtf8('&Rectangle'),
             0, 0,
@@ -564,7 +589,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawRectangleAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawRectangleAct)
         
-        self.drawFilledRectangleAct = E5Action(self.trUtf8('Filled Rectangle'),
+        self.drawFilledRectangleAct = E5Action(
+            self.trUtf8('Filled Rectangle'),
             UI.PixmapCache.getIcon("drawRectangleFilled.png"),
             self.trUtf8('F&illed Rectangle'),
             0, 0,
@@ -579,7 +605,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawFilledRectangleAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFilledRectangleAct)
         
-        self.drawCircleAct = E5Action(self.trUtf8('Circle'),
+        self.drawCircleAct = E5Action(
+            self.trUtf8('Circle'),
             UI.PixmapCache.getIcon("drawCircle.png"),
             self.trUtf8('Circle'),
             0, 0,
@@ -593,7 +620,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawCircleAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawCircleAct)
         
-        self.drawFilledCircleAct = E5Action(self.trUtf8('Filled Circle'),
+        self.drawFilledCircleAct = E5Action(
+            self.trUtf8('Filled Circle'),
             UI.PixmapCache.getIcon("drawCircleFilled.png"),
             self.trUtf8('Fille&d Circle'),
             0, 0,
@@ -608,7 +636,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawFilledCircleAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFilledCircleAct)
         
-        self.drawEllipseAct = E5Action(self.trUtf8('Ellipse'),
+        self.drawEllipseAct = E5Action(
+            self.trUtf8('Ellipse'),
             UI.PixmapCache.getIcon("drawEllipse.png"),
             self.trUtf8('&Ellipse'),
             0, 0,
@@ -622,7 +651,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawEllipseAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawEllipseAct)
         
-        self.drawFilledEllipseAct = E5Action(self.trUtf8('Filled Ellipse'),
+        self.drawFilledEllipseAct = E5Action(
+            self.trUtf8('Filled Ellipse'),
             UI.PixmapCache.getIcon("drawEllipseFilled.png"),
             self.trUtf8('Fille&d Elli&pse'),
             0, 0,
@@ -637,7 +667,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawFilledEllipseAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFilledEllipseAct)
         
-        self.drawFloodFillAct = E5Action(self.trUtf8('Flood Fill'),
+        self.drawFloodFillAct = E5Action(
+            self.trUtf8('Flood Fill'),
             UI.PixmapCache.getIcon("drawFill.png"),
             self.trUtf8('Fl&ood Fill'),
             0, 0,
@@ -652,7 +683,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawFloodFillAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawFloodFillAct)
         
-        self.drawLineAct = E5Action(self.trUtf8('Line'),
+        self.drawLineAct = E5Action(
+            self.trUtf8('Line'),
             UI.PixmapCache.getIcon("drawLine.png"),
             self.trUtf8('&Line'),
             0, 0,
@@ -666,7 +698,8 @@ class IconEditorWindow(E5MainWindow):
         self.drawLineAct.triggered[()].connect(self.esm.map)
         self.__actions.append(self.drawLineAct)
         
-        self.drawEraserAct = E5Action(self.trUtf8('Eraser (Transparent)'),
+        self.drawEraserAct = E5Action(
+            self.trUtf8('Eraser (Transparent)'),
             UI.PixmapCache.getIcon("drawEraser.png"),
             self.trUtf8('Eraser (&Transparent)'),
             0, 0,
@@ -720,9 +753,10 @@ class IconEditorWindow(E5MainWindow):
         """
         Private method to create the Help actions.
         """
-        self.aboutAct = E5Action(self.trUtf8('About'),
-                self.trUtf8('&About'),
-                0, 0, self, 'iconEditor_help_about')
+        self.aboutAct = E5Action(
+            self.trUtf8('About'),
+            self.trUtf8('&About'),
+            0, 0, self, 'iconEditor_help_about')
         self.aboutAct.setStatusTip(self.trUtf8(
             'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
@@ -731,9 +765,10 @@ class IconEditorWindow(E5MainWindow):
         self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
         
-        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
-                self.trUtf8('About &Qt'),
-                0, 0, self, 'iconEditor_help_about_qt')
+        self.aboutQtAct = E5Action(
+            self.trUtf8('About Qt'),
+            self.trUtf8('About &Qt'),
+            0, 0, self, 'iconEditor_help_about_qt')
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
@@ -743,7 +778,8 @@ class IconEditorWindow(E5MainWindow):
         self.aboutQtAct.triggered[()].connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
-        self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
+        self.whatsThisAct = E5Action(
+            self.trUtf8('What\'s This?'),
             UI.PixmapCache.getIcon("whatsThis.png"),
             self.trUtf8('&What\'s This?'),
             QKeySequence(self.trUtf8("Shift+F1", "Help|What's This?'")),

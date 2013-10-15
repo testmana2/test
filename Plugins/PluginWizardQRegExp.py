@@ -67,9 +67,10 @@ class QRegExpWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QRegExp Wizard'),
-             self.trUtf8('Q&RegExp Wizard...'), 0, 0, self,
-             'wizards_qregexp')
+        self.action = E5Action(
+            self.trUtf8('QRegExp Wizard'),
+            self.trUtf8('Q&RegExp Wizard...'), 0, 0, self,
+            'wizards_qregexp')
         self.action.setStatusTip(self.trUtf8('QRegExp Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QRegExp Wizard</b>"""

@@ -353,20 +353,24 @@ class HelpWebPage(QWebPage):
             html = html.replace(
                 "@H2@", self.trUtf8("When connecting to: {0}.")\
                 .format(urlString).encode("utf8"))
-            html = html.replace("@LI-1@",
+            html = html.replace(
+                "@LI-1@",
                 self.trUtf8("Check the address for errors such as "
                             "<b>ww</b>.example.org instead of "
                             "<b>www</b>.example.org").encode("utf8"))
-            html = html.replace("@LI-2@",
+            html = html.replace(
+                "@LI-2@",
                 self.trUtf8(
                     "If the address is correct, try checking the network "
                     "connection.").encode("utf8"))
-            html = html.replace("@LI-3@",
+            html = html.replace(
+                "@LI-3@",
                 self.trUtf8(
                     "If your computer or network is protected by a firewall "
                     "or proxy, make sure that the browser is permitted to "
                     "access the network.").encode("utf8"))
-            html = html.replace("@LI-4@",
+            html = html.replace(
+                "@LI-4@",
                 self.trUtf8("If your cache policy is set to offline browsing,"
                             "only pages in the local cache are available.")\
                 .encode("utf8"))
@@ -832,8 +836,10 @@ class HelpBrowser(QWebView):
                     E5MessageBox.critical(
                         self,
                         self.trUtf8("eric5 Web Browser"),
-                        self.trUtf8("""<p>Could not start a viewer"""
-                        """ for file <b>{0}</b>.</p>""").format(name.path()))
+                        self.trUtf8(
+                            """<p>Could not start a viewer"""
+                            """ for file <b>{0}</b>.</p>""")
+                        .format(name.path()))
                 return
         elif name.scheme() in ["mailto"]:
             started = QDesktopServices.openUrl(name)
@@ -841,8 +847,10 @@ class HelpBrowser(QWebView):
                 E5MessageBox.critical(
                     self,
                     self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8("""<p>Could not start an application"""
-                    """ for URL <b>{0}</b>.</p>""").format(name.toString()))
+                    self.trUtf8(
+                        """<p>Could not start an application"""
+                        """ for URL <b>{0}</b>.</p>""")
+                    .format(name.toString()))
             return
         elif name.scheme() == "javascript":
             scriptSource = QUrl.fromPercentEncoding(name.toString(
@@ -859,8 +867,10 @@ class HelpBrowser(QWebView):
                     E5MessageBox.critical(
                         self,
                         self.trUtf8("eric5 Web Browser"),
-                        self.trUtf8("""<p>Could not start a viewer"""
-                        """ for file <b>{0}</b>.</p>""").format(name.path()))
+                        self.trUtf8(
+                            """<p>Could not start a viewer"""
+                            """ for file <b>{0}</b>.</p>""")
+                        .format(name.path()))
                 return
         
         if requestData is not None:
@@ -1064,17 +1074,21 @@ class HelpBrowser(QWebView):
         frameAtPos = self.page().frameAt(evt.pos())
         hit = self.page().mainFrame().hitTestContent(evt.pos())
         if not hit.linkUrl().isEmpty():
-            menu.addAction(UI.PixmapCache.getIcon("openNewTab.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("openNewTab.png"),
                 self.trUtf8("Open Link in New Tab\tCtrl+LMB"),
                 self.__openLinkInNewTab).setData(hit.linkUrl())
             menu.addSeparator()
-            menu.addAction(UI.PixmapCache.getIcon("download.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("download.png"),
                 self.trUtf8("Save Lin&k"), self.__downloadLink)
-            menu.addAction(UI.PixmapCache.getIcon("bookmark22.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("bookmark22.png"),
                 self.trUtf8("Bookmark this Link"), self.__bookmarkLink)\
                 .setData(hit.linkUrl())
             menu.addSeparator()
-            menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
             menu.addAction(
                 UI.PixmapCache.getIcon("mailSend.png"),
@@ -1090,15 +1104,18 @@ class HelpBrowser(QWebView):
         if not hit.imageUrl().isEmpty():
             if not menu.isEmpty():
                 menu.addSeparator()
-            menu.addAction(UI.PixmapCache.getIcon("openNewTab.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("openNewTab.png"),
                 self.trUtf8("Open Image in New Tab"),
                 self.__openLinkInNewTab).setData(hit.imageUrl())
             menu.addSeparator()
-            menu.addAction(UI.PixmapCache.getIcon("download.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("download.png"),
                 self.trUtf8("Save Image"), self.__downloadImage)
             menu.addAction(
                 self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
-            menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy Image Location to Clipboard"),
                 self.__copyLocation).setData(hit.imageUrl().toString())
             menu.addAction(
@@ -1106,7 +1123,8 @@ class HelpBrowser(QWebView):
                 self.trUtf8("Send Image Link"),
                 self.__sendLink).setData(hit.imageUrl())
             menu.addSeparator()
-            menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
+            menu.addAction(
+                UI.PixmapCache.getIcon("adBlockPlus.png"),
                 self.trUtf8("Block Image"), self.__blockImage)\
                 .setData(hit.imageUrl().toString())
             if Preferences.getHelp("VirusTotalEnabled") and \
@@ -1145,13 +1163,16 @@ class HelpBrowser(QWebView):
                         UI.PixmapCache.getIcon("audioVolumeMuted.png"),
                         self.trUtf8("Mute"), self.__muteMedia)
                 menu.addSeparator()
-                menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("editCopy.png"),
                     self.trUtf8("Copy Media Address to Clipboard"),
                     self.__copyLocation).setData(videoUrl.toString())
-                menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("mailSend.png"),
                     self.trUtf8("Send Media Address"), self.__sendLink)\
                     .setData(videoUrl)
-                menu.addAction(UI.PixmapCache.getIcon("download.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("download.png"),
                     self.trUtf8("Save Media"), self.__downloadMedia)\
                     .setData(videoUrl)
             
@@ -1196,35 +1217,46 @@ class HelpBrowser(QWebView):
             fmenu = QMenu(self.trUtf8("This Frame"))
             frameUrl = self.__clickedFrame.url()
             if frameUrl.isValid():
-                fmenu.addAction(self.trUtf8("Show &only this frame"),
+                fmenu.addAction(
+                    self.trUtf8("Show &only this frame"),
                     self.__loadClickedFrame)
-                fmenu.addAction(UI.PixmapCache.getIcon("openNewTab.png"),
+                fmenu.addAction(
+                    UI.PixmapCache.getIcon("openNewTab.png"),
                     self.trUtf8("Show in new &tab"),
                     self.__openLinkInNewTab).setData(self.__clickedFrame.url())
                 fmenu.addSeparator()
-            fmenu.addAction(UI.PixmapCache.getIcon("print.png"),
+            fmenu.addAction(
+                UI.PixmapCache.getIcon("print.png"),
                 self.trUtf8("&Print"), self.__printClickedFrame)
-            fmenu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
+            fmenu.addAction(
+                UI.PixmapCache.getIcon("printPreview.png"),
                 self.trUtf8("Print Preview"), self.__printPreviewClickedFrame)
-            fmenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
+            fmenu.addAction(
+                UI.PixmapCache.getIcon("printPdf.png"),
                 self.trUtf8("Print as PDF"), self.__printPdfClickedFrame)
             fmenu.addSeparator()
-            fmenu.addAction(UI.PixmapCache.getIcon("zoomIn.png"),
+            fmenu.addAction(
+                UI.PixmapCache.getIcon("zoomIn.png"),
                 self.trUtf8("Zoom &in"), self.__zoomInClickedFrame)
-            fmenu.addAction(UI.PixmapCache.getIcon("zoomReset.png"),
+            fmenu.addAction(
+                UI.PixmapCache.getIcon("zoomReset.png"),
                 self.trUtf8("Zoom &reset"), self.__zoomResetClickedFrame)
-            fmenu.addAction(UI.PixmapCache.getIcon("zoomOut.png"),
+            fmenu.addAction(
+                UI.PixmapCache.getIcon("zoomOut.png"),
                 self.trUtf8("Zoom &out"), self.__zoomOutClickedFrame)
             fmenu.addSeparator()
-            fmenu.addAction(self.trUtf8("Show frame so&urce"),
+            fmenu.addAction(
+                self.trUtf8("Show frame so&urce"),
                 self.__showClickedFrameSource)
             
             menu.addMenu(fmenu)
             menu.addSeparator()
         
-        menu.addAction(UI.PixmapCache.getIcon("bookmark22.png"),
+        menu.addAction(
+            UI.PixmapCache.getIcon("bookmark22.png"),
             self.trUtf8("Bookmark this Page"), self.addBookmark)
-        menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+        menu.addAction(
+            UI.PixmapCache.getIcon("mailSend.png"),
             self.trUtf8("Send Page Link"), self.__sendLink).setData(self.url())
         menu.addSeparator()
         self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"),
@@ -1264,7 +1296,8 @@ class HelpBrowser(QWebView):
             
             from .HelpLanguagesDialog import HelpLanguagesDialog
             languages = Preferences.toList(
-                Preferences.Prefs.settings.value("Help/AcceptLanguages",
+                Preferences.Prefs.settings.value(
+                    "Help/AcceptLanguages",
                     HelpLanguagesDialog.defaultAcceptLanguages()))
             if languages:
                 language = languages[0]
@@ -1272,13 +1305,15 @@ class HelpBrowser(QWebView):
                 googleTranslatorUrl = QUrl(
                     "http://translate.google.com/#auto|{0}|{1}".format(
                         langCode, self.selectedText()))
-                menu.addAction(UI.PixmapCache.getIcon("translate.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("translate.png"),
                     self.trUtf8("Google Translate"), self.__openLinkInNewTab)\
                     .setData(googleTranslatorUrl)
                 wiktionaryUrl = QUrl(
                     "http://{0}.wiktionary.org/wiki/Special:Search?search={1}"
                     .format(langCode, self.selectedText()))
-                menu.addAction(UI.PixmapCache.getIcon("wikipedia.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("wikipedia.png"),
                     self.trUtf8("Dictionary"), self.__openLinkInNewTab)\
                     .setData(wiktionaryUrl)
                 menu.addSeparator()
@@ -1298,7 +1333,8 @@ class HelpBrowser(QWebView):
                            self.__addSearchEngine).setData(element)
             menu.addSeparator()
         
-        menu.addAction(UI.PixmapCache.getIcon("webInspector.png"),
+        menu.addAction(
+            UI.PixmapCache.getIcon("webInspector.png"),
             self.trUtf8("Web Inspector..."), self.__webInspector)
         
         menu.exec_(evt.globalPos())
@@ -1915,21 +1951,26 @@ class HelpBrowser(QWebView):
             html = html.replace("@FAVICON@", imageBuffer.buffer().toBase64())
         html = html.replace("@TITLE@", title.encode("utf8"))
         html = html.replace("@H1@", reply.errorString().encode("utf8"))
-        html = html.replace("@H2@", self.trUtf8("When connecting to: {0}.")\
-            .format(urlString).encode("utf8"))
-        html = html.replace("@LI-1@",
+        html = html.replace(
+            "@H2@", self.trUtf8("When connecting to: {0}.")\
+                .format(urlString).encode("utf8"))
+        html = html.replace(
+            "@LI-1@",
             self.trUtf8("Check the address for errors such as "
                         "<b>ww</b>.example.org instead of "
                         "<b>www</b>.example.org").encode("utf8"))
-        html = html.replace("@LI-2@",
+        html = html.replace(
+            "@LI-2@",
             self.trUtf8("If the address is correct, try checking the network "
                         "connection.").encode("utf8"))
-        html = html.replace("@LI-3@",
+        html = html.replace(
+            "@LI-3@",
             self.trUtf8(
                 "If your computer or network is protected by a firewall "
                 "or proxy, make sure that the browser is permitted to "
                 "access the network.").encode("utf8"))
-        html = html.replace("@LI-4@",
+        html = html.replace(
+            "@LI-4@",
             self.trUtf8("If your cache policy is set to offline browsing,"
                         "only pages in the local cache are available.")\
             .encode("utf8"))

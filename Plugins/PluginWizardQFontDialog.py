@@ -67,9 +67,10 @@ class FontDialogWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QFontDialog Wizard'),
-             self.trUtf8('Q&FontDialog Wizard...'), 0, 0, self,
-             'wizards_qfontdialog')
+        self.action = E5Action(
+            self.trUtf8('QFontDialog Wizard'),
+            self.trUtf8('Q&FontDialog Wizard...'), 0, 0, self,
+            'wizards_qfontdialog')
         self.action.setStatusTip(self.trUtf8('QFontDialog Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QFontDialog Wizard</b>"""

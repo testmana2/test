@@ -80,22 +80,28 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             row = self.downloadsView.selectionModel().selectedRows()[0].row()
             itm = self.__downloads[row]
             if itm.downloadCanceled():
-                menu.addAction(UI.PixmapCache.getIcon("restart.png"),
+                menu.addAction(
+                    UI.PixmapCache.getIcon("restart.png"),
                     self.trUtf8("Retry"), self.__contextMenuRetry)
             else:
                 if itm.downloadedSuccessfully():
-                    menu.addAction(UI.PixmapCache.getIcon("open.png"),
+                    menu.addAction(
+                        UI.PixmapCache.getIcon("open.png"),
                         self.trUtf8("Open"), self.__contextMenuOpen)
                 elif itm.downloading():
-                    menu.addAction(UI.PixmapCache.getIcon("stopLoading.png"),
+                    menu.addAction(
+                        UI.PixmapCache.getIcon("stopLoading.png"),
                         self.trUtf8("Cancel"), self.__contextMenuCancel)
                     menu.addSeparator()
-                menu.addAction(self.trUtf8("Open Containing Folder"),
+                menu.addAction(
+                    self.trUtf8("Open Containing Folder"),
                     self.__contextMenuOpenFolder)
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Go to Download Page"),
+            menu.addAction(
+                self.trUtf8("Go to Download Page"),
                 self.__contextMenuGotoPage)
-            menu.addAction(self.trUtf8("Copy Download Link"),
+            menu.addAction(
+                self.trUtf8("Copy Download Link"),
                 self.__contextMenuCopyLink)
             menu.addSeparator()
         menu.addAction(self.trUtf8("Select All"), self.__contextMenuSelectAll)
@@ -105,7 +111,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
                 self.downloadsView.selectionModel().selectedRows()[0].row()]\
                 .downloading()):
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Remove From List"),
+            menu.addAction(
+                self.trUtf8("Remove From List"),
                 self.__contextMenuRemoveSelected)
         
         menu.exec_(QCursor.pos())
@@ -163,7 +170,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         request = QNetworkRequest(requestOrUrl)
         if request.url().isEmpty():
             return
-        self.handleUnsupportedContent(self.__manager.get(request),
+        self.handleUnsupportedContent(
+            self.__manager.get(request),
             requestFileName=requestFileName,
             download=True,
             mainWindow=mainWindow)
@@ -251,7 +259,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         itm.setIcon(icon)
         
         oldHeight = self.downloadsView.rowHeight(row)
-        self.downloadsView.setRowHeight(row,
+        self.downloadsView.setRowHeight(
+            row,
             max(oldHeight, itm.minimumSizeHint().height() * 1.5))
         
         remove = False

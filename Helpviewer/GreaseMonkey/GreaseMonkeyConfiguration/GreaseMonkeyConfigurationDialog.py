@@ -89,9 +89,11 @@ class GreaseMonkeyConfigurationDialog(
             itm = QListWidgetItem(
                 UI.PixmapCache.getIcon("greaseMonkeyScript.png"),
                 script.name(), self.scriptsList)
-            itm.setData(GreaseMonkeyConfigurationDialog.ScriptVersionRole,
+            itm.setData(
+                GreaseMonkeyConfigurationDialog.ScriptVersionRole,
                 script.version())
-            itm.setData(GreaseMonkeyConfigurationDialog.ScriptDescriptionRole,
+            itm.setData(
+                GreaseMonkeyConfigurationDialog.ScriptDescriptionRole,
                 script.description())
             itm.setFlags(itm.flags() | Qt.ItemIsUserCheckable)
             if script.isEnabled():

@@ -165,8 +165,8 @@ class HelpTabWidget(E5TabWidget):
         self.tabContextCloseOthersAct = self.__tabContextMenu.addAction(
             UI.PixmapCache.getIcon("tabCloseOther.png"),
             self.trUtf8("Close Others"), self.__tabContextMenuCloseOthers)
-        self.__tabContextMenu.addAction(self.trUtf8('Close All'),
-            self.closeAllBrowsers)
+        self.__tabContextMenu.addAction(
+            self.trUtf8('Close All'), self.closeAllBrowsers)
         self.__tabContextMenu.addSeparator()
         self.__tabContextMenu.addAction(
             UI.PixmapCache.getIcon("printPreview.png"),
@@ -187,8 +187,8 @@ class HelpTabWidget(E5TabWidget):
             self.trUtf8('Bookmark All Tabs'), self.__mainWindow.bookmarkAll)
         
         self.__tabBackContextMenu = QMenu(self)
-        self.__tabBackContextMenu.addAction(self.trUtf8('Close All'),
-            self.closeAllBrowsers)
+        self.__tabBackContextMenu.addAction(
+            self.trUtf8('Close All'), self.closeAllBrowsers)
         self.__tabBackContextMenu.addAction(
             UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('Reload All'), self.reloadAllBrowsers)
@@ -363,7 +363,8 @@ class HelpTabWidget(E5TabWidget):
                 self.setTabText(index, self.__elide(linkName, Qt.ElideMiddle))
                 self.setTabToolTip(index, linkName)
             else:
-                self.setTabText(index,
+                self.setTabText(
+                    index,
                     self.__elide(browser.documentTitle().replace("&", "&&")))
                 self.setTabToolTip(index, browser.documentTitle())
         elif requestData:
@@ -749,7 +750,8 @@ class HelpTabWidget(E5TabWidget):
         
         if browser is not None:
             import Helpviewer.HelpWindow
-            self.setTabIcon(self.indexOf(browser),
+            self.setTabIcon(
+                self.indexOf(browser),
                 Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
                 .iconChanged(browser.url())
@@ -833,8 +835,8 @@ class HelpTabWidget(E5TabWidget):
             self.newBrowser(
                 None, (request, QNetworkAccessManager.GetOperation, b""))
         else:
-            self.currentBrowser().setSource(None,
-                (request, QNetworkAccessManager.GetOperation, b""))
+            self.currentBrowser().setSource(
+                None, (request, QNetworkAccessManager.GetOperation, b""))
             self.currentBrowser().setFocus()
     
     def __pathSelected(self, path):
@@ -948,10 +950,10 @@ class HelpTabWidget(E5TabWidget):
                 self.restoreClosedTab).setData(index)
             index += 1
         self.__closedTabsMenu.addSeparator()
-        self.__closedTabsMenu.addAction(self.trUtf8("Restore All Closed Tabs"),
-            self.restoreAllClosedTabs)
-        self.__closedTabsMenu.addAction(self.trUtf8("Clear List"),
-            self.clearClosedTabsList)
+        self.__closedTabsMenu.addAction(
+            self.trUtf8("Restore All Closed Tabs"), self.restoreAllClosedTabs)
+        self.__closedTabsMenu.addAction(
+            self.trUtf8("Clear List"), self.clearClosedTabsList)
     
     def closedTabsManager(self):
         """

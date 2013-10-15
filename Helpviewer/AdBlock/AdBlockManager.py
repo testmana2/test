@@ -294,10 +294,11 @@ class AdBlockManager(QObject):
                 subscriptions.append(self.__customSubscriptionUrlString)
         else:
             subscriptions = [self.__defaultSubscriptionUrlString,
-                self.__customSubscriptionUrlString]
+                             self.__customSubscriptionUrlString]
         for subscription in subscriptions:
             url = QUrl.fromEncoded(subscription.encode())
-            adBlockSubscription = AdBlockSubscription(url,
+            adBlockSubscription = AdBlockSubscription(
+                url,
                 subscription.startswith(self.__customSubscriptionUrlString),
                 self,
                 subscription.startswith(self.__defaultSubscriptionUrlString))

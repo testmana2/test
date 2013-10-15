@@ -40,10 +40,12 @@ def getImporterInfo(id):
             UI.PixmapCache.getPixmap("opera.png"),
             "Opera",
             "bookmarks.adr",
-            QCoreApplication.translate("OperaImporter",
+            QCoreApplication.translate(
+                "OperaImporter",
                 """Opera stores its bookmarks in the <b>bookmarks.adr</b> """
                 """text file. This file is usually located in"""),
-            QCoreApplication.translate("OperaImporter",
+            QCoreApplication.translate(
+                "OperaImporter",
                 """Please choose the file to begin importing bookmarks."""),
             standardDir,
         )

@@ -70,8 +70,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadButton = self.buttonBox.addButton(
             self.trUtf8("Download"), QDialogButtonBox.ActionRole)
         self.__downloadButton.setEnabled(False)
-        self.__downloadInstallButton = \
-            self.buttonBox.addButton(self.trUtf8("Download && Install"),
+        self.__downloadInstallButton = self.buttonBox.addButton(
+            self.trUtf8("Download && Install"),
             QDialogButtonBox.ActionRole)
         self.__downloadInstallButton.setEnabled(False)
         self.__downloadCancelButton = self.buttonBox.addButton(
@@ -169,7 +169,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             return
         
         self.urlEdit.setText(current.data(0, urlRole) or "")
-        self.descriptionEdit.setPlainText(current.data(0, descrRole) and \
+        self.descriptionEdit.setPlainText(
+            current.data(0, descrRole) and \
             self.__formatDescription(current.data(0, descrRole)) or "")
         self.authorEdit.setText(current.data(0, authorRole) or "")
     
@@ -270,7 +271,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         else:
             ui = None
         if ui and ui.notificationsEnabled():
-            ui.showNotification(UI.PixmapCache.getPixmap("plugin48.png"),
+            ui.showNotification(
+                UI.PixmapCache.getPixmap("plugin48.png"),
                 self.trUtf8("Download Plugin Files"),
                 self.trUtf8("""The requested plugins were downloaded."""))
         
@@ -337,7 +339,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                         .format(self.pluginRepositoryFile))
         else:
             self.__repositoryMissing = True
-            QTreeWidgetItem(self.repositoryList,
+            QTreeWidgetItem(
+                self.repositoryList,
                 ["", self.trUtf8(
                     "No plugin repository file available.\nSelect Update.")
                 ])

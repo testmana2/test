@@ -29,34 +29,48 @@ class NamingStyleChecker(object):
         "N811", "N812", "N813", "N814", "N821", "N831"
     ]
     Messages = {
-        "N801": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N801": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "class names should use CapWords convention"),
-        "N802": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N802": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "function name should be lowercase"),
-        "N803": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N803": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "argument name should be lowercase"),
-        "N804": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N804": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "first argument of a class method should be named 'cls'"),
-        "N805": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N805": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "first argument of a method should be named 'self'"),
-        "N806": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N806": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "first argument of a static method should not be named"
             " 'self' or 'cls"),
-        "N807": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N807": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "module names should be lowercase"),
-        "N808": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N808": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "package names should be lowercase"),
-        "N811": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N811": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "constant imported as non constant"),
-        "N812": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N812": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "lowercase imported as non lowercase"),
-        "N813": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N813": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "camelcase imported as lowercase"),
-        "N814": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N814": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "camelcase imported as constant"),
-        "N821": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N821": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "variable in function should be lowercase"),
-        "N831": QT_TRANSLATE_NOOP("NamingStyleChecker",
+        "N831": QT_TRANSLATE_NOOP(
+            "NamingStyleChecker",
             "names 'l', 'O' and 'I' should be avoided"),
     }
     

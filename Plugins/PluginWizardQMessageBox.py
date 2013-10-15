@@ -67,9 +67,10 @@ class MessageBoxWizard(QObject):
         """
         Private method to initialize the action.
         """
-        self.action = E5Action(self.trUtf8('QMessageBox Wizard'),
-             self.trUtf8('Q&MessageBox Wizard...'), 0, 0, self,
-             'wizards_qmessagebox')
+        self.action = E5Action(
+            self.trUtf8('QMessageBox Wizard'),
+            self.trUtf8('Q&MessageBox Wizard...'), 0, 0, self,
+            'wizards_qmessagebox')
         self.action.setStatusTip(self.trUtf8('QMessageBox Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>QMessageBox Wizard</b>"""

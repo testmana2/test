@@ -251,7 +251,8 @@ class MultiProject(QObject):
             E5MessageBox.critical(
                 self.ui,
                 self.trUtf8("Save multiproject file"),
-                self.trUtf8("<p>The multiproject file <b>{0}</b> could not be "
+                self.trUtf8(
+                    "<p>The multiproject file <b>{0}</b> could not be "
                     "written.</p>").format(fn))
             res = False
         
@@ -569,10 +570,11 @@ class MultiProject(QObject):
         
         self.actGrp1 = createActionGroup(self)
         
-        act = E5Action(self.trUtf8('New multiproject'),
-                UI.PixmapCache.getIcon("multiProjectNew.png"),
-                self.trUtf8('&New...'), 0, 0,
-                self.actGrp1, 'multi_project_new')
+        act = E5Action(
+            self.trUtf8('New multiproject'),
+            UI.PixmapCache.getIcon("multiProjectNew.png"),
+            self.trUtf8('&New...'), 0, 0,
+            self.actGrp1, 'multi_project_new')
         act.setStatusTip(self.trUtf8('Generate a new multiproject'))
         act.setWhatsThis(self.trUtf8(
             """<b>New...</b>"""
@@ -582,10 +584,11 @@ class MultiProject(QObject):
         act.triggered[()].connect(self.__newMultiProject)
         self.actions.append(act)
 
-        act = E5Action(self.trUtf8('Open multiproject'),
-                UI.PixmapCache.getIcon("multiProjectOpen.png"),
-                self.trUtf8('&Open...'), 0, 0,
-                self.actGrp1, 'multi_project_open')
+        act = E5Action(
+            self.trUtf8('Open multiproject'),
+            UI.PixmapCache.getIcon("multiProjectOpen.png"),
+            self.trUtf8('&Open...'), 0, 0,
+            self.actGrp1, 'multi_project_open')
         act.setStatusTip(self.trUtf8('Open an existing multiproject'))
         act.setWhatsThis(self.trUtf8(
             """<b>Open...</b>"""
@@ -594,9 +597,10 @@ class MultiProject(QObject):
         act.triggered[()].connect(self.openMultiProject)
         self.actions.append(act)
 
-        self.closeAct = E5Action(self.trUtf8('Close multiproject'),
-                UI.PixmapCache.getIcon("multiProjectClose.png"),
-                self.trUtf8('&Close'), 0, 0, self, 'multi_project_close')
+        self.closeAct = E5Action(
+            self.trUtf8('Close multiproject'),
+            UI.PixmapCache.getIcon("multiProjectClose.png"),
+            self.trUtf8('&Close'), 0, 0, self, 'multi_project_close')
         self.closeAct.setStatusTip(self.trUtf8(
             'Close the current multiproject'))
         self.closeAct.setWhatsThis(self.trUtf8(
@@ -606,9 +610,10 @@ class MultiProject(QObject):
         self.closeAct.triggered[()].connect(self.closeMultiProject)
         self.actions.append(self.closeAct)
 
-        self.saveAct = E5Action(self.trUtf8('Save multiproject'),
-                UI.PixmapCache.getIcon("multiProjectSave.png"),
-                self.trUtf8('&Save'), 0, 0, self, 'multi_project_save')
+        self.saveAct = E5Action(
+            self.trUtf8('Save multiproject'),
+            UI.PixmapCache.getIcon("multiProjectSave.png"),
+            self.trUtf8('&Save'), 0, 0, self, 'multi_project_save')
         self.saveAct.setStatusTip(self.trUtf8('Save the current multiproject'))
         self.saveAct.setWhatsThis(self.trUtf8(
             """<b>Save</b>"""
@@ -617,10 +622,11 @@ class MultiProject(QObject):
         self.saveAct.triggered[()].connect(self.saveMultiProject)
         self.actions.append(self.saveAct)
 
-        self.saveasAct = E5Action(self.trUtf8('Save multiproject as'),
-                UI.PixmapCache.getIcon("multiProjectSaveAs.png"),
-                self.trUtf8('Save &as...'), 0, 0, self,
-                'multi_project_save_as')
+        self.saveasAct = E5Action(
+            self.trUtf8('Save multiproject as'),
+            UI.PixmapCache.getIcon("multiProjectSaveAs.png"),
+            self.trUtf8('Save &as...'), 0, 0, self,
+            'multi_project_save_as')
         self.saveasAct.setStatusTip(self.trUtf8(
             'Save the current multiproject to a new file'))
         self.saveasAct.setWhatsThis(self.trUtf8(
@@ -645,10 +651,11 @@ class MultiProject(QObject):
         self.addProjectAct.triggered[()].connect(self.addProject)
         self.actions.append(self.addProjectAct)
 
-        self.propsAct = E5Action(self.trUtf8('Multiproject properties'),
-                UI.PixmapCache.getIcon("multiProjectProps.png"),
-                self.trUtf8('&Properties...'), 0, 0, self,
-                'multi_project_properties')
+        self.propsAct = E5Action(
+            self.trUtf8('Multiproject properties'),
+            UI.PixmapCache.getIcon("multiProjectProps.png"),
+            self.trUtf8('&Properties...'), 0, 0, self,
+            'multi_project_properties')
         self.propsAct.setStatusTip(self.trUtf8(
             'Show the multiproject properties'))
         self.propsAct.setWhatsThis(self.trUtf8(
@@ -764,7 +771,8 @@ class MultiProject(QObject):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(
-                formatStr.format(idx,
+                formatStr.format(
+                    idx,
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())

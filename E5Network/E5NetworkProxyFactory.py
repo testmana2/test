@@ -47,7 +47,8 @@ def proxyAuthenticationRequired(proxy, auth):
     @param proxy reference to the proxy object (QNetworkProxy)
     @param auth reference to the authenticator object (QAuthenticator)
     """
-    info = QCoreApplication.translate("E5NetworkProxyFactory",
+    info = QCoreApplication.translate(
+        "E5NetworkProxyFactory",
         "<b>Connect to proxy '{0}' using:</b>")\
         .format(Utilities.html_encode(proxy.hostName()))
     
@@ -135,9 +136,11 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                 if not host:
                     E5MessageBox.critical(
                         None,
-                        QCoreApplication.translate("E5NetworkProxyFactory",
+                        QCoreApplication.translate(
+                            "E5NetworkProxyFactory",
                             "Proxy Configuration Error"),
-                        QCoreApplication.translate("E5NetworkProxyFactory",
+                        QCoreApplication.translate(
+                            "E5NetworkProxyFactory",
                             """Proxy usage was activated"""
                             """ but no proxy host for protocol"""
                             """ '{0}' configured.""").format(protocolKey))
@@ -150,7 +153,8 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                             proxyType = QNetworkProxy.HttpCachingProxy
                         else:
                             proxyType = QNetworkProxy.HttpProxy
-                        proxy = QNetworkProxy(proxyType, host,
+                        proxy = QNetworkProxy(
+                            proxyType, host,
                             Preferences.getUI("ProxyPort/" + protocolKey),
                             Preferences.getUI("ProxyUser/" + protocolKey),
                             Preferences.getUI("ProxyPassword/" + protocolKey))

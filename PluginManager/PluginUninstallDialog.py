@@ -178,11 +178,12 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         if not self.__external:
             ui = e5App().getObject("UserInterface")
             if ui.notificationsEnabled():
-                ui.showNotification(UI.PixmapCache.getPixmap("plugin48.png"),
-                self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8(
-                    """<p>The plugin <b>{0}</b> was uninstalled successfully"""
-                    """ from {1}.</p>""")\
+                ui.showNotification(
+                    UI.PixmapCache.getPixmap("plugin48.png"),
+                    self.trUtf8("Plugin Uninstallation"),
+                    self.trUtf8(
+                        """<p>The plugin <b>{0}</b> was uninstalled"""
+                        """ successfully from {1}.</p>""")\
                     .format(pluginName, pluginDirectory))
                 return True
         

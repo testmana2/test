@@ -32,7 +32,8 @@ class E5ErrorMessage(QErrorMessage):
         """
         super().__init__(parent)
         
-        self.settings = QSettings(QSettings.IniFormat,
+        self.settings = QSettings(
+            QSettings.IniFormat,
             QSettings.UserScope,
             Globals.settingsNameOrganization,
             "eric5messagefilters")
@@ -168,8 +169,8 @@ def editMessageFilters():
     if __msgHandlerDialog:
         __msgHandlerDialog.editMessageFilters()
     else:
-        print(QCoreApplication.translate("E5ErrorMessage",
-            "No message handler installed."))
+        print(QCoreApplication.translate(
+            "E5ErrorMessage", "No message handler installed."))
 
 
 def messageHandlerInstalled():

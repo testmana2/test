@@ -107,7 +107,8 @@ def main():
     import getopt
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "b:e:hl:o:pRrt:Vx:",
+        opts, args = getopt.getopt(
+            sys.argv[1:], "b:e:hl:o:pRrt:Vx:",
             ["base=", "eol=", "exclude=", "exclude-file=", "extension=",
              "help", "language=", "output=", "private", "recursive",
              "version", ])
@@ -195,8 +196,8 @@ def main():
         
         for arg in args:
             if os.path.isdir(arg):
-                if os.path.exists(os.path.join(arg,
-                        Utilities.joinext("__init__", ".py"))):
+                if os.path.exists(os.path.join(
+                        arg, Utilities.joinext("__init__", ".py"))):
                     basename = os.path.dirname(arg)
                     if arg == '.':
                         sys.stderr.write("The directory '.' is a package.\n")
@@ -250,7 +251,8 @@ def main():
                         continue
                     
                     try:
-                        module = Utilities.ModuleParser.readModule(file,
+                        module = Utilities.ModuleParser.readModule(
+                            file,
                             basename=basename, inpackage=inpackage)
                         apiGenerator = APIGenerator(module)
                         api = apiGenerator.genAPI(True, basePackage,

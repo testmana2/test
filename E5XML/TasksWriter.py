@@ -62,7 +62,8 @@ class TasksWriter(XMLStreamWriterBase):
         
         # write the project scan filter
         if self.forProject:
-            self.writeTextElement("ProjectScanFilter",
+            self.writeTextElement(
+                "ProjectScanFilter",
                 e5App().getObject("TaskViewer").projectTasksScanFilter.strip())
         
         # do the tasks
@@ -81,7 +82,8 @@ class TasksWriter(XMLStreamWriterBase):
                 "%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
             if task.filename:
                 self.writeStartElement("Resource")
-                self.writeTextElement("Filename",
+                self.writeTextElement(
+                    "Filename",
                     Utilities.fromNativeSeparators(task.filename))
                 self.writeTextElement("Linenumber", str(task.lineno))
                 self.writeEndElement()

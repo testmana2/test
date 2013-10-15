@@ -122,7 +122,8 @@ class HelpDocsInstaller(QThread):
         
         files = docsPath.entryList(["*.qch"])
         if not files:
-            engine.setCustomValue(versionKey,
+            engine.setCustomValue(
+                versionKey,
                 QDateTime().toString(Qt.ISODate) + '|')
             return False
         
@@ -153,7 +154,8 @@ class HelpDocsInstaller(QThread):
                     )
                     return False
                 
-                engine.setCustomValue(versionKey,
+                engine.setCustomValue(
+                    versionKey,
                     fi.lastModified().toString(Qt.ISODate) + '|' + \
                     fi.absoluteFilePath())
                 return True
@@ -183,8 +185,8 @@ class HelpDocsInstaller(QThread):
         
         files = docsPath.entryList(["*.qch"])
         if not files:
-            engine.setCustomValue(versionKey,
-                QDateTime().toString(Qt.ISODate) + '|')
+            engine.setCustomValue(
+                versionKey, QDateTime().toString(Qt.ISODate) + '|')
             return False
         
         for f in files:
@@ -213,7 +215,8 @@ class HelpDocsInstaller(QThread):
                     )
                     return False
                 
-                engine.setCustomValue(versionKey,
+                engine.setCustomValue(
+                    versionKey,
                     fi.lastModified().toString(Qt.ISODate) + '|' + \
                     fi.absoluteFilePath())
                 return True

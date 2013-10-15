@@ -43,8 +43,9 @@ class OpenSearchReader(QXmlStreamReader):
         
         if self.name() != "OpenSearchDescription" or \
            self.namespaceUri() != "http://a9.com/-/spec/opensearch/1.1/":
-            self.raiseError(QCoreApplication.translate("OpenSearchReader",
-                    "The file is not an OpenSearch 1.1 file."))
+            self.raiseError(QCoreApplication.translate(
+                "OpenSearchReader",
+                "The file is not an OpenSearch 1.1 file."))
             return engine
         
         while not self.atEnd():

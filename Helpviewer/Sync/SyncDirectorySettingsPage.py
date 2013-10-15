@@ -42,7 +42,8 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         @return next wizard page ID (integer)
         """
         # save the settings
-        Preferences.setHelp("SyncDirectoryPath",
+        Preferences.setHelp(
+            "SyncDirectoryPath",
             Utilities.toNativeSeparators(self.directoryEdit.text()))
         
         from . import SyncGlobals

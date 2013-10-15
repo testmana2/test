@@ -189,7 +189,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         source = Utilities.convertLineEnds(source, "\n")
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", 0,
+                        self.__createResultItem(
+                            file, "1", 0,
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], "")
                         progress += 1
@@ -208,7 +209,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                                             "Python2"]):
                     isPy3 = False
                     nok, fname, line, index, code, error, warnings = \
-                        Utilities.py2compile(file,
+                        Utilities.py2compile(
+                            file,
                             checkFlakes=Preferences.getFlakes(
                                 "IncludeInSyntaxCheck"))
                 else:
