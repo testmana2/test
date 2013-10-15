@@ -203,7 +203,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         """
         Private method to resort the tree.
         """
-        self.bookmarksList.sortItems(self.bookmarksList.sortColumn(),
+        self.bookmarksList.sortItems(
+            self.bookmarksList.sortColumn(),
             self.bookmarksList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):

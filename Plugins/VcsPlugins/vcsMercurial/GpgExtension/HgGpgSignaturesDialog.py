@@ -179,7 +179,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         Private method to resort the tree.
         """
-        self.signaturesList.sortItems(self.signaturesList.sortColumn(),
+        self.signaturesList.sortItems(
+            self.signaturesList.sortColumn(),
             self.signaturesList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):

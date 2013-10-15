@@ -262,7 +262,8 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         """
         Private method to resort the tree.
         """
-        self.patchesList.sortItems(self.patchesList.sortColumn(),
+        self.patchesList.sortItems(
+            self.patchesList.sortColumn(),
             self.patchesList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):

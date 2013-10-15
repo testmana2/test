@@ -68,11 +68,11 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
             if msg in self.recentCommitMessages:
                 self.recentCommitMessages.remove(msg)
             self.recentCommitMessages.insert(0, msg)
-            no = int(Preferences.Prefs.settings\
-                .value('Mercurial/CommitMessages', 20))
+            no = int(Preferences.Prefs.settings.value(
+                'Mercurial/CommitMessages', 20))
             del self.recentCommitMessages[no:]
-            Preferences.Prefs.settings.setValue('Mercurial/Commits',
-                self.recentCommitMessages)
+            Preferences.Prefs.settings.setValue(
+                'Mercurial/Commits', self.recentCommitMessages)
         return msg
     
     def amend(self):

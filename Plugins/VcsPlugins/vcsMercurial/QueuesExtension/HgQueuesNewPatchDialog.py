@@ -127,4 +127,4 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
                     self.currentDateCheckBox.isChecked(),
                     self.dateTimeEdit.dateTime().toString("yyyy-MM-dd hh:mm"))
         return (self.nameEdit.text(), self.messageEdit.toPlainText(),
-            userData, dateData)
+                userData, dateData)

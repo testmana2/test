@@ -957,7 +957,8 @@ class Hg(VersionControl):
         if names[0]:
             from UI.DeleteFilesConfirmationDialog import \
                 DeleteFilesConfirmationDialog
-            dlg = DeleteFilesConfirmationDialog(self.parent(),
+            dlg = DeleteFilesConfirmationDialog(
+                self.parent(),
                 self.trUtf8("Revert changes"),
                 self.trUtf8(
                     "Do you really want to revert all changes to these files"
@@ -1175,8 +1176,8 @@ class Hg(VersionControl):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = \
-                            str(process.readAllStandardOutput(),
+                        output = str(
+                            process.readAllStandardOutput(),
                             Preferences.getSystem("IOEncoding"),
                             'replace')
             else:
@@ -1337,7 +1338,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(),
+                    output = str(
+                        process.readAllStandardOutput(),
                         Preferences.getSystem("IOEncoding"), 'replace')
         else:
             output, error = self.__client.runcommand(args)
@@ -1351,23 +1353,28 @@ class Hg(VersionControl):
                     line.split("@@@")
                 cdate, ctime = date.split()[:2]
                 info = []
-                info.append(QApplication.translate("mercurial",
+                info.append(QApplication.translate(
+                    "mercurial",
                     """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
                     """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")\
                     .format(index, changeset))
                 if tags:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(tags.split())))
                 if bookmarks:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(bookmarks.split())))
                 if branches:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(branches.split())))
-                info.append(QApplication.translate("mercurial",
+                info.append(QApplication.translate(
+                    "mercurial",
                     """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
                     """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")\
@@ -1391,7 +1398,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(),
+                    output = str(
+                        process.readAllStandardOutput(),
                         Preferences.getSystem("IOEncoding"), 'replace')
         else:
             output, error = self.__client.runcommand(args)
@@ -1401,7 +1409,8 @@ class Hg(VersionControl):
         else:
             url = ""
         
-        return QApplication.translate('mercurial',
+        return QApplication.translate(
+            'mercurial',
             """<h3>Repository information</h3>\n"""
             """<p><table>\n"""
             """<tr><td><b>Mercurial V.</b></td><td>{0}</td></tr>\n"""
@@ -1488,8 +1497,8 @@ class Hg(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return False
             
-            dia = HgDialog(self.trUtf8('Copying {0}')
-                .format(name), self)
+            dia = HgDialog(
+                self.trUtf8('Copying {0}').format(name), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1717,16 +1726,19 @@ class Hg(VersionControl):
                 finished = process.waitForFinished(30000)
                 if finished:
                     if process.exitCode() == 0:
-                        output = str(process.readAllStandardOutput(),
+                        output = str(
+                            process.readAllStandardOutput(),
                             Preferences.getSystem("IOEncoding"), 'replace')
                     else:
-                        error = str(process.readAllStandardError(),
+                        error = str(
+                            process.readAllStandardError(),
                             Preferences.getSystem("IOEncoding"), 'replace')
                 else:
                     error = self.trUtf8(
                         "The hg process did not finish within 30s.")
             else:
-                error = self.trUtf8('The process {0} could not be started. '
+                error = self.trUtf8(
+                    'The process {0} could not be started. '
                     'Ensure, that it is in the search path.').format('hg')
         else:
             output, error = self.__client.runcommand(args)
@@ -1972,7 +1984,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(),
+                    output = str(
+                        process.readAllStandardOutput(),
                         Preferences.getSystem("IOEncoding"), 'replace')
         else:
             output, error = self.__client.runcommand(args)
@@ -1986,36 +1999,45 @@ class Hg(VersionControl):
                 cdate, ctime = date.split()[:2]
                 info.append("""<p><table>""")
                 if mode == "heads":
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Head #{0}</b></td><td></td></tr>\n"""
                         .format(index, changeset)))
                 elif mode == "parents":
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
                         .format(index, changeset)))
                 elif mode == "tip":
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Tip</b></td><td></td></tr>\n"""))
-                info.append(QApplication.translate("mercurial",
+                info.append(QApplication.translate(
+                    "mercurial",
                     """<tr><td><b>Changeset</b></td><td>{0}</td></tr>""")\
                     .format(changeset))
                 if tags:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(tags.split())))
                 if bookmarks:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(bookmarks.split())))
                 if branches:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(branches.split())))
                 if parents:
-                    info.append(QApplication.translate("mercurial",
+                    info.append(QApplication.translate(
+                        "mercurial",
                         """<tr><td><b>Parents</b></td><td>{0}</td></tr>""")\
                         .format('<br/>'.join(parents.split())))
-                info.append(QApplication.translate("mercurial",
+                info.append(QApplication.translate(
+                    "mercurial",
                     """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
                     """<tr><td><b>Committed time</b></td><td>{2}</td></tr>\n"""
@@ -3192,7 +3214,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(),
+                    output = str(
+                        process.readAllStandardOutput(),
                         Preferences.getSystem("IOEncoding"), 'replace')
         else:
             output, error = self.__client.runcommand(args)

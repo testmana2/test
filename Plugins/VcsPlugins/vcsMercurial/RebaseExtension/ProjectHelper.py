@@ -31,10 +31,11 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         """
         Public method to generate the action objects.
         """
-        self.hgRebaseAct = E5Action(self.trUtf8('Rebase Changesets'),
-                UI.PixmapCache.getIcon("vcsRebase.png"),
-                self.trUtf8('Rebase Changesets'),
-                0, 0, self, 'mercurial_rebase')
+        self.hgRebaseAct = E5Action(
+            self.trUtf8('Rebase Changesets'),
+            UI.PixmapCache.getIcon("vcsRebase.png"),
+            self.trUtf8('Rebase Changesets'),
+            0, 0, self, 'mercurial_rebase')
         self.hgRebaseAct.setStatusTip(self.trUtf8(
             'Rebase changesets to another branch'
         ))

@@ -31,10 +31,11 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         """
         Public method to generate the action objects.
         """
-        self.hgFetchAct = E5Action(self.trUtf8('Fetch changes'),
-                UI.PixmapCache.getIcon("vcsUpdate.png"),
-                self.trUtf8('Fetch changes'),
-                0, 0, self, 'mercurial_fetch')
+        self.hgFetchAct = E5Action(
+            self.trUtf8('Fetch changes'),
+            UI.PixmapCache.getIcon("vcsUpdate.png"),
+            self.trUtf8('Fetch changes'),
+            0, 0, self, 'mercurial_fetch')
         self.hgFetchAct.setStatusTip(self.trUtf8(
             'Fetch changes from a remote repository'
         ))

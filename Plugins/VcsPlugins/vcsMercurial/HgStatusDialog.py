@@ -132,7 +132,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private method to resort the tree.
         """
-        self.statusList.sortItems(self.statusList.sortColumn(),
+        self.statusList.sortItems(
+            self.statusList.sortColumn(),
             self.statusList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):
@@ -358,9 +359,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                line = str(
+                    self.process.readLine(),
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
                 self.__processOutputLine(line)
     
     def __processOutputLine(self, line):

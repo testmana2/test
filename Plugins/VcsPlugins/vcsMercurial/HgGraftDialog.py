@@ -107,6 +107,6 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
                     self.currentDateCheckBox.isChecked(),
                     self.dateTimeEdit.dateTime().toString("yyyy-MM-dd hh:mm"))
         return (self.revisionsEdit.toPlainText().strip().splitlines(),
-            userData, dateData,
-            self.logCheckBox.isChecked(),
-            self.dryRunCheckBox.isChecked())
+                userData, dateData,
+                self.logCheckBox.isChecked(),
+                self.dryRunCheckBox.isChecked())

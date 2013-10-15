@@ -130,8 +130,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.logTree.setIconSize(
             QSize(100 * self.__rowHeight, self.__rowHeight))
         if self.vcs.version >= (1, 8):
-            self.logTree.headerItem().setText(self.logTree.columnCount(),
-                self.trUtf8("Bookmarks"))
+            self.logTree.headerItem().setText(
+                self.logTree.columnCount(), self.trUtf8("Bookmarks"))
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
             self.phaseLine.hide()
@@ -204,10 +204,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         Private method to resort the changed files tree.
         """
         sortColumn = self.filesTree.sortColumn()
-        self.filesTree.sortItems(1,
-            self.filesTree.header().sortIndicatorOrder())
-        self.filesTree.sortItems(sortColumn,
-            self.filesTree.header().sortIndicatorOrder())
+        self.filesTree.sortItems(
+            1, self.filesTree.header().sortIndicatorOrder())
+        self.filesTree.sortItems(
+            sortColumn, self.filesTree.header().sortIndicatorOrder())
     
     def __getColor(self, n):
         """
@@ -862,7 +862,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         log["message"].append(value.strip())
             else:
                 if len(log) > 1:
-                    self.__generateLogItem(log["author"], log["date"],
+                    self.__generateLogItem(
+                        log["author"], log["date"],
                         log["message"], log["revision"], changedPaths,
                         log["parents"], log["branches"], log["tags"],
                         log["phase"], log["bookmarks"])

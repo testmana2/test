@@ -157,9 +157,10 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                line = str(
+                    self.process.readLine(),
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
                 self.__buffer.append(line)
     
     def __readStderr(self):
@@ -421,7 +422,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                         l.append(self.trUtf8("1 or more incoming"))
                     if infoDict["remote"][1]:
                         l.append(self.trUtf8("{0} outgoing")\
-                            .format(infoDict["remote"][1]))
+                                 .format(infoDict["remote"][1]))
                     if infoDict["remote"][2]:
                         l.append(self.trUtf8("%n incoming bookmark(s)", "",
                                  infoDict["remote"][2]))

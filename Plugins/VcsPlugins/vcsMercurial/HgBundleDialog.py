@@ -149,4 +149,4 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         baseRevs = self.baseRevisionsEdit.toPlainText().strip().splitlines()
         
         return (revs, baseRevs, self.compressionCombo.currentText(),
-            self.allCheckBox.isChecked())
+                self.allCheckBox.isChecked())

@@ -30,10 +30,11 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         """
         Public method to generate the action objects.
         """
-        self.hgPurgeAct = E5Action(self.trUtf8('Purge Files'),
-                UI.PixmapCache.getIcon("fileDelete.png"),
-                self.trUtf8('Purge Files'),
-                0, 0, self, 'mercurial_purge')
+        self.hgPurgeAct = E5Action(
+            self.trUtf8('Purge Files'),
+            UI.PixmapCache.getIcon("fileDelete.png"),
+            self.trUtf8('Purge Files'),
+            0, 0, self, 'mercurial_purge')
         self.hgPurgeAct.setStatusTip(self.trUtf8(
             'Delete files and directories not known to Mercurial'
         ))
@@ -49,9 +50,10 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         self.hgPurgeAct.triggered[()].connect(self.__hgPurge)
         self.actions.append(self.hgPurgeAct)
         
-        self.hgPurgeAllAct = E5Action(self.trUtf8('Purge All Files'),
-                self.trUtf8('Purge All Files'),
-                0, 0, self, 'mercurial_purge_all')
+        self.hgPurgeAllAct = E5Action(
+            self.trUtf8('Purge All Files'),
+            self.trUtf8('Purge All Files'),
+            0, 0, self, 'mercurial_purge_all')
         self.hgPurgeAllAct.setStatusTip(self.trUtf8(
             'Delete files and directories not known to Mercurial including'
             ' ignored ones'
@@ -69,10 +71,11 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         self.hgPurgeAllAct.triggered[()].connect(self.__hgPurgeAll)
         self.actions.append(self.hgPurgeAllAct)
         
-        self.hgPurgeListAct = E5Action(self.trUtf8('List Files to be Purged'),
-                UI.PixmapCache.getIcon("fileDeleteList.png"),
-                self.trUtf8('List Files to be Purged...'),
-                0, 0, self, 'mercurial_purge_list')
+        self.hgPurgeListAct = E5Action(
+            self.trUtf8('List Files to be Purged'),
+            UI.PixmapCache.getIcon("fileDeleteList.png"),
+            self.trUtf8('List Files to be Purged...'),
+            0, 0, self, 'mercurial_purge_list')
         self.hgPurgeListAct.setStatusTip(self.trUtf8(
             'List files and directories not known to Mercurial'
         ))

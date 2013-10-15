@@ -45,10 +45,11 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         """
         Public method to generate the action objects.
         """
-        self.hgTransplantAct = E5Action(self.trUtf8('Transplant Changesets'),
-                UI.PixmapCache.getIcon("vcsTransplant.png"),
-                self.trUtf8('Transplant Changesets'),
-                0, 0, self, 'mercurial_transplant')
+        self.hgTransplantAct = E5Action(
+            self.trUtf8('Transplant Changesets'),
+            UI.PixmapCache.getIcon("vcsTransplant.png"),
+            self.trUtf8('Transplant Changesets'),
+            0, 0, self, 'mercurial_transplant')
         self.hgTransplantAct.setStatusTip(self.trUtf8(
             'Transplant changesets from another branch'
         ))

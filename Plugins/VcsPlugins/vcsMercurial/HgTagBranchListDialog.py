@@ -195,7 +195,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         """
         Private method to resort the tree.
         """
-        self.tagList.sortItems(self.tagList.sortColumn(),
+        self.tagList.sortItems(
+            self.tagList.sortColumn(),
             self.tagList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):

@@ -438,7 +438,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         except IOError as why:
             E5MessageBox.critical(
                 self, self.trUtf8('Save Diff'),
-                self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.'
+                self.trUtf8(
+                    '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                     .format(fname, str(why)))
     
