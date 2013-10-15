@@ -123,7 +123,8 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         @param lineno linenumber (string)
         @param text line of text from the annotated file (string)
         """
-        itm = QTreeWidgetItem(self.blameList,
+        itm = QTreeWidgetItem(
+            self.blameList,
             ["{0:d}".format(revision), author, "{0:d}".format(lineno), text])
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(2, Qt.AlignRight)

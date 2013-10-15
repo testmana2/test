@@ -349,7 +349,8 @@ class Subversion(VersionControl):
                     type_, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Checkout"),
-                        self.trUtf8("The tag must be a normal tag (tags) or"
+                        self.trUtf8(
+                            "The tag must be a normal tag (tags) or"
                             " a branch tag (branches)."
                             " Please select from the list."),
                         self.tagTypeList,
@@ -413,7 +414,8 @@ class Subversion(VersionControl):
                     type_, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Export"),
-                        self.trUtf8("The tag must be a normal tag (tags) or"
+                        self.trUtf8(
+                            "The tag must be a normal tag (tags) or"
                             " a branch tag (branches)."
                             " Please select from the list."),
                         self.tagTypeList,
@@ -578,8 +580,8 @@ class Subversion(VersionControl):
                 dlg.showError(e.args[0])
         locker.unlock()
         if not noDialog:
-            rev and dlg.showMessage(self.trUtf8("Committed revision {0}.")\
-                .format(rev.number))
+            rev and dlg.showMessage(self.trUtf8("Committed revision {0}.")
+                                    .format(rev.number))
             dlg.finish()
             dlg.exec_()
         os.chdir(cwd)
@@ -1066,7 +1068,8 @@ class Subversion(VersionControl):
                 E5MessageBox.critical(
                     self.__ui,
                     self.trUtf8("Subversion Error"),
-                    self.trUtf8("""The URL of the project repository has an"""
+                    self.trUtf8(
+                        """The URL of the project repository has an"""
                         """ invalid format. The tag operation will"""
                         """ be aborted"""))
                 return
@@ -1133,7 +1136,8 @@ class Subversion(VersionControl):
         if names[0]:
             from UI.DeleteFilesConfirmationDialog import \
                 DeleteFilesConfirmationDialog
-            dia = DeleteFilesConfirmationDialog(self.parent(),
+            dia = DeleteFilesConfirmationDialog(
+                self.parent(),
                 self.trUtf8("Revert changes"),
                 self.trUtf8(
                     "Do you really want to revert all changes to these files"
@@ -1207,7 +1211,8 @@ class Subversion(VersionControl):
                 E5MessageBox.critical(
                     self.__ui,
                     self.trUtf8("Subversion Error"),
-                    self.trUtf8("""The URL of the project repository has an"""
+                    self.trUtf8(
+                        """The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
                         """ be aborted"""))
                 return False
@@ -1227,10 +1232,9 @@ class Subversion(VersionControl):
             tn = url
         
         client = self.getClient()
-        dlg = \
-            SvnDialog(self.trUtf8('Switching to {0}').format(tn),
-                      "switch {0} {1}".format(url, name),
-                client)
+        dlg = SvnDialog(self.trUtf8('Switching to {0}').format(tn),
+                        "switch {0} {1}".format(url, name),
+                        client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
@@ -1611,10 +1615,9 @@ class Subversion(VersionControl):
         @param name directory name to be cleaned up (string)
         """
         client = self.getClient()
-        dlg = \
-            SvnDialog(self.trUtf8('Cleaning up {0}').format(name),
-                      "cleanup {0}".format(name),
-                client)
+        dlg = SvnDialog(self.trUtf8('Cleaning up {0}').format(name),
+                        "cleanup {0}".format(name),
+                        client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
@@ -1700,7 +1703,8 @@ class Subversion(VersionControl):
                 pysvn.svn_api_version[3])
         else:
             apiVersion = QApplication.translate('subversion', "unknown")
-        return QApplication.translate('subversion',
+        return QApplication.translate(
+            'subversion',
             """<h3>Repository information</h3>"""
             """<table>"""
             """<tr><td><b>PySvn V.</b></td><td>{0}</td></tr>"""
@@ -1767,12 +1771,11 @@ class Subversion(VersionControl):
         opts = self.options['global']
         recurse = "--non-recursive" not in opts
         client = self.getClient()
-        dlg = \
-            SvnDialog(self.trUtf8('Resolving conficts'),
-                      "resolved{0} {1}".format(
-                        (not recurse) and " --non-recursive" or "",
-                        " ".join(fnames)),
-                client)
+        dlg = SvnDialog(self.trUtf8('Resolving conficts'),
+                        "resolved{0} {1}".format(
+                            (not recurse) and " --non-recursive" or "",
+                            " ".join(fnames)),
+                        client)
         QApplication.processEvents()
         try:
             for name in fnames:

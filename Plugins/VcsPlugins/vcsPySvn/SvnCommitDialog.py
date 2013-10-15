@@ -68,11 +68,11 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
             if msg in self.recentCommitMessages:
                 self.recentCommitMessages.remove(msg)
             self.recentCommitMessages.insert(0, msg)
-            no = int(Preferences.Prefs.settings\
-                .value('Subversion/CommitMessages', 20))
+            no = int(Preferences.Prefs.settings.value(
+                'Subversion/CommitMessages', 20))
             del self.recentCommitMessages[no:]
-            Preferences.Prefs.settings.setValue('Subversion/Commits',
-                self.recentCommitMessages)
+            Preferences.Prefs.settings.setValue(
+                'Subversion/Commits', self.recentCommitMessages)
         return msg
         
     def hasChangelists(self):

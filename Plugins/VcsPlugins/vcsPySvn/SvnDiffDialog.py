@@ -219,7 +219,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                                 diff_sum['path']))
                         diffText = os.linesep.join(diff_list)
                     else:
-                        diffText = self.client.diff(tmpdir,
+                        diffText = self.client.diff(
+                            tmpdir,
                             url1, revision1=rev1,
                             url_or_path2=url2, revision2=rev2,
                             recurse=recurse)
@@ -231,7 +232,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             revision_start=rev1, revision_end=rev2,
                             recurse=recurse)
                     else:
-                        diffText = self.client.diff(tmpdir, name,
+                        diffText = self.client.diff(
+                            tmpdir, name,
                             revision1=rev1, revision2=rev2, recurse=recurse)
                 counter = 0
                 for line in diffText.splitlines():
@@ -438,7 +440,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         except IOError as why:
             E5MessageBox.critical(
                 self, self.trUtf8('Save Diff'),
-                self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.'
+                self.trUtf8(
+                    '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                     .format(fname, str(why)))
         

@@ -103,10 +103,10 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                 self.__removeFromChangelist))
         if self.vcs.version >= (1, 2, 0):
             self.menu.addSeparator()
-            self.menuactions.append(self.menu.addAction(self.trUtf8("Lock"),
-                self.__lock))
-            self.menuactions.append(self.menu.addAction(self.trUtf8("Unlock"),
-                self.__unlock))
+            self.menuactions.append(
+                self.menu.addAction(self.trUtf8("Lock"), self.__lock))
+            self.menuactions.append(
+                self.menu.addAction(self.trUtf8("Unlock"), self.__unlock))
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Break lock"),
                 self.__breakLock))
@@ -179,7 +179,8 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private method to resort the tree.
         """
-        self.statusList.sortItems(self.statusList.sortColumn(),
+        self.statusList.sortItems(
+            self.statusList.sortColumn(),
             self.statusList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):

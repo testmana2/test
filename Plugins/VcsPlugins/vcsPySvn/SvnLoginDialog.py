@@ -44,5 +44,5 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         @return tuple of three values (username, password, save)
         """
         return (self.usernameEdit.text(),
-               self.passwordEdit.text(),
-               self.saveCheckBox.isChecked())
+                self.passwordEdit.text(),
+                self.saveCheckBox.isChecked())

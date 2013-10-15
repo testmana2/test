@@ -73,7 +73,8 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         """
         Private method to resort the tree.
         """
-        self.repoTree.sortItems(self.repoTree.sortColumn(),
+        self.repoTree.sortItems(
+            self.repoTree.sortColumn(),
             self.repoTree.header().sortIndicatorOrder())
     
     def __resizeColumns(self):
@@ -84,7 +85,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         self.repoTree.header().setStretchLastSection(True)
     
     def __generateItem(self, parent, repopath, revision, author, size, date,
-            nodekind, url):
+                       nodekind, url):
         """
         Private method to generate a tree item in the repository tree.
         
@@ -170,8 +171,9 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                             repoUrl = dirent["path"]
                         if repoUrl != url:
                             self.__ignoreExpand = True
-                            itm = self.__generateItem(parent, "/",
-                                "", "", 0, "", pysvn.node_kind.dir, repoUrl)
+                            itm = self.__generateItem(
+                                parent, "/", "", "", 0, "",
+                                pysvn.node_kind.dir, repoUrl)
                             itm.setExpanded(True)
                             parent = itm
                             urlPart = repoUrl
@@ -180,16 +182,16 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                                 if element:
                                     urlPart = "{0}/{1}".format(urlPart,
                                                                element)
-                                    itm = self.__generateItem(parent, element,
-                                        "", "", 0, "", pysvn.node_kind.dir,
-                                        urlPart)
+                                    itm = self.__generateItem(
+                                        parent, element, "", "", 0, "",
+                                        pysvn.node_kind.dir, urlPart)
                                     itm.setExpanded(True)
                                     parent = itm
                             self.__ignoreExpand = False
-                    itm = self.__generateItem(parent, dirent["repos_path"],
-                                dirent["created_rev"], dirent["last_author"],
-                                dirent["size"], dirent["time"],
-                                dirent["kind"], dirent["path"])
+                    itm = self.__generateItem(
+                        parent, dirent["repos_path"], dirent["created_rev"],
+                        dirent["last_author"], dirent["size"], dirent["time"],
+                        dirent["kind"], dirent["path"])
                 self.__resort()
                 self.__resizeColumns()
             except pysvn.ClientError as e:
