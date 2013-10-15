@@ -15,13 +15,14 @@ import sys
 import json
 
 from PyQt4.QtCore import QFileInfo, pyqtSlot, qVersion, QProcess, QByteArray
-from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, QClipboard, \
-    QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
+from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, \
+    QClipboard, QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
-from .Ui_QRegularExpressionWizardDialog import Ui_QRegularExpressionWizardDialog
+from .Ui_QRegularExpressionWizardDialog import \
+    Ui_QRegularExpressionWizardDialog
 
 import UI.PixmapCache
 
@@ -29,7 +30,8 @@ import Utilities
 import Preferences
 
 
-class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog):
+class QRegularExpressionWizardWidget(QWidget,
+                                     Ui_QRegularExpressionWizardDialog):
     """
     Class implementing the QRegularExpression wizard dialog.
     """
@@ -49,19 +51,27 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         self.anycharButton.setIcon(UI.PixmapCache.getIcon("anychar.png"))
         self.repeatButton.setIcon(UI.PixmapCache.getIcon("repeat.png"))
         self.nonGroupButton.setIcon(UI.PixmapCache.getIcon("nongroup.png"))
-        self.atomicGroupButton.setIcon(UI.PixmapCache.getIcon("atomicgroup.png"))
+        self.atomicGroupButton.setIcon(
+            UI.PixmapCache.getIcon("atomicgroup.png"))
         self.groupButton.setIcon(UI.PixmapCache.getIcon("group.png"))
         self.namedGroupButton.setIcon(UI.PixmapCache.getIcon("namedgroup.png"))
-        self.namedReferenceButton.setIcon(UI.PixmapCache.getIcon("namedreference.png"))
+        self.namedReferenceButton.setIcon(
+            UI.PixmapCache.getIcon("namedreference.png"))
         self.altnButton.setIcon(UI.PixmapCache.getIcon("altn.png"))
         self.beglineButton.setIcon(UI.PixmapCache.getIcon("begline.png"))
         self.endlineButton.setIcon(UI.PixmapCache.getIcon("endline.png"))
-        self.wordboundButton.setIcon(UI.PixmapCache.getIcon("wordboundary.png"))
-        self.nonwordboundButton.setIcon(UI.PixmapCache.getIcon("nonwordboundary.png"))
-        self.poslookaheadButton.setIcon(UI.PixmapCache.getIcon("poslookahead.png"))
-        self.neglookaheadButton.setIcon(UI.PixmapCache.getIcon("neglookahead.png"))
-        self.poslookbehindButton.setIcon(UI.PixmapCache.getIcon("poslookbehind.png"))
-        self.neglookbehindButton.setIcon(UI.PixmapCache.getIcon("neglookbehind.png"))
+        self.wordboundButton.setIcon(
+            UI.PixmapCache.getIcon("wordboundary.png"))
+        self.nonwordboundButton.setIcon(
+            UI.PixmapCache.getIcon("nonwordboundary.png"))
+        self.poslookaheadButton.setIcon(
+            UI.PixmapCache.getIcon("poslookahead.png"))
+        self.neglookaheadButton.setIcon(
+            UI.PixmapCache.getIcon("neglookahead.png"))
+        self.poslookbehindButton.setIcon(
+            UI.PixmapCache.getIcon("poslookbehind.png"))
+        self.neglookbehindButton.setIcon(
+            UI.PixmapCache.getIcon("neglookbehind.png"))
         self.undoButton.setIcon(UI.PixmapCache.getIcon("editUndo.png"))
         self.redoButton.setIcon(UI.PixmapCache.getIcon("editRedo.png"))
         
@@ -70,8 +80,10 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         # start the PyQt5 server part
         self.__pyqt5Available = False
         self.__pyqt5Server = QProcess(self)
-        self.__pyqt5Server.start(sys.executable, [
-            os.path.join(os.path.dirname(__file__), "QRegularExpressionWizardServer.py")])
+        self.__pyqt5Server.start(
+            sys.executable, [os.path.join(
+                os.path.dirname(__file__), "QRegularExpressionWizardServer.py")
+            ])
         if self.__pyqt5Server.waitForStarted(5000):
             self.__pyqt5Server.setReadChannel(QProcess.StandardOutput)
             if self.__sendCommand("available"):
@@ -79,19 +91,23 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                 if response and response["available"]:
                     self.__pyqt5Available = True
         
-        self.saveButton = \
-            self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)
-        self.saveButton.setToolTip(self.trUtf8("Save the regular expression to a file"))
-        self.loadButton = \
-            self.buttonBox.addButton(self.trUtf8("Load"), QDialogButtonBox.ActionRole)
-        self.loadButton.setToolTip(self.trUtf8("Load a regular expression from a file"))
+        self.saveButton = self.buttonBox.addButton(
+            self.trUtf8("Save"), QDialogButtonBox.ActionRole)
+        self.saveButton.setToolTip(
+            self.trUtf8("Save the regular expression to a file"))
+        self.loadButton = self.buttonBox.addButton(
+            self.trUtf8("Load"), QDialogButtonBox.ActionRole)
+        self.loadButton.setToolTip(
+            self.trUtf8("Load a regular expression from a file"))
         if qVersion() >= "5.0.0" and self.__pyqt5Available:
             self.validateButton = self.buttonBox.addButton(
                 self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
-            self.validateButton.setToolTip(self.trUtf8("Validate the regular expression"))
+            self.validateButton.setToolTip(
+                self.trUtf8("Validate the regular expression"))
             self.executeButton = self.buttonBox.addButton(
                 self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
-            self.executeButton.setToolTip(self.trUtf8("Execute the regular expression"))
+            self.executeButton.setToolTip(
+                self.trUtf8("Execute the regular expression"))
             self.nextButton = self.buttonBox.addButton(
                 self.trUtf8("Next match"), QDialogButtonBox.ActionRole)
             self.nextButton.setToolTip(
@@ -107,8 +123,8 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                 QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
             self.copyButton = None
         else:
-            self.copyButton = \
-                self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
+            self.copyButton = self.buttonBox.addButton(
+                self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
             self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
             self.buttonBox.setStandardButtons(QDialogButtonBox.Close)
@@ -121,7 +137,8 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         """
         Private method to send a command to the PyQt5 server.
         
-        @param commandDict dictionary with command string and related data (dict)
+        @param commandDict dictionary with command string and related
+            data (dict)
         @return flag indicating a successful transmission (boolean)
         """
         result = False
@@ -146,10 +163,12 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
             responseStr = data.decode("utf-8")
             responseDict = json.loads(responseStr)
             if responseDict["error"]:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Communication Error"),
-                    self.trUtf8("""<p>The PyQt5 backend reported an error.</p>"""
-                                """<p>{0}</p>""").format(responseDict["error"]))
+                    self.trUtf8("""<p>The PyQt5 backend reported"""
+                                """ an error.</p><p>{0}</p>""")
+                    .format(responseDict["error"]))
                 responseDict = {}
         
         return responseDict
@@ -254,11 +273,13 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         # determine cursor position as length into text
         length = self.regexpTextEdit.textCursor().position()
         
-        # only present group names that occur before the current cursor position
+        # only present group names that occur before the current
+        # cursor position
         regex = self.regexpTextEdit.toPlainText()[:length]
         names = self.namedGroups(regex)
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Named reference"),
                 self.trUtf8("""No named groups have been defined yet."""))
             return
@@ -387,23 +408,27 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                                " Overwrite it?</p>").format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
             
             try:
-                f = open(Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
+                f = open(
+                    Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
                 f.write(self.regexpTextEdit.toPlainText())
                 f.close()
             except IOError as err:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(str(err)))
+                    self.trUtf8("""<p>The regular expression could not"""
+                                """ be saved.</p><p>Reason: {0}</p>""")
+                    .format(str(err)))
     
     @pyqtSlot()
     def on_loadButton_clicked(self):
@@ -417,15 +442,18 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f = open(Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
+                f = open(
+                    Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
                 regexp = f.read()
                 f.close()
                 self.regexpTextEdit.setPlainText(regexp)
             except IOError as err:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(str(err)))
+                    self.trUtf8("""<p>The regular expression could not"""
+                                """ be saved.</p><p>Reason: {0}</p>""")
+                    .format(str(err)))
 
     @pyqtSlot()
     def on_copyButton_clicked(self):
@@ -473,14 +501,17 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                 response = self.__receiveResponse()
                 if response and "valid" in response:
                     if response["valid"]:
-                        E5MessageBox.information(self,
+                        E5MessageBox.information(
+                            self,
                             self.trUtf8("Validation"),
-                            self.trUtf8("""The regular expression is valid."""))
+                            self.trUtf8(
+                                """The regular expression is valid."""))
                     else:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("Error"),
                             self.trUtf8("""Invalid regular expression: {0}""")
-                                .format(response["errorMessage"]))
+                            .format(response["errorMessage"]))
                         # move cursor to error offset
                         offset = response["errorOffset"]
                         tc = self.regexpTextEdit.textCursor()
@@ -489,25 +520,31 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                         self.regexpTextEdit.setFocus()
                         return
                 else:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Communication Error"),
-                        self.trUtf8("""Invalid response received from PyQt5 backend."""))
+                        self.trUtf8("""Invalid response received from"""
+                                    """ PyQt5 backend."""))
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Communication Error"),
-                    self.trUtf8("""Communication with PyQt5 backend failed."""))
+                    self.trUtf8("""Communication with PyQt5 backend"""
+                                """ failed."""))
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 
     @pyqtSlot()
     def on_executeButton_clicked(self, startpos=0):
         """
-        Private slot to execute the entered QRegularExpression on the test text.
+        Private slot to execute the entered QRegularExpression on the test
+        text.
         
-        This slot will execute the entered QRegularExpression on the entered test
-        data and will display the result in the table part of the dialog.
+        This slot will execute the entered QRegularExpression on the entered
+        test data and will display the result in the table part of the dialog.
         
         @param startpos starting position for the QRegularExpression matching
         """
@@ -539,10 +576,11 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                 response = self.__receiveResponse()
                 if response and ("valid" in response or "matched" in response):
                     if "valid" in response:
-                        E5MessageBox.critical(self,
+                        E5MessageBox.critical(
+                            self,
                             self.trUtf8("Error"),
                             self.trUtf8("""Invalid regular expression: {0}""")
-                                .format(response["errorMessage"]))
+                            .format(response["errorMessage"]))
                         # move cursor to error offset
                         offset = response["errorOffset"]
                         tc = self.regexpTextEdit.textCursor()
@@ -569,57 +607,78 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                             self.lastMatchEnd = captures[0][2]
                             self.nextButton.setEnabled(True)
                             row += 1
-                            self.resultTable.setItem(row, 0,
+                            self.resultTable.setItem(
+                                row, 0,
                                 QTableWidgetItem(self.trUtf8("Offset")))
-                            self.resultTable.setItem(row, 1,
+                            self.resultTable.setItem(
+                                row, 1,
                                 QTableWidgetItem("{0:d}".format(offset)))
                             
                             row += 1
-                            self.resultTable.setItem(row, 0,
+                            self.resultTable.setItem(
+                                row, 0,
                                 QTableWidgetItem(self.trUtf8("Captures")))
-                            self.resultTable.setItem(row, 1,
-                                QTableWidgetItem("{0:d}".format(len(captures) - 1)))
+                            self.resultTable.setItem(
+                                row, 1,
+                                QTableWidgetItem(
+                                    "{0:d}".format(len(captures) - 1)))
                             row += 1
-                            self.resultTable.setItem(row, 1,
+                            self.resultTable.setItem(
+                                row, 1,
                                 QTableWidgetItem(self.trUtf8("Text")))
-                            self.resultTable.setItem(row, 2,
+                            self.resultTable.setItem(
+                                row, 2,
                                 QTableWidgetItem(self.trUtf8("Characters")))
                             
                             row += 1
-                            self.resultTable.setItem(row, 0,
+                            self.resultTable.setItem(
+                                row, 0,
                                 QTableWidgetItem(self.trUtf8("Match")))
-                            self.resultTable.setItem(row, 1,
+                            self.resultTable.setItem(
+                                row, 1,
                                 QTableWidgetItem(captures[0][0]))
-                            self.resultTable.setItem(row, 2,
-                                QTableWidgetItem("{0:d}".format(captures[0][3])))
+                            self.resultTable.setItem(
+                                row, 2,
+                                QTableWidgetItem(
+                                    "{0:d}".format(captures[0][3])))
                             
                             for i in range(1, len(captures)):
                                 if captures[i][0]:
                                     row += 1
                                     self.resultTable.insertRow(row)
-                                    self.resultTable.setItem(row, 0,
+                                    self.resultTable.setItem(
+                                        row, 0,
                                         QTableWidgetItem(
-                                            self.trUtf8("Capture #{0}").format(i)))
-                                    self.resultTable.setItem(row, 1,
+                                            self.trUtf8("Capture #{0}")
+                                            .format(i)))
+                                    self.resultTable.setItem(
+                                        row, 1,
                                         QTableWidgetItem(captures[i][0]))
-                                    self.resultTable.setItem(row, 2,
-                                        QTableWidgetItem("{0:d}".format(captures[i][3])))
+                                    self.resultTable.setItem(
+                                        row, 2,
+                                        QTableWidgetItem(
+                                            "{0:d}".format(captures[i][3])))
                             
                             # highlight the matched text
                             tc = self.textTextEdit.textCursor()
                             tc.setPosition(offset)
-                            tc.setPosition(self.lastMatchEnd, QTextCursor.KeepAnchor)
+                            tc.setPosition(
+                                self.lastMatchEnd, QTextCursor.KeepAnchor)
                             self.textTextEdit.setTextCursor(tc)
                         else:
                             self.nextButton.setEnabled(False)
                             self.resultTable.setRowCount(2)
                             row += 1
                             if startpos > 0:
-                                self.resultTable.setItem(row, 0,
-                                    QTableWidgetItem(self.trUtf8("No more matches")))
+                                self.resultTable.setItem(
+                                    row, 0,
+                                    QTableWidgetItem(
+                                        self.trUtf8("No more matches")))
                             else:
-                                self.resultTable.setItem(row, 0,
-                                    QTableWidgetItem(self.trUtf8("No matches")))
+                                self.resultTable.setItem(
+                                    row, 0,
+                                    QTableWidgetItem(
+                                        self.trUtf8("No matches")))
                             
                             # remove the highlight
                             tc = self.textTextEdit.textCursor()
@@ -631,17 +690,23 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
                         self.resultTable.verticalHeader().hide()
                         self.resultTable.horizontalHeader().hide()
                 else:
-                    E5MessageBox.critical(self,
+                    E5MessageBox.critical(
+                        self,
                         self.trUtf8("Communication Error"),
-                        self.trUtf8("""Invalid response received from PyQt5 backend."""))
+                        self.trUtf8("""Invalid response received from"""
+                                    """ PyQt5 backend."""))
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Communication Error"),
-                    self.trUtf8("""Communication with PyQt5 backend failed."""))
+                    self.trUtf8("""Communication with PyQt5"""
+                                """ backend failed."""))
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error"),
-                self.trUtf8("""A regular expression and a text must be given."""))
+                self.trUtf8("""A regular expression and a text must"""
+                            """ be given."""))
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -772,7 +837,8 @@ class QRegularExpressionWizardWindow(E5MainWindow):
         self.resize(size)
         self.setWindowTitle(self.cw.windowTitle())
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(
+            Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

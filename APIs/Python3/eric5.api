@@ -1,3 +1,37 @@
+Pep257CheckerPy2.Pep257Checker.Codes?7
+Pep257CheckerPy2.Pep257Checker.run?4()
+Pep257CheckerPy2.Pep257Checker.unpackArgs?4()
+Pep257CheckerPy2.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
+Pep257CheckerPy2.Pep257Context.contextType?4()
+Pep257CheckerPy2.Pep257Context.end?4()
+Pep257CheckerPy2.Pep257Context.indent?4()
+Pep257CheckerPy2.Pep257Context.source?4()
+Pep257CheckerPy2.Pep257Context.ssource?4()
+Pep257CheckerPy2.Pep257Context.start?4()
+Pep257CheckerPy2.Pep257Context?1(source, startLine, contextType)
+Pep8Checker.Pep8Report.docType?7
+Pep8Checker.Pep8Report.error_args?4(line_number, offset, code, check, *args)
+Pep8Checker.Pep8Report.filename?7
+Pep8Checker.Pep8Report.hang_closing?7
+Pep8Checker.Pep8Report.ignore?7
+Pep8Checker.Pep8Report.max_line_length?7
+Pep8Checker.Pep8Report.repeat?7
+Pep8Checker.Pep8Report.select?7
+Pep8Checker.Pep8Report?1(options)
+Pep8NamingCheckerPy2.Pep8NamingChecker.CamelcaseRegexp?7
+Pep8NamingCheckerPy2.Pep8NamingChecker.Codes?7
+Pep8NamingCheckerPy2.Pep8NamingChecker.LowercaseRegex?7
+Pep8NamingCheckerPy2.Pep8NamingChecker.MixedcaseRegexp?7
+Pep8NamingCheckerPy2.Pep8NamingChecker.UppercaseRegexp?7
+Pep8NamingCheckerPy2.Pep8NamingChecker.run?4()
+Pep8NamingCheckerPy2.Pep8NamingChecker.unpackArgs?4()
+Pep8NamingCheckerPy2.Pep8NamingChecker?1(tree, filename, options)
+Tools.coding_regexps?7
+Tools.decode?4(text)
+Tools.extractLineFlags?4(line, startComment=")
+Tools.get_coding?4(text)
+Tools.normalizeCode?4(codestring)
+Tools.readEncodedFile?4(filename)
 eric5.Cooperation.ChatWidget.ChatWidget.appendMessage?4(from_, message)
 eric5.Cooperation.ChatWidget.ChatWidget.cancelEdit?7
 eric5.Cooperation.ChatWidget.ChatWidget.checkEditorActions?4(editor)
@@ -3687,7 +3721,7 @@ eric5.PluginManager.PluginManager.PluginManager.pluginDeactivated?7
 eric5.PluginManager.PluginManager.PluginManager.preferencesChanged?4()
 eric5.PluginManager.PluginManager.PluginManager.removePluginFromSysModules?4(pluginName, package, internalPackages)
 eric5.PluginManager.PluginManager.PluginManager.shutdown?7
-eric5.PluginManager.PluginManager.PluginManager.unloadPlugin?4(name, directory)
+eric5.PluginManager.PluginManager.PluginManager.unloadPlugin?4(name)
 eric5.PluginManager.PluginManager.PluginManager?1(parent=None, doLoadPlugins=True, develPlugin=None)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog.getDownloadedPlugins?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog?1(parent=None)
@@ -3716,6 +3750,20 @@ eric5.Plugins.AboutPlugin.AboutDialog.authorsText?7
 eric5.Plugins.AboutPlugin.AboutDialog.licenseText?7
 eric5.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.Codes?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.Messages?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.run?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.unpackArgs?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.contextType?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.end?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.indent?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.source?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.ssource?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.start?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context?1(source, startLine, contextType)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Py2Checker?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False, docType="pep257")
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog.getSelectedCodes?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, showFixCodes, parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.codeRole?7
@@ -3744,6 +3792,7 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report.error_args?4(line_number, offset, code, check, *args)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report?1(options)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.finalize?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.mutualStartswith?4(b)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
@@ -3757,6 +3806,15 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.fixedLine?4(line)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.getline?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.run?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter?1(sourceLines)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.CamelcaseRegexp?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.Codes?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.LowercaseRegex?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.Messages?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.MixedcaseRegexp?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.UppercaseRegexp?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.run?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker?1(tree, filename, options)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.pep8.ARITHMETIC_OP?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
@@ -5803,6 +5861,8 @@ eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.EditorSpellChecking
 eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsErrorBgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsErrorFgButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsStyleWarningBgButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsStyleWarningFgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsWarningBgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsWarningFgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_defaultFontButton_clicked?4()
@@ -5932,9 +5992,6 @@ eric5.Preferences.ConfigurationPages.ProjectBrowserPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.ProjectPage.ProjectPage.save?4()
 eric5.Preferences.ConfigurationPages.ProjectPage.ProjectPage?1()
 eric5.Preferences.ConfigurationPages.ProjectPage.create?4(dlg)
-eric5.Preferences.ConfigurationPages.Py3FlakesPage.Py3FlakesPage.save?4()
-eric5.Preferences.ConfigurationPages.Py3FlakesPage.Py3FlakesPage?1()
-eric5.Preferences.ConfigurationPages.Py3FlakesPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.PythonPage.PythonPage.save?4()
 eric5.Preferences.ConfigurationPages.PythonPage.PythonPage?1()
 eric5.Preferences.ConfigurationPages.PythonPage.create?4(dlg)
@@ -6619,6 +6676,8 @@ eric5.QScintilla.Editor.Editor.Separator?7
 eric5.QScintilla.Editor.Editor.StartEditToken?7
 eric5.QScintilla.Editor.Editor.SyncToken?7
 eric5.QScintilla.Editor.Editor.TemplateImageID?7
+eric5.QScintilla.Editor.Editor.WarningCode?7
+eric5.QScintilla.Editor.Editor.WarningStyle?7
 eric5.QScintilla.Editor.Editor.addClone?4(editor)
 eric5.QScintilla.Editor.Editor.addedToProject?4()
 eric5.QScintilla.Editor.Editor.autoComplete?4(auto=False, context=True)
@@ -6792,7 +6851,7 @@ eric5.QScintilla.Editor.Editor.syntaxerrorToggled?7
 eric5.QScintilla.Editor.Editor.taskMarkersUpdated?7
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
 eric5.QScintilla.Editor.Editor.toggleCommentBlock?4()
-eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg="")
+eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg="", warningType=WarningCode)
 eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, index, error, msg="", show=False)
 eric5.QScintilla.Editor.Editor.uncommentLine?4()
 eric5.QScintilla.Editor.Editor.uncommentLineOrSelection?4()
@@ -8843,3 +8902,115 @@ eric5.uninstall.pyModDir?7
 eric5.uninstall.uninstallEric?4()
 eric5.uninstall.usage?4(rcode=2)
 eric5.uninstall.wrapperName?4(dname, wfile)
+pep8.ARITHMETIC_OP?7
+pep8.BENCHMARK_KEYS?7
+pep8.BaseReport.error?4(line_number, offset, text, check)
+pep8.BaseReport.error_args?4(line_number, offset, code, check, *args)
+pep8.BaseReport.get_count?4(prefix='')
+pep8.BaseReport.get_file_results?4()
+pep8.BaseReport.get_statistics?4(prefix='')
+pep8.BaseReport.increment_logical_line?4()
+pep8.BaseReport.init_file?4(filename, lines, expected, line_offset)
+pep8.BaseReport.print_benchmark?4()
+pep8.BaseReport.print_filename?7
+pep8.BaseReport.print_statistics?4(prefix='')
+pep8.BaseReport.start?4()
+pep8.BaseReport.stop?4()
+pep8.BaseReport?1(options)
+pep8.COMMENT_WITH_NL?7
+pep8.COMPARE_SINGLETON_REGEX?7
+pep8.COMPARE_TYPE_REGEX?7
+pep8.Checker.build_tokens_line?4()
+pep8.Checker.check_all?4(expected=None, line_offset=0)
+pep8.Checker.check_ast?4()
+pep8.Checker.check_logical?4()
+pep8.Checker.check_physical?4(line)
+pep8.Checker.generate_tokens?4()
+pep8.Checker.readline?4()
+pep8.Checker.readline_check_physical?4()
+pep8.Checker.report_invalid_syntax?4()
+pep8.Checker.run_check?4(check, argument_names)
+pep8.Checker?1(filename=None, lines=None, options=None, report=None, **kwargs)
+pep8.DEFAULT_EXCLUDE?7
+pep8.DEFAULT_IGNORE?7
+pep8.DOCSTRING_REGEX?7
+pep8.DiffReport.error?4(line_number, offset, text, check)
+pep8.DiffReport?1(options)
+pep8.ERRORCODE_REGEX?7
+pep8.EXTRANEOUS_WHITESPACE_REGEX?7
+pep8.FileReport.print_filename?7
+pep8.HUNK_REGEX?7
+pep8.INDENT_REGEX?7
+pep8.KEYWORDS?7
+pep8.KEYWORD_REGEX?7
+pep8.LAMBDA_REGEX?7
+pep8.MAX_LINE_LENGTH?7
+pep8.OPERATOR_REGEX?7
+pep8.PROJECT_CONFIG?7
+pep8.PyCF_ONLY_AST?7
+pep8.RAISE_COMMA_REGEX?7
+pep8.REPORT_FORMAT?7
+pep8.RERAISE_COMMA_REGEX?7
+pep8.SINGLETONS?7
+pep8.SKIP_TOKENS?7
+pep8.StandardReport.error?4(line_number, offset, text, check)
+pep8.StandardReport.error_args?4(line_number, offset, code, check, *args)
+pep8.StandardReport.get_file_results?4()
+pep8.StandardReport.init_file?4(filename, lines, expected, line_offset)
+pep8.StandardReport?1(options)
+pep8.StyleGuide.check_files?4(paths=None)
+pep8.StyleGuide.excluded?4(filename, parent=None)
+pep8.StyleGuide.get_checks?4(argument_name)
+pep8.StyleGuide.ignore_code?4(code)
+pep8.StyleGuide.init_report?4(reporter=None)
+pep8.StyleGuide.input_dir?4(dirname)
+pep8.StyleGuide.input_file?4(filename, lines=None, expected=None, line_offset=0)
+pep8.StyleGuide?1(*args, **kwargs)
+pep8.TESTSUITE_PATH?7
+pep8.UNARY_OPERATORS?7
+pep8.WHITESPACE?7
+pep8.WHITESPACE_AFTER_COMMA_REGEX?7
+pep8.WS_NEEDED_OPERATORS?7
+pep8.WS_OPTIONAL_OPERATORS?7
+pep8._add_check?5(check, kind, codes, args)
+pep8._checks?8
+pep8._main?5()
+pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level)
+pep8.comparison_to_singleton?4(logical_line, noqa)
+pep8.comparison_type?4(logical_line)
+pep8.compound_statements?4(logical_line)
+pep8.continued_indentation?4(logical_line, tokens, indent_level, hang_closing, noqa, verbose)
+pep8.expand_indent?4(line)
+pep8.explicit_line_join?4(logical_line, tokens)
+pep8.extraneous_whitespace?4(logical_line)
+pep8.filename_match?4(filename, patterns, default=True)
+pep8.get_parser?4(prog='pep8', version=__version__)
+pep8.imports_on_separate_lines?4(logical_line)
+pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
+pep8.init_checks_registry?4()
+pep8.maximum_line_length?4(physical_line, max_line_length)
+pep8.missing_newline?4(physical_line)
+pep8.missing_whitespace?4(logical_line)
+pep8.missing_whitespace_around_operator?4(logical_line, tokens)
+pep8.mute_string?4(text)
+pep8.noqa?7
+pep8.parse_udiff?4(diff, patterns=None, parent='.')
+pep8.process_options?4(arglist=None, parse_argv=False, config_file=None, parser=None)
+pep8.python_3000_backticks?4(logical_line)
+pep8.python_3000_has_key?4(logical_line)
+pep8.python_3000_not_equal?4(logical_line)
+pep8.python_3000_raise_comma?4(logical_line)
+pep8.read_config?4(options, args, arglist, parser)
+pep8.readlines?4(filename)
+pep8.register_check?4(check, codes=None)
+pep8.stdin_get_value?4()
+pep8.tabs_obsolete?4(physical_line)
+pep8.tabs_or_spaces?4(physical_line, indent_char)
+pep8.trailing_blank_lines?4(physical_line, lines, line_number)
+pep8.trailing_whitespace?4(physical_line)
+pep8.whitespace_around_comma?4(logical_line)
+pep8.whitespace_around_keywords?4(logical_line)
+pep8.whitespace_around_named_parameter_equals?4(logical_line, tokens)
+pep8.whitespace_around_operator?4(logical_line)
+pep8.whitespace_before_inline_comment?4(logical_line, tokens)
+pep8.whitespace_before_parameters?4(logical_line, tokens)

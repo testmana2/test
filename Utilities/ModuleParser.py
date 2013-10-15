@@ -91,16 +91,16 @@ _py_getnext = re.compile(r"""
 
 |   (?P<Docstring>
         (?<= :) \s*
-       \""" (?P<DocstringContents1>
+        [ru]? \""" (?P<DocstringContents1>
                 [^"\\]* (?:
                             (?: \\. | "(?!"") )
                             [^"\\]*
                         )*
             )
-       \"""
+        \"""
 
     |   (?<= :) \s*
-        ''' (?P<DocstringContents2>
+        [ru]? ''' (?P<DocstringContents2>
                 [^'\\]* (?:
                             (?: \\. | '(?!'') )
                             [^'\\]*

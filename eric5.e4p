@@ -711,7 +711,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Utilities/py3flakes/__init__.py</Source>
     <Source>Utilities/py3flakes/checker.py</Source>
     <Source>Utilities/py3flakes/messages.py</Source>
-    <Source>Preferences/ConfigurationPages/Py3FlakesPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorKeywordsPage.py</Source>
     <Source>Cooperation/__init__.py</Source>
     <Source>Cooperation/Connection.py</Source>
@@ -1103,6 +1102,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py</Source>
+    <Source>UtilitiesPython2/Pep8NamingCheckerPy2.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep257Checker.py</Source>
+    <Source>UtilitiesPython2/Pep257CheckerPy2.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1299,7 +1302,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>E5Network/E5NetworkMonitor.ui</Form>
     <Form>E5Network/E5NetworkHeaderDetailsDialog.ui</Form>
     <Form>E5Gui/E5ToolBarDialog.ui</Form>
-    <Form>Preferences/ConfigurationPages/Py3FlakesPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorKeywordsPage.ui</Form>
     <Form>Cooperation/ChatWidget.ui</Form>
     <Form>Preferences/ConfigurationPages/CooperationPage.ui</Form>
@@ -1887,6 +1889,12 @@ bindings and the QScintilla2 editor widget.</Description>
         <value>
           <dict>
             <key>
+              <string>DocstringType</string>
+            </key>
+            <value>
+              <string>eric</string>
+            </value>
+            <key>
               <string>ExcludeFiles</string>
             </key>
             <value>
@@ -1896,7 +1904,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>E24, E501, W293</string>
+              <string>E24, E501, W293, N, E</string>
             </value>
             <key>
               <string>FixCodes</string>
@@ -1908,13 +1916,31 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>FixIssues</string>
             </key>
             <value>
-              <bool>True</bool>
+              <bool>False</bool>
+            </value>
+            <key>
+              <string>HangClosing</string>
+            </key>
+            <value>
+              <bool>False</bool>
             </value>
             <key>
               <string>IncludeMessages</string>
             </key>
             <value>
               <string></string>
+            </value>
+            <key>
+              <string>MaxLineLength</string>
+            </key>
+            <value>
+              <int>79</int>
+            </value>
+            <key>
+              <string>NoFixCodes</string>
+            </key>
+            <value>
+              <string>E501</string>
             </value>
             <key>
               <string>RepeatMessages</string>

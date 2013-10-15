@@ -239,8 +239,6 @@ class UserInterface(E5MainWindow):
         
         # now setup the connections
         splash.showMessage(self.trUtf8("Setting up connections..."))
-        app.focusChanged.connect(
-            self.viewmanager.appFocusChanged)
         self.browser.sourceFile[str].connect(
             self.viewmanager.openSourceFile)
         self.browser.sourceFile[str, int].connect(
@@ -453,7 +451,10 @@ class UserInterface(E5MainWindow):
         splash.showMessage(self.trUtf8("Initializing Statusbar..."))
         self.__initStatusbar()
         
-        # Initialise the instance variables.
+        # connect the appFocusChanged signal after all actions are ready
+        app.focusChanged.connect(self.viewmanager.appFocusChanged)
+        
+        # Initialize the instance variables.
         self.currentProg = None
         self.isProg = False
         self.utEditorOpen = False
@@ -1012,7 +1013,19 @@ class UserInterface(E5MainWindow):
 
         for arg in args:
             # handle a request to start with last session
-            if arg == '--start-session':
+            if arg == '--start-file':
+                self.__openOnStartup("File")
+                # ignore all further arguments
+                return
+            elif arg == '--start-multi':
+                self.__openOnStartup("MultiProject")
+                # ignore all further arguments
+                return
+            elif arg == '--start-project':
+                self.__openOnStartup("Project")
+                # ignore all further arguments
+                return
+            elif arg == '--start-session':
                 self.__openOnStartup("Session")
                 # ignore all further arguments
                 return

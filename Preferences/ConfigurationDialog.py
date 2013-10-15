@@ -150,9 +150,6 @@ class ConfigurationWidget(QWidget):
                 "printerPage": \
                     [self.trUtf8("Printer"), "preferences-printer.png",
                     "PrinterPage", None, None],
-                "py3flakesPage": \
-                    [self.trUtf8("PyFlakes"), "warning.png",
-                    "Py3FlakesPage", None, None],
                 "pythonPage": \
                     [self.trUtf8("Python"), "preferences-python.png",
                     "PythonPage", None, None],
@@ -229,7 +226,7 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("Style"), "preferences-styles.png",
                     "EditorStylesPage", "0editorPage", None],
                 "editorSyntaxPage": \
-                    [self.trUtf8("Syntax Checker"), "preferences-debugger.png",
+                    [self.trUtf8("Code Checkers"), "preferences-debugger.png",
                     "EditorSyntaxPage", "0editorPage", None],
                 "editorTypingPage": \
                     [self.trUtf8("Typing"), "preferences-typing.png",

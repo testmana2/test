@@ -173,6 +173,9 @@ def main():
         ("--nosplash", "don't show the splash screen"),
         ("--noopen", "don't open anything at startup except that given in command"),
         ("--plugin=plugin-file", "load the given plugin file (plugin development)"),
+        ("--start-file", "load the most recently opened file"),
+        ("--start-multi", "load the most recently opened multi-project"),
+        ("--start-project", "load the most recently opened project"),
         ("--start-session", "load the global session file"),
         ("--", "indicate that there are options for the program to be debugged"),
         ("", "(everything after that is considered arguments for this program)")

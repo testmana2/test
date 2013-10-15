@@ -67,7 +67,7 @@ object
 </table>
 <a NAME="Pep8Py2Checker.__init__" ID="Pep8Py2Checker.__init__"></a>
 <h4>Pep8Py2Checker (Constructor)</h4>
-<b>Pep8Py2Checker</b>(<i>filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False</i>)
+<b>Pep8Py2Checker</b>(<i>filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False, docType="pep257"</i>)
 <p>
         Constructor
 </p><dl>
@@ -93,7 +93,12 @@ list of message IDs to ignore
 maximum allowed line length (integer)
 </dd><dt><i>hang_closing=</i></dt>
 <dd>
-flag indicating to allow hanging closing brackets (boolean)
+flag indicating to allow hanging closing
+            brackets (boolean)
+</dd><dt><i>docType=</i></dt>
+<dd>
+type of the documentation strings
+            (string, one of 'eric' or 'pep257')
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

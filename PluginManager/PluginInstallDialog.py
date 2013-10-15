@@ -371,7 +371,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 (self.__pluginManager.isPluginLoaded(installedPluginName) and \
                  self.__pluginManager.isPluginActive(installedPluginName))
             # try to unload a plugin with the same name
-            self.__pluginManager.unloadPlugin(installedPluginName, destination)
+            self.__pluginManager.unloadPlugin(installedPluginName)
         
         # uninstall existing plugin first to get clean conditions
         self.__uninstallPackage(destination, pluginFileName, packageName)

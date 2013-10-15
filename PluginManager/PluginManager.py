@@ -335,33 +335,27 @@ class PluginManager(QObject):
             print("Error loading plugin module:",  name)
             print(str(err))
     
-    def unloadPlugin(self, name, directory):
+    def unloadPlugin(self, name):
         """
         Public method to unload a plugin module.
         
         @param name name of the module to be unloaded (string)
-        @param directory name of the plugin directory (string)
         @return flag indicating success (boolean)
         """
-        fname = "{0}.py".format(os.path.join(directory, name))
-        if name in self.__onDemandActiveModules and \
-           self.__onDemandActiveModules[name].eric5PluginModuleFilename == fname:
+        if name in self.__onDemandActiveModules:
             # cannot unload an ondemand plugin, that is in use
             return False
         
-        if name in self.__activeModules and \
-           self.__activeModules[name].eric5PluginModuleFilename == fname:
+        if name in self.__activeModules:
             self.deactivatePlugin(name)
         
-        if name in self.__inactiveModules and \
-           self.__inactiveModules[name].eric5PluginModuleFilename == fname:
+        if name in self.__inactiveModules:
             try:
                 del self.__inactivePlugins[name]
             except KeyError:
                 pass
             del self.__inactiveModules[name]
-        elif name in self.__onDemandInactiveModules and \
-             self.__onDemandInactiveModules[name].eric5PluginModuleFilename == fname:
+        elif name in self.__onDemandInactiveModules:
             try:
                 del self.__onDemandInactivePlugins[name]
             except KeyError:

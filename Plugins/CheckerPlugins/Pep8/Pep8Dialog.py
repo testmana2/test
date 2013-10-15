@@ -14,9 +14,7 @@ import fnmatch
 
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QAbstractButton, \
-    QDialogButtonBox, QApplication, QHeaderView
-
-from . import pep8
+    QDialogButtonBox, QApplication, QHeaderView, QIcon
 
 from E5Gui.E5Application import e5App
 
@@ -25,6 +23,14 @@ from .Ui_Pep8Dialog import Ui_Pep8Dialog
 import UI.PixmapCache
 import Preferences
 import Utilities
+
+from . import pep8
+from .Pep8NamingChecker import Pep8NamingChecker
+
+# register the name checker
+pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
+
+from .Pep257Checker import Pep257Checker
 
 
 class Pep8Report(pep8.BaseReport):
@@ -54,7 +60,10 @@ class Pep8Report(pep8.BaseReport):
         """
         code = super(Pep8Report, self).error_args(line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
-            text = pep8.getMessage(code, *args)
+            if code in Pep8NamingChecker.Codes:
+                text = Pep8NamingChecker.getMessage(code, *args)
+            else:
+                text = pep8.getMessage(code, *args)
             self.errors.append(
                 (self.filename, line_number, offset, text)
             )
@@ -81,6 +90,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         super(Pep8Dialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.docTypeComboBox.addItem(self.trUtf8("PEP-257"), "pep257")
+        self.docTypeComboBox.addItem(self.trUtf8("Eric"), "eric")
+        
         self.statisticsButton = self.buttonBox.addButton(
             self.trUtf8("Statistics..."), QDialogButtonBox.ActionRole)
         self.statisticsButton.setToolTip(
@@ -96,6 +108,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         self.resultList.headerItem().setText(self.resultList.columnCount(), "")
         self.resultList.header().setSortIndicator(0, Qt.AscendingOrder)
+        
+        self.checkProgress.setVisible(False)
+        self.checkProgressLabel.setVisible(False)
+        self.checkProgressLabel.setMaximumWidth(600)
         
         self.noResults = True
         self.cancelled = False
@@ -117,7 +133,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                   self.resultList.header().sortIndicatorOrder()
                                  )
     
-    def __createResultItem(self, file, line, pos, message, fixed):
+    def __createResultItem(self, file, line, pos, message, fixed, autofixing):
         """
         Private method to create an entry in the result list.
         
@@ -126,6 +142,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param pos character position of issue (integer or string)
         @param message message text (string)
         @param fixed flag indicating a fixed issue (boolean)
+        @param autofixing flag indicating, that we are fixing issues
+            automatically (boolean)
+        @return reference to the created item (QTreeWidgetItem)
         """
         from .Pep8Fixer import Pep8FixableIssues
         
@@ -142,11 +161,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             ["{0:6}".format(line), code, message])
         if code.startswith("W"):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
+        elif code.startswith("N"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
+        elif code.startswith("D"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("docstringError.png"))
         else:
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         if fixed:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
-        elif code in Pep8FixableIssues:
+        elif code in Pep8FixableIssues and not autofixing:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixable.png"))
             fixable = True
         
@@ -163,20 +186,26 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         itm.setData(0, self.messageRole, message)
         itm.setData(0, self.fixableRole, fixable)
         itm.setData(0, self.codeRole, code)
+        
+        return itm
     
-    def __modifyFixedResultItem(self, itm, text):
+    def __modifyFixedResultItem(self, itm, text, fixed):
         """
         Private method to modify a result list entry to show its
         positive fixed state.
         
         @param itm reference to the item to modify (QTreeWidgetItem)
         @param text text to be appended (string)
+        @param fixed flag indicating a fixed issue (boolean)
         """
-        message = itm.data(0, self.messageRole) + text
-        itm.setText(2, message)
-        itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
-        
-        itm.setData(0, self.messageRole, message)
+        if fixed:
+            message = itm.data(0, self.messageRole) + text
+            itm.setText(2, message)
+            itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
+            
+            itm.setData(0, self.messageRole, message)
+        else:
+            itm.setIcon(0, QIcon())
         itm.setData(0, self.fixableRole, False)
     
     def __updateStatistics(self, statistics, fixer):
@@ -188,7 +217,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param fixer reference to the PEP 8 fixer (Pep8Fixer)
         """
         self.__statistics["_FilesCount"] += 1
-        if statistics:
+        stats = [k for k in statistics.keys() if k[0].isupper()]
+        if stats:
             self.__statistics["_FilesIssues"] += 1
             for key in statistics:
                 if key in self.__statistics:
@@ -248,6 +278,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.__data["HangClosing"] = False
         if "NoFixCodes" not in self.__data:
             self.__data["NoFixCodes"] = "E501"
+        if "DocstringType" not in self.__data:
+            self.__data["DocstringType"] = "pep257"
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -258,6 +290,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
         self.lineLengthSpinBox.setValue(self.__data["MaxLineLength"])
         self.hangClosingCheckBox.setChecked(self.__data["HangClosing"])
+        self.docTypeComboBox.setCurrentIndex(
+            self.docTypeComboBox.findData(self.__data["DocstringType"]))
     
     def start(self, fn, save=False, repeat=None):
         """
@@ -280,8 +314,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.statisticsButton.setEnabled(False)
         self.showButton.setEnabled(False)
         self.fixButton.setEnabled(False)
+        self.startButton.setEnabled(False)
         if repeat is not None:
             self.repeatCheckBox.setChecked(repeat)
+        self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
         self.__resetStatistics()
@@ -310,8 +346,17 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     [f for f in files
                      if not fnmatch.fnmatch(f, filter.strip())]
         
-        if len(files) > 0:
-            self.checkProgress.setMaximum(len(files))
+        py3files = [f for f in files \
+                    if f.endswith(
+                        tuple(Preferences.getPython("Python3Extensions")))]
+        py2files = [f for f in files \
+                    if f.endswith(
+                        tuple(Preferences.getPython("PythonExtensions")))]
+        
+        if len(py3files) + len(py2files) > 0:
+            self.checkProgress.setMaximum(len(py3files) + len(py2files))
+            self.checkProgressLabel.setVisible(
+                len(py3files) + len(py2files) > 1)
             QApplication.processEvents()
             
             # extract the configuration values
@@ -323,6 +368,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
             maxLineLength = self.lineLengthSpinBox.value()
             hangClosing = self.hangClosingCheckBox.isChecked()
+            docType = self.docTypeComboBox.itemData(
+                self.docTypeComboBox.currentIndex())
             
             try:
                 # disable updates of the list for speed
@@ -331,8 +378,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 
                 # now go through all the files
                 progress = 0
-                for file in files:
+                for file in sorted(py3files + py2files):
                     self.checkProgress.setValue(progress)
+                    self.checkProgressLabel.setPath(file)
                     QApplication.processEvents()
                     
                     if self.cancelled:
@@ -348,10 +396,13 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.noResults = False
                         self.__createResultItem(file, 1, 1,
                             self.trUtf8("Error: {0}").format(str(msg))\
-                                .rstrip()[1:-1], False)
+                                .rstrip()[1:-1], False, False)
                         progress += 1
                         continue
                     
+                    stats = {}
+                    flags = Utilities.extractFlags(source)
+                    ext = os.path.splitext(file)[1]
                     if fixIssues:
                         from .Pep8Fixer import Pep8Fixer
                         fixer = Pep8Fixer(self.__project, file, source,
@@ -359,50 +410,104 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                           True)  # always fix in place
                     else:
                         fixer = None
-                    if includeMessages:
-                        select = [s.strip() for s in includeMessages.split(',')
-                                  if s.strip()]
+                    if ("FileType" in flags and
+                        flags["FileType"] in ["Python", "Python2"]) or \
+                       file in py2files or \
+                       (ext in [".py", ".pyw"] and \
+                        Preferences.getProject("DeterminePyFromProject") and \
+                        self.__project.isOpen() and \
+                        self.__project.isProjectFile(file) and \
+                        self.__project.getProjectLanguage() in ["Python",
+                                                                "Python2"]):
+                        from .Pep8Checker import Pep8Py2Checker
+                        report = Pep8Py2Checker(file, [],
+                            repeat=repeatMessages,
+                            select=includeMessages,
+                            ignore=excludeMessages,
+                            max_line_length=maxLineLength,
+                            hang_closing=hangClosing,
+                            docType=docType,
+                        )
+                        errors = report.errors[:]
+                        stats.update(report.counters)
                     else:
-                        select = []
-                    if excludeMessages:
-                        ignore = [i.strip() for i in excludeMessages.split(',')
-                                  if i.strip()]
-                    else:
-                        ignore = []
-                    styleGuide = pep8.StyleGuide(
-                        reporter=Pep8Report,
-                        repeat=repeatMessages,
-                        select=select,
-                        ignore=ignore,
-                        max_line_length=maxLineLength,
-                        hang_closing=hangClosing,
-                    )
-                    report = styleGuide.check_files([file])
-                    report.errors.sort(key=lambda a: a[1])
-
-                    for fname, lineno, position, text in report.errors:
+                        if includeMessages:
+                            select = [s.strip() for s in includeMessages.split(',')
+                                      if s.strip()]
+                        else:
+                            select = []
+                        if excludeMessages:
+                            ignore = [i.strip() for i in excludeMessages.split(',')
+                                      if i.strip()]
+                        else:
+                            ignore = []
+                        
+                        # check PEP-8
+                        styleGuide = pep8.StyleGuide(
+                            reporter=Pep8Report,
+                            repeat=repeatMessages,
+                            select=select,
+                            ignore=ignore,
+                            max_line_length=maxLineLength,
+                            hang_closing=hangClosing,
+                        )
+                        report = styleGuide.check_files([file])
+                        stats.update(report.counters)
+                        
+                        # check PEP-257
+                        pep257Checker = Pep257Checker(
+                            source, file, select, ignore, [], repeatMessages,
+                            maxLineLength=maxLineLength, docType=docType)
+                        pep257Checker.run()
+                        stats.update(pep257Checker.counters)
+                        
+                        errors = report.errors + pep257Checker.errors
+                    
+                    deferredFixes = {}
+                    for error in errors:
+                        fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
                         if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
                                 source[lineno - 1].strip()):
                             self.noResults = False
-                            fixed = False
                             if fixer:
-                                fixed, msg = fixer.fixIssue(lineno, position, text)
-                                if fixed:
+                                res, msg, id_ = fixer.fixIssue(lineno, position, text)
+                                if res == 1:
                                     text += "\n" + \
                                             self.trUtf8("Fix: {0}").format(msg)
-                            self.__createResultItem(
-                                fname, lineno, position, text, fixed)
+                                    self.__createResultItem(
+                                        fname, lineno, position, text, True, True)
+                                elif res == 0:
+                                    self.__createResultItem(
+                                        fname, lineno, position, text, False, True)
+                                else:
+                                    itm = self.__createResultItem(
+                                        fname, lineno, position,
+                                        text, False, False)
+                                    deferredFixes[id_] = itm
+                            else:
+                                self.__createResultItem(
+                                    fname, lineno, position, text, False, False)
                     if fixer:
+                        deferredResults = fixer.finalize()
+                        for id_ in deferredResults:
+                            fixed, msg = deferredResults[id_]
+                            itm = deferredFixes[id_]
+                            if fixed == 1:
+                                text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                                self.__modifyFixedResultItem(itm, text, True)
+                            else:
+                                self.__modifyFixedResultItem(itm, "", False)
                         fixer.saveFile(encoding)
-                    self.__updateStatistics(report.counters, fixer)
+                    self.__updateStatistics(stats, fixer)
                     progress += 1
             finally:
                 # reenable updates of the list
                 self.resultList.setSortingEnabled(True)
                 self.resultList.setUpdatesEnabled(True)
             self.checkProgress.setValue(progress)
+            self.checkProgressLabel.setPath("")
             QApplication.processEvents()
             self.__resort()
         else:
@@ -421,6 +526,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.statisticsButton.setEnabled(True)
         self.showButton.setEnabled(True)
+        self.startButton.setEnabled(True)
         
         if self.noResults:
             QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
@@ -433,6 +539,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
+        
+        self.checkProgress.setVisible(False)
+        self.checkProgressLabel.setVisible(False)
     
     @pyqtSlot()
     def on_startButton_clicked(self):
@@ -450,6 +559,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "FixIssues": self.fixIssuesCheckBox.isChecked(),
                 "MaxLineLength": self.lineLengthSpinBox.value(),
                 "HangClosing": self.hangClosingCheckBox.isChecked(),
+                "DocstringType": self.docTypeComboBox.itemData(
+                    self.docTypeComboBox.currentIndex()),
             }
             if data != self.__data:
                 self.__data = data
@@ -522,12 +633,17 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             lineno = item.data(0, self.lineRole)
             position = item.data(0, self.positionRole)
             message = item.data(0, self.messageRole)
+            code = item.data(0, self.codeRole)
             
             vm = e5App().getObject("ViewManager")
             vm.openSourceFile(fn, lineno=lineno, pos=position + 1)
             editor = vm.getOpenEditor(fn)
             
-            editor.toggleFlakesWarning(lineno, True, message)
+            if code == "E901":
+                editor.toggleSyntaxError(lineno, 0, True, message, True)
+            else:
+                editor.toggleFlakesWarning(
+                    lineno, True, message, warningType=editor.WarningStyle)
     
     @pyqtSlot()
     def on_resultList_itemSelectionChanged(self):
@@ -606,6 +722,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)))
         self.hangClosingCheckBox.setChecked(Preferences.toBool(
             Preferences.Prefs.settings.value("PEP8/HangClosing")))
+        self.docTypeComboBox.setCurrentIndex(self.docTypeComboBox.findData(
+            Preferences.Prefs.settings.value("PEP8/DocstringType", "pep257")))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -631,13 +749,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.lineLengthSpinBox.value())
         Preferences.Prefs.settings.setValue("PEP8/HangClosing",
             self.hangClosingCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue("PEP8/DocstringType",
+            self.docTypeComboBox.itemData(
+                self.docTypeComboBox.currentIndex()))
     
     @pyqtSlot()
     def on_resetDefaultButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to reset the configuration values to their default values.
         """
-        raise NotImplementedError
         Preferences.Prefs.settings.setValue("PEP8/ExcludeFilePatterns", "")
         Preferences.Prefs.settings.setValue("PEP8/ExcludeMessages",
             pep8.DEFAULT_IGNORE)
@@ -649,6 +769,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
             pep8.MAX_LINE_LENGTH)
         Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
+        Preferences.Prefs.settings.setValue("PEP8/DocstringType", "pep257")
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):
@@ -681,7 +802,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         """
         Private slot to fix selected issues.
         """
-        # TODO: test this
         from .Pep8Fixer import Pep8Fixer
         
         # build a dictionary of issues to fix
@@ -721,6 +841,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     progress += 1
                     continue
                 
+                deferredFixes = {}
+                # TODO: add docstring type
                 fixer = Pep8Fixer(self.__project, file, source,
                                   fixCodes, noFixCodes, maxLineLength,
                                   True)  # always fix in place
@@ -730,10 +852,24 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     (lineno, position, text), itm = error
                     if lineno > len(source):
                         lineno = len(source)
-                    fixed, msg = fixer.fixIssue(lineno, position, text)
-                    if fixed:
+                    fixed, msg, id_ = fixer.fixIssue(lineno, position, text)
+                    if fixed == 1:
                         text = "\n" + self.trUtf8("Fix: {0}").format(msg)
-                        self.__modifyFixedResultItem(itm, text)
+                        self.__modifyFixedResultItem(itm, text, True)
+                    elif fixed == 0:
+                        self.__modifyFixedResultItem(itm, "", False)
+                    else:
+                        # remember item for the deferred fix
+                        deferredFixes[id_] = itm
+                deferredResults = fixer.finalize()
+                for id_ in deferredResults:
+                    fixed, msg = deferredResults[id_]
+                    itm = deferredFixes[id_]
+                    if fixed == 1:
+                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                        self.__modifyFixedResultItem(itm, text, True)
+                    else:
+                        self.__modifyFixedResultItem(itm, "", False)
                 fixer.saveFile(encoding)
                 
                 self.__updateFixerStatistics(fixer)

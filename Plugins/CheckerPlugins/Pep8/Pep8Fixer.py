@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a class to fix certain PEP 8 issues.
+Module implementing a class to fix certain code style issues.
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
@@ -22,21 +22,26 @@ from . import pep8
 
 import Utilities
 
-Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
-                     "E125", "E126", "E127", "E128", "E133", "W191",
-                     "E201", "E202", "E203", "E211", "E221", "E222",
-                     "E223", "E224", "E225", "E226", "E227", "E228",
-                     "E231", "E241", "E242", "E251", "E261", "E262",
-                     "E271", "E272", "E273", "E274", "W291", "W292",
-                     "W293", "E301", "E302", "E303", "E304", "W391",
-                     "E401", "E501", "E502", "W603", "E701", "E702",
-                     "E703", "E711", "E712"
-                    ]
+Pep8FixableIssues = ["D111", "D112", "D113", "D121", "D131", "D141",
+                     "D142", "D143", "D144", "D145",
+                     "D221", "D222", "D231", "D242", "D243", "D244",
+                     "D245", "D246", "D247",
+                     "E101", "E111", "E121", "E122", "E123", "E124",
+                     "E125", "E126", "E127", "E128", "E133", "E201",
+                     "E202", "E203", "E211", "E221", "E222", "E223",
+                     "E224", "E225", "E226", "E227", "E228", "E231",
+                     "E241", "E242", "E251", "E261", "E262", "E271",
+                     "E272", "E273", "E274", "E301", "E302", "E303",
+                     "E304", "E401", "E501", "E502", "E701", "E702",
+                     "E703", "E711", "E712",
+                     "N804", "N805", "N806",
+                     "W191", "W291", "W292", "W293", "W391", "W603",
+                     ]
 
 
 class Pep8Fixer(QObject):
     """
-    Class implementing a fixer for certain PEP 8 issues.
+    Class implementing a fixer for certain code style issues.
     """
     def __init__(self, project, filename, sourceLines, fixCodes, noFixCodes,
                  maxLineLength, inPlace):
@@ -72,10 +77,30 @@ class Pep8Fixer(QObject):
         
         if not inPlace:
             self.__origName = self.__filename
-            self.__filename = os.path.join(os.path.dirname(self.__filename),
+            self.__filename = os.path.join(
+                os.path.dirname(self.__filename),
                 "fixed_" + os.path.basename(self.__filename))
         
         self.__fixes = {
+            "D111": self.__fixD111,
+            "D112": self.__fixD112,
+            "D113": self.__fixD112,
+            "D121": self.__fixD121,
+            "D131": self.__fixD131,
+            "D141": self.__fixD141,
+            "D142": self.__fixD142,
+            "D143": self.__fixD143,
+            "D144": self.__fixD144,
+            "D145": self.__fixD145,
+            "D221": self.__fixD221,
+            "D222": self.__fixD221,
+            "D231": self.__fixD131,
+            "D242": self.__fixD242,
+            "D243": self.__fixD243,
+            "D244": self.__fixD242,
+            "D245": self.__fixD243,
+            "D246": self.__fixD144,
+            "D247": self.__fixD247,
             "E101": self.__fixE101,
             "E111": self.__fixE101,
             "E121": self.__fixE121,
@@ -87,7 +112,6 @@ class Pep8Fixer(QObject):
             "E127": self.__fixE127,
             "E128": self.__fixE127,
             "E133": self.__fixE126,
-            "W191": self.__fixE101,
             "E201": self.__fixE201,
             "E202": self.__fixE201,
             "E203": self.__fixE201,
@@ -110,23 +134,27 @@ class Pep8Fixer(QObject):
             "E272": self.__fixE221,
             "E273": self.__fixE221,
             "E274": self.__fixE221,
-            "W291": self.__fixW291,
-            "W292": self.__fixW292,
-            "W293": self.__fixW291,
             "E301": self.__fixE301,
             "E302": self.__fixE302,
             "E303": self.__fixE303,
             "E304": self.__fixE304,
-            "W391": self.__fixW391,
             "E401": self.__fixE401,
             "E501": self.__fixE501,
             "E502": self.__fixE502,
-            "W603": self.__fixW603,
             "E701": self.__fixE701,
             "E702": self.__fixE702,
             "E703": self.__fixE702,
             "E711": self.__fixE711,
             "E712": self.__fixE711,
+            "N804": self.__fixN804,
+            "N805": self.__fixN804,
+            "N806": self.__fixN806,
+            "W191": self.__fixE101,
+            "W291": self.__fixW291,
+            "W292": self.__fixW292,
+            "W293": self.__fixW291,
+            "W391": self.__fixW391,
+            "W603": self.__fixW603,
         }
         self.__modified = False
         self.__stackLogical = []    # these need to be fixed before the file
@@ -137,6 +165,8 @@ class Pep8Fixer(QObject):
         
         self.__multiLineNumbers = None
         self.__docLineNumbers = None
+        
+        self.__lastID = 0
     
     def saveFile(self, encoding):
         """
@@ -149,19 +179,17 @@ class Pep8Fixer(QObject):
             # no need to write
             return True
         
-        # apply deferred fixes
-        self.__finalize()
-        
         txt = "".join(self.__source)
         try:
             Utilities.writeEncodedFile(self.__filename, txt, encoding)
         except (IOError, Utilities.CodingError, UnicodeError) as err:
-            E5MessageBox.critical(self,
-                self.trUtf8("Fix PEP 8 issues"),
+            E5MessageBox.critical(
+                self,
+                self.trUtf8("Fix Code Style Issues"),
                 self.trUtf8(
                     """<p>Could not save the file <b>{0}</b>."""
                     """ Skipping it.</p><p>Reason: {1}</p>""")
-                    .format(self.__filename, str(err))
+                .format(self.__filename, str(err))
             )
             return False
         
@@ -204,8 +232,9 @@ class Pep8Fixer(QObject):
         @param line line number of issue (integer)
         @param pos character position of issue (integer)
         @param message message text (string)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         code = message.split(None, 1)[0].strip()
         
@@ -213,25 +242,46 @@ class Pep8Fixer(QObject):
            self.__codeMatch(code) and \
            code in self.__fixes:
             res = self.__fixes[code](code, line, pos)
-            if res[0]:
+            if res[0] == 1:
                 self.__modified = True
                 self.fixed += 1
         else:
-            res = (False, "")
+            res = (0, "", 0)
         
         return res
     
-    def __finalize(self):
+    def finalize(self):
         """
-        Private method to apply all deferred fixes.
+        Public method to apply all deferred fixes.
         """
+        results = {}
+        
         # step 1: do fixes operating on logical lines first
-        for code, line, pos in self.__stackLogical:
-            self.__fixes[code](code, line, pos, apply=True)
+        for id_, code, line, pos in self.__stackLogical:
+            res, msg, _ = self.__fixes[code](code, line, pos, apply=True)
+            if res == 1:
+                self.__modified = True
+                self.fixed += 1
+            results[id_] = (res, msg)
         
         # step 2: do fixes that change the number of lines
-        for code, line, pos in reversed(self.__stack):
-            self.__fixes[code](code, line, pos, apply=True)
+        for id_, code, line, pos in reversed(self.__stack):
+            res, msg, _ = self.__fixes[code](code, line, pos, apply=True)
+            if res == 1:
+                self.__modified = True
+                self.fixed += 1
+            results[id_] = (res, msg)
+        
+        return results
+    
+    def __getID(self):
+        """
+        Private method to get the ID for a deferred fix.
+        
+        @return ID for a deferred fix (integer)
+        """
+        self.__lastID += 1
+        return self.__lastID
     
     def __getEol(self):
         """
@@ -434,6 +484,392 @@ class Pep8Fixer(QObject):
         else:
             return left + replacement + right
     
+    def __fixD111(self, code, line, pos):
+        """
+        Private method to fix docstring enclosed in wrong quotes (D111).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        left, right = self.__source[line].split("'''", 1)
+        self.__source[line] = left + '"""' + right
+        while line < len(self.__source):
+            if self.__source[line].rstrip().endswith("'''"):
+                left, right = self.__source[line].rsplit("'''", 1)
+                self.__source[line] = left + '"""' + right
+                break
+            line += 1
+        
+        return (
+            1,
+            self.trUtf8(
+                "Triple single quotes converted to triple double quotes."),
+            0)
+    
+    def __fixD112(self, code, line, pos):
+        """
+        Private method to fix docstring 'r' or 'u' in leading quotes
+        (D112, D113).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        if code == "D112":
+            insertChar = "r"
+        elif code == "D113":
+            insertChar = "u"
+        else:
+            return (0, "", 0)
+        
+        newText = self.__getIndent(self.__source[line]) + \
+            insertChar + self.__source[line].lstrip()
+        self.__source[line] = newText
+        return (
+            1,
+            self.trUtf8('Introductory quotes corrected to be {0}"""')
+                .format(insertChar),
+            0)
+    
+    def __fixD121(self, code, line, pos, apply=False):
+        """
+        Private method to fix a single line docstring on multiple lines (D121).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            if not self.__source[line].lstrip().startswith(
+                    ('"""', 'r"""', 'u"""')):
+                # only correctly formatted docstrings will be fixed
+                return (0, "", 0)
+            
+            docstring = self.__source[line].rstrip() + \
+                self.__source[line + 1].strip()
+            if docstring.endswith('"""'):
+                docstring += self.__getEol()
+            else:
+                docstring += self.__source[line + 2].lstrip()
+                self.__source[line + 2] = ""
+            
+            self.__source[line] = docstring
+            self.__source[line + 1] = ""
+            return (
+                1,
+                self.trUtf8("Single line docstring put on one line."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD131(self, code, line, pos):
+        """
+        Private method to fix a docstring summary not ending with a
+        period (D131).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        newText = ""
+        if self.__source[line].rstrip().endswith(('"""', "'''")) and \
+           self.__source[line].lstrip().startswith(('"""', 'r"""', 'u"""')):
+            # it is a one-liner
+            newText = self.__source[line].rstrip()[:-3].rstrip() + "." + \
+                self.__source[line].rstrip()[-3:] + self.__getEol()
+        else:
+            if line < len(self.__source) - 1 and \
+                (not self.__source[line + 1].strip() or
+                 self.__source[line + 1].lstrip().startswith("@") or
+                 (self.__source[line + 1].strip() in ('"""', "'''") and
+                  not self.__source[line].lstrip().startswith("@"))):
+                newText = self.__source[line].rstrip() + "." + self.__getEol()
+        
+        if newText:
+            self.__source[line] = newText
+            return (1, self.trUtf8("Period added to summary line."), 0)
+        else:
+            return (0, "", 0)
+    
+    def __fixD141(self, code, line, pos, apply=False):
+        """
+        Private method to fix a function/method docstring preceded by a
+        blank line (D141).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line - 1] = ""
+            return (
+                1,
+                self.trUtf8(
+                    "Blank line before function/method docstring removed."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD142(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class docstring not preceded by a
+        blank line (D142).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line] = self.__getEol() + self.__source[line]
+            return (
+                1,
+                self.trUtf8("Blank line inserted before class docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD143(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class docstring not followed by a
+        blank line (D143).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line] += self.__getEol()
+            return (
+                1,
+                self.trUtf8("Blank line inserted after class docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD144(self, code, line, pos, apply=False):
+        """
+        Private method to fix a docstring summary not followed by a
+        blank line (D144).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            if not self.__source[line].rstrip().endswith("."):
+                # only correct summary lines can be fixed here
+                return (0, "", 0)
+            
+            self.__source[line] += self.__getEol()
+            return (
+                1,
+                self.trUtf8("Blank line inserted after docstring summary."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD145(self, code, line, pos, apply=False):
+        """
+        Private method to fix the last paragraph of a multi-line docstring
+        not followed by a blank line (D143).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line] = self.__getEol() + self.__source[line]
+            return (
+                1,
+                self.trUtf8("Blank line inserted after last paragraph"
+                            " of docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD221(self, code, line, pos, apply=False):
+        """
+        Private method to fix leading and trailing quotes of docstring
+        not on separate lines (D221, D222).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            indent = self.__getIndent(self.__source[line])
+            source = self.__source[line].strip()
+            if code == "D221":
+                # leading
+                if source.startswith(("r", "u")):
+                    first, second = source[:4], source[4:].strip()
+                else:
+                    first, second = source[:3], source[3:].strip()
+            else:
+                # trailing
+                first, second = source[:-3].strip(), source[-3:]
+            newText = indent + first + self.__getEol() + \
+                indent + second + self.__getEol()
+            self.__source[line] = newText
+            if code == "D221":
+                msg = self.trUtf8("Leading quotes put on separate line.")
+            else:
+                msg = self.trUtf8("Trailing quotes put on separate line.")
+            return (1, msg, 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD242(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class or function/method docstring preceded
+        by a blank line (D242, D244).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line - 1] = ""
+            if code == "D242":
+                msg = self.trUtf8("Blank line before class docstring removed.")
+            else:
+                msg = self.trUtf8(
+                    "Blank line before function/method docstring removed.")
+            return (1, msg, 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD243(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class or function/method docstring followed
+        by a blank line (D243, D245).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line + 1] = ""
+            if code == "D243":
+                msg = self.trUtf8("Blank line after class docstring removed.")
+            else:
+                msg = self.trUtf8(
+                    "Blank line after function/method docstring removed.")
+            return (1, msg, 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD247(self, code, line, pos, apply=False):
+        """
+        Private method to fix a last paragraph of a docstring followed
+        by a blank line (D247).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line - 1] = ""
+            return (
+                1,
+                self.trUtf8("Blank line after last paragraph removed."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
     def __fixE101(self, code, line, pos):
         """
         Private method to fix obsolete tab usage and indentation errors
@@ -442,49 +878,57 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if self.__reindenter is None:
             self.__reindenter = Pep8Reindenter(self.__source)
             self.__reindenter.run()
         fixedLine = self.__reindenter.fixedLine(line - 1)
-        if fixedLine is not None:
+        if fixedLine is not None and fixedLine != self.__source[line - 1]:
             self.__source[line - 1] = fixedLine
             if code in ["E101", "W191"]:
                 msg = self.trUtf8("Tab converted to 4 spaces.")
             else:
                 msg = self.trUtf8(
                     "Indentation adjusted to be a multiple of four.")
-            return (True, msg)
+            return (1, msg, 0)
         else:
-            return (False, self.trUtf8("Fix for {0} failed.").format(code))
+            return (0, "", 0)
     
     def __fixE121(self, code, line, pos, apply=False):
         """
         Private method to fix the indentation of continuation lines and
-        closing brackets (E121,E124).
+        closing brackets (E121, E124).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             logical = self.__getLogical(line, pos)
             if logical:
                 # Fix by adjusting initial indent level.
-                self.__fixReindent(line, pos, logical)
+                changed = self.__fixReindent(line, pos, logical)
+                if changed:
+                    if code == "E121":
+                        msg = self.trUtf8(
+                            "Indentation of continuation line corrected.")
+                    elif code == "E124":
+                        msg = self.trUtf8(
+                            "Indentation of closing bracket corrected.")
+                    return (1, msg, 0)
+            return (0, "", 0)
         else:
-            self.__stackLogical.append((code, line, pos))
-        if code == "E121":
-            msg = self.trUtf8("Indentation of continuation line corrected.")
-        elif code == "E124":
-            msg = self.trUtf8("Indentation of closing bracket corrected.")
-        return (True, msg)
+            id = self.__getID()
+            self.__stackLogical.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE122(self, code, line, pos, apply=False):
         """
@@ -496,8 +940,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             logical = self.__getLogical(line, pos)
@@ -511,11 +956,16 @@ class Pep8Fixer(QObject):
                     indentation = self.__getIndent(text)
                     self.__source[line] = indentation + \
                         self.__indentWord + text.lstrip()
+                return (
+                    1,
+                    self.trUtf8(
+                        "Missing indentation of continuation line corrected."),
+                    0)
+            return (0, "", 0)
         else:
-            self.__stackLogical.append((code, line, pos))
-        return (
-            True,
-            self.trUtf8("Missing indentation of continuation line corrected."))
+            id = self.__getID()
+            self.__stackLogical.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE123(self, code, line, pos, apply=False):
         """
@@ -527,8 +977,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             logical = self.__getLogical(line, pos)
@@ -540,13 +991,19 @@ class Pep8Fixer(QObject):
                 newText = self.__getIndent(logicalLines[0]) + text.lstrip()
                 if newText == text:
                     # fall back to slower method
-                    self.__fixReindent(line, pos, logical)
+                    changed = self.__fixReindent(line, pos, logical)
                 else:
                     self.__source[row] = newText
+                    changed = True
+                if changed:
+                    return (1, self.trUtf8(
+                        "Closing bracket aligned to opening bracket."),
+                        0)
+            return (0, "", 0)
         else:
-            self.__stackLogical.append((code, line, pos))
-        return (
-            True, self.trUtf8("Closing bracket aligned to opening bracket."))
+            id = self.__getID()
+            self.__stackLogical.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE125(self, code, line, pos, apply=False):
         """
@@ -558,8 +1015,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             logical = self.__getLogical(line, pos)
@@ -571,9 +1029,12 @@ class Pep8Fixer(QObject):
                     text = self.__source[row]
                     self.__source[row] = self.__getIndent(text) + \
                         self.__indentWord + text.lstrip()
+                return (1, self.trUtf8("Indentation level changed."), 0)
+            return (0, "", 0)
         else:
-            self.__stackLogical.append((code, line, pos))
-        return (True, self.trUtf8("Indentation level changed."))
+            id = self.__getID()
+            self.__stackLogical.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE126(self, code, line, pos, apply=False):
         """
@@ -585,8 +1046,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             logical = self.__getLogical(line, pos)
@@ -599,14 +1061,19 @@ class Pep8Fixer(QObject):
                     self.__indentWord + text.lstrip()
                 if newText == text:
                     # fall back to slower method
-                    self.__fixReindent(line, pos, logical)
+                    changed = self.__fixReindent(line, pos, logical)
                 else:
                     self.__source[row] = newText
+                    changed = True
+                if changed:
+                    return (1, self.trUtf8(
+                        "Indentation level of hanging indentation changed."),
+                        0)
+            return (0, "", 0)
         else:
-            self.__stackLogical.append((code, line, pos))
-        return (
-            True,
-            self.trUtf8("Indentation level of hanging indentation changed."))
+            id = self.__getID()
+            self.__stackLogical.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE127(self, code, line, pos, apply=False):
         """
@@ -617,8 +1084,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             logical = self.__getLogical(line, pos)
@@ -647,12 +1115,17 @@ class Pep8Fixer(QObject):
                     
                 if newText == text:
                     # fall back to slower method
-                    self.__fixReindent(line, pos, logical)
+                    changed = self.__fixReindent(line, pos, logical)
                 else:
                     self.__source[row] = newText
+                    changed = True
+                if changed:
+                    return (1, self.trUtf8("Visual indentation corrected."), 0)
+            return (0, "", 0)
         else:
-            self.__stackLogical.append((code, line, pos))
-        return (True, self.trUtf8("Visual indentation corrected."))
+            id = self.__getID()
+            self.__stackLogical.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE201(self, code, line, pos):
         """
@@ -662,22 +1135,22 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         line = line - 1
         text = self.__source[line]
         
         if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
-            return (
-                False, self.trUtf8("Extraneous whitespace cannot be removed."))
+            return (0, "", 0)
         
         newText = self.__fixWhitespace(text, pos, '')
         if newText == text:
-            return (False, "")
+            return (0, "", 0)
         
         self.__source[line] = newText
-        return (True, self.trUtf8("Extraneous whitespace removed."))
+        return (1, self.trUtf8("Extraneous whitespace removed."), 0)
     
     def __fixE221(self, code, line, pos):
         """
@@ -688,25 +1161,25 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         line = line - 1
         text = self.__source[line]
         
         if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
-            return (
-                False, self.trUtf8("Extraneous whitespace cannot be removed."))
+            return (0, "", 0)
         
         newText = self.__fixWhitespace(text, pos, ' ')
         if newText == text:
-            return (False, "")
+            return (0, "", 0)
         
         self.__source[line] = newText
         if code in ["E225", "E226", "E227", "E228"]:
-            return (True, self.trUtf8("Missing whitespace added."))
+            return (1, self.trUtf8("Missing whitespace added."), 0)
         else:
-            return (True, self.trUtf8("Extraneous whitespace removed."))
+            return (1, self.trUtf8("Extraneous whitespace removed."), 0)
     
     def __fixE231(self, code, line, pos):
         """
@@ -715,15 +1188,15 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         line = line - 1
         pos = pos + 1
         self.__source[line] = self.__source[line][:pos] + \
-                               " " + \
-                               self.__source[line][pos:]
-        return (True, self.trUtf8("Missing whitespace added."))
+            " " + self.__source[line][pos:]
+        return (1, self.trUtf8("Missing whitespace added."), 0)
     
     def __fixE251(self, code, line, pos):
         """
@@ -733,8 +1206,9 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         line = line - 1
         text = self.__source[line]
@@ -757,7 +1231,7 @@ class Pep8Fixer(QObject):
             self.__source[line + 1] = self.__source[line + 1].lstrip()
         else:
             self.__source[line] = newText
-        return (True, self.trUtf8("Extraneous whitespace removed."))
+        return (1, self.trUtf8("Extraneous whitespace removed."), 0)
     
     def __fixE261(self, code, line, pos):
         """
@@ -767,8 +1241,9 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         line = line - 1
         text = self.__source[line]
@@ -776,7 +1251,7 @@ class Pep8Fixer(QObject):
         right = text[pos:].lstrip(' \t#')
         newText = left + ("  # " + right if right.strip() else right)
         self.__source[line] = newText
-        return (True, self.trUtf8("Whitespace around comment sign corrected."))
+        return (1, self.trUtf8("Whitespace around comment sign corrected."), 0)
     
     def __fixE301(self, code, line, pos, apply=False):
         """
@@ -787,14 +1262,17 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             self.__source.insert(line - 1, self.__getEol())
+            return (1, self.trUtf8("One blank line inserted."), 0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("One blank line inserted."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE302(self, code, line, pos, apply=False):
         """
@@ -805,43 +1283,54 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
-        # count blank lines
-        index = line - 1
-        blanks = 0
-        while index:
-            if self.__source[index - 1].strip() == "":
-                blanks += 1
-                index -= 1
-            else:
-                break
-        delta = blanks - 2
-        
         if apply:
+            # count blank lines
+            index = line - 1
+            blanks = 0
+            while index:
+                if self.__source[index - 1].strip() == "":
+                    blanks += 1
+                    index -= 1
+                else:
+                    break
+            delta = blanks - 2
+            
             line -= 1
             if delta < 0:
                 # insert blank lines (one or two)
                 while delta < 0:
                     self.__source.insert(line, self.__getEol())
                     delta += 1
+                changed = True
             elif delta > 0:
                 # delete superfluous blank lines
                 while delta > 0:
                     del self.__source[line - 1]
                     line -= 1
                     delta -= 1
+                changed = True
+            else:
+                changed = False
+            
+            if changed:
+                if delta < 0:
+                    msg = self.trUtf8(
+                        "%n blank line(s) inserted.", "", -delta)
+                elif delta > 0:
+                    msg = self.trUtf8(
+                        "%n superfluous lines removed", "", delta)
+                else:
+                    msg = ""
+                return (1, msg, 0)
+            return (0, "", 0)
         else:
-            self.__stack.append((code, line, pos))
-        
-        if delta < 0:
-            msg = self.trUtf8("%n blank line(s) inserted.", "", -delta)
-        elif delta > 0:
-            msg = self.trUtf8("%n superfluous lines removed", "", delta)
-        else:
-            msg = ""
-        return (True, msg)
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE303(self, code, line, pos, apply=False):
         """
@@ -852,8 +1341,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             index = line - 3
@@ -863,9 +1353,11 @@ class Pep8Fixer(QObject):
                     index -= 1
                 else:
                     break
+            return (1, self.trUtf8("Superfluous blank lines removed."), 0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("Superfluous blank lines removed."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE304(self, code, line, pos, apply=False):
         """
@@ -877,8 +1369,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             index = line - 2
@@ -888,10 +1381,13 @@ class Pep8Fixer(QObject):
                     index -= 1
                 else:
                     break
+            return (1, self.trUtf8(
+                "Superfluous blank lines after function decorator removed."),
+                0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8(
-            "Superfluous blank lines after function decorator removed."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE401(self, code, line, pos, apply=False):
         """
@@ -902,27 +1398,30 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             line = line - 1
             text = self.__source[line]
             if not text.lstrip().startswith("import"):
-                return (False, "")
+                return (0, "", 0)
             
             # pep8 (1.3.1) reports false positive if there is an import
             # statement followed by a semicolon and some unrelated
             # statement with commas in it.
             if ';' in text:
-                return (False, "")
+                return (0, "", 0)
             
             newText = text[:pos].rstrip("\t ,") + self.__getEol() + \
                 self.__getIndent(text) + "import " + text[pos:].lstrip("\t ,")
             self.__source[line] = newText
+            return (1, self.trUtf8("Imports were put on separate lines."), 0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("Imports were put on separate lines."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE501(self, code, line, pos, apply=False):
         """
@@ -933,8 +1432,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         multilineStringLines, docStringLines = self.__multilineStringLines()
         if apply:
@@ -949,18 +1449,23 @@ class Pep8Fixer(QObject):
                 nextText = self.__source[line + 1]
             else:
                 nextText = ""
-            shortener = Pep8LineShortener(text, prevText, nextText,
-                 maxLength=self.__maxLineLength, eol=self.__getEol(),
-                 indentWord=self.__indentWord, isDocString=isDocString)
+            shortener = Pep8LineShortener(
+                text, prevText, nextText,
+                maxLength=self.__maxLineLength, eol=self.__getEol(),
+                indentWord=self.__indentWord, isDocString=isDocString)
             changed, newText, newNextText = shortener.shorten()
             if changed:
                 if newText != text:
                     self.__source[line] = newText
                 if newNextText and newNextText != nextText:
                     self.__source[line + 1] = newNextText
+                return (1, self.trUtf8("Long lines have been shortened."), 0)
+            else:
+                return (0, "", 0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("Long lines have been shortened."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE502(self, code, line, pos):
         """
@@ -969,24 +1474,26 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         self.__source[line - 1] = \
             self.__source[line - 1].rstrip("\n\r \t\\") + self.__getEol()
-        return (True, self.trUtf8("Redundant backslash in brackets removed."))
+        return (1, self.trUtf8("Redundant backslash in brackets removed."), 0)
     
     def __fixE701(self, code, line, pos, apply=False):
         """
-        Private method to fix colon-separated compund statements (E701).
+        Private method to fix colon-separated compound statements (E701).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             line = line - 1
@@ -997,9 +1504,11 @@ class Pep8Fixer(QObject):
                 self.__indentWord + text[pos:].lstrip("\n\r \t\\") + \
                 self.__getEol()
             self.__source[line] = newText
+            return (1, self.trUtf8("Compound statement corrected."), 0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("Compound statement corrected."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE702(self, code, line, pos, apply=False):
         """
@@ -1011,8 +1520,9 @@ class Pep8Fixer(QObject):
         @param pos position inside line (integer)
         @keyparam apply flag indicating, that the fix should be applied
             (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         if apply:
             line = line - 1
@@ -1028,9 +1538,11 @@ class Pep8Fixer(QObject):
                 first = text[:pos].rstrip("\n\r \t;") + self.__getEol()
                 second = text[pos:].lstrip("\n\r \t;")
                 self.__source[line] = first + self.__getIndent(text) + second
+            return (1, self.trUtf8("Compound statement corrected."), 0)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("Compound statement corrected."))
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE711(self, code, line, pos):
         """
@@ -1039,32 +1551,133 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         line = line - 1
         text = self.__source[line]
         
         rightPos = pos + 2
         if rightPos >= len(text):
-            return (False, "")
+            return (0, "", 0)
         
         left = text[:pos].rstrip()
         center = text[pos:rightPos]
         right = text[rightPos:].lstrip()
         
         if not right.startswith(("None", "True", "False")):
-            return (False, "")
+            return (0, "", 0)
         
         if center.strip() == "==":
             center = "is"
         elif center.strip() == "!=":
             center = "is not"
         else:
-            return (False, "")
+            return (0, "", 0)
         
         self.__source[line] = " ".join([left, center, right])
-        return (True, self.trUtf8("Comparison to None/True/False corrected."))
+        return (1, self.trUtf8("Comparison to None/True/False corrected."), 0)
+    
+    def __fixN804(self, code, line, pos, apply=False):
+        """
+        Private method to fix a wrong first argument of normal and
+        class methods (N804, N805).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            if code == "N804":
+                arg = "cls"
+            else:
+                arg = "self"
+            
+            if text.rstrip().endswith("("):
+                newText = text + self.__getIndent(text) + \
+                    self.__indentWord + arg + "," + self.__getEol()
+            else:
+                index = text.find("(") + 1
+                left = text[:index]
+                right = text[index:]
+                if right.startswith(")"):
+                    center = arg
+                else:
+                    center = arg + ", "
+                newText = left + center + right
+            self.__source[line] = newText
+            return (1, self.trUtf8("'{0}' argument added.").format(arg), 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixN806(self, code, line, pos, apply=False):
+        """
+        Private method to fix a wrong first argument of static methods
+        (N806).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            index = text.find("(") + 1
+            left = text[:index]
+            right = text[index:]
+            
+            if right.startswith(("cls", "self")):
+                # cls or self are on the definition line
+                if right.startswith("cls"):
+                    right = right[3:]
+                    arg = "cls"
+                else:
+                    right = right[4:]
+                    arg = "self"
+                right = right.lstrip(", ")
+                newText = left + right
+                self.__source[line] = newText
+            else:
+                # they are on the next line
+                line = line + 1
+                text = self.__source[line]
+                indent = self.__getIndent(text)
+                right = text.lstrip()
+                if right.startswith("cls"):
+                    right = right[3:]
+                    arg = "cls"
+                else:
+                    right = right[4:]
+                    arg = "self"
+                right = right.lstrip(", ")
+                if right.startswith("):"):
+                    # merge with previous line
+                    self.__source[line - 1] = \
+                        self.__source[line - 1].rstrip() + right
+                    self.__source[line] = ""
+                else:
+                    self.__source[line] = indent + right
+            
+            return (1, self.trUtf8("'{0}' argument removed.").format(arg), 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixW291(self, code, line, pos):
         """
@@ -1073,12 +1686,13 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         self.__source[line - 1] = re.sub(r'[\t ]+(\r?)$', r"\1",
                                          self.__source[line - 1])
-        return (True, self.trUtf8("Whitespace stripped from end of line."))
+        return (1, self.trUtf8("Whitespace stripped from end of line."), 0)
     
     def __fixW292(self, code, line, pos):
         """
@@ -1087,11 +1701,12 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         self.__source[line - 1] += self.__getEol()
-        return (True, self.trUtf8("newline added to end of file."))
+        return (1, self.trUtf8("newline added to end of file."), 0)
     
     def __fixW391(self, code, line, pos):
         """
@@ -1100,8 +1715,9 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         index = line - 1
         while index:
@@ -1110,8 +1726,8 @@ class Pep8Fixer(QObject):
                 index -= 1
             else:
                 break
-        return (True, self.trUtf8(
-            "Superfluous trailing blank lines removed from end of file."))
+        return (1, self.trUtf8(
+            "Superfluous trailing blank lines removed from end of file."), 0)
     
     def __fixW603(self, code, line, pos):
         """
@@ -1120,11 +1736,12 @@ class Pep8Fixer(QObject):
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
         """
         self.__source[line - 1] = self.__source[line - 1].replace("<>", "!=")
-        return (True, self.trUtf8("'<>' replaced by '!='."))
+        return (1, self.trUtf8("'<>' replaced by '!='."), 0)
 
 
 class Pep8Reindenter(object):
@@ -1678,6 +2295,8 @@ class Pep8LineShortener(object):
             candidates = list(sorted(
                 set(candidates).union([self.__text]),
                 key=lambda x: self.__lineShorteningRank(x)))
+            if candidates[0] == self.__text:
+                return False, "", ""
             return True, candidates[0], ""
         
         source = self.__text
@@ -1698,7 +2317,8 @@ class Pep8LineShortener(object):
                 else:
                     first = source[:blank]
                     second = source[blank + 1:]
-                return (True,
+                return (
+                    True,
                     first + quote + " \\" + self.__eol +
                     indent + self.__indentWord + quote + second,
                     "")
@@ -1727,9 +2347,9 @@ class Pep8LineShortener(object):
                         len(indentation) + 72)
 
         MIN_CHARACTER_REPEAT = 5
-        if (len(newText) - len(newText.rstrip(newText[-1])) >= \
-                MIN_CHARACTER_REPEAT and
-                not newText[-1].isalnum()):
+        if len(newText) - len(newText.rstrip(newText[-1])) >= \
+                MIN_CHARACTER_REPEAT and \
+                not newText[-1].isalnum():
             # Trim comments that end with things like ---------
             return newText[:maxLength] + self.__eol
         elif isLast and re.match(r"\s*#+\s*\w+", newText):
@@ -1840,8 +2460,9 @@ class Pep8LineShortener(object):
                 offset = tkn[2][1]
                 first = source[:offset]
                 second = source[offset:]
-                candidates.append(indent + second.strip() + self.__eol +
-                       indent + first.strip() + self.__eol)
+                candidates.append(
+                    indent + second.strip() + self.__eol +
+                    indent + first.strip() + self.__eol)
             elif tokenType == tokenize.OP and tokenString != '=':
                 # Don't break on '=' after keyword as this violates PEP 8.
 
@@ -1913,6 +2534,10 @@ class Pep8LineShortener(object):
         """
         rank = 0
         if candidate.strip():
+            if candidate == self.__text:
+                # give the original a disadvantage
+                rank += 50
+            
             lines = candidate.split(self.__eol)
 
             offset = 0
@@ -1945,9 +2570,8 @@ class Pep8LineShortener(object):
 
                 for ending in '([{':
                     # Avoid lonely opening. They result in longer lines.
-                    if (currentLine.endswith(ending) and
-                            len(currentLine.strip()) <= \
-                            len(self.__indentWord)):
+                    if currentLine.endswith(ending) and \
+                            len(currentLine.strip()) <= len(self.__indentWord):
                         rank += 100
 
                 if currentLine.endswith('%'):

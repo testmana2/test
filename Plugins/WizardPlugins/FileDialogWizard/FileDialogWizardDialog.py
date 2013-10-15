@@ -47,8 +47,8 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.cWorkDir.toggled[bool].connect(self.__toggleGroupsAndTest)
         self.cFilters.toggled[bool].connect(self.__toggleGroupsAndTest)
         
-        self.bTest = \
-            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        self.bTest = self.buttonBox.addButton(
+            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
         
     def __adjustOptions(self, options):
         """
@@ -166,7 +166,8 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if self.rOpenFile.isChecked():
                 code += 'getOpenFileName({0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getOpenFileNameAndFilter({0}{1}'.format(os.linesep, istring)
+                code += 'getOpenFileNameAndFilter({0}{1}'.format(
+                    os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -192,14 +193,17 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if self.rfOpenFile.isChecked():
                 code += ',{0}{1}None'.format(os.linesep, istring)
             if not self.cSymlinks.isChecked():
-                code += ',{0}{1}QFileDialog.Options(QFileDialog.DontResolveSymlinks)'\
-                        .format(os.linesep, istring)
+                code += \
+                    ',{0}{1}QFileDialog.Options(' \
+                    'QFileDialog.DontResolveSymlinks)' \
+                    .format(os.linesep, istring)
             code += '){0}'.format(estring)
         elif self.rOpenFiles.isChecked() or self.rfOpenFiles.isChecked():
             if self.rOpenFiles.isChecked():
                 code += 'getOpenFileNames({0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getOpenFileNamesAndFilter({0}{1}'.format(os.linesep, istring)
+                code += 'getOpenFileNamesAndFilter({0}{1}'.format(
+                    os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -225,14 +229,17 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if self.rfOpenFiles.isChecked():
                 code += ',{0}{1}None'.format(os.linesep, istring)
             if not self.cSymlinks.isChecked():
-                code += ',{0}{1}QFileDialog.Options(QFileDialog.DontResolveSymlinks)'\
-                        .format(os.linesep, istring)
+                code += \
+                    ',{0}{1}QFileDialog.Options(' \
+                    'QFileDialog.DontResolveSymlinks)' \
+                    .format(os.linesep, istring)
             code += '){0}'.format(estring)
         elif self.rSaveFile.isChecked() or self.rfSaveFile.isChecked():
             if self.rSaveFile.isChecked():
                 code += 'getSaveFileName({0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getSaveFileNameAndFilter({0}{1}'.format(os.linesep, istring)
+                code += 'getSaveFileNameAndFilter({0}{1}'.format(
+                    os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -259,7 +266,8 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 code += ',{0}{1}None'.format(os.linesep, istring)
             if (not self.cSymlinks.isChecked()) or \
                (not self.cConfirmOverwrite.isChecked()):
-                code += ',{0}{1}QFileDialog.Options('.format(os.linesep, istring)
+                code += ',{0}{1}QFileDialog.Options('.format(
+                    os.linesep, istring)
                 if not self.cSymlinks.isChecked():
                     code += 'QFileDialog.DontResolveSymlinks'
                 if (not self.cSymlinks.isChecked()) and \

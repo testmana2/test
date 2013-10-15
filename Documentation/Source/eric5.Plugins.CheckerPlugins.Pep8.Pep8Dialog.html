@@ -118,7 +118,7 @@ QDialog, Ui_Pep8Dialog
 <td>Private slot to select the issue codes not to be fixed via a selection dialog.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.on_resetDefaultButton_clicked">on_resetDefaultButton_clicked</a></td>
-<td>Slot documentation goes here.</td>
+<td>Private slot to reset the configuration values to their default values.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.on_resultList_itemActivated">on_resultList_itemActivated</a></td>
 <td>Private slot to handle the activation of an item.</td>
@@ -166,7 +166,7 @@ reference to the parent widget (QWidget)
         Private method to clear all warning markers of open editors.
 </p><a NAME="Pep8Dialog.__createResultItem" ID="Pep8Dialog.__createResultItem"></a>
 <h4>Pep8Dialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, pos, message, fixed</i>)
+<b>__createResultItem</b>(<i>file, line, pos, message, fixed, autofixing</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
@@ -185,6 +185,15 @@ message text (string)
 </dd><dt><i>fixed</i></dt>
 <dd>
 flag indicating a fixed issue (boolean)
+</dd><dt><i>autofixing</i></dt>
+<dd>
+flag indicating, that we are fixing issues
+            automatically (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the created item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="Pep8Dialog.__finish" ID="Pep8Dialog.__finish"></a>
 <h4>Pep8Dialog.__finish</h4>
@@ -219,7 +228,7 @@ flag indicating a fixable issue (boolean)
 </dd>
 </dl><a NAME="Pep8Dialog.__modifyFixedResultItem" ID="Pep8Dialog.__modifyFixedResultItem"></a>
 <h4>Pep8Dialog.__modifyFixedResultItem</h4>
-<b>__modifyFixedResultItem</b>(<i>itm, text</i>)
+<b>__modifyFixedResultItem</b>(<i>itm, text, fixed</i>)
 <p>
         Private method to modify a result list entry to show its
         positive fixed state.
@@ -230,6 +239,9 @@ reference to the item to modify (QTreeWidgetItem)
 </dd><dt><i>text</i></dt>
 <dd>
 text to be appended (string)
+</dd><dt><i>fixed</i></dt>
+<dd>
+flag indicating a fixed issue (boolean)
 </dd>
 </dl><a NAME="Pep8Dialog.__resetStatistics" ID="Pep8Dialog.__resetStatistics"></a>
 <h4>Pep8Dialog.__resetStatistics</h4>
@@ -327,7 +339,7 @@ button that was clicked (QAbstractButton)
 <h4>Pep8Dialog.on_resetDefaultButton_clicked</h4>
 <b>on_resetDefaultButton_clicked</b>(<i></i>)
 <p>
-        Slot documentation goes here.
+        Private slot to reset the configuration values to their default values.
 </p><a NAME="Pep8Dialog.on_resultList_itemActivated" ID="Pep8Dialog.on_resultList_itemActivated"></a>
 <h4>Pep8Dialog.on_resultList_itemActivated</h4>
 <b>on_resultList_itemActivated</b>(<i>item, column</i>)
@@ -408,7 +420,7 @@ state of the repeat check box if it is not None
     Class implementing a special report to be used with our dialog.
 </p>
 <h3>Derived from</h3>
-pep8.BaseReport
+pep8
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>

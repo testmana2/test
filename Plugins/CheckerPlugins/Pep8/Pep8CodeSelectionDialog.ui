@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>PEP 8 Message Codes</string>
+   <string>Code Style Message Codes</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>

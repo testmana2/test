@@ -27,12 +27,15 @@ deactivateable = True
 version = "5.4.0"
 className = "Pep8CheckerPlugin"
 packageName = "__core__"
-shortDescription = "Show the PEP 8 Checker dialog."
-longDescription = """This plugin implements the PEP 8 Checker dialog.""" \
- """ PEP 8 Checker is used to check Python source files for compliance""" \
- """ to the conventions given in PEP 8."""
+shortDescription = "Show the Python Code Style Checker dialog."
+longDescription = """This plugin implements the Python Code Style""" \
+    """ Checker dialog. PEP-8 checker is used to check Python source""" \
+    """ files for compliance to the code style conventions given in PEP-8.""" \
+    """ PEP-257 checker is used to check Python source files for""" \
+    """ compliance to docstring conventions given in PEP-257."""
 pyqtApi = 2
 # End-Of-Header
+
 
 error = ""
 
@@ -74,27 +77,29 @@ class Pep8CheckerPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
-            self.__projectAct = E5Action(self.trUtf8('Check PEP 8 Compliance'),
-                    self.trUtf8('PEP &8 Compliance...'), 0, 0,
-                    self, 'project_check_pep8')
+            self.__projectAct = E5Action(
+                self.trUtf8('Check Code Style'),
+                self.trUtf8('&Code Style...'), 0, 0,
+                self, 'project_check_pep8')
             self.__projectAct.setStatusTip(
                 self.trUtf8('Check PEP 8 compliance.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
-                """<b>Check PEP 8 Compliance...</b>"""
+                """<b>Check Code Style...</b>"""
                 """<p>This checks Python files for compliance to the"""
-                """ conventions given in PEP 8.</p>"""
+                """ code style conventions given in various PEPs.</p>"""
             ))
             self.__projectAct.triggered[()].connect(self.__projectPep8Check)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
-        self.__editorAct = E5Action(self.trUtf8('Check PEP 8 Compliance'),
-                self.trUtf8('PEP &8 Compliance...'), 0, 0,
-                self, "")
+        self.__editorAct = E5Action(
+            self.trUtf8('Check Code Style'),
+            self.trUtf8('&Code Style...'), 0, 0,
+            self, "")
         self.__editorAct.setWhatsThis(self.trUtf8(
-                """<b>Check PEP 8 Compliance...</b>"""
-                """<p>This checks Python files for compliance to the"""
-                """ conventions given in PEP 8.</p>"""
+            """<b>Check Code Style...</b>"""
+            """<p>This checks Python files for compliance to the"""
+            """ code style conventions given in various PEPs.</p>"""
         ))
         self.__editorAct.triggered[()].connect(self.__editorPep8Check)
         
@@ -151,8 +156,8 @@ class Pep8CheckerPlugin(QObject):
         """
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
-                e5App().getObject("Project").getProjectLanguage() in \
-                    ["Python3", "Python2", "Python"])
+                e5App().getObject("Project").getProjectLanguage() in
+                ["Python3", "Python2", "Python"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -168,13 +173,13 @@ class Pep8CheckerPlugin(QObject):
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
-                    self.trUtf8('Check PEP 8 Compliance'),
-                    self.trUtf8('PEP &8 Compliance...'), 0, 0,
+                    self.trUtf8('Check Code Style'),
+                    self.trUtf8('&Code Style...'), 0, 0,
                     self, "")
                 self.__projectBrowserAct.setWhatsThis(self.trUtf8(
-                    """<b>Check PEP 8 Compliance...</b>"""
+                    """<b>Check Code Style...</b>"""
                     """<p>This checks Python files for compliance to the"""
-                    """ conventions given in PEP 8.</p>"""
+                    """ code style conventions given in various PEPs.</p>"""
                 ))
                 self.__projectBrowserAct.triggered[()].connect(
                     self.__projectBrowserPep8Check)
@@ -188,11 +193,11 @@ class Pep8CheckerPlugin(QObject):
         project = e5App().getObject("Project")
         project.saveAllScripts()
         ppath = project.getProjectPath()
-        files = [os.path.join(ppath, file) \
-            for file in project.pdata["SOURCES"] \
-                if file.endswith(
-                    tuple(Preferences.getPython("Python3Extensions")) +
-                    tuple(Preferences.getPython("PythonExtensions")))]
+        files = [os.path.join(ppath, file)
+                 for file in project.pdata["SOURCES"]
+                 if file.endswith(
+                     tuple(Preferences.getPython("Python3Extensions")) +
+                     tuple(Preferences.getPython("PythonExtensions")))]
         
         from CheckerPlugins.Pep8.Pep8Dialog import Pep8Dialog
         self.__projectPep8CheckerDialog = Pep8Dialog()
@@ -259,7 +264,8 @@ class Pep8CheckerPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.isPy3File() or editor.isPy2File())
+            self.__editorAct.setEnabled(
+                editor.isPy3File() or editor.isPy2File())
     
     def __editorPep8Check(self):
         """

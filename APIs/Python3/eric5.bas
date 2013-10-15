@@ -481,7 +481,7 @@ Pep8CheckerPlugin QObject
 Pep8CodeSelectionDialog QDialog Ui_Pep8CodeSelectionDialog
 Pep8Dialog QDialog Ui_Pep8Dialog
 Pep8Fixer QObject
-Pep8Report pep8.BaseReport
+Pep8Report pep8
 Pep8StatisticsDialog QDialog Ui_Pep8StatisticsDialog
 PersonalDataDialog QDialog Ui_PersonalDataDialog
 PersonalInformationManager QObject
@@ -537,7 +537,6 @@ ProjectWriter XMLStreamWriterBase
 PropertiesDialog QDialog Ui_PropertiesDialog
 Purge HgExtension
 PurgeProjectHelper HgExtensionProjectHelper
-Py3FlakesPage ConfigurationPageBase Ui_Py3FlakesPage
 PyCoverageDialog QDialog Ui_PyCoverageDialog
 PyProfile profile.Profile
 PyProfileDialog QDialog Ui_PyProfileDialog

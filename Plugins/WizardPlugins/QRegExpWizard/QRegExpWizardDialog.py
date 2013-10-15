@@ -12,8 +12,8 @@ from __future__ import unicode_literals    # __IGNORE_WARNING__
 import os
 
 from PyQt4.QtCore import QFileInfo, QRegExp, Qt, pyqtSlot, qVersion
-from PyQt4.QtGui import QWidget, QDialog, QApplication, QClipboard, QTextCursor, \
-    QDialogButtonBox, QVBoxLayout, QTableWidgetItem
+from PyQt4.QtGui import QWidget, QDialog, QApplication, QClipboard, \
+    QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
@@ -50,15 +50,21 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         self.altnButton.setIcon(UI.PixmapCache.getIcon("altn.png"))
         self.beglineButton.setIcon(UI.PixmapCache.getIcon("begline.png"))
         self.endlineButton.setIcon(UI.PixmapCache.getIcon("endline.png"))
-        self.wordboundButton.setIcon(UI.PixmapCache.getIcon("wordboundary.png"))
-        self.nonwordboundButton.setIcon(UI.PixmapCache.getIcon("nonwordboundary.png"))
-        self.poslookaheadButton.setIcon(UI.PixmapCache.getIcon("poslookahead.png"))
-        self.neglookaheadButton.setIcon(UI.PixmapCache.getIcon("neglookahead.png"))
+        self.wordboundButton.setIcon(
+            UI.PixmapCache.getIcon("wordboundary.png"))
+        self.nonwordboundButton.setIcon(
+            UI.PixmapCache.getIcon("nonwordboundary.png"))
+        self.poslookaheadButton.setIcon(
+            UI.PixmapCache.getIcon("poslookahead.png"))
+        self.neglookaheadButton.setIcon(
+            UI.PixmapCache.getIcon("neglookahead.png"))
         self.undoButton.setIcon(UI.PixmapCache.getIcon("editUndo.png"))
         self.redoButton.setIcon(UI.PixmapCache.getIcon("editRedo.png"))
         # wildcard tool buttons
-        self.wildcardCharButton.setIcon(UI.PixmapCache.getIcon("characters.png"))
-        self.wildcardAnycharButton.setIcon(UI.PixmapCache.getIcon("anychar.png"))
+        self.wildcardCharButton.setIcon(
+            UI.PixmapCache.getIcon("characters.png"))
+        self.wildcardAnycharButton.setIcon(
+            UI.PixmapCache.getIcon("anychar.png"))
         self.wildcardRepeatButton.setIcon(UI.PixmapCache.getIcon("repeat.png"))
         # W3C tool buttons
         self.w3cCharButton.setIcon(UI.PixmapCache.getIcon("characters.png"))
@@ -77,21 +83,24 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         if qVersion() >= "5.0.0":
             self.syntaxCombo.setCurrentIndex(1)
         
-        self.saveButton = \
-            self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)
-        self.saveButton.setToolTip(self.trUtf8("Save the regular expression to a file"))
-        self.loadButton = \
-            self.buttonBox.addButton(self.trUtf8("Load"), QDialogButtonBox.ActionRole)
-        self.loadButton.setToolTip(self.trUtf8("Load a regular expression from a file"))
-        self.validateButton = \
-            self.buttonBox.addButton(self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
-        self.validateButton.setToolTip(self.trUtf8("Validate the regular expression"))
-        self.executeButton = \
-            self.buttonBox.addButton(self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
-        self.executeButton.setToolTip(self.trUtf8("Execute the regular expression"))
-        self.nextButton = \
-            self.buttonBox.addButton(self.trUtf8("Next match"),
-                                     QDialogButtonBox.ActionRole)
+        self.saveButton = self.buttonBox.addButton(
+            self.trUtf8("Save"), QDialogButtonBox.ActionRole)
+        self.saveButton.setToolTip(
+            self.trUtf8("Save the regular expression to a file"))
+        self.loadButton = self.buttonBox.addButton(
+            self.trUtf8("Load"), QDialogButtonBox.ActionRole)
+        self.loadButton.setToolTip(
+            self.trUtf8("Load a regular expression from a file"))
+        self.validateButton = self.buttonBox.addButton(
+            self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
+        self.validateButton.setToolTip(
+            self.trUtf8("Validate the regular expression"))
+        self.executeButton = self.buttonBox.addButton(
+            self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
+        self.executeButton.setToolTip(
+            self.trUtf8("Execute the regular expression"))
+        self.nextButton = self.buttonBox.addButton(
+            self.trUtf8("Next match"), QDialogButtonBox.ActionRole)
         self.nextButton.setToolTip(
             self.trUtf8("Show the next match of the regular expression"))
         self.nextButton.setEnabled(False)
@@ -101,8 +110,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
                 QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
             self.copyButton = None
         else:
-            self.copyButton = \
-                self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
+            self.copyButton = self.buttonBox.addButton(
+                self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
             self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
             self.buttonBox.setStandardButtons(QDialogButtonBox.Close)
@@ -227,7 +236,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the characters toolbutton.
         """
-        from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
+        from .QRegExpWizardCharactersDialog import \
+            QRegExpWizardCharactersDialog
         dlg = QRegExpWizardCharactersDialog(
             mode=QRegExpWizardCharactersDialog.RegExpMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
@@ -238,7 +248,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the wildcard characters toolbutton.
         """
-        from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
+        from .QRegExpWizardCharactersDialog import \
+            QRegExpWizardCharactersDialog
         dlg = QRegExpWizardCharactersDialog(
             mode=QRegExpWizardCharactersDialog.WildcardMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
@@ -263,7 +274,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the wildcard characters toolbutton.
         """
-        from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
+        from .QRegExpWizardCharactersDialog import \
+            QRegExpWizardCharactersDialog
         dlg = QRegExpWizardCharactersDialog(
             mode=QRegExpWizardCharactersDialog.W3CMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
@@ -338,25 +350,29 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                                " Overwrite it?</p>").format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
             
             syntax = self.syntaxCombo.itemData(self.syntaxCombo.currentIndex())
             try:
-                f = open(Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
+                f = open(
+                    Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
                 f.write("syntax={0}\n".format(syntax))
                 f.write(self.regexpLineEdit.text())
                 f.close()
             except IOError as err:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(str(err)))
+                    self.trUtf8("""<p>The regular expression could not"""
+                                """ be saved.</p><p>Reason: {0}</p>""")
+                    .format(str(err)))
     
     @pyqtSlot()
     def on_loadButton_clicked(self):
@@ -370,7 +386,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f = open(Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
+                f = open(
+                    Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
                 regexp = f.read()
                 f.close()
                 if regexp.startswith("syntax="):
@@ -381,10 +398,12 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
                     regexp = lines[1]
                 self.regexpLineEdit.setText(regexp)
             except IOError as err:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(str(err)))
+                    self.trUtf8("""<p>The regular expression could not"""
+                                """ be saved.</p><p>Reason: {0}</p>""")
+                    .format(str(err)))
 
     @pyqtSlot()
     def on_copyButton_clicked(self):
@@ -414,19 +433,23 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             else:
                 re.setCaseSensitivity(Qt.CaseInsensitive)
             re.setMinimal(self.minimalCheckBox.isChecked())
-            re.setPatternSyntax(self.syntaxCombo.itemData(self.syntaxCombo.currentIndex()))
+            re.setPatternSyntax(
+                self.syntaxCombo.itemData(self.syntaxCombo.currentIndex()))
             if re.isValid():
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Validation"),
                     self.trUtf8("""The regular expression is valid."""))
             else:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(re.errorString()))
+                    .format(re.errorString()))
                 return
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 
@@ -453,10 +476,11 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             wildcard = syntax in [QRegExp.Wildcard, QRegExp.WildcardUnix]
             re.setPatternSyntax(syntax)
             if not re.isValid():
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(re.errorString()))
+                    .format(re.errorString()))
                 return
             offset = re.indexIn(text, startpos)
             captures = re.captureCount()
@@ -467,34 +491,38 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             self.resultTable.setColumnCount(3)
             self.resultTable.setRowCount(0)
             self.resultTable.setRowCount(OFFSET)
-            self.resultTable.setItem(row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
+            self.resultTable.setItem(
+                row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
             self.resultTable.setItem(row, 1, QTableWidgetItem(regex))
             
             if offset != -1:
                 self.lastMatchEnd = offset + re.matchedLength()
                 self.nextButton.setEnabled(True)
                 row += 1
-                self.resultTable.setItem(row, 0, QTableWidgetItem(self.trUtf8("Offset")))
-                self.resultTable.setItem(row, 1, QTableWidgetItem("{0:d}".format(offset)))
+                self.resultTable.setItem(
+                    row, 0, QTableWidgetItem(self.trUtf8("Offset")))
+                self.resultTable.setItem(
+                    row, 1, QTableWidgetItem("{0:d}".format(offset)))
                 
                 if not wildcard:
                     row += 1
-                    self.resultTable.setItem(row, 0,
-                        QTableWidgetItem(self.trUtf8("Captures")))
-                    self.resultTable.setItem(row, 1,
-                        QTableWidgetItem("{0:d}".format(captures)))
+                    self.resultTable.setItem(
+                        row, 0, QTableWidgetItem(self.trUtf8("Captures")))
+                    self.resultTable.setItem(
+                        row, 1, QTableWidgetItem("{0:d}".format(captures)))
                     row += 1
-                    self.resultTable.setItem(row, 1,
-                        QTableWidgetItem(self.trUtf8("Text")))
-                    self.resultTable.setItem(row, 2,
-                        QTableWidgetItem(self.trUtf8("Characters")))
+                    self.resultTable.setItem(
+                        row, 1, QTableWidgetItem(self.trUtf8("Text")))
+                    self.resultTable.setItem(
+                        row, 2, QTableWidgetItem(self.trUtf8("Characters")))
                     
                 row += 1
-                self.resultTable.setItem(row, 0,
-                    QTableWidgetItem(self.trUtf8("Match")))
-                self.resultTable.setItem(row, 1,
-                    QTableWidgetItem(re.cap(0)))
-                self.resultTable.setItem(row, 2,
+                self.resultTable.setItem(
+                    row, 0, QTableWidgetItem(self.trUtf8("Match")))
+                self.resultTable.setItem(
+                    row, 1, QTableWidgetItem(re.cap(0)))
+                self.resultTable.setItem(
+                    row, 2,
                     QTableWidgetItem("{0:d}".format(re.matchedLength())))
                 
                 if not wildcard:
@@ -502,12 +530,17 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
                         if len(re.cap(i)) > 0:
                             row += 1
                             self.resultTable.insertRow(row)
-                            self.resultTable.setItem(row, 0,
-                                QTableWidgetItem(self.trUtf8("Capture #{0}").format(i)))
-                            self.resultTable.setItem(row, 1,
+                            self.resultTable.setItem(
+                                row, 0,
+                                QTableWidgetItem(
+                                    self.trUtf8("Capture #{0}").format(i)))
+                            self.resultTable.setItem(
+                                row, 1,
                                 QTableWidgetItem(re.cap(i)))
-                            self.resultTable.setItem(row, 2,
-                                QTableWidgetItem("{0:d}".format(len(re.cap(i)))))
+                            self.resultTable.setItem(
+                                row, 2,
+                                QTableWidgetItem(
+                                    "{0:d}".format(len(re.cap(i)))))
                 else:
                     self.resultTable.setRowCount(3)
                 
@@ -521,10 +554,12 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
                 self.resultTable.setRowCount(2)
                 row += 1
                 if startpos > 0:
-                    self.resultTable.setItem(row, 0,
+                    self.resultTable.setItem(
+                        row, 0,
                         QTableWidgetItem(self.trUtf8("No more matches")))
                 else:
-                    self.resultTable.setItem(row, 0,
+                    self.resultTable.setItem(
+                        row, 0,
                         QTableWidgetItem(self.trUtf8("No matches")))
                 
                 # remove the highlight
@@ -537,9 +572,11 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             self.resultTable.verticalHeader().hide()
             self.resultTable.horizontalHeader().hide()
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error"),
-                self.trUtf8("""A regular expression and a text must be given."""))
+                self.trUtf8("""A regular expression and a text must"""
+                            """ be given."""))
         
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -558,7 +595,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         
     def __getPatternSyntaxCode(self, syntaxValue):
         """
-        Private method to convert a pattern syntax value into a pattern syntax string.
+        Private method to convert a pattern syntax value into a
+        pattern syntax string.
         
         @param syntaxValue pattern syntax value (integer)
         @return pattern syntax string (string)
@@ -603,7 +641,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             code += '{0}{1}.setCaseSensitivity(Qt.CaseInsensitive){2}'.format(
                     istring, reVar, os.linesep)
         if self.minimalCheckBox.isChecked():
-            code += '{0}{1}.setMinimal(True){2}'.format(istring, reVar, os.linesep)
+            code += '{0}{1}.setMinimal(True){2}'.format(
+                istring, reVar, os.linesep)
         syntax = self.syntaxCombo.itemData(self.syntaxCombo.currentIndex())
         needPatternSyntax = True
         if qVersion() < "5.0.0" and syntax == QRegExp.RegExp or \
@@ -612,7 +651,8 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
             needPatternSyntax = False
         if needPatternSyntax:
             code += '{0}{1}.setPatternSyntax({2}){3}'.format(
-                    istring, reVar, self.__getPatternSyntaxCode(syntax), estring)
+                    istring, reVar, self.__getPatternSyntaxCode(syntax),
+                    estring)
         return code
 
 
@@ -670,7 +710,8 @@ class QRegExpWizardWindow(E5MainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(
+            Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

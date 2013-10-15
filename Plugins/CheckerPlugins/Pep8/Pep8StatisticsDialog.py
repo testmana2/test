@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog showing statistical data for the last PEP 8 run.
+Module implementing a dialog showing statistical data for the last code
+style checker run.
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
@@ -13,6 +14,8 @@ from PyQt4.QtCore import Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
+from .Pep8NamingChecker import Pep8NamingChecker
+from .Pep257Checker import Pep257Checker
 
 from .Ui_Pep8StatisticsDialog import Ui_Pep8StatisticsDialog
 
@@ -22,7 +25,7 @@ import UI.PixmapCache
 class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
     """
     Class implementing a dialog showing statistical data for the last
-    PEP 8 run.
+    code style checker run.
     """
     def __init__(self, statistics, parent=None):
         """
@@ -44,14 +47,20 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         
         totalIssues = 0
         
-        for code in sorted(stats.keys(), key=lambda a: a[1:]):
+        for code in sorted(stats.keys()):
             if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code]).format(
-                        *pep8.pep8_messages_sample_args[code])
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code]).format(
+                    *pep8.pep8_messages_sample_args[code])
             elif code in pep8.pep8_messages:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code])
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code])
+            elif code in Pep8NamingChecker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep8NamingChecker", Pep8NamingChecker.Messages[code])
+            elif code in Pep257Checker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep257Checker", Pep257Checker.Messages[code])
             else:
                 continue
             self.__createItem(stats[code], code, message)
@@ -85,6 +94,10 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("E"):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
+        elif code.startswith("N"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
+        elif code.startswith("D"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("docstringError.png"))
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignHCenter)

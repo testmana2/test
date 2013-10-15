@@ -389,7 +389,7 @@ def maximum_line_length(physical_line, max_line_length):
     length = len(line)
     if length > max_line_length and not noqa(line):
         if hasattr(line, 'decode'):   # Python 2
-        # The line could contain multi-byte characters
+            # The line could contain multi-byte characters
             try:
                 length = len(line.decode('utf-8'))
             except (UnicodeDecodeError, UnicodeEncodeError):
@@ -1378,6 +1378,9 @@ class Checker(object):
         self.report = report or options.report
         self.report_error = self.report.error
         self.report_error_args = self.report.error_args
+        
+        # added for eric5 integration
+        self.options = options
 
     def report_invalid_syntax(self):
         exc_type, exc = sys.exc_info()[:2]
@@ -1388,8 +1391,8 @@ class Checker(object):
         else:
             offset = (1, 0)
         self.report_error_args(offset[0], offset[1] or 0,
-                          'E901', exc_type.__name__, exc.args[0],
-                          self.report_invalid_syntax)
+                          'E901', self.report_invalid_syntax,
+                          exc_type.__name__, exc.args[0])
     report_invalid_syntax.__doc__ = "    Check if the syntax is valid."
 
     def readline(self):
@@ -1510,11 +1513,12 @@ class Checker(object):
         except (SyntaxError, TypeError):
             return self.report_invalid_syntax()
         for name, cls, _ in self._ast_checks:
-            checker = cls(tree, self.filename)
+            # extended API for eric5 integration
+            checker = cls(tree, self.filename, self.options)
             for args in checker.run():
-                lineno = args.pop(0)
+                lineno = args[0]
                 if not noqa(self.lines[lineno - 1]):
-                    self.report_error_args(lineno, *args)
+                    self.report_error_args(lineno, *args[1:])
 
     def generate_tokens(self):
         if self._io_error:

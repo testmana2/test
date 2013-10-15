@@ -25,6 +25,7 @@ from PyQt4.QtCore import QFile, QFileInfo, pyqtSignal, QCryptographicHash, QIODe
     QByteArray, QObject, Qt
 from PyQt4.QtGui import QCursor, QLineEdit, QToolBar, QDialog, QInputDialog, \
     QApplication, QMenu, QAction
+from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
@@ -407,7 +408,7 @@ class Project(QObject):
         self.pdata["PACKAGERSPARMS"] = {}
         self.pdata["DOCUMENTATIONPARMS"] = {}
         self.pdata["OTHERTOOLSPARMS"] = {}
-        self.pdata["EOL"] = [0]
+        self.pdata["EOL"] = [-1]
         
         self.__initDebugProperties()
         
@@ -2975,7 +2976,19 @@ class Project(QObject):
         
         @return eol string (string)
         """
-        return self.eols[self.pdata["EOL"][0]]
+        if self.pdata["EOL"][0] >= 0:
+            return self.eols[self.pdata["EOL"][0]]
+        else:
+            eolMode = Preferences.getEditor("EOLMode")
+            if eolMode == QsciScintilla.EolWindows:
+                eol = '\r\n'
+            elif eolMode == QsciScintilla.EolUnix:
+                eol = '\n'
+            elif eolMode == QsciScintilla.EolMac:
+                eol = '\r'
+            else:
+                eol = os.linesep
+            return eol
         
     def useSystemEol(self):
         """

@@ -42,8 +42,8 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         self.eDoubleTo.setValidator(
             QDoubleValidator(-2147483647, 2147483647, 99, self.eDoubleTo))
         
-        self.bTest = \
-            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        self.bTest = self.buttonBox.addButton(
+            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
         
     @pyqtSlot(bool)
     def on_rItem_toggled(self, checked):
@@ -183,7 +183,8 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.eCaption.text(), os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eLabel.text(), os.linesep, istring)
-            code += '{0},{1}{2}'.format(self.eVariable.text(), os.linesep, istring)
+            code += '{0},{1}{2}'.format(
+                self.eVariable.text(), os.linesep, istring)
             code += '{0:d}, {1}){2}'.format(
                 self.sCurrentItem.value(), self.cEditable.isChecked(), estring)
             

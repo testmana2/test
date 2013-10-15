@@ -463,6 +463,8 @@ class Prefs(object):
         "AnnotationsWarningBackground": QColor("#ffffd0"),
         "AnnotationsErrorForeground": QColor("#600000"),
         "AnnotationsErrorBackground": QColor("#ffd0d0"),
+        "AnnotationsStyleForeground": QColor("#000060"),
+        "AnnotationsStyleBackground": QColor("#d0d0ff"),
         "WhitespaceForeground": QColor(Qt.darkGray),
         "WhitespaceBackground": QColor(Qt.white),
         "OnlineChangeTraceMarkerUnsaved": QColor("#ff8888"),

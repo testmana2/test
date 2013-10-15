@@ -13,8 +13,12 @@ from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
+from .Pep8NamingChecker import Pep8NamingChecker
+from .Pep257Checker import Pep257Checker
 
 from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
+
+import UI.PixmapCache
 
 
 class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
@@ -39,16 +43,35 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
             from .Pep8Fixer import Pep8FixableIssues
             selectableCodes = Pep8FixableIssues
         else:
-            selectableCodes = pep8.pep8_messages.keys()
-        for code in sorted(selectableCodes, key=lambda a: a[1:]):
+            selectableCodes = list(pep8.pep8_messages.keys())
+            selectableCodes.extend(Pep8NamingChecker.Messages.keys())
+            selectableCodes.extend(Pep257Checker.Messages.keys())
+        for code in sorted(selectableCodes):
             if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code]).format(
-                        *pep8.pep8_messages_sample_args[code])
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code]).format(
+                    *pep8.pep8_messages_sample_args[code])
+            elif code in pep8.pep8_messages:
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code])
+            elif code in Pep8NamingChecker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep8NamingChecker",
+                    Pep8NamingChecker.Messages[code])
+            elif code in Pep257Checker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep257Checker", Pep257Checker.Messages[code])
             else:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code])
+                continue
             itm = QTreeWidgetItem(self.codeTable, [code, message])
+            if code.startswith("W"):
+                itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
+            elif code.startswith("E"):
+                itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
+            elif code.startswith("N"):
+                itm.setIcon(0, UI.PixmapCache.getIcon("namingError.png"))
+            elif code.startswith("D"):
+                itm.setIcon(0, UI.PixmapCache.getIcon("docstringError.png"))
             if code in codeList:
                 itm.setSelected(True)
                 codeList.remove(code)

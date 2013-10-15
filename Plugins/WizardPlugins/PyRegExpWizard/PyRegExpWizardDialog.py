@@ -13,8 +13,8 @@ import os
 import re
 
 from PyQt4.QtCore import QFileInfo, pyqtSlot
-from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, QClipboard, \
-    QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
+from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, \
+    QClipboard, QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
@@ -49,36 +49,46 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         self.nonGroupButton.setIcon(UI.PixmapCache.getIcon("nongroup.png"))
         self.groupButton.setIcon(UI.PixmapCache.getIcon("group.png"))
         self.namedGroupButton.setIcon(UI.PixmapCache.getIcon("namedgroup.png"))
-        self.namedReferenceButton.setIcon(UI.PixmapCache.getIcon("namedreference.png"))
+        self.namedReferenceButton.setIcon(
+            UI.PixmapCache.getIcon("namedreference.png"))
         self.altnButton.setIcon(UI.PixmapCache.getIcon("altn.png"))
         self.beglineButton.setIcon(UI.PixmapCache.getIcon("begline.png"))
         self.endlineButton.setIcon(UI.PixmapCache.getIcon("endline.png"))
-        self.wordboundButton.setIcon(UI.PixmapCache.getIcon("wordboundary.png"))
-        self.nonwordboundButton.setIcon(UI.PixmapCache.getIcon("nonwordboundary.png"))
-        self.poslookaheadButton.setIcon(UI.PixmapCache.getIcon("poslookahead.png"))
-        self.neglookaheadButton.setIcon(UI.PixmapCache.getIcon("neglookahead.png"))
-        self.poslookbehindButton.setIcon(UI.PixmapCache.getIcon("poslookbehind.png"))
-        self.neglookbehindButton.setIcon(UI.PixmapCache.getIcon("neglookbehind.png"))
+        self.wordboundButton.setIcon(
+            UI.PixmapCache.getIcon("wordboundary.png"))
+        self.nonwordboundButton.setIcon(
+            UI.PixmapCache.getIcon("nonwordboundary.png"))
+        self.poslookaheadButton.setIcon(
+            UI.PixmapCache.getIcon("poslookahead.png"))
+        self.neglookaheadButton.setIcon(
+            UI.PixmapCache.getIcon("neglookahead.png"))
+        self.poslookbehindButton.setIcon(
+            UI.PixmapCache.getIcon("poslookbehind.png"))
+        self.neglookbehindButton.setIcon(
+            UI.PixmapCache.getIcon("neglookbehind.png"))
         self.undoButton.setIcon(UI.PixmapCache.getIcon("editUndo.png"))
         self.redoButton.setIcon(UI.PixmapCache.getIcon("editRedo.png"))
         
         self.namedGroups = re.compile(r"""\(?P<([^>]+)>""").findall
         
-        self.saveButton = \
-            self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)
-        self.saveButton.setToolTip(self.trUtf8("Save the regular expression to a file"))
-        self.loadButton = \
-            self.buttonBox.addButton(self.trUtf8("Load"), QDialogButtonBox.ActionRole)
-        self.loadButton.setToolTip(self.trUtf8("Load a regular expression from a file"))
-        self.validateButton = \
-            self.buttonBox.addButton(self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
-        self.validateButton.setToolTip(self.trUtf8("Validate the regular expression"))
-        self.executeButton = \
-            self.buttonBox.addButton(self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
-        self.executeButton.setToolTip(self.trUtf8("Execute the regular expression"))
-        self.nextButton = \
-            self.buttonBox.addButton(self.trUtf8("Next match"),
-                                     QDialogButtonBox.ActionRole)
+        self.saveButton = self.buttonBox.addButton(
+            self.trUtf8("Save"), QDialogButtonBox.ActionRole)
+        self.saveButton.setToolTip(
+            self.trUtf8("Save the regular expression to a file"))
+        self.loadButton = self.buttonBox.addButton(
+            self.trUtf8("Load"), QDialogButtonBox.ActionRole)
+        self.loadButton.setToolTip(
+            self.trUtf8("Load a regular expression from a file"))
+        self.validateButton = self.buttonBox.addButton(
+            self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
+        self.validateButton.setToolTip(
+            self.trUtf8("Validate the regular expression"))
+        self.executeButton = self.buttonBox.addButton(
+            self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
+        self.executeButton.setToolTip(
+            self.trUtf8("Execute the regular expression"))
+        self.nextButton = self.buttonBox.addButton(
+            self.trUtf8("Next match"), QDialogButtonBox.ActionRole)
         self.nextButton.setToolTip(
             self.trUtf8("Show the next match of the regular expression"))
         self.nextButton.setEnabled(False)
@@ -88,8 +98,8 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
             self.copyButton = None
         else:
-            self.copyButton = \
-                self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
+            self.copyButton = self.buttonBox.addButton(
+                self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
             self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
             self.buttonBox.setStandardButtons(QDialogButtonBox.Close)
@@ -163,11 +173,13 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         # determine cursor position as length into text
         length = self.regexpTextEdit.textCursor().position()
         
-        # only present group names that occur before the current cursor position
+        # only present group names that occur before the
+        # current cursor position
         regex = self.regexpTextEdit.toPlainText()[:length]
         names = self.namedGroups(regex)
         if not names:
-            E5MessageBox.information(self,
+            E5MessageBox.information(
+                self,
                 self.trUtf8("Named reference"),
                 self.trUtf8("""No named groups have been defined yet."""))
             return
@@ -259,7 +271,8 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to handle the characters toolbutton.
         """
-        from .PyRegExpWizardCharactersDialog import PyRegExpWizardCharactersDialog
+        from .PyRegExpWizardCharactersDialog import \
+            PyRegExpWizardCharactersDialog
         dlg = PyRegExpWizardCharactersDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             self.__insertString(dlg.getCharacters())
@@ -316,23 +329,27 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self,
+                res = E5MessageBox.yesNo(
+                    self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                                " Overwrite it?</p>").format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
             
             try:
-                f = open(Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
+                f = open(
+                    Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
                 f.write(self.regexpTextEdit.toPlainText())
                 f.close()
             except IOError as err:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(str(err)))
+                    self.trUtf8("""<p>The regular expression could not"""
+                                """ be saved.</p><p>Reason: {0}</p>""")
+                    .format(str(err)))
     
     @pyqtSlot()
     def on_loadButton_clicked(self):
@@ -346,15 +363,18 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f = open(Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
+                f = open(
+                    Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
                 regexp = f.read()
                 f.close()
                 self.regexpTextEdit.setPlainText(regexp)
             except IOError as err:
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(str(err)))
+                    self.trUtf8("""<p>The regular expression could not"""
+                                """ be saved.</p><p>Reason: {0}</p>""")
+                    .format(str(err)))
 
     @pyqtSlot()
     def on_copyButton_clicked(self):
@@ -397,22 +417,27 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     if self.unicodeCheckBox.isChecked():
                         flags |= re.ASCII
                 re.compile(regex, flags)
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.trUtf8("Validation"),
                     self.trUtf8("""The regular expression is valid."""))
             except re.error as e:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(str(e)))
+                    .format(str(e)))
                 return
             except IndexError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error"),
-                    self.trUtf8("""Invalid regular expression: missing group name"""))
+                    self.trUtf8("""Invalid regular expression: missing"""
+                                """ group name"""))
                 return
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 
@@ -462,48 +487,63 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 self.resultTable.setColumnCount(3)
                 self.resultTable.setRowCount(0)
                 self.resultTable.setRowCount(OFFSET)
-                self.resultTable.setItem(row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
-                self.resultTable.setItem(row, 1, QTableWidgetItem(regex))
+                self.resultTable.setItem(
+                    row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
+                self.resultTable.setItem(
+                    row, 1, QTableWidgetItem(regex))
                 
                 if matchobj is not None:
                     offset = matchobj.start()
                     self.lastMatchEnd = matchobj.end()
                     self.nextButton.setEnabled(True)
                     row += 1
-                    self.resultTable.setItem(row, 0,
+                    self.resultTable.setItem(
+                        row, 0,
                         QTableWidgetItem(self.trUtf8("Offset")))
-                    self.resultTable.setItem(row, 1,
+                    self.resultTable.setItem(
+                        row, 1,
                         QTableWidgetItem("{0:d}".format(matchobj.start(0))))
                     
                     row += 1
-                    self.resultTable.setItem(row, 0,
+                    self.resultTable.setItem(
+                        row, 0,
                         QTableWidgetItem(self.trUtf8("Captures")))
-                    self.resultTable.setItem(row, 1,
+                    self.resultTable.setItem(
+                        row, 1,
                         QTableWidgetItem("{0:d}".format(captures)))
                     row += 1
-                    self.resultTable.setItem(row, 1,
+                    self.resultTable.setItem(
+                        row, 1,
                         QTableWidgetItem(self.trUtf8("Text")))
-                    self.resultTable.setItem(row, 2,
+                    self.resultTable.setItem(
+                        row, 2,
                         QTableWidgetItem(self.trUtf8("Characters")))
                     
                     row += 1
-                    self.resultTable.setItem(row, 0,
+                    self.resultTable.setItem(
+                        row, 0,
                         QTableWidgetItem(self.trUtf8("Match")))
-                    self.resultTable.setItem(row, 1,
+                    self.resultTable.setItem(
+                        row, 1,
                         QTableWidgetItem(matchobj.group(0)))
-                    self.resultTable.setItem(row, 2,
-                        QTableWidgetItem("{0:d}".format(len(matchobj.group(0)))))
+                    self.resultTable.setItem(
+                        row, 2,
+                        QTableWidgetItem(
+                            "{0:d}".format(len(matchobj.group(0)))))
                     
                     for i in range(1, captures + 1):
                         if matchobj.group(i) is not None:
                             row += 1
                             self.resultTable.insertRow(row)
-                            self.resultTable.setItem(row, 0,
-                                QTableWidgetItem(self.trUtf8("Capture #{0}").format(i)))
-                            self.resultTable.setItem(row, 1,
-                                QTableWidgetItem(matchobj.group(i)))
-                            self.resultTable.setItem(row, 2,
-                                QTableWidgetItem("{0:d}".format(len(matchobj.group(i)))))
+                            self.resultTable.setItem(
+                                row, 0,
+                                QTableWidgetItem(
+                                    self.trUtf8("Capture #{0}").format(i)))
+                            self.resultTable.setItem(
+                                row, 1, QTableWidgetItem(matchobj.group(i)))
+                            self.resultTable.setItem(
+                                row, 2, QTableWidgetItem(
+                                    "{0:d}".format(len(matchobj.group(i)))))
                     
                     # highlight the matched text
                     tc = self.textTextEdit.textCursor()
@@ -515,10 +555,12 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.resultTable.setRowCount(2)
                     row += 1
                     if startpos > 0:
-                        self.resultTable.setItem(row, 0,
+                        self.resultTable.setItem(
+                            row, 0,
                             QTableWidgetItem(self.trUtf8("No more matches")))
                     else:
-                        self.resultTable.setItem(row, 0,
+                        self.resultTable.setItem(
+                            row, 0,
                             QTableWidgetItem(self.trUtf8("No matches")))
                     
                     # remove the highlight
@@ -531,20 +573,25 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 self.resultTable.verticalHeader().hide()
                 self.resultTable.horizontalHeader().hide()
             except re.error as e:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(str(e)))
+                    .format(str(e)))
                 return
             except IndexError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.trUtf8("Error"),
-                    self.trUtf8("""Invalid regular expression: missing group name"""))
+                    self.trUtf8("""Invalid regular expression: missing"""
+                                """ group name"""))
                 return
         else:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Error"),
-                self.trUtf8("""A regular expression and a text must be given."""))
+                self.trUtf8("""A regular expression and a text must be"""
+                            """ given."""))
         
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -689,7 +736,8 @@ class PyRegExpWizardWindow(E5MainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        self.setStyle(
+            Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)
