@@ -247,13 +247,14 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         Private method to test the selected options.
         """
         if self.rAbout.isChecked():
-            E5MessageBox.about(None,
+            E5MessageBox.about(
+                None,
                 self.eCaption.text(),
                 self.eMessage.toPlainText()
             )
         elif self.rAboutQt.isChecked():
-            E5MessageBox.aboutQt(None,
-                self.eCaption.text()
+            E5MessageBox.aboutQt(
+                None, self.eCaption.text()
             )
         elif self.rInformation.isChecked() or \
              self.rQuestion.isChecked() or \
@@ -303,28 +304,32 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 self.defaultCombo.currentIndex()]
             
             if self.rInformation.isChecked():
-                E5MessageBox.information(self,
+                E5MessageBox.information(
+                    self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
                     E5MessageBox.StandardButtons(buttons),
                     defaultButton
                 )
             elif self.rQuestion.isChecked():
-                E5MessageBox.question(self,
+                E5MessageBox.question(
+                    self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
                     E5MessageBox.StandardButtons(buttons),
                     defaultButton
                 )
             elif self.rWarning.isChecked():
-                E5MessageBox.warning(self,
+                E5MessageBox.warning(
+                    self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
                     E5MessageBox.StandardButtons(buttons),
                     defaultButton
                 )
             elif self.rCritical.isChecked():
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(
+                    self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
                     E5MessageBox.StandardButtons(buttons),
@@ -342,20 +347,23 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 icon = E5MessageBox.Critical
             
             if self.rYesNo.isChecked():
-                E5MessageBox.yesNo(self,
+                E5MessageBox.yesNo(
+                    self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
                     icon=icon,
                     yesDefault=self.yesDefaultCheck.isChecked()
                 )
             elif self.rRetryAbort.isChecked():
-                E5MessageBox.retryAbort(self,
+                E5MessageBox.retryAbort(
+                    self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
                     icon=icon
                 )
         elif self.rOkToClearData.isChecked():
-            E5MessageBox.okToClearData(self,
+            E5MessageBox.okToClearData(
+                self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 lambda: True
@@ -434,7 +442,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         btnCode = ""
         defaultIndex = self.defaultCombo.currentIndex()
         if defaultIndex:
-            btnCode = ',{0}{1}{2}'.format(os.linesep, istring,
+            btnCode = ',{0}{1}{2}'.format(
+                os.linesep, istring,
                 self.buttonsCodeListText[defaultIndex])
         return btnCode
     

@@ -66,7 +66,8 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         elif self.customViewerButton.isChecked():
             hvId = 4
         Preferences.setHelp("HelpViewerType", hvId)
-        Preferences.setHelp("CustomViewer",
+        Preferences.setHelp(
+            "CustomViewer",
             self.customViewerEdit.text())
         
     @pyqtSlot()

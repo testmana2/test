@@ -46,13 +46,17 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         """
         Public slot to save the Project configuration.
         """
-        Preferences.setMultiProject("OpenMasterAutomatically",
+        Preferences.setMultiProject(
+            "OpenMasterAutomatically",
             self.openMasterAutomaticallyCheckBox.isChecked())
-        Preferences.setMultiProject("XMLTimestamp",
+        Preferences.setMultiProject(
+            "XMLTimestamp",
             self.multiProjectTimestampCheckBox.isChecked())
-        Preferences.setMultiProject("RecentNumber",
+        Preferences.setMultiProject(
+            "RecentNumber",
             self.multiProjectRecentSpinBox.value())
-        Preferences.setMultiProject("Workspace",
+        Preferences.setMultiProject(
+            "Workspace",
             self.workspaceEdit.text())
     
     @pyqtSlot()

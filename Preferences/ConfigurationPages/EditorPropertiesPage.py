@@ -277,195 +277,263 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         Public slot to save the Editor Properties (1) configuration.
         """
         # All
-        Preferences.setEditor("AllFoldCompact",
+        Preferences.setEditor(
+            "AllFoldCompact",
             self.allFoldCompactCheckBox.isChecked())
         
         # Bash
-        Preferences.setEditor("BashFoldComment",
+        Preferences.setEditor(
+            "BashFoldComment",
             self.foldBashCommentCheckBox.isChecked())
         
         # CMake
-        Preferences.setEditor("CMakeFoldAtElse",
+        Preferences.setEditor(
+            "CMakeFoldAtElse",
             self.cmakeFoldAtElseCheckBox.isChecked())
         
         # C++
-        Preferences.setEditor("CppFoldComment",
+        Preferences.setEditor(
+            "CppFoldComment",
             self.foldCppCommentCheckBox.isChecked())
-        Preferences.setEditor("CppFoldPreprocessor",
+        Preferences.setEditor(
+            "CppFoldPreprocessor",
             self.foldCppPreprocessorCheckBox.isChecked())
-        Preferences.setEditor("CppFoldAtElse",
+        Preferences.setEditor(
+            "CppFoldAtElse",
             self.foldCppAtElseCheckBox.isChecked())
-        Preferences.setEditor("CppIndentOpeningBrace",
+        Preferences.setEditor(
+            "CppIndentOpeningBrace",
             self.cppIndentOpeningBraceCheckBox.isChecked())
-        Preferences.setEditor("CppIndentClosingBrace",
+        Preferences.setEditor(
+            "CppIndentClosingBrace",
             self.cppIndentClosingBraceCheckBox.isChecked())
-        Preferences.setEditor("CppCaseInsensitiveKeywords",
+        Preferences.setEditor(
+            "CppCaseInsensitiveKeywords",
             self.cppCaseInsensitiveCheckBox.isChecked())
-        Preferences.setEditor("CppDollarsAllowed",
+        Preferences.setEditor(
+            "CppDollarsAllowed",
             self.cppDollarAllowedCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("CppStylePreprocessor",
+            Preferences.setEditor(
+                "CppStylePreprocessor",
                 self.cppStylePreprocessorCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020600:
-            Preferences.setEditor("CppHighlightTripleQuotedStrings",
+            Preferences.setEditor(
+                "CppHighlightTripleQuotedStrings",
                 self.cppHighlightTripleQuotedCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020700:
-            Preferences.setEditor("CppHighlightHashQuotedStrings",
+            Preferences.setEditor(
+                "CppHighlightHashQuotedStrings",
                 self.cppHighlightHashQuotedCheckBox.isChecked())
         
         # CSS
-        Preferences.setEditor("CssFoldComment",
+        Preferences.setEditor(
+            "CssFoldComment",
             self.foldCssCommentCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020700:
-            Preferences.setEditor("CssHssSupport",
+            Preferences.setEditor(
+                "CssHssSupport",
                 self.cssHssCheckBox.isChecked())
-            Preferences.setEditor("CssLessSupport",
+            Preferences.setEditor(
+                "CssLessSupport",
                 self.cssLessCheckBox.isChecked())
-            Preferences.setEditor("CssSassySupport",
+            Preferences.setEditor(
+                "CssSassySupport",
                 self.cssSassyCheckBox.isChecked())
         
         # D
-        Preferences.setEditor("DFoldComment",
+        Preferences.setEditor(
+            "DFoldComment",
             self.foldDCommentCheckBox.isChecked())
-        Preferences.setEditor("DFoldAtElse",
+        Preferences.setEditor(
+            "DFoldAtElse",
             self.foldDAtElseCheckBox.isChecked())
-        Preferences.setEditor("DIndentOpeningBrace",
+        Preferences.setEditor(
+            "DIndentOpeningBrace",
             self.dIndentOpeningBraceCheckBox.isChecked())
-        Preferences.setEditor("DIndentClosingBrace",
+        Preferences.setEditor(
+            "DIndentClosingBrace",
             self.dIndentClosingBraceCheckBox.isChecked())
         
         # HTML
-        Preferences.setEditor("HtmlFoldPreprocessor",
+        Preferences.setEditor(
+            "HtmlFoldPreprocessor",
             self.foldHtmlPreprocessorCheckBox.isChecked())
-        Preferences.setEditor("HtmlCaseSensitiveTags",
+        Preferences.setEditor(
+            "HtmlCaseSensitiveTags",
             self.htmlCaseSensitiveTagsCheckBox.isChecked())
-        Preferences.setEditor("HtmlFoldScriptComments",
+        Preferences.setEditor(
+            "HtmlFoldScriptComments",
             self.foldHtmlScriptCommentsCheckBox.isChecked())
-        Preferences.setEditor("HtmlFoldScriptHeredocs",
+        Preferences.setEditor(
+            "HtmlFoldScriptHeredocs",
             self.foldHtmlScriptHereDocsCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("HtmlDjangoTemplates",
+            Preferences.setEditor(
+                "HtmlDjangoTemplates",
                 self.htmlDjangoCheckBox.isChecked())
-            Preferences.setEditor("HtmlMakoTemplates",
+            Preferences.setEditor(
+                "HtmlMakoTemplates",
                 self.htmlMakoCheckBox.isChecked())
         
         # Pascal
         if "Pascal" in self.languages:
-            Preferences.setEditor("PascalFoldComment",
+            Preferences.setEditor(
+                "PascalFoldComment",
                 self.foldPascalCommentCheckBox.isChecked())
-            Preferences.setEditor("PascalFoldPreprocessor",
+            Preferences.setEditor(
+                "PascalFoldPreprocessor",
                 self.foldPascalPreprocessorCheckBox.isChecked())
-            Preferences.setEditor("PascalSmartHighlighting",
+            Preferences.setEditor(
+                "PascalSmartHighlighting",
                 self.pascalSmartHighlightingCheckBox.isChecked())
         
         # Perl
-        Preferences.setEditor("PerlFoldComment",
+        Preferences.setEditor(
+            "PerlFoldComment",
             self.foldPerlCommentCheckBox.isChecked())
-        Preferences.setEditor("PerlFoldPackages",
+        Preferences.setEditor(
+            "PerlFoldPackages",
             self.foldPerlPackagesCheckBox.isChecked())
-        Preferences.setEditor("PerlFoldPODBlocks",
+        Preferences.setEditor(
+            "PerlFoldPODBlocks",
             self.foldPerlPODBlocksCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020600:
-            Preferences.setEditor("PerlFoldAtElse",
+            Preferences.setEditor(
+                "PerlFoldAtElse",
                 self.foldPerlAtElseCheckBox.isChecked())
         
         # PostScript
         if "PostScript" in self.languages:
-            Preferences.setEditor("PostScriptFoldAtElse",
+            Preferences.setEditor(
+                "PostScriptFoldAtElse",
                 self.psFoldAtElseCheckBox.isChecked())
-            Preferences.setEditor("PostScriptTokenize",
+            Preferences.setEditor(
+                "PostScriptTokenize",
                 self.psMarkTokensCheckBox.isChecked())
-            Preferences.setEditor("PostScriptLevel",
+            Preferences.setEditor(
+                "PostScriptLevel",
                 self.psLevelSpinBox.value())
         
         # Povray
-        Preferences.setEditor("PovFoldComment",
+        Preferences.setEditor(
+            "PovFoldComment",
             self.foldPovrayCommentCheckBox.isChecked())
-        Preferences.setEditor("PovFoldDirectives",
+        Preferences.setEditor(
+            "PovFoldDirectives",
             self.foldPovrayDirectivesCheckBox.isChecked())
         
         # Properties
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("PropertiesInitialSpaces",
+            Preferences.setEditor(
+                "PropertiesInitialSpaces",
                 self.propertiesInitialSpacesCheckBox.isChecked())
         
         # Python
-        Preferences.setEditor("PythonFoldComment",
+        Preferences.setEditor(
+            "PythonFoldComment",
             self.foldPythonCommentCheckBox.isChecked())
-        Preferences.setEditor("PythonFoldString",
+        Preferences.setEditor(
+            "PythonFoldString",
             self.foldPythonStringCheckBox.isChecked())
-        Preferences.setEditor("PythonBadIndentation",
+        Preferences.setEditor(
+            "PythonBadIndentation",
             self.pythonBadIndentationCheckBox.isChecked())
-        Preferences.setEditor("PythonAutoIndent",
+        Preferences.setEditor(
+            "PythonAutoIndent",
             self.pythonAutoindentCheckBox.isChecked())
-        Preferences.setEditor("PythonAllowV2Unicode",
+        Preferences.setEditor(
+            "PythonAllowV2Unicode",
             self.pythonV2UnicodeAllowedCheckBox.isChecked())
-        Preferences.setEditor("PythonAllowV3Binary",
+        Preferences.setEditor(
+            "PythonAllowV3Binary",
             self.pythonV3BinaryAllowedCheckBox.isChecked())
-        Preferences.setEditor("PythonAllowV3Bytes",
+        Preferences.setEditor(
+            "PythonAllowV3Bytes",
             self.pythonV3BytesAllowedCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("PythonFoldQuotes",
+            Preferences.setEditor(
+                "PythonFoldQuotes",
                 self.foldPythonQuotesCheckBox.isChecked())
-            Preferences.setEditor("PythonStringsOverNewLineAllowed",
+            Preferences.setEditor(
+                "PythonStringsOverNewLineAllowed",
                 self.pythonStringsOverNewlineCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020600:
-            Preferences.setEditor("PythonHighlightSubidentifier",
+            Preferences.setEditor(
+                "PythonHighlightSubidentifier",
                 self.pythonHighlightSubidentifierCheckBox.isChecked())
         
         # Ruby
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("RubyFoldComment",
+            Preferences.setEditor(
+                "RubyFoldComment",
                 self.foldRubyCommentCheckBox.isChecked())
         
         # SQL
-        Preferences.setEditor("SqlFoldComment",
+        Preferences.setEditor(
+            "SqlFoldComment",
             self.foldSqlCommentCheckBox.isChecked())
-        Preferences.setEditor("SqlBackslashEscapes",
+        Preferences.setEditor(
+            "SqlBackslashEscapes",
             self.sqlBackslashEscapesCheckBox.isChecked())
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("SqlFoldAtElse",
+            Preferences.setEditor(
+                "SqlFoldAtElse",
                 self.sqlFoldAtElseCheckBox.isChecked())
-            Preferences.setEditor("SqlFoldOnlyBegin",
+            Preferences.setEditor(
+                "SqlFoldOnlyBegin",
                 self.sqlFoldOnlyBeginCheckBox.isChecked())
-            Preferences.setEditor("SqlDottedWords",
+            Preferences.setEditor(
+                "SqlDottedWords",
                 self.sqlDottedWordsCheckBox.isChecked())
-            Preferences.setEditor("SqlHashComments",
+            Preferences.setEditor(
+                "SqlHashComments",
                 self.sqlHashCommentsCheckBox.isChecked())
-            Preferences.setEditor("SqlQuotedIdentifiers",
+            Preferences.setEditor(
+                "SqlQuotedIdentifiers",
                 self.sqlQuotedIdentifiersCheckBox.isChecked())
         
         # TCL
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("TclFoldComment",
+            Preferences.setEditor(
+                "TclFoldComment",
                 self.foldTclCommentCheckBox.isChecked())
         
         # TeX
         if QSCINTILLA_VERSION() >= 0x020500:
-            Preferences.setEditor("TexFoldComment",
+            Preferences.setEditor(
+                "TexFoldComment",
                 self.foldTexCommentCheckBox.isChecked())
-            Preferences.setEditor("TexProcessComments",
+            Preferences.setEditor(
+                "TexProcessComments",
                 self.texProcessCommentsCheckBox.isChecked())
-            Preferences.setEditor("TexProcessIf",
+            Preferences.setEditor(
+                "TexProcessIf",
                 self.texProcessIfCheckBox.isChecked())
         
         # VHDL
-        Preferences.setEditor("VHDLFoldComment",
+        Preferences.setEditor(
+            "VHDLFoldComment",
             self.vhdlFoldCommentCheckBox.isChecked())
-        Preferences.setEditor("VHDLFoldAtElse",
+        Preferences.setEditor(
+            "VHDLFoldAtElse",
             self.vhdlFoldAtElseCheckBox.isChecked())
-        Preferences.setEditor("VHDLFoldAtBegin",
+        Preferences.setEditor(
+            "VHDLFoldAtBegin",
             self.vhdlFoldAtBeginCheckBox.isChecked())
-        Preferences.setEditor("VHDLFoldAtParenthesis",
+        Preferences.setEditor(
+            "VHDLFoldAtParenthesis",
             self.vhdlFoldAtParenthesisCheckBox.isChecked())
         
         # XML
-        Preferences.setEditor("XMLStyleScripts",
+        Preferences.setEditor(
+            "XMLStyleScripts",
             self.xmlSyleScriptsCheckBox.isChecked())
         
         # YAML
         if "YAML" in self.languages:
-            Preferences.setEditor("YAMLFoldComment",
+            Preferences.setEditor(
+                "YAMLFoldComment",
                 self.foldYamlCommentCheckBox.isChecked())
 
 

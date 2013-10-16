@@ -302,8 +302,8 @@ class Subversion(VersionControl):
         args.append(self.__svnURL(vcsDir))
         
         if noDialog:
-            status = self.startSynchronizedProcess(QProcess(), "svn", args,
-                os.path.join(tmpDir, project))
+            status = self.startSynchronizedProcess(
+                QProcess(), "svn", args, os.path.join(tmpDir, project))
         else:
             dia = SvnDialog(
                 self.trUtf8('Importing project into Subversion repository'))
@@ -345,7 +345,8 @@ class Subversion(VersionControl):
                     type, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Checkout"),
-                        self.trUtf8("The tag must be a normal tag (tags) or"
+                        self.trUtf8(
+                            "The tag must be a normal tag (tags) or"
                             " a branch tag (branches)."
                             " Please select from the list."),
                         self.tagTypeList,
@@ -400,7 +401,8 @@ class Subversion(VersionControl):
                     type, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Export"),
-                        self.trUtf8("The tag must be a normal tag (tags) or"
+                        self.trUtf8(
+                            "The tag must be a normal tag (tags) or"
                             " a branch tag (branches)."
                             " Please select from the list."),
                         self.tagTypeList,
@@ -652,7 +654,7 @@ class Subversion(VersionControl):
                                 os.path.normcase(repodir) and \
                             (d not in tree2 + tree) and \
                             (os.path.normcase(d) not in self.statusCache or \
-                            self.statusCache[os.path.normcase(d)] == \
+                             self.statusCache[os.path.normcase(d)] == \
                                 self.canBeAdded):
                         tree2.append(d)
                         d = os.path.dirname(d)
@@ -857,7 +859,7 @@ class Subversion(VersionControl):
                 res = self.startSynchronizedProcess(QProcess(), "svn", args)
             else:
                 dia = SvnDialog(self.trUtf8('Moving {0}')
-                    .format(name))
+                                .format(name))
                 res = dia.startProcess(args)
                 if res:
                     dia.exec_()
@@ -979,7 +981,8 @@ class Subversion(VersionControl):
                 E5MessageBox.critical(
                     self.__ui,
                     self.trUtf8("Subversion Error"),
-                    self.trUtf8("""The URL of the project repository has an"""
+                    self.trUtf8(
+                        """The URL of the project repository has an"""
                         """ invalid format. The tag operation will"""
                         """ be aborted"""))
                 return
@@ -1011,7 +1014,7 @@ class Subversion(VersionControl):
             args.append(url)
         
         dia = SvnDialog(self.trUtf8('Tagging {0} in the Subversion repository')
-            .format(name))
+                        .format(name))
         res = dia.startProcess(args)
         if res:
             dia.exec_()
@@ -1039,7 +1042,8 @@ class Subversion(VersionControl):
         if names[0]:
             from UI.DeleteFilesConfirmationDialog import \
                 DeleteFilesConfirmationDialog
-            dlg = DeleteFilesConfirmationDialog(self.parent(),
+            dlg = DeleteFilesConfirmationDialog(
+                self.parent(),
                 self.trUtf8("Revert changes"),
                 self.trUtf8("Do you really want to revert all changes to"
                             " these files or directories?"),
@@ -1099,7 +1103,8 @@ class Subversion(VersionControl):
                 E5MessageBox.critical(
                     self.__ui,
                     self.trUtf8("Subversion Error"),
-                    self.trUtf8("""The URL of the project repository has an"""
+                    self.trUtf8(
+                        """The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
                         """ be aborted"""))
                 return False
@@ -1127,7 +1132,7 @@ class Subversion(VersionControl):
         args.append(name)
         
         dia = SvnDialog(self.trUtf8('Switching to {0}')
-            .format(tn))
+                        .format(tn))
         res = dia.startProcess(args, setLanguage=True)
         if res:
             dia.exec_()
@@ -1458,7 +1463,7 @@ class Subversion(VersionControl):
         args.append(name)
         
         dia = SvnDialog(self.trUtf8('Cleaning up {0}')
-            .format(name))
+                        .format(name))
         res = dia.startProcess(args)
         if res:
             dia.exec_()
@@ -1580,7 +1585,8 @@ class Subversion(VersionControl):
                         info['committed-time'] = "{0}{1}".format(
                             time.split('.')[0], time[-1])
         
-        return QApplication.translate('subversion',
+        return QApplication.translate(
+            'subversion',
             """<h3>Repository information</h3>"""
             """<table>"""
             """<tr><td><b>Subversion V.</b></td><td>{0}</td></tr>"""
@@ -1689,7 +1695,7 @@ class Subversion(VersionControl):
             args.append(target)
             
             dia = SvnDialog(self.trUtf8('Copying {0}')
-                .format(name))
+                            .format(name))
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -1906,7 +1912,7 @@ class Subversion(VersionControl):
         
         from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
         dlg = SvnUrlSelectionDialog(self, self.tagsList, self.branchesList,
-        dname)
+                                    dname)
         if dlg.exec_() == QDialog.Accepted:
             urls, summary = dlg.getURLs()
             from .SvnDiffDialog import SvnDiffDialog
@@ -1941,17 +1947,20 @@ class Subversion(VersionControl):
             finished = process.waitForFinished(30000)
             if finished:
                 if process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(),
+                    output = str(
+                        process.readAllStandardOutput(),
                         Preferences.getSystem("IOEncoding"), 'replace')
                 else:
-                    error = str(process.readAllStandardError(),
+                    error = str(
+                        process.readAllStandardError(),
                         Preferences.getSystem("IOEncoding"), 'replace')
             else:
                 error = self.trUtf8(
                     "The svn process did not finish within 30s.")
         else:
-            error = self.trUtf8('The process {0} could not be started. '
-                    'Ensure, that it is in the search path.').format('svn')
+            error = self.trUtf8(
+                'The process {0} could not be started. '
+                'Ensure, that it is in the search path.').format('svn')
         
         return output, error
     

@@ -137,9 +137,9 @@ def main():
                         responseDict["errorMessage"] = error
                         responseDict["errorOffset"] = errorOffset
                     else:
-                        matched, captures = rxExecute(commandDict["regexp"],
-                            commandDict["options"], commandDict["text"],
-                            commandDict["startpos"])
+                        matched, captures = rxExecute(
+                            commandDict["regexp"], commandDict["options"],
+                            commandDict["text"], commandDict["startpos"])
                         responseDict["matched"] = matched
                         responseDict["captures"] = captures
         except ValueError as err:

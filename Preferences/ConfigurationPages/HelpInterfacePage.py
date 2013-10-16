@@ -44,7 +44,8 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         styleIndex = self.styleComboBox.currentIndex()
         style = self.styleComboBox.itemData(styleIndex)
         Preferences.setUI("Style", style)
-        Preferences.setUI("StyleSheet",
+        Preferences.setUI(
+            "StyleSheet",
             self.styleSheetEdit.text())
     
     def __populateStyleCombo(self):

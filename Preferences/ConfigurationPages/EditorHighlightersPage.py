@@ -98,7 +98,8 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
             self.editorFileExtEdit.clear()
             self.editorLexerCombo.setCurrentIndex(0)
             self.pygmentsLexerCombo.setCurrentIndex(0)
-            self.editorLexerList.sortItems(self.editorLexerList.sortColumn(),
+            self.editorLexerList.sortItems(
+                self.editorLexerList.sortColumn(),
                 self.editorLexerList.header().sortIndicatorOrder())
         
     @pyqtSlot()

@@ -87,34 +87,40 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             'lrelease', -1)
         # 1b. Qt Designer
         if Utilities.isWindowsPlatform():
-            exe = os.path.join(Utilities.getQtBinariesPath(),
+            exe = os.path.join(
+                Utilities.getQtBinariesPath(),
                 "{0}.exe".format(Utilities.generateQtToolName("designer")))
         elif Utilities.isMacPlatform():
             exe = Utilities.getQtMacBundle("designer")
         else:
-            exe = os.path.join(Utilities.getQtBinariesPath(),
+            exe = os.path.join(
+                Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("designer"))
         self.__createProgramEntry(
             self.trUtf8("Qt Designer"), exe, version=version)
         # 1c. Qt Linguist
         if Utilities.isWindowsPlatform():
-            exe = os.path.join(Utilities.getQtBinariesPath(),
+            exe = os.path.join(
+                Utilities.getQtBinariesPath(),
                 "{0}.exe".format(Utilities.generateQtToolName("linguist")))
         elif Utilities.isMacPlatform():
             exe = Utilities.getQtMacBundle("linguist")
         else:
-            exe = os.path.join(Utilities.getQtBinariesPath(),
+            exe = os.path.join(
+                Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("linguist"))
         self.__createProgramEntry(
             self.trUtf8("Qt Linguist"), exe, version=version)
         # 1d. Qt Assistant
         if Utilities.isWindowsPlatform():
-            exe = os.path.join(Utilities.getQtBinariesPath(),
+            exe = os.path.join(
+                Utilities.getQtBinariesPath(),
                 "{0}.exe".format(Utilities.generateQtToolName("assistant")))
         elif Utilities.isMacPlatform():
             exe = Utilities.getQtMacBundle("assistant")
         else:
-            exe = os.path.join(Utilities.getQtBinariesPath(),
+            exe = os.path.join(
+                Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("assistant"))
         self.__createProgramEntry(
             self.trUtf8("Qt Assistant"), exe, version=version)
@@ -170,11 +176,13 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         
         # 4. do the Ruby programs
         # 4a. Forms Compiler for Qt4
-        self.__createProgramEntry(self.trUtf8("Forms Compiler (Ruby, Qt4)"),
+        self.__createProgramEntry(
+            self.trUtf8("Forms Compiler (Ruby, Qt4)"),
             Utilities.isWindowsPlatform() and "rbuic4.exe" or "rbuic4",
             '-version', 'Qt', -1)
         # 4b. Resource Compiler for Qt4
-        self.__createProgramEntry(self.trUtf8("Resource Compiler (Ruby, Qt4)"),
+        self.__createProgramEntry(
+            self.trUtf8("Resource Compiler (Ruby, Qt4)"),
             Utilities.isWindowsPlatform() and "rbrcc.exe" or "rbrcc",
             '-version', 'Ruby Resource Compiler', -1)
         
@@ -183,8 +191,8 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         exe = Preferences.getCorba("omniidl")
         if Utilities.isWindowsPlatform():
             exe += ".exe"
-        self.__createProgramEntry(self.trUtf8("CORBA IDL Compiler"), exe,
-            '-V', 'omniidl', -1)
+        self.__createProgramEntry(
+            self.trUtf8("CORBA IDL Compiler"), exe, '-V', 'omniidl', -1)
         
         # 6. do the spell checking entry
         try:

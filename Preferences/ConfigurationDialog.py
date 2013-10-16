@@ -418,8 +418,8 @@ class ConfigurationWidget(QWidget):
         self.leftVBoxLayout.setContentsMargins(0, 0, 0, 0)
         self.leftVBoxLayout.setSpacing(0)
         self.leftVBoxLayout.setObjectName("leftVBoxLayout")
-        self.configListFilter = E5ClearableLineEdit(self,
-            self.trUtf8("Enter filter text..."))
+        self.configListFilter = E5ClearableLineEdit(
+            self, self.trUtf8("Enter filter text..."))
         self.configListFilter.setObjectName("configListFilter")
         self.leftVBoxLayout.addWidget(self.configListFilter)
         self.configList = QTreeWidget()
@@ -616,7 +616,8 @@ class ConfigurationWidget(QWidget):
             if page is None:
                 page = self.emptyPage
             elif setCurrent:
-                items = self.configList.findItems(pageData[0],
+                items = self.configList.findItems(
+                    pageData[0],
                     Qt.MatchFixedString | Qt.MatchRecursive)
                 if items:
                     self.configList.setCurrentItem(items[0])

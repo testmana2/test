@@ -54,15 +54,20 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         """
         Public slot to save the Cooperation configuration.
         """
-        Preferences.setCooperation("AutoStartServer",
+        Preferences.setCooperation(
+            "AutoStartServer",
             self.autostartCheckBox.isChecked())
-        Preferences.setCooperation("TryOtherPorts",
+        Preferences.setCooperation(
+            "TryOtherPorts",
             self.otherPortsCheckBox.isChecked())
-        Preferences.setCooperation("AutoAcceptConnections",
+        Preferences.setCooperation(
+            "AutoAcceptConnections",
             self.autoAcceptCheckBox.isChecked())
-        Preferences.setCooperation("ServerPort",
+        Preferences.setCooperation(
+            "ServerPort",
             self.serverPortSpin.value())
-        Preferences.setCooperation("MaxPortsToTry",
+        Preferences.setCooperation(
+            "MaxPortsToTry",
             self.portToTrySpin.value())
         
         bannedUsers = []

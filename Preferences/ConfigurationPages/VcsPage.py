@@ -38,34 +38,46 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         self.autoUpdateCheckBox.setChecked(
             Preferences.getVCS("AutoUpdate"))
         
-        self.initColour("VcsAdded", self.pbVcsAddedButton,
+        self.initColour(
+            "VcsAdded", self.pbVcsAddedButton,
             Preferences.getProjectBrowserColour)
-        self.initColour("VcsConflict", self.pbVcsConflictButton,
+        self.initColour(
+            "VcsConflict", self.pbVcsConflictButton,
             Preferences.getProjectBrowserColour)
-        self.initColour("VcsModified", self.pbVcsModifiedButton,
+        self.initColour(
+            "VcsModified", self.pbVcsModifiedButton,
             Preferences.getProjectBrowserColour)
-        self.initColour("VcsReplaced", self.pbVcsReplacedButton,
+        self.initColour(
+            "VcsReplaced", self.pbVcsReplacedButton,
             Preferences.getProjectBrowserColour)
-        self.initColour("VcsUpdate", self.pbVcsUpdateButton,
+        self.initColour(
+            "VcsUpdate", self.pbVcsUpdateButton,
             Preferences.getProjectBrowserColour)
-        self.initColour("VcsRemoved", self.pbVcsRemovedButton,
+        self.initColour(
+            "VcsRemoved", self.pbVcsRemovedButton,
             Preferences.getProjectBrowserColour)
     
     def save(self):
         """
         Public slot to save the VCS configuration.
         """
-        Preferences.setVCS("AutoClose",
+        Preferences.setVCS(
+            "AutoClose",
             self.vcsAutoCloseCheckBox.isChecked())
-        Preferences.setVCS("AutoSaveFiles",
+        Preferences.setVCS(
+            "AutoSaveFiles",
             self.vcsAutoSaveCheckBox.isChecked())
-        Preferences.setVCS("AutoSaveProject",
+        Preferences.setVCS(
+            "AutoSaveProject",
             self.vcsAutoSaveProjectCheckBox.isChecked())
-        Preferences.setVCS("StatusMonitorInterval",
+        Preferences.setVCS(
+            "StatusMonitorInterval",
             self.vcsStatusMonitorIntervalSpinBox.value())
-        Preferences.setVCS("MonitorLocalStatus",
+        Preferences.setVCS(
+            "MonitorLocalStatus",
             self.vcsMonitorLocalStatusCheckBox.isChecked())
-        Preferences.setVCS("AutoUpdate",
+        Preferences.setVCS(
+            "AutoUpdate",
             self.autoUpdateCheckBox.isChecked())
     
         self.saveColours(Preferences.setProjectBrowserColour)

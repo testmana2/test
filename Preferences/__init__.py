@@ -1175,7 +1175,8 @@ def exportPreferences(prefClass=Prefs):
         None,
         QCoreApplication.translate("Preferences", "Export Preferences"),
         "",
-        QCoreApplication.translate("Preferences",
+        QCoreApplication.translate(
+            "Preferences",
             "Properties File (*.ini);;All Files (*)"),
         None,
         E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
@@ -1202,7 +1203,8 @@ def importPreferences(prefClass=Prefs):
         None,
         QCoreApplication.translate("Preferences", "Import Preferences"),
         "",
-        QCoreApplication.translate("Preferences",
+        QCoreApplication.translate(
+            "Preferences",
             "Properties File (*.ini);;All Files (*)"))
     if filename:
         settingsFile = prefClass.settings.fileName()
@@ -1239,10 +1241,10 @@ def getVarFilters(prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return a tuple defining the variables filter
     """
-    localsFilter = eval(prefClass.settings.value("Variables/LocalsFilter",
-        prefClass.varDefaults["LocalsFilter"]))
-    globalsFilter = eval(prefClass.settings.value("Variables/GlobalsFilter",
-        prefClass.varDefaults["GlobalsFilter"]))
+    localsFilter = eval(prefClass.settings.value(
+        "Variables/LocalsFilter", prefClass.varDefaults["LocalsFilter"]))
+    globalsFilter = eval(prefClass.settings.value(
+        "Variables/GlobalsFilter", prefClass.varDefaults["GlobalsFilter"]))
     return (localsFilter, globalsFilter)
     
 
@@ -1276,20 +1278,20 @@ def getDebugger(key, prefClass=Prefs):
                 "SuppressClientExit", "BreakAlways",
                 "AutoViewSourceCode",
               ]:
-        return toBool(prefClass.settings.value("Debugger/" + key,
-            prefClass.debuggerDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Debugger/" + key, prefClass.debuggerDefaults[key]))
     elif key in ["PassiveDbgPort"]:
         return int(
-            prefClass.settings.value("Debugger/" + key,
-                                     prefClass.debuggerDefaults[key]))
+            prefClass.settings.value(
+                "Debugger/" + key, prefClass.debuggerDefaults[key]))
     elif key in ["AllowedHosts"]:
         return toList(
-            prefClass.settings.value("Debugger/" + key,
-                                     prefClass.debuggerDefaults[key]))
+            prefClass.settings.value(
+                "Debugger/" + key, prefClass.debuggerDefaults[key]))
     elif key == "PythonInterpreter":
         interpreter = \
-            prefClass.settings.value("Debugger/" + key,
-                                     prefClass.debuggerDefaults[key])
+            prefClass.settings.value(
+                "Debugger/" + key, prefClass.debuggerDefaults[key])
         if not interpreter:
             interpreters = findPython2Interpreters()
             if interpreters:
@@ -1298,9 +1300,10 @@ def getDebugger(key, prefClass=Prefs):
                 else:
                     selection, ok = QInputDialog.getItem(
                         None,
-                        QCoreApplication.translate("Preferences",
-                            "Select Python2 Interpreter"),
-                        QCoreApplication.translate("Preferences",
+                        QCoreApplication.translate(
+                            "Preferences", "Select Python2 Interpreter"),
+                        QCoreApplication.translate(
+                            "Preferences",
                             "Select the Python2 interpreter to be used:"),
                         interpreters,
                         0, False)
@@ -1310,8 +1313,8 @@ def getDebugger(key, prefClass=Prefs):
                     setDebugger("PythonInterpreter", interpreter)
         return interpreter
     else:
-        return prefClass.settings.value("Debugger/" + key,
-                                        prefClass.debuggerDefaults[key])
+        return prefClass.settings.value(
+            "Debugger/" + key, prefClass.debuggerDefaults[key])
     
 
 def setDebugger(key, value, prefClass=Prefs):
@@ -1391,16 +1394,16 @@ def getUILayout(prefClass=Prefs):
     @return the UI layout as a tuple of main layout, flag for
         an embedded shell and a value for an embedded file browser
     """
-    layoutType = prefClass.settings.value("UI/LayoutType",
-            prefClass.uiDefaults["LayoutType"])
+    layoutType = prefClass.settings.value(
+        "UI/LayoutType", prefClass.uiDefaults["LayoutType"])
     if layoutType in ["DockWindows", "FloatingWindows"]:
         # change old fashioned layouts to the modern default
         layoutType = prefClass.uiDefaults["LayoutType"]
     layout = (layoutType,
-        int(prefClass.settings.value("UI/LayoutShellEmbedded",
-            prefClass.uiDefaults["LayoutShellEmbedded"])),
-        int(prefClass.settings.value("UI/LayoutFileBrowserEmbedded",
-            prefClass.uiDefaults["LayoutFileBrowserEmbedded"])),
+              int(prefClass.settings.value("UI/LayoutShellEmbedded",
+                  prefClass.uiDefaults["LayoutShellEmbedded"])),
+              int(prefClass.settings.value("UI/LayoutFileBrowserEmbedded",
+                  prefClass.uiDefaults["LayoutFileBrowserEmbedded"])),
     )
     return layout
     
@@ -1424,8 +1427,8 @@ def getViewManager(prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the viewmanager type
     """
-    return prefClass.settings.value("UI/ViewManager",
-        prefClass.uiDefaults["ViewManager"])
+    return prefClass.settings.value(
+        "UI/ViewManager", prefClass.uiDefaults["ViewManager"])
     
 
 def setViewManager(vm, prefClass=Prefs):
@@ -1459,15 +1462,15 @@ def getUI(key, prefClass=Prefs):
                "RequestDownloadFilename",
                "LayoutShellEmbedded", "LayoutFileBrowserEmbedded",
                "CheckErrorLog", "NotificationsEnabled"]:
-        return toBool(prefClass.settings.value("UI/" + key,
-            prefClass.uiDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "UI/" + key, prefClass.uiDefaults[key]))
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
                  "ProxyPort/Http", "ProxyPort/Https", "ProxyPort/Ftp",
                  "ProxyType/Ftp", "OpenOnStartup",
                  "PerformVersionCheck", "RecentNumber", "NotificationTimeout",
                  "SidebarDelay"]:
-        return int(prefClass.settings.value("UI/" + key,
-            prefClass.uiDefaults[key]))
+        return int(prefClass.settings.value(
+            "UI/" + key, prefClass.uiDefaults[key]))
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",
                  "ProxyPassword/Ftp", ]:
         from Utilities.crypto import pwConvert
@@ -1631,17 +1634,17 @@ def getCooperation(key, prefClass=Prefs):
     @return the requested UI setting
     """
     if key in ["AutoStartServer", "TryOtherPorts", "AutoAcceptConnections"]:
-        return toBool(prefClass.settings.value("Cooperation/" + key,
-            prefClass.cooperationDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Cooperation/" + key, prefClass.cooperationDefaults[key]))
     elif key in ["ServerPort", "MaxPortsToTry"]:
-        return int(prefClass.settings.value("Cooperation/" + key,
-            prefClass.cooperationDefaults[key]))
+        return int(prefClass.settings.value(
+            "Cooperation/" + key, prefClass.cooperationDefaults[key]))
     elif key in ["BannedUsers"]:
-        return toList(prefClass.settings.value("Cooperation/" + key,
-            prefClass.cooperationDefaults[key]))
+        return toList(prefClass.settings.value(
+            "Cooperation/" + key, prefClass.cooperationDefaults[key]))
     else:
-        return prefClass.settings.value("Cooperation/" + key,
-            prefClass.cooperationDefaults[key])
+        return prefClass.settings.value(
+            "Cooperation/" + key, prefClass.cooperationDefaults[key])
     
 
 def setCooperation(key, value, prefClass=Prefs):
@@ -1666,8 +1669,8 @@ def getEditor(key, prefClass=Prefs):
     if key in ["DefaultEncoding", "DefaultOpenFilter", "DefaultSaveFilter",
                "SpellCheckingDefaultLanguage", "SpellCheckingPersonalWordList",
                "SpellCheckingPersonalExcludeList"]:
-        return prefClass.settings.value("Editor/" + key,
-                                        prefClass.editorDefaults[key])
+        return prefClass.settings.value(
+            "Editor/" + key, prefClass.editorDefaults[key])
     elif key in ["AutosaveInterval", "TabWidth", "IndentWidth",
                  "FoldingStyle", "WarnFilesize", "EdgeMode", "EdgeColumn",
                  "CaretWidth", "AutoCompletionSource",
@@ -1678,17 +1681,17 @@ def getEditor(key, prefClass=Prefs):
                  "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval",
                  "WrapLongLinesMode", "WrapVisualFlag", "CallTipsPosition",
                  "VirtualSpaceOptions"]:
-        return int(prefClass.settings.value("Editor/" + key,
-            prefClass.editorDefaults[key]))
+        return int(prefClass.settings.value(
+            "Editor/" + key, prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
                  "PreviewMarkdownFileNameExtensions",
                  "PreviewRestFileNameExtensions",
                  "PreviewHtmlFileNameExtensions"]:
-        return toList(prefClass.settings.value("Editor/" + key,
-            prefClass.editorDefaults[key]))
+        return toList(prefClass.settings.value(
+            "Editor/" + key, prefClass.editorDefaults[key]))
     else:
-        return toBool(prefClass.settings.value("Editor/" + key,
-            prefClass.editorDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Editor/" + key, prefClass.editorDefaults[key]))
     
 
 def setEditor(key, value, prefClass=Prefs):
@@ -1752,8 +1755,8 @@ def getEditorOtherFonts(key, prefClass=Prefs):
     @return the requested editor font (QFont)
     """
     f = QFont()
-    f.fromString(prefClass.settings.value("Editor/Other Fonts/" + key,
-        prefClass.editorOtherFontsDefaults[key]))
+    f.fromString(prefClass.settings.value(
+        "Editor/Other Fonts/" + key, prefClass.editorOtherFontsDefaults[key]))
     return f
     
 
@@ -1874,8 +1877,8 @@ def setEditorLexerAssocs(assocs, prefClass=Prefs):
         if key not in assocs:
             prefClass.settings.remove("Editor/LexerAssociations/" + key)
     for key in assocs:
-        prefClass.settings.setValue("Editor/LexerAssociations/" + key,
-                                    assocs[key])
+        prefClass.settings.setValue(
+            "Editor/LexerAssociations/" + key, assocs[key])
     
 
 def getEditorLexerAssoc(filename, prefClass=Prefs):
@@ -1902,8 +1905,8 @@ def getEditorTyping(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested editor setting
     """
-    return toBool(prefClass.settings.value("Editor/Typing/" + key,
-        prefClass.editorTypingDefaults[key]))
+    return toBool(prefClass.settings.value(
+        "Editor/Typing/" + key, prefClass.editorTypingDefaults[key]))
     
 
 def setEditorTyping(key, value, prefClass=Prefs):
@@ -1927,22 +1930,22 @@ def getEditorExporter(key, prefClass=Prefs):
     """
     if key in ["RTF/Font"]:
         f = QFont()
-        f.fromString(prefClass.settings.value("Editor/Exporters/" + key,
-            prefClass.editorExporterDefaults[key]))
+        f.fromString(prefClass.settings.value(
+            "Editor/Exporters/" + key, prefClass.editorExporterDefaults[key]))
         return f
     elif key in ["HTML/WYSIWYG", "HTML/Folding", "HTML/OnlyStylesUsed",
                  "HTML/FullPathAsTitle", "HTML/UseTabs", "RTF/WYSIWYG",
                  "RTF/UseTabs", "TeX/OnlyStylesUsed", "TeX/FullPathAsTitle",
                  "ODT/WYSIWYG", "ODT/OnlyStylesUsed", "ODT/UseTabs"]:
-        return toBool(prefClass.settings.value("Editor/Exporters/" + key,
-            prefClass.editorExporterDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Editor/Exporters/" + key, prefClass.editorExporterDefaults[key]))
     elif key in ["PDF/Magnification", "PDF/MarginLeft", "PDF/MarginRight",
                  "PDF/MarginTop", "PDF/MarginBottom"]:
-        return int(prefClass.settings.value("Editor/Exporters/" + key,
-            prefClass.editorExporterDefaults[key]))
+        return int(prefClass.settings.value(
+            "Editor/Exporters/" + key, prefClass.editorExporterDefaults[key]))
     else:
-        return prefClass.settings.value("Editor/Exporters/" + key,
-            prefClass.editorExporterDefaults[key])
+        return prefClass.settings.value(
+            "Editor/Exporters/" + key, prefClass.editorExporterDefaults[key])
 
 
 def setEditorExporter(key, value, prefClass=Prefs):
@@ -1954,8 +1957,8 @@ def setEditorExporter(key, value, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["RTF/Font"]:
-        prefClass.settings.setValue("Editor/Exporters/" + key,
-                                    value.toString())
+        prefClass.settings.setValue(
+            "Editor/Exporters/" + key, value.toString())
     else:
         prefClass.settings.setValue("Editor/Exporters/" + key, value)
     
@@ -1969,22 +1972,22 @@ def getPrinter(key, prefClass=Prefs):
     @return the requested printer setting
     """
     if key in ["ColorMode", "FirstPageFirst"]:
-        return toBool(prefClass.settings.value("Printer/" + key,
-            prefClass.printerDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Printer/" + key, prefClass.printerDefaults[key]))
     elif key in ["Magnification", "Orientation", "PageSize"]:
-        return int(prefClass.settings.value("Printer/" + key,
-            prefClass.printerDefaults[key]))
+        return int(prefClass.settings.value(
+            "Printer/" + key, prefClass.printerDefaults[key]))
     elif key in ["LeftMargin", "RightMargin", "TopMargin", "BottomMargin"]:
-        return float(prefClass.settings.value("Printer/" + key,
-            prefClass.printerDefaults[key]))
+        return float(prefClass.settings.value(
+            "Printer/" + key, prefClass.printerDefaults[key]))
     elif key in ["HeaderFont"]:
         f = QFont()
-        f.fromString(prefClass.settings.value("Printer/" + key,
-            prefClass.printerDefaults[key]))
+        f.fromString(prefClass.settings.value(
+            "Printer/" + key, prefClass.printerDefaults[key]))
         return f
     else:
-        return prefClass.settings.value("Printer/" + key,
-            prefClass.printerDefaults[key])
+        return prefClass.settings.value(
+            "Printer/" + key, prefClass.printerDefaults[key])
 
 
 def setPrinter(key, value, prefClass=Prefs):
@@ -2011,15 +2014,15 @@ def getShell(key, prefClass=Prefs):
     """
     if key in ["MonospacedFont", "MarginsFont"]:
         f = QFont()
-        f.fromString(prefClass.settings.value("Shell/" + key,
-            prefClass.shellDefaults[key]))
+        f.fromString(prefClass.settings.value(
+            "Shell/" + key, prefClass.shellDefaults[key]))
         return f
     elif key in ["MaxHistoryEntries"]:
-        return int(prefClass.settings.value("Shell/" + key,
-            prefClass.shellDefaults[key]))
+        return int(prefClass.settings.value(
+            "Shell/" + key, prefClass.shellDefaults[key]))
     else:
-        return toBool(prefClass.settings.value("Shell/" + key,
-            prefClass.shellDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Shell/" + key, prefClass.shellDefaults[key]))
 
 
 def setShell(key, value, prefClass=Prefs):
@@ -2045,11 +2048,11 @@ def getProject(key, prefClass=Prefs):
     @return the requested project setting
     """
     if key in ["RecentNumber"]:
-        return int(prefClass.settings.value("Project/" + key,
-            prefClass.projectDefaults[key]))
+        return int(prefClass.settings.value(
+            "Project/" + key, prefClass.projectDefaults[key]))
     else:
-        return toBool(prefClass.settings.value("Project/" + key,
-            prefClass.projectDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Project/" + key, prefClass.projectDefaults[key]))
     
 
 def setProject(key, value, prefClass=Prefs):
@@ -2076,8 +2079,8 @@ def getProjectBrowserFlags(key, prefClass=Prefs):
     except KeyError:
         default = AllBrowsersFlag
     
-    return int(prefClass.settings.value("Project/BrowserFlags/" + key,
-                                        default))
+    return int(prefClass.settings.value(
+        "Project/BrowserFlags/" + key, default))
     
 
 def setProjectBrowserFlags(key, value, prefClass=Prefs):
@@ -2147,14 +2150,14 @@ def getMultiProject(key, prefClass=Prefs):
     @return the requested project setting
     """
     if key in ["RecentNumber"]:
-        return int(prefClass.settings.value("MultiProject/" + key,
-            prefClass.multiProjectDefaults[key]))
+        return int(prefClass.settings.value(
+            "MultiProject/" + key, prefClass.multiProjectDefaults[key]))
     elif key in ["OpenMasterAutomatically", "XMLTimestamp"]:
-        return toBool(prefClass.settings.value("MultiProject/" + key,
-            prefClass.multiProjectDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "MultiProject/" + key, prefClass.multiProjectDefaults[key]))
     else:
-        return prefClass.settings.value("MultiProject/" + key,
-            prefClass.multiProjectDefaults[key])
+        return prefClass.settings.value(
+            "MultiProject/" + key, prefClass.multiProjectDefaults[key])
     
 
 def setMultiProject(key, value, prefClass=Prefs):
@@ -2175,8 +2178,8 @@ def getQt4DocDir(prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested Qt4DocDir setting (string)
     """
-    s = prefClass.settings.value("Help/Qt4DocDir",
-        prefClass.helpDefaults["Qt4DocDir"])
+    s = prefClass.settings.value(
+        "Help/Qt4DocDir", prefClass.helpDefaults["Qt4DocDir"])
     if s == "":
         s = os.getenv("QT4DOCDIR", "")
     if s == "":
@@ -2192,8 +2195,8 @@ def getQt5DocDir(prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested Qt4DocDir setting (string)
     """
-    s = prefClass.settings.value("Help/Qt5DocDir",
-        prefClass.helpDefaults["Qt5DocDir"])
+    s = prefClass.settings.value(
+        "Help/Qt5DocDir", prefClass.helpDefaults["Qt5DocDir"])
     if s == "":
         s = os.getenv("QT5DOCDIR", "")
     if s == "":
@@ -2215,8 +2218,8 @@ def getHelp(key, prefClass=Prefs):
     
     if key in ["StandardFont", "FixedFont"]:
         f = QFont()
-        f.fromString(prefClass.settings.value("Help/" + key,
-            prefClass.helpDefaults[key]))
+        f.fromString(prefClass.settings.value(
+            "Help/" + key, prefClass.helpDefaults[key]))
         return f
     elif key in ["SaveUrlColor"]:
         col = prefClass.settings.value("Help/" + key)
@@ -2264,8 +2267,8 @@ def getHelp(key, prefClass=Prefs):
         return feeds
     elif key in ["SyncFtpPassword", "SyncEncryptionKey"]:
         from Utilities.crypto import pwConvert
-        return pwConvert(prefClass.settings.value("Help/" + key,
-            prefClass.helpDefaults[key]), encode=False)
+        return pwConvert(prefClass.settings.value(
+            "Help/" + key, prefClass.helpDefaults[key]), encode=False)
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies",
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota",
@@ -2273,8 +2276,8 @@ def getHelp(key, prefClass=Prefs):
                  "DownloadManagerRemovePolicy", "AdBlockUpdatePeriod",
                  "SearchLanguage", "SyncType", "SyncFtpPort",
                  "SyncFtpIdleTimeout", "SyncEncryptionKeyLength"]:
-        return int(prefClass.settings.value("Help/" + key,
-            prefClass.helpDefaults[key]))
+        return int(prefClass.settings.value(
+            "Help/" + key, prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",
                  "DiskCacheEnabled", "FilterTrackingCookies",
                  "PrintBackgrounds", "AdBlockEnabled", "AutoLoadImages",
@@ -2294,13 +2297,13 @@ def getHelp(key, prefClass=Prefs):
                  "SyncEncryptPasswordsOnly",
                  "WarnOnMultipleClose", "ClickToFlashEnabled"
                 ]:
-        return toBool(prefClass.settings.value("Help/" + key,
-            prefClass.helpDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Help/" + key, prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions", "AdBlockExceptions",
                  "ClickToFlashWhitelist", "SendRefererWhitelist",
                  "GreaseMonkeyDisabledScripts", "NoCacheHosts"]:
-        return toList(prefClass.settings.value("Help/" + key,
-            prefClass.helpDefaults[key]))
+        return toList(prefClass.settings.value(
+            "Help/" + key, prefClass.helpDefaults[key]))
     else:
         return prefClass.settings.value("Help/" + key,
                                         prefClass.helpDefaults[key])
@@ -2372,8 +2375,8 @@ def getSystem(key, prefClass=Prefs):
     """
     from Utilities import supportedCodecs
     if key in ["StringEncoding", "IOEncoding"]:
-        encoding = prefClass.settings.value("System/" + key,
-            prefClass.sysDefaults[key])
+        encoding = prefClass.settings.value(
+            "System/" + key, prefClass.sysDefaults[key])
         if encoding not in supportedCodecs:
             encoding = prefClass.sysDefaults[key]
         return encoding
@@ -2397,8 +2400,8 @@ def getQt4TranslationsDir(prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested Qt4TranslationsDir setting (string)
     """
-    s = prefClass.settings.value("Qt/Qt4TranslationsDir",
-        prefClass.qtDefaults["Qt4TranslationsDir"])
+    s = prefClass.settings.value(
+        "Qt/Qt4TranslationsDir", prefClass.qtDefaults["Qt4TranslationsDir"])
     if s == "":
         s = os.getenv("QT4TRANSLATIONSDIR", "")
     if s == "":
@@ -2443,8 +2446,8 @@ def getCorba(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested corba setting
     """
-    return prefClass.settings.value("Corba/" + key,
-                                    prefClass.corbaDefaults[key])
+    return prefClass.settings.value(
+        "Corba/" + key, prefClass.corbaDefaults[key])
     
 
 def setCorba(key, value, prefClass=Prefs):
@@ -2468,19 +2471,19 @@ def getUser(key, prefClass=Prefs):
     """
     if key == "MailServerPassword":
         from Utilities.crypto import pwConvert
-        return pwConvert(prefClass.settings.value("User/" + key,
-            prefClass.userDefaults[key]), encode=False)
+        return pwConvert(prefClass.settings.value(
+            "User/" + key, prefClass.userDefaults[key]), encode=False)
     elif key in ["MailServerPort"]:
-        return int(prefClass.settings.value("User/" + key,
-            prefClass.userDefaults[key]))
+        return int(prefClass.settings.value(
+            "User/" + key, prefClass.userDefaults[key]))
     elif key in ["MailServerAuthentication", "MailServerUseTLS",
                  "UseSystemEmailClient", "UseMasterPassword",
                  "SavePasswords"]:
-        return toBool(prefClass.settings.value("User/" + key,
-            prefClass.userDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "User/" + key, prefClass.userDefaults[key]))
     else:
-        return prefClass.settings.value("User/" + key,
-                                        prefClass.userDefaults[key])
+        return prefClass.settings.value(
+            "User/" + key, prefClass.userDefaults[key])
     
 
 def setUser(key, value, prefClass=Prefs):
@@ -2512,11 +2515,11 @@ def getVCS(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["StatusMonitorInterval"]:
-        return int(prefClass.settings.value("VCS/" + key,
-                                            prefClass.vcsDefaults[key]))
+        return int(prefClass.settings.value(
+            "VCS/" + key, prefClass.vcsDefaults[key]))
     else:
-        return toBool(prefClass.settings.value("VCS/" + key,
-                                               prefClass.vcsDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "VCS/" + key, prefClass.vcsDefaults[key]))
     
 
 def setVCS(key, value, prefClass=Prefs):
@@ -2546,11 +2549,11 @@ def getTasks(key, prefClass=Prefs):
         else:
             return prefClass.tasksDefaults[key]
     elif key in ["ClearOnFileClose", "TasksProjectAutoSave"]:
-        return toBool(prefClass.settings.value("Tasks/" + key,
-            prefClass.tasksDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Tasks/" + key, prefClass.tasksDefaults[key]))
     else:
-        return prefClass.settings.value("Tasks/" + key,
-            prefClass.tasksDefaults[key])
+        return prefClass.settings.value(
+            "Tasks/" + key, prefClass.tasksDefaults[key])
     
 
 def setTasks(key, value, prefClass=Prefs):
@@ -2577,11 +2580,11 @@ def getTemplates(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["SeparatorChar"]:
-        return prefClass.settings.value("Templates/" + key,
-            prefClass.templatesDefaults[key])
+        return prefClass.settings.value(
+            "Templates/" + key, prefClass.templatesDefaults[key])
     else:
-        return toBool(prefClass.settings.value("Templates/" + key,
-            prefClass.templatesDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "Templates/" + key, prefClass.templatesDefaults[key]))
     
 
 def setTemplates(key, value, prefClass=Prefs):
@@ -2604,11 +2607,11 @@ def getPluginManager(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["DownloadPath"]:
-        return prefClass.settings.value("PluginManager/" + key,
-            prefClass.pluginManagerDefaults[key])
+        return prefClass.settings.value(
+            "PluginManager/" + key, prefClass.pluginManagerDefaults[key])
     else:
-        return toBool(prefClass.settings.value("PluginManager/" + key,
-            prefClass.pluginManagerDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
     
 
 def setPluginManager(key, value, prefClass=Prefs):
@@ -2631,8 +2634,8 @@ def getGraphics(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["Font"]:
-        font = prefClass.settings.value("Graphics/" + key,
-            prefClass.graphicsDefaults[key])
+        font = prefClass.settings.value(
+            "Graphics/" + key, prefClass.graphicsDefaults[key])
         if isinstance(font, QFont):
             # workaround for an old bug in eric < 4.4
             return font
@@ -2641,8 +2644,8 @@ def getGraphics(key, prefClass=Prefs):
             f.fromString(font)
             return f
     else:
-        return prefClass.settings.value("Graphics/" + key,
-            prefClass.graphicsDefaults[key])
+        return prefClass.settings.value(
+            "Graphics/" + key, prefClass.graphicsDefaults[key])
     
 
 def setGraphics(key, value, prefClass=Prefs):
@@ -2667,8 +2670,8 @@ def getIconEditor(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    return prefClass.settings.value("IconEditor/" + key,
-        prefClass.iconEditorDefaults[key])
+    return prefClass.settings.value(
+        "IconEditor/" + key, prefClass.iconEditorDefaults[key])
     
 
 def setIconEditor(key, value, prefClass=Prefs):
@@ -2692,10 +2695,10 @@ def getFlakes(key, prefClass=Prefs):
     """
     if key in ["IncludeInSyntaxCheck", "IgnoreStarImportWarnings"]:
         return toBool(prefClass.settings.value("Py3Flakes/" + key,
-            prefClass.py3flakesDefaults[key]))
+                      prefClass.py3flakesDefaults[key]))
     else:
-        return prefClass.settings.value("Py3Flakes/" + key,
-            prefClass.py3flakesDefaults[key])
+        return prefClass.settings.value(
+            "Py3Flakes/" + key, prefClass.py3flakesDefaults[key])
     
 
 def setFlakes(key, value, prefClass=Prefs):
@@ -2717,8 +2720,8 @@ def getTrayStarter(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    return prefClass.settings.value("TrayStarter/" + key,
-            prefClass.trayStarterDefaults[key])
+    return prefClass.settings.value(
+        "TrayStarter/" + key, prefClass.trayStarterDefaults[key])
     
 
 def setTrayStarter(key, value, prefClass=Prefs):
@@ -2744,14 +2747,14 @@ def getIrc(key, prefClass=Prefs):
                "NotifyJoinPart", "NotifyMessage", "NotifyNick",
                "EnableIrcColours", "AutoUserInfoLookup",
                "MarkPositionWhenHidden", "AskOnShutdown"]:
-        return toBool(prefClass.settings.value("IRC/" + key,
-                prefClass.ircDefaults[key]))
+        return toBool(prefClass.settings.value(
+            "IRC/" + key, prefClass.ircDefaults[key]))
     elif key in ["AutoUserInfoMax", "AutoUserInfoInterval"]:
-        return int(prefClass.settings.value("IRC/" + key,
-                prefClass.ircDefaults[key]))
+        return int(prefClass.settings.value(
+            "IRC/" + key, prefClass.ircDefaults[key]))
     else:
-        return prefClass.settings.value("IRC/" + key,
-                                        prefClass.ircDefaults[key])
+        return prefClass.settings.value(
+            "IRC/" + key, prefClass.ircDefaults[key])
 
 
 def setIrc(key, value, prefClass=Prefs):
@@ -2774,7 +2777,8 @@ def getGeometry(key, prefClass=Prefs):
     @return the requested geometry setting
     """
     if key in ["MainMaximized"]:
-        return toBool(prefClass.settings.value("Geometry/" + key,
+        return toBool(prefClass.settings.value(
+            "Geometry/" + key,
             prefClass.geometryDefaults[key]))
     else:
         v = prefClass.settings.value("Geometry/" + key)
@@ -2829,7 +2833,8 @@ def saveResetLayout(prefClass=Prefs):
     """
     if prefClass.resetLayout:
         for key in list(prefClass.geometryDefaults.keys()):
-            prefClass.settings.setValue("Geometry/" + key,
+            prefClass.settings.setValue(
+                "Geometry/" + key,
                 prefClass.geometryDefaults[key])
 
 

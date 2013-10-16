@@ -57,9 +57,11 @@ class PythonPage(ConfigurationPageBase, Ui_PythonPage):
             enc = "utf-8"
         Preferences.setSystem("IOEncoding", enc)
         
-        Preferences.setDebugger("PythonExtensions",
+        Preferences.setDebugger(
+            "PythonExtensions",
             self.py2ExtensionsEdit.text())
-        Preferences.setDebugger("Python3Extensions",
+        Preferences.setDebugger(
+            "Python3Extensions",
             self.py3ExtensionsEdit.text())
     
 

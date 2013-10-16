@@ -38,21 +38,26 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         self.markOccurrencesTimeoutSpinBox.setValue(
             Preferences.getEditor("MarkOccurrencesTimeout"))
         
-        self.initColour("SearchMarkers", self.searchMarkerButton,
+        self.initColour(
+            "SearchMarkers", self.searchMarkerButton,
             Preferences.getEditorColour, hasAlpha=True)
         
     def save(self):
         """
         Public slot to save the Editor Search configuration.
         """
-        Preferences.setEditor("SearchMarkersEnabled",
+        Preferences.setEditor(
+            "SearchMarkersEnabled",
             self.searchMarkersEnabledCheckBox.isChecked())
-        Preferences.setEditor("QuickSearchMarkersEnabled",
+        Preferences.setEditor(
+            "QuickSearchMarkersEnabled",
             self.quicksearchMarkersEnabledCheckBox.isChecked())
-        Preferences.setEditor("MarkOccurrencesEnabled",
+        Preferences.setEditor(
+            "MarkOccurrencesEnabled",
             self.occurrencesMarkersEnabledCheckBox.isChecked())
         
-        Preferences.setEditor("MarkOccurrencesTimeout",
+        Preferences.setEditor(
+            "MarkOccurrencesTimeout",
             self.markOccurrencesTimeoutSpinBox.value())
         
         self.saveColours(Preferences.setEditorColour)

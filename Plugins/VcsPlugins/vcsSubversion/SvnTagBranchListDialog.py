@@ -115,7 +115,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
                 E5MessageBox.critical(
                     self,
                     self.trUtf8("Subversion Error"),
-                    self.trUtf8("""The URL of the project repository has an"""
+                    self.trUtf8(
+                        """The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
                         """ be aborted"""))
                 return
@@ -216,7 +217,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         """
         Private method to resort the tree.
         """
-        self.tagList.sortItems(self.tagList.sortColumn(),
+        self.tagList.sortItems(
+            self.tagList.sortColumn(),
             self.tagList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):

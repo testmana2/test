@@ -119,8 +119,8 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         hlayout0.setContentsMargins(0, 0, 0, 0)
         hlayout0.setSpacing(6)
         hlayout0.setObjectName("hlayout0")
-        self.moreSinglesButton = QPushButton(self.trUtf8("Additional Entries"),
-            self.singlesBox)
+        self.moreSinglesButton = QPushButton(
+            self.trUtf8("Additional Entries"), self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
         hspacer0 = QSpacerItem(
@@ -154,8 +154,8 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         hlayout1.setContentsMargins(0, 0, 0, 0)
         hlayout1.setSpacing(6)
         hlayout1.setObjectName("hlayout1")
-        self.moreRangesButton = QPushButton(self.trUtf8("Additional Entries"),
-            self.rangesBox)
+        self.moreRangesButton = QPushButton(
+            self.trUtf8("Additional Entries"), self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
         hspacer1 = QSpacerItem(
@@ -588,7 +588,7 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
             return ""
         
         if self.__mode in [QRegExpWizardCharactersDialog.RegExpMode,
-                QRegExpWizardCharactersDialog.W3CMode]:
+                           QRegExpWizardCharactersDialog.W3CMode]:
             if format == "-h":
                 return "\\x{0}".format(char.lower())
             elif format == "-o":

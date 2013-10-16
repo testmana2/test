@@ -54,12 +54,15 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         """
         Public slot to save the Help Viewers configuration.
         """
-        Preferences.setUser("SavePasswords",
+        Preferences.setUser(
+            "SavePasswords",
             self.savePasswordsCheckBox.isChecked())
-        Preferences.setUser("UseMasterPassword",
+        Preferences.setUser(
+            "UseMasterPassword",
             self.masterPasswordCheckBox.isChecked())
         if self.dnsPrefetchCheckBox.isEnabled():
-            Preferences.setHelp("DnsPrefetchEnabled",
+            Preferences.setHelp(
+                "DnsPrefetchEnabled",
                 self.dnsPrefetchCheckBox.isChecked())
         
         if self.__oldUseMasterPassword != \
@@ -77,7 +80,8 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
             from .MasterPasswordEntryDialog import MasterPasswordEntryDialog
             dlg = MasterPasswordEntryDialog("", self)
             if dlg.exec_() == QDialog.Accepted:
-                Preferences.setUser("MasterPassword",
+                Preferences.setUser(
+                    "MasterPassword",
                     dlg.getMasterPassword())
                 self.masterPasswordButton.setEnabled(True)
                 self.__newPassword = dlg.getMasterPassword()
@@ -96,7 +100,8 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         dlg = MasterPasswordEntryDialog(
             Preferences.getUser("MasterPassword"), self)
         if dlg.exec_() == QDialog.Accepted:
-            Preferences.setUser("MasterPassword",
+            Preferences.setUser(
+                "MasterPassword",
                 dlg.getMasterPassword())
             
             if self.__oldUseMasterPassword != \

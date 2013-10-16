@@ -76,7 +76,8 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         @param txt the text of the directory edit (string)
         """
         self.addIconDirectoryButton.setEnabled(txt != "")
-        self.showIconsButton.setEnabled(txt != "" or \
+        self.showIconsButton.setEnabled(
+            txt != "" or \
             self.iconDirectoryList.currentRow() != -1)
         
     @pyqtSlot()

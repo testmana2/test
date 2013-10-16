@@ -267,47 +267,47 @@ def setActions(shortcuts):
     """
     if "Project" in shortcuts:
         __setAction(e5App().getObject("Project").getActions(),
-            shortcuts["Project"])
+                    shortcuts["Project"])
     
     if "General" in shortcuts:
         __setAction(e5App().getObject("UserInterface").getActions('ui'),
-            shortcuts["General"])
+                    shortcuts["General"])
     
     if "Wizards" in shortcuts:
         __setAction(e5App().getObject("UserInterface").getActions('wizards'),
-            shortcuts["Wizards"])
+                    shortcuts["Wizards"])
     
     if "Debug" in shortcuts:
         __setAction(e5App().getObject("DebugUI").getActions(),
-            shortcuts["Debug"])
+                    shortcuts["Debug"])
     
     if "Edit" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('edit'),
-            shortcuts["Edit"])
+                    shortcuts["Edit"])
     
     if "File" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('file'),
-            shortcuts["File"])
+                    shortcuts["File"])
     
     if "Search" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('search'),
-            shortcuts["Search"])
+                    shortcuts["Search"])
     
     if "View" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('view'),
-            shortcuts["View"])
+                    shortcuts["View"])
     
     if "Macro" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('macro'),
-            shortcuts["Macro"])
+                    shortcuts["Macro"])
     
     if "Bookmarks" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('bookmark'),
-            shortcuts["Bookmarks"])
+                    shortcuts["Bookmarks"])
     
     if "Spelling" in shortcuts:
         __setAction(e5App().getObject("ViewManager").getActions('spelling'),
-            shortcuts["Spelling"])
+                    shortcuts["Spelling"])
     
     if "Window" in shortcuts:
         actions = e5App().getObject("ViewManager").getActions('window')
@@ -321,4 +321,4 @@ def setActions(shortcuts):
     
     if "HelpViewer" in shortcuts:
         __setAction(e5App().getObject("DummyHelpViewer").getActions(),
-            shortcuts["HelpViewer"])
+                    shortcuts["HelpViewer"])

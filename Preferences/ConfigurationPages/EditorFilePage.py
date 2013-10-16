@@ -90,29 +90,39 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         """
         Public slot to save the Editor File Handling configuration.
         """
-        Preferences.setEditor("AutosaveInterval",
+        Preferences.setEditor(
+            "AutosaveInterval",
             self.autosaveSlider.value())
-        Preferences.setEditor("CreateBackupFile",
+        Preferences.setEditor(
+            "CreateBackupFile",
             self.createBackupFileCheckBox.isChecked())
         enc = self.defaultEncodingComboBox.currentText()
         if not enc:
             enc = "utf-8"
         Preferences.setEditor("DefaultEncoding", enc)
-        Preferences.setEditor("AdvancedEncodingDetection",
+        Preferences.setEditor(
+            "AdvancedEncodingDetection",
             self.advEncodingCheckBox.isChecked())
-        Preferences.setEditor("WarnFilesize",
+        Preferences.setEditor(
+            "WarnFilesize",
             self.warnFilesizeSpinBox.value())
-        Preferences.setEditor("ClearBreaksOnClose",
+        Preferences.setEditor(
+            "ClearBreaksOnClose",
             self.clearBreakpointsCheckBox.isChecked())
-        Preferences.setEditor("AutoReopen",
+        Preferences.setEditor(
+            "AutoReopen",
             self.automaticReopenCheckBox.isChecked())
-        Preferences.setEditor("StripTrailingWhitespace",
+        Preferences.setEditor(
+            "StripTrailingWhitespace",
             self.stripWhitespaceCheckBox.isChecked())
-        Preferences.setEditor("DefaultOpenFilter",
+        Preferences.setEditor(
+            "DefaultOpenFilter",
             self.openFilesFilterComboBox.currentText())
-        Preferences.setEditor("DefaultSaveFilter",
+        Preferences.setEditor(
+            "DefaultSaveFilter",
             self.saveFilesFilterComboBox.currentText())
-        Preferences.setEditor("AutomaticEOLConversion",
+        Preferences.setEditor(
+            "AutomaticEOLConversion",
             self.automaticEolConversionCheckBox.isChecked())
         
         if self.crlfRadioButton.isChecked():
@@ -126,13 +136,16 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         Preferences.setEditor("AdditionalOpenFilters", self.openFileFilters)
         Preferences.setEditor("AdditionalSaveFilters", self.saveFileFilters)
         
-        Preferences.setEditor("PreviewHtmlFileNameExtensions",
+        Preferences.setEditor(
+            "PreviewHtmlFileNameExtensions",
             [ext.strip() for ext in 
              self.previewHtmlExtensionsEdit.text().split()])
-        Preferences.setEditor("PreviewMarkdownFileNameExtensions",
+        Preferences.setEditor(
+            "PreviewMarkdownFileNameExtensions",
             [ext.strip() for ext in 
              self.previewMarkdownExtensionsEdit.text().split()])
-        Preferences.setEditor("PreviewRestFileNameExtensions",
+        Preferences.setEditor(
+            "PreviewRestFileNameExtensions",
             [ext.strip() for ext in 
              self.previewRestExtensionsEdit.text().split()])
     

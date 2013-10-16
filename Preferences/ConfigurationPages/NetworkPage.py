@@ -110,9 +110,11 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         Public slot to save the Networj configuration.
         """
-        Preferences.setUI("DownloadPath",
+        Preferences.setUI(
+            "DownloadPath",
             self.downloadDirEdit.text())
-        Preferences.setUI("RequestDownloadFilename",
+        Preferences.setUI(
+            "RequestDownloadFilename",
             self.requestFilenameCheckBox.isChecked())
         from Helpviewer.Download.DownloadManager import DownloadManager
         if self.cleanupNeverButton.isChecked():
@@ -123,38 +125,51 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             policy = DownloadManager.RemoveSuccessFullDownload
         Preferences.setHelp("DownloadManagerRemovePolicy", policy)
         
-        Preferences.setUI("UseProxy",
+        Preferences.setUI(
+            "UseProxy",
             self.proxyGroup.isChecked())
-        Preferences.setUI("UseSystemProxy",
+        Preferences.setUI(
+            "UseSystemProxy",
             self.systemProxyButton.isChecked())
-        Preferences.setUI("UseHttpProxyForAll",
+        Preferences.setUI(
+            "UseHttpProxyForAll",
             self.httpProxyForAllCheckBox.isChecked())
         
         # HTTP proxy
-        Preferences.setUI("ProxyHost/Http",
+        Preferences.setUI(
+            "ProxyHost/Http",
             self.httpProxyHostEdit.text())
-        Preferences.setUI("ProxyPort/Http",
+        Preferences.setUI(
+            "ProxyPort/Http",
             self.httpProxyPortSpin.value())
         
         # HTTPS proxy
-        Preferences.setUI("ProxyHost/Https",
+        Preferences.setUI(
+            "ProxyHost/Https",
             self.httpsProxyHostEdit.text())
-        Preferences.setUI("ProxyPort/Https",
+        Preferences.setUI(
+            "ProxyPort/Https",
             self.httpsProxyPortSpin.value())
         
         # FTP proxy
-        Preferences.setUI("ProxyHost/Ftp",
+        Preferences.setUI(
+            "ProxyHost/Ftp",
             self.ftpProxyHostEdit.text())
-        Preferences.setUI("ProxyPort/Ftp",
+        Preferences.setUI(
+            "ProxyPort/Ftp",
             self.ftpProxyPortSpin.value())
-        Preferences.setUI("ProxyType/Ftp",
+        Preferences.setUI(
+            "ProxyType/Ftp",
             self.ftpProxyTypeCombo.itemData(
                 self.ftpProxyTypeCombo.currentIndex()))
-        Preferences.setUI("ProxyUser/Ftp",
+        Preferences.setUI(
+            "ProxyUser/Ftp",
             self.ftpProxyUserEdit.text())
-        Preferences.setUI("ProxyPassword/Ftp",
+        Preferences.setUI(
+            "ProxyPassword/Ftp",
             self.ftpProxyPasswordEdit.text())
-        Preferences.setUI("ProxyAccount/Ftp",
+        Preferences.setUI(
+            "ProxyAccount/Ftp",
             self.ftpProxyAccountEdit.text())
     
     @pyqtSlot()

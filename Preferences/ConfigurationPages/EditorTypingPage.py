@@ -89,49 +89,70 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
         Public slot to save the Editor Typing configuration.
         """
         # Python
-        Preferences.setEditorTyping("Python/EnabledTypingAids",
+        Preferences.setEditorTyping(
+            "Python/EnabledTypingAids",
             self.pythonGroup.isChecked())
-        Preferences.setEditorTyping("Python/InsertClosingBrace",
+        Preferences.setEditorTyping(
+            "Python/InsertClosingBrace",
             self.pythonInsertClosingBraceCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/SkipBrace",
+        Preferences.setEditorTyping(
+            "Python/SkipBrace",
             self.pythonSkipBraceCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/IndentBrace",
+        Preferences.setEditorTyping(
+            "Python/IndentBrace",
             self.pythonIndentBraceCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/InsertQuote",
+        Preferences.setEditorTyping(
+            "Python/InsertQuote",
             self.pythonInsertQuoteCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/DedentElse",
+        Preferences.setEditorTyping(
+            "Python/DedentElse",
             self.pythonDedentElseCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/DedentExcept",
+        Preferences.setEditorTyping(
+            "Python/DedentExcept",
             self.pythonDedentExceptCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/Py24StyleTry",
+        Preferences.setEditorTyping(
+            "Python/Py24StyleTry",
             self.pythonDedentExceptPy24CheckBox.isChecked())
-        Preferences.setEditorTyping("Python/InsertImport",
+        Preferences.setEditorTyping(
+            "Python/InsertImport",
             self.pythonInsertImportCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/InsertSelf",
+        Preferences.setEditorTyping(
+            "Python/InsertSelf",
             self.pythonInsertSelfCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/InsertBlank",
+        Preferences.setEditorTyping(
+            "Python/InsertBlank",
             self.pythonInsertBlankCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/ColonDetection",
+        Preferences.setEditorTyping(
+            "Python/ColonDetection",
             self.pythonColonDetectionCheckBox.isChecked())
-        Preferences.setEditorTyping("Python/DedentDef",
+        Preferences.setEditorTyping(
+            "Python/DedentDef",
             self.pythonDedentDefCheckBox.isChecked())
         
         # Ruby
-        Preferences.setEditorTyping("Ruby/EnabledTypingAids",
+        Preferences.setEditorTyping(
+            "Ruby/EnabledTypingAids",
             self.rubyGroup.isChecked())
-        Preferences.setEditorTyping("Ruby/InsertClosingBrace",
+        Preferences.setEditorTyping(
+            "Ruby/InsertClosingBrace",
             self.rubyInsertClosingBraceCheckBox.isChecked())
-        Preferences.setEditorTyping("Ruby/SkipBrace",
+        Preferences.setEditorTyping(
+            "Ruby/SkipBrace",
             self.rubySkipBraceCheckBox.isChecked())
-        Preferences.setEditorTyping("Ruby/IndentBrace",
+        Preferences.setEditorTyping(
+            "Ruby/IndentBrace",
             self.rubyIndentBraceCheckBox.isChecked())
-        Preferences.setEditorTyping("Ruby/InsertQuote",
+        Preferences.setEditorTyping(
+            "Ruby/InsertQuote",
             self.rubyInsertQuoteCheckBox.isChecked())
-        Preferences.setEditorTyping("Ruby/InsertBlank",
+        Preferences.setEditorTyping(
+            "Ruby/InsertBlank",
             self.rubyInsertBlankCheckBox.isChecked())
-        Preferences.setEditorTyping("Ruby/InsertHereDoc",
+        Preferences.setEditorTyping(
+            "Ruby/InsertHereDoc",
             self.rubyInsertHereDocCheckBox.isChecked())
-        Preferences.setEditorTyping("Ruby/InsertInlineDoc",
+        Preferences.setEditorTyping(
+            "Ruby/InsertInlineDoc",
             self.rubyInsertInlineDocCheckBox.isChecked())
         
     @pyqtSlot(str)

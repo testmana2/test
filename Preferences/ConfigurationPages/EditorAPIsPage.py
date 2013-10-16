@@ -46,8 +46,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         
         import QScintilla.Lexers
         self.apis = {}
-        apiLanguages = sorted([''] + \
-                       list(QScintilla.Lexers.getSupportedLanguages().keys()))
+        apiLanguages = sorted(
+            [''] + list(QScintilla.Lexers.getSupportedLanguages().keys()))
         for lang in apiLanguages:
             if lang != "Guessed":
                 self.apiLanguageComboBox.addItem(lang)
@@ -61,7 +61,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         Public slot to save the Editor APIs configuration.
         """
-        Preferences.setEditor("AutoPrepareAPIs",
+        Preferences.setEditor(
+            "AutoPrepareAPIs",
             self.apiAutoPrepareCheckBox.isChecked())
         
         lang = self.apiLanguageComboBox.currentText()

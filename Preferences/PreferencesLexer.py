@@ -22,9 +22,9 @@ class PreferencesLexerError(Exception):
         """
         Constructor
         """
-        self._errorMessage = \
-            QApplication.translate("PreferencesLexerError",
-                "Unspecific PreferencesLexer error.")
+        self._errorMessage = QApplication.translate(
+            "PreferencesLexerError",
+            "Unspecific PreferencesLexer error.")
         
     def __repr__(self):
         """
@@ -54,9 +54,9 @@ class PreferencesLexerLanguageError(PreferencesLexerError):
         @param language lexer language (string)
         """
         PreferencesLexerError.__init__(self)
-        self._errorMessage = \
-            QApplication.translate("PreferencesLexerError",
-                'Unsupported Lexer Language: {0}').format(language)
+        self._errorMessage = QApplication.translate(
+            "PreferencesLexerError",
+            'Unsupported Lexer Language: {0}').format(language)
 
 
 class PreferencesLexer(QsciLexer):

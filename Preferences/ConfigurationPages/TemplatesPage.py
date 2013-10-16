@@ -41,14 +41,17 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
         """
         Public slot to save the Templates configuration.
         """
-        Preferences.setTemplates("AutoOpenGroups",
+        Preferences.setTemplates(
+            "AutoOpenGroups",
             self.templatesAutoOpenGroupsCheckBox.isChecked())
         sepChar = self.templatesSeparatorCharEdit.text()
         if sepChar:
             Preferences.setTemplates("SeparatorChar", sepChar)
-        Preferences.setTemplates("SingleDialog",
+        Preferences.setTemplates(
+            "SingleDialog",
             self.templatesSingleDialogButton.isChecked())
-        Preferences.setTemplates("ShowTooltip",
+        Preferences.setTemplates(
+            "ShowTooltip",
             self.templatesToolTipCheckBox.isChecked())
     
 

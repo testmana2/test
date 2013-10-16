@@ -34,8 +34,8 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         self.__keywords = {
             "": ["", "", "", "", "", "", "", "", "", ""]
         }
-        languages = sorted([''] + \
-                    list(QScintilla.Lexers.getSupportedLanguages().keys()))
+        languages = sorted(
+            [''] + list(QScintilla.Lexers.getSupportedLanguages().keys()))
         for lang in languages:
             if lang:
                 lex = QScintilla.Lexers.getLexer(lang)

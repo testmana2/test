@@ -159,57 +159,79 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         """
         Public slot to save the Help Viewers configuration.
         """
-        Preferences.setHelp("SingleHelpWindow",
+        Preferences.setHelp(
+            "SingleHelpWindow",
             self.singleHelpWindowCheckBox.isChecked())
-        Preferences.setHelp("SaveGeometry",
+        Preferences.setHelp(
+            "SaveGeometry",
             self.saveGeometryCheckBox.isChecked())
-        Preferences.setHelp("WebSearchSuggestions",
+        Preferences.setHelp(
+            "WebSearchSuggestions",
             self.webSuggestionsCheckBox.isChecked())
-        Preferences.setHelp("ShowPreview",
+        Preferences.setHelp(
+            "ShowPreview",
             self.showTabPreviews.isChecked())
-        Preferences.setHelp("AccessKeysEnabled",
+        Preferences.setHelp(
+            "AccessKeysEnabled",
             self.accessKeysCheckBox.isChecked())
         
-        Preferences.setHelp("JavaEnabled",
+        Preferences.setHelp(
+            "JavaEnabled",
             self.javaCheckBox.isChecked())
-        Preferences.setHelp("JavaScriptEnabled",
+        Preferences.setHelp(
+            "JavaScriptEnabled",
             self.javaScriptCheckBox.isChecked())
-        Preferences.setHelp("JavaScriptCanOpenWindows",
+        Preferences.setHelp(
+            "JavaScriptCanOpenWindows",
             self.jsOpenWindowsCheckBox.isChecked())
-        Preferences.setHelp("JavaScriptCanAccessClipboard",
+        Preferences.setHelp(
+            "JavaScriptCanAccessClipboard",
             self.jsClipboardCheckBox.isChecked())
-        Preferences.setHelp("PluginsEnabled",
+        Preferences.setHelp(
+            "PluginsEnabled",
             self.pluginsCheckBox.isChecked())
-        Preferences.setHelp("ClickToFlashEnabled",
+        Preferences.setHelp(
+            "ClickToFlashEnabled",
             self.clickToFlashCheckBox.isChecked())
-        Preferences.setHelp("DoNotTrack",
+        Preferences.setHelp(
+            "DoNotTrack",
             self.doNotTrackCheckBox.isChecked())
-        Preferences.setHelp("SendReferer",
+        Preferences.setHelp(
+            "SendReferer",
             self.sendRefererCheckBox.isChecked())
         
-        Preferences.setHelp("DiskCacheEnabled",
+        Preferences.setHelp(
+            "DiskCacheEnabled",
             self.diskCacheCheckBox.isChecked())
-        Preferences.setHelp("DiskCacheSize",
+        Preferences.setHelp(
+            "DiskCacheSize",
             self.cacheSizeSpinBox.value())
         if self.cacheKeepButton.isChecked():
-            Preferences.setHelp("CachePolicy",
+            Preferences.setHelp(
+                "CachePolicy",
                 QNetworkRequest.PreferNetwork)
         elif self.cachePreferButton.isChecked():
-            Preferences.setHelp("CachePolicy",
+            Preferences.setHelp(
+                "CachePolicy",
                 QNetworkRequest.PreferCache)
         elif self.cacheOfflineButton.isChecked():
-            Preferences.setHelp("CachePolicy",
+            Preferences.setHelp(
+                "CachePolicy",
                 QNetworkRequest.AlwaysCache)
         
-        Preferences.setHelp("PrintBackgrounds",
+        Preferences.setHelp(
+            "PrintBackgrounds",
             self.printBackgroundsCheckBox.isChecked())
         
-        Preferences.setHelp("StartupBehavior",
+        Preferences.setHelp(
+            "StartupBehavior",
             self.startupCombo.currentIndex())
-        Preferences.setHelp("HomePage",
+        Preferences.setHelp(
+            "HomePage",
             self.homePageEdit.text())
         
-        Preferences.setHelp("DefaultScheme",
+        Preferences.setHelp(
+            "DefaultScheme",
             self.defaultSchemeCombo.currentText())
         
         idx = self.expireHistory.currentIndex()
@@ -238,16 +260,20 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         Preferences.setHelp("SearchLanguage", language)
         
         if hasattr(QWebSettings, "SpatialNavigationEnabled"):
-            Preferences.setHelp("SpatialNavigationEnabled",
+            Preferences.setHelp(
+                "SpatialNavigationEnabled",
                 self.spatialCheckBox.isChecked())
         if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
-            Preferences.setHelp("LinksIncludedInFocusChain",
+            Preferences.setHelp(
+                "LinksIncludedInFocusChain",
                 self.linksInFocusChainCheckBox.isChecked())
         if hasattr(QWebSettings, "XSSAuditingEnabled"):
-            Preferences.setHelp("XSSAuditingEnabled",
+            Preferences.setHelp(
+                "XSSAuditingEnabled",
                 self.xssAuditingCheckBox.isChecked())
         if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
-            Preferences.setHelp("SiteSpecificQuirksEnabled",
+            Preferences.setHelp(
+                "SiteSpecificQuirksEnabled",
                 self.quirksCheckBox.isChecked())
     
     @pyqtSlot()

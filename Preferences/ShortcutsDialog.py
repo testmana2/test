@@ -60,7 +60,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         Private method to resort the tree.
         """
-        self.shortcutsList.sortItems(self.shortcutsList.sortColumn(),
+        self.shortcutsList.sortItems(
+            self.shortcutsList.sortColumn(),
             self.shortcutsList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -94,7 +95,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         @keyparam objectType type of the object (string). Objects of the same
             type are not checked for duplicate shortcuts.
         """
-        itm = QTreeWidgetItem(category,
+        itm = QTreeWidgetItem(
+            category,
             [action.iconText(), action.shortcut().toString(),
              action.alternateShortcut().toString()])
         itm.setIcon(0, action.icon())
@@ -381,27 +383,38 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         Private slot to handle the OK button press.
         """
-        self.__saveCategoryActions(self.projectItem,
+        self.__saveCategoryActions(
+            self.projectItem,
             e5App().getObject("Project").getActions())
-        self.__saveCategoryActions(self.uiItem,
+        self.__saveCategoryActions(
+            self.uiItem,
             e5App().getObject("UserInterface").getActions('ui'))
-        self.__saveCategoryActions(self.wizardsItem,
+        self.__saveCategoryActions(
+            self.wizardsItem,
             e5App().getObject("UserInterface").getActions('wizards'))
-        self.__saveCategoryActions(self.debugItem,
+        self.__saveCategoryActions(
+            self.debugItem,
             e5App().getObject("DebugUI").getActions())
-        self.__saveCategoryActions(self.editItem,
+        self.__saveCategoryActions(
+            self.editItem,
             e5App().getObject("ViewManager").getActions('edit'))
-        self.__saveCategoryActions(self.fileItem,
+        self.__saveCategoryActions(
+            self.fileItem,
             e5App().getObject("ViewManager").getActions('file'))
-        self.__saveCategoryActions(self.searchItem,
+        self.__saveCategoryActions(
+            self.searchItem,
             e5App().getObject("ViewManager").getActions('search'))
-        self.__saveCategoryActions(self.viewItem,
+        self.__saveCategoryActions(
+            self.viewItem,
             e5App().getObject("ViewManager").getActions('view'))
-        self.__saveCategoryActions(self.macroItem,
+        self.__saveCategoryActions(
+            self.macroItem,
             e5App().getObject("ViewManager").getActions('macro'))
-        self.__saveCategoryActions(self.bookmarkItem,
+        self.__saveCategoryActions(
+            self.bookmarkItem,
             e5App().getObject("ViewManager").getActions('bookmark'))
-        self.__saveCategoryActions(self.spellingItem,
+        self.__saveCategoryActions(
+            self.spellingItem,
             e5App().getObject("ViewManager").getActions('spelling'))
         
         actions = e5App().getObject("ViewManager").getActions('window')
@@ -414,7 +427,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             if ref is not None and hasattr(ref, "getActions"):
                 self.__saveCategoryActions(categoryItem, ref.getActions())
         
-        self.__saveCategoryActions(self.helpViewerItem,
+        self.__saveCategoryActions(
+            self.helpViewerItem,
             e5App().getObject("DummyHelpViewer").getActions())
         
         Shortcuts.saveShortcuts()

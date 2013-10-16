@@ -57,7 +57,8 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         Public slot to save the Debugger Python configuration.
         """
-        Preferences.setDebugger("PythonInterpreter",
+        Preferences.setDebugger(
+            "PythonInterpreter",
             self.interpreterEdit.text())
         if self.standardButton.isChecked():
             dct = "standard"
@@ -66,13 +67,17 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         else:
             dct = "custom"
         Preferences.setDebugger("DebugClientType", dct)
-        Preferences.setDebugger("DebugClient",
+        Preferences.setDebugger(
+            "DebugClient",
             self.debugClientEdit.text())
-        Preferences.setDebugger("PythonRedirect",
+        Preferences.setDebugger(
+            "PythonRedirect",
             self.pyRedirectCheckBox.isChecked())
-        Preferences.setDebugger("PythonNoEncoding",
+        Preferences.setDebugger(
+            "PythonNoEncoding",
             self.pyNoEncodingCheckBox.isChecked())
-        Preferences.setDebugger("PythonExtensions",
+        Preferences.setDebugger(
+            "PythonExtensions",
             self.sourceExtensionsEdit.text())
         
     @pyqtSlot()

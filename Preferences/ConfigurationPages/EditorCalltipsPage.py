@@ -30,9 +30,11 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         self.setObjectName("EditorCalltipsPage")
         
         if QSCINTILLA_VERSION() >= 0x020700:
-            self.positionComboBox.addItem(self.trUtf8("Below Text"),
+            self.positionComboBox.addItem(
+                self.trUtf8("Below Text"),
                 QsciScintilla.CallTipsBelowText)
-            self.positionComboBox.addItem(self.trUtf8("Above Text"),
+            self.positionComboBox.addItem(
+                self.trUtf8("Above Text"),
                 QsciScintilla.CallTipsAboveText)
         else:
             self.calltipsPositionBox.hide()
@@ -44,7 +46,7 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         self.ctVisibleSlider.setValue(
             Preferences.getEditor("CallTipsVisible"))
         self.initColour("CallTipsBackground", self.calltipsBackgroundButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
         
         self.ctScintillaCheckBox.setChecked(
             Preferences.getEditor("CallTipsScintillaOnFail"))
@@ -58,18 +60,22 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         """
         Public slot to save the EditorCalltips configuration.
         """
-        Preferences.setEditor("CallTipsEnabled",
+        Preferences.setEditor(
+            "CallTipsEnabled",
             self.ctEnabledCheckBox.isChecked())
         
-        Preferences.setEditor("CallTipsVisible",
+        Preferences.setEditor(
+            "CallTipsVisible",
             self.ctVisibleSlider.value())
         self.saveColours(Preferences.setEditorColour)
         
-        Preferences.setEditor("CallTipsScintillaOnFail",
+        Preferences.setEditor(
+            "CallTipsScintillaOnFail",
             self.ctScintillaCheckBox.isChecked())
         
         if QSCINTILLA_VERSION() >= 0x020700:
-            Preferences.setEditor("CallTipsPosition",
+            Preferences.setEditor(
+                "CallTipsPosition",
                 self.positionComboBox.itemData(
                     self.positionComboBox.currentIndex()))
 

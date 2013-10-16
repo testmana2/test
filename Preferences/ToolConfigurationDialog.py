@@ -100,7 +100,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Add tool entry"),
-                self.trUtf8("You have to set an executable to add to the"
+                self.trUtf8(
+                    "You have to set an executable to add to the"
                     " Tools-Menu first."))
             return
         
@@ -108,7 +109,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Add tool entry"),
-                self.trUtf8("You have to insert a menuentry text to add the"
+                self.trUtf8(
+                    "You have to insert a menuentry text to add the"
                     " selected program to the Tools-Menu first."))
             return
         
@@ -116,7 +118,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Add tool entry"),
-                self.trUtf8("The selected file could not be found or"
+                self.trUtf8(
+                    "The selected file could not be found or"
                     " is not an executable."
                     " Please choose an executable filename."))
             return
@@ -159,7 +162,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Change tool entry"),
-                self.trUtf8("You have to set an executable to change the"
+                self.trUtf8(
+                    "You have to set an executable to change the"
                     " Tools-Menu entry."))
             return
             
@@ -167,7 +171,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Change tool entry"),
-                self.trUtf8("You have to insert a menuentry text to change the"
+                self.trUtf8(
+                    "You have to insert a menuentry text to change the"
                     " selected Tools-Menu entry."))
             return
             
@@ -175,7 +180,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Change tool entry"),
-                self.trUtf8("The selected file could not be found or"
+                self.trUtf8(
+                    "The selected file could not be found or"
                     " is not an executable."
                     " Please choose an existing executable filename."))
             return
@@ -269,7 +275,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
                 E5MessageBox.critical(
                     self,
                     self.trUtf8("Select executable"),
-                    self.trUtf8("The selected file is not an executable."
+                    self.trUtf8(
+                        "The selected file is not an executable."
                         " Please choose an executable filename."))
                 return
             

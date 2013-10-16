@@ -50,21 +50,29 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         """
         Public slot to save the Email configuration.
         """
-        Preferences.setUser("MailServer",
+        Preferences.setUser(
+            "MailServer",
             self.mailServerEdit.text())
-        Preferences.setUser("MailServerPort",
+        Preferences.setUser(
+            "MailServerPort",
             self.portSpin.value())
-        Preferences.setUser("Email",
+        Preferences.setUser(
+            "Email",
             self.emailEdit.text())
-        Preferences.setUser("Signature",
+        Preferences.setUser(
+            "Signature",
             self.signatureEdit.toPlainText())
-        Preferences.setUser("MailServerAuthentication",
+        Preferences.setUser(
+            "MailServerAuthentication",
             self.mailAuthenticationCheckBox.isChecked())
-        Preferences.setUser("MailServerUser",
+        Preferences.setUser(
+            "MailServerUser",
             self.mailUserEdit.text())
-        Preferences.setUser("MailServerPassword",
+        Preferences.setUser(
+            "MailServerPassword",
             self.mailPasswordEdit.text())
-        Preferences.setUser("MailServerUseTLS",
+        Preferences.setUser(
+            "MailServerUseTLS",
             self.useTlsCheckBox.isChecked())
     
     def __updateTestButton(self):

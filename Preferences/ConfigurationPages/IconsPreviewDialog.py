@@ -31,5 +31,6 @@ class IconsPreviewDialog(QDialog, Ui_IconsPreviewDialog):
         
         dir = QDir(dirName)
         for icon in dir.entryList(["*.png"]):
-            QListWidgetItem(QIcon(os.path.join(dirName, icon)),
+            QListWidgetItem(
+                QIcon(os.path.join(dirName, icon)),
                 icon, self.iconView)

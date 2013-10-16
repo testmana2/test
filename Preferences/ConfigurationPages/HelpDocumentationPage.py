@@ -69,19 +69,26 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Public slot to save the Help Documentation configuration.
         """
-        Preferences.setHelp("Python2DocDir",
+        Preferences.setHelp(
+            "Python2DocDir",
             self.python2DocDirEdit.text())
-        Preferences.setHelp("PythonDocDir",
+        Preferences.setHelp(
+            "PythonDocDir",
             self.pythonDocDirEdit.text())
-        Preferences.setHelp("Qt4DocDir",
+        Preferences.setHelp(
+            "Qt4DocDir",
             self.qt4DocDirEdit.text())
-        Preferences.setHelp("Qt5DocDir",
+        Preferences.setHelp(
+            "Qt5DocDir",
             self.qt5DocDirEdit.text())
-        Preferences.setHelp("PyQt4DocDir",
+        Preferences.setHelp(
+            "PyQt4DocDir",
             self.pyqt4DocDirEdit.text())
-        Preferences.setHelp("PyQt5DocDir",
+        Preferences.setHelp(
+            "PyQt5DocDir",
             self.pyqt5DocDirEdit.text())
-        Preferences.setHelp("PySideDocDir",
+        Preferences.setHelp(
+            "PySideDocDir",
             self.pysideDocDirEdit.text())
         
     @pyqtSlot()
@@ -93,7 +100,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self,
             self.trUtf8("Select Python 2 documentation entry"),
             QUrl(self.python2DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;"
+            self.trUtf8(
+                "HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
                 "All Files (*)"))
         
@@ -109,7 +117,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self,
             self.trUtf8("Select Python 3 documentation entry"),
             QUrl(self.pythonDocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;"
+            self.trUtf8(
+                "HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
                 "All Files (*)"))
         

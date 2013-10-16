@@ -44,7 +44,8 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         except KeyError:
             self.pbGroup.setEnabled(False)
         
-        self.initColour("Highlighted", self.pbHighlightedButton,
+        self.initColour(
+            "Highlighted", self.pbHighlightedButton,
             Preferences.getProjectBrowserColour)
         
         self.followEditorCheckBox.setChecked(
@@ -62,13 +63,17 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         """
         self.saveColours(Preferences.setProjectBrowserColour)
         
-        Preferences.setProject("FollowEditor",
+        Preferences.setProject(
+            "FollowEditor",
             self.followEditorCheckBox.isChecked())
-        Preferences.setProject("FollowCursorLine",
+        Preferences.setProject(
+            "FollowCursorLine",
             self.followCursorLineCheckBox.isChecked())
-        Preferences.setProject("AutoPopulateItems",
+        Preferences.setProject(
+            "AutoPopulateItems",
             self.autoPopulateCheckBox.isChecked())
-        Preferences.setProject("HideGeneratedForms",
+        Preferences.setProject(
+            "HideGeneratedForms",
             self.hideGeneratedCheckBox.isChecked())
         
         if self.pbGroup.isEnabled():

@@ -125,7 +125,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         Private method to resort the log tree.
         """
-        self.logTree.sortItems(self.logTree.sortColumn(),
+        self.logTree.sortItems(
+            self.logTree.sortColumn(),
             self.logTree.header().sortIndicatorOrder())
     
     def __resizeColumnsFiles(self):
@@ -140,10 +141,10 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         Private method to resort the changed files tree.
         """
         sortColumn = self.filesTree.sortColumn()
-        self.filesTree.sortItems(1,
-            self.filesTree.header().sortIndicatorOrder())
-        self.filesTree.sortItems(sortColumn,
-            self.filesTree.header().sortIndicatorOrder())
+        self.filesTree.sortItems(
+            1, self.filesTree.header().sortIndicatorOrder())
+        self.filesTree.sortItems(
+            sortColumn, self.filesTree.header().sortIndicatorOrder())
     
     def __generateLogItem(self, author, date, message, revision, changedPaths):
         """
@@ -346,8 +347,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                 })
             elif self.rx_sep1.exactMatch(s) or self.rx_sep2.exactMatch(s):
                 if len(log) > 1:
-                    self.__generateLogItem(log["author"], log["date"],
-                        log["message"], log["revision"], changedPaths)
+                    self.__generateLogItem(
+                        log["author"], log["date"], log["message"],
+                        log["revision"], changedPaths)
                     dt = QDate.fromString(log["date"], Qt.ISODate)
                     if not self.__maxDate.isValid() and \
                             not self.__minDate.isValid():
@@ -463,8 +465,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         changes = current.data(0, self.__changesRole)
         if len(changes) > 0:
             for change in changes:
-                self.__generateFileItem(change["action"], change["path"],
-                    change["copyfrom_path"], change["copyfrom_revision"])
+                self.__generateFileItem(
+                    change["action"], change["path"], change["copyfrom_path"],
+                    change["copyfrom_revision"])
             self.__resizeColumnsFiles()
             self.__resortFiles()
         

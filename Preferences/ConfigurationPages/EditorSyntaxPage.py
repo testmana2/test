@@ -45,17 +45,22 @@ class EditorSyntaxPage(ConfigurationPageBase, Ui_EditorSyntaxPage):
         """
         Public slot to save the Editor Syntax Checker configuration.
         """
-        Preferences.setEditor("OnlineSyntaxCheck",
+        Preferences.setEditor(
+            "OnlineSyntaxCheck",
             self.onlineCheckBox.isChecked())
-        Preferences.setEditor("OnlineSyntaxCheckInterval",
+        Preferences.setEditor(
+            "OnlineSyntaxCheckInterval",
             self.onlineTimeoutSpinBox.value())
-        Preferences.setEditor("AutoCheckSyntax",
+        Preferences.setEditor(
+            "AutoCheckSyntax",
             self.automaticSyntaxCheckCheckBox.isChecked())
         
         # pyflakes related stuff
-        Preferences.setFlakes("IncludeInSyntaxCheck",
+        Preferences.setFlakes(
+            "IncludeInSyntaxCheck",
             self.includeCheckBox.isChecked())
-        Preferences.setFlakes("IgnoreStarImportWarnings",
+        Preferences.setFlakes(
+            "IgnoreStarImportWarnings",
             self.ignoreStarImportCheckBox.isChecked())
 
 

@@ -153,7 +153,8 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
             "AutoUserInfoInterval", self.whoIntervalSpinBox.value())
         
         # Markers
-        Preferences.setIrc("MarkPositionWhenHidden",
+        Preferences.setIrc(
+            "MarkPositionWhenHidden",
             self.markWhenHiddenCheckBox.isChecked())
         
         # Shutdown

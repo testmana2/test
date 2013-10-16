@@ -106,53 +106,72 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         Public slot to save the Editor Typing configuration.
         """
         # HTML
-        Preferences.setEditorExporter("HTML/WYSIWYG",
+        Preferences.setEditorExporter(
+            "HTML/WYSIWYG",
             self.htmlWysiwygCheckBox.isChecked())
-        Preferences.setEditorExporter("HTML/Folding",
+        Preferences.setEditorExporter(
+            "HTML/Folding",
             self.htmlFoldingCheckBox.isChecked())
-        Preferences.setEditorExporter("HTML/OnlyStylesUsed",
+        Preferences.setEditorExporter(
+            "HTML/OnlyStylesUsed",
             self.htmlStylesCheckBox.isChecked())
-        Preferences.setEditorExporter("HTML/FullPathAsTitle",
+        Preferences.setEditorExporter(
+            "HTML/FullPathAsTitle",
             self.htmlTitleCheckBox.isChecked())
-        Preferences.setEditorExporter("HTML/UseTabs",
+        Preferences.setEditorExporter(
+            "HTML/UseTabs",
             self.htmlTabsCheckBox.isChecked())
         
         # ODT
-        Preferences.setEditorExporter("ODT/WYSIWYG",
+        Preferences.setEditorExporter(
+            "ODT/WYSIWYG",
             self.odtWysiwygCheckBox.isChecked())
-        Preferences.setEditorExporter("ODT/OnlyStylesUsed",
+        Preferences.setEditorExporter(
+            "ODT/OnlyStylesUsed",
             self.odtStylesCheckBox.isChecked())
-        Preferences.setEditorExporter("ODT/UseTabs",
+        Preferences.setEditorExporter(
+            "ODT/UseTabs",
             self.odtTabsCheckBox.isChecked())
         
         # PDF
-        Preferences.setEditorExporter("PDF/Magnification",
+        Preferences.setEditorExporter(
+            "PDF/Magnification",
             self.pdfMagnificationSlider.value())
-        Preferences.setEditorExporter("PDF/Font",
+        Preferences.setEditorExporter(
+            "PDF/Font",
             self.pdfFontCombo.itemData(self.pdfFontCombo.currentIndex()))
-        Preferences.setEditorExporter("PDF/PageSize",
+        Preferences.setEditorExporter(
+            "PDF/PageSize",
             self.pdfPageSizeCombo.itemData(
                 self.pdfPageSizeCombo.currentIndex()))
-        Preferences.setEditorExporter("PDF/MarginTop",
+        Preferences.setEditorExporter(
+            "PDF/MarginTop",
             self.pdfMarginTopSpin.value())
-        Preferences.setEditorExporter("PDF/MarginBottom",
+        Preferences.setEditorExporter(
+            "PDF/MarginBottom",
             self.pdfMarginBottomSpin.value())
-        Preferences.setEditorExporter("PDF/MarginLeft",
+        Preferences.setEditorExporter(
+            "PDF/MarginLeft",
             self.pdfMarginLeftSpin.value())
-        Preferences.setEditorExporter("PDF/MarginRight",
+        Preferences.setEditorExporter(
+            "PDF/MarginRight",
             self.pdfMarginRightSpin.value())
         
         # RTF
-        Preferences.setEditorExporter("RTF/WYSIWYG",
+        Preferences.setEditorExporter(
+            "RTF/WYSIWYG",
             self.rtfWysiwygCheckBox.isChecked())
-        Preferences.setEditorExporter("RTF/UseTabs",
+        Preferences.setEditorExporter(
+            "RTF/UseTabs",
             self.rtfTabsCheckBox.isChecked())
         Preferences.setEditorExporter("RTF/Font", self.rtfFont)
         
         # TeX
-        Preferences.setEditorExporter("TeX/OnlyStylesUsed",
+        Preferences.setEditorExporter(
+            "TeX/OnlyStylesUsed",
             self.texStylesCheckBox.isChecked())
-        Preferences.setEditorExporter("TeX/FullPathAsTitle",
+        Preferences.setEditorExporter(
+            "TeX/FullPathAsTitle",
             self.texTitleCheckBox.isChecked())
     
     @pyqtSlot(str)

@@ -230,20 +230,21 @@ class TabWidget(E5TabWidget):
         Private method to initialize the tab context menu.
         """
         self.__menu = QMenu(self)
-        self.leftMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("1leftarrow.png"),
+        self.leftMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("1leftarrow.png"),
             self.trUtf8('Move Left'), self.__contextMenuMoveLeft)
-        self.rightMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("1rightarrow.png"),
+        self.rightMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("1rightarrow.png"),
             self.trUtf8('Move Right'), self.__contextMenuMoveRight)
-        self.firstMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("2leftarrow.png"),
+        self.firstMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("2leftarrow.png"),
             self.trUtf8('Move First'), self.__contextMenuMoveFirst)
-        self.lastMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("2rightarrow.png"),
+        self.lastMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("2rightarrow.png"),
             self.trUtf8('Move Last'), self.__contextMenuMoveLast)
         self.__menu.addSeparator()
-        self.__menu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("tabClose.png"),
             self.trUtf8('Close'), self.__contextMenuClose)
         self.closeOthersMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("tabCloseOther.png"),
@@ -251,19 +252,22 @@ class TabWidget(E5TabWidget):
         self.__menu.addAction(
             self.trUtf8('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
-        self.saveMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("fileSave.png"),
+        self.saveMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("fileSave.png"),
             self.trUtf8('Save'), self.__contextMenuSave)
-        self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveAs.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.trUtf8('Save As...'), self.__contextMenuSaveAs)
-        self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveAll.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("fileSaveAll.png"),
             self.trUtf8('Save All'), self.__contextMenuSaveAll)
         self.__menu.addSeparator()
-        self.openRejectionsMenuAct = \
-            self.__menu.addAction(self.trUtf8("Open 'rejection' file"),
+        self.openRejectionsMenuAct = self.__menu.addAction(
+            self.trUtf8("Open 'rejection' file"),
             self.__contextMenuOpenRejections)
         self.__menu.addSeparator()
-        self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
         self.copyPathAct = self.__menu.addAction(
@@ -508,8 +512,8 @@ class TabWidget(E5TabWidget):
         @param targetIndex index position to place it to (integer)
         """
         editor = self.widget(sourceIndex).getEditor()
-        newEditor, assembly = self.vm.cloneEditor(editor, editor.getFileType(),
-                                        editor.getFileName())
+        newEditor, assembly = self.vm.cloneEditor(
+            editor, editor.getFileType(), editor.getFileName())
         self.vm.insertView(assembly, self, targetIndex,
                            editor.getFileName(), editor.getNoName())
         

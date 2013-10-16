@@ -90,7 +90,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         Preferences.setHelp("StandardFont", self.standardFont)
         Preferences.setHelp("FixedFont", self.fixedFont)
         
-        Preferences.setHelp("AutoLoadImages",
+        Preferences.setHelp(
+            "AutoLoadImages",
             self.autoLoadImagesCheckBox.isChecked())
         
         Preferences.setHelp("UserStyleSheet", self.styleSheetEdit.text())
@@ -99,10 +100,12 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         
         from ..ConfigurationDialog import ConfigurationWidget
         if self.__displayMode == ConfigurationWidget.HelpBrowserMode:
-            Preferences.setUI("SingleCloseButton",
+            Preferences.setUI(
+                "SingleCloseButton",
                 self.tabsCloseButtonCheckBox.isChecked())
         
-        Preferences.setHelp("WarnOnMultipleClose",
+        Preferences.setHelp(
+            "WarnOnMultipleClose",
             self.warnOnMultipleCloseCheckBox.isChecked())
     
     @pyqtSlot()

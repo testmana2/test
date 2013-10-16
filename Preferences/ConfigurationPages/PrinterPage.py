@@ -55,7 +55,8 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
         """
         Public slot to save the Printer configuration.
         """
-        Preferences.setPrinter("PrinterName",
+        Preferences.setPrinter(
+            "PrinterName",
             self.printerNameEdit.text())
         if self.printerColorButton.isChecked():
             Preferences.setPrinter("ColorMode", 1)
@@ -65,16 +66,21 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
             Preferences.setPrinter("FirstPageFirst", 1)
         else:
             Preferences.setPrinter("FirstPageFirst", 0)
-        Preferences.setPrinter("Magnification",
+        Preferences.setPrinter(
+            "Magnification",
             self.printMagnificationSpinBox.value())
         Preferences.setPrinter("HeaderFont", self.printheaderFont)
-        Preferences.setPrinter("LeftMargin",
+        Preferences.setPrinter(
+            "LeftMargin",
             self.leftMarginSpinBox.value())
-        Preferences.setPrinter("RightMargin",
+        Preferences.setPrinter(
+            "RightMargin",
             self.rightMarginSpinBox.value())
-        Preferences.setPrinter("TopMargin",
+        Preferences.setPrinter(
+            "TopMargin",
             self.topMarginSpinBox.value())
-        Preferences.setPrinter("BottomMargin",
+        Preferences.setPrinter(
+            "BottomMargin",
             self.bottomMarginSpinBox.value())
         
     @pyqtSlot()

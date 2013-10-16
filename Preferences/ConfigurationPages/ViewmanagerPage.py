@@ -59,14 +59,17 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         """
         Public slot to save the Viewmanager configuration.
         """
-        vm = \
-            self.windowComboBox.itemData(self.windowComboBox.currentIndex())
+        vm = self.windowComboBox.itemData(
+            self.windowComboBox.currentIndex())
         Preferences.setViewManager(vm)
-        Preferences.setUI("TabViewManagerFilenameLength",
+        Preferences.setUI(
+            "TabViewManagerFilenameLength",
             self.filenameLengthSpinBox.value())
-        Preferences.setUI("TabViewManagerFilenameOnly",
+        Preferences.setUI(
+            "TabViewManagerFilenameOnly",
             self.filenameOnlyCheckBox.isChecked())
-        Preferences.setUI("RecentNumber",
+        Preferences.setUI(
+            "RecentNumber",
             self.recentFilesSpinBox.value())
         
     @pyqtSlot(int)

@@ -60,34 +60,48 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         """
         Public slot to save the Project configuration.
         """
-        Preferences.setProject("SearchNewFilesRecursively",
+        Preferences.setProject(
+            "SearchNewFilesRecursively",
             self.projectSearchNewFilesRecursiveCheckBox.isChecked())
-        Preferences.setProject("SearchNewFiles",
+        Preferences.setProject(
+            "SearchNewFiles",
             self.projectSearchNewFilesCheckBox.isChecked())
-        Preferences.setProject("AutoIncludeNewFiles",
+        Preferences.setProject(
+            "AutoIncludeNewFiles",
             self.projectAutoIncludeNewFilesCheckBox.isChecked())
-        Preferences.setProject("AutoLoadSession",
+        Preferences.setProject(
+            "AutoLoadSession",
             self.projectLoadSessionCheckBox.isChecked())
-        Preferences.setProject("AutoSaveSession",
+        Preferences.setProject(
+            "AutoSaveSession",
             self.projectSaveSessionCheckBox.isChecked())
-        Preferences.setProject("SessionAllBreakpoints",
+        Preferences.setProject(
+            "SessionAllBreakpoints",
             self.projectSessionAllBpCheckBox.isChecked())
-        Preferences.setProject("AutoLoadDbgProperties",
+        Preferences.setProject(
+            "AutoLoadDbgProperties",
             self.projectLoadDebugPropertiesCheckBox.isChecked())
-        Preferences.setProject("AutoSaveDbgProperties",
+        Preferences.setProject(
+            "AutoSaveDbgProperties",
             self.projectSaveDebugPropertiesCheckBox.isChecked())
-        Preferences.setProject("AutoCompileForms",
+        Preferences.setProject(
+            "AutoCompileForms",
             self.projectAutoCompileFormsCheckBox.isChecked())
-        Preferences.setProject("AutoCompileResources",
+        Preferences.setProject(
+            "AutoCompileResources",
             self.projectAutoCompileResourcesCheckBox.isChecked())
-        Preferences.setProject("XMLTimestamp",
+        Preferences.setProject(
+            "XMLTimestamp",
             self.projectTimestampCheckBox.isChecked())
-        Preferences.setProject("RecentNumber",
+        Preferences.setProject(
+            "RecentNumber",
             self.projectRecentSpinBox.value())
-        Preferences.setProject("DeterminePyFromProject",
+        Preferences.setProject(
+            "DeterminePyFromProject",
             self.pythonVariantCheckBox.isChecked())
         
-        Preferences.setTasks("TasksProjectAutoSave",
+        Preferences.setTasks(
+            "TasksProjectAutoSave",
             self.autosaveTasksCheckBox.isChecked())
     
 

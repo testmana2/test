@@ -83,7 +83,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         """
         Private method to resort the tree.
         """
-        self.repoTree.sortItems(self.repoTree.sortColumn(),
+        self.repoTree.sortItems(
+            self.repoTree.sortColumn(),
             self.repoTree.header().sortIndicatorOrder())
     
     def __resizeColumns(self):

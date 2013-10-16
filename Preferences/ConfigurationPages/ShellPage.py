@@ -54,23 +54,31 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         """
         Public slot to save the Shell configuration.
         """
-        Preferences.setShell("LinenoMargin",
+        Preferences.setShell(
+            "LinenoMargin",
             self.shellLinenoCheckBox.isChecked())
-        Preferences.setShell("WrapEnabled",
+        Preferences.setShell(
+            "WrapEnabled",
             self.shellWordWrapCheckBox.isChecked())
-        Preferences.setShell("AutoCompletionEnabled",
+        Preferences.setShell(
+            "AutoCompletionEnabled",
             self.shellACEnabledCheckBox.isChecked())
-        Preferences.setShell("CallTipsEnabled",
+        Preferences.setShell(
+            "CallTipsEnabled",
             self.shellCTEnabledCheckBox.isChecked())
-        Preferences.setShell("SyntaxHighlightingEnabled",
+        Preferences.setShell(
+            "SyntaxHighlightingEnabled",
             self.shellSyntaxHighlightingCheckBox.isChecked())
-        Preferences.setShell("MaxHistoryEntries",
+        Preferences.setShell(
+            "MaxHistoryEntries",
             self.shellHistorySpinBox.value())
-        Preferences.setShell("ShowStdOutErr",
+        Preferences.setShell(
+            "ShowStdOutErr",
             self.stdOutErrCheckBox.isChecked())
         
         Preferences.setShell("MonospacedFont", self.monospacedFont)
-        Preferences.setShell("UseMonospacedFont",
+        Preferences.setShell(
+            "UseMonospacedFont",
             self.monospacedCheckBox.isChecked())
         Preferences.setShell("MarginsFont", self.marginsFont)
         

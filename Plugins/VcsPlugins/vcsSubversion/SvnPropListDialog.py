@@ -59,7 +59,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         """
         Private method to resort the tree.
         """
-        self.propsList.sortItems(self.propsList.sortColumn(),
+        self.propsList.sortItems(
+            self.propsList.sortColumn(),
             self.propsList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):

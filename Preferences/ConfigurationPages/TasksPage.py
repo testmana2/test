@@ -35,13 +35,17 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         self.tasksMarkerNoteEdit.setText(
             Preferences.getTasks("TasksNoteMarkers"))
         
-        self.initColour("TasksFixmeColor", self.tasksFixmeColourButton,
+        self.initColour(
+            "TasksFixmeColor", self.tasksFixmeColourButton,
             Preferences.getTasks)
-        self.initColour("TasksWarningColor", self.tasksWarningColourButton,
+        self.initColour(
+            "TasksWarningColor", self.tasksWarningColourButton,
             Preferences.getTasks)
-        self.initColour("TasksTodoColor", self.tasksTodoColourButton,
+        self.initColour(
+            "TasksTodoColor", self.tasksTodoColourButton,
             Preferences.getTasks)
-        self.initColour("TasksNoteColor", self.tasksNoteColourButton,
+        self.initColour(
+            "TasksNoteColor", self.tasksNoteColourButton,
             Preferences.getTasks)
         
         self.clearCheckBox.setChecked(Preferences.getTasks("ClearOnFileClose"))

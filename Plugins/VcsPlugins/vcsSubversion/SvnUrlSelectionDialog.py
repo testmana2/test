@@ -65,7 +65,8 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
                 E5MessageBox.critical(
                     self,
                     self.trUtf8("Subversion Error"),
-                    self.trUtf8("""The URL of the project repository has an"""
+                    self.trUtf8(
+                        """The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
                         """ be aborted"""))
                 self.reject()

@@ -44,9 +44,11 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         Public slot to save the Debugger Ruby configuration.
         """
-        Preferences.setDebugger("RubyInterpreter",
+        Preferences.setDebugger(
+            "RubyInterpreter",
             self.rubyInterpreterEdit.text())
-        Preferences.setDebugger("RubyRedirect",
+        Preferences.setDebugger(
+            "RubyRedirect",
             self.rbRedirectCheckBox.isChecked())
         
     @pyqtSlot()

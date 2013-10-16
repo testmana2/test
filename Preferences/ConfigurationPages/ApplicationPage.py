@@ -65,9 +65,11 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
         """
         Public slot to save the Application configuration.
         """
-        Preferences.setUI("SingleApplicationMode",
+        Preferences.setUI(
+            "SingleApplicationMode",
             self.singleApplicationCheckBox.isChecked())
-        Preferences.setUI("ShowSplash",
+        Preferences.setUI(
+            "ShowSplash",
             self.splashScreenCheckBox.isChecked())
         
         if self.noOpenRadioButton.isChecked():
@@ -94,10 +96,12 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
             period = 4
         Preferences.setUI("PerformVersionCheck", period)
         
-        Preferences.setUser("UseSystemEmailClient",
+        Preferences.setUser(
+            "UseSystemEmailClient",
             self.systemEmailClientCheckBox.isChecked())
         
-        Preferences.setUI("CheckErrorLog",
+        Preferences.setUI(
+            "CheckErrorLog",
             self.errorlogCheckBox.isChecked())
     
 

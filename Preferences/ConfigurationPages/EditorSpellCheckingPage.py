@@ -56,7 +56,8 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         self.minimumWordSizeSlider.setValue(
             Preferences.getEditor("SpellCheckingMinWordSize"))
         
-        self.initColour("SpellingMarkers", self.spellingMarkerButton,
+        self.initColour(
+            "SpellingMarkers", self.spellingMarkerButton,
             Preferences.getEditorColour, hasAlpha=True)
         
         self.pwlEdit.setText(

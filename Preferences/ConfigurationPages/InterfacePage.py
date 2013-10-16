@@ -103,7 +103,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.tabsCloseButtonCheckBox.setChecked(
             Preferences.getUI("SingleCloseButton"))
         
-        self.initColour("LogStdErrColour", self.stderrTextColourButton,
+        self.initColour(
+            "LogStdErrColour", self.stderrTextColourButton,
             Preferences.getUI)
         
         self.delaySpinBox.setValue(Preferences.getUI("SidebarDelay"))
@@ -118,34 +119,47 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Preferences.setUI("Style", style)
         
         # save the other UI related settings
-        Preferences.setUI("BrowsersListFoldersFirst",
+        Preferences.setUI(
+            "BrowsersListFoldersFirst",
             self.uiBrowsersListFoldersFirstCheckBox.isChecked())
-        Preferences.setUI("BrowsersHideNonPublic",
+        Preferences.setUI(
+            "BrowsersHideNonPublic",
             self.uiBrowsersHideNonPublicCheckBox.isChecked())
-        Preferences.setUI("BrowsersListContentsByOccurrence",
+        Preferences.setUI(
+            "BrowsersListContentsByOccurrence",
             self.uiBrowsersSortByOccurrenceCheckBox.isChecked())
-        Preferences.setUI("BrowsersListHiddenFiles",
+        Preferences.setUI(
+            "BrowsersListHiddenFiles",
             self.uiBrowsersShowHiddenCheckBox.isChecked())
-        Preferences.setUI("BrowsersFileFilters",
+        Preferences.setUI(
+            "BrowsersFileFilters",
             self.fileFiltersEdit.text())
         
-        Preferences.setUI("LogViewerAutoRaise",
+        Preferences.setUI(
+            "LogViewerAutoRaise",
             self.lvAutoRaiseCheckBox.isChecked())
-        Preferences.setUI("CaptionShowsFilename",
+        Preferences.setUI(
+            "CaptionShowsFilename",
             self.uiCaptionShowsFilenameGroupBox.isChecked())
-        Preferences.setUI("CaptionFilenameLength",
+        Preferences.setUI(
+            "CaptionFilenameLength",
             self.filenameLengthSpinBox.value())
-        Preferences.setUI("StyleSheet",
+        Preferences.setUI(
+            "StyleSheet",
             self.styleSheetEdit.text())
         
         # save the dockarea corner settings
-        Preferences.setUI("TopLeftByLeft",
+        Preferences.setUI(
+            "TopLeftByLeft",
             self.tlLeftButton.isChecked())
-        Preferences.setUI("BottomLeftByLeft",
+        Preferences.setUI(
+            "BottomLeftByLeft",
             self.blLeftButton.isChecked())
-        Preferences.setUI("TopRightByRight",
+        Preferences.setUI(
+            "TopRightByRight",
             self.trRightButton.isChecked())
-        Preferences.setUI("BottomRightByRight",
+        Preferences.setUI(
+            "BottomRightByRight",
             self.brRightButton.isChecked())
         
         # save the language settings
@@ -177,7 +191,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         layout = (layout1, layout2, layout3)
         Preferences.setUILayout(layout)
         
-        Preferences.setUI("SingleCloseButton",
+        Preferences.setUI(
+            "SingleCloseButton",
             self.tabsCloseButtonCheckBox.isChecked())
         
         Preferences.setUI("SidebarDelay", self.delaySpinBox.value())
