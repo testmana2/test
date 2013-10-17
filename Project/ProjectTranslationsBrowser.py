@@ -1007,9 +1007,11 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.trUtf8("Translation file release"),
                     self.trUtf8("The release of the translation files (*.qm)"
                         " was successful."))
-            if self.project.pdata["TRANSLATIONSBINPATH"]:
-                target = os.path.join(self.project.ppath,
-                                      self.project.pdata["TRANSLATIONSBINPATH"][0])
+            if self.project.pdata["TRANSLATIONSBINPATH"] and \
+                    self.project.pdata["TRANSLATIONSBINPATH"][0]:
+                target = os.path.join(
+                    self.project.ppath,
+                    self.project.pdata["TRANSLATIONSBINPATH"][0])
                 for langFile in self.project.pdata["TRANSLATIONS"][:]:
                     if langFile.endswith('.ts'):
                         qmFile = os.path.join(self.project.ppath,
