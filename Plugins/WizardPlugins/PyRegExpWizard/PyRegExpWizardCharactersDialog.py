@@ -7,6 +7,8 @@
 Module implementing a dialog for entering character classes.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QRegExp
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
     QLineEdit, QPushButton, QDialog, QScrollArea, QComboBox, QVBoxLayout, \
@@ -38,7 +40,7 @@ class PyRegExpWizardCharactersDialog(
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PyRegExpWizardCharactersDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.comboItems = []

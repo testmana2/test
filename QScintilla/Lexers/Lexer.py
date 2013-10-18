@@ -7,6 +7,8 @@
 Module implementing the lexer mixin class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import Preferences
 
 

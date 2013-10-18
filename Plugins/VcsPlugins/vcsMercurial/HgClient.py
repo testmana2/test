@@ -7,6 +7,11 @@
 Module implementing an interface to the Mercurial command server.
 """
 
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import struct
 import io
 
@@ -38,7 +43,7 @@ class HgClient(QObject):
         @param encoding encoding to be used by the command server (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HgClient, self).__init__(parent)
         
         self.__server = None
         self.__started = False

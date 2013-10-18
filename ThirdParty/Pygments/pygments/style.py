@@ -9,7 +9,16 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from pygments.token import Token, STANDARD_TYPES
+
+def with_metaclass(meta, base=object):
+    """
+    Python independent version to create a base class with a metaclass.
+    Taken from six 1.3.0 (http://pythonhosted.org/six)
+    """
+    return meta("NewBase", (base,), {})
 
 
 class StyleMeta(type):
@@ -104,7 +113,7 @@ class StyleMeta(type):
         return len(cls._styles)
 
 
-class Style(object, metaclass=StyleMeta):
+class Style(with_metaclass(StyleMeta, object)):
     background_color = '#ffffff'
 
     #: highlight background color

@@ -7,6 +7,8 @@
 Module implementing a class to store task data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import time
 
@@ -46,7 +48,7 @@ class Task(QTreeWidgetItem):
         @param project reference to the project object (Project)
         @param description explanatory text of the task (string)
         """
-        super().__init__()
+        super(Task, self).__init__()
         
         self.summary = summary
         self.description = description

@@ -7,6 +7,8 @@
 Module implementing a dialog to enter filetype associations for the project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, pyqtSlot
 from PyQt4.QtGui import QHeaderView, QDialog, QTreeWidgetItem
 
@@ -24,7 +26,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         @param project reference to the project object
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FiletypeAssociationDialog, self).__init__(parent)
         self.setupUi(self)
 
         self.filetypeAssociationList.headerItem().setText(

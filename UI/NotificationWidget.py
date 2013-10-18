@@ -7,6 +7,8 @@
 Module implementing a Notification widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QTimer, QPoint
 from PyQt4.QtGui import QWidget, QPixmap
 
@@ -27,7 +29,7 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
         @param setPosition flag indicating to set the display
             position interactively (boolean)
         """
-        super().__init__(parent)
+        super(NotificationWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.__timeout = 5000
@@ -98,7 +100,7 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
             self.__timer.setInterval(self.__timeout)
             self.__timer.start()
         
-        super().show()
+        super(NotificationWidget, self).show()
     
     def mousePressEvent(self, evt):
         """

@@ -7,6 +7,8 @@
 Module implementing the Plugin Manager.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import sys
 import imp
@@ -69,7 +71,7 @@ class PluginManager(QObject):
             development (string)
         @exception PluginPathError raised to indicate an invalid plug-in path
         """
-        super().__init__(parent)
+        super(PluginManager, self).__init__(parent)
         
         self.__ui = parent
         self.__develPluginFile = develPlugin

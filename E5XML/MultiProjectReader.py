@@ -7,6 +7,8 @@
 Module implementing a class for reading an XML multi project file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .Config import multiProjectFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 

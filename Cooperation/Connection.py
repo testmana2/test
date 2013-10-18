@@ -7,6 +7,12 @@
 Module implementing a class representing a peer connection.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
 from PyQt4.QtNetwork import QTcpSocket, QHostInfo
 
@@ -68,7 +74,7 @@ class Connection(QTcpSocket):
         
         @param parent referenec to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(Connection, self).__init__(parent)
         
         self.__greetingMessage = self.trUtf8("undefined")
         self.__username = self.trUtf8("unknown")

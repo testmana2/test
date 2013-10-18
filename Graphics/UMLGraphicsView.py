@@ -7,6 +7,8 @@
 Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, \
     QRectF
 from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, \
@@ -319,7 +321,7 @@ class UMLGraphicsView(E5GraphicsView):
         @param limit flag indicating to limit the scene to the
             initial size (boolean)
         """
-        super().autoAdjustSceneSize(limit=limit)
+        super(UMLGraphicsView, self).autoAdjustSceneSize(limit=limit)
         self.__checkSizeActions()
         
     def saveImage(self):
@@ -349,7 +351,7 @@ class UMLGraphicsView(E5GraphicsView):
                 if not res:
                     return
             
-            success = super().saveImage(
+            success = super(UMLGraphicsView, self).saveImage(
                 fname, QFileInfo(fname).suffix().upper())
             if not success:
                 E5MessageBox.critical(self,
@@ -418,7 +420,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_():
-            super().printDiagram(printer, self.diagramName)
+            super(UMLGraphicsView, self).printDiagram(printer, self.diagramName)
         
     def printPreviewDiagram(self):
         """
@@ -455,7 +457,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         @param printer reference to the printer object (QPrinter)
         """
-        super().printDiagram(printer, self.diagramName)
+        super(UMLGraphicsView, self).printDiagram(printer, self.diagramName)
         
     def setDiagramName(self, name):
         """
@@ -583,7 +585,7 @@ class UMLGraphicsView(E5GraphicsView):
                 evt.accept()
                 return
         
-        super().keyPressEvent(evt)
+        super(UMLGraphicsView, self).keyPressEvent(evt)
     
     def wheelEvent(self, evt):
         """
@@ -599,7 +601,7 @@ class UMLGraphicsView(E5GraphicsView):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(UMLGraphicsView, self).wheelEvent(evt)
     
     def event(self, evt):
         """
@@ -612,7 +614,7 @@ class UMLGraphicsView(E5GraphicsView):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(UMLGraphicsView, self).event(evt)
     
     def gestureEvent(self, evt):
         """

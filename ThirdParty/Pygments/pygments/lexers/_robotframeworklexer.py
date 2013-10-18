@@ -9,6 +9,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 #  Copyright 2012 Nokia Siemens Networks Oyj
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");

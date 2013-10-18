@@ -7,6 +7,8 @@
 Module implementing a dialog to show GreaseMonkey script information.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -30,7 +32,7 @@ class GreaseMonkeyConfigurationScriptInfoDialog(QDialog,
         @param script reference to the script (GreaseMonkeyScript)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(GreaseMonkeyConfigurationScriptInfoDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(

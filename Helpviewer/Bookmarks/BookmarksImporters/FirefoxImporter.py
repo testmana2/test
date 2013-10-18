@@ -7,6 +7,8 @@
 Module implementing an importer for Firefox bookmarks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import sqlite3
 
@@ -65,7 +67,7 @@ class FirefoxImporter(BookmarksImporter):
         @param id source ID (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(id, parent)
+        super(FirefoxImporter, self).__init__(id, parent)
         
         self.__fileName = ""
         self.__db = None

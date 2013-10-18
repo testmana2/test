@@ -11,7 +11,15 @@
 Module implementing the messages for py3flakes.
 """
 
-from PyQt4.QtCore import QCoreApplication
+def QT_TRANSLATE_NOOP(mod, txt):
+    """
+    Function to tell 'lupdate' which strings to keep for translation.
+    
+    @param mod module name
+    @param txt translatable string
+    @return the untranslated! string
+    """
+    return txt
 
 
 class Message(object):
@@ -48,15 +56,14 @@ class Message(object):
         @return tuple containing file name, line number and message
             (string, integer, string)
         """
-        return (self.filename, self.lineno,
-        self.message.format(*self.message_args))
+        return (self.filename, self.lineno, self.message, self.message_args)
 
 
 class UnusedImport(Message):
     """
     Class defining the "Unused Import" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         '{0!r} imported but unused.')
     
     def __init__(self, filename, lineno, name):
@@ -75,9 +82,9 @@ class RedefinedWhileUnused(Message):
     """
     Class defining the "Redefined While Unused" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes', 
         'Redefinition of unused {0!r} from line {1!r}.')
-    
+
     def __init__(self, filename, lineno, name, orig_lineno):
         """
         Constructor
@@ -95,7 +102,7 @@ class ImportShadowedByLoopVar(Message):
     """
     Class defining the "Import Shadowed By Loop Var" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         'Import {0!r} from line {1!r} shadowed by loop variable.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -115,7 +122,7 @@ class ImportStarUsed(Message):
     """
     Class defining the "Import Star Used" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         "'from {0} import *' used; unable to detect undefined names.")
     
     def __init__(self, filename, lineno, modname):
@@ -134,7 +141,7 @@ class UndefinedName(Message):
     """
     Class defining the "Undefined Name" message.
     """
-    message = QCoreApplication.translate('py3Flakes', 'Undefined name {0!r}.')
+    message = QT_TRANSLATE_NOOP('py3Flakes', 'Undefined name {0!r}.')
     
     def __init__(self, filename, lineno, name):
         """
@@ -152,8 +159,8 @@ class UndefinedExport(Message):
     """
     Class defining the "Undefined Export" message.
     """
-    message = QCoreApplication.translate(
-        'py3Flakes', 'Undefined name {0!r} in __all__.')
+    message = QT_TRANSLATE_NOOP('py3Flakes', 
+        'Undefined name {0!r} in __all__.')
     
     def __init__(self, filename, lineno, name):
         """
@@ -171,9 +178,9 @@ class UndefinedLocal(Message):
     """
     Class defining the "Undefined Local Variable" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
-        "Local variable {0!r} (defined in enclosing scope on line {1!r})"
-        " referenced before assignment.")
+    message = QT_TRANSLATE_NOOP('py3Flakes',
+        "Local variable {0!r} (defined in enclosing scope on line {1!r})" \
+              " referenced before assignment.")
     
     def __init__(self, filename, lineno, name, orig_lineno):
         """
@@ -192,7 +199,7 @@ class DuplicateArgument(Message):
     """
     Class defining the "Duplicate Argument" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         'Duplicate argument {0!r} in function definition.')
     
     def __init__(self, filename, lineno, name):
@@ -211,7 +218,7 @@ class RedefinedFunction(Message):
     """
     Class defining the "Redefined Function" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         'Redefinition of function {0!r} from line {1!r}.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -231,7 +238,7 @@ class LateFutureImport(Message):
     """
     Class defining the "Late Future Import" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         'Future import(s) {0!r} after other statements.')
     
     def __init__(self, filename, lineno, names):
@@ -253,7 +260,7 @@ class UnusedVariable(Message):
     Indicates that a variable has been explicitly assigned to but not actually
     used.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QT_TRANSLATE_NOOP('py3Flakes',
         'Local variable {0!r} is assigned to but never used.')
     
     def __init__(self, filename, lineno, name):

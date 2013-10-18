@@ -7,6 +7,8 @@
 Module implementing a template viewer and associated classes.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import datetime
 import os
 import re
@@ -40,7 +42,7 @@ class TemplateGroup(QTreeWidgetItem):
         self.language = language
         self.entries = {}
         
-        super().__init__(parent, [name])
+        super(TemplateGroup, self).__init__(parent, [name])
         
         if Preferences.getTemplates("ShowTooltip"):
             self.setToolTip(0, language)
@@ -193,7 +195,7 @@ class TemplateEntry(QTreeWidgetItem):
         self.template = templateText
         self.__extractVariables()
         
-        super().__init__(parent, [self.__displayText()])
+        super(TemplateEntry, self).__init__(parent, [self.__displayText()])
         if Preferences.getTemplates("ShowTooltip"):
             self.setToolTip(0, self.template)
 
@@ -377,7 +379,7 @@ class TemplateViewer(QTreeWidget):
         @param parent the parent (QWidget)
         @param viewmanager reference to the viewmanager object
         """
-        super().__init__(parent)
+        super(TemplateViewer, self).__init__(parent)
         
         self.viewmanager = viewmanager
         self.groups = {}

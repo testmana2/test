@@ -7,6 +7,8 @@
 Module implementing a model for search engines.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 from PyQt4.QtCore import Qt, QUrl, QAbstractTableModel, QModelIndex
@@ -25,7 +27,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
             (OpenSearchManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(OpenSearchEngineModel, self).__init__(parent)
         
         self.__manager = manager
         manager.changed.connect(self.__enginesChanged)
@@ -195,4 +197,4 @@ class OpenSearchEngineModel(QAbstractTableModel):
         """
         Private slot handling a change of the registered engines.
         """
-        super().reset()
+        super(OpenSearchEngineModel, self).reset()

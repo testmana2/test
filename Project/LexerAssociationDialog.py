@@ -7,6 +7,8 @@
 Module implementing a dialog to enter lexer associations for the project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import Qt, pyqtSlot, qVersion
@@ -26,7 +28,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         @param project reference to the project object
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(LexerAssociationDialog, self).__init__(parent)
         self.setupUi(self)
 
         self.editorLexerList.headerItem().setText(

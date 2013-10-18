@@ -7,6 +7,8 @@
 Module implementing the password manager.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
@@ -43,7 +45,7 @@ class PasswordManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(PasswordManager, self).__init__(parent)
         
         self.__logins = {}
         self.__loginForms = {}

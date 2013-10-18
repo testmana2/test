@@ -7,6 +7,8 @@
 Module implementing the base class of the VCS project helper.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import shutil
 import copy
@@ -34,7 +36,7 @@ class VcsProjectHelper(QObject):
         @param parent parent widget (QWidget)
         @param name name of this object (string)
         """
-        super().__init__(parent)
+        super(VcsProjectHelper, self).__init__(parent)
         if name:
             self.setObjectName(name)
         

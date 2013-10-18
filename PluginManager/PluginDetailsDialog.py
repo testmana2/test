@@ -8,6 +8,8 @@
 Module implementing the Plugin Details Dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
@@ -25,7 +27,7 @@ class PluginDetailsDialog(QDialog, Ui_PluginDetailsDialog):
         @param details dictionary containing the info to be displayed
         @param parent parent of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(PluginDetailsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__autoactivate = details["autoactivate"]

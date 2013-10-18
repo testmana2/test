@@ -15,6 +15,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 # TODO:
 #  - Options to map style's bold/underline/italic/border attributes
 #    to some ANSI attrbutes (something like 'italic=underline')

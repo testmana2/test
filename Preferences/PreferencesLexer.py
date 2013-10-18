@@ -7,6 +7,8 @@
 Module implementing a special QextScintilla lexer to handle the preferences.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QColor, QFont, QApplication
 from PyQt4.Qsci import QsciLexer
 
@@ -72,7 +74,7 @@ class PreferencesLexer(QsciLexer):
         @exception PreferencesLexerLanguageError raised to indicate an invalid
             lexer language
         """
-        super().__init__(parent)
+        super(PreferencesLexer, self).__init__(parent)
         
         # These default font families are taken from QScintilla
         if Globals.isWindowsPlatform():

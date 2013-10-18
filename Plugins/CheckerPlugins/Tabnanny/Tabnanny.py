@@ -18,6 +18,8 @@ for being called from within the eric5 IDE.
 @exception ValueError The tokenize module is too old.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 # Released to the public domain, by Tim Peters, 15 April 1998.
 
 # XXX Note: this is now a standard library module.
@@ -42,7 +44,10 @@ for being called from within the eric5 IDE.
 __version__ = "6_eric"
 
 import tokenize
-import io
+try:
+    import StringIO as io
+except (ImportError):
+    import io    # __IGNORE_WARNING__    
 
 import Utilities
 
@@ -113,11 +118,9 @@ def check(file, text=""):
     if not text:
         try:
             text = Utilities.readEncodedFile(file)[0]
+            text = Utilities.normalizeCode(text)
         except (UnicodeError, IOError) as msg:
             return (True, file, "1", "Error: {0}".format(str(msg)))
-            
-        # convert eols
-        text = Utilities.convertLineEnds(text, "\n")
     
     source = io.StringIO(text)
     try:

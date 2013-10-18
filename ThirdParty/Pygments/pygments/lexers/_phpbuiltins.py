@@ -17,6 +17,8 @@
 """
 
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 MODULES = {'.NET': ['dotnet_load'],
  'APC': ['apc_add',
          'apc_bin_dump',
@@ -3711,7 +3713,10 @@ if __name__ == '__main__':
     import re
     import shutil
     import tarfile
-    import urllib.request, urllib.parse, urllib.error
+    try:  # Py3
+        import urllib.request as request
+    except (ImportError):
+        import urllib2 as request   # __IGNORE_WARNING__
 
     PHP_MANUAL_URL     = 'http://us3.php.net/distributions/manual/php_manual_en.tar.gz'
     PHP_MANUAL_DIR     = './php-chunked-xhtml/'
@@ -3752,7 +3757,7 @@ if __name__ == '__main__':
         return modules
 
     def get_php_references():
-        download = urllib.request.urlretrieve(PHP_MANUAL_URL)
+        download = request.urlretrieve(PHP_MANUAL_URL)
         tar = tarfile.open(download[0])
         tar.extractall()
         tar.close()

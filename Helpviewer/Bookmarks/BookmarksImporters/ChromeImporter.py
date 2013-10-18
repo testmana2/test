@@ -7,6 +7,8 @@
 Module implementing an importer for Chrome bookmarks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import json
 
@@ -86,7 +88,7 @@ class ChromeImporter(BookmarksImporter):
         @param id source ID (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(id, parent)
+        super(ChromeImporter, self).__init__(id, parent)
         
         self.__fileName = ""
     

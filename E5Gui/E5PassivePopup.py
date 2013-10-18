@@ -8,6 +8,8 @@ Module implementing dialog-like popup that displays messages without
 interrupting the user.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QTimer, QPoint, QRect
 from PyQt4.QtGui import QFrame, QVBoxLayout, QApplication
 
@@ -28,7 +30,7 @@ class E5PassivePopup(QFrame):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(None)
+        super(E5PassivePopup, self).__init__(None)
         
         self.__popupStyle = DEFAULT_POPUP_TYPE
         self.__msgView = None
@@ -71,7 +73,7 @@ class E5PassivePopup(QFrame):
         @param visible flag indicating the visibility status (boolean)
         """
         if not visible:
-            super().setVisible(visible)
+            super(E5PassivePopup, self).setVisible(visible)
             return
         
         if self.size() != self.sizeHint():
@@ -81,7 +83,7 @@ class E5PassivePopup(QFrame):
             self.__positionSelf()
         else:
             self.move(self.__fixedPosition)
-        super().setVisible(True)
+        super(E5PassivePopup, self).setVisible(True)
         
         delay = self.__hideDelay
         if delay < 0:
@@ -97,7 +99,7 @@ class E5PassivePopup(QFrame):
         """
         if p is not None:
             self.__fixedPosition = p
-        super().show()
+        super(E5PassivePopup, self).show()
     
     def setTimeout(self, delay):
         """

@@ -7,6 +7,12 @@
 Module implementing the purge extension interface.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess
@@ -28,7 +34,7 @@ class Purge(HgExtension):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(Purge, self).__init__(vcs)
         
         self.purgeListDialog = None
     

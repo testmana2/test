@@ -7,6 +7,12 @@
 Module implementing the label to show the web site icon.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import Qt, QPoint, QUrl, QMimeData
 from PyQt4.QtGui import QLabel, QApplication, QDrag, QPixmap
 
@@ -21,7 +27,7 @@ class FavIconLabel(QLabel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FavIconLabel, self).__init__(parent)
         
         self.__browser = None
         self.__dragStartPos = QPoint()
@@ -72,7 +78,7 @@ class FavIconLabel(QLabel):
         """
         if evt.button() == Qt.LeftButton:
             self.__dragStartPos = evt.pos()
-        super().mousePressEvent(evt)
+        super(FavIconLabel, self).mousePressEvent(evt)
     
     def mouseMoveEvent(self, evt):
         """

@@ -7,6 +7,8 @@
 Module implementing some utility functions for the Download package.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QCoreApplication
 
 

@@ -8,6 +8,8 @@ Module implementing the writer class for writing an XML project debugger
 properties file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import time
 
 from E5Gui.E5Application import e5App

@@ -7,10 +7,16 @@
 Module implementing the version control systems interface to Mercurial.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+    import urllib as parse
+except (NameError):
+    import urllib.parse as parse    # __IGNORE_WARNING__
+
 import os
 import shutil
 import re
-import urllib.parse
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
 from PyQt4.QtGui import QApplication, QDialog, QInputDialog
@@ -1427,21 +1433,21 @@ class Hg(VersionControl):
             host = url[2]
             port, path = url[3].split("/", 1)
             return "{0}:{1}:{2}:{3}/{4}".format(
-                scheme, user, host, port, urllib.parse.quote(path))
+                scheme, user, host, port, parse.quote(path))
         elif len(url) == 3:
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/", 1)
             return "{0}:{1}:{2}/{3}".format(
-                scheme, host, port, urllib.parse.quote(path))
+                scheme, host, port, parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
+                return "{0}:{1}".format(scheme, parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/", 1)
                 return "{0}://{1}/{2}".format(
-                    scheme, host, urllib.parse.quote(path))
+                    scheme, host, parse.quote(path))
 
     def hgNormalizeURL(self, url):
         """

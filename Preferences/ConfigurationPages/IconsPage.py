@@ -7,6 +7,8 @@
 Module implementing the Icons configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QListWidgetItem
 
@@ -28,7 +30,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         Constructor
         """
-        super().__init__()
+        super(IconsPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("IconsPage")
         

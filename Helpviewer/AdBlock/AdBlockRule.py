@@ -7,6 +7,8 @@
 Module implementing the AdBlock rule class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 from PyQt4.QtCore import Qt, QRegExp, QUrl, qVersion

@@ -7,6 +7,8 @@
 Module implementing the Plugin Manager configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -29,7 +31,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         Constructor
         """
-        super().__init__()
+        super(PluginManagerPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
         

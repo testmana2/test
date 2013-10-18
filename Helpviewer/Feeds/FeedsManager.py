@@ -7,6 +7,12 @@
 Module implementing a RSS feeds manager dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QUrl, QXmlStreamReader
 from PyQt4.QtGui import QDialog, QIcon, QTreeWidgetItem, QMenu, QCursor, \
     QApplication
@@ -40,7 +46,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FeedsManager, self).__init__(parent)
         self.setupUi(self)
         
         self.__wasShown = False
@@ -58,7 +64,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         """
         Public slot to show the feeds manager dialog.
         """
-        super().show()
+        super(FeedsManager, self).show()
         
         if not self.__wasShown:
             self.__enableButtons()

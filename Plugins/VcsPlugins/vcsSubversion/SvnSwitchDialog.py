@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a switch operation.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_SvnSwitchDialog import Ui_SvnSwitchDialog
@@ -26,7 +28,7 @@ class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
             repository (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnSwitchDialog, self).__init__(parent)
         self.setupUi(self)
        
         self.tagCombo.clear()

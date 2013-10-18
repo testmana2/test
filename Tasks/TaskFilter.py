@@ -7,6 +7,8 @@
 Module implementing a class to store task data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QRegExp
 
 from .Task import Task

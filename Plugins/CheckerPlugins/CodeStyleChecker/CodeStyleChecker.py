@@ -7,6 +7,13 @@
 Module implementing the code style checker.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess, QCoreApplication

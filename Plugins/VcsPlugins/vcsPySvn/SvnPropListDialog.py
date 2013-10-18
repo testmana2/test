@@ -8,6 +8,8 @@ Module implementing a dialog to show the output of the svn proplist command
 process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 import pysvn
@@ -32,7 +34,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnPropListDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         

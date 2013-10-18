@@ -12,6 +12,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 FUNCTIONS = ['TopMenuHandler',
  'CreateTopMenu',
  'LoadTopMenuConfig',

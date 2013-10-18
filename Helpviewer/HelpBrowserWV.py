@@ -8,6 +8,12 @@
 Module implementing the helpbrowser using QWebView.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
     QUrl, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, \
     QPoint, QByteArray, qVersion
@@ -47,7 +53,7 @@ class JavaScriptExternalObject(QObject):
         @param mw reference to the main window 8HelpWindow)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(JavaScriptExternalObject, self).__init__(parent)
         
         self.__mw = mw
     
@@ -99,7 +105,7 @@ class JavaScriptEricObject(QObject):
         @param mw reference to the main window 8HelpWindow)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(JavaScriptEricObject, self).__init__(parent)
         
         self.__mw = mw
     
@@ -157,7 +163,7 @@ class HelpWebPage(QWebPage):
         
         @param parent parent widget of this window (QWidget)
         """
-        super().__init__(parent)
+        super(HelpWebPage, self).__init__(parent)
         
         self.setPluginFactory(self.webPluginFactory())
         
@@ -272,7 +278,7 @@ class HelpWebPage(QWebPage):
             files = sip.cast(output,
                              QWebPage.ChooseMultipleFilesExtensionReturn)
             if info is None or files is None:
-                return super().extension(extension, option, output)
+                return super(HelpWebPage, self).extension(extension, option, output)
             
             suggestedFileName = ""
             if info.suggestedFileNames:
@@ -596,9 +602,9 @@ class HelpWebPage(QWebPage):
             # the interesting mouse-out behavior like invalidating scrollbars.
             fakeEvent = QMouseEvent(QEvent.MouseMove, QPoint(0, -1),
                                     Qt.NoButton, Qt.NoButton, Qt.NoModifier)
-            return super().event(fakeEvent)
+            return super(HelpWebPage, self).event(fakeEvent)
         
-        return super().event(evt)
+        return super(HelpWebPage, self).event(evt)
 
 ###############################################################################
 
@@ -639,7 +645,7 @@ class HelpBrowser(QWebView):
         @param parent parent widget of this window (QWidget)
         @param name name of this window (string)
         """
-        super().__init__(parent)
+        super(HelpBrowser, self).__init__(parent)
         self.setObjectName(name)
         self.setWhatsThis(self.trUtf8(
             """<b>Help Window</b>"""
@@ -1589,7 +1595,7 @@ class HelpBrowser(QWebView):
                     evt.acceptProposedAction()
         
         if not evt.isAccepted():
-            super().dragMoveEvent(evt)
+            super(HelpBrowser, self).dragMoveEvent(evt)
     
     def dropEvent(self, evt):
         """
@@ -1597,7 +1603,7 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the drop event (QDropEvent)
         """
-        super().dropEvent(evt)
+        super(HelpBrowser, self).dropEvent(evt)
         if not evt.isAccepted() and \
            evt.source() != self and \
            evt.possibleActions() & Qt.CopyAction:
@@ -1624,7 +1630,7 @@ class HelpBrowser(QWebView):
         elif evt.button() == Qt.XButton2:
             self.pageAction(QWebPage.Forward).trigger()
         else:
-            super().mousePressEvent(evt)
+            super(HelpBrowser, self).mousePressEvent(evt)
     
     def mouseReleaseEvent(self, evt):
         """
@@ -1667,7 +1673,7 @@ class HelpBrowser(QWebView):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(HelpBrowser, self).wheelEvent(evt)
     
     def keyPressEvent(self, evt):
         """
@@ -1692,7 +1698,7 @@ class HelpBrowser(QWebView):
                 QTimer.singleShot(300, self.__accessKeyShortcut)
         
         self.ctrlPressed = (evt.key() == Qt.Key_Control)
-        super().keyPressEvent(evt)
+        super(HelpBrowser, self).keyPressEvent(evt)
     
     def keyReleaseEvent(self, evt):
         """
@@ -1704,7 +1710,7 @@ class HelpBrowser(QWebView):
             self.__accessKeysPressed = evt.key() == Qt.Key_Control
         
         self.ctrlPressed = False
-        super().keyReleaseEvent(evt)
+        super(HelpBrowser, self).keyReleaseEvent(evt)
     
     def focusOutEvent(self, evt):
         """
@@ -1716,7 +1722,7 @@ class HelpBrowser(QWebView):
             self.__hideAccessKeys()
             self.__accessKeysPressed = False
         
-        super().focusOutEvent(evt)
+        super(HelpBrowser, self).focusOutEvent(evt)
     
     def event(self, evt):
         """
@@ -1729,7 +1735,7 @@ class HelpBrowser(QWebView):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(HelpBrowser, self).event(evt)
     
     def gestureEvent(self, evt):
         """

@@ -7,6 +7,8 @@
 Module implementing the network part of the IRC widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QPoint, QFileInfo, QUrl
 from PyQt4.QtGui import QWidget, QApplication, QMenu, QDesktopServices
 
@@ -48,7 +50,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcNetworkWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))

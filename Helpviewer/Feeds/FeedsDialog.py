@@ -7,6 +7,8 @@
 Module implementing a dialog to add RSS feeds.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QUrl
 from PyQt4.QtGui import QDialog, QPushButton, QLabel
 
@@ -30,7 +32,7 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
         @param browser reference to the browser widget (HelpBrowser)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FeedsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("rss48.png"))

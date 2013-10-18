@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>eric5.UtilitiesPython2.py2flakes.checker</title>
+<title>eric5.Utilities.py2flakes.checker</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -19,7 +19,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.UtilitiesPython2.py2flakes.checker</h1>
+<h1>eric5.Utilities.py2flakes.checker</h1>
 
 <h3>Global Attributes</h3>
 <table>
@@ -38,28 +38,34 @@ a { color: #BA6D36; }
 <td>Represents the binding of a value to a name.</td>
 </tr><tr>
 <td><a href="#Checker">Checker</a></td>
-<td>Class to check the cleanliness and sanity of Python code.</td>
+<td>I check the cleanliness and sanity of Python code.</td>
+</tr><tr>
+<td><a href="#ClassDefinition">ClassDefinition</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#ClassScope">ClassScope</a></td>
-<td>Class representing a name scope for a class.</td>
+<td></td>
+</tr><tr>
+<td><a href="#Definition">Definition</a></td>
+<td>A binding that defines a function or a class.</td>
 </tr><tr>
 <td><a href="#ExportBinding">ExportBinding</a></td>
-<td>A binding created by an __all__ assignment.</td>
+<td>A binding created by an C{__all__} assignment.</td>
 </tr><tr>
 <td><a href="#FunctionDefinition">FunctionDefinition</a></td>
-<td>Represents a function definition.</td>
+<td></td>
 </tr><tr>
 <td><a href="#FunctionScope">FunctionScope</a></td>
-<td>Class representing a name scope for a function.</td>
+<td>I represent a name scope for a function.</td>
 </tr><tr>
 <td><a href="#Importation">Importation</a></td>
 <td>A binding created by an import statement.</td>
 </tr><tr>
 <td><a href="#ModuleScope">ModuleScope</a></td>
-<td>Class representing a name scope for a module.</td>
+<td></td>
 </tr><tr>
 <td><a href="#Scope">Scope</a></td>
-<td>Class defining the scope base class.</td>
+<td></td>
 </tr><tr>
 <td><a href="#UnBinding">UnBinding</a></td>
 <td>Created by the 'del' operator.</td>
@@ -68,6 +74,9 @@ a { color: #BA6D36; }
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#getNodeName">getNodeName</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#iter_child_nodes">iter_child_nodes</a></td>
 <td>Yield all direct child nodes of *node*, that is, all fields that are nodes and all items of fields that are lists of nodes.</td>
 </tr>
@@ -180,13 +189,13 @@ object
 <a NAME="Checker" ID="Checker"></a>
 <h2>Checker</h2>
 <p>
-    Class to check the cleanliness and sanity of Python code.
+    I check the cleanliness and sanity of Python code.
 </p>
 <h3>Derived from</h3>
 object
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AND</td></tr><tr><td>BITOR</td></tr><tr><td>BOOLOP</td></tr><tr><td>CALL</td></tr><tr><td>COMPREHENSION</td></tr><tr><td>CONTINUE</td></tr><tr><td>EQ</td></tr><tr><td>GENERATOREXP</td></tr><tr><td>LOAD</td></tr><tr><td>NUM</td></tr><tr><td>RETURN</td></tr><tr><td>SLICE</td></tr><tr><td>nodeDepth</td></tr><tr><td>scope</td></tr><tr><td>traceTree</td></tr>
+<tr><td>AND</td></tr><tr><td>BOOLOP</td></tr><tr><td>COMPREHENSION</td></tr><tr><td>CONTINUE</td></tr><tr><td>GENERATOREXP</td></tr><tr><td>LOAD</td></tr><tr><td>NONLOCAL</td></tr><tr><td>NUM</td></tr><tr><td>RETURN</td></tr><tr><td>SLICE</td></tr><tr><td>builtIns</td></tr><tr><td>nodeDepth</td></tr><tr><td>traceTree</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -196,7 +205,7 @@ object
 <table>
 <tr>
 <td><a href="#Checker.__init__">Checker</a></td>
-<td>Constructor</td>
+<td></td>
 </tr><tr>
 <td><a href="#Checker.ASSIGN">ASSIGN</a></td>
 <td></td>
@@ -208,6 +217,9 @@ object
 <td>Check names used in a class definition, including its decorators, base classes, and the body of its definition.</td>
 </tr><tr>
 <td><a href="#Checker.DICTCOMP">DICTCOMP</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.EXCEPTHANDLER">EXCEPTHANDLER</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.FOR">FOR</a></td>
@@ -232,10 +244,7 @@ object
 <td></td>
 </tr><tr>
 <td><a href="#Checker.NAME">NAME</a></td>
-<td>Locate the name in locals / function / globals scopes.</td>
-</tr><tr>
-<td><a href="#Checker._runDeferred">_runDeferred</a></td>
-<td>Run the callables in deferred using their associated scope stack.</td>
+<td>Handle occurrence of Name (which can be a load/store/delete access.)</td>
 </tr><tr>
 <td><a href="#Checker.addArgs">addArgs</a></td>
 <td></td>
@@ -243,11 +252,11 @@ object
 <td><a href="#Checker.addBinding">addBinding</a></td>
 <td>Called when a binding is altered.</td>
 </tr><tr>
+<td><a href="#Checker.checkDeadScopes">checkDeadScopes</a></td>
+<td>Look at scopes which have been fully examined and report names in them which were imported but unused.</td>
+</tr><tr>
 <td><a href="#Checker.checkUnusedAssignments">checkUnusedAssignments</a></td>
 <td>Check to see if any assignments have not been used.</td>
-</tr><tr>
-<td><a href="#Checker.check_dead_scopes">check_dead_scopes</a></td>
-<td>Look at scopes which have been fully examined and report names in them which were imported but unused.</td>
 </tr><tr>
 <td><a href="#Checker.collectLoopVars">collectLoopVars</a></td>
 <td></td>
@@ -258,10 +267,31 @@ object
 <td><a href="#Checker.deferFunction">deferFunction</a></td>
 <td>Schedule a function handler to be called just before completion.</td>
 </tr><tr>
+<td><a href="#Checker.descendantOf">descendantOf</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.differentForks">differentForks</a></td>
+<td>True, if lnode and rnode are located on different forks of IF/TRY</td>
+</tr><tr>
+<td><a href="#Checker.getCommonAncestor">getCommonAncestor</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Checker.handleChildren">handleChildren</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.handleNode">handleNode</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.handleNodeDelete">handleNodeDelete</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.handleNodeLoad">handleNodeLoad</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.handleNodeStore">handleNodeStore</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.hasParent">hasParent</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.ignore">ignore</a></td>
@@ -269,6 +299,9 @@ object
 </tr><tr>
 <td><a href="#Checker.isDocstring">isDocstring</a></td>
 <td>Determine if the given node is a docstring, as long as it is at the correct place in the node tree.</td>
+</tr><tr>
+<td><a href="#Checker.onFork">onFork</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#Checker.popScope">popScope</a></td>
 <td></td>
@@ -281,6 +314,9 @@ object
 </tr><tr>
 <td><a href="#Checker.report">report</a></td>
 <td></td>
+</tr><tr>
+<td><a href="#Checker.runDeferred">runDeferred</a></td>
+<td>Run the callables in C{deferred} using their associated scope stack.</td>
 </tr><tr>
 <td><a href="#Checker.runFunction">runFunction</a></td>
 <td></td>
@@ -295,18 +331,8 @@ object
 </table>
 <a NAME="Checker.__init__" ID="Checker.__init__"></a>
 <h4>Checker (Constructor)</h4>
-<b>Checker</b>(<i>module, filename='(none)'</i>)
-<p>
-        Constructor
-</p><dl>
-<dt><i>module</i></dt>
-<dd>
-parsed module tree or module source code
-</dd><dt><i>filename</i></dt>
-<dd>
-name of the module file (string)
-</dd>
-</dl><a NAME="Checker.ASSIGN" ID="Checker.ASSIGN"></a>
+<b>Checker</b>(<i>tree, filename='(none)', builtins=None</i>)
+<a NAME="Checker.ASSIGN" ID="Checker.ASSIGN"></a>
 <h4>Checker.ASSIGN</h4>
 <b>ASSIGN</b>(<i>node</i>)
 <a NAME="Checker.AUGASSIGN" ID="Checker.AUGASSIGN"></a>
@@ -322,6 +348,9 @@ name of the module file (string)
 </p><a NAME="Checker.DICTCOMP" ID="Checker.DICTCOMP"></a>
 <h4>Checker.DICTCOMP</h4>
 <b>DICTCOMP</b>(<i>node</i>)
+<a NAME="Checker.EXCEPTHANDLER" ID="Checker.EXCEPTHANDLER"></a>
+<h4>Checker.EXCEPTHANDLER</h4>
+<b>EXCEPTHANDLER</b>(<i>node</i>)
 <a NAME="Checker.FOR" ID="Checker.FOR"></a>
 <h4>Checker.FOR</h4>
 <b>FOR</b>(<i>node</i>)
@@ -351,44 +380,32 @@ name of the module file (string)
 <h4>Checker.NAME</h4>
 <b>NAME</b>(<i>node</i>)
 <p>
-        Locate the name in locals / function / globals scopes.
-</p><a NAME="Checker._runDeferred" ID="Checker._runDeferred"></a>
-<h4>Checker._runDeferred</h4>
-<b>_runDeferred</b>(<i>deferred</i>)
-<p>
-        Run the callables in deferred using their associated scope stack.
+        Handle occurrence of Name (which can be a load/store/delete access.)
 </p><a NAME="Checker.addArgs" ID="Checker.addArgs"></a>
 <h4>Checker.addArgs</h4>
 <b>addArgs</b>(<i></i>)
 <a NAME="Checker.addBinding" ID="Checker.addBinding"></a>
 <h4>Checker.addBinding</h4>
-<b>addBinding</b>(<i>lineno, value, reportRedef=True</i>)
+<b>addBinding</b>(<i>node, value, reportRedef=True</i>)
 <p>
         Called when a binding is altered.
-</p><dl>
-<dt><i>lineno</i></dt>
-<dd>
-line of the statement responsible for the change (integer)
-</dd><dt><i>value</i></dt>
-<dd>
-the optional new value, a Binding instance, associated
-            with the binding; if None, the binding is deleted if it exists
-</dd><dt><i>reportRedef</i></dt>
-<dd>
-flag indicating if rebinding while unused will be
-            reported (boolean)
-</dd>
-</dl><a NAME="Checker.checkUnusedAssignments" ID="Checker.checkUnusedAssignments"></a>
+</p><p>
+        - `node` is the statement responsible for the change
+        - `value` is the optional new value, a Binding instance, associated
+          with the binding; if None, the binding is deleted if it exists.
+        - if `reportRedef` is True (default), rebinding while unused will be
+          reported.
+</p><a NAME="Checker.checkDeadScopes" ID="Checker.checkDeadScopes"></a>
+<h4>Checker.checkDeadScopes</h4>
+<b>checkDeadScopes</b>(<i></i>)
+<p>
+        Look at scopes which have been fully examined and report names in them
+        which were imported but unused.
+</p><a NAME="Checker.checkUnusedAssignments" ID="Checker.checkUnusedAssignments"></a>
 <h4>Checker.checkUnusedAssignments</h4>
 <b>checkUnusedAssignments</b>(<i></i>)
 <p>
                 Check to see if any assignments have not been used.
-</p><a NAME="Checker.check_dead_scopes" ID="Checker.check_dead_scopes"></a>
-<h4>Checker.check_dead_scopes</h4>
-<b>check_dead_scopes</b>(<i></i>)
-<p>
-        Look at scopes which have been fully examined and report names in them
-        which were imported but unused.
 </p><a NAME="Checker.collectLoopVars" ID="Checker.collectLoopVars"></a>
 <h4>Checker.collectLoopVars</h4>
 <b>collectLoopVars</b>(<i></i>)
@@ -408,12 +425,35 @@ flag indicating if rebinding while unused will be
         because code later in the file might modify the global scope. When
         `callable` is called, the scope at the time this is called will be
         restored, however it will contain any new bindings added to it.
-</p><a NAME="Checker.handleChildren" ID="Checker.handleChildren"></a>
+</p><a NAME="Checker.descendantOf" ID="Checker.descendantOf"></a>
+<h4>Checker.descendantOf</h4>
+<b>descendantOf</b>(<i>node, ancestors, stop=None</i>)
+<a NAME="Checker.differentForks" ID="Checker.differentForks"></a>
+<h4>Checker.differentForks</h4>
+<b>differentForks</b>(<i>lnode, rnode</i>)
+<p>
+True, if lnode and rnode are located on different forks of IF/TRY
+</p><a NAME="Checker.getCommonAncestor" ID="Checker.getCommonAncestor"></a>
+<h4>Checker.getCommonAncestor</h4>
+<b>getCommonAncestor</b>(<i>lnode, rnode, stop=None</i>)
+<a NAME="Checker.handleChildren" ID="Checker.handleChildren"></a>
 <h4>Checker.handleChildren</h4>
 <b>handleChildren</b>(<i>tree</i>)
 <a NAME="Checker.handleNode" ID="Checker.handleNode"></a>
 <h4>Checker.handleNode</h4>
 <b>handleNode</b>(<i>node, parent</i>)
+<a NAME="Checker.handleNodeDelete" ID="Checker.handleNodeDelete"></a>
+<h4>Checker.handleNodeDelete</h4>
+<b>handleNodeDelete</b>(<i>node</i>)
+<a NAME="Checker.handleNodeLoad" ID="Checker.handleNodeLoad"></a>
+<h4>Checker.handleNodeLoad</h4>
+<b>handleNodeLoad</b>(<i>node</i>)
+<a NAME="Checker.handleNodeStore" ID="Checker.handleNodeStore"></a>
+<h4>Checker.handleNodeStore</h4>
+<b>handleNodeStore</b>(<i>node</i>)
+<a NAME="Checker.hasParent" ID="Checker.hasParent"></a>
+<h4>Checker.hasParent</h4>
+<b>hasParent</b>(<i>node, kind</i>)
 <a NAME="Checker.ignore" ID="Checker.ignore"></a>
 <h4>Checker.ignore</h4>
 <b>ignore</b>(<i>node</i>)
@@ -423,7 +463,10 @@ flag indicating if rebinding while unused will be
 <p>
         Determine if the given node is a docstring, as long as it is at the
         correct place in the node tree.
-</p><a NAME="Checker.popScope" ID="Checker.popScope"></a>
+</p><a NAME="Checker.onFork" ID="Checker.onFork"></a>
+<h4>Checker.onFork</h4>
+<b>onFork</b>(<i>parent, lnode, rnode, items</i>)
+<a NAME="Checker.popScope" ID="Checker.popScope"></a>
 <h4>Checker.popScope</h4>
 <b>popScope</b>(<i></i>)
 <a NAME="Checker.pushClassScope" ID="Checker.pushClassScope"></a>
@@ -435,7 +478,12 @@ flag indicating if rebinding while unused will be
 <a NAME="Checker.report" ID="Checker.report"></a>
 <h4>Checker.report</h4>
 <b>report</b>(<i>messageClass, *args, **kwargs</i>)
-<a NAME="Checker.runFunction" ID="Checker.runFunction"></a>
+<a NAME="Checker.runDeferred" ID="Checker.runDeferred"></a>
+<h4>Checker.runDeferred</h4>
+<b>runDeferred</b>(<i>deferred</i>)
+<p>
+        Run the callables in C{deferred} using their associated scope stack.
+</p><a NAME="Checker.runFunction" ID="Checker.runFunction"></a>
 <h4>Checker.runFunction</h4>
 <b>runFunction</b>(<i></i>)
 <a NAME="Checker.scope" ID="Checker.scope"></a>
@@ -444,13 +492,61 @@ flag indicating if rebinding while unused will be
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="ClassDefinition" ID="ClassDefinition"></a>
+<h2>ClassDefinition</h2>
+
+<h3>Derived from</h3>
+Definition
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="ClassScope" ID="ClassScope"></a>
 <h2>ClassScope</h2>
-<p>
-    Class representing a name scope for a class.
-</p>
+
 <h3>Derived from</h3>
 Scope
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Definition" ID="Definition"></a>
+<h2>Definition</h2>
+<p>
+    A binding that defines a function or a class.
+</p>
+<h3>Derived from</h3>
+Binding
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -473,17 +569,17 @@ Scope
 <a NAME="ExportBinding" ID="ExportBinding"></a>
 <h2>ExportBinding</h2>
 <p>
-    A binding created by an __all__ assignment.  If the names in the list
+    A binding created by an C{__all__} assignment.  If the names in the list
     can be determined statically, they will be treated as names for export and
     additional checking applied to them.
 </p><p>
-    The only __all__ assignment that can be recognized is one which takes
+    The only C{__all__} assignment that can be recognized is one which takes
     the value of a literal list containing literal strings.  For example::
 </p><p>
         __all__ = ["foo", "bar"]
 </p><p>
     Names which are imported and not otherwise used but appear in the value of
-    __all__ will not have an unused import warning reported for them.
+    C{__all__} will not have an unused import warning reported for them.
 </p>
 <h3>Derived from</h3>
 Binding
@@ -516,11 +612,9 @@ Binding
 <hr /><hr />
 <a NAME="FunctionDefinition" ID="FunctionDefinition"></a>
 <h2>FunctionDefinition</h2>
-<p>
-    Represents a function definition.
-</p>
+
 <h3>Derived from</h3>
-Binding
+Definition
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -543,7 +637,7 @@ Binding
 <a NAME="FunctionScope" ID="FunctionScope"></a>
 <h2>FunctionScope</h2>
 <p>
-    Class representing a name scope for a function.
+    I represent a name scope for a function.
 </p>
 <h3>Derived from</h3>
 Scope
@@ -606,9 +700,7 @@ Binding
 <hr /><hr />
 <a NAME="ModuleScope" ID="ModuleScope"></a>
 <h2>ModuleScope</h2>
-<p>
-    Class representing a name scope for a module.
-</p>
+
 <h3>Derived from</h3>
 Scope
 <h3>Class Attributes</h3>
@@ -632,14 +724,12 @@ Scope
 <hr /><hr />
 <a NAME="Scope" ID="Scope"></a>
 <h2>Scope</h2>
-<p>
-    Class defining the scope base class.
-</p>
+
 <h3>Derived from</h3>
 dict
 <h3>Class Attributes</h3>
 <table>
-<tr><td>importStarred</td></tr>
+<tr><td>importStarred</td></tr><tr><td>usesLocals</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -648,9 +738,6 @@ dict
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#Scope.__init__">Scope</a></td>
-<td></td>
-</tr><tr>
 <td><a href="#Scope.__repr__">__repr__</a></td>
 <td></td>
 </tr>
@@ -659,9 +746,6 @@ dict
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="Scope.__init__" ID="Scope.__init__"></a>
-<h4>Scope (Constructor)</h4>
-<b>Scope</b>(<i></i>)
 <a NAME="Scope.__repr__" ID="Scope.__repr__"></a>
 <h4>Scope.__repr__</h4>
 <b>__repr__</b>(<i></i>)
@@ -671,7 +755,7 @@ dict
 <a NAME="UnBinding" ID="UnBinding"></a>
 <h2>UnBinding</h2>
 <p>
-    Created by the 'del' operator.
+Created by the 'del' operator.
 </p>
 <h3>Derived from</h3>
 Binding
@@ -694,9 +778,15 @@ Binding
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="getNodeName" ID="getNodeName"></a>
+<h2>getNodeName</h2>
+<b>getNodeName</b>(<i>node</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="iter_child_nodes" ID="iter_child_nodes"></a>
 <h2>iter_child_nodes</h2>
-<b>iter_child_nodes</b>(<i>node, astcls=_ast.AST</i>)
+<b>iter_child_nodes</b>(<i>node, astcls=ast.AST</i>)
 <p>
         Yield all direct child nodes of *node*, that is, all fields that are nodes
         and all items of fields that are lists of nodes.

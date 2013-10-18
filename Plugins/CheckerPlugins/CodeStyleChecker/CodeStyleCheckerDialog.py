@@ -7,6 +7,8 @@
 Module implementing a dialog to show the results of the code style check.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import fnmatch
 
@@ -41,7 +43,7 @@ class CodeStyleCheckerReport(pep8.BaseReport):
         
         @param options options for the report (optparse.Values)
         """
-        super().__init__(options)
+        super(CodeStyleCheckerReport, self).__init__(options)
         
         self.__repeat = options.repeat
         self.errors = []
@@ -57,7 +59,7 @@ class CodeStyleCheckerReport(pep8.BaseReport):
         @param args arguments for the message (list)
         @return error code (string)
         """
-        code = super().error_args(line_number, offset, code, check, *args)
+        code = super(CodeStyleCheckerReport, self).error_args(line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
             if code in NamingStyleChecker.Codes:
                 text = NamingStyleChecker.getMessage(code, *args)
@@ -86,7 +88,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CodeStyleCheckerDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.docTypeComboBox.addItem(self.trUtf8("PEP-257"), "pep257")
@@ -216,7 +218,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         @param fixer reference to the code style fixer (CodeStyleFixer)
         """
         self.__statistics["_FilesCount"] += 1
-        stats = {v: k for v, k in statistics.items() if v[0].isupper()}
+        stats = [k for k in statistics.keys() if k[0].isupper()]
         if stats:
             self.__statistics["_FilesIssues"] += 1
             for key in statistics:
@@ -328,12 +330,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             files = fn[:]
         elif os.path.isdir(fn):
             files = []
-            for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            extensions = set(Preferences.getPython("PythonExtensions") +
+                Preferences.getPython("Python3Extensions"))
+            for ext in extensions:
+                files.extend(Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         
@@ -395,7 +395,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         source = source.splitlines(True)
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", "1",
+                        self.__createResultItem(file, 1, 1,
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], False, False)
                         progress += 1

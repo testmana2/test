@@ -7,6 +7,8 @@
 Module implementing the bookmarks manager.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, \
@@ -55,7 +57,7 @@ class BookmarksManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(BookmarksManager, self).__init__(parent)
         
         self.__saveTimer = AutoSaver(self, self.save)
         self.entryAdded.connect(self.__saveTimer.changeOccurred)
@@ -527,7 +529,7 @@ class RemoveBookmarksCommand(QUndoCommand):
         @param parent reference to the parent node (BookmarkNode)
         @param row row number of bookmark (integer)
         """
-        super().__init__(
+        super(RemoveBookmarksCommand, self).__init__(
             QApplication.translate("BookmarksManager", "Remove Bookmark"))
         
         self._row = row
@@ -601,7 +603,7 @@ class ChangeBookmarkCommand(QUndoCommand):
         @param title flag indicating a change of the title (True) or
             the URL (False) (boolean)
         """
-        super().__init__()
+        super(ChangeBookmarkCommand, self).__init__()
         
         self._bookmarksManager = bookmarksManager
         self._title = title

@@ -7,6 +7,8 @@
 Module implementing a synchronization handler using FTP.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import ftplib
 import io
 
@@ -50,7 +52,7 @@ class FtpSyncHandler(SyncHandler):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(FtpSyncHandler, self).__init__(parent)
         
         self.__state = "idle"
         self.__forceUpload = False

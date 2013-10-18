@@ -7,6 +7,8 @@
 Module implementing a dialog to edit the various spell checking dictionaries.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt
@@ -28,7 +30,7 @@ class SpellingDictionaryEditDialog(QDialog, Ui_SpellingDictionaryEditDialog):
         @param info info string to show at the header (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SpellingDictionaryEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.infoLabel.setText(info)

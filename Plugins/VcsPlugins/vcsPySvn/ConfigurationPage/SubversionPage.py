@@ -7,6 +7,8 @@
 Module implementing the Subversion configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 
 from Preferences.ConfigurationPages.ConfigurationPageBase import \
@@ -24,7 +26,7 @@ class SubversionPage(ConfigurationPageBase, Ui_SubversionPage):
         
         @param plugin reference to the plugin object
         """
-        super().__init__()
+        super(SubversionPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("SubversionPage")
         

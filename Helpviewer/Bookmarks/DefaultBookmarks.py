@@ -7,6 +7,8 @@
 Module defining the default bookmarks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 DefaultBookmarks = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
 <xbel version="1.0">

@@ -7,6 +7,8 @@
 Module implementing a network reply object for special data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QTimer, QIODevice, QByteArray
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 
@@ -24,7 +26,7 @@ class NetworkReply(QNetworkReply):
         @param mimeType for the reply (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(NetworkReply, self).__init__(parent)
         
         self.__data = fileData
         

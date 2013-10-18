@@ -7,6 +7,8 @@
 Module implementing a tool bar showing bookmarks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QUrl
 from PyQt4.QtGui import QMenu, QApplication, QCursor
 from PyQt4.QtWebKit import QWebPage

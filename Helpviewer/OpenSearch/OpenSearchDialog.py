@@ -7,6 +7,8 @@
 Module implementing a dialog for the configuration of search engines.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
@@ -27,7 +29,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         
         @param parent reference to the parent object (QWidget)
         """
-        super().__init__(parent)
+        super(OpenSearchDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.setModal(True)

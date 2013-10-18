@@ -7,6 +7,8 @@
 Module containing a base class for synchronization handlers.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QObject, pyqtSignal, QByteArray
@@ -42,7 +44,7 @@ class SyncHandler(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(SyncHandler, self).__init__(parent)
         
         self._firstTimeSynced = False
         

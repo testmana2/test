@@ -7,6 +7,8 @@
 Module implementing the VCS project browser helper for Mercurial.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtGui import QMenu, QDialog

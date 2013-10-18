@@ -7,6 +7,8 @@
 Module implementing a dialog to search for text in files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import re
 
@@ -52,7 +54,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         @param replaceMode flag indicating the replace dialog mode (boolean)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(FindFileDialog, self).__init__(parent)
         self.setupUi(self)
         self.setWindowFlags(Qt.WindowFlags(Qt.Window))
         
@@ -183,7 +185,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findList.clear()
             self.replacetextCombo.setEditText("")
         
-        super().show()
+        super(FindFileDialog, self).show()
         
     def on_findtextCombo_editTextChanged(self, text):
         """

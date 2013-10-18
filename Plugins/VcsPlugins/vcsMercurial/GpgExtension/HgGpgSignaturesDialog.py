@@ -7,6 +7,12 @@
 Module implementing a dialog showing signed changesets.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QRegExp, \
@@ -32,7 +38,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         @param vcs reference to the vcs object
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgGpgSignaturesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -382,4 +388,4 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgGpgSignaturesDialog, self).keyPressEvent(evt)
