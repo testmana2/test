@@ -124,8 +124,9 @@ class UIPreviewer(E5MainWindow):
         """
         Private method to define the user interface actions.
         """
-        self.openAct = QAction(UI.PixmapCache.getIcon("openUI.png"),
-                        self.trUtf8('&Open File'), self)
+        self.openAct = QAction(
+            UI.PixmapCache.getIcon("openUI.png"),
+            self.trUtf8('&Open File'), self)
         self.openAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+O", "File|Open")))
         self.openAct.setStatusTip(self.trUtf8('Open a UI file for display'))
@@ -135,8 +136,9 @@ class UIPreviewer(E5MainWindow):
         ))
         self.openAct.triggered[()].connect(self.__openFile)
         
-        self.printAct = QAction(UI.PixmapCache.getIcon("print.png"),
-                        self.trUtf8('&Print'), self)
+        self.printAct = QAction(
+            UI.PixmapCache.getIcon("print.png"),
+            self.trUtf8('&Print'), self)
         self.printAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+P", "File|Print")))
         self.printAct.setStatusTip(self.trUtf8('Print a screen capture'))
@@ -157,8 +159,9 @@ class UIPreviewer(E5MainWindow):
         ))
         self.printPreviewAct.triggered[()].connect(self.__printPreviewImage)
         
-        self.imageAct = QAction(UI.PixmapCache.getIcon("screenCapture.png"),
-                        self.trUtf8('&Screen Capture'), self)
+        self.imageAct = QAction(
+            UI.PixmapCache.getIcon("screenCapture.png"),
+            self.trUtf8('&Screen Capture'), self)
         self.imageAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+S", "File|Screen Capture")))
         self.imageAct.setStatusTip(self.trUtf8(
@@ -169,8 +172,8 @@ class UIPreviewer(E5MainWindow):
         ))
         self.imageAct.triggered[()].connect(self.__saveImage)
         
-        self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"),
-                        self.trUtf8('&Quit'), self)
+        self.exitAct = QAction(
+            UI.PixmapCache.getIcon("exit.png"), self.trUtf8('&Quit'), self)
         self.exitAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
@@ -180,8 +183,8 @@ class UIPreviewer(E5MainWindow):
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
-        self.copyAct = QAction(UI.PixmapCache.getIcon("editCopy.png"),
-                            self.trUtf8('&Copy'), self)
+        self.copyAct = QAction(
+            UI.PixmapCache.getIcon("editCopy.png"), self.trUtf8('&Copy'), self)
         self.copyAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")))
         self.copyAct.setStatusTip(
@@ -192,8 +195,9 @@ class UIPreviewer(E5MainWindow):
         ))
         self.copyAct.triggered[()].connect(self.__copyImageToClipboard)
         
-        self.whatsThisAct = QAction(UI.PixmapCache.getIcon("whatsThis.png"),
-                                self.trUtf8('&What\'s This?'), self)
+        self.whatsThisAct = QAction(
+            UI.PixmapCache.getIcon("whatsThis.png"),
+            self.trUtf8('&What\'s This?'), self)
         self.whatsThisAct.setShortcut(QKeySequence(self.trUtf8("Shift+F1")))
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
@@ -383,8 +387,8 @@ class UIPreviewer(E5MainWindow):
         
         self.lastQStyle = qstyle
         self.lastStyle = sstyle
-        Preferences.Prefs.settings.setValue('UIPreviewer/style',
-            self.styleCombo.currentIndex())
+        Preferences.Prefs.settings.setValue(
+            'UIPreviewer/style', self.styleCombo.currentIndex())
         QApplication.restoreOverrideCursor()
     
     def __updateActions(self):

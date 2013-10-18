@@ -341,9 +341,11 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.vsb2.setValue(0)
         self.firstButton.setEnabled(False)
         self.upButton.setEnabled(False)
-        self.downButton.setEnabled(len(self.diffParas) > 0 and 
+        self.downButton.setEnabled(
+            len(self.diffParas) > 0 and 
             (self.vsb1.isVisible() or self.vsb2.isVisible()))
-        self.lastButton.setEnabled(len(self.diffParas) > 0 and 
+        self.lastButton.setEnabled(
+            len(self.diffParas) > 0 and 
             (self.vsb1.isVisible() or self.vsb2.isVisible()))
         
         self.totalLabel.setText(self.trUtf8('Total: {0}')\

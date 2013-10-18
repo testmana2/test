@@ -163,37 +163,44 @@ class ProjectBrowser(E5TabWidget):
         
         # step 2: add browsers
         if browserFlags & SourcesBrowserFlag:
-            index = self.addTab(self.psBrowser,
+            index = self.addTab(
+                self.psBrowser,
                 UI.PixmapCache.getIcon("projectSources.png"), '')
             self.setTabToolTip(index, self.psBrowser.windowTitle())
         
         if browserFlags & FormsBrowserFlag:
-            index = self.addTab(self.pfBrowser,
+            index = self.addTab(
+                self.pfBrowser,
                 UI.PixmapCache.getIcon("projectForms.png"), '')
             self.setTabToolTip(index, self.pfBrowser.windowTitle())
         
         if browserFlags & ResourcesBrowserFlag:
-            index = self.addTab(self.prBrowser,
+            index = self.addTab(
+                self.prBrowser,
                 UI.PixmapCache.getIcon("projectResources.png"), '')
             self.setTabToolTip(index, self.prBrowser.windowTitle())
         
         if browserFlags & TranslationsBrowserFlag:
-            index = self.addTab(self.ptBrowser,
+            index = self.addTab(
+                self.ptBrowser,
                 UI.PixmapCache.getIcon("projectTranslations.png"), '')
             self.setTabToolTip(index, self.ptBrowser.windowTitle())
         
         if browserFlags & InterfacesBrowserFlag:
-            index = self.addTab(self.piBrowser,
+            index = self.addTab(
+                self.piBrowser,
                 UI.PixmapCache.getIcon("projectInterfaces.png"), '')
             self.setTabToolTip(index, self.piBrowser.windowTitle())
         
         if browserFlags & OthersBrowserFlag:
-            index = self.addTab(self.poBrowser,
+            index = self.addTab(
+                self.poBrowser,
                 UI.PixmapCache.getIcon("projectOthers.png"), '')
             self.setTabToolTip(index, self.poBrowser.windowTitle())
         
         if self.embeddedBrowser:
-            index = self.addTab(self.fileBrowser,
+            index = self.addTab(
+                self.fileBrowser,
                 UI.PixmapCache.getIcon("browser.png"), '')
             self.setTabToolTip(index, self.fileBrowser.windowTitle())
         

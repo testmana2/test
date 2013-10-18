@@ -261,8 +261,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                             else:
                                 method = "on_{0}_{1}".format(
                                     name, metaMethod.signature().split("(")[0])
-                            method2 = "{0}({1})".format(method,
-                                ", ".join(
+                            method2 = "{0}({1})".format(
+                                method, ", ".join(
                                     [self.__mapType(t)
                                      for t in metaMethod.parameterTypes()]))
                             

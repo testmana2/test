@@ -155,8 +155,9 @@ class TRPreviewer(E5MainWindow):
         """
         Private method to define the user interface actions.
         """
-        self.openUIAct = QAction(UI.PixmapCache.getIcon("openUI.png"),
-                        self.trUtf8('&Open UI Files...'), self)
+        self.openUIAct = QAction(
+            UI.PixmapCache.getIcon("openUI.png"),
+            self.trUtf8('&Open UI Files...'), self)
         self.openUIAct.setStatusTip(self.trUtf8('Open UI files for display'))
         self.openUIAct.setWhatsThis(self.trUtf8(
                 """<b>Open UI Files</b>"""
@@ -164,8 +165,9 @@ class TRPreviewer(E5MainWindow):
         ))
         self.openUIAct.triggered[()].connect(self.__openWidget)
         
-        self.openQMAct = QAction(UI.PixmapCache.getIcon("openQM.png"),
-                        self.trUtf8('Open &Translation Files...'), self)
+        self.openQMAct = QAction(
+            UI.PixmapCache.getIcon("openQM.png"),
+            self.trUtf8('Open &Translation Files...'), self)
         self.openQMAct.setStatusTip(self.trUtf8(
             'Open Translation files for display'))
         self.openQMAct.setWhatsThis(self.trUtf8(
@@ -174,8 +176,9 @@ class TRPreviewer(E5MainWindow):
         ))
         self.openQMAct.triggered[()].connect(self.__openTranslation)
         
-        self.reloadAct = QAction(UI.PixmapCache.getIcon("reload.png"),
-                        self.trUtf8('&Reload Translations'), self)
+        self.reloadAct = QAction(
+            UI.PixmapCache.getIcon("reload.png"),
+            self.trUtf8('&Reload Translations'), self)
         self.reloadAct.setStatusTip(self.trUtf8(
             'Reload the loaded translations'))
         self.reloadAct.setWhatsThis(self.trUtf8(
@@ -185,8 +188,8 @@ class TRPreviewer(E5MainWindow):
         ))
         self.reloadAct.triggered[()].connect(self.translations.reload)
         
-        self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"),
-                        self.trUtf8('&Quit'), self)
+        self.exitAct = QAction(
+            UI.PixmapCache.getIcon("exit.png"), self.trUtf8('&Quit'), self)
         self.exitAct.setShortcut(QKeySequence(
             self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
@@ -196,8 +199,9 @@ class TRPreviewer(E5MainWindow):
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
-        self.whatsThisAct = QAction(UI.PixmapCache.getIcon("whatsThis.png"),
-                                self.trUtf8('&What\'s This?'), self)
+        self.whatsThisAct = QAction(
+            UI.PixmapCache.getIcon("whatsThis.png"),
+            self.trUtf8('&What\'s This?'), self)
         self.whatsThisAct.setShortcut(QKeySequence(self.trUtf8("Shift+F1")))
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
@@ -246,8 +250,8 @@ class TRPreviewer(E5MainWindow):
         ))
         self.cascadeAct.triggered[()].connect(self.preview.cascadeSubWindows)
         
-        self.closeAct = QAction(UI.PixmapCache.getIcon("close.png"),
-                            self.trUtf8('&Close'), self)
+        self.closeAct = QAction(
+            UI.PixmapCache.getIcon("close.png"), self.trUtf8('&Close'), self)
         self.closeAct.setShortcut(QKeySequence(self.trUtf8(
             "Ctrl+W", "File|Close")))
         self.closeAct.setStatusTip(self.trUtf8('Close the current window'))
@@ -474,7 +478,8 @@ class TranslationsDict(QObject):
                 E5MessageBox.warning(
                     self.parent(),
                     self.trUtf8("Set Translator"),
-                    self.trUtf8("""<p>The translation filename <b>{0}</b>"""
+                    self.trUtf8(
+                        """<p>The translation filename <b>{0}</b>"""
                         """ is invalid.</p>""").format(fileName))
                 return
             

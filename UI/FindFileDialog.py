@@ -143,7 +143,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.__lastFileItem.setFirstColumnSpanned(True)
             self.__lastFileItem.setExpanded(True)
             if self.__replaceMode:
-                self.__lastFileItem.setFlags(self.__lastFileItem.flags() | \
+                self.__lastFileItem.setFlags(
+                    self.__lastFileItem.flags() | \
                     Qt.ItemFlags(Qt.ItemIsUserCheckable | Qt.ItemIsTristate))
                 # Qt bug:
                 # item is not user checkable if setFirstColumnSpanned

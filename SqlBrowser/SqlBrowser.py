@@ -94,7 +94,8 @@ class SqlBrowser(E5MainWindow):
         # list of all actions
         self.__actions = []
         
-        self.addConnectionAct = E5Action(self.trUtf8('Add Connection'),
+        self.addConnectionAct = E5Action(
+            self.trUtf8('Add Connection'),
             UI.PixmapCache.getIcon("databaseConnection.png"),
             self.trUtf8('Add &Connection...'),
             0, 0, self, 'sql_file_add_connection')
@@ -109,7 +110,8 @@ class SqlBrowser(E5MainWindow):
             self.__browser.addConnectionByDialog)
         self.__actions.append(self.addConnectionAct)
         
-        self.exitAct = E5Action(self.trUtf8('Quit'),
+        self.exitAct = E5Action(
+            self.trUtf8('Quit'),
             UI.PixmapCache.getIcon("exit.png"),
             self.trUtf8('&Quit'),
             QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
@@ -121,7 +123,8 @@ class SqlBrowser(E5MainWindow):
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
-        self.aboutAct = E5Action(self.trUtf8('About'),
+        self.aboutAct = E5Action(
+            self.trUtf8('About'),
             self.trUtf8('&About'),
             0, 0, self, 'sql_help_about')
         self.aboutAct.setStatusTip(self.trUtf8(
@@ -133,7 +136,8 @@ class SqlBrowser(E5MainWindow):
         self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
         
-        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
+        self.aboutQtAct = E5Action(
+            self.trUtf8('About Qt'),
             self.trUtf8('About &Qt'),
             0, 0, self, 'sql_help_about_qt')
         self.aboutQtAct.setStatusTip(

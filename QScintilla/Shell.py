@@ -223,8 +223,8 @@ class Shell(QsciScintillaCompat):
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Clear'), self.clear)
         self.menu.addAction(self.trUtf8('Reset'), self.__reset)
-        self.menu.addAction(self.trUtf8('Reset and Clear'),
-            self.__resetAndClear)
+        self.menu.addAction(
+            self.trUtf8('Reset and Clear'), self.__resetAndClear)
         self.menu.addSeparator()
         self.menu.addMenu(self.lmenu)
         self.menu.addSeparator()
@@ -1654,8 +1654,8 @@ class Shell(QsciScintillaCompat):
             only (boolean)
         """
         self.__lastSearch = (txt, caseSensitive, wholeWord)
-        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False,
-            forward=True)
+        ok = self.findFirst(
+            txt, False, caseSensitive, wholeWord, False, forward=True)
         self.searchStringFound.emit(ok)
     
     def __searchPrev(self):
@@ -1680,7 +1680,7 @@ class Shell(QsciScintillaCompat):
             line, index = self.getSelection()[:2]
         else:
             line, index = -1, -1
-        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False,
-            forward=False,
-                            line=line, index=index)
+        ok = self.findFirst(
+            txt, False, caseSensitive, wholeWord, False,
+            forward=False, line=line, index=index)
         self.searchStringFound.emit(ok)

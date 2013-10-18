@@ -31,8 +31,8 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         self.setupUi(self)
         
         self.historyList.addItems(history)
-        self.historyList.setCurrentRow(self.historyList.count() - 1,
-            QItemSelectionModel.Clear)
+        self.historyList.setCurrentRow(
+            self.historyList.count() - 1, QItemSelectionModel.Clear)
         self.historyList.scrollToItem(self.historyList.currentItem())
         
         self.vm = vm
@@ -113,8 +113,8 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         history = self.shell.getHistory(None)
         self.historyList.clear()
         self.historyList.addItems(history)
-        self.historyList.setCurrentRow(self.historyList.count() - 1,
-            QItemSelectionModel.Clear)
+        self.historyList.setCurrentRow(
+            self.historyList.count() - 1, QItemSelectionModel.Clear)
         self.historyList.scrollToItem(self.historyList.currentItem())
         
     def getHistory(self):

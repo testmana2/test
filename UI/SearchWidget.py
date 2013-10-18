@@ -95,7 +95,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.findtextCombo.clear()
         self.findtextCombo.addItems(self.findHistory)
         
-        self.searchNext.emit(txt,
+        self.searchNext.emit(
+            txt,
             self.caseCheckBox.isChecked(),
             self.wordCheckBox.isChecked())
     
@@ -115,7 +116,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.findtextCombo.clear()
         self.findtextCombo.addItems(self.findHistory)
         
-        self.searchPrevious.emit(txt,
+        self.searchPrevious.emit(
+            txt,
             self.caseCheckBox.isChecked(),
             self.wordCheckBox.isChecked())
     

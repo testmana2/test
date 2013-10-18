@@ -233,10 +233,12 @@ def is_stream_binary_plist(stream):
     else:
         return False
 
-PlistTrailer = namedtuple('PlistTrailer',
+PlistTrailer = namedtuple(
+    'PlistTrailer',
     'offsetSize, objectRefSize, offsetCount, topLevelObjectNumber,'
     ' offsetTableOffset')
-PlistByteCounts = namedtuple('PlistByteCounts',
+PlistByteCounts = namedtuple(
+    'PlistByteCounts',
     'nullBytes, boolBytes, intBytes, realBytes, dateBytes, dataBytes,'
     ' stringBytes, uidBytes, arrayBytes, setBytes, dictBytes')
 
@@ -502,7 +504,8 @@ class PlistReader(object):
         @param length length of the string (integer)
         @return ASCII encoded string
         """
-        result = str(unpack("!{0}s".format(length),
+        result = str(unpack(
+            "!{0}s".format(length),
             self.contents[self.currentOffset:self.currentOffset + length])[0],
             encoding="ascii")
         self.currentOffset += length
@@ -529,7 +532,8 @@ class PlistReader(object):
         @return date object (datetime.datetime)
         """
         global apple_reference_date_offset
-        result = unpack(">d",
+        result = unpack(
+            ">d",
             self.contents[self.currentOffset:self.currentOffset + 8])[0]
         result = datetime.datetime.utcfromtimestamp(
             result + apple_reference_date_offset)

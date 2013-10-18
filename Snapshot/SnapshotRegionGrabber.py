@@ -57,7 +57,8 @@ class SnapshotRegionGrabber(QWidget):
         @param mode region grabber mode (SnapshotRegionGrabber.Rectangle or
             SnapshotRegionGrabber.Ellipse)
         """
-        super().__init__(None,
+        super().__init__(
+            None,
             Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint |
             Qt.FramelessWindowHint | Qt.Tool)
         
@@ -113,7 +114,8 @@ class SnapshotRegionGrabber(QWidget):
                 self.__desktop.winId(), x, y,
                 self.__desktop.width(), self.__desktop.height())
         else:
-            self.__pixmap = QPixmap.grabWindow(self.__desktop.winId(), x, y,
+            self.__pixmap = QPixmap.grabWindow(
+                self.__desktop.winId(), x, y,
                 self.__desktop.width(), self.__desktop.height())
         self.resize(self.__pixmap.size())
         self.move(x, y)
@@ -169,7 +171,8 @@ class SnapshotRegionGrabber(QWidget):
             self.__helpTextRect.adjust(-2, -2, 4, 2)
             drawRect(painter, self.__helpTextRect, textColor,
                      textBackgroundColor)
-            painter.drawText(self.__helpTextRect.adjusted(3, 3, -3, -3),
+            painter.drawText(
+                self.__helpTextRect.adjusted(3, 3, -3, -3),
                 Qt.TextWordWrap, self.__helpText)
         
         if self.__selection.isNull():
@@ -294,8 +297,8 @@ class SnapshotRegionGrabber(QWidget):
                 s = self.__selectionBeforeDrag.normalized()
                 p = s.topLeft() + evt.pos() - self.__dragStartPoint
                 r.setBottomRight(
-                    r.bottomRight() - QPoint(s.width(),
-                    s.height()) + QPoint(1, 1))
+                    r.bottomRight() - QPoint(s.width(), s.height()) + 
+                    QPoint(1, 1))
                 if not r.isNull() and r.isValid():
                     self.__selection.moveTo(self.__limitPointToRect(p, r))
             else:

@@ -108,8 +108,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
             return
         
         patternFormat = fileExt and "{0}{1}{2}" or "{0}*{1}{2}"
-        fileNamePattern = patternFormat.format(fileName, os.extsep,
-            fileExt and fileExt or '*')
+        fileNamePattern = patternFormat.format(
+            fileName, os.extsep, fileExt and fileExt or '*')
         
         searchPaths = []
         if self.searchDirCheckBox.isChecked() and \

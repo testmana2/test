@@ -99,7 +99,8 @@ class SnapshotTimer(QWidget):
             painter.setBrush(textBackgroundColor)
             helpText = self.trUtf8("Snapshot will be taken in %n seconds", "",
                                    self.__length - self.__time)
-            textRect = painter.boundingRect(self.rect().adjusted(2, 2, -2, -2),
+            textRect = painter.boundingRect(
+                self.rect().adjusted(2, 2, -2, -2),
                 Qt.AlignHCenter | Qt.TextSingleLine, helpText)
             painter.drawText(textRect, Qt.AlignHCenter | Qt.TextSingleLine,
                              helpText)
@@ -113,8 +114,8 @@ class SnapshotTimer(QWidget):
         screenGeom = QApplication.desktop().screenGeometry()
         if self.x() == screenGeom.left():
             self.move(
-                screenGeom.x() + (screenGeom.width() // 2 - \
-                    self.size().width() // 2),
+                screenGeom.x() + 
+                    (screenGeom.width() // 2 - self.size().width() // 2),
                 screenGeom.top())
         else:
             self.move(screenGeom.topLeft())

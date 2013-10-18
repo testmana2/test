@@ -56,7 +56,8 @@ def getTypeFromTypeName(name):
         return -1
 
 
-_py_getnext = re.compile(r"""
+_py_getnext = re.compile(
+r"""
     (?P<String>
        \""" (?P<StringContents1>
                [^"\\]* (?:
@@ -189,7 +190,8 @@ _py_getnext = re.compile(r"""
     )
 """, re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
-_rb_getnext = re.compile(r"""
+_rb_getnext = re.compile(
+r"""
     (?P<Docstring>
         =begin [ \t]+ edoc (?P<DocstringContents> .*? ) =end
     )
@@ -959,7 +961,7 @@ class Module(object):
                 module_name = m.group("ModuleName")
                 # remember this class
                 cur_class = RbModule(self.name, module_name,
-                                  self.file, lineno)
+                                     self.file, lineno)
                 # add nested Ruby modules to the file
                 if module_name in self.modules:
                     cur_class = self.modules[module_name]
@@ -1152,8 +1154,8 @@ class Module(object):
                     self.addPathToHierarchy(
                         exhausted, result, self.addPathToHierarchy)
                 else:
-                    rv[cls] = self.assembleHierarchy(cls,
-                                   classes, path + [cls], result)
+                    rv[cls] = self.assembleHierarchy(
+                        cls, classes, path + [cls], result)
         
         if len(rv) == 0:
             exhausted = path

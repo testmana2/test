@@ -172,8 +172,8 @@ class ProjectBaseBrowser(Browser):
         @param selected flag giving the new selection status (boolean)
         """
         if index.isValid():
-            self.selectionModel().select(index,
-                selected and self.SelectFlags or self.DeselectFlags)
+            self.selectionModel().select(
+                index, selected and self.SelectFlags or self.DeselectFlags)
         
     def _setItemRangeSelected(self, startIndex, endIndex, selected):
         """
@@ -184,8 +184,8 @@ class ProjectBaseBrowser(Browser):
         @param selected flag giving the new selection status (boolean)
         """
         selection = QItemSelection(startIndex, endIndex)
-        self.selectionModel().select(selection,
-            selected and self.SelectFlags or self.DeselectFlags)
+        self.selectionModel().select(
+            selection, selected and self.SelectFlags or self.DeselectFlags)
         
     def __modelRowsInserted(self, parent, start, end):
         """
@@ -226,10 +226,11 @@ class ProjectBaseBrowser(Browser):
             self.backMenu.setEnabled(True)
         
         if self.project.vcs is not None:
-            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(self,
-                self.project, self.isTranslationsBrowser)
-            self.vcsHelper.addVCSMenus(self.mainMenu, self.multiMenu,
-                self.backMenu, self.dirMenu, self.dirMultiMenu)
+            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(
+                self, self.project, self.isTranslationsBrowser)
+            self.vcsHelper.addVCSMenus(
+                self.mainMenu, self.multiMenu, self.backMenu,
+                self.dirMenu, self.dirMultiMenu)
         
     def _newProject(self):
         """
@@ -245,10 +246,11 @@ class ProjectBaseBrowser(Browser):
             self.backMenu.setEnabled(True)
         
         if self.project.vcs is not None:
-            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(self,
-                self.project, self.isTranslationsBrowser)
-            self.vcsHelper.addVCSMenus(self.mainMenu, self.multiMenu,
-                self.backMenu, self.dirMenu, self.dirMultiMenu)
+            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(
+                self, self.project, self.isTranslationsBrowser)
+            self.vcsHelper.addVCSMenus(
+                self.mainMenu, self.multiMenu, self.backMenu,
+                self.dirMenu, self.dirMultiMenu)
         
     def _removeFile(self):
         """
@@ -288,7 +290,8 @@ class ProjectBaseBrowser(Browser):
         
         from UI.DeleteFilesConfirmationDialog import \
             DeleteFilesConfirmationDialog
-        dlg = DeleteFilesConfirmationDialog(self.parent(),
+        dlg = DeleteFilesConfirmationDialog(
+            self.parent(),
             self.trUtf8("Delete directories"),
             self.trUtf8("Do you really want to delete these directories from"
                         " the project?"),
@@ -526,7 +529,8 @@ class ProjectBaseBrowser(Browser):
             E5MessageBox.information(
                 self,
                 QApplication.translate('ProjectBaseBrowser', "Select entries"),
-                QApplication.translate('ProjectBaseBrowser',
+                QApplication.translate(
+                    'ProjectBaseBrowser',
                     """There were no matching entries found."""))
         
     def selectLocalEntries(self):
@@ -546,7 +550,8 @@ class ProjectBaseBrowser(Browser):
         Public slot to handle the select local directories context menu
         entries.
         """
-        self._selectEntries(local=True,
+        self._selectEntries(
+            local=True,
             filter=[ProjectBrowserSimpleDirectoryItem,
                     ProjectBrowserDirectoryItem])
         
@@ -554,7 +559,8 @@ class ProjectBaseBrowser(Browser):
         """
         Public slot to handle the select VCS directories context menu entries.
         """
-        self._selectEntries(local=False,
+        self._selectEntries(
+            local=False,
             filter=[ProjectBrowserSimpleDirectoryItem,
                     ProjectBrowserDirectoryItem])
         

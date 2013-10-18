@@ -109,8 +109,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
-            act = self.menu.addAction(self.trUtf8('Generate translation'),
-                self.__generateSelected)
+            act = self.menu.addAction(
+                self.trUtf8('Generate translation'), self.__generateSelected)
             self.tsMenuActions.append(act)
             self.tsprocMenuActions.append(act)
             act = self.menu.addAction(
@@ -118,66 +118,71 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.__generateObsoleteSelected)
             self.tsMenuActions.append(act)
             self.tsprocMenuActions.append(act)
-            act = self.menu.addAction(self.trUtf8('Generate all translations'),
-                self.__generateAll)
+            act = self.menu.addAction(
+                self.trUtf8('Generate all translations'), self.__generateAll)
             self.tsprocMenuActions.append(act)
             act = self.menu.addAction(
                 self.trUtf8('Generate all translations (with obsolete)'),
                 self.__generateObsoleteAll)
             self.tsprocMenuActions.append(act)
             self.menu.addSeparator()
-            act = self.menu.addAction(self.trUtf8('Open in Qt-Linguist'),
-                self._openItem)
+            act = self.menu.addAction(
+                self.trUtf8('Open in Qt-Linguist'), self._openItem)
             self.tsMenuActions.append(act)
-            act = self.menu.addAction(self.trUtf8('Open in Editor'),
-                self.__openFileInEditor)
+            act = self.menu.addAction(
+                self.trUtf8('Open in Editor'), self.__openFileInEditor)
             self.tsMenuActions.append(act)
             self.menu.addSeparator()
-            act = self.menu.addAction(self.trUtf8('Release translation'),
-                self.__releaseSelected)
+            act = self.menu.addAction(
+                self.trUtf8('Release translation'), self.__releaseSelected)
             self.tsMenuActions.append(act)
             self.qmprocMenuActions.append(act)
-            act = self.menu.addAction(self.trUtf8('Release all translations'),
-                self.__releaseAll)
+            act = self.menu.addAction(
+                self.trUtf8('Release all translations'), self.__releaseAll)
             self.qmprocMenuActions.append(act)
             self.menu.addSeparator()
-            act = self.menu.addAction(self.trUtf8('Preview translation'),
-                self.__TRPreview)
+            act = self.menu.addAction(
+                self.trUtf8('Preview translation'), self.__TRPreview)
             self.qmMenuActions.append(act)
-            act = self.menu.addAction(self.trUtf8('Preview all translations'),
-                self.__TRPreviewAll)
+            act = self.menu.addAction(
+                self.trUtf8('Preview all translations'), self.__TRPreviewAll)
             self.menu.addSeparator()
         else:
             if self.hooks["extractMessages"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("extractMessages",
+                    self.hooksMenuEntries.get(
+                        "extractMessages",
                         self.trUtf8('Extract messages')),
                     self.__extractMessages)
                 self.menuActions.append(act)
                 self.menu.addSeparator()
             if self.hooks["generateSelected"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("generateSelected",
+                    self.hooksMenuEntries.get(
+                        "generateSelected",
                         self.trUtf8('Generate translation')),
                     self.__generateSelected)
                 self.tsMenuActions.append(act)
                 self.tsprocMenuActions.append(act)
             if self.hooks["generateSelectedWithObsolete"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("generateSelectedWithObsolete",
+                    self.hooksMenuEntries.get(
+                        "generateSelectedWithObsolete",
                         self.trUtf8('Generate translation (with obsolete)')),
                     self.__generateObsoleteSelected)
                 self.tsMenuActions.append(act)
                 self.tsprocMenuActions.append(act)
             if self.hooks["generateAll"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("generateAll",
+                    self.hooksMenuEntries.get(
+                        "generateAll",
                         self.trUtf8('Generate all translations')),
                     self.__generateAll)
                 self.tsprocMenuActions.append(act)
             if self.hooks["generateAllWithObsolete"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("generateAllWithObsolete",
+                    self.hooksMenuEntries.get(
+                        "generateAllWithObsolete",
                         self.trUtf8(
                             'Generate all translations (with obsolete)')),
                     self.__generateObsoleteAll)
@@ -185,30 +190,32 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.menu.addSeparator()
             if self.hooks["open"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("open",
-                        self.trUtf8('Open')),
+                    self.hooksMenuEntries.get(
+                        "open", self.trUtf8('Open')),
                     self._openItem)
                 self.tsMenuActions.append(act)
-            act = self.menu.addAction(self.trUtf8('Open in Editor'),
-                self.__openFileInEditor)
+            act = self.menu.addAction(
+                self.trUtf8('Open in Editor'), self.__openFileInEditor)
             self.tsMenuActions.append(act)
             self.menu.addSeparator()
             if self.hooks["releaseSelected"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("releaseSelected",
+                    self.hooksMenuEntries.get(
+                        "releaseSelected",
                         self.trUtf8('Release translation')),
                     self.__releaseSelected)
                 self.tsMenuActions.append(act)
                 self.qmprocMenuActions.append(act)
             if self.hooks["releaseAll"] is not None:
                 act = self.menu.addAction(
-                    self.hooksMenuEntries.get("releaseAll",
+                    self.hooksMenuEntries.get(
+                        "releaseAll",
                         self.trUtf8('Release all translations')),
                     self.__releaseAll)
                 self.qmprocMenuActions.append(act)
             self.menu.addSeparator()
-        act = self.menu.addAction(self.trUtf8('Remove from project'),
-            self.__removeLanguageFile)
+        act = self.menu.addAction(
+            self.trUtf8('Remove from project'), self.__removeLanguageFile)
         self.menuActions.append(act)
         act = self.menu.addAction(
             self.trUtf8('Delete'), self.__deleteLanguageFile)
@@ -216,11 +223,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.menu.addSeparator()
         self.__addTranslationAct = self.menu.addAction(
             self.trUtf8('Add translation...'), self.project.addLanguage)
-        self.menu.addAction(self.trUtf8('Add translation files...'),
+        self.menu.addAction(
+            self.trUtf8('Add translation files...'),
             self.__addTranslationFiles)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Copy Path to Clipboard'),
-            self._copyToClipboard)
+        self.menu.addAction(
+            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
         
@@ -247,33 +255,38 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             if self.hooks["extractMessages"] is not None:
                 act = self.backMenu.addAction(
-                    self.hooksMenuEntries.get("extractMessages",
+                    self.hooksMenuEntries.get(
+                        "extractMessages",
                         self.trUtf8('Extract messages')),
                     self.__extractMessages)
                 self.backMenu.addSeparator()
             if self.hooks["generateAll"] is not None:
                 act = self.backMenu.addAction(
-                    self.hooksMenuEntries.get("generateAll",
+                    self.hooksMenuEntries.get(
+                        "generateAll",
                         self.trUtf8('Generate all translations')),
                     self.__generateAll)
                 self.tsprocBackMenuActions.append(act)
             if self.hooks["generateAllWithObsolete"] is not None:
                 act = self.backMenu.addAction(
-                    self.hooksMenuEntries.get("generateAllWithObsolete",
+                    self.hooksMenuEntries.get(
+                        "generateAllWithObsolete",
                         self.trUtf8(
                             'Generate all translations (with obsolete)')),
                     self.__generateObsoleteAll)
                 self.tsprocBackMenuActions.append(act)
             if self.hooks["releaseAll"] is not None:
                 act = self.backMenu.addAction(
-                    self.hooksMenuEntries.get("releaseAll",
+                    self.hooksMenuEntries.get(
+                        "releaseAll",
                         self.trUtf8('Release all translations')),
                     self.__releaseAll)
                 self.qmprocBackMenuActions.append(act)
         self.backMenu.addSeparator()
         self.__addTranslationBackAct = self.backMenu.addAction(
             self.trUtf8('Add translation...'), self.project.addLanguage)
-        self.backMenu.addAction(self.trUtf8('Add translation files...'),
+        self.backMenu.addAction(
+            self.trUtf8('Add translation files...'),
             self.__addTranslationFiles)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
@@ -298,36 +311,39 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             act = self.multiMenu.addAction(
                 self.trUtf8('Open in Qt-Linguist'), self._openItem)
             self.tsMultiMenuActions.append(act)
-            act = self.multiMenu.addAction(self.trUtf8('Open in Editor'),
-                self.__openFileInEditor)
+            act = self.multiMenu.addAction(
+                self.trUtf8('Open in Editor'), self.__openFileInEditor)
             self.tsMultiMenuActions.append(act)
             self.multiMenu.addSeparator()
-            act = self.multiMenu.addAction(self.trUtf8('Release translations'),
-                self.__releaseSelected)
+            act = self.multiMenu.addAction(
+                self.trUtf8('Release translations'), self.__releaseSelected)
             self.tsMultiMenuActions.append(act)
             self.qmprocMultiMenuActions.append(act)
             self.multiMenu.addSeparator()
-            act = self.multiMenu.addAction(self.trUtf8('Preview translations'),
-                self.__TRPreview)
+            act = self.multiMenu.addAction(
+                self.trUtf8('Preview translations'), self.__TRPreview)
             self.qmMultiMenuActions.append(act)
         else:
             if self.hooks["extractMessages"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("extractMessages",
+                    self.hooksMenuEntries.get(
+                        "extractMessages",
                         self.trUtf8('Extract messages')),
                     self.__extractMessages)
                 self.multiMenuActions.append(act)
                 self.multiMenu.addSeparator()
             if self.hooks["generateSelected"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("generateSelected",
+                    self.hooksMenuEntries.get(
+                        "generateSelected",
                         self.trUtf8('Generate translations')),
                     self.__generateSelected)
                 self.tsMultiMenuActions.append(act)
                 self.tsprocMultiMenuActions.append(act)
             if self.hooks["generateSelectedWithObsolete"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("generateSelectedWithObsolete",
+                    self.hooksMenuEntries.get(
+                        "generateSelectedWithObsolete",
                         self.trUtf8('Generate translations (with obsolete)')),
                     self.__generateObsoleteSelected)
                 self.tsMultiMenuActions.append(act)
@@ -335,24 +351,25 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.multiMenu.addSeparator()
             if self.hooks["open"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("open",
-                        self.trUtf8('Open')),
+                    self.hooksMenuEntries.get(
+                        "open", self.trUtf8('Open')),
                     self._openItem)
                 self.tsMultiMenuActions.append(act)
-            act = self.multiMenu.addAction(self.trUtf8('Open in Editor'),
-                self.__openFileInEditor)
+            act = self.multiMenu.addAction(
+                self.trUtf8('Open in Editor'), self.__openFileInEditor)
             self.tsMultiMenuActions.append(act)
             self.multiMenu.addSeparator()
             if self.hooks["releaseSelected"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("releaseSelected",
+                    self.hooksMenuEntries.get(
+                        "releaseSelected",
                         self.trUtf8('Release translations')),
                     self.__releaseSelected)
                 self.tsMultiMenuActions.append(act)
                 self.qmprocMultiMenuActions.append(act)
         self.multiMenu.addSeparator()
-        act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
-            self.__removeLanguageFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Remove from project'), self.__removeLanguageFile)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
             self.trUtf8('Delete'), self.__deleteLanguageFile)
@@ -383,27 +400,31 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             if self.hooks["extractMessages"] is not None:
                 act = self.dirMenu.addAction(
-                    self.hooksMenuEntries.get("extractMessages",
+                    self.hooksMenuEntries.get(
+                        "extractMessages",
                         self.trUtf8('Extract messages')),
                     self.__extractMessages)
                 self.dirMenuActions.append(act)
                 self.dirMenu.addSeparator()
             if self.hooks["generateAll"] is not None:
                 act = self.dirMenu.addAction(
-                    self.hooksMenuEntries.get("generateAll",
+                    self.hooksMenuEntries.get(
+                        "generateAll",
                         self.trUtf8('Generate all translations')),
                     self.__generateAll)
                 self.tsprocDirMenuActions.append(act)
             if self.hooks["generateAllWithObsolete"] is not None:
                 act = self.dirMenu.addAction(
-                    self.hooksMenuEntries.get("generateAllWithObsolete",
+                    self.hooksMenuEntries.get(
+                        "generateAllWithObsolete",
                         self.trUtf8(
                             'Generate all translations (with obsolete)')),
                     self.__generateObsoleteAll)
                 self.tsprocDirMenuActions.append(act)
             if self.hooks["releaseAll"] is not None:
                 act = self.dirMenu.addAction(
-                    self.hooksMenuEntries.get("releaseAll",
+                    self.hooksMenuEntries.get(
+                        "releaseAll",
                         self.trUtf8('Release all translations')),
                     self.__releaseAll)
                 self.qmprocDirMenuActions.append(act)
@@ -414,11 +435,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.dirMenu.addSeparator()
         self.__addTranslationDirAct = self.dirMenu.addAction(
             self.trUtf8('Add translation...'), self.project.addLanguage)
-        self.dirMenu.addAction(self.trUtf8('Add translation files...'),
+        self.dirMenu.addAction(
+            self.trUtf8('Add translation files...'),
             self.__addTranslationFiles)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Copy Path to Clipboard'),
-            self._copyToClipboard)
+        self.dirMenu.addAction(
+            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
@@ -651,10 +673,11 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         from UI.DeleteFilesConfirmationDialog import \
             DeleteFilesConfirmationDialog
-        dlg = DeleteFilesConfirmationDialog(self.parent(),
+        dlg = DeleteFilesConfirmationDialog(
+            self.parent(),
             self.trUtf8("Delete translation files"),
             self.trUtf8("Do you really want to delete these translation files"
-                " from the project?"),
+                        " from the project?"),
             translationFiles)
         
         if dlg.exec_() == QDialog.Accepted:
@@ -719,7 +742,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         # only consider files satisfying the filter criteria
         _sources = [s for s in self.project.pdata["SOURCES"] \
-                   if os.path.splitext(s)[1] in filter]
+                    if os.path.splitext(s)[1] in filter]
         sources = []
         for s in _sources:
             addIt = True
@@ -743,13 +766,13 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if langs:
             langs = [self.project.getRelativePath(lang.fileName()) \
-                 for lang in langs if lang.fileName().endswith('.ts')]
+                     for lang in langs if lang.fileName().endswith('.ts')]
         else:
             try:
                 pattern = self.project.pdata["TRANSLATIONPATTERN"][0]\
                           .replace("%language%", "*")
                 langs = [lang for lang in self.project.pdata["TRANSLATIONS"] \
-                     if fnmatch.fnmatch(lang, pattern)]
+                         if fnmatch.fnmatch(lang, pattern)]
             except IndexError:
                 langs = []
         if not langs:
@@ -769,12 +792,15 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
 
         for level, langs in langLevel.items():
             prefix = '../' * level
-            sections = [("SOURCES",
-                [prefix + src for src in sources])]
-            sections.append(("FORMS",
-                [prefix + form for form in forms]))
-            sections.append(("TRANSLATIONS",
-                [prefix + lang for lang in langs]))
+            sections = [
+                ("SOURCES",
+                 [prefix + src for src in sources])]
+            sections.append(
+                ("FORMS",
+                 [prefix + form for form in forms]))
+            sections.append(
+                ("TRANSLATIONS",
+                 [prefix + lang for lang in langs]))
             
             dir, name = os.path.split(pfile)
             outFile = os.path.join(dir, os.path.dirname(langs[0]), name)
@@ -908,7 +934,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0:
             ui = e5App().getObject("UserInterface")
             if ui.notificationsEnabled():
-                ui.showNotification(UI.PixmapCache.getPixmap("linguist48.png"),
+                ui.showNotification(
+                    UI.PixmapCache.getPixmap("linguist48.png"),
                     self.trUtf8("Translation file generation"),
                     self.trUtf8(
                         "The generation of the translation files (*.ts)"
@@ -1092,16 +1119,17 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0:
             ui = e5App().getObject("UserInterface")
             if ui.notificationsEnabled():
-                ui.showNotification(UI.PixmapCache.getPixmap("linguist48.png"),
+                ui.showNotification(
+                    UI.PixmapCache.getPixmap("linguist48.png"),
                     self.trUtf8("Translation file release"),
                     self.trUtf8("The release of the translation files (*.qm)"
-                        " was successful."))
+                                " was successful."))
             else:
                 E5MessageBox.information(
                     self,
                     self.trUtf8("Translation file release"),
                     self.trUtf8("The release of the translation files (*.qm)"
-                        " was successful."))
+                                " was successful."))
             if self.project.pdata["TRANSLATIONSBINPATH"] and \
                     self.project.pdata["TRANSLATIONSBINPATH"][0]:
                 target = os.path.join(

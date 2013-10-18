@@ -220,8 +220,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @return string containing the mail message
         """
         mpPreamble = ("This is a MIME-encoded message with attachments. "
-            "If you see this message, your mail client is not "
-            "capable of displaying the attachments.")
+                      "If you see this message, your mail client is not "
+                      "capable of displaying the attachments.")
         
         msgtext = "{0}\r\n----\r\n{1}----\r\n{2}----\r\n{3}".format(
             self.message.toPlainText(),

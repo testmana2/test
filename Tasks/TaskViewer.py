@@ -53,8 +53,9 @@ class TaskViewer(QTreeWidget):
         self.setItemsExpandable(False)
         self.setSortingEnabled(True)
         
-        self.__headerItem = QTreeWidgetItem(["", "", self.trUtf8("Summary"),
-            self.trUtf8("Filename"), self.trUtf8("Line"), ""])
+        self.__headerItem = QTreeWidgetItem(
+            ["", "", self.trUtf8("Summary"), self.trUtf8("Filename"),
+             self.trUtf8("Line"), ""])
         self.__headerItem.setIcon(
             0, UI.PixmapCache.getIcon("taskCompleted.png"))
         self.__headerItem.setIcon(
@@ -265,8 +266,8 @@ class TaskViewer(QTreeWidget):
         @param description explanatory text of the task (string)
         """
         task = Task(summary, priority, filename, lineno, completed,
-                   _time, isProjectTask, taskType,
-                   self.project, description)
+                    _time, isProjectTask, taskType,
+                    self.project, description)
         self.tasks.append(task)
         if self.taskFilter.showTask(task):
             self.addTopLevelItem(task)
@@ -541,7 +542,8 @@ class TaskViewer(QTreeWidget):
         self.clearProjectTasks(fileOnly=True)
         
         # now process them
-        progress = QProgressDialog(self.trUtf8("Extracting project tasks..."),
+        progress = QProgressDialog(
+            self.trUtf8("Extracting project tasks..."),
             self.trUtf8("Abort"), 0, len(files))
         progress.setMinimumDuration(0)
         count = 0

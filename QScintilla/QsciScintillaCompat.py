@@ -82,9 +82,11 @@ class QsciScintillaCompat(QsciScintilla):
         """
         palette = QApplication.palette()
         self.SendScintilla(QsciScintilla.SCI_STYLESETFORE,
-            QsciScintilla.STYLE_DEFAULT, palette.color(QPalette.Text))
+                           QsciScintilla.STYLE_DEFAULT,
+                           palette.color(QPalette.Text))
         self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,
-            QsciScintilla.STYLE_DEFAULT, palette.color(QPalette.Base))
+                           QsciScintilla.STYLE_DEFAULT,
+                           palette.color(QPalette.Base))
         self.SendScintilla(QsciScintilla.SCI_STYLECLEARALL)
         self.SendScintilla(QsciScintilla.SCI_CLEARDOCUMENTSTYLE)
     
@@ -100,7 +102,7 @@ class QsciScintillaCompat(QsciScintilla):
             rangeLow = list(range(32))
         try:
             rangeHigh = list(range(self.STYLE_LASTPREDEFINED + 1,
-                              self.STYLE_MAX + 1))
+                                   self.STYLE_MAX + 1))
         except AttributeError:
             rangeHigh = list(range(40, 128))
         
@@ -758,8 +760,8 @@ class QsciScintillaCompat(QsciScintilla):
             return (0, 0)
     
     def findFirstTarget(self, expr_, re_, cs_, wo_,
-            begline=-1, begindex=-1, endline=-1, endindex=-1,
-            ws_=False):
+                        begline=-1, begindex=-1, endline=-1, endindex=-1,
+                        ws_=False):
         """
         Public method to search in a specified range of text without
         setting the selection.
@@ -982,9 +984,9 @@ class QsciScintillaCompat(QsciScintilla):
         
         if mark != QsciScintilla.SC_MARK_EMPTY:
             self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-                marknr, QColor(Qt.white))
+                               marknr, QColor(Qt.white))
             self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-                marknr, QColor(Qt.black))
+                               marknr, QColor(Qt.black))
     
     def setFolding(self, style, margin=2):
         """
@@ -1034,39 +1036,39 @@ class QsciScintillaCompat(QsciScintilla):
         @param backColor background color (QColor)
         """
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDER, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDER, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDER, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDER, backColor)
         
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDEROPEN, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDEROPEN, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDEROPEN, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDEROPEN, backColor)
         
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDEROPENMID, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDEROPENMID, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDEROPENMID, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDEROPENMID, backColor)
         
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDERSUB, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDERSUB, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDERSUB, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDERSUB, backColor)
         
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDERTAIL, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDERTAIL, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDERTAIL, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDERTAIL, backColor)
         
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, backColor)
         
         self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
-            QsciScintilla.SC_MARKNUM_FOLDEREND, foreColor)
+                           QsciScintilla.SC_MARKNUM_FOLDEREND, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
-            QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
+                           QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
     
     ###########################################################################
     # interface methods to the standard keyboard command set
@@ -1149,7 +1151,7 @@ class QsciScintillaCompat(QsciScintilla):
         self.SendScintilla(QsciScintilla.SCI_AUTOCSETSEPARATOR,
                            ord(self.UserSeparator))
         self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id,
-            self._encodeString(self.UserSeparator.join(lst)))
+                           self._encodeString(self.UserSeparator.join(lst)))
     
     ###########################################################################
     # utility methods

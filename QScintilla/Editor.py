@@ -618,89 +618,89 @@ class Editor(QsciScintillaCompat):
         self.encodingsMenu = self.__initContextMenuEncodings()
         self.__menus["Encodings"] = self.encodingsMenu
         
-        self.menuActs["Undo"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("editUndo.png"),
+        self.menuActs["Undo"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("editUndo.png"),
             self.trUtf8('Undo'), self.undo)
-        self.menuActs["Redo"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("editRedo.png"),
+        self.menuActs["Redo"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("editRedo.png"),
             self.trUtf8('Redo'), self.redo)
-        self.menuActs["Revert"] = \
-            self.menu.addAction(self.trUtf8("Revert to last saved state"),
-                self.revertToUnmodified)
+        self.menuActs["Revert"] = self.menu.addAction(
+            self.trUtf8("Revert to last saved state"),
+            self.revertToUnmodified)
         self.menu.addSeparator()
-        self.menuActs["Cut"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("editCut.png"),
+        self.menuActs["Cut"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("editCut.png"),
             self.trUtf8('Cut'), self.cut)
-        self.menuActs["Copy"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+        self.menuActs["Copy"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("editCopy.png"),
             self.trUtf8('Copy'), self.copy)
-        self.menu.addAction(UI.PixmapCache.getIcon("editPaste.png"),
+        self.menu.addAction(
+            UI.PixmapCache.getIcon("editPaste.png"),
             self.trUtf8('Paste'), self.paste)
         if not self.miniMenu:
             self.menu.addSeparator()
-            self.menu.addAction(UI.PixmapCache.getIcon("editIndent.png"),
+            self.menu.addAction(
+                UI.PixmapCache.getIcon("editIndent.png"),
                 self.trUtf8('Indent'), self.indentLineOrSelection)
-            self.menu.addAction(UI.PixmapCache.getIcon("editUnindent.png"),
+            self.menu.addAction(
+                UI.PixmapCache.getIcon("editUnindent.png"),
                 self.trUtf8('Unindent'), self.unindentLineOrSelection)
-            self.menuActs["Comment"] = \
-                self.menu.addAction(UI.PixmapCache.getIcon("editComment.png"),
-                    self.trUtf8('Comment'), self.commentLineOrSelection)
-            self.menuActs["Uncomment"] = \
-                self.menu.addAction(
-                    UI.PixmapCache.getIcon("editUncomment.png"),
-                    self.trUtf8('Uncomment'), self.uncommentLineOrSelection)
-            self.menuActs["StreamComment"] = \
-                self.menu.addAction(self.trUtf8('Stream Comment'),
-                    self.streamCommentLineOrSelection)
-            self.menuActs["BoxComment"] = \
-                self.menu.addAction(self.trUtf8('Box Comment'),
-                    self.boxCommentLineOrSelection)
+            self.menuActs["Comment"] = self.menu.addAction(
+                UI.PixmapCache.getIcon("editComment.png"),
+                self.trUtf8('Comment'), self.commentLineOrSelection)
+            self.menuActs["Uncomment"] = self.menu.addAction(
+                UI.PixmapCache.getIcon("editUncomment.png"),
+                self.trUtf8('Uncomment'), self.uncommentLineOrSelection)
+            self.menuActs["StreamComment"] = self.menu.addAction(
+                self.trUtf8('Stream Comment'),
+                self.streamCommentLineOrSelection)
+            self.menuActs["BoxComment"] = self.menu.addAction(
+                self.trUtf8('Box Comment'),
+                self.boxCommentLineOrSelection)
             self.menu.addSeparator()
-            self.menu.addAction(self.trUtf8('Select to brace'),
-                self.selectToMatchingBrace)
+            self.menu.addAction(
+                self.trUtf8('Select to brace'), self.selectToMatchingBrace)
             self.menu.addAction(self.trUtf8('Select all'), self.__selectAll)
             self.menu.addAction(
                 self.trUtf8('Deselect all'), self.__deselectAll)
             self.menu.addSeparator()
-        self.menuActs["SpellCheck"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("spellchecking.png"),
-                self.trUtf8('Check spelling...'), self.checkSpelling)
-        self.menuActs["SpellCheckSelection"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("spellchecking.png"),
-                self.trUtf8('Check spelling of selection...'),
-                self.__checkSpellingSelection)
-        self.menuActs["SpellCheckRemove"] = \
-            self.menu.addAction(self.trUtf8("Remove from dictionary"),
-                self.__removeFromSpellingDictionary)
+        self.menuActs["SpellCheck"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("spellchecking.png"),
+            self.trUtf8('Check spelling...'), self.checkSpelling)
+        self.menuActs["SpellCheckSelection"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("spellchecking.png"),
+            self.trUtf8('Check spelling of selection...'),
+            self.__checkSpellingSelection)
+        self.menuActs["SpellCheckRemove"] = self.menu.addAction(
+            self.trUtf8("Remove from dictionary"),
+            self.__removeFromSpellingDictionary)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Shorten empty lines'),
-            self.shortenEmptyLines)
+        self.menu.addAction(
+            self.trUtf8('Shorten empty lines'), self.shortenEmptyLines)
         self.menu.addSeparator()
         self.menuActs["Languages"] = self.menu.addMenu(self.languagesMenu)
         self.menuActs["Encodings"] = self.menu.addMenu(self.encodingsMenu)
         self.menuActs["Eol"] = self.menu.addMenu(self.eolMenu)
         self.menu.addSeparator()
-        self.menuActs["MonospacedFont"] = \
-            self.menu.addAction(self.trUtf8("Use Monospaced Font"),
-                self.handleMonospacedEnable)
+        self.menuActs["MonospacedFont"] = self.menu.addAction(
+            self.trUtf8("Use Monospaced Font"),
+            self.handleMonospacedEnable)
         self.menuActs["MonospacedFont"].setCheckable(True)
         self.menuActs["MonospacedFont"].setChecked(self.useMonospaced)
-        self.menuActs["AutosaveEnable"] = \
-            self.menu.addAction(self.trUtf8("Autosave enabled"),
-                self.__autosaveEnable)
+        self.menuActs["AutosaveEnable"] = self.menu.addAction(
+            self.trUtf8("Autosave enabled"), self.__autosaveEnable)
         self.menuActs["AutosaveEnable"].setCheckable(True)
         self.menuActs["AutosaveEnable"].setChecked(self.autosaveEnabled)
-        self.menuActs["TypingAidsEnabled"] = \
-            self.menu.addAction(self.trUtf8("Typing aids enabled"),
-                self.__toggleTypingAids)
+        self.menuActs["TypingAidsEnabled"] = self.menu.addAction(
+            self.trUtf8("Typing aids enabled"), self.__toggleTypingAids)
         self.menuActs["TypingAidsEnabled"].setCheckable(True)
         self.menuActs["TypingAidsEnabled"].setEnabled(
             self.completer is not None)
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
-        self.menuActs["AutoCompletionEnable"] = \
-            self.menu.addAction(self.trUtf8("Autocompletion enabled"),
-                self.__toggleAutoCompletionEnable)
+        self.menuActs["AutoCompletionEnable"] = self.menu.addAction(
+            self.trUtf8("Autocompletion enabled"),
+            self.__toggleAutoCompletionEnable)
         self.menuActs["AutoCompletionEnable"].setCheckable(True)
         self.menuActs["AutoCompletionEnable"].setChecked(
             self.autoCompletionThreshold() != -1)
@@ -717,28 +717,32 @@ class Editor(QsciScintillaCompat):
             self.menuActs["Diagrams"] = self.menu.addMenu(self.graphicsMenu)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('New view'), self.__newView)
-        act = self.menu.addAction(self.trUtf8('New view (with new split)'),
-            self.__newViewNewSplit)
+        act = self.menu.addAction(
+            self.trUtf8('New view (with new split)'), self.__newViewNewSplit)
         if not self.vm.canSplit():
                 act.setEnabled(False)
-        self.menu.addAction(UI.PixmapCache.getIcon("close.png"),
+        self.menu.addAction(
+            UI.PixmapCache.getIcon("close.png"),
             self.trUtf8('Close'), self.__contextClose)
         self.menu.addSeparator()
-        self.menuActs["Save"] = \
-            self.menu.addAction(UI.PixmapCache.getIcon("fileSave.png"),
+        self.menuActs["Save"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("fileSave.png"),
             self.trUtf8('Save'), self.__contextSave)
-        self.menu.addAction(UI.PixmapCache.getIcon("fileSaveAs.png"),
+        self.menu.addAction(
+            UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.trUtf8('Save As...'), self.__contextSaveAs)
         if not self.miniMenu:
             self.menu.addMenu(self.exportersMenu)
             self.menu.addSeparator()
-            self.menuActs["OpenRejections"] = \
-                self.menu.addAction(self.trUtf8("Open 'rejection' file"),
-                                    self.__contextOpenRejections)
+            self.menuActs["OpenRejections"] = self.menu.addAction(
+                self.trUtf8("Open 'rejection' file"),
+                self.__contextOpenRejections)
             self.menu.addSeparator()
-            self.menu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
-            self.trUtf8("Print Preview"), self.printPreviewFile)
-            self.menu.addAction(UI.PixmapCache.getIcon("print.png"),
+            self.menu.addAction(
+                UI.PixmapCache.getIcon("printPreview.png"),
+                self.trUtf8("Print Preview"), self.printPreviewFile)
+            self.menu.addAction(
+                UI.PixmapCache.getIcon("print.png"),
                 self.trUtf8('Print'), self.printFile)
         else:
             self.menuActs["OpenRejections"] = None
@@ -760,21 +764,18 @@ class Editor(QsciScintillaCompat):
         """
         menu = QMenu(self.trUtf8('Autocomplete'))
         
-        self.menuActs["acDynamic"] = \
-            menu.addAction(self.trUtf8('dynamic'),
-                self.autoComplete)
+        self.menuActs["acDynamic"] = menu.addAction(
+            self.trUtf8('dynamic'), self.autoComplete)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('from Document'),
-            self.autoCompleteFromDocument)
-        self.menuActs["acAPI"] = \
-            menu.addAction(self.trUtf8('from APIs'),
-                self.autoCompleteFromAPIs)
-        self.menuActs["acAPIDocument"] = \
-            menu.addAction(self.trUtf8('from Document and APIs'),
-                self.autoCompleteFromAll)
+        menu.addAction(
+            self.trUtf8('from Document'), self.autoCompleteFromDocument)
+        self.menuActs["acAPI"] = menu.addAction(
+            self.trUtf8('from APIs'), self.autoCompleteFromAPIs)
+        self.menuActs["acAPIDocument"] = menu.addAction(
+            self.trUtf8('from Document and APIs'), self.autoCompleteFromAll)
         menu.addSeparator()
-        self.menuActs["calltip"] = \
-            menu.addAction(self.trUtf8('Calltip'), self.callTip)
+        self.menuActs["calltip"] = menu.addAction(
+            self.trUtf8('Calltip'), self.callTip)
         
         menu.aboutToShow.connect(self.__showContextMenuAutocompletion)
         
@@ -822,17 +823,18 @@ class Editor(QsciScintillaCompat):
         """
         menu = QMenu(self.trUtf8('Diagrams'))
         
-        menu.addAction(self.trUtf8('Class Diagram...'),
-            self.__showClassDiagram)
-        menu.addAction(self.trUtf8('Package Diagram...'),
-            self.__showPackageDiagram)
-        menu.addAction(self.trUtf8('Imports Diagram...'),
-            self.__showImportsDiagram)
-        self.applicationDiagramMenuAct = \
-            menu.addAction(self.trUtf8('Application Diagram...'),
-                self.__showApplicationDiagram)
+        menu.addAction(
+            self.trUtf8('Class Diagram...'), self.__showClassDiagram)
+        menu.addAction(
+            self.trUtf8('Package Diagram...'), self.__showPackageDiagram)
+        menu.addAction(
+            self.trUtf8('Imports Diagram...'), self.__showImportsDiagram)
+        self.applicationDiagramMenuAct = menu.addAction(
+            self.trUtf8('Application Diagram...'),
+            self.__showApplicationDiagram)
         menu.addSeparator()
-        menu.addAction(UI.PixmapCache.getIcon("open.png"),
+        menu.addAction(
+            UI.PixmapCache.getIcon("open.png"),
             self.trUtf8("Load Diagram..."), self.__loadDiagram)
         
         menu.aboutToShow.connect(self.__showContextMenuGraphics)
@@ -983,45 +985,38 @@ class Editor(QsciScintillaCompat):
         # bookmark margin
         self.bmMarginMenu = QMenu()
         
-        self.bmMarginMenu.addAction(self.trUtf8('Toggle bookmark'),
-            self.menuToggleBookmark)
-        self.marginMenuActs["NextBookmark"] = \
-            self.bmMarginMenu.addAction(self.trUtf8('Next bookmark'),
-                self.nextBookmark)
-        self.marginMenuActs["PreviousBookmark"] = \
-            self.bmMarginMenu.addAction(self.trUtf8('Previous bookmark'),
-                self.previousBookmark)
-        self.marginMenuActs["ClearBookmark"] = \
-            self.bmMarginMenu.addAction(self.trUtf8('Clear all bookmarks'),
-                self.clearBookmarks)
+        self.bmMarginMenu.addAction(
+            self.trUtf8('Toggle bookmark'), self.menuToggleBookmark)
+        self.marginMenuActs["NextBookmark"] = self.bmMarginMenu.addAction(
+            self.trUtf8('Next bookmark'), self.nextBookmark)
+        self.marginMenuActs["PreviousBookmark"] = self.bmMarginMenu.addAction(
+            self.trUtf8('Previous bookmark'), self.previousBookmark)
+        self.marginMenuActs["ClearBookmark"] = self.bmMarginMenu.addAction(
+            self.trUtf8('Clear all bookmarks'), self.clearBookmarks)
         
         self.bmMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
         # breakpoint margin
         self.bpMarginMenu = QMenu()
         
-        self.marginMenuActs["Breakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Toggle breakpoint'),
-                self.menuToggleBreakpoint)
-        self.marginMenuActs["TempBreakpoint"] = \
-            self.bpMarginMenu.addAction(
-                self.trUtf8('Toggle temporary breakpoint'),
-                self.__menuToggleTemporaryBreakpoint)
-        self.marginMenuActs["EditBreakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Edit breakpoint...'),
-                self.menuEditBreakpoint)
-        self.marginMenuActs["EnableBreakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Enable breakpoint'),
-                self.__menuToggleBreakpointEnabled)
-        self.marginMenuActs["NextBreakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Next breakpoint'),
-                self.menuNextBreakpoint)
+        self.marginMenuActs["Breakpoint"] = self.bpMarginMenu.addAction(
+            self.trUtf8('Toggle breakpoint'), self.menuToggleBreakpoint)
+        self.marginMenuActs["TempBreakpoint"] = self.bpMarginMenu.addAction(
+            self.trUtf8('Toggle temporary breakpoint'),
+            self.__menuToggleTemporaryBreakpoint)
+        self.marginMenuActs["EditBreakpoint"] = self.bpMarginMenu.addAction(
+            self.trUtf8('Edit breakpoint...'), self.menuEditBreakpoint)
+        self.marginMenuActs["EnableBreakpoint"] = self.bpMarginMenu.addAction(
+            self.trUtf8('Enable breakpoint'),
+            self.__menuToggleBreakpointEnabled)
+        self.marginMenuActs["NextBreakpoint"] = self.bpMarginMenu.addAction(
+            self.trUtf8('Next breakpoint'), self.menuNextBreakpoint)
         self.marginMenuActs["PreviousBreakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Previous breakpoint'),
+            self.bpMarginMenu.addAction(
+                self.trUtf8('Previous breakpoint'),
                 self.menuPreviousBreakpoint)
-        self.marginMenuActs["ClearBreakpoint"] = \
-            self.bpMarginMenu.addAction(self.trUtf8('Clear all breakpoints'),
-                self.__menuClearBreakpoints)
+        self.marginMenuActs["ClearBreakpoint"] = self.bpMarginMenu.addAction(
+            self.trUtf8('Clear all breakpoints'), self.__menuClearBreakpoints)
         
         self.bpMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
@@ -1029,50 +1024,49 @@ class Editor(QsciScintillaCompat):
         self.indicMarginMenu = QMenu()
         
         self.marginMenuActs["GotoSyntaxError"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Goto syntax error'),
-                self.gotoSyntaxError)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Goto syntax error'), self.gotoSyntaxError)
         self.marginMenuActs["ShowSyntaxError"] = \
             self.indicMarginMenu.addAction(
                 self.trUtf8('Show syntax error message'),
                 self.__showSyntaxError)
         self.marginMenuActs["ClearSyntaxError"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Clear syntax error'),
-                self.clearSyntaxError)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Clear syntax error'), self.clearSyntaxError)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextWarningMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8("Next warning"),
-                self.nextFlakesWarning)
+            self.indicMarginMenu.addAction(
+                self.trUtf8("Next warning"), self.nextFlakesWarning)
         self.marginMenuActs["PreviousWarningMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8("Previous warning"),
-                self.previousFlakesWarning)
+            self.indicMarginMenu.addAction(
+                self.trUtf8("Previous warning"), self.previousFlakesWarning)
         self.marginMenuActs["ShowWarning"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Show warning message'),
-                self.__showFlakesWarning)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Show warning message'), self.__showFlakesWarning)
         self.marginMenuActs["ClearWarnings"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Clear warnings'),
-                self.clearFlakesWarnings)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Clear warnings'), self.clearFlakesWarnings)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextCoverageMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Next uncovered line'),
-                self.nextUncovered)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Next uncovered line'), self.nextUncovered)
         self.marginMenuActs["PreviousCoverageMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Previous uncovered line'),
-                self.previousUncovered)
+                self.trUtf8('Previous uncovered line'), self.previousUncovered)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextTaskMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Next task'),
-                self.nextTask)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Next task'), self.nextTask)
         self.marginMenuActs["PreviousTaskMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Previous task'),
-                self.previousTask)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Previous task'), self.previousTask)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextChangeMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Next change'),
-                self.nextChange)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Next change'), self.nextChange)
         self.marginMenuActs["PreviousChangeMarker"] = \
-            self.indicMarginMenu.addAction(self.trUtf8('Previous change'),
-                self.previousChange)
+            self.indicMarginMenu.addAction(
+                self.trUtf8('Previous change'), self.previousChange)
         
         self.indicMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
@@ -1082,93 +1076,72 @@ class Editor(QsciScintillaCompat):
         """
         self.marginMenu = QMenu()
         
-        self.marginMenu.addAction(self.trUtf8('Toggle bookmark'),
-            self.menuToggleBookmark)
-        self.marginMenuActs["NextBookmark"] = \
-            self.marginMenu.addAction(self.trUtf8('Next bookmark'),
-                self.nextBookmark)
-        self.marginMenuActs["PreviousBookmark"] = \
-            self.marginMenu.addAction(self.trUtf8('Previous bookmark'),
-                self.previousBookmark)
-        self.marginMenuActs["ClearBookmark"] = \
-            self.marginMenu.addAction(self.trUtf8('Clear all bookmarks'),
-                self.clearBookmarks)
+        self.marginMenu.addAction(
+            self.trUtf8('Toggle bookmark'), self.menuToggleBookmark)
+        self.marginMenuActs["NextBookmark"] = self.marginMenu.addAction(
+            self.trUtf8('Next bookmark'), self.nextBookmark)
+        self.marginMenuActs["PreviousBookmark"] = self.marginMenu.addAction(
+            self.trUtf8('Previous bookmark'), self.previousBookmark)
+        self.marginMenuActs["ClearBookmark"] = self.marginMenu.addAction(
+            self.trUtf8('Clear all bookmarks'), self.clearBookmarks)
         self.marginMenu.addSeparator()
-        self.marginMenuActs["GotoSyntaxError"] = \
-            self.marginMenu.addAction(self.trUtf8('Goto syntax error'),
-                self.gotoSyntaxError)
-        self.marginMenuActs["ShowSyntaxError"] = \
-            self.marginMenu.addAction(self.trUtf8('Show syntax error message'),
-                self.__showSyntaxError)
-        self.marginMenuActs["ClearSyntaxError"] = \
-            self.marginMenu.addAction(self.trUtf8('Clear syntax error'),
-                self.clearSyntaxError)
+        self.marginMenuActs["GotoSyntaxError"] = self.marginMenu.addAction(
+            self.trUtf8('Goto syntax error'), self.gotoSyntaxError)
+        self.marginMenuActs["ShowSyntaxError"] = self.marginMenu.addAction(
+            self.trUtf8('Show syntax error message'), self.__showSyntaxError)
+        self.marginMenuActs["ClearSyntaxError"] = self.marginMenu.addAction(
+            self.trUtf8('Clear syntax error'), self.clearSyntaxError)
         self.marginMenu.addSeparator()
-        self.marginMenuActs["NextWarningMarker"] = \
-            self.marginMenu.addAction(self.trUtf8("Next warning"),
-                self.nextFlakesWarning)
+        self.marginMenuActs["NextWarningMarker"] = self.marginMenu.addAction(
+            self.trUtf8("Next warning"), self.nextFlakesWarning)
         self.marginMenuActs["PreviousWarningMarker"] = \
-            self.marginMenu.addAction(self.trUtf8("Previous warning"),
-                self.previousFlakesWarning)
-        self.marginMenuActs["ShowWarning"] = \
-            self.marginMenu.addAction(self.trUtf8('Show warning message'),
-                self.__showFlakesWarning)
-        self.marginMenuActs["ClearWarnings"] = \
-            self.marginMenu.addAction(self.trUtf8('Clear warnings'),
-                self.clearFlakesWarnings)
-        self.marginMenu.addSeparator()
-        self.marginMenuActs["Breakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Toggle breakpoint'),
-                self.menuToggleBreakpoint)
-        self.marginMenuActs["TempBreakpoint"] = \
             self.marginMenu.addAction(
-                self.trUtf8('Toggle temporary breakpoint'),
-                self.__menuToggleTemporaryBreakpoint)
-        self.marginMenuActs["EditBreakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Edit breakpoint...'),
-                self.menuEditBreakpoint)
-        self.marginMenuActs["EnableBreakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Enable breakpoint'),
-                self.__menuToggleBreakpointEnabled)
-        self.marginMenuActs["NextBreakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Next breakpoint'),
-                self.menuNextBreakpoint)
-        self.marginMenuActs["PreviousBreakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Previous breakpoint'),
-                self.menuPreviousBreakpoint)
-        self.marginMenuActs["ClearBreakpoint"] = \
-            self.marginMenu.addAction(self.trUtf8('Clear all breakpoints'),
-                self.__menuClearBreakpoints)
+                self.trUtf8("Previous warning"), self.previousFlakesWarning)
+        self.marginMenuActs["ShowWarning"] = self.marginMenu.addAction(
+            self.trUtf8('Show warning message'), self.__showFlakesWarning)
+        self.marginMenuActs["ClearWarnings"] = self.marginMenu.addAction(
+            self.trUtf8('Clear warnings'), self.clearFlakesWarnings)
         self.marginMenu.addSeparator()
-        self.marginMenuActs["NextCoverageMarker"] = \
-            self.marginMenu.addAction(self.trUtf8('Next uncovered line'),
-                self.nextUncovered)
+        self.marginMenuActs["Breakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Toggle breakpoint'), self.menuToggleBreakpoint)
+        self.marginMenuActs["TempBreakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Toggle temporary breakpoint'),
+            self.__menuToggleTemporaryBreakpoint)
+        self.marginMenuActs["EditBreakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Edit breakpoint...'), self.menuEditBreakpoint)
+        self.marginMenuActs["EnableBreakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Enable breakpoint'),
+            self.__menuToggleBreakpointEnabled)
+        self.marginMenuActs["NextBreakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Next breakpoint'), self.menuNextBreakpoint)
+        self.marginMenuActs["PreviousBreakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Previous breakpoint'), self.menuPreviousBreakpoint)
+        self.marginMenuActs["ClearBreakpoint"] = self.marginMenu.addAction(
+            self.trUtf8('Clear all breakpoints'), self.__menuClearBreakpoints)
+        self.marginMenu.addSeparator()
+        self.marginMenuActs["NextCoverageMarker"] = self.marginMenu.addAction(
+            self.trUtf8('Next uncovered line'), self.nextUncovered)
         self.marginMenuActs["PreviousCoverageMarker"] = \
-            self.marginMenu.addAction(self.trUtf8('Previous uncovered line'),
-                self.previousUncovered)
+            self.marginMenu.addAction(
+                self.trUtf8('Previous uncovered line'), self.previousUncovered)
         self.marginMenu.addSeparator()
-        self.marginMenuActs["NextTaskMarker"] = \
-            self.marginMenu.addAction(self.trUtf8('Next task'),
-                self.nextTask)
-        self.marginMenuActs["PreviousTaskMarker"] = \
-            self.marginMenu.addAction(self.trUtf8('Previous task'),
-                self.previousTask)
+        self.marginMenuActs["NextTaskMarker"] = self.marginMenu.addAction(
+            self.trUtf8('Next task'), self.nextTask)
+        self.marginMenuActs["PreviousTaskMarker"] = self.marginMenu.addAction(
+            self.trUtf8('Previous task'), self.previousTask)
         self.marginMenu.addSeparator()
-        self.marginMenuActs["NextChangeMarker"] = \
-            self.marginMenu.addAction(self.trUtf8('Next change'),
-                self.nextChange)
+        self.marginMenuActs["NextChangeMarker"] = self.marginMenu.addAction(
+            self.trUtf8('Next change'), self.nextChange)
         self.marginMenuActs["PreviousChangeMarker"] = \
-            self.marginMenu.addAction(self.trUtf8('Previous change'),
-                self.previousChange)
+            self.marginMenu.addAction(
+                self.trUtf8('Previous change'), self.previousChange)
         self.marginMenu.addSeparator()
-        self.marginMenuActs["LMBbookmarks"] = \
-            self.marginMenu.addAction(self.trUtf8('LMB toggles bookmarks'),
-                self.__lmBbookmarks)
+        self.marginMenuActs["LMBbookmarks"] = self.marginMenu.addAction(
+            self.trUtf8('LMB toggles bookmarks'), self.__lmBbookmarks)
         self.marginMenuActs["LMBbookmarks"].setCheckable(True)
         self.marginMenuActs["LMBbookmarks"].setChecked(False)
-        self.marginMenuActs["LMBbreakpoints"] = \
-            self.marginMenu.addAction(self.trUtf8('LMB toggles breakpoints'),
-                self.__lmBbreakpoints)
+        self.marginMenuActs["LMBbreakpoints"] = self.marginMenu.addAction(
+            self.trUtf8('LMB toggles breakpoints'), self.__lmBbreakpoints)
         self.marginMenuActs["LMBbreakpoints"].setCheckable(True)
         self.marginMenuActs["LMBbreakpoints"].setChecked(True)
         
@@ -1780,8 +1753,8 @@ class Editor(QsciScintillaCompat):
                         return isProjectPy2
                     else:
                         # 3) determine by compiling the sources
-                        syntaxError = Utilities.py2compile(self.fileName,
-                            checkFlakes=False)[0]
+                        syntaxError = Utilities.py2compile(
+                            self.fileName, checkFlakes=False)[0]
                         if not syntaxError:
                             self.filetype = "Python2"
                             return True
@@ -2087,8 +2060,8 @@ class Editor(QsciScintillaCompat):
         """
         if self.fileName and \
            (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
-            self.breakpointModel.addBreakPoint(self.fileName, line,
-                ('', temporary, True, 0))
+            self.breakpointModel.addBreakPoint(
+                self.fileName, line, ('', temporary, True, 0))
             self.breakpointToggled.emit(self)
         
     def __toggleBreakpointEnabled(self, line):
@@ -2181,13 +2154,15 @@ class Editor(QsciScintillaCompat):
                 return
             
             from Debugger.EditBreakpointDialog import EditBreakpointDialog
-            dlg = EditBreakpointDialog((self.fileName, ln),
+            dlg = EditBreakpointDialog(
+                (self.fileName, ln),
                 (cond, temp, enabled, ignorecount),
                 self.condHistory, self, modal=True)
             if dlg.exec_() == QDialog.Accepted:
                 cond, temp, enabled, ignorecount = dlg.getData()
-                self.breakpointModel.setBreakPointByIndex(index,
-                    self.fileName, ln, (cond, temp, enabled, ignorecount))
+                self.breakpointModel.setBreakPointByIndex(
+                    index, self.fileName, ln,
+                    (cond, temp, enabled, ignorecount))
         
         self.line = -1
         
@@ -4097,7 +4072,8 @@ class Editor(QsciScintillaCompat):
         self.zoomTo(Preferences.getEditor("ZoomFactor"))
         
         self.searchIndicator = QsciScintilla.INDIC_CONTAINER
-        self.indicatorDefine(self.searchIndicator, QsciScintilla.INDIC_BOX,
+        self.indicatorDefine(
+            self.searchIndicator, QsciScintilla.INDIC_BOX,
             Preferences.getEditorColour("SearchMarkers"))
         if not Preferences.getEditor("SearchMarkersEnabled") and \
            not Preferences.getEditor("QuickSearchMarkersEnabled") and \
@@ -4228,7 +4204,8 @@ class Editor(QsciScintillaCompat):
             E5MessageBox.information(
                 self,
                 self.trUtf8("Autocompletion"),
-                self.trUtf8("""Autocompletion is not available because"""
+                self.trUtf8(
+                    """Autocompletion is not available because"""
                     """ there is no autocompletion source set."""))
         
     def setAutoCompletionEnabled(self, enable):
@@ -4494,7 +4471,8 @@ class Editor(QsciScintillaCompat):
         """
         ct = pos
         if ctshift:
-            ctmin = self.SendScintilla(QsciScintilla.SCI_POSITIONFROMLINE,
+            ctmin = self.SendScintilla(
+                QsciScintilla.SCI_POSITIONFROMLINE,
                 self.SendScintilla(QsciScintilla.SCI_LINEFROMPOSITION, ct))
             if ct - ctshift < ctmin:
                 ct = ctmin
@@ -4674,7 +4652,8 @@ class Editor(QsciScintillaCompat):
                 prEnable = prEnable or \
                     os.path.isfile("{0}.profile".format(basename)) or \
                     os.path.isfile("{0}.profile".format(tbasename))
-                coEnable = (coEnable or \
+                coEnable = (
+                    coEnable or \
                     os.path.isfile("{0}.coverage".format(basename)) or \
                     os.path.isfile("{0}.coverage".format(tbasename))) and \
                     self.project.isPy3Project()
@@ -4688,7 +4667,8 @@ class Editor(QsciScintillaCompat):
             prEnable = prEnable or \
                 os.path.isfile("{0}.profile".format(basename)) or \
                 os.path.isfile("{0}.profile".format(tbasename))
-            coEnable = (coEnable or \
+            coEnable = (
+                coEnable or \
                 os.path.isfile("{0}.coverage".format(basename)) or \
                 os.path.isfile("{0}.coverage".format(tbasename))) and \
                 self.isPy3File()
@@ -5596,20 +5576,20 @@ class Editor(QsciScintillaCompat):
                 annotationStyleTxt = "\n".join(styleAnnotations)
                 if warningAnnotations or errorAnnotations:
                     annotationStyleTxt += "\n"
-                annotations.append(QsciStyledText(annotationStyleTxt,
-                    self.annotationStyleStyle))
+                annotations.append(QsciStyledText(
+                    annotationStyleTxt, self.annotationStyleStyle))
             
             if warningAnnotations:
                 annotationWarningTxt = "\n".join(warningAnnotations)
                 if errorAnnotations:
                     annotationWarningTxt += "\n"
-                annotations.append(QsciStyledText(annotationWarningTxt,
-                    self.annotationWarningStyle))
+                annotations.append(QsciStyledText(
+                    annotationWarningTxt, self.annotationWarningStyle))
             
             if errorAnnotations:
                 annotationErrorTxt = "\n".join(errorAnnotations)
-                annotations.append(QsciStyledText(annotationErrorTxt,
-                    self.annotationErrorStyle))
+                annotations.append(QsciStyledText(
+                    annotationErrorTxt, self.annotationErrorStyle))
             
             if annotations:
                 self.annotate(line, annotations)
@@ -6201,17 +6181,19 @@ class Editor(QsciScintillaCompat):
         """
         menu = QMenu(self.trUtf8('Resources'))
         
-        menu.addAction(self.trUtf8('Add file...'),
-            self.__addFileResource)
-        menu.addAction(self.trUtf8('Add files...'),
-            self.__addFileResources)
-        menu.addAction(self.trUtf8('Add aliased file...'),
+        menu.addAction(
+            self.trUtf8('Add file...'), self.__addFileResource)
+        menu.addAction(
+            self.trUtf8('Add files...'), self.__addFileResources)
+        menu.addAction(
+            self.trUtf8('Add aliased file...'),
             self.__addFileAliasResource)
-        menu.addAction(self.trUtf8('Add localized resource...'),
+        menu.addAction(
+            self.trUtf8('Add localized resource...'),
             self.__addLocalizedResource)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Add resource frame'),
-            self.__addResourceFrame)
+        menu.addAction(
+            self.trUtf8('Add resource frame'), self.__addResourceFrame)
         
         menu.aboutToShow.connect(self.__showContextMenuResources)
         
@@ -6432,7 +6414,8 @@ class Editor(QsciScintillaCompat):
                                              self.getLanguage())
                         return
                     elif len(templateNames) > 1:
-                        self.showUserList(TemplateCompletionListID,
+                        self.showUserList(
+                            TemplateCompletionListID,
                             ["{0}?{1:d}".format(t, self.TemplateImageID) \
                              for t in templateNames])
                         return
@@ -6660,10 +6643,10 @@ class Editor(QsciScintillaCompat):
         self.spellingMenu.addAction(
             UI.PixmapCache.getIcon("spellchecking.png"),
             self.trUtf8("Check spelling..."), self.__checkSpellingWord)
-        self.spellingMenu.addAction(self.trUtf8("Add to dictionary"),
-            self.__addToSpellingDictionary)
-        self.spellingMenu.addAction(self.trUtf8("Ignore All"),
-            self.__ignoreSpellingAlways)
+        self.spellingMenu.addAction(
+            self.trUtf8("Add to dictionary"), self.__addToSpellingDictionary)
+        self.spellingMenu.addAction(
+            self.trUtf8("Ignore All"), self.__ignoreSpellingAlways)
         
         self.showMenu.emit("Spelling", self.spellingMenu,  self)
     

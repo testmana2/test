@@ -39,7 +39,8 @@ class TrayStarter(QSystemTrayIcon):
         
         self.maxMenuFilePathLen = 75
         
-        self.rsettings = QSettings(QSettings.IniFormat,
+        self.rsettings = QSettings(
+            QSettings.IniFormat,
             QSettings.UserScope,
             Globals.settingsNameOrganization,
             Globals.settingsNameRecent)
@@ -84,63 +85,80 @@ class TrayStarter(QSystemTrayIcon):
             self.trUtf8("Python re editor"), self.__startPyRe)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("uiPreviewer.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("uiPreviewer.png"),
             self.trUtf8("UI Previewer"), self.__startUIPreviewer)
-        self.__menu.addAction(UI.PixmapCache.getIcon("trPreviewer.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("trPreviewer.png"),
             self.trUtf8("Translations Previewer"), self.__startTRPreviewer)
-        self.__menu.addAction(UI.PixmapCache.getIcon("unittest.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("unittest.png"),
             self.trUtf8("Unittest"), self.__startUnittest)
-        self.__menu.addAction(UI.PixmapCache.getIcon("ericWeb.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("ericWeb.png"),
             self.trUtf8("eric5 Web Browser"), self.__startHelpViewer)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("diffFiles.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("diffFiles.png"),
             self.trUtf8("Compare Files"), self.__startDiff)
-        self.__menu.addAction(UI.PixmapCache.getIcon("compareFiles.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("compareFiles.png"),
             self.trUtf8("Compare Files side by side"), self.__startCompare)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("sqlBrowser.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("sqlBrowser.png"),
             self.trUtf8("SQL Browser"), self.__startSqlBrowser)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("ericSnap.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("ericSnap.png"),
             self.trUtf8("Snapshot"), self.__startSnapshot)
-        self.__menu.addAction(UI.PixmapCache.getIcon("iconEditor.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("iconEditor.png"),
             self.trUtf8("Icon Editor"), self.__startIconEditor)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("pluginInstall.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("pluginInstall.png"),
             self.trUtf8("Install Plugin"), self.__startPluginInstall)
-        self.__menu.addAction(UI.PixmapCache.getIcon("pluginUninstall.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("pluginUninstall.png"),
             self.trUtf8("Uninstall Plugin"), self.__startPluginUninstall)
-        self.__menu.addAction(UI.PixmapCache.getIcon("pluginRepository.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("pluginRepository.png"),
             self.trUtf8("Plugin Repository"), self.__startPluginRepository)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("configure.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("configure.png"),
             self.trUtf8('Preferences'), self.__startPreferences)
-        self.__menu.addAction(UI.PixmapCache.getIcon("erict.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("erict.png"),
             self.trUtf8("eric5 IDE"), self.__startEric)
-        self.__menu.addAction(UI.PixmapCache.getIcon("editor.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("editor.png"),
             self.trUtf8("eric5 Mini Editor"), self.__startMiniEditor)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("configure.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("configure.png"),
             self.trUtf8('Configure Tray Starter'), self.__showPreferences)
         self.__menu.addSeparator()
         
         # recent files
         self.menuRecentFilesAct = self.__menu.addMenu(self.recentFilesMenu)
         # recent multi projects
-        self.menuRecentMultiProjectsAct = \
-            self.__menu.addMenu(self.recentMultiProjectsMenu)
+        self.menuRecentMultiProjectsAct = self.__menu.addMenu(
+            self.recentMultiProjectsMenu)
         # recent projects
         self.menuRecentProjectsAct = self.__menu.addMenu(
             self.recentProjectsMenu)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("exit.png"),
+        self.__menu.addAction(
+            UI.PixmapCache.getIcon("exit.png"),
             self.trUtf8('Quit'), qApp.quit)
     
     def __loadRecentProjects(self):
@@ -364,8 +382,8 @@ class TrayStarter(QSystemTrayIcon):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentProjectsMenu.addAction(
-                formatStr.format(idx,
-                    Utilities.compactPath(rp, self.maxMenuFilePathLen)))
+                formatStr.format(
+                    idx, Utilities.compactPath(rp, self.maxMenuFilePathLen)))
             act.setData(rp)
             idx += 1
     
@@ -386,8 +404,8 @@ class TrayStarter(QSystemTrayIcon):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentMultiProjectsMenu.addAction(
-                formatStr.format(idx,
-                    Utilities.compactPath(rmp, self.maxMenuFilePathLen)))
+                formatStr.format(
+                    idx, Utilities.compactPath(rmp, self.maxMenuFilePathLen)))
             act.setData(rmp)
             idx += 1
     
@@ -408,8 +426,8 @@ class TrayStarter(QSystemTrayIcon):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentFilesMenu.addAction(
-                formatStr.format(idx,
-                    Utilities.compactPath(rf, self.maxMenuFilePathLen)))
+                formatStr.format(
+                    idx, Utilities.compactPath(rf, self.maxMenuFilePathLen)))
             act.setData(rf)
             idx += 1
     

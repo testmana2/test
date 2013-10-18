@@ -133,7 +133,7 @@ def getSupportedLanguages():
         "TeX": [QApplication.translate('Lexers', "TeX"), 'dummy.tex',
                 "lexerTeX.png"],
         "VHDL": [QApplication.translate('Lexers', "VHDL"), 'dummy.vhd',
-                "lexerVHDL.png"],
+                 "lexerVHDL.png"],
         "XML": [QApplication.translate('Lexers', "XML"), 'dummy.xml',
                 "lexerXML.png"],
         "YAML": [QApplication.translate('Lexers', "YAML"), 'dummy.yml',
@@ -193,7 +193,8 @@ def getLexer(language, parent=None, pyname=""):
                 return LexerPython(language, parent)
             elif language == "C++":
                 from .LexerCPP import LexerCPP
-                return LexerCPP(parent,
+                return LexerCPP(
+                    parent,
                     Preferences.getEditor("CppCaseInsensitiveKeywords"))
             elif language == "C#":
                 from .LexerCSharp import LexerCSharp

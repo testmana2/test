@@ -186,7 +186,7 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
 
 
 def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
-    app=None, raiseIt=True, installErrorHandler=False):
+                     app=None, raiseIt=True, installErrorHandler=False):
     """
     Module function to start up an application that doesn't need a specialized
     start up.

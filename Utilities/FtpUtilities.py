@@ -296,9 +296,9 @@ class FtpDirLineParser(QObject):
         ext = os.path.splitext(name.lower())[1]
         urlInfo.setSymLink(ext == ".lnk")
         
-        permissions = (E5UrlInfo.ReadOwner | E5UrlInfo.WriteOwner
-                      | E5UrlInfo.ReadGroup | E5UrlInfo.WriteGroup
-                      | E5UrlInfo.ReadOther | E5UrlInfo.WriteOther)
+        permissions = (E5UrlInfo.ReadOwner | E5UrlInfo.WriteOwner |
+                       E5UrlInfo.ReadGroup | E5UrlInfo.WriteGroup |
+                       E5UrlInfo.ReadOther | E5UrlInfo.WriteOther)
         if ext in [".exe", ".com", ".bat", ".cmd"]:
             permissions |= E5UrlInfo.ExeOwner | E5UrlInfo.ExeGroup | \
                 E5UrlInfo.ExeOther

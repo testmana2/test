@@ -49,14 +49,15 @@ class Message(object):
             (string, integer, string)
         """
         return (self.filename, self.lineno,
-        self.message.format(*self.message_args))
+                self.message.format(*self.message_args))
 
 
 class UnusedImport(Message):
     """
     Class defining the "Unused Import" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         '{0!r} imported but unused.')
     
     def __init__(self, filename, lineno, name):
@@ -75,7 +76,8 @@ class RedefinedWhileUnused(Message):
     """
     Class defining the "Redefined While Unused" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         'Redefinition of unused {0!r} from line {1!r}.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -95,7 +97,8 @@ class ImportShadowedByLoopVar(Message):
     """
     Class defining the "Import Shadowed By Loop Var" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         'Import {0!r} from line {1!r} shadowed by loop variable.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -115,7 +118,8 @@ class ImportStarUsed(Message):
     """
     Class defining the "Import Star Used" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         "'from {0} import *' used; unable to detect undefined names.")
     
     def __init__(self, filename, lineno, modname):
@@ -171,7 +175,8 @@ class UndefinedLocal(Message):
     """
     Class defining the "Undefined Local Variable" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         "Local variable {0!r} (defined in enclosing scope on line {1!r})"
         " referenced before assignment.")
     
@@ -192,7 +197,8 @@ class DuplicateArgument(Message):
     """
     Class defining the "Duplicate Argument" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         'Duplicate argument {0!r} in function definition.')
     
     def __init__(self, filename, lineno, name):
@@ -211,7 +217,8 @@ class RedefinedFunction(Message):
     """
     Class defining the "Redefined Function" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         'Redefinition of function {0!r} from line {1!r}.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -231,7 +238,8 @@ class LateFutureImport(Message):
     """
     Class defining the "Late Future Import" message.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         'Future import(s) {0!r} after other statements.')
     
     def __init__(self, filename, lineno, names):
@@ -253,7 +261,8 @@ class UnusedVariable(Message):
     Indicates that a variable has been explicitly assigned to but not actually
     used.
     """
-    message = QCoreApplication.translate('py3Flakes',
+    message = QCoreApplication.translate(
+        'py3Flakes',
         'Local variable {0!r} is assigned to but never used.')
     
     def __init__(self, filename, lineno, name):

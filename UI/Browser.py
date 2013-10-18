@@ -187,8 +187,8 @@ class Browser(QTreeView):
         """
         # create the popup menu for source files
         self.sourceMenu = QMenu(self)
-        self.sourceMenu.addAction(QApplication.translate('Browser', 'Open'),
-            self._openItem)
+        self.sourceMenu.addAction(
+            QApplication.translate('Browser', 'Open'), self._openItem)
         self.unittestAct = self.sourceMenu.addAction(
             QApplication.translate('Browser', 'Run unittest...'),
             self.handleUnittest)
@@ -214,8 +214,8 @@ class Browser(QTreeView):
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        self.multiMenu.addAction(QApplication.translate('Browser', 'Open'),
-            self._openItem)
+        self.multiMenu.addAction(
+            QApplication.translate('Browser', 'Open'), self._openItem)
         if self.__embeddedBrowser in [1, 2]:
             self.multiMenu.addSeparator()
             self.multiMenu.addAction(
@@ -224,8 +224,8 @@ class Browser(QTreeView):
         
         # create the directory menu
         self.dirMenu = QMenu(self)
-        self.dirMenu.addAction(QApplication.translate('Browser',
-            'New toplevel directory...'),
+        self.dirMenu.addAction(
+            QApplication.translate('Browser', 'New toplevel directory...'),
             self.__newToplevelDir)
         self.addAsTopLevelAct = self.dirMenu.addAction(
             QApplication.translate('Browser', 'Add as toplevel directory'),
@@ -234,15 +234,16 @@ class Browser(QTreeView):
             QApplication.translate('Browser', 'Remove from toplevel'),
             self.__removeToplevel)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(QApplication.translate('Browser',
-            'Refresh directory'),
+        self.dirMenu.addAction(
+            QApplication.translate('Browser', 'Refresh directory'),
             self.__refreshDirectory)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(QApplication.translate('Browser',
-            'Find in this directory'),
+        self.dirMenu.addAction(
+            QApplication.translate('Browser', 'Find in this directory'),
             self.__findInDirectory)
-        self.dirMenu.addAction(QApplication.translate('Browser',
-            'Find&&Replace in this directory'),
+        self.dirMenu.addAction(
+            QApplication.translate(
+                'Browser', 'Find&&Replace in this directory'),
             self.__replaceInDirectory)
         self.dirMenu.addAction(
             QApplication.translate('Browser', 'Copy Path to Clipboard'),
@@ -259,8 +260,8 @@ class Browser(QTreeView):
         self.gotoMenu.triggered.connect(self._gotoAttribute)
         
         self.attributeMenu = QMenu(self)
-        self.attributeMenu.addAction(QApplication.translate('Browser',
-            'New toplevel directory...'),
+        self.attributeMenu.addAction(
+            QApplication.translate('Browser', 'New toplevel directory...'),
             self.__newToplevelDir)
         self.attributeMenu.addSeparator()
         self.attributeMenu.addMenu(self.gotoMenu)
@@ -272,8 +273,8 @@ class Browser(QTreeView):
         
         # create the background menu
         self.backMenu = QMenu(self)
-        self.backMenu.addAction(QApplication.translate('Browser',
-            'New toplevel directory...'),
+        self.backMenu.addAction(
+            QApplication.translate('Browser', 'New toplevel directory...'),
             self.__newToplevelDir)
         if self.__embeddedBrowser in [1, 2]:
             self.backMenu.addSeparator()
@@ -426,14 +427,14 @@ class Browser(QTreeView):
                         else:
                             QDesktopServices.openUrl(QUrl(itm.fileName()))
                 elif isinstance(itm, BrowserClassItem):
-                    self.sourceFile[str, int].emit(itm.fileName(),
-                        itm.classObject().lineno)
+                    self.sourceFile[str, int].emit(
+                        itm.fileName(), itm.classObject().lineno)
                 elif isinstance(itm, BrowserMethodItem):
-                    self.sourceFile[str, int].emit(itm.fileName(),
-                        itm.functionObject().lineno)
+                    self.sourceFile[str, int].emit(
+                        itm.fileName(), itm.functionObject().lineno)
                 elif isinstance(itm, BrowserClassAttributeItem):
-                    self.sourceFile[str, int].emit(itm.fileName(),
-                        itm.attributeObject().lineno)
+                    self.sourceFile[str, int].emit(
+                        itm.fileName(), itm.attributeObject().lineno)
             self._activating = False
         
     def _editPixmap(self):

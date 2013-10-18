@@ -20,7 +20,8 @@ from . import ClbrBaseClasses
 
 SUPPORTED_TYPES = [ClassBrowsers.RB_SOURCE]
     
-_getnext = re.compile(r"""
+_getnext = re.compile(
+r"""
     (?P<String>
         =begin .*? =end
     

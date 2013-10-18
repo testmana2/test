@@ -312,14 +312,16 @@ class BrowserModel(QAbstractItemModel):
                     continue
                 
                 cnt = itm.childCount()
-                self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
-                    cnt, cnt)
+                self.beginInsertRows(
+                    self.createIndex(itm.row(), 0, itm), cnt, cnt)
                 if f.isDir():
-                    node = BrowserDirectoryItem(itm,
+                    node = BrowserDirectoryItem(
+                        itm,
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         False)
                 else:
-                    node = BrowserFileItem(itm,
+                    node = BrowserFileItem(
+                        itm,
                         Utilities.toNativeSeparators(f.absoluteFilePath()))
                 self._addItem(node, itm)
                 self.endInsertRows()
@@ -339,8 +341,8 @@ class BrowserModel(QAbstractItemModel):
                         continue
                     
                     self._removeWatchedItem(child)
-                    self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
-                        row, row)
+                    self.beginRemoveRows(
+                        self.createIndex(itm.row(), 0, itm), row, row)
                     itm.removeChild(child)
                     self.endRemoveRows()
     
@@ -421,8 +423,8 @@ class BrowserModel(QAbstractItemModel):
         """
         Public slot to save the toplevel directories.
         """
-        Preferences.Prefs.settings.setValue('BrowserModel/ToplevelDirs',
-            self.toplevelDirs)
+        Preferences.Prefs.settings.setValue(
+            'BrowserModel/ToplevelDirs', self.toplevelDirs)
     
     def _addItem(self, itm, parentItem):
         """
@@ -494,7 +496,8 @@ class BrowserModel(QAbstractItemModel):
                     0, len(entryInfoList) - 1)
             for f in entryInfoList:
                 if f.isDir():
-                    node = BrowserDirectoryItem(parentItem,
+                    node = BrowserDirectoryItem(
+                        parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         False)
                 else:
@@ -505,7 +508,8 @@ class BrowserModel(QAbstractItemModel):
                         if any([fnmatch.fnmatch(fn, ff.strip())
                                 for ff in fileFilters]):
                             continue
-                    node = BrowserFileItem(parentItem,
+                    node = BrowserFileItem(
+                        parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()))
                 self._addItem(node, parentItem)
             if repopulate:
@@ -567,12 +571,14 @@ class BrowserModel(QAbstractItemModel):
                 except AttributeError:
                     pass
             if "@@Coding@@" in keys:
-                node = BrowserCodingItem(parentItem,
+                node = BrowserCodingItem(
+                    parentItem,
                     QApplication.translate("BrowserModel", "Coding: {0}")\
                         .format(dict["@@Coding@@"].coding))
                 self._addItem(node, parentItem)
             if "@@Globals@@" in keys:
-                node = BrowserClassAttributesItem(parentItem,
+                node = BrowserClassAttributesItem(
+                    parentItem,
                     dict["@@Globals@@"].globals,
                     QApplication.translate("BrowserModel", "Globals"))
                 self._addItem(node, parentItem)
@@ -619,8 +625,8 @@ class BrowserModel(QAbstractItemModel):
                 parentItem, cl.attributes,
                 QApplication.translate("BrowserModel", "Attributes"))
             if repopulate:
-                self.addItem(node,
-                    self.createIndex(parentItem.row(), 0, parentItem))
+                self.addItem(
+                    node, self.createIndex(parentItem.row(), 0, parentItem))
             else:
                 self._addItem(node, parentItem)
         
@@ -630,8 +636,8 @@ class BrowserModel(QAbstractItemModel):
                 QApplication.translate("BrowserModel", "Class Attributes"),
                 True)
             if repopulate:
-                self.addItem(node,
-                    self.createIndex(parentItem.row(), 0, parentItem))
+                self.addItem(
+                    node, self.createIndex(parentItem.row(), 0, parentItem))
             else:
                 self._addItem(node, parentItem)
 

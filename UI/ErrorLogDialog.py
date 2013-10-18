@@ -50,8 +50,8 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
         Private slot to send an email.
         """
         self.accept()
-        self.__ui.showEmailDialog("bug",
-            attachFile=self.__logFile, deleteAttachFile=True)
+        self.__ui.showEmailDialog(
+            "bug", attachFile=self.__logFile, deleteAttachFile=True)
     
     @pyqtSlot()
     def on_deleteButton_clicked(self):

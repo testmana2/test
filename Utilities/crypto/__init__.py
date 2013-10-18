@@ -87,13 +87,15 @@ def __getMasterPassword():
                 E5MessageBox.critical(
                     None,
                     QCoreApplication.translate("Crypto", "Master Password"),
-                    QCoreApplication.translate("Crypto",
+                    QCoreApplication.translate(
+                        "Crypto",
                         """There is no master password registered."""))
         except ValueError as why:
             E5MessageBox.warning(
                 None,
                 QCoreApplication.translate("Crypto", "Master Password"),
-                QCoreApplication.translate("Crypto",
+                QCoreApplication.translate(
+                    "Crypto",
                     """<p>The given password cannot be verified.</p>"""
                     """<p>Reason: {0}""".format(str(why))))
 

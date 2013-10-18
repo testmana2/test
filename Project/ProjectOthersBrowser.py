@@ -68,12 +68,11 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._createPopupMenus(self)
         
-        self.editPixmapAct = \
-            self.menu.addAction(self.trUtf8('Open in Icon Editor'),
-            self._editPixmap)
+        self.editPixmapAct = self.menu.addAction(
+            self.trUtf8('Open in Icon Editor'), self._editPixmap)
         self.menu.addSeparator()
-        self.renameFileAct = self.menu.addAction(self.trUtf8('Rename file'),
-            self._renameFile)
+        self.renameFileAct = self.menu.addAction(
+            self.trUtf8('Rename file'), self._renameFile)
         self.menuActions.append(self.renameFileAct)
         act = self.menu.addAction(
             self.trUtf8('Remove from project'), self.__removeItem)
@@ -88,42 +87,42 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Refresh'), self.__refreshItem)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Copy Path to Clipboard'),
-            self._copyToClipboard)
+        self.menu.addAction(
+            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.menu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.menu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.menu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
-        self.backMenu.addAction(self.trUtf8('Add files...'),
-            self.project.addOthersFiles)
-        self.backMenu.addAction(self.trUtf8('Add directory...'),
-            self.project.addOthersDir)
+        self.backMenu.addAction(
+            self.trUtf8('Add files...'), self.project.addOthersFiles)
+        self.backMenu.addAction(
+            self.trUtf8('Add directory...'), self.project.addOthersDir)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.backMenu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.backMenu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.backMenu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
         self.backMenu.setEnabled(False)
 
         self.multiMenu.addSeparator()
-        act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
-            self.__removeItem)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Remove from project'), self.__removeItem)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
             self.trUtf8('Delete'), self.__deleteItem)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.multiMenu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.multiMenu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.multiMenu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
@@ -292,7 +291,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         
         from UI.DeleteFilesConfirmationDialog import \
             DeleteFilesConfirmationDialog
-        dlg = DeleteFilesConfirmationDialog(self.parent(),
+        dlg = DeleteFilesConfirmationDialog(
+            self.parent(),
             self.trUtf8("Delete files/directories"),
             self.trUtf8(
                 "Do you really want to delete these entries from the"

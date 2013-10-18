@@ -80,20 +80,24 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.menu.addAction(self.trUtf8('Compile resource'),
+            self.menu.addAction(
+                self.trUtf8('Compile resource'),
                 self.__compileResource)
-            self.menu.addAction(self.trUtf8('Compile all resources'),
+            self.menu.addAction(
+                self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.menu.addSeparator()
         else:
             if self.hooks["compileResource"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("compileResource",
+                    self.hooksMenuEntries.get(
+                        "compileResource",
                         self.trUtf8('Compile resource')),
                     self.__compileResource)
             if self.hooks["compileAllResources"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources",
+                    self.hooksMenuEntries.get(
+                        "compileAllResources",
                         self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
             if self.hooks["compileResource"] is not None or \
@@ -116,27 +120,30 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             if self.hooks["newResource"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("newResource",
+                    self.hooksMenuEntries.get(
+                        "newResource",
                         self.trUtf8('New resource...')), self.__newResource)
         self.menu.addAction(
             self.trUtf8('Add resources...'), self.__addResourceFiles)
-        self.menu.addAction(self.trUtf8('Add resources directory...'),
+        self.menu.addAction(
+            self.trUtf8('Add resources directory...'),
             self.__addResourcesDirectory)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Copy Path to Clipboard'),
-            self._copyToClipboard)
+        self.menu.addAction(
+            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.menu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.menu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.menu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.backMenu.addAction(self.trUtf8('Compile all resources'),
+            self.backMenu.addAction(
+                self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.backMenu.addSeparator()
             self.backMenu.addAction(
@@ -144,23 +151,26 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.backMenu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources",
+                    self.hooksMenuEntries.get(
+                        "compileAllResources",
                         self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.backMenu.addSeparator()
             if self.hooks["newResource"] is not None:
                 self.backMenu.addAction(
-                    self.hooksMenuEntries.get("newResource",
+                    self.hooksMenuEntries.get(
+                        "newResource",
                         self.trUtf8('New resource...')), self.__newResource)
-        self.backMenu.addAction(self.trUtf8('Add resources...'),
-            self.project.addResourceFiles)
-        self.backMenu.addAction(self.trUtf8('Add resources directory...'),
+        self.backMenu.addAction(
+            self.trUtf8('Add resources...'), self.project.addResourceFiles)
+        self.backMenu.addAction(
+            self.trUtf8('Add resources directory...'),
             self.project.addResourceDir)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.backMenu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.backMenu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.backMenu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
         self.backMenu.setEnabled(False)
@@ -169,42 +179,46 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            act = self.multiMenu.addAction(self.trUtf8('Compile resources'),
+            act = self.multiMenu.addAction(
+                self.trUtf8('Compile resources'),
                 self.__compileSelectedResources)
             self.multiMenu.addSeparator()
         else:
             if self.hooks["compileSelectedResources"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("compileSelectedResources",
+                    self.hooksMenuEntries.get(
+                        "compileSelectedResources",
                         self.trUtf8('Compile resources')),
                     self.__compileSelectedResources)
                 self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Open'), self.__openFile)
         self.multiMenu.addSeparator()
-        act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
-            self._removeFile)
+        act = self.multiMenu.addAction(
+            self.trUtf8('Remove from project'), self._removeFile)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
             self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.multiMenu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.multiMenu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.multiMenu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.dirMenu.addAction(self.trUtf8('Compile all resources'),
+            self.dirMenu.addAction(
+                self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMenu.addSeparator()
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.dirMenu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources",
+                    self.hooksMenuEntries.get(
+                        "compileAllResources",
                         self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMenu.addSeparator()
@@ -219,41 +233,46 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.trUtf8('New resource...'), self.__newResource)
         self.dirMenu.addAction(
             self.trUtf8('Add resources...'), self.__addResourceFiles)
-        self.dirMenu.addAction(self.trUtf8('Add resources directory...'),
+        self.dirMenu.addAction(
+            self.trUtf8('Add resources directory...'),
             self.__addResourcesDirectory)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Copy Path to Clipboard'),
-            self._copyToClipboard)
+        self.dirMenu.addAction(
+            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.dirMenu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.dirMenu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.dirMenu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.dirMultiMenu.addAction(self.trUtf8('Compile all resources'),
+            self.dirMultiMenu.addAction(
+                self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMultiMenu.addSeparator()
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.dirMultiMenu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources",
+                    self.hooksMenuEntries.get(
+                        "compileAllResources",
                         self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Add resources...'),
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Add resources...'),
             self.project.addResourceFiles)
-        self.dirMultiMenu.addAction(self.trUtf8('Add resources directory...'),
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Add resources directory...'),
             self.project.addResourceDir)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Expand all directories'),
-            self._expandAllDirs)
-        self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
-            self._collapseAllDirs)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Expand all directories'), self._expandAllDirs)
+        self.dirMultiMenu.addAction(
+            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
             self.trUtf8('Configure...'), self._configure)
@@ -453,7 +472,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 E5MessageBox.critical(
                     self,
                     self.trUtf8("New Resource"),
-                    self.trUtf8("<p>The new resource file <b>{0}</b> could not"
+                    self.trUtf8(
+                        "<p>The new resource file <b>{0}</b> could not"
                         " be created.<br>Problem: {1}</p>")\
                         .format(fname, str(e)))
                 return
@@ -477,7 +497,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         from UI.DeleteFilesConfirmationDialog import \
             DeleteFilesConfirmationDialog
-        dlg = DeleteFilesConfirmationDialog(self.parent(),
+        dlg = DeleteFilesConfirmationDialog(
+            self.parent(),
             self.trUtf8("Delete resources"),
             self.trUtf8(
                 "Do you really want to delete these resources from the"
@@ -553,13 +574,13 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         self,
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8("The compilation of the resource file"
-                            " was successful."))
+                                    " was successful."))
                 else:
                     ui.showNotification(
                         UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8("The compilation of the resource file"
-                            " was successful."))
+                                    " was successful."))
             except IOError as msg:
                 if not self.noDialog:
                     E5MessageBox.information(
@@ -691,7 +712,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileAllResources"](self.project.pdata["RESOURCES"])
         else:
             numResources = len(self.project.pdata["RESOURCES"])
-            progress = QProgressDialog(self.trUtf8("Compiling resources..."),
+            progress = QProgressDialog(
+                self.trUtf8("Compiling resources..."),
                 self.trUtf8("Abort"), 0, numResources, self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
@@ -725,7 +747,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileSelectedResources"](files)
         else:
             numResources = len(files)
-            progress = QProgressDialog(self.trUtf8("Compiling resources..."),
+            progress = QProgressDialog(
+                self.trUtf8("Compiling resources..."),
                 self.trUtf8("Abort"), 0, numResources, self)
             progress.setModal(True)
             progress.setMinimumDuration(0)

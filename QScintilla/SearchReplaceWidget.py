@@ -139,16 +139,18 @@ and so on.</td></tr>
             self.ui.replacetextCombo.lineEdit().returnPressed.connect(
                 self.on_replaceButton_clicked)
         
-        self.findNextAct = E5Action(self.trUtf8('Find Next'),
-                self.trUtf8('Find Next'),
-                0, 0, self, 'search_widget_find_next')
+        self.findNextAct = E5Action(
+            self.trUtf8('Find Next'),
+            self.trUtf8('Find Next'),
+            0, 0, self, 'search_widget_find_next')
         self.findNextAct.triggered[()].connect(self.on_findNextButton_clicked)
         self.findNextAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findNextAct)
         
-        self.findPrevAct = E5Action(self.trUtf8('Find Prev'),
-                self.trUtf8('Find Prev'),
-                0, 0, self, 'search_widget_find_prev')
+        self.findPrevAct = E5Action(
+            self.trUtf8('Find Prev'),
+            self.trUtf8('Find Prev'),
+            0, 0, self, 'search_widget_find_prev')
         self.findPrevAct.triggered[()].connect(self.on_findPrevButton_clicked)
         self.findPrevAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findPrevAct)
@@ -307,11 +309,12 @@ and so on.</td></tr>
             lineFrom, indexFrom, lineTo, indexTo = self.__selectionBoundary()
         
         aw.clearSearchIndicators()
-        ok = aw.findFirstTarget(txt,
-                self.ui.regexpCheckBox.isChecked(),
-                self.ui.caseCheckBox.isChecked(),
-                self.ui.wordCheckBox.isChecked(),
-                lineFrom, indexFrom, lineTo, indexTo)
+        ok = aw.findFirstTarget(
+            txt,
+            self.ui.regexpCheckBox.isChecked(),
+            self.ui.caseCheckBox.isChecked(),
+            self.ui.wordCheckBox.isChecked(),
+            lineFrom, indexFrom, lineTo, indexTo)
         while ok:
             tgtPos, tgtLen = aw.getFoundTarget()
             if tgtLen == 0:
@@ -400,7 +403,8 @@ and so on.</td></tr>
                 index = indexTo
         
         if ok:
-            ok = aw.findFirst(txt,
+            ok = aw.findFirst(
+                txt,
                 self.ui.regexpCheckBox.isChecked(),
                 self.ui.caseCheckBox.isChecked(),
                 self.ui.wordCheckBox.isChecked(),
@@ -450,7 +454,8 @@ and so on.</td></tr>
                             break
                     else:
                         break
-                    ok = aw.findFirst(txt,
+                    ok = aw.findFirst(
+                        txt,
                         self.ui.regexpCheckBox.isChecked(),
                         self.ui.caseCheckBox.isChecked(),
                         self.ui.wordCheckBox.isChecked(),
@@ -475,7 +480,8 @@ and so on.</td></tr>
                         line, index = boundary[2:]
                     else:
                         line, index = boundary[:2]
-                    ok = aw.findFirst(txt,
+                    ok = aw.findFirst(
+                        txt,
                         self.ui.regexpCheckBox.isChecked(),
                         self.ui.caseCheckBox.isChecked(),
                         self.ui.wordCheckBox.isChecked(),
@@ -495,11 +501,11 @@ and so on.</td></tr>
                             else:
                                 ok = False
                         elif (lineFrom == boundary[0] and \
-                            indexFrom >= boundary[1]) or \
-                           (lineFrom > boundary[0] and \
-                            lineFrom < boundary[2]) or \
-                           (lineFrom == boundary[2] \
-                            and indexFrom <= boundary[3]):
+                              indexFrom >= boundary[1]) or \
+                                (lineFrom > boundary[0] and \
+                                 lineFrom < boundary[2]) or \
+                                (lineFrom == boundary[2] \
+                                 and indexFrom <= boundary[3]):
                             ok = True
                         else:
                             ok = False
@@ -670,11 +676,12 @@ and so on.</td></tr>
         else:
             line = 0
             index = 0
-        ok = aw.findFirst(ftxt,
-                self.ui.regexpCheckBox.isChecked(),
-                self.ui.caseCheckBox.isChecked(),
-                self.ui.wordCheckBox.isChecked(),
-                False, True, line, index)
+        ok = aw.findFirst(
+            ftxt,
+            self.ui.regexpCheckBox.isChecked(),
+            self.ui.caseCheckBox.isChecked(),
+            self.ui.wordCheckBox.isChecked(),
+            False, True, line, index)
         
         if ok and self.ui.selectionCheckBox.isChecked():
             lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
@@ -708,11 +715,12 @@ and so on.</td></tr>
                         break
                     else:
                         break
-                    ok = aw.findFirst(ftxt,
-                            self.ui.regexpCheckBox.isChecked(),
-                            self.ui.caseCheckBox.isChecked(),
-                            self.ui.wordCheckBox.isChecked(),
-                            False, True, line, index)
+                    ok = aw.findFirst(
+                        ftxt,
+                        self.ui.regexpCheckBox.isChecked(),
+                        self.ui.caseCheckBox.isChecked(),
+                        self.ui.wordCheckBox.isChecked(),
+                        False, True, line, index)
                     if ok:
                         lineFrom, indexFrom, lineTo, indexTo = \
                             aw.getSelection()

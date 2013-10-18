@@ -509,7 +509,8 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
             int(Preferences.Prefs.settings.value("Symbols/Top", 0)),
             0)
         self.symbolsTable.scrollTo(index, QAbstractItemView.PositionAtTop)
-        self.symbolsTable.selectionModel().setCurrentIndex(index,
+        self.symbolsTable.selectionModel().setCurrentIndex(
+            index,
             QItemSelectionModel.SelectCurrent | QItemSelectionModel.Rows)
     
     @pyqtSlot(QModelIndex)

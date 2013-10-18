@@ -22,7 +22,8 @@ from . import ClbrBaseClasses
 
 SUPPORTED_TYPES = [ClassBrowsers.IDL_SOURCE]
     
-_getnext = re.compile(r"""
+_getnext = re.compile(
+r"""
     (?P<String>
         " [^"\\\n]* (?: \\. [^"\\\n]*)* "
     )
@@ -301,7 +302,7 @@ def readmodule_ex(module, path=[]):
                 inherit = [_commentsub('', inherit)]
             # remember this interface
             cur_class = Interface(module, class_name, inherit,
-                              file, lineno)
+                                  file, lineno)
             if not classstack:
                 dict[class_name] = cur_class
             else:

@@ -295,8 +295,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             else:
                 failed = []
             self.__failedTests = []
-            self.dbs.remoteUTPrepare(prog, self.testName, testFunctionName,
-                failed,
+            self.dbs.remoteUTPrepare(
+                prog, self.testName, testFunctionName, failed,
                 self.coverageCheckBox.isChecked(), mainScript,
                 self.coverageEraseCheckBox.isChecked(), clientType=clientType)
         else:

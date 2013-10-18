@@ -399,7 +399,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.contents.insertPlainText(txt)
         
     def __generateUnifiedDiff(self, a, b, fromfile, tofile,
-                            fromfiledate, tofiledate):
+                              fromfiledate, tofiledate):
         """
         Private slot to generate a unified diff output.
         
@@ -412,7 +412,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         paras = 0
         for line in unified_diff(a, b, fromfile, tofile,
-                            fromfiledate, tofiledate):
+                                 fromfiledate, tofiledate):
             if line.startswith('+') or line.startswith('>'):
                 format = self.cAddedFormat
             elif line.startswith('-') or line.startswith('<'):
@@ -431,7 +431,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 self.trUtf8('There is no difference.'), self.cNormalFormat)
 
     def __generateContextDiff(self, a, b, fromfile, tofile,
-                            fromfiledate, tofiledate):
+                              fromfiledate, tofiledate):
         """
         Private slot to generate a context diff output.
         
@@ -444,7 +444,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         paras = 0
         for line in context_diff(a, b, fromfile, tofile,
-                            fromfiledate, tofiledate):
+                                 fromfiledate, tofiledate):
             if line.startswith('+ '):
                 format = self.cAddedFormat
             elif line.startswith('- '):

@@ -164,8 +164,8 @@ class Lexer(object):
         editor.beginUndoAction()
         # iterate over the lines
         for line in range(lineFrom, endLine + 1):
-            editor.setIndentation(line,
-                editor.indentation(line) + indentDifference)
+            editor.setIndentation(
+                line, editor.indentation(line) + indentDifference)
         editor.endUndoAction()
         
         if self.lastIndentedIndex != 0:

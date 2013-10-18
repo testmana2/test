@@ -354,11 +354,13 @@ class ProjectBrowserModel(BrowserModel):
             
             for f in entryInfoList:
                 if f.isDir():
-                    node = ProjectBrowserDirectoryItem(parentItem,
+                    node = ProjectBrowserDirectoryItem(
+                        parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         parentItem.getProjectTypes()[0], False)
                 else:
-                    node = ProjectBrowserFileItem(parentItem,
+                    node = ProjectBrowserFileItem(
+                        parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         parentItem.getProjectTypes()[0])
                 if self.project.vcs is not None:
@@ -429,12 +431,13 @@ class ProjectBrowserModel(BrowserModel):
                 parentItem, dt = self.findParentItemByName(
                     self.projectBrowserTypes[key], fn)
                 if os.path.isdir(fname):
-                    itm = ProjectBrowserDirectoryItem(parentItem, fname,
-                        self.projectBrowserTypes[key], False, bold)
+                    itm = ProjectBrowserDirectoryItem(
+                        parentItem, fname, self.projectBrowserTypes[key],
+                        False, bold)
                 else:
-                    itm = ProjectBrowserFileItem(parentItem, fname,
-                        self.projectBrowserTypes[key], False, bold,
-                        sourceLanguage=sourceLanguage)
+                    itm = ProjectBrowserFileItem(
+                        parentItem, fname, self.projectBrowserTypes[key],
+                        False, bold, sourceLanguage=sourceLanguage)
                 self._addItem(itm, parentItem)
                 if self.project.vcs is not None:
                     if states[os.path.normcase(fname)] == \
@@ -536,16 +539,17 @@ class ProjectBrowserModel(BrowserModel):
         else:
             parentIndex = self.createIndex(parentItem.row(), 0, parentItem)
         if os.path.isdir(fname):
-            itm = ProjectBrowserDirectoryItem(parentItem, fname,
-                self.projectBrowserTypes[typeString], False, bold)
+            itm = ProjectBrowserDirectoryItem(
+                parentItem, fname, self.projectBrowserTypes[typeString],
+                False, bold)
         else:
             if typeString == "SOURCES":
                 sourceLanguage = self.project.pdata["PROGLANGUAGE"][0]
             else:
                 sourceLanguage = ""
-            itm = ProjectBrowserFileItem(parentItem, fname,
-                self.projectBrowserTypes[typeString], False, bold,
-                sourceLanguage=sourceLanguage)
+            itm = ProjectBrowserFileItem(
+                parentItem, fname, self.projectBrowserTypes[typeString],
+                False, bold, sourceLanguage=sourceLanguage)
         self.__addVCSStatus(itm, fname)
         if additionalTypeStrings:
             for additionalTypeString in additionalTypeStrings:
@@ -680,15 +684,17 @@ class ProjectBrowserModel(BrowserModel):
                     continue
                 
                 cnt = itm.childCount()
-                self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
-                    cnt, cnt)
+                self.beginInsertRows(
+                    self.createIndex(itm.row(), 0, itm), cnt, cnt)
                 if f.isDir():
-                    node = ProjectBrowserDirectoryItem(itm,
+                    node = ProjectBrowserDirectoryItem(
+                        itm,
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         itm.getProjectTypes()[0],
                         False)
                 else:
-                    node = ProjectBrowserFileItem(itm,
+                    node = ProjectBrowserFileItem(
+                        itm,
                         Utilities.toNativeSeparators(f.absoluteFilePath()),
                         itm.getProjectTypes()[0])
                 self._addItem(node, itm)
@@ -716,8 +722,8 @@ class ProjectBrowserModel(BrowserModel):
                         continue
                     
                     self._removeWatchedItem(child)
-                    self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
-                        row, row)
+                    self.beginRemoveRows(
+                        self.createIndex(itm.row(), 0, itm), row, row)
                     itm.removeChild(child)
                     self.endRemoveRows()
     
@@ -868,8 +874,8 @@ class ProjectBrowserModel(BrowserModel):
             if itm:
                 itm.setVcsState(state)
                 index1 = self.createIndex(itm.row(), 0, itm)
-                index2 = self.createIndex(itm.row(),
-                    self.rootItem.columnCount(), itm)
+                index2 = self.createIndex(
+                    itm.row(), self.rootItem.columnCount(), itm)
                 self.dataChanged.emit(index1, index2)
             
             head, tail = os.path.split(name)
@@ -908,8 +914,8 @@ class ProjectBrowserModel(BrowserModel):
                 if state != itm.vcsState:
                     itm.setVcsState(state)
                     index1 = self.createIndex(itm.row(), 0, itm)
-                    index2 = self.createIndex(itm.row(),
-                        self.rootItem.columnCount(), itm)
+                    index2 = self.createIndex(
+                        itm.row(), self.rootItem.columnCount(), itm)
                     self.dataChanged.emit(index1, index2)
             path, tail = os.path.split(path)
     

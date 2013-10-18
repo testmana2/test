@@ -67,22 +67,24 @@ coding_regexps = [
     (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')),
 ]
 
-supportedCodecs = ['utf-8',
-          'iso8859-1', 'iso8859-15', 'iso8859-2', 'iso8859-3',
-          'iso8859-4', 'iso8859-5', 'iso8859-6', 'iso8859-7',
-          'iso8859-8', 'iso8859-9', 'iso8859-10', 'iso8859-11',
-          'iso8859-13', 'iso8859-14', 'iso8859-16', 'latin-1',
-          'koi8-r', 'koi8-u',
-          'utf-16', 'utf-32',
-          'cp037', 'cp424', 'cp437', 'cp500', 'cp737', 'cp775',
-          'cp850', 'cp852', 'cp855', 'cp856', 'cp857', 'cp860',
-          'cp861', 'cp862', 'cp863', 'cp864', 'cp865', 'cp866',
-          'cp869', 'cp874', 'cp875', 'cp932', 'cp949', 'cp950',
-          'cp1006', 'cp1026', 'cp1140', 'cp1250', 'cp1251',
-          'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256',
-          'cp1257', 'cp1258',
-          'gb2312', 'gb18030',
-          'ascii']
+supportedCodecs = [
+    'utf-8',
+    'iso8859-1', 'iso8859-15', 'iso8859-2', 'iso8859-3',
+    'iso8859-4', 'iso8859-5', 'iso8859-6', 'iso8859-7',
+    'iso8859-8', 'iso8859-9', 'iso8859-10', 'iso8859-11',
+    'iso8859-13', 'iso8859-14', 'iso8859-16', 'latin-1',
+    'koi8-r', 'koi8-u',
+    'utf-16', 'utf-32',
+    'cp037', 'cp424', 'cp437', 'cp500', 'cp737', 'cp775',
+    'cp850', 'cp852', 'cp855', 'cp856', 'cp857', 'cp860',
+    'cp861', 'cp862', 'cp863', 'cp864', 'cp865', 'cp866',
+    'cp869', 'cp874', 'cp875', 'cp932', 'cp949', 'cp950',
+    'cp1006', 'cp1026', 'cp1140', 'cp1250', 'cp1251',
+    'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256',
+    'cp1257', 'cp1258',
+    'gb2312', 'gb18030',
+    'ascii'
+]
 
 
 class CodingError(Exception):
@@ -96,7 +98,8 @@ class CodingError(Exception):
         
         @param coding coding to include in the message (string)
         """
-        self.errorMessage = QCoreApplication.translate("CodingError",
+        self.errorMessage = QCoreApplication.translate(
+            "CodingError",
             "The coding '{0}' is wrong for the given text.").format(coding)
         
     def __repr__(self):
@@ -1162,7 +1165,8 @@ def getPercentReplacementHelp():
     
     @returns help text (string)
     """
-    return QCoreApplication.translate("Utilities",
+    return QCoreApplication.translate(
+        "Utilities",
         """<p>You may use %-codes as placeholders in the string."""
         """ Supported codes are:"""
         """<table>"""
@@ -1294,7 +1298,8 @@ def compile(file, codestring=""):
         code = ""
         error = ""
         lines = traceback.format_exception_only(SyntaxError, detail)
-        match = re.match('\s*File "(.+)", line (\d+)',
+        match = re.match(
+            '\s*File "(.+)", line (\d+)',
             lines[0].replace('<string>', '{0}'.format(file)))
         if match is not None:
             fn, line = match.group(1, 2)
@@ -1405,9 +1410,9 @@ def py2compile(file, checkFlakes=False):
             return (False, "", "", "", "", "", [])
     
     return (True, file, "1", "0", "",
-        QCoreApplication.translate(
-            "Utilities", "Python2 interpreter did not finish within 30s."),
-        [])
+            QCoreApplication.translate(
+                "Utilities", "Python2 interpreter did not finish within 30s."),
+            [])
 
 
 ###############################################################################

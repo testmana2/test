@@ -26,7 +26,8 @@ TABWIDTH = 4
 
 SUPPORTED_TYPES = [ClassBrowsers.PY_SOURCE, ClassBrowsers.PTL_SOURCE]
     
-_getnext = re.compile(r"""
+_getnext = re.compile(
+r"""
     (?P<String>
        \""" [^"\\]* (?:
                         (?: \\. | "(?!"") )

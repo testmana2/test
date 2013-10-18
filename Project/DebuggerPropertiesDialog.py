@@ -70,7 +70,8 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
                     getConfig('ericDir'),
                     "DebugClients", "Python3", "DebugClient.py")
             elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
-                debugClient = os.path.join(getConfig('ericDir'),
+                debugClient = os.path.join(
+                    getConfig('ericDir'),
                     "DebugClients", "Ruby", "DebugClient.rb")
             else:
                 debugClient = ""
@@ -156,7 +157,8 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
                     getConfig('ericDir'),
                     "DebugClients", "Python3", "DebugClient.py")
             elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
-                debugClient = os.path.join(getConfig('ericDir'),
+                debugClient = os.path.join(
+                    getConfig('ericDir'),
                     "DebugClients", "Ruby", "DebugClient.rb")
             else:
                 debugClient = ""

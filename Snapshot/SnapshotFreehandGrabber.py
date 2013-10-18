@@ -48,7 +48,8 @@ class SnapshotFreehandGrabber(QWidget):
         """
         Constructor
         """
-        super().__init__(None,
+        super().__init__(
+            None,
             Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint |
             Qt.FramelessWindowHint | Qt.Tool)
         
@@ -85,7 +86,8 @@ class SnapshotFreehandGrabber(QWidget):
                 self.__desktop.winId(), x, y,
                 self.__desktop.width(), self.__desktop.height())
         else:
-            self.__pixmap = QPixmap.grabWindow(self.__desktop.winId(), x, y,
+            self.__pixmap = QPixmap.grabWindow(
+                self.__desktop.winId(), x, y,
                 self.__desktop.width(), self.__desktop.height())
         self.resize(self.__pixmap.size())
         self.move(x, y)
@@ -146,7 +148,8 @@ class SnapshotFreehandGrabber(QWidget):
             self.__helpTextRect.adjust(-2, -2, 4, 2)
             drawPolygon(painter, self.__helpTextRect, textColor,
                         textBackgroundColor)
-            painter.drawText(self.__helpTextRect.adjusted(3, 3, -3, -3),
+            painter.drawText(
+                self.__helpTextRect.adjusted(3, 3, -3, -3),
                 Qt.TextWordWrap, self.__helpText)
         
         if self.__selection.isEmpty():

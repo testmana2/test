@@ -72,7 +72,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             Preferences.Prefs.settings.value("Snapshot/Delay", 0))
         self.delaySpin.setValue(self.__delay)
         
-        self.__filename = Preferences.Prefs.settings.value("Snapshot/Filename",
+        self.__filename = Preferences.Prefs.settings.value(
+            "Snapshot/Filename",
             os.path.join(
                 QDesktopServices.storageLocation(
                     QDesktopServices.PicturesLocation),
@@ -145,23 +146,25 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         self.__quitShortcut = QShortcut(
             QKeySequence(QKeySequence.Quit), self, self.close)
         
-        self.__copyShortcut = QShortcut(QKeySequence(QKeySequence.Copy), self,
+        self.__copyShortcut = QShortcut(
+            QKeySequence(QKeySequence.Copy), self,
             self.copyButton.animateClick)
         
-        self.__quickSaveShortcut = QShortcut(QKeySequence(Qt.Key_Q), self,
-            self.__quickSave)
+        self.__quickSaveShortcut = QShortcut(
+            QKeySequence(Qt.Key_Q), self, self.__quickSave)
         
-        self.__save1Shortcut = QShortcut(QKeySequence(QKeySequence.Save), self,
+        self.__save1Shortcut = QShortcut(
+            QKeySequence(QKeySequence.Save), self,
             self.saveButton.animateClick)
-        self.__save2Shortcut = QShortcut(QKeySequence(Qt.Key_S), self,
-            self.saveButton.animateClick)
+        self.__save2Shortcut = QShortcut(
+            QKeySequence(Qt.Key_S), self, self.saveButton.animateClick)
         
-        self.__grab1Shortcut = QShortcut(QKeySequence(QKeySequence.New), self,
-            self.takeButton.animateClick)
-        self.__grab2Shortcut = QShortcut(QKeySequence(Qt.Key_N), self,
-            self.takeButton.animateClick)
-        self.__grab3Shortcut = QShortcut(QKeySequence(Qt.Key_Space), self,
-            self.takeButton.animateClick)
+        self.__grab1Shortcut = QShortcut(
+            QKeySequence(QKeySequence.New), self, self.takeButton.animateClick)
+        self.__grab2Shortcut = QShortcut(
+            QKeySequence(Qt.Key_N), self, self.takeButton.animateClick)
+        self.__grab3Shortcut = QShortcut(
+            QKeySequence(Qt.Key_Space), self, self.takeButton.animateClick)
     
     def __quickSave(self):
         """
