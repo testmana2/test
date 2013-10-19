@@ -266,7 +266,8 @@ class VcsProjectBrowserHelper(QObject):
             items = self.browser.getSelectedItems([ProjectBrowserFileItem])
             names = [itm.fileName() for itm in items]
             
-            dlg = DeleteFilesConfirmationDialog(self.parent(),
+            dlg = DeleteFilesConfirmationDialog(
+                self.parent(),
                 self.trUtf8("Remove from repository (and disk)"),
                 self.trUtf8(
                     "Do you really want to remove these translation files from"
@@ -283,9 +284,10 @@ class VcsProjectBrowserHelper(QObject):
             else:
                 names = [itm.fileName() for itm in items]
             files = [self.browser.project.getRelativePath(name) \
-                for name in names]
+                     for name in names]
             
-            dlg = DeleteFilesConfirmationDialog(self.parent(),
+            dlg = DeleteFilesConfirmationDialog(
+                self.parent(),
                 self.trUtf8("Remove from repository (and disk)"),
                 self.trUtf8(
                     "Do you really want to remove these files/directories"

@@ -49,9 +49,9 @@ class vcsCommandOptionsDialog(QDialog, Ui_vcsCommandOptionsDialog):
         
         # modify the what's this help
         for widget in [self.globalEdit, self.commitEdit, self.checkoutEdit,
-                  self.updateEdit, self.addEdit, self.removeEdit,
-                  self.diffEdit, self.logEdit, self.historyEdit,
-                  self.statusEdit, self.tagEdit, self.exportEdit]:
+                       self.updateEdit, self.addEdit, self.removeEdit,
+                       self.diffEdit, self.logEdit, self.historyEdit,
+                       self.statusEdit, self.tagEdit, self.exportEdit]:
             t = widget.whatsThis()
             if t:
                 t += Utilities.getPercentReplacementHelp()

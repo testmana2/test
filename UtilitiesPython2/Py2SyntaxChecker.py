@@ -46,7 +46,8 @@ def compile(file, codestring):
         code = ""
         error = ""
         lines = traceback.format_exception_only(SyntaxError, detail)
-        match = re.match('\s*File "(.+)", line (\d+)',
+        match = re.match(
+            '\s*File "(.+)", line (\d+)',
             lines[0].replace('<string>', '%s' % file))
         if match is not None:
             fn, line = match.group(1, 2)

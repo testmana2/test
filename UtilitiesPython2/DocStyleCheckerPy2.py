@@ -571,7 +571,7 @@ class DocStyleChecker(object):
                         endLine = classContext.start() + end[0]
                         contexts.append(
                             DocStyleContext(self.__source[startLine:endLine],
-                                          startLine, "def"))
+                                            startLine, "def"))
                 except StopIteration:
                     pass
             self.__methodsCache = contexts

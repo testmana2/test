@@ -50,7 +50,8 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         @param txt the text of the file edit (string)
         """
         self.addButton.setEnabled(txt != "")
-        self.changeButton.setEnabled(txt != "" and \
+        self.changeButton.setEnabled(
+            txt != "" and \
             self.filesList.currentRow() != -1)
         
     def on_filesList_currentRowChanged(self, row):

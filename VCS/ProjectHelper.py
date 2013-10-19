@@ -61,8 +61,10 @@ class VcsProjectHelper(QObject):
         """
         Public method to generate the action objects.
         """
-        self.vcsNewAct = E5Action(self.trUtf8('New from repository'),
-                self.trUtf8('&New from repository...'), 0, 0, self, 'vcs_new')
+        self.vcsNewAct = E5Action(
+            self.trUtf8('New from repository'),
+            self.trUtf8('&New from repository...'),
+            0, 0, self, 'vcs_new')
         self.vcsNewAct.setStatusTip(self.trUtf8(
             'Create a new project from the VCS repository'
         ))
@@ -88,8 +90,10 @@ class VcsProjectHelper(QObject):
         self.vcsExportAct.triggered[()].connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
-        self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
-                self.trUtf8('&Add to repository...'), 0, 0, self, 'vcs_add')
+        self.vcsAddAct = E5Action(
+            self.trUtf8('Add to repository'),
+            self.trUtf8('&Add to repository...'),
+            0, 0, self, 'vcs_add')
         self.vcsAddAct.setStatusTip(self.trUtf8(
             'Add the local project to the VCS repository'
         ))
@@ -406,7 +410,8 @@ class VcsProjectHelper(QObject):
         res = E5MessageBox.yesNo(
             self.parent(),
             self.trUtf8("Remove project from repository"),
-            self.trUtf8("Dou you really want to remove this project from"
+            self.trUtf8(
+                "Dou you really want to remove this project from"
                 " the repository (and disk)?"))
         if res:
             self.vcs.vcsRemove(self.project.ppath, True)

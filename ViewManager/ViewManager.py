@@ -508,7 +508,8 @@ class ViewManager(QObject):
         """
         Private method defining the user interface actions for file handling.
         """
-        self.newAct = E5Action(QApplication.translate('ViewManager', 'New'),
+        self.newAct = E5Action(
+            QApplication.translate('ViewManager', 'New'),
             UI.PixmapCache.getIcon("new.png"),
             QApplication.translate('ViewManager', '&New'),
             QKeySequence(
@@ -517,14 +518,16 @@ class ViewManager(QObject):
         self.newAct.setStatusTip(
             QApplication.translate(
                 'ViewManager', 'Open an empty editor window'))
-        self.newAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.newAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>New</b>"""
             """<p>An empty editor window will be created.</p>"""
         ))
         self.newAct.triggered[()].connect(self.newEditor)
         self.fileActions.append(self.newAct)
         
-        self.openAct = E5Action(QApplication.translate('ViewManager', 'Open'),
+        self.openAct = E5Action(
+            QApplication.translate('ViewManager', 'Open'),
             UI.PixmapCache.getIcon("open.png"),
             QApplication.translate('ViewManager', '&Open...'),
             QKeySequence(
@@ -552,7 +555,8 @@ class ViewManager(QObject):
             0, self.closeActGrp, 'vm_file_close')
         self.closeAct.setStatusTip(
             QApplication.translate('ViewManager', 'Close the current window'))
-        self.closeAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.closeAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
@@ -565,7 +569,8 @@ class ViewManager(QObject):
             0, 0, self.closeActGrp, 'vm_file_close_all')
         self.closeAllAct.setStatusTip(
             QApplication.translate('ViewManager', 'Close all editor windows'))
-        self.closeAllAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.closeAllAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Close All Windows</b>"""
             """<p>Close all editor windows.</p>"""
         ))
@@ -585,7 +590,8 @@ class ViewManager(QObject):
             0, self.saveActGrp, 'vm_file_save')
         self.saveAct.setStatusTip(
             QApplication.translate('ViewManager', 'Save the current file'))
-        self.saveAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.saveAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Save File</b>"""
             """<p>Save the contents of current editor window.</p>"""
         ))
@@ -596,12 +602,13 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Save as'),
             UI.PixmapCache.getIcon("fileSaveAs.png"),
             QApplication.translate('ViewManager', 'Save &as...'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Shift+Ctrl+S", "File|Save As")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+Ctrl+S", "File|Save As")),
             0, self.saveActGrp, 'vm_file_save_as')
-        self.saveAsAct.setStatusTip(QApplication.translate('ViewManager',
-            'Save the current file to a new one'))
-        self.saveAsAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.saveAsAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Save the current file to a new one'))
+        self.saveAsAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Save File as</b>"""
             """<p>Save the contents of current editor window to a new file."""
             """ The file can be entered in a file selection dialog.</p>"""
@@ -614,9 +621,10 @@ class ViewManager(QObject):
             UI.PixmapCache.getIcon("fileSaveAll.png"),
             QApplication.translate('ViewManager', 'Save a&ll'),
             0, 0, self.saveActGrp, 'vm_file_save_all')
-        self.saveAllAct.setStatusTip(QApplication.translate('ViewManager',
-            'Save all files'))
-        self.saveAllAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.saveAllAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Save all files'))
+        self.saveAllAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Save All Files</b>"""
             """<p>Save the contents of all editor windows.</p>"""
         ))
@@ -629,12 +637,13 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Print'),
             UI.PixmapCache.getIcon("print.png"),
             QApplication.translate('ViewManager', '&Print'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+P", "File|Print")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+P", "File|Print")),
             0, self, 'vm_file_print')
-        self.printAct.setStatusTip(QApplication.translate('ViewManager',
-            'Print the current file'))
-        self.printAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.printAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Print the current file'))
+        self.printAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Print File</b>"""
             """<p>Print the contents of current editor window.</p>"""
         ))
@@ -642,14 +651,15 @@ class ViewManager(QObject):
         self.printAct.setEnabled(False)
         self.fileActions.append(self.printAct)
         
-        self.printPreviewAct = \
-            E5Action(QApplication.translate('ViewManager', 'Print Preview'),
-                UI.PixmapCache.getIcon("printPreview.png"),
-                QApplication.translate('ViewManager', 'Print Preview'),
-                0, 0, self, 'vm_file_print_preview')
-        self.printPreviewAct.setStatusTip(QApplication.translate('ViewManager',
-            'Print preview of the current file'))
-        self.printPreviewAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.printPreviewAct = E5Action(
+            QApplication.translate('ViewManager', 'Print Preview'),
+            UI.PixmapCache.getIcon("printPreview.png"),
+            QApplication.translate('ViewManager', 'Print Preview'),
+            0, 0, self, 'vm_file_print_preview')
+        self.printPreviewAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Print preview of the current file'))
+        self.printPreviewAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Print Preview</b>"""
             """<p>Print preview of the current editor window.</p>"""
         ))
@@ -658,15 +668,16 @@ class ViewManager(QObject):
         self.printPreviewAct.setEnabled(False)
         self.fileActions.append(self.printPreviewAct)
         
-        self.findFileNameAct = E5Action(QApplication.translate('ViewManager',
-                    'Search File'),
-                QApplication.translate('ViewManager', 'Search &File...'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Alt+Ctrl+F", "File|Search File")),
-                0, self, 'vm_file_search_file')
-        self.findFileNameAct.setStatusTip(QApplication.translate('ViewManager',
-            'Search for a file'))
-        self.findFileNameAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.findFileNameAct = E5Action(
+            QApplication.translate('ViewManager', 'Search File'),
+            QApplication.translate('ViewManager', 'Search &File...'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Alt+Ctrl+F", "File|Search File")),
+            0, self, 'vm_file_search_file')
+        self.findFileNameAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Search for a file'))
+        self.findFileNameAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Search File</b>"""
             """<p>Search for a file.</p>"""
         ))
@@ -680,10 +691,12 @@ class ViewManager(QObject):
         @return the generated menu
         """
         menu = QMenu(QApplication.translate('ViewManager', '&File'), self.ui)
-        self.recentMenu = QMenu(QApplication.translate('ViewManager',
-            'Open &Recent Files'), menu)
-        self.bookmarkedMenu = QMenu(QApplication.translate('ViewManager',
-            'Open &Bookmarked Files'), menu)
+        self.recentMenu = QMenu(
+            QApplication.translate('ViewManager', 'Open &Recent Files'),
+            menu)
+        self.bookmarkedMenu = QMenu(
+            QApplication.translate('ViewManager', 'Open &Bookmarked Files'),
+            menu)
         self.exportersMenu = self.__initContextMenuExporters()
         menu.setTearOffEnabled(True)
         
@@ -772,50 +785,56 @@ class ViewManager(QObject):
         """
         self.editActGrp = createActionGroup(self)
         
-        self.undoAct = E5Action(QApplication.translate('ViewManager', 'Undo'),
-                UI.PixmapCache.getIcon("editUndo.png"),
-                QApplication.translate('ViewManager', '&Undo'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Z", "Edit|Undo")),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Alt+Backspace", "Edit|Undo")),
-                self.editActGrp, 'vm_edit_undo')
-        self.undoAct.setStatusTip(QApplication.translate('ViewManager',
-            'Undo the last change'))
-        self.undoAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.undoAct = E5Action(
+            QApplication.translate('ViewManager', 'Undo'),
+            UI.PixmapCache.getIcon("editUndo.png"),
+            QApplication.translate('ViewManager', '&Undo'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Z", "Edit|Undo")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Alt+Backspace", "Edit|Undo")),
+            self.editActGrp, 'vm_edit_undo')
+        self.undoAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Undo the last change'))
+        self.undoAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Undo</b>"""
             """<p>Undo the last change done in the current editor.</p>"""
         ))
         self.undoAct.triggered[()].connect(self.__editUndo)
         self.editActions.append(self.undoAct)
         
-        self.redoAct = E5Action(QApplication.translate('ViewManager', 'Redo'),
-                UI.PixmapCache.getIcon("editRedo.png"),
-                QApplication.translate('ViewManager', '&Redo'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Shift+Z", "Edit|Redo")),
-                0,
-                self.editActGrp, 'vm_edit_redo')
-        self.redoAct.setStatusTip(QApplication.translate('ViewManager',
-            'Redo the last change'))
-        self.redoAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.redoAct = E5Action(
+            QApplication.translate('ViewManager', 'Redo'),
+            UI.PixmapCache.getIcon("editRedo.png"),
+            QApplication.translate('ViewManager', '&Redo'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Shift+Z", "Edit|Redo")),
+            0,
+            self.editActGrp, 'vm_edit_redo')
+        self.redoAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Redo the last change'))
+        self.redoAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Redo</b>"""
             """<p>Redo the last change done in the current editor.</p>"""
         ))
         self.redoAct.triggered[()].connect(self.__editRedo)
         self.editActions.append(self.redoAct)
         
-        self.revertAct = E5Action(QApplication.translate('ViewManager',
-                    'Revert to last saved state'),
-                QApplication.translate(
+        self.revertAct = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Revert to last saved state'),
+            QApplication.translate(
                     'ViewManager', 'Re&vert to last saved state'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Y", "Edit|Revert")),
-                0,
-                self.editActGrp, 'vm_edit_revert')
-        self.revertAct.setStatusTip(QApplication.translate('ViewManager',
-            'Revert to last saved state'))
-        self.revertAct.setWhatsThis(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Y", "Edit|Revert")),
+            0,
+            self.editActGrp, 'vm_edit_revert')
+        self.revertAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Revert to last saved state'))
+        self.revertAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Revert to last saved state</b>"""
             """<p>Undo all changes up to the last saved state"""
             """ of the current editor.</p>"""
@@ -825,17 +844,19 @@ class ViewManager(QObject):
         
         self.copyActGrp = createActionGroup(self.editActGrp)
         
-        self.cutAct = E5Action(QApplication.translate('ViewManager', 'Cut'),
-                UI.PixmapCache.getIcon("editCut.png"),
-                QApplication.translate('ViewManager', 'Cu&t'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+X", "Edit|Cut")),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Shift+Del", "Edit|Cut")),
-                self.copyActGrp, 'vm_edit_cut')
-        self.cutAct.setStatusTip(QApplication.translate('ViewManager',
-            'Cut the selection'))
-        self.cutAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.cutAct = E5Action(
+            QApplication.translate('ViewManager', 'Cut'),
+            UI.PixmapCache.getIcon("editCut.png"),
+            QApplication.translate('ViewManager', 'Cu&t'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+X", "Edit|Cut")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+Del", "Edit|Cut")),
+            self.copyActGrp, 'vm_edit_cut')
+        self.cutAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Cut the selection'))
+        self.cutAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Cut</b>"""
             """<p>Cut the selected text of the current editor to the"""
             """ clipboard.</p>"""
@@ -843,17 +864,19 @@ class ViewManager(QObject):
         self.cutAct.triggered[()].connect(self.__editCut)
         self.editActions.append(self.cutAct)
         
-        self.copyAct = E5Action(QApplication.translate('ViewManager', 'Copy'),
-                UI.PixmapCache.getIcon("editCopy.png"),
-                QApplication.translate('ViewManager', '&Copy'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+C", "Edit|Copy")),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Ins", "Edit|Copy")),
-                self.copyActGrp, 'vm_edit_copy')
-        self.copyAct.setStatusTip(QApplication.translate('ViewManager',
-            'Copy the selection'))
-        self.copyAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.copyAct = E5Action(
+            QApplication.translate('ViewManager', 'Copy'),
+            UI.PixmapCache.getIcon("editCopy.png"),
+            QApplication.translate('ViewManager', '&Copy'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+C", "Edit|Copy")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Ins", "Edit|Copy")),
+            self.copyActGrp, 'vm_edit_copy')
+        self.copyAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Copy the selection'))
+        self.copyAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Copy</b>"""
             """<p>Copy the selected text of the current editor to the"""
             """ clipboard.</p>"""
@@ -865,14 +888,15 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Paste'),
             UI.PixmapCache.getIcon("editPaste.png"),
             QApplication.translate('ViewManager', '&Paste'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+V", "Edit|Paste")),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Shift+Ins", "Edit|Paste")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+V", "Edit|Paste")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+Ins", "Edit|Paste")),
             self.copyActGrp, 'vm_edit_paste')
-        self.pasteAct.setStatusTip(QApplication.translate('ViewManager',
-            'Paste the last cut/copied text'))
-        self.pasteAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.pasteAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Paste the last cut/copied text'))
+        self.pasteAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Paste</b>"""
             """<p>Paste the last cut/copied text from the clipboard to"""
             """ the current editor.</p>"""
@@ -884,13 +908,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Clear'),
             UI.PixmapCache.getIcon("editDelete.png"),
             QApplication.translate('ViewManager', 'Clear'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Alt+Shift+C", "Edit|Clear")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Alt+Shift+C", "Edit|Clear")),
             0,
             self.copyActGrp, 'vm_edit_clear')
-        self.deleteAct.setStatusTip(QApplication.translate('ViewManager',
-            'Clear all text'))
-        self.deleteAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.deleteAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Clear all text'))
+        self.deleteAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Clear</b>"""
             """<p>Delete all text of the current editor.</p>"""
         ))
@@ -900,13 +925,14 @@ class ViewManager(QObject):
         self.joinAct = E5Action(
             QApplication.translate('ViewManager', 'Join Lines'),
             QApplication.translate('ViewManager', 'Join Lines'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+J", "Edit|Join Lines")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+J", "Edit|Join Lines")),
             0,
             self.copyActGrp, 'vm_edit_join_lines')
-        self.joinAct.setStatusTip(QApplication.translate('ViewManager',
-            'Join Lines'))
-        self.joinAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.joinAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Join Lines'))
+        self.joinAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Join Lines</b>"""
             """<p>Join the current and the next lines.</p>"""
         ))
@@ -917,13 +943,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Indent'),
             UI.PixmapCache.getIcon("editIndent.png"),
             QApplication.translate('ViewManager', '&Indent'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+I", "Edit|Indent")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+I", "Edit|Indent")),
             0,
             self.editActGrp, 'vm_edit_indent')
-        self.indentAct.setStatusTip(QApplication.translate('ViewManager',
-            'Indent line'))
-        self.indentAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.indentAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Indent line'))
+        self.indentAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Indent</b>"""
             """<p>Indents the current line or the lines of the"""
             """ selection by one level.</p>"""
@@ -935,13 +962,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Unindent'),
             UI.PixmapCache.getIcon("editUnindent.png"),
             QApplication.translate('ViewManager', 'U&nindent'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+Shift+I", "Edit|Unindent")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Shift+I", "Edit|Unindent")),
             0,
             self.editActGrp, 'vm_edit_unindent')
-        self.unindentAct.setStatusTip(QApplication.translate('ViewManager',
-            'Unindent line'))
-        self.unindentAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.unindentAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Unindent line'))
+        self.unindentAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Unindent</b>"""
             """<p>Unindents the current line or the lines of the"""
             """ selection by one level.</p>"""
@@ -949,17 +977,18 @@ class ViewManager(QObject):
         self.unindentAct.triggered[()].connect(self.__editUnindent)
         self.editActions.append(self.unindentAct)
         
-        self.smartIndentAct = E5Action(QApplication.translate('ViewManager',
-                    'Smart indent'),
-                UI.PixmapCache.getIcon("editSmartIndent.png"),
-                QApplication.translate('ViewManager', 'Smart indent'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Alt+I", "Edit|Smart indent")),
-                0,
-                self.editActGrp, 'vm_edit_smart_indent')
-        self.smartIndentAct.setStatusTip(QApplication.translate('ViewManager',
-            'Smart indent Line or Selection'))
-        self.smartIndentAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.smartIndentAct = E5Action(
+            QApplication.translate('ViewManager', 'Smart indent'),
+            UI.PixmapCache.getIcon("editSmartIndent.png"),
+            QApplication.translate('ViewManager', 'Smart indent'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Alt+I", "Edit|Smart indent")),
+            0,
+            self.editActGrp, 'vm_edit_smart_indent')
+        self.smartIndentAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Smart indent Line or Selection'))
+        self.smartIndentAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Smart indent</b>"""
             """<p>Indents the current line or the lines of the"""
             """ current selection smartly.</p>"""
@@ -971,13 +1000,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Comment'),
             UI.PixmapCache.getIcon("editComment.png"),
             QApplication.translate('ViewManager', 'C&omment'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+M", "Edit|Comment")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+M", "Edit|Comment")),
             0,
             self.editActGrp, 'vm_edit_comment')
-        self.commentAct.setStatusTip(QApplication.translate('ViewManager',
-            'Comment Line or Selection'))
-        self.commentAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.commentAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Comment Line or Selection'))
+        self.commentAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Comment</b>"""
             """<p>Comments the current line or the lines of the"""
             """ current selection.</p>"""
@@ -989,13 +1019,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Uncomment'),
             UI.PixmapCache.getIcon("editUncomment.png"),
             QApplication.translate('ViewManager', 'Unco&mment'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Alt+Ctrl+M", "Edit|Uncomment")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Alt+Ctrl+M", "Edit|Uncomment")),
             0,
             self.editActGrp, 'vm_edit_uncomment')
-        self.uncommentAct.setStatusTip(QApplication.translate('ViewManager',
-            'Uncomment Line or Selection'))
-        self.uncommentAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.uncommentAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Uncomment Line or Selection'))
+        self.uncommentAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Uncomment</b>"""
             """<p>Uncomments the current line or the lines of the"""
             """ current selection.</p>"""
@@ -1004,13 +1035,13 @@ class ViewManager(QObject):
         self.editActions.append(self.uncommentAct)
         
         self.toggleCommentAct = E5Action(
-                QApplication.translate('ViewManager', 'Toggle Comment'),
-                UI.PixmapCache.getIcon("editToggleComment.png"),
-                QApplication.translate('ViewManager', 'Toggle Comment'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Shift+M", "Edit|Toggle Comment")),
-                0,
-                self.editActGrp, 'vm_edit_toggle_comment')
+            QApplication.translate('ViewManager', 'Toggle Comment'),
+            UI.PixmapCache.getIcon("editToggleComment.png"),
+            QApplication.translate('ViewManager', 'Toggle Comment'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Shift+M", "Edit|Toggle Comment")),
+            0,
+            self.editActGrp, 'vm_edit_toggle_comment')
         self.toggleCommentAct.setStatusTip(QApplication.translate(
                 'ViewManager',
                 'Toggle the comment of the current line, selection or'
@@ -1042,14 +1073,15 @@ class ViewManager(QObject):
         self.streamCommentAct.triggered[()].connect(self.__editStreamComment)
         self.editActions.append(self.streamCommentAct)
         
-        self.boxCommentAct = E5Action(QApplication.translate('ViewManager',
-                    'Box Comment'),
-                QApplication.translate('ViewManager', 'Box Comment'),
-                0, 0,
-                self.editActGrp, 'vm_edit_box_comment')
-        self.boxCommentAct.setStatusTip(QApplication.translate('ViewManager',
-            'Box Comment Line or Selection'))
-        self.boxCommentAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.boxCommentAct = E5Action(
+            QApplication.translate('ViewManager', 'Box Comment'),
+            QApplication.translate('ViewManager', 'Box Comment'),
+            0, 0,
+            self.editActGrp, 'vm_edit_box_comment')
+        self.boxCommentAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Box Comment Line or Selection'))
+        self.boxCommentAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Box Comment</b>"""
             """<p>Box comments the current line or the lines of the"""
             """ current selection.</p>"""
@@ -1057,16 +1089,17 @@ class ViewManager(QObject):
         self.boxCommentAct.triggered[()].connect(self.__editBoxComment)
         self.editActions.append(self.boxCommentAct)
         
-        self.selectBraceAct = E5Action(QApplication.translate('ViewManager',
-                    'Select to brace'),
-                QApplication.translate('ViewManager', 'Select to &brace'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+E", "Edit|Select to brace")),
-                0,
-                self.editActGrp, 'vm_edit_select_to_brace')
-        self.selectBraceAct.setStatusTip(QApplication.translate('ViewManager',
-            'Select text to the matching brace'))
-        self.selectBraceAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.selectBraceAct = E5Action(
+            QApplication.translate('ViewManager', 'Select to brace'),
+            QApplication.translate('ViewManager', 'Select to &brace'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+E", "Edit|Select to brace")),
+            0,
+            self.editActGrp, 'vm_edit_select_to_brace')
+        self.selectBraceAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Select text to the matching brace'))
+        self.selectBraceAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Select to brace</b>"""
             """<p>Select text of the current editor to the matching"""
             """ brace.</p>"""
@@ -1077,29 +1110,31 @@ class ViewManager(QObject):
         self.selectAllAct = E5Action(
             QApplication.translate('ViewManager', 'Select all'),
             QApplication.translate('ViewManager', '&Select all'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+A", "Edit|Select all")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+A", "Edit|Select all")),
             0,
             self.editActGrp, 'vm_edit_select_all')
-        self.selectAllAct.setStatusTip(QApplication.translate('ViewManager',
-            'Select all text'))
-        self.selectAllAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.selectAllAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Select all text'))
+        self.selectAllAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Select All</b>"""
             """<p>Select all text of the current editor.</p>"""
         ))
         self.selectAllAct.triggered[()].connect(self.__editSelectAll)
         self.editActions.append(self.selectAllAct)
         
-        self.deselectAllAct = E5Action(QApplication.translate('ViewManager',
-                    'Deselect all'),
-                QApplication.translate('ViewManager', '&Deselect all'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Alt+Ctrl+A", "Edit|Deselect all")),
-                0,
-                self.editActGrp, 'vm_edit_deselect_all')
-        self.deselectAllAct.setStatusTip(QApplication.translate('ViewManager',
-            'Deselect all text'))
-        self.deselectAllAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.deselectAllAct = E5Action(
+            QApplication.translate('ViewManager', 'Deselect all'),
+            QApplication.translate('ViewManager', '&Deselect all'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Alt+Ctrl+A", "Edit|Deselect all")),
+            0,
+            self.editActGrp, 'vm_edit_deselect_all')
+        self.deselectAllAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Deselect all text'))
+        self.deselectAllAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Deselect All</b>"""
             """<p>Deselect all text of the current editor.</p>"""
         ))
@@ -1113,9 +1148,10 @@ class ViewManager(QObject):
                 'ViewManager', 'Convert &Line End Characters'),
             0, 0,
             self.editActGrp, 'vm_edit_convert_eol')
-        self.convertEOLAct.setStatusTip(QApplication.translate('ViewManager',
-            'Convert Line End Characters'))
-        self.convertEOLAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.convertEOLAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Convert Line End Characters'))
+        self.convertEOLAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Convert Line End Characters</b>"""
             """<p>Convert the line end characters to the currently set"""
             """ type.</p>"""
@@ -1123,14 +1159,15 @@ class ViewManager(QObject):
         self.convertEOLAct.triggered[()].connect(self.__convertEOL)
         self.editActions.append(self.convertEOLAct)
         
-        self.shortenEmptyAct = E5Action(QApplication.translate('ViewManager',
-                    'Shorten empty lines'),
-                QApplication.translate('ViewManager', 'Shorten empty lines'),
-                0, 0,
-                self.editActGrp, 'vm_edit_shorten_empty_lines')
-        self.shortenEmptyAct.setStatusTip(QApplication.translate('ViewManager',
-            'Shorten empty lines'))
-        self.shortenEmptyAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.shortenEmptyAct = E5Action(
+            QApplication.translate('ViewManager', 'Shorten empty lines'),
+            QApplication.translate('ViewManager', 'Shorten empty lines'),
+            0, 0,
+            self.editActGrp, 'vm_edit_shorten_empty_lines')
+        self.shortenEmptyAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Shorten empty lines'))
+        self.shortenEmptyAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Shorten empty lines</b>"""
             """<p>Shorten lines consisting solely of whitespace"""
             """ characters.</p>"""
@@ -1138,16 +1175,17 @@ class ViewManager(QObject):
         self.shortenEmptyAct.triggered[()].connect(self.__shortenEmptyLines)
         self.editActions.append(self.shortenEmptyAct)
         
-        self.autoCompleteAct = E5Action(QApplication.translate('ViewManager',
-                    'Autocomplete'),
-                QApplication.translate('ViewManager', '&Autocomplete'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Space", "Edit|Autocomplete")),
-                0,
-                self.editActGrp, 'vm_edit_autocomplete')
-        self.autoCompleteAct.setStatusTip(QApplication.translate('ViewManager',
-            'Autocomplete current word'))
-        self.autoCompleteAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.autoCompleteAct = E5Action(
+            QApplication.translate('ViewManager', 'Autocomplete'),
+            QApplication.translate('ViewManager', '&Autocomplete'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Space", "Edit|Autocomplete")),
+            0,
+            self.editActGrp, 'vm_edit_autocomplete')
+        self.autoCompleteAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Autocomplete current word'))
+        self.autoCompleteAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Autocomplete</b>"""
             """<p>Performs an autocompletion of the word containing"""
             """ the cursor.</p>"""
@@ -1222,16 +1260,17 @@ class ViewManager(QObject):
             self.__editAutoCompleteFromAll)
         self.editActions.append(self.autoCompleteFromAllAct)
         
-        self.calltipsAct = E5Action(QApplication.translate('ViewManager',
-                    'Calltip'),
-                QApplication.translate('ViewManager', '&Calltip'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Alt+Space", "Edit|Calltip")),
-                0,
-                self.editActGrp, 'vm_edit_calltip')
-        self.calltipsAct.setStatusTip(QApplication.translate('ViewManager',
-            'Show Calltips'))
-        self.calltipsAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.calltipsAct = E5Action(
+            QApplication.translate('ViewManager', 'Calltip'),
+            QApplication.translate('ViewManager', '&Calltip'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Alt+Space", "Edit|Calltip")),
+            0,
+            self.editActGrp, 'vm_edit_calltip')
+        self.calltipsAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Show Calltips'))
+        self.calltipsAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Calltip</b>"""
             """<p>Show calltips based on the characters immediately to the"""
             """ left of the cursor.</p>"""
@@ -1239,15 +1278,18 @@ class ViewManager(QObject):
         self.calltipsAct.triggered[()].connect(self.__editShowCallTips)
         self.editActions.append(self.calltipsAct)
         
-        self.sortAct = E5Action(QApplication.translate('ViewManager', 'Sort'),
-                QApplication.translate('ViewManager', 'Sort'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Alt+S", "Edit|Sort")),
-                0,
-                self.editActGrp, 'vm_edit_sort')
-        self.sortAct.setStatusTip(QApplication.translate('ViewManager',
+        self.sortAct = E5Action(
+            QApplication.translate('ViewManager', 'Sort'),
+            QApplication.translate('ViewManager', 'Sort'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Alt+S", "Edit|Sort")),
+            0,
+            self.editActGrp, 'vm_edit_sort')
+        self.sortAct.setStatusTip(QApplication.translate(
+            'ViewManager',
             'Sort the lines containing the rectangular selection'))
-        self.sortAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.sortAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Sort</b>"""
             """<p>Sort the lines spanned by a rectangular selection based on"""
             """ the selection ignoring leading and trailing whitespace.</p>"""
@@ -1366,12 +1408,15 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Move to first visible character in document line'),
-                      QApplication.translate('ViewManager',
-                        'Move to first visible character in document line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_first_visible_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Move to first visible character in document line'),
+            QApplication.translate(
+                'ViewManager',
+                'Move to first visible character in document line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_first_visible_char')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Home')))
@@ -1379,12 +1424,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Move to start of display line'),
-                      QApplication.translate('ViewManager',
-                        'Move to start of display line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_start_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Move to start of display line'),
+            QApplication.translate(
+                'ViewManager', 'Move to start of display line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_start_line')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Left')))
@@ -1395,12 +1441,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                            'Move to end of document line'),
-                      QApplication.translate('ViewManager',
-                            'Move to end of document line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_end_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Move to end of document line'),
+            QApplication.translate(
+                'ViewManager', 'Move to end of document line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_end_line')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+E')))
@@ -1605,12 +1652,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection left one word'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection left one word'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_left_word')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection left one word'),
+            QApplication.translate(
+                'ViewManager', 'Extend selection left one word'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_left_word')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Left')))
@@ -1621,12 +1669,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection right one word'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection right one word'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_right_word')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection right one word'),
+            QApplication.translate(
+                'ViewManager', 'Extend selection right one word'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_right_word')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Right')))
@@ -1655,12 +1704,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection to end of document line'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection to end of document line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_end_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection to end of document line'),
+            QApplication.translate(
+                'ViewManager', 'Extend selection to end of document line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_end_line')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+E')))
@@ -1684,14 +1734,15 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection down one paragraph'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection down one paragraph'),
-                      QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Shift+Down')),
-                      0,
-                      self.editorActGrp, 'vm_edit_extend_selection_down_para')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection down one paragraph'),
+            QApplication.translate(
+                'ViewManager', 'Extend selection down one paragraph'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', 'Alt+Shift+Down')),
+            0,
+            self.editorActGrp, 'vm_edit_extend_selection_down_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARADOWNEXTEND)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -1724,12 +1775,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection to start of document'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection to start of document'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_start_text')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection to start of document'),
+            QApplication.translate(
+                'ViewManager', 'Extend selection to start of document'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_start_text')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Up')))
@@ -1740,12 +1792,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend selection to end of document'),
-                      QApplication.translate('ViewManager',
-                        'Extend selection to end of document'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_extend_selection_end_text')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Extend selection to end of document'),
+            QApplication.translate(
+                'ViewManager', 'Extend selection to end of document'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_extend_selection_end_text')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Down')))
@@ -1926,12 +1979,13 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Move to end of display line'),
-                      QApplication.translate('ViewManager',
-                        'Move to end of display line'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_move_end_displayed_line')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager', 'Move to end of display line'),
+            QApplication.translate(
+                'ViewManager', 'Move to end of display line'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_move_end_displayed_line')
         if isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Right')))
@@ -1956,10 +2010,11 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager', 'Formfeed'),
-                      QApplication.translate('ViewManager', 'Formfeed'),
-                      0, 0,
-                      self.editorActGrp, 'vm_edit_formfeed')
+        act = E5Action(
+            QApplication.translate('ViewManager', 'Formfeed'),
+            QApplication.translate('ViewManager', 'Formfeed'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_formfeed')
         self.esm.setMapping(act, QsciScintilla.SCI_FORMFEED)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -2040,15 +2095,18 @@ class ViewManager(QObject):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Extend rectangular selection to first'
-                        ' visible character in document line'),
-                      QApplication.translate('ViewManager',
-                        'Extend rectangular selection to first'
-                        ' visible character in document line'),
-                      0, 0,
-                      self.editorActGrp,
-                      'vm_edit_extend_rect_selection_first_visible_char')
+        act = E5Action(
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection to first visible character in'
+                ' document line'),
+            QApplication.translate(
+                'ViewManager',
+                'Extend rectangular selection to first visible character in'
+                ' document line'),
+            0, 0,
+            self.editorActGrp,
+            'vm_edit_extend_rect_selection_first_visible_char')
         if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Home')))
@@ -2122,12 +2180,13 @@ class ViewManager(QObject):
         self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_SCROLLTOSTART"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Scroll to start of document'),
-                        QApplication.translate('ViewManager',
-                            'Scroll to start of document'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_scroll_start_text')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Scroll to start of document'),
+                QApplication.translate(
+                    'ViewManager', 'Scroll to start of document'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_scroll_start_text')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Home')))
@@ -2136,12 +2195,13 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_SCROLLTOEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Scroll to end of document'),
-                        QApplication.translate('ViewManager',
-                            'Scroll to end of document'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_scroll_end_text')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Scroll to end of document'),
+                QApplication.translate(
+                    'ViewManager', 'Scroll to end of document'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_scroll_end_text')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'End')))
@@ -2150,12 +2210,13 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_VERTICALCENTRECARET"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Scroll vertically to center current line'),
-                        QApplication.translate('ViewManager',
-                            'Scroll vertically to center current line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_scroll_vertically_center')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Scroll vertically to center current line'),
+                QApplication.translate(
+                    'ViewManager', 'Scroll vertically to center current line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_scroll_vertically_center')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+L')))
@@ -2164,12 +2225,13 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDRIGHTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move to end of next word'),
-                        QApplication.translate('ViewManager',
-                            'Move to end of next word'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_move_end_next_word')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Move to end of next word'),
+                QApplication.translate(
+                    'ViewManager', 'Move to end of next word'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_move_end_next_word')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Alt+Right')))
@@ -2178,12 +2240,13 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDRIGHTENDEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to end of next word'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to end of next word'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_select_end_next_word')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Extend selection to end of next word'),
+                QApplication.translate(
+                    'ViewManager', 'Extend selection to end of next word'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_select_end_next_word')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Alt+Shift+Right')))
@@ -2192,34 +2255,37 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDLEFTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move to end of previous word'),
-                        QApplication.translate('ViewManager',
-                            'Move to end of previous word'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_move_end_previous_word')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Move to end of previous word'),
+                QApplication.translate(
+                    'ViewManager', 'Move to end of previous word'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_move_end_previous_word')
             self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDLEFTENDEXTEND"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Extend selection to end of previous word'),
-                        QApplication.translate('ViewManager',
-                            'Extend selection to end of previous word'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_select_end_previous_word')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Extend selection to end of previous word'),
+                QApplication.translate(
+                    'ViewManager', 'Extend selection to end of previous word'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_select_end_previous_word')
             self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFTENDEXTEND)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOME"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move to start of document line'),
-                        QApplication.translate('ViewManager',
-                            'Move to start of document line'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_move_start_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Move to start of document line'),
+                QApplication.translate(
+                    'ViewManager', 'Move to start of document line'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_move_start_document_line')
             if isMacPlatform():
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+A')))
@@ -2310,15 +2376,18 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_VCHOMEWRAP"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Move to first visible character in display'
-                            ' or document line'),
-                        QApplication.translate('ViewManager',
-                            'Move to first visible character in display'
-                            ' or document line'),
-                        0, 0,
-                        self.editorActGrp,
-                        'vm_edit_move_first_visible_char_document_line')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager',
+                    'Move to first visible character in display or document'
+                    ' line'),
+                QApplication.translate(
+                    'ViewManager',
+                    'Move to first visible character in display or document'
+                    ' line'),
+                0, 0,
+                self.editorActGrp,
+                'vm_edit_move_first_visible_char_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_VCHOMEWRAP)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
@@ -2370,12 +2439,13 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEUP"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Stuttered move up one page'),
-                        QApplication.translate('ViewManager',
-                            'Stuttered move up one page'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_stuttered_move_up_page')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Stuttered move up one page'),
+                QApplication.translate(
+                    'ViewManager', 'Stuttered move up one page'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_stuttered_move_up_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEUP)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
@@ -2394,12 +2464,13 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEDOWN"):
-            act = E5Action(QApplication.translate('ViewManager',
-                            'Stuttered move down one page'),
-                        QApplication.translate('ViewManager',
-                            'Stuttered move down one page'),
-                        0, 0,
-                        self.editorActGrp, 'vm_edit_stuttered_move_down_page')
+            act = E5Action(
+                QApplication.translate(
+                    'ViewManager', 'Stuttered move down one page'),
+                QApplication.translate(
+                    'ViewManager', 'Stuttered move down one page'),
+                0, 0,
+                self.editorActGrp, 'vm_edit_stuttered_move_down_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEDOWN)
             act.triggered[()].connect(self.esm.map)
             self.editActions.append(act)
@@ -2611,13 +2682,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Search'),
             UI.PixmapCache.getIcon("find.png"),
             QApplication.translate('ViewManager', '&Search...'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+F", "Search|Search")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+F", "Search|Search")),
             0,
             self.searchActGrp, 'vm_search')
-        self.searchAct.setStatusTip(QApplication.translate('ViewManager',
-            'Search for a text'))
-        self.searchAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.searchAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Search for a text'))
+        self.searchAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Search</b>"""
             """<p>Search for some text in the current editor. A"""
             """ dialog is shown to enter the searchtext and options"""
@@ -2631,13 +2703,14 @@ class ViewManager(QObject):
                 'ViewManager', 'Search next'),
             UI.PixmapCache.getIcon("findNext.png"),
             QApplication.translate('ViewManager', 'Search &next'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "F3", "Search|Search next")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "F3", "Search|Search next")),
             0,
             self.searchActGrp, 'vm_search_next')
-        self.searchNextAct.setStatusTip(QApplication.translate('ViewManager',
-            'Search next occurrence of text'))
-        self.searchNextAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.searchNextAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Search next occurrence of text'))
+        self.searchNextAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Search next</b>"""
             """<p>Search the next occurrence of some text in the current"""
             """ editor. The previously entered searchtext and options are"""
@@ -2650,13 +2723,14 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Search previous'),
             UI.PixmapCache.getIcon("findPrev.png"),
             QApplication.translate('ViewManager', 'Search &previous'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Shift+F3", "Search|Search previous")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+F3", "Search|Search previous")),
             0,
             self.searchActGrp, 'vm_search_previous')
-        self.searchPrevAct.setStatusTip(QApplication.translate('ViewManager',
-            'Search previous occurrence of text'))
-        self.searchPrevAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.searchPrevAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Search previous occurrence of text'))
+        self.searchPrevAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Search previous</b>"""
             """<p>Search the previous occurrence of some text in the current"""
             """ editor. The previously entered searchtext and options are"""
@@ -2669,13 +2743,12 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Clear search markers'),
             UI.PixmapCache.getIcon("findClear.png"),
             QApplication.translate('ViewManager', 'Clear search markers'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+3", "Search|Clear search markers")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+3", "Search|Clear search markers")),
             0,
             self.searchActGrp, 'vm_clear_search_markers')
         self.searchClearMarkersAct.setStatusTip(QApplication.translate(
-            'ViewManager',
-            'Clear all displayed search markers'))
+            'ViewManager', 'Clear all displayed search markers'))
         self.searchClearMarkersAct.setWhatsThis(QApplication.translate(
             'ViewManager',
             """<b>Clear search markers</b>"""
@@ -2691,7 +2764,8 @@ class ViewManager(QObject):
             UI.PixmapCache.getIcon("findWordNext.png"),
             QApplication.translate(
                 'ViewManager', 'Search current word forward'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Ctrl+.", "Search|Search current word forward")),
             0,
             self.searchActGrp, 'vm_search_word_next')
@@ -2713,7 +2787,8 @@ class ViewManager(QObject):
             UI.PixmapCache.getIcon("findWordPrev.png"),
             QApplication.translate(
                 'ViewManager', 'Search current word backward'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Ctrl+,", "Search|Search current word backward")),
             0,
             self.searchActGrp, 'vm_search_word_previous')
@@ -2732,13 +2807,14 @@ class ViewManager(QObject):
         self.replaceAct = E5Action(
             QApplication.translate('ViewManager', 'Replace'),
             QApplication.translate('ViewManager', '&Replace...'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+R", "Search|Replace")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+R", "Search|Replace")),
             0,
             self.searchActGrp, 'vm_search_replace')
-        self.replaceAct.setStatusTip(QApplication.translate('ViewManager',
-            'Replace some text'))
-        self.replaceAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.replaceAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Replace some text'))
+        self.replaceAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Replace</b>"""
             """<p>Search for some text in the current editor and replace it."""
             """ A dialog is shown to enter the searchtext, the replacement"""
@@ -2747,17 +2823,18 @@ class ViewManager(QObject):
         self.replaceAct.triggered[()].connect(self.__replace)
         self.searchActions.append(self.replaceAct)
         
-        self.quickSearchAct = E5Action(QApplication.translate('ViewManager',
-                    'Quicksearch'),
-                UI.PixmapCache.getIcon("quickFindNext.png"),
-                QApplication.translate('ViewManager', '&Quicksearch'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Ctrl+Shift+K", "Search|Quicksearch")),
-                0,
-                self.searchActGrp, 'vm_quicksearch')
-        self.quickSearchAct.setStatusTip(QApplication.translate('ViewManager',
-            'Perform a quicksearch'))
-        self.quickSearchAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.quickSearchAct = E5Action(
+            QApplication.translate('ViewManager', 'Quicksearch'),
+            UI.PixmapCache.getIcon("quickFindNext.png"),
+            QApplication.translate('ViewManager', '&Quicksearch'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Shift+K", "Search|Quicksearch")),
+            0,
+            self.searchActGrp, 'vm_quicksearch')
+        self.quickSearchAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Perform a quicksearch'))
+        self.quickSearchAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Quicksearch</b>"""
             """<p>This activates the quicksearch function of the IDE by"""
             """ giving focus to the quicksearch entry field. If this field"""
@@ -2771,7 +2848,8 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Quicksearch backwards'),
             UI.PixmapCache.getIcon("quickFindPrev.png"),
             QApplication.translate('ViewManager', 'Quicksearch &backwards'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Ctrl+Shift+J", "Search|Quicksearch backwards")),
             0, self.searchActGrp, 'vm_quicksearch_backwards')
         self.quickSearchBackAct.setStatusTip(QApplication.translate(
@@ -2790,8 +2868,8 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Quicksearch extend'),
             UI.PixmapCache.getIcon("quickFindExtend.png"),
             QApplication.translate('ViewManager', 'Quicksearch e&xtend'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+Shift+H", "Search|Quicksearch extend")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Shift+H", "Search|Quicksearch extend")),
             0,
             self.searchActGrp, 'vm_quicksearch_extend')
         self.quickSearchExtendAct.setStatusTip(QApplication.translate(
@@ -2811,8 +2889,8 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Goto Line'),
             UI.PixmapCache.getIcon("goto.png"),
             QApplication.translate('ViewManager', '&Goto Line...'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+G", "Search|Goto Line")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+G", "Search|Goto Line")),
             0,
             self.searchActGrp, 'vm_search_goto_line')
         self.gotoAct.setStatusTip(QApplication.translate(
@@ -2830,8 +2908,8 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Goto Brace'),
             UI.PixmapCache.getIcon("gotoBrace.png"),
             QApplication.translate('ViewManager', 'Goto &Brace'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+L", "Search|Goto Brace")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+L", "Search|Goto Brace")),
             0,
             self.searchActGrp, 'vm_search_goto_brace')
         self.gotoBraceAct.setStatusTip(QApplication.translate(
@@ -2848,13 +2926,15 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Goto Last Edit Location'),
             UI.PixmapCache.getIcon("gotoLastEditPosition.png"),
             QApplication.translate('ViewManager', 'Goto Last &Edit Location'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Ctrl+Shift+G", "Search|Goto Last Edit Location")),
             0,
             self.searchActGrp, 'vm_search_goto_last_edit_location')
         self.gotoLastEditAct.setStatusTip(
             QApplication.translate('ViewManager', 'Goto Last Edit Location'))
-        self.gotoLastEditAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.gotoLastEditAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Goto Last Edit Location</b>"""
             """<p>Go to the location of the last edit in the current"""
             """ editor.</p>"""
@@ -2889,13 +2969,15 @@ class ViewManager(QObject):
         self.gotoNextDefAct = E5Action(
             QApplication.translate('ViewManager', 'Goto Next Method or Class'),
             QApplication.translate('ViewManager', 'Goto Next Method or Class'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Ctrl+Shift+Down", "Search|Goto Next Method or Class")),
             0,
             self.searchActGrp, 'vm_search_goto_next_method_or_class')
         self.gotoNextDefAct.setStatusTip(QApplication.translate(
             'ViewManager', 'Go to the next method or class definition'))
-        self.gotoNextDefAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.gotoNextDefAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Goto Next Method or Class</b>"""
             """<p>Goes to the line of the next method or class definition"""
             """ and highlights the name.</p>"""
@@ -2905,17 +2987,18 @@ class ViewManager(QObject):
         
         self.searchActGrp.setEnabled(False)
         
-        self.searchFilesAct = E5Action(QApplication.translate('ViewManager',
-                    'Search in Files'),
-                UI.PixmapCache.getIcon("projectFind.png"),
-                QApplication.translate('ViewManager', 'Search in &Files...'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Shift+Ctrl+F", "Search|Search Files")),
-                0,
-                self, 'vm_search_in_files')
-        self.searchFilesAct.setStatusTip(QApplication.translate('ViewManager',
-            'Search for a text in files'))
-        self.searchFilesAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.searchFilesAct = E5Action(
+            QApplication.translate( 'ViewManager', 'Search in Files'),
+            UI.PixmapCache.getIcon("projectFind.png"),
+            QApplication.translate('ViewManager', 'Search in &Files...'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+Ctrl+F", "Search|Search Files")),
+            0,
+            self, 'vm_search_in_files')
+        self.searchFilesAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Search for a text in files'))
+        self.searchFilesAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Search in Files</b>"""
             """<p>Search for some text in the files of a directory tree"""
             """ or the project. A dialog is shown to enter the searchtext"""
@@ -2924,16 +3007,17 @@ class ViewManager(QObject):
         self.searchFilesAct.triggered[()].connect(self.__searchFiles)
         self.searchActions.append(self.searchFilesAct)
         
-        self.replaceFilesAct = E5Action(QApplication.translate('ViewManager',
-                    'Replace in Files'),
-                QApplication.translate('ViewManager', 'Replace in F&iles...'),
-                QKeySequence(QApplication.translate('ViewManager',
-                    "Shift+Ctrl+R", "Search|Replace in Files")),
-                0,
-                self, 'vm_replace_in_files')
-        self.replaceFilesAct.setStatusTip(QApplication.translate('ViewManager',
-            'Search for a text in files and replace it'))
-        self.replaceFilesAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.replaceFilesAct = E5Action(
+            QApplication.translate('ViewManager', 'Replace in Files'),
+            QApplication.translate('ViewManager', 'Replace in F&iles...'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+Ctrl+R", "Search|Replace in Files")),
+            0,
+            self, 'vm_replace_in_files')
+        self.replaceFilesAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Search for a text in files and replace it'))
+        self.replaceFilesAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Replace in Files</b>"""
             """<p>Search for some text in the files of a directory tree"""
             """ or the project and replace it. A dialog is shown to enter"""
@@ -2947,7 +3031,8 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Search in Open Files'),
             UI.PixmapCache.getIcon("documentFind.png"),
             QApplication.translate('ViewManager', 'Search in Open Files...'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Meta+Ctrl+Alt+F", "Search|Search Open Files")),
             0,
             self.searchActGrp, 'vm_search_in_open_files')
@@ -2966,7 +3051,8 @@ class ViewManager(QObject):
         self.replaceOpenFilesAct = E5Action(
             QApplication.translate('ViewManager', 'Replace in Open Files'),
             QApplication.translate('ViewManager', 'Replace in Open Files...'),
-            QKeySequence(QApplication.translate('ViewManager',
+            QKeySequence(QApplication.translate(
+                'ViewManager',
                 "Meta+Ctrl+Alt+R", "Search|Replace in Open Files")),
             0,
             self.searchActGrp, 'vm_replace_in_open_files')
@@ -3098,17 +3184,18 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Zoom in'),
             UI.PixmapCache.getIcon("zoomIn.png"),
             QApplication.translate('ViewManager', 'Zoom &in'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl++", "View|Zoom in")),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Zoom In", "View|Zoom in")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl++", "View|Zoom in")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Zoom In", "View|Zoom in")),
             self.viewActGrp, 'vm_view_zoom_in')
-        self.zoomInAct.setStatusTip(QApplication.translate('ViewManager',
-            'Zoom in on the text'))
-        self.zoomInAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Zoom in</b>"""
-                """<p>Zoom in on the text. This makes the text bigger.</p>"""
-                ))
+        self.zoomInAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Zoom in on the text'))
+        self.zoomInAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Zoom in</b>"""
+            """<p>Zoom in on the text. This makes the text bigger.</p>"""
+            ))
         self.zoomInAct.triggered[()].connect(self.__zoomIn)
         self.viewActions.append(self.zoomInAct)
         
@@ -3116,17 +3203,18 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Zoom out'),
             UI.PixmapCache.getIcon("zoomOut.png"),
             QApplication.translate('ViewManager', 'Zoom &out'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+-", "View|Zoom out")),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Zoom Out", "View|Zoom out")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+-", "View|Zoom out")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Zoom Out", "View|Zoom out")),
             self.viewActGrp, 'vm_view_zoom_out')
-        self.zoomOutAct.setStatusTip(QApplication.translate('ViewManager',
-            'Zoom out on the text'))
-        self.zoomOutAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Zoom out</b>"""
-                """<p>Zoom out on the text. This makes the text smaller.</p>"""
-                ))
+        self.zoomOutAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Zoom out on the text'))
+        self.zoomOutAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Zoom out</b>"""
+            """<p>Zoom out on the text. This makes the text smaller.</p>"""
+            ))
         self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.viewActions.append(self.zoomOutAct)
         
@@ -3134,17 +3222,18 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Zoom reset'),
             UI.PixmapCache.getIcon("zoomReset.png"),
             QApplication.translate('ViewManager', 'Zoom &reset'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+0", "View|Zoom reset")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+0", "View|Zoom reset")),
             0,
             self.viewActGrp, 'vm_view_zoom_reset')
-        self.zoomResetAct.setStatusTip(QApplication.translate('ViewManager',
-            'Reset the zoom of the text'))
-        self.zoomResetAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Zoom reset</b>"""
-                """<p>Reset the zoom of the text. """
-                """This sets the zoom factor to 100%.</p>"""
-                ))
+        self.zoomResetAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Reset the zoom of the text'))
+        self.zoomResetAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Zoom reset</b>"""
+            """<p>Reset the zoom of the text. """
+            """This sets the zoom factor to 100%.</p>"""
+            ))
         self.zoomResetAct.triggered[()].connect(self.__zoomReset)
         self.viewActions.append(self.zoomResetAct)
         
@@ -3152,17 +3241,18 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Zoom'),
             UI.PixmapCache.getIcon("zoomTo.png"),
             QApplication.translate('ViewManager', '&Zoom'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+#", "View|Zoom")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+#", "View|Zoom")),
             0,
             self.viewActGrp, 'vm_view_zoom')
-        self.zoomToAct.setStatusTip(QApplication.translate('ViewManager',
-            'Zoom the text'))
-        self.zoomToAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Zoom</b>"""
-                """<p>Zoom the text. This opens a dialog where the"""
-                """ desired size can be entered.</p>"""
-                ))
+        self.zoomToAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Zoom the text'))
+        self.zoomToAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Zoom</b>"""
+            """<p>Zoom the text. This opens a dialog where the"""
+            """ desired size can be entered.</p>"""
+            ))
         self.zoomToAct.triggered[()].connect(self.__zoom)
         self.viewActions.append(self.zoomToAct)
         
@@ -3170,12 +3260,13 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Toggle all folds'),
             QApplication.translate('ViewManager', 'Toggle &all folds'),
             0, 0, self.viewFoldActGrp, 'vm_view_toggle_all_folds')
-        self.toggleAllAct.setStatusTip(QApplication.translate('ViewManager',
-            'Toggle all folds'))
-        self.toggleAllAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Toggle all folds</b>"""
-                """<p>Toggle all folds of the current editor.</p>"""
-                ))
+        self.toggleAllAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Toggle all folds'))
+        self.toggleAllAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Toggle all folds</b>"""
+            """<p>Toggle all folds of the current editor.</p>"""
+            ))
         self.toggleAllAct.triggered[()].connect(self.__toggleAll)
         self.viewActions.append(self.toggleAllAct)
         
@@ -3212,18 +3303,19 @@ class ViewManager(QObject):
         self.toggleCurrentAct.triggered[()].connect(self.__toggleCurrent)
         self.viewActions.append(self.toggleCurrentAct)
         
-        self.unhighlightAct = E5Action(QApplication.translate('ViewManager',
-                                'Remove all highlights'),
-                            UI.PixmapCache.getIcon("unhighlight.png"),
-                            QApplication.translate('ViewManager',
-                                'Remove all highlights'),
-                            0, 0, self, 'vm_view_unhighlight')
-        self.unhighlightAct.setStatusTip(QApplication.translate('ViewManager',
-            'Remove all highlights'))
-        self.unhighlightAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Remove all highlights</b>"""
-                """<p>Remove the highlights of all editors.</p>"""
-                ))
+        self.unhighlightAct = E5Action(
+            QApplication.translate('ViewManager', 'Remove all highlights'),
+            UI.PixmapCache.getIcon("unhighlight.png"),
+            QApplication.translate('ViewManager', 'Remove all highlights'),
+            0, 0,
+            self, 'vm_view_unhighlight')
+        self.unhighlightAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Remove all highlights'))
+        self.unhighlightAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Remove all highlights</b>"""
+            """<p>Remove the highlights of all editors.</p>"""
+            ))
         self.unhighlightAct.triggered[()].connect(self.unhighlight)
         self.viewActions.append(self.unhighlightAct)
         
@@ -3232,9 +3324,10 @@ class ViewManager(QObject):
             UI.PixmapCache.getIcon("splitVertical.png"),
             QApplication.translate('ViewManager', '&Split view'),
             0, 0, self, 'vm_view_split_view')
-        self.splitViewAct.setStatusTip(QApplication.translate('ViewManager',
-            'Add a split to the view'))
-        self.splitViewAct.setWhatsThis(QApplication.translate('ViewManager',
+        self.splitViewAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Add a split to the view'))
+        self.splitViewAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
             """<b>Split view</b>"""
             """<p>Add a split to the view.</p>"""
             ))
@@ -3261,58 +3354,62 @@ class ViewManager(QObject):
             UI.PixmapCache.getIcon("remsplitVertical.png"),
             QApplication.translate('ViewManager', '&Remove split'),
             0, 0, self, 'vm_view_remove_split')
-        self.splitRemoveAct.setStatusTip(QApplication.translate('ViewManager',
-            'Remove the current split'))
-        self.splitRemoveAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Remove split</b>"""
-                """<p>Remove the current split.</p>"""
-                ))
+        self.splitRemoveAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Remove the current split'))
+        self.splitRemoveAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Remove split</b>"""
+            """<p>Remove the current split.</p>"""
+            ))
         self.splitRemoveAct.triggered[()].connect(self.removeSplit)
         self.viewActions.append(self.splitRemoveAct)
         
         self.nextSplitAct = E5Action(
             QApplication.translate('ViewManager', 'Next split'),
             QApplication.translate('ViewManager', '&Next split'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+Alt+N", "View|Next split")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Alt+N", "View|Next split")),
             0,
             self, 'vm_next_split')
-        self.nextSplitAct.setStatusTip(QApplication.translate('ViewManager',
-            'Move to the next split'))
-        self.nextSplitAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Next split</b>"""
-                """<p>Move to the next split.</p>"""
-                ))
+        self.nextSplitAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Move to the next split'))
+        self.nextSplitAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Next split</b>"""
+            """<p>Move to the next split.</p>"""
+            ))
         self.nextSplitAct.triggered[()].connect(self.nextSplit)
         self.viewActions.append(self.nextSplitAct)
         
         self.prevSplitAct = E5Action(
             QApplication.translate('ViewManager', 'Previous split'),
             QApplication.translate('ViewManager', '&Previous split'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Ctrl+Alt+P", "View|Previous split")),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Ctrl+Alt+P", "View|Previous split")),
             0, self, 'vm_previous_split')
-        self.prevSplitAct.setStatusTip(QApplication.translate('ViewManager',
-            'Move to the previous split'))
-        self.prevSplitAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Previous split</b>"""
-                """<p>Move to the previous split.</p>"""
-                ))
+        self.prevSplitAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Move to the previous split'))
+        self.prevSplitAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Previous split</b>"""
+            """<p>Move to the previous split.</p>"""
+            ))
         self.prevSplitAct.triggered[()].connect(self.prevSplit)
         self.viewActions.append(self.prevSplitAct)
         
-        self.previewAct = E5Action(QApplication.translate('ViewManager',
-                                'Preview'),
-                            UI.PixmapCache.getIcon("previewer.png"),
-                            QApplication.translate('ViewManager', 'Preview'),
-                            0, 0, self, 'vm_preview', True)
-        self.previewAct.setStatusTip(QApplication.translate('ViewManager',
-            'Preview the current file in the web browser'))
-        self.previewAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Preview</b>"""
-                """<p>This opens the web browser with a preview of"""
-                """ the current file.</p>"""
-                ))
+        self.previewAct = E5Action(
+            QApplication.translate('ViewManager', 'Preview'),
+            UI.PixmapCache.getIcon("previewer.png"),
+            QApplication.translate('ViewManager', 'Preview'),
+            0, 0, self, 'vm_preview', True)
+        self.previewAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Preview the current file in the web browser'))
+        self.previewAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Preview</b>"""
+            """<p>This opens the web browser with a preview of"""
+            """ the current file.</p>"""
+            ))
         self.previewAct.setChecked(Preferences.getUI("ShowFilePreview"))
         self.previewAct.toggled[bool].connect(self.__previewEditor)
         self.viewActions.append(self.previewAct)
@@ -3401,17 +3498,17 @@ class ViewManager(QObject):
         self.macroStartRecAct.triggered[()].connect(self.__macroStartRecording)
         self.macroActions.append(self.macroStartRecAct)
         
-        self.macroStopRecAct = E5Action(QApplication.translate('ViewManager',
-                            'Stop Macro Recording'),
-                            QApplication.translate('ViewManager',
-                            'Sto&p Macro Recording'),
-                            0, 0, self.macroActGrp, 'vm_macro_stop_recording')
-        self.macroStopRecAct.setStatusTip(QApplication.translate('ViewManager',
-            'Stop Macro Recording'))
-        self.macroStopRecAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Stop Macro Recording</b>"""
-                """<p>Stop recording editor commands into a new macro.</p>"""
-                ))
+        self.macroStopRecAct = E5Action(
+            QApplication.translate('ViewManager', 'Stop Macro Recording'),
+            QApplication.translate('ViewManager', 'Sto&p Macro Recording'),
+            0, 0, self.macroActGrp, 'vm_macro_stop_recording')
+        self.macroStopRecAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Stop Macro Recording'))
+        self.macroStopRecAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Stop Macro Recording</b>"""
+            """<p>Stop recording editor commands into a new macro.</p>"""
+            ))
         self.macroStopRecAct.triggered[()].connect(self.__macroStopRecording)
         self.macroActions.append(self.macroStopRecAct)
         
@@ -3461,12 +3558,13 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', 'Save Macro'),
             QApplication.translate('ViewManager', '&Save Macro'),
             0, 0, self.macroActGrp, 'vm_macro_save')
-        self.macroSaveAct.setStatusTip(QApplication.translate('ViewManager',
-            'Save Macro'))
-        self.macroSaveAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Save Macro</b>"""
-                """<p>Save a previously recorded editor macro to a file.</p>"""
-                ))
+        self.macroSaveAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Save Macro'))
+        self.macroSaveAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Save Macro</b>"""
+            """<p>Save a previously recorded editor macro to a file.</p>"""
+            ))
         self.macroSaveAct.triggered[()].connect(self.__macroSave)
         self.macroActions.append(self.macroSaveAct)
         
@@ -3522,12 +3620,13 @@ class ViewManager(QObject):
                 'ViewManager', "Ctrl+PgDown", "Bookmark|Next")),
             0,
             self.bookmarkActGrp, 'vm_bookmark_next')
-        self.bookmarkNextAct.setStatusTip(QApplication.translate('ViewManager',
-            'Next Bookmark'))
-        self.bookmarkNextAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Next Bookmark</b>"""
-                """<p>Go to next bookmark of the current editor.</p>"""
-                ))
+        self.bookmarkNextAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Next Bookmark'))
+        self.bookmarkNextAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Next Bookmark</b>"""
+            """<p>Go to next bookmark of the current editor.</p>"""
+            ))
         self.bookmarkNextAct.triggered[()].connect(self.__nextBookmark)
         self.bookmarkActions.append(self.bookmarkNextAct)
         
@@ -3598,28 +3697,28 @@ class ViewManager(QObject):
             self.__clearAllSyntaxErrors)
         self.bookmarkActions.append(self.syntaxErrorClearAct)
         
-        self.warningsNextAct = E5Action(QApplication.translate('ViewManager',
-                                'Next warning message'),
-                            UI.PixmapCache.getIcon("warningNext.png"),
-                            QApplication.translate('ViewManager',
-                                '&Next warning message'),
-                            0, 0,
-                            self.bookmarkActGrp, 'vm_warning_next')
-        self.warningsNextAct.setStatusTip(QApplication.translate('ViewManager',
-            'Next warning message'))
-        self.warningsNextAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Next warning message</b>"""
-                """<p>Go to next line of the current editor"""
-                """ having a py3flakes warning.</p>"""
-                ))
+        self.warningsNextAct = E5Action(
+            QApplication.translate('ViewManager', 'Next warning message'),
+            UI.PixmapCache.getIcon("warningNext.png"),
+            QApplication.translate('ViewManager', '&Next warning message'),
+            0, 0,
+            self.bookmarkActGrp, 'vm_warning_next')
+        self.warningsNextAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Next warning message'))
+        self.warningsNextAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>Next warning message</b>"""
+            """<p>Go to next line of the current editor"""
+            """ having a py3flakes warning.</p>"""
+            ))
         self.warningsNextAct.triggered[()].connect(self.__nextWarning)
         self.bookmarkActions.append(self.warningsNextAct)
         
         self.warningsPreviousAct = E5Action(
             QApplication.translate('ViewManager', 'Previous warning message'),
             UI.PixmapCache.getIcon("warningPrev.png"),
-            QApplication.translate('ViewManager',
-                '&Previous warning message'),
+            QApplication.translate(
+                'ViewManager', '&Previous warning message'),
             0, 0,
             self.bookmarkActGrp, 'vm_warning_previous')
         self.warningsPreviousAct.setStatusTip(QApplication.translate(
@@ -3668,8 +3767,8 @@ class ViewManager(QObject):
         self.notcoveredPreviousAct = E5Action(
             QApplication.translate('ViewManager', 'Previous uncovered line'),
             UI.PixmapCache.getIcon("notcoveredPrev.png"),
-            QApplication.translate('ViewManager',
-                '&Previous uncovered line'),
+            QApplication.translate(
+                'ViewManager', '&Previous uncovered line'),
             0, 0,
             self.bookmarkActGrp, 'vm_uncovered_previous')
         self.notcoveredPreviousAct.setStatusTip(QApplication.translate(
@@ -3703,8 +3802,8 @@ class ViewManager(QObject):
         self.taskPreviousAct = E5Action(
             QApplication.translate('ViewManager', 'Previous Task'),
             UI.PixmapCache.getIcon("taskPrev.png"),
-            QApplication.translate('ViewManager',
-                '&Previous Task'),
+            QApplication.translate(
+                'ViewManager', '&Previous Task'),
             0, 0,
             self.bookmarkActGrp, 'vm_task_previous')
         self.taskPreviousAct.setStatusTip(QApplication.translate(
@@ -3738,8 +3837,8 @@ class ViewManager(QObject):
         self.changePreviousAct = E5Action(
             QApplication.translate('ViewManager', 'Previous Change'),
             UI.PixmapCache.getIcon("changePrev.png"),
-            QApplication.translate('ViewManager',
-                '&Previous Change'),
+            QApplication.translate(
+                'ViewManager', '&Previous Change'),
             0, 0,
             self.bookmarkActGrp, 'vm_change_previous')
         self.changePreviousAct.setStatusTip(QApplication.translate(
@@ -3845,10 +3944,10 @@ class ViewManager(QObject):
         self.spellCheckAct = E5Action(
             QApplication.translate('ViewManager', 'Check spelling'),
             UI.PixmapCache.getIcon("spellchecking.png"),
-            QApplication.translate('ViewManager',
-                'Check &spelling...'),
-            QKeySequence(QApplication.translate('ViewManager',
-                "Shift+F7", "Spelling|Spell Check")),
+            QApplication.translate(
+                'ViewManager', 'Check &spelling...'),
+            QKeySequence(QApplication.translate(
+                'ViewManager', "Shift+F7", "Spelling|Spell Check")),
             0,
             self.spellingActGrp, 'vm_spelling_spellcheck')
         self.spellCheckAct.setStatusTip(QApplication.translate(
@@ -3864,8 +3963,8 @@ class ViewManager(QObject):
         self.autoSpellCheckAct = E5Action(
             QApplication.translate('ViewManager', 'Automatic spell checking'),
             UI.PixmapCache.getIcon("autospellchecking.png"),
-            QApplication.translate('ViewManager',
-                '&Automatic spell checking'),
+            QApplication.translate(
+                'ViewManager', '&Automatic spell checking'),
             0, 0,
             self.spellingActGrp, 'vm_spelling_autospellcheck', True)
         self.autoSpellCheckAct.setStatusTip(QApplication.translate(
@@ -3901,8 +4000,8 @@ class ViewManager(QObject):
         
         @param menu reference to the menu to add actions to (QMenu)
         """
-        self.__editSpellingMenu = QMenu(QApplication.translate('ViewManager',
-            "Edit Dictionary"))
+        self.__editSpellingMenu = QMenu(QApplication.translate(
+            'ViewManager', "Edit Dictionary"))
         self.__editProjectPwlAct = self.__editSpellingMenu.addAction(
             QApplication.translate('ViewManager', "Project Word List"),
             self.__editProjectPWL)
@@ -4002,7 +4101,8 @@ class ViewManager(QObject):
                 res = E5MessageBox.okToClearData(
                     self.ui,
                     QApplication.translate('ViewManager', "File Modified"),
-                    QApplication.translate('ViewManager',
+                    QApplication.translate(
+                        'ViewManager',
                         """<p>The file <b>{0}</b> has unsaved changes.</p>""")
                         .format(fn),
                     editor.saveFile)
@@ -4651,7 +4751,8 @@ class ViewManager(QObject):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(
-                formatStr.format(idx,
+                formatStr.format(
+                    idx,
                     Utilities.compactPath(rs, self.ui.maxMenuFilePathLen)))
             act.setData(rs)
             act.setEnabled(QFileInfo(rs).exists())
