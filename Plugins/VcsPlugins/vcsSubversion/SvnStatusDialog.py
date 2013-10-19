@@ -888,7 +888,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(
-                    self.stealBreakLockIndicators)]
+                     self.stealBreakLockIndicators)]
         if not names:
             E5MessageBox.information(
                 self,
@@ -906,7 +906,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(
-                    self.stealBreakLockIndicators)]
+                     self.stealBreakLockIndicators)]
         if not names:
             E5MessageBox.information(
                 self,

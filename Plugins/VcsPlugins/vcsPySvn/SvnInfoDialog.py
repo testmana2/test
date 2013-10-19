@@ -94,7 +94,7 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
                         .format(formatTime(info['last_changed_date']))
                 if info['last_changed_rev'] and \
                         info['last_changed_rev'].kind == \
-                            pysvn.opt_revision_kind.number:
+                        pysvn.opt_revision_kind.number:
                     infoStr += self.trUtf8(
                         "<tr><td><b>Last changed revision:</b></td>"
                         "<td>{0}</td></tr>")\
@@ -121,8 +121,7 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
                         "<td>{0}</td></tr>")\
                         .format(formatTime(lockInfo['creation_date']))
                     if lockInfo['expiration_date'] is not None:
-                        infoStr += \
-                            self.trUtf8(
+                        infoStr += self.trUtf8(
                             "<tr><td><b>Lock Expiration Date:</b></td>"
                             "<td>{0}</td></tr>")\
                             .format(formatTime(lockInfo['expiration_date']))

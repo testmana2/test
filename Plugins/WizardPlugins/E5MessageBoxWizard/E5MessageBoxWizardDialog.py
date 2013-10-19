@@ -257,9 +257,9 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 None, self.eCaption.text()
             )
         elif self.rInformation.isChecked() or \
-             self.rQuestion.isChecked() or \
-             self.rWarning.isChecked() or \
-             self.rCritical.isChecked():
+            self.rQuestion.isChecked() or \
+            self.rWarning.isChecked() or \
+                self.rCritical.isChecked():
             buttons = E5MessageBox.NoButton
             if self.abortCheck.isChecked():
                 buttons |= E5MessageBox.Abort
@@ -336,7 +336,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                     defaultButton
                 )
         elif self.rYesNo.isChecked() or \
-             self.rRetryAbort.isChecked():
+                self.rRetryAbort.isChecked():
             if self.iconInformation.isChecked():
                 icon = E5MessageBox.Information
             elif self.iconQuestion.isChecked():

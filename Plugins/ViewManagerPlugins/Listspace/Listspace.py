@@ -670,7 +670,7 @@ class Listspace(QSplitter, ViewManager):
         """
         index = self.contextMenuIndex
         for i in list(range(self.viewlist.count() - 1, index, -1)) + \
-                 list(range(index - 1, -1, -1)):
+                list(range(index - 1, -1, -1)):
             editor = self.editors[i]
             self.closeEditorWindow(editor)
         

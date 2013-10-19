@@ -478,7 +478,7 @@ class Subversion(VersionControl):
                     project = e5App().getObject("Project")
                     if nam == project.getProjectPath():
                         ok &= project.checkAllScriptsDirty(
-                                reportSyntaxErrors=True) and \
+                            reportSyntaxErrors=True) and \
                             project.checkDirty()
                         continue
                 elif os.path.isfile(nam):
@@ -651,7 +651,7 @@ class Subversion(VersionControl):
                         if os.path.splitdrive(repodir)[1] == os.sep:
                             return  # oops, project is not version controlled
                     while os.path.normcase(d) != \
-                                os.path.normcase(repodir) and \
+                        os.path.normcase(repodir) and \
                             (d not in tree2 + tree) and \
                             (os.path.normcase(d) not in self.statusCache or
                              self.statusCache[os.path.normcase(d)] ==
@@ -716,7 +716,7 @@ class Subversion(VersionControl):
                         if os.path.splitdrive(repodir)[1] == os.sep:
                             return  # oops, project is not version controlled
                     while os.path.normcase(d) != \
-                                os.path.normcase(repodir) and \
+                        os.path.normcase(repodir) and \
                             (d not in tree) and \
                             (os.path.normcase(d) not in self.statusCache or
                              self.statusCache[os.path.normcase(d)] ==
@@ -741,7 +741,7 @@ class Subversion(VersionControl):
                     if os.path.splitdrive(repodir)[1] == os.sep:
                         return  # oops, project is not version controlled
                 while os.path.normcase(dname) != \
-                            os.path.normcase(repodir) and \
+                    os.path.normcase(repodir) and \
                         (os.path.normcase(dname) not in self.statusCache or
                          self.statusCache[os.path.normcase(dname)] ==
                             self.canBeAdded):
@@ -1597,14 +1597,13 @@ class Subversion(VersionControl):
             """<tr><td><b>Comitted time</b></td><td>{5}</td></tr>"""
             """<tr><td><b>Last author</b></td><td>{6}</td></tr>"""
             """</table>"""
-            )\
-            .format(self.versionStr,
-                    info['url'],
-                    info['revision'],
-                    info['committed-rev'],
-                    info['committed-date'],
-                    info['committed-time'],
-                    info['last-author'])
+        ).format(self.versionStr,
+                 info['url'],
+                 info['revision'],
+                 info['committed-rev'],
+                 info['committed-date'],
+                 info['committed-time'],
+                 info['last-author'])
     
     ###########################################################################
     ## Public Subversion specific methods are below.
@@ -2021,7 +2020,7 @@ class Subversion(VersionControl):
                     self.trUtf8("Subversion Side-by-Side Difference"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be read.</p>""")
-                        .format(name))
+                    .format(name))
                 return
         
         if self.sbsDiff is None:

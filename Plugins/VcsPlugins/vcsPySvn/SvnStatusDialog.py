@@ -330,11 +330,11 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     if file.repos_text_status != pysvn.wc_status_kind.none:
                         uptodate = uptodate and \
                             file.repos_text_status != \
-                                pysvn.wc_status_kind.modified
+                            pysvn.wc_status_kind.modified
                     if file.repos_prop_status != pysvn.wc_status_kind.none:
                         uptodate = uptodate and \
                             file.repos_prop_status != \
-                                pysvn.wc_status_kind.modified
+                            pysvn.wc_status_kind.modified
                     
                     lockState = " "
                     if file.entry is not None and \
@@ -347,8 +347,9 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                         elif lockState == " " and file.repos_lock is not None:
                             lockState = "O"
                         elif lockState == "L" and \
-                             file.repos_lock is not None and \
-                             file.entry.lock_token != file.repos_lock["token"]:
+                            file.repos_lock is not None and \
+                            file.entry.lock_token != \
+                                file.repos_lock["token"]:
                             lockState = "S"
                     
                     fpath = Utilities.normcasepath(
@@ -778,7 +779,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(
-                    self.stealBreakLockIndicators)]
+                     self.stealBreakLockIndicators)]
         if not names:
             E5MessageBox.information(
                 self,
@@ -796,7 +797,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(
-                    self.stealBreakLockIndicators)]
+                     self.stealBreakLockIndicators)]
         if not names:
             E5MessageBox.information(
                 self,

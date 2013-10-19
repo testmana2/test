@@ -328,20 +328,20 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             elif self.rx_flags1.exactMatch(s):
                 changedPaths.append({
                     "action":
-                        self.rx_flags1.cap(1).strip(),
+                    self.rx_flags1.cap(1).strip(),
                     "path":
-                        self.rx_flags1.cap(2).strip(),
+                    self.rx_flags1.cap(2).strip(),
                     "copyfrom_path":
-                        self.rx_flags1.cap(3).strip(),
+                    self.rx_flags1.cap(3).strip(),
                     "copyfrom_revision":
-                        self.rx_flags1.cap(4).strip(),
+                    self.rx_flags1.cap(4).strip(),
                 })
             elif self.rx_flags2.exactMatch(s):
                 changedPaths.append({
                     "action":
-                        self.rx_flags2.cap(1).strip(),
+                    self.rx_flags2.cap(1).strip(),
                     "path":
-                        self.rx_flags2.cap(2).strip(),
+                    self.rx_flags2.cap(2).strip(),
                     "copyfrom_path": "",
                     "copyfrom_revision": "",
                 })
@@ -400,8 +400,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         
         while self.process.canReadLine():
             line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                       Preferences.getSystem("IOEncoding"),
+                       'replace')
             self.buf.append(line)
     
     def __readStderr(self):
@@ -414,8 +414,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         if self.process is not None:
             self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
-                     Preferences.getSystem("IOEncoding"),
-                     'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
     

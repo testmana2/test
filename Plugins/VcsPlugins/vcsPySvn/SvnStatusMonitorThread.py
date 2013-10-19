@@ -82,19 +82,19 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     status = "U"
                     self.shouldUpdate = True
                 elif file.text_status == pysvn.wc_status_kind.conflicted or \
-                   file.prop_status == pysvn.wc_status_kind.conflicted:
+                        file.prop_status == pysvn.wc_status_kind.conflicted:
                     status = "Z"
                 elif file.text_status == pysvn.wc_status_kind.deleted or \
-                   file.prop_status == pysvn.wc_status_kind.deleted:
+                        file.prop_status == pysvn.wc_status_kind.deleted:
                     status = "O"
                 elif file.text_status == pysvn.wc_status_kind.modified or \
-                   file.prop_status == pysvn.wc_status_kind.modified:
+                        file.prop_status == pysvn.wc_status_kind.modified:
                     status = "M"
                 elif file.text_status == pysvn.wc_status_kind.added or \
-                   file.prop_status == pysvn.wc_status_kind.added:
+                        file.prop_status == pysvn.wc_status_kind.added:
                     status = "A"
                 elif file.text_status == pysvn.wc_status_kind.replaced or \
-                   file.prop_status == pysvn.wc_status_kind.replaced:
+                        file.prop_status == pysvn.wc_status_kind.replaced:
                     status = "R"
                 if status:
                     states[file.path] = status

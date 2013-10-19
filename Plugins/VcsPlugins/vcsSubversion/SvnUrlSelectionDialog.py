@@ -140,11 +140,11 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         """
         if self.vcs.otherData["standardLayout"]:
             url1 = self.repoRootLabel1.text() + \
-                   self.typeCombo1.currentText() + \
-                   self.labelCombo1.currentText()
+                self.typeCombo1.currentText() + \
+                self.labelCombo1.currentText()
             url2 = self.repoRootLabel2.text() + \
-                   self.typeCombo2.currentText() + \
-                   self.labelCombo2.currentText()
+                self.typeCombo2.currentText() + \
+                self.labelCombo2.currentText()
         else:
             url1 = self.labelCombo1.currentText()
             url2 = self.labelCombo2.currentText()

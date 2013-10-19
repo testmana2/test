@@ -579,7 +579,7 @@ class TabWidget(E5TabWidget):
         """
         index = self.contextMenuIndex
         for i in list(range(self.count() - 1, index, -1)) + \
-                 list(range(index - 1, -1, -1)):
+                list(range(index - 1, -1, -1)):
             editor = self.widget(i).getEditor()
             self.vm.closeEditorWindow(editor)
         
@@ -823,8 +823,8 @@ class Tabview(QSplitter, ViewManager):
         # if this was the last editor in this view, switch to the next, that
         # still has open editors
         for i in list(range(self.tabWidgets.index(tw), -1, -1)) + \
-                 list(range(self.tabWidgets.index(tw) + 1,
-                            len(self.tabWidgets))):
+            list(range(self.tabWidgets.index(tw) + 1,
+                 len(self.tabWidgets))):
             if self.tabWidgets[i].hasEditors():
                 self.currentTabWidget.showIndicator(False)
                 self.currentTabWidget = self.tabWidgets[i]

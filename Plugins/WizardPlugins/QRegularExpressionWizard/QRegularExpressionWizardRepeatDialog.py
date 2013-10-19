@@ -15,7 +15,7 @@ from .Ui_QRegularExpressionWizardRepeatDialog import \
 
 
 class QRegularExpressionWizardRepeatDialog(
-    QDialog, Ui_QRegularExpressionWizardRepeatDialog):
+        QDialog, Ui_QRegularExpressionWizardRepeatDialog):
     """
     Class implementing a dialog for entering repeat counts.
     """

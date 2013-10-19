@@ -59,8 +59,8 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
                   self.rx_url.exactMatch(self.tag2Combo.currentText())) or
                  (self.rx_rev.exactMatch(self.tag1Combo.currentText()) and
                   self.rx_rev.exactMatch(self.tag2Combo.currentText()))
-                )
-            )
+                 )
+        )
         
     def on_tag1Combo_editTextChanged(self, text):
         """

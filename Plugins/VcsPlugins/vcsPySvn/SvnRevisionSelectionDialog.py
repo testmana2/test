@@ -65,7 +65,7 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
         elif dateButton.isChecked():
             return "{{{0}}}".format(
                 QDateTime(dateEdit.date(), timeEdit.time())
-                    .toString(Qt.ISODate))
+                .toString(Qt.ISODate))
         elif headButton.isChecked():
             return "HEAD"
         elif workingButton.isChecked():

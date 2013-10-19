@@ -17,7 +17,7 @@ from .Ui_QRegularExpressionWizardCharactersDialog import \
 
 
 class QRegularExpressionWizardCharactersDialog(
-    QDialog, Ui_QRegularExpressionWizardCharactersDialog):
+        QDialog, Ui_QRegularExpressionWizardCharactersDialog):
     """
     Class implementing a dialog for entering character classes.
     """

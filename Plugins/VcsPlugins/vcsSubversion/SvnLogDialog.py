@@ -230,8 +230,8 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         
         while self.process.canReadLine():
             line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                       Preferences.getSystem("IOEncoding"),
+                       'replace')
             self.buf.append(line)
             if self.rx_rev.exactMatch(line):
                 ver = self.rx_rev.cap(1)
@@ -252,8 +252,8 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         if self.process is not None:
             self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
-                     Preferences.getSystem("IOEncoding"),
-                     'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
         

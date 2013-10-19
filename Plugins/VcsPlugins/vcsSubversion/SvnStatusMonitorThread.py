@@ -115,9 +115,9 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                 process.kill()
                 process.waitForFinished()
                 return False, \
-                       str(process.readAllStandardError(),
-                           Preferences.getSystem("IOEncoding"),
-                           'replace')
+                    str(process.readAllStandardError(),
+                        Preferences.getSystem("IOEncoding"),
+                        'replace')
         else:
             process.kill()
             process.waitForFinished()

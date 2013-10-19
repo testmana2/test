@@ -17,7 +17,7 @@ from .Ui_PyRegExpWizardCharactersDialog import \
 
 
 class PyRegExpWizardCharactersDialog(
-    QDialog, Ui_PyRegExpWizardCharactersDialog):
+        QDialog, Ui_PyRegExpWizardCharactersDialog):
     """
     Class implementing a dialog for entering character classes.
     """

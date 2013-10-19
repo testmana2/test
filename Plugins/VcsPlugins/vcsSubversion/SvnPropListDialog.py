@@ -187,8 +187,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         
         while self.process.canReadLine():
             s = str(self.process.readLine(),
-                     Preferences.getSystem("IOEncoding"),
-                     'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             if self.rx_path.exactMatch(s):
                 if self.lastProp:
                     self.__generateItem(
@@ -216,7 +216,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         if self.process is not None:
             self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
-                     Preferences.getSystem("IOEncoding"),
-                     'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

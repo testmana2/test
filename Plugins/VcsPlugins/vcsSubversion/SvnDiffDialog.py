@@ -265,13 +265,12 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         
         while self.process.canReadLine():
             line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                       Preferences.getSystem("IOEncoding"),
+                       'replace')
             if self.summaryPath:
                 line = line.replace(self.summaryPath + '/', '')
                 line = " ".join(line.split())
-            if line.startswith("--- ") or \
-                line.startswith("+++ "):
+            if line.startswith("--- ") or line.startswith("+++ "):
                     self.__processFileLine(line)
                 
             if line.startswith('+') or line.startswith('>') or \
@@ -403,7 +402,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
                 self.trUtf8(
                     '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
-                    .format(fname, str(why)))
+                .format(fname, str(why)))
         
     def on_passwordCheckBox_toggled(self, isOn):
         """

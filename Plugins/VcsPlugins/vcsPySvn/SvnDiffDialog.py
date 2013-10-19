@@ -443,7 +443,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                 self.trUtf8(
                     '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
-                    .format(fname, str(why)))
+                .format(fname, str(why)))
         
     def __showError(self, msg):
         """
