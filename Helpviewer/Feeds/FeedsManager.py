@@ -360,7 +360,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
             return
         
         self.__openMessage(
-            QApplication.keyboardModifiers() & 
+            QApplication.keyboardModifiers() &
             Qt.ControlModifier == Qt.ControlModifier)
         
     def __openMessageInCurrentTab(self):

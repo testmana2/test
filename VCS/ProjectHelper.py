@@ -176,8 +176,8 @@ class VcsProjectHelper(QObject):
                     self.trUtf8(
                         """Would you like to edit the VCS command options?"""))
                 if vcores:
-                    from .CommandOptionsDialog import vcsCommandOptionsDialog
-                    codlg = vcsCommandOptionsDialog(self.project.vcs)
+                    from .CommandOptionsDialog import VcsCommandOptionsDialog
+                    codlg = VcsCommandOptionsDialog(self.project.vcs)
                     if codlg.exec_() == QDialog.Accepted:
                         self.project.vcs.vcsSetOptions(codlg.getOptions())
                 
@@ -355,8 +355,8 @@ class VcsProjectHelper(QObject):
                     self.trUtf8(
                         """Would you like to edit the VCS command options?"""))
                 if vcores:
-                    from .CommandOptionsDialog import vcsCommandOptionsDialog
-                    codlg = vcsCommandOptionsDialog(self.project.vcs)
+                    from .CommandOptionsDialog import VcsCommandOptionsDialog
+                    codlg = VcsCommandOptionsDialog(self.project.vcs)
                     if codlg.exec_() == QDialog.Accepted:
                         self.project.vcs.vcsSetOptions(codlg.getOptions())
                 self.project.setDirty(True)
@@ -426,8 +426,8 @@ class VcsProjectHelper(QObject):
         """
         Protected slot to edit the VCS command options.
         """
-        from .CommandOptionsDialog import vcsCommandOptionsDialog
-        codlg = vcsCommandOptionsDialog(self.vcs)
+        from .CommandOptionsDialog import VcsCommandOptionsDialog
+        codlg = VcsCommandOptionsDialog(self.vcs)
         if codlg.exec_() == QDialog.Accepted:
             self.vcs.vcsSetOptions(codlg.getOptions())
             self.project.setDirty(True)

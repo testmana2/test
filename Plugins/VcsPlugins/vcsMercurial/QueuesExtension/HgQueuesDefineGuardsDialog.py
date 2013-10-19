@@ -77,7 +77,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                 self.trUtf8("""The guards list has been changed."""
                             """ Shall the changes be applied?"""),
                 E5MessageBox.StandardButtons(
-                    E5MessageBox.Apply | \
+                    E5MessageBox.Apply |
                     E5MessageBox.Discard),
                 E5MessageBox.Apply)
             if res == E5MessageBox.Apply:
@@ -120,7 +120,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                 self.trUtf8("""The guards list has been changed."""
                             """ Shall the changes be applied?"""),
                 E5MessageBox.StandardButtons(
-                    E5MessageBox.Apply | \
+                    E5MessageBox.Apply |
                     E5MessageBox.Discard),
                 E5MessageBox.Apply)
             if res == E5MessageBox.Apply:
@@ -312,7 +312,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                     self,
                     self.trUtf8("Apply Guard Definitions"),
                     self.trUtf8("""<p>The defined guards could not be"""
-                                """ applied.</p><p>Reason: {0}</p>""")\
+                                """ applied.</p><p>Reason: {0}</p>""")
                         .format(error))
             else:
                             self.__dirtyList = False

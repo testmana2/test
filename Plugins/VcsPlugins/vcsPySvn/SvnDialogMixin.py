@@ -103,7 +103,7 @@ class SvnDialogMixin(object):
                         """<tr><td>Valid from:</td><td>{3}</td></tr>"""
                         """<tr><td>Valid until:</td><td>{4}</td></tr>"""
                         """<tr><td>Issuer name:</td><td>{5}</td></tr>"""
-                        """</table>""")\
+                        """</table>""")
                 .format(trust_dict["realm"],
                         trust_dict["hostname"],
                         trust_dict["finger_print"],

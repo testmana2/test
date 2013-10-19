@@ -62,7 +62,7 @@ class StackedUrlBar(QStackedWidget):
         
         @return list of references to url bars (list of UrlBar)
         """
-        l = []
+        li = []
         for index in range(self.count()):
-            l.append(self.widget(index))
-        return l
+            li.append(self.widget(index))
+        return li

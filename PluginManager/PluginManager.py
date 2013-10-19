@@ -161,7 +161,7 @@ class PluginManager(QObject):
                 except IOError:
                     return (
                         False,
-                        self.trUtf8("Could not create a package for {0}.")\
+                        self.trUtf8("Could not create a package for {0}.")
                             .format(self.__develPluginFile))
         
         if Preferences.getPluginManager("ActivateExternal"):
@@ -221,7 +221,7 @@ class PluginManager(QObject):
             self.__foundUserModules = \
                 self.getPluginModules(self.pluginDirs["user"])
         
-        return len(self.__foundCoreModules + self.__foundGlobalModules + \
+        return len(self.__foundCoreModules + self.__foundGlobalModules +
                    self.__foundUserModules) > 0
     
     def getPluginModules(self, pluginPath):
@@ -231,7 +231,7 @@ class PluginManager(QObject):
         @param pluginPath name of the path to search (string)
         @return list of plugin module names (list of string)
         """
-        pluginFiles = [f[:-3] for f in os.listdir(pluginPath) \
+        pluginFiles = [f[:-3] for f in os.listdir(pluginPath)
                        if self.isValidPluginName(f)]
         return pluginFiles[:]
     

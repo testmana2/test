@@ -649,19 +649,20 @@ class IconEditorGrid(QWidget):
         
         elif self.__curTool in [self.Rectangle, self.FilledRectangle,
                                 self.RectangleSelection]:
-            l = min(start.x(), end.x())
-            t = min(start.y(), end.y())
-            r = max(start.x(), end.x())
-            b = max(start.y(), end.y())
+            left = min(start.x(), end.x())
+            top = min(start.y(), end.y())
+            right = max(start.x(), end.x())
+            bottom = max(start.y(), end.y())
             if self.__curTool == self.RectangleSelection:
                 painter.setBrush(QBrush(drawColor))
             if self.__curTool == self.FilledRectangle:
-                for y in range(t, b + 1):
-                    painter.drawLine(l, y, r, y)
+                for y in range(top, bottom + 1):
+                    painter.drawLine(left, y, right, y)
             else:
-                painter.drawRect(l, t, r - l, b - t)
+                painter.drawRect(left, top, right - left, bottom - top)
             if self.__selecting:
-                self.__selRect = QRect(l, t, r - l + 1, b - t + 1)
+                self.__selRect = QRect(
+                    left, top, right - left + 1, bottom - top + 1)
                 self.__selectionAvailable = True
                 self.selectionAvailable.emit(True)
         

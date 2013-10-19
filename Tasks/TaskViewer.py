@@ -291,7 +291,7 @@ class TaskViewer(QTreeWidget):
         """
         self.addTask(summary, filename=filename, lineno=lineno,
                      isProjectTask=(
-                        self.project and 
+                        self.project and
                         self.project.isProjectSource(filename)),
                      taskType=taskType, description=description)
         
@@ -523,7 +523,7 @@ class TaskViewer(QTreeWidget):
         entry.
         """
         markers = {
-            Task.TypeWarning: 
+            Task.TypeWarning:
                 Preferences.getTasks("TasksWarningMarkers").split(),
             Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
             Task.TypeTodo: Preferences.getTasks("TasksTodoMarkers").split(),

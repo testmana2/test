@@ -184,7 +184,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 if meth.name.startswith("on_"):
                     if meth.pyqtSignature is not None:
                         sig = ", ".join(
-                            [bytes(QMetaObject.normalizedType(t)).decode() 
+                            [bytes(QMetaObject.normalizedType(t)).decode()
                              for t in meth.pyqtSignature.split(",")])
                         signatures.append("{0}({1})".format(meth.name, sig))
                     else:
@@ -256,7 +256,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                             if qVersion() >= "5.0.0":
                                 method = "on_{0}_{1}".format(
                                     name,
-                                    bytes(metaMethod.methodSignature())\
+                                    bytes(metaMethod.methodSignature())
                                         .decode().split("(")[0])
                             else:
                                 method = "on_{0}_{1}".format(
@@ -292,7 +292,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 pythonSignature = \
                                     "on_{0}_{1}(self, {2})".format(
                                         name,
-                                        bytes(metaMethod.methodSignature())\
+                                        bytes(metaMethod.methodSignature())
                                             .decode().split("(")[0],
                                         methNamesSig)
                             else:
@@ -305,7 +305,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                             if qVersion() >= "5.0.0":
                                 pythonSignature = "on_{0}_{1}(self)".format(
                                     name,
-                                    bytes(metaMethod.methodSignature())\
+                                    bytes(metaMethod.methodSignature())
                                         .decode().split("(")[0])
                             else:
                                 pythonSignature = "on_{0}_{1}(self)".format(
@@ -315,8 +315,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         itm2.setData(pythonSignature, pythonSignatureRole)
                         
                         itm2.setFlags(Qt.ItemFlags(
-                            Qt.ItemIsUserCheckable | \
-                            Qt.ItemIsEnabled | \
+                            Qt.ItemIsUserCheckable |
+                            Qt.ItemIsEnabled |
                             Qt.ItemIsSelectable)
                         )
                         itm2.setCheckState(Qt.Unchecked)
@@ -397,7 +397,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     self.trUtf8("Code Generation"),
                     self.trUtf8(
                         """<p>Could not open the code template file"""
-                        """ "{0}".</p><p>Reason: {1}</p>""")\
+                        """ "{0}".</p><p>Reason: {1}</p>""")
                         .format(tmplName, str(why)))
                 return
             
@@ -433,7 +433,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     self.trUtf8("Code Generation"),
                     self.trUtf8(
                         """<p>Could not open the source file "{0}".</p>"""
-                        """<p>Reason: {1}</p>""")\
+                        """<p>Reason: {1}</p>""")
                         .format(self.srcFile, str(why)))
                 return
             
@@ -511,7 +511,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 self,
                 self.trUtf8("Code Generation"),
                 self.trUtf8("""<p>Could not write the source file "{0}".</p>"""
-                            """<p>Reason: {1}</p>""")\
+                            """<p>Reason: {1}</p>""")
                     .format(self.filenameEdit.text(), str(why)))
             return
         
@@ -524,7 +524,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         @param index index of the activated item (integer)
         """
-        if (self.classNameCombo.currentText() == 
+        if (self.classNameCombo.currentText() ==
                 CreateDialogCodeDialog.Separator):
             self.okButton.setEnabled(False)
             self.filterEdit.clear()

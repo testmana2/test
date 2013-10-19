@@ -100,7 +100,7 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
                     ' not valid.</font>'))
             else:
                 self.testResultLabel.setText(self.trUtf8(
-                    '<font color="#FF0000"><b>Error:</b> {0}</font>')\
+                    '<font color="#FF0000"><b>Error:</b> {0}</font>')
                     .format(msg))
     
 

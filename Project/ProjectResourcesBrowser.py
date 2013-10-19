@@ -474,7 +474,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     self.trUtf8("New Resource"),
                     self.trUtf8(
                         "<p>The new resource file <b>{0}</b> could not"
-                        " be created.<br>Problem: {1}</p>")\
+                        " be created.<br>Problem: {1}</p>")
                         .format(fname, str(e)))
                 return
             
@@ -740,7 +740,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         Private method to compile selected resources to source files.
         """
         items = self.getSelectedItems()
-        files = [self.project.getRelativePath(itm.fileName()) \
+        files = [self.project.getRelativePath(itm.fileName())
                  for itm in items]
         
         if self.hooks["compileSelectedResources"] is not None:

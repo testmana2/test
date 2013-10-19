@@ -243,7 +243,7 @@ class ViewManager(QObject):
         Public method to transfer statusbar info from the user interface to
         viewmanager.
         
-        @param sbLine reference to the line number part of the statusbar 
+        @param sbLine reference to the line number part of the statusbar
             (QLabel)
         @param sbPos reference to the character position part of the statusbar
             (QLabel)
@@ -2873,7 +2873,7 @@ class ViewManager(QObject):
             0,
             self.searchActGrp, 'vm_quicksearch_extend')
         self.quickSearchExtendAct.setStatusTip(QApplication.translate(
-            'ViewManager', \
+            'ViewManager',
             'Extend the quicksearch to the end of the current word'))
         self.quickSearchExtendAct.setWhatsThis(QApplication.translate(
             'ViewManager',
@@ -2988,7 +2988,7 @@ class ViewManager(QObject):
         self.searchActGrp.setEnabled(False)
         
         self.searchFilesAct = E5Action(
-            QApplication.translate( 'ViewManager', 'Search in Files'),
+            QApplication.translate('ViewManager', 'Search in Files'),
             UI.PixmapCache.getIcon("projectFind.png"),
             QApplication.translate('ViewManager', 'Search in &Files...'),
             QKeySequence(QApplication.translate(

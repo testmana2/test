@@ -352,17 +352,17 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         if self.__mode == "qtop":
             self.__markTopItem(line)
         else:
-            l = line.split(": ", 1)
-            if len(l) == 1:
-                data, summary = l[0][:-1], ""
+            li = line.split(": ", 1)
+            if len(li) == 1:
+                data, summary = li[0][:-1], ""
             else:
-                data, summary = l[0], l[1]
-            l = data.split(None, 2)
-            if len(l) == 2:
+                data, summary = li[0], li[1]
+            li = data.split(None, 2)
+            if len(li) == 2:
                 # missing entry
-                index, status, name = -1, l[0], l[1]
-            elif len(l) == 3:
-                index, status, name = l[:3]
+                index, status, name = -1, li[0], li[1]
+            elif len(li) == 3:
+                index, status, name = li[:3]
             else:
                 return
             self.__generateItem(index, status, name, summary)

@@ -100,7 +100,7 @@ class PasswordManager(QObject):
         
         key = self.__createKey(url, realm)
         self.__logins[key] = (
-            username, 
+            username,
             Utilities.crypto.pwConvert(password, encode=True)
         )
         self.changed.emit()
@@ -166,7 +166,7 @@ class PasswordManager(QObject):
                     None,
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""Error when loading login data on"""
-                                """ line {0}, column {1}:\n{2}""")\
+                                """ line {0}, column {1}:\n{2}""")
                         .format(reader.lineNumber(),
                                 reader.columnNumber(),
                                 reader.errorString()))
@@ -193,7 +193,7 @@ class PasswordManager(QObject):
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""<p>Login data could not be loaded """
                                 """from <b>{0}</b></p>"""
-                                """<p>Reason: {1}</p>""")\
+                                """<p>Reason: {1}</p>""")
                         .format(loginFile, str(err)))
                 return
             
@@ -219,7 +219,7 @@ class PasswordManager(QObject):
                                 self.trUtf8(
                                     """<p>Login data could not be loaded """
                                     """from <b>{0}</b></p>"""
-                                    """<p>Reason: Wrong input format</p>""")\
+                                    """<p>Reason: Wrong input format</p>""")
                                     .format(loginFile))
                             return
                         self.__logins[data[0]] = (data[1], data[2])
@@ -355,7 +355,7 @@ class PasswordManager(QObject):
         
         # determine the QWebPage
         webPage = request.attribute(QNetworkRequest.User + 100)
-        if  webPage is None:
+        if webPage is None:
             return
         
         # determine the requests content type
@@ -466,7 +466,7 @@ class PasswordManager(QObject):
             formHasPasswords = False
             formName = map["name"]
             formIndex = map["index"]
-            if type(formIndex) == type(0.0) and formIndex.is_integer():
+            if isinstance(formIndex, float) and formIndex.is_integer():
                 formIndex = int(formIndex)
             elements = map["elements"]
             formElements = set()

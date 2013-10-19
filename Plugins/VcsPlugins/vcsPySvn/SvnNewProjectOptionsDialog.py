@@ -54,7 +54,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         self.localProtocol = True
         
         self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
-            Preferences.getMultiProject("Workspace") or 
+            Preferences.getMultiProject("Workspace") or
             Utilities.getHomeDir()))
         
     @pyqtSlot()

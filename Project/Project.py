@@ -315,7 +315,7 @@ class Project(QObject):
                         self.trUtf8("Registering Project Type"),
                         self.trUtf8(
                             """<p>The Programming Language <b>{0}</b> is not"""
-                            """ supported.</p>""")\
+                            """ supported.</p>""")
                             .format(progLanguage)
                     )
                     return
@@ -327,7 +327,7 @@ class Project(QObject):
                         self.trUtf8(
                             """<p>The Project type <b>{0}</b> is already"""
                             """ registered with Programming Language"""
-                            """ <b>{1}</b>.</p>""")\
+                            """ <b>{1}</b>.</p>""")
                             .format(type_, progLanguage)
                     )
                     return
@@ -671,7 +671,7 @@ class Project(QObject):
                 self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8(
-                    "<p>The project file <b>{0}</b> could not be read.</p>")\
+                    "<p>The project file <b>{0}</b> could not be read.</p>")
                     .format(fn))
             return False
         
@@ -973,7 +973,7 @@ class Project(QObject):
                 self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8(
-                    "<p>The tasks file <b>{0}</b> could not be read.</p>")\
+                    "<p>The tasks file <b>{0}</b> could not be read.</p>")
                     .format(fn))
         
     def writeTasks(self):
@@ -2025,7 +2025,7 @@ class Project(QObject):
             self.pluginGrp.setEnabled(
                 self.pdata["PROJECTTYPE"][0] == "E4Plugin")
             self.addLanguageAct.setEnabled(
-                len(self.pdata["TRANSLATIONPATTERN"]) > 0 and \
+                len(self.pdata["TRANSLATIONPATTERN"]) > 0 and
                 self.pdata["TRANSLATIONPATTERN"][0] != '')
             
             self.projectAboutToBeCreated.emit()
@@ -2169,8 +2169,8 @@ class Project(QObject):
                                     """ command options?"""))
                             if vcores:
                                 from VCS.CommandOptionsDialog import \
-                                    vcsCommandOptionsDialog
-                                codlg = vcsCommandOptionsDialog(self.vcs)
+                                    VcsCommandOptionsDialog
+                                codlg = VcsCommandOptionsDialog(self.vcs)
                                 if codlg.exec_() == QDialog.Accepted:
                                     self.vcs.vcsSetOptions(codlg.getOptions())
                             # add project file to repository
@@ -2233,7 +2233,7 @@ class Project(QObject):
                             """Would you like to edit the VCS command"""
                             """ options?"""))
                     if vcores:
-                        codlg = vcsCommandOptionsDialog(self.vcs)
+                        codlg = VcsCommandOptionsDialog(self.vcs)
                         if codlg.exec_() == QDialog.Accepted:
                             self.vcs.vcsSetOptions(codlg.getOptions())
                     
@@ -2398,11 +2398,11 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
             
-            if (self.pdata["VCS"] and \
+            if (self.pdata["VCS"] and
                 self.pdata["VCS"][0] != vcsSystem) or \
-               (self.pudata["VCSOVERRIDE"] and \
+               (self.pudata["VCSOVERRIDE"] and
                 self.pudata["VCSOVERRIDE"][0] != vcsSystemOverride) or \
-               (vcsSystemOverride is not None and \
+               (vcsSystemOverride is not None and
                 len(self.pudata["VCSOVERRIDE"]) == 0):
                 # stop the VCS monitor thread and shutdown VCS
                 if self.vcs is not None:
@@ -2491,7 +2491,7 @@ class Project(QObject):
             fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open project"),
-                Preferences.getMultiProject("Workspace") or \
+                Preferences.getMultiProject("Workspace") or
                     Utilities.getHomeDir(),
                 self.trUtf8("Project Files (*.e4p)"))
         
@@ -2563,7 +2563,7 @@ class Project(QObject):
                                 self.vcs = self.initVCS()
                                 self.setDirty(True)
                     if self.vcs is not None and \
-                           (self.vcs.vcsRegisteredState(self.ppath) != 
+                           (self.vcs.vcsRegisteredState(self.ppath) !=
                             self.vcs.canBeCommitted):
                         self.pdata["VCS"] = ['None']
                         self.vcs = self.initVCS()
@@ -2586,7 +2586,7 @@ class Project(QObject):
                     self.pluginGrp.setEnabled(
                         self.pdata["PROJECTTYPE"][0] == "E4Plugin")
                     self.addLanguageAct.setEnabled(
-                        len(self.pdata["TRANSLATIONPATTERN"]) > 0 and \
+                        len(self.pdata["TRANSLATIONPATTERN"]) > 0 and
                         self.pdata["TRANSLATIONPATTERN"][0] != '')
                     
                     self.__model.projectOpened()
@@ -2738,11 +2738,11 @@ class Project(QObject):
         """
         Private method to close all project related windows.
         """
-        self.codemetrics        and self.codemetrics.close()
-        self.codecoverage       and self.codecoverage.close()
-        self.profiledata        and self.profiledata.close()
+        self.codemetrics and self.codemetrics.close()
+        self.codecoverage and self.codecoverage.close()
+        self.profiledata and self.profiledata.close()
         self.applicationDiagram and self.applicationDiagram.close()
-        self.loadedDiagram      and self.loadedDiagram.close()
+        self.loadedDiagram and self.loadedDiagram.close()
         
     def closeProject(self, reopen=False, noSave=False):
         """
@@ -2921,7 +2921,7 @@ class Project(QObject):
         @return list of the projects scripts (list of string)
         """
         if normalized:
-            return [os.path.join(self.ppath, fn) for fn in 
+            return [os.path.join(self.ppath, fn) for fn in
                     self.pdata["SOURCES"]]
         else:
             return self.pdata["SOURCES"]
@@ -3969,13 +3969,13 @@ class Project(QObject):
                         filetype = self.pdata["FILETYPES"][pattern]
                         break
                 
-                if (filetype == "SOURCES" and 
+                if (filetype == "SOURCES" and
                     fn not in self.pdata["SOURCES"]) or \
-                   (filetype == "FORMS" and 
+                   (filetype == "FORMS" and
                     fn not in self.pdata["FORMS"]) or \
-                   (filetype == "INTERFACES" and 
+                   (filetype == "INTERFACES" and
                     fn not in self.pdata["INTERFACES"]) or \
-                   (filetype == "RESOURCES" and 
+                   (filetype == "RESOURCES" and
                     fn not in self.pdata["RESOURCES"]) or \
                    (filetype == "OTHERS" and fn not in self.pdata["OTHERS"]):
                     if autoInclude and AI:
@@ -4361,11 +4361,11 @@ class Project(QObject):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             self.codeProfileAct.setEnabled(
-                os.path.isfile("{0}.profile".format(basename)) or \
+                os.path.isfile("{0}.profile".format(basename)) or
                 os.path.isfile("{0}.profile".format(tbasename)))
             self.codeCoverageAct.setEnabled(
-                self.isPy3Project() and \
-                (os.path.isfile("{0}.coverage".format(basename)) or \
+                self.isPy3Project() and
+                (os.path.isfile("{0}.coverage".format(basename)) or
                  os.path.isfile("{0}.coverage".format(tbasename))))
         else:
             self.codeProfileAct.setEnabled(False)
@@ -4524,7 +4524,7 @@ class Project(QObject):
         for entry in lst_:
             if os.path.isdir(self.getAbsolutePath(entry)):
                 lst.extend(
-                    [self.getRelativePath(p) for p in 
+                    [self.getRelativePath(p) for p in
                      Utilities.direntries(self.getAbsolutePath(entry), True)])
                 continue
             else:
@@ -4632,7 +4632,7 @@ class Project(QObject):
                         self.trUtf8(
                             """<p>The file <b>{0}</b> could not be stored """
                             """in the archive. Ignoring it.</p>"""
-                            """<p>Reason: {1}</p>""")\
+                            """<p>Reason: {1}</p>""")
                             .format(os.path.join(self.ppath, name), str(why)))
         archiveFile.writestr("VERSION", version.encode("utf-8"))
         archiveFile.close()
@@ -4646,7 +4646,7 @@ class Project(QObject):
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8(
                     """<p>The eric5 plugin archive file <b>{0}</b> was """
-                    """created successfully.</p>""")\
+                    """created successfully.</p>""")
                     .format(os.path.basename(archive)))
         else:
             E5MessageBox.information(

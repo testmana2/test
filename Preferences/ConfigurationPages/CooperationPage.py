@@ -91,7 +91,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         @param txt text entered by the user (string)
         """
         self.addBannedUserButton.setEnabled(
-            self.__bannedUserValidator.validate(txt, len(txt))[0] == \
+            self.__bannedUserValidator.validate(txt, len(txt))[0] ==
                 QValidator.Acceptable)
     
     @pyqtSlot()

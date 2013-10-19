@@ -85,13 +85,13 @@ class Bookmarks(HgExtension):
         
         self.bookmarksList = []
         for line in output.splitlines():
-            l = line.strip().split()
-            if l[-1][0] in "1234567890":
+            li = line.strip().split()
+            if li[-1][0] in "1234567890":
                 # last element is a rev:changeset
-                del l[-1]
-                if l[0] == "*":
-                    del l[0]
-                name = " ".join(l)
+                del li[-1]
+                if li[0] == "*":
+                    del li[0]
+                name = " ".join(li)
                 self.bookmarksList.append(name)
         
         return self.bookmarksList[:]
@@ -282,9 +282,9 @@ class Bookmarks(HgExtension):
         
         for line in output.splitlines():
             if line.startswith(" "):
-                l = line.strip().split()
-                del l[-1]
-                name = " ".join(l)
+                li = line.strip().split()
+                del li[-1]
+                name = " ".join(li)
                 bookmarksList.append(name)
         
         return bookmarksList

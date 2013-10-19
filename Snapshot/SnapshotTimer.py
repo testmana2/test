@@ -114,7 +114,7 @@ class SnapshotTimer(QWidget):
         screenGeom = QApplication.desktop().screenGeometry()
         if self.x() == screenGeom.left():
             self.move(
-                screenGeom.x() + 
+                screenGeom.x() +
                     (screenGeom.width() // 2 - self.size().width() // 2),
                 screenGeom.top())
         else:

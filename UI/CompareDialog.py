@@ -274,9 +274,9 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.diffButton.setEnabled(False)
         self.diffButton.hide()
         
-        if type(lines1) == type(""):
+        if isinstance(lines1, str):
             lines1 = lines1.splitlines(True)
-        if type(lines2) == type(""):
+        if isinstance(lines2, str):
             lines2 = lines2.splitlines(True)
         
         self.__compare(lines1, lines2)
@@ -342,13 +342,13 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.firstButton.setEnabled(False)
         self.upButton.setEnabled(False)
         self.downButton.setEnabled(
-            len(self.diffParas) > 0 and 
+            len(self.diffParas) > 0 and
             (self.vsb1.isVisible() or self.vsb2.isVisible()))
         self.lastButton.setEnabled(
-            len(self.diffParas) > 0 and 
+            len(self.diffParas) > 0 and
             (self.vsb1.isVisible() or self.vsb2.isVisible()))
         
-        self.totalLabel.setText(self.trUtf8('Total: {0}')\
+        self.totalLabel.setText(self.trUtf8('Total: {0}')
                                     .format(added + deleted + changed))
         self.changedLabel.setText(self.trUtf8('Changed: {0}').format(changed))
         self.addedLabel.setText(self.trUtf8('Added: {0}').format(added))

@@ -125,7 +125,7 @@ def getConfigData():
         data
     """
     return {
-        "zzz_mercurialPage": \
+        "zzz_mercurialPage":
             [QApplication.translate("VcsMercurialPlugin", "Mercurial"),
              os.path.join("VcsPlugins", "vcsMercurial", "icons",
                           "preferences-mercurial.png"),

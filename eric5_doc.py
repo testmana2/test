@@ -250,8 +250,8 @@ def main():
         usage()
     
     if qtHelpCreation and \
-       (qtHelpNamespace == "" or \
-        qtHelpFolder == "" or '/' in qtHelpFolder or \
+       (qtHelpNamespace == "" or
+        qtHelpFolder == "" or '/' in qtHelpFolder or
         qtHelpTitle == ""):
         usage()
     

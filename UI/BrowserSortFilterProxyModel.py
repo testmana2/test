@@ -49,11 +49,11 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         @param right index of right item (QModelIndex)
         @return true, if left is less than right (boolean)
         """
-        l = left.model() and left.model().item(left) or None
-        r = right.model() and right.model().item(right) or None
+        le = left.model() and left.model().item(left) or None
+        ri = right.model() and right.model().item(right) or None
         
-        if l and r:
-            return l.lessThan(r, self.__sortColumn, self.__sortOrder)
+        if le and ri:
+            return le.lessThan(ri, self.__sortColumn, self.__sortOrder)
         
         return False
         

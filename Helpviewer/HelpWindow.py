@@ -351,7 +351,7 @@ class HelpWindow(E5MainWindow):
                 os.makedirs(webDatabaseDir)
             settings.setOfflineStoragePath(webDatabaseDir)
             settings.setOfflineStorageDefaultQuota(
-                Preferences.getHelp("OfflineStorageDatabaseQuota") * \
+                Preferences.getHelp("OfflineStorageDatabaseQuota") *
                 1024 * 1024)
         
         if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
@@ -364,7 +364,7 @@ class HelpWindow(E5MainWindow):
                 os.makedirs(appCacheDir)
             settings.setOfflineWebApplicationCachePath(appCacheDir)
             settings.setOfflineWebApplicationCacheQuota(
-                Preferences.getHelp("OfflineWebApplicationCacheQuota") * \
+                Preferences.getHelp("OfflineWebApplicationCacheQuota") *
                 1024 * 1024)
         
         if hasattr(QWebSettings, "LocalStorageEnabled"):
@@ -3567,8 +3567,8 @@ class HelpWindow(E5MainWindow):
         @param txt contents of the search (string)
         """
         self.virustotalSearchAct.setEnabled(
-            txt != "" and \
-            Preferences.getHelp("VirusTotalEnabled") and \
+            txt != "" and
+            Preferences.getHelp("VirusTotalEnabled") and
             Preferences.getHelp("VirusTotalServiceKey") != "")
     
     def __virusTotalSearch(self):

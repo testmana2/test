@@ -171,7 +171,7 @@ class ExporterTEX(ExporterBase):
                 if lex:
                     istyle = 0
                     while istyle <= QsciScintilla.STYLE_MAX:
-                        if (istyle <= QsciScintilla.STYLE_DEFAULT or \
+                        if (istyle <= QsciScintilla.STYLE_DEFAULT or
                             istyle > QsciScintilla.STYLE_LASTPREDEFINED) and \
                            styleIsUsed[istyle]:
                             if lex.description(istyle) or \
@@ -272,7 +272,7 @@ class ExporterTEX(ExporterBase):
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>The source could not be exported to"""
-                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")\
+                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
                         .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

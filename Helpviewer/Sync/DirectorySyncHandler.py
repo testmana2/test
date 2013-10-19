@@ -63,7 +63,7 @@ class DirectorySyncHandler(SyncHandler):
         
         self.__remoteFilesFound = []
         
-        # check the existence of the shared directory; create it, if it is 
+        # check the existence of the shared directory; create it, if it is
         # not there
         if not os.path.exists(Preferences.getHelp("SyncDirectoryPath")):
             try:
@@ -179,7 +179,7 @@ class DirectorySyncHandler(SyncHandler):
         if Preferences.getHelp("SyncBookmarks"):
             self.__initialSyncFile(
                 "bookmarks",
-                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
                     .getFileName())
         
         QCoreApplication.processEvents()
@@ -187,7 +187,7 @@ class DirectorySyncHandler(SyncHandler):
         if Preferences.getHelp("SyncHistory"):
             self.__initialSyncFile(
                 "history",
-                Helpviewer.HelpWindow.HelpWindow.historyManager()\
+                Helpviewer.HelpWindow.HelpWindow.historyManager()
                     .getFileName())
         
         QCoreApplication.processEvents()

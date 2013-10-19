@@ -91,7 +91,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         
         # populate the Security info and the Security tab
         if sslInfo and \
-           ((qVersion() >= "5.0.0" and not sslInfo[0].isBlacklisted()) or \
+           ((qVersion() >= "5.0.0" and not sslInfo[0].isBlacklisted()) or
             (qVersion() < "5.0.0" and sslInfo[0].isValid())):
             self.securityLabel.setStyleSheet(SiteInfoDialog.okStyle)
             self.securityLabel.setText('<b>Connection is encrypted.</b>')

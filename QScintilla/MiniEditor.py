@@ -2222,7 +2222,7 @@ class MiniEditor(E5MainWindow):
         else:
             shownName = self.__strippedName(self.__curFile)
         
-        self.setWindowTitle(self.trUtf8("{0}[*] - {1}")\
+        self.setWindowTitle(self.trUtf8("{0}[*] - {1}")
                             .format(shownName, self.trUtf8("Mini Editor")))
         
         self.__textEdit.setModified(False)
@@ -2794,7 +2794,7 @@ class MiniEditor(E5MainWindow):
         if self.filetype == "":
             line0 = self.__textEdit.text(0)
             if line0.startswith("#!") and \
-               ("python2" in line0 or \
+               ("python2" in line0 or
                 ("python" in line0 and not "python3" in line0)):
                 return True
             

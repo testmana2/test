@@ -29,7 +29,7 @@ class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.label.setText(self.trUtf8("Choose a &topic for <b>{0}</b>:")\
+        self.label.setText(self.trUtf8("Choose a &topic for <b>{0}</b>:")
             .format(keyword))
         
         self.__links = links

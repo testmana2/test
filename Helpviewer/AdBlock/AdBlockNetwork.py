@@ -43,7 +43,7 @@ class AdBlockNetwork(QObject):
                 blockedRule = subscription.match(request, urlDomain, urlString)
                 if blockedRule:
                     webPage = request.attribute(QNetworkRequest.User + 100)
-                    if  webPage is not None:
+                    if webPage is not None:
                         if not self.__canBeBlocked(webPage.url()):
                             return None
                         

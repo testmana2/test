@@ -511,7 +511,7 @@ class PreviewProcessingThread(QThread):
         
         # version 2.0 supports only extension names, not instances
         if markdown.version_info[0] > 2 or \
-                (markdown.version_info[0] == 2 and 
+                (markdown.version_info[0] == 2 and
                  markdown.version_info[1] > 0):
             class _StrikeThroughExtension(markdown.Extension):
                 """

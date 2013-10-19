@@ -417,19 +417,19 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 if infoDict["remote"] == (0, 0, 0, 0):
                     rinfo = self.trUtf8("synched")
                 else:
-                    l = []
+                    li = []
                     if infoDict["remote"][0]:
-                        l.append(self.trUtf8("1 or more incoming"))
+                        li.append(self.trUtf8("1 or more incoming"))
                     if infoDict["remote"][1]:
-                        l.append(self.trUtf8("{0} outgoing")\
-                                 .format(infoDict["remote"][1]))
+                        li.append(self.trUtf8("{0} outgoing")
+                                  .format(infoDict["remote"][1]))
                     if infoDict["remote"][2]:
-                        l.append(self.trUtf8("%n incoming bookmark(s)", "",
-                                 infoDict["remote"][2]))
+                        li.append(self.trUtf8("%n incoming bookmark(s)", "",
+                                  infoDict["remote"][2]))
                     if infoDict["remote"][3]:
-                        l.append(self.trUtf8("%n outgoing bookmark(s)", "",
-                                 infoDict["remote"][3]))
-                    rinfo = "<br/>".join(l)
+                        li.append(self.trUtf8("%n outgoing bookmark(s)", "",
+                                  infoDict["remote"][3]))
+                    rinfo = "<br/>".join(li)
                 info.append(self.trUtf8(
                     "<tr><td><b>Remote Status</b></td><td>{0}</td></tr>")
                     .format(rinfo))
@@ -437,14 +437,14 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 if infoDict["mq"] == (0, 0):
                     qinfo = self.trUtf8("empty queue")
                 else:
-                    l = []
+                    li = []
                     if infoDict["mq"][0]:
-                        l.append(self.trUtf8("{0} applied")
-                                 .format(infoDict["mq"][0]))
+                        li.append(self.trUtf8("{0} applied")
+                                  .format(infoDict["mq"][0]))
                     if infoDict["mq"][1]:
-                        l.append(self.trUtf8("{0} unapplied")
-                                 .format(infoDict["mq"][1]))
-                    qinfo = "<br/>".join(l)
+                        li.append(self.trUtf8("{0} unapplied")
+                                  .format(infoDict["mq"][1]))
+                    qinfo = "<br/>".join(li)
                 info.append(self.trUtf8(
                     "<tr><td><b>Queues Status</b></td><td>{0}</td></tr>")
                     .format(qinfo))

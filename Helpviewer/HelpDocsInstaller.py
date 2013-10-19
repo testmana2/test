@@ -111,7 +111,7 @@ class HelpDocsInstaller(QThread):
         
         if version == 4:
             docsPath = QDir(
-                QLibraryInfo.location(QLibraryInfo.DocumentationPath) + \
+                QLibraryInfo.location(QLibraryInfo.DocumentationPath) +
                 QDir.separator() + "qch")
         elif version == 5:
             docsPath = QDir(
@@ -149,14 +149,14 @@ class HelpDocsInstaller(QThread):
                     self.errorMessage.emit(
                         self.trUtf8(
                             """<p>The file <b>{0}</b> could not be"""
-                            """ registered. <br/>Reason: {1}</p>""")\
+                            """ registered. <br/>Reason: {1}</p>""")
                             .format(fi.absoluteFilePath, engine.error())
                     )
                     return False
                 
                 engine.setCustomValue(
                     versionKey,
-                    fi.lastModified().toString(Qt.ISODate) + '|' + \
+                    fi.lastModified().toString(Qt.ISODate) + '|' +
                     fi.absoluteFilePath())
                 return True
         
@@ -210,14 +210,14 @@ class HelpDocsInstaller(QThread):
                     self.errorMessage.emit(
                         self.trUtf8(
                             """<p>The file <b>{0}</b> could not be"""
-                            """ registered. <br/>Reason: {1}</p>""")\
+                            """ registered. <br/>Reason: {1}</p>""")
                             .format(fi.absoluteFilePath, engine.error())
                     )
                     return False
                 
                 engine.setCustomValue(
                     versionKey,
-                    fi.lastModified().toString(Qt.ISODate) + '|' + \
+                    fi.lastModified().toString(Qt.ISODate) + '|' +
                     fi.absoluteFilePath())
                 return True
         

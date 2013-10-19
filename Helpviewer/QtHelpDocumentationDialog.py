@@ -80,7 +80,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                     self,
                     self.trUtf8("Add Documentation"),
                     self.trUtf8(
-                        """The namespace <b>{0}</b> is already registered.""")\
+                        """The namespace <b>{0}</b> is already registered.""")
                         .format(ns)
                 )
                 continue

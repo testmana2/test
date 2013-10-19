@@ -697,7 +697,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         else:
             items = self.browser.getSelectedItems()
             names = [itm.fileName() for itm in items]
-            files = [self.browser.project.getRelativePath(name) \
+            files = [self.browser.project.getRelativePath(name)
                      for name in names]
             
             dlg = DeleteFilesConfirmationDialog(

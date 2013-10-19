@@ -151,7 +151,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
                 self.deleteAssociationButton.setEnabled(False)
             else:
                 self.deleteAssociationButton.setEnabled(
-                    self.filetypeAssociationList.selectedItems()[0].text(0) \
+                    self.filetypeAssociationList.selectedItems()[0].text(0)
                     == txt)
 
     def transferData(self):

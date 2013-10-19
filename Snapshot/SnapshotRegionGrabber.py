@@ -218,7 +218,7 @@ class SnapshotRegionGrabber(QWidget):
         drawRect(painter, boundingRect, textColor, textBackgroundColor)
         painter.drawText(textRect, Qt.AlignHCenter, txt)
         
-        if (r.height() > self.__handleSize * 2 and \
+        if (r.height() > self.__handleSize * 2 and
             r.width() > self.__handleSize * 2) or \
            not self.__mouseDown:
             self.__updateHandles()
@@ -297,7 +297,7 @@ class SnapshotRegionGrabber(QWidget):
                 s = self.__selectionBeforeDrag.normalized()
                 p = s.topLeft() + evt.pos() - self.__dragStartPoint
                 r.setBottomRight(
-                    r.bottomRight() - QPoint(s.width(), s.height()) + 
+                    r.bottomRight() - QPoint(s.width(), s.height()) +
                     QPoint(1, 1))
                 if not r.isNull() and r.isValid():
                     self.__selection.moveTo(self.__limitPointToRect(p, r))
@@ -460,18 +460,18 @@ class SnapshotRegionGrabber(QWidget):
         @param sel selection to be normalized (QRect)
         @return normalized selection (QRect)
         """
-        r = QRect(sel)
-        if r.width() <= 0:
-            l = r.left()
-            w = r.width()
-            r.setLeft(l + w - 1)
-            r.setRight(l)
-        if r.height() <= 0:
-            t = r.top()
-            h = r.height()
-            r.setTop(t + h - 1)
-            r.setBottom(t)
-        return r
+        rect = QRect(sel)
+        if rect.width() <= 0:
+            left = rect.left()
+            width = rect.width()
+            rect.setLeft(left + width - 1)
+            rect.setRight(left)
+        if rect.height() <= 0:
+            top = rect.top()
+            height = rect.height()
+            rect.setTop(top + height - 1)
+            rect.setBottom(top)
+        return rect
     
     def __grabRect(self):
         """
@@ -493,8 +493,8 @@ class SnapshotRegionGrabber(QWidget):
                 pt.begin(pixmap2)
                 if pt.paintEngine().hasFeature(QPaintEngine.PorterDuff):
                     pt.setRenderHints(
-                        QPainter.Antialiasing | \
-                        QPainter.HighQualityAntialiasing | \
+                        QPainter.Antialiasing |
+                        QPainter.HighQualityAntialiasing |
                         QPainter.SmoothPixmapTransform,
                         True)
                     pt.setBrush(Qt.black)

@@ -248,10 +248,10 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         @param line output line to be processed (string)
         """
         if line.startswith(" "):
-            l = line.strip().split()
-            changeset = l[-1]
-            del l[-1]
-            name = " ".join(l)
+            li = line.strip().split()
+            changeset = li[-1]
+            del li[-1]
+            name = " ".join(li)
             self.__generateItem(changeset, name)
     
     def __readStderr(self):

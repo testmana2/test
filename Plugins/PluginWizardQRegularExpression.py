@@ -118,7 +118,7 @@ class QRegularExpressionWizard(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         
-        if editor == None:
+        if editor is None:
             E5MessageBox.critical(
                 self.__ui,
                 self.trUtf8('No current editor'),

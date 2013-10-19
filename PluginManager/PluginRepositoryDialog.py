@@ -170,7 +170,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         self.urlEdit.setText(current.data(0, urlRole) or "")
         self.descriptionEdit.setPlainText(
-            current.data(0, descrRole) and \
+            current.data(0, descrRole) and
             self.__formatDescription(current.data(0, descrRole)) or "")
         self.authorEdit.setText(current.data(0, authorRole) or "")
     
@@ -335,7 +335,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self,
                     self.trUtf8("Read plugins repository file"),
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
-                                "could not be read. Select Update</p>")\
+                                "could not be read. Select Update</p>")
                         .format(self.pluginRepositoryFile))
         else:
             self.__repositoryMissing = True

@@ -48,7 +48,7 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
         enable = self.revisionsEdit.toPlainText() != ""
         if self.userGroup.isChecked():
             enable = enable and \
-                (self.currentUserCheckBox.isChecked() or \
+                (self.currentUserCheckBox.isChecked() or
                  self.userEdit.text() != "")
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enable)

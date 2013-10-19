@@ -238,12 +238,12 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         
         @param line output line to be processed (string)
         """
-        l = line.split()
-        if l[-1][0] in "1234567890":
+        li = line.split()
+        if li[-1][0] in "1234567890":
             # last element is a rev:changeset
-            rev, changeset = l[-1].split(":", 1)
-            del l[-1]
-            signature = " ".join(l)
+            rev, changeset = li[-1].split(":", 1)
+            del li[-1]
+            signature = " ".join(li)
             self.__generateItem(rev, changeset, signature)
     
     def __readStderr(self):

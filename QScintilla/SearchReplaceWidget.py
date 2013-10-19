@@ -432,7 +432,7 @@ and so on.</td></tr>
             if not ok and len(self.__selections) > 1:
                 # try again
                 while not ok and \
-                      ((backwards and lineFrom >= boundary[0]) or \
+                      ((backwards and lineFrom >= boundary[0]) or
                        (not backwards and lineFrom <= boundary[2])):
                     for ind in range(len(self.__selections)):
                         if lineFrom == self.__selections[ind][0]:
@@ -500,11 +500,11 @@ and so on.</td></tr>
                                     break
                             else:
                                 ok = False
-                        elif (lineFrom == boundary[0] and \
+                        elif (lineFrom == boundary[0] and
                               indexFrom >= boundary[1]) or \
-                                (lineFrom > boundary[0] and \
+                                (lineFrom > boundary[0] and
                                  lineFrom < boundary[2]) or \
-                                (lineFrom == boundary[2] \
+                                (lineFrom == boundary[2]
                                  and indexFrom <= boundary[3]):
                             ok = True
                         else:

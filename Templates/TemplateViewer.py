@@ -524,7 +524,7 @@ class TemplateViewer(QTreeWidget):
         res = E5MessageBox.yesNo(
             self,
             self.trUtf8("Remove Template"),
-            self.trUtf8("""<p>Do you really want to remove <b>{0}</b>?</p>""")\
+            self.trUtf8("""<p>Do you really want to remove <b>{0}</b>?</p>""")
                 .format(itm.getName()))
         if not res:
             return
@@ -850,7 +850,7 @@ class TemplateViewer(QTreeWidget):
                     self,
                     self.trUtf8("Edit Template Group"),
                     self.trUtf8("""<p>A template group with the name"""
-                                """ <b>{0}</b> already exists.</p>""")\
+                                """ <b>{0}</b> already exists.</p>""")
                         .format(newname))
                 return
             

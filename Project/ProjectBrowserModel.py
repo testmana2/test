@@ -331,8 +331,8 @@ class ProjectBrowserModel(BrowserModel):
         qdir = QDir(parentItem.dirName())
         
         if Preferences.getUI("BrowsersListHiddenFiles"):
-            filter = QDir.Filters(QDir.AllEntries | 
-                                  QDir.Hidden | 
+            filter = QDir.Filters(QDir.AllEntries |
+                                  QDir.Hidden |
                                   QDir.NoDotAndDotDot)
         else:
             filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
@@ -657,8 +657,8 @@ class ProjectBrowserModel(BrowserModel):
             return
         
         if Preferences.getUI("BrowsersListHiddenFiles"):
-            filter = QDir.Filters(QDir.AllEntries | 
-                                  QDir.Hidden | 
+            filter = QDir.Filters(QDir.AllEntries |
+                                  QDir.Hidden |
                                   QDir.NoDotAndDotDot)
         else:
             filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)

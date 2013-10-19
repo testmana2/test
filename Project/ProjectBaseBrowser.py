@@ -366,7 +366,7 @@ class ProjectBaseBrowser(Browser):
         index = self.model().index(0, 0)
         while index.isValid():
             itm = self.model().item(index)
-            if (isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
+            if (isinstance(itm, ProjectBrowserSimpleDirectoryItem) or
                 isinstance(itm, ProjectBrowserDirectoryItem)) and \
                not self.isExpanded(index):
                 self.expand(index)
@@ -393,7 +393,7 @@ class ProjectBaseBrowser(Browser):
         index = vindex
         while index.isValid():
             itm = self.model().item(index)
-            if (isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
+            if (isinstance(itm, ProjectBrowserSimpleDirectoryItem) or
                 isinstance(itm, ProjectBrowserDirectoryItem)) and \
                self.isExpanded(index):
                 self.collapse(index)

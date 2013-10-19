@@ -236,7 +236,7 @@ class CompleterPython(CompleterBase):
             edInd = self.editor.indentation(ifLine)
             if self.__elseRX.indexIn(txt) == 0 and edInd <= indentation:
                 indentation = edInd - 1
-            elif (self.__ifRX.indexIn(txt) == 0 or \
+            elif (self.__ifRX.indexIn(txt) == 0 or
                   self.__elifRX.indexIn(txt) == 0) and edInd <= indentation:
                 self.editor.cancelList()
                 self.editor.setIndentation(line, edInd)
@@ -262,9 +262,9 @@ class CompleterPython(CompleterBase):
                  edInd == indentation and \
                  edInd == prevInd:
                     indentation = edInd - 1
-            elif (self.__ifRX.indexIn(txt) == 0 or \
-                  self.__whileRX.indexIn(txt) == 0 or \
-                  self.__forRX.indexIn(txt) == 0 or \
+            elif (self.__ifRX.indexIn(txt) == 0 or
+                  self.__whileRX.indexIn(txt) == 0 or
+                  self.__forRX.indexIn(txt) == 0 or
                   self.__tryRX.indexIn(txt) == 0) and \
                  edInd <= indentation:
                 self.editor.cancelList()
@@ -285,10 +285,10 @@ class CompleterPython(CompleterBase):
         while tryLine >= 0:
             txt = self.editor.text(tryLine)
             edInd = self.editor.indentation(tryLine)
-            if (self.__exceptcRX.indexIn(txt) == 0 or \
+            if (self.__exceptcRX.indexIn(txt) == 0 or
                 self.__finallyRX.indexIn(txt) == 0) and edInd <= indentation:
                 indentation = edInd - 1
-            elif (self.__exceptRX.indexIn(txt) == 0 or \
+            elif (self.__exceptRX.indexIn(txt) == 0 or
                   self.__tryRX.indexIn(txt) == 0) and edInd <= indentation:
                 self.editor.cancelList()
                 self.editor.setIndentation(line, edInd)
@@ -307,8 +307,8 @@ class CompleterPython(CompleterBase):
             txt = self.editor.text(tryLine)
             edInd = self.editor.indentation(tryLine)
             if self.__py24StyleTry:
-                if (self.__exceptcRX.indexIn(txt) == 0 or \
-                    self.__exceptRX.indexIn(txt) == 0 or \
+                if (self.__exceptcRX.indexIn(txt) == 0 or
+                    self.__exceptRX.indexIn(txt) == 0 or
                     self.__finallyRX.indexIn(txt) == 0) and \
                         edInd <= indentation:
                     indentation = edInd - 1
@@ -319,8 +319,8 @@ class CompleterPython(CompleterBase):
             else:
                 if self.__finallyRX.indexIn(txt) == 0 and edInd <= indentation:
                     indentation = edInd - 1
-                elif (self.__tryRX.indexIn(txt) == 0 or \
-                      self.__exceptcRX.indexIn(txt) == 0 or \
+                elif (self.__tryRX.indexIn(txt) == 0 or
+                      self.__exceptcRX.indexIn(txt) == 0 or
                       self.__exceptRX.indexIn(txt) == 0) and \
                         edInd <= indentation:
                     self.editor.cancelList()
@@ -362,7 +362,7 @@ class CompleterPython(CompleterBase):
         curLine = line - 1
         while curLine >= 0:
             txt = self.editor.text(curLine)
-            if (self.__defSelfRX.indexIn(txt) == 0 or \
+            if (self.__defSelfRX.indexIn(txt) == 0 or
                 self.__defClsRX.indexIn(txt) == 0) and \
                self.editor.indentation(curLine) == indentation:
                 return True

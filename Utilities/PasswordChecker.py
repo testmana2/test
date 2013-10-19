@@ -325,7 +325,7 @@ class PasswordChecker(object):
         lowercasedPassword = password.lower()
         
         if self.passwordLength["count"] >= self.sequentialLetters["length"]:
-            for index in range(len(self.sequentialLetters["data"]) - \
+            for index in range(len(self.sequentialLetters["data"]) -
                                self.sequentialLetters["length"] + 1):
                 fwd = self.sequentialLetters["data"][
                     index:index + self.sequentialLetters["length"]]
@@ -337,7 +337,7 @@ class PasswordChecker(object):
         
         # Check for sequential numeric string patterns (forward and reverse)
         if self.passwordLength["count"] >= self.sequentialNumerics["length"]:
-            for index in range(len(self.sequentialNumerics["data"]) - \
+            for index in range(len(self.sequentialNumerics["data"]) -
                                self.sequentialNumerics["length"] + 1):
                 fwd = self.sequentialNumerics["data"][
                     index:index + self.sequentialNumerics["length"]]
@@ -353,7 +353,7 @@ class PasswordChecker(object):
             for pattern in self.keyboardPatterns["data"]:
                 for index in range(
                         len(pattern) - self.keyboardPatterns["length"] + 1):
-                    fwd = pattern[index:index + 
+                    fwd = pattern[index:index +
                                   self.keyboardPatterns["length"]]
                     rev = self.__strReverse(fwd)
                     if lowercasedPassword.find(fwd) != -1:
@@ -367,7 +367,7 @@ class PasswordChecker(object):
         
         # Try to find repeated sequences of characters.
         if self.passwordLength["count"] >= self.repeatedSequences["length"]:
-            for index in range(len(lowercasedPassword) - \
+            for index in range(len(lowercasedPassword) -
                                self.repeatedSequences["length"] + 1):
                 fwd = lowercasedPassword[
                     index:index + self.repeatedSequences["length"]]
@@ -377,7 +377,7 @@ class PasswordChecker(object):
         
         # Try to find mirrored sequences of characters.
         if self.passwordLength["count"] >= self.mirroredSequences["length"]:
-            for index in range(len(lowercasedPassword) - \
+            for index in range(len(lowercasedPassword) -
                                self.mirroredSequences["length"] + 1):
                 fwd = lowercasedPassword[
                     index:index + self.mirroredSequences["length"]]
@@ -395,7 +395,7 @@ class PasswordChecker(object):
         if self.passwordLength["count"] >= self.passwordLength["minimum"]:
             # credit additional characters over minimum
             self.passwordLength["rating"] = self.passwordLength["bonus"] + \
-                (self.passwordLength["count"] - 
+                (self.passwordLength["count"] -
                  self.passwordLength["minimum"]) * \
                 self.passwordLength["factor"]
         else:
@@ -409,7 +409,7 @@ class PasswordChecker(object):
                 self.recommendedPasswordLength["minimum"]:
             self.recommendedPasswordLength["rating"] = \
                 self.recommendedPasswordLength["bonus"] + \
-                (self.passwordLength["count"] - \
+                (self.passwordLength["count"] -
                  self.recommendedPasswordLength["minimum"]) * \
                 self.recommendedPasswordLength["factor"]
         else:
@@ -550,7 +550,7 @@ class PasswordChecker(object):
         
         # judge the requirement status
         self.basicRequirements["status"] = self.__determineStatus(
-            self.basicRequirements["count"] - 
+            self.basicRequirements["count"] -
             self.basicRequirements["minimum"])
         if self.basicRequirements["status"] != self.Status_Failed:
             self.basicRequirements["rating"] = \
@@ -564,13 +564,13 @@ class PasswordChecker(object):
         
         # beyond basic requirements
         self.recommendedPasswordLength["status"] = self.__determineStatus(
-            self.recommendedPasswordLength["count"] - \
+            self.recommendedPasswordLength["count"] -
                 self.recommendedPasswordLength["minimum"])
         self.middleNumerics["status"] = self.__determineStatus(
-            self.middleNumerics["count"] - \
+            self.middleNumerics["count"] -
                 self.middleNumerics["minimum"])
         self.middleSymbols["status"] = self.__determineStatus(
-            self.middleSymbols["count"] - \
+            self.middleSymbols["count"] -
                 self.middleSymbols["minimum"])
         self.sequentialLetters["status"] = self.__determineBinaryStatus(
             self.sequentialLetters["count"])

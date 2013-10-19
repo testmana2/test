@@ -170,7 +170,7 @@ class ExporterRTF(ExporterBase):
                 if lex:
                     istyle = 0
                     while istyle <= QsciScintilla.STYLE_MAX:
-                        if (istyle < QsciScintilla.STYLE_DEFAULT or \
+                        if (istyle < QsciScintilla.STYLE_DEFAULT or
                             istyle > QsciScintilla.STYLE_LASTPREDEFINED):
                             if lex.description(istyle):
                                 font = lex.font(istyle)
@@ -262,9 +262,9 @@ class ExporterRTF(ExporterBase):
                 f.write(self.RTF_INFOOPEN + self.RTF_COMMENT)
                 f.write(time.strftime(self.RTF_CREATED))
                 f.write(self.RTF_INFOCLOSE)
-                f.write(self.RTF_HEADERCLOSE + \
-                        self.RTF_BODYOPEN + self.RTF_SETFONTFACE + "0" + \
-                        self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
+                f.write(self.RTF_HEADERCLOSE +
+                        self.RTF_BODYOPEN + self.RTF_SETFONTFACE + "0" +
+                        self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) +
                         self.RTF_SETCOLOR + "0 ")
                 lastStyle = self.RTF_SETFONTFACE + "0" + \
                             self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
@@ -351,7 +351,7 @@ class ExporterRTF(ExporterBase):
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>The source could not be exported to"""
-                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")\
+                        """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
                         .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

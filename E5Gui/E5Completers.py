@@ -33,7 +33,7 @@ class E5FileCompleter(QCompleter):
         self.__model = QFileSystemModel(self)
         if showHidden:
             self.__model.setFilter(
-                QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | \
+                QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives |
                              QDir.AllDirs | QDir.Hidden))
         else:
             self.__model.setFilter(QDir.Filters(

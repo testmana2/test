@@ -302,7 +302,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
             self.statusMessage.emit(self.trUtf8("Query OK."))
         else:
             self.statusMessage.emit(
-                self.trUtf8("Query OK, number of affected rows: {0}")\
+                self.trUtf8("Query OK, number of affected rows: {0}")
                     .format(model.query().numRowsAffected()))
         
         self.table.resizeColumnsToContents()

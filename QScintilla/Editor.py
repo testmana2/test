@@ -317,7 +317,7 @@ class Editor(QsciScintillaCompat):
                         self.trUtf8("Open File"),
                         self.trUtf8("""<p>The size of the file <b>{0}</b>"""
                                     """ is <b>{1} KB</b>."""
-                                    """ Do you really want to load it?</p>""")\
+                                    """ Do you really want to load it?</p>""")
                                     .format(
                                         self.fileName,
                                         QFileInfo(self.fileName).size() //
@@ -1173,7 +1173,7 @@ class Editor(QsciScintillaCompat):
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>No exporter available for the """
-                        """export format <b>{0}</b>. Aborting...</p>""")\
+                        """export format <b>{0}</b>. Aborting...</p>""")
                         .format(exporterFormat))
         else:
             E5MessageBox.critical(
@@ -1733,7 +1733,7 @@ class Editor(QsciScintillaCompat):
             # 1) Determine by first line
             line0 = self.text(0)
             if line0.startswith("#!") and \
-               ("python2" in line0 or \
+               ("python2" in line0 or
                 ("python" in line0 and not "python3" in line0)):
                 self.filetype = "Python2"
                 return True
@@ -2741,7 +2741,7 @@ class Editor(QsciScintillaCompat):
         modified = False
         if (not Preferences.getEditor("TabForIndentation")) and \
                 Preferences.getEditor("ConvertTabsOnLoad") and \
-                not (self.lexer_ and \
+                not (self.lexer_ and
                      self.lexer_.alwaysKeepTabs()):
             txtExpanded = txt.expandtabs(Preferences.getEditor("TabWidth"))
             if txtExpanded != txt:
@@ -4653,8 +4653,8 @@ class Editor(QsciScintillaCompat):
                     os.path.isfile("{0}.profile".format(basename)) or \
                     os.path.isfile("{0}.profile".format(tbasename))
                 coEnable = (
-                    coEnable or \
-                    os.path.isfile("{0}.coverage".format(basename)) or \
+                    coEnable or
+                    os.path.isfile("{0}.coverage".format(basename)) or
                     os.path.isfile("{0}.coverage".format(tbasename))) and \
                     self.project.isPy3Project()
         
@@ -4668,8 +4668,8 @@ class Editor(QsciScintillaCompat):
                 os.path.isfile("{0}.profile".format(basename)) or \
                 os.path.isfile("{0}.profile".format(tbasename))
             coEnable = (
-                coEnable or \
-                os.path.isfile("{0}.coverage".format(basename)) or \
+                coEnable or
+                os.path.isfile("{0}.coverage".format(basename)) or
                 os.path.isfile("{0}.coverage".format(tbasename))) and \
                 self.isPy3File()
         
@@ -6262,7 +6262,7 @@ class Editor(QsciScintillaCompat):
                 relFile)
             if ok and alias:
                 line, index = self.getCursorPosition()
-                self.insert('  <file alias="{1}">{0}</file>\n'\
+                self.insert('  <file alias="{1}">{0}</file>\n'
                             .format(relFile, alias))
                 self.setCursorPosition(line + 1, index)
         
@@ -6416,7 +6416,7 @@ class Editor(QsciScintillaCompat):
                     elif len(templateNames) > 1:
                         self.showUserList(
                             TemplateCompletionListID,
-                            ["{0}?{1:d}".format(t, self.TemplateImageID) \
+                            ["{0}?{1:d}".format(t, self.TemplateImageID)
                              for t in templateNames])
                         return
         

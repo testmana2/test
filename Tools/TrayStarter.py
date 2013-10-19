@@ -11,8 +11,8 @@ import sys
 import os
 
 from PyQt4.QtCore import QProcess, QSettings, QFileInfo
-from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, \
-    QApplication, QDialog
+from PyQt4.QtGui import QSystemTrayIcon, QMenu, qApp, QCursor, QDialog, \
+    QApplication
 
 from E5Gui import E5MessageBox
 

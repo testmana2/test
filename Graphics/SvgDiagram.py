@@ -263,7 +263,7 @@ class SvgDiagram(E5MainWindow):
         
         @return current zoom factor in percent (integer)
         """
-        return int(self.svgWidget.width() / 
+        return int(self.svgWidget.width() /
                    self.svgWidget.sizeHint().width() * 100.0)
         
     def __printDiagram(self):

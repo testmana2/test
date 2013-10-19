@@ -157,11 +157,11 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         # backward compatibility to 4.6
                         val = self.readElementText()
                     elif self.name() == "bytes":
-                        by = bytes([int(b) for b in 
+                        by = bytes([int(b) for b in
                                     self.readElementText().split(",")])
                         val = by
                     elif self.name() == "bytearray":
-                        by = bytearray([int(b) for b in 
+                        by = bytearray([int(b) for b in
                                         self.readElementText().split(",")])
                         val = by
                     elif self.name() == "tuple":
@@ -209,13 +209,13 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @return Python tuple
         """
-        l = []
+        li = []
         while not self.atEnd():
             val = self._readBasics()
             if self.isEndElement() and self.name() == "tuple" and val is None:
-                return tuple(l)
+                return tuple(li)
             else:
-                l.append(val)
+                li.append(val)
     
     def __readList(self):
         """
@@ -223,13 +223,13 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @return Python list
         """
-        l = []
+        li = []
         while not self.atEnd():
             val = self._readBasics()
             if self.isEndElement() and self.name() == "list" and val is None:
-                return l
+                return li
             else:
-                l.append(val)
+                li.append(val)
     
     def __readDict(self):
         """
@@ -257,13 +257,13 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @return Python set
         """
-        l = []
+        li = []
         while not self.atEnd():
             val = self._readBasics()
             if self.isEndElement() and self.name() == "set" and val is None:
-                return set(l)
+                return set(li)
             else:
-                l.append(val)
+                li.append(val)
     
     def __readFrozenset(self):
         """
@@ -271,12 +271,12 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @return Python set
         """
-        l = []
+        li = []
         while not self.atEnd():
             val = self._readBasics()
             if self.isEndElement() and \
                     self.name() == "frozenset" and \
                     val is None:
-                return frozenset(l)
+                return frozenset(li)
             else:
-                l.append(val)
+                li.append(val)

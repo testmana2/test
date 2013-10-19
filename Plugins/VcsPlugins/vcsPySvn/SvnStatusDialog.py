@@ -634,7 +634,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to handle the Add context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getUnversionedItems()]
         if not names:
             E5MessageBox.information(
@@ -656,7 +656,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to handle the Revert context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getModifiedItems()]
         if not names:
             E5MessageBox.information(
@@ -742,7 +742,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to handle the Lock context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(self.unlockedIndicators)]
         if not names:
             E5MessageBox.information(
@@ -759,7 +759,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to handle the Unlock context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(self.lockedIndicators)]
         if not names:
             E5MessageBox.information(
@@ -812,7 +812,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to add entries to a changelist.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getNonChangelistItems()]
         if not names:
             E5MessageBox.information(
@@ -831,7 +831,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to remove entries from their changelists.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getChangelistItems()]
         if not names:
             E5MessageBox.information(

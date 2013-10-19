@@ -58,7 +58,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         @param project reference to the project object
         @param parent parent widget of this browser (QWidget)
         """
-        ProjectBaseBrowser.__init__(self, project, 
+        ProjectBaseBrowser.__init__(self, project,
                                     ProjectBrowserTranslationType, parent)
         self.isTranslationsBrowser = True
         
@@ -710,8 +710,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         fileNames.append(os.path.join(self.project.ppath, fn))
         else:
             trfiles = sorted(self.project.pdata["TRANSLATIONS"][:])
-            fileNames.extend([os.path.join(self.project.ppath, trfile) \
-                              for trfile in trfiles \
+            fileNames.extend([os.path.join(self.project.ppath, trfile)
+                              for trfile in trfiles
                               if trfile.endswith('.qm')])
         self.trpreview[list, bool].emit(fileNames, True)
         
@@ -741,7 +741,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         pfile = '{0}_e4x.pro'.format(path)
         
         # only consider files satisfying the filter criteria
-        _sources = [s for s in self.project.pdata["SOURCES"] \
+        _sources = [s for s in self.project.pdata["SOURCES"]
                     if os.path.splitext(s)[1] in filter]
         sources = []
         for s in _sources:
@@ -765,13 +765,13 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 forms.append(f)
         
         if langs:
-            langs = [self.project.getRelativePath(lang.fileName()) \
+            langs = [self.project.getRelativePath(lang.fileName())
                      for lang in langs if lang.fileName().endswith('.ts')]
         else:
             try:
                 pattern = self.project.pdata["TRANSLATIONPATTERN"][0]\
                           .replace("%language%", "*")
-                langs = [lang for lang in self.project.pdata["TRANSLATIONS"] \
+                langs = [lang for lang in self.project.pdata["TRANSLATIONS"]
                          if fnmatch.fnmatch(lang, pattern)]
             except IndexError:
                 langs = []
@@ -1000,15 +1000,15 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             if noobsolete:
                 if self.hooks["generateSelected"] is not None:
-                    l = [self.project.getRelativePath(lang.fileName()) \
-                         for lang in langs]
-                    self.hooks["generateSelected"](l)
+                    li = [self.project.getRelativePath(lang.fileName())
+                          for lang in langs]
+                    self.hooks["generateSelected"](li)
                     return
             else:
                 if self.hooks["generateSelectedWithObsolete"] is not None:
-                    l = [self.project.getRelativePath(lang.fileName()) \
-                         for lang in langs]
-                    self.hooks["generateSelectedWithObsolete"](l)
+                    li = [self.project.getRelativePath(lang.fileName())
+                          for lang in langs]
+                    self.hooks["generateSelectedWithObsolete"](li)
                     return
         
         # generate a minimal temporary projectfile suitable for pylupdate
@@ -1183,9 +1183,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 return
         else:
             if self.hooks["releaseSelected"] is not None:
-                l = [self.project.getRelativePath(lang.fileName()) \
-                     for lang in langs]
-                self.hooks["releaseSelected"](l)
+                li = [self.project.getRelativePath(lang.fileName())
+                      for lang in langs]
+                self.hooks["releaseSelected"](li)
                 return
         
         # generate a minimal temporary projectfile suitable for lrelease

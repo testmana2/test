@@ -144,7 +144,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.__lastFileItem.setExpanded(True)
             if self.__replaceMode:
                 self.__lastFileItem.setFlags(
-                    self.__lastFileItem.flags() | \
+                    self.__lastFileItem.flags() |
                     Qt.ItemFlags(Qt.ItemIsUserCheckable | Qt.ItemIsTristate))
                 # Qt bug:
                 # item is not user checkable if setFirstColumnSpanned
@@ -248,10 +248,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         Private slot called to enable the find button.
         """
         if self.findtextCombo.currentText() == "" or \
-           (self.__replaceMode and \
+           (self.__replaceMode and
             self.replacetextCombo.currentText() == "") or \
-           (self.dirButton.isChecked() and \
-            (self.dirCombo.currentText() == "" or \
+           (self.dirButton.isChecked() and
+            (self.dirCombo.currentText() == "" or
              not os.path.exists(os.path.abspath(
                 self.dirCombo.currentText())))) or \
            (self.filterCheckBox.isChecked() and self.filterEdit.text() == ""):
@@ -300,14 +300,14 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         if self.filterCheckBox.isChecked():
             fileFilter = self.filterEdit.text()
             fileFilterList = \
-                ["^{0}$".format(filter.replace(".", "\.").replace("*", ".*")) \
+                ["^{0}$".format(filter.replace(".", "\.").replace("*", ".*"))
                  for filter in fileFilter.split(";")]
             filterRe = re.compile("|".join(fileFilterList))
         
         if self.projectButton.isChecked():
             if self.filterCheckBox.isChecked():
-                files = [self.project.getRelativePath(file) \
-                         for file in \
+                files = [self.project.getRelativePath(file)
+                         for file in
                          self.__getFileList(
                             self.project.getProjectPath(), filterRe)]
             else:
@@ -555,8 +555,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         path = os.path.abspath(path)
         files = []
         for dirname, _, names in os.walk(path):
-            files.extend([os.path.join(dirname, f) \
-                          for f in names \
+            files.extend([os.path.join(dirname, f)
+                          for f in names
                           if re.match(filterRe, f)]
             )
         return files
@@ -609,7 +609,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(
                             """<p>Could not read the file <b>{0}</b>."""
-                            """ Skipping it.</p><p>Reason: {1}</p>""")\
+                            """ Skipping it.</p><p>Reason: {1}</p>""")
                             .format(fn, str(err))
                     )
                     progress += 1
@@ -625,7 +625,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         self.trUtf8(
                             """<p>The current and the original hash of the"""
                             """ file <b>{0}</b> are different. Skipping it."""
-                            """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")\
+                            """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")
                             .format(fn, origHash, hash)
                     )
                     progress += 1
@@ -650,7 +650,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(
                             """<p>Could not save the file <b>{0}</b>."""
-                            """ Skipping it.</p><p>Reason: {1}</p>""")\
+                            """ Skipping it.</p><p>Reason: {1}</p>""")
                             .format(fn, str(err))
                     )
             

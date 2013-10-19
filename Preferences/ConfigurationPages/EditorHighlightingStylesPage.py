@@ -403,7 +403,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                 self.trUtf8("Export Highlighting Styles"),
                 self.trUtf8(
                     """<p>The highlighting styles could not be exported"""
-                    """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
+                    """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")
                     .format(fn, f.errorString())
             )
         
@@ -435,7 +435,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8(
                     """<p>The highlighting styles could not be read"""
-                    """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
+                    """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")
                     .format(fn, f.errorString())
             )
             return

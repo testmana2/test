@@ -509,7 +509,7 @@ class TranslationsDict(QObject):
                     self.parent(),
                     self.trUtf8("Set Translator"),
                     self.trUtf8(
-                        """<p>The translator <b>{0}</b> is not known.</p>""")\
+                        """<p>The translator <b>{0}</b> is not known.</p>""")
                         .format(name))
                 return
                 
@@ -726,7 +726,7 @@ class WidgetView(QWidget):
                 self,
                 self.trUtf8("Load UI File"),
                 self.trUtf8(
-                    """<p>The file <b>{0}</b> could not be loaded.</p>""")\
+                    """<p>The file <b>{0}</b> could not be loaded.</p>""")
                     .format(self.__uiFileName))
             self.__valid = False
             return
@@ -782,7 +782,7 @@ class WidgetArea(QMdiArea):
                     self,
                     self.trUtf8("Load UI File"),
                     self.trUtf8(
-                        """<p>The file <b>{0}</b> could not be loaded.</p>""")\
+                        """<p>The file <b>{0}</b> could not be loaded.</p>""")
                         .format(uiFileName))
                 return
             

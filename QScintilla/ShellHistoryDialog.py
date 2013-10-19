@@ -44,7 +44,7 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         Private slot to handle a change of the selection.
         """
         selected = len(self.historyList.selectedItems()) > 0
-        self.copyButton.setEnabled(selected and \
+        self.copyButton.setEnabled(selected and
                                    self.vm.activeWindow() is not None)
         self.deleteButton.setEnabled(selected)
         self.executeButton.setEnabled(selected)

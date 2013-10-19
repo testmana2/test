@@ -387,7 +387,7 @@ class HistoryManager(QWebHistoryInterface):
                 self.trUtf8("Loading History"),
                 self.trUtf8(
                     """<p>Unable to open history file <b>{0}</b>.<br/>"""
-                    """Reason: {1}</p>""")\
+                    """Reason: {1}</p>""")
                     .format(historyFile.fileName, historyFile.errorString()))
             return
         
@@ -467,7 +467,7 @@ class HistoryManager(QWebHistoryInterface):
                 self.trUtf8("Saving History"),
                 self.trUtf8(
                     """<p>Unable to open history file <b>{0}</b>.<br/>"""
-                    """Reason: {1}</p>""")\
+                    """Reason: {1}</p>""")
                     .format(f.fileName(), f.errorString()))
             return
         
@@ -490,7 +490,7 @@ class HistoryManager(QWebHistoryInterface):
                     self.trUtf8("Saving History"),
                     self.trUtf8(
                         """<p>Error removing old history file <b>{0}</b>."""
-                        """<br/>Reason: {1}</p>""")\
+                        """<br/>Reason: {1}</p>""")
                         .format(historyFile.fileName(),
                                 historyFile.errorString()))
             if not f.copy(historyFile.fileName()):
@@ -499,7 +499,7 @@ class HistoryManager(QWebHistoryInterface):
                     self.trUtf8("Saving History"),
                     self.trUtf8(
                         """<p>Error moving new history file over old one """
-                        """(<b>{0}</b>).<br/>Reason: {1}</p>""")\
+                        """(<b>{0}</b>).<br/>Reason: {1}</p>""")
                         .format(historyFile.fileName(), f.errorString()))
         self.historySaved.emit()
         try:

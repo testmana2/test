@@ -662,7 +662,7 @@ class AESModeOfOperation(object):
             for j in range(int(math.ceil(float(len(input)) / 16))):
                 start = j * 16
                 end = j * 16 + 16
-                if  end > len(input):
+                if end > len(input):
                     end = len(input)
                 plaintext = self.__extractBytes(input, start, end, mode)
                 # print 'PT@%s:%s' % (j, plaintext)
@@ -751,7 +751,7 @@ class AESModeOfOperation(object):
         bytesOut = bytearray()
         # char firstRound
         firstRound = True
-        if cipherIn != None:
+        if cipherIn is not None:
             for j in range(int(math.ceil(float(len(cipherIn)) / 16))):
                 start = j * 16
                 end = j * 16 + 16

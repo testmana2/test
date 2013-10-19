@@ -137,7 +137,6 @@ if __name__ == "__main__":
             maxLineLength=max_line_length, docType=docType)
         docStyleChecker.run()
         
-        
         errors = report.errors + docStyleChecker.errors
         
         if len(errors) > 0:

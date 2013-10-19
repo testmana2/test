@@ -99,10 +99,10 @@ def usage(rcode=2):
         print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
               " [-m name] [-p python]".format(progName))
     elif sys.platform.startswith("win"):
-        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file]"\
+        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file]"
               .format(progName))
     else:
-        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"\
+        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
               .format(progName))
     print("where:")
     print("    -h        display this help message")
@@ -923,13 +923,13 @@ def doDependancyChecks():
         min = int(min)
         pat = int(pat)
         if maj < 4 or (maj == 4 and min < 8):
-            print('Sorry, you must have PyQt 4.8.0 or higher or' \
+            print('Sorry, you must have PyQt 4.8.0 or higher or'
                   ' a recent snapshot release.')
             exit(4)
         # check for blacklisted versions
         for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
+                print('Sorry, PyQt4 version {0} is not compatible with eric5.'
                       .format(vers))
                 print('Please install another version.')
                 exit(4)
@@ -947,7 +947,7 @@ def doDependancyChecks():
         min = int(min)
         pat = int(pat)
         if maj < 2 or (maj == 2 and min < 6):
-            print('Sorry, you must have QScintilla 2.6.0 or higher or' \
+            print('Sorry, you must have QScintilla 2.6.0 or higher or'
                   ' a recent snapshot release.')
             exit(5)
         # check for blacklisted versions

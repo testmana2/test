@@ -94,7 +94,7 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
         Private slot to update the state of the OK button.
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
-            self.revisionsEdit.toPlainText() != "" or 
+            self.revisionsEdit.toPlainText() != "" or
             self.allCheckBox.isChecked())
     
     @pyqtSlot()

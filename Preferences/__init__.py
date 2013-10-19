@@ -76,7 +76,7 @@ class Prefs(object):
         "DebugClient3": "",
         "PythonExtensions": ".py2 .pyw2 .ptl",  # space separated list of
                                                 # Python extensions
-        "Python3Extensions": ".py .pyw .py3 .pyw3", # space separated list of
+        "Python3Extensions": ".py .pyw .py3 .pyw3",  # space separated list of
                                                     # Python3 extensions
         "DebugEnvironmentReplace": False,
         "DebugEnvironment": "",
@@ -236,7 +236,7 @@ class Prefs(object):
         "ProxyType/Ftp": E5FtpProxyType.NoProxy,
         "ProxyAccount/Ftp": "",
         
-        "PluginRepositoryUrl5": \
+        "PluginRepositoryUrl5":
             "http://eric-ide.python-projects.org/plugins5/repository.xml",
         "VersionsUrls5": [
             "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/"
@@ -631,58 +631,58 @@ class Prefs(object):
     # defaults for the project browser flags settings
     projectBrowserFlagsDefaults = {
         "Qt4":
-            SourcesBrowserFlag | \
-            FormsBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            FormsBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "Qt4C":
-            SourcesBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "PyQt5":
-            SourcesBrowserFlag | \
-            FormsBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            FormsBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "PyQt5C":
-            SourcesBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "E4Plugin":
-            SourcesBrowserFlag | \
-            FormsBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            FormsBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "Console":
-            SourcesBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "Other":
-            SourcesBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "PySide":
-            SourcesBrowserFlag | \
-            FormsBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            FormsBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
         "PySideC":
-            SourcesBrowserFlag | \
-            ResourcesBrowserFlag | \
-            TranslationsBrowserFlag | \
-            InterfacesBrowserFlag | \
+            SourcesBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
             OthersBrowserFlag,
     }
     
@@ -1252,7 +1252,7 @@ def setVarFilters(filters, prefClass=Prefs):
     """
     Module function to store the variables filter settings.
     
-    @param filters variable filters to set 
+    @param filters variable filters to set
     @param prefClass preferences class used as the storage area
     """
     prefClass.settings.setValue("Variables/LocalsFilter", str(filters[0]))

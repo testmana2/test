@@ -296,7 +296,7 @@ class PixmapDiagram(E5MainWindow):
         
         @return current zoom factor in percent (integer)
         """
-        return int(self.pixmapLabel.width() / 
+        return int(self.pixmapLabel.width() /
                    self.pixmapLabel.pixmap().width() * 100.0)
         
     def __printDiagram(self):

@@ -170,8 +170,8 @@ class IrcUserItem(QListWidgetItem):
         
         @return flag indicating that the topic can be changed (boolean)
         """
-        return(bool(self.__privilege & IrcUserItem.Operator) or \
-               bool(self.__privilege & IrcUserItem.Admin) or \
+        return(bool(self.__privilege & IrcUserItem.Operator) or
+               bool(self.__privilege & IrcUserItem.Admin) or
                bool(self.__privilege & IrcUserItem.Owner))
 
 
@@ -726,7 +726,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.__addManagementMessage(
                 IrcChannelWidget.MessageIndicator,
                 self.trUtf8("The topic was set by {0} on {1}.").format(
-                    match.group(2), QDateTime.fromTime_t(int(match.group(3)))\
+                    match.group(2), QDateTime.fromTime_t(int(match.group(3)))
                                     .toString("yyyy-MM-dd hh:mm")))
             return True
         
@@ -795,7 +795,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.__addManagementMessage(
                 IrcChannelWidget.MessageIndicator,
                 self.trUtf8("This channel was created on {0}.").format(
-                    QDateTime.fromTime_t(int(match.group(2)))\
+                    QDateTime.fromTime_t(int(match.group(2)))
                         .toString("yyyy-MM-dd hh:mm")))
             return True
         

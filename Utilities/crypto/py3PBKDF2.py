@@ -127,7 +127,7 @@ def rehashPassword(password, hashParameters):
         digestname, iterations, salt = hashParameters.split(Delimiter)
     except ValueError:
         raise ValueError(
-            "Expected hash parameters string in format "\
+            "Expected hash parameters string in format "
             "'digestmod{0}iterations{0}salt".format(Delimiter))
     
     if digestname not in Hashes.keys():

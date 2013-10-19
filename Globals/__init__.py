@@ -94,7 +94,7 @@ def checkBlacklistedVersions():
         # check for blacklisted versions
         for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
+                print('Sorry, PyQt4 version {0} is not compatible with eric5.'
                       .format(vers))
                 print('Please install another version.')
                 return False

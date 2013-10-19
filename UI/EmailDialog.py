@@ -389,7 +389,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @param txt changed text (string)
         """
         self.sendButton.setEnabled(
-            self.subject.text() != "" and \
+            self.subject.text() != "" and
             self.message.toPlainText() != "")
         
     def on_message_textChanged(self):
@@ -397,5 +397,5 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         Private slot to handle the textChanged signal of the message edit.
         """
         self.sendButton.setEnabled(
-            self.subject.text() != "" and \
+            self.subject.text() != "" and
             self.message.toPlainText() != "")

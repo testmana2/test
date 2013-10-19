@@ -103,7 +103,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
                             self.allModules[self.file].append(className)
                 if cw and cw.noAttrs != self.noAttrs:
                     cw = None
-                if cw and not (cw.external and \
+                if cw and not (cw.external and
                                (className in module.classes or
                                 className in module.modules)
                               ):

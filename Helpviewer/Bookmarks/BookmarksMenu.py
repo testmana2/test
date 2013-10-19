@@ -234,7 +234,7 @@ class BookmarksMenuBarMenu(BookmarksMenu):
         self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow\
             .bookmarksManager()
         self.setModel(self.__bookmarksManager.bookmarksModel())
-        self.setRootIndex(self.__bookmarksManager.bookmarksModel()\
+        self.setRootIndex(self.__bookmarksManager.bookmarksModel()
                             .nodeIndex(self.__bookmarksManager.menu()))
         
         # initial actions
@@ -247,7 +247,7 @@ class BookmarksMenuBarMenu(BookmarksMenu):
             self.addSeparator()
         
         self.createMenu(
-            self.__bookmarksManager.bookmarksModel()\
+            self.__bookmarksManager.bookmarksModel()
                 .nodeIndex(self.__bookmarksManager.toolbar()),
             1, self)
         return True

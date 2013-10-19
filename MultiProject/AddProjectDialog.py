@@ -104,5 +104,5 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         """
         Private method to update the dialog.
         """
-        self.__okButton.setEnabled(self.nameEdit.text() != "" and \
+        self.__okButton.setEnabled(self.nameEdit.text() != "" and
                                    self.filenameEdit.text() != "")

@@ -348,10 +348,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     [f for f in files
                      if not fnmatch.fnmatch(f, filter.strip())]
         
-        py3files = [f for f in files \
+        py3files = [f for f in files
                     if f.endswith(
                         tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files \
+        py2files = [f for f in files
                     if f.endswith(
                         tuple(Preferences.getPython("PythonExtensions")))]
         
@@ -398,7 +398,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         self.noResults = False
                         self.__createResultItem(
                             file, "1", "1",
-                            self.trUtf8("Error: {0}").format(str(msg))\
+                            self.trUtf8("Error: {0}").format(str(msg))
                                 .rstrip()[1:-1], False, False)
                         progress += 1
                         continue
@@ -416,10 +416,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     if ("FileType" in flags and
                         flags["FileType"] in ["Python", "Python2"]) or \
                        file in py2files or \
-                       (ext in [".py", ".pyw"] and \
-                        Preferences.getProject("DeterminePyFromProject") and \
-                        self.__project.isOpen() and \
-                        self.__project.isProjectFile(file) and \
+                       (ext in [".py", ".pyw"] and
+                        Preferences.getProject("DeterminePyFromProject") and
+                        self.__project.isOpen() and
+                        self.__project.isProjectFile(file) and
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
                         from .CodeStyleChecker import CodeStyleCheckerPy2
@@ -436,12 +436,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         stats.update(report.counters)
                     else:
                         if includeMessages:
-                            select = [s.strip() for s in 
+                            select = [s.strip() for s in
                                       includeMessages.split(',') if s.strip()]
                         else:
                             select = []
                         if excludeMessages:
-                            ignore = [i.strip() for i in 
+                            ignore = [i.strip() for i in
                                       excludeMessages.split(',') if i.strip()]
                         else:
                             ignore = []
@@ -825,7 +825,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             fixesDict[filename].append((
                 (itm.data(0, self.lineRole),
                  itm.data(0, self.positionRole),
-                 "{0} {1}".format(itm.data(0, self.codeRole), 
+                 "{0} {1}".format(itm.data(0, self.codeRole),
                                   itm.data(0, self.messageRole))),
                 itm
             ))

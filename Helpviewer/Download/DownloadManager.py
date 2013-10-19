@@ -106,9 +106,9 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             menu.addSeparator()
         menu.addAction(self.trUtf8("Select All"), self.__contextMenuSelectAll)
         if selectedRowsCount > 1 or \
-           (selectedRowsCount == 1 and \
+           (selectedRowsCount == 1 and
             not self.__downloads[
-                self.downloadsView.selectionModel().selectedRows()[0].row()]\
+                self.downloadsView.selectionModel().selectedRows()[0].row()]
                 .downloading()):
             menu.addSeparator()
             menu.addAction(

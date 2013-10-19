@@ -139,7 +139,7 @@ class BookmarksManager(QObject):
                 self.trUtf8("Loading Bookmarks"),
                 self.trUtf8(
                     """Error when loading bookmarks on line {0},"""
-                    """ column {1}:\n {2}""")\
+                    """ column {1}:\n {2}""")
                     .format(reader.lineNumber(),
                             reader.columnNumber(),
                             reader.errorString()))
@@ -149,13 +149,13 @@ class BookmarksManager(QObject):
                 len(self.__bookmarkRootNode.children()) - 1, -1, -1):
             node = self.__bookmarkRootNode.children()[index]
             if node.type() == BookmarkNode.Folder:
-                if (node.title == self.trUtf8("Toolbar Bookmarks") or \
+                if (node.title == self.trUtf8("Toolbar Bookmarks") or
                     node.title == BOOKMARKBAR) and \
                    self.__toolbar is None:
                     node.title = self.trUtf8(BOOKMARKBAR)
                     self.__toolbar = node
                 
-                if (node.title == self.trUtf8("Menu") or \
+                if (node.title == self.trUtf8("Menu") or
                     node.title == BOOKMARKMENU) and \
                    self.__menu is None:
                     node.title = self.trUtf8(BOOKMARKMENU)
@@ -204,7 +204,7 @@ class BookmarksManager(QObject):
             E5MessageBox.warning(
                 None,
                 self.trUtf8("Saving Bookmarks"),
-                self.trUtf8("""Error saving bookmarks to <b>{0}</b>.""")\
+                self.trUtf8("""Error saving bookmarks to <b>{0}</b>.""")
                     .format(bookmarkFile))
         
         # restore localized titles
@@ -390,7 +390,7 @@ class BookmarksManager(QObject):
             E5MessageBox.critical(
                 None,
                 self.trUtf8("Exporting Bookmarks"),
-                self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")\
+                self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")
                     .format(fileName))
     
     def __convertFromOldBookmarks(self):

@@ -41,11 +41,11 @@ class HelpIndexWidget(QWidget):
         self.__index = None
         
         self.__layout = QVBoxLayout(self)
-        l = QLabel(self.trUtf8("&Look for:"))
-        self.__layout.addWidget(l)
+        label = QLabel(self.trUtf8("&Look for:"))
+        self.__layout.addWidget(label)
         
         self.__searchEdit = QLineEdit()
-        l.setBuddy(self.__searchEdit)
+        label.setBuddy(self.__searchEdit)
         self.__searchEdit.textChanged.connect(self.__filterIndices)
         self.__searchEdit.installEventFilter(self)
         self.__layout.addWidget(self.__searchEdit)

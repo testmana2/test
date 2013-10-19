@@ -220,7 +220,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__reply.close()
                 self.on_stopButton_clicked()
                 self.filenameLabel.setText(
-                    self.trUtf8("Download canceled: {0}")\
+                    self.trUtf8("Download canceled: {0}")
                         .format(QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
@@ -240,7 +240,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.progressBar.setVisible(False)
                 self.on_stopButton_clicked()
                 self.infoLabel.setText(self.trUtf8(
-                    "Download directory ({0}) couldn't be created.")\
+                    "Download directory ({0}) couldn't be created.")
                     .format(saveDirPath.absolutePath()))
                 return
         
@@ -416,7 +416,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__getFileName()
             if not self.__output.open(QIODevice.WriteOnly):
                 self.infoLabel.setText(
-                    self.trUtf8("Error opening save file: {0}")\
+                    self.trUtf8("Error opening save file: {0}")
                     .format(self.__output.errorString()))
                 self.on_stopButton_clicked()
                 self.statusChanged.emit()
@@ -428,7 +428,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__md5Hash.addData(buffer)
         bytesWritten = self.__output.write(buffer)
         if bytesWritten == -1:
-            self.infoLabel.setText(self.trUtf8("Error saving: {0}")\
+            self.infoLabel.setText(self.trUtf8("Error saving: {0}")
                 .format(self.__output.errorString()))
             self.on_stopButton_clicked()
         else:
@@ -440,7 +440,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to handle a network error.
         """
-        self.infoLabel.setText(self.trUtf8("Network Error: {0}")\
+        self.infoLabel.setText(self.trUtf8("Network Error: {0}")
             .format(self.__reply.errorString()))
         self.tryAgainButton.setEnabled(True)
         self.tryAgainButton.setVisible(True)
@@ -511,7 +511,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if self.bytesTotal() == -1:
             return -1.0
         
-        timeRemaining = (self.bytesTotal() - 
+        timeRemaining = (self.bytesTotal() -
                          self.bytesReceived()) / self.currentSpeed()
         
         # ETA should never be 0
@@ -554,7 +554,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             info = self.trUtf8("{0} of {1} ({2}/sec)\n{3}")\
                 .format(
                     dataString(self.__bytesReceived),
-                    bytesTotal == -1 and self.trUtf8("?") \
+                    bytesTotal == -1 and self.trUtf8("?")
                                      or dataString(bytesTotal),
                     dataString(int(speed)),
                     remaining)

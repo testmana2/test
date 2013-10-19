@@ -231,7 +231,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if not file.open(QFile.WriteOnly):
             E5MessageBox.warning(
                 self, self.trUtf8("Save Snapshot"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")\
+                self.trUtf8("Cannot write file '{0}:\n{1}.")
                     .format(fileName, file.errorString()))
             return False
         
@@ -241,7 +241,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if not ok:
             E5MessageBox.warning(
                 self, self.trUtf8("Save Snapshot"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")\
+                self.trUtf8("Cannot write file '{0}:\n{1}.")
                     .format(fileName, file.errorString()))
         
         return ok
@@ -254,7 +254,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         name = os.path.basename(self.__filename)
         
         # If the name contains a number, then increment it.
-        numSearch = QRegExp("(^|[^\\d])(\\d+)") 
+        numSearch = QRegExp("(^|[^\\d])(\\d+)")
         # We want to match as far left as possible, and when the number is
         # at the start of the name.
         
@@ -485,8 +485,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
                 self.trUtf8(
                     """The application contains an unsaved snapshot."""),
                 E5MessageBox.StandardButtons(
-                    E5MessageBox.Abort | \
-                    E5MessageBox.Discard | \
+                    E5MessageBox.Abort |
+                    E5MessageBox.Discard |
                     E5MessageBox.Save))
             if res == E5MessageBox.Abort:
                 evt.ignore()

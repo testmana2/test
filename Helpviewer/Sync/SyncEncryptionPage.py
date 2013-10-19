@@ -99,7 +99,7 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
             
             if self.encryptionKeyEdit.text() != "" and \
                     self.reencryptCheckBox.isChecked() and \
-                    (self.encryptionKeyEdit.text() != 
+                    (self.encryptionKeyEdit.text() !=
                      self.encryptionKeyAgainEdit.text()):
                 error = error or self.trUtf8(
                     "Repeated encryption key is wrong.")

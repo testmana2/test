@@ -326,7 +326,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                 log["date"] = self.rx_rev2.cap(3)
                 # number of lines is ignored
             elif self.rx_flags1.exactMatch(s):
-                changedPaths.append({\
+                changedPaths.append({
                     "action":
                         self.rx_flags1.cap(1).strip(),
                     "path":
@@ -337,7 +337,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                         self.rx_flags1.cap(4).strip(),
                 })
             elif self.rx_flags2.exactMatch(s):
-                changedPaths.append({\
+                changedPaths.append({
                     "action":
                         self.rx_flags2.cap(1).strip(),
                     "path":

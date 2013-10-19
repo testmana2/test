@@ -53,7 +53,7 @@ class Lexer(object):
         
     def canBlockComment(self):
         """
-        Public method to determine, whether the lexer language supports a 
+        Public method to determine, whether the lexer language supports a
         block comment.
         
         @return flag (boolean)

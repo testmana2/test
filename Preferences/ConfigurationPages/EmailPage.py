@@ -80,9 +80,9 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         Private slot to update the enabled state of the test button.
         """
         self.testButton.setEnabled(
-            self.mailAuthenticationCheckBox.isChecked() and \
-            self.mailUserEdit.text() != "" and \
-            self.mailPasswordEdit.text() != "" and \
+            self.mailAuthenticationCheckBox.isChecked() and
+            self.mailUserEdit.text() != "" and
+            self.mailPasswordEdit.text() != "" and
             self.mailServerEdit.text() != ""
         )
     

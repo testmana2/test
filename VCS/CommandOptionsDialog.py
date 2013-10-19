@@ -9,12 +9,12 @@ Module implementing the VCS command options dialog.
 
 from PyQt4.QtGui import QDialog
 
-from .Ui_CommandOptionsDialog import Ui_vcsCommandOptionsDialog
+from .Ui_CommandOptionsDialog import Ui_VcsCommandOptionsDialog
 
 import Utilities
 
 
-class vcsCommandOptionsDialog(QDialog, Ui_vcsCommandOptionsDialog):
+class VcsCommandOptionsDialog(QDialog, Ui_VcsCommandOptionsDialog):
     """
     Class implementing the VCS command options dialog.
     """

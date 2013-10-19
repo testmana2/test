@@ -53,11 +53,11 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         Private method used to enable/disable the OK-button.
         """
         self.okButton.setDisabled(
-            self.tag1Combo.currentText() != "" or \
-            self.tag2Combo.currentText() != "" or \
-            not ((self.rx_url.exactMatch(self.tag1Combo.currentText()) and \
-                  self.rx_url.exactMatch(self.tag2Combo.currentText())) or \
-                 (self.rx_rev.exactMatch(self.tag1Combo.currentText()) and \
+            self.tag1Combo.currentText() != "" or
+            self.tag2Combo.currentText() != "" or
+            not ((self.rx_url.exactMatch(self.tag1Combo.currentText()) and
+                  self.rx_url.exactMatch(self.tag2Combo.currentText())) or
+                 (self.rx_rev.exactMatch(self.tag1Combo.currentText()) and
                   self.rx_rev.exactMatch(self.tag2Combo.currentText()))
                 )
             )

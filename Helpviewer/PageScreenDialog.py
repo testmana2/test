@@ -88,7 +88,7 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
             E5MessageBox.warning(
                 self,
                 self.trUtf8("Save Page Screen"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")\
+                self.trUtf8("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return False
         
@@ -99,7 +99,7 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
             E5MessageBox.warning(
                 self,
                 self.trUtf8("Save Page Screen"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")\
+                self.trUtf8("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return False
         

@@ -310,7 +310,7 @@ class Subversion(VersionControl):
                 dlg.showError(e.args[0])
         locker.unlock()
         if not noDialog:
-            rev and dlg.showMessage(self.trUtf8("Imported revision {0}.\n")\
+            rev and dlg.showMessage(self.trUtf8("Imported revision {0}.\n")
                                           .format(rev.number))
             dlg.finish()
             dlg.exec_()
@@ -560,7 +560,7 @@ class Subversion(VersionControl):
                     (not recurse) and " --non-recursive" or "",
                     keeplocks and " --keep-locks" or "",
                     keepChangelists and " --keep-changelists" or "",
-                    changelists and \
+                    changelists and
                         " --changelist ".join([""] + changelists) or "",
                     msg, " ".join(fnames)),
                 client)
@@ -663,8 +663,8 @@ class Subversion(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return  # oops, project is not version controlled
             while os.path.normcase(dname) != os.path.normcase(repodir) and \
-                  (os.path.normcase(dname) not in self.statusCache or \
-                   self.statusCache[os.path.normcase(dname)] == 
+                  (os.path.normcase(dname) not in self.statusCache or
+                   self.statusCache[os.path.normcase(dname)] ==
                     self.canBeAdded):
                 # add directories recursively, if they aren't in the
                 # repository already
@@ -694,8 +694,8 @@ class Subversion(VersionControl):
                     while os.path.normcase(d) != \
                             os.path.normcase(repodir) and \
                           (d not in tree2 + tree) and \
-                          (os.path.normcase(d) not in self.statusCache or \
-                           self.statusCache[os.path.normcase(d)] == 
+                          (os.path.normcase(d) not in self.statusCache or
+                           self.statusCache[os.path.normcase(d)] ==
                             self.canBeAdded):
                         tree2.append(d)
                         d = os.path.dirname(d)
@@ -774,8 +774,8 @@ class Subversion(VersionControl):
                     while os.path.normcase(d) != \
                             os.path.normcase(repodir) and \
                           (d not in tree) and \
-                          (os.path.normcase(d) not in self.statusCache or \
-                           self.statusCache[os.path.normcase(d)] == 
+                          (os.path.normcase(d) not in self.statusCache or
+                           self.statusCache[os.path.normcase(d)] ==
                             self.canBeAdded):
                         tree.append(d)
                         d = os.path.dirname(d)
@@ -798,8 +798,8 @@ class Subversion(VersionControl):
                         return  # oops, project is not version controlled
                 while os.path.normcase(dname) != \
                         os.path.normcase(repodir) and \
-                      (os.path.normcase(dname) not in self.statusCache or \
-                       self.statusCache[os.path.normcase(dname)] == 
+                      (os.path.normcase(dname) not in self.statusCache or
+                       self.statusCache[os.path.normcase(dname)] ==
                         self.canBeAdded):
                     # add directories recursively, if they aren't in the
                     # repository already
@@ -988,7 +988,7 @@ class Subversion(VersionControl):
         Subversion repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are 
+        are saved first. If name is a file (or list of files), which is/are
         being edited and has unsaved modification, they can be saved or the
         operation may be aborted.
         

@@ -237,17 +237,17 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         
         @param line output line to be processed (string)
         """
-        l = line.split()
-        if l[-1][0] in "1234567890":
+        li = line.split()
+        if li[-1][0] in "1234567890":
             # last element is a rev:changeset
-            rev, changeset = l[-1].split(":", 1)
-            del l[-1]
-            if l[0] == "*":
+            rev, changeset = li[-1].split(":", 1)
+            del li[-1]
+            if li[0] == "*":
                 status = "current"
-                del l[0]
+                del li[0]
             else:
                 status = ""
-            name = " ".join(l)
+            name = " ".join(li)
             self.__generateItem(rev, changeset, status, name)
             if self.__bookmarksList is not None:
                 self.__bookmarksList.append(name)

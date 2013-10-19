@@ -42,7 +42,7 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
         """
         from .BookmarkNode import BookmarkNode
         
-        if (self.__node.type() == BookmarkNode.Bookmark and \
+        if (self.__node.type() == BookmarkNode.Bookmark and
             not self.addressEdit.text()) or \
            not self.nameEdit.text():
             super().accept()

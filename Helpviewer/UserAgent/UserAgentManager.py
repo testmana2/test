@@ -88,7 +88,7 @@ class UserAgentManager(QObject):
                     None,
                     self.trUtf8("Loading user agent data"),
                     self.trUtf8("""Error when loading user agent data on"""
-                                """ line {0}, column {1}:\n{2}""")\
+                                """ line {0}, column {1}:\n{2}""")
                         .format(reader.lineNumber(),
                                 reader.columnNumber(),
                                 reader.errorString()))
@@ -115,7 +115,7 @@ class UserAgentManager(QObject):
                     self.trUtf8("Loading user agent data"),
                     self.trUtf8("""<p>User agent data could not be loaded """
                                 """from <b>{0}</b></p>"""
-                                """<p>Reason: {1}</p>""")\
+                                """<p>Reason: {1}</p>""")
                         .format(agentFile, str(err)))
                 return
             

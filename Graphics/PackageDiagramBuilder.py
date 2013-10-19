@@ -71,9 +71,9 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         import Utilities.ModuleParser
         
         supportedExt = \
-            ['*{0}'.format(ext) for ext in 
+            ['*{0}'.format(ext) for ext in
              Preferences.getPython("PythonExtensions")] + \
-            ['*{0}'.format(ext) for ext in 
+            ['*{0}'.format(ext) for ext in
              Preferences.getPython("Python3Extensions")] + \
             ['*.rb']
         extensions = Preferences.getPython("PythonExtensions") + \
@@ -122,9 +122,9 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         import Utilities.ModuleParser
         
         supportedExt = \
-            ['*{0}'.format(ext) for ext in 
+            ['*{0}'.format(ext) for ext in
              Preferences.getPython("PythonExtensions")] + \
-            ['*{0}'.format(ext) for ext in 
+            ['*{0}'.format(ext) for ext in
              Preferences.getPython("Python3Extensions")] + \
             ['*.rb']
         extensions = Preferences.getPython("PythonExtensions") + \
@@ -195,7 +195,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
-                self.trUtf8("The directory <b>'{0}'</b> is not a package.")\
+                self.trUtf8("The directory <b>'{0}'</b> is not a package.")
                     .format(self.package))
             return
         
@@ -241,7 +241,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                             self.allClasses[className] = cw
                     if cw and cw.noAttrs != self.noAttrs:
                         cw = None
-                    if cw and not (cw.external and \
+                    if cw and not (cw.external and
                                    (className in module.classes or
                                     className in module.modules)
                                   ):

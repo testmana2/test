@@ -139,7 +139,7 @@ class JavaScriptEricObject(QObject):
         @return search URL (string)
         """
         return bytes(
-            self.__mw.openSearchManager().currentEngine()\
+            self.__mw.openSearchManager().currentEngine()
             .searchUrl(searchStr).toEncoded()).decode()
 
 ###############################################################################
@@ -351,7 +351,7 @@ class HelpWebPage(QWebPage):
             html = html.replace("@TITLE@", title.encode("utf8"))
             html = html.replace("@H1@", info.errorString.encode("utf8"))
             html = html.replace(
-                "@H2@", self.trUtf8("When connecting to: {0}.")\
+                "@H2@", self.trUtf8("When connecting to: {0}.")
                 .format(urlString).encode("utf8"))
             html = html.replace(
                 "@LI-1@",
@@ -372,7 +372,7 @@ class HelpWebPage(QWebPage):
             html = html.replace(
                 "@LI-4@",
                 self.trUtf8("If your cache policy is set to offline browsing,"
-                            "only pages in the local cache are available.")\
+                            "only pages in the local cache are available.")
                 .encode("utf8"))
             html = html.replace(
                 "@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
@@ -823,7 +823,7 @@ class HelpBrowser(QWebView):
                     self,
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
-                        """<p>The file <b>{0}</b> does not exist.</p>""")\
+                        """<p>The file <b>{0}</b> does not exist.</p>""")
                         .format(name.toLocalFile()))
                 return
 
@@ -1723,7 +1723,7 @@ class HelpBrowser(QWebView):
         
         if self.__enableAccessKeys:
             self.__accessKeysPressed = (
-                evt.modifiers() == Qt.ControlModifier and \
+                evt.modifiers() == Qt.ControlModifier and
                 evt.key() == Qt.Key_Control)
             if not self.__accessKeysPressed:
                 if self.__checkForAccessKey(evt):
@@ -1952,7 +1952,7 @@ class HelpBrowser(QWebView):
         html = html.replace("@TITLE@", title.encode("utf8"))
         html = html.replace("@H1@", reply.errorString().encode("utf8"))
         html = html.replace(
-            "@H2@", self.trUtf8("When connecting to: {0}.")\
+            "@H2@", self.trUtf8("When connecting to: {0}.")
                 .format(urlString).encode("utf8"))
         html = html.replace(
             "@LI-1@",
@@ -1972,7 +1972,7 @@ class HelpBrowser(QWebView):
         html = html.replace(
             "@LI-4@",
             self.trUtf8("If your cache policy is set to offline browsing,"
-                        "only pages in the local cache are available.")\
+                        "only pages in the local cache are available.")
             .encode("utf8"))
         html = html.replace(
             "@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
@@ -2008,7 +2008,7 @@ class HelpBrowser(QWebView):
             self.trUtf8(
                 """<p>The database quota of <strong>{0}</strong> has"""
                 """ been exceeded while accessing database <strong>{1}"""
-                """</strong>.</p><p>Shall it be changed?</p>""")\
+                """</strong>.</p><p>Shall it be changed?</p>""")
                 .format(self.__dataString(securityOrigin.databaseQuota()),
                         databaseName),
             yesDefault=True)
@@ -2018,7 +2018,7 @@ class HelpBrowser(QWebView):
                 self.trUtf8("New Web Database Quota"),
                 self.trUtf8(
                     "Enter the new quota in MB (current = {0}, used = {1}; "
-                    "step size = 5 MB):"\
+                    "step size = 5 MB):"
                     .format(
                         self.__dataString(securityOrigin.databaseQuota()),
                         self.__dataString(securityOrigin.databaseUsage()))),
@@ -2250,7 +2250,7 @@ class HelpBrowser(QWebView):
         for linkElement in linkElementsList:
             # only atom+xml and rss+xml will be processed
             if linkElement.attribute("rel") != "alternate" or \
-               (linkElement.attribute("type") != "application/rss+xml" and \
+               (linkElement.attribute("type") != "application/rss+xml" and
                 linkElement.attribute("type") != "application/atom+xml"):
                 continue
             

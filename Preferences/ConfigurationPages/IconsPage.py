@@ -77,7 +77,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         self.addIconDirectoryButton.setEnabled(txt != "")
         self.showIconsButton.setEnabled(
-            txt != "" or \
+            txt != "" or
             self.iconDirectoryList.currentRow() != -1)
         
     @pyqtSlot()

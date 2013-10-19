@@ -61,7 +61,7 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
                      self.messageEdit.toPlainText() != ""
         if self.userGroup.isChecked():
             enable = enable and \
-                (self.currentUserCheckBox.isChecked() or \
+                (self.currentUserCheckBox.isChecked() or
                  self.userEdit.text() != "")
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enable)

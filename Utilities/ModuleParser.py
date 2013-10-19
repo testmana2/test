@@ -638,8 +638,8 @@ class Module(object):
             
             elif m.start("String") >= 0:
                 if modulelevel and \
-                   (src[start - len('\r\n'):start] == '\r\n' or \
-                    src[start - len('\n'):start] == '\n' or \
+                   (src[start - len('\r\n'):start] == '\r\n' or
+                    src[start - len('\n'):start] == '\n' or
                     src[start - len('\r'):start] == '\r'):
                     contents = m.group("StringContents3")
                     if contents is not None:
@@ -754,7 +754,7 @@ class Module(object):
 
             elif m.start("Import") >= 0:
                 # import module
-                names = [n.strip() for n in 
+                names = [n.strip() for n in
                          "".join(m.group("ImportList").splitlines())
                          .replace("\\", "").split(',')]
                 for name in names:
@@ -764,7 +764,7 @@ class Module(object):
             elif m.start("ImportFrom") >= 0:
                 # from module import stuff
                 mod = m.group("ImportFromPath")
-                names = [n.strip() for n in 
+                names = [n.strip() for n in
                          "".join(m.group("ImportFromList").splitlines())
                          .replace("\\", "").split(',')]
                 if mod not in self.from_imports:

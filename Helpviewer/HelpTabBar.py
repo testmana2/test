@@ -59,10 +59,10 @@ class HelpTabBar(E5WheelTabBar):
         self.__previewPopup.setFixedSize(w, h)
         
         from .HelpSnap import renderTabPreview
-        l = QLabel()
-        l.setPixmap(renderTabPreview(indexedBrowser.page(), w, h))
+        label = QLabel()
+        label.setPixmap(renderTabPreview(indexedBrowser.page(), w, h))
         
-        self.__previewPopup.setView(l)
+        self.__previewPopup.setView(label)
         self.__previewPopup.layout().setAlignment(Qt.AlignTop)
         self.__previewPopup.layout().setContentsMargins(0, 0, 0, 0)
         

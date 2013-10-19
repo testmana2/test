@@ -80,14 +80,14 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Private method to close all project related windows.
         """
-        self.codemetrics        and self.codemetrics.close()
-        self.codecoverage       and self.codecoverage.close()
-        self.profiledata        and self.profiledata.close()
-        self.classDiagram       and self.classDiagram.close()
-        self.importsDiagram     and self.importsDiagram.close()
-        self.packageDiagram     and self.packageDiagram.close()
+        self.codemetrics and self.codemetrics.close()
+        self.codecoverage and self.codecoverage.close()
+        self.profiledata and self.profiledata.close()
+        self.classDiagram and self.classDiagram.close()
+        self.importsDiagram and self.importsDiagram.close()
+        self.packageDiagram and self.packageDiagram.close()
         self.applicationDiagram and self.applicationDiagram.close()
-        self.loadedDiagram      and self.loadedDiagram.close()
+        self.loadedDiagram and self.loadedDiagram.close()
         
     def _projectClosed(self):
         """
@@ -577,8 +577,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             prEnable = prEnable or \
                 os.path.isfile("{0}.profile".format(basename)) or \
                 os.path.isfile("{0}.profile".format(tbasename))
-            coEnable = (coEnable or \
-                        os.path.isfile("{0}.coverage".format(basename)) or \
+            coEnable = (coEnable or
+                        os.path.isfile("{0}.coverage".format(basename)) or
                         os.path.isfile("{0}.coverage".format(tbasename))) and \
                 self.project.isPy3Project()
         
@@ -589,7 +589,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             basename = os.path.splitext(fn)[0]
             prEnable = prEnable or \
                 os.path.isfile("{0}.profile".format(basename))
-            coEnable = (coEnable or \
+            coEnable = (coEnable or
                         os.path.isfile("{0}.coverage".format(basename))) and \
                 itm.isPython3File()
         
@@ -667,7 +667,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                             self.trUtf8(
                                 """<p>The package directory <b>{0}</b> could"""
                                 """ not be created. Aborting...</p>"""
-                                """<p>Reason: {1}</p>""")\
+                                """<p>Reason: {1}</p>""")
                                 .format(packagePath, str(err)))
                         return
                 packageFile = os.path.join(packagePath, "__init__.py")
@@ -682,7 +682,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                             self.trUtf8(
                                 """<p>The package file <b>{0}</b> could"""
                                 """ not be created. Aborting...</p>"""
-                                """<p>Reason: {1}</p>""")\
+                                """<p>Reason: {1}</p>""")
                                 .format(packageFile, str(err)))
                         return
                 self.project.appendFile(packageFile)

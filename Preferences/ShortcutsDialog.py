@@ -258,7 +258,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         if not noCheck and \
                 (not self.__checkShortcut(
-                    keysequence, objectType, self.__editTopItem) or \
+                    keysequence, objectType, self.__editTopItem) or
                  not self.__checkShortcut(
                     altKeysequence, objectType, self.__editTopItem)):
             return
@@ -449,11 +449,11 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             childHiddenCount = 0
             for index in range(topItem.childCount()):
                 itm = topItem.child(index)
-                if (self.actionButton.isChecked() and \
+                if (self.actionButton.isChecked() and
                     not QRegExp(txt, Qt.CaseInsensitive).indexIn(itm.text(0)) >
                         -1) or \
-                   (self.shortcutButton.isChecked() and \
-                    not txt.lower() in itm.text(1).lower() and \
+                   (self.shortcutButton.isChecked() and
+                    not txt.lower() in itm.text(1).lower() and
                     not txt.lower() in itm.text(2).lower()):
                     itm.setHidden(True)
                     childHiddenCount += 1

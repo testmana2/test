@@ -408,7 +408,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                         self.trUtf8("Error saving Messages"),
                         self.trUtf8(
                             """<p>The messages contents could not be written"""
-                            """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                            """ to <b>{0}</b></p><p>Reason: {1}</p>""")
                             .format(fname, str(err)))
     
     def __initMessagesMenu(self):

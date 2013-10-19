@@ -418,7 +418,7 @@ class MultiProject(QObject):
             fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open multiproject"),
-                Preferences.getMultiProject("Workspace") or \
+                Preferences.getMultiProject("Workspace") or
                     Utilities.getHomeDir(),
                 self.trUtf8("Multiproject Files (*.e4m)"))
             

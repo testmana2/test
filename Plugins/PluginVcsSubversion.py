@@ -126,7 +126,7 @@ def getConfigData():
     data
     """
     return {
-        "zzz_subversionPage": \
+        "zzz_subversionPage":
             [QApplication.translate("VcsSubversionPlugin", "Subversion"),
              os.path.join("VcsPlugins", "vcsSubversion", "icons",
                           "preferences-subversion.png"),

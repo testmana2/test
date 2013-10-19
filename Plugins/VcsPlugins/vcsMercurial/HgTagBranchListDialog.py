@@ -245,23 +245,23 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         
         @param line output line to be processed (string)
         """
-        l = line.split()
-        if l[-1][0] in "1234567890":
+        li = line.split()
+        if li[-1][0] in "1234567890":
             # last element is a rev:changeset
             if self.tagsMode:
                 status = ""
             else:
                 status = self.trUtf8("active")
-            rev, changeset = l[-1].split(":", 1)
-            del l[-1]
+            rev, changeset = li[-1].split(":", 1)
+            del li[-1]
         else:
             if self.tagsMode:
                 status = self.trUtf8("yes")
             else:
-                status = l[-1][1:-1]
-            rev, changeset = l[-2].split(":", 1)
-            del l[-2:]
-        name = " ".join(l)
+                status = li[-1][1:-1]
+            rev, changeset = li[-2].split(":", 1)
+            del li[-2:]
+        name = " ".join(li)
         self.__generateItem(rev, changeset, status, name)
         if name not in ["tip", "default"]:
             if self.tagsList is not None:

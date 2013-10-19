@@ -113,7 +113,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         Private method to create the completer menu.
         """
         if not self.__suggestions or \
-           (self.__model.rowCount() > 0 and \
+           (self.__model.rowCount() > 0 and
             self.__model.item(0) != self.__suggestionsItem):
             self.__model.clear()
             self.__suggestionsItem = None

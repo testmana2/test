@@ -622,8 +622,8 @@ class Subversion(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return  # oops, project is not version controlled
             while os.path.normcase(dname) != os.path.normcase(repodir) and \
-                    (os.path.normcase(dname) not in self.statusCache or \
-                     self.statusCache[os.path.normcase(dname)] == 
+                    (os.path.normcase(dname) not in self.statusCache or
+                     self.statusCache[os.path.normcase(dname)] ==
                         self.canBeAdded):
                 # add directories recursively, if they aren't in the
                 # repository already
@@ -653,8 +653,8 @@ class Subversion(VersionControl):
                     while os.path.normcase(d) != \
                                 os.path.normcase(repodir) and \
                             (d not in tree2 + tree) and \
-                            (os.path.normcase(d) not in self.statusCache or \
-                             self.statusCache[os.path.normcase(d)] == \
+                            (os.path.normcase(d) not in self.statusCache or
+                             self.statusCache[os.path.normcase(d)] ==
                                 self.canBeAdded):
                         tree2.append(d)
                         d = os.path.dirname(d)
@@ -718,8 +718,8 @@ class Subversion(VersionControl):
                     while os.path.normcase(d) != \
                                 os.path.normcase(repodir) and \
                             (d not in tree) and \
-                            (os.path.normcase(d) not in self.statusCache or \
-                             self.statusCache[os.path.normcase(d)] == \
+                            (os.path.normcase(d) not in self.statusCache or
+                             self.statusCache[os.path.normcase(d)] ==
                                 self.canBeAdded):
                         tree.append(d)
                         d = os.path.dirname(d)
@@ -742,8 +742,8 @@ class Subversion(VersionControl):
                         return  # oops, project is not version controlled
                 while os.path.normcase(dname) != \
                             os.path.normcase(repodir) and \
-                        (os.path.normcase(dname) not in self.statusCache or \
-                         self.statusCache[os.path.normcase(dname)] == \
+                        (os.path.normcase(dname) not in self.statusCache or
+                         self.statusCache[os.path.normcase(dname)] ==
                             self.canBeAdded):
                     # add directories recursively, if they aren't in the
                     # repository already
@@ -1530,7 +1530,7 @@ class Subversion(VersionControl):
         @param ppath local path to get the repository infos (string)
         @return string with ready formated info for display (string)
         """
-        info = {\
+        info = {
             'committed-rev': '',
             'committed-date': '',
             'committed-time': '',

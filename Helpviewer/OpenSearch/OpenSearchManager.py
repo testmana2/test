@@ -359,8 +359,8 @@ class OpenSearchManager(QObject):
         from .OpenSearchReader import OpenSearchReader
         from .DefaultSearchEngines import DefaultSearchEngines_rc   # __IGNORE_WARNING__
         
-        defaultEngineFiles = ["YouTube.xml", "Amazoncom.xml", "Bing.xml", 
-                              "DeEn_Beolingus.xml", "Facebook.xml", 
+        defaultEngineFiles = ["YouTube.xml", "Amazoncom.xml", "Bing.xml",
+                              "DeEn_Beolingus.xml", "Facebook.xml",
                               "Google_Im_Feeling_Lucky.xml", "Google.xml",
                               "LEO_DeuEng.xml", "LinuxMagazin.xml",
                               "Reddit.xml", "Wikia_en.xml", "Wikia.xml",

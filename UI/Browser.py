@@ -314,7 +314,7 @@ class Browser(QTreeView):
             if index.isValid():
                 self.setCurrentIndex(index)
                 flags = QItemSelectionModel.SelectionFlags(
-                    QItemSelectionModel.ClearAndSelect | 
+                    QItemSelectionModel.ClearAndSelect |
                     QItemSelectionModel.Rows)
                 self.selectionModel().select(index, flags)
                 

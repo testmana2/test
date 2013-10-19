@@ -1356,28 +1356,28 @@ class Hg(VersionControl):
                 info.append(QApplication.translate(
                     "mercurial",
                     """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
-                    """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")\
+                    """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")
                     .format(index, changeset))
                 if tags:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(tags.split())))
                 if bookmarks:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(bookmarks.split())))
                 if branches:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(branches.split())))
                 info.append(QApplication.translate(
                     "mercurial",
                     """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
-                    """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")\
+                    """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")
                     .format(author, cdate, ctime))
                 infoBlock.append("\n".join(info))
         if infoBlock:
@@ -1541,13 +1541,13 @@ class Hg(VersionControl):
         if output:
             self.tagsList = []
             for line in output.splitlines():
-                l = line.strip().split()
-                if l[-1][0] in "1234567890":
+                li = line.strip().split()
+                if li[-1][0] in "1234567890":
                     # last element is a rev:changeset
-                    del l[-1]
+                    del li[-1]
                 else:
-                    del l[-2:]
-                name = " ".join(l)
+                    del li[-2:]
+                name = " ".join(li)
                 if name not in ["tip", "default"]:
                     self.tagsList.append(name)
         
@@ -1583,13 +1583,13 @@ class Hg(VersionControl):
         if output:
             self.branchesList = []
             for line in output.splitlines():
-                l = line.strip().split()
-                if l[-1][0] in "1234567890":
+                li = line.strip().split()
+                if li[-1][0] in "1234567890":
                     # last element is a rev:changeset
-                    del l[-1]
+                    del li[-1]
                 else:
-                    del l[-2:]
-                name = " ".join(l)
+                    del li[-2:]
+                name = " ".join(li)
                 if name not in ["tip", "default"]:
                     self.branchesList.append(name)
         
@@ -2014,34 +2014,34 @@ class Hg(VersionControl):
                         """<tr><td><b>Tip</b></td><td></td></tr>\n"""))
                 info.append(QApplication.translate(
                     "mercurial",
-                    """<tr><td><b>Changeset</b></td><td>{0}</td></tr>""")\
+                    """<tr><td><b>Changeset</b></td><td>{0}</td></tr>""")
                     .format(changeset))
                 if tags:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(tags.split())))
                 if bookmarks:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(bookmarks.split())))
                 if branches:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(branches.split())))
                 if parents:
                     info.append(QApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Parents</b></td><td>{0}</td></tr>""")\
+                        """<tr><td><b>Parents</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(parents.split())))
                 info.append(QApplication.translate(
                     "mercurial",
                     """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
                     """<tr><td><b>Committed time</b></td><td>{2}</td></tr>\n"""
-                    """</table></p>""")\
+                    """</table></p>""")
                     .format(author, cdate, ctime))
             
             dlg = VcsRepositoryInfoDialog(None, "\n".join(info))

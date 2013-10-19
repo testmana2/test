@@ -129,7 +129,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             E5MessageBox.critical(
                 self,
                 self.trUtf8("Add tool entry"),
-                self.trUtf8("An entry for the menu text {0} already exists.")\
+                self.trUtf8("An entry for the menu text {0} already exists.")
                     .format(menutext))
             return
         

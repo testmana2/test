@@ -1145,14 +1145,14 @@ class UserInterface(E5MainWindow):
                 self.setWindowTitle(
                     self.trUtf8("{0} - Passive Mode").format(Program))
             elif self.capProject and not self.capEditor:
-                self.setWindowTitle(self.trUtf8("{0} - {1} - Passive Mode")\
+                self.setWindowTitle(self.trUtf8("{0} - {1} - Passive Mode")
                     .format(self.capProject, Program))
             elif not self.capProject and self.capEditor:
-                self.setWindowTitle(self.trUtf8("{0} - {1} - Passive Mode")\
+                self.setWindowTitle(self.trUtf8("{0} - {1} - Passive Mode")
                     .format(self.capEditor, Program))
             else:
                 self.setWindowTitle(
-                    self.trUtf8("{0} - {1} - {2} - Passive Mode")\
+                    self.trUtf8("{0} - {1} - {2} - Passive Mode")
                     .format(self.capProject, self.capEditor, Program))
         else:
             if not self.capProject and not self.capEditor:
@@ -4508,7 +4508,7 @@ class UserInterface(E5MainWindow):
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the tool entry <b>{0}</b>.<br>'
-                    'Ensure that it is available as <b>{1}</b>.</p>')\
+                    'Ensure that it is available as <b>{1}</b>.</p>')
                 .format(tool['menutext'], tool['executable']))
         else:
             self.toolProcs.append((program, proc, procData))
@@ -4617,7 +4617,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -4674,7 +4674,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -4743,7 +4743,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -4785,7 +4785,7 @@ class UserInterface(E5MainWindow):
                 if pyqt4DocDir.startswith("file://"):
                     pyqt4DocDir = pyqt4DocDir[7:]
                 if not os.path.splitext(pyqt4DocDir)[1]:
-                    possibleHomes = [\
+                    possibleHomes = [
                         Utilities.normjoinpath(pyqt4DocDir, 'index.html'),
                         Utilities.normjoinpath(pyqt4DocDir, 'classes.html'),
                     ]
@@ -4801,7 +4801,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -4863,7 +4863,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -4899,7 +4899,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -4947,7 +4947,7 @@ class UserInterface(E5MainWindow):
                     self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
-                                """ "<b>{0}</b>" could not be found.</p>""")\
+                                """ "<b>{0}</b>" could not be found.</p>""")
                         .format(home))
                 return
             
@@ -5430,7 +5430,7 @@ class UserInterface(E5MainWindow):
                 self,
                 self.trUtf8("Read session"),
                 self.trUtf8(
-                    "<p>The session file <b>{0}</b> could not be read.</p>")\
+                    "<p>The session file <b>{0}</b> could not be read.</p>")
                     .format(fn))
             return
         
@@ -5445,7 +5445,7 @@ class UserInterface(E5MainWindow):
                 self,
                 self.trUtf8("Read session"),
                 self.trUtf8(
-                    "<p>The session file <b>{0}</b> could not be read.</p>")\
+                    "<p>The session file <b>{0}</b> could not be read.</p>")
                     .format(fn))
     
     def showFindFileByNameDialog(self):
@@ -5883,7 +5883,7 @@ class UserInterface(E5MainWindow):
                         self.trUtf8(
                             """The update to <b>{0}</b> of eric5 is"""
                             """ available at <b>{1}</b>. Would you like to"""
-                            """ get it?""")\
+                            """ get it?""")
                             .format(versions[2], versions[3]),
                         yesDefault=True)
                     url = res and versions[3] or ''
@@ -5894,7 +5894,7 @@ class UserInterface(E5MainWindow):
                         self.trUtf8(
                             """The update to <b>{0}</b> of eric5 is"""
                             """ available at <b>{1}</b>. Would you like to"""
-                            """ get it?""")\
+                            """ get it?""")
                             .format(versions[0], versions[1]),
                         yesDefault=True)
                     url = res and versions[1] or ''
@@ -5915,7 +5915,7 @@ class UserInterface(E5MainWindow):
                         self.trUtf8(
                             """The update to <b>{0}</b> of eric5 is"""
                             """ available at <b>{1}</b>. Would you like"""
-                            """ to get it?""")\
+                            """ to get it?""")
                             .format(versions[0], versions[1]),
                         yesDefault=True)
                     url = res and versions[1] or ''
@@ -5962,7 +5962,7 @@ class UserInterface(E5MainWindow):
             versionText += """<tr><td>{0}</td><td><a href="{1}">{2}</a>""" \
                 """</td></tr>""".format(
                     versions[line], versions[line + 1],
-                    'sourceforge' in versions[line + 1] and \
+                    'sourceforge' in versions[line + 1] and
                         "SourceForge" or versions[line + 1])
             line += 2
         versionText += self.trUtf8("""</table>""")

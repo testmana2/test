@@ -119,7 +119,7 @@ def getConfigData():
     data
     """
     return {
-        "zzz_subversionPage": \
+        "zzz_subversionPage":
             [QApplication.translate("VcsPySvnPlugin", "Subversion"),
              os.path.join("VcsPlugins", "vcsPySvn", "icons",
                           "preferences-subversion.png"),

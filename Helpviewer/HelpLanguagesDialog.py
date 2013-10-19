@@ -157,7 +157,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             return cls.expand(QLocale(language).language())
     
     @classmethod
-    def expand(self, language):
+    def expand(cls, language):
         """
         Class method to expand a language enum to a readable languages list.
         

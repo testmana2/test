@@ -61,8 +61,8 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         Private slot to set the enable state of theok button.
         """
         self.okButton.setEnabled(
-            self.classnameEdit.text() != "" and \
-            self.filenameEdit.text() != "" and \
+            self.classnameEdit.text() != "" and
+            self.filenameEdit.text() != "" and
             self.pathnameEdit.text() != "")
         
     def on_classnameEdit_textChanged(self, text):
@@ -96,5 +96,5 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         @return tuple giving the classname (string) and the file name (string)
         """
         return self.classnameEdit.text(), \
-            os.path.join(self.pathnameEdit.text(), \
+            os.path.join(self.pathnameEdit.text(),
                          self.filenameEdit.text())

@@ -316,7 +316,7 @@ class UrlBar(E5LineEdit):
                 b = (highlight.blue() + 2 * backgroundColor.blue()) // 3
                 
                 loadingColor = QColor(r, g, b)
-                if abs(loadingColor.lightness() - 
+                if abs(loadingColor.lightness() -
                         backgroundColor.lightness()) < 20:
                     # special handling for special color schemes (e.g Gaia)
                     r = (2 * highlight.red() + backgroundColor.red()) // 3

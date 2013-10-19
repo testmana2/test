@@ -35,7 +35,7 @@ class HistoryData(object):
         @return flag indicating equality (boolean)
         """
         return self.tailOffset == other.tailOffset and \
-            (self.frequency == -1 or other.frequency == -1 or \
+            (self.frequency == -1 or other.frequency == -1 or
              self.frequency == other.frequency)
     
     def __lt__(self, other):

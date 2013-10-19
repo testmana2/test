@@ -93,7 +93,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         """
         itm = self.pluginList.itemAt(coord)
         if itm is not None:
-            autoactivate = (itm.text(self.__autoActivateColumn) == 
+            autoactivate = (itm.text(self.__autoActivateColumn) ==
                             self.trUtf8("Yes"))
             if itm.text(self.__activeColumn) == self.trUtf8("Yes"):
                 self.__activateAct.setEnabled(False)

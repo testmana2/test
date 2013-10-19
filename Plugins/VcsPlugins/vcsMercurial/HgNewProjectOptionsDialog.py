@@ -54,7 +54,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         self.localProtocol = True
         
         self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
-            Preferences.getMultiProject("Workspace") or \
+            Preferences.getMultiProject("Workspace") or
                 Utilities.getHomeDir()))
     
     @pyqtSlot()

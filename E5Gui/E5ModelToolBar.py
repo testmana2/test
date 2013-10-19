@@ -232,7 +232,7 @@ class E5ModelToolBar(QToolBar):
             super().mouseMoveEvent(evt)
             return
         
-        manhattanLength = (evt.pos() - 
+        manhattanLength = (evt.pos() -
                            self.__dragStartPosition).manhattanLength()
         if manhattanLength <= QApplication.startDragDistance():
             super().mouseMoveEvent(evt)

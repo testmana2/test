@@ -152,10 +152,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
-        py3files = [f for f in files \
+        py3files = [f for f in files
                     if f.endswith(
                         tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files \
+        py2files = [f for f in files
                     if f.endswith(
                         tuple(Preferences.getPython("PythonExtensions")))]
         
@@ -191,7 +191,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         self.noResults = False
                         self.__createResultItem(
                             file, "1", 0,
-                            self.trUtf8("Error: {0}").format(str(msg))\
+                            self.trUtf8("Error: {0}").format(str(msg))
                                 .rstrip()[1:-1], "")
                         progress += 1
                         continue
@@ -201,10 +201,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 if ("FileType" in flags and
                     flags["FileType"] in ["Python", "Python2"]) or \
                    file in py2files or \
-                   (ext in [".py", ".pyw"] and \
-                    Preferences.getProject("DeterminePyFromProject") and \
-                    self.__project.isOpen() and \
-                    self.__project.isProjectFile(file) and \
+                   (ext in [".py", ".pyw"] and
+                    Preferences.getProject("DeterminePyFromProject") and
+                    self.__project.isOpen() and
+                    self.__project.isProjectFile(file) and
                     self.__project.getProjectLanguage() in ["Python",
                                                             "Python2"]):
                     isPy3 = False

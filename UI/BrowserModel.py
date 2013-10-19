@@ -573,7 +573,7 @@ class BrowserModel(QAbstractItemModel):
             if "@@Coding@@" in keys:
                 node = BrowserCodingItem(
                     parentItem,
-                    QApplication.translate("BrowserModel", "Coding: {0}")\
+                    QApplication.translate("BrowserModel", "Coding: {0}")
                         .format(dict["@@Coding@@"].coding))
                 self._addItem(node, parentItem)
             if "@@Globals@@" in keys:
@@ -1296,8 +1296,8 @@ class BrowserClassItem(BrowserItem):
             else:
                 self.icon = UI.PixmapCache.getIcon("class.png")
         if self._classObject and \
-           (self._classObject.methods or \
-            self._classObject.classes or \
+           (self._classObject.methods or
+            self._classObject.classes or
             self._classObject.attributes):
             self._populated = False
             self._lazyPopulation = True

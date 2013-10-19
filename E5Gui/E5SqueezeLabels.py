@@ -107,7 +107,7 @@ class E5SqueezeLabelPath(QLabel):
         @param event reference to the paint event (QPaintEvent)
         """
         fm = self.fontMetrics()
-        if (fm.width(self.__surrounding.format(self.__path)) > 
+        if (fm.width(self.__surrounding.format(self.__path)) >
                 self.contentsRect().width()):
             super().setText(
                 self.__surrounding.format(compactPath(self.__path,

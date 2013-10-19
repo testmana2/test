@@ -590,8 +590,8 @@ class QRegularExpressionWizardCharactersDialog(
                 self.__formatCharacter(char2, format))
         
         if regexp:
-            if (regexp.startswith("\\") and \
-                regexp.count("\\") == 1 and \
+            if (regexp.startswith("\\") and
+                regexp.count("\\") == 1 and
                 "-" not in regexp) or \
                len(regexp) == 1:
                 return regexp

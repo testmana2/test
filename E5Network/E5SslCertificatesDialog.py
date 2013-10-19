@@ -156,7 +156,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         """<p>If the server certificate is deleted, the"""
                         """ normal security checks will be reinstantiated"""
                         """ and the server has to present a valid"""
-                        """ certificate.</p>""")\
+                        """ certificate.</p>""")
                 .format(itm.text(0)))
         if res:
             server = itm.text(1)
@@ -364,7 +364,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                 """<p>Shall the CA certificate really be deleted?</p>"""
                 """<p>{0}</p>"""
                 """<p>If the CA certificate is deleted, the browser"""
-                """ will not trust any certificate issued by this CA.</p>""")\
+                """ will not trust any certificate issued by this CA.</p>""")
                 .format(itm.text(0)))
         if res:
             cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)

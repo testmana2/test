@@ -69,8 +69,8 @@ class OpenSearchReader(QXmlStreamReader):
                    engine.suggestionsUrlTemplate():
                     continue
                 
-                if (not type_ or \
-                    type_ == "text/html" or \
+                if (not type_ or
+                    type_ == "text/html" or
                     type_ == "application/xhtml+xml") and \
                    engine.suggestionsUrlTemplate():
                     continue

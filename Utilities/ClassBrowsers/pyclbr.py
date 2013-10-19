@@ -201,7 +201,7 @@ class Publics(object):
         self.name = '__all__'
         self.file = file
         self.lineno = lineno
-        self.identifiers = [e.replace('"', '').replace("'", "").strip() \
+        self.identifiers = [e.replace('"', '').replace("'", "").strip()
                             for e in idents.split(',')]
     
 

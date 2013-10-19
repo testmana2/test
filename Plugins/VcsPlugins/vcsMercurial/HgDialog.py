@@ -119,7 +119,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         if args[0] in ["fetch", "qpush", "qpop", "qgoto", "rebase",
                        "transplant", "update", "import", "revert",
                        "graft"] or \
-           (args[0] in ["pull", "unbundle"] and \
+           (args[0] in ["pull", "unbundle"] and
             ("--update" in args[1:] or "--rebase" in args[1:])):
             self.__updateCommand = True
         else:

@@ -75,7 +75,7 @@ class VcsProjectBrowserHelper(QObject):
         VCS status and the file status.
         
         @param menu reference to the menu to be shown
-        @param standardItems array of standard items that need 
+        @param standardItems array of standard items that need
             activation/deactivation depending on the overall VCS status
         @exception RuntimeError to indicate that this method must be
             implemented by a subclass
@@ -283,7 +283,7 @@ class VcsProjectBrowserHelper(QObject):
                 names = [itm.dirName() for itm in items]
             else:
                 names = [itm.fileName() for itm in items]
-            files = [self.browser.project.getRelativePath(name) \
+            files = [self.browser.project.getRelativePath(name)
                      for name in names]
             
             dlg = DeleteFilesConfirmationDialog(

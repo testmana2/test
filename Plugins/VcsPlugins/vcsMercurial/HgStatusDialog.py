@@ -589,7 +589,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if self.__mq:
             self.vcs.vcsCommit(self.dname, "", mq=True)
         else:
-            names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+            names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                      for itm in self.__getCommitableItems()]
             if not names:
                 E5MessageBox.information(
@@ -629,7 +629,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private slot to handle the Add context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getUnversionedItems()]
         if not names:
             E5MessageBox.information(
@@ -651,7 +651,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private slot to handle the Remove context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getMissingItems()]
         if not names:
             E5MessageBox.information(
@@ -668,7 +668,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private slot to handle the Revert context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getModifiedItems()]
         if not names:
             E5MessageBox.information(

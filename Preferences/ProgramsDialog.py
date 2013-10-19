@@ -294,7 +294,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                 exe = Utilities.getExecutablePath(exe)
             if exe:
                 if versionCommand and \
-                   (versionStartsWith != "" or \
+                   (versionStartsWith != "" or
                     (versionRe is not None and versionRe != "")) and \
                    versionPosition:
                     proc = QProcess()

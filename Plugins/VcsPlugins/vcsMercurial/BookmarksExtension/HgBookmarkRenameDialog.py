@@ -36,7 +36,7 @@ class HgBookmarkRenameDialog(QDialog, Ui_HgBookmarkRenameDialog):
         Private slot to update the UI.
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
-            self.nameEdit.text() != "" and \
+            self.nameEdit.text() != "" and
             self.bookmarkCombo.currentText() != ""
         )
     

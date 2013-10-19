@@ -117,11 +117,11 @@ class Queues(HgExtension):
         
         for line in output.splitlines():
             if withSummary:
-                l = line.strip().split(": ")
-                if len(l) == 1:
-                    patch, summary = l[0][:-1], ""
+                li = line.strip().split(": ")
+                if len(li) == 1:
+                    patch, summary = li[0][:-1], ""
                 else:
-                    patch, summary = l[0], l[1]
+                    patch, summary = li[0], li[1]
                 patchesList.append("{0}@@{1}".format(patch, summary))
             else:
                 patchesList.append(line.strip())

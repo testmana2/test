@@ -107,23 +107,23 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         Private method to enable/disable some group boxes.
         """
         self.standardButtons.setEnabled(
-            self.rInformation.isChecked() or \
-            self.rQuestion.isChecked() or \
-            self.rWarning.isChecked() or \
-            self.rCritical.isChecked() or \
+            self.rInformation.isChecked() or
+            self.rQuestion.isChecked() or
+            self.rWarning.isChecked() or
+            self.rCritical.isChecked() or
             self.rStandard.isChecked()
         )
         
         self.defaultButton.setEnabled(
-            self.rInformation.isChecked() or \
-            self.rQuestion.isChecked() or \
-            self.rWarning.isChecked() or \
+            self.rInformation.isChecked() or
+            self.rQuestion.isChecked() or
+            self.rWarning.isChecked() or
             self.rCritical.isChecked()
         )
         
         self.iconBox.setEnabled(
-            self.rYesNo.isChecked() or \
-            self.rRetryAbort.isChecked() or \
+            self.rYesNo.isChecked() or
+            self.rRetryAbort.isChecked() or
             self.rStandard.isChecked()
         )
         

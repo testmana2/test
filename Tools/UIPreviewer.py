@@ -360,7 +360,7 @@ class UIPreviewer(E5MainWindow):
                 self,
                 self.trUtf8("Load UI File"),
                 self.trUtf8(
-                    """<p>The file <b>{0}</b> could not be loaded.</p>""")\
+                    """<p>The file <b>{0}</b> could not be loaded.</p>""")
                     .format(fn))
         self.__updateActions()
     

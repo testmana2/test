@@ -258,7 +258,7 @@ class CookieJar(QNetworkCookieJar):
             soon = soon.addDays(90)
             for cookie in cookieList:
                 lst = []
-                if not (self.__filterTrackingCookies and \
+                if not (self.__filterTrackingCookies and
                         cookie.name().startsWith("__utm")):
                     if eAllowSession:
                         cookie.setExpirationDate(QDateTime())

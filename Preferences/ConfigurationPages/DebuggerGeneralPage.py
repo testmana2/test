@@ -252,7 +252,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                     self.trUtf8(
                         """<p>The entered address <b>{0}</b> is not"""
                         """ a valid IP v4 or IP v6 address."""
-                        """ Aborting...</p>""")\
+                        """ Aborting...</p>""")
                         .format(allowedHost))
         
     @pyqtSlot()
@@ -285,7 +285,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                     self.trUtf8(
                         """<p>The entered address <b>{0}</b> is not"""
                         """ a valid IP v4 or IP v6 address."""
-                        """ Aborting...</p>""")\
+                        """ Aborting...</p>""")
                         .format(allowedHost))
     
 

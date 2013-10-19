@@ -138,15 +138,15 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         
         Preferences.setEditor(
             "PreviewHtmlFileNameExtensions",
-            [ext.strip() for ext in 
+            [ext.strip() for ext in
              self.previewHtmlExtensionsEdit.text().split()])
         Preferences.setEditor(
             "PreviewMarkdownFileNameExtensions",
-            [ext.strip() for ext in 
+            [ext.strip() for ext in
              self.previewMarkdownExtensionsEdit.text().split()])
         Preferences.setEditor(
             "PreviewRestFileNameExtensions",
-            [ext.strip() for ext in 
+            [ext.strip() for ext in
              self.previewRestExtensionsEdit.text().split()])
     
     def __setDefaultFiltersLists(self, keepSelection=False):
@@ -203,7 +203,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
                 self,
                 self.trUtf8("Add File Filter"),
                 self.trUtf8("""A Save File Filter must contain exactly one"""
-                            """ wildcard pattern. Yours contains {0}.""")\
+                            """ wildcard pattern. Yours contains {0}.""")
                             .format(filter.count("*")))
             return False
         

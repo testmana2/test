@@ -601,7 +601,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         if self.omniidl is not None:
             items = self.getSelectedItems()
             
-            files = [self.project.getRelativePath(itm.fileName()) \
+            files = [self.project.getRelativePath(itm.fileName())
                      for itm in items]
             numIDLs = len(files)
             progress = QProgressDialog(

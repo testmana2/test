@@ -475,10 +475,10 @@ class HelpTabWidget(E5TabWidget):
         
         @return list of references to browsers (list of HelpBrowser)
         """
-        l = []
+        li = []
         for index in range(self.count()):
-            l.append(self.widget(index))
-        return l
+            li.append(self.widget(index))
+        return li
     
     def printBrowser(self, browser=None):
         """

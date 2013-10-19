@@ -132,7 +132,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         internalPackages = []
         if hasattr(module, "internalPackages"):
             # it is a comma separated string
-            internalPackages = [p.strip() for p in 
+            internalPackages = [p.strip() for p in
                                 module.internalPackages.split(",")]
         del module
         
@@ -183,7 +183,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                     self.trUtf8("Plugin Uninstallation"),
                     self.trUtf8(
                         """<p>The plugin <b>{0}</b> was uninstalled"""
-                        """ successfully from {1}.</p>""")\
+                        """ successfully from {1}.</p>""")
                     .format(pluginName, pluginDirectory))
                 return True
         
@@ -192,7 +192,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             self.trUtf8("Plugin Uninstallation"),
             self.trUtf8(
                 """<p>The plugin <b>{0}</b> was uninstalled successfully"""
-                """ from {1}.</p>""")\
+                """ from {1}.</p>""")
                 .format(pluginName, pluginDirectory))
         return True
 

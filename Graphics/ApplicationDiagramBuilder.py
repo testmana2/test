@@ -105,17 +105,17 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         
         # step 1: build a dictionary of packages
         for module in sortedkeys:
-            l = module.split('.')
-            package = '.'.join(l[:-1])
+            li = module.split('.')
+            package = '.'.join(li[:-1])
             if package in packages:
-                packages[package][0].append(l[-1])
+                packages[package][0].append(li[-1])
             else:
-                packages[package] = ([l[-1]], [])
+                packages[package] = ([li[-1]], [])
                 
         # step 2: assign modules to dictionaries and update import relationship
         for module in sortedkeys:
-            l = module.split('.')
-            package = '.'.join(l[:-1])
+            li = module.split('.')
+            package = '.'.join(li[:-1])
             impLst = []
             for i in modules[module].imports:
                 if i in modules:
@@ -154,7 +154,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                         packageList = shortPackage.split('.')[1:]
                         packageListLen = len(packageList)
                         i = '.'.join(
-                            packageList[:packageListLen - dots + 1] + 
+                            packageList[:packageListLen - dots + 1] +
                             [i[dots:]])
                 
                 if i in modules:

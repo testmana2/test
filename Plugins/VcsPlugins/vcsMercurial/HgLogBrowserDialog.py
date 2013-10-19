@@ -1041,7 +1041,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             
             # step 2: set the status of the phase button
             if public == 0 and \
-               ((secret > 0 and draft == 0) or \
+               ((secret > 0 and draft == 0) or
                 (secret == 0 and draft > 0)):
                 self.phaseButton.setEnabled(True)
             else:
@@ -1253,8 +1253,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 topItem = self.logTree.topLevelItem(topIndex)
                 if topItem.text(self.DateColumn) <= to_ and \
                    topItem.text(self.DateColumn) >= from_ and \
-                   (branch == self.__allBranchesFilter or \
-                    topItem.text(self.BranchColumn) in \
+                   (branch == self.__allBranchesFilter or
+                    topItem.text(self.BranchColumn) in
                         [branch, closedBranch]) and \
                    searchRx.indexIn(topItem.text(fieldIndex)) > -1:
                     topItem.setHidden(False)

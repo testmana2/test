@@ -160,10 +160,10 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                 if ("FileType" in flags and
                     flags["FileType"] in ["Python", "Python2"]) or \
                    file in py2files or \
-                   (ext in [".py", ".pyw"] and \
-                    Preferences.getProject("DeterminePyFromProject") and \
-                    self.__project.isOpen() and \
-                    self.__project.isProjectFile(file) and \
+                   (ext in [".py", ".pyw"] and
+                    Preferences.getProject("DeterminePyFromProject") and
+                    self.__project.isOpen() and
+                    self.__project.isProjectFile(file) and
                     self.__project.getProjectLanguage() in ["Python",
                                                             "Python2"]):
                     nok, fname, line, error = self.__py2check(file)

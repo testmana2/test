@@ -65,7 +65,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Private slot to update the Qt4 tools sample label.
         """
-        self.qt4SampleLabel.setText("Sample: {0}designer{1}"\
+        self.qt4SampleLabel.setText("Sample: {0}designer{1}"
             .format(self.qt4PrefixEdit.text(),
                     self.qt4PostfixEdit.text()))
     

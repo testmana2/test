@@ -278,7 +278,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.contents.clear()
         
         if not self.logEntries:
-            self.errors.append(self.trUtf8("No log available for '{0}'")\
+            self.errors.append(self.trUtf8("No log available for '{0}'")
                                .format(self.filename))
             self.errorGroup.show()
             return

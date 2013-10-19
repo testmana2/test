@@ -50,7 +50,7 @@ def main():
     """
     Main entry point into the application.
     """
-    options = [\
+    options = [
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
         ("", "name of file to edit")

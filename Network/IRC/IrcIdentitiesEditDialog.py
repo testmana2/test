@@ -88,7 +88,7 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         """
         Private slot to update the status of the identity related buttons.
         """
-        enable = (self.identitiesCombo.currentText() != 
+        enable = (self.identitiesCombo.currentText() !=
                   IrcIdentity.DefaultIdentityDisplay)
         self.renameButton.setEnabled(enable)
         self.deleteButton.setEnabled(enable)

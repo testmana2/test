@@ -133,7 +133,7 @@ class E5SslErrorHandler(QObject):
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
                         """<ul><li>{1}</li></ul></p>"""
-                        """<p>Do you want to ignore these errors?</p>""")\
+                        """<p>Do you want to ignore these errors?</p>""")
                 .format(server, errorString),
             icon=E5MessageBox.Warning)
         
@@ -149,7 +149,7 @@ class E5SslErrorHandler(QObject):
                     self.trUtf8(
                         """<p>Certificates:<br/>{0}<br/>"""
                         """Do you want to accept all these certificates?"""
-                        """</p>""")\
+                        """</p>""")
                         .format("".join(certinfos)))
                 if caRet:
                     if server not in caMerge:

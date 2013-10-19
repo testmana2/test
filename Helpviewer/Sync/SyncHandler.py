@@ -215,8 +215,8 @@ class SyncHandler(QObject):
                 return QByteArray()
             
             if Preferences.getHelp("SyncEncryptData") and \
-               (not Preferences.getHelp("SyncEncryptPasswordsOnly") or \
-                (Preferences.getHelp("SyncEncryptPasswordsOnly") and \
+               (not Preferences.getHelp("SyncEncryptPasswordsOnly") or
+                (Preferences.getHelp("SyncEncryptPasswordsOnly") and
                  type_ == "passwords")):
                 key = Preferences.getHelp("SyncEncryptionKey")
                 if not key:
@@ -253,7 +253,7 @@ class SyncHandler(QObject):
         
         if Preferences.getHelp("SyncEncryptData") and \
                 (not Preferences.getHelp("SyncEncryptPasswordsOnly") or
-                 (Preferences.getHelp("SyncEncryptPasswordsOnly") and 
+                 (Preferences.getHelp("SyncEncryptPasswordsOnly") and
                   type_ == "passwords")):
             key = Preferences.getHelp("SyncEncryptionKey")
             if not key:

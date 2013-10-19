@@ -63,7 +63,7 @@ def main():
     """
     Main entry point into the application.
     """
-    options = [\
+    options = [
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
         ("--search=word", "search for the given word")

@@ -166,9 +166,9 @@ class SnapshotFreehandGrabber(QWidget):
         boundingRect = textRect.adjusted(-4, 0, 0, 0)
         
         polBoundingRect = pol.boundingRect()
-        if (textRect.width() < 
+        if (textRect.width() <
             polBoundingRect.width() - 2 * self.__handleSize) and \
-           (textRect.height() < 
+           (textRect.height() <
             polBoundingRect.height() - 2 * self.__handleSize) and \
            polBoundingRect.width() > 100 and \
            polBoundingRect.height() > 100:
@@ -188,7 +188,7 @@ class SnapshotFreehandGrabber(QWidget):
                 QPoint(polBoundingRect.x() - 3, polBoundingRect.y()))
             textRect.moveTopRight(
                 QPoint(polBoundingRect.x() - 5, polBoundingRect.y()))
-        elif (polBoundingRect.bottom() + 3 + textRect.height() < 
+        elif (polBoundingRect.bottom() + 3 + textRect.height() <
               self.rect().bottom()) and \
              polBoundingRect.right() > textRect.width():
             # at bottom, right aligned
@@ -210,7 +210,7 @@ class SnapshotFreehandGrabber(QWidget):
         drawPolygon(painter, boundingRect, textColor, textBackgroundColor)
         painter.drawText(textRect, Qt.AlignHCenter, txt)
         
-        if (polBoundingRect.height() > self.__handleSize * 2 and \
+        if (polBoundingRect.height() > self.__handleSize * 2 and
             polBoundingRect.width() > self.__handleSize * 2) or \
            not self.__mouseDown:
             painter.setBrush(Qt.transparent)
@@ -325,8 +325,8 @@ class SnapshotFreehandGrabber(QWidget):
             pt.begin(pixmap2)
             if pt.paintEngine().hasFeature(QPaintEngine.PorterDuff):
                 pt.setRenderHints(
-                    QPainter.Antialiasing | \
-                    QPainter.HighQualityAntialiasing | \
+                    QPainter.Antialiasing |
+                    QPainter.HighQualityAntialiasing |
                     QPainter.SmoothPixmapTransform,
                     True)
                 pt.setBrush(Qt.black)

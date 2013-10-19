@@ -269,7 +269,7 @@ class AdBlockSubscription(QObject):
                     None,
                     self.trUtf8("Load subscription rules"),
                     self.trUtf8(
-                        """Unable to open adblock file '{0}' for reading.""")\
+                        """Unable to open adblock file '{0}' for reading.""")
                         .format(fileName))
             else:
                 textStream = QTextStream(f)
@@ -279,7 +279,7 @@ class AdBlockSubscription(QObject):
                         None,
                         self.trUtf8("Load subscription rules"),
                         self.trUtf8("""AdBlock file '{0}' does not start"""
-                                    """ with [Adblock.""")\
+                                    """ with [Adblock.""")
                             .format(fileName))
                     f.close()
                     f.remove()
@@ -331,8 +331,8 @@ class AdBlockSubscription(QObject):
         else:
             updatePeriod = Preferences.getHelp("AdBlockUpdatePeriod") * 24
         if not self.__lastUpdate.isValid() or \
-           (self.__remoteModified.isValid() and \
-            self.__remoteModified.addSecs(updatePeriod * 3600) < \
+           (self.__remoteModified.isValid() and
+            self.__remoteModified.addSecs(updatePeriod * 3600) <
                 QDateTime.currentDateTime()) or \
            self.__lastUpdate.addSecs(updatePeriod * 3600) < \
                 QDateTime.currentDateTime():
@@ -400,7 +400,7 @@ class AdBlockSubscription(QObject):
                 None,
                 self.trUtf8("Downloading subscription rules"),
                 self.trUtf8(
-                    """Unable to open adblock file '{0}' for writing.""")\
+                    """Unable to open adblock file '{0}' for writing.""")
                     .file(fileName))
             return
         f.write(response)
@@ -456,7 +456,7 @@ class AdBlockSubscription(QObject):
                     """ checksum.<br/>"""
                     """Found: {1}<br/>"""
                     """Calculated: {2}<br/>"""
-                    """Use it anyway?</p>""")\
+                    """Use it anyway?</p>""")
                     .format(self.__title, expectedChecksum,
                             calculatedChecksum))
             return res
@@ -475,7 +475,7 @@ class AdBlockSubscription(QObject):
                 None,
                 self.trUtf8("Saving subscription rules"),
                 self.trUtf8(
-                    """Unable to open adblock file '{0}' for writing.""")\
+                    """Unable to open adblock file '{0}' for writing.""")
                     .format(fileName))
             return
         

@@ -150,7 +150,7 @@ class TabnannyPlugin(QObject):
         """
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
-                e5App().getObject("Project").getProjectLanguage() in \
+                e5App().getObject("Project").getProjectLanguage() in
                     ["Python3", "Python2", "Python"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
@@ -187,8 +187,8 @@ class TabnannyPlugin(QObject):
         project = e5App().getObject("Project")
         project.saveAllScripts()
         ppath = project.getProjectPath()
-        files = [os.path.join(ppath, file) \
-                 for file in project.pdata["SOURCES"] \
+        files = [os.path.join(ppath, file)
+                 for file in project.pdata["SOURCES"]
                  if file.endswith(
                     tuple(Preferences.getPython("Python3Extensions")) +
                     tuple(Preferences.getPython("PythonExtensions")))]

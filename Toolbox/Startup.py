@@ -29,7 +29,7 @@ def usage(appinfo, optlen=12):
     @param appinfo dictionary describing the application
     @param optlen length of the field for the commandline option (integer)
     """
-    options = [\
+    options = [
         ("--version",  "show the program's version number and exit"),
         ("-h, --help", "show this help message and exit")
     ]

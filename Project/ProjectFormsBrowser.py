@@ -508,8 +508,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         for itm in self.getSelectedItems():
             fileNames.append(itm.fileName())
         trfiles = sorted(self.project.pdata["TRANSLATIONS"][:])
-        fileNames.extend([os.path.join(self.project.ppath, trfile) \
-                          for trfile in trfiles \
+        fileNames.extend([os.path.join(self.project.ppath, trfile)
+                          for trfile in trfiles
                           if trfile.endswith('.qm')])
         self.trpreview[list].emit(fileNames)
         
@@ -881,7 +881,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         Private method to compile selected forms to source files.
         """
         items = self.getSelectedItems()
-        files = [self.project.getRelativePath(itm.fileName()) \
+        files = [self.project.getRelativePath(itm.fileName())
                  for itm in items]
         
         if self.hooks["compileSelectedForms"] is not None:

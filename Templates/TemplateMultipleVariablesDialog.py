@@ -54,8 +54,8 @@ class TemplateMultipleVariablesDialog(QDialog):
         self.variablesEntries = {}
         row = 0
         for var in variables:
-            l = QLabel("{0}:".format(var), self.top)
-            self.grid.addWidget(l, row, 0, Qt.Alignment(Qt.AlignTop))
+            label = QLabel("{0}:".format(var), self.top)
+            self.grid.addWidget(label, row, 0, Qt.Alignment(Qt.AlignTop))
             if var.find(":") >= 0:
                 formatStr = var[1:-1].split(":")[1]
                 if formatStr in ["ml", "rl"]:

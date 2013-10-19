@@ -28,7 +28,7 @@ splash = None
 
 # generate list of arguments to be remembered for a restart
 restartArgsList = ["--nosplash", "--plugin", "--debug", "--config"]
-restartArgs = [arg for arg in sys.argv[1:] 
+restartArgs = [arg for arg in sys.argv[1:]
                if arg.split("=", 1)[0] in restartArgsList]
 
 if "--debug" in sys.argv:
@@ -162,7 +162,7 @@ def main():
     
     sys.excepthook = excepthook
     
-    options = [\
+    options = [
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
         ("--debug", "activate debugging output to the console"),

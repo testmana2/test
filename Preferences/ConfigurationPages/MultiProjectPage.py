@@ -39,7 +39,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             Preferences.getMultiProject("RecentNumber"))
         self.workspaceEdit.setText(
             Utilities.toNativeSeparators(
-                Preferences.getMultiProject("Workspace") or \
+                Preferences.getMultiProject("Workspace") or
                 Utilities.getHomeDir()))
         
     def save(self):

@@ -64,7 +64,7 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
             return numberSpinBox.value()
         elif dateButton.isChecked():
             return "{{{0}}}".format(
-                QDateTime(dateEdit.date(), timeEdit.time())\
+                QDateTime(dateEdit.date(), timeEdit.time())
                     .toString(Qt.ISODate))
         elif headButton.isChecked():
             return "HEAD"

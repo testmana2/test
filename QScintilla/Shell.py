@@ -1326,7 +1326,7 @@ class Shell(QsciScintillaCompat):
         @param cmd history entry to be inserted (string)
         """
         self.setCursorPosition(self.prline, self.prcol)
-        self.setSelection(self.prline, self.prcol,\
+        self.setSelection(self.prline, self.prcol,
                           self.prline, self.lineLength(self.prline))
         self.removeSelectedText()
         self.__insertText(cmd)
@@ -1616,12 +1616,12 @@ class Shell(QsciScintillaCompat):
         
         @param txt text to be inserted (string)
         """
-        l = len(txt)
+        length = len(txt)
         line, col = self.getCursorPosition()
         self.insertAt(txt, line, col)
         if re.search(self.linesepRegExp, txt) is not None:
             line += 1
-        self.setCursorPosition(line, col + l)
+        self.setCursorPosition(line, col + length)
         
     def __configure(self):
         """

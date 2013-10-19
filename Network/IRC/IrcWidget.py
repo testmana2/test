@@ -237,7 +237,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     self.trUtf8("Disconnect from Server"),
                     self.trUtf8("""<p>Do you really want to disconnect from"""
                                 """ <b>{0}</b>?</p><p>All channels will be"""
-                                """ closed.</p>""")\
+                                """ closed.</p>""")
                         .format(self.__server.getName()))
             if ok:
                 self.networkWidget.addServerMessage(
