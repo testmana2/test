@@ -730,6 +730,7 @@ VariableDetailDialog QDialog Ui_VariableDetailDialog
 VariableItem QTreeWidgetItem
 VariablesFilterDialog QDialog Ui_VariablesFilterDialog
 VariablesViewer QTreeWidget
+VcsCommandOptionsDialog QDialog Ui_VcsCommandOptionsDialog
 VcsMercurialPlugin QObject
 VcsPage ConfigurationPageBase Ui_VcsPage
 VcsProjectBrowserHelper QObject
@@ -761,4 +762,3 @@ XbelWriter QXmlStreamWriter
 XmlEntityResolver QXmlStreamEntityResolver
 ZoomDialog QDialog Ui_ZoomDialog
 _StrikeThroughExtension markdown.Extension
-vcsCommandOptionsDialog QDialog Ui_vcsCommandOptionsDialog

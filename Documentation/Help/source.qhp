@@ -12071,6 +12071,9 @@
       <keyword name="VariablesViewer.mouseDoubleClickEvent" id="VariablesViewer.mouseDoubleClickEvent" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.mouseDoubleClickEvent" />
       <keyword name="VariablesViewer.showVariable" id="VariablesViewer.showVariable" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.showVariable" />
       <keyword name="VariablesViewer.showVariables" id="VariablesViewer.showVariables" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.showVariables" />
+      <keyword name="VcsCommandOptionsDialog" id="VcsCommandOptionsDialog" ref="eric5.VCS.CommandOptionsDialog.html#VcsCommandOptionsDialog" />
+      <keyword name="VcsCommandOptionsDialog (Constructor)" id="VcsCommandOptionsDialog (Constructor)" ref="eric5.VCS.CommandOptionsDialog.html#VcsCommandOptionsDialog.__init__" />
+      <keyword name="VcsCommandOptionsDialog.getOptions" id="VcsCommandOptionsDialog.getOptions" ref="eric5.VCS.CommandOptionsDialog.html#VcsCommandOptionsDialog.getOptions" />
       <keyword name="VcsMercurialPlugin" id="VcsMercurialPlugin" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin" />
       <keyword name="VcsMercurialPlugin (Constructor)" id="VcsMercurialPlugin (Constructor)" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.__init__" />
       <keyword name="VcsMercurialPlugin.activate" id="VcsMercurialPlugin.activate" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.activate" />
@@ -13364,9 +13367,6 @@
       <keyword name="usage" id="usage" ref="eric5.install.html#usage" />
       <keyword name="usage" id="usage" ref="eric5.patch_modpython.html#usage" />
       <keyword name="usage" id="usage" ref="eric5.uninstall.html#usage" />
-      <keyword name="vcsCommandOptionsDialog" id="vcsCommandOptionsDialog" ref="eric5.VCS.CommandOptionsDialog.html#vcsCommandOptionsDialog" />
-      <keyword name="vcsCommandOptionsDialog (Constructor)" id="vcsCommandOptionsDialog (Constructor)" ref="eric5.VCS.CommandOptionsDialog.html#vcsCommandOptionsDialog.__init__" />
-      <keyword name="vcsCommandOptionsDialog.getOptions" id="vcsCommandOptionsDialog.getOptions" ref="eric5.VCS.CommandOptionsDialog.html#vcsCommandOptionsDialog.getOptions" />
       <keyword name="vcsMercurial (Package)" id="vcsMercurial (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.html" />
       <keyword name="vcsPySvn (Package)" id="vcsPySvn (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsPySvn.html" />
       <keyword name="vcsSubversion (Package)" id="vcsSubversion (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsSubversion.html" />

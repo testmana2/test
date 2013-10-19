@@ -7072,8 +7072,50 @@ eric5.QScintilla.Lexers.LexerPygments.LexerPygments.name?4()
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.styleBitsNeeded?4()
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.styleText?4(start, end)
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments?1(parent=None, name="")
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_ATTRIBUTE?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_BUILTIN?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_CHAR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_CLASS?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_COMMENT?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_CONSTANT?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_DECORATOR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_DEFAULT?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_DELETED?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_DOCSTRING?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_EMPHASIZE?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_ENTITY?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_ERROR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_ESCAPE?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_EXCEPTION?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_FUNCTION?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_GENERIC_ERROR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_HEADING?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_HEREDOC?7
 eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_INSERTED?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_KEYWORD?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_LABEL?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_MULTILINECOMMENT?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_NAMESPACE?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_NUMBER?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_OPERATOR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_OTHER?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_OUTPUT?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_PREPROCESSOR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_PROMPT?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_PROPERTY?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_PSEUDOKEYWORD?7
 eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_PUNCTUATION?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_REGEX?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_SCALAR?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_STRING?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_STRONG?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_SUBHEADING?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_SYMBOL?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_TAG?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_TRACEBACK?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_TYPEKEYWORD?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_VARIABLE?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_WORD?7
 eric5.QScintilla.Lexers.LexerPygments.TOKEN_MAP?7
 eric5.QScintilla.Lexers.LexerPython.LexerPython.autoCompletionWordSeparators?4()
 eric5.QScintilla.Lexers.LexerPython.LexerPython.defaultKeywords?4(kwSet)
@@ -8643,8 +8685,8 @@ eric5.UtilitiesPython2.py2flakes.messages.UnusedImport.message?7
 eric5.UtilitiesPython2.py2flakes.messages.UnusedImport?1(filename, lineno, name)
 eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable.message?7
 eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable?1(filename, lineno, names)
-eric5.VCS.CommandOptionsDialog.vcsCommandOptionsDialog.getOptions?4()
-eric5.VCS.CommandOptionsDialog.vcsCommandOptionsDialog?1(vcs, parent=None)
+eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog.getOptions?4()
+eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog?1(vcs, parent=None)
 eric5.VCS.ProjectBrowserHelper.VcsProjectBrowserHelper._VCSAdd?5()
 eric5.VCS.ProjectBrowserHelper.VcsProjectBrowserHelper._VCSAddTree?5()
 eric5.VCS.ProjectBrowserHelper.VcsProjectBrowserHelper._VCSCommit?5()
