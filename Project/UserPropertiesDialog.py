@@ -47,7 +47,7 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
             found = False
             for indicator, vcsData in \
                     e5App().getObject("PluginManager")\
-                        .getVcsSystemIndicators().items():
+                    .getVcsSystemIndicators().items():
                 for vcsSystem, vcsSystemDisplay in vcsData:
                     if vcsSystem == self.project.pdata["VCS"][0]:
                         found = True

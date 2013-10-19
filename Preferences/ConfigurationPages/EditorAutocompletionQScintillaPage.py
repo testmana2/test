@@ -17,7 +17,7 @@ import Preferences
 
 
 class EditorAutocompletionQScintillaPage(
-    ConfigurationPageBase, Ui_EditorAutocompletionQScintillaPage):
+        ConfigurationPageBase, Ui_EditorAutocompletionQScintillaPage):
     """
     Class implementing the QScintilla Autocompletion configuration page.
     """

@@ -253,7 +253,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                         """<p>The entered address <b>{0}</b> is not"""
                         """ a valid IP v4 or IP v6 address."""
                         """ Aborting...</p>""")
-                        .format(allowedHost))
+                    .format(allowedHost))
         
     @pyqtSlot()
     def on_deleteAllowedHostButton_clicked(self):
@@ -286,7 +286,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                         """<p>The entered address <b>{0}</b> is not"""
                         """ a valid IP v4 or IP v6 address."""
                         """ Aborting...</p>""")
-                        .format(allowedHost))
+                    .format(allowedHost))
     
 
 def create(dlg):

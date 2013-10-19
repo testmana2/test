@@ -257,7 +257,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 method = "on_{0}_{1}".format(
                                     name,
                                     bytes(metaMethod.methodSignature())
-                                        .decode().split("(")[0])
+                                    .decode().split("(")[0])
                             else:
                                 method = "on_{0}_{1}".format(
                                     name, metaMethod.signature().split("(")[0])
@@ -293,11 +293,11 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                     "on_{0}_{1}(self, {2})".format(
                                         name,
                                         bytes(metaMethod.methodSignature())
-                                            .decode().split("(")[0],
+                                        .decode().split("(")[0],
                                         methNamesSig)
                             else:
                                 pythonSignature = \
-                                        "on_{0}_{1}(self, {2})".format(
+                                    "on_{0}_{1}(self, {2})".format(
                                         name,
                                         metaMethod.signature().split("(")[0],
                                         methNamesSig)
@@ -306,7 +306,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 pythonSignature = "on_{0}_{1}(self)".format(
                                     name,
                                     bytes(metaMethod.methodSignature())
-                                        .decode().split("(")[0])
+                                    .decode().split("(")[0])
                             else:
                                 pythonSignature = "on_{0}_{1}(self)".format(
                                     name,
@@ -398,7 +398,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     self.trUtf8(
                         """<p>Could not open the code template file"""
                         """ "{0}".</p><p>Reason: {1}</p>""")
-                        .format(tmplName, str(why)))
+                    .format(tmplName, str(why)))
                 return
             
             objName = self.__objectName()
@@ -434,7 +434,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     self.trUtf8(
                         """<p>Could not open the source file "{0}".</p>"""
                         """<p>Reason: {1}</p>""")
-                        .format(self.srcFile, str(why)))
+                    .format(self.srcFile, str(why)))
                 return
             
             cls = self.__module.classes[self.classNameCombo.currentText()]
@@ -512,7 +512,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 self.trUtf8("Code Generation"),
                 self.trUtf8("""<p>Could not write the source file "{0}".</p>"""
                             """<p>Reason: {1}</p>""")
-                    .format(self.filenameEdit.text(), str(why)))
+                .format(self.filenameEdit.text(), str(why)))
             return
         
         self.project.appendFile(self.filenameEdit.text())

@@ -68,16 +68,16 @@ class Prefs(object):
         "Python3Interpreter": "",
         "CustomPython3Interpreter": False,
         "RubyInterpreter": "/usr/bin/ruby",
-        "DebugClientType": "standard",      # supported "standard", "threaded",
-                                            # "custom"
+        "DebugClientType": "standard",
+        # supported "standard", "threaded", "custom"
         "DebugClient": "",
-        "DebugClientType3": "standard",     # supported "standard", "threaded",
-                                            # "custom"
+        "DebugClientType3": "standard",
+        # supported "standard", "threaded", "custom"
         "DebugClient3": "",
-        "PythonExtensions": ".py2 .pyw2 .ptl",  # space separated list of
-                                                # Python extensions
-        "Python3Extensions": ".py .pyw .py3 .pyw3",  # space separated list of
-                                                    # Python3 extensions
+        "PythonExtensions": ".py2 .pyw2 .ptl",
+        # space separated list of Python extensions
+        "Python3Extensions": ".py .pyw .py3 .pyw3",
+        # space separated list of Python3 extensions
         "DebugEnvironmentReplace": False,
         "DebugEnvironment": "",
         "PythonRedirect": True,
@@ -134,90 +134,91 @@ class Prefs(object):
         # Numbers
         "ViewProfiles": {
             "edit": [
-                    # visibility (0) OBSOLETE
-                    [True, False, False, True, True, True, True,  True,
-                     True, True,  True,  True],
-                    # saved state main window with dock windows (1) OBSOLETE
-                    b"",
-                    # saved states floating windows (2) OBSOLETE
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"",
-                     b""],
-                    # saved state main window with floating windows (3)
-                    # OBSOLETE
-                    b"",
-                    # saved state main window with toolbox windows (4)
-                    b"",
-                    # visibility of the toolboxes/sidebars (5)
-                    # left, bottom, right
-                    [True,  True, True],
-                    # saved states of the splitters and sidebars of the
-                    # sidebars layout (6)
-                    # left splitter, vertical splitter, left sidebar,
-                    # bottom sidebar, right splitter, right sidebar
-                    [b"", b"", b"", b"", b"", b""],
-                ],
+                # visibility (0) OBSOLETE
+                [True, False, False, True, True, True, True,  True,
+                 True, True,  True,  True],
+                # saved state main window with dock windows (1) OBSOLETE
+                b"",
+                # saved states floating windows (2) OBSOLETE
+                [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"",
+                 b""],
+                # saved state main window with floating windows (3)
+                # OBSOLETE
+                b"",
+                # saved state main window with toolbox windows (4)
+                b"",
+                # visibility of the toolboxes/sidebars (5)
+                # left, bottom, right
+                [True,  True, True],
+                # saved states of the splitters and sidebars of the
+                # sidebars layout (6)
+                # left splitter, vertical splitter, left sidebar,
+                # bottom sidebar, right splitter, right sidebar
+                [b"", b"", b"", b"", b"", b""],
+            ],
             "debug": [
-                    # visibility (0) OBSOLETE
-                    [False, False, True,  True, True, True, False, False,
-                     True,  False, False, False],
-                    # saved state main window with dock windows (1) OBSOLETE
-                    b"",
-                    # saved states floating windows (2) OBSOLETE
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"",
-                     b""],
-                    # saved state main window with floating windows (3)
-                    # OBSOLETE
-                    b"",
-                    # saved state main window with toolbox windows (4)
-                    b"",
-                    # visibility of the toolboxes/sidebars (5)
-                    # left, bottom, right
-                    [False,  True, True],
-                    # saved states of the splitters and sidebars of the
-                    # sidebars layout (6)
-                    # left splitter, vertical splitter, left sidebar,
-                    # bottom sidebar, right splitter, right sidebar
-                    [b"", b"", b"", b"", b"", b""],
-                ],
+                # visibility (0) OBSOLETE
+                [False, False, True,  True, True, True, False, False,
+                 True,  False, False, False],
+                # saved state main window with dock windows (1) OBSOLETE
+                b"",
+                # saved states floating windows (2) OBSOLETE
+                [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"",
+                 b""],
+                # saved state main window with floating windows (3)
+                # OBSOLETE
+                b"",
+                # saved state main window with toolbox windows (4)
+                b"",
+                # visibility of the toolboxes/sidebars (5)
+                # left, bottom, right
+                [False,  True, True],
+                # saved states of the splitters and sidebars of the
+                # sidebars layout (6)
+                # left splitter, vertical splitter, left sidebar,
+                # bottom sidebar, right splitter, right sidebar
+                [b"", b"", b"", b"", b"", b""],
+            ],
         },
         "ViewProfiles2": {
             "edit": [
-                    # saved state main window with toolbox windows (0)
-                    QByteArray(),
-                    # visibility of the toolboxes/sidebars (1)
-                    # left, bottom, right
-                    [True,  True, True],
-                    # saved states of the splitters and sidebars of the
-                    # sidebars layout (2)
-                    # left splitter, vertical splitter, left sidebar,
-                    # bottom sidebar, right splitter, right sidebar
-                    [QByteArray(), QByteArray(), QByteArray(),
-                     QByteArray(), QByteArray(), QByteArray()],
-                ],
+                # saved state main window with toolbox windows (0)
+                QByteArray(),
+                # visibility of the toolboxes/sidebars (1)
+                # left, bottom, right
+                [True,  True, True],
+                # saved states of the splitters and sidebars of the
+                # sidebars layout (2)
+                # left splitter, vertical splitter, left sidebar,
+                # bottom sidebar, right splitter, right sidebar
+                [QByteArray(), QByteArray(), QByteArray(),
+                 QByteArray(), QByteArray(), QByteArray()],
+            ],
             "debug": [
-                    # saved state main window with toolbox windows (0)
-                    QByteArray(),
-                    # visibility of the toolboxes/sidebars (1)
-                    # left, bottom, right
-                    [False,  True, True],
-                    # saved states of the splitters and sidebars of the
-                    # sidebars layout (2)
-                    # left splitter, vertical splitter, left sidebar,
-                    # bottom sidebar, right splitter, right sidebar
-                    [QByteArray(), QByteArray(), QByteArray(),
-                     QByteArray(), QByteArray(), QByteArray()],
-                ],
+                # saved state main window with toolbox windows (0)
+                QByteArray(),
+                # visibility of the toolboxes/sidebars (1)
+                # left, bottom, right
+                [False,  True, True],
+                # saved states of the splitters and sidebars of the
+                # sidebars layout (2)
+                # left splitter, vertical splitter, left sidebar,
+                # bottom sidebar, right splitter, right sidebar
+                [QByteArray(), QByteArray(), QByteArray(),
+                 QByteArray(), QByteArray(), QByteArray()],
+            ],
         },
         "ToolbarManagerState": QByteArray(),
         "PreviewSplitterState": QByteArray(),
         "ShowSplash": True,
         "SingleCloseButton": False,
         
-        "PerformVersionCheck": 4,      # 0 = off
-                                        # 1 = at startup
-                                        # 2 = daily
-                                        # 3 = weekly
-                                        # 4 = monthly
+        "PerformVersionCheck": 4,
+        # 0 = off
+        # 1 = at startup
+        # 2 = daily
+        # 3 = weekly
+        # 4 = monthly
         "UseProxy": False,
         "UseSystemProxy": True,
         "UseHttpProxyForAll": False,
@@ -237,7 +238,7 @@ class Prefs(object):
         "ProxyAccount/Ftp": "",
         
         "PluginRepositoryUrl5":
-            "http://eric-ide.python-projects.org/plugins5/repository.xml",
+        "http://eric-ide.python-projects.org/plugins5/repository.xml",
         "VersionsUrls5": [
             "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/"
             "versions",
@@ -630,60 +631,60 @@ class Prefs(object):
     
     # defaults for the project browser flags settings
     projectBrowserFlagsDefaults = {
-        "Qt4":
+        "Qt4": (
             SourcesBrowserFlag |
             FormsBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "Qt4C":
+            OthersBrowserFlag),
+        "Qt4C": (
             SourcesBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "PyQt5":
+            OthersBrowserFlag),
+        "PyQt5": (
             SourcesBrowserFlag |
             FormsBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "PyQt5C":
+            OthersBrowserFlag),
+        "PyQt5C": (
             SourcesBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "E4Plugin":
+            OthersBrowserFlag),
+        "E4Plugin": (
             SourcesBrowserFlag |
             FormsBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "Console":
+            OthersBrowserFlag),
+        "Console": (
             SourcesBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "Other":
+            OthersBrowserFlag),
+        "Other": (
             SourcesBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "PySide":
+            OthersBrowserFlag),
+        "PySide": (
             SourcesBrowserFlag |
             FormsBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
-        "PySideC":
+            OthersBrowserFlag),
+        "PySideC": (
             SourcesBrowserFlag |
             ResourcesBrowserFlag |
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
-            OthersBrowserFlag,
+            OthersBrowserFlag),
     }
     
     # defaults for the project browser colour settings
@@ -804,29 +805,29 @@ class Prefs(object):
         cls.helpDefaults["FixedFont"] = QFont(fontFamily, fontSize).toString()
         cls.helpDefaults.update({
             "AutoLoadImages":
-                websettings.testAttribute(QWebSettings.AutoLoadImages),
+            websettings.testAttribute(QWebSettings.AutoLoadImages),
             "UserStyleSheet": "",
             "SaveUrlColor": QColor(248, 248, 210),
             "JavaEnabled":
-                websettings.testAttribute(QWebSettings.JavaEnabled),
+            websettings.testAttribute(QWebSettings.JavaEnabled),
             "JavaScriptEnabled":
-                websettings.testAttribute(QWebSettings.JavascriptEnabled),
+            websettings.testAttribute(QWebSettings.JavascriptEnabled),
             "JavaScriptCanOpenWindows":
-                websettings.testAttribute(
-                    QWebSettings.JavascriptCanOpenWindows),
+            websettings.testAttribute(
+                QWebSettings.JavascriptCanOpenWindows),
             "JavaScriptCanAccessClipboard":
-                websettings.testAttribute(
-                    QWebSettings.JavascriptCanAccessClipboard),
+            websettings.testAttribute(
+                QWebSettings.JavascriptCanAccessClipboard),
             "PluginsEnabled":
-                websettings.testAttribute(QWebSettings.PluginsEnabled),
+            websettings.testAttribute(QWebSettings.PluginsEnabled),
             "OfflineStorageDatabaseEnabled":
-                websettings.testAttribute(
-                    QWebSettings.OfflineStorageDatabaseEnabled),
+            websettings.testAttribute(
+                QWebSettings.OfflineStorageDatabaseEnabled),
         })
         if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
             cls.helpDefaults.update({
                 "OfflineWebApplicationCacheEnabled":
-                    websettings.testAttribute(
+                websettings.testAttribute(
                     QWebSettings.OfflineWebApplicationCacheEnabled),
                 "OfflineWebApplicationCacheQuota": 50,     # 50 MB
             })
@@ -1268,16 +1269,16 @@ def getDebugger(key, prefClass=Prefs):
     @return the requested debugger setting
     """
     if key in ["RemoteDbgEnabled", "PassiveDbgEnabled",
-                "CustomPython3Interpreter",
-                "AutomaticReset", "DebugEnvironmentReplace",
-                "PythonRedirect", "PythonNoEncoding",
-                "Python3Redirect", "Python3NoEncoding",
-                "RubyRedirect",
-                "ConsoleDbgEnabled", "PathTranslation",
-                "Autosave", "ThreeStateBreakPoints",
-                "SuppressClientExit", "BreakAlways",
-                "AutoViewSourceCode",
-              ]:
+               "CustomPython3Interpreter",
+               "AutomaticReset", "DebugEnvironmentReplace",
+               "PythonRedirect", "PythonNoEncoding",
+               "Python3Redirect", "Python3NoEncoding",
+               "RubyRedirect",
+               "ConsoleDbgEnabled", "PathTranslation",
+               "Autosave", "ThreeStateBreakPoints",
+               "SuppressClientExit", "BreakAlways",
+               "AutoViewSourceCode",
+               ]:
         return toBool(prefClass.settings.value(
             "Debugger/" + key, prefClass.debuggerDefaults[key]))
     elif key in ["PassiveDbgPort"]:
@@ -1404,7 +1405,7 @@ def getUILayout(prefClass=Prefs):
                   prefClass.uiDefaults["LayoutShellEmbedded"])),
               int(prefClass.settings.value("UI/LayoutFileBrowserEmbedded",
                   prefClass.uiDefaults["LayoutFileBrowserEmbedded"])),
-    )
+              )
     return layout
     
 
@@ -1493,7 +1494,7 @@ def getUI(key, prefClass=Prefs):
                 if vpLength < prefClass.viewProfilesLength:
                     viewProfiles[name][0].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][0]
-                            [vpLength:])
+                        [vpLength:])
                 
                 # adjust profile
                 vpLength = len(viewProfiles[name])
@@ -1507,13 +1508,13 @@ def getUI(key, prefClass=Prefs):
                         prefClass.uiDefaults["ViewProfiles"][name][5]):
                     viewProfiles[name][5].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][5]
-                            [vpLength:])
+                        [vpLength:])
                 vpLength = len(viewProfiles[name][6])
                 if vpLength < len(
                         prefClass.uiDefaults["ViewProfiles"][name][6]):
                     viewProfiles[name][6].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][6]
-                            [vpLength:])
+                        [vpLength:])
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]
         return viewProfiles
@@ -2296,7 +2297,7 @@ def getHelp(key, prefClass=Prefs):
                  "SyncSpeedDial", "SyncEncryptData",
                  "SyncEncryptPasswordsOnly",
                  "WarnOnMultipleClose", "ClickToFlashEnabled"
-                ]:
+                 ]:
         return toBool(prefClass.settings.value(
             "Help/" + key, prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions", "AdBlockExceptions",
@@ -2909,8 +2910,7 @@ def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
             "UI/" + key,
             pwRecode(
                 prefClass.settings.value("UI/" + key,
-                                         prefClass.uiDefaults[key]
-                ),
+                                         prefClass.uiDefaults[key]),
                 oldPassword,
                 newPassword
             )
@@ -2920,8 +2920,7 @@ def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
             "User/" + key,
             pwRecode(
                 prefClass.settings.value("User/" + key,
-                                         prefClass.userDefaults[key]
-                ),
+                                         prefClass.userDefaults[key]),
                 oldPassword,
                 newPassword
             )
@@ -2931,8 +2930,7 @@ def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
             "Help/" + key,
             pwRecode(
                 prefClass.settings.value("Help/" + key,
-                                         prefClass.helpDefaults[key]
-                ),
+                                         prefClass.helpDefaults[key]),
                 oldPassword,
                 newPassword
             )

@@ -68,7 +68,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
                 self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")
-                    .format(groupName))
+                .format(groupName))
             return
         
         self.groupsList.addItem(groupName)
@@ -98,7 +98,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
                 self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")
-                    .format(groupName))
+                .format(groupName))
             return
         
         self.toolGroups[row][0] = groupName
@@ -118,7 +118,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
             self.trUtf8("Delete tool group entry"),
             self.trUtf8("""<p>Do you really want to delete the tool group"""
                         """ <b>"{0}"</b>?</p>""")
-                .format(self.groupsList.currentItem().text()),
+            .format(self.groupsList.currentItem().text()),
             icon=E5MessageBox.Warning)
         if not res:
             return

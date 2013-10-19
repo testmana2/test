@@ -67,7 +67,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         """
         lexerAssocs = {}
         for index in range(
-            self.editorLexerList.topLevelItemCount()):
+                self.editorLexerList.topLevelItemCount()):
             itm = self.editorLexerList.topLevelItem(index)
             lexerAssocs[itm.text(0)] = itm.text(1)
         Preferences.setEditorLexerAssocs(lexerAssocs)

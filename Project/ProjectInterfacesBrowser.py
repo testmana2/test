@@ -279,7 +279,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             
             bfcnt = categories[str(ProjectBrowserFileItem)]
             cmcnt = categories[str(BrowserClassItem)] + \
-                    categories[str(BrowserMethodItem)]
+                categories[str(BrowserMethodItem)]
             sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
@@ -377,7 +377,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
            isinstance(itm, BrowserMethodItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None
@@ -393,7 +393,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
            isinstance(itm, BrowserMethodItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None

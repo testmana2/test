@@ -204,7 +204,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
                 self.trUtf8("Add File Filter"),
                 self.trUtf8("""A Save File Filter must contain exactly one"""
                             """ wildcard pattern. Yours contains {0}.""")
-                            .format(filter.count("*")))
+                .format(filter.count("*")))
             return False
         
         if filter.count("*") == 0:

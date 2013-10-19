@@ -39,7 +39,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         self.__hasSearched = False
         
         self.programsList.headerItem().setText(
-        self.programsList.columnCount(), "")
+            self.programsList.columnCount(), "")
         
         self.searchButton = self.buttonBox.addButton(
             self.trUtf8("Search"), QDialogButtonBox.ActionRole)
@@ -302,10 +302,9 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                     proc.start(exe, [versionCommand])
                     finished = proc.waitForFinished(10000)
                     if finished:
-                        output = \
-                            str(proc.readAllStandardOutput(),
-                                    Preferences.getSystem("IOEncoding"),
-                                    'replace')
+                        output = str(proc.readAllStandardOutput(),
+                                     Preferences.getSystem("IOEncoding"),
+                                     'replace')
                         if versionRe is None:
                             versionRe = "^{0}".format(
                                 re.escape(versionStartsWith))

@@ -153,7 +153,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                     self.trUtf8("Login Test"),
                     self.trUtf8(
                         """<p>The login test failed.<br>Reason: {0}</p>""")
-                        .format(errorStr))
+                    .format(errorStr))
             server.quit()
         except (smtplib.SMTPException, socket.error) as e:
             QApplication.restoreOverrideCursor()
@@ -172,7 +172,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                 self,
                 self.trUtf8("Login Test"),
                 self.trUtf8("""<p>The login test failed.<br>Reason: {0}</p>""")
-                    .format(errorStr))
+                .format(errorStr))
 
 
 def create(dlg):

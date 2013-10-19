@@ -43,7 +43,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
             Preferences.getUser("UseMasterPassword"))
         if hasattr(QWebSettings, "DnsPrefetchEnabled"):
             self.dnsPrefetchCheckBox.setChecked(
-            Preferences.getHelp("DnsPrefetchEnabled"))
+                Preferences.getHelp("DnsPrefetchEnabled"))
         else:
             self.dnsPrefetchCheckBox.setEnabled(False)
         

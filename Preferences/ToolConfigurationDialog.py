@@ -130,7 +130,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
                 self,
                 self.trUtf8("Add tool entry"),
                 self.trUtf8("An entry for the menu text {0} already exists.")
-                    .format(menutext))
+                .format(menutext))
             return
         
         self.toolsList.addItem(menutext)

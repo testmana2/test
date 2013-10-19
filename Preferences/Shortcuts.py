@@ -205,7 +205,7 @@ def exportShortcuts(fn):
                 "Shortcuts",
                 "<p>The keyboard shortcuts could not be written to file"
                 " <b>{0}</b>.</p>")
-                .format(fn))
+            .format(fn))
 
 
 def importShortcuts(fn):
@@ -237,7 +237,7 @@ def importShortcuts(fn):
                 "Shortcuts",
                 "<p>The keyboard shortcuts could not be read from file"
                 " <b>{0}</b>.</p>")
-                .format(fn))
+            .format(fn))
         return
 
 

@@ -219,7 +219,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             flags = Utilities.extractFlagsFromFile(txt)
             if txt.endswith(exts) or \
                ("FileType" in flags and
-                flags["FileType"] in ["Python", "Python2"]):
+                    flags["FileType"] in ["Python", "Python2"]):
                 self.coverageCheckBox.setChecked(False)
                 self.coverageCheckBox.setEnabled(False)
                 self.localCheckBox.setChecked(False)
@@ -286,7 +286,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 if mainScript.endswith(
                     tuple(Preferences.getPython("PythonExtensions"))) or \
                    ("FileType" in flags and
-                    flags["FileType"] in ["Python", "Python2"]):
+                        flags["FileType"] in ["Python", "Python2"]):
                     clientType = "Python2"
                 else:
                     clientType = ""
@@ -335,8 +335,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                     self.trUtf8(
                         "<p>Unable to run test <b>{0}</b>.<br>"
                         "{1}<br>{2}</p>")
-                        .format(self.testName, str(exc_type),
-                                str(exc_value)))
+                    .format(self.testName, str(exc_type),
+                            str(exc_value)))
                 return
                 
             # now set up the coverage stuff
@@ -356,7 +356,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 from DebugClients.Python3.coverage import coverage
                 cover = coverage(
                     data_file="{0}.coverage".format(
-                    os.path.splitext(mainScript)[0]))
+                        os.path.splitext(mainScript)[0]))
                 cover.use_cache(True)
                 if self.coverageEraseCheckBox.isChecked():
                     cover.erase()
@@ -393,7 +393,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 self.trUtf8("Unittest"),
                 self.trUtf8(
                     "<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
-                    .format(self.testName, exc_type, exc_value))
+                .format(self.testName, exc_type, exc_value))
             return
             
         self.totalTests = nrTests

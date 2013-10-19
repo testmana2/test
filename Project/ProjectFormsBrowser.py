@@ -437,7 +437,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if isinstance(itm, ProjectBrowserFileItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None
@@ -451,7 +451,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if isinstance(itm, ProjectBrowserFileItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None
@@ -658,7 +658,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         while self.compileProc and self.compileProc.canReadLine():
             s = self.uicompiler + ': '
             error = str(self.compileProc.readLine(),
-                            ioEncoding, 'replace')
+                        ioEncoding, 'replace')
             s += error
             self.appendStderr.emit(s)
         

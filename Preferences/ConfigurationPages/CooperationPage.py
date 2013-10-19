@@ -92,7 +92,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         """
         self.addBannedUserButton.setEnabled(
             self.__bannedUserValidator.validate(txt, len(txt))[0] ==
-                QValidator.Acceptable)
+            QValidator.Acceptable)
     
     @pyqtSlot()
     def on_deleteBannedUsersButton_clicked(self):

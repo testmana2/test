@@ -183,11 +183,11 @@ class Project(QObject):
         
         self.dbgFilters = {
             "Python2": self.trUtf8(
-                         "Python2 Files (*.py2);;"
-                         "Python2 GUI Files (*.pyw2);;"),
+                "Python2 Files (*.py2);;"
+                "Python2 GUI Files (*.pyw2);;"),
             "Python3": self.trUtf8(
-                         "Python3 Files (*.py *.py3);;"
-                         "Python3 GUI Files (*.pyw *.pyw3);;"),
+                "Python3 Files (*.py *.py3);;"
+                "Python3 GUI Files (*.pyw *.pyw3);;"),
             "Ruby": self.trUtf8("Ruby Files (*.rb);;"),
         }
         
@@ -316,7 +316,7 @@ class Project(QObject):
                         self.trUtf8(
                             """<p>The Programming Language <b>{0}</b> is not"""
                             """ supported.</p>""")
-                            .format(progLanguage)
+                        .format(progLanguage)
                     )
                     return
                 
@@ -328,7 +328,7 @@ class Project(QObject):
                             """<p>The Project type <b>{0}</b> is already"""
                             """ registered with Programming Language"""
                             """ <b>{1}</b>.</p>""")
-                            .format(type_, progLanguage)
+                        .format(type_, progLanguage)
                     )
                     return
             
@@ -672,7 +672,7 @@ class Project(QObject):
                 self.trUtf8("Read project file"),
                 self.trUtf8(
                     "<p>The project file <b>{0}</b> could not be read.</p>")
-                    .format(fn))
+                .format(fn))
             return False
         
         self.pfile = os.path.abspath(fn)
@@ -708,10 +708,10 @@ class Project(QObject):
             
             # get the names of subdirectories the files are stored in
             for fn in self.pdata["SOURCES"] + \
-                      self.pdata["FORMS"] + \
-                      self.pdata["INTERFACES"] + \
-                      self.pdata["RESOURCES"] + \
-                      self.pdata["TRANSLATIONS"]:
+                self.pdata["FORMS"] + \
+                self.pdata["INTERFACES"] + \
+                self.pdata["RESOURCES"] + \
+                    self.pdata["TRANSLATIONS"]:
                 dn = os.path.dirname(fn)
                 if dn not in self.subdirs:
                     self.subdirs.append(dn)
@@ -974,7 +974,7 @@ class Project(QObject):
                 self.trUtf8("Read tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be read.</p>")
-                    .format(fn))
+                .format(fn))
         
     def writeTasks(self):
         """
@@ -994,7 +994,7 @@ class Project(QObject):
                 self.trUtf8("Save tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be written.</p>")
-                    .format(fn))
+                .format(fn))
             return
         
         from E5XML.TasksWriter import TasksWriter
@@ -1110,7 +1110,7 @@ class Project(QObject):
                         self.trUtf8(
                             "<p>The project debugger properties file"
                             " <b>{0}</b> could not be deleted.</p>")
-                            .format(fn))
+                        .format(fn))
         
     def __initDebugProperties(self):
         """
@@ -1244,7 +1244,7 @@ class Project(QObject):
         Public slot to check the language files after a release process.
         """
         tbPath = self.pdata["TRANSLATIONSBINPATH"] and \
-                 self.pdata["TRANSLATIONSBINPATH"][0] or ""
+            self.pdata["TRANSLATIONSBINPATH"][0] or ""
         for langFile in self.pdata["TRANSLATIONS"][:]:
             qmFile = self.__binaryTranslationFile(langFile)
             if qmFile:
@@ -1447,7 +1447,7 @@ class Project(QObject):
                                     self.trUtf8(
                                         "<p>The file <b>{0}</b> already"
                                         " exists.</p><p>Overwrite it?</p>")
-                                        .format(targetfile),
+                                    .format(targetfile),
                                     icon=E5MessageBox.Warning)
                                 if not res:
                                     return  # don't overwrite
@@ -1461,7 +1461,7 @@ class Project(QObject):
                                     "<p>The selected file <b>{0}</b> could"
                                     " not be added to <b>{1}</b>.</p>"
                                     "<p>Reason: {2}</p>")
-                                    .format(fn, target, str(why)))
+                                .format(fn, target, str(why)))
                             continue
                     
                     self.appendFile(targetfile, isSource or filter == 'source')
@@ -1516,7 +1516,7 @@ class Project(QObject):
                     self.trUtf8(
                         "<p>The target directory <b>{0}</b> could not be"
                         " created.</p><p>Reason: {1}</p>")
-                        .format(target, str(why)))
+                    .format(target, str(why)))
                 return
         
         for file in files:
@@ -1534,7 +1534,7 @@ class Project(QObject):
                             self.trUtf8(
                                 "<p>The file <b>{0}</b> already exists.</p>"
                                 "<p>Overwrite it?</p>")
-                                .format(targetfile),
+                            .format(targetfile),
                             icon=E5MessageBox.Warning)
                         if not res:
                             continue  # don't overwrite, carry on
@@ -2047,7 +2047,7 @@ class Project(QObject):
                         self.trUtf8(
                             "<p>The project directory <b>{0}</b> could not"
                             " be created.</p>")
-                            .format(self.ppath))
+                        .format(self.ppath))
                     self.vcs = self.initVCS()
                     return
                 # create an empty __init__.py file to make it a Python package
@@ -2105,7 +2105,7 @@ class Project(QObject):
                                 self.trUtf8(
                                     "<p>The mainscript <b>{0}</b> could not"
                                     " be created.<br/>Reason: {1}</p>")
-                                    .format(self.ppath, str(err)))
+                                .format(self.ppath, str(err)))
                     self.appendFile(ms)
                 except IndexError:
                     ms = ""
@@ -2290,12 +2290,12 @@ class Project(QObject):
             if '_' in os.path.basename(tslist[0]):
                 # the first entry determines the mainscript name
                 mainscriptname = os.path.splitext(mainscript)[0] or \
-                                 os.path.basename(tslist[0]).split('_')[0]
+                    os.path.basename(tslist[0]).split('_')[0]
                 self.pdata["TRANSLATIONPATTERN"] = \
                     [os.path.join(os.path.dirname(tslist[0]),
                      "{0}_%language%{1}".format(
-                        os.path.basename(tslist[0]).split('_')[0],
-                        os.path.splitext(tslist[0])[1]))]
+                         os.path.basename(tslist[0]).split('_')[0],
+                         os.path.splitext(tslist[0])[1]))]
             else:
                 pattern, ok = QInputDialog.getText(
                     None,
@@ -2403,7 +2403,7 @@ class Project(QObject):
                (self.pudata["VCSOVERRIDE"] and
                 self.pudata["VCSOVERRIDE"][0] != vcsSystemOverride) or \
                (vcsSystemOverride is not None and
-                len(self.pudata["VCSOVERRIDE"]) == 0):
+                    len(self.pudata["VCSOVERRIDE"]) == 0):
                 # stop the VCS monitor thread and shutdown VCS
                 if self.vcs is not None:
                     self.vcs.stopStatusMonitor()
@@ -2492,7 +2492,7 @@ class Project(QObject):
                 self.parent(),
                 self.trUtf8("Open project"),
                 Preferences.getMultiProject("Workspace") or
-                    Utilities.getHomeDir(),
+                Utilities.getHomeDir(),
                 self.trUtf8("Project Files (*.e4p)"))
         
         QApplication.processEvents()
@@ -2563,7 +2563,7 @@ class Project(QObject):
                                 self.vcs = self.initVCS()
                                 self.setDirty(True)
                     if self.vcs is not None and \
-                           (self.vcs.vcsRegisteredState(self.ppath) !=
+                        (self.vcs.vcsRegisteredState(self.ppath) !=
                             self.vcs.canBeCommitted):
                         self.pdata["VCS"] = ['None']
                         self.vcs = self.initVCS()
@@ -2669,7 +2669,7 @@ class Project(QObject):
             defaultPath = self.ppath
         else:
             defaultPath = Preferences.getMultiProject("Workspace") or \
-                          Utilities.getHomeDir()
+                Utilities.getHomeDir()
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save project as"),
@@ -4139,7 +4139,7 @@ class Project(QObject):
                         self.trUtf8(
                             "<p>The selected VCS <b>{0}</b> could not be"
                             " found. <br/>Reverting override.</p><p>{1}</p>")
-                            .format(vcsSystem, msg))
+                        .format(vcsSystem, msg))
                     self.pudata["VCSOVERRIDE"] = []
                     return self.initVCS(nooverride=True)
                 
@@ -4633,7 +4633,7 @@ class Project(QObject):
                             """<p>The file <b>{0}</b> could not be stored """
                             """in the archive. Ignoring it.</p>"""
                             """<p>Reason: {1}</p>""")
-                            .format(os.path.join(self.ppath, name), str(why)))
+                        .format(os.path.join(self.ppath, name), str(why)))
         archiveFile.writestr("VERSION", version.encode("utf-8"))
         archiveFile.close()
         
@@ -4647,7 +4647,7 @@ class Project(QObject):
                 self.trUtf8(
                     """<p>The eric5 plugin archive file <b>{0}</b> was """
                     """created successfully.</p>""")
-                    .format(os.path.basename(archive)))
+                .format(os.path.basename(archive)))
         else:
             E5MessageBox.information(
                 self.ui,
@@ -4700,7 +4700,7 @@ class Project(QObject):
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
                             """<p>Reason: {1}</p>""")
-                            .format(filename, str(why)))
+                .format(filename, str(why)))
             return b"", ""
         
         lineno = 0
@@ -4712,7 +4712,7 @@ class Project(QObject):
                     .replace(sourcelines[lineno].rstrip(), "")
                 sversion = "{0}-snapshot-{1}".format(
                     sourcelines[lineno].replace("version = ", "")
-                        .strip()[1:-1],
+                    .strip()[1:-1],
                     datestr)
                 sourcelines[lineno] = '{0} + "-snapshot-{1}"{2}'.format(
                     sourcelines[lineno].rstrip(), datestr, lineend)
@@ -4741,13 +4741,13 @@ class Project(QObject):
                 self.trUtf8(
                     """<p>The plugin file <b>{0}</b> could """
                     """not be read.</p> <p>Reason: {1}</p>""")
-                    .format(filename, str(why)))
+                .format(filename, str(why)))
             return ""
         
         for sourceline in sourcelines:
             if sourceline.startswith("version = "):
                 version = sourceline.replace("version = ", "").strip()\
-                            .replace('"', "").replace("'", "")
+                    .replace('"', "").replace("'", "")
                 break
         
         return version

@@ -49,7 +49,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
                     self.fixedFont.pointSize()))
         
         self.initColour("SaveUrlColor", self.secureURLsColourButton,
-                         Preferences.getHelp)
+                        Preferences.getHelp)
         
         self.autoLoadImagesCheckBox.setChecked(
             Preferences.getHelp("AutoLoadImages"))

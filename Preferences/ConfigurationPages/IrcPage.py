@@ -44,27 +44,27 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         
         # colours
         self.initColour("NetworkMessageColour", self.networkButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("ServerMessageColour", self.serverButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("ErrorMessageColour", self.errorButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("TimestampColour", self.timestampButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("HyperlinkColour", self.hyperlinkButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("ChannelMessageColour", self.channelButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("OwnNickColour", self.ownNickButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("NickColour", self.nickButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("JoinChannelColour", self.joinButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("LeaveChannelColour", self.leaveButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("ChannelInfoColour", self.infoButton,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         
         # notifications
         self.notificationsGroup.setChecked(
@@ -75,37 +75,37 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         
         # IRC text colors
         self.initColour("IrcColor0", self.ircColor0Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor1", self.ircColor1Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor2", self.ircColor2Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor3", self.ircColor3Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor4", self.ircColor4Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor5", self.ircColor5Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor6", self.ircColor6Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor7", self.ircColor7Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor8", self.ircColor8Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor9", self.ircColor9Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor10", self.ircColor10Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor11", self.ircColor11Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor12", self.ircColor12Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor13", self.ircColor13Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor14", self.ircColor14Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         self.initColour("IrcColor15", self.ircColor15Button,
-                         Preferences.getIrc, byName=True)
+                        Preferences.getIrc, byName=True)
         
         # Automatic User Information Lookup
         self.whoGroup.setChecked(Preferences.getIrc("AutoUserInfoLookup"))
@@ -117,11 +117,11 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         self.markWhenHiddenCheckBox.setChecked(
             Preferences.getIrc("MarkPositionWhenHidden"))
         self.initColour("MarkerLineForegroundColour",
-                         self.markerForegroundButton,
-                         Preferences.getIrc, byName=True)
+                        self.markerForegroundButton,
+                        Preferences.getIrc, byName=True)
         self.initColour("MarkerLineBackgroundColour",
-                         self.markerBackgroundButton,
-                         Preferences.getIrc, byName=True)
+                        self.markerBackgroundButton,
+                        Preferences.getIrc, byName=True)
         
         # Shutdown
         self.confirmShutdownCheckBox.setChecked(

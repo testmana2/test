@@ -260,7 +260,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 (not self.__checkShortcut(
                     keysequence, objectType, self.__editTopItem) or
                  not self.__checkShortcut(
-                    altKeysequence, objectType, self.__editTopItem)):
+                     altKeysequence, objectType, self.__editTopItem)):
             return
         
         self.shortcutsList.currentItem().setText(1, keysequence.toString())
@@ -315,7 +315,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """<p><b>{0}</b> has already been"""
                                     """ allocated to the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
-                                    .format(keystr, itm.text(0)),
+                                .format(keystr, itm.text(0)),
                                 icon=E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
@@ -334,7 +334,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                 self.trUtf8(
                                     """<p><b>{0}</b> hides the <b>{1}</b>"""
                                     """ action. Remove this binding?</p>""")
-                                    .format(keystr, itm.text(0)),
+                                .format(keystr, itm.text(0)),
                                 icon=E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
@@ -352,7 +352,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """<p><b>{0}</b> is hidden by the """
                                     """<b>{1}</b> action. """
                                     """Remove this binding?</p>""")
-                                    .format(keystr, itm.text(0)),
+                                .format(keystr, itm.text(0)),
                                 icon=E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
@@ -454,7 +454,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         -1) or \
                    (self.shortcutButton.isChecked() and
                     not txt.lower() in itm.text(1).lower() and
-                    not txt.lower() in itm.text(2).lower()):
+                        not txt.lower() in itm.text(2).lower()):
                     itm.setHidden(True)
                     childHiddenCount += 1
                 else:

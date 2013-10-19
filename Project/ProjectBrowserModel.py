@@ -341,7 +341,7 @@ class ProjectBrowserModel(BrowserModel):
         if len(entryInfoList) > 0:
             if repopulate:
                 self.beginInsertRows(self.createIndex(
-                        parentItem.row(), 0, parentItem),
+                    parentItem.row(), 0, parentItem),
                     0, len(entryInfoList) - 1)
             states = {}
             if self.project.vcs is not None:

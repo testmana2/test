@@ -81,9 +81,9 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         """
         self.hide()
         self.shortcutChanged.emit(
-                  QKeySequence(self.keyEdit.text()),
-                  QKeySequence(self.alternateKeyEdit.text()),
-                  self.noCheck, self.objectType)
+            QKeySequence(self.keyEdit.text()),
+            QKeySequence(self.alternateKeyEdit.text()),
+            self.noCheck, self.objectType)
 
     def __clear(self):
         """

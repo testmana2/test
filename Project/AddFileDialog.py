@@ -96,7 +96,8 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
                 "Resource Files ({2});;"
                 "Interface Files ({3});;"
                 "Translation Files ({4});;"
-                "All Files (*)").format(
+                "All Files (*)")\
+                .format(
                     " ".join(patterns["SOURCES"]),
                     " ".join(patterns["FORMS"]),
                     " ".join(patterns["RESOURCES"]),

@@ -104,7 +104,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.sourceMenuActions = {}
         
         if self.project.pdata["PROGLANGUAGE"][0] in \
-            ["Python", "Python2", "Python3"]:
+                ["Python", "Python2", "Python3"]:
             self.__createPythonPopupMenus()
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.__createRubyPopupMenus()
@@ -460,8 +460,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             
             bfcnt = categories[str(ProjectBrowserFileItem)]
             cmcnt = categories[str(BrowserClassItem)] + \
-                    categories[str(BrowserMethodItem)] + \
-                    categories[str(BrowserClassAttributeItem)]
+                categories[str(BrowserMethodItem)] + \
+                categories[str(BrowserClassAttributeItem)]
             sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
@@ -640,7 +640,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
            isinstance(itm, BrowserMethodItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = ""
@@ -668,7 +668,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                 """<p>The package directory <b>{0}</b> could"""
                                 """ not be created. Aborting...</p>"""
                                 """<p>Reason: {1}</p>""")
-                                .format(packagePath, str(err)))
+                            .format(packagePath, str(err)))
                         return
                 packageFile = os.path.join(packagePath, "__init__.py")
                 if not os.path.exists(packageFile):
@@ -683,7 +683,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                 """<p>The package file <b>{0}</b> could"""
                                 """ not be created. Aborting...</p>"""
                                 """<p>Reason: {1}</p>""")
-                                .format(packageFile, str(err)))
+                            .format(packageFile, str(err)))
                         return
                 self.project.appendFile(packageFile)
             if packageFile:
@@ -699,7 +699,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
            isinstance(itm, BrowserMethodItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None
@@ -715,7 +715,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
            isinstance(itm, BrowserMethodItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None

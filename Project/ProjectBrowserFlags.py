@@ -14,8 +14,8 @@ TranslationsBrowserFlag = 8
 InterfacesBrowserFlag = 16
 OthersBrowserFlag = 32
 AllBrowsersFlag = SourcesBrowserFlag | \
-                          FormsBrowserFlag | \
-                          ResourcesBrowserFlag | \
-                          TranslationsBrowserFlag | \
-                          InterfacesBrowserFlag | \
-                          OthersBrowserFlag
+    FormsBrowserFlag | \
+    ResourcesBrowserFlag | \
+    TranslationsBrowserFlag | \
+    InterfacesBrowserFlag | \
+    OthersBrowserFlag

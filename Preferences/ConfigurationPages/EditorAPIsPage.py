@@ -110,7 +110,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         
         self.addPluginApiFileButton.setEnabled(
             len(self.pluginManager.getPluginApiFiles(self.currentApiLanguage))
-                > 0)
+            > 0)
         
     def __editorGetApisFromApiList(self):
         """
@@ -179,7 +179,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             if ok:
                 self.apiList.addItem(Utilities.toNativeSeparators(
                     QFileInfo(QDir(installedAPIFilesPath), file)
-                        .absoluteFilePath()))
+                    .absoluteFilePath()))
         else:
             E5MessageBox.warning(
                 self,

@@ -9,7 +9,7 @@ Module implementing the Editor Highlighting Styles configuration page.
 
 from PyQt4.QtCore import pyqtSlot, QFileInfo, QFile, QIODevice
 from PyQt4.QtGui import QPalette, QColorDialog, QFontDialog, \
-                        QInputDialog, QFont, QMenu
+    QInputDialog, QFont, QMenu
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
@@ -404,7 +404,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                 self.trUtf8(
                     """<p>The highlighting styles could not be exported"""
                     """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")
-                    .format(fn, f.errorString())
+                .format(fn, f.errorString())
             )
         
     def __importStyles(self, lexers):
@@ -436,7 +436,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                 self.trUtf8(
                     """<p>The highlighting styles could not be read"""
                     """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")
-                    .format(fn, f.errorString())
+                .format(fn, f.errorString())
             )
             return
         

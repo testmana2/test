@@ -620,7 +620,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if isinstance(itm, ProjectBrowserFileItem):
             dn = os.path.dirname(itm.fileName())
         elif isinstance(itm, ProjectBrowserSimpleDirectoryItem) or \
-             isinstance(itm, ProjectBrowserDirectoryItem):
+                isinstance(itm, ProjectBrowserDirectoryItem):
             dn = itm.dirName()
         else:
             dn = None
@@ -770,7 +770,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             try:
                 pattern = self.project.pdata["TRANSLATIONPATTERN"][0]\
-                          .replace("%language%", "*")
+                    .replace("%language%", "*")
                 langs = [lang for lang in self.project.pdata["TRANSLATIONS"]
                          if fnmatch.fnmatch(lang, pattern)]
             except IndexError:
@@ -1202,8 +1202,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             lrelease = os.path.join(
-                    Utilities.getQtBinariesPath(),
-                    Utilities.generateQtToolName("lrelease"))
+                Utilities.getQtBinariesPath(),
+                Utilities.generateQtToolName("lrelease"))
         else:
             return
         if Utilities.isWindowsPlatform():
