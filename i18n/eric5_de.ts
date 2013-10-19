@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1944,8 +1943,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2181,8 +2180,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -15691,8 +15690,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1077"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1150"/>
@@ -61147,225 +61146,6 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1706"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Repositoryinformationen&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Aktuelle Revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Eingepflegte Revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Einpflegedatum&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Einpflegezeit&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Letzter Autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>vcsCommandOptionsDialog</name>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="13"/>
-        <source>VCS Command Options</source>
-        <translation type="obsolete">VCS-Befehlsoptionen</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="16"/>
-        <source>&lt;b&gt;VCS Command Options Dialog&lt;/b&gt;
-&lt;p&gt;Enter the options for the different VCS commands. The &quot;Global Options&quot; entry applies to all VCS commands.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;VCS-Befehlsoptionen-Dialog&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für die verschiedenen VCS-Befehle ein. Die „Globalen Optionen“ sind für alle VCS-Befehle gültig.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="28"/>
-        <source>&amp;History Options:</source>
-        <translation type="obsolete">&amp;History-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="38"/>
-        <source>&amp;Add Options:</source>
-        <translation type="obsolete">&amp;Add-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="48"/>
-        <source>&amp;Remove Options:</source>
-        <translation type="obsolete">&amp;Remove-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="58"/>
-        <source>&amp;Tag Options:</source>
-        <translation type="obsolete">&amp;Tag-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="68"/>
-        <source>Enter the options for the commit command.</source>
-        <translation type="obsolete">Gib die Optionen für den Commit-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="71"/>
-        <source>&lt;b&gt;Commit Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the commit command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Commit-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Commit Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="79"/>
-        <source>Enter the options for the history command.</source>
-        <translation type="obsolete">Gib die Optionen für den History-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="82"/>
-        <source>&lt;b&gt;History Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the history command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;History-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den History-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="90"/>
-        <source>Enter the options for the diff command.</source>
-        <translation type="obsolete">Gib die Optionen für den Diff-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="93"/>
-        <source>&lt;b&gt;Diff Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the diff command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Diff-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Diff-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="101"/>
-        <source>Enter the options for the update command.</source>
-        <translation type="obsolete">Gib die Optionen für den Update-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="104"/>
-        <source>&lt;b&gt;Update Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the update command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Update-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Update-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="112"/>
-        <source>Enter the options for the log command.</source>
-        <translation type="obsolete">Gib die Optionen für den Log-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="115"/>
-        <source>&lt;b&gt;Log Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the log command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Log-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Log-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="123"/>
-        <source>Enter the options for the tag command.</source>
-        <translation type="obsolete">Gib die Optionen für den Tag-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="126"/>
-        <source>&lt;b&gt;Tag Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the tag command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Tag-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Tag-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="134"/>
-        <source>Enter the options for the status command.</source>
-        <translation type="obsolete">Gib die Optionen für den Status-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="137"/>
-        <source>&lt;b&gt;Status Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the status command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Status-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Status-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="145"/>
-        <source>&amp;Diff Options:</source>
-        <translation type="obsolete">&amp;Diff-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="155"/>
-        <source>&amp;Global Options:</source>
-        <translation type="obsolete">&amp;Globale Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="165"/>
-        <source>Enter the options for the export command.</source>
-        <translation type="obsolete">Gib die Optionen für den Export-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="168"/>
-        <source>&lt;b&gt;Export Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the export command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Exportoptionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Export-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="176"/>
-        <source>Enter the options for the add command.</source>
-        <translation type="obsolete">Gib die Optionen für den Add-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="179"/>
-        <source>&lt;b&gt;Add Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the add command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Add-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Add-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="187"/>
-        <source>&amp;Log Options:</source>
-        <translation type="obsolete">&amp;Log-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="197"/>
-        <source>&amp;StatusOptions:</source>
-        <translation type="obsolete">&amp;Status-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="207"/>
-        <source>Enter the options for the remove command.</source>
-        <translation type="obsolete">Gib die Optionen für den Remove-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="210"/>
-        <source>&lt;b&gt;Remove Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the remove command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Remove-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Remove-Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="218"/>
-        <source>Enter the options for the checkout command.</source>
-        <translation type="obsolete">Gib die Optionen für den Checkout-Befehl ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="221"/>
-        <source>&lt;b&gt;Checkout Options&lt;/b&gt;
-&lt;p&gt;Enter the options for the checkout command.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Checkout-Optionen&lt;/b&gt;
-&lt;p&gt;Gib die Optionen für den Checkout Befehl ein.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="229"/>
-        <source>Co&amp;mmit Options:</source>
-        <translation type="obsolete">&amp;Commit-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="239"/>
-        <source>&amp;Export Options:</source>
-        <translation type="obsolete">&amp;Exportoptionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="249"/>
-        <source>Check&amp;out Options:</source>
-        <translation type="obsolete">Check&amp;out-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="259"/>
-        <source>&amp;Update Options:</source>
-        <translation type="obsolete">&amp;Update-Optionen:</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="269"/>
-        <source>Enter the global options.</source>
-        <translation type="obsolete">Gib die globalen Optionen ein.</translation>
-    </message>
-    <message>
-        <location filename="../VCS/CommandOptionsDialog.ui" line="272"/>
-        <source>&lt;b&gt;Global Options&lt;/b&gt;
-&lt;p&gt;Enter the global options.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Globale Optionen&lt;/b&gt;
-&lt;p&gt;Gib die globalen Optionen ein.&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

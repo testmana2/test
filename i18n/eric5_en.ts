@@ -60587,7 +60587,4 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
-    <name>vcsCommandOptionsDialog</name>
-</context>
 </TS>
