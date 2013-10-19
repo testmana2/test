@@ -34,7 +34,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         self.rx_status1 = \
             QRegExp('(.{8,9})\\s+([0-9-]+)\\s+(.+)\\s*')
         self.rx_status2 = QRegExp(
-            '(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+            '(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+(\\S+)\\s+(.+)\\s*')
     
     def _performMonitor(self):
         """
