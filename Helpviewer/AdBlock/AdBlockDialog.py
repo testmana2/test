@@ -110,11 +110,11 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         Private slot to show the actions menu.
         """
         subscriptionEditable = self.__currentSubscription and \
-                               self.__currentSubscription.canEditRules()
+            self.__currentSubscription.canEditRules()
         subscriptionRemovable = self.__currentSubscription and \
-                               self.__currentSubscription.canBeRemoved()
+            self.__currentSubscription.canBeRemoved()
         subscriptionEnabled = self.__currentSubscription and \
-                              self.__currentSubscription.isEnabled()
+            self.__currentSubscription.isEnabled()
         
         menu = self.actionButton.menu()
         menu.clear()
@@ -213,8 +213,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
                 "<p>Do you really want to remove subscription"
                 " <b>{0}</b> and all subscriptions requiring it?</p>"
                 "<ul><li>{1}</li></ul>").format(
-                    self.__currentSubscription.title(),
-                    "</li><li>".join(requiresTitles))
+                self.__currentSubscription.title(),
+                "</li><li>".join(requiresTitles))
         else:
             message = self.trUtf8(
                 "<p>Do you really want to remove subscription"

@@ -32,4 +32,4 @@ class Page(object):
         @return flag indicating equality (boolean)
         """
         return self.title == other.title and \
-               self.url == other.url
+            self.url == other.url

@@ -148,8 +148,8 @@ class ClickToFlashPlugin(WebPluginInterface):
         @return flag indicating presence in the whitelist (boolean)
         """
         return host in self.__whitelist or \
-               "www." + host in self.__whitelist or \
-               host.replace("www.", "") in self.__whitelist
+            "www." + host in self.__whitelist or \
+            host.replace("www.", "") in self.__whitelist
     
     def addToWhitelist(self, host):
         """

@@ -235,7 +235,7 @@ class BookmarksMenuBarMenu(BookmarksMenu):
             .bookmarksManager()
         self.setModel(self.__bookmarksManager.bookmarksModel())
         self.setRootIndex(self.__bookmarksManager.bookmarksModel()
-                            .nodeIndex(self.__bookmarksManager.menu()))
+                          .nodeIndex(self.__bookmarksManager.menu()))
         
         # initial actions
         for act in self.__initialActions:

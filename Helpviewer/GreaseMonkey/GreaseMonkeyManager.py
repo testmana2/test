@@ -250,7 +250,7 @@ class GreaseMonkeyManager(QObject):
             if script.match(urlString):
                 javascript = 'window.addEventListener("DOMContentLoaded",' \
                     'function(e) {{ {0} }}, false);'.format(
-                    bootstrap_js + script.script())
+                        bootstrap_js + script.script())
                 frame.evaluateJavaScript(javascript)
     
     def __load(self):

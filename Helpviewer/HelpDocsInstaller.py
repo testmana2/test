@@ -150,7 +150,7 @@ class HelpDocsInstaller(QThread):
                         self.trUtf8(
                             """<p>The file <b>{0}</b> could not be"""
                             """ registered. <br/>Reason: {1}</p>""")
-                            .format(fi.absoluteFilePath, engine.error())
+                        .format(fi.absoluteFilePath, engine.error())
                     )
                     return False
                 
@@ -211,7 +211,7 @@ class HelpDocsInstaller(QThread):
                         self.trUtf8(
                             """<p>The file <b>{0}</b> could not be"""
                             """ registered. <br/>Reason: {1}</p>""")
-                            .format(fi.absoluteFilePath, engine.error())
+                        .format(fi.absoluteFilePath, engine.error())
                     )
                     return False
                 

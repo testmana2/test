@@ -101,7 +101,7 @@ class HelpTocWidget(QWidget):
                event.button() == Qt.LeftButton:
                 self.itemClicked(self.__tocWidget.currentIndex())
             elif self.__tocWidget.indexAt(event.pos()).isValid() and \
-                 event.button() == Qt.MidButton:
+                    event.button() == Qt.MidButton:
                 model = self.__tocWidget.model()
                 itm = model.contentItemAt(self.__tocWidget.currentIndex())
                 self.__mw.newTab(itm.url())

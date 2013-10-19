@@ -114,7 +114,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         """
         if not self.__suggestions or \
            (self.__model.rowCount() > 0 and
-            self.__model.item(0) != self.__suggestionsItem):
+                self.__model.item(0) != self.__suggestionsItem):
             self.__model.clear()
             self.__suggestionsItem = None
         else:
@@ -371,7 +371,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         self.setInactiveText(self.__openSearchManager.currentEngineName())
         self.__currentEngine = self.__openSearchManager.currentEngineName()
         self.__engineButton.setIcon(QIcon(QPixmap.fromImage(
-                self.__openSearchManager.currentEngine().image())))
+            self.__openSearchManager.currentEngine().image())))
         self.__suggestions = []
         self.__setupCompleterMenu()
     
@@ -380,7 +380,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         Private slot to handle a change of the current search engine icon.
         """
         self.__engineButton.setIcon(QIcon(QPixmap.fromImage(
-                self.__openSearchManager.currentEngine().image())))
+            self.__openSearchManager.currentEngine().image())))
     
     def mousePressEvent(self, evt):
         """

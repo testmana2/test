@@ -555,7 +555,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 .format(
                     dataString(self.__bytesReceived),
                     bytesTotal == -1 and self.trUtf8("?")
-                                     or dataString(bytesTotal),
+                    or dataString(bytesTotal),
                     dataString(int(speed)),
                     remaining)
         else:
@@ -566,7 +566,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                                 encoding="ascii"),
                             str(self.__md5Hash.result().toHex(),
                                 encoding="ascii")
-                    )
+                            )
             else:
                 info = self.trUtf8("{0} of {1} - Stopped")\
                     .format(dataString(self.__bytesReceived),

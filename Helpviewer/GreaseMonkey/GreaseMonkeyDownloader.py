@@ -72,7 +72,7 @@ class GreaseMonkeyDownloader(QObject):
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be opened"""
                         """ for writing.<br/>Reason: {1}</p>""").format(
-                            self.__fileName, str(err)))
+                        self.__fileName, str(err)))
                 self.finished.emit()
                 return
             f.write(response)
@@ -123,7 +123,7 @@ class GreaseMonkeyDownloader(QObject):
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be opened"""
                         """ for writing.<br/>Reason: {1}</p>""").format(
-                            fileName, str(err)))
+                        fileName, str(err)))
                 self.finished.emit()
                 return
             f.write(response)
@@ -167,7 +167,7 @@ class GreaseMonkeyDownloader(QObject):
                         self.trUtf8("GreaseMonkey Download"),
                         self.trUtf8(
                             """<p><b>{0}</b> is already installed.</p>""")
-                            .format(script.name()))
+                        .format(script.name()))
             
             if deleteScript:
                 try:

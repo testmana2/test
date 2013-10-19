@@ -131,7 +131,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
                 
             elif role == Qt.ToolTipRole:
                 description = self.trUtf8("<strong>Description:</strong> {0}")\
-                              .format(engine.description())
+                    .format(engine.description())
                 if engine.providesSuggestions():
                     description += "<br/>"
                     description += self.trUtf8(

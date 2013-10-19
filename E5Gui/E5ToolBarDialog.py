@@ -145,7 +145,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                     self.trUtf8(
                         """A toolbar with the name <b>{0}</b> already"""
                         """ exists.""")
-                        .format(name))
+                    .format(name))
                 return
             
             tbItem = E5ToolBarItem(None, [], False)
@@ -169,7 +169,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
             self.trUtf8("Remove Toolbar"),
             self.trUtf8(
                 """Should the toolbar <b>{0}</b> really be removed?""")
-                .format(name))
+            .format(name))
         if res:
             index = self.toolbarComboBox.currentIndex()
             tbItemID = self.toolbarComboBox.itemData(index)
@@ -206,7 +206,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                     self.trUtf8(
                         """A toolbar with the name <b>{0}</b> already"""
                         """ exists.""")
-                        .format(newName))
+                    .format(newName))
                 return
             index = self.toolbarComboBox.currentIndex()
             self.toolbarComboBox.setItemText(index, newName)
@@ -356,7 +356,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
             actionID = None
         else:
             actionID = self.actionsTree.currentItem()\
-                       .data(0, E5ToolBarDialog.ActionIdRole)
+                .data(0, E5ToolBarDialog.ActionIdRole)
             action = self.__manager.actionById(actionID)
             item.setText(action.text())
             item.setIcon(action.icon())

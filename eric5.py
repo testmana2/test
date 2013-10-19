@@ -99,7 +99,7 @@ def excepthook(excType, excValue, tracebackobj):
         """An unhandled exception occurred. Please report the problem\n"""\
         """using the error reporting dialog or via email to <{0}>.\n"""\
         """A log has been written to "{1}".\n\nError information:\n""".format(
-        BugAddress, logFile)
+            BugAddress, logFile)
     timeString = time.strftime("%Y-%m-%d, %H:%M:%S")
     
     versionInfo = "\n{0}\n{1}".format(

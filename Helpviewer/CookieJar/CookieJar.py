@@ -243,11 +243,11 @@ class CookieJar(QNetworkCookieJar):
         host = url.host()
         eBlock = self.__isOnDomainList(self.__exceptionsBlock, host)
         eAllow = not eBlock and \
-                 self.__isOnDomainList(self.__exceptionsAllow, host)
+            self.__isOnDomainList(self.__exceptionsAllow, host)
         eAllowSession = not eBlock and \
-                        not eAllow and \
-                        self.__isOnDomainList(
-                            self.__exceptionsAllowForSession, host)
+            not eAllow and \
+            self.__isOnDomainList(
+                self.__exceptionsAllowForSession, host)
         
         addedCookies = False
         acceptInitially = self.__acceptCookies != self.AcceptNever

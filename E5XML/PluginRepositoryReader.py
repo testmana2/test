@@ -66,7 +66,7 @@ class PluginRepositoryReader(XMLStreamReaderBase):
                       "author": "",
                       "version": "",
                       "filename": "",
-        }
+                      }
         pluginInfo["status"] = self.attribute("status", "unknown")
         
         while not self.atEnd():

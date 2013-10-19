@@ -31,4 +31,4 @@ def makeAppInfo(argv, name, arg, description, options=[]):
         "description": description,
         "version": Version,
         "options": options
-        }
+    }

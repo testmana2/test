@@ -32,7 +32,7 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         self.setError(
             QNetworkReply.ContentAccessDenied,
             "AdBlockRule:{0} ({1})"
-                .format(subscription.title(), rule.filter()))
+            .format(subscription.title(), rule.filter()))
         QTimer.singleShot(0, self.__fireSignals)
     
     def __fireSignals(self):

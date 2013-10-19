@@ -57,7 +57,7 @@ class E5MainWindow(QMainWindow):
                     self.trUtf8(
                         """<p>The Qt Style Sheet file <b>{0}</b> could"""
                         """ not be read.<br>Reason: {1}</p>""")
-                        .format(styleSheetFile, str(msg)))
+                    .format(styleSheetFile, str(msg)))
                 return
         else:
             styleSheet = ""

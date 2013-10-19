@@ -44,7 +44,7 @@ class UserProjectWriter(XMLStreamWriterBase):
         
         self.writeDTD(
             '<!DOCTYPE UserProject SYSTEM "UserProject-{0}.dtd">'.format(
-            userProjectFileFormatVersion))
+                userProjectFileFormatVersion))
         
         # add some generation comments
         self.writeComment(

@@ -300,7 +300,7 @@ class E5Ftp(ftplib.FTP):
                 if presp[0] != "2":
                     raise E5FtpProxyError(
                         "9{0}0 Error authorizing at proxy\n{1}".format(
-                        presp[0], presp))
+                            presp[0], presp))
                 
                 if self.__proxyType == E5FtpProxyType.Site:
                     # send SITE command
@@ -308,14 +308,14 @@ class E5Ftp(ftplib.FTP):
                     if presp[0] != "2":
                         raise E5FtpProxyError(
                             "9{0}0 Error sending SITE command\n{1}".format(
-                            presp[0], presp))
+                                presp[0], presp))
                 elif self.__proxyType == E5FtpProxyType.Open:
                     # send OPEN command
                     presp = self.sendcmd("OPEN " + self.__host)
                     if presp[0] != "2":
                         raise E5FtpProxyError(
                             "9{0}0 Error sending OPEN command\n{1}".format(
-                            presp[0], presp))
+                                presp[0], presp))
         
         # authenticate to the remote host or combined to proxy and remote host
         resp = self.sendcmd("USER " + user)
@@ -334,6 +334,6 @@ class E5Ftp(ftplib.FTP):
             if presp[0] != "2":
                 raise E5FtpProxyError(
                     "9{0}0 Error authorizing at proxy\n{1}".format(
-                    presp[0], presp))
+                        presp[0], presp))
         
         return resp

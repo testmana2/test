@@ -372,9 +372,9 @@ class UMLDialog(E5MainWindow):
         """
         if linenum < 0:
             msg = self.trUtf8("""<p>The file <b>{0}</b> does not contain"""
-                               """ valid data.</p>""").format(filename)
+                              """ valid data.</p>""").format(filename)
         else:
             msg = self.trUtf8("""<p>The file <b>{0}</b> does not contain"""
-                               """ valid data.</p><p>Invalid line: {1}</p>"""
+                              """ valid data.</p><p>Invalid line: {1}</p>"""
                               ).format(filename, linenum + 1)
         E5MessageBox.critical(self, self.trUtf8("Load Diagram"), msg)

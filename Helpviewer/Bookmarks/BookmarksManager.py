@@ -140,9 +140,9 @@ class BookmarksManager(QObject):
                 self.trUtf8(
                     """Error when loading bookmarks on line {0},"""
                     """ column {1}:\n {2}""")
-                    .format(reader.lineNumber(),
-                            reader.columnNumber(),
-                            reader.errorString()))
+                .format(reader.lineNumber(),
+                        reader.columnNumber(),
+                        reader.errorString()))
         
         others = []
         for index in range(
@@ -205,7 +205,7 @@ class BookmarksManager(QObject):
                 None,
                 self.trUtf8("Saving Bookmarks"),
                 self.trUtf8("""Error saving bookmarks to <b>{0}</b>.""")
-                    .format(bookmarkFile))
+                .format(bookmarkFile))
         
         # restore localized titles
         self.__menu.title = self.trUtf8(BOOKMARKMENU)
@@ -391,7 +391,7 @@ class BookmarksManager(QObject):
                 None,
                 self.trUtf8("Exporting Bookmarks"),
                 self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")
-                    .format(fileName))
+                .format(fileName))
     
     def __convertFromOldBookmarks(self):
         """

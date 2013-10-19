@@ -124,8 +124,8 @@ class CookieExceptionsModel(QAbstractTableModel):
             return 0
         else:
             return len(self.__allowedCookies) + \
-                   len(self.__blockedCookies) + \
-                   len(self.__sessionCookies)
+                len(self.__blockedCookies) + \
+                len(self.__sessionCookies)
     
     def removeRows(self, row, count, parent=QModelIndex()):
         """

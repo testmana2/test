@@ -192,8 +192,8 @@ class OpenSearchEngine(QObject):
         if not self._suggestionsUrlTemplate:
             return QUrl()
         
-        ret = QUrl.fromEncoded(QByteArray(
-              self.parseTemplate(searchTerm, self._suggestionsUrlTemplate)))
+        ret = QUrl.fromEncoded(QByteArray(self.parseTemplate(
+            searchTerm, self._suggestionsUrlTemplate)))
         
         if self.__searchMethod != "post":
             for parameter in self._suggestionsParameters:

@@ -182,6 +182,6 @@ class UserAgentMenu(QMenu):
                 self.trUtf8("Parsing default user agents"),
                 self.trUtf8(
                     """<p>Error parsing default user agents.</p><p>{0}</p>""")
-                    .format(xml.errorString()))
+                .format(xml.errorString()))
         
         return isChecked

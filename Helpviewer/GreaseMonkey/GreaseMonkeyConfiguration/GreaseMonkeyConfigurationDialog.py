@@ -19,7 +19,7 @@ import UI.PixmapCache
 
 
 class GreaseMonkeyConfigurationDialog(
-    QDialog, Ui_GreaseMonkeyConfigurationDialog):
+        QDialog, Ui_GreaseMonkeyConfigurationDialog):
     """
     Class implementing the GreaseMonkey scripts configuration dialog.
     """
@@ -148,7 +148,7 @@ class GreaseMonkeyConfigurationDialog(
             self.trUtf8("Remove Script"),
             self.trUtf8(
                 """<p>Are you sure you want to remove <b>{0}</b>?</p>""")
-                .format(script.name()))
+            .format(script.name()))
         if removeIt and self.__manager.removeScript(script):
             self.scriptsList.takeItem(self.scriptsList.row(itm))
             del itm

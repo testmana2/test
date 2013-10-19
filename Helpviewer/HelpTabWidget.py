@@ -261,7 +261,7 @@ class HelpTabWidget(E5TabWidget):
         """
         index = self.__tabContextMenuIndex
         for i in list(range(self.count() - 1, index, -1)) + \
-                 list(range(index - 1, -1, -1)):
+                list(range(index - 1, -1, -1)):
             self.closeBrowserAt(i)
     
     def __tabContextMenuPrint(self):

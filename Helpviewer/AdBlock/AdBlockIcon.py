@@ -166,7 +166,7 @@ class AdBlockIcon(E5ClickableLabel):
         import Helpviewer.HelpWindow
         return urlHost and \
             Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
-                .isHostExcepted(urlHost)
+            .isHostExcepted(urlHost)
     
     def currentChanged(self):
         """

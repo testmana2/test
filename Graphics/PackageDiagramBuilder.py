@@ -205,7 +205,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
             ct.setHtml(
                 self.trUtf8(
                     "The package <b>'{0}'</b> does not contain any modules.")
-                    .format(self.package))
+                .format(self.package))
             return
             
         # step 1: build all classes found in the modules
@@ -221,7 +221,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
             ct.setHtml(
                 self.trUtf8(
                     "The package <b>'{0}'</b> does not contain any classes.")
-                    .format(self.package))
+                .format(self.package))
             return
         
         # step 2: build the class hierarchies
@@ -244,7 +244,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                     if cw and not (cw.external and
                                    (className in module.classes or
                                     className in module.modules)
-                                  ):
+                                   ):
                         if className not in nodes:
                             nodes.append(className)
                     else:
@@ -423,10 +423,10 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         for route in routes:
             if len(route) > 1:
                 assoc = AssociationItem(
-                        self.__getCurrentShape(route[1]),
-                        self.__getCurrentShape(route[0]),
-                        Generalisation,
-                        topToBottom=True)
+                    self.__getCurrentShape(route[1]),
+                    self.__getCurrentShape(route[0]),
+                    Generalisation,
+                    topToBottom=True)
                 self.scene.addItem(assoc)
     
     def getPersistenceData(self):

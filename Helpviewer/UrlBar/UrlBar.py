@@ -154,7 +154,7 @@ class UrlBar(E5LineEdit):
                 manager.setTimestamp(bookmark, BookmarkNode.TsVisited,
                                      QDateTime.currentDateTime())
         elif Helpviewer.HelpWindow.HelpWindow.speedDial()\
-           .pageForUrl(self.__browser.url()).url != "":
+                .pageForUrl(self.__browser.url()).url != "":
             self.__bookmarkButton.setIcon(self.__bmActiveIcon)
         else:
             self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
@@ -259,7 +259,7 @@ class UrlBar(E5LineEdit):
                 self.__browser.addBookmark()
             elif action == BookmarkActionSelectionDialog.EditBookmark:
                 bookmark = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
-                   .bookmarkForUrl(url)
+                    .bookmarkForUrl(url)
                 from .BookmarkInfoDialog import BookmarkInfoDialog
                 dlg = BookmarkInfoDialog(bookmark, self.__browser)
                 dlg.exec_()

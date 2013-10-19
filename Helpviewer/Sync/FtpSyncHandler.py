@@ -281,28 +281,28 @@ class FtpSyncHandler(SyncHandler):
             self.__initialSyncFile(
                 "bookmarks",
                 Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
-                    .getFileName())
+                .getFileName())
         
         # History
         if Preferences.getHelp("SyncHistory"):
             self.__initialSyncFile(
                 "history",
                 Helpviewer.HelpWindow.HelpWindow.historyManager()
-                    .getFileName())
+                .getFileName())
         
         # Passwords
         if Preferences.getHelp("SyncPasswords"):
             self.__initialSyncFile(
                 "passwords",
                 Helpviewer.HelpWindow.HelpWindow.passwordManager()
-                    .getFileName())
+                .getFileName())
         
         # User Agent Settings
         if Preferences.getHelp("SyncUserAgents"):
             self.__initialSyncFile(
                 "useragents",
                 Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
-                    .getFileName())
+                .getFileName())
         
         # Speed Dial Settings
         if Preferences.getHelp("SyncSpeedDial"):

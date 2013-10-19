@@ -201,8 +201,9 @@ class SvgDiagram(E5MainWindow):
         @param scrollBar reference to the scrollbar object (QScrollBar)
         @param factor factor to adjust by (float)
         """
-        scrollBar.setValue(int(factor * scrollBar.value()
-                                + ((factor - 1) * scrollBar.pageStep() / 2)))
+        scrollBar.setValue(
+            int(factor * scrollBar.value() +
+                ((factor - 1) * scrollBar.pageStep() / 2)))
         
     def __levelForZoom(self, zoom):
         """

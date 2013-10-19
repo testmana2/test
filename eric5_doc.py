@@ -122,14 +122,18 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric5_doc  {0}
-
-Eric5 API documentation generator.
-
-Copyright (c) 2003-2013 Detlev Offenbach <detlev@die-offenbachs.de>
-This is free software; see the LICENSE.GPL3 for copying conditions.
-There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""".format(Version))
+    print(
+        """eric5_doc  {0}\n"""
+        """\n"""
+        """Eric5 API documentation generator.\n"""
+        """\n"""
+        """Copyright (c) 2003-2013 Detlev Offenbach"""
+        """ <detlev@die-offenbachs.de>\n"""
+        """This is free software; see the LICENSE.GPL3 for copying"""
+        """ conditions.\n"""
+        """There is NO warranty; not even for MERCHANTABILITY or FITNESS"""
+        """ FOR A\n"""
+        """PARTICULAR PURPOSE.""".format(Version))
     sys.exit(1)
 
 
@@ -153,7 +157,7 @@ def main():
              "create-qhp", "qhp-outdir=", "qhp-namespace=",
              "qhp-virtualfolder=", "qhp-filtername=", "qhp-filterattribs=",
              "qhp-title=", "create-qhc",
-            ])
+             ])
     except getopt.error:
         usage()
 
@@ -252,7 +256,7 @@ def main():
     if qtHelpCreation and \
        (qtHelpNamespace == "" or
         qtHelpFolder == "" or '/' in qtHelpFolder or
-        qtHelpTitle == ""):
+            qtHelpTitle == ""):
         usage()
     
     if qtHelpCreation:
@@ -298,7 +302,7 @@ def main():
                 except EnvironmentError:
                     sys.stderr.write(
                         "Could not create QtHelp output directory {0}.".format(
-                        qtHelpOutputDir))
+                            qtHelpOutputDir))
                     sys.exit(2)
         else:
             qtHelpOutputDir = os.getcwd()

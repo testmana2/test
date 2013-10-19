@@ -232,7 +232,7 @@ class PixmapDiagram(E5MainWindow):
         @param factor factor to adjust by (float)
         """
         scrollBar.setValue(int(factor * scrollBar.value()
-                                + ((factor - 1) * scrollBar.pageStep() / 2)))
+                           + ((factor - 1) * scrollBar.pageStep() / 2)))
         
     def __levelForZoom(self, zoom):
         """

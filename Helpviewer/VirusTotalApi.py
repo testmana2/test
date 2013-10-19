@@ -82,7 +82,7 @@ class VirusTotalAPI(QObject):
         self.errorMessages = {
             -2: self.trUtf8("Request limit has been reached."),
             -1: self.trUtf8("Invalid key given."),
-             0: self.trUtf8("Requested item is not present.")
+            0: self.trUtf8("Requested item is not present.")
         }
     
     def preferencesChanged(self):
@@ -142,7 +142,7 @@ class VirusTotalAPI(QObject):
         request.setHeader(QNetworkRequest.ContentTypeHeader,
                           "application/x-www-form-urlencoded")
         params = QByteArray("key={0}&url=".format(
-                Preferences.getHelp("VirusTotalServiceKey")))\
+            Preferences.getHelp("VirusTotalServiceKey")))\
             .append(QUrl.toPercentEncoding(url.toString()))
         
         import Helpviewer.HelpWindow

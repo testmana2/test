@@ -293,12 +293,12 @@ class HistoryMenu(E5ModelMenu):
         """
         if self._keyboardModifiers & Qt.ControlModifier:
             self.newUrl.emit(
-                      idx.data(HistoryModel.UrlRole),
-                      idx.data(HistoryModel.TitleRole))
+                idx.data(HistoryModel.UrlRole),
+                idx.data(HistoryModel.TitleRole))
         else:
             self.openUrl.emit(
-                      idx.data(HistoryModel.UrlRole),
-                      idx.data(HistoryModel.TitleRole))
+                idx.data(HistoryModel.UrlRole),
+                idx.data(HistoryModel.TitleRole))
     
     def prePopulated(self):
         """
@@ -447,12 +447,12 @@ class HistoryMostVisitedMenu(E5ModelMenu):
         """
         if self._keyboardModifiers & Qt.ControlModifier:
             self.newUrl.emit(
-                      idx.data(HistoryModel.UrlRole),
-                      idx.data(HistoryModel.TitleRole))
+                idx.data(HistoryModel.UrlRole),
+                idx.data(HistoryModel.TitleRole))
         else:
             self.openUrl.emit(
-                      idx.data(HistoryModel.UrlRole),
-                      idx.data(HistoryModel.TitleRole))
+                idx.data(HistoryModel.UrlRole),
+                idx.data(HistoryModel.TitleRole))
     
     def prePopulated(self):
         """

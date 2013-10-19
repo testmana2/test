@@ -306,7 +306,7 @@ class UMLGraphicsView(E5GraphicsView):
         rect = self._getDiagramRect(10)
         sceneRect = self.scene().sceneRect()
         dlg = UMLSceneSizeDialog(sceneRect.width(), sceneRect.height(),
-                                  rect.width(), rect.height(), self)
+                                 rect.width(), rect.height(), self)
         if dlg.exec_() == QDialog.Accepted:
             width, height = dlg.getData()
             self.setSceneSize(width, height)
@@ -358,7 +358,7 @@ class UMLGraphicsView(E5GraphicsView):
                     self.trUtf8("Save Diagram"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be saved.</p>""")
-                        .format(fname))
+                    .format(fname))
         
     def __relayout(self):
         """

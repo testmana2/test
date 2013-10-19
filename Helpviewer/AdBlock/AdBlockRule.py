@@ -197,7 +197,7 @@ class AdBlockRule(object):
             parsedLine = parsedLine[1:-1]
             self.__useRegExp = True
             self.__regExp = QRegExp(parsedLine, self.__caseSensitivity,
-                                     QRegExp.RegExp)
+                                    QRegExp.RegExp)
             return
         
         # Remove starting / ending wildcards

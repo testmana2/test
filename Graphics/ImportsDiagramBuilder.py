@@ -76,11 +76,11 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         """
         import Utilities.ModuleParser
         extensions = Preferences.getPython("PythonExtensions") + \
-                     Preferences.getPython("Python3Extensions")
+            Preferences.getPython("Python3Extensions")
         moduleDict = {}
         modules = []
         for ext in Preferences.getPython("PythonExtensions") + \
-                    Preferences.getPython("Python3Extensions"):
+                Preferences.getPython("Python3Extensions"):
             modules.extend(glob.glob(Utilities.normjoinpath(
                 self.packagePath, '*{0}'.format(ext))))
         
@@ -121,7 +121,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
             ct.setHtml(
                 self.trUtf8(
                     "The directory <b>'{0}'</b> is not a Python package.")
-                    .format(self.package))
+                .format(self.package))
             self.scene.addItem(ct)
             return
         
@@ -247,8 +247,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         for module in list(shapes.keys()):
             for rel in shapes[module][1]:
                 assoc = AssociationItem(
-                        shapes[module][0], shapes[rel][0],
-                        Imports)
+                    shapes[module][0], shapes[rel][0],
+                    Imports)
                 self.scene.addItem(assoc)
     
     def getPersistenceData(self):

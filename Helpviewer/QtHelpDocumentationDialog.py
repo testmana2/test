@@ -81,7 +81,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                     self.trUtf8("Add Documentation"),
                     self.trUtf8(
                         """The namespace <b>{0}</b> is already registered.""")
-                        .format(ns)
+                    .format(ns)
                 )
                 continue
             
@@ -142,7 +142,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         @return flag indicating presence of changes
         """
         return len(self.__registeredDocs) > 0 or \
-               len(self.__unregisteredDocs) > 0
+            len(self.__unregisteredDocs) > 0
     
     def getTabsToClose(self):
         """

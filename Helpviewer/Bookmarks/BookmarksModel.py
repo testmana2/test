@@ -192,7 +192,7 @@ class BookmarksModel(QAbstractItemModel):
                     return UI.PixmapCache.getIcon("dirOpen.png")
                 import Helpviewer.HelpWindow
                 return Helpviewer.HelpWindow.HelpWindow.icon(
-                        QUrl(bookmarkNode.url))
+                    QUrl(bookmarkNode.url))
         
         return None
     

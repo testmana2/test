@@ -246,8 +246,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         for package in shapes:
             for rel in shapes[package][1]:
                 assoc = AssociationItem(
-                        shapes[package][0], shapes[rel][0],
-                        Imports)
+                    shapes[package][0], shapes[rel][0],
+                    Imports)
                 self.scene.addItem(assoc)
     
     def getPersistenceData(self):

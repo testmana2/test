@@ -50,9 +50,9 @@ class ProjectWriter(XMLStreamWriterBase):
             self.writeComment(
                 " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
             self.writeComment(" Copyright (C) {0} {1}, {2} ".format(
-                    time.strftime('%Y'),
-                    self.pdata["AUTHOR"][0],
-                    self.pdata["EMAIL"][0]))
+                time.strftime('%Y'),
+                self.pdata["AUTHOR"][0],
+                self.pdata["EMAIL"][0]))
         
         # add the main tag
         self.writeStartElement("Project")

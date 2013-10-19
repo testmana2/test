@@ -351,8 +351,8 @@ class HistoryManager(QWebHistoryInterface):
         else:
             breakMS = QDateTime.currentMSecsSinceEpoch() - period
             while self.__history and \
-                  (QDateTime(self.__history[0].dateTime).toMSecsSinceEpoch() >
-                   breakMS):
+                (QDateTime(self.__history[0].dateTime).toMSecsSinceEpoch() >
+                 breakMS):
                 itm = self.__history.pop(0)
                 self.entryRemoved.emit(itm)
         self.__lastSavedUrl = ""
@@ -388,7 +388,7 @@ class HistoryManager(QWebHistoryInterface):
                 self.trUtf8(
                     """<p>Unable to open history file <b>{0}</b>.<br/>"""
                     """Reason: {1}</p>""")
-                    .format(historyFile.fileName, historyFile.errorString()))
+                .format(historyFile.fileName, historyFile.errorString()))
             return
         
         history = []
@@ -468,7 +468,7 @@ class HistoryManager(QWebHistoryInterface):
                 self.trUtf8(
                     """<p>Unable to open history file <b>{0}</b>.<br/>"""
                     """Reason: {1}</p>""")
-                    .format(f.fileName(), f.errorString()))
+                .format(f.fileName(), f.errorString()))
             return
         
         for index in range(first, -1, -1):
@@ -491,8 +491,8 @@ class HistoryManager(QWebHistoryInterface):
                     self.trUtf8(
                         """<p>Error removing old history file <b>{0}</b>."""
                         """<br/>Reason: {1}</p>""")
-                        .format(historyFile.fileName(),
-                                historyFile.errorString()))
+                    .format(historyFile.fileName(),
+                            historyFile.errorString()))
             if not f.copy(historyFile.fileName()):
                 E5MessageBox.warning(
                     None,
@@ -500,7 +500,7 @@ class HistoryManager(QWebHistoryInterface):
                     self.trUtf8(
                         """<p>Error moving new history file over old one """
                         """(<b>{0}</b>).<br/>Reason: {1}</p>""")
-                        .format(historyFile.fileName(), f.errorString()))
+                    .format(historyFile.fileName(), f.errorString()))
         self.historySaved.emit()
         try:
             self.__lastSavedUrl = self.__history[0].url

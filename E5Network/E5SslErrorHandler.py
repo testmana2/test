@@ -104,7 +104,7 @@ class E5SslErrorHandler(QObject):
         """
         caMerge = {}
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
+            Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for caServer in certificateDict:
             caMerge[caServer] = QSslCertificate.fromData(
                 certificateDict[caServer])
@@ -134,7 +134,7 @@ class E5SslErrorHandler(QObject):
             self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
                         """<ul><li>{1}</li></ul></p>"""
                         """<p>Do you want to ignore these errors?</p>""")
-                .format(server, errorString),
+            .format(server, errorString),
             icon=E5MessageBox.Warning)
         
         if ret:
@@ -150,7 +150,7 @@ class E5SslErrorHandler(QObject):
                         """<p>Certificates:<br/>{0}<br/>"""
                         """Do you want to accept all these certificates?"""
                         """</p>""")
-                        .format("".join(certinfos)))
+                    .format("".join(certinfos)))
                 if caRet:
                     if server not in caMerge:
                         caMerge[server] = []
@@ -218,7 +218,7 @@ class E5SslErrorHandler(QObject):
         result += self.trUtf8(
             "<br/>Not valid before: {0}<br/>Valid Until: {1}")\
             .format(Utilities.html_encode(
-                        cert.effectiveDate().toString("yyyy-MM-dd")),
+                    cert.effectiveDate().toString("yyyy-MM-dd")),
                     Utilities.html_encode(
                         cert.expiryDate().toString("yyyy-MM-dd")))
         

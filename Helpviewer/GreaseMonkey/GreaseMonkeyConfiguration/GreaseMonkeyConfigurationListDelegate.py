@@ -79,7 +79,7 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         
         leftPos = self.__padding
         rightPos = opt.rect.right() - self.__padding - \
-                   GreaseMonkeyConfigurationListDelegate.RemoveIconSize
+            GreaseMonkeyConfigurationListDelegate.RemoveIconSize
         
         # Draw background
         style.drawPrimitive(QStyle.PE_PanelItemViewItem, opt, painter, widget)
@@ -180,9 +180,9 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
             titleMetrics = QFontMetrics(titleFont)
             
             self.__rowHeight = 2 * self.__padding + \
-                                opt.fontMetrics.leading() + \
-                                opt.fontMetrics.height() + \
-                                titleMetrics.height()
+                opt.fontMetrics.leading() + \
+                opt.fontMetrics.height() + \
+                titleMetrics.height()
         
         return QSize(GreaseMonkeyConfigurationListDelegate.ItemWidth,
                      self.__rowHeight)

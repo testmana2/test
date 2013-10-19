@@ -66,7 +66,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to populate the server certificates tree.
         """
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
+            Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
                 self.__createServerCertificateEntry(server, cert)
@@ -157,7 +157,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         """ normal security checks will be reinstantiated"""
                         """ and the server has to present a valid"""
                         """ certificate.</p>""")
-                .format(itm.text(0)))
+            .format(itm.text(0)))
         if res:
             server = itm.text(1)
             cert = self.serversCertificatesTree.currentItem().data(
@@ -173,7 +173,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             
             # delete the certificate from the user certificate store
             certificateDict = Preferences.toDict(
-                    Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
+                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
             if server in certificateDict:
                 certs = QSslCertificate.fromData(certificateDict[server])
                 if cert in certs:
@@ -222,7 +222,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         self.trUtf8(
                             """<p>The certificate <b>{0}</b> already exists."""
                             """ Skipping.</p>""")
-                            .format(Utilities.decodeString(commonStr)))
+                        .format(Utilities.decodeString(commonStr)))
                 else:
                     pems.append(cert.toPem() + '\n')
             if server not in certificateDict:
@@ -254,7 +254,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         caList = self.__getSystemCaCertificates()
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
+            Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
                 if cert not in caList:
@@ -365,7 +365,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                 """<p>{0}</p>"""
                 """<p>If the CA certificate is deleted, the browser"""
                 """ will not trust any certificate issued by this CA.</p>""")
-                .format(itm.text(0)))
+            .format(itm.text(0)))
         if res:
             cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
             
@@ -412,7 +412,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         self.trUtf8(
                             """<p>The certificate <b>{0}</b> already exists."""
                             """ Skipping.</p>""")
-                            .format(Utilities.decodeString(commonStr)))
+                        .format(Utilities.decodeString(commonStr)))
                 else:
                     caCerts.append(cert)
             
@@ -478,7 +478,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                         self.trUtf8(
                             """<p>The certificate could not be written"""
                             """ to file <b>{0}</b></p><p>Error: {1}</p>""")
-                            .format(fname, f.errorString()))
+                        .format(fname, f.errorString()))
                     return
                 
                 if fname.endswith(".pem"):
@@ -510,7 +510,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                     self.trUtf8(
                         """<p>The certificate could not be read from file"""
                         """ <b>{0}</b></p><p>Error: {1}</p>""")
-                        .format(fname, f.errorString()))
+                    .format(fname, f.errorString()))
                 return []
             
             crt = f.readAll()

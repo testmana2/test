@@ -44,12 +44,12 @@ class DebuggerPropertiesWriter(XMLStreamWriterBase):
         self.writeDTD(
             '<!DOCTYPE DebuggerProperties SYSTEM'
             ' "DebuggerProperties-{0}.dtd">'.format(
-            debuggerPropertiesFileFormatVersion))
+                debuggerPropertiesFileFormatVersion))
         
         # add some generation comments
         self.writeComment(
             " eric5 debugger properties file for project {0} ".format(
-            self.name))
+                self.name))
         self.writeComment(
             " This file was generated automatically, do not edit. ")
         if Preferences.getProject("XMLTimestamp"):

@@ -250,7 +250,7 @@ class HelpWebPage(QWebPage):
         """
         try:
             if extension in [QWebPage.ErrorPageExtension,
-                              QWebPage.ChooseMultipleFilesExtension]:
+                             QWebPage.ChooseMultipleFilesExtension]:
                 return True
         except AttributeError:
             pass
@@ -336,13 +336,13 @@ class HelpWebPage(QWebPage):
             htmlFile.open(QFile.ReadOnly)
             html = htmlFile.readAll()
             pixmap = qApp.style()\
-                     .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
+                .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
             imageBuffer = QBuffer()
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
                 html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
             pixmap = qApp.style()\
-                     .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
+                .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
             imageBuffer = QBuffer()
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
@@ -558,7 +558,7 @@ class HelpWebPage(QWebPage):
             return False
         
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
+            Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             localCAList = QSslCertificate.fromData(certificateDict[server])
             for cert in certList:
@@ -824,7 +824,7 @@ class HelpBrowser(QWebView):
                     self.trUtf8("eric5 Web Browser"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> does not exist.</p>""")
-                        .format(name.toLocalFile()))
+                    .format(name.toLocalFile()))
                 return
 
             if name.toLocalFile().endswith(".pdf") or \
@@ -1193,7 +1193,7 @@ class HelpBrowser(QWebView):
                                     act.setVisible(False)
                                 directionFound = True
                             elif self.pageAction(QWebPage.ToggleBold) in \
-                                 act.menu().actions():
+                                    act.menu().actions():
                                 act.setVisible(False)
                         elif act == self.pageAction(QWebPage.InspectElement):
                             # we have our own inspect entry
@@ -1347,9 +1347,9 @@ class HelpBrowser(QWebView):
         @return flag indicating a valid URL (boolean)
         """
         return url.isValid() and \
-               bool(url.host()) and \
-               bool(url.scheme()) and \
-               "." in url.host()
+            bool(url.host()) and \
+            bool(url.scheme()) and \
+            "." in url.host()
     
     def __openLinkInNewTab(self):
         """
@@ -1938,13 +1938,13 @@ class HelpBrowser(QWebView):
         htmlFile.open(QFile.ReadOnly)
         html = htmlFile.readAll()
         pixmap = qApp.style()\
-                 .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
+            .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):
             html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
         pixmap = qApp.style()\
-                 .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
+            .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):
@@ -1953,7 +1953,7 @@ class HelpBrowser(QWebView):
         html = html.replace("@H1@", reply.errorString().encode("utf8"))
         html = html.replace(
             "@H2@", self.trUtf8("When connecting to: {0}.")
-                .format(urlString).encode("utf8"))
+            .format(urlString).encode("utf8"))
         html = html.replace(
             "@LI-1@",
             self.trUtf8("Check the address for errors such as "
@@ -2009,8 +2009,8 @@ class HelpBrowser(QWebView):
                 """<p>The database quota of <strong>{0}</strong> has"""
                 """ been exceeded while accessing database <strong>{1}"""
                 """</strong>.</p><p>Shall it be changed?</p>""")
-                .format(self.__dataString(securityOrigin.databaseQuota()),
-                        databaseName),
+            .format(self.__dataString(securityOrigin.databaseQuota()),
+                    databaseName),
             yesDefault=True)
         if res:
             newQuota, ok = QInputDialog.getInt(
@@ -2251,7 +2251,7 @@ class HelpBrowser(QWebView):
             # only atom+xml and rss+xml will be processed
             if linkElement.attribute("rel") != "alternate" or \
                (linkElement.attribute("type") != "application/rss+xml" and
-                linkElement.attribute("type") != "application/atom+xml"):
+                    linkElement.attribute("type") != "application/atom+xml"):
                 continue
             
             title = linkElement.attribute("title")

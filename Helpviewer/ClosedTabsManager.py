@@ -35,8 +35,8 @@ class ClosedTab(object):
         @return flag indicating equality of the tabs (boolean)
         """
         return self.url == other.url and \
-               self.title == other.title and \
-               self.position == other.position
+            self.title == other.title and \
+            self.position == other.position
 
 
 class ClosedTabsManager(QObject):

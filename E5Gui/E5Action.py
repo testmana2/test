@@ -79,11 +79,11 @@ class E5Action(QAction):
         if len(args) < 6 + incr:
             raise ArgumentsError(
                 "Not enough arguments, {0:d} expected, got {1:d}".format(
-                6 + incr, len(args)))
+                    6 + incr, len(args)))
         elif len(args) > 7 + incr:
             raise ArgumentsError(
                 "Too many arguments, max. {0:d} expected, got {1:d}".format(
-                7 + incr, len(args)))
+                    7 + incr, len(args)))
             
         parent = args[4 + incr]
         super().__init__(parent)

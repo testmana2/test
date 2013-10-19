@@ -87,17 +87,21 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric5_api  {0}
-
-Eric5 API generator.
-
-Copyright (c) 2004 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
-This is free software; see the LICENSE.GPL3 for copying conditions.
-There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""".format(Version))
+    print(
+        """eric5_api  {0}\n"""
+        """\n"""
+        """Eric5 API generator.\n"""
+        """\n"""
+        """Copyright (c) 2004 - 2013 Detlev Offenbach"""
+        """ <detlev@die-offenbachs.de>\n"""
+        """This is free software; see the LICENSE.GPL3 for copying"""
+        """ conditions.\n"""
+        """There is NO warranty; not even for MERCHANTABILITY or FITNESS"""
+        """ FOR A\n"""
+        """PARTICULAR PURPOSE.""".format(Version))
     sys.exit(1)
 
-
+    
 def main():
     """
     Main entry point into the application.

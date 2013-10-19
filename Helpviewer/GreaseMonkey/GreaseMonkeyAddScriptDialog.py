@@ -55,7 +55,7 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         if exclude:
             doesNotRunAt = self.trUtf8(
                 "<p>does not run at:<br/><i>{0}</i></p>").format(
-                    "<br/>".join(exclude))
+                "<br/>".join(exclude))
         
         scriptInfoTxt = "<p><b>{0}</b> {1}<br/>{2}</p>{3}{4}".format(
             script.name(), script.version(), script.description(), runsAt,

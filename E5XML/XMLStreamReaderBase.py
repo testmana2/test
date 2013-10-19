@@ -52,13 +52,13 @@ class XMLStreamReaderBase(QXmlStreamReader):
                 "XMLStreamReaderBase",
                 "<p>XML parse error in file <b>{0}</b>, line {1},"
                 " column {2}</p><p>Error: {3}</p>").format(
-                    self.device().fileName(),
-                    self.lineNumber(), self.columnNumber(),
-                    self.errorString())
+                self.device().fileName(),
+                self.lineNumber(), self.columnNumber(),
+                self.errorString())
             E5MessageBox.warning(
                 None,
                 QCoreApplication.translate(
-                "XMLStreamReaderBase", "XML parse error"),
+                    "XMLStreamReaderBase", "XML parse error"),
                 msg)
     
     def raiseUnexpectedStartTag(self, tag):

@@ -136,7 +136,7 @@ class HelpIndexWidget(QWidget):
             elif event.key() == Qt.Key_Escape:
                 self.escapePressed.emit()
         elif self.__index and watched == self.__index and \
-             event.type() == QEvent.ContextMenu:
+                event.type() == QEvent.ContextMenu:
             idx = self.__index.indexAt(event.pos())
             if idx.isValid():
                 menu = QMenu()
@@ -160,7 +160,7 @@ class HelpIndexWidget(QWidget):
                             if dlg.exec_() == QDialog.Accepted:
                                 self.__mw.newTab(dlg.link())
         elif self.__index and watched == self.__index.viewport() and \
-             event.type() == QEvent.MouseButtonRelease:
+                event.type() == QEvent.MouseButtonRelease:
             idx = self.__index.indexAt(event.pos())
             if idx.isValid() and event.button() == Qt.MidButton:
                 model = self.__index.model()

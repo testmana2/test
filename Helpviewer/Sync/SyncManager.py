@@ -182,7 +182,7 @@ class SyncManager(QObject):
         """
         from . import SyncGlobals
         return Preferences.getHelp("SyncEnabled") and \
-               Preferences.getHelp("SyncType") != SyncGlobals.SyncTypeNone
+            Preferences.getHelp("SyncType") != SyncGlobals.SyncTypeNone
     
     def __syncBookmarks(self):
         """

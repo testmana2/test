@@ -105,8 +105,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
                     cw = None
                 if cw and not (cw.external and
                                (className in module.classes or
-                                className in module.modules)
-                              ):
+                                className in module.modules)):
                     if cw.scene() != self.scene:
                         self.scene.addItem(cw)
                         cw.setPos(10, 10)
@@ -275,10 +274,10 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         for route in routes:
             if len(route) > 1:
                 assoc = AssociationItem(
-                        self.__getCurrentShape(route[1]),
-                        self.__getCurrentShape(route[0]),
-                        Generalisation,
-                        topToBottom=True)
+                    self.__getCurrentShape(route[1]),
+                    self.__getCurrentShape(route[0]),
+                    Generalisation,
+                    topToBottom=True)
                 self.scene.addItem(assoc)
     
     def getPersistenceData(self):

@@ -102,8 +102,8 @@ class OpenSearchReader(QXmlStreamReader):
                     engine.setSuggestionsParameters(parameters)
                     engine.setSuggestionsMethod(method)
                 elif not type_ or \
-                     type_ == "text/html" or \
-                     type_ == "application/xhtml+xml":
+                    type_ == "text/html" or \
+                        type_ == "application/xhtml+xml":
                     engine.setSearchUrlTemplate(url)
                     engine.setSearchParameters(parameters)
                     engine.setSearchMethod(method)

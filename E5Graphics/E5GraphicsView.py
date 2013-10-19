@@ -320,10 +320,10 @@ class E5GraphicsView(QGraphicsView):
         
         width = printer.width() - marginX \
             - Preferences.getPrinter("RightMargin") * int(
-            printer.resolution() / 2.54)
+                printer.resolution() / 2.54)
         height = printer.height() - fontHeight - 4 - marginY \
             - Preferences.getPrinter("BottomMargin") * int(
-            printer.resolution() / 2.54)
+                printer.resolution() / 2.54)
         
         border = self.border == 0 and 5 or self.border
         rect = self._getDiagramRect(border)

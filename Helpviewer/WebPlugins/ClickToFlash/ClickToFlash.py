@@ -314,5 +314,5 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         @return flag indicating that this was already accepted (boolean)
         """
         return url == cls._acceptedUrl and \
-               argumentNames == cls._acceptedArgNames and \
-               argumentValues == cls._acceptedArgValues
+            argumentNames == cls._acceptedArgNames and \
+            argumentValues == cls._acceptedArgValues

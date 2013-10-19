@@ -80,7 +80,7 @@ class TasksReader(XMLStreamReaderBase):
                 "linenumber": 0,
                 "type": Task.TypeTodo,
                 "description": "",
-               }
+                }
         task["priority"] = int(self.attribute("priority", "1"))
         task["completed"] = self.toBool(self.attribute("completed", "False"))
         if self.version in ["4.2", "5.0"]:

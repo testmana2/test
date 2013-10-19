@@ -42,7 +42,7 @@ class HighlightingStylesWriter(XMLStreamWriterBase):
         self.writeDTD(
             '<!DOCTYPE HighlightingStyles SYSTEM'
             ' "HighlightingStyles-{0}.dtd">'.format(
-            highlightingStylesFileFormatVersion))
+                highlightingStylesFileFormatVersion))
         
         # add some generation comments
         self.writeComment(" Eric5 highlighting styles ")

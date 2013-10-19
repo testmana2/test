@@ -270,7 +270,7 @@ class AdBlockSubscription(QObject):
                     self.trUtf8("Load subscription rules"),
                     self.trUtf8(
                         """Unable to open adblock file '{0}' for reading.""")
-                        .format(fileName))
+                    .format(fileName))
             else:
                 textStream = QTextStream(f)
                 header = textStream.readLine(1024)
@@ -280,7 +280,7 @@ class AdBlockSubscription(QObject):
                         self.trUtf8("Load subscription rules"),
                         self.trUtf8("""AdBlock file '{0}' does not start"""
                                     """ with [Adblock.""")
-                            .format(fileName))
+                        .format(fileName))
                     f.close()
                     f.remove()
                     self.__lastUpdate = QDateTime()
@@ -379,7 +379,7 @@ class AdBlockSubscription(QObject):
                     self.trUtf8(
                         """<p>Subscription rules could not be"""
                         """ downloaded.</p><p>Error: {0}</p>""")
-                        .format(reply.errorString()))
+                    .format(reply.errorString()))
             else:
                 # reset after first download attempt
                 self.__defaultSubscription = False
@@ -401,7 +401,7 @@ class AdBlockSubscription(QObject):
                 self.trUtf8("Downloading subscription rules"),
                 self.trUtf8(
                     """Unable to open adblock file '{0}' for writing.""")
-                    .file(fileName))
+                .file(fileName))
             return
         f.write(response)
         f.close()
@@ -457,8 +457,8 @@ class AdBlockSubscription(QObject):
                     """Found: {1}<br/>"""
                     """Calculated: {2}<br/>"""
                     """Use it anyway?</p>""")
-                    .format(self.__title, expectedChecksum,
-                            calculatedChecksum))
+                .format(self.__title, expectedChecksum,
+                        calculatedChecksum))
             return res
     
     def saveRules(self):
@@ -476,7 +476,7 @@ class AdBlockSubscription(QObject):
                 self.trUtf8("Saving subscription rules"),
                 self.trUtf8(
                     """Unable to open adblock file '{0}' for writing.""")
-                    .format(fileName))
+                .format(fileName))
             return
         
         textStream = QTextStream(f)

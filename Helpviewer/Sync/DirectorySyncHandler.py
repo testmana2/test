@@ -180,7 +180,7 @@ class DirectorySyncHandler(SyncHandler):
             self.__initialSyncFile(
                 "bookmarks",
                 Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
-                    .getFileName())
+                .getFileName())
         
         QCoreApplication.processEvents()
         # History
@@ -188,7 +188,7 @@ class DirectorySyncHandler(SyncHandler):
             self.__initialSyncFile(
                 "history",
                 Helpviewer.HelpWindow.HelpWindow.historyManager()
-                    .getFileName())
+                .getFileName())
         
         QCoreApplication.processEvents()
         # Passwords
@@ -196,7 +196,7 @@ class DirectorySyncHandler(SyncHandler):
             self.__initialSyncFile(
                 "passwords",
                 Helpviewer.HelpWindow.HelpWindow.passwordManager()
-                    .getFileName())
+                .getFileName())
         
         QCoreApplication.processEvents()
         # User Agent Settings
@@ -204,7 +204,7 @@ class DirectorySyncHandler(SyncHandler):
             self.__initialSyncFile(
                 "useragents",
                 Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
-                    .getFileName())
+                .getFileName())
         
         QCoreApplication.processEvents()
         # Speed Dial Settings

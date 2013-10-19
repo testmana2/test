@@ -302,7 +302,7 @@ class E5ToolBarManager(QObject):
         @return flag indicating an added toolbar (boolean)
         """
         return toolBar is not None and \
-               id(toolBar) in self.__defaultToolBars
+            id(toolBar) in self.__defaultToolBars
     
     def createToolBar(self, title, name=""):
         """

@@ -167,9 +167,9 @@ class PasswordManager(QObject):
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""Error when loading login data on"""
                                 """ line {0}, column {1}:\n{2}""")
-                        .format(reader.lineNumber(),
-                                reader.columnNumber(),
-                                reader.errorString()))
+                    .format(reader.lineNumber(),
+                            reader.columnNumber(),
+                            reader.errorString()))
         
         self.__loaded = True
     
@@ -194,7 +194,7 @@ class PasswordManager(QObject):
                     self.trUtf8("""<p>Login data could not be loaded """
                                 """from <b>{0}</b></p>"""
                                 """<p>Reason: {1}</p>""")
-                        .format(loginFile, str(err)))
+                    .format(loginFile, str(err)))
                 return
             
             data = []
@@ -220,7 +220,7 @@ class PasswordManager(QObject):
                                     """<p>Login data could not be loaded """
                                     """from <b>{0}</b></p>"""
                                     """<p>Reason: Wrong input format</p>""")
-                                    .format(loginFile))
+                                .format(loginFile))
                             return
                         self.__logins[data[0]] = (data[1], data[2])
                         data = []
@@ -413,7 +413,7 @@ class PasswordManager(QObject):
                type_ == "text":
                 user = element[1]
             elif password == "" and \
-                 type_ == "password":
+                    type_ == "password":
                 password = element[1]
                 form.elements[index] = (element[0], "--PASSWORD--")
         if user and password:

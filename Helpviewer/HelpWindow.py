@@ -428,8 +428,8 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_file_new_tab')
         self.newTabAct.setStatusTip(self.trUtf8('Open a new help window tab'))
         self.newTabAct.setWhatsThis(self.trUtf8(
-                """<b>New Tab</b>"""
-                """<p>This opens a new help window tab.</p>"""
+            """<b>New Tab</b>"""
+            """<p>This opens a new help window tab.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.newTabAct.triggered[()].connect(self.newTab)
@@ -443,8 +443,8 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_file_new_window')
         self.newAct.setStatusTip(self.trUtf8('Open a new help browser window'))
         self.newAct.setWhatsThis(self.trUtf8(
-                """<b>New Window</b>"""
-                """<p>This opens a new help browser window.</p>"""
+            """<b>New Window</b>"""
+            """<p>This opens a new help browser window.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.newAct.triggered[()].connect(self.newWindow)
@@ -458,9 +458,9 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_file_open')
         self.openAct.setStatusTip(self.trUtf8('Open a help file for display'))
         self.openAct.setWhatsThis(self.trUtf8(
-                """<b>Open File</b>"""
-                """<p>This opens a new help file for display."""
-                """ It pops up a file selection dialog.</p>"""
+            """<b>Open File</b>"""
+            """<p>This opens a new help file for display."""
+            """ It pops up a file selection dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.openAct.triggered[()].connect(self.__openFile)
@@ -475,9 +475,9 @@ class HelpWindow(E5MainWindow):
         self.openTabAct.setStatusTip(
             self.trUtf8('Open a help file for display in a new tab'))
         self.openTabAct.setWhatsThis(self.trUtf8(
-                """<b>Open File in New Tab</b>"""
-                """<p>This opens a new help file for display in a new tab."""
-                """ It pops up a file selection dialog.</p>"""
+            """<b>Open File in New Tab</b>"""
+            """<p>This opens a new help file for display in a new tab."""
+            """ It pops up a file selection dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.openTabAct.triggered[()].connect(self.__openFileNewTab)
@@ -492,8 +492,8 @@ class HelpWindow(E5MainWindow):
         self.saveAsAct.setStatusTip(
             self.trUtf8('Save the current page to disk'))
         self.saveAsAct.setWhatsThis(self.trUtf8(
-                """<b>Save As...</b>"""
-                """<p>Saves the current page to disk.</p>"""
+            """<b>Save As...</b>"""
+            """<p>Saves the current page to disk.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.saveAsAct.triggered[()].connect(self.__savePageAs)
@@ -507,8 +507,8 @@ class HelpWindow(E5MainWindow):
         self.savePageScreenAct.setStatusTip(
             self.trUtf8('Save the current page as a screen shot'))
         self.savePageScreenAct.setWhatsThis(self.trUtf8(
-                """<b>Save Page Screen...</b>"""
-                """<p>Saves the current page as a screen shot.</p>"""
+            """<b>Save Page Screen...</b>"""
+            """<p>Saves the current page as a screen shot.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.savePageScreenAct.triggered[()].connect(self.__savePageScreen)
@@ -540,8 +540,8 @@ class HelpWindow(E5MainWindow):
         self.importBookmarksAct.setStatusTip(
             self.trUtf8('Import bookmarks from other browsers'))
         self.importBookmarksAct.setWhatsThis(self.trUtf8(
-                """<b>Import Bookmarks</b>"""
-                """<p>Import bookmarks from other browsers.</p>"""
+            """<b>Import Bookmarks</b>"""
+            """<p>Import bookmarks from other browsers.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.importBookmarksAct.triggered[()].connect(
@@ -555,8 +555,8 @@ class HelpWindow(E5MainWindow):
         self.exportBookmarksAct.setStatusTip(
             self.trUtf8('Export the bookmarks into a file'))
         self.exportBookmarksAct.setWhatsThis(self.trUtf8(
-                """<b>Export Bookmarks</b>"""
-                """<p>Export the bookmarks into a file.</p>"""
+            """<b>Export Bookmarks</b>"""
+            """<p>Export the bookmarks into a file.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.exportBookmarksAct.triggered[()].connect(
@@ -571,8 +571,8 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_file_print')
         self.printAct.setStatusTip(self.trUtf8('Print the displayed help'))
         self.printAct.setWhatsThis(self.trUtf8(
-                """<b>Print</b>"""
-                """<p>Print the displayed help text.</p>"""
+            """<b>Print</b>"""
+            """<p>Print the displayed help text.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.printAct.triggered[()].connect(self.tabWidget.printBrowser)
@@ -600,10 +600,10 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Print Preview'),
             0, 0, self, 'help_file_print_preview')
         self.printPreviewAct.setStatusTip(self.trUtf8(
-                'Print preview of the displayed help'))
+            'Print preview of the displayed help'))
         self.printPreviewAct.setWhatsThis(self.trUtf8(
-                """<b>Print Preview</b>"""
-                """<p>Print preview of the displayed help text.</p>"""
+            """<b>Print Preview</b>"""
+            """<p>Print preview of the displayed help text.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.printPreviewAct.triggered[()].connect(
@@ -632,8 +632,8 @@ class HelpWindow(E5MainWindow):
             0, 0, self, 'help_file_close_all')
         self.closeAllAct.setStatusTip(self.trUtf8('Close all help windows'))
         self.closeAllAct.setWhatsThis(self.trUtf8(
-                """<b>Close All</b>"""
-                """<p>Closes all help windows except the first one.</p>"""
+            """<b>Close All</b>"""
+            """<p>Closes all help windows except the first one.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.closeAllAct.triggered[()].connect(
@@ -647,9 +647,9 @@ class HelpWindow(E5MainWindow):
             0, 0, self, 'help_file_private_browsing')
         self.privateBrowsingAct.setStatusTip(self.trUtf8('Private Browsing'))
         self.privateBrowsingAct.setWhatsThis(self.trUtf8(
-                """<b>Private Browsing</b>"""
-                """<p>Enables private browsing. In this mode no history is"""
-                """ recorded anymore.</p>"""
+            """<b>Private Browsing</b>"""
+            """<p>Enables private browsing. In this mode no history is"""
+            """ recorded anymore.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.privateBrowsingAct.triggered[()].connect(
@@ -665,8 +665,8 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_file_quit')
         self.exitAct.setStatusTip(self.trUtf8('Quit the eric5 Web Browser'))
         self.exitAct.setWhatsThis(self.trUtf8(
-                """<b>Quit</b>"""
-                """<p>Quit the eric5 Web Browser.</p>"""
+            """<b>Quit</b>"""
+            """<p>Quit the eric5 Web Browser.</p>"""
         ))
         if not self.initShortcutsOnly:
             if self.fromEric:
@@ -684,9 +684,9 @@ class HelpWindow(E5MainWindow):
             self, 'help_go_backward')
         self.backAct.setStatusTip(self.trUtf8('Move one help screen backward'))
         self.backAct.setWhatsThis(self.trUtf8(
-                """<b>Backward</b>"""
-                """<p>Moves one help screen backward. If none is"""
-                """ available, this action is disabled.</p>"""
+            """<b>Backward</b>"""
+            """<p>Moves one help screen backward. If none is"""
+            """ available, this action is disabled.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.backAct.triggered[()].connect(self.__backward)
@@ -752,8 +752,8 @@ class HelpWindow(E5MainWindow):
             self, 'help_go_stop')
         self.stopAct.setStatusTip(self.trUtf8('Stop loading'))
         self.stopAct.setWhatsThis(self.trUtf8(
-                """<b>Stop</b>"""
-                """<p>Stops loading of the current tab.</p>"""
+            """<b>Stop</b>"""
+            """<p>Stops loading of the current tab.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.stopAct.triggered[()].connect(self.__stopLoading)
@@ -767,8 +767,8 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_edit_copy')
         self.copyAct.setStatusTip(self.trUtf8('Copy the selected text'))
         self.copyAct.setWhatsThis(self.trUtf8(
-                """<b>Copy</b>"""
-                """<p>Copy the selected text to the clipboard.</p>"""
+            """<b>Copy</b>"""
+            """<p>Copy the selected text to the clipboard.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.copyAct.triggered[()].connect(self.__copy)
@@ -782,8 +782,8 @@ class HelpWindow(E5MainWindow):
             0, self, 'help_edit_find')
         self.findAct.setStatusTip(self.trUtf8('Find text in page'))
         self.findAct.setWhatsThis(self.trUtf8(
-                """<b>Find</b>"""
-                """<p>Find text in the current page.</p>"""
+            """<b>Find</b>"""
+            """<p>Find text in the current page.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.findAct.triggered[()].connect(self.__find)
@@ -828,10 +828,10 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+Shift+B", "Help|Manage bookmarks")),
             0, self, 'help_bookmarks_manage')
         self.bookmarksManageAct.setStatusTip(self.trUtf8(
-                'Open a dialog to manage the bookmarks.'))
+            'Open a dialog to manage the bookmarks.'))
         self.bookmarksManageAct.setWhatsThis(self.trUtf8(
-                """<b>Manage Bookmarks...</b>"""
-                """<p>Open a dialog to manage the bookmarks.</p>"""
+            """<b>Manage Bookmarks...</b>"""
+            """<p>Open a dialog to manage the bookmarks.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.bookmarksManageAct.triggered[()].connect(
@@ -860,10 +860,10 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Add &Folder...'),
             0, 0, self, 'help_bookmark_show_all')
         self.bookmarksAddFolderAct.setStatusTip(self.trUtf8(
-                'Open a dialog to add a new bookmarks folder.'))
+            'Open a dialog to add a new bookmarks folder.'))
         self.bookmarksAddFolderAct.setWhatsThis(self.trUtf8(
-                """<b>Add Folder...</b>"""
-                """<p>Open a dialog to add a new bookmarks folder.</p>"""
+            """<b>Add Folder...</b>"""
+            """<p>Open a dialog to add a new bookmarks folder.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.bookmarksAddFolderAct.triggered[()].connect(
@@ -875,11 +875,11 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Bookmark All Tabs...'),
             0, 0, self, 'help_bookmark_all_tabs')
         self.bookmarksAllTabsAct.setStatusTip(self.trUtf8(
-                'Bookmark all open tabs.'))
+            'Bookmark all open tabs.'))
         self.bookmarksAllTabsAct.setWhatsThis(self.trUtf8(
-                """<b>Bookmark All Tabs...</b>"""
-                """<p>Open a dialog to add a new bookmarks folder for"""
-                """ all open tabs.</p>"""
+            """<b>Bookmark All Tabs...</b>"""
+            """<p>Open a dialog to add a new bookmarks folder for"""
+            """ all open tabs.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.bookmarksAllTabsAct.triggered[()].connect(self.bookmarkAll)
@@ -925,8 +925,8 @@ class HelpWindow(E5MainWindow):
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
-                """<b>About Qt</b>"""
-                """<p>Display some information about the Qt toolkit.</p>"""
+            """<b>About Qt</b>"""
+            """<p>Display some information about the Qt toolkit.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.aboutQtAct.triggered[()].connect(self.__aboutQt)
@@ -941,8 +941,8 @@ class HelpWindow(E5MainWindow):
             self, 'help_view_zoom_in')
         self.zoomInAct.setStatusTip(self.trUtf8('Zoom in on the text'))
         self.zoomInAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom in</b>"""
-                """<p>Zoom in on the text. This makes the text bigger.</p>"""
+            """<b>Zoom in</b>"""
+            """<p>Zoom in on the text. This makes the text bigger.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.zoomInAct.triggered[()].connect(self.__zoomIn)
@@ -957,8 +957,8 @@ class HelpWindow(E5MainWindow):
             self, 'help_view_zoom_out')
         self.zoomOutAct.setStatusTip(self.trUtf8('Zoom out on the text'))
         self.zoomOutAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom out</b>"""
-                """<p>Zoom out on the text. This makes the text smaller.</p>"""
+            """<b>Zoom out</b>"""
+            """<p>Zoom out on the text. This makes the text smaller.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.zoomOutAct.triggered[()].connect(self.__zoomOut)
@@ -988,10 +988,10 @@ class HelpWindow(E5MainWindow):
                 0, 0, self, 'help_view_zoom_text_only')
             self.zoomTextOnlyAct.setCheckable(True)
             self.zoomTextOnlyAct.setStatusTip(self.trUtf8(
-                    'Zoom text only; pictures remain constant'))
+                'Zoom text only; pictures remain constant'))
             self.zoomTextOnlyAct.setWhatsThis(self.trUtf8(
-                    """<b>Zoom text only</b>"""
-                    """<p>Zoom text only; pictures remain constant.</p>"""
+                """<b>Zoom text only</b>"""
+                """<p>Zoom text only; pictures remain constant.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.zoomTextOnlyAct.triggered[bool].connect(
@@ -1180,7 +1180,7 @@ class HelpWindow(E5MainWindow):
                 self.trUtf8('Sync with Table of Contents'),
                 0, 0, self, 'help_sync_toc')
             self.syncTocAct.setStatusTip(self.trUtf8(
-                    'Synchronizes the table of contents with current page'))
+                'Synchronizes the table of contents with current page'))
             self.syncTocAct.setWhatsThis(self.trUtf8(
                 """<b>Sync with Table of Contents</b>"""
                 """<p>Synchronizes the table of contents with current"""
@@ -1195,10 +1195,10 @@ class HelpWindow(E5MainWindow):
                 self.trUtf8('Table of Contents'),
                 0, 0, self, 'help_show_toc')
             self.showTocAct.setStatusTip(self.trUtf8(
-                    'Shows the table of contents window'))
+                'Shows the table of contents window'))
             self.showTocAct.setWhatsThis(self.trUtf8(
-                    """<b>Table of Contents</b>"""
-                    """<p>Shows the table of contents window.</p>"""
+                """<b>Table of Contents</b>"""
+                """<p>Shows the table of contents window.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.showTocAct.triggered[()].connect(self.__showTocWindow)
@@ -1209,10 +1209,10 @@ class HelpWindow(E5MainWindow):
                 self.trUtf8('Index'),
                 0, 0, self, 'help_show_index')
             self.showIndexAct.setStatusTip(self.trUtf8(
-                    'Shows the index window'))
+                'Shows the index window'))
             self.showIndexAct.setWhatsThis(self.trUtf8(
-                    """<b>Index</b>"""
-                    """<p>Shows the index window.</p>"""
+                """<b>Index</b>"""
+                """<p>Shows the index window.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
@@ -1223,10 +1223,10 @@ class HelpWindow(E5MainWindow):
                 self.trUtf8('Search'),
                 0, 0, self, 'help_show_search')
             self.showSearchAct.setStatusTip(self.trUtf8(
-                    'Shows the search window'))
+                'Shows the search window'))
             self.showSearchAct.setWhatsThis(self.trUtf8(
-                    """<b>Search</b>"""
-                    """<p>Shows the search window.</p>"""
+                """<b>Search</b>"""
+                """<p>Shows the search window.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.showSearchAct.triggered[()].connect(
@@ -1254,10 +1254,10 @@ class HelpWindow(E5MainWindow):
                 self.trUtf8('Manage QtHelp &Filters'),
                 0, 0, self, 'help_qthelp_filters')
             self.manageQtHelpFiltersAct.setStatusTip(self.trUtf8(
-                    'Shows a dialog to manage the QtHelp filters'))
+                'Shows a dialog to manage the QtHelp filters'))
             self.manageQtHelpFiltersAct.setWhatsThis(self.trUtf8(
-                    """<b>Manage QtHelp Filters</b>"""
-                    """<p>Shows a dialog to manage the QtHelp filters.</p>"""
+                """<b>Manage QtHelp Filters</b>"""
+                """<p>Shows a dialog to manage the QtHelp filters.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.manageQtHelpFiltersAct.triggered[()].connect(
@@ -1269,10 +1269,10 @@ class HelpWindow(E5MainWindow):
                 self.trUtf8('&Reindex Documentation'),
                 0, 0, self, 'help_qthelp_reindex')
             self.reindexDocumentationAct.setStatusTip(self.trUtf8(
-                    'Reindexes the documentation set'))
+                'Reindexes the documentation set'))
             self.reindexDocumentationAct.setWhatsThis(self.trUtf8(
-                    """<b>Reindex Documentation</b>"""
-                    """<p>Reindexes the documentation set.</p>"""
+                """<b>Reindex Documentation</b>"""
+                """<p>Reindexes the documentation set.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.reindexDocumentationAct.triggered[()].connect(
@@ -1336,10 +1336,10 @@ class HelpWindow(E5MainWindow):
             0, 0,
             self, 'help_manage_passwords')
         self.passwordsAct.setStatusTip(self.trUtf8(
-                'Manage the saved passwords'))
+            'Manage the saved passwords'))
         self.passwordsAct.setWhatsThis(self.trUtf8(
-                """<b>Manage Saved Passwords...</b>"""
-                """<p>Opens a dialog to manage the saved passwords.</p>"""
+            """<b>Manage Saved Passwords...</b>"""
+            """<p>Opens a dialog to manage the saved passwords.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.passwordsAct.triggered[()].connect(self.__showPasswordsDialog)
@@ -1420,10 +1420,10 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Downloads'),
             0, 0, self, 'help_show_downloads')
         self.showDownloadManagerAct.setStatusTip(self.trUtf8(
-                'Shows the downloads window'))
+            'Shows the downloads window'))
         self.showDownloadManagerAct.setWhatsThis(self.trUtf8(
-                """<b>Downloads</b>"""
-                """<p>Shows the downloads window.</p>"""
+            """<b>Downloads</b>"""
+            """<p>Shows the downloads window.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.showDownloadManagerAct.triggered[()].connect(
@@ -1470,10 +1470,10 @@ class HelpWindow(E5MainWindow):
             self.trUtf8('Manage &User Agent Settings'),
             0, 0, self, 'help_user_agent_settings')
         self.userAgentManagerAct.setStatusTip(self.trUtf8(
-                'Shows a dialog to manage the User Agent settings'))
+            'Shows a dialog to manage the User Agent settings'))
         self.userAgentManagerAct.setWhatsThis(self.trUtf8(
-                """<b>Manage User Agent Settings</b>"""
-                """<p>Shows a dialog to manage the User Agent settings.</p>"""
+            """<b>Manage User Agent Settings</b>"""
+            """<p>Shows a dialog to manage the User Agent settings.</p>"""
         ))
         if not self.initShortcutsOnly:
             self.userAgentManagerAct.triggered[()].connect(
@@ -1985,7 +1985,7 @@ class HelpWindow(E5MainWindow):
                         "PDF Files (*.pdf);;"
                         "CHM Files (*.chm);;"
                         "All Files (*)"
-            ))
+                        ))
         if fn:
             if Utilities.isWindowsPlatform():
                 url = "file:///" + Utilities.fromNativeSeparators(fn)
@@ -2005,7 +2005,7 @@ class HelpWindow(E5MainWindow):
                         "PDF Files (*.pdf);;"
                         "CHM Files (*.chm);;"
                         "All Files (*)"
-            ))
+                        ))
         if fn:
             if Utilities.isWindowsPlatform():
                 url = "file:///" + Utilities.fromNativeSeparators(fn)
@@ -3644,7 +3644,7 @@ class HelpWindow(E5MainWindow):
         @return style sheet (QUrl)
         """
         userStyle = self.adBlockManager().elementHidingRules() + \
-                    "{display:none !important;}"
+            "{display:none !important;}"
         
         if styleSheetFile:
             try:
