@@ -40,7 +40,7 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         self.vcs = vcs
         
         self.rx_status = \
-            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+(\\S+)\\s+(.+)\\s*')
             # flags (8 or 9 anything), revision, changed rev, author, path
         self.rx_status2 = \
             QRegExp('(.{8,9})\\s+(.+)\\s*')

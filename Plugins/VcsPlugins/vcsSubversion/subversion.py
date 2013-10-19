@@ -122,7 +122,7 @@ class Subversion(VersionControl):
         self.repoBrowser = None
         
         # regular expression object for evaluation of the status output
-        self.rx_status1 = QRegExp('(.{8})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)')
+        self.rx_status1 = QRegExp('(.{8})\\s+([0-9-]+)\\s+([0-9?]+)\\s+(\\S+)\\s+(.+)')
         self.rx_status2 = QRegExp('(.{8})\\s+(.+)\\s*')
         self.statusCache = {}
         
