@@ -40,7 +40,7 @@ class BreakPointModel(QAbstractItemModel):
                            Qt.Alignment(Qt.AlignHCenter),
                            Qt.Alignment(Qt.AlignRight),
                            Qt.Alignment(Qt.AlignHCenter),
-        ]
+                           ]
 
     def columnCount(self, parent=QModelIndex()):
         """

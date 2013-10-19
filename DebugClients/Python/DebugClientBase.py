@@ -673,9 +673,9 @@ class DebugClientBase(object):
                             compile(cond, '<string>', 'eval')
                         except SyntaxError:
                             self.write(
-                                '%s%s,%d\n' % \
-                                    (DebugProtocol.ResponseBPConditionError,
-                                     fn, line))
+                                '%s%s,%d\n' %
+                                (DebugProtocol.ResponseBPConditionError,
+                                 fn, line))
                             return
                     self.mainThread.set_break(fn, line, temporary, cond)
                 else:
@@ -852,13 +852,13 @@ class DebugClientBase(object):
                     try:
                         if failed:
                             self.test = unittest.defaultTestLoader\
-                                        .loadTestsFromNames(failed, utModule)
+                                .loadTestsFromNames(failed, utModule)
                         else:
                             self.test = unittest.defaultTestLoader\
-                                        .loadTestsFromName(tfn, utModule)
+                                .loadTestsFromName(tfn, utModule)
                     except AttributeError:
                         self.test = unittest.defaultTestLoader\
-                                    .loadTestsFromModule(utModule)
+                            .loadTestsFromModule(utModule)
                 except:
                     exc_type, exc_value, exc_tb = sys.exc_info()
                     self.write(
@@ -1011,7 +1011,7 @@ class DebugClientBase(object):
                 pass
             return self.clientCapabilities
         except ImportError:
-            return (self.clientCapabilities & 
+            return (self.clientCapabilities &
                     ~DebugClientCapabilities.HasProfiler)
         
     def write(self, s):
@@ -1490,7 +1490,7 @@ class DebugClientBase(object):
             if qtVariable:
                 vlist = self.__formatQt4Variable(qvar, qvtype)
             elif ("sipThis" in dict.keys() and len(dict) == 1) or \
-               (len(dict) == 0 and len(udict) > 0):
+                    (len(dict) == 0 and len(udict) > 0):
                 if access:
                     exec 'qvar = udict%s' % access
                 # this has to be in line with VariablesViewer.indicators
@@ -1643,7 +1643,7 @@ class DebugClientBase(object):
                 varlist.append(
                     ("internalId", "int", "%s" % value.internalId()))
                 varlist.append(
-                    ("internalPointer", "void *", "%s" % \
+                    ("internalPointer", "void *", "%s" %
                      value.internalPointer()))
         elif qttype == 'QRegExp':
             varlist.append(("pattern", "str", "%s" % value.pattern()))
@@ -1761,7 +1761,7 @@ class DebugClientBase(object):
                             if ConfigVarTypeStrings.index('class') in filter:
                                 continue
                         elif not valtype.startswith("PySide") and \
-                             ConfigVarTypeStrings.index('other') in filter:
+                                ConfigVarTypeStrings.index('other') in filter:
                             continue
                     
                 try:

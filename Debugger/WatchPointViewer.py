@@ -237,7 +237,7 @@ class WatchPointViewer(QTreeView):
             if not special:
                 msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
                                   """ already exists.</p>""")\
-                        .format(Utilities.html_encode(cond))
+                    .format(Utilities.html_encode(cond))
             else:
                 msg = self.trUtf8(
                     """<p>A watch expression '<b>{0}</b>'"""

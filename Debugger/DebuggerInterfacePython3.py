@@ -185,7 +185,7 @@ class DebuggerInterfacePython3(QObject):
                 rhost = "localhost"
             if rexec:
                 args = Utilities.parseOptionString(rexec) + \
-                       [rhost, interpreter, os.path.abspath(debugClient),
+                    [rhost, interpreter, os.path.abspath(debugClient),
                         noencoding, str(port), redirect, ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
@@ -232,7 +232,7 @@ class DebuggerInterfacePython3(QObject):
             ccmd = Preferences.getDebugger("ConsoleDbgCommand")
             if ccmd:
                 args = Utilities.parseOptionString(ccmd) + \
-                       [interpreter, os.path.abspath(debugClient),
+                    [interpreter, os.path.abspath(debugClient),
                         noencoding, str(port), '0', ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)
@@ -287,7 +287,7 @@ class DebuggerInterfacePython3(QObject):
                 rhost = "localhost"
             if rexec:
                 args = Utilities.parseOptionString(rexec) + \
-                       [rhost, interpreter, os.path.abspath(debugClient),
+                    [rhost, interpreter, os.path.abspath(debugClient),
                         noencoding, str(port), redirect, ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
@@ -331,10 +331,10 @@ class DebuggerInterfacePython3(QObject):
         ipaddr = self.debugServer.getHostAddress(True)
         if runInConsole or project.getDebugProperty("CONSOLEDEBUGGER"):
             ccmd = project.getDebugProperty("CONSOLECOMMAND") or \
-                   Preferences.getDebugger("ConsoleDbgCommand")
+                Preferences.getDebugger("ConsoleDbgCommand")
             if ccmd:
                 args = Utilities.parseOptionString(ccmd) + \
-                       [interpreter, os.path.abspath(debugClient),
+                    [interpreter, os.path.abspath(debugClient),
                         noencoding, str(port), '0', ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)

@@ -522,17 +522,17 @@ class VariablesViewer(QTreeWidget):
         @return The item that was generated (VariableItem).
         """
         if isSpecial and \
-           (self.dvar_rx_class1.exactMatch(dvar) or \
-            self.dvar_rx_class2.exactMatch(dvar)):
+           (self.dvar_rx_class1.exactMatch(dvar) or
+                self.dvar_rx_class2.exactMatch(dvar)):
             isSpecial = False
         
         if self.rx_class2.exactMatch(dtype):
             return SpecialVarItem(parent, dvar, dvalue, dtype[7:-1],
                                   self.framenr, self.scope)
         elif dtype != "void *" and \
-             (self.rx_class.exactMatch(dvalue) or \
-              self.rx_class3.exactMatch(dvalue) or \
-              isSpecial):
+            (self.rx_class.exactMatch(dvalue) or
+             self.rx_class3.exactMatch(dvalue) or
+             isSpecial):
             if self.dvar_rx_special_array_element.exactMatch(dvar):
                 return SpecialArrayElementVarItem(parent, dvar, dvalue, dtype,
                                                   self.framenr, self.scope)

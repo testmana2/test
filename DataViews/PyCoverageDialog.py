@@ -195,7 +195,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
                 try:
                     statements, excluded, missing, readable = \
                         cover.analysis2(file)[1:]
-                    readableEx = (excluded and self.__format_lines(excluded) 
+                    readableEx = (excluded and self.__format_lines(excluded)
                                   or '')
                     n = len(statements)
                     m = n - len(missing)

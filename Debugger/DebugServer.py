@@ -243,7 +243,7 @@ class DebugServer(QTcpServer):
                         if addressEntry.ip().toString().lower() == \
                                 address.lower():
                             return networkInterface.humanReadableName(), \
-                                    networkInterface.index()
+                                networkInterface.index()
         
         return "", 0
         
@@ -291,8 +291,8 @@ class DebugServer(QTcpServer):
         
         if shellOnly:
             languages = \
-                [lang for lang in languages \
-                 if self.__clientCapabilities[lang] & 
+                [lang for lang in languages
+                 if self.__clientCapabilities[lang] &
                     DebugClientCapabilities.HasShell]
         
         return languages[:]
@@ -637,8 +637,8 @@ class DebugServer(QTcpServer):
                 self.trUtf8("Connection from illegal host"),
                 self.trUtf8(
                     """<p>A connection was attempted by the illegal host"""
-                    """ <b>{0}</b>. Accept this connection?</p>""")\
-                    .format(peerAddress),
+                    """ <b>{0}</b>. Accept this connection?</p>""")
+                .format(peerAddress),
                 icon=E5MessageBox.Warning)
             if not res:
                 sock.abort()

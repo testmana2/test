@@ -37,7 +37,7 @@ class WatchPointModel(QAbstractItemModel):
                            Qt.Alignment(Qt.AlignHCenter),
                            Qt.Alignment(Qt.AlignHCenter),
                            Qt.Alignment(Qt.AlignRight),
-        ]
+                           ]
         
     def columnCount(self, parent=QModelIndex()):
         """

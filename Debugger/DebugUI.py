@@ -972,7 +972,7 @@ class DebugUI(QObject):
             self.profileProjectAct.setEnabled(self.projectOpen)
             self.coverageProjectAct.setEnabled(self.projectOpen)
             if self.lastDebuggedFile is not None and \
-                (self.editorOpen or self.projectOpen):
+                    (self.editorOpen or self.projectOpen):
                 self.restartAct.setEnabled(True)
             else:
                 self.restartAct.setEnabled(False)
@@ -1027,8 +1027,8 @@ class DebugUI(QObject):
                 else:
                     msg = self.trUtf8('"{0}" has terminated with an exit'
                                       ' status of {1}.')\
-                            .format(os.path.basename(self.ui.currentProg),
-                                    status)
+                        .format(os.path.basename(self.ui.currentProg),
+                                status)
                 self.ui.showNotification(
                     UI.PixmapCache.getPixmap("debug48.png"),
                     self.trUtf8("Program terminated"), msg)
@@ -1103,9 +1103,9 @@ class DebugUI(QObject):
                             ' See the shell window for details.'))
             return
         
-        if (self.exceptions and \
-            exceptionType not in self.excIgnoreList and \
-            (not len(self.excList) or \
+        if (self.exceptions and
+            exceptionType not in self.excIgnoreList and
+            (not len(self.excList) or
              (len(self.excList) and exceptionType in self.excList)))\
            or exceptionType.startswith('unhandled'):
             res = None
@@ -1130,12 +1130,12 @@ class DebugUI(QObject):
                     if stackTrace:
                         if exceptionType.startswith('unhandled'):
                             buttons = E5MessageBox.StandardButtons(
-                                E5MessageBox.No | \
+                                E5MessageBox.No |
                                 E5MessageBox.Yes)
                         else:
                             buttons = E5MessageBox.StandardButtons(
-                                E5MessageBox.No | \
-                                E5MessageBox.Yes | \
+                                E5MessageBox.No |
+                                E5MessageBox.Yes |
                                 E5MessageBox.Ignore)
                         res = E5MessageBox.critical(
                             self.ui, Program,
@@ -1144,11 +1144,11 @@ class DebugUI(QObject):
                                 ' <b>{0}</b><br>"<b>{1}</b>"<br>'
                                 'File: <b>{2}</b>, Line: <b>{3}</b></p>'
                                 '<p>Break here?</p>')
-                                .format(
-                                    exceptionType,
-                                    Utilities.html_encode(exceptionMessage),
-                                    stackTrace[0][0],
-                                    stackTrace[0][1]),
+                            .format(
+                                exceptionType,
+                                Utilities.html_encode(exceptionMessage),
+                                stackTrace[0][0],
+                                stackTrace[0][1]),
                             buttons,
                             E5MessageBox.No)
                     else:
@@ -1157,9 +1157,9 @@ class DebugUI(QObject):
                             self.trUtf8(
                                 '<p>The debugged program raised the exception'
                                 ' <b>{0}</b><br>"<b>{1}</b>"</p>')
-                                .format(
-                                    exceptionType,
-                                    Utilities.html_encode(exceptionMessage)))
+                            .format(
+                                exceptionType,
+                                Utilities.html_encode(exceptionMessage)))
             if res == E5MessageBox.Yes:
                 self.exceptionInterrupt.emit()
                 stack = []
@@ -1267,8 +1267,8 @@ class DebugUI(QObject):
             self.trUtf8("Breakpoint Condition Error"),
             self.trUtf8(
                 """<p>The condition of the breakpoint <b>{0}, {1}</b>"""
-                """ contains a syntax error.</p>""")\
-                .format(filename, lineno))
+                """ contains a syntax error.</p>""")
+            .format(filename, lineno))
         
         model = self.debugServer.getBreakPointModel()
         index = model.getBreakPointIndex(filename, lineno)
@@ -1302,8 +1302,8 @@ class DebugUI(QObject):
             self.ui,
             self.trUtf8("Watch Expression Error"),
             self.trUtf8("""<p>The watch expression <b>{0}</b>"""
-                        """ contains a syntax error.</p>""")\
-                        .format(cond))
+                        """ contains a syntax error.</p>""")
+            .format(cond))
         
         model = self.debugServer.getWatchPointModel()
         index = model.getWatchPointIndex(cond)
@@ -1330,7 +1330,7 @@ class DebugUI(QObject):
                 if not special:
                     msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
                                       """ already exists.</p>""")\
-                            .format(Utilities.html_encode(cond))
+                        .format(Utilities.html_encode(cond))
                 else:
                     msg = self.trUtf8(
                         """<p>A watch expression '<b>{0}</b>'"""
@@ -1345,7 +1345,7 @@ class DebugUI(QObject):
                 model.deleteWatchPointByIndex(index)
             else:
                 model.setWatchPointByIndex(index, cond, special,
-                                                  (temp, enabled, count))
+                                           (temp, enabled, count))
         
     def __configureVariablesFilters(self):
         """
@@ -1526,9 +1526,10 @@ class DebugUI(QObject):
                 if editor is None:
                     return
                 
-                if not self.viewmanager.checkDirty(editor,
-                   Preferences.getDebugger("Autosave")) or \
-                   editor.getFileName() is None:
+                if not self.viewmanager.checkDirty(
+                        editor,
+                        Preferences.getDebugger("Autosave")) or \
+                        editor.getFileName() is None:
                     return
                     
                 fn = editor.getFileName()
@@ -1643,9 +1644,10 @@ class DebugUI(QObject):
                 if editor is None:
                     return
                 
-                if not self.viewmanager.checkDirty(editor,
-                   Preferences.getDebugger("Autosave")) or \
-                   editor.getFileName() is None:
+                if not self.viewmanager.checkDirty(
+                        editor,
+                        Preferences.getDebugger("Autosave")) or \
+                        editor.getFileName() is None:
                     return
                     
                 fn = editor.getFileName()
@@ -1762,9 +1764,10 @@ class DebugUI(QObject):
                 if editor is None:
                     return
                 
-                if not self.viewmanager.checkDirty(editor,
-                   Preferences.getDebugger("Autosave")) or \
-                   editor.getFileName() is None:
+                if not self.viewmanager.checkDirty(
+                        editor,
+                        Preferences.getDebugger("Autosave")) or \
+                        editor.getFileName() is None:
                     return
                     
                 fn = editor.getFileName()
@@ -1883,9 +1886,10 @@ class DebugUI(QObject):
                 if editor is None:
                     return
                 
-                if not self.viewmanager.checkDirty(editor,
-                   Preferences.getDebugger("Autosave")) or \
-                   editor.getFileName() is None:
+                if not self.viewmanager.checkDirty(
+                        editor,
+                        Preferences.getDebugger("Autosave")) or \
+                        editor.getFileName() is None:
                     return
                     
                 fn = editor.getFileName()
@@ -2149,11 +2153,11 @@ class DebugUI(QObject):
             curr = -1
 
         arg, ok = QInputDialog.getItem(
-                            self.ui,
-                            self.trUtf8("Evaluate"),
-                            self.trUtf8("Enter the statement to evaluate"),
-                            self.evalHistory,
-                            curr, True)
+            self.ui,
+            self.trUtf8("Evaluate"),
+            self.trUtf8("Enter the statement to evaluate"),
+            self.evalHistory,
+            curr, True)
 
         if ok:
             if not arg:
@@ -2178,11 +2182,11 @@ class DebugUI(QObject):
             curr = -1
 
         stmt, ok = QInputDialog.getItem(
-                            self.ui,
-                            self.trUtf8("Execute"),
-                            self.trUtf8("Enter the statement to execute"),
-                            self.execHistory,
-                            curr, True)
+            self.ui,
+            self.trUtf8("Execute"),
+            self.trUtf8("Enter the statement to execute"),
+            self.execHistory,
+            curr, True)
 
         if ok:
             if not stmt:

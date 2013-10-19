@@ -859,13 +859,13 @@ class DebugClientBase(object):
                     try:
                         if failed:
                             self.test = unittest.defaultTestLoader\
-                                        .loadTestsFromNames(failed, utModule)
+                                .loadTestsFromNames(failed, utModule)
                         else:
                             self.test = unittest.defaultTestLoader\
-                                        .loadTestsFromName(tfn, utModule)
+                                .loadTestsFromName(tfn, utModule)
                     except AttributeError:
                         self.test = unittest.defaultTestLoader\
-                                    .loadTestsFromModule(utModule)
+                            .loadTestsFromModule(utModule)
                 except:
                     exc_type, exc_value, exc_tb = sys.exc_info()
                     self.write('{0}{1}\n'.format(
@@ -1019,7 +1019,7 @@ class DebugClientBase(object):
                 pass
             return self.clientCapabilities
         except ImportError:
-            return (self.clientCapabilities & 
+            return (self.clientCapabilities &
                     ~DebugClientCapabilities.HasProfiler)
     
     def write(self, s):
@@ -1432,7 +1432,7 @@ class DebugClientBase(object):
                             oaccess = ''
                         try:
                             loc = {"dict": dict}
-                            exec('mdict = dict{0!s}.__dict__\nobj = dict{0!s}'\
+                            exec('mdict = dict{0!s}.__dict__\nobj = dict{0!s}'
                                  .format(access), globals(), loc)
                             mdict = loc["mdict"]
                             obj = loc["obj"]
@@ -1445,7 +1445,7 @@ class DebugClientBase(object):
                             pass
                         try:
                             loc = {"dict": dict}
-                            exec('mcdict = dict{0!s}.__class__.__dict__'\
+                            exec('mcdict = dict{0!s}.__class__.__dict__'
                                  .format(access), globals(), loc)
                             ndict.update(loc["mcdict"])
                             if mdict and not "sipThis" in mdict.keys():
@@ -1461,8 +1461,7 @@ class DebugClientBase(object):
                                 try:
                                     loc["v"] = v
                                     exec('cdict[v] = dict{0!s}.{1!s}'.format(
-                                            access, v),
-                                         globals, loc)
+                                        access, v), globals, loc)
                                 except:
                                     pass
                             ndict.update(loc["cdict"])
@@ -1496,7 +1495,7 @@ class DebugClientBase(object):
                                 try:
                                     loc["v"] = v
                                     exec('cdict[v] = dict[var[i]].{0!s}'
-                                            .format(v),
+                                         .format(v),
                                          globals(), loc)
                                 except:
                                     pass
@@ -1515,7 +1514,7 @@ class DebugClientBase(object):
             if qtVariable:
                 vlist = self.__formatQt4Variable(qvar, qvtype)
             elif ("sipThis" in dict.keys() and len(dict) == 1) or \
-               (len(dict) == 0 and len(udict) > 0):
+                    (len(dict) == 0 and len(udict) > 0):
                 if access:
                     loc = {"udict": udict}
                     exec('qvar = udict{0!s}'.format(access), globals(), loc)
@@ -1817,7 +1816,7 @@ class DebugClientBase(object):
                             if ConfigVarTypeStrings.index('class') in filter:
                                 continue
                         elif not valtype.startswith("PySide") and \
-                             ConfigVarTypeStrings.index('other') in filter:
+                                ConfigVarTypeStrings.index('other') in filter:
                             continue
                 
                 try:

@@ -16,7 +16,7 @@ HasUnittest = 0x0020
 HasShell = 0x0040
 
 HasAll = HasDebugger | HasInterpreter | HasProfiler | \
-         HasCoverage | HasCompleter | HasUnittest | HasShell
+    HasCoverage | HasCompleter | HasUnittest | HasShell
 
 #
 # eflag: FileType = Python2

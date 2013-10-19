@@ -191,5 +191,5 @@ class CallStackViewer(QTreeWidget):
                         self.trUtf8("Error saving Call Stack Info"),
                         self.trUtf8("""<p>The call stack info could not be"""
                                     """ written to <b>{0}</b></p>"""
-                                    """<p>Reason: {1}</p>""")\
-                            .format(fname, str(err)))
+                                    """<p>Reason: {1}</p>""")
+                        .format(fname, str(err)))

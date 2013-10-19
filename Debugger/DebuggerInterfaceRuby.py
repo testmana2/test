@@ -157,7 +157,7 @@ class DebuggerInterfaceRuby(QObject):
                 rhost = "localhost"
             if rexec:
                 args = Utilities.parseOptionString(rexec) + \
-                       [rhost, interpreter, os.path.abspath(debugClient),
+                    [rhost, interpreter, os.path.abspath(debugClient),
                         str(port), redirect, ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
@@ -204,7 +204,7 @@ class DebuggerInterfaceRuby(QObject):
             ccmd = Preferences.getDebugger("ConsoleDbgCommand")
             if ccmd:
                 args = Utilities.parseOptionString(ccmd) + \
-                       [interpreter, os.path.abspath(debugClient),
+                    [interpreter, os.path.abspath(debugClient),
                         str(port), '0', ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)
@@ -257,7 +257,7 @@ class DebuggerInterfaceRuby(QObject):
                 rhost = "localhost"
             if rexec:
                 args = Utilities.parseOptionString(rexec) + \
-                       [rhost, interpreter, os.path.abspath(debugClient),
+                    [rhost, interpreter, os.path.abspath(debugClient),
                         str(port), redirect, ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
@@ -301,10 +301,10 @@ class DebuggerInterfaceRuby(QObject):
         ipaddr = self.debugServer.getHostAddress(True)
         if runInConsole or project.getDebugProperty("CONSOLEDEBUGGER"):
             ccmd = project.getDebugProperty("CONSOLECOMMAND") or \
-                   Preferences.getDebugger("ConsoleDbgCommand")
+                Preferences.getDebugger("ConsoleDbgCommand")
             if ccmd:
                 args = Utilities.parseOptionString(ccmd) + \
-                       [interpreter, os.path.abspath(debugClient),
+                    [interpreter, os.path.abspath(debugClient),
                         str(port), '0', ipaddr]
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)

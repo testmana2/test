@@ -276,7 +276,7 @@ class AsyncFile(object):
         if not self.wpending:
             self.wpending = s
         elif type(self.wpending) != type(s) or \
-            len(self.wpending) + len(s) > self.maxbuffersize:
+                len(self.wpending) + len(s) > self.maxbuffersize:
             # flush wpending so that different string types are not
             # concatenated
             while self.wpending:

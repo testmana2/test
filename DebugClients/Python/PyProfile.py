@@ -115,7 +115,7 @@ class PyProfile(profile.Profile):
         """
         # get module name from __file__
         if not isinstance(frame, profile.Profile.fake_frame) and \
-            '__file__' in frame.f_globals:
+                '__file__' in frame.f_globals:
             root, ext = os.path.splitext(frame.f_globals['__file__'])
             if ext == '.pyc' or ext == '.py':
                 fixedName = root + '.py'
@@ -142,7 +142,7 @@ class PyProfile(profile.Profile):
                                                        rframe, rframe.f_back,
                                                        frame, frame.f_back)
                 self.trace_dispatch_return(rframe, 0)
-                assert (self.cur is None or \
+                assert (self.cur is None or
                         frame.f_back is self.cur[-2]), ("Bad call",
                                                         self.cur[-3])
         fcode = frame.f_code
@@ -165,7 +165,7 @@ class PyProfile(profile.Profile):
         "c_exception": profile.Profile.trace_dispatch_return,
         # the C function returned
         "c_return": profile.Profile.trace_dispatch_return,
-        }
+    }
 
 #
 # eflag: FileType = Python2

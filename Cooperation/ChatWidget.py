@@ -587,7 +587,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                         self.trUtf8("""<p>The chat contents could not be"""
                                     """ written to <b>{0}</b></p>"""
                                     """<p>Reason: {1}</p>""") .format(
-                        fname, str(err)))
+                            fname, str(err)))
     
     def __copyChat(self):
         """

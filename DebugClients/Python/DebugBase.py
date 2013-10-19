@@ -740,7 +740,7 @@ class DebugBase(bdb.Bdb):
         """
         # The program has finished if we have just left the first frame.
         if frame == self._dbgClient.mainFrame and \
-            self._mainThread:
+                self._mainThread:
             atexit._run_exitfuncs()
             self._dbgClient.progTerminated(retval)
         elif frame is not self.stepFrame:
@@ -783,7 +783,7 @@ class DebugBase(bdb.Bdb):
         #XXX - think of a better way to do this.  It's only a convience for
         #debugging the debugger - when the debugger code is in the current
         #directory.
-        if os.path.basename(fn) in [\
+        if os.path.basename(fn) in [
             'AsyncFile.py', 'AsyncIO.py',
             'DebugConfig.py', 'DCTestResult.py',
             'DebugBase.py', 'DebugClientBase.py',
