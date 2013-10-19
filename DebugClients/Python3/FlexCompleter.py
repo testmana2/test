@@ -77,7 +77,7 @@ class Completer(object):
         @exception TypeError raised to indicate a wrong data structure of
             the namespace object
         """
-        if namespace and isinstance(namespace, dict):
+        if namespace and not isinstance(namespace, dict):
             raise TypeError('namespace must be a dictionary')
 
         # Don't bind to namespace quite yet, but flag whether the user wants a
