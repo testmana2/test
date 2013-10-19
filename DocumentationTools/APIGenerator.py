@@ -120,9 +120,10 @@ class APIGenerator(object):
                 id = Editor.ClassProtectedID
             else:
                 id = Editor.ClassPrivateID
-            self.api.append('{0}{1}?{2:d}({3})'.format(
-                self.moduleName, _class.name, id,
-                 ', '.join(_class.methods['__init__'].parameters[1:])))
+            self.api.append(
+                '{0}{1}?{2:d}({3})'.format(
+                    self.moduleName, _class.name, id,
+                    ', '.join(_class.methods['__init__'].parameters[1:])))
             
         classNameStr = "{0}{1}.".format(self.moduleName, className)
         for method in methods:
@@ -133,9 +134,10 @@ class APIGenerator(object):
                     id = Editor.MethodProtectedID
                 else:
                     id = Editor.MethodPrivateID
-                self.api.append('{0}{1}?{2:d}({3})'.format(
-                    classNameStr, method, id,
-                     ', '.join(_class.methods[method].parameters[1:])))
+                self.api.append(
+                    '{0}{1}?{2:d}({3})'.format(
+                        classNameStr, method, id,
+                        ', '.join(_class.methods[method].parameters[1:])))
         
     def __addClassVariablesAPI(self, className):
         """
@@ -174,6 +176,8 @@ class APIGenerator(object):
                     id = Editor.MethodProtectedID
                 else:
                     id = Editor.MethodPrivateID
-                self.api.append('{0}{1}?{2:d}({3})'.format(
-                    self.moduleName, self.module.functions[funcName].name, id,
-                     ', '.join(self.module.functions[funcName].parameters)))
+                self.api.append(
+                    '{0}{1}?{2:d}({3})'.format(
+                        self.moduleName, self.module.functions[funcName].name,
+                        id,
+                        ', '.join(self.module.functions[funcName].parameters)))

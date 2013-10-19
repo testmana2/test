@@ -168,16 +168,15 @@ class IndexGenerator(object):
                 "Entries": "".join(lst),
             })
             
-        doc = self.headerTemplate.format(**{ \
-                "Title": title,
-                "Style": self.stylesheet}) + \
-              self.indexBodyTemplate.format(**{ \
-                "Title": title,
-                "Description": package["description"],
-                "Subpackages": subpackages,
-                "Modules": modules,
-              }) + \
-              self.footerTemplate
+        doc = self.headerTemplate.format(
+            **{"Title": title,
+               "Style": self.stylesheet}) + \
+            self.indexBodyTemplate.format(
+                **{"Title": title,
+                   "Description": package["description"],
+                   "Subpackages": subpackages,
+                   "Modules": modules}) + \
+            self.footerTemplate
     
         f = open(filename, "w", encoding="utf-8", newline=newline)
         f.write(doc)

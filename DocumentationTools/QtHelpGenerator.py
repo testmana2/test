@@ -168,9 +168,9 @@ class QtHelpGenerator(object):
         indent1 = indent + '  '
         s = indent + '<section title="{0}" ref="{1}">\n'.format(
             package == "00index" and self.title or package,
-             package == "00index" and \
-                joinext("index", ".html") or \
-                joinext("index-{0}".format(package), ".html"))
+            package == "00index" and
+            joinext("index", ".html") or
+            joinext("index-{0}".format(package), ".html"))
         for subpack in sorted(self.packages[package]["subpackages"]):
             s += self.__generateSections(subpack, level + 1)
             s += '\n'

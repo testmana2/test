@@ -135,14 +135,11 @@ listEntryTemplate = \
 <td>{Deprecated}{Description}</td>
 </tr>'''
 
-listEntryNoneTemplate = \
-'''<tr><td>None</td></tr>'''
+listEntryNoneTemplate = '''<tr><td>None</td></tr>'''
 
-listEntryDeprecatedTemplate = \
-'''<b>Deprecated.</b>'''
+listEntryDeprecatedTemplate = '''<b>Deprecated.</b>'''
 
-listEntrySimpleTemplate = \
-'''<tr><td>{Name}</td></tr>'''
+listEntrySimpleTemplate = '''<tr><td>{Name}</td></tr>'''
 
 paragraphTemplate = \
 '''<p>
@@ -226,8 +223,7 @@ seeListEntryTemplate = \
 {Link}
 </dd>'''
 
-seeLinkTemplate = \
-'''<a {Link}'''
+seeLinkTemplate = '''<a {Link}'''
 
 sinceInfoTemplate = \
 '''<p>
