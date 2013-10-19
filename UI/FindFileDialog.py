@@ -309,7 +309,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 files = [self.project.getRelativePath(file)
                          for file in
                          self.__getFileList(
-                            self.project.getProjectPath(), filterRe)]
+                             self.project.getProjectPath(), filterRe)]
             else:
                 files = []
                 if self.sourcesCheckBox.isChecked():
@@ -328,7 +328,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         ["^{0}$".format(
                             assoc.replace(".", "\.").replace("*", ".*"))
                          for assoc in list(
-                            Preferences.getEditorLexerAssocs().keys())
+                             Preferences.getEditorLexerAssocs().keys())
                          if assoc not in self.formsExt + self.interfacesExt])
                 if self.formsCheckBox.isChecked():
                     filters.append(self.filterForms)
@@ -558,7 +558,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             files.extend([os.path.join(dirname, f)
                           for f in names
                           if re.match(filterRe, f)]
-            )
+                         )
         return files
         
     def setSearchDirectory(self, searchDir):
@@ -610,7 +610,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         self.trUtf8(
                             """<p>Could not read the file <b>{0}</b>."""
                             """ Skipping it.</p><p>Reason: {1}</p>""")
-                            .format(fn, str(err))
+                        .format(fn, str(err))
                     )
                     progress += 1
                     self.findProgress.setValue(progress)
@@ -626,7 +626,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                             """<p>The current and the original hash of the"""
                             """ file <b>{0}</b> are different. Skipping it."""
                             """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")
-                            .format(fn, origHash, hash)
+                        .format(fn, origHash, hash)
                     )
                     progress += 1
                     self.findProgress.setValue(progress)
@@ -651,7 +651,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         self.trUtf8(
                             """<p>Could not save the file <b>{0}</b>."""
                             """ Skipping it.</p><p>Reason: {1}</p>""")
-                            .format(fn, str(err))
+                        .format(fn, str(err))
                     )
             
             progress += 1

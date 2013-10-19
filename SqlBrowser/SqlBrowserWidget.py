@@ -215,7 +215,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
             else:
                 model.setData(
                     model.index(i, 1), "{0} ({1})".format(
-                    QVariant.typeToName(fld.type()), fld.typeID()))
+                        QVariant.typeToName(fld.type()), fld.typeID()))
             if fld.length() < 0:
                 model.setData(model.index(i, 2), "?")
             else:

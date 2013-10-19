@@ -188,7 +188,7 @@ r"""
         (?P<ConditionalDefineIndent> [ \t]* )
         (?: (?: if | elif ) [ \t]+ [^:]* | else [ \t]* ) : (?= \s* def)
     )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search
+""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
 
 _rb_getnext = re.compile(
 r"""
@@ -325,7 +325,7 @@ r"""
             end \b [^_]
         )
     )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search
+""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
 
 _hashsub = re.compile(r"""^([ \t]*)#[ \t]?""", re.MULTILINE).sub
 
@@ -567,14 +567,14 @@ class Module(object):
                         thisindent -= deltaindent
                     else:
                         while conditionalsstack and \
-                              conditionalsstack[-1] >= thisindent:
+                                conditionalsstack[-1] >= thisindent:
                             del conditionalsstack[-1]
                             if deltastack:
                                 del deltastack[-1]
                         deltaindentcalculated = 0
                 # close all classes indented at least as much
                 while classstack and \
-                      classstack[-1][1] >= thisindent:
+                        classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
                        isinstance(classstack[-1][0], (Class, Function)):
                         # record the end line of this class or function
@@ -632,7 +632,7 @@ class Module(object):
                             contents = ""
                     else:
                         contents = 1 and m.group("DocstringContents1") \
-                                   or m.group("DocstringContents2")
+                            or m.group("DocstringContents2")
                 if cur_obj:
                     cur_obj.addDescription(contents)
             
@@ -640,7 +640,7 @@ class Module(object):
                 if modulelevel and \
                    (src[start - len('\r\n'):start] == '\r\n' or
                     src[start - len('\n'):start] == '\n' or
-                    src[start - len('\r'):start] == '\r'):
+                        src[start - len('\r'):start] == '\r'):
                     contents = m.group("StringContents3")
                     if contents is not None:
                         contents = _hashsub(r"\1", contents)
@@ -649,7 +649,7 @@ class Module(object):
                             contents = ""
                         else:
                             contents = 1 and m.group("StringContents1") \
-                                       or m.group("StringContents2")
+                                or m.group("StringContents2")
                     if cur_obj:
                         cur_obj.addDescription(contents)
             
@@ -660,7 +660,7 @@ class Module(object):
                 last_lineno_pos = start
                 # close all classes indented at least as much
                 while classstack and \
-                      classstack[-1][1] >= thisindent:
+                        classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
                        isinstance(classstack[-1][0], (Class,  Function)):
                         # record the end line of this class or function
@@ -775,7 +775,7 @@ class Module(object):
                 # a conditional function/method definition
                 thisindent = _indent(m.group("ConditionalDefineIndent"))
                 while conditionalsstack and \
-                      conditionalsstack[-1] >= thisindent:
+                        conditionalsstack[-1] >= thisindent:
                     del conditionalsstack[-1]
                     if deltastack:
                         del deltastack[-1]
@@ -812,8 +812,8 @@ class Module(object):
                 thisindent = indent
                 indent += 1
                 meth_name = m.group("MethodName") or \
-                            m.group("MethodName2") or \
-                            m.group("MethodName3")
+                    m.group("MethodName2") or \
+                    m.group("MethodName3")
                 meth_sig = m.group("MethodSignature")
                 meth_sig = meth_sig and meth_sig.replace('\\\n', '') or ''
                 lineno = lineno + src.count('\n', last_lineno_pos, start)
@@ -824,7 +824,7 @@ class Module(object):
                     meth_name = meth_name[6:]
                 # close all classes/modules indented at least as much
                 while classstack and \
-                      classstack[-1][1] >= thisindent:
+                        classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
                        isinstance(classstack[-1][0],
                                   (Class, Function, RbModule)):
@@ -832,7 +832,7 @@ class Module(object):
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
                 while acstack and \
-                      acstack[-1][1] >= thisindent:
+                        acstack[-1][1] >= thisindent:
                     del acstack[-1]
                 if classstack:
                     csi = -1
@@ -902,7 +902,7 @@ class Module(object):
                 last_lineno_pos = start
                 # close all classes/modules indented at least as much
                 while classstack and \
-                      classstack[-1][1] >= thisindent:
+                        classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
                        isinstance(classstack[-1][0],
                                   (Class, Function, RbModule)):
@@ -926,8 +926,8 @@ class Module(object):
                 if class_name in parent_obj.classes:
                     cur_class = parent_obj.classes[class_name]
                 elif classstack and \
-                     isinstance(classstack[-1][0], Class) and \
-                     class_name == "self":
+                    isinstance(classstack[-1][0], Class) and \
+                        class_name == "self":
                     cur_class = classstack[-1][0]
                 else:
                     parent_obj.addClass(class_name, cur_class)
@@ -938,7 +938,7 @@ class Module(object):
                 cur_obj = cur_class
                 classstack.append((cur_class, thisindent))
                 while acstack and \
-                      acstack[-1][1] >= thisindent:
+                        acstack[-1][1] >= thisindent:
                     del acstack[-1]
                 acstack.append(["public", thisindent])
                 # default access control is 'public'
@@ -951,7 +951,7 @@ class Module(object):
                 last_lineno_pos = start
                 # close all classes/modules indented at least as much
                 while classstack and \
-                      classstack[-1][1] >= thisindent:
+                        classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
                        isinstance(classstack[-1][0],
                                   (Class, Function, RbModule)):
@@ -974,7 +974,7 @@ class Module(object):
                 cur_obj = cur_class
                 classstack.append((cur_class, thisindent))
                 while acstack and \
-                      acstack[-1][1] >= thisindent:
+                        acstack[-1][1] >= thisindent:
                     del acstack[-1]
                 acstack.append(["public", thisindent])
                 # default access control is 'public'
@@ -1063,8 +1063,8 @@ class Module(object):
                             # get rid of leading ':'
                             name = nv[0].strip()[1:]
                             attr = parent.getAttribute("@" + name) or \
-                                   parent.getAttribute("@@" + name) or \
-                                   Attribute(
+                                parent.getAttribute("@@" + name) or \
+                                Attribute(
                                     self.name, "@" + name, self.file, lineno)
                             if len(nv) == 1 or nv[1].strip() == "false":
                                 attr.setProtected()
@@ -1077,8 +1077,8 @@ class Module(object):
                                 # get rid of leading ':'
                                 name = name.strip()[1:]
                                 attr = parent.getAttribute("@" + name) or \
-                                       parent.getAttribute("@@" + name) or \
-                                       Attribute(
+                                    parent.getAttribute("@@" + name) or \
+                                    Attribute(
                                         self.name, "@" + name, self.file,
                                         lineno)
                                 if access == "_accessor":

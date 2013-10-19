@@ -826,7 +826,7 @@ class ViewManager(QObject):
             QApplication.translate(
                 'ViewManager', 'Revert to last saved state'),
             QApplication.translate(
-                    'ViewManager', 'Re&vert to last saved state'),
+                'ViewManager', 'Re&vert to last saved state'),
             QKeySequence(QApplication.translate(
                 'ViewManager', "Ctrl+Y", "Edit|Revert")),
             0,
@@ -1043,9 +1043,9 @@ class ViewManager(QObject):
             0,
             self.editActGrp, 'vm_edit_toggle_comment')
         self.toggleCommentAct.setStatusTip(QApplication.translate(
-                'ViewManager',
-                'Toggle the comment of the current line, selection or'
-                ' comment block'))
+            'ViewManager',
+            'Toggle the comment of the current line, selection or'
+            ' comment block'))
         self.toggleCommentAct.setWhatsThis(QApplication.translate(
             'ViewManager',
             """<b>Toggle Comment</b>"""
@@ -3195,7 +3195,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Zoom in</b>"""
             """<p>Zoom in on the text. This makes the text bigger.</p>"""
-            ))
+        ))
         self.zoomInAct.triggered[()].connect(self.__zoomIn)
         self.viewActions.append(self.zoomInAct)
         
@@ -3214,7 +3214,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Zoom out</b>"""
             """<p>Zoom out on the text. This makes the text smaller.</p>"""
-            ))
+        ))
         self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.viewActions.append(self.zoomOutAct)
         
@@ -3233,7 +3233,7 @@ class ViewManager(QObject):
             """<b>Zoom reset</b>"""
             """<p>Reset the zoom of the text. """
             """This sets the zoom factor to 100%.</p>"""
-            ))
+        ))
         self.zoomResetAct.triggered[()].connect(self.__zoomReset)
         self.viewActions.append(self.zoomResetAct)
         
@@ -3252,7 +3252,7 @@ class ViewManager(QObject):
             """<b>Zoom</b>"""
             """<p>Zoom the text. This opens a dialog where the"""
             """ desired size can be entered.</p>"""
-            ))
+        ))
         self.zoomToAct.triggered[()].connect(self.__zoom)
         self.viewActions.append(self.zoomToAct)
         
@@ -3266,7 +3266,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Toggle all folds</b>"""
             """<p>Toggle all folds of the current editor.</p>"""
-            ))
+        ))
         self.toggleAllAct.triggered[()].connect(self.__toggleAll)
         self.viewActions.append(self.toggleAllAct)
         
@@ -3283,7 +3283,7 @@ class ViewManager(QObject):
             """<b>Toggle all folds (including children)</b>"""
             """<p>Toggle all folds of the current editor including"""
             """ all children.</p>"""
-            ))
+        ))
         self.toggleAllChildrenAct.triggered[()].connect(
             self.__toggleAllChildren)
         self.viewActions.append(self.toggleAllChildrenAct)
@@ -3299,7 +3299,7 @@ class ViewManager(QObject):
             """<b>Toggle current fold</b>"""
             """<p>Toggle the folds of the current line of the current"""
             """ editor.</p>"""
-            ))
+        ))
         self.toggleCurrentAct.triggered[()].connect(self.__toggleCurrent)
         self.viewActions.append(self.toggleCurrentAct)
         
@@ -3315,7 +3315,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Remove all highlights</b>"""
             """<p>Remove the highlights of all editors.</p>"""
-            ))
+        ))
         self.unhighlightAct.triggered[()].connect(self.unhighlight)
         self.viewActions.append(self.unhighlightAct)
         
@@ -3330,7 +3330,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Split view</b>"""
             """<p>Add a split to the view.</p>"""
-            ))
+        ))
         self.splitViewAct.triggered[()].connect(self.__splitView)
         self.viewActions.append(self.splitViewAct)
         
@@ -3344,7 +3344,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Arrange horizontally</b>"""
             """<p>Arrange the splitted views horizontally.</p>"""
-            ))
+        ))
         self.splitOrientationAct.setChecked(False)
         self.splitOrientationAct.toggled[bool].connect(self.__splitOrientation)
         self.viewActions.append(self.splitOrientationAct)
@@ -3360,7 +3360,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Remove split</b>"""
             """<p>Remove the current split.</p>"""
-            ))
+        ))
         self.splitRemoveAct.triggered[()].connect(self.removeSplit)
         self.viewActions.append(self.splitRemoveAct)
         
@@ -3377,7 +3377,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Next split</b>"""
             """<p>Move to the next split.</p>"""
-            ))
+        ))
         self.nextSplitAct.triggered[()].connect(self.nextSplit)
         self.viewActions.append(self.nextSplitAct)
         
@@ -3393,7 +3393,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Previous split</b>"""
             """<p>Move to the previous split.</p>"""
-            ))
+        ))
         self.prevSplitAct.triggered[()].connect(self.prevSplit)
         self.viewActions.append(self.prevSplitAct)
         
@@ -3409,7 +3409,7 @@ class ViewManager(QObject):
             """<b>Preview</b>"""
             """<p>This opens the web browser with a preview of"""
             """ the current file.</p>"""
-            ))
+        ))
         self.previewAct.setChecked(Preferences.getUI("ShowFilePreview"))
         self.previewAct.toggled[bool].connect(self.__previewEditor)
         self.viewActions.append(self.previewAct)
@@ -3494,7 +3494,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Start Macro Recording</b>"""
             """<p>Start recording editor commands into a new macro.</p>"""
-            ))
+        ))
         self.macroStartRecAct.triggered[()].connect(self.__macroStartRecording)
         self.macroActions.append(self.macroStartRecAct)
         
@@ -3508,7 +3508,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Stop Macro Recording</b>"""
             """<p>Stop recording editor commands into a new macro.</p>"""
-            ))
+        ))
         self.macroStopRecAct.triggered[()].connect(self.__macroStopRecording)
         self.macroActions.append(self.macroStopRecAct)
         
@@ -3522,7 +3522,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Run Macro</b>"""
             """<p>Run a previously recorded editor macro.</p>"""
-            ))
+        ))
         self.macroRunAct.triggered[()].connect(self.__macroRun)
         self.macroActions.append(self.macroRunAct)
         
@@ -3536,7 +3536,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Delete Macro</b>"""
             """<p>Delete a previously recorded editor macro.</p>"""
-            ))
+        ))
         self.macroDeleteAct.triggered[()].connect(self.__macroDelete)
         self.macroActions.append(self.macroDeleteAct)
         
@@ -3550,7 +3550,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Load Macro</b>"""
             """<p>Load an editor macro from a file.</p>"""
-            ))
+        ))
         self.macroLoadAct.triggered[()].connect(self.__macroLoad)
         self.macroActions.append(self.macroLoadAct)
         
@@ -3564,7 +3564,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Save Macro</b>"""
             """<p>Save a previously recorded editor macro to a file.</p>"""
-            ))
+        ))
         self.macroSaveAct.triggered[()].connect(self.__macroSave)
         self.macroActions.append(self.macroSaveAct)
         
@@ -3608,7 +3608,7 @@ class ViewManager(QObject):
             """<b>Toggle Bookmark</b>"""
             """<p>Toggle a bookmark at the current line of the current"""
             """ editor.</p>"""
-            ))
+        ))
         self.bookmarkToggleAct.triggered[()].connect(self.__toggleBookmark)
         self.bookmarkActions.append(self.bookmarkToggleAct)
         
@@ -3626,7 +3626,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Next Bookmark</b>"""
             """<p>Go to next bookmark of the current editor.</p>"""
-            ))
+        ))
         self.bookmarkNextAct.triggered[()].connect(self.__nextBookmark)
         self.bookmarkActions.append(self.bookmarkNextAct)
         
@@ -3644,7 +3644,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Previous Bookmark</b>"""
             """<p>Go to previous bookmark of the current editor.</p>"""
-            ))
+        ))
         self.bookmarkPreviousAct.triggered[()].connect(self.__previousBookmark)
         self.bookmarkActions.append(self.bookmarkPreviousAct)
         
@@ -3661,7 +3661,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Clear Bookmarks</b>"""
             """<p>Clear bookmarks of all editors.</p>"""
-            ))
+        ))
         self.bookmarkClearAct.triggered[()].connect(self.__clearAllBookmarks)
         self.bookmarkActions.append(self.bookmarkClearAct)
         
@@ -3677,7 +3677,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Goto Syntax Error</b>"""
             """<p>Go to next syntax error of the current editor.</p>"""
-            ))
+        ))
         self.syntaxErrorGotoAct.triggered[()].connect(self.__gotoSyntaxError)
         self.bookmarkActions.append(self.syntaxErrorGotoAct)
         
@@ -3692,7 +3692,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Clear Syntax Errors</b>"""
             """<p>Clear syntax errors of all editors.</p>"""
-            ))
+        ))
         self.syntaxErrorClearAct.triggered[()].connect(
             self.__clearAllSyntaxErrors)
         self.bookmarkActions.append(self.syntaxErrorClearAct)
@@ -3710,7 +3710,7 @@ class ViewManager(QObject):
             """<b>Next warning message</b>"""
             """<p>Go to next line of the current editor"""
             """ having a py3flakes warning.</p>"""
-            ))
+        ))
         self.warningsNextAct.triggered[()].connect(self.__nextWarning)
         self.bookmarkActions.append(self.warningsNextAct)
         
@@ -3728,7 +3728,7 @@ class ViewManager(QObject):
             """<b>Previous warning message</b>"""
             """<p>Go to previous line of the current editor"""
             """ having a py3flakes warning.</p>"""
-            ))
+        ))
         self.warningsPreviousAct.triggered[()].connect(self.__previousWarning)
         self.bookmarkActions.append(self.warningsPreviousAct)
         
@@ -3743,7 +3743,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Clear Warning Messages</b>"""
             """<p>Clear py3flakes warning messages of all editors.</p>"""
-            ))
+        ))
         self.warningsClearAct.triggered[()].connect(self.__clearAllWarnings)
         self.bookmarkActions.append(self.warningsClearAct)
         
@@ -3760,7 +3760,7 @@ class ViewManager(QObject):
             """<b>Next uncovered line</b>"""
             """<p>Go to next line of the current editor marked as not"""
             """ covered.</p>"""
-            ))
+        ))
         self.notcoveredNextAct.triggered[()].connect(self.__nextUncovered)
         self.bookmarkActions.append(self.notcoveredNextAct)
         
@@ -3778,7 +3778,7 @@ class ViewManager(QObject):
             """<b>Previous uncovered line</b>"""
             """<p>Go to previous line of the current editor marked"""
             """ as not covered.</p>"""
-            ))
+        ))
         self.notcoveredPreviousAct.triggered[()].connect(
             self.__previousUncovered)
         self.bookmarkActions.append(self.notcoveredPreviousAct)
@@ -3795,7 +3795,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Next Task</b>"""
             """<p>Go to next line of the current editor having a task.</p>"""
-            ))
+        ))
         self.taskNextAct.triggered[()].connect(self.__nextTask)
         self.bookmarkActions.append(self.taskNextAct)
         
@@ -3813,7 +3813,7 @@ class ViewManager(QObject):
             """<b>Previous Task</b>"""
             """<p>Go to previous line of the current editor having a"""
             """ task.</p>"""
-            ))
+        ))
         self.taskPreviousAct.triggered[()].connect(self.__previousTask)
         self.bookmarkActions.append(self.taskPreviousAct)
         
@@ -3830,7 +3830,7 @@ class ViewManager(QObject):
             """<b>Next Change</b>"""
             """<p>Go to next line of the current editor having a change"""
             """ marker.</p>"""
-            ))
+        ))
         self.changeNextAct.triggered[()].connect(self.__nextChange)
         self.bookmarkActions.append(self.changeNextAct)
         
@@ -3848,7 +3848,7 @@ class ViewManager(QObject):
             """<b>Previous Change</b>"""
             """<p>Go to previous line of the current editor having"""
             """ a change marker.</p>"""
-            ))
+        ))
         self.changePreviousAct.triggered[()].connect(self.__previousChange)
         self.bookmarkActions.append(self.changePreviousAct)
         
@@ -3956,7 +3956,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Check spelling</b>"""
             """<p>Perform a spell check of the current editor.</p>"""
-            ))
+        ))
         self.spellCheckAct.triggered[()].connect(self.__spellCheck)
         self.spellingActions.append(self.spellCheckAct)
         
@@ -3974,7 +3974,7 @@ class ViewManager(QObject):
             """<b>Automatic spell checking</b>"""
             """<p>Activate or deactivate the automatic spell checking"""
             """ function of all editors.</p>"""
-            ))
+        ))
         self.autoSpellCheckAct.setChecked(
             Preferences.getEditor("AutoSpellCheckingEnabled"))
         self.autoSpellCheckAct.triggered[()].connect(
@@ -4104,7 +4104,7 @@ class ViewManager(QObject):
                     QApplication.translate(
                         'ViewManager',
                         """<p>The file <b>{0}</b> has unsaved changes.</p>""")
-                        .format(fn),
+                    .format(fn),
                     editor.saveFile)
             if res:
                 self.setEditorName(editor, editor.getFileName())
@@ -4432,7 +4432,7 @@ class ViewManager(QObject):
             self.sbLang.setText("")
             self.sbLang.setToolTip(
                 QApplication.translate('ViewManager', 'Language: {0}')
-                    .format(language))
+                .format(language))
         
         if eol is None:
             eol = ''
@@ -5927,13 +5927,13 @@ class ViewManager(QObject):
                 return
             
             fileInfo = dictionaryFile if len(dictionaryFile) < 40 \
-                       else "...{0}".format(dictionaryFile[-40:])
+                else "...{0}".format(dictionaryFile[-40:])
             from QScintilla.SpellingDictionaryEditDialog import \
                 SpellingDictionaryEditDialog
             dlg = SpellingDictionaryEditDialog(
                 data,
                 QApplication.translate('ViewManager', "Editing {0}")
-                    .format(fileInfo),
+                .format(fileInfo),
                 self.ui)
             if dlg.exec_() == QDialog.Accepted:
                 data = dlg.getData()
@@ -6232,7 +6232,7 @@ class ViewManager(QObject):
                self.autosaveInterval == 0:
                 self.autosaveTimer.stop()
             elif not self.autosaveTimer.isActive() and \
-               self.autosaveInterval > 0:
+                    self.autosaveInterval > 0:
                 self.autosaveTimer.start(self.autosaveInterval * 60000)
         
         self.__enableSpellingActions()

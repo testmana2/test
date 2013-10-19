@@ -1308,9 +1308,9 @@ class MiniEditor(E5MainWindow):
         
         act = E5Action(
             QApplication.translate('ViewManager', 'Formfeed'),
-                  QApplication.translate('ViewManager', 'Formfeed'),
-                  0, 0,
-                  self.editorActGrp, 'vm_edit_formfeed')
+            QApplication.translate('ViewManager', 'Formfeed'),
+            0, 0,
+            self.editorActGrp, 'vm_edit_formfeed')
         self.esm.setMapping(act, QsciScintilla.SCI_FORMFEED)
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
@@ -1989,13 +1989,13 @@ class MiniEditor(E5MainWindow):
             0, self, 'help_help_whats_this')
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
         self.whatsThisAct.setWhatsThis(self.trUtf8(
-                """<b>Display context sensitive help</b>"""
-                """<p>In What's This? mode, the mouse cursor shows an arrow"""
-                """ with a question mark, and you can click on the interface"""
-                """ elements to get a short description of what they do and"""
-                """ how to use them. In dialogs, this feature can be"""
-                """ accessed using the context help button in the titlebar."""
-                """</p>"""
+            """<b>Display context sensitive help</b>"""
+            """<p>In What's This? mode, the mouse cursor shows an arrow"""
+            """ with a question mark, and you can click on the interface"""
+            """ elements to get a short description of what they do and"""
+            """ how to use them. In dialogs, this feature can be"""
+            """ accessed using the context help button in the titlebar."""
+            """</p>"""
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
         self.helpActions.append(self.whatsThisAct)
@@ -2157,7 +2157,7 @@ class MiniEditor(E5MainWindow):
                 self, self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
                             '<p>Reason: {1}</p>')
-                    .format(fileName, str(why)))
+                .format(fileName, str(why)))
             QApplication.restoreOverrideCursor()
             return
         
@@ -2192,7 +2192,7 @@ class MiniEditor(E5MainWindow):
                 self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
-                    .format(fileName, str(why)))
+                .format(fileName, str(why)))
             QApplication.restoreOverrideCursor()
         
             self.__checkActions()
@@ -2795,7 +2795,7 @@ class MiniEditor(E5MainWindow):
             line0 = self.__textEdit.text(0)
             if line0.startswith("#!") and \
                ("python2" in line0 or
-                ("python" in line0 and not "python3" in line0)):
+                    ("python" in line0 and not "python3" in line0)):
                 return True
             
             if self.__curFile is not None:

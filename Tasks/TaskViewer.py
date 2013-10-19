@@ -291,8 +291,8 @@ class TaskViewer(QTreeWidget):
         """
         self.addTask(summary, filename=filename, lineno=lineno,
                      isProjectTask=(
-                        self.project and
-                        self.project.isProjectSource(filename)),
+                         self.project and
+                         self.project.isProjectSource(filename)),
                      taskType=taskType, description=description)
         
     def getProjectTasks(self):
@@ -524,7 +524,7 @@ class TaskViewer(QTreeWidget):
         """
         markers = {
             Task.TypeWarning:
-                Preferences.getTasks("TasksWarningMarkers").split(),
+            Preferences.getTasks("TasksWarningMarkers").split(),
             Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
             Task.TypeTodo: Preferences.getTasks("TasksTodoMarkers").split(),
             Task.TypeFixme: Preferences.getTasks("TasksFixmeMarkers").split(),

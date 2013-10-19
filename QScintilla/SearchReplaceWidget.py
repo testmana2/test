@@ -116,7 +116,7 @@ and so on.</td></tr>
 <td>This matches 1 or more times. For example, <code>Sa+m</code> matches
 <code>Sam</code>, <code>Saam</code>, <code>Saaam</code> and so on.</td></tr>
 </table>
-""")
+""")                                                # __IGNORE_WARNING__
         self.setWhatsThis(whatsThis)
         
         self.ui.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
@@ -424,16 +424,16 @@ and so on.</td></tr>
                 else:
                     ok = False
             elif (lineFrom == boundary[0] and indexFrom >= boundary[1]) or \
-               (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
-               (lineFrom == boundary[2] and indexFrom <= boundary[3]):
+                (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
+                    (lineFrom == boundary[2] and indexFrom <= boundary[3]):
                 ok = True
             else:
                 ok = False
             if not ok and len(self.__selections) > 1:
                 # try again
                 while not ok and \
-                      ((backwards and lineFrom >= boundary[0]) or
-                       (not backwards and lineFrom <= boundary[2])):
+                    ((backwards and lineFrom >= boundary[0]) or
+                     (not backwards and lineFrom <= boundary[2])):
                     for ind in range(len(self.__selections)):
                         if lineFrom == self.__selections[ind][0]:
                             after = indexTo > self.__selections[ind][3]
@@ -695,8 +695,8 @@ and so on.</td></tr>
                 else:
                     ok = False
             elif (lineFrom == boundary[0] and indexFrom >= boundary[1]) or \
-               (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
-               (lineFrom == boundary[2] and indexFrom <= boundary[3]):
+                (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
+                    (lineFrom == boundary[2] and indexFrom <= boundary[3]):
                 ok = True
             else:
                 ok = False
@@ -758,12 +758,12 @@ and so on.</td></tr>
             E5MessageBox.information(
                 self, self.windowTitle(),
                 self.trUtf8("Replaced {0} occurrences.")
-                    .format(replacements))
+                .format(replacements))
         else:
             E5MessageBox.information(
                 self, self.windowTitle(),
                 self.trUtf8("Nothing replaced because '{0}' was not found.")
-                    .format(ftxt))
+                .format(ftxt))
         
         aw.setCursorPosition(cline, cindex)
         aw.ensureCursorVisible()

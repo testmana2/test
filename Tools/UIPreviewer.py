@@ -131,8 +131,8 @@ class UIPreviewer(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+O", "File|Open")))
         self.openAct.setStatusTip(self.trUtf8('Open a UI file for display'))
         self.openAct.setWhatsThis(self.trUtf8(
-                """<b>Open File</b>"""
-                """<p>This opens a new UI file for display.</p>"""
+            """<b>Open File</b>"""
+            """<p>This opens a new UI file for display.</p>"""
         ))
         self.openAct.triggered[()].connect(self.__openFile)
         
@@ -143,8 +143,8 @@ class UIPreviewer(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+P", "File|Print")))
         self.printAct.setStatusTip(self.trUtf8('Print a screen capture'))
         self.printAct.setWhatsThis(self.trUtf8(
-                """<b>Print</b>"""
-                """<p>Print a screen capture.</p>"""
+            """<b>Print</b>"""
+            """<p>Print a screen capture.</p>"""
         ))
         self.printAct.triggered[()].connect(self.__printImage)
         
@@ -152,10 +152,10 @@ class UIPreviewer(E5MainWindow):
             UI.PixmapCache.getIcon("printPreview.png"),
             self.trUtf8('Print Preview'), self)
         self.printPreviewAct.setStatusTip(self.trUtf8(
-                'Print preview a screen capture'))
+            'Print preview a screen capture'))
         self.printPreviewAct.setWhatsThis(self.trUtf8(
-                """<b>Print Preview</b>"""
-                """<p>Print preview a screen capture.</p>"""
+            """<b>Print Preview</b>"""
+            """<p>Print preview a screen capture.</p>"""
         ))
         self.printPreviewAct.triggered[()].connect(self.__printPreviewImage)
         
@@ -167,8 +167,8 @@ class UIPreviewer(E5MainWindow):
         self.imageAct.setStatusTip(self.trUtf8(
             'Save a screen capture to an image file'))
         self.imageAct.setWhatsThis(self.trUtf8(
-                """<b>Screen Capture</b>"""
-                """<p>Save a screen capture to an image file.</p>"""
+            """<b>Screen Capture</b>"""
+            """<p>Save a screen capture to an image file.</p>"""
         ))
         self.imageAct.triggered[()].connect(self.__saveImage)
         
@@ -178,8 +178,8 @@ class UIPreviewer(E5MainWindow):
             QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
         self.exitAct.setWhatsThis(self.trUtf8(
-                """<b>Quit</b>"""
-                """<p>Quit the application.</p>"""
+            """<b>Quit</b>"""
+            """<p>Quit the application.</p>"""
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
@@ -190,8 +190,8 @@ class UIPreviewer(E5MainWindow):
         self.copyAct.setStatusTip(
             self.trUtf8('Copy screen capture to clipboard'))
         self.copyAct.setWhatsThis(self.trUtf8(
-                """<b>Copy</b>"""
-                """<p>Copy screen capture to clipboard.</p>"""
+            """<b>Copy</b>"""
+            """<p>Copy screen capture to clipboard.</p>"""
         ))
         self.copyAct.triggered[()].connect(self.__copyImageToClipboard)
         
@@ -214,8 +214,8 @@ class UIPreviewer(E5MainWindow):
         self.aboutAct.setStatusTip(self.trUtf8(
             'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
-                """<b>About</b>"""
-                """<p>Display some information about this software.</p>"""
+            """<b>About</b>"""
+            """<p>Display some information about this software.</p>"""
         ))
         self.aboutAct.triggered[()].connect(self.__about)
                      
@@ -223,8 +223,8 @@ class UIPreviewer(E5MainWindow):
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
-                """<b>About Qt</b>"""
-                """<p>Display some information about the Qt toolkit.</p>"""
+            """<b>About Qt</b>"""
+            """<p>Display some information about the Qt toolkit.</p>"""
         ))
         self.aboutQtAct.triggered[()].connect(self.__aboutQt)
 
@@ -361,7 +361,7 @@ class UIPreviewer(E5MainWindow):
                 self.trUtf8("Load UI File"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be loaded.</p>""")
-                    .format(fn))
+                .format(fn))
         self.__updateActions()
     
     def __updateChildren(self, sstyle):
@@ -483,7 +483,7 @@ class UIPreviewer(E5MainWindow):
                 self.trUtf8("Save Image"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be saved.</p>""")
-                    .format(fname))
+                .format(fname))
 
     def __copyImageToClipboard(self):
         """

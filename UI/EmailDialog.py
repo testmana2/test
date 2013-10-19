@@ -308,7 +308,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                         self.trUtf8("Send bug report"),
                         self.trUtf8(
                             """<p>Authentication failed.<br>Reason: {0}</p>""")
-                            .format(errorStr),
+                        .format(errorStr),
                         E5MessageBox.Critical)
                     if res:
                         return self.__sendmail(msg)
@@ -334,7 +334,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 self.trUtf8("Send bug report"),
                 self.trUtf8(
                     """<p>Message could not be sent.<br>Reason: {0}</p>""")
-                    .format(errorStr),
+                .format(errorStr),
                 E5MessageBox.Critical)
             if res:
                 return self.__sendmail(msg)

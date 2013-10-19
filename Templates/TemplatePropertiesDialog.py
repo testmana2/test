@@ -200,10 +200,10 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         if self.groupMode:
             return (self.nameEdit.text(),
                     self.languages[self.groupCombo.currentIndex()][0]
-                   )
+                    )
         else:
             return (self.nameEdit.text(),
                     self.descriptionEdit.text(),
                     self.groupCombo.currentText(),
                     self.templateEdit.toPlainText()
-                   )
+                    )

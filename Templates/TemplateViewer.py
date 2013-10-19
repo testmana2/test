@@ -98,7 +98,7 @@ class TemplateGroup(QTreeWidgetItem):
                         "TemplateGroup",
                         """<p>The group <b>{0}</b> already contains a"""
                         """ template named <b>{1}</b>.</p>""")
-                        .format(self.name, name))
+                    .format(self.name, name))
             return
         
         self.entries[name] = TemplateEntry(self, name, description, template)
@@ -525,7 +525,7 @@ class TemplateViewer(QTreeWidget):
             self,
             self.trUtf8("Remove Template"),
             self.trUtf8("""<p>Do you really want to remove <b>{0}</b>?</p>""")
-                .format(itm.getName()))
+            .format(itm.getName()))
         if not res:
             return
 
@@ -643,11 +643,11 @@ class TemplateViewer(QTreeWidget):
             if ext:
                 ext = ext[1:]
             varValues.update({
-                    keyfmt.format('path_name'): path_name,
-                    keyfmt.format('dir_name'): dir_name,
-                    keyfmt.format('file_name'): file_name,
-                    keyfmt.format('base_name'): base_name,
-                    keyfmt.format('ext'): ext
+                keyfmt.format('path_name'): path_name,
+                keyfmt.format('dir_name'): dir_name,
+                keyfmt.format('file_name'): file_name,
+                keyfmt.format('base_name'): base_name,
+                keyfmt.format('ext'): ext
             })
         
         varValues[keyfmt.format('clipboard:ml')] = \
@@ -713,7 +713,7 @@ class TemplateViewer(QTreeWidget):
         
         if ok:
             line = editor.text(editor.getCursorPosition()[0])\
-                   .replace(os.linesep, "")
+                .replace(os.linesep, "")
             indent = line.replace(line.lstrip(), "")
             txt, lines, count = itm.getExpandedText(varValues, indent)
             # It should be done in this way to allow undo
@@ -851,7 +851,7 @@ class TemplateViewer(QTreeWidget):
                     self.trUtf8("Edit Template Group"),
                     self.trUtf8("""<p>A template group with the name"""
                                 """ <b>{0}</b> already exists.</p>""")
-                        .format(newname))
+                    .format(newname))
                 return
             
             self.groups[newname] = self.groups[oldname]
@@ -946,7 +946,7 @@ class TemplateViewer(QTreeWidget):
                 self.trUtf8(
                     "<p>The templates file <b>{0}</b> could not be"
                     " written.</p>")
-                    .format(filename))
+                .format(filename))
             return False
         
         from E5XML.TemplatesWriter import TemplatesWriter
@@ -979,7 +979,7 @@ class TemplateViewer(QTreeWidget):
                 self.trUtf8("Read templates"),
                 self.trUtf8(
                     "<p>The templates file <b>{0}</b> could not be read.</p>")
-                    .format(filename))
+                .format(filename))
     
     def __configure(self):
         """

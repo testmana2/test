@@ -344,12 +344,12 @@ class AES(object):
         for i in range(nbr):
             if isInv:
                 state[statePointer:statePointer + 4] = \
-                        state[statePointer + 3:statePointer + 4] + \
-                        state[statePointer:statePointer + 3]
+                    state[statePointer + 3:statePointer + 4] + \
+                    state[statePointer:statePointer + 3]
             else:
                 state[statePointer:statePointer + 4] = \
-                        state[statePointer + 1:statePointer + 4] + \
-                        state[statePointer:statePointer + 1]
+                    state[statePointer + 1:statePointer + 4] + \
+                    state[statePointer:statePointer + 1]
         return state
 
     def __mixColumns(self, state, isInv):
@@ -391,13 +391,13 @@ class AES(object):
         g = self.__galois_multiplication
 
         column[0] = g(cpy[0], mult[0]) ^ g(cpy[3], mult[1]) ^ \
-                    g(cpy[2], mult[2]) ^ g(cpy[1], mult[3])
+            g(cpy[2], mult[2]) ^ g(cpy[1], mult[3])
         column[1] = g(cpy[1], mult[0]) ^ g(cpy[0], mult[1]) ^ \
-                    g(cpy[3], mult[2]) ^ g(cpy[2], mult[3])
+            g(cpy[3], mult[2]) ^ g(cpy[2], mult[3])
         column[2] = g(cpy[2], mult[0]) ^ g(cpy[1], mult[1]) ^ \
-                    g(cpy[0], mult[2]) ^ g(cpy[3], mult[3])
+            g(cpy[0], mult[2]) ^ g(cpy[3], mult[3])
         column[3] = g(cpy[3], mult[0]) ^ g(cpy[2], mult[1]) ^ \
-                    g(cpy[1], mult[2]) ^ g(cpy[0], mult[3])
+            g(cpy[1], mult[2]) ^ g(cpy[0], mult[3])
         return column
 
     def __aes_round(self, state, roundKey):

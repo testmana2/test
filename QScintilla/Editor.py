@@ -253,10 +253,10 @@ class Editor(QsciScintillaCompat):
         # define the margins markers
         self.__changeMarkerSaved = self.markerDefine(
             self.__createChangeMarkerPixmap(
-            "OnlineChangeTraceMarkerSaved"))
+                "OnlineChangeTraceMarkerSaved"))
         self.__changeMarkerUnsaved = self.markerDefine(
             self.__createChangeMarkerPixmap(
-            "OnlineChangeTraceMarkerUnsaved"))
+                "OnlineChangeTraceMarkerUnsaved"))
         self.breakpoint = \
             self.markerDefine(UI.PixmapCache.getPixmap("break.png"))
         self.cbreakpoint = \
@@ -318,10 +318,8 @@ class Editor(QsciScintillaCompat):
                         self.trUtf8("""<p>The size of the file <b>{0}</b>"""
                                     """ is <b>{1} KB</b>."""
                                     """ Do you really want to load it?</p>""")
-                                    .format(
-                                        self.fileName,
-                                        QFileInfo(self.fileName).size() //
-                                            1024),
+                        .format(self.fileName,
+                                QFileInfo(self.fileName).size() // 1024),
                         icon=E5MessageBox.Warning)
                     if not res:
                         raise IOError()
@@ -1174,7 +1172,7 @@ class Editor(QsciScintillaCompat):
                     self.trUtf8(
                         """<p>No exporter available for the """
                         """export format <b>{0}</b>. Aborting...</p>""")
-                        .format(exporterFormat))
+                    .format(exporterFormat))
         else:
             E5MessageBox.critical(
                 self,
@@ -1734,7 +1732,7 @@ class Editor(QsciScintillaCompat):
             line0 = self.text(0)
             if line0.startswith("#!") and \
                ("python2" in line0 or
-                ("python" in line0 and not "python3" in line0)):
+                    ("python" in line0 and not "python3" in line0)):
                 self.filetype = "Python2"
                 return True
             
@@ -2441,13 +2439,13 @@ class Editor(QsciScintillaCompat):
         from Tasks.Task import Task
         markers = {
             Task.TypeWarning:
-                Preferences.getTasks("TasksWarningMarkers").split(),
+            Preferences.getTasks("TasksWarningMarkers").split(),
             Task.TypeNote:
-                Preferences.getTasks("TasksNoteMarkers").split(),
+            Preferences.getTasks("TasksNoteMarkers").split(),
             Task.TypeTodo:
-                Preferences.getTasks("TasksTodoMarkers").split(),
+            Preferences.getTasks("TasksTodoMarkers").split(),
             Task.TypeFixme:
-                Preferences.getTasks("TasksFixmeMarkers").split(),
+            Preferences.getTasks("TasksFixmeMarkers").split(),
         }
         txtList = self.text().split(self.getLineSeparator())
         
@@ -2683,7 +2681,7 @@ class Editor(QsciScintillaCompat):
                 self,
                 self.trUtf8("File Modified"),
                 self.trUtf8("<p>The file <b>{0}</b> has unsaved changes.</p>")
-                    .format(fn),
+                .format(fn),
                 self.saveFile)
             if res:
                 self.vm.setEditorName(self, self.fileName)
@@ -2836,7 +2834,7 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
-                    .format(fn, str(why)))
+                .format(fn, str(why)))
             return False
         
     def saveFile(self, saveas=False, path=None):
@@ -3310,13 +3308,13 @@ class Editor(QsciScintillaCompat):
             # determine the start of the comment block
             begline = line
             while begline > 0 and \
-                  self.__isCommentedLine(self.text(begline - 1), commentStr):
+                    self.__isCommentedLine(self.text(begline - 1), commentStr):
                 begline -= 1
             # determine the end of the comment block
             endline = line
             lines = self.lines()
             while endline < lines and \
-                  self.__isCommentedLine(self.text(endline + 1), commentStr):
+                    self.__isCommentedLine(self.text(endline + 1), commentStr):
                 endline += 1
             
             self.setSelection(begline, 0, endline, self.lineLength(endline))
@@ -4928,8 +4926,8 @@ class Editor(QsciScintillaCompat):
         @return flag indicating this editor should be saved (boolean)
         """
         return self.fileName is not None and \
-               not self.autosaveManuallyDisabled and \
-               not self.isReadOnly()
+            not self.autosaveManuallyDisabled and \
+            not self.isReadOnly()
         
     def __autoSyntaxCheck(self):
         """
@@ -4980,9 +4978,10 @@ class Editor(QsciScintillaCompat):
                             self.toggleSyntaxError(err.lineno, True, msg)
             elif self.isPy2File() and self.fileName is not None:
                 syntaxError, _fn, errorline, errorindex, _code, _error, \
-                warnings = Utilities.py2compile(
-                    self.fileName,
-                    checkFlakes=Preferences.getFlakes("IncludeInSyntaxCheck"))
+                    warnings = Utilities.py2compile(
+                        self.fileName,
+                        checkFlakes=Preferences.getFlakes(
+                            "IncludeInSyntaxCheck"))
                 if syntaxError:
                     self.toggleSyntaxError(
                         int(errorline), int(errorindex), True, _error)
@@ -5669,7 +5668,7 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8("Error loading macro"),
                 self.trUtf8(
                     "<p>The macro file <b>{0}</b> could not be read.</p>")
-                    .format(fname))
+                .format(fname))
             return
         
         if len(lines) != 2:
@@ -5677,7 +5676,7 @@ class Editor(QsciScintillaCompat):
                 self,
                 self.trUtf8("Error loading macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> is corrupt.</p>")
-                    .format(fname))
+                .format(fname))
             return
         
         macro = QsciMacro(lines[1], self)
@@ -5731,7 +5730,7 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8("Error saving macro"),
                 self.trUtf8(
                     "<p>The macro file <b>{0}</b> could not be written.</p>")
-                    .format(fname))
+                .format(fname))
             return
         
     def macroRecordingStart(self):
@@ -6162,7 +6161,7 @@ class Editor(QsciScintillaCompat):
                             self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
-                                .format(fname))
+                            .format(fname))
             event.acceptProposedAction()
         else:
             super().dropEvent(event)
@@ -6572,7 +6571,7 @@ class Editor(QsciScintillaCompat):
             style = self.styleAt(pos)
             if self.lexer_ is not None:
                 return self.lexer_.isCommentStyle(style) or \
-                       self.lexer_.isStringStyle(style)
+                    self.lexer_.isStringStyle(style)
         return True
     
     @pyqtSlot(int)
@@ -6718,9 +6717,9 @@ class Editor(QsciScintillaCompat):
             (boolean, boolean, boolean, boolean)
         """
         return self.fileName is not None and \
-                self.project.isOpen() and \
-                self.project.isProjectFile(self.fileName), \
-               self.__isShared, self.__inSharedEdit, self.__inRemoteSharedEdit
+            self.project.isOpen() and \
+            self.project.isProjectFile(self.fileName), \
+            self.__isShared, self.__inSharedEdit, self.__inRemoteSharedEdit
     
     def shareConnected(self, connected):
         """

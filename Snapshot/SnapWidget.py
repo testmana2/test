@@ -232,7 +232,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             E5MessageBox.warning(
                 self, self.trUtf8("Save Snapshot"),
                 self.trUtf8("Cannot write file '{0}:\n{1}.")
-                    .format(fileName, file.errorString()))
+                .format(fileName, file.errorString()))
             return False
         
         ok = self.__snapshot.save(file)
@@ -242,7 +242,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             E5MessageBox.warning(
                 self, self.trUtf8("Save Snapshot"),
                 self.trUtf8("Cannot write file '{0}:\n{1}.")
-                    .format(fileName, file.errorString()))
+                .format(fileName, file.errorString()))
         
         return ok
     

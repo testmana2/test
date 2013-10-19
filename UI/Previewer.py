@@ -227,10 +227,10 @@ class Previewer(QWidget, Ui_Previewer):
                editor.getLanguage() == "HTML":
                 language = "HTML"
             elif extension in \
-                Preferences.getEditor("PreviewMarkdownFileNameExtensions"):
+                    Preferences.getEditor("PreviewMarkdownFileNameExtensions"):
                 language = "Markdown"
             elif extension in \
-                Preferences.getEditor("PreviewRestFileNameExtensions"):
+                    Preferences.getEditor("PreviewRestFileNameExtensions"):
                 language = "ReST"
             else:
                 self.__setHtml(fn, self.trUtf8(

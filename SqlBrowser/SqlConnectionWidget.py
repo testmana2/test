@@ -184,4 +184,4 @@ class SqlConnectionWidget(QWidget):
         
         self.__setBold(itm, True)
         self.__activeDb = QSqlDatabase.connectionNames()[
-                            self.__connectionTree.indexOfTopLevelItem(itm)]
+            self.__connectionTree.indexOfTopLevelItem(itm)]

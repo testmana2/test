@@ -156,7 +156,7 @@ r"""
             end \b [^_]
         )
     )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search
+""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
 
 _commentsub = re.compile(r"""#[^\n]*\n|#[^\n]*$""").sub
 
@@ -302,8 +302,8 @@ def readmodule_ex(module, path=[]):
             thisindent = indent
             indent += 1
             meth_name = m.group("MethodName") or \
-                        m.group("MethodName2") or \
-                        m.group("MethodName3")
+                m.group("MethodName2") or \
+                m.group("MethodName3")
             meth_sig = m.group("MethodSignature")
             meth_sig = meth_sig and meth_sig.replace('\\\n', '') or ''
             meth_sig = _commentsub('', meth_sig)
@@ -315,13 +315,13 @@ def readmodule_ex(module, path=[]):
                 meth_name = meth_name[6:]
             # close all classes/modules indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             while acstack and \
-                  acstack[-1][1] >= thisindent:
+                    acstack[-1][1] >= thisindent:
                 del acstack[-1]
             if classstack:
                 # it's a class/module method
@@ -381,7 +381,7 @@ def readmodule_ex(module, path=[]):
             last_lineno_pos = start
             # close all classes/modules indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
@@ -415,7 +415,7 @@ def readmodule_ex(module, path=[]):
             cur_obj = cur_class
             classstack.append((cur_class, thisindent))
             while acstack and \
-                  acstack[-1][1] >= thisindent:
+                    acstack[-1][1] >= thisindent:
                 del acstack[-1]
             acstack.append(["public", thisindent])  # default access control
                                                     # is 'public'
@@ -428,7 +428,7 @@ def readmodule_ex(module, path=[]):
             last_lineno_pos = start
             # close all classes/modules indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
@@ -456,7 +456,7 @@ def readmodule_ex(module, path=[]):
             cur_obj = cur_class
             classstack.append((cur_class, thisindent))
             while acstack and \
-                  acstack[-1][1] >= thisindent:
+                    acstack[-1][1] >= thisindent:
                 del acstack[-1]
             acstack.append(["public", thisindent])  # default access control
                                                     # is 'public'
@@ -468,7 +468,7 @@ def readmodule_ex(module, path=[]):
                 while index >= -len(acstack):
                     if acstack[index][1] < indent:
                         actype = m.group("AccessControlType") or \
-                                 m.group("AccessControlType2").split('_')[0]
+                            m.group("AccessControlType2").split('_')[0]
                         acstack[index][0] = actype.lower()
                         break
                     else:
@@ -481,7 +481,7 @@ def readmodule_ex(module, path=[]):
                        not classstack[index][1] >= indent:
                         parent = classstack[index][0]
                         actype = m.group("AccessControlType") or \
-                                 m.group("AccessControlType2").split('_')[0]
+                            m.group("AccessControlType2").split('_')[0]
                         actype = actype.lower()
                         for name in aclist.split(","):
                             name = name.strip()[1:]   # get rid of leading ':'
@@ -531,8 +531,8 @@ def readmodule_ex(module, path=[]):
                             break
                         name = nv[0].strip()[1:]    # get rid of leading ':'
                         attr = parent._getattribute("@" + name) or \
-                               parent._getattribute("@@" + name) or \
-                               Attribute(module, "@" + name, file, lineno)
+                            parent._getattribute("@@" + name) or \
+                            Attribute(module, "@" + name, file, lineno)
                         if len(nv) == 1 or nv[1].strip() == "false":
                             attr.setProtected()
                         elif nv[1].strip() == "true":
@@ -543,8 +543,8 @@ def readmodule_ex(module, path=[]):
                         for name in m.group("AttrList").split(","):
                             name = name.strip()[1:]   # get rid of leading ':'
                             attr = parent._getattribute("@" + name) or \
-                                   parent._getattribute("@@" + name) or \
-                                   Attribute(module, "@" + name, file, lineno)
+                                parent._getattribute("@@" + name) or \
+                                Attribute(module, "@" + name, file, lineno)
                             if access == "_accessor":
                                 attr.setPublic()
                             elif access == "_reader" or access == "_writer":

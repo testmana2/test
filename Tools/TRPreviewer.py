@@ -160,8 +160,8 @@ class TRPreviewer(E5MainWindow):
             self.trUtf8('&Open UI Files...'), self)
         self.openUIAct.setStatusTip(self.trUtf8('Open UI files for display'))
         self.openUIAct.setWhatsThis(self.trUtf8(
-                """<b>Open UI Files</b>"""
-                """<p>This opens some UI files for display.</p>"""
+            """<b>Open UI Files</b>"""
+            """<p>This opens some UI files for display.</p>"""
         ))
         self.openUIAct.triggered[()].connect(self.__openWidget)
         
@@ -171,8 +171,8 @@ class TRPreviewer(E5MainWindow):
         self.openQMAct.setStatusTip(self.trUtf8(
             'Open Translation files for display'))
         self.openQMAct.setWhatsThis(self.trUtf8(
-                """<b>Open Translation Files</b>"""
-                """<p>This opens some translation files for display.</p>"""
+            """<b>Open Translation Files</b>"""
+            """<p>This opens some translation files for display.</p>"""
         ))
         self.openQMAct.triggered[()].connect(self.__openTranslation)
         
@@ -194,8 +194,8 @@ class TRPreviewer(E5MainWindow):
             self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
         self.exitAct.setWhatsThis(self.trUtf8(
-                """<b>Quit</b>"""
-                """<p>Quit the application.</p>"""
+            """<b>Quit</b>"""
+            """<p>Quit the application.</p>"""
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
@@ -218,8 +218,8 @@ class TRPreviewer(E5MainWindow):
         self.aboutAct.setStatusTip(self.trUtf8(
             'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
-                """<b>About</b>"""
-                """<p>Display some information about this software.</p>"""
+            """<b>About</b>"""
+            """<p>Display some information about this software.</p>"""
         ))
         self.aboutAct.triggered[()].connect(self.__about)
         
@@ -227,8 +227,8 @@ class TRPreviewer(E5MainWindow):
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
-                """<b>About Qt</b>"""
-                """<p>Display some information about the Qt toolkit.</p>"""
+            """<b>About Qt</b>"""
+            """<p>Display some information about the Qt toolkit.</p>"""
         ))
         self.aboutQtAct.triggered[()].connect(self.__aboutQt)
         
@@ -256,16 +256,16 @@ class TRPreviewer(E5MainWindow):
             "Ctrl+W", "File|Close")))
         self.closeAct.setStatusTip(self.trUtf8('Close the current window'))
         self.closeAct.setWhatsThis(self.trUtf8(
-                """<b>Close Window</b>"""
-                """<p>Close the current window.</p>"""
+            """<b>Close Window</b>"""
+            """<p>Close the current window.</p>"""
         ))
         self.closeAct.triggered[()].connect(self.preview.closeWidget)
         
         self.closeAllAct = QAction(self.trUtf8('Clos&e All'), self)
         self.closeAllAct.setStatusTip(self.trUtf8('Close all windows'))
         self.closeAllAct.setWhatsThis(self.trUtf8(
-                """<b>Close All Windows</b>"""
-                """<p>Close all windows.</p>"""
+            """<b>Close All Windows</b>"""
+            """<p>Close all windows.</p>"""
         ))
         self.closeAllAct.triggered[()].connect(self.preview.closeAllWidgets)
 
@@ -510,7 +510,7 @@ class TranslationsDict(QObject):
                     self.trUtf8("Set Translator"),
                     self.trUtf8(
                         """<p>The translator <b>{0}</b> is not known.</p>""")
-                        .format(name))
+                    .format(name))
                 return
                 
             nTranslator = trans.translator
@@ -727,7 +727,7 @@ class WidgetView(QWidget):
                 self.trUtf8("Load UI File"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be loaded.</p>""")
-                    .format(self.__uiFileName))
+                .format(self.__uiFileName))
             self.__valid = False
             return
         
@@ -783,7 +783,7 @@ class WidgetArea(QMdiArea):
                     self.trUtf8("Load UI File"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be loaded.</p>""")
-                        .format(uiFileName))
+                    .format(uiFileName))
                 return
             
             uname = name

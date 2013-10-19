@@ -66,18 +66,18 @@ def sbsdiff(a, b, linenumberwidth=4):
                                              IS_CHARACTER_JUNK):
         if not flag:
             yield ('e', linenumberformat.format(ln1), l1,
-                        linenumberformat.format(ln2), l2)
+                   linenumberformat.format(ln2), l2)
             continue
         if ln2 == "" and l2 == "\n":
             yield ('d', linenumberformat.format(ln1), removeMarkers(l1),
-                        emptylineno, '\n')
+                   emptylineno, '\n')
             continue
         if ln1 == "" and l1 == "\n":
             yield ('i', emptylineno, '\n',
-                        linenumberformat.format(ln2), removeMarkers(l2))
+                   linenumberformat.format(ln2), removeMarkers(l2))
             continue
         yield ('r', linenumberformat.format(ln1), l1,
-                    linenumberformat.format(ln2), l2)
+               linenumberformat.format(ln2), l2)
 
 
 class CompareDialog(QWidget, Ui_CompareDialog):
@@ -234,7 +234,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
-                    .format(filename1))
+                .format(filename1))
             return
 
         filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
@@ -248,7 +248,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
-                    .format(filename2))
+                .format(filename2))
             return
         
         self.__compare(lines1, lines2)

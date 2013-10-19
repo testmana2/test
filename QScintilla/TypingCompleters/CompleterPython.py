@@ -259,14 +259,14 @@ class CompleterPython(CompleterBase):
             if self.__elseRX.indexIn(txt) == 0 and edInd <= indentation:
                 indentation = edInd - 1
             elif self.__elifRX.indexIn(txt) == 0 and \
-                 edInd == indentation and \
-                 edInd == prevInd:
-                    indentation = edInd - 1
+                edInd == indentation and \
+                    edInd == prevInd:
+                indentation = edInd - 1
             elif (self.__ifRX.indexIn(txt) == 0 or
                   self.__whileRX.indexIn(txt) == 0 or
                   self.__forRX.indexIn(txt) == 0 or
                   self.__tryRX.indexIn(txt) == 0) and \
-                 edInd <= indentation:
+                    edInd <= indentation:
                 self.editor.cancelList()
                 self.editor.setIndentation(line, edInd)
                 break
@@ -286,7 +286,8 @@ class CompleterPython(CompleterBase):
             txt = self.editor.text(tryLine)
             edInd = self.editor.indentation(tryLine)
             if (self.__exceptcRX.indexIn(txt) == 0 or
-                self.__finallyRX.indexIn(txt) == 0) and edInd <= indentation:
+                self.__finallyRX.indexIn(txt) == 0) and \
+                    edInd <= indentation:
                 indentation = edInd - 1
             elif (self.__exceptRX.indexIn(txt) == 0 or
                   self.__tryRX.indexIn(txt) == 0) and edInd <= indentation:
@@ -367,10 +368,10 @@ class CompleterPython(CompleterBase):
                self.editor.indentation(curLine) == indentation:
                 return True
             elif self.__classRX.indexIn(txt) == 0 and \
-               self.editor.indentation(curLine) < indentation:
+                    self.editor.indentation(curLine) < indentation:
                 return True
             elif self.__defRX.indexIn(txt) == 0 and \
-               self.editor.indentation(curLine) <= indentation:
+                    self.editor.indentation(curLine) <= indentation:
                 return False
             curLine -= 1
         return False

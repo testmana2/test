@@ -255,8 +255,8 @@ class Whitespace(object):
         for ts in range(1, n + 1):
             if self.indent_level(ts) != other.indent_level(ts):
                 a.append((ts,
-                           self.indent_level(ts),
-                           other.indent_level(ts)))
+                         self.indent_level(ts),
+                         other.indent_level(ts)))
         return a
 
     # Return True iff self.indent_level(t) < other.indent_level(t)
@@ -313,8 +313,8 @@ class Whitespace(object):
         for ts in range(1, n + 1):
             if self.indent_level(ts) >= other.indent_level(ts):
                 a.append((ts,
-                           self.indent_level(ts),
-                           other.indent_level(ts)))
+                         self.indent_level(ts),
+                         other.indent_level(ts)))
         return a
 
 

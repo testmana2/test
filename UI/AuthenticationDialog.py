@@ -38,7 +38,7 @@ class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
         self.iconLabel.setText("")
         self.iconLabel.setPixmap(
             self.style().standardIcon(QStyle.SP_MessageBoxQuestion).pixmap(
-            32, 32))
+                32, 32))
     
     def setData(self, username, password):
         """

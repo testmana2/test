@@ -104,7 +104,7 @@ r"""
 |   (?P<CodingLine>
         ^ \# \s* [*_-]* \s* coding[:=] \s* (?P<Coding> [-\w_.]+ ) \s* [*_-]* $
     )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search
+""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
 
 _commentsub = re.compile(r"""#[^\n]*\n|#[^\n]*$""").sub
 
@@ -237,7 +237,7 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
     if inpackage:
         try:
             f, file, (suff, mode, type) = \
-                    ClassBrowsers.find_module(module, path)
+                ClassBrowsers.find_module(module, path)
         except ImportError:
             f = None
     if f is None:
@@ -251,7 +251,7 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
         _modules[module] = dict
         path = [file] + path
         f, file, (suff, mode, type) = \
-                        ClassBrowsers.find_module('__init__', [file])
+            ClassBrowsers.find_module('__init__', [file])
     if f:
         f.close()
     if type not in SUPPORTED_TYPES:
@@ -316,14 +316,14 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                     thisindent -= deltaindent
                 else:
                     while conditionalsstack and \
-                          conditionalsstack[-1] >= thisindent:
+                            conditionalsstack[-1] >= thisindent:
                         del conditionalsstack[-1]
                         if deltastack:
                             del deltastack[-1]
                     deltaindentcalculated = 0
             # close all classes indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
@@ -368,7 +368,7 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             thisindent = _indent(m.group("ClassIndent"))
             # close all classes indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
@@ -473,7 +473,7 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             # a conditional function/method definition
             thisindent = _indent(m.group("ConditionalDefineIndent"))
             while conditionalsstack and \
-                  conditionalsstack[-1] >= thisindent:
+                    conditionalsstack[-1] >= thisindent:
                 del conditionalsstack[-1]
                 if deltastack:
                     del deltastack[-1]

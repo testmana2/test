@@ -100,11 +100,11 @@ class SqlBrowser(E5MainWindow):
             self.trUtf8('Add &Connection...'),
             0, 0, self, 'sql_file_add_connection')
         self.addConnectionAct.setStatusTip(self.trUtf8(
-                'Open a dialog to add a new database connection'))
+            'Open a dialog to add a new database connection'))
         self.addConnectionAct.setWhatsThis(self.trUtf8(
-                """<b>Add Connection</b>"""
-                """<p>This opens a dialog to add a new database"""
-                """ connection.</p>"""
+            """<b>Add Connection</b>"""
+            """<p>This opens a dialog to add a new database"""
+            """ connection.</p>"""
         ))
         self.addConnectionAct.triggered[()].connect(
             self.__browser.addConnectionByDialog)
@@ -118,8 +118,8 @@ class SqlBrowser(E5MainWindow):
             0, self, 'sql_file_quit')
         self.exitAct.setStatusTip(self.trUtf8('Quit the SQL browser'))
         self.exitAct.setWhatsThis(self.trUtf8(
-                """<b>Quit</b>"""
-                """<p>Quit the SQL browser.</p>"""
+            """<b>Quit</b>"""
+            """<p>Quit the SQL browser.</p>"""
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
@@ -130,8 +130,8 @@ class SqlBrowser(E5MainWindow):
         self.aboutAct.setStatusTip(self.trUtf8(
             'Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
-                """<b>About</b>"""
-                """<p>Display some information about this software.</p>"""
+            """<b>About</b>"""
+            """<p>Display some information about this software.</p>"""
         ))
         self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
@@ -143,8 +143,8 @@ class SqlBrowser(E5MainWindow):
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
-                """<b>About Qt</b>"""
-                """<p>Display some information about the Qt toolkit.</p>"""
+            """<b>About Qt</b>"""
+            """<p>Display some information about the Qt toolkit.</p>"""
         ))
         self.aboutQtAct.triggered[()].connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)

@@ -1587,7 +1587,7 @@ class UserInterface(E5MainWindow):
         self.versionAct.setWhatsThis(self.trUtf8(
             """<b>Show Versions</b>"""
             """<p>Display version information.</p>"""
-                             ))
+        ))
         self.versionAct.triggered[()].connect(self.__showVersions)
         self.actions.append(self.versionAct)
 
@@ -1598,7 +1598,7 @@ class UserInterface(E5MainWindow):
         self.checkUpdateAct.setWhatsThis(self.trUtf8(
             """<b>Check for Updates...</b>"""
             """<p>Checks the internet for updates of eric5.</p>"""
-                             ))
+        ))
         self.checkUpdateAct.triggered[()].connect(self.performVersionCheck)
         self.actions.append(self.checkUpdateAct)
     
@@ -1612,7 +1612,7 @@ class UserInterface(E5MainWindow):
             """<b>Show downloadable versions...</b>"""
             """<p>Shows the eric5 versions available for download """
             """from the internet.</p>"""
-                             ))
+        ))
         self.showVersionsAct.triggered[()].connect(
             self.showAvailableVersionsInfo)
         self.actions.append(self.showVersionsAct)
@@ -1625,7 +1625,7 @@ class UserInterface(E5MainWindow):
         self.reportBugAct.setWhatsThis(self.trUtf8(
             """<b>Report Bug...</b>"""
             """<p>Opens a dialog to report a bug.</p>"""
-                             ))
+        ))
         self.reportBugAct.triggered[()].connect(self.__reportBug)
         self.actions.append(self.reportBugAct)
         
@@ -1638,7 +1638,7 @@ class UserInterface(E5MainWindow):
         self.requestFeatureAct.setWhatsThis(self.trUtf8(
             """<b>Request Feature...</b>"""
             """<p>Opens a dialog to send a feature request.</p>"""
-                             ))
+        ))
         self.requestFeatureAct.triggered[()].connect(self.__requestFeature)
         self.actions.append(self.requestFeatureAct)
 
@@ -2909,7 +2909,7 @@ class UserInterface(E5MainWindow):
         try:
             from PyQt4.QtWebKit import qWebKitVersion
             versionText += """<tr><td><b>WebKit</b></td><td>{0}</td></tr>"""\
-            .format(qWebKitVersion())
+                .format(qWebKitVersion())
         except ImportError:
             pass
         versionText += """<tr><td><b>{0}</b></td><td>{1}</td></tr>"""\
@@ -4044,7 +4044,7 @@ class UserInterface(E5MainWindow):
                         self.trUtf8(
                             '<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
-                            .format(fn))
+                        .format(fn))
                     return
             except EnvironmentError:
                 E5MessageBox.critical(
@@ -4053,7 +4053,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8(
                         '<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
-                        .format(fn))
+                    .format(fn))
                 return
         
         if Utilities.isMacPlatform():
@@ -4111,7 +4111,7 @@ class UserInterface(E5MainWindow):
                         self.trUtf8(
                             '<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
-                            .format(fn))
+                        .format(fn))
                     return
             except EnvironmentError:
                 E5MessageBox.critical(
@@ -4120,7 +4120,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8(
                         '<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
-                        .format(fn))
+                    .format(fn))
                 return
         
         if Utilities.isMacPlatform():
@@ -4279,7 +4279,7 @@ class UserInterface(E5MainWindow):
                         self.trUtf8(
                             '<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
-                            .format(fn))
+                        .format(fn))
                     return
             except EnvironmentError:
                 E5MessageBox.critical(
@@ -4288,7 +4288,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8(
                         '<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
-                        .format(fn))
+                    .format(fn))
                 return
                 
         if not os.path.isfile(viewer) or \
@@ -4330,7 +4330,7 @@ class UserInterface(E5MainWindow):
                                 self.trUtf8(
                                     '<p>The file <b>{0}</b> does not exist or'
                                     ' is zero length.</p>')
-                                    .format(fn))
+                                .format(fn))
                             return
                 except EnvironmentError:
                     if not ignore:
@@ -4340,7 +4340,7 @@ class UserInterface(E5MainWindow):
                             self.trUtf8(
                                 '<p>The file <b>{0}</b> does not exist or'
                                 ' is zero length.</p>')
-                                .format(fn))
+                            .format(fn))
                         return
         
         if not os.path.isfile(viewer) or \
@@ -4452,7 +4452,7 @@ class UserInterface(E5MainWindow):
             self,
             self.trUtf8("External Tools"),
             self.trUtf8("""No toolgroup entry '{0}' found.""")
-                .format(toolGroupName)
+            .format(toolGroupName)
         )
     
     def __toolExecute(self, act):
@@ -4618,7 +4618,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if not home.endswith(".chm"):
@@ -4675,7 +4675,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if not home.endswith(".chm"):
@@ -4744,7 +4744,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if Utilities.isWindowsPlatform():
@@ -4802,7 +4802,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if Utilities.isWindowsPlatform():
@@ -4864,7 +4864,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if Utilities.isWindowsPlatform():
@@ -4900,7 +4900,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if Utilities.isWindowsPlatform():
@@ -4948,7 +4948,7 @@ class UserInterface(E5MainWindow):
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")
-                        .format(home))
+                    .format(home))
                 return
             
             if Utilities.isWindowsPlatform():
@@ -5374,7 +5374,7 @@ class UserInterface(E5MainWindow):
                 self.trUtf8("Save tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be written.</p>")
-                    .format(fn))
+                .format(fn))
             return
         
         from E5XML.TasksWriter import TasksWriter
@@ -5400,7 +5400,7 @@ class UserInterface(E5MainWindow):
                 self.trUtf8("Read tasks"),
                 self.trUtf8(
                     "<p>The tasks file <b>{0}</b> could not be read.</p>")
-                    .format(fn))
+                .format(fn))
         
     def __writeSession(self):
         """
@@ -5418,7 +5418,7 @@ class UserInterface(E5MainWindow):
                 self.trUtf8("Save session"),
                 self.trUtf8(
                     "<p>The session file <b>{0}</b> could not be written.</p>")
-                    .format(fn))
+                .format(fn))
         
     def __readSession(self):
         """
@@ -5431,7 +5431,7 @@ class UserInterface(E5MainWindow):
                 self.trUtf8("Read session"),
                 self.trUtf8(
                     "<p>The session file <b>{0}</b> could not be read.</p>")
-                    .format(fn))
+                .format(fn))
             return
         
         f = QFile(fn)
@@ -5446,7 +5446,7 @@ class UserInterface(E5MainWindow):
                 self.trUtf8("Read session"),
                 self.trUtf8(
                     "<p>The session file <b>{0}</b> could not be read.</p>")
-                    .format(fn))
+                .format(fn))
     
     def showFindFileByNameDialog(self):
         """
@@ -5628,7 +5628,7 @@ class UserInterface(E5MainWindow):
                             self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
-                                .format(fname))
+                            .format(fname))
         
         self.inDragDrop = False
     
@@ -5767,7 +5767,7 @@ class UserInterface(E5MainWindow):
             if self.__versionCheckProgress is None:
                 self.__versionCheckProgress = \
                     QProgressDialog("", self.trUtf8("&Cancel"),
-                                     0,  len(self.__httpAlternatives),  self)
+                                    0,  len(self.__httpAlternatives),  self)
                 self.__versionCheckProgress.setMinimumDuration(0)
                 self.__versionCheckProgress.canceled.connect(
                     self.__versionsDownloadCanceled)
@@ -5884,7 +5884,7 @@ class UserInterface(E5MainWindow):
                             """The update to <b>{0}</b> of eric5 is"""
                             """ available at <b>{1}</b>. Would you like to"""
                             """ get it?""")
-                            .format(versions[2], versions[3]),
+                        .format(versions[2], versions[3]),
                         yesDefault=True)
                     url = res and versions[3] or ''
                 elif versions[0] > Version:
@@ -5895,7 +5895,7 @@ class UserInterface(E5MainWindow):
                             """The update to <b>{0}</b> of eric5 is"""
                             """ available at <b>{1}</b>. Would you like to"""
                             """ get it?""")
-                            .format(versions[0], versions[1]),
+                        .format(versions[0], versions[1]),
                         yesDefault=True)
                     url = res and versions[1] or ''
                 else:
@@ -5916,7 +5916,7 @@ class UserInterface(E5MainWindow):
                             """The update to <b>{0}</b> of eric5 is"""
                             """ available at <b>{1}</b>. Would you like"""
                             """ to get it?""")
-                            .format(versions[0], versions[1]),
+                        .format(versions[0], versions[1]),
                         yesDefault=True)
                     url = res and versions[1] or ''
                 else:
@@ -5963,7 +5963,7 @@ class UserInterface(E5MainWindow):
                 """</td></tr>""".format(
                     versions[line], versions[line + 1],
                     'sourceforge' in versions[line + 1] and
-                        "SourceForge" or versions[line + 1])
+                    "SourceForge" or versions[line + 1])
             line += 2
         versionText += self.trUtf8("""</table>""")
         

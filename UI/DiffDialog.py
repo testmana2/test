@@ -345,7 +345,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
-                    .format(self.filename1))
+                .format(self.filename1))
             return
 
         self.filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
@@ -363,7 +363,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 self.trUtf8("Compare Files"),
                 self.trUtf8(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
-                    .format(self.filename2))
+                .format(self.filename2))
             return
         
         self.contents.clear()

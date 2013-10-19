@@ -196,11 +196,11 @@ class PDFRender(object):
         
         # sanity check for page size and margins
         pageWidthMin = int(self.leading) + \
-                       self.pageMargins["left"] + self.pageMargins["right"]
+            self.pageMargins["left"] + self.pageMargins["right"]
         if self.pageWidth < pageWidthMin:
             self.pageWidth = pageWidthMin
         pageHeightMin = int(self.leading) + \
-                       self.pageMargins["top"] + self.pageMargins["bottom"]
+            self.pageMargins["top"] + self.pageMargins["bottom"]
         if self.pageHeight < pageHeightMin:
             self.pageHeight = pageHeightMin
         
@@ -243,8 +243,8 @@ class PDFRender(object):
                      "/MediaBox[ 0 0 {1:d} {2:d}]\n" \
                      "/Contents {3:d} 0 R\n" \
                      "/Resources {4:d} 0 R\n>>\n".format(
-                     pagesRef, self.pageWidth, self.pageHeight,
-                     self.pageContentStart + i, resourceRef)
+                         pagesRef, self.pageWidth, self.pageHeight,
+                         self.pageContentStart + i, resourceRef)
             self.oT.add(buffer)
         
         # create page tree object (PDF1.4Ref(p86))
@@ -480,7 +480,7 @@ class ExporterPDF(ExporterBase):
                 istyle = 0
                 while istyle <= QsciScintilla.STYLE_MAX:
                     if (istyle <= QsciScintilla.STYLE_DEFAULT or
-                        istyle > QsciScintilla.STYLE_LASTPREDEFINED):
+                            istyle > QsciScintilla.STYLE_LASTPREDEFINED):
                         if lex.description(istyle) or \
                            istyle == QsciScintilla.STYLE_DEFAULT:
                             style = PDFStyle()
@@ -600,6 +600,6 @@ class ExporterPDF(ExporterBase):
                     self.trUtf8(
                         """<p>The source could not be exported to"""
                         """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
-                        .format(filename, str(err)))
+                    .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

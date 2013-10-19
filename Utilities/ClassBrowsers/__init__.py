@@ -65,8 +65,8 @@ def readmodule(module, path=[], isPyFile=False):
         dict = jsclbr.readmodule_ex(module, path)
         jsclbr._modules.clear()
     elif ext in Preferences.getPython("PythonExtensions") or \
-         ext in Preferences.getPython("Python3Extensions") or \
-         isPyFile:
+        ext in Preferences.getPython("Python3Extensions") or \
+            isPyFile:
         from . import pyclbr
         dict = pyclbr.readmodule_ex(module, path, isPyFile=isPyFile)
         pyclbr._modules.clear()

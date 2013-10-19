@@ -85,7 +85,7 @@ class BrowserModel(QAbstractItemModel):
             if index.column() < item.columnCount():
                 return item.data(index.column())
             elif index.column() == item.columnCount() and \
-                 index.column() < self.columnCount(self.parent(index)):
+                    index.column() < self.columnCount(self.parent(index)):
                 # This is for the case where an item under a multi-column
                 # parent doesn't have a value for all the columns
                 return ""
@@ -574,7 +574,7 @@ class BrowserModel(QAbstractItemModel):
                 node = BrowserCodingItem(
                     parentItem,
                     QApplication.translate("BrowserModel", "Coding: {0}")
-                        .format(dict["@@Coding@@"].coding))
+                    .format(dict["@@Coding@@"].coding))
                 self._addItem(node, parentItem)
             if "@@Globals@@" in keys:
                 node = BrowserClassAttributesItem(
@@ -1107,8 +1107,8 @@ class BrowserFileItem(BrowserItem):
         @return flag indicating a Python file (boolean)
         """
         return self.fileext in Preferences.getPython("PythonExtensions") or \
-               (self.fileext == "" and self.sourceLanguage in ["Python",
-                                                               "Python2"])
+            (self.fileext == "" and
+             self.sourceLanguage in ["Python", "Python2"])
     
     def isPython3File(self):
         """
@@ -1117,7 +1117,7 @@ class BrowserFileItem(BrowserItem):
         @return flag indicating a Python file (boolean)
         """
         return self.fileext in Preferences.getPython("Python3Extensions") or \
-               (self.fileext == "" and self.sourceLanguage == "Python3")
+            (self.fileext == "" and self.sourceLanguage == "Python3")
     
     def isRubyFile(self):
         """
@@ -1126,7 +1126,7 @@ class BrowserFileItem(BrowserItem):
         @return flag indicating a Ruby file (boolean)
         """
         return self.fileext == '.rb' or \
-               (self.fileext == "" and self.sourceLanguage == "Ruby")
+            (self.fileext == "" and self.sourceLanguage == "Ruby")
     
     def isDesignerFile(self):
         """
@@ -1207,7 +1207,7 @@ class BrowserFileItem(BrowserItem):
         @return flag indicating a D file (boolean)
         """
         return self.fileext in ['.d', '.di'] or \
-               (self.fileext == "" and self.sourceLanguage == "D")
+            (self.fileext == "" and self.sourceLanguage == "D")
     
     def lessThan(self, other, column, order):
         """
@@ -1298,7 +1298,7 @@ class BrowserClassItem(BrowserItem):
         if self._classObject and \
            (self._classObject.methods or
             self._classObject.classes or
-            self._classObject.attributes):
+                self._classObject.attributes):
             self._populated = False
             self._lazyPopulation = True
     
@@ -1389,7 +1389,7 @@ class BrowserMethodItem(BrowserItem):
            Utilities.ClassBrowsers.ClbrBaseClasses.Function.Static:
             self.icon = UI.PixmapCache.getIcon("method_static.png")
         elif self._functionObject.modifier == \
-           Utilities.ClassBrowsers.ClbrBaseClasses.Function.Class:
+                Utilities.ClassBrowsers.ClbrBaseClasses.Function.Class:
             self.icon = UI.PixmapCache.getIcon("method_class.png")
         elif self._functionObject.isPrivate():
             self.icon = UI.PixmapCache.getIcon("method_private.png")
@@ -1528,7 +1528,7 @@ class BrowserClassAttributesItem(BrowserItem):
         if issubclass(other.__class__, BrowserCodingItem):
             return order == Qt.DescendingOrder
         elif issubclass(other.__class__, BrowserClassItem) or \
-             issubclass(other.__class__, BrowserMethodItem):
+                issubclass(other.__class__, BrowserMethodItem):
             return order == Qt.AscendingOrder
         
         return BrowserItem.lessThan(self, other, column, order)

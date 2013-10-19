@@ -39,9 +39,9 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
         self.__settingPosition = setPosition
         
         flags = Qt.Tool | \
-                Qt.FramelessWindowHint | \
-                Qt.WindowStaysOnTopHint | \
-                Qt.X11BypassWindowManagerHint
+            Qt.FramelessWindowHint | \
+            Qt.WindowStaysOnTopHint | \
+            Qt.X11BypassWindowManagerHint
         if Globals.isWindowsPlatform():
             flags |= Qt.ToolTip
         self.setWindowFlags(flags)

@@ -139,11 +139,11 @@ class VcsProjectBrowserHelper(QObject):
         if self.isTranslationsBrowser:
             names = [itm.dirName()
                      for itm in self.browser.getSelectedItems(
-                        [ProjectBrowserSimpleDirectoryItem])]
+                         [ProjectBrowserSimpleDirectoryItem])]
             if not names:
                 names = [itm.fileName()
                          for itm in self.browser.getSelectedItems(
-                            [ProjectBrowserFileItem])]
+                             [ProjectBrowserFileItem])]
         else:
             names = []
             for itm in self.browser.getSelectedItems():
@@ -162,11 +162,11 @@ class VcsProjectBrowserHelper(QObject):
         if self.isTranslationsBrowser:
             names = [itm.dirName()
                      for itm in self.browser.getSelectedItems(
-                        [ProjectBrowserSimpleDirectoryItem])]
+                         [ProjectBrowserSimpleDirectoryItem])]
             if not names:
                 names = [itm.fileName()
                          for itm in self.browser.getSelectedItems(
-                            [ProjectBrowserFileItem])]
+                             [ProjectBrowserFileItem])]
         else:
             names = []
             for itm in self.browser.getSelectedItems():

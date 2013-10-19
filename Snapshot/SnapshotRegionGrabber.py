@@ -195,7 +195,7 @@ class SnapshotRegionGrabber(QWidget):
             boundingRect.moveCenter(r.center())
             textRect.moveCenter(r.center())
         elif r.y() - 3 > textRect.height() and \
-             r.x() + textRect.width() < self.rect().width():
+                r.x() + textRect.width() < self.rect().width():
             # on top, left aligned
             boundingRect.moveBottomLeft(QPoint(r.x(), r.y() - 3))
             textRect.moveBottomLeft(QPoint(r.x() + 2, r.y() - 3))
@@ -204,7 +204,7 @@ class SnapshotRegionGrabber(QWidget):
             boundingRect.moveTopRight(QPoint(r.x() - 3, r.y()))
             textRect.moveTopRight(QPoint(r.x() - 5, r.y()))
         elif r.bottom() + 3 + textRect.height() < self.rect().bottom() and \
-             r.right() > textRect.width():
+                r.right() > textRect.width():
             # at bottom, right aligned
             boundingRect.moveTopRight(QPoint(r.right(), r.bottom() + 3))
             textRect.moveTopRight(QPoint(r.right() - 2, r.bottom() + 3))

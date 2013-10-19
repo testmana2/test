@@ -130,14 +130,14 @@ class ExporterTEX(ExporterBase):
             
             lex = self.editor.getLexer()
             self.defaultPaper = lex and \
-                                lex.paper(QsciScintilla.STYLE_DEFAULT) or \
-                                self.editor.paper().name()
+                lex.paper(QsciScintilla.STYLE_DEFAULT) or \
+                self.editor.paper().name()
             self.defaultColor = lex and \
-                                lex.color(QsciScintilla.STYLE_DEFAULT) or \
-                                self.editor.color().name()
+                lex.color(QsciScintilla.STYLE_DEFAULT) or \
+                self.editor.color().name()
             self.defaultFont = lex and \
-                                lex.color(QsciScintilla.STYLE_DEFAULT) or \
-                                Preferences.getEditorOtherFonts("DefaultFont")
+                lex.color(QsciScintilla.STYLE_DEFAULT) or \
+                Preferences.getEditorOtherFonts("DefaultFont")
             
             lengthDoc = self.editor.length()
             styleIsUsed = {}
@@ -273,6 +273,6 @@ class ExporterTEX(ExporterBase):
                     self.trUtf8(
                         """<p>The source could not be exported to"""
                         """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
-                        .format(filename, str(err)))
+                    .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

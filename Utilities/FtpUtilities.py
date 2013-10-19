@@ -63,7 +63,7 @@ class FtpDirLineParser(QObject):
         @return flag indicating to ignore the line (boolean)
         """
         return line.strip() == "" or \
-               line.strip().lower().startswith("total ")
+            line.strip().lower().startswith("total ")
     
     def __parseUnixMode(self, modeString, urlInfo):
         """
@@ -201,7 +201,7 @@ class FtpDirLineParser(QObject):
         @return URL info object containing the valid data (E5UrlInfo)
         """
         modeString, nlink, user, group, size, month, day, \
-          yearOrTime, name = self.__splitUnixLine(line)
+            yearOrTime, name = self.__splitUnixLine(line)
         
         if name in [".", ".."]:
             return None

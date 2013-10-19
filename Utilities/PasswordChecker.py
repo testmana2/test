@@ -565,13 +565,13 @@ class PasswordChecker(object):
         # beyond basic requirements
         self.recommendedPasswordLength["status"] = self.__determineStatus(
             self.recommendedPasswordLength["count"] -
-                self.recommendedPasswordLength["minimum"])
+            self.recommendedPasswordLength["minimum"])
         self.middleNumerics["status"] = self.__determineStatus(
             self.middleNumerics["count"] -
-                self.middleNumerics["minimum"])
+            self.middleNumerics["minimum"])
         self.middleSymbols["status"] = self.__determineStatus(
             self.middleSymbols["count"] -
-                self.middleSymbols["minimum"])
+            self.middleSymbols["minimum"])
         self.sequentialLetters["status"] = self.__determineBinaryStatus(
             self.sequentialLetters["count"])
         self.sequentialNumerics["status"] = self.__determineBinaryStatus(

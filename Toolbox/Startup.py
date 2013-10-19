@@ -35,12 +35,12 @@ def usage(appinfo, optlen=12):
     ]
     options.extend(appinfo["options"])
     
-    print("""
-Usage: {bin} [OPTIONS] {arg}
-
-{name} - {description}
-    
-Options:""".format(**appinfo))
+    print("""\n"""
+          """Usage: {bin} [OPTIONS] {arg}\n"""
+          """\n"""
+          """{name} - {description}\n"""
+          """\n"""
+          """Options:""".format(**appinfo))
     for opt in options:
         print("  {0}  {1}".format(opt[0].ljust(optlen), opt[1]))
     sys.exit(0)
@@ -52,15 +52,18 @@ def version(appinfo):
     
     @param appinfo dictionary describing the application
     """
-    print("""
-{name} {version}
-
-{description}
-
-Copyright (c) 2002 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
-This is free software; see LICENSE.GPL3 for copying conditions.
-There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""".format(**appinfo))
+    print("""\n"""
+          """{name} {version}\n"""
+          """\n"""
+          """{description}\n"""
+          """\n"""
+          """Copyright (c) 2002 - 2013 Detlev Offenbach"""
+          """ <detlev@die-offenbachs.de>\n"""
+          """This is free software; see LICENSE.GPL3 for copying"""
+          """ conditions.\n"""
+          """There is NO warranty; not even for MERCHANTABILITY or FITNESS"""
+          """ FOR A\n"""
+          """PARTICULAR PURPOSE.""".format(**appinfo))
     sys.exit(0)
 
 
@@ -79,7 +82,7 @@ def handleArgs(argv, appinfo):
         "--version": version,
         "--help": usage,
         "-h": usage
-        }
+    }
     if '--' in argv:
         ddindex = argv.index("--")
     for a in args:

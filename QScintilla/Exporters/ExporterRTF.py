@@ -171,7 +171,7 @@ class ExporterRTF(ExporterBase):
                     istyle = 0
                     while istyle <= QsciScintilla.STYLE_MAX:
                         if (istyle < QsciScintilla.STYLE_DEFAULT or
-                            istyle > QsciScintilla.STYLE_LASTPREDEFINED):
+                                istyle > QsciScintilla.STYLE_LASTPREDEFINED):
                             if lex.description(istyle):
                                 font = lex.font(istyle)
                                 if wysiwyg:
@@ -199,7 +199,7 @@ class ExporterRTF(ExporterBase):
                                             QFontInfo(font).pointSize() << 1)
                                 else:
                                     lastStyle += self.RTF_SETFONTSIZE + \
-                                                 "{0:d}".format(fontsize)
+                                        "{0:d}".format(fontsize)
                                 
                                 sColour = lex.color(istyle)
                                 sColourKey = None
@@ -212,7 +212,7 @@ class ExporterRTF(ExporterBase):
                                     sColourKey = colorCount
                                     colorCount += 1
                                 lastStyle += self.RTF_SETCOLOR + \
-                                             "{0:d}".format(sColourKey)
+                                    "{0:d}".format(sColourKey)
                                 
                                 sColour = lex.paper(istyle)
                                 sColourKey = None
@@ -225,7 +225,7 @@ class ExporterRTF(ExporterBase):
                                     sColourKey = colorCount
                                     colorCount += 1
                                 lastStyle += self.RTF_SETBACKGROUND + \
-                                             "{0:d}".format(sColourKey)
+                                    "{0:d}".format(sColourKey)
                                 
                                 if font.bold():
                                     lastStyle += self.RTF_BOLD_ON
@@ -248,11 +248,11 @@ class ExporterRTF(ExporterBase):
                         istyle += 1
                 else:
                     styles[0] = self.RTF_SETFONTFACE + "0" + \
-                                self.RTF_SETFONTSIZE + \
-                                "{0:d}".format(fontsize) + \
-                                self.RTF_SETCOLOR + "0" + \
-                                self.RTF_SETBACKGROUND + "1" + \
-                                self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
+                        self.RTF_SETFONTSIZE + \
+                        "{0:d}".format(fontsize) + \
+                        self.RTF_SETCOLOR + "0" + \
+                        self.RTF_SETBACKGROUND + "1" + \
+                        self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
                 
                 f.write(self.RTF_FONTDEFCLOSE + self.RTF_COLORDEFOPEN)
                 for value in list(colors.values()):
@@ -267,10 +267,10 @@ class ExporterRTF(ExporterBase):
                         self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) +
                         self.RTF_SETCOLOR + "0 ")
                 lastStyle = self.RTF_SETFONTFACE + "0" + \
-                            self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
-                            self.RTF_SETCOLOR + "0" + \
-                            self.RTF_SETBACKGROUND + "1" + \
-                            self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
+                    self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
+                    self.RTF_SETCOLOR + "0" + \
+                    self.RTF_SETBACKGROUND + "1" + \
+                    self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
                 
                 lengthDoc = self.editor.length()
                 prevCR = False
@@ -352,6 +352,6 @@ class ExporterRTF(ExporterBase):
                     self.trUtf8(
                         """<p>The source could not be exported to"""
                         """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
-                        .format(filename, str(err)))
+                    .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

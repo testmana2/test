@@ -291,7 +291,7 @@ def encode(text, orig_coding):
                 raise CodingError(coding)
         else:
             if orig_coding and orig_coding.endswith(
-                ('-selected', '-default', '-guessed', '-ignore')):
+                    ('-selected', '-default', '-guessed', '-ignore')):
                 coding = orig_coding\
                     .replace("-selected", "")\
                     .replace("-default", "")\
@@ -958,8 +958,8 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True,
             
             fentry = os.path.join(path, entry)
             if pattern and \
-            not os.path.isdir(fentry) and \
-            not fnmatch.fnmatch(entry, pattern):
+                not os.path.isdir(fentry) and \
+                    not fnmatch.fnmatch(entry, pattern):
                 # entry doesn't fit the given pattern
                 continue
                 
@@ -993,7 +993,7 @@ def getDirs(path, excludeDirs):
     dirs = []
     for name in names:
         if os.path.isdir(os.path.join(path, name)) and \
-          not os.path.islink(os.path.join(path, name)):
+                not os.path.islink(os.path.join(path, name)):
             exclude = 0
             for e in excludeDirs:
                 if name.split(os.sep, 1)[0] == e:
@@ -1363,7 +1363,7 @@ def py2compile(file, checkFlakes=False):
             file, "1",
             QCoreApplication.translate("Utilities",
                                        "Python2 interpreter not configured.")
-            )])
+        )])
     
     syntaxChecker = os.path.join(getConfig('ericDir'),
                                  "UtilitiesPython2", "Py2SyntaxChecker.py")
@@ -1381,8 +1381,8 @@ def py2compile(file, checkFlakes=False):
     if finished:
         output = \
             str(proc.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace').splitlines()
+                Preferences.getSystem("IOEncoding"),
+                'replace').splitlines()
         
         if output:
             syntaxerror = output[0] == "ERROR"
@@ -1475,7 +1475,7 @@ def generateQtToolName(toolname):
     return "{0}{1}{2}".format(Preferences.getQt("QtToolsPrefix4"),
                               toolname,
                               Preferences.getQt("QtToolsPostfix4")
-                             )
+                              )
 
 
 def getQtMacBundle(toolname):

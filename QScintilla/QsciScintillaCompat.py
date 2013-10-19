@@ -494,8 +494,8 @@ class QsciScintillaCompat(QsciScintilla):
         """
         startLine, startIndex, endLine, endIndex = self.getSelection()
         return startLine != -1 and \
-               startLine != endLine and \
-               self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
+            startLine != endLine and \
+            self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
     
     def getRectangularSelection(self):
         """

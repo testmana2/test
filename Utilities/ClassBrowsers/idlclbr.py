@@ -83,7 +83,7 @@ r"""
 |   (?P<End>
         [ \t]* } [ \t]* ;
     )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search
+""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
 
 # function to replace comments
 _commentsub = re.compile(r"""//[^\n]*\n|//[^\n]*$""").sub
@@ -238,7 +238,7 @@ def readmodule_ex(module, path=[]):
             last_lineno_pos = start
             # close all interfaces/modules indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
@@ -287,7 +287,7 @@ def readmodule_ex(module, path=[]):
             indent += 1
             # close all interfaces/modules indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)
@@ -323,7 +323,7 @@ def readmodule_ex(module, path=[]):
             indent += 1
             # close all interfaces/modules indented at least as much
             while classstack and \
-                  classstack[-1][1] >= thisindent:
+                    classstack[-1][1] >= thisindent:
                 if classstack[-1][0] is not None:
                     # record the end line
                     classstack[-1][0].setEndLine(lineno - 1)

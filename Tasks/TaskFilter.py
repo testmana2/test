@@ -104,11 +104,11 @@ class TaskFilter(object):
         @return flag indicating an active filter was found (boolean)
         """
         return self.summaryFilter is not None or \
-               self.filenameFilter is not None or \
-               self.typeFilter != Task.TypeNone or \
-               self.scopeFilter is not None or \
-               self.statusFilter is not None or \
-               self.prioritiesFilter is not None
+            self.filenameFilter is not None or \
+            self.typeFilter != Task.TypeNone or \
+            self.scopeFilter is not None or \
+            self.statusFilter is not None or \
+            self.prioritiesFilter is not None
         
     def showTask(self, task):
         """

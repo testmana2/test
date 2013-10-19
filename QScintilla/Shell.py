@@ -1269,7 +1269,7 @@ class Shell(QsciScintillaCompat):
                             self.__write(
                                 self.trUtf8(
                                     'Shell language "{0}" not supported.\n')
-                                    .format(cmdList[1]))
+                                .format(cmdList[1]))
                             self.__clientStatement(False)
                         return
                     cmd = ''
@@ -1344,7 +1344,7 @@ class Shell(QsciScintillaCompat):
         else:
             idx = startIdx + 1
         while idx < len(self.history) and \
-              not self.history[idx].startswith(txt):
+                not self.history[idx].startswith(txt):
             idx += 1
         return idx
         
@@ -1361,7 +1361,7 @@ class Shell(QsciScintillaCompat):
         else:
             idx = startIdx - 1
         while idx >= 0 and \
-              not self.history[idx].startswith(txt):
+                not self.history[idx].startswith(txt):
             idx -= 1
         return idx
         
@@ -1543,7 +1543,7 @@ class Shell(QsciScintillaCompat):
                             self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
-                                .format(fname))
+                            .format(fname))
             event.acceptProposedAction()
         elif event.mimeData().hasText():
             s = event.mimeData().text()

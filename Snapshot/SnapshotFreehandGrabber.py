@@ -176,7 +176,7 @@ class SnapshotFreehandGrabber(QWidget):
             boundingRect.moveCenter(polBoundingRect.center())
             textRect.moveCenter(polBoundingRect.center())
         elif polBoundingRect.y() - 3 > textRect.height() and \
-             polBoundingRect.x() + textRect.width() < self.rect().width():
+                polBoundingRect.x() + textRect.width() < self.rect().width():
             # on top, left aligned
             boundingRect.moveBottomLeft(
                 QPoint(polBoundingRect.x(), polBoundingRect.y() - 3))
@@ -190,7 +190,7 @@ class SnapshotFreehandGrabber(QWidget):
                 QPoint(polBoundingRect.x() - 5, polBoundingRect.y()))
         elif (polBoundingRect.bottom() + 3 + textRect.height() <
               self.rect().bottom()) and \
-             polBoundingRect.right() > textRect.width():
+                polBoundingRect.right() > textRect.width():
             # at bottom, right aligned
             boundingRect.moveTopRight(
                 QPoint(polBoundingRect.right(), polBoundingRect.bottom() + 3))

@@ -723,7 +723,7 @@ class PlistWriter(object):
             'offsetCount': len(self.computedUniques),
             'offsetTableOffset': len(output),
             'topLevelObjectNumber': 0
-            })
+        })
         
         output = self.writeOffsetTable(output)
         output += pack('!xxxxxxBBQQQ', *self.trailer)
@@ -866,7 +866,7 @@ class PlistWriter(object):
         if position is None:
             self.writtenReferences[obj] = len(self.writtenReferences)
             output += self.binaryInt(len(self.writtenReferences) - 1,
-                                      bytes=self.trailer.objectRefSize)
+                                     bytes=self.trailer.objectRefSize)
             return (True, output)
         else:
             output += self.binaryInt(
