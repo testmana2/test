@@ -83,7 +83,7 @@ class AboutPlugin(QObject):
         self.aboutAct.setWhatsThis(self.trUtf8(
             """<b>About {0}</b>"""
             """<p>Display some information about this software.</p>"""
-                             ).format(UI.Info.Program))
+        ).format(UI.Info.Program))
         self.aboutAct.triggered[()].connect(self.__about)
         self.aboutAct.setMenuRole(QAction.AboutRole)
         acts.append(self.aboutAct)

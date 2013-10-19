@@ -186,7 +186,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
                 self.trUtf8("Delete Channel"),
                 self.trUtf8(
                     """Do you really want to delete channel <b>{0}</b>?""")
-                    .format(itm.text(0)))
+                .format(itm.text(0)))
             if res:
                 self.__network.deleteChannel(itm.text(0))
                 

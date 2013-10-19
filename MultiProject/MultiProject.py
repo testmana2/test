@@ -419,7 +419,7 @@ class MultiProject(QObject):
                 self.parent(),
                 self.trUtf8("Open multiproject"),
                 Preferences.getMultiProject("Workspace") or
-                    Utilities.getHomeDir(),
+                Utilities.getHomeDir(),
                 self.trUtf8("Multiproject Files (*.e4m)"))
             
             if fn == "":
@@ -444,7 +444,7 @@ class MultiProject(QObject):
                 self.multiProjectOpened.emit()
                 
                 if openMaster and Preferences.getMultiProject(
-                    "OpenMasterAutomatically"):
+                        "OpenMasterAutomatically"):
                     self.__openMasterProject(False)
             else:
                 QApplication.restoreOverrideCursor()
@@ -475,7 +475,7 @@ class MultiProject(QObject):
             defaultPath = self.ppath
         else:
             defaultPath = Preferences.getMultiProject("Workspace") or \
-                          Utilities.getHomeDir()
+                Utilities.getHomeDir()
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save multiproject as"),

@@ -27,7 +27,8 @@ className = "SyntaxCheckerPlugin"
 packageName = "__core__"
 shortDescription = "Show the Syntax Checker dialog."
 longDescription = """This plugin implements the Syntax Checker dialog.""" \
- """ Syntax Checker is used to check Python source files for correct syntax."""
+    """ Syntax Checker is used to check Python source files for correct""" \
+    """ syntax."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -90,8 +91,8 @@ class SyntaxCheckerPlugin(QObject):
             self.trUtf8('&Syntax...'), 0, 0,
             self, "")
         self.__editorAct.setWhatsThis(self.trUtf8(
-                """<b>Check Syntax...</b>"""
-                """<p>This checks Python files for syntax errors.</p>"""
+            """<b>Check Syntax...</b>"""
+            """<p>This checks Python files for syntax errors.</p>"""
         ))
         self.__editorAct.triggered[()].connect(self.__editorSyntaxCheck)
         
@@ -149,7 +150,7 @@ class SyntaxCheckerPlugin(QObject):
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() in
-                    ["Python3", "Python2", "Python"])
+                ["Python3", "Python2", "Python"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -187,8 +188,8 @@ class SyntaxCheckerPlugin(QObject):
         files = [os.path.join(ppath, file)
                  for file in project.pdata["SOURCES"]
                  if file.endswith(
-                    tuple(Preferences.getPython("Python3Extensions")) +
-                    tuple(Preferences.getPython("PythonExtensions")))]
+                     tuple(Preferences.getPython("Python3Extensions")) +
+                     tuple(Preferences.getPython("PythonExtensions")))]
         
         from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
             SyntaxCheckerDialog

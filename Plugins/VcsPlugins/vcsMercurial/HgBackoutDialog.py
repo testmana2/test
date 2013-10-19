@@ -178,4 +178,4 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
                 date,
                 self.userEdit.text(),
                 msg
-        )
+                )

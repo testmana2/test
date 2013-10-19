@@ -225,7 +225,7 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
                 '''start "" "{2}\\pythonw.exe"''' \
                 ''' "{0}\\{1}.pyw"''' \
                 ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(
-                pydir, wfile, sys.exec_prefix)
+                    pydir, wfile, sys.exec_prefix)
         else:
             wrapper = \
                 '''@"{0}\\python" "{1}\\{2}.py"''' \
@@ -238,20 +238,18 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         if not os.path.exists(pyexec):
             pyexec = "{0}/bin/python3".format(sys.exec_prefix)
         wname = wfile
-        wrapper = (
-'''#!/bin/sh
-
-exec "{0}" "{1}/{2}.py" "$@"
-'''.format(pyexec, pydir, wfile))
+        wrapper = ('''#!/bin/sh\n'''
+                   '''\n'''
+                   '''exec "{0}" "{1}/{2}.py" "$@"\n'''
+                   .format(pyexec, pydir, wfile))
 
     # *nix systems
     else:
         wname = wfile
-        wrapper = (
-'''#!/bin/sh
-
-exec "{0}" "{1}/{2}.py" "$@"
-'''.format(sys.executable, pydir, wfile))
+        wrapper = ('''#!/bin/sh\n'''
+                   '''\n'''
+                   '''exec "{0}" "{1}/{2}.py" "$@"\n'''
+                   .format(sys.executable, pydir, wfile))
 
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
@@ -500,7 +498,7 @@ def installEric():
         # copy the various parts of eric5
         copyTree(
             sourceDir, cfg['ericDir'],
-                 ['*.py', '*.pyc', '*.pyo', '*.pyw'],
+            ['*.py', '*.pyc', '*.pyo', '*.pyw'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)],
             excludePatterns=["eric5config.py*"])
         copyTree(
@@ -681,18 +679,16 @@ def createMacAppBundle(pydir):
         if pybin not in pathlist:
             pathlist.insert(0, pybin)
         path = os.pathsep.join(pathlist)
-        wrapper = (
-'''#!/bin/sh
-
-PATH={0}
-exec "{1}" "{2}/{3}.py" "$@"
-'''.format(path, starter, pydir, "eric5"))
+        wrapper = ('''#!/bin/sh\n'''
+                   '''\n'''
+                   '''PATH={0}\n'''
+                   '''exec "{1}" "{2}/{3}.py" "$@"\n'''
+                   .format(path, starter, pydir, "eric5"))
     else:
-        wrapper = (
-'''#!/bin/sh
-
-exec "{0}" "{1}/{2}.py" "$@"
-'''.format(starter, pydir, "eric5"))
+        wrapper = ('''#!/bin/sh\n'''
+                   '''\n'''
+                   '''exec "{0}" "{1}/{2}.py" "$@"\n'''
+                   .format(starter, pydir, "eric5"))
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
     
@@ -700,30 +696,30 @@ exec "{0}" "{1}/{2}.py" "$@"
                os.path.join(dirs["icns"], "eric.icns"))
     
     copyToFile(
-os.path.join(dirs["contents"], "Info.plist"),
-'''<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-          "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>CFBundleExecutable</key>
-    <string>eric5</string>
-    <key>CFBundleIconFile</key>
-    <string>eric.icns</string>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>1.0</string>
-    <key>CFBundleName</key>
-    <string>{0}</string>
-    <key>CFBundleDisplayName</key>
-    <string>{0}</string>
-    <key>CFBundlePackageType</key>
-    <string>APPL</string>
-    <key>CFBundleSignature</key>
-    <string>????</string>
-    <key>CFBundleVersion</key>
-    <string>1.0</string>
-</dict>
-</plist>\n'''.format(macAppBundleName.replace(".app", "")))
+        os.path.join(dirs["contents"], "Info.plist"),
+        '''<?xml version="1.0" encoding="UTF-8"?>\n'''
+        '''<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"\n'''
+        '''          "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n'''
+        '''<plist version="1.0">\n'''
+        '''<dict>\n'''
+        '''    <key>CFBundleExecutable</key>\n'''
+        '''    <string>eric5</string>\n'''
+        '''    <key>CFBundleIconFile</key>\n'''
+        '''    <string>eric.icns</string>\n'''
+        '''    <key>CFBundleInfoDictionaryVersion</key>\n'''
+        '''    <string>1.0</string>\n'''
+        '''    <key>CFBundleName</key>\n'''
+        '''    <string>{0}</string>\n'''
+        '''    <key>CFBundleDisplayName</key>\n'''
+        '''    <string>{0}</string>\n'''
+        '''    <key>CFBundlePackageType</key>\n'''
+        '''    <string>APPL</string>\n'''
+        '''    <key>CFBundleSignature</key>\n'''
+        '''    <string>????</string>\n'''
+        '''    <key>CFBundleVersion</key>\n'''
+        '''    <string>1.0</string>\n'''
+        '''</dict>\n'''
+        '''</plist>\n'''.format(macAppBundleName.replace(".app", "")))
 
 
 def createInstallConfig():
@@ -774,52 +770,53 @@ def createConfig():
                 apis.append(os.path.basename(apiName))
     
     fn = 'eric5config.py'
-    config = \
-"""# -*- coding: utf-8 -*-
-#
-# This module contains the configuration of the individual eric5 installation
-#
-
-_pkg_config = {{
-    'ericDir': r'{0}',
-    'ericPixDir': r'{1}',
-    'ericIconDir': r'{2}',
-    'ericDTDDir': r'{3}',
-    'ericCSSDir': r'{4}',
-    'ericStylesDir': r'{5}',
-    'ericDocDir': r'{6}',
-    'ericExamplesDir': r'{7}',
-    'ericTranslationsDir': r'{8}',
-    'ericTemplatesDir': r'{9}',
-    'ericCodeTemplatesDir': r'{10}',
-    'ericOthersDir': r'{11}',
-    'bindir': r'{12}',
-    'mdir': r'{13}',
-    'apidir': r'{14}',
-    'apis': {15},
-}}
-
-def getConfig(name):
-    '''
-    Module function to get a configuration value.
-
-    @param name the name of the configuration value (string).
-    '''
-    try:
-        return _pkg_config[name]
-    except KeyError:
-        pass
-
-    raise AttributeError('"{{0}}" is not a valid configuration value'.format(
-        name))\n""".format(
-    cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
-    cfg['ericDTDDir'], cfg['ericCSSDir'],
-    cfg['ericStylesDir'], cfg['ericDocDir'],
-    cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
-    cfg['ericTemplatesDir'],
-    cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
-    cfg['bindir'], cfg['mdir'],
-    cfg['apidir'], apis)
+    config = (
+        """# -*- coding: utf-8 -*-\n"""
+        """#\n"""
+        """# This module contains the configuration of the individual eric5"""
+        """ installation\n"""
+        """#\n"""
+        """\n"""
+        """_pkg_config = {{\n"""
+        """    'ericDir': r'{0}',\n"""
+        """    'ericPixDir': r'{1}',\n"""
+        """    'ericIconDir': r'{2}',\n"""
+        """    'ericDTDDir': r'{3}',\n"""
+        """    'ericCSSDir': r'{4}',\n"""
+        """    'ericStylesDir': r'{5}',\n"""
+        """    'ericDocDir': r'{6}',\n"""
+        """    'ericExamplesDir': r'{7}',\n"""
+        """    'ericTranslationsDir': r'{8}',\n"""
+        """    'ericTemplatesDir': r'{9}',\n"""
+        """    'ericCodeTemplatesDir': r'{10}',\n"""
+        """    'ericOthersDir': r'{11}',\n"""
+        """    'bindir': r'{12}',\n"""
+        """    'mdir': r'{13}',\n"""
+        """    'apidir': r'{14}',\n"""
+        """    'apis': {15},\n"""
+        """}}\n"""
+        """\n"""
+        """def getConfig(name):\n"""
+        """    '''\n"""
+        """    Module function to get a configuration value.\n"""
+        """\n"""
+        """    @param name name of the configuration value (string)\n"""
+        """    '''\n"""
+        """    try:\n"""
+        """        return _pkg_config[name]\n"""
+        """    except KeyError:\n"""
+        """        pass\n"""
+        """\n"""
+        """    raise AttributeError('"{{0}}" is not a valid configuration"""
+        """ value'.format(name))\n""").format(
+        cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
+        cfg['ericDTDDir'], cfg['ericCSSDir'],
+        cfg['ericStylesDir'], cfg['ericDocDir'],
+        cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
+        cfg['ericTemplatesDir'],
+        cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
+        cfg['bindir'], cfg['mdir'],
+        cfg['apidir'], apis)
     copyToFile(fn, config)
 
 
@@ -1217,8 +1214,7 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print("""
-An internal error occured.  Please report all the output of the program,
-including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
-""")
+        print("""An internal error occured.  Please report all the output"""
+              """ of the program,\nincluding the following traceback, to"""
+              """ eric5-bugs@eric-ide.python-projects.org.\n""")
         raise

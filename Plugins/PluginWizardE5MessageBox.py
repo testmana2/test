@@ -69,8 +69,8 @@ class E5MessageBoxWizard(QObject):
         """
         self.action = E5Action(
             self.trUtf8('E5MessageBox Wizard'),
-             self.trUtf8('&E5MessageBox Wizard...'), 0, 0, self,
-             'wizards_e5messagebox')
+            self.trUtf8('&E5MessageBox Wizard...'), 0, 0, self,
+            'wizards_e5messagebox')
         self.action.setStatusTip(self.trUtf8('E5MessageBox Wizard'))
         self.action.setWhatsThis(self.trUtf8(
             """<b>E5MessageBox Wizard</b>"""

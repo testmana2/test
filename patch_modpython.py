@@ -157,8 +157,7 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print(
-"""An internal error occured.  Please report all the output of the program,
-including the following traceback, to eric-bugs@die-offenbachs.de.
-""")
+        print("""An internal error occured.  Please report all the output of"""
+              """ the program,\nincluding the following traceback, to"""
+              """ eric-bugs@die-offenbachs.de.\n""")
         raise

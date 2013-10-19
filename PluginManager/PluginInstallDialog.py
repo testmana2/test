@@ -143,7 +143,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                         self.destinationCombo.currentText(),
                         self.destinationCombo.itemData(
                             self.destinationCombo.currentIndex())
-                )
+                        )
             self.summaryEdit.setPlainText(msg)
     
     @pyqtSlot()
@@ -345,7 +345,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 self.trUtf8(
                     """<p>The plugin module <b>{0}</b> does not contain """
                     """a 'packageName' attribute. Aborting...</p>""")\
-                    .format(pluginFileName), \
+                .format(pluginFileName), \
                 False
         
         if pyqtApi < 2:
@@ -353,7 +353,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 self.trUtf8(
                     """<p>The plugin module <b>{0}</b> does not conform"""
                     """ with the PyQt v2 API. Aborting...</p>""")\
-                    .format(pluginFileName), \
+                .format(pluginFileName), \
                 False
         
         # check, if it is a plugin, that collides with others

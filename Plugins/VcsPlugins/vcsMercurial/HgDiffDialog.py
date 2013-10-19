@@ -313,8 +313,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         while self.process.canReadLine():
             line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                       Preferences.getSystem("IOEncoding"),
+                       'replace')
             self.__processOutputLine(line)
     
     def __readStderr(self):
@@ -441,7 +441,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
                 self.trUtf8(
                     '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
-                    .format(fname, str(why)))
+                .format(fname, str(why)))
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

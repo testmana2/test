@@ -81,7 +81,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         if identityName == IrcIdentity.DefaultIdentityName:
             identityName = IrcIdentity.DefaultIdentityDisplay
         autoConnect = self.trUtf8("Yes") if network.autoConnect() \
-                      else self.trUtf8("No")
+            else self.trUtf8("No")
         
         QTreeWidgetItem(
             itm,
@@ -163,7 +163,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
                 self.trUtf8("Delete Irc Network"),
                 self.trUtf8(
                     """Do you really want to delete IRC network <b>{0}</b>?""")
-                    .format(networkName))
+                .format(networkName))
             if res:
                 index = self.networksList.indexOfTopLevelItem(itm)
                 self.networksList.takeTopLevelItem(index)

@@ -191,8 +191,8 @@ class IconEditorWindow(E5MainWindow):
             0, self, 'iconEditor_file_new')
         self.newAct.setStatusTip(self.trUtf8('Create a new icon'))
         self.newAct.setWhatsThis(self.trUtf8(
-                """<b>New</b>"""
-                """<p>This creates a new icon.</p>"""
+            """<b>New</b>"""
+            """<p>This creates a new icon.</p>"""
         ))
         self.newAct.triggered[()].connect(self.__newIcon)
         self.__actions.append(self.newAct)
@@ -205,8 +205,8 @@ class IconEditorWindow(E5MainWindow):
         self.newWindowAct.setStatusTip(self.trUtf8(
             'Open a new icon editor window'))
         self.newWindowAct.setWhatsThis(self.trUtf8(
-                """<b>New Window</b>"""
-                """<p>This opens a new icon editor window.</p>"""
+            """<b>New Window</b>"""
+            """<p>This opens a new icon editor window.</p>"""
         ))
         self.newWindowAct.triggered[()].connect(self.__newWindow)
         self.__actions.append(self.newWindowAct)
@@ -219,9 +219,9 @@ class IconEditorWindow(E5MainWindow):
             0, self, 'iconEditor_file_open')
         self.openAct.setStatusTip(self.trUtf8('Open an icon file for editing'))
         self.openAct.setWhatsThis(self.trUtf8(
-                """<b>Open File</b>"""
-                """<p>This opens a new icon file for editing."""
-                """ It pops up a file selection dialog.</p>"""
+            """<b>Open File</b>"""
+            """<p>This opens a new icon file for editing."""
+            """ It pops up a file selection dialog.</p>"""
         ))
         self.openAct.triggered[()].connect(self.__openIcon)
         self.__actions.append(self.openAct)
@@ -249,8 +249,8 @@ class IconEditorWindow(E5MainWindow):
         self.saveAsAct.setStatusTip(
             self.trUtf8('Save the current icon to a new file'))
         self.saveAsAct.setWhatsThis(self.trUtf8(
-                """<b>Save As...</b>"""
-                """<p>Saves the current icon to a new file.</p>"""
+            """<b>Save As...</b>"""
+            """<p>Saves the current icon to a new file.</p>"""
         ))
         self.saveAsAct.triggered[()].connect(self.__saveIconAs)
         self.__actions.append(self.saveAsAct)
@@ -264,8 +264,8 @@ class IconEditorWindow(E5MainWindow):
         self.closeAct.setStatusTip(self.trUtf8(
             'Close the current icon editor window'))
         self.closeAct.setWhatsThis(self.trUtf8(
-                """<b>Close</b>"""
-                """<p>Closes the current icon editor window.</p>"""
+            """<b>Close</b>"""
+            """<p>Closes the current icon editor window.</p>"""
         ))
         self.closeAct.triggered[()].connect(self.close)
         self.__actions.append(self.closeAct)
@@ -291,8 +291,8 @@ class IconEditorWindow(E5MainWindow):
             0, self, 'iconEditor_file_quit')
         self.exitAct.setStatusTip(self.trUtf8('Quit the icon editor'))
         self.exitAct.setWhatsThis(self.trUtf8(
-                """<b>Quit</b>"""
-                """<p>Quit the icon editor.</p>"""
+            """<b>Quit</b>"""
+            """<p>Quit the icon editor.</p>"""
         ))
         if not self.fromEric:
             self.exitAct.triggered[()].connect(self.__closeAll)
@@ -479,8 +479,8 @@ class IconEditorWindow(E5MainWindow):
             0, self, 'iconEditor_view_zoom_in')
         self.zoomInAct.setStatusTip(self.trUtf8('Zoom in on the icon'))
         self.zoomInAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom in</b>"""
-                """<p>Zoom in on the icon. This makes the grid bigger.</p>"""
+            """<b>Zoom in</b>"""
+            """<p>Zoom in on the icon. This makes the grid bigger.</p>"""
         ))
         self.zoomInAct.triggered[()].connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
@@ -493,8 +493,8 @@ class IconEditorWindow(E5MainWindow):
             0, self, 'iconEditor_view_zoom_out')
         self.zoomOutAct.setStatusTip(self.trUtf8('Zoom out on the icon'))
         self.zoomOutAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom out</b>"""
-                """<p>Zoom out on the icon. This makes the grid smaller.</p>"""
+            """<b>Zoom out</b>"""
+            """<p>Zoom out on the icon. This makes the grid smaller.</p>"""
         ))
         self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
@@ -508,9 +508,9 @@ class IconEditorWindow(E5MainWindow):
         self.zoomResetAct.setStatusTip(self.trUtf8(
             'Reset the zoom of the icon'))
         self.zoomResetAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom reset</b>"""
-                """<p>Reset the zoom of the icon. """
-                """This sets the zoom factor to 100%.</p>"""
+            """<b>Zoom reset</b>"""
+            """<p>Reset the zoom of the icon. """
+            """This sets the zoom factor to 100%.</p>"""
         ))
         self.zoomResetAct.triggered[()].connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
@@ -524,9 +524,9 @@ class IconEditorWindow(E5MainWindow):
         self.showGridAct.setStatusTip(self.trUtf8(
             'Toggle the display of the grid'))
         self.showGridAct.setWhatsThis(self.trUtf8(
-                """<b>Show Grid</b>"""
-                """<p>Toggle the display of the grid.</p>"""
-                ))
+            """<b>Show Grid</b>"""
+            """<p>Toggle the display of the grid.</p>"""
+        ))
         self.showGridAct.triggered[bool].connect(self.__editor.setGridEnabled)
         self.__actions.append(self.showGridAct)
         self.showGridAct.setCheckable(True)
@@ -549,8 +549,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_pencil')
         self.drawPencilAct.setWhatsThis(self.trUtf8(
-                """<b>Free hand</b>"""
-                """<p>Draws non linear lines.</p>"""
+            """<b>Free hand</b>"""
+            """<p>Draws non linear lines.</p>"""
         ))
         self.drawPencilAct.setCheckable(True)
         self.esm.setMapping(self.drawPencilAct, IconEditorGrid.Pencil)
@@ -564,9 +564,9 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_color_picker')
         self.drawColorPickerAct.setWhatsThis(self.trUtf8(
-                """<b>Color Picker</b>"""
-                """<p>The color of the pixel clicked on will become """
-                """the current draw color.</p>"""
+            """<b>Color Picker</b>"""
+            """<p>The color of the pixel clicked on will become """
+            """the current draw color.</p>"""
         ))
         self.drawColorPickerAct.setCheckable(True)
         self.esm.setMapping(self.drawColorPickerAct,
@@ -581,8 +581,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_rectangle')
         self.drawRectangleAct.setWhatsThis(self.trUtf8(
-                """<b>Rectangle</b>"""
-                """<p>Draw a rectangle.</p>"""
+            """<b>Rectangle</b>"""
+            """<p>Draw a rectangle.</p>"""
         ))
         self.drawRectangleAct.setCheckable(True)
         self.esm.setMapping(self.drawRectangleAct, IconEditorGrid.Rectangle)
@@ -596,8 +596,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_filled_rectangle')
         self.drawFilledRectangleAct.setWhatsThis(self.trUtf8(
-                """<b>Filled Rectangle</b>"""
-                """<p>Draw a filled rectangle.</p>"""
+            """<b>Filled Rectangle</b>"""
+            """<p>Draw a filled rectangle.</p>"""
         ))
         self.drawFilledRectangleAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledRectangleAct,
@@ -612,8 +612,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_circle')
         self.drawCircleAct.setWhatsThis(self.trUtf8(
-                """<b>Circle</b>"""
-                """<p>Draw a circle.</p>"""
+            """<b>Circle</b>"""
+            """<p>Draw a circle.</p>"""
         ))
         self.drawCircleAct.setCheckable(True)
         self.esm.setMapping(self.drawCircleAct, IconEditorGrid.Circle)
@@ -627,8 +627,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_filled_circle')
         self.drawFilledCircleAct.setWhatsThis(self.trUtf8(
-                """<b>Filled Circle</b>"""
-                """<p>Draw a filled circle.</p>"""
+            """<b>Filled Circle</b>"""
+            """<p>Draw a filled circle.</p>"""
         ))
         self.drawFilledCircleAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledCircleAct,
@@ -643,8 +643,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_ellipse')
         self.drawEllipseAct.setWhatsThis(self.trUtf8(
-                """<b>Ellipse</b>"""
-                """<p>Draw an ellipse.</p>"""
+            """<b>Ellipse</b>"""
+            """<p>Draw an ellipse.</p>"""
         ))
         self.drawEllipseAct.setCheckable(True)
         self.esm.setMapping(self.drawEllipseAct, IconEditorGrid.Ellipse)
@@ -658,8 +658,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_filled_ellipse')
         self.drawFilledEllipseAct.setWhatsThis(self.trUtf8(
-                """<b>Filled Ellipse</b>"""
-                """<p>Draw a filled ellipse.</p>"""
+            """<b>Filled Ellipse</b>"""
+            """<p>Draw a filled ellipse.</p>"""
         ))
         self.drawFilledEllipseAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledEllipseAct,
@@ -674,9 +674,9 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_flood_fill')
         self.drawFloodFillAct.setWhatsThis(self.trUtf8(
-                """<b>Flood Fill</b>"""
-                """<p>Fill adjoining pixels with the same color with """
-                """the current color.</p>"""
+            """<b>Flood Fill</b>"""
+            """<p>Fill adjoining pixels with the same color with """
+            """the current color.</p>"""
         ))
         self.drawFloodFillAct.setCheckable(True)
         self.esm.setMapping(self.drawFloodFillAct, IconEditorGrid.Fill)
@@ -690,8 +690,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_line')
         self.drawLineAct.setWhatsThis(self.trUtf8(
-                """<b>Line</b>"""
-                """<p>Draw a line.</p>"""
+            """<b>Line</b>"""
+            """<p>Draw a line.</p>"""
         ))
         self.drawLineAct.setCheckable(True)
         self.esm.setMapping(self.drawLineAct, IconEditorGrid.Line)
@@ -705,8 +705,8 @@ class IconEditorWindow(E5MainWindow):
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_eraser')
         self.drawEraserAct.setWhatsThis(self.trUtf8(
-                """<b>Eraser (Transparent)</b>"""
-                """<p>Erase pixels by setting them to transparent.</p>"""
+            """<b>Eraser (Transparent)</b>"""
+            """<p>Erase pixels by setting them to transparent.</p>"""
         ))
         self.drawEraserAct.setCheckable(True)
         self.esm.setMapping(self.drawEraserAct, IconEditorGrid.Rubber)
@@ -1120,14 +1120,14 @@ class IconEditorWindow(E5MainWindow):
             E5MessageBox.warning(
                 self, self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("The file '{0}' does not exist.")
-                    .format(fileName))
+                .format(fileName))
             return
         
         if not file.open(QFile.ReadOnly):
             E5MessageBox.warning(
                 self, self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("Cannot read file '{0}:\n{1}.")
-                    .format(fileName, file.errorString()))
+                .format(fileName, file.errorString()))
             return
         file.close()
         
@@ -1147,7 +1147,7 @@ class IconEditorWindow(E5MainWindow):
             E5MessageBox.warning(
                 self, self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("Cannot write file '{0}:\n{1}.")
-                    .format(fileName, file.errorString()))
+                .format(fileName, file.errorString()))
         
             self.__checkActions()
             
@@ -1161,7 +1161,7 @@ class IconEditorWindow(E5MainWindow):
             E5MessageBox.warning(
                 self, self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("Cannot write file '{0}:\n{1}.")
-                    .format(fileName, file.errorString()))
+                .format(fileName, file.errorString()))
         
             self.__checkActions()
             

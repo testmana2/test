@@ -811,12 +811,12 @@ class Hg(VersionControl):
         from .HgMultiRevisionSelectionDialog import \
             HgMultiRevisionSelectionDialog
         dlg = HgMultiRevisionSelectionDialog(
-                self.hgGetTagsList(repodir),
-                self.hgGetBranchesList(repodir),
-                bookmarksList,
-                emptyRevsOk=True,
-                showLimit=True,
-                limitDefault=self.getPlugin().getPreferences("LogLimit"))
+            self.hgGetTagsList(repodir),
+            self.hgGetBranchesList(repodir),
+            bookmarksList,
+            emptyRevsOk=True,
+            showLimit=True,
+            limitDefault=self.getPlugin().getPreferences("LogLimit"))
         if dlg.exec_() == QDialog.Accepted:
             revs, noEntries = dlg.getRevisions()
             from .HgLogDialog import HgLogDialog
@@ -1418,7 +1418,7 @@ class Hg(VersionControl):
             """<tr><td><b>URL</b></td><td>{1}</td></tr>\n"""
             """{2}"""
             """</table></p>\n"""
-            ).format(self.versionStr, url, infoStr)
+        ).format(self.versionStr, url, infoStr)
 
     ###########################################################################
     ## Private Mercurial specific methods are below.
@@ -1814,7 +1814,7 @@ class Hg(VersionControl):
                     self.trUtf8("Mercurial Side-by-Side Difference"),
                     self.trUtf8(
                         """<p>The file <b>{0}</b> could not be read.</p>""")
-                        .format(name))
+                    .format(name))
                 return
         
         if self.sbsDiff is None:
@@ -2916,7 +2916,7 @@ class Hg(VersionControl):
         dlg = HgGraftDialog(self, revs)
         if dlg.exec_() == QDialog.Accepted:
             revs, (userData, currentUser, userName), \
-            (dateData, currentDate, dateStr), log, dryrun = dlg.getData()
+                (dateData, currentDate, dateStr), log, dryrun = dlg.getData()
             
             args = []
             args.append("graft")
@@ -3061,7 +3061,7 @@ class Hg(VersionControl):
                         self.trUtf8(
                             """<p>The sub-repositories file .hgsub could not"""
                             """ be read.</p><p>Reason: {0}</p>""")
-                            .format(str(err)))
+                        .format(str(err)))
                     return
                 
                 if entry in contents:
@@ -3090,7 +3090,7 @@ class Hg(VersionControl):
                     self.trUtf8(
                         """<p>The sub-repositories file .hgsub could not"""
                         """ be written to.</p><p>Reason: {0}</p>""")
-                        .format(str(err)))
+                    .format(str(err)))
                 return
             
             if needsAdd:
@@ -3122,7 +3122,7 @@ class Hg(VersionControl):
                 self.trUtf8("Remove Sub-repositories"),
                 self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
                             """ be read.</p><p>Reason: {0}</p>""")
-                            .format(str(err)))
+                .format(str(err)))
             return
         
         from .HgRemoveSubrepositoriesDialog import \
@@ -3142,7 +3142,7 @@ class Hg(VersionControl):
                     self.trUtf8(
                         """<p>The sub-repositories file .hgsub could not"""
                         """ be written to.</p><p>Reason: {0}</p>""")
-                        .format(str(err)))
+                    .format(str(err)))
                 return
             
             if deleteSubrepos:

@@ -69,8 +69,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         
         @param index index of the selected item (integer)
         """
-        pluginDirectory = self.pluginDirectoryCombo\
-                .itemData(index)
+        pluginDirectory = self.pluginDirectoryCombo.itemData(index)
         pluginNames = sorted(self.__pluginManager.getPluginModules(
             pluginDirectory))
         self.pluginNameCombo.clear()
@@ -95,10 +94,10 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         @return flag indicating success (boolean)
         """
         pluginDirectory = self.pluginDirectoryCombo\
-                .itemData(self.pluginDirectoryCombo.currentIndex())
+            .itemData(self.pluginDirectoryCombo.currentIndex())
         pluginName = self.pluginNameCombo.currentText()
         pluginFile = self.pluginNameCombo\
-                .itemData(self.pluginNameCombo.currentIndex())
+            .itemData(self.pluginNameCombo.currentIndex())
         
         if not self.__pluginManager.unloadPlugin(pluginName):
             E5MessageBox.critical(
@@ -193,7 +192,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             self.trUtf8(
                 """<p>The plugin <b>{0}</b> was uninstalled successfully"""
                 """ from {1}.</p>""")
-                .format(pluginName, pluginDirectory))
+            .format(pluginName, pluginDirectory))
         return True
 
 

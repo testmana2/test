@@ -52,8 +52,7 @@ class CodeStyleCheckerPy2(object):
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
             self.errors.append(
-                (filename, 1, 1,
-                 QCoreApplication.translate(
+                (filename, 1, 1, QCoreApplication.translate(
                     "CodeStyleCheckerPy2",
                     "Python2 interpreter not configured.")))
             return
@@ -86,8 +85,8 @@ class CodeStyleCheckerPy2(object):
         if finished:
             output = \
                 str(proc.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace').splitlines()
+                    Preferences.getSystem("IOEncoding"),
+                    'replace').splitlines()
             if output[0] == "ERROR":
                 self.errors.append((filename, 1, 1, output[2]))
                 return
@@ -126,7 +125,6 @@ class CodeStyleCheckerPy2(object):
                 index += 1
         else:
             self.errors.append(
-                (filename, 1, 1,
-                 QCoreApplication.translate(
+                (filename, 1, 1, QCoreApplication.translate(
                     "CodeStyleCheckerPy2",
                     "Python2 interpreter did not finish within 15s.")))

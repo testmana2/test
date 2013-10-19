@@ -30,8 +30,8 @@ className = "EricapiPlugin"
 packageName = "__core__"
 shortDescription = "Show the Ericapi dialogs."
 longDescription = """This plugin implements the Ericapi dialogs.""" \
- """ Ericapi is used to generate a QScintilla API file for Python and Ruby"""\
- """ projects."""
+    """ Ericapi is used to generate a QScintilla API file for Python and""" \
+    """ Ruby projects."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -135,7 +135,7 @@ class EricapiPlugin(QObject):
             if self.__projectAct is not None:
                 self.__projectAct.setEnabled(
                     e5App().getObject("Project").getProjectLanguage() in
-                        ["Python", "Python2", "Python3", "Ruby"])
+                    ["Python", "Python2", "Python3", "Ruby"])
     
     def __doEricapi(self):
         """

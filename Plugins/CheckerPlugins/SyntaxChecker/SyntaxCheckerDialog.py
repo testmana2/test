@@ -66,7 +66,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         """
         self.resultList.sortItems(self.resultList.sortColumn(),
                                   self.resultList.header().sortIndicatorOrder()
-                                 )
+                                  )
         
     def __createResultItem(self, file, line, index, error, sourcecode,
                            isWarning=False):
@@ -192,7 +192,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         self.__createResultItem(
                             file, "1", 0,
                             self.trUtf8("Error: {0}").format(str(msg))
-                                .rstrip()[1:-1], "")
+                            .rstrip()[1:-1], "")
                         progress += 1
                         continue
                 

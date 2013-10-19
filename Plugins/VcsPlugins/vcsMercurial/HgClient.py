@@ -81,9 +81,9 @@ class HgClient(QObject):
         serverStarted = self.__server.waitForStarted(5000)
         if not serverStarted:
             return False, self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg')
+                'The process {0} could not be started. '
+                'Ensure, that it is in the search path.'
+            ).format('hg')
         
         self.__server.setReadChannel(QProcess.StandardOutput)
         ok, error = self.__readHello()

@@ -336,14 +336,14 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self.trUtf8("Read plugins repository file"),
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
                                 "could not be read. Select Update</p>")
-                        .format(self.pluginRepositoryFile))
+                    .format(self.pluginRepositoryFile))
         else:
             self.__repositoryMissing = True
             QTreeWidgetItem(
                 self.repositoryList,
                 ["", self.trUtf8(
                     "No plugin repository file available.\nSelect Update.")
-                ])
+                 ])
             self.repositoryList.resizeColumnToContents(1)
     
     def __downloadFile(self, url, filename, doneMethod=None):

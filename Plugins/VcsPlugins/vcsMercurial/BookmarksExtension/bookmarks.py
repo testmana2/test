@@ -317,7 +317,7 @@ class Bookmarks(HgExtension):
             args.append(bookmark)
             
             dia = HgDialog(self.trUtf8(
-                    'Pulling bookmark from a remote Mercurial repository'),
+                'Pulling bookmark from a remote Mercurial repository'),
                 self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
@@ -351,7 +351,7 @@ class Bookmarks(HgExtension):
             args.append(bookmark)
             
             dia = HgDialog(self.trUtf8(
-                    'Pushing bookmark to a remote Mercurial repository'),
+                'Pushing bookmark to a remote Mercurial repository'),
                 self.vcs)
             res = dia.startProcess(args, repodir)
             if res:

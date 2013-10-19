@@ -349,9 +349,10 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.messages.append(
                 '<font color="{0}">{2} <b>&lt;</b><font color="{1}">{3}</font>'
                 '<b>&gt;</b> {4}</font>'.format(
-                Preferences.getIrc("ChannelMessageColour"),
-                Preferences.getIrc("OwnNickColour"),
-                ircTimestamp(), self.__userName, Utilities.html_encode(msg)))
+                    Preferences.getIrc("ChannelMessageColour"),
+                    Preferences.getIrc("OwnNickColour"),
+                    ircTimestamp(), self.__userName,
+                    Utilities.html_encode(msg)))
             if msg.startswith("/"):
                 if self.__private:
                     E5MessageBox.information(
@@ -386,7 +387,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.trUtf8("Leave IRC channel"),
             self.trUtf8(
                 """Do you really want to leave the IRC channel <b>{0}</b>?""")
-                .format(self.__name))
+            .format(self.__name))
         if ok:
             if not self.__private:
                 self.sendData.emit(
@@ -517,16 +518,16 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__appendMessage(
             '<font color="{0}">{2} <b>&lt;</b><font color="{1}">{3}</font>'
             '<b>&gt;</b> {4}</font>'.format(
-            Preferences.getIrc("ChannelMessageColour"),
-            Preferences.getIrc("NickColour"),
-            ircTimestamp(), sender, ircFilter(msg)))
+                Preferences.getIrc("ChannelMessageColour"),
+                Preferences.getIrc("NickColour"),
+                ircTimestamp(), sender, ircFilter(msg)))
         if Preferences.getIrc("ShowNotifications"):
             if Preferences.getIrc("NotifyMessage"):
                 self.__ui.showNotification(
                     UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Channel Message"), msg)
             elif Preferences.getIrc("NotifyNick") and \
-                 self.__userName.lower() in msg.lower():
+                    self.__userName.lower() in msg.lower():
                 self.__ui.showNotification(
                     UI.PixmapCache.getPixmap("irc48.png"),
                     self.trUtf8("Nick mentioned"), msg)
@@ -554,13 +555,13 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 IrcUserItem(match.group(1), self.usersList)
                 msg = self.trUtf8(
                     "{0} has joined the channel {1} ({2}).").format(
-                        match.group(1), self.__name, match.group(2))
+                    match.group(1), self.__name, match.group(2))
                 self.__addManagementMessage(
                     IrcChannelWidget.JoinIndicator, msg)
             else:
                 msg = self.trUtf8(
                     "You have joined the channel {0} ({1}).").format(
-                        self.__name, match.group(2))
+                    self.__name, match.group(2))
                 self.__addManagementMessage(
                     IrcChannelWidget.JoinIndicator, msg)
             if Preferences.getIrc("ShowNotifications") and \
@@ -727,7 +728,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 IrcChannelWidget.MessageIndicator,
                 self.trUtf8("The topic was set by {0} on {1}.").format(
                     match.group(2), QDateTime.fromTime_t(int(match.group(3)))
-                                    .toString("yyyy-MM-dd hh:mm")))
+                    .toString("yyyy-MM-dd hh:mm")))
             return True
         
         return False
@@ -796,7 +797,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 IrcChannelWidget.MessageIndicator,
                 self.trUtf8("This channel was created on {0}.").format(
                     QDateTime.fromTime_t(int(match.group(2)))
-                        .toString("yyyy-MM-dd hh:mm")))
+                    .toString("yyyy-MM-dd hh:mm")))
             return True
         
         return False
@@ -1023,7 +1024,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.__addManagementMessage(
                     self.trUtf8("CTCP"),
                     self.trUtf8("Received Version request from {0}.").format(
-                    match.group(1)))
+                        match.group(1)))
                 self.sendCtcpReply.emit(match.group(1), "VERSION " + msg)
             elif ctcpRequest == "ping":
                 self.__addManagementMessage(
@@ -1107,7 +1108,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             color = Preferences.getIrc("ChannelInfoColour")
         self.__appendMessage(
             '<font color="{0}">{1} <b>[</b>{2}<b>]</b> {3}</font>'.format(
-            color, ircTimestamp(), indicator, message))
+                color, ircTimestamp(), indicator, message))
     
     def __appendMessage(self, message):
         """
@@ -1199,7 +1200,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 "",
                 self.trUtf8(
                     "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)")
-                    .format(htmlExtension),
+                .format(htmlExtension),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
@@ -1235,7 +1236,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                         self.trUtf8(
                             """<p>The messages contents could not be written"""
                             """ to <b>{0}</b></p><p>Reason: {1}</p>""")
-                            .format(fname, str(err)))
+                        .format(fname, str(err)))
     
     def __initMessagesMenu(self):
         """
@@ -1413,7 +1414,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.__addManagementMessage(
                     self.trUtf8("Who"),
                     self.trUtf8("End of WHO list for {0}.").format(
-                    match.group(1)))
+                        match.group(1)))
             return True
         
         return False
@@ -1488,7 +1489,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 if channel.startswith(("*", "&")):
                     adminChannels.append(channel[1:])
                 elif channel.startswith(("!", "~")) and \
-                     self.__ircWidget.isChannelName(channel[1:]):
+                        self.__ircWidget.isChannelName(channel[1:]):
                     ownerChannels.append(channel[1:])
                 elif channel.startswith("@+"):
                     opChannels.append(channel[2:])
@@ -1506,32 +1507,32 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} is a user on channels: {1}").format(
-                    match.group(1), " ".join(userChannels)))
+                        match.group(1), " ".join(userChannels)))
             if voiceChannels:
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} has voice on channels: {1}").format(
-                    match.group(1), " ".join(voiceChannels)))
+                        match.group(1), " ".join(voiceChannels)))
             if halfopChannels:
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} is a halfop on channels: {1}").format(
-                    match.group(1), " ".join(halfopChannels)))
+                        match.group(1), " ".join(halfopChannels)))
             if opChannels:
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} is an operator on channels: {1}").format(
-                    match.group(1), " ".join(opChannels)))
+                        match.group(1), " ".join(opChannels)))
             if ownerChannels:
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} is owner of channels: {1}").format(
-                    match.group(1), " ".join(ownerChannels)))
+                        match.group(1), " ".join(ownerChannels)))
             if adminChannels:
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} is admin on channels: {1}").format(
-                    match.group(1), " ".join(adminChannels)))
+                        match.group(1), " ".join(adminChannels)))
             return True
         
         return False
@@ -1618,19 +1619,22 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 secondsString = self.trUtf8("%n second(s)", "", seconds)
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
-                    self.trUtf8("{0} has been idle for {1}, {2}, and {3}.",
-                                "{0} = name of person, {1} = (x hours), "
-                                "{2} = (x minutes), {3} = (x seconds)").format(
-                    match.group(1), hoursString, minutesString, secondsString))
+                    self.trUtf8(
+                        "{0} has been idle for {1}, {2}, and {3}.",
+                        "{0} = name of person, {1} = (x hours), "
+                        "{2} = (x minutes), {3} = (x seconds)")
+                    .format(match.group(1), hoursString, minutesString,
+                            secondsString))
             elif minutes:
                 minutesString = self.trUtf8("%n minute(s)", "", minutes)
                 secondsString = self.trUtf8("%n second(s)", "", seconds)
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
-                    self.trUtf8("{0} has been idle for {1} and {2}.",
-                                "{0} = name of person, {1} = (x minutes), "
-                                "{3} = (x seconds)").format(
-                    match.group(1), minutesString, secondsString))
+                    self.trUtf8(
+                        "{0} has been idle for {1} and {2}.",
+                        "{0} = name of person, {1} = (x minutes), "
+                        "{3} = (x seconds)")
+                    .format(match.group(1), minutesString, secondsString))
             else:
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
@@ -1642,8 +1646,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.__addManagementMessage(
                     self.trUtf8("Whois"),
                     self.trUtf8("{0} has been online since {1}.").format(
-                    match.group(1),
-                    signonTime.toString("yyyy-MM-dd, hh:mm:ss")))
+                        match.group(1),
+                        signonTime.toString("yyyy-MM-dd, hh:mm:ss")))
             return True
         
         return False
@@ -1772,7 +1776,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.__addManagementMessage(
                 self.trUtf8("Whois"),
                 self.trUtf8("{0} is connecting from {1} (IP: {2}).").format(
-                match.group(1), match.group(2), match.group(3)))
+                    match.group(1), match.group(2), match.group(3)))
             return True
         
         return False

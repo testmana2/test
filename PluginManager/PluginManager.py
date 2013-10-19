@@ -80,7 +80,7 @@ class PluginManager(QObject):
         self.pluginDirs = {
             "eric5": os.path.join(getConfig('ericDir'), "Plugins"),
             "global": os.path.join(Utilities.getPythonModulesDirectory(),
-                                    "eric5plugins"),
+                                   "eric5plugins"),
             "user": os.path.join(Utilities.getConfigDir(), "eric5plugins"),
         }
         self.__priorityOrder = ["eric5", "global", "user"]
@@ -123,7 +123,7 @@ class PluginManager(QObject):
         Public method to finalize the setup of the plugin manager.
         """
         for module in list(self.__onDemandInactiveModules.values()) + \
-                      list(self.__onDemandActiveModules.values()):
+                list(self.__onDemandActiveModules.values()):
             if hasattr(module, "moduleSetup"):
                 module.moduleSetup()
         
@@ -769,7 +769,7 @@ class PluginManager(QObject):
         
         for name, module in \
             list(self.__onDemandActiveModules.items()) + \
-            list(self.__onDemandInactiveModules.items()):
+                list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "error", "") == "":
                 plugin_name = getattr(module, "pluginTypename")
@@ -795,7 +795,7 @@ class PluginManager(QObject):
         """
         for modname, module in \
             list(self.__onDemandActiveModules.items()) + \
-            list(self.__onDemandInactiveModules.items()):
+                list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "pluginTypename") == name:
                 if hasattr(module, "previewPix"):
@@ -815,7 +815,7 @@ class PluginManager(QObject):
         apis = []
         
         for module in list(self.__activeModules.values()) + \
-                      list(self.__onDemandActiveModules.values()):
+                list(self.__onDemandActiveModules.values()):
             if hasattr(module, "apiFiles"):
                 apis.extend(module.apiFiles(language))
         
@@ -858,13 +858,13 @@ class PluginManager(QObject):
         infos = []
         
         for module in list(self.__activeModules.values()) + \
-                      list(self.__inactiveModules.values()):
+                list(self.__inactiveModules.values()):
             if hasattr(module, "exeDisplayDataList"):
                 infos.extend(module.exeDisplayDataList())
             elif hasattr(module, "exeDisplayData"):
                 infos.append(module.exeDisplayData())
         for module in list(self.__onDemandActiveModules.values()) + \
-                      list(self.__onDemandInactiveModules.values()):
+                list(self.__onDemandInactiveModules.values()):
             if hasattr(module, "exeDisplayDataList"):
                 infos.extend(module.exeDisplayDataList())
             elif hasattr(module, "exeDisplayData"):
@@ -906,8 +906,8 @@ class PluginManager(QObject):
         """
         configData = {}
         for module in list(self.__activeModules.values()) + \
-                      list(self.__onDemandActiveModules.values()) + \
-                      list(self.__onDemandInactiveModules.values()):
+            list(self.__onDemandActiveModules.values()) + \
+                list(self.__onDemandInactiveModules.values()):
             if hasattr(module, 'getConfigData'):
                 configData.update(module.getConfigData())
         return configData
@@ -920,9 +920,9 @@ class PluginManager(QObject):
         @return flag indicating, if the plugin is loaded (boolean)
         """
         return pluginName in self.__activeModules or \
-               pluginName in self.__inactiveModules or \
-               pluginName in self.__onDemandActiveModules or \
-               pluginName in self.__onDemandInactiveModules
+            pluginName in self.__inactiveModules or \
+            pluginName in self.__onDemandActiveModules or \
+            pluginName in self.__onDemandInactiveModules
         
     def isPluginActive(self, pluginName):
         """
@@ -932,7 +932,7 @@ class PluginManager(QObject):
         @return flag indicating, if the plugin is active (boolean)
         """
         return pluginName in self.__activeModules or \
-               pluginName in self.__onDemandActiveModules
+            pluginName in self.__onDemandActiveModules
     
     ###########################################################################
     ## Specialized plugin module handling methods below
@@ -958,7 +958,7 @@ class PluginManager(QObject):
         
         for name, module in \
             list(self.__onDemandActiveModules.items()) + \
-            list(self.__onDemandInactiveModules.items()):
+                list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == "version_control":
                 if hasattr(module, "getVcsSystemIndicator"):
                     res = module.getVcsSystemIndicator()
@@ -1005,7 +1005,7 @@ class PluginManager(QObject):
                                 """ <b>{0}</b> could not be created. Please"""
                                 """ configure it via the configuration"""
                                 """ dialog.</p><p>Reason: {1}</p>""")
-                                .format(downloadDir, str(err)))
+                            .format(downloadDir, str(err)))
                         downloadDir = ""
         
         Preferences.setPluginManager("DownloadPath", downloadDir)

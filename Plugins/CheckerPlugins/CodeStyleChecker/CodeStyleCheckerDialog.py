@@ -130,7 +130,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         self.resultList.sortItems(self.resultList.sortColumn(),
                                   self.resultList.header().sortIndicatorOrder()
-                                 )
+                                  )
     
     def __createResultItem(self, file, line, pos, message, fixed, autofixing):
         """
@@ -399,7 +399,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         self.__createResultItem(
                             file, "1", "1",
                             self.trUtf8("Error: {0}").format(str(msg))
-                                .rstrip()[1:-1], False, False)
+                            .rstrip()[1:-1], False, False)
                         progress += 1
                         continue
                     

@@ -58,7 +58,7 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
             enable = self.messageEdit.toPlainText() != ""
         else:
             enable = self.nameEdit.text() != "" and \
-                     self.messageEdit.toPlainText() != ""
+                self.messageEdit.toPlainText() != ""
         if self.userGroup.isChecked():
             enable = enable and \
                 (self.currentUserCheckBox.isChecked() or

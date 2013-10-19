@@ -30,8 +30,8 @@ className = "EricdocPlugin"
 packageName = "__core__"
 shortDescription = "Show the Ericdoc dialogs."
 longDescription = """This plugin implements the Ericdoc dialogs.""" \
- """ Ericdoc is used to generate a source code documentation""" \
- """ for Python and Ruby projects."""
+    """ Ericdoc is used to generate a source code documentation""" \
+    """ for Python and Ruby projects."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -170,7 +170,7 @@ class EricdocPlugin(QObject):
             if self.__projectAct is not None:
                 self.__projectAct.setEnabled(
                     e5App().getObject("Project").getProjectLanguage() in
-                        ["Python", "Python2", "Python3", "Ruby"])
+                    ["Python", "Python2", "Python3", "Ruby"])
     
     def __doEricdoc(self):
         """

@@ -325,7 +325,7 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         for networkName in self.__manager.getNetworkNames():
             inUse = (
                 self.__manager.getNetwork(networkName).getIdentityName() ==
-                    currentIdentity)
+                currentIdentity)
             if inUse:
                 break
         

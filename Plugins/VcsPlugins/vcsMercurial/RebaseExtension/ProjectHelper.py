@@ -47,9 +47,9 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgRebaseAct)
         
         self.hgRebaseContinueAct = E5Action(
-                self.trUtf8('Continue Rebase Session'),
-                self.trUtf8('Continue Rebase Session'),
-                0, 0, self, 'mercurial_rebase_continue')
+            self.trUtf8('Continue Rebase Session'),
+            self.trUtf8('Continue Rebase Session'),
+            0, 0, self, 'mercurial_rebase_continue')
         self.hgRebaseContinueAct.setStatusTip(self.trUtf8(
             'Continue the last rebase session after repair'
         ))
@@ -61,9 +61,9 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgRebaseContinueAct)
         
         self.hgRebaseAbortAct = E5Action(
-                self.trUtf8('Abort Rebase Session'),
-                self.trUtf8('Abort Rebase Session'),
-                0, 0, self, 'mercurial_rebase_abort')
+            self.trUtf8('Abort Rebase Session'),
+            self.trUtf8('Abort Rebase Session'),
+            0, 0, self, 'mercurial_rebase_abort')
         self.hgRebaseAbortAct.setStatusTip(self.trUtf8(
             'Abort the last rebase session'
         ))

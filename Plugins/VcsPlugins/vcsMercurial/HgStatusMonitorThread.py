@@ -154,7 +154,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         self.reportedStates = states
         
         return True, \
-               self.trUtf8("Mercurial status checked successfully")
+            self.trUtf8("Mercurial status checked successfully")
     
     def _shutdown(self):
         """

@@ -10,7 +10,7 @@ Module implementing a dialog to browse the log history.
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
-     QSize, QPoint
+    QSize, QPoint
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
     QTreeWidgetItem, QApplication, QCursor, QLineEdit, QColor, \
     QPixmap, QPainter, QPen, QBrush, QIcon
@@ -933,8 +933,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         while self.process.canReadLine():
             line = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                       Preferences.getSystem("IOEncoding"),
+                       'replace')
             self.buf.append(line)
     
     def __readStderr(self):
@@ -946,8 +946,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                     Preferences.getSystem("IOEncoding"),
-                     'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             self.__showError(s)
     
     def __showError(self, out):
@@ -1042,7 +1042,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             # step 2: set the status of the phase button
             if public == 0 and \
                ((secret > 0 and draft == 0) or
-                (secret == 0 and draft > 0)):
+                    (secret == 0 and draft > 0)):
                 self.phaseButton.setEnabled(True)
             else:
                 self.phaseButton.setEnabled(False)

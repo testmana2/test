@@ -113,8 +113,8 @@ def ircFilter(msg):
                         tag = '<span style="background-color:{0};color={1}">'\
                             .format(Preferences.getIrc(
                                 "IrcColor{0}".format(int(colors[0]))),
-                                    Preferences.getIrc(
-                                "IrcColor{0}".format(int(colors[1]))))
+                                Preferences.getIrc(
+                                    "IrcColor{0}".format(int(colors[1]))))
                     else:
                         # background only
                         tag = '<span style="background-color:{0}">'.format(

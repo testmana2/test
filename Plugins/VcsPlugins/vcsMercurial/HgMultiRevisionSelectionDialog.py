@@ -15,7 +15,7 @@ from .Ui_HgMultiRevisionSelectionDialog import \
 
 
 class HgMultiRevisionSelectionDialog(
-    QDialog, Ui_HgMultiRevisionSelectionDialog):
+        QDialog, Ui_HgMultiRevisionSelectionDialog):
     """
     Class implementing a dialog to select revisions.
     """

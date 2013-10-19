@@ -725,7 +725,8 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
-                     END OF TERMS AND CONDITIONS""".format(UI.Info.Copyright)
+                     END OF TERMS AND CONDITIONS""" \
+.format(UI.Info.Copyright)                  # __IGNORE_WARNING__
 
 
 class AboutDialog(QDialog, Ui_AboutDialog):

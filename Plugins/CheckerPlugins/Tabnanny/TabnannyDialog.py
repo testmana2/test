@@ -276,10 +276,9 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         proc.start(interpreter, [checker, filename])
         finished = proc.waitForFinished(15000)
         if finished:
-            output = \
-                str(proc.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace').splitlines()
+            output = str(proc.readAllStandardOutput(),
+                         Preferences.getSystem("IOEncoding"),
+                         'replace').splitlines()
             
             nok = output[0] == "ERROR"
             if nok:

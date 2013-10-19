@@ -356,19 +356,19 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                                     Utilities.html_encode(fileCopies[f]))
                     else:
                         html += self.trUtf8('Added {0}<br />\n')\
-                                .format(Utilities.html_encode(f))
+                            .format(Utilities.html_encode(f))
             
             if entry["files_mods"]:
                 html += '<br />\n'
                 for f in entry["files_mods"].strip().split(", "):
                     html += self.trUtf8('Modified {0}<br />\n')\
-                            .format(Utilities.html_encode(f))
+                        .format(Utilities.html_encode(f))
             
             if entry["file_dels"]:
                 html += '<br />\n'
                 for f in entry["file_dels"].strip().split(", "):
                     html += self.trUtf8('Deleted {0}<br />\n')\
-                            .format(Utilities.html_encode(f))
+                        .format(Utilities.html_encode(f))
             
             html += '</p>{0}<br/>\n'.format(80 * "=")
         
@@ -388,8 +388,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         while self.process.canReadLine():
             s = str(self.process.readLine(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):
@@ -411,8 +411,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             if key == "change":
                 self.endInitialText = True
             if key in ("change", "branches", "tags", "parents", "user",
-                        "date", "file_copies", "file_adds", "files_mods",
-                        "file_dels", "bookmarks", "phase"):
+                       "date", "file_copies", "file_adds", "files_mods",
+                       "file_dels", "bookmarks", "phase"):
                 self.lastLogEntry[key] = value.strip()
             elif key == "description":
                 self.lastLogEntry[key] = [value.strip()]
@@ -431,8 +431,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                     Preferences.getSystem("IOEncoding"),
-                     'replace')
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
             self.__showError(s)
     
     def __showError(self, out):

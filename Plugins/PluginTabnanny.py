@@ -27,7 +27,8 @@ className = "TabnannyPlugin"
 packageName = "__core__"
 shortDescription = "Show the Tabnanny dialog."
 longDescription = """This plugin implements the Tabnanny dialog.""" \
- """ Tabnanny is used to check Python source files for correct indentations."""
+    """ Tabnanny is used to check Python source files for correct""" \
+    """ indentations."""
 pyqtApi = 2
 # End-Of-Header
 
@@ -151,7 +152,7 @@ class TabnannyPlugin(QObject):
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() in
-                    ["Python3", "Python2", "Python"])
+                ["Python3", "Python2", "Python"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -190,8 +191,8 @@ class TabnannyPlugin(QObject):
         files = [os.path.join(ppath, file)
                  for file in project.pdata["SOURCES"]
                  if file.endswith(
-                    tuple(Preferences.getPython("Python3Extensions")) +
-                    tuple(Preferences.getPython("PythonExtensions")))]
+                     tuple(Preferences.getPython("Python3Extensions")) +
+                     tuple(Preferences.getPython("PythonExtensions")))]
         
         from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
         self.__projectTabnannyDialog = TabnannyDialog()

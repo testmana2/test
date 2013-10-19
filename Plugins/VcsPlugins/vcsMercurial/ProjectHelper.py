@@ -319,10 +319,10 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsStatusAct)
         
         self.hgSummaryAct = E5Action(
-                self.trUtf8('Show Summary'),
-                UI.PixmapCache.getIcon("vcsSummary.png"),
-                self.trUtf8('Show summary...'),
-                0, 0, self, 'mercurial_summary')
+            self.trUtf8('Show Summary'),
+            UI.PixmapCache.getIcon("vcsSummary.png"),
+            self.trUtf8('Show summary...'),
+            0, 0, self, 'mercurial_summary')
         self.hgSummaryAct.setStatusTip(self.trUtf8(
             'Show summary information of the working directory status'
         ))

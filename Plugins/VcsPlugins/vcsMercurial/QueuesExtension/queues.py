@@ -245,7 +245,7 @@ class Queues(HgExtension):
         dlg = HgQueuesNewPatchDialog(HgQueuesNewPatchDialog.NEW_MODE)
         if dlg.exec_() == QDialog.Accepted:
             name, message, (userData, currentUser, userName), \
-            (dateData, currentDate, dateStr) = dlg.getData()
+                (dateData, currentDate, dateStr) = dlg.getData()
             
             args = []
             args.append("qnew")
@@ -297,7 +297,7 @@ class Queues(HgExtension):
                                          currentMessage)
             if dlg.exec_() == QDialog.Accepted:
                 name, message, (userData, currentUser, userName), \
-                (dateData, currentDate, dateStr) = dlg.getData()
+                    (dateData, currentDate, dateStr) = dlg.getData()
                 if message != "" and message != currentMessage:
                     args.append("--message")
                     args.append(message)

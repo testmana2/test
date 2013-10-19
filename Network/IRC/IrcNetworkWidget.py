@@ -373,7 +373,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 "",
                 self.trUtf8(
                     "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)")
-                    .format(htmlExtension),
+                .format(htmlExtension),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
@@ -409,7 +409,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                         self.trUtf8(
                             """<p>The messages contents could not be written"""
                             """ to <b>{0}</b></p><p>Reason: {1}</p>""")
-                            .format(fname, str(err)))
+                        .format(fname, str(err)))
     
     def __initMessagesMenu(self):
         """

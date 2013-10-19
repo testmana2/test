@@ -267,13 +267,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
-                        self.browser.selectLocalEntries)
+                       self.browser.selectLocalEntries)
         menu.addAction(self.trUtf8('Select all versioned file entries'),
-                        self.browser.selectVCSEntries)
+                       self.browser.selectVCSEntries)
         menu.addAction(self.trUtf8('Select all local directory entries'),
-                        self.browser.selectLocalDirEntries)
+                       self.browser.selectLocalDirEntries)
         menu.addAction(self.trUtf8('Select all versioned directory entries'),
-                        self.browser.selectVCSDirEntries)
+                       self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
         mainMenu.addSeparator()
@@ -347,13 +347,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
-                        self.browser.selectLocalEntries)
+                       self.browser.selectLocalEntries)
         menu.addAction(self.trUtf8('Select all versioned file entries'),
-                        self.browser.selectVCSEntries)
+                       self.browser.selectVCSEntries)
         menu.addAction(self.trUtf8('Select all local directory entries'),
-                        self.browser.selectLocalDirEntries)
+                       self.browser.selectLocalDirEntries)
         menu.addAction(self.trUtf8('Select all versioned directory entries'),
-                        self.browser.selectVCSDirEntries)
+                       self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
         mainMenu.addSeparator()
@@ -379,13 +379,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         
         menu.addAction(self.trUtf8('Select all local file entries'),
-                        self.browser.selectLocalEntries)
+                       self.browser.selectLocalEntries)
         menu.addAction(self.trUtf8('Select all versioned file entries'),
-                        self.browser.selectVCSEntries)
+                       self.browser.selectVCSEntries)
         menu.addAction(self.trUtf8('Select all local directory entries'),
-                        self.browser.selectLocalDirEntries)
+                       self.browser.selectLocalDirEntries)
         menu.addAction(self.trUtf8('Select all versioned directory entries'),
-                        self.browser.selectVCSDirEntries)
+                       self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
         mainMenu.addSeparator()
@@ -470,13 +470,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
-                        self.browser.selectLocalEntries)
+                       self.browser.selectLocalEntries)
         menu.addAction(self.trUtf8('Select all versioned file entries'),
-                        self.browser.selectVCSEntries)
+                       self.browser.selectVCSEntries)
         menu.addAction(self.trUtf8('Select all local directory entries'),
-                        self.browser.selectLocalDirEntries)
+                       self.browser.selectLocalDirEntries)
         menu.addAction(self.trUtf8('Select all versioned directory entries'),
-                        self.browser.selectVCSDirEntries)
+                       self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
         mainMenu.addSeparator()
@@ -547,13 +547,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
-                        self.browser.selectLocalEntries)
+                       self.browser.selectLocalEntries)
         menu.addAction(self.trUtf8('Select all versioned file entries'),
-                        self.browser.selectVCSEntries)
+                       self.browser.selectVCSEntries)
         menu.addAction(self.trUtf8('Select all local directory entries'),
-                        self.browser.selectLocalDirEntries)
+                       self.browser.selectLocalDirEntries)
         menu.addAction(self.trUtf8('Select all versioned directory entries'),
-                        self.browser.selectVCSDirEntries)
+                       self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
         mainMenu.addSeparator()
