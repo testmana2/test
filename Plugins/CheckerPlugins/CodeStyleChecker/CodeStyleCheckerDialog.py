@@ -685,7 +685,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 citm = itm.child(cindex)
                 lineno = citm.data(0, self.lineRole)
                 message = citm.data(0, self.messageRole)
-                editor.toggleFlakesWarning(lineno, True, message)
+                editor.toggleFlakesWarning(
+                    lineno, True, message, warningType=editor.WarningStyle)
         
         # go through the list again to clear warning markers for files,
         # that are ok
