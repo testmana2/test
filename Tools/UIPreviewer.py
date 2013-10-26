@@ -489,7 +489,9 @@ class UIPreviewer(E5MainWindow):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setFullPage(True)
         
-        printer.setPrinterName(settings.value("UIPreviewer/printername"))
+        printerName = Preferences.getPrinter("UIPreviewer/printername")
+        if printerName:
+            self.setPrinterName(printerName)
         printer.setPageSize(
             QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
@@ -528,7 +530,9 @@ class UIPreviewer(E5MainWindow):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setFullPage(True)
         
-        printer.setPrinterName(settings.value("UIPreviewer/printername"))
+        printerName = Preferences.getPrinter("UIPreviewer/printername")
+        if printerName:
+            self.setPrinterName(printerName)
         printer.setPageSize(
             QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(

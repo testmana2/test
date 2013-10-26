@@ -490,7 +490,9 @@ class HelpTabWidget(E5TabWidget):
             Preferences.getPrinter("BottomMargin") * 10,
             QPrinter.Millimeter
         )
-        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        printerName = Preferences.getPrinter("PrinterName")
+        if printerName:
+            self.setPrinterName(printerName)
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_() == QDialog.Accepted:
@@ -525,7 +527,9 @@ class HelpTabWidget(E5TabWidget):
             printer.setColorMode(QPrinter.Color)
         else:
             printer.setColorMode(QPrinter.GrayScale)
-        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        printerName = Preferences.getPrinter("PrinterName")
+        if printerName:
+            self.setPrinterName(printerName)
         printer.setOutputFormat(QPrinter.PdfFormat)
         name = frame.url().path().rsplit('/', 1)[-1]
         if name:
@@ -571,7 +575,9 @@ class HelpTabWidget(E5TabWidget):
             Preferences.getPrinter("BottomMargin") * 10,
             QPrinter.Millimeter
         )
-        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        printerName = Preferences.getPrinter("PrinterName")
+        if printerName:
+            self.setPrinterName(printerName)
         
         self.__printPreviewBrowser = browser
         preview = QPrintPreviewDialog(printer, self)
