@@ -42,7 +42,9 @@ class Printer(QsciPrinter):
             Preferences.getPrinter("BottomMargin") * 10,
             QPrinter.Millimeter
         )
-        self.setPrinterName(Preferences.getPrinter("PrinterName"))
+        printerName = Preferences.getPrinter("PrinterName")
+        if printerName:
+            self.setPrinterName(printerName)
         self.time = QTime.currentTime().toString(Qt.LocalDate)
         self.date = QDate.currentDate().toString(Qt.LocalDate)
         self.headerFont = Preferences.getPrinter("HeaderFont")
