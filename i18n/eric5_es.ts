@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1919,7 +1920,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <location filename="../Helpviewer/Bookmarks/BookmarksManager.py" line="137"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
  {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al cargar marcadores en línea {0}, columna {1}:
+{2}</translation>
     </message>
 </context>
 <context>
@@ -1936,8 +1938,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2178,8 +2180,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -2378,7 +2380,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../UI/Browser.py" line="90"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierarchy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierarchies.&lt;/p&gt;&lt;p&gt;The first hierarchy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierarchy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierarchy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierarchies allow you navigate your system as a whole. On a UNIX system there will be a hierarchy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierarchy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierarchies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;La Ventana de Navegación&lt;/b&gt;&lt;p&gt;Permite navegar facilmente la jerarquía de directorios y archivos del sistema, identificar los programas en Python y abrirlos utilizando la ventana de Visor de Código Fuente. La ventana muestra varias jerarquías separadas.&lt;/p&gt;&lt;p&gt;La primera jerarquía se muestra solamente si se tiene abierto un programa para depuración y la raíz es el directorio que contiene dicho programa. Usualmente los distintos archivos que forman una aplicación Python son mantenidos en el mismo directorio, por lo tanto esta jerarquía proporciona un acceso sencillo a la mayor parte de lo que resulta necesario.&lt;/p&gt;&lt;p&gt;La siguiente jerarquía se utiliza para navegar facilmente los directorios especificados en la variable de Python &lt;tt&gt;sys.path&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;Las restantes jerarquías permiten la navegación por el sistema como un todo. En un sistema UNIX habrá una jerarquía con &lt;tt&gt;/&lt;/tt&gt; en la raíz y otra con el directorio home del usuario. En un sistema Windows habrá una jerarquía por cada uno de los drives en el sistema.&lt;/p&gt;&lt;p&gt;Los programas Python (es decir aquellos archivos con extensión &lt;tt&gt;.py&lt;/tt&gt;) se identifican en las jerarquías con un icono de Python. Un click con el botón derecho del ratón muestra un menú contextual que permite abrir el archivo en la ventana Visor de Fuentes, o bien abrir el archivo para depuración o utilizarlo para ejecutar un test unitario.&lt;/p&gt;&lt;p&gt;El menú contextual de una clase, función o método permite abrir el archivo en donde se define esta clase, función o método y permite asegurar que se muestra la línea de código correcta.&lt;/p&gt;&lt;p&gt;Los archivos de Qt-Designer (es decir aquellos con extensión &lt;tt&gt;.ui&lt;/tt&gt;) son mostrados con un icono de Designer. El menú contextual de estos archivos permite iniciar Qt-Designer a partir de dicho archivo.&lt;/p&gt;&lt;p&gt;Los archivos de Qt-Linguist (es decir aquellos con extensión &lt;tt&gt;.ts&lt;/tt&gt;) son mostrados con un icono de Linguist. El menú contextual de dichos archivos permite iniciar Qt-Linguist a partir de dicho archivo.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -3347,7 +3349,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="433"/>
         <source>Shows the progress of the code style check</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el progreso de la revisión de estilo de código </translation>
     </message>
 </context>
 <context>
@@ -15446,7 +15448,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1077"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -15777,7 +15779,7 @@ Razón: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2392"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15918,7 +15920,7 @@ Razón: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpDocsInstaller.py" line="210"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered. &lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no ha podido ser registrado.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16397,7 +16399,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="566"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -23237,7 +23239,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="854"/>
         <source>&lt;b&gt;Rollback last transaction&lt;/b&gt;&lt;p&gt;This performs a rollback of the last transaction. Transactions are used to encapsulate the effects of all commands that create new changesets or propagate existing changesets into a repository. For example, the following commands are transactional, and their effects can be rolled back:&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (with this repository as the destination)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This command is dangerous. Please use with care. &lt;/strong&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Rollback de última transacción&lt;/b&gt;&lt;p&gt;Lleva a cabo un rollback de la última transacción. Las transactiones se utilizan para encapsular los efectos de todos los comandos que crean nuevos changesets or propagan changesets existentes hacia un repository. Por ejemplo, los siguientes comandos son transaccionales, y sus efectos pueden ser revertidos (rollback):&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (con este repositorio como destino)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Este comando es peligroso. Utiliícelo por favor con cuidado.&lt;/strong&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -35442,12 +35444,12 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/Project.py" line="4136"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found. &lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Revirtiendo sobreescritura.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="4738"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt; &lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -42863,7 +42865,12 @@ By checking the various checkboxes, the search can be made more specific.
 The search string might be a regular expression. In a regular expression,
 special characters interpreted are:&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Buscar y Reemplazar&lt;/b&gt;
+&lt;p&gt;Este diálogo se utiliza para encontrar un determinado texto y replazarlo con otro.
+Utilizando las distintas checkboxes, la búsqueda se puede hacer más específica. 
+La cadena de búsqueda puede ser una expresión regular. En una expresión regular, los caracteres especiales que se pueden
+interpretar son:&lt;/p&gt;
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/SearchReplaceWidget.py" line="66"/>
@@ -42872,7 +42879,11 @@ special characters interpreted are:&lt;/p&gt;
 the search can be made more specific. The search string might be a regular
 expression. In a regular expression, special characters interpreted are:&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Buscar&lt;/b&gt;
+&lt;p&gt;Este diálogo se utiliza para encontrar un determinado texto. Utilizando las distintas checkboxes, la búsqueda 
+se puede hacer más específica. La cadena de búsqueda puede ser una expresión regular. En una expresión 
+regular, los caracteres especiales que se pueden interpretar son:&lt;/p&gt;
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/SearchReplaceWidget.py" line="77"/>
@@ -42918,7 +42929,39 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
 &lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Coincide con cualquier caracter&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Marca el principio de una región para etiquetar una coincidencia.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Marca el fin de una región etiquetada.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Donde &lt;code&gt;n&lt;/code&gt; de 1 a 9 se refiere a la primera a novena región con etiqueta
+al reemplazar. Por example, si la cadena de búsqueda era &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; y
+la cadena de reemplazo era &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt;, al ser aplicado a &lt;code&gt;Fred2XXX&lt;/code&gt; 
+generaría&lt;code&gt;Sam2YYY&lt;/code&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide el comienzo de una palabra utilizando la definición de palabra de Scintilla.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide el final de una palabra utilizando la definición de palabra de Scintilla.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Permite utilizar un carácter x que de otro modo tiene especial significado. Por
+ejemplo, \[ se interpretaría como [ y no como el principio de un conjunto de caracteres.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Indica un conjunto de caracteres, por ejemplo, [abc] significa cualquiera de los caracteres a,
+b o c. Es posible también utilizar rangos, por ejemplo [a-z] para cualquier carácter en minúscula.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;El complemento de los caracteres en el conjunto. Por ejemplo, [^A-Za-z] significa cualquier
+carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide el principio de una línea (a no ser que se utilice en un conjunto, ver más arriba).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Coincide el final de una línea.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide 0 o más veces. Por ejemplo, &lt;code&gt;Sa*m&lt;/code&gt; coincide 
+&lt;code&gt;Sm&lt;/code&gt;, &lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; etc.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide 1 o más veces. For example, &lt;code&gt;Sa+m&lt;/code&gt; coincide
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
 </context>
 <context>
@@ -56586,32 +56629,32 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../UI/UserInterface.py" line="2191"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependent upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Documentación de Qt4&lt;/b&gt;&lt;p&gt;Muestra la Documentación de Qt4. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2205"/>
         <source>&lt;b&gt;Qt5 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt5 Documentation. Dependent upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Documentación de Qt5&lt;/b&gt;&lt;p&gt;Muestra la Documentación de Qt5. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2219"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependent upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Documentación de PyQt4&lt;/b&gt;&lt;p&gt;Muestra la Documentación de PyQt4. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2236"/>
         <source>&lt;b&gt;PyQt5 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt5 Documentation. Dependent upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Documentación de PyQt5&lt;/b&gt;&lt;p&gt;Muestra la Documentación de PyQt5. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt; </translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2259"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Documentación de Python 3&lt;/b&gt;&lt;p&gt;Mostrar la documentación de Python 3. Si no se ha configurado un directorio con lesta documentación, la ubicación de la documentación de Python 3 se asumirá en el directorio de documentación bajo la ubicación del ejecutable de Python 3 en Windows, y en &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; para Unix. Establezca el valor de la variable de entorno PYTHON3DOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2322"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependent upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Documentación de PySide&lt;/b&gt;&lt;p&gt;Muestra la Documentación de PySide. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -56993,215 +57036,218 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="14"/>
         <source>VCS Command Options</source>
-        <translation type="unfinished">Opciones de Comando VCS</translation>
+        <translation>Opciones de Comando VCS</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="17"/>
         <source>&lt;b&gt;VCS Command Options Dialog&lt;/b&gt;
 &lt;p&gt;Enter the options for the different VCS commands. The &quot;Global Options&quot; entry applies to all VCS commands.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Diálogo de Opciones de Comando VCS&lt;/b&gt;￼
-&lt;p&gt;Introduzca las opciones para los distintos comandos VCS. La entrada &quot;Opciones Globales&quot; se aplica a todos los comandos VCS.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Diálogo de Opciones de Comando VCS&lt;/b&gt;￼
+&lt;p&gt;Introducir las opciones para los distintos comandos VCS. La entrada &quot;Opciones Globales&quot; se aplica a todos los comandos VCS.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="29"/>
         <source>&amp;History Options:</source>
-        <translation type="unfinished">Opciones de &amp;History:</translation>
+        <translation>Opciones de &amp;History:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="39"/>
         <source>&amp;Add Options:</source>
-        <translation type="unfinished">Opciones de &amp;Add:</translation>
+        <translation>Opciones de &amp;Add:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="49"/>
         <source>&amp;Remove Options:</source>
-        <translation type="unfinished">Opciones de &amp;Remove:</translation>
+        <translation>Opciones de &amp;Remove:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="59"/>
         <source>&amp;Tag Options:</source>
-        <translation type="unfinished">Opciones de &amp;Tag:</translation>
+        <translation>Opciones de &amp;Tag:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="69"/>
         <source>Enter the options for the commit command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando commit.</translation>
+        <translation>Introducir las opciones para el comando commit.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="72"/>
         <source>&lt;b&gt;Commit Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the commit command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Commit&lt;/b&gt;￼&lt;p&gt;Introduzca las opciones para el comando commit.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Commit&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando commit.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="80"/>
         <source>Enter the options for the history command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando history.</translation>
+        <translation>Introducir las opciones para el comando history.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="83"/>
         <source>&lt;b&gt;History Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the history command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de History&lt;/b&gt;￼&lt;p&gt;Introduzca las opciones para el comando history.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de History&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando history.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="91"/>
         <source>Enter the options for the diff command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando diff.</translation>
+        <translation>Introducir las opciones para el comando diff.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="94"/>
         <source>&lt;b&gt;Diff Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the diff command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Diff&lt;/b&gt;￼&lt;p&gt;Introduzca las opciones para el comando diff.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Diff&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando diff.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="102"/>
         <source>Enter the options for the update command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando update.</translation>
+        <translation>Introducir las opciones para el comando update.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="105"/>
         <source>&lt;b&gt;Update Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the update command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Update&lt;/b&gt;
-￼&lt;p&gt;Introduzca las opciones para el comando update.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Update&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando update.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="113"/>
         <source>Enter the options for the log command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando log.</translation>
+        <translation>Introducir las opciones para el comando log.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="116"/>
         <source>&lt;b&gt;Log Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the log command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Log&lt;/b&gt;
-￼&lt;p&gt;Introduzca las opciones para el comando log.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Log&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando log.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="124"/>
         <source>Enter the options for the tag command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando tag.</translation>
+        <translation>Introducir las opciones para el comando tag.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="127"/>
         <source>&lt;b&gt;Tag Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the tag command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Tag&lt;/b&gt;
-￼&lt;p&gt;Introduzca las opciones para el comando tag.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Tag&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando tag.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="135"/>
         <source>Enter the options for the status command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando status.</translation>
+        <translation>Introducir las opciones para el comando status.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="138"/>
         <source>&lt;b&gt;Status Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the status command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Status&lt;/b&gt;
-￼&lt;p&gt;Introduzca las opciones para el comando status.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Status&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando status.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="146"/>
         <source>&amp;Diff Options:</source>
-        <translation type="unfinished">Opciones de &amp;Diff:</translation>
+        <translation>Opciones de &amp;Diff:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="156"/>
         <source>&amp;Global Options:</source>
-        <translation type="unfinished">Opciones &amp;Globales:</translation>
+        <translation>Opciones &amp;Globales:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="166"/>
         <source>Enter the options for the export command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando export.</translation>
+        <translation>Introducir las opciones para el comando export.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="169"/>
         <source>&lt;b&gt;Export Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the export command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Export&lt;/b&gt;￼
-&lt;p&gt;Introduzca las opciones para el comando export.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Export&lt;/b&gt;￼
+&lt;p&gt;Introducir las opciones para el comando export.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="177"/>
         <source>Enter the options for the add command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando add.</translation>
+        <translation>Introducir las opciones para el comando add.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="180"/>
         <source>&lt;b&gt;Add Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the add command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Add&lt;/b&gt;
-￼&lt;p&gt;Introduzca las opciones para el comando add.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Add&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones para el comando add.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="188"/>
         <source>&amp;Log Options:</source>
-        <translation type="unfinished">Opciones de &amp;Log:</translation>
+        <translation>Opciones de &amp;Log:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="198"/>
         <source>&amp;StatusOptions:</source>
-        <translation type="unfinished">Opciones de &amp;Status:</translation>
+        <translation>Opciones de &amp;Status:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="208"/>
         <source>Enter the options for the remove command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando remove.</translation>
+        <translation>Introducir las opciones para el comando remove.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="211"/>
         <source>&lt;b&gt;Remove Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the remove command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Remove&lt;/b&gt;￼
-&lt;p&gt;Introduzca las opciones para el comando remove.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Remove&lt;/b&gt;￼
+&lt;p&gt;Introducir las opciones para el comando remove.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="219"/>
         <source>Enter the options for the checkout command.</source>
-        <translation type="unfinished">Introduzca las opciones para el comando checkout.</translation>
+        <translation>Introducir las opciones para el comando checkout.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="222"/>
         <source>&lt;b&gt;Checkout Options&lt;/b&gt;
 &lt;p&gt;Enter the options for the checkout command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Checkout&lt;/b&gt;￼
-&lt;p&gt;Introduzca las opciones para el comando checkout.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Checkout&lt;/b&gt;￼
+&lt;p&gt;Introducir las opciones para el comando checkout.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="230"/>
         <source>Co&amp;mmit Options:</source>
-        <translation type="unfinished">Opciones de Co&amp;mmit:</translation>
+        <translation>Opciones de Co&amp;mmit:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="240"/>
         <source>&amp;Export Options:</source>
-        <translation type="unfinished">Opciones de &amp;Exportación:</translation>
+        <translation>Opciones de &amp;Export:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="250"/>
         <source>Check&amp;out Options:</source>
-        <translation type="unfinished">Opciones de Check&amp;out:</translation>
+        <translation>Opciones de Check&amp;out:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="260"/>
         <source>&amp;Update Options:</source>
-        <translation type="unfinished">Opciones de &amp;Update:</translation>
+        <translation>Opciones de &amp;Update:</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="270"/>
         <source>Enter the global options.</source>
-        <translation type="unfinished">Introduzca las opciones globales.</translation>
+        <translation>Introducir las opciones globales.</translation>
     </message>
     <message>
         <location filename="../VCS/CommandOptionsDialog.ui" line="273"/>
         <source>&lt;b&gt;Global Options&lt;/b&gt;
 &lt;p&gt;Enter the global options.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de Globales&lt;/b&gt;
-￼&lt;p&gt;Introduzca las opciones globales.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de Globales&lt;/b&gt;
+￼&lt;p&gt;Introducir las opciones globales.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -60707,12 +60753,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="4433"/>
         <source>Language: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Lenguaje: {0}</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="4440"/>
         <source>EOL Mode: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de EOL: {0}</translation>
     </message>
 </context>
 <context>
