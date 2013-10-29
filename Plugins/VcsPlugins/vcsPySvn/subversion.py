@@ -2318,7 +2318,9 @@ class Subversion(VersionControl):
         helper.setObjects(self, project)
         self.__wcng = \
             os.path.exists(os.path.join(project.getProjectPath(), ".svn", "format")) or \
-            os.path.exists(os.path.join(project.getProjectPath(), "_svn", "format"))
+            os.path.exists(os.path.join(project.getProjectPath(), "_svn", "format")) or \
+            os.path.exists(os.path.join(project.getProjectPath(), ".svn", "wc.db")) or \
+            os.path.exists(os.path.join(project.getProjectPath(), "_svn", "wc.db"))
         return helper
 
     ############################################################################
