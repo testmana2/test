@@ -7,6 +7,8 @@
 Module implementing a dialog to show a list of tags or branches.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 import pysvn
@@ -35,7 +37,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnTagBranchListDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         

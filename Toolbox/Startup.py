@@ -7,6 +7,8 @@
 Module implementing some startup helper funcions.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import sys
 

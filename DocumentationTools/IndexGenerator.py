@@ -8,6 +8,8 @@ Module implementing the index generator for the builtin documentation
 generator.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 

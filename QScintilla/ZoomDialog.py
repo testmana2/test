@@ -7,6 +7,8 @@
 Module implementing a dialog to select the zoom scale.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_ZoomDialog import Ui_ZoomDialog
@@ -25,7 +27,7 @@ class ZoomDialog(QDialog, Ui_ZoomDialog):
         @param name name of this dialog (string)
         @param modal modal dialog state (boolean)
         """
-        super().__init__(parent)
+        super(ZoomDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

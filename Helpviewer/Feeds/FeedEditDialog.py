@@ -7,6 +7,8 @@
 Module implementing a dialog to edit feed data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QUrl
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -25,7 +27,7 @@ class FeedEditDialog(QDialog, Ui_FeedEditDialog):
         @param title feed title (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FeedEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

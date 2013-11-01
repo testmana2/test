@@ -8,6 +8,8 @@ Module implementing the editor assembly widget containing the navigation
 combos and the editor widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QTimer
 from PyQt4.QtGui import QWidget, QGridLayout, QComboBox
 
@@ -33,7 +35,7 @@ class EditorAssembly(QWidget):
         @param editor reference to an Editor object, if this is a cloned view
         @param tv reference to the task viewer object
         """
-        super().__init__()
+        super(EditorAssembly, self).__init__()
         
         self.__layout = QGridLayout(self)
         self.__layout.setContentsMargins(0, 0, 0, 0)

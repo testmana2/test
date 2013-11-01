@@ -7,6 +7,8 @@
 Module implementing the open search engine.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 import json
 
@@ -38,7 +40,7 @@ class OpenSearchEngine(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(OpenSearchEngine, self).__init__(parent)
         
         self.__suggestionsReply = None
         self.__networkAccessManager = None

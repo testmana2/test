@@ -7,6 +7,8 @@
 Module implementing a dialog to manage history.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QUrl
 from PyQt4.QtGui import QDialog, QFontMetrics, QMenu, QCursor, QApplication
 
@@ -34,7 +36,7 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         @param parent reference to the parent widget (QWidget
         @param manager reference to the history manager object (HistoryManager)
         """
-        super().__init__(parent)
+        super(HistoryDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__historyManager = manager

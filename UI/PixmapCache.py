@@ -7,6 +7,8 @@
 Module implementing a pixmap cache for icons.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtGui import QPixmap, QIcon, QPainter

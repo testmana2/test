@@ -7,6 +7,8 @@
 Module implementing a dialog for entering a single template variable.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_TemplateSingleVariableDialog import Ui_TemplateSingleVariableDialog
@@ -23,7 +25,7 @@ class TemplateSingleVariableDialog(QDialog, Ui_TemplateSingleVariableDialog):
         @param variable template variable name (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(TemplateSingleVariableDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.variableLabel.setText(variable)

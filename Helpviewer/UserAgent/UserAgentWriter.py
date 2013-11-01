@@ -7,6 +7,8 @@
 Module implementing a class to write user agent data files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile
 
 
@@ -18,7 +20,7 @@ class UserAgentWriter(QXmlStreamWriter):
         """
         Constructor
         """
-        super().__init__()
+        super(UserAgentWriter, self).__init__()
         
         self.setAutoFormatting(True)
     

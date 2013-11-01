@@ -8,6 +8,12 @@ Module implementing a class used to display the translations part of the
 project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import shutil
 import fnmatch
@@ -834,7 +840,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if len(self.__tmpProjects) == 0:
             return False
-        
+            
         return True
     
     def __readStdoutLupdate(self):
@@ -1063,7 +1069,6 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         'Could not start {0}.<br>'
                         'Ensure that it is in the search path.'
                     ).format(self.pylupdate))
-                
                 # cleanup
                 try:
                     self.__tmpProjects.remove(tempProjectFile)

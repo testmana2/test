@@ -7,6 +7,8 @@
 Module implementing a dialog to enter data to be used for a fetch operation.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -25,7 +27,7 @@ class HgFetchDialog(QDialog, Ui_HgFetchDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgFetchDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.recentCommitMessages = Preferences.toList(

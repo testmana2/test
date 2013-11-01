@@ -7,6 +7,8 @@
 Module implementing the tray starter configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_TrayStarterPage import Ui_TrayStarterPage
 
@@ -24,7 +26,7 @@ class TrayStarterPage(ConfigurationPageBase, Ui_TrayStarterPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__()
+        super(TrayStarterPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("TrayStarterPage")
         

@@ -7,6 +7,8 @@
 Module implementing a splashscreen for eric5.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os.path
 import logging
 
@@ -28,7 +30,7 @@ class SplashScreen(QSplashScreen):
             os.path.join(getConfig('ericPixDir'), 'ericSplash.png'))
         self.labelAlignment = Qt.Alignment(
             Qt.AlignBottom | Qt.AlignRight | Qt.AlignAbsolute)
-        super().__init__(ericPic)
+        super(SplashScreen, self).__init__(ericPic)
         self.show()
         QApplication.flush()
         
@@ -39,14 +41,14 @@ class SplashScreen(QSplashScreen):
         @param msg message to be shown (string)
         """
         logging.debug(msg)
-        super().showMessage(msg, self.labelAlignment, QColor(Qt.white))
+        super(SplashScreen, self).showMessage(msg, self.labelAlignment, QColor(Qt.white))
         QApplication.processEvents()
         
     def clearMessage(self):
         """
         Public method to clear the message shown.
         """
-        super().clearMessage()
+        super(SplashScreen, self).clearMessage()
         QApplication.processEvents()
 
 

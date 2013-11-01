@@ -8,6 +8,8 @@ Module implementing an abstract base class to be subclassed by all specific
 VCS interfaces.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QObject, QThread, QMutex, QProcess, \
@@ -47,7 +49,7 @@ class VersionControl(QObject):
         @param parent parent widget (QWidget)
         @param name name of this object (string)
         """
-        super().__init__(parent)
+        super(VersionControl, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.defaultOptions = {

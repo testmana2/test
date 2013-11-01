@@ -7,6 +7,8 @@
 Module implementing a class to fix certain code style issues.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import re
 import tokenize
@@ -58,7 +60,7 @@ class CodeStyleFixer(QObject):
         @param maxLineLength maximum allowed line length (integer)
         @param inPlace flag indicating to modify the file in place (boolean)
         """
-        super().__init__()
+        super(CodeStyleFixer, self).__init__()
         
         self.__project = project
         self.__filename = filename

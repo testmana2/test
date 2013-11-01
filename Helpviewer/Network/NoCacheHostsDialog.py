@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the list of hosts not to be cached.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel, \
     QInputDialog, QLineEdit
@@ -26,7 +28,7 @@ class NoCacheHostsDialog(QDialog, Ui_NoCacheHostsDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(NoCacheHostsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__model = QStringListModel(
@@ -65,4 +67,4 @@ class NoCacheHostsDialog(QDialog, Ui_NoCacheHostsDialog):
         """
         Preferences.setHelp("NoCacheHosts", self.__model.stringList())
         
-        super().accept()
+        super(NoCacheHostsDialog, self).accept()

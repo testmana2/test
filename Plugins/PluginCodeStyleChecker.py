@@ -7,6 +7,8 @@
 Module implementing the code style checker plug-in.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QObject
@@ -49,7 +51,7 @@ class CodeStyleCheckerPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(CodeStyleCheckerPlugin, self).__init__(ui)
         self.__ui = ui
         self.__initialize()
         

@@ -7,6 +7,8 @@
 Module implementing the browser sort filter proxy model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from UI.BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 from .ProjectBrowserModel import ProjectBrowserSourceType
 

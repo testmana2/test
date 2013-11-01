@@ -7,6 +7,8 @@
 Module implementing the QScintilla Autocompletion configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.Qsci import QsciScintilla
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -25,7 +27,7 @@ class EditorAutocompletionQScintillaPage(
         """
         Constructor
         """
-        super().__init__()
+        super(EditorAutocompletionQScintillaPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorAutocompletionQScintillaPage")
         

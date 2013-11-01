@@ -7,6 +7,12 @@
 Module implementing a dialog to show a list of incoming or outgoing bookmarks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
@@ -38,7 +44,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         @param parent reference to the parent widget (QWidget)
         @exception ValueError raised to indicate an invalid dialog mode
         """
-        super().__init__(parent)
+        super(HgBookmarksInOutDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -325,4 +331,4 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgBookmarksInOutDialog, self).keyPressEvent(evt)

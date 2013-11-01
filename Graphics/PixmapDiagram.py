@@ -7,6 +7,8 @@
 Module implementing a dialog showing a pixmap.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QSize, QEvent
 from PyQt4.QtGui import QLabel, QPalette, QSizePolicy, QScrollArea, QAction, \
     QMenu, QToolBar, QImage, QPixmap, QPrinter, QPrintDialog, QPainter, \
@@ -42,7 +44,7 @@ class PixmapDiagram(E5MainWindow):
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
-        super().__init__(parent)
+        super(PixmapDiagram, self).__init__(parent)
         if name:
             self.setObjectName(name)
         else:
@@ -191,7 +193,7 @@ class PixmapDiagram(E5MainWindow):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(PixmapDiagram, self).wheelEvent(evt)
     
     def event(self, evt):
         """
@@ -204,7 +206,7 @@ class PixmapDiagram(E5MainWindow):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(PixmapDiagram, self).event(evt)
     
     def gestureEvent(self, evt):
         """

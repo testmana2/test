@@ -7,6 +7,8 @@
 Package implementing bookmarks importers for various sources.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QCoreApplication
 
 import UI.PixmapCache

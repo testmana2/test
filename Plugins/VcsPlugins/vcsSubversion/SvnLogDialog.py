@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the svn log command process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QTimer, QByteArray, QProcess, QRegExp, QUrl, pyqtSlot
@@ -37,7 +43,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnLogDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -332,4 +338,4 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnLogDialog, self).keyPressEvent(evt)

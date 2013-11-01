@@ -7,6 +7,8 @@
 Module implementing the search box for the shel, terminal and log viewer.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt
 from PyQt4.QtGui import QWidget, QSpacerItem, QSizePolicy
 
@@ -36,7 +38,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         @param spacer flag indicating to add a vertical spacer to the
             main layout (boolean)
         """
-        super().__init__(parent)
+        super(SearchWidget, self).__init__(parent)
         self.setupUi(self)
         if spacer:
             spacerItem = QSpacerItem(

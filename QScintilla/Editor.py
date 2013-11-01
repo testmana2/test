@@ -6,6 +6,13 @@
 """
 Module implementing the editor component of the eric5 IDE.
 """
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode   # __IGNORE_WARNING__
+    chr = unichr   # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 import re
 import difflib
@@ -141,7 +148,7 @@ class Editor(QsciScintillaCompat):
         @param tv reference to the task viewer object
         @exception IOError raised to indicate an issue accessing the file
         """
-        super().__init__()
+        super(Editor, self).__init__()
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.setAttribute(Qt.WA_KeyCompression)
         self.setUtf8(True)
@@ -1753,8 +1760,8 @@ class Editor(QsciScintillaCompat):
                         return isProjectPy2
                     else:
                         # 3) determine by compiling the sources
-                        syntaxError = Utilities.py2compile(
-                            self.fileName, checkFlakes=False)[0]
+                        syntaxError = Utilities.compile(
+                            self.fileName, self.text(), True)[0]
                         if not syntaxError:
                             self.filetype = "Python2"
                             return True
@@ -1797,7 +1804,7 @@ class Editor(QsciScintillaCompat):
                     else:
                         # 3) determine by compiling the sources
                         syntaxError = Utilities.compile(
-                            self.fileName, self.text())
+                            self.fileName, self.text(), False)[0]
                         if not syntaxError:
                             self.filetype = "Python3"
                             return True
@@ -4359,7 +4366,7 @@ class Editor(QsciScintillaCompat):
         if self.__ctHookFunction is not None:
             self.__callTip()
         else:
-            super().callTip()
+            super(Editor, self).callTip()
     
     def __callTip(self):
         """
@@ -4408,7 +4415,7 @@ class Editor(QsciScintillaCompat):
         if len(callTips) == 0:
             if Preferences.getEditor("CallTipsScintillaOnFail"):
                 # try QScintilla calltips
-                super().callTip()
+                super(Editor, self).callTip()
             return
         
         ctshift = 0
@@ -4930,67 +4937,32 @@ class Editor(QsciScintillaCompat):
         return self.fileName is not None and \
                not self.autosaveManuallyDisabled and \
                not self.isReadOnly()
-        
+
+
     def __autoSyntaxCheck(self):
         """
         Private method to perform an automatic syntax check of the file.
         """
+        isPy2 = self.isPy2File()
+        if (isPy2 or self.isPy3File()) == False:
+            return
+        
         if Preferences.getEditor("AutoCheckSyntax"):
             if Preferences.getEditor("OnlineSyntaxCheck"):
                 self.__onlineSyntaxCheckTimer.stop()
             self.clearSyntaxError()
             self.clearFlakesWarnings()
-            if self.isPy3File():
-                syntaxError, _fn, errorline, errorindex, _code, _error = \
-                    Utilities.compile(self.fileName or "(Unnamed)",
-                                      self.text())
-                if syntaxError:
-                    self.toggleSyntaxError(
-                        int(errorline), int(errorindex), True, _error)
-                else:
-                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
-                        from Utilities.py3flakes.checker import Checker
-                        from Utilities.py3flakes.messages import ImportStarUsed
-                        
-                        ignoreStarImportWarnings = \
-                            Preferences.getFlakes("IgnoreStarImportWarnings")
-                        try:
-                            txt = self.text()\
-                                .replace("\r\n", "\n")\
-                                .replace("\r", "\n")
-                            warnings = Checker(
-                                txt, self.fileName or "(Unnamed)")
-                            warnings.messages.sort(key=lambda a: a.lineno)
-                            for warning in warnings.messages:
-                                if ignoreStarImportWarnings and \
-                                   isinstance(warning, ImportStarUsed):
-                                    continue
-                                
-                                _fn, lineno, message = warning.getMessageData()
-                                if "__IGNORE_WARNING__" not in \
-                                        Utilities.extractLineFlags(
-                                            self.text(lineno - 1).strip()):
-                                    self.toggleFlakesWarning(
-                                        lineno, True, message)
-                        except SyntaxError as err:
-                            if err.text.strip():
-                                msg = err.text.strip()
-                            else:
-                                msg = err.msg
-                            self.toggleSyntaxError(err.lineno, True, msg)
-            elif self.isPy2File() and self.fileName is not None:
-                syntaxError, _fn, errorline, errorindex, _code, _error, \
-                warnings = Utilities.py2compile(
-                    self.fileName,
-                    checkFlakes=Preferences.getFlakes("IncludeInSyntaxCheck"))
-                if syntaxError:
-                    self.toggleSyntaxError(
-                        int(errorline), int(errorindex), True, _error)
-                else:
-                    for warning in warnings:
-                        self.toggleFlakesWarning(
-                            int(warning[1]), True, warning[2])
-        
+
+            syntaxError, _fn, errorline, errorindex, _code, _error, warnings = \
+                Utilities.compile(self.fileName or "(Unnamed)", self.text(), isPy2)
+            if syntaxError:
+                self.toggleSyntaxError(errorline, errorindex, True, _error)
+            else:
+                for warning in warnings:
+                    self.toggleFlakesWarning(
+                        warning[2], True, warning[3])
+
+
     def __initOnlineSyntaxCheck(self):
         """
         Private slot to initialize the online syntax check.
@@ -5784,7 +5756,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to undo the last recorded change.
         """
-        super().undo()
+        super(Editor, self).undo()
         self.undoAvailable.emit(self.isUndoAvailable())
         self.redoAvailable.emit(self.isRedoAvailable())
         
@@ -5792,7 +5764,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to redo the last recorded change.
         """
-        super().redo()
+        super(Editor, self).redo()
         self.undoAvailable.emit(self.isUndoAvailable())
         self.redoAvailable.emit(self.isRedoAvailable())
         
@@ -5841,7 +5813,7 @@ class Editor(QsciScintillaCompat):
         if self.fileName:
             self.taskViewer.clearFileTasks(self.fileName, True)
         
-        super().close()
+        super(Editor, self).close()
         
     def keyPressEvent(self, ev):
         """
@@ -5853,7 +5825,7 @@ class Editor(QsciScintillaCompat):
         
         # See it is text to insert.
         if len(txt) and txt >= " ":
-            super().keyPressEvent(ev)
+            super(Editor, self).keyPressEvent(ev)
         else:
             ev.ignore()
         
@@ -5911,7 +5883,7 @@ class Editor(QsciScintillaCompat):
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        super().focusInEvent(event)
+        super(Editor, self).focusInEvent(event)
         
     def focusOutEvent(self, event):
         """
@@ -5922,7 +5894,7 @@ class Editor(QsciScintillaCompat):
         self.vm.editorActGrp.setEnabled(False)
         self.setCaretWidth(0)
         
-        super().focusOutEvent(event)
+        super(Editor, self).focusOutEvent(event)
         
     def changeEvent(self, evt):
         """
@@ -5946,7 +5918,7 @@ class Editor(QsciScintillaCompat):
                 cap = self.trUtf8("{0} (ro)").format(cap)
             self.setWindowTitle(cap)
         
-        super().changeEvent(evt)
+        super(Editor, self).changeEvent(evt)
         
     def mousePressEvent(self, event):
         """
@@ -5955,7 +5927,7 @@ class Editor(QsciScintillaCompat):
         @param event the mouse press event (QMouseEvent)
         """
         self.vm.eventFilter(self, event)
-        super().mousePressEvent(event)
+        super(Editor, self).mousePressEvent(event)
         
     def wheelEvent(self, evt):
         """
@@ -5979,7 +5951,7 @@ class Editor(QsciScintillaCompat):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(Editor, self).wheelEvent(evt)
     
     def event(self, evt):
         """
@@ -5992,7 +5964,7 @@ class Editor(QsciScintillaCompat):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(Editor, self).event(evt)
     
     def gestureEvent(self, evt):
         """
@@ -6120,7 +6092,7 @@ class Editor(QsciScintillaCompat):
         if self.inDragDrop:
             event.acceptProposedAction()
         else:
-            super().dragEnterEvent(event)
+            super(Editor, self).dragEnterEvent(event)
         
     def dragMoveEvent(self, event):
         """
@@ -6131,7 +6103,7 @@ class Editor(QsciScintillaCompat):
         if self.inDragDrop:
             event.accept()
         else:
-            super().dragMoveEvent(event)
+            super(Editor, self).dragMoveEvent(event)
         
     def dragLeaveEvent(self, event):
         """
@@ -6143,7 +6115,7 @@ class Editor(QsciScintillaCompat):
             self.inDragDrop = False
             event.accept()
         else:
-            super().dragLeaveEvent(event)
+            super(Editor, self).dragLeaveEvent(event)
         
     def dropEvent(self, event):
         """
@@ -6165,7 +6137,7 @@ class Editor(QsciScintillaCompat):
                                 .format(fname))
             event.acceptProposedAction()
         else:
-            super().dropEvent(event)
+            super(Editor, self).dropEvent(event)
         
         self.inDragDrop = False
     
@@ -6420,7 +6392,7 @@ class Editor(QsciScintillaCompat):
                              for t in templateNames])
                         return
         
-        super().editorCommand(cmd)
+        super(Editor, self).editorCommand(cmd)
     
     def __completionListSelected(self, id, txt):
         """
@@ -6901,7 +6873,8 @@ class Editor(QsciScintillaCompat):
             if not commandLine.startswith("@@"):
                 continue
             
-            command, *args = commandLine.split()
+            args = commandLine.split()
+            command = args.pop(0)
             pos, l1, l2 = [int(arg) for arg in args]
             if command == "@@i":
                 txt = sep.join(commands[0:l1]) + sep

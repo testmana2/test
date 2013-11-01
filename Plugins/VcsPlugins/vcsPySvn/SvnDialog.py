@@ -7,6 +7,8 @@
 Module implementing a dialog to show the output of a pysvn action.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import pysvn
 
 from PyQt4.QtGui import QDialog, QApplication, QDialogButtonBox
@@ -34,7 +36,7 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         @keyparam parent parent widget (QWidget)
         @keyparam log optional log message (string)
         """
-        super().__init__(parent)
+        super(SvnDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self, log)
         

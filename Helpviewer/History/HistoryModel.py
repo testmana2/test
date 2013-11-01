@@ -7,6 +7,8 @@
 Module implementing the history model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 
 import Helpviewer.HelpWindow
@@ -31,7 +33,7 @@ class HistoryModel(QAbstractTableModel):
             (HistoryManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryModel, self).__init__(parent)
         
         self.__historyManager = historyManager
         

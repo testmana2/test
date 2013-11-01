@@ -7,6 +7,8 @@
 Module implementing the exceptions filter dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -25,7 +27,7 @@ class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
         @param ignore flag indicating the ignore exceptions mode (boolean)
         @param parent the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ExceptionsFilterDialog, self).__init__(parent)
         self.setupUi(self)
         self.setModal(True)
         

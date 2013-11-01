@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a new dialog class file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QDir, pyqtSlot
@@ -32,7 +34,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         @param defaultPath default path for the new file (string)
         @param parent parent widget if the dialog (QWidget)
         """
-        super().__init__(parent)
+        super(NewDialogClassDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

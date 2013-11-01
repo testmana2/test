@@ -13,5 +13,7 @@ Its main goal is to offer an API which could be used by developers to write thei
 custom build/deployment scripts.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 __version__ = "1.1.0"
 __author__ = "Sebastian Werner <info@sebastian-werner.net>"

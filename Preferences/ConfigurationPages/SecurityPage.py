@@ -7,6 +7,8 @@
 Module implementing the Security configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 from PyQt4.QtWebKit import QWebSettings
@@ -28,7 +30,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         @param configDialog reference to the configuration dialog
             (ConfigurationDialog)
         """
-        super().__init__()
+        super(SecurityPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("SecurityPage")
         

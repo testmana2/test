@@ -7,6 +7,12 @@
 Module implementing a dialog to show a list of tags or branches.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
@@ -31,7 +37,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgTagBranchListDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -340,4 +346,4 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgTagBranchListDialog, self).keyPressEvent(evt)

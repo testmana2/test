@@ -7,6 +7,8 @@
 Module implementing the add project dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -30,7 +32,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         @param startdir start directory for the selection dialog (string)
         @param project dictionary containing project data
         """
-        super().__init__(parent)
+        super(AddProjectDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.fileCompleter = E5FileCompleter(self.filenameEdit)

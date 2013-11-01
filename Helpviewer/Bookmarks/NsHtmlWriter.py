@@ -7,6 +7,8 @@
 Module implementing a class to write Netscape HTML bookmark files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QObject, QIODevice, QFile
 
 from .BookmarkNode import BookmarkNode
@@ -25,7 +27,7 @@ class NsHtmlWriter(QObject):
         """
         Constructor
         """
-        super().__init__()
+        super(NsHtmlWriter, self).__init__()
     
     def write(self, fileNameOrDevice, root):
         """

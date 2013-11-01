@@ -8,6 +8,8 @@
 Module implementing a class to read user agent data files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QXmlStreamReader, QIODevice, QFile, QCoreApplication
 
 
@@ -19,7 +21,7 @@ class UserAgentReader(QXmlStreamReader):
         """
         Constructor
         """
-        super().__init__()
+        super(UserAgentReader, self).__init__()
     
     def read(self, fileNameOrDevice):
         """

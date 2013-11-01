@@ -3,6 +3,8 @@
 # Copyright 2010-2012 Zynga Inc.
 #
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 import jasy.core.Console as Console

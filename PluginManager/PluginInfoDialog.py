@@ -8,6 +8,8 @@
 Module implementing the Plugin Info Dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QHeaderView, QMenu, QBrush
 
@@ -25,7 +27,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         @param pluginManager reference to the plugin manager object
         @param parent parent of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInfoDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.pm = pluginManager

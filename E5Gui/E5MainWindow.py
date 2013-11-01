@@ -7,6 +7,8 @@
 Module implementing a main window class with styling support.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QMainWindow, QStyleFactory,  QApplication
 
 from .E5Application import e5App
@@ -23,7 +25,7 @@ class E5MainWindow(QMainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5MainWindow, self).__init__(parent)
         
         self.defaultStyleName = QApplication.style().objectName()
     

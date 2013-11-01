@@ -8,6 +8,8 @@ Module implementing a dialog to show repository related information for a
 file/directory.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 import pysvn
@@ -32,7 +34,7 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnInfoDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         

@@ -7,6 +7,12 @@
 Module implementing a network reply class for FTP resources.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import ftplib
 import socket
 import errno
@@ -116,7 +122,7 @@ class FtpReply(QNetworkReply):
         @param accessHandler reference to the access handler (FtpAccessHandler)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(FtpReply, self).__init__(parent)
         
         self.__manager = parent
         self.__handler = accessHandler

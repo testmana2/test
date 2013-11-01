@@ -7,6 +7,8 @@
 Module implementing the Goto dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_GotoDialog import Ui_GotoDialog
@@ -26,7 +28,7 @@ class GotoDialog(QDialog, Ui_GotoDialog):
         @param name name of this dialog (string)
         @param modal flag indicating a modal dialog (boolean)
         """
-        super().__init__(parent)
+        super(GotoDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

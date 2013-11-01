@@ -7,6 +7,8 @@
 Module implementing a dialog for the configuration of a keyboard shortcut.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, QEvent, Qt
 from PyQt4.QtGui import QKeySequence, QDialog, QDialogButtonBox
 
@@ -30,7 +32,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         @param name The name of this dialog. (string)
         @param modal Flag indicating a modal dialog. (boolean)
         """
-        super().__init__(parent)
+        super(ShortcutDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)

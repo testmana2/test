@@ -7,6 +7,8 @@
 Module implementing specialized tree views.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QAbstractItemView
 
@@ -32,7 +34,7 @@ class E5TreeWidget(QTreeWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5TreeWidget, self).__init__(parent)
         
         self.__refreshAllItemsNeeded = True
         self.__allTreeItems = []
@@ -131,7 +133,7 @@ class E5TreeWidget(QTreeWidget):
         @param item item to be added as a top level item (QTreeWidgetItem)
         """
         self.__allTreeItems.append(item)
-        super().addTopLevelItem(item)
+        super(E5TreeWidget, self).addTopLevelItem(item)
     
     def addTopLevelItems(self, items):
         """
@@ -141,7 +143,7 @@ class E5TreeWidget(QTreeWidget):
             (list of QTreeWidgetItem)
         """
         self.__allTreeItems.extend(items)
-        super().addTopLevelItems(items)
+        super(E5TreeWidget, self).addTopLevelItems(items)
     
     def insertTopLevelItem(self, index, item):
         """
@@ -151,7 +153,7 @@ class E5TreeWidget(QTreeWidget):
         @param item item to be inserted as a top level item (QTreeWidgetItem)
         """
         self.__allTreeItems.append(item)
-        super().insertTopLevelItem(index, item)
+        super(E5TreeWidget, self).insertTopLevelItem(index, item)
     
     def insertTopLevelItems(self, index, items):
         """
@@ -162,7 +164,7 @@ class E5TreeWidget(QTreeWidget):
             (list of QTreeWidgetItem)
         """
         self.__allTreeItems.extend(items)
-        super().insertTopLevelItems(index, items)
+        super(E5TreeWidget, self).insertTopLevelItems(index, items)
     
     def deleteItem(self, item):
         """
@@ -232,7 +234,7 @@ class E5TreeWidget(QTreeWidget):
         Public slot to clear the tree.
         """
         self.__allTreeItems = []
-        super().clear()
+        super(E5TreeWidget, self).clear()
     
     def __scheduleRefresh(self):
         """
@@ -254,7 +256,7 @@ class E5TreeWidget(QTreeWidget):
             self.itemMiddleButtonClicked.emit(self.itemAt(evt.pos()))
             return
         else:
-            super().mousePressEvent(evt)
+            super(E5TreeWidget, self).mousePressEvent(evt)
     
     def __iterateAllItems(self, parent):
         """

@@ -8,6 +8,12 @@ Module implementing a dialog to show the output of the svn status command
 process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QTimer, QProcess, QRegExp, Qt, pyqtSlot
@@ -34,7 +40,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnStatusDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__toBeCommittedColumn = 0
@@ -572,7 +578,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnStatusDialog, self).keyPressEvent(evt)
         
     @pyqtSlot()
     def on_refreshButton_clicked(self):

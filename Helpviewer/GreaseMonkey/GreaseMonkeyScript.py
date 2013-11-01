@@ -7,6 +7,8 @@
 Module implementing the GreaseMonkey script.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QUrl, QRegExp
 
 from .GreaseMonkeyUrlMatcher import GreaseMonkeyUrlMatcher

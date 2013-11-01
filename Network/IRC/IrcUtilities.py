@@ -7,6 +7,8 @@
 Module implementing functions used by several IRC objects.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 from PyQt4.QtCore import QTime, QCoreApplication

@@ -7,6 +7,8 @@
 Module implementing a dialog to configure the preferred languages.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QByteArray, QLocale
 from PyQt4.QtGui import QDialog, QStringListModel
 
@@ -25,7 +27,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HelpLanguagesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__model = QStringListModel()
@@ -114,7 +116,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             Preferences.Prefs.settings.remove("Help/AcceptLanguages")
         else:
             Preferences.Prefs.settings.setValue("Help/AcceptLanguages", result)
-        super().accept()
+        super(HelpLanguagesDialog, self).accept()
     
     @classmethod
     def httpString(cls, languages):
