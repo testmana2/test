@@ -1272,11 +1272,13 @@ class Editor(QsciScintillaCompat):
         self.lexer_ = None
         self.__lexerReset = True
         self.setLexer()
-        self.setMonospaced(self.useMonospaced)
         if self.completer is not None:
             self.completer.setEnabled(False)
             self.completer = None
+        useMonospaced = self.useMonospaced
         self.__setTextDisplay()
+        self.setMonospaced(useMonospaced)
+        self.menuActs["MonospacedFont"].setChecked(self.useMonospaced)
         
         if not self.inLanguageChanged and propagate:
             self.inLanguageChanged = True
@@ -1295,6 +1297,8 @@ class Editor(QsciScintillaCompat):
         @keyparam propagate flag indicating to propagate the change (boolean)
         @keyparam pyname name of the pygments lexer to use (string)
         """
+        self.menuActs["MonospacedFont"].setChecked(False)
+        
         self.__lexerReset = False
         self.__bindLexer(filename, pyname=pyname)
         self.__bindCompleter(filename)
