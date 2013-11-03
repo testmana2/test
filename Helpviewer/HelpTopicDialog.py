@@ -7,6 +7,8 @@
 Module implementing a dialog to select a help topic to display.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import QUrl
 
@@ -26,7 +28,7 @@ class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
         @param links dictionary with help topic as key (string) and
             URL as value (QUrl)
         """
-        super().__init__(parent)
+        super(HelpTopicDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.label.setText(self.trUtf8("Choose a &topic for <b>{0}</b>:")

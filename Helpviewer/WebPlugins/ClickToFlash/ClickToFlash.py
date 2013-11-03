@@ -8,6 +8,8 @@ Module implementing the Flash blocker.
 """
 
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QByteArray,  QTimer
 from PyQt4.QtGui import QWidget, QMenu, QCursor, QDialog, QLabel, QFormLayout
 from PyQt4.QtNetwork import QNetworkRequest
@@ -39,7 +41,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         @param argumentValues list of argument values (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ClickToFlash, self).__init__(parent)
         
         # Check AdBlock first
         import Helpviewer.HelpWindow

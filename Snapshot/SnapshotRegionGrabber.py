@@ -7,6 +7,8 @@
 Module implementing a grabber widget for a rectangular snapshot region.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
 from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \
     QPainter, QPalette, QToolTip, QPaintEngine, QPen, QBrush
@@ -57,7 +59,7 @@ class SnapshotRegionGrabber(QWidget):
         @param mode region grabber mode (SnapshotRegionGrabber.Rectangle or
             SnapshotRegionGrabber.Ellipse)
         """
-        super().__init__(
+        super(SnapshotRegionGrabber, self).__init__(
             None,
             Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint |
             Qt.FramelessWindowHint | Qt.Tool)

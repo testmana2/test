@@ -7,6 +7,8 @@
 Module implementing the exporter base class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QFileInfo, QObject
 from PyQt4.QtGui import QApplication
 
@@ -26,7 +28,7 @@ class ExporterBase(QObject):
         @param editor reference to the editor object (QScintilla.Editor.Editor)
         @param parent parent object of the exporter (QObject)
         """
-        super().__init__(parent)
+        super(ExporterBase, self).__init__(parent)
         self.editor = editor
     
     def _getFileName(self, filter):

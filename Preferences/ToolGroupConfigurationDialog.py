@@ -7,6 +7,8 @@
 Module implementing a configuration dialog for the tools menu.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import copy
 
 from PyQt4.QtCore import Qt, pyqtSlot
@@ -29,7 +31,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         @param currentGroup number of the active group (integer)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ToolGroupConfigurationDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.currentGroup = currentGroup

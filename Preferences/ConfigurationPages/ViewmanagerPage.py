@@ -7,6 +7,8 @@
 Module implementing the Viewmanager configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Application import e5App
@@ -25,7 +27,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         """
         Constructor
         """
-        super().__init__()
+        super(ViewmanagerPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("ViewmanagerPage")
         

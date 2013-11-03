@@ -7,6 +7,12 @@
 Module implementing a class to read Netscape HTML bookmark files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import QObject, QIODevice, QFile, QRegExp, Qt, QDateTime
 
 from .BookmarkNode import BookmarkNode
@@ -24,7 +30,7 @@ class NsHtmlReader(QObject):
         """
         Constructor
         """
-        super().__init__()
+        super(NsHtmlReader, self).__init__()
         
         self.__folderRx = QRegExp("<DT><H3(.*)>(.*)</H3>", Qt.CaseInsensitive)
         self.__folderRx.setMinimal(True)

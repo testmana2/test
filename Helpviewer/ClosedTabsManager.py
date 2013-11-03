@@ -7,6 +7,8 @@
 Module implementing a class to manage closed tabs.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, QUrl, QObject
 from PyQt4.QtWebKit import QWebSettings
 
@@ -54,7 +56,7 @@ class ClosedTabsManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__()
+        super(ClosedTabsManager, self).__init__()
         
         self.__closedTabs = []
     

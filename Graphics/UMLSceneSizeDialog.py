@@ -7,6 +7,8 @@
 Module implementing a dialog to set the scene sizes.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_UMLSceneSizeDialog import Ui_UMLSceneSizeDialog
@@ -27,7 +29,7 @@ class UMLSceneSizeDialog(QDialog, Ui_UMLSceneSizeDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this widget (string)
         """
-        super().__init__(parent)
+        super(UMLSceneSizeDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

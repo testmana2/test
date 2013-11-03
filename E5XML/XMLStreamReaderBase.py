@@ -7,6 +7,8 @@
 Module implementing a base class for all of eric5s XML stream writers.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import pickle
 import base64
 
@@ -25,7 +27,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @param device reference to the I/O device to read from (QIODevice)
         """
-        super().__init__(device)
+        super(XMLStreamReaderBase, self).__init__(device)
     
     def toBool(self, value):
         """

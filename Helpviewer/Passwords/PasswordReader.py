@@ -7,6 +7,8 @@
 Module implementing a class to read login data files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QXmlStreamReader, QIODevice, QFile, \
     QCoreApplication, QUrl
 
@@ -19,7 +21,7 @@ class PasswordReader(QXmlStreamReader):
         """
         Constructor
         """
-        super().__init__()
+        super(PasswordReader, self).__init__()
     
     def read(self, fileNameOrDevice):
         """

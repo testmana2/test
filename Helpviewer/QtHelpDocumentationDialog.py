@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the QtHelp documentation database.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QItemSelectionModel
 from PyQt4.QtHelp import QHelpEngineCore
@@ -27,7 +29,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         @param engine reference to the help engine (QHelpEngine)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(QtHelpDocumentationDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.removeButton.setEnabled(False)

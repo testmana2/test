@@ -7,6 +7,12 @@
 Module implementing the Programs page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import re
 
@@ -32,7 +38,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         
         @param parent The parent widget of this dialog. (QWidget)
         """
-        super().__init__(parent)
+        super(ProgramsDialog, self).__init__(parent)
         self.setupUi(self)
         self.setObjectName("ProgramsDialog")
         

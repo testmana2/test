@@ -7,6 +7,12 @@
 Module implementing the main user interface.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import sys
 import logging
@@ -64,7 +70,7 @@ class Redirector(QObject):
         
         @param stderr flag indicating stderr is being redirected
         """
-        super().__init__()
+        super(Redirector, self).__init__()
         self.stderr = stderr
         self.buffer = ''
         
@@ -150,7 +156,7 @@ class UserInterface(E5MainWindow):
         @param restartArguments list of command line parameters to be used for
             a restart (list of strings)
         """
-        super().__init__()
+        super(UserInterface, self).__init__()
         self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.__restartArgs = restartArguments[:]

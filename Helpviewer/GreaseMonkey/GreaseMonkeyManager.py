@@ -7,6 +7,8 @@
 Module implementing the manager for GreaseMonkey scripts.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, \
@@ -29,7 +31,7 @@ class GreaseMonkeyManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(GreaseMonkeyManager, self).__init__(parent)
         
         self.__disabledScripts = []
         self.__endScripts = []

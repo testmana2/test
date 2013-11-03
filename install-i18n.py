@@ -9,6 +9,8 @@
 Installation script for the eric5 IDE translation files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 import shutil

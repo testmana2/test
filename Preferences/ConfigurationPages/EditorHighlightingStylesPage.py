@@ -7,6 +7,8 @@
 Module implementing the Editor Highlighting Styles configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QFileInfo, QFile, QIODevice
 from PyQt4.QtGui import QPalette, QColorDialog, QFontDialog, \
     QInputDialog, QFont, QMenu
@@ -35,7 +37,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         @param lexers reference to the lexers dictionary
         """
-        super().__init__()
+        super(EditorHighlightingStylesPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorHighlightingStylesPage")
         

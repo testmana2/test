@@ -7,6 +7,8 @@
 Module implementing a compatability interface class to QsciScintilla.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QPalette, QColor, QApplication
 from PyQt4.Qsci import QsciScintilla, \
@@ -56,7 +58,7 @@ class QsciScintillaCompat(QsciScintilla):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(QsciScintillaCompat, self).__init__(parent)
         
         self.zoom = 0
         
@@ -72,7 +74,7 @@ class QsciScintillaCompat(QsciScintilla):
         
         @param lex the lexer to be set or None to reset it.
         """
-        super().setLexer(lex)
+        super(QsciScintillaCompat, self).setLexer(lex)
         if lex is None:
             self.clearStyles()
     
@@ -249,10 +251,10 @@ class QsciScintillaCompat(QsciScintilla):
         """
         char = self.SendScintilla(QsciScintilla.SCI_GETCHARAT, pos)
         if char == 0:
-            return b""
+            return bytearray()
         if char < 0:
             char += 256
-        return bytes.fromhex("{0:02x}".format(char))
+        return bytearray((char,))
     
     def foldLevelAt(self, line):
         """
@@ -324,7 +326,7 @@ class QsciScintillaCompat(QsciScintilla):
         
         @param zoom zoom factor increment (integer)
         """
-        super().zoomIn(zoom)
+        super(QsciScintillaCompat, self).zoomIn(zoom)
     
     def zoomOut(self, zoom=1):
         """
@@ -332,7 +334,7 @@ class QsciScintillaCompat(QsciScintilla):
         
         @param zoom zoom factor decrement (integer)
         """
-        super().zoomOut(zoom)
+        super(QsciScintillaCompat, self).zoomOut(zoom)
     
     def zoomTo(self, zoom):
         """
@@ -341,7 +343,7 @@ class QsciScintillaCompat(QsciScintilla):
         @param zoom zoom factor (integer)
         """
         self.zoom = zoom
-        super().zoomTo(zoom)
+        super(QsciScintillaCompat, self).zoomTo(zoom)
         self.zoomValueChanged.emit(self.zoom)
     
     def getZoom(self):
@@ -996,9 +998,9 @@ class QsciScintillaCompat(QsciScintilla):
         @param margin margin number (integer)
         """
         if style < self.ArrowFoldStyle:
-            super().setFolding(style, margin)
+            super(QsciScintillaCompat, self).setFolding(style, margin)
         else:
-            super().setFolding(
+            super(QsciScintillaCompat, self).setFolding(
                 QsciScintilla.PlainFoldStyle, margin)
             
             if style == self.ArrowFoldStyle:
@@ -1101,7 +1103,7 @@ class QsciScintillaCompat(QsciScintilla):
         if self.isListActive():
             self.cancelList()
         
-        super().focusOutEvent(event)
+        super(QsciScintillaCompat, self).focusOutEvent(event)
     
     def event(self, evt):
         """

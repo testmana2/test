@@ -8,6 +8,8 @@ Module implementing a class used to display the parts of the project, that
 don't fit the other categories.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import mimetypes
 
 from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl

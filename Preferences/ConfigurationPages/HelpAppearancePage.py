@@ -7,6 +7,8 @@
 Module implementing the Help Viewers configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -27,7 +29,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         """
         Constructor
         """
-        super().__init__()
+        super(HelpAppearancePage, self).__init__()
         self.setupUi(self)
         self.setObjectName("HelpAppearancePage")
         

@@ -7,6 +7,8 @@
 Module implementing a dialog showing the cookie data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_CookieDetailsDialog import Ui_CookieDetailsDialog
@@ -22,7 +24,7 @@ class CookieDetailsDialog(QDialog, Ui_CookieDetailsDialog):
         
         @param parent reference to the parent object (QWidget)
         """
-        super().__init__(parent)
+        super(CookieDetailsDialog, self).__init__(parent)
         self.setupUi(self)
     
     def setData(self, domain, name, path, secure, expires, value):

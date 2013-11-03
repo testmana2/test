@@ -4,6 +4,8 @@
 Module implementing a dialog to enter the icon size.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_IconSizeDialog import Ui_IconSizeDialog
@@ -21,7 +23,7 @@ class IconSizeDialog(QDialog, Ui_IconSizeDialog):
         @param height height to be set (integer)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IconSizeDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.widthSpin.setValue(width)

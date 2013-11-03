@@ -8,6 +8,8 @@ Module implementing a dialog showing statistical data for the last code
 style checker run.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
@@ -32,7 +34,7 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         @param statistics dictionary with the statistical data
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CodeStyleStatisticsDialog, self).__init__(parent)
         self.setupUi(self)
         
         stats = statistics.copy()

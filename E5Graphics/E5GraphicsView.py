@@ -7,6 +7,8 @@
 Module implementing a canvas view class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 
 from PyQt4.QtCore import pyqtSignal, QRectF, QSize, QSizeF, Qt
@@ -39,7 +41,7 @@ class E5GraphicsView(QGraphicsView):
         @param scene reference to the scene object (QGraphicsScene)
         @param parent parent widget (QWidget)
         """
-        super().__init__(scene, parent)
+        super(E5GraphicsView, self).__init__(scene, parent)
         self.setObjectName("E5GraphicsView")
         
         self.__initialSceneSize = self.scene().sceneRect().size()

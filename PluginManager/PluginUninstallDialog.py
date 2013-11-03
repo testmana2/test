@@ -7,6 +7,8 @@
 Module implementing a dialog for plugin deinstallation.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 import imp
@@ -39,7 +41,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         @param pluginManager reference to the plugin manager object
         @param parent parent of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(PluginUninstallWidget, self).__init__(parent)
         self.setupUi(self)
         
         if pluginManager is None:
@@ -207,7 +209,7 @@ class PluginUninstallDialog(QDialog):
         @param pluginManager reference to the plugin manager object
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginUninstallDialog, self).__init__(parent)
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
@@ -233,7 +235,7 @@ class PluginUninstallWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginUninstallWindow, self).__init__(parent)
         self.cw = PluginUninstallWidget(None, self)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

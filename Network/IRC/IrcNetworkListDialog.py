@@ -7,6 +7,8 @@
 Module implementing a dialog to list the configured IRC networks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
@@ -26,7 +28,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         @param manager reference to the IRC network manager (IrcNetworkManager)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcNetworkListDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__manager = manager

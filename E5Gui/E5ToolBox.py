@@ -7,6 +7,8 @@
 Module implementing a horizontal and a vertical toolbox class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QToolBox, QTabWidget
 
 from .E5TabWidget import E5TabWidget
@@ -23,7 +25,7 @@ class E5VerticalToolBox(QToolBox):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5VerticalToolBox, self).__init__(parent)
 
 
 class E5HorizontalToolBox(E5TabWidget):

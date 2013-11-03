@@ -7,6 +7,8 @@
 Module implementing the Subversion command dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -35,7 +37,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         @param ppath pathname of the project directory (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(SvnCommandDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.workdirCompleter = E5DirCompleter(self.workdirCombo)

@@ -8,10 +8,16 @@ Module implementing a dialog to show the output of the tabnanny command
 process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode   # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 import fnmatch
 
-from PyQt4.QtCore import pyqtSlot, Qt, QProcess
+from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, \
     QApplication, QHeaderView
 
@@ -21,8 +27,6 @@ from .Ui_TabnannyDialog import Ui_TabnannyDialog
 
 import Utilities
 import Preferences
-
-from eric5config import getConfig
 
 
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
@@ -35,7 +39,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         @param parent The parent widget (QWidget).
         """
-        super().__init__(parent)
+        super(TabnannyDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -114,28 +118,21 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             files = fn
         elif os.path.isdir(fn):
             files = []
-            for ext in Preferences.getPython("Python3Extensions"):
+            extensions = set(Preferences.getPython("PythonExtensions") +
+                Preferences.getPython("Python3Extensions"))
+            for ext in extensions:
                 files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+                    Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             files = [fn]
-        py3files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
         
-        if len(py3files) + len(py2files) > 0:
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
+        if len(files) > 0:
+            self.checkProgress.setMaximum(len(files))
             QApplication.processEvents()
             
             # now go through all the files
             progress = 0
-            for file in py3files + py2files:
+            for file in files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
                 self.__resort()
@@ -145,31 +142,17 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                 
                 try:
                     source = Utilities.readEncodedFile(file)[0]
-                    # convert eols
-                    source = Utilities.convertLineEnds(source, "\n")
+                    source = Utilities.normalizeCode(source)
                 except (UnicodeError, IOError) as msg:
                     self.noResults = False
                     self.__createResultItem(
-                        file, "1",
+                        file, 1,
                         "Error: {0}".format(str(msg)).rstrip()[1:-1])
                     progress += 1
                     continue
-                
-                flags = Utilities.extractFlags(source)
-                ext = os.path.splitext(file)[1]
-                if ("FileType" in flags and
-                    flags["FileType"] in ["Python", "Python2"]) or \
-                   file in py2files or \
-                   (ext in [".py", ".pyw"] and
-                    Preferences.getProject("DeterminePyFromProject") and
-                    self.__project.isOpen() and
-                    self.__project.isProjectFile(file) and
-                    self.__project.getProjectLanguage() in ["Python",
-                                                            "Python2"]):
-                    nok, fname, line, error = self.__py2check(file)
-                else:
-                    from . import Tabnanny
-                    nok, fname, line, error = Tabnanny.check(file, source)
+
+                from . import Tabnanny
+                nok, fname, line, error = Tabnanny.check(file, source)
                 if nok:
                     self.noResults = False
                     self.__createResultItem(fname, line, error.rstrip())
@@ -248,46 +231,3 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         lineno = int(itm.text(1))
         
         e5App().getObject("ViewManager").openSourceFile(fn, lineno)
-    
-    ###########################################################################
-    ## Python 2 interface below
-    ###########################################################################
-    
-    def __py2check(self, filename):
-        """
-        Private method to perform the indentation check for Python 2 files.
-        
-        @param filename name of the file to be checked (string)
-        @return A tuple indicating status (True = an error was found), the
-            filename, the linenumber and the error message
-            (boolean, string, string, string). The values are only
-            valid, if the status is True.
-        """
-        interpreter = Preferences.getDebugger("PythonInterpreter")
-        if interpreter == "" or not Utilities.isExecutable(interpreter):
-            return (True, filename, "1",
-                    self.trUtf8("Python2 interpreter not configured."))
-        
-        checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "TabnannyChecker.py")
-        
-        proc = QProcess()
-        proc.setProcessChannelMode(QProcess.MergedChannels)
-        proc.start(interpreter, [checker, filename])
-        finished = proc.waitForFinished(15000)
-        if finished:
-            output = str(proc.readAllStandardOutput(),
-                         Preferences.getSystem("IOEncoding"),
-                         'replace').splitlines()
-            
-            nok = output[0] == "ERROR"
-            if nok:
-                fn = output[1]
-                line = output[2]
-                error = output[3]
-                return (True, fn, line, error)
-            else:
-                return (False, None, None, None)
-        
-        return (True, filename, "1",
-                self.trUtf8("Python2 interpreter did not finish within 15s."))
