@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2013-09-07, 22:02:55 -->
-<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -1109,6 +1107,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/__init__.py</Source>
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
+    <Source>UtilitiesPython2/pep8.py</Source>
+    <Source>UtilitiesPython2/__init__.py</Source>
+    <Source>UtilitiesPython2/Tools.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1927,7 +1928,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>E24, D, W293, N802, N803, N807, N808, N821</string>
+              <string>E24, W293, N802, N803, N807, N808, N821</string>
             </value>
             <key>
               <string>FixCodes</string>
