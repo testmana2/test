@@ -154,7 +154,8 @@ class DebuggerInterfacePython3(QObject):
         """
         interpreter = Preferences.getDebugger("Python3Interpreter")
         if interpreter == "":
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8("Start Debugger"),
                 self.trUtf8(
                     """<p>No Python3 interpreter configured.</p>"""))

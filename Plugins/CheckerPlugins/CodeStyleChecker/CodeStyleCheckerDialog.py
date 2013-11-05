@@ -59,7 +59,8 @@ class CodeStyleCheckerReport(pep8.BaseReport):
         @param args arguments for the message (list)
         @return error code (string)
         """
-        code = super(CodeStyleCheckerReport, self).error_args(line_number, offset, code, check, *args)
+        code = super(CodeStyleCheckerReport, self).error_args(
+            line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
             if code in NamingStyleChecker.Codes:
                 text = NamingStyleChecker.getMessage(code, *args)
@@ -332,9 +333,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         elif os.path.isdir(fn):
             files = []
             extensions = set(Preferences.getPython("PythonExtensions") +
-                Preferences.getPython("Python3Extensions"))
+                             Preferences.getPython("Python3Extensions"))
             for ext in extensions:
-                files.extend(Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
+                files.extend(Utilities.direntries(
+                    fn, True, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         

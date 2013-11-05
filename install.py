@@ -843,7 +843,8 @@ def doDependancyChecks():
     
     # perform dependency checks
     if sys.version_info < (2, 6, 0):
-        print('Sorry, you must have Python 2.6.0 or higher or Python 3.1.0 or higher.')
+        print('Sorry, you must have Python 2.6.0 or higher or '
+              'Python 3.1.0 or higher.')
         exit(5)
     elif sys.version_info < (3, 1, 0) and sys.version_info[0] == 3:
         print('Sorry, you must have Python 3.1.0 or higher.')
@@ -1083,7 +1084,8 @@ def main(argv):
     global sourceDir, configName, macAppBundleName, macPythonExe
     
     if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
-        print('Sorry, eric5 requires at least Python 2.6 or Python 3 for running.')
+        print('Sorry, eric5 requires at least Python 2.6 or '
+              'Python 3 for running.')
         exit(5)
     
     progName = os.path.basename(argv[0])

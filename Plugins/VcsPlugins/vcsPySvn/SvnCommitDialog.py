@@ -36,7 +36,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         @param changelists list of available change lists (list of strings)
         @param parent parent widget (QWidget)
         """
-        super(SvnCommitDialog, self).__init__(parent, Qt.WindowFlags(Qt.Window))
+        super(SvnCommitDialog, self).__init__(
+            parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
         if pysvn.svn_version < (1, 5, 0) or pysvn.version < (1, 6, 0):

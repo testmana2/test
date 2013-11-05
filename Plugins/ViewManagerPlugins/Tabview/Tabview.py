@@ -224,8 +224,9 @@ class TabWidget(E5TabWidget):
         self.emptyLabel = QLabel()
         self.emptyLabel.setPixmap(ericPic)
         self.emptyLabel.setAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
-        super(TabWidget, self).addTab(self.emptyLabel,
-                       UI.PixmapCache.getIcon("empty.png"), "")
+        super(TabWidget, self).addTab(
+            self.emptyLabel,
+            UI.PixmapCache.getIcon("empty.png"), "")
         
     def __initMenu(self):
         """
@@ -347,7 +348,8 @@ class TabWidget(E5TabWidget):
         @param title title for the new tab (string)
         """
         editor = assembly.getEditor()
-        super(TabWidget, self).addTab(assembly, UI.PixmapCache.getIcon("empty.png"), title)
+        super(TabWidget, self).addTab(
+            assembly, UI.PixmapCache.getIcon("empty.png"), title)
         if self.closeButton:
             self.closeButton.setEnabled(True)
         else:
@@ -374,9 +376,10 @@ class TabWidget(E5TabWidget):
         @return index of the inserted tab (integer)
         """
         editor = assembly.getEditor()
-        newIndex = super(TabWidget, self).insertTab(index, assembly,
-                                     UI.PixmapCache.getIcon("empty.png"),
-                                     title)
+        newIndex = super(TabWidget, self).insertTab(
+            index, assembly,
+            UI.PixmapCache.getIcon("empty.png"),
+            title)
         if self.closeButton:
             self.closeButton.setEnabled(True)
         else:

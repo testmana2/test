@@ -166,7 +166,8 @@ class E5Ftp(ftplib.FTP):
             return super(E5Ftp, self).connect(
                 self.__proxyHost, self.__proxyPort, self.__timeout)
         else:
-            return super(E5Ftp, self).connect(self.__host, self.__port, self.__timeout)
+            return super(E5Ftp, self).connect(
+                self.__host, self.__port, self.__timeout)
     
     def login(self, user="", password="", acct=""):
         """

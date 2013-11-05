@@ -59,7 +59,8 @@ class E5PasswordMeter(QProgressBar):
         strength = PasswordChecker().checkPassword(password)
         self.setStyleSheet(self.__styleSheetTemplate.format(
             self.__indicatorColors[strength]))
-        super(E5PasswordMeter, self).setValue((strength + 1) * self.__increment)
+        super(E5PasswordMeter, self).setValue(
+            (strength + 1) * self.__increment)
     
     def setValue(self, value):
         """

@@ -36,7 +36,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         @param vcsObject reference to the vcs object
         @param projectObject reference to the project object
         """
-        super(TransplantProjectHelper, self).setObjects(vcsObject, projectObject)
+        super(TransplantProjectHelper, self).setObjects(
+            vcsObject, projectObject)
         
         if self.vcs.version >= (2, 3):
             # transplant is deprecated as of Mercurial 2.3

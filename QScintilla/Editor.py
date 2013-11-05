@@ -4940,13 +4940,12 @@ class Editor(QsciScintillaCompat):
             not self.autosaveManuallyDisabled and \
             not self.isReadOnly()
 
-
     def __autoSyntaxCheck(self):
         """
         Private method to perform an automatic syntax check of the file.
         """
         isPy2 = self.isPy2File()
-        if (isPy2 or self.isPy3File()) == False:
+        if (isPy2 or self.isPy3File()) is False:
             return
         
         if Preferences.getEditor("AutoCheckSyntax"):
@@ -4955,15 +4954,15 @@ class Editor(QsciScintillaCompat):
             self.clearSyntaxError()
             self.clearFlakesWarnings()
 
-            syntaxError, _fn, errorline, errorindex, _code, _error, warnings = \
-                Utilities.compile(self.fileName or "(Unnamed)", self.text(), isPy2)
+            syntaxError, _fn, errorline, errorindex, _code, _error, warnings =\
+                Utilities.compile(
+                    self.fileName or "(Unnamed)", self.text(), isPy2)
             if syntaxError:
                 self.toggleSyntaxError(errorline, errorindex, True, _error)
             else:
                 for warning in warnings:
                     self.toggleFlakesWarning(
                         warning[2], True, warning[3])
-
 
     def __initOnlineSyntaxCheck(self):
         """

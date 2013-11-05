@@ -34,7 +34,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super(SvnCommitDialog, self).__init__(parent, Qt.WindowFlags(Qt.Window))
+        super(SvnCommitDialog, self).__init__(
+            parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
         if vcs.version < (1, 5, 0):

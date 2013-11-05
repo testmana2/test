@@ -751,8 +751,8 @@ def samefilepath(f1, f2):
         return False
     
     if (normcaseabspath(os.path.dirname(os.path.realpath(f1))) ==
-        normcaseabspath(os.path.dirname(os.path.realpath(f2)))):
-            return True
+            normcaseabspath(os.path.dirname(os.path.realpath(f2)))):
+        return True
     
     return False
 
@@ -1179,19 +1179,24 @@ def compile(file, codestring="", isPy2=False):
     from PyQt4.QtCore import QCoreApplication
     
     interpreter_name = 'Python' if isPy2 else 'Python3'
-    interpreter = Preferences.getDebugger(interpreter_name+"Interpreter")
+    interpreter = Preferences.getDebugger(
+        interpreter_name + "Interpreter")
     checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
-    ignoreStarImportWarnings = Preferences.getFlakes("IgnoreStarImportWarnings")
+    ignoreStarImportWarnings = Preferences.getFlakes(
+        "IgnoreStarImportWarnings")
     if samefilepath(interpreter, sys.executable):
-        ret = compile_and_check(file, codestring, checkFlakes, ignoreStarImportWarnings)
+        ret = compile_and_check(
+            file, codestring, checkFlakes, ignoreStarImportWarnings)
     else:
         #TODO: create temporary file if only a codestring is given
-        ret = compile_extern(file, isPy2, checkFlakes, ignoreStarImportWarnings)
+        ret = compile_extern(
+            file, isPy2, checkFlakes, ignoreStarImportWarnings)
     
     # Translate messages
     for warning in ret[6]:
         msg_args = warning.pop()
-        translated = QCoreApplication.translate('py3Flakes', warning[-1]).format(*msg_args)
+        translated = QCoreApplication.translate(
+            'py3Flakes', warning[-1]).format(*msg_args)
         # Avoid leading "u" at Python2 unicode strings
         if translated.startswith("u'"):
             translated = translated[1:]
@@ -1200,12 +1205,16 @@ def compile(file, codestring="", isPy2=False):
     return ret
 
 
-def compile_extern(file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False):
+def compile_extern(
+        file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False):
     """
     Function to compile one Python source file to Python bytecode.
     
     @param file source filename (string)
+    @param isPy2 flag indicating if it's a Python 2 or 3 file (boolean)
     @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
+    @keyparam ignoreStarImportWarnings flag if star import warnings should be
+        suppressed (boolean)
     @return A tuple indicating status (True = an error was found), the
         file name, the line number, the index number, the code string,
         the error message and a list of tuples of pyflakes warnings indicating
@@ -1215,12 +1224,13 @@ def compile_extern(file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False
         be empty, if a syntax error was detected by the syntax checker.
     """
     interpreter_name = 'Python' if isPy2 else 'Python3'
-    interpreter = Preferences.getDebugger(interpreter_name+"Interpreter")
+    interpreter = Preferences.getDebugger(interpreter_name + "Interpreter")
     if interpreter == "" or not isinpath(interpreter):
-        return (True, file, 1, 0, "", 
-                QCoreApplication.translate("Utilities",
+        return (True, file, 1, 0, "",
+                QCoreApplication.translate(
+                    "Utilities",
                     "{0} interpreter not configured.")
-                    .format(interpreter_name), [])
+                .format(interpreter_name), [])
     syntaxChecker = os.path.join(getConfig('ericDir'),
                                  "Utilities", "SyntaxCheck.py")
     args = [syntaxChecker]
@@ -1235,7 +1245,8 @@ def compile_extern(file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False
     proc.start(interpreter, args)
     finished = proc.waitForFinished(30000)
     if finished:
-        output = codecs.decode(proc.readAllStandardOutput(),
+        output = codecs.decode(
+            proc.readAllStandardOutput(),
             sys.getfilesystemencoding(), 'strict').splitlines()
         
         if output:
@@ -1252,12 +1263,15 @@ def compile_extern(file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False
                 warnings = []
                 while len(output) - index > 3:
                     if output[index] == "FLAKES_ERROR":
-                        return (True, output[index + 1], int(output[index + 2]), -1,
-                            '', output[index + 3], [])
+                        return (True, output[index + 1],
+                                int(output[index + 2]), -1,
+                                '', output[index + 3], [])
                     else:
                         msg_args = output[index + 4].split('#')
-                        warnings.append([output[index], output[index + 1], 
-                            int(output[index + 2]), output[index + 3], msg_args])
+                        warnings.append([
+                            output[index], output[index + 1],
+                            int(output[index + 2]), output[index + 3],
+                            msg_args])
                         index += 5
                 
                 return (False, None, None, None, None, None, warnings)
@@ -1265,9 +1279,10 @@ def compile_extern(file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False
             return (False, "", -1, -1, "", "", [])
     
     return (True, file, 1, 0, "",
-        QCoreApplication.translate("Utilities",
-        "{0} interpreter did not finish within 30s.").format(
-        interpreter_name), [])
+            QCoreApplication.translate(
+                "Utilities",
+                "{0} interpreter did not finish within 30s.").format(
+                interpreter_name), [])
 
 
 ###############################################################################

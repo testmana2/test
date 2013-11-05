@@ -424,7 +424,8 @@ class UMLGraphicsView(E5GraphicsView):
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_():
-            super(UMLGraphicsView, self).printDiagram(printer, self.diagramName)
+            super(UMLGraphicsView, self).printDiagram(
+                printer, self.diagramName)
         
     def printPreviewDiagram(self):
         """

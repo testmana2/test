@@ -279,7 +279,8 @@ class HelpWebPage(QWebPage):
             files = sip.cast(output,
                              QWebPage.ChooseMultipleFilesExtensionReturn)
             if info is None or files is None:
-                return super(HelpWebPage, self).extension(extension, option, output)
+                return super(HelpWebPage, self).extension(
+                    extension, option, output)
             
             suggestedFileName = ""
             if info.suggestedFileNames:

@@ -77,4 +77,5 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
             self.removeItemRequested.emit(self.itemAt(evt.pos()))
             return
         
-        super(GreaseMonkeyConfigurationListWidget, self).mouseDoubleClickEvent(evt)
+        super(GreaseMonkeyConfigurationListWidget, self).mouseDoubleClickEvent(
+            evt)

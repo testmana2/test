@@ -5,6 +5,7 @@
 
 """
 Module implementing the open behavior of Python3 for use with Eric5.
+
 The Eric5 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 """
@@ -15,7 +16,8 @@ import __builtin__
 import codecs
 
 
-def open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True):
+def open(file, mode='r', buffering=-1, encoding=None,
+         errors=None, newline=None, closefd=True):
     """
     Replacement for the build in open function.
     
@@ -23,9 +25,12 @@ def open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None,
     @keyparam mode access mode (string)
     @keyparam buffering size of the read buffer (string)
     @keyparam encoding character encoding for reading/ writing (string)
-    @keyparam errors behavior for the character encoding ('strict', 'explicit', ...) (string)
+    @keyparam errors behavior for the character encoding ('strict',
+        'explicit', ...) (string)
     @keyparam newline controls how universal newlines works (string)
-    @keyparam closefd close underlying file descriptor if given as file parameter (boolean)
+    @keyparam closefd close underlying file descriptor if given as file
+        parameter (boolean)
+    @return Returns the new file object
     """
     return File(file, mode, buffering,  encoding, errors, newline, closefd)
 
@@ -34,7 +39,8 @@ class File(file):   #__IGNORE_WARNING__
     """
     Facade for the original file class.
     """
-    def __init__(self, filein, mode='r', buffering=-1,  encoding=None, errors=None, newline=None, closefd=True):
+    def __init__(self, filein, mode='r', buffering=-1,
+                 encoding=None, errors=None, newline=None, closefd=True):
         """
         Constructor, checks for unimplemented parameters.
         
@@ -42,9 +48,12 @@ class File(file):   #__IGNORE_WARNING__
         @keyparam mode access mode (string)
         @keyparam buffering size of the read buffer (string)
         @keyparam encoding character encoding for reading/ writing (string)
-        @keyparam errors behavior for the character encoding ('strict', 'explicit', ...) (string)
+        @keyparam errors behavior for the character encoding ('strict',
+            'explicit', ...) (string)
         @keyparam newline controls how universal newlines works (string)
-        @keyparam closefd close underlying file descriptor if given as file parameter (boolean)
+        @keyparam closefd close underlying file descriptor if given as file
+            parameter (boolean)
+        @exception NotImplementedError for not implemented method parameters
         """
         self.__encoding = encoding
         self.__newline = newline
@@ -57,7 +66,7 @@ class File(file):   #__IGNORE_WARNING__
                 if 'b' not in mode:
                     mode = mode + 'b'
 
-        if closefd == False:
+        if closefd is False:
             raise NotImplementedError
 
         if errors is None:
@@ -103,7 +112,8 @@ class File(file):   #__IGNORE_WARNING__
         if self.__encoding is None:
             return super(File, self).readlines(hint)
         else:
-            return [codecs.decode(txt,  self.__encoding) for txt in super(File, self).readlines(hint)]
+            return [codecs.decode(txt,  self.__encoding)
+                    for txt in super(File, self).readlines(hint)]
 
     def write(self,  txt):
         """

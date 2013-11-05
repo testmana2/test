@@ -79,7 +79,8 @@ class E5SqueezeLabelPath(QLabel):
             (string)
         """
         self.__surrounding = surrounding
-        super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).setText(
+            self.__surrounding.format(self.__path))
     
     def setPath(self, path):
         """
@@ -88,7 +89,8 @@ class E5SqueezeLabelPath(QLabel):
         @param path path to be shown (string)
         """
         self.__path = path
-        super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).setText(
+            self.__surrounding.format(self.__path))
     
     def setTextPath(self, surrounding, path):
         """
@@ -100,7 +102,8 @@ class E5SqueezeLabelPath(QLabel):
         """
         self.__surrounding = surrounding
         self.__path = path
-        super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).setText(
+            self.__surrounding.format(self.__path))
     
     def paintEvent(self, event):
         """
@@ -117,7 +120,8 @@ class E5SqueezeLabelPath(QLabel):
                                           self.length))
             )
         else:
-            super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
+            super(E5SqueezeLabelPath, self).setText(
+                self.__surrounding.format(self.__path))
         super(E5SqueezeLabelPath, self).paintEvent(event)
     
     def length(self, txt):

@@ -41,7 +41,8 @@ class SplashScreen(QSplashScreen):
         @param msg message to be shown (string)
         """
         logging.debug(msg)
-        super(SplashScreen, self).showMessage(msg, self.labelAlignment, QColor(Qt.white))
+        super(SplashScreen, self).showMessage(
+            msg, self.labelAlignment, QColor(Qt.white))
         QApplication.processEvents()
         
     def clearMessage(self):

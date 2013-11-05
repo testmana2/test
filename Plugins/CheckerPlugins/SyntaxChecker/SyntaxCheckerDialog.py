@@ -147,7 +147,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         elif os.path.isdir(fn):
             files = []
             extensions = set(Preferences.getPython("PythonExtensions") +
-                Preferences.getPython("Python3Extensions"))
+                             Preferences.getPython("Python3Extensions"))
             for ext in extensions:
                 files.extend(
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
@@ -189,11 +189,11 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 ext = os.path.splitext(file)[1]
                 if "FileType" in flags:
                     isPy2 = flags["FileType"] in ["Python", "Python2"]
-                elif (Preferences.getProject("DeterminePyFromProject") and \
-                    self.__project.isOpen() and
-                    self.__project.isProjectFile(file)):
-                        isPy2 = self.__project.getProjectLanguage() in \
-                            ["Python", "Python2"]
+                elif (Preferences.getProject("DeterminePyFromProject") and
+                      self.__project.isOpen() and
+                      self.__project.isProjectFile(file)):
+                            isPy2 = self.__project.getProjectLanguage() in \
+                                ["Python", "Python2"]
                 else:
                     isPy2 = flags.get("FileType") in ["Python", "Python2"] or \
                         ext in Preferences.getPython("PythonExtensions")
@@ -202,15 +202,16 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     Utilities.compile(file, source, isPy2)
                 if nok:
                     self.noResults = False
-                    self.__createResultItem(fname, line, index, error, code.strip(), False)
+                    self.__createResultItem(
+                        fname, line, index, error, code.strip(), False)
                 else:
                     source = source.splitlines()
                     for warning in warnings:
                         self.noResults = False
-                        scr_line = source[warning[2]-1].strip()
+                        scr_line = source[warning[2] - 1].strip()
                         self.__createResultItem(
                             warning[1], warning[2], 0,
-                            warning[3], scr_line, True)  
+                            warning[3], scr_line, True)
 
                 progress += 1
             self.checkProgress.setValue(progress)

@@ -631,7 +631,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         if self.project.pdata["PROGLANGUAGE"][0] in \
                 ["Python", "Python2", "Python3"]:
-            if self.project.getProjectType() in ["Qt4", "Qt4C","E4Plugin"]:
+            if self.project.getProjectType() in ["Qt4", "Qt4C", "E4Plugin"]:
                 self.rccCompiler = 'pyrcc4'
                 if Utilities.isWindowsPlatform():
                     self.rccCompiler += '.exe'

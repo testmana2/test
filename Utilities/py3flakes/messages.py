@@ -11,6 +11,7 @@
 Module implementing the messages for py3flakes.
 """
 
+
 def QT_TRANSLATE_NOOP(mod, txt):
     """
     Function to tell 'lupdate' which strings to keep for translation.
@@ -164,7 +165,8 @@ class UndefinedExport(Message):
     """
     Class defining the "Undefined Export" message.
     """
-    message = QT_TRANSLATE_NOOP('py3Flakes', 
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
         'Undefined name {0!r} in __all__.')
     
     def __init__(self, filename, lineno, name):

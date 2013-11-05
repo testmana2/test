@@ -119,7 +119,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         elif os.path.isdir(fn):
             files = []
             extensions = set(Preferences.getPython("PythonExtensions") +
-                Preferences.getPython("Python3Extensions"))
+                             Preferences.getPython("Python3Extensions"))
             for ext in extensions:
                 files.extend(
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))

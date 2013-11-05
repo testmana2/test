@@ -1103,7 +1103,7 @@ def initPreferences():
     QCoreApplication.setApplicationName(settingsNameGlobal)
     
     # Avoid nasty behavior of QSettings in combination with Py2
-    Prefs.settings.value("UI/SingleApplicationMode")    
+    Prefs.settings.value("UI/SingleApplicationMode")
     
 
 def syncPreferences(prefClass=Prefs):
@@ -1262,7 +1262,8 @@ def getDebugger(key, prefClass=Prefs):
                             "Select Python{0} Interpreter").format(pyVersion),
                         QCoreApplication.translate(
                             "Preferences",
-                            "Select the Python{0} interpreter to be used:").format(pyVersion),
+                            "Select the Python{0} interpreter to be used:")
+                        .format(pyVersion),
                         interpreters,
                         0, False)
                     if ok and selection != "":
@@ -1474,7 +1475,8 @@ def getUI(key, prefClass=Prefs):
             else:
                 # use the defaults
                 viewProfiles = prefClass.uiDefaults["ViewProfiles2"]
-        # Remove unused setting in Python 2. Otherwise Eric 5.3 would get problems
+        # Remove unused setting in Python 2. Otherwise Eric 5.3
+        # would get problems
         if sys.version_info[0] == 2:
             prefClass.settings.remove("UI/ViewProfiles")
         return viewProfiles

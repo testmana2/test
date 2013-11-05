@@ -93,7 +93,8 @@ def decode(text):
             try:
                 import ThirdParty.CharDet.chardet
                 guess = ThirdParty.CharDet.chardet.detect(text)
-                if guess and guess['confidence'] > 0.95 and guess['encoding'] is not None:
+                if guess and guess['confidence'] > 0.95 \
+                        and guess['encoding'] is not None:
                     codec = guess['encoding'].lower()
                     return str(text, codec), '{0}-guessed'.format(codec)
             except (UnicodeError, LookupError, ImportError):
@@ -165,7 +166,8 @@ def normalizeCode(codestring):
 
 def extractLineFlags(line, startComment="#", endComment=""):
     """
-    Function to extract flags starting and ending with '__' from a line comment.
+    Function to extract flags starting and ending with '__' from a line
+    comment.
     
     @param line line to extract flags from (string)
     @keyparam startComment string identifying the start of the comment (string)
@@ -184,7 +186,8 @@ def extractLineFlags(line, startComment="#", endComment=""):
     return flags
 
 
-def compile_and_check(file_, codestring="", checkFlakes=True, ignoreStarImportWarnings=False):
+def compile_and_check(file_, codestring="", checkFlakes=True,
+                      ignoreStarImportWarnings=False):
     """
     Function to compile one Python source file to Python bytecode
     and to perform a pyflakes check.
@@ -201,7 +204,6 @@ def compile_and_check(file_, codestring="", checkFlakes=True, ignoreStarImportWa
         warnings (marker, file name, line number, message)
         The values are only valid, if the status is True.
     """
- 
     try:
         import builtins
     except ImportError:
@@ -237,7 +239,7 @@ def compile_and_check(file_, codestring="", checkFlakes=True, ignoreStarImportWa
         error = ""
         lines = traceback.format_exception_only(SyntaxError, detail)
         match = re.match('\s*File "(.+)", line (\d+)',
-            lines[0].replace('<string>', '{0}'.format(file_)))
+                         lines[0].replace('<string>', '{0}'.format(file_)))
         if match is not None:
             fn, line = match.group(1, 2)
             if lines[1].startswith('SyntaxError:'):
@@ -288,12 +290,14 @@ def compile_and_check(file_, codestring="", checkFlakes=True, ignoreStarImportWa
         warnings.messages.sort(key=lambda a: a.lineno)
         for warning in warnings.messages:
             if ignoreStarImportWarnings and \
-                isinstance(warning, ImportStarUsed):
-                    continue
+                    isinstance(warning, ImportStarUsed):
+                continue
             
             _fn, lineno, message, msg_args = warning.getMessageData()
-            if "__IGNORE_WARNING__" not in extractLineFlags(lines[lineno - 1].strip()):
-                strings.append(["FLAKES_WARNING", _fn, lineno, message, msg_args])
+            if "__IGNORE_WARNING__" not in extractLineFlags(
+                    lines[lineno - 1].strip()):
+                strings.append([
+                    "FLAKES_WARNING", _fn, lineno, message, msg_args])
     except SyntaxError as err:
         if err.text.strip():
             msg = err.text.strip()
@@ -317,13 +321,15 @@ if __name__ == "__main__":
     else:
         filename = sys.argv[-1]
         checkFlakes = len(sys.argv) == 3
-        ignoreStarImportWarnings = sys.argv[1] == "-fi"     # Setting is ignored if checkFlakes is False
+        # Setting is ignored if checkFlakes is False
+        ignoreStarImportWarnings = sys.argv[1] == "-fi"
         
         try:
             codestring = readEncodedFile(filename)[0]
             
             syntaxerror, fname, line, index, code, error, warnings = \
-                compile_and_check(filename, codestring, checkFlakes, ignoreStarImportWarnings)
+                compile_and_check(filename, codestring, checkFlakes,
+                                  ignoreStarImportWarnings)
         except IOError as msg:
             # fake a syntax error
             syntaxerror, fname, line, index, code, error, warnings = \
