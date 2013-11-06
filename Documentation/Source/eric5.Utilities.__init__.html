@@ -426,9 +426,16 @@ A tuple indicating status (True = an error was found), the
 <dt><i>file</i></dt>
 <dd>
 source filename (string)
+</dd><dt><i>isPy2</i></dt>
+<dd>
+flag indicating if it's a Python 2 or 3 file (boolean)
 </dd><dt><i>checkFlakes=</i></dt>
 <dd>
 flag indicating to do a pyflakes check (boolean)
+</dd><dt><i>ignoreStarImportWarnings=</i></dt>
+<dd>
+flag if star import warnings should be
+        suppressed (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

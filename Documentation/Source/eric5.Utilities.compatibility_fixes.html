@@ -22,6 +22,7 @@ a { color: #BA6D36; }
 <h1>eric5.Utilities.compatibility_fixes</h1>
 <p>
 Module implementing the open behavior of Python3 for use with Eric5.
+</p><p>
 The Eric5 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 </p>
@@ -103,13 +104,20 @@ size of the read buffer (string)
 character encoding for reading/ writing (string)
 </dd><dt><i>errors=</i></dt>
 <dd>
-behavior for the character encoding ('strict', 'explicit', ...) (string)
+behavior for the character encoding ('strict',
+            'explicit', ...) (string)
 </dd><dt><i>newline=</i></dt>
 <dd>
 controls how universal newlines works (string)
 </dd><dt><i>closefd=</i></dt>
 <dd>
-close underlying file descriptor if given as file parameter (boolean)
+close underlying file descriptor if given as file
+            parameter (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+for not implemented method parameters
 </dd>
 </dl><a NAME="File.next" ID="File.next"></a>
 <h4>File.next</h4>
@@ -199,13 +207,20 @@ size of the read buffer (string)
 character encoding for reading/ writing (string)
 </dd><dt><i>errors=</i></dt>
 <dd>
-behavior for the character encoding ('strict', 'explicit', ...) (string)
+behavior for the character encoding ('strict',
+        'explicit', ...) (string)
 </dd><dt><i>newline=</i></dt>
 <dd>
 controls how universal newlines works (string)
 </dd><dt><i>closefd=</i></dt>
 <dd>
-close underlying file descriptor if given as file parameter (boolean)
+close underlying file descriptor if given as file
+        parameter (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+Returns the new file object
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
