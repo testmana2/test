@@ -372,13 +372,32 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         """
         vm = e5App().getObject("ViewManager")
         
+        selectedIndexes = []
         for index in range(self.resultList.topLevelItemCount()):
+            if self.resultList.topLevelItem(index).isSelected():
+                selectedIndexes.append(index)
+        if len(selectedIndexes) == 0:
+            selectedIndexes = list(range(self.resultList.topLevelItemCount()))
+        for index in selectedIndexes:
             itm = self.resultList.topLevelItem(index)
             fn = Utilities.normabspath(itm.data(0, self.filenameRole))
             vm.openSourceFile(fn, 1)
+            editor = vm.getOpenEditor(fn)
+            editor.clearSyntaxError()
+            editor.clearFlakesWarnings()
+            for cindex in range(itm.childCount()):
+                citm = itm.child(cindex)
+                lineno = citm.data(0, self.lineRole)
+                index = citm.data(0, self.indexRole)
+                error = citm.data(0, self.errorRole)
+                if citm.data(0, self.warningRole):
+                    editor.toggleWarning(lineno, True, error)
+                else:
+                    editor.toggleSyntaxError(
+                        lineno, index, True, error, show=True)
         
         # go through the list again to clear syntax error and
-        # py3flakes warning markers for files, that are ok
+        # flakes warning markers for files, that are ok
         openFiles = vm.getOpenFilenames()
         errorFiles = []
         for index in range(self.resultList.topLevelItemCount()):
