@@ -215,6 +215,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         QApplication.processEvents()
         
         self.__resetStatistics()
+        self.__clearErrors()
         
         if save:
             self.__fileOrFileList = fn
