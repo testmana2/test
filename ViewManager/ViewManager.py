@@ -5731,7 +5731,7 @@ class ViewManager(QObject):
         else:
             self.syntaxErrorGotoAct.setEnabled(False)
             self.syntaxErrorClearAct.setEnabled(False)
-        if editor.hasFlakesWarnings():
+        if editor.hasWarnings():
             self.warningsNextAct.setEnabled(True)
             self.warningsPreviousAct.setEnabled(True)
             self.warningsClearAct.setEnabled(True)
@@ -5745,20 +5745,20 @@ class ViewManager(QObject):
         """
         Private method to handle the next warning action.
         """
-        self.activeWindow().nextFlakesWarning()
+        self.activeWindow().nextWarning()
         
     def __previousWarning(self):
         """
         Private method to handle the previous warning action.
         """
-        self.activeWindow().previousFlakesWarning()
+        self.activeWindow().previousWarning()
         
     def __clearAllWarnings(self):
         """
         Private method to handle the clear all warnings action.
         """
         for editor in self.editors:
-            editor.clearFlakesWarnings()
+            editor.clearWarnings()
         
     def __nextUncovered(self):
         """
@@ -6139,7 +6139,7 @@ class ViewManager(QObject):
                 self.syntaxErrorGotoAct.setEnabled(False)
                 self.syntaxErrorClearAct.setEnabled(False)
             
-            if editor.hasFlakesWarnings():
+            if editor.hasWarnings():
                 self.warningsNextAct.setEnabled(True)
                 self.warningsPreviousAct.setEnabled(True)
                 self.warningsClearAct.setEnabled(True)

@@ -1002,7 +1002,7 @@ class Tabview(QSplitter, ViewManager):
             tw.setTabIcon(index, UI.PixmapCache.getIcon("fileModified.png"))
         elif editor.hasSyntaxErrors():
             tw.setTabIcon(index, UI.PixmapCache.getIcon("syntaxError.png"))
-        elif editor.hasFlakesWarnings():
+        elif editor.hasWarnings():
             tw.setTabIcon(index, UI.PixmapCache.getIcon("warning.png"))
         else:
             tw.setTabIcon(index, UI.PixmapCache.getIcon("empty.png"))
@@ -1020,7 +1020,7 @@ class Tabview(QSplitter, ViewManager):
         index = tw.indexOf(editor)
         if editor.hasSyntaxErrors():
             tw.setTabIcon(index, UI.PixmapCache.getIcon("syntaxError.png"))
-        elif editor.hasFlakesWarnings():
+        elif editor.hasWarnings():
             tw.setTabIcon(index, UI.PixmapCache.getIcon("warning.png"))
         elif editor.isModified():
             tw.setTabIcon(index, UI.PixmapCache.getIcon("fileModified.png"))

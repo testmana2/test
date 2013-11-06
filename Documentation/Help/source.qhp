@@ -4245,6 +4245,7 @@
       <keyword name="Editor.__checkSpellingSelection" id="Editor.__checkSpellingSelection" ref="eric5.QScintilla.Editor.html#Editor.__checkSpellingSelection" />
       <keyword name="Editor.__checkSpellingWord" id="Editor.__checkSpellingWord" ref="eric5.QScintilla.Editor.html#Editor.__checkSpellingWord" />
       <keyword name="Editor.__clearBreakpoints" id="Editor.__clearBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__clearBreakpoints" />
+      <keyword name="Editor.__clearTypedWarning" id="Editor.__clearTypedWarning" ref="eric5.QScintilla.Editor.html#Editor.__clearTypedWarning" />
       <keyword name="Editor.__codeCoverageHideAnnotations" id="Editor.__codeCoverageHideAnnotations" ref="eric5.QScintilla.Editor.html#Editor.__codeCoverageHideAnnotations" />
       <keyword name="Editor.__completionListSelected" id="Editor.__completionListSelected" ref="eric5.QScintilla.Editor.html#Editor.__completionListSelected" />
       <keyword name="Editor.__contextClose" id="Editor.__contextClose" ref="eric5.QScintilla.Editor.html#Editor.__contextClose" />
@@ -4352,11 +4353,11 @@
       <keyword name="Editor.__showContextMenuResources" id="Editor.__showContextMenuResources" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuResources" />
       <keyword name="Editor.__showContextMenuShow" id="Editor.__showContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuShow" />
       <keyword name="Editor.__showContextMenuSpelling" id="Editor.__showContextMenuSpelling" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuSpelling" />
-      <keyword name="Editor.__showFlakesWarning" id="Editor.__showFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.__showFlakesWarning" />
       <keyword name="Editor.__showImportsDiagram" id="Editor.__showImportsDiagram" ref="eric5.QScintilla.Editor.html#Editor.__showImportsDiagram" />
       <keyword name="Editor.__showPackageDiagram" id="Editor.__showPackageDiagram" ref="eric5.QScintilla.Editor.html#Editor.__showPackageDiagram" />
       <keyword name="Editor.__showProfileData" id="Editor.__showProfileData" ref="eric5.QScintilla.Editor.html#Editor.__showProfileData" />
       <keyword name="Editor.__showSyntaxError" id="Editor.__showSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.__showSyntaxError" />
+      <keyword name="Editor.__showWarning" id="Editor.__showWarning" ref="eric5.QScintilla.Editor.html#Editor.__showWarning" />
       <keyword name="Editor.__spellCharAdded" id="Editor.__spellCharAdded" ref="eric5.QScintilla.Editor.html#Editor.__spellCharAdded" />
       <keyword name="Editor.__styleNeeded" id="Editor.__styleNeeded" ref="eric5.QScintilla.Editor.html#Editor.__styleNeeded" />
       <keyword name="Editor.__textChanged" id="Editor.__textChanged" ref="eric5.QScintilla.Editor.html#Editor.__textChanged" />
@@ -4384,7 +4385,9 @@
       <keyword name="Editor.clearBreakpoint" id="Editor.clearBreakpoint" ref="eric5.QScintilla.Editor.html#Editor.clearBreakpoint" />
       <keyword name="Editor.clearFlakesWarnings" id="Editor.clearFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearFlakesWarnings" />
       <keyword name="Editor.clearSearchIndicators" id="Editor.clearSearchIndicators" ref="eric5.QScintilla.Editor.html#Editor.clearSearchIndicators" />
+      <keyword name="Editor.clearStyleWarnings" id="Editor.clearStyleWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearStyleWarnings" />
       <keyword name="Editor.clearSyntaxError" id="Editor.clearSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.clearSyntaxError" />
+      <keyword name="Editor.clearWarnings" id="Editor.clearWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearWarnings" />
       <keyword name="Editor.close" id="Editor.close" ref="eric5.QScintilla.Editor.html#Editor.close" />
       <keyword name="Editor.closeIt" id="Editor.closeIt" ref="eric5.QScintilla.Editor.html#Editor.closeIt" />
       <keyword name="Editor.codeCoverageShowAnnotations" id="Editor.codeCoverageShowAnnotations" ref="eric5.QScintilla.Editor.html#Editor.codeCoverageShowAnnotations" />
@@ -4416,7 +4419,6 @@
       <keyword name="Editor.getFileName" id="Editor.getFileName" ref="eric5.QScintilla.Editor.html#Editor.getFileName" />
       <keyword name="Editor.getFileType" id="Editor.getFileType" ref="eric5.QScintilla.Editor.html#Editor.getFileType" />
       <keyword name="Editor.getFileTypeByFlag" id="Editor.getFileTypeByFlag" ref="eric5.QScintilla.Editor.html#Editor.getFileTypeByFlag" />
-      <keyword name="Editor.getFlakesWarnings" id="Editor.getFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.getFlakesWarnings" />
       <keyword name="Editor.getHighlightPosition" id="Editor.getHighlightPosition" ref="eric5.QScintilla.Editor.html#Editor.getHighlightPosition" />
       <keyword name="Editor.getLanguage" id="Editor.getLanguage" ref="eric5.QScintilla.Editor.html#Editor.getLanguage" />
       <keyword name="Editor.getLexer" id="Editor.getLexer" ref="eric5.QScintilla.Editor.html#Editor.getLexer" />
@@ -4425,6 +4427,7 @@
       <keyword name="Editor.getSearchText" id="Editor.getSearchText" ref="eric5.QScintilla.Editor.html#Editor.getSearchText" />
       <keyword name="Editor.getSharingStatus" id="Editor.getSharingStatus" ref="eric5.QScintilla.Editor.html#Editor.getSharingStatus" />
       <keyword name="Editor.getSyntaxErrors" id="Editor.getSyntaxErrors" ref="eric5.QScintilla.Editor.html#Editor.getSyntaxErrors" />
+      <keyword name="Editor.getWarnings" id="Editor.getWarnings" ref="eric5.QScintilla.Editor.html#Editor.getWarnings" />
       <keyword name="Editor.getWord" id="Editor.getWord" ref="eric5.QScintilla.Editor.html#Editor.getWord" />
       <keyword name="Editor.getWordBoundaries" id="Editor.getWordBoundaries" ref="eric5.QScintilla.Editor.html#Editor.getWordBoundaries" />
       <keyword name="Editor.getWordLeft" id="Editor.getWordLeft" ref="eric5.QScintilla.Editor.html#Editor.getWordLeft" />
@@ -4439,10 +4442,10 @@
       <keyword name="Editor.hasBreakpoints" id="Editor.hasBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.hasBreakpoints" />
       <keyword name="Editor.hasChangeMarkers" id="Editor.hasChangeMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasChangeMarkers" />
       <keyword name="Editor.hasCoverageMarkers" id="Editor.hasCoverageMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasCoverageMarkers" />
-      <keyword name="Editor.hasFlakesWarnings" id="Editor.hasFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.hasFlakesWarnings" />
       <keyword name="Editor.hasMiniMenu" id="Editor.hasMiniMenu" ref="eric5.QScintilla.Editor.html#Editor.hasMiniMenu" />
       <keyword name="Editor.hasSyntaxErrors" id="Editor.hasSyntaxErrors" ref="eric5.QScintilla.Editor.html#Editor.hasSyntaxErrors" />
       <keyword name="Editor.hasTaskMarkers" id="Editor.hasTaskMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasTaskMarkers" />
+      <keyword name="Editor.hasWarnings" id="Editor.hasWarnings" ref="eric5.QScintilla.Editor.html#Editor.hasWarnings" />
       <keyword name="Editor.highlight" id="Editor.highlight" ref="eric5.QScintilla.Editor.html#Editor.highlight" />
       <keyword name="Editor.highlightVisible" id="Editor.highlightVisible" ref="eric5.QScintilla.Editor.html#Editor.highlightVisible" />
       <keyword name="Editor.indentLineOrSelection" id="Editor.indentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.indentLineOrSelection" />
@@ -4468,14 +4471,14 @@
       <keyword name="Editor.newBreakpointWithProperties" id="Editor.newBreakpointWithProperties" ref="eric5.QScintilla.Editor.html#Editor.newBreakpointWithProperties" />
       <keyword name="Editor.nextBookmark" id="Editor.nextBookmark" ref="eric5.QScintilla.Editor.html#Editor.nextBookmark" />
       <keyword name="Editor.nextChange" id="Editor.nextChange" ref="eric5.QScintilla.Editor.html#Editor.nextChange" />
-      <keyword name="Editor.nextFlakesWarning" id="Editor.nextFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.nextFlakesWarning" />
       <keyword name="Editor.nextTask" id="Editor.nextTask" ref="eric5.QScintilla.Editor.html#Editor.nextTask" />
       <keyword name="Editor.nextUncovered" id="Editor.nextUncovered" ref="eric5.QScintilla.Editor.html#Editor.nextUncovered" />
+      <keyword name="Editor.nextWarning" id="Editor.nextWarning" ref="eric5.QScintilla.Editor.html#Editor.nextWarning" />
       <keyword name="Editor.previousBookmark" id="Editor.previousBookmark" ref="eric5.QScintilla.Editor.html#Editor.previousBookmark" />
       <keyword name="Editor.previousChange" id="Editor.previousChange" ref="eric5.QScintilla.Editor.html#Editor.previousChange" />
-      <keyword name="Editor.previousFlakesWarning" id="Editor.previousFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.previousFlakesWarning" />
       <keyword name="Editor.previousTask" id="Editor.previousTask" ref="eric5.QScintilla.Editor.html#Editor.previousTask" />
       <keyword name="Editor.previousUncovered" id="Editor.previousUncovered" ref="eric5.QScintilla.Editor.html#Editor.previousUncovered" />
+      <keyword name="Editor.previousWarning" id="Editor.previousWarning" ref="eric5.QScintilla.Editor.html#Editor.previousWarning" />
       <keyword name="Editor.printFile" id="Editor.printFile" ref="eric5.QScintilla.Editor.html#Editor.printFile" />
       <keyword name="Editor.printPreviewFile" id="Editor.printPreviewFile" ref="eric5.QScintilla.Editor.html#Editor.printPreviewFile" />
       <keyword name="Editor.projectClosed" id="Editor.projectClosed" ref="eric5.QScintilla.Editor.html#Editor.projectClosed" />
@@ -4517,8 +4520,8 @@
       <keyword name="Editor.streamCommentSelection" id="Editor.streamCommentSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentSelection" />
       <keyword name="Editor.toggleBookmark" id="Editor.toggleBookmark" ref="eric5.QScintilla.Editor.html#Editor.toggleBookmark" />
       <keyword name="Editor.toggleCommentBlock" id="Editor.toggleCommentBlock" ref="eric5.QScintilla.Editor.html#Editor.toggleCommentBlock" />
-      <keyword name="Editor.toggleFlakesWarning" id="Editor.toggleFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.toggleFlakesWarning" />
       <keyword name="Editor.toggleSyntaxError" id="Editor.toggleSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.toggleSyntaxError" />
+      <keyword name="Editor.toggleWarning" id="Editor.toggleWarning" ref="eric5.QScintilla.Editor.html#Editor.toggleWarning" />
       <keyword name="Editor.uncommentLine" id="Editor.uncommentLine" ref="eric5.QScintilla.Editor.html#Editor.uncommentLine" />
       <keyword name="Editor.uncommentLineOrSelection" id="Editor.uncommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.uncommentLineOrSelection" />
       <keyword name="Editor.uncommentSelection" id="Editor.uncommentSelection" ref="eric5.QScintilla.Editor.html#Editor.uncommentSelection" />

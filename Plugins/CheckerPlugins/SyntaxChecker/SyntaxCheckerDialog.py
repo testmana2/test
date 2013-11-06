@@ -140,6 +140,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         QApplication.processEvents()
         
+        self.__clearErrors()
+        
         if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
@@ -344,7 +346,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             editor = vm.getOpenEditor(fn)
             
             if itm.data(0, self.warningRole):
-                editor.toggleFlakesWarning(lineno, True, error)
+                editor.toggleWarning(lineno, True, error)
             else:
                 editor.toggleSyntaxError(lineno, index, True, error, show=True)
         else:
@@ -358,7 +360,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 index = citm.data(0, self.indexRole)
                 error = citm.data(0, self.errorRole)
                 if citm.data(0, self.warningRole):
-                    editor.toggleFlakesWarning(lineno, True, error)
+                    editor.toggleWarning(lineno, True, error)
                 else:
                     editor.toggleSyntaxError(
                         lineno, index, True, error, show=True)

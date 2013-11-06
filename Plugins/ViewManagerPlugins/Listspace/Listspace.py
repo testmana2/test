@@ -527,7 +527,7 @@ class Listspace(QSplitter, ViewManager):
         elif editor.hasSyntaxErrors():
             self.viewlist.item(index).setIcon(
                 UI.PixmapCache.getIcon("syntaxError.png"))
-        elif editor.hasFlakesWarnings():
+        elif editor.hasWarnings():
             self.viewlist.item(index).setIcon(
                 UI.PixmapCache.getIcon("warning.png"))
         else:
@@ -547,7 +547,7 @@ class Listspace(QSplitter, ViewManager):
         if editor.hasSyntaxErrors():
             self.viewlist.item(index).setIcon(
                 UI.PixmapCache.getIcon("syntaxError.png"))
-        elif editor.hasFlakesWarnings():
+        elif editor.hasWarnings():
             self.viewlist.item(index).setIcon(
                 UI.PixmapCache.getIcon("warning.png"))
         elif editor.isModified():

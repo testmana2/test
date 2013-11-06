@@ -1034,16 +1034,16 @@ class Editor(QsciScintillaCompat):
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextWarningMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8("Next warning"), self.nextFlakesWarning)
+                self.trUtf8("Next warning"), self.nextWarning)
         self.marginMenuActs["PreviousWarningMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8("Previous warning"), self.previousFlakesWarning)
+                self.trUtf8("Previous warning"), self.previousWarning)
         self.marginMenuActs["ShowWarning"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Show warning message'), self.__showFlakesWarning)
+                self.trUtf8('Show warning message'), self.__showWarning)
         self.marginMenuActs["ClearWarnings"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Clear warnings'), self.clearFlakesWarnings)
+                self.trUtf8('Clear warnings'), self.clearWarnings)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextCoverageMarker"] = \
             self.indicMarginMenu.addAction(
@@ -1091,14 +1091,14 @@ class Editor(QsciScintillaCompat):
             self.trUtf8('Clear syntax error'), self.clearSyntaxError)
         self.marginMenu.addSeparator()
         self.marginMenuActs["NextWarningMarker"] = self.marginMenu.addAction(
-            self.trUtf8("Next warning"), self.nextFlakesWarning)
+            self.trUtf8("Next warning"), self.nextWarning)
         self.marginMenuActs["PreviousWarningMarker"] = \
             self.marginMenu.addAction(
-                self.trUtf8("Previous warning"), self.previousFlakesWarning)
+                self.trUtf8("Previous warning"), self.previousWarning)
         self.marginMenuActs["ShowWarning"] = self.marginMenu.addAction(
-            self.trUtf8('Show warning message'), self.__showFlakesWarning)
+            self.trUtf8('Show warning message'), self.__showWarning)
         self.marginMenuActs["ClearWarnings"] = self.marginMenu.addAction(
-            self.trUtf8('Clear warnings'), self.clearFlakesWarnings)
+            self.trUtf8('Clear warnings'), self.clearWarnings)
         self.marginMenu.addSeparator()
         self.marginMenuActs["Breakpoint"] = self.marginMenu.addAction(
             self.trUtf8('Toggle breakpoint'), self.menuToggleBreakpoint)
@@ -3040,7 +3040,7 @@ class Editor(QsciScintillaCompat):
                     if self.markersAtLine(line) & (1 << self.syntaxerror):
                         self.__showSyntaxError(line)
                     elif self.markersAtLine(line) & (1 << self.warning):
-                        self.__showFlakesWarning(line)
+                        self.__showWarning(line)
                 else:
                     if self.marginMenuActs["LMBbreakpoints"].isChecked():
                         self.__toggleBreakpoint(line + 1)
@@ -3055,7 +3055,7 @@ class Editor(QsciScintillaCompat):
                 if self.markersAtLine(line) & (1 << self.syntaxerror):
                     self.__showSyntaxError(line)
                 elif self.markersAtLine(line) & (1 << self.warning):
-                    self.__showFlakesWarning(line)
+                    self.__showWarning(line)
         
     def handleMonospacedEnable(self):
         """
@@ -4972,7 +4972,7 @@ class Editor(QsciScintillaCompat):
                                 if "__IGNORE_WARNING__" not in \
                                         Utilities.extractLineFlags(
                                             self.text(lineno - 1).strip()):
-                                    self.toggleFlakesWarning(
+                                    self.toggleWarning(
                                         lineno, True, message)
                         except SyntaxError as err:
                             if err.text.strip():
@@ -4991,7 +4991,7 @@ class Editor(QsciScintillaCompat):
                         int(errorline), int(errorindex), True, _error)
                 else:
                     for warning in warnings:
-                        self.toggleFlakesWarning(
+                        self.toggleWarning(
                             int(warning[1]), True, warning[2])
         
     def __initOnlineSyntaxCheck(self):
@@ -5374,17 +5374,16 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8("No syntax error message available."))
     
     ###########################################################################
-    ## Flakes warning handling methods below
+    ## Warning handling methods below
     ###########################################################################
     
-    def toggleFlakesWarning(self, line, warning, msg="",
-                            warningType=WarningCode):
+    def toggleWarning(self, line, warning, msg="", warningType=WarningCode):
         """
-        Public method to toggle a flakes warning indicator.
+        Public method to toggle a warning indicator.
         
-        Note: This method is used to set code style warnings as well.
+        Note: This method is used to set pyflakes and code style warnings.
         
-        @param line line number of the flakes warning
+        @param line line number of the warning
         @param warning flag indicating if the warning marker should be
             set or deleted (boolean)
         @param msg warning message (string)
@@ -5394,7 +5393,7 @@ class Editor(QsciScintillaCompat):
             line = 1
             # hack to show a warning marker, if line is reported to be 0
         if warning:
-            # set/ammend a new warning marker
+            # set/amend a new warning marker
             warn = (msg, warningType)
             markers = self.markersAtLine(line - 1)
             if not (markers & (1 << self.warning)):
@@ -5415,11 +5414,11 @@ class Editor(QsciScintillaCompat):
         
         self.__setAnnotation(line - 1)
     
-    def getFlakesWarnings(self):
+    def getWarnings(self):
         """
-        Public method to retrieve the flakes warning markers.
+        Public method to retrieve the warning markers.
         
-        @return sorted list of all lines containing a flakes warning
+        @return sorted list of all lines containing a warning
             (list of integer)
         """
         fwlist = []
@@ -5429,15 +5428,15 @@ class Editor(QsciScintillaCompat):
         fwlist.sort()
         return fwlist
     
-    def hasFlakesWarnings(self):
+    def hasWarnings(self):
         """
-        Public method to check for the presence of flakes warnings.
+        Public method to check for the presence of warnings.
         
-        @return flag indicating the presence of flakes warnings (boolean)
+        @return flag indicating the presence of warnings (boolean)
         """
         return len(self.warnings) > 0
     
-    def nextFlakesWarning(self):
+    def nextWarning(self):
         """
         Public slot to handle the 'Next warning' context menu action.
         """
@@ -5454,7 +5453,7 @@ class Editor(QsciScintillaCompat):
             self.setCursorPosition(fwline, 0)
             self.ensureLineVisible(fwline)
     
-    def previousFlakesWarning(self):
+    def previousWarning(self):
         """
         Public slot to handle the 'Previous warning' context menu action.
         """
@@ -5474,7 +5473,45 @@ class Editor(QsciScintillaCompat):
     
     def clearFlakesWarnings(self):
         """
-        Public slot to handle the 'Clear all warnings' context menu action.
+        Public slot to clear all pyflakes warnings.
+        """
+        self.__clearTypedWarning(Editor.WarningCode)
+    
+    def clearStyleWarnings(self):
+        """
+        Public slot to clear all style warnings.
+        """
+        self.__clearTypedWarning(Editor.WarningStyle)
+    
+    def __clearTypedWarning(self, warningKind):
+        """
+        Public method to clear warnings of a specific kind.
+        
+        @param warningKind kind of warning to clear (Editor.WarningCode,
+            Editor.WarningStyle)
+        """
+        assert warningKind in [Editor.WarningCode, Editor.WarningStyle]
+        
+        for handle in list(self.warnings.keys()):
+            warnings = []
+            for msg, warningType in self.warnings[handle]:
+                if warningType == warningKind:
+                    continue
+                
+                warnings.append((msg, warningType))
+            
+            if warnings:
+                self.warnings[handle] = warnings
+                self.__setAnnotation(self.markerLine(handle))
+            else:
+                del self.warnings[handle]
+                self.__setAnnotation(self.markerLine(handle))
+                self.markerDeleteHandle(handle)
+        self.syntaxerrorToggled.emit(self)
+    
+    def clearWarnings(self):
+        """
+        Public slot to clear all warnings.
         """
         for handle in self.warnings:
             self.warnings[handle] = []
@@ -5483,11 +5520,11 @@ class Editor(QsciScintillaCompat):
         self.warnings = {}
         self.syntaxerrorToggled.emit(self)
     
-    def __showFlakesWarning(self, line=-1):
+    def __showWarning(self, line=-1):
         """
         Private slot to handle the 'Show warning' context menu action.
         
-        @param line line number to show the flakes warning for (integer)
+        @param line line number to show the warning for (integer)
         """
         if line == -1:
             line = self.line
@@ -5557,7 +5594,7 @@ class Editor(QsciScintillaCompat):
             styleAnnotations = []
             
             # step 1: do warnings
-            for handle in list(self.warnings.keys()):
+            for handle in self.warnings.keys():
                 if self.markerLine(handle) == line:
                     for msg, warningType in self.warnings[handle]:
                         if warningType == self.WarningStyle:
@@ -5568,7 +5605,7 @@ class Editor(QsciScintillaCompat):
                                 self.trUtf8("Warning: {0}").format(msg))
             
             # step 2: do syntax errors
-            for handle in list(self.syntaxerrors.keys()):
+            for handle in self.syntaxerrors.keys():
                 if self.markerLine(handle) == line:
                     for msg, _ in self.syntaxerrors[handle]:
                         errorAnnotations.append(
@@ -6059,7 +6096,7 @@ class Editor(QsciScintillaCompat):
         self.clearSyntaxError()
         
         # clear flakes warning markers
-        self.clearFlakesWarnings()
+        self.clearWarnings()
         
         # clear breakpoint markers
         for handle in list(self.breaks.keys()):

@@ -321,6 +321,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         QApplication.processEvents()
         
         self.__resetStatistics()
+        self.__clearErrors()
         
         if save:
             self.__fileOrFileList = fn
@@ -652,7 +653,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             if code == "E901":
                 editor.toggleSyntaxError(lineno, 0, True, message, True)
             else:
-                editor.toggleFlakesWarning(
+                editor.toggleWarning(
                     lineno, True, message, warningType=editor.WarningStyle)
     
     @pyqtSlot()
@@ -680,12 +681,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             fn = Utilities.normabspath(itm.data(0, self.filenameRole))
             vm.openSourceFile(fn, 1)
             editor = vm.getOpenEditor(fn)
-            editor.clearFlakesWarnings()
+            editor.clearStyleWarnings()
             for cindex in range(itm.childCount()):
                 citm = itm.child(cindex)
                 lineno = citm.data(0, self.lineRole)
                 message = citm.data(0, self.messageRole)
-                editor.toggleFlakesWarning(
+                editor.toggleWarning(
                     lineno, True, message, warningType=editor.WarningStyle)
         
         # go through the list again to clear warning markers for files,
@@ -699,7 +700,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         for file in openFiles:
             if not file in errorFiles:
                 editor = vm.getOpenEditor(file)
-                editor.clearFlakesWarnings()
+                editor.clearStyleWarnings()
     
     @pyqtSlot()
     def on_statisticsButton_clicked(self):
@@ -806,7 +807,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         openFiles = vm.getOpenFilenames()
         for file in openFiles:
             editor = vm.getOpenEditor(file)
-            editor.clearFlakesWarnings()
+            editor.clearStyleWarnings()
     
     @pyqtSlot()
     def on_fixButton_clicked(self):
