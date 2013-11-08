@@ -2412,6 +2412,8 @@ class MiniEditor(E5MainWindow):
             Preferences.getEditorColour("CaretLineBackground"))
         self.__textEdit.setCaretLineVisible(
             Preferences.getEditor("CaretLineVisible"))
+        self.__textEdit.setCaretLineAlwaysVisible(
+            Preferences.getEditor("CaretLineAlwaysVisible"))
         self.caretWidth = Preferences.getEditor("CaretWidth")
         self.__textEdit.setCaretWidth(self.caretWidth)
         self.useMonospaced = Preferences.getEditor("UseMonospacedFont")

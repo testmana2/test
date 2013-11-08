@@ -64,6 +64,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
                 self.trUtf8("Indicator in Line Number Margin"),
                 QsciScintilla.WrapFlagInMargin)
         
+        if QSCINTILLA_VERSION() < 0x020800:
+            self.caretlineAlwaysVisibleCheckBox.hide()
+        
         # set initial values
         try:
             self.foldingStyleComboBox.setCurrentIndex(
@@ -87,6 +90,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         self.caretlineVisibleCheckBox.setChecked(
             Preferences.getEditor("CaretLineVisible"))
+        self.caretlineAlwaysVisibleCheckBox.setChecked(
+            Preferences.getEditor("CaretLineAlwaysVisible"))
         self.caretWidthSpinBox.setValue(
             Preferences.getEditor("CaretWidth"))
         self.colourizeSelTextCheckBox.setChecked(
@@ -232,6 +237,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         Preferences.setEditor(
             "CaretLineVisible", self.caretlineVisibleCheckBox.isChecked())
+        Preferences.setEditor(
+            "CaretLineAlwaysVisible",
+            self.caretlineAlwaysVisibleCheckBox.isChecked())
         Preferences.setEditor(
             "ColourizeSelText", self.colourizeSelTextCheckBox.isChecked())
         Preferences.setEditor(

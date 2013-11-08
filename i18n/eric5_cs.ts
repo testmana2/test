@@ -3477,17 +3477,17 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished">Stisknout pro zobrazení všech souborů, které obsahují problém</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="399"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="400"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Chyby: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="878"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="880"/>
         <source>Fix: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="542"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="543"/>
         <source>No issues found.</source>
         <translation type="unfinished">Žádné problémy nenalezeny.</translation>
     </message>
@@ -9074,7 +9074,7 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2729"/>
+        <location filename="../QScintilla/Editor.py" line="2733"/>
         <source>Open File</source>
         <translation>Otevřít soubor</translation>
     </message>
@@ -9344,7 +9344,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4716"/>
+        <location filename="../QScintilla/Editor.py" line="4722"/>
         <source>Enable breakpoint</source>
         <translation>Aktivovat breakpoint</translation>
     </message>
@@ -9394,162 +9394,162 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>LMB přepínač breakpointů</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1641"/>
+        <location filename="../QScintilla/Editor.py" line="1645"/>
         <source>Modification of Read Only file</source>
         <translation>Modifikace souboru otevřeného jen pro čtení</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1641"/>
+        <location filename="../QScintilla/Editor.py" line="1645"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Pokoušíte se změnit soubor, který je otevřen jen pro čtení. Prosím, uložte jej nejdříve do jiného souboru.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2337"/>
+        <location filename="../QScintilla/Editor.py" line="2341"/>
         <source>Printing...</source>
         <translation>Tisk...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2354"/>
+        <location filename="../QScintilla/Editor.py" line="2358"/>
         <source>Printing completed</source>
         <translation>Tisk je hotov</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2356"/>
+        <location filename="../QScintilla/Editor.py" line="2360"/>
         <source>Error while printing</source>
         <translation>Chyba během tisku</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2359"/>
+        <location filename="../QScintilla/Editor.py" line="2363"/>
         <source>Printing aborted</source>
         <translation>Tisk byl zrušen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2899"/>
+        <location filename="../QScintilla/Editor.py" line="2903"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2680"/>
+        <location filename="../QScintilla/Editor.py" line="2684"/>
         <source>File Modified</source>
         <translation>Soubor je modifikován</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4202"/>
+        <location filename="../QScintilla/Editor.py" line="4208"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4202"/>
+        <location filename="../QScintilla/Editor.py" line="4208"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autodoplňování není dostupné protože zdrojová část autodoplňování nebyla nalezena.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4719"/>
+        <location filename="../QScintilla/Editor.py" line="4725"/>
         <source>Disable breakpoint</source>
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5066"/>
+        <location filename="../QScintilla/Editor.py" line="5072"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5066"/>
+        <location filename="../QScintilla/Editor.py" line="5072"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5129"/>
+        <location filename="../QScintilla/Editor.py" line="5135"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5122"/>
+        <location filename="../QScintilla/Editor.py" line="5128"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5129"/>
+        <location filename="../QScintilla/Editor.py" line="5135"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5227"/>
+        <location filename="../QScintilla/Editor.py" line="5233"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5227"/>
+        <location filename="../QScintilla/Editor.py" line="5233"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5367"/>
+        <location filename="../QScintilla/Editor.py" line="5373"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5367"/>
+        <location filename="../QScintilla/Editor.py" line="5373"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5624"/>
+        <location filename="../QScintilla/Editor.py" line="5667"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5624"/>
+        <location filename="../QScintilla/Editor.py" line="5667"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5652"/>
+        <location filename="../QScintilla/Editor.py" line="5695"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5695"/>
+        <location filename="../QScintilla/Editor.py" line="5738"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5675"/>
+        <location filename="../QScintilla/Editor.py" line="5718"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5695"/>
+        <location filename="../QScintilla/Editor.py" line="5738"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5712"/>
+        <location filename="../QScintilla/Editor.py" line="5755"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5728"/>
+        <location filename="../QScintilla/Editor.py" line="5771"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5741"/>
+        <location filename="../QScintilla/Editor.py" line="5784"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5741"/>
+        <location filename="../QScintilla/Editor.py" line="5784"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5767"/>
+        <location filename="../QScintilla/Editor.py" line="5810"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5767"/>
+        <location filename="../QScintilla/Editor.py" line="5810"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
@@ -9559,77 +9559,77 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5899"/>
+        <location filename="../QScintilla/Editor.py" line="5942"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6160"/>
+        <location filename="../QScintilla/Editor.py" line="6203"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6181"/>
+        <location filename="../QScintilla/Editor.py" line="6224"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6183"/>
+        <location filename="../QScintilla/Editor.py" line="6226"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6185"/>
+        <location filename="../QScintilla/Editor.py" line="6228"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6187"/>
+        <location filename="../QScintilla/Editor.py" line="6230"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6190"/>
+        <location filename="../QScintilla/Editor.py" line="6233"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6194"/>
+        <location filename="../QScintilla/Editor.py" line="6237"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6213"/>
+        <location filename="../QScintilla/Editor.py" line="6256"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6229"/>
+        <location filename="../QScintilla/Editor.py" line="6272"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6256"/>
+        <location filename="../QScintilla/Editor.py" line="6299"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6320"/>
+        <location filename="../QScintilla/Editor.py" line="6363"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6320"/>
+        <location filename="../QScintilla/Editor.py" line="6363"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6354"/>
+        <location filename="../QScintilla/Editor.py" line="6397"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6354"/>
+        <location filename="../QScintilla/Editor.py" line="6397"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
@@ -9649,12 +9649,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6340"/>
+        <location filename="../QScintilla/Editor.py" line="6383"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6340"/>
+        <location filename="../QScintilla/Editor.py" line="6383"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
@@ -9729,7 +9729,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6642"/>
+        <location filename="../QScintilla/Editor.py" line="6685"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
@@ -9739,12 +9739,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6645"/>
+        <location filename="../QScintilla/Editor.py" line="6688"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6647"/>
+        <location filename="../QScintilla/Editor.py" line="6690"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
@@ -9769,17 +9769,17 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Alternativy ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2680"/>
+        <location filename="../QScintilla/Editor.py" line="2684"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; obsahuje neuložené změny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2729"/>
+        <location filename="../QScintilla/Editor.py" line="2733"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2832"/>
+        <location filename="../QScintilla/Editor.py" line="2836"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -9789,12 +9789,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5666"/>
+        <location filename="../QScintilla/Editor.py" line="5709"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5675"/>
+        <location filename="../QScintilla/Editor.py" line="5718"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
@@ -9804,27 +9804,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5728"/>
+        <location filename="../QScintilla/Editor.py" line="5771"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5889"/>
+        <location filename="../QScintilla/Editor.py" line="5932"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6038"/>
+        <location filename="../QScintilla/Editor.py" line="6081"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6160"/>
+        <location filename="../QScintilla/Editor.py" line="6203"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6256"/>
+        <location filename="../QScintilla/Editor.py" line="6299"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -9859,47 +9859,47 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">Varování py3flakes není dostupné.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2899"/>
+        <location filename="../QScintilla/Editor.py" line="2903"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5712"/>
+        <location filename="../QScintilla/Editor.py" line="5755"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5563"/>
+        <location filename="../QScintilla/Editor.py" line="5606"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5570"/>
+        <location filename="../QScintilla/Editor.py" line="5613"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Chyby: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5895"/>
+        <location filename="../QScintilla/Editor.py" line="5938"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4303"/>
+        <location filename="../QScintilla/Editor.py" line="4309"/>
         <source>Activating Auto-Completion Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4303"/>
+        <location filename="../QScintilla/Editor.py" line="4309"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4493"/>
+        <location filename="../QScintilla/Editor.py" line="4499"/>
         <source>Activating Calltip Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4493"/>
+        <location filename="../QScintilla/Editor.py" line="4499"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9924,27 +9924,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7052"/>
+        <location filename="../QScintilla/Editor.py" line="7095"/>
         <source>Sort Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7052"/>
+        <location filename="../QScintilla/Editor.py" line="7095"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5499"/>
+        <location filename="../QScintilla/Editor.py" line="5542"/>
         <source>Warning</source>
         <translation type="unfinished">Varování</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5499"/>
+        <location filename="../QScintilla/Editor.py" line="5542"/>
         <source>No warning messages available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5560"/>
+        <location filename="../QScintilla/Editor.py" line="5603"/>
         <source>Style: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12311,132 +12311,132 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Karet (textový kurzor)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="580"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="582"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Vybrat, má-li být linka karetu zvýrazněna</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="583"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="585"/>
         <source>Caretline visible</source>
         <translation>Zobrazení textového kurzoru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="619"/>
         <source>Caret width:</source>
         <translation>Šířka text.kurzoru:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="599"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="626"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Výběr délky karetu (1, 2 nebo 3 pixelu)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="632"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="659"/>
         <source>Caret foreground:</source>
         <translation>Barva karetu:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="645"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="672"/>
         <source>Select the colour for the caret.</source>
         <translation>Výběr barvy karetu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="655"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="682"/>
         <source>Caretline background:</source>
         <translation>Pozadí karetu:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="668"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="695"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Vybrat barvu pozadí pro řádku obsahující karet.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="689"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="716"/>
         <source>Current line marker:</source>
         <translation>Značka aktuální řádky:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="702"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="729"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Vybrat barvu pro značku aktuální řádky.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="712"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="739"/>
         <source>Error line marker:</source>
         <translation>Značka chybné řádky:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="752"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Vybrat barvu pro značku chybné řádky.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="765"/>
         <source>Braces</source>
         <translation>Závorky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="744"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="771"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Vybrat, jestliže se má zkontrolovat párovost závorek a neplatné se mají zvýraznit.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="747"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="774"/>
         <source>Highlight braces</source>
         <translation>Zvýraznit závorky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="754"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="781"/>
         <source>Matched braces:</source>
         <translation>Párové závorky:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="767"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="794"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Výběr barvy pro zvýraznění párových závorek.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="777"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="804"/>
         <source>Matched braces background:</source>
         <translation>Pozadí párových závorek:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="790"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="817"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Výběr barvy pozadí pro zvýraznění párových závorek.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="806"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="833"/>
         <source>Unmatched brace:</source>
         <translation>Nepárová závorka:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="813"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="840"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Výběr barvy pro zvýraznění nepárových závorek.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="829"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="856"/>
         <source>Unmatched brace background:</source>
         <translation>Pozadí nepárové závorky:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="836"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="863"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Vybrat barvu pozadí pro zvýraznění nepárových závorek.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="849"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="876"/>
         <source>End of Line</source>
         <translation>Konec řádku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="882"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Vybrat, mají-li se zobrazovat symboly konce řádků</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="858"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="885"/>
         <source>Show End of Line</source>
         <translation>Zobrazovat konce řádků</translation>
     </message>
@@ -12446,42 +12446,42 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">Vybrat, mají-li se dlouhé řádky zalamovat</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="868"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="895"/>
         <source>Wrap long lines</source>
         <translation>Zalamovat dlouhé řádky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="921"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="948"/>
         <source>Edge Mode</source>
         <translation>Mód okraje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="965"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="992"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Vybrat barvu pro značku okraje.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="975"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1002"/>
         <source>Background colour:</source>
         <translation>Barva pozadí:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="988"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1015"/>
         <source>Move to set the edge column.</source>
         <translation>Posunout pro nastavení sloupce okraje.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1016"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1043"/>
         <source>Displays the selected tab width.</source>
         <translation>Zobrazuje vybranou šířku tabulátoru.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1032"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1059"/>
         <source>Column number:</source>
         <translation>Číslo sloupce:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1039"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1066"/>
         <source>Mode:</source>
         <translation>Mód:</translation>
     </message>
@@ -12491,37 +12491,37 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Vypnuto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1058"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1085"/>
         <source>Draw Line</source>
         <translation>Zobrazit linku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1063"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1090"/>
         <source>Change Background Colour</source>
         <translation>Změnit barvu pozadí</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1515"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1542"/>
         <source>Various</source>
         <translation>Různé</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1412"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1439"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Vybrat, mají-li se zobrazovat prázdné znaky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1415"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1442"/>
         <source>Show Whitespace</source>
         <translation>Zobrazit prázdné znaky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1521"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1548"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Vybrat pro zobrazení minimalistického kontextového menu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1524"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1551"/>
         <source>Show minimal context menu</source>
         <translation>Zobrazit minimální kontextové menu</translation>
     </message>
@@ -12566,27 +12566,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zobrazit jednotné okraje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="683"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="710"/>
         <source>Debugging Line Markers</source>
         <translation>Značky debugované řádky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1077"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1104"/>
         <source>Zoom</source>
         <translation>Lupa</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1083"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1110"/>
         <source>Initial zoom factor:</source>
         <translation>Úvodní nastavení lupy:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1090"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1117"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Posunout pro nastavení velikosti lupy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1112"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1139"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Zobrazuje vybranou velikost lupy</translation>
     </message>
@@ -12626,82 +12626,82 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1131"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1158"/>
         <source>Annotations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1137"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1164"/>
         <source>Select to enable the display of annotations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1140"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1167"/>
         <source>Show annotations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1147"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1174"/>
         <source>Warnings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1243"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1270"/>
         <source>Press to select the foreground colour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1246"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1273"/>
         <source>Foreground</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1280"/>
         <source>Press to select the background colour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1256"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1283"/>
         <source>Background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1192"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1219"/>
         <source>Errors</source>
         <translation type="unfinished">Chyby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1406"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1433"/>
         <source>Whitespace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1424"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1451"/>
         <source>Whitespace size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1431"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1458"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1464"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1491"/>
         <source>Whitespace foreground:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1477"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1504"/>
         <source>Select the foreground colour for visible whitespace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1487"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1514"/>
         <source>Whitespace background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1500"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1527"/>
         <source>Select the background colour for visible whitespace</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12746,67 +12746,67 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished">Barvy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1285"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1312"/>
         <source>Change Tracing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1291"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1318"/>
         <source>Select to mark changed lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1294"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1321"/>
         <source>Mark changed lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1303"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1330"/>
         <source>Timeout for marking changed lines:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1310"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1337"/>
         <source>Enter the time in milliseconds after which changed lines will be marked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1322"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1349"/>
         <source> ms</source>
         <translation type="unfinished"> ms</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1355"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1382"/>
         <source>Unsaved changes colour:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1368"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1395"/>
         <source>Select the colour for the change marker for unsaved changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1378"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1405"/>
         <source>Saved changes colour:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1391"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1418"/>
         <source>Select the colour for the change marker for saved changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="884"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="911"/>
         <source>Select the wrap mode for long lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="904"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="931"/>
         <source>Indication:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="911"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="938"/>
         <source>Select, how wrapped lines are indicated</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12841,23 +12841,33 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1176"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1203"/>
         <source>Warning: There might be an issue.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1221"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1248"/>
         <source>Error: There is an issue.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1237"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1264"/>
         <source>Style</source>
         <translation type="unfinished">Styl</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1266"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1293"/>
         <source>Style: There is a style issue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
+        <source>Select, whether the caretline should be highlighted even if the editor doesn&apos;t have the focus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="595"/>
+        <source>Caretline always visible</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -16090,7 +16100,7 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2392"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2398"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
@@ -16180,7 +16190,7 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2362"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2366"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Tisk není dostupný kvůli bugu v PyQt4.Please upgrade.&lt;/p&gt;</translation>
     </message>
@@ -16230,7 +16240,7 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2392"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2398"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16799,32 +16809,32 @@ Reason: {0}</source>
         <translation type="obsolete">Eric web prohlížeč</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="617"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="623"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Tisk není dostupný kvůli bugu v PyQt4.Please upgrade.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="718"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="724"/>
         <source>Loading...</source>
         <translation type="unfinished">Načítám...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="739"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="745"/>
         <source>Finished loading</source>
         <translation type="unfinished">Načteno</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="741"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="747"/>
         <source>Failed to load</source>
         <translation type="unfinished">Načtení selhalo</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="781"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="787"/>
         <source>Are you sure you want to close the window?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../Helpviewer/HelpTabWidget.py" line="781"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="787"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation type="unfinished">
@@ -16834,22 +16844,22 @@ You have %n tab(s) open.</source>
         </translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="789"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="795"/>
         <source>&amp;Close</source>
         <translation type="unfinished">&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="793"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="799"/>
         <source>&amp;Quit</source>
         <translation type="unfinished">&amp;Konec</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="796"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="802"/>
         <source>C&amp;lose Current Tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="617"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="623"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
@@ -16869,17 +16879,17 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="953"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="959"/>
         <source>Restore All Closed Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="955"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="961"/>
         <source>Clear List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="566"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="570"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32096,7 +32106,7 @@ Do you want to save your changes?</source>
         <translation>Soubor načten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2519"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2521"/>
         <source>Untitled</source>
         <translation>Beze jména</translation>
     </message>
@@ -32106,22 +32116,22 @@ Do you want to save your changes?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2560"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2562"/>
         <source>Select all</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2561"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2563"/>
         <source>Deselect all</source>
         <translation>Zrušit celý výběr</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2575"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2577"/>
         <source>Languages</source>
         <translation>Jazyky</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2578"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2580"/>
         <source>No Language</source>
         <translation>Žádný jazyk</translation>
     </message>
@@ -32208,22 +32218,22 @@ Do you want to save your changes?</source>
         <translation>Tisk aktuálního souboru</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2483"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2485"/>
         <source>Printing...</source>
         <translation>Tisk...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2500"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2502"/>
         <source>Printing completed</source>
         <translation>Tisk je hotov</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2502"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2504"/>
         <source>Error while printing</source>
         <translation>Chyba během tisku</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2505"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2507"/>
         <source>Printing aborted</source>
         <translation>Tisk byl zrušen</translation>
     </message>
@@ -32248,22 +32258,22 @@ Do you want to save your changes?</source>
         <translation>&lt;b&gt;Náhkled tisku&lt;/b&gt;&lt;p&gt;Náhkled tisku aktuálního souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2601"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2603"/>
         <source>Guessed</source>
         <translation>Odhadem</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2622"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2624"/>
         <source>Alternatives</source>
         <translation>Alternativy</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2636"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2638"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2636"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2638"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Použít Pygments lexer.</translation>
     </message>
@@ -32313,7 +32323,7 @@ Do you want to save your changes?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2619"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2621"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativy ({0})</translation>
     </message>
@@ -35027,27 +35037,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1175"/>
+        <location filename="../Preferences/__init__.py" line="1176"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1203"/>
+        <location filename="../Preferences/__init__.py" line="1204"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1203"/>
+        <location filename="../Preferences/__init__.py" line="1204"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1302"/>
+        <location filename="../Preferences/__init__.py" line="1303"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1302"/>
+        <location filename="../Preferences/__init__.py" line="1303"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35129,7 +35139,7 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Printer</name>
     <message>
-        <location filename="../QScintilla/Printer.py" line="61"/>
+        <location filename="../QScintilla/Printer.py" line="63"/>
         <source>{0} - Printed on {1}, {2} - Page {3}</source>
         <translation>{0} - tištěn na {1}, {2} - Strana {3}</translation>
     </message>
@@ -37539,152 +37549,152 @@ Vyberte Obnovit.</translation>
         <translation>&lt;b&gt;Prohlížeč Resources projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny Resources aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="92"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="93"/>
         <source>Compile resource</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="259"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="265"/>
         <source>Compile all resources</source>
         <translation>Kompilovat všechny Resource</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="194"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="198"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="108"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="109"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="225"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="230"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="228"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="233"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="232"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="237"/>
         <source>New resource...</source>
         <translation>Nový Resource...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="265"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="271"/>
         <source>Add resources...</source>
         <translation>Přidat resources...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="268"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="274"/>
         <source>Add resources directory...</source>
         <translation>Přidat adresář se zdroji...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="272"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="278"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="274"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="280"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="188"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="192"/>
         <source>Compile resources</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="472"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="478"/>
         <source>New Resource</source>
         <translation>Nový Resource</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="431"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="437"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>Qt Resource soubory (*.qrc)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="450"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="456"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="500"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="506"/>
         <source>Delete resources</source>
         <translation>Smazat Resource</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="500"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="506"/>
         <source>Do you really want to delete these resources from the project?</source>
         <translation>Opravdu chcete odebrat tyto Resource z projektu?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="600"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="606"/>
         <source>Resource Compilation</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="579"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="585"/>
         <source>The compilation of the resource file was successful.</source>
         <translation>Kompilace souboru Resource byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="600"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="606"/>
         <source>The compilation of the resource file failed.</source>
         <translation>Kompliace Resource souboru selhala.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="686"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="692"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="750"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="756"/>
         <source>Compiling resources...</source>
         <translation>Kompilovat resources...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="750"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="756"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="819"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="825"/>
         <source>Determining changed resources...</source>
         <translation>Určení změněných resources...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="853"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="859"/>
         <source>Compiling changed resources...</source>
         <translation>Kompilování změněných resources...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="277"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="283"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="240"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="245"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="472"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="478"/>
         <source>&lt;p&gt;The new resource file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s resource &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="586"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="592"/>
         <source>&lt;p&gt;The compilation of the resource file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace Resource se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="686"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="692"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -44458,12 +44468,12 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation>Reset a vyčistit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="630"/>
+        <location filename="../QScintilla/Shell.py" line="632"/>
         <source>No.</source>
         <translation>Č.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1542"/>
+        <location filename="../QScintilla/Shell.py" line="1544"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
@@ -44473,7 +44483,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation>&lt;b&gt;Okno Shellu&lt;/b&gt;&lt;p&gt;Toto je jednoduchý interpretr běžící v okně. Interpretr běží nezávisle na programu, který je debugován. To znamená, že můžete spustit jakýkoliv příkaz i během debugování.&lt;/p&gt;&lt;p&gt;Během vkládání příkazu můžete použít kurzorové klávesy. Je zde také historie příkazů, která se aktivuje klávesami up a down. Stisknutím up nebo down klávesy po textu, který byl zadán se spustí inkrementální vyhledávání.&lt;/p&gt;&lt;p&gt;Shell má několik speciálních příkazů. &apos;reset&apos; zabije shell a spustí nový. &apos;clear&apos; vyčistí obsah shell okna.&apos;start&apos; se používá pro přepnutí shell jazyka a musí za ním následovat jméno podporovaného jazyka. Podporované jazyky jsou zobrazeny v seznamu, který vrací příkaz &apos;languages&apos;. Tyto příkazy (kromě &apos;languages&apos;) jsou také dostupné přes kontextové menu.&lt;/p&gt;&lt;p&gt;Stisknutím tab klávesy po nějakém vloženém textu se zobrazí seznam s nabídkou možných zakončení výrazu. Odpovídající zadání pak může být vybráno z tohoto listu. Pokud je existuje jen jedna možnost, je vložena automaticky.&lt;/p&gt;&lt;p&gt;Dokud se program neukončí, je shell v pasivním módu dostupný jen pokud se debugovaný program připojil k IDE. To je oznámeno odlišným promptem a dále v názvu titulku okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="627"/>
+        <location filename="../QScintilla/Shell.py" line="629"/>
         <source>Passive Debug Mode</source>
         <translation>Pasivní debug mód</translation>
     </message>
@@ -44493,17 +44503,17 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="576"/>
+        <location filename="../QScintilla/Shell.py" line="578"/>
         <source>Select History</source>
         <translation>Vybrat historii</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="576"/>
+        <location filename="../QScintilla/Shell.py" line="578"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Vybrat vstup historie pro vykonání (nejaktuálnější zobrazen poslední).</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="628"/>
+        <location filename="../QScintilla/Shell.py" line="630"/>
         <source>
 Not connected</source>
         <translation>Nepřipojen</translation>
@@ -44519,28 +44529,28 @@ Not connected</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="632"/>
+        <location filename="../QScintilla/Shell.py" line="634"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} na {1}, {2}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="693"/>
+        <location filename="../QScintilla/Shell.py" line="695"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="701"/>
+        <location filename="../QScintilla/Shell.py" line="703"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1269"/>
+        <location filename="../QScintilla/Shell.py" line="1271"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Shell jazyk &quot;{0}&quot; není podporován.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1542"/>
+        <location filename="../QScintilla/Shell.py" line="1544"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
@@ -47338,7 +47348,7 @@ Not connected</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="../Graphics/SvgDiagram.py" line="348"/>
+        <location filename="../Graphics/SvgDiagram.py" line="352"/>
         <source>Diagram: {0}</source>
         <translation>Diagram: {0}</translation>
     </message>
@@ -52683,7 +52693,7 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
         <translation>Stisknout pro zobrazení všech souborů, které obsahují problém</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="279"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="281"/>
         <source>No issues found.</source>
         <translation>Žádné problémy nenalezeny.</translation>
     </message>
@@ -52708,7 +52718,7 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="192"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="194"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Chyby: {0}</translation>
     </message>
@@ -55579,22 +55589,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Uložit obrázek</translation>
     </message>
     <message>
-        <location filename="../Tools/UIPreviewer.py" line="552"/>
+        <location filename="../Tools/UIPreviewer.py" line="554"/>
         <source>There is no UI file loaded.</source>
         <translation>Žádný UI soubor nebyl načten.</translation>
     </message>
     <message>
-        <location filename="../Tools/UIPreviewer.py" line="533"/>
+        <location filename="../Tools/UIPreviewer.py" line="535"/>
         <source>Printing the image...</source>
         <translation>Tisknu obrázek...</translation>
     </message>
     <message>
-        <location filename="../Tools/UIPreviewer.py" line="542"/>
+        <location filename="../Tools/UIPreviewer.py" line="544"/>
         <source>Image sent to printer...</source>
         <translation>Obrázek byl odeslán na tiskárnu...</translation>
     </message>
     <message>
-        <location filename="../Tools/UIPreviewer.py" line="552"/>
+        <location filename="../Tools/UIPreviewer.py" line="554"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>

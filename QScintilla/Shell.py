@@ -406,6 +406,8 @@ class Shell(QsciScintillaCompat):
         self.setCaretLineBackgroundColor(
             Preferences.getEditorColour("CaretLineBackground"))
         self.setCaretLineVisible(Preferences.getEditor("CaretLineVisible"))
+        self.setCaretLineAlwaysVisible(
+            Preferences.getEditor("CaretLineAlwaysVisible"))
         self.caretWidth = Preferences.getEditor("CaretWidth")
         self.setCaretWidth(self.caretWidth)
         if Preferences.getShell("WrapEnabled"):

@@ -573,16 +573,43 @@
      <property name="title">
       <string>Caret</string>
      </property>
-     <layout class="QVBoxLayout" name="_5">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
       <item>
-       <widget class="QCheckBox" name="caretlineVisibleCheckBox">
-        <property name="toolTip">
-         <string>Select, whether the caretline should be highlighted</string>
-        </property>
-        <property name="text">
-         <string>Caretline visible</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QCheckBox" name="caretlineVisibleCheckBox">
+          <property name="toolTip">
+           <string>Select, whether the caretline should be highlighted</string>
+          </property>
+          <property name="text">
+           <string>Caretline visible</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="caretlineAlwaysVisibleCheckBox">
+          <property name="toolTip">
+           <string>Select, whether the caretline should be highlighted even if the editor doesn't have the focus</string>
+          </property>
+          <property name="text">
+           <string>Caretline always visible</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
       <item>
        <layout class="QHBoxLayout" name="_6">
@@ -1566,6 +1593,7 @@
   <tabstop>selectionForegroundButton</tabstop>
   <tabstop>selectionBackgroundButton</tabstop>
   <tabstop>caretlineVisibleCheckBox</tabstop>
+  <tabstop>caretlineAlwaysVisibleCheckBox</tabstop>
   <tabstop>caretWidthSpinBox</tabstop>
   <tabstop>caretForegroundButton</tabstop>
   <tabstop>caretlineBackgroundButton</tabstop>

@@ -181,6 +181,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.foldLevelAt">foldLevelAt</a></td>
 <td>Public method to get the fold level of a line of the document.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.getCaretLineAlwaysVisible">getCaretLineAlwaysVisible</a></td>
+<td>Public method to determine, if the caret line is visible even if the editor doesn't have the focus.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.getCursorFlashTime">getCursorFlashTime</a></td>
 <td>Public method to get the flash (blink) time of the cursor in milliseconds.</td>
 </tr><tr>
@@ -279,6 +282,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.selectionIsRectangle">selectionIsRectangle</a></td>
 <td>Public method to check, if the current selection is rectangular.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.setCaretLineAlwaysVisible">setCaretLineAlwaysVisible</a></td>
+<td>Public method to set the caret line visible even if the editor doesn't have the focus.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setContractedFolds">setContractedFolds</a></td>
 <td>Public method to set a list of line numbers of collapsed folds.</td>
@@ -751,7 +757,13 @@ line number (integer)
 <dd>
 fold level of the given line (integer)
 </dd>
-</dl><a NAME="QsciScintillaCompat.getCursorFlashTime" ID="QsciScintillaCompat.getCursorFlashTime"></a>
+</dl><a NAME="QsciScintillaCompat.getCaretLineAlwaysVisible" ID="QsciScintillaCompat.getCaretLineAlwaysVisible"></a>
+<h4>QsciScintillaCompat.getCaretLineAlwaysVisible</h4>
+<b>getCaretLineAlwaysVisible</b>(<i></i>)
+<p>
+        Public method to determine, if the caret line is visible even if
+        the editor doesn't have the focus.
+</p><a NAME="QsciScintillaCompat.getCursorFlashTime" ID="QsciScintillaCompat.getCursorFlashTime"></a>
 <h4>QsciScintillaCompat.getCursorFlashTime</h4>
 <b>getCursorFlashTime</b>(<i></i>)
 <p>
@@ -1140,6 +1152,18 @@ number of lines to scroll (negative scrolls up,
 <dt>Returns:</dt>
 <dd>
 flag indicating a rectangular selection (boolean)
+</dd>
+</dl><a NAME="QsciScintillaCompat.setCaretLineAlwaysVisible" ID="QsciScintillaCompat.setCaretLineAlwaysVisible"></a>
+<h4>QsciScintillaCompat.setCaretLineAlwaysVisible</h4>
+<b>setCaretLineAlwaysVisible</b>(<i>alwaysVisible</i>)
+<p>
+        Public method to set the caret line visible even if the editor doesn't
+        have the focus.
+</p><dl>
+<dt><i>alwaysVisible</i></dt>
+<dd>
+flag indicating that the caret line shall be
+            visible even if the editor doesn't have the focus (boolean)
 </dd>
 </dl><a NAME="QsciScintillaCompat.setContractedFolds" ID="QsciScintillaCompat.setContractedFolds"></a>
 <h4>QsciScintillaCompat.setContractedFolds</h4>

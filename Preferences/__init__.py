@@ -310,6 +310,7 @@ class Prefs(object):
         "BraceHighlighting": True,
         "CreateBackupFile": False,
         "CaretLineVisible": False,
+        "CaretLineAlwaysVisible": False,
         "CaretWidth": 1,
         "ColourizeSelText": False,
         "CustomSelectionColours": False,

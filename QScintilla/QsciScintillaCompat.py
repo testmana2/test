@@ -669,6 +669,31 @@ class QsciScintillaCompat(QsciScintilla):
         """
         self.SendScintilla(QsciScintilla.SCI_SETCARETPERIOD, time // 2)
     
+    def getCaretLineAlwaysVisible(self):
+        """
+        Public method to determine, if the caret line is visible even if
+        the editor doesn't have the focus.
+        """
+        try:
+            return self.SendScintilla(
+                QsciScintilla.SCI_GETCARETLINEVISIBLEALWAYS)
+        except AttributeError:
+            return False
+    
+    def setCaretLineAlwaysVisible(self, alwaysVisible):
+        """
+        Public method to set the caret line visible even if the editor doesn't
+        have the focus.
+        
+        @param alwaysVisible flag indicating that the caret line shall be
+            visible even if the editor doesn't have the focus (boolean)
+        """
+        try:
+            self.SendScintilla(
+                QsciScintilla.SCI_SETCARETLINEVISIBLEALWAYS, alwaysVisible)
+        except AttributeError:
+            pass
+    
     ###########################################################################
     # methods to perform searches in target range
     ###########################################################################
