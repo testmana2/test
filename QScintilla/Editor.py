@@ -7027,6 +7027,7 @@ class Editor(QsciScintillaCompat):
         
         @param forward flag indicating the search direction (boolean)
         """
+        self.hideFindIndicator()
         line, index = self.getCursorPosition()
         word = self.getCurrentWord()
         wordStart, wordEnd = self.getCurrentWordBoundaries()
@@ -7057,6 +7058,8 @@ class Editor(QsciScintillaCompat):
                     match = matches[-1]
             line, index = self.lineIndexFromPosition(match.start())
             self.setSelection(line, index + len(match.group(0)), line, index)
+            self.showFindIndicator(line, index,
+                                   line, index + len(match.group(0)))
     
     #######################################################################
     ## Sort related methods

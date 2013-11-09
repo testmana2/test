@@ -7193,6 +7193,7 @@ eric5.QScintilla.Printer.Printer?1(mode=QPrinter.ScreenResolution)
 eric5.QScintilla.QsciScintillaCompat.QSCINTILLA_VERSION?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.ArrowFoldStyle?7
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.ArrowTreeFoldStyle?7
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.IndicatorStyleMax?7
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.UserSeparator?7
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat._encodeString?5(string)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.byteAt?4(pos)
@@ -7223,6 +7224,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.extendSelectionWordLeft
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.extendSelectionWordRight?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.findFirstTarget?4(expr_, re_, cs_, wo_, begline=-1, begindex=-1, endline=-1, endindex=-1, ws_=False)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.findNextTarget?4()
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.flashFindIndicator?4(sline, sindex, eline, eindex)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.focusOutEvent?4(event)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.foldExpandedAt?4(line)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.foldFlagsAt?4(line)
@@ -7242,6 +7244,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.getSelections?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.getZoom?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.hasIndicator?4(indicator, pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.hasSelection?4()
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.hideFindIndicator?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.indentationGuideView?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.indicatorDefine?4(indicator, style, color)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.lineAt?4(pos)
@@ -7277,6 +7280,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setRectangularSelection
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setStyleBits?4(bits)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setStyling?4(length, style)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setVirtualSpaceOptions?4(options)
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.showFindIndicator?4(sline, sindex, eline, eindex)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.showUserList?4(id, lst)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.startStyling?4(pos, mask)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.styleAt?4(pos)

@@ -5180,9 +5180,13 @@ class ViewManager(QObject):
         if self.quickFindtextCombo.lastActive:
             self.quickFindtextCombo.lastActive.setFocus()
             aw = self.activeWindow()
-            if aw and self.quickFindtextCombo.lastCursorPos:
-                aw.setCursorPosition(self.quickFindtextCombo.lastCursorPos[0],
-                                     self.quickFindtextCombo.lastCursorPos[1])
+            if aw:
+                aw.hideFindIndicator()
+                if self.quickFindtextCombo.lastCursorPos:
+                    aw.setCursorPosition(
+                        self.quickFindtextCombo.lastCursorPos[0],
+                        self.quickFindtextCombo.lastCursorPos[1])
+                
         if self.__quickSearchToolbarVisibility is not None:
             self.__quickSearchToolbar.setVisible(
                 self.__quickSearchToolbarVisibility)
@@ -5253,6 +5257,8 @@ class ViewManager(QObject):
         if not aw:
             return
         
+        aw.hideFindIndicator()
+        
         text = self.quickFindtextCombo.lineEdit().text()
         if not text and again:
                 text = self.quickFindtextCombo.lastSearchText
@@ -5286,6 +5292,9 @@ class ViewManager(QObject):
         else:
             ok = aw.findFirst(text, False, False, False, True, not back,
                               lineFrom, indexFrom)
+        if ok:
+            sline, sindex, eline, eindex = aw.getSelection()
+            aw.showFindIndicator(sline, sindex, eline, eindex)
         self.__quickSearchSetEditColors(not ok)
     
     def __quickSearchSetEditColors(self, error):

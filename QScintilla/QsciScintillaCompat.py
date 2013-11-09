@@ -50,6 +50,15 @@ class QsciScintillaCompat(QsciScintilla):
     
     UserSeparator = '\x04'
     
+    if QSCINTILLA_VERSION() < 0x020600:
+        IndicatorStyleMax = QsciScintilla.INDIC_ROUNDBOX
+    elif QSCINTILLA_VERSION() < 0x020700:
+        IndicatorStyleMax = QsciScintilla.INDIC_DOTBOX
+    elif QSCINTILLA_VERSION() < 0x020800:
+        IndicatorStyleMax = QsciScintilla.INDIC_SQUIGGLEPIXMAP
+    else:
+        IndicatorStyleMax = QsciScintilla.INDIC_COMPOSITIONTHICK
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -884,7 +893,12 @@ class QsciScintillaCompat(QsciScintilla):
             (QsciScintilla.INDIC_PLAIN, QsciScintilla.INDIC_SQUIGGLE,
             QsciScintilla.INDIC_TT, QsciScintilla.INDIC_DIAGONAL,
             QsciScintilla.INDIC_STRIKE, QsciScintilla.INDIC_HIDDEN,
-            QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX)
+            QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX,
+            QsciScintilla.INDIC_STRAIGHTBOX, QsciScintilla.INDIC_DASH,
+            QsciScintilla.INDIC_DOTS, QsciScintilla.INDIC_SQUIGGLELOW, 
+            QsciScintilla.INDIC_DOTBOX, QsciScintilla.INDIC_SQUIGGLEPIXMAP,
+            QsciScintilla.INDIC_COMPOSITIONTHICK depending upon QScintilla
+            version)
         @param color color to be used by the indicator (QColor)
         @exception ValueError the indicator or style are not valid
         """
@@ -893,7 +907,7 @@ class QsciScintillaCompat(QsciScintilla):
             raise ValueError("indicator number out of range")
         
         if style < QsciScintilla.INDIC_PLAIN or \
-           style > QsciScintilla.INDIC_ROUNDBOX:
+           style > self.IndicatorStyleMax:
             raise ValueError("style out of range")
         
         self.SendScintilla(QsciScintilla.SCI_INDICSETSTYLE, indicator, style)
@@ -993,6 +1007,42 @@ class QsciScintillaCompat(QsciScintilla):
         res = self.SendScintilla(QsciScintilla.SCI_INDICATORVALUEAT,
                                  indicator, pos)
         return res
+    
+    def showFindIndicator(self, sline, sindex, eline, eindex):
+        """
+        Public method to show the find indicator for the given range.
+        
+        @param sline line number of the indicator start (integer)
+        @param sindex index of the indicator start (integer)
+        @param eline line number of the indicator end (integer)
+        @param eindex index of the indicator end (integer)
+        """
+        if hasattr(QsciScintilla, "SCI_FINDINDICATORSHOW"):
+            spos = self.positionFromLineIndex(sline, sindex)
+            epos = self.positionFromLineIndex(eline, eindex)
+            self.SendScintilla(QsciScintilla.SCI_FINDINDICATORSHOW, spos, epos)
+    
+    def flashFindIndicator(self, sline, sindex, eline, eindex):
+        """
+        Public method to flash the find indicator for the given range.
+        
+        @param sline line number of the indicator start (integer)
+        @param sindex index of the indicator start (integer)
+        @param eline line number of the indicator end (integer)
+        @param eindex index of the indicator end (integer)
+        """
+        if hasattr(QsciScintilla, "SCI_FINDINDICATORFLASH"):
+            spos = self.positionFromLineIndex(sline, sindex)
+            epos = self.positionFromLineIndex(eline, eindex)
+            self.SendScintilla(QsciScintilla.SCI_FINDINDICATORFLASH,
+                               spos, epos)
+    
+    def hideFindIndicator(self):
+        """
+        Public method to hide the find indicator.
+        """
+        if hasattr(QsciScintilla, "SCI_FINDINDICATORHIDE"):
+            self.SendScintilla(QsciScintilla.SCI_FINDINDICATORHIDE)
     
     ###########################################################################
     # methods to perform folding related stuff

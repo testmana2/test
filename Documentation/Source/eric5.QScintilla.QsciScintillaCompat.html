@@ -61,7 +61,7 @@ emitted to signal a change of the zoom value
 QsciScintilla
 <h3>Class Attributes</h3>
 <table>
-<tr><td>ArrowFoldStyle</td></tr><tr><td>ArrowTreeFoldStyle</td></tr><tr><td>UserSeparator</td></tr>
+<tr><td>ArrowFoldStyle</td></tr><tr><td>ArrowTreeFoldStyle</td></tr><tr><td>IndicatorStyleMax</td></tr><tr><td>UserSeparator</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -166,6 +166,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.findNextTarget">findNextTarget</a></td>
 <td>Public method to find the next occurrence in the target range.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.flashFindIndicator">flashFindIndicator</a></td>
+<td>Public method to flash the find indicator for the given range.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.focusOutEvent">focusOutEvent</a></td>
 <td>Public method called when the editor loses focus.</td>
 </tr><tr>
@@ -222,6 +225,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.hasSelection">hasSelection</a></td>
 <td>Public method to check for a selection.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.hideFindIndicator">hideFindIndicator</a></td>
+<td>Public method to hide the find indicator.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.indentationGuideView">indentationGuideView</a></td>
 <td>Public method to get the indentation guide view.</td>
@@ -327,6 +333,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setVirtualSpaceOptions">setVirtualSpaceOptions</a></td>
 <td>Public method to set the virtual space usage options.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.showFindIndicator">showFindIndicator</a></td>
+<td>Public method to show the find indicator for the given range.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.showUserList">showUserList</a></td>
 <td>Public method to show a user supplied list.</td>
@@ -686,6 +695,25 @@ flag indicating a successful search (boolean)
 <dd>
 flag indicating a successful search (boolean)
 </dd>
+</dl><a NAME="QsciScintillaCompat.flashFindIndicator" ID="QsciScintillaCompat.flashFindIndicator"></a>
+<h4>QsciScintillaCompat.flashFindIndicator</h4>
+<b>flashFindIndicator</b>(<i>sline, sindex, eline, eindex</i>)
+<p>
+        Public method to flash the find indicator for the given range.
+</p><dl>
+<dt><i>sline</i></dt>
+<dd>
+line number of the indicator start (integer)
+</dd><dt><i>sindex</i></dt>
+<dd>
+index of the indicator start (integer)
+</dd><dt><i>eline</i></dt>
+<dd>
+line number of the indicator end (integer)
+</dd><dt><i>eindex</i></dt>
+<dd>
+index of the indicator end (integer)
+</dd>
 </dl><a NAME="QsciScintillaCompat.focusOutEvent" ID="QsciScintillaCompat.focusOutEvent"></a>
 <h4>QsciScintillaCompat.focusOutEvent</h4>
 <b>focusOutEvent</b>(<i>event</i>)
@@ -918,7 +946,12 @@ flag indicating the existence of the indicator (boolean)
 <dd>
 flag indicating the presence of a selection (boolean)
 </dd>
-</dl><a NAME="QsciScintillaCompat.indentationGuideView" ID="QsciScintillaCompat.indentationGuideView"></a>
+</dl><a NAME="QsciScintillaCompat.hideFindIndicator" ID="QsciScintillaCompat.hideFindIndicator"></a>
+<h4>QsciScintillaCompat.hideFindIndicator</h4>
+<b>hideFindIndicator</b>(<i></i>)
+<p>
+        Public method to hide the find indicator.
+</p><a NAME="QsciScintillaCompat.indentationGuideView" ID="QsciScintillaCompat.indentationGuideView"></a>
 <h4>QsciScintillaCompat.indentationGuideView</h4>
 <b>indentationGuideView</b>(<i></i>)
 <p>
@@ -945,7 +978,12 @@ style to be used for the indicator
             (QsciScintilla.INDIC_PLAIN, QsciScintilla.INDIC_SQUIGGLE,
             QsciScintilla.INDIC_TT, QsciScintilla.INDIC_DIAGONAL,
             QsciScintilla.INDIC_STRIKE, QsciScintilla.INDIC_HIDDEN,
-            QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX)
+            QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX,
+            QsciScintilla.INDIC_STRAIGHTBOX, QsciScintilla.INDIC_DASH,
+            QsciScintilla.INDIC_DOTS, QsciScintilla.INDIC_SQUIGGLELOW, 
+            QsciScintilla.INDIC_DOTBOX, QsciScintilla.INDIC_SQUIGGLEPIXMAP,
+            QsciScintilla.INDIC_COMPOSITIONTHICK depending upon QScintilla
+            version)
 </dd><dt><i>color</i></dt>
 <dd>
 color to be used by the indicator (QColor)
@@ -1355,6 +1393,25 @@ style to set for text (integer)
 <dt><i>options</i></dt>
 <dd>
 usage options to set (integer, 0 to 3)
+</dd>
+</dl><a NAME="QsciScintillaCompat.showFindIndicator" ID="QsciScintillaCompat.showFindIndicator"></a>
+<h4>QsciScintillaCompat.showFindIndicator</h4>
+<b>showFindIndicator</b>(<i>sline, sindex, eline, eindex</i>)
+<p>
+        Public method to show the find indicator for the given range.
+</p><dl>
+<dt><i>sline</i></dt>
+<dd>
+line number of the indicator start (integer)
+</dd><dt><i>sindex</i></dt>
+<dd>
+index of the indicator start (integer)
+</dd><dt><i>eline</i></dt>
+<dd>
+line number of the indicator end (integer)
+</dd><dt><i>eindex</i></dt>
+<dd>
+index of the indicator end (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.showUserList" ID="QsciScintillaCompat.showUserList"></a>
 <h4>QsciScintillaCompat.showUserList</h4>

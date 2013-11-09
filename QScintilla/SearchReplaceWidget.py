@@ -350,6 +350,7 @@ and so on.</td></tr>
             self.__markOccurrences(txt)
         
         aw = self.viewmanager.activeWindow()
+        aw.hideFindIndicator()
         cline, cindex = aw.getCursorPosition()
         
         ok = True
@@ -517,6 +518,10 @@ and so on.</td></tr>
                 aw.setCursorPosition(cline, cindex)
                 aw.ensureCursorVisible()
         
+        if ok:
+            sline, sindex, eline, eindex = aw.getSelection()
+            aw.showFindIndicator(sline, sindex, eline, eindex)
+        
         self.__finding = False
         
         return ok
@@ -626,6 +631,7 @@ and so on.</td></tr>
         self.ui.replacetextCombo.addItems(self.replaceHistory)
         
         aw = self.viewmanager.activeWindow()
+        aw.hideFindIndicator()
         aw.replace(rtxt)
         
         if searchNext:
@@ -669,6 +675,7 @@ and so on.</td></tr>
         self.ui.replacetextCombo.addItems(self.replaceHistory)
         
         aw = self.viewmanager.activeWindow()
+        aw.hideFindIndicator()
         cline, cindex = aw.getCursorPosition()
         boundary = self.__selectionBoundary()
         if self.ui.selectionCheckBox.isChecked():
@@ -830,6 +837,10 @@ and so on.</td></tr>
         """
         Private slot to close the widget.
         """
+        aw = self.viewmanager.activeWindow()
+        if aw:
+            aw.hideFindIndicator()
+        
         if self.__sliding:
             self.__topWidget.close()
         else:
@@ -845,6 +856,7 @@ and so on.</td></tr>
             aw = self.viewmanager.activeWindow()
             if aw:
                 aw.setFocus(Qt.ActiveWindowFocusReason)
+                aw.hideFindIndicator()
             event.accept()
             if self.__sliding:
                 self.__topWidget.close()
