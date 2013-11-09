@@ -9,9 +9,8 @@ Module implementing a compatability interface class to QsciScintilla.
 
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QPalette, QColor, QApplication
-from PyQt4.Qsci import QsciScintilla, \
-    QSCINTILLA_VERSION as QSCIQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR, \
-    QsciScintillaBase
+from PyQt4.Qsci import QsciScintillaBase, QsciScintilla, \
+    QSCINTILLA_VERSION as QSCIQSCINTILLA_VERSION
 
 ###############################################################################
 
@@ -20,15 +19,9 @@ def QSCINTILLA_VERSION():
     """
     Module function to return the QScintilla version.
     
-    If the installed QScintilla is a snapshot version, then assume it is
-    of the latest release and return a version number of 0x99999.
-    
     @return QScintilla version (integer)
     """
-    if '-snapshot-' in QSCINTILLA_VERSION_STR:
-        return 0x99999
-    else:
-        return QSCIQSCINTILLA_VERSION
+    return QSCIQSCINTILLA_VERSION
     
 ###############################################################################
 
