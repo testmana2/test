@@ -10,9 +10,10 @@ Module implementing a dialog showing an imports diagram of the application.
 import os
 import glob
 
-from PyQt4.QtGui import QApplication, QProgressDialog
+from PyQt4.QtGui import QApplication
 
 from E5Gui import E5MessageBox
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
 
@@ -60,11 +61,11 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
             modules.append(Utilities.normabsjoinpath(
                 self.project.ppath, module))
         tot = len(modules)
+        progress = E5ProgressDialog(
+            self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(
-                self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             

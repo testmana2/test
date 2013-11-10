@@ -16,7 +16,7 @@ from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, \
     QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
     QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, \
-    QProgressDialog, QVBoxLayout, QDockWidget, QAction, QLabel
+    QVBoxLayout, QDockWidget, QAction, QLabel
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
@@ -31,6 +31,7 @@ from E5Gui import E5MessageBox, E5FileDialog, E5ErrorMessage
 from E5Gui.E5Application import e5App
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5ZoomWidget import E5ZoomWidget
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 import Preferences
 import Utilities
@@ -5765,9 +5766,10 @@ class UserInterface(E5MainWindow):
         self.__versionCheckCanceled = False
         if manual:
             if self.__versionCheckProgress is None:
-                self.__versionCheckProgress = \
-                    QProgressDialog("", self.trUtf8("&Cancel"),
-                                    0,  len(self.__httpAlternatives),  self)
+                self.__versionCheckProgress = E5ProgressDialog(
+                    "", self.trUtf8("&Cancel"),
+                    0,  len(self.__httpAlternatives),
+                    self.trUtf8("%v/%m"),  self)
                 self.__versionCheckProgress.setMinimumDuration(0)
                 self.__versionCheckProgress.canceled.connect(
                     self.__versionsDownloadCanceled)

@@ -169,6 +169,7 @@ E5NetworkMonitor QDialog Ui_E5NetworkMonitor
 E5NetworkProxyFactory QNetworkProxyFactory
 E5PassivePopup QFrame
 E5PasswordMeter QProgressBar
+E5ProgressDialog QProgressDialog
 E5RequestModel QAbstractTableModel
 E5SideBar QWidget
 E5SingleApplicationClient SingleApplicationClient

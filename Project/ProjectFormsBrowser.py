@@ -12,11 +12,11 @@ import sys
 import shutil
 
 from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, QProcess
-from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, \
-    QProgressDialog
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -852,9 +852,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.hooks["compileAllForms"](self.project.pdata["FORMS"])
         else:
             numForms = len(self.project.pdata["FORMS"])
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Compiling forms..."),
-                self.trUtf8("Abort"), 0, numForms, self)
+                self.trUtf8("Abort"), 0, numForms,
+                self.trUtf8("%v/%m Forms"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -888,9 +889,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.hooks["compileSelectedForms"](files)
         else:
             numForms = len(files)
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Compiling forms..."),
-                self.trUtf8("Abort"), 0, numForms, self)
+                self.trUtf8("Abort"), 0, numForms,
+                self.trUtf8("%v/%m Forms"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -924,9 +926,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 # ignore the request for non Qt GUI projects
                 return
             
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Determining changed forms..."),
-                None, 0, 100)
+                None, 0, 100, self.trUtf8("%v/%m Forms"))
             progress.setMinimumDuration(0)
             i = 0
             

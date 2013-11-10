@@ -113,6 +113,9 @@ the respective line.&lt;/p&gt;</string>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
+     <property name="format">
+      <string>%v/%m Files</string>
+     </property>
     </widget>
    </item>
    <item>

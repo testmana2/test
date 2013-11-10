@@ -12,10 +12,11 @@ import os
 import glob
 
 from PyQt4.QtCore import QThread, pyqtSignal, QProcess
-from PyQt4.QtGui import QDialog, QApplication, QMenu, QProgressDialog
+from PyQt4.QtGui import QDialog, QApplication, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -518,7 +519,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
 
         @param fn filename of the .idl file to be compiled (string)
         @param noDialog flag indicating silent operations (boolean)
-        @param progress reference to the progress dialog (QProgressDialog)
+        @param progress reference to the progress dialog (E5ProgressDialog)
         @return reference to the compile process (QProcess)
         """
         self.compileProc = QProcess()
@@ -571,9 +572,10 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         if self.omniidl is not None:
             numIDLs = len(self.project.pdata["INTERFACES"])
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Compiling interfaces..."),
-                self.trUtf8("Abort"), 0, numIDLs, self)
+                self.trUtf8("Abort"), 0, numIDLs,
+                self.trUtf8("%v/%m Interfaces"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -604,9 +606,10 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             files = [self.project.getRelativePath(itm.fileName())
                      for itm in items]
             numIDLs = len(files)
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Compiling interfaces..."),
-                self.trUtf8("Abort"), 0, numIDLs, self)
+                self.trUtf8("Abort"), 0, numIDLs,
+                self.trUtf8("%v/%m Interfaces"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0

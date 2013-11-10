@@ -10,10 +10,11 @@ Module implementing a class used to display the resources part of the project.
 import os
 
 from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, PYQT_VERSION, QProcess
-from PyQt4.QtGui import QDialog, QApplication, QMenu, QProgressDialog
+from PyQt4.QtGui import QDialog, QApplication, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -625,7 +626,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         if self.project.pdata["PROGLANGUAGE"][0] in \
                 ["Python", "Python2", "Python3"]:
-            if self.project.getProjectType() in ["Qt4", "Qt4C","E4Plugin"]:
+            if self.project.getProjectType() in ["Qt4", "Qt4C", "E4Plugin"]:
                 self.rccCompiler = 'pyrcc4'
                 if Utilities.isWindowsPlatform():
                     self.rccCompiler += '.exe'
@@ -718,9 +719,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileAllResources"](self.project.pdata["RESOURCES"])
         else:
             numResources = len(self.project.pdata["RESOURCES"])
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Compiling resources..."),
-                self.trUtf8("Abort"), 0, numResources, self)
+                self.trUtf8("Abort"), 0, numResources,
+                self.trUtf8("%v/%m Resources"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -753,9 +755,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileSelectedResources"](files)
         else:
             numResources = len(files)
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Compiling resources..."),
-                self.trUtf8("Abort"), 0, numResources, self)
+                self.trUtf8("Abort"), 0, numResources,
+                self.trUtf8("%v/%m Resources"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -822,9 +825,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileChangedResources"](
                 self.project.pdata["RESOURCES"])
         else:
-            progress = QProgressDialog(
+            progress = E5ProgressDialog(
                 self.trUtf8("Determining changed resources..."),
-                None, 0, 100)
+                None, 0, 100, self.trUtf8("%v/%m Resources"))
             progress.setMinimumDuration(0)
             i = 0
             

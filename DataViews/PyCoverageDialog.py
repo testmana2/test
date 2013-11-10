@@ -11,10 +11,11 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
-    QTreeWidgetItem, QApplication, QProgressDialog
+    QTreeWidgetItem, QApplication
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 
@@ -341,8 +342,9 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         cover.load()
         
         # now process them
-        progress = QProgressDialog(self.trUtf8("Annotating files..."),
-                                   self.trUtf8("Abort"), 0, len(files), self)
+        progress = E5ProgressDialog(
+            self.trUtf8("Annotating files..."), self.trUtf8("Abort"),
+            0, len(files), self.trUtf8("%v/%m Files"), self)
         progress.setMinimumDuration(0)
         count = 0
         

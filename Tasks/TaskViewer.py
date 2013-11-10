@@ -16,11 +16,11 @@ import fnmatch
 
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QHeaderView, QLineEdit, QTreeWidget, QDialog, \
-    QInputDialog, QApplication, QMenu, QAbstractItemView, QProgressDialog, \
-    QTreeWidgetItem
+    QInputDialog, QApplication, QMenu, QAbstractItemView, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .Task import Task
 
@@ -542,9 +542,9 @@ class TaskViewer(QTreeWidget):
         self.clearProjectTasks(fileOnly=True)
         
         # now process them
-        progress = QProgressDialog(
+        progress = E5ProgressDialog(
             self.trUtf8("Extracting project tasks..."),
-            self.trUtf8("Abort"), 0, len(files))
+            self.trUtf8("Abort"), 0, len(files), self.trUtf8("%v/%m Files"))
         progress.setMinimumDuration(0)
         count = 0
         

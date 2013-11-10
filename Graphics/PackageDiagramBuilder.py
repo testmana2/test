@@ -11,7 +11,9 @@ import glob
 import os.path
 import itertools
 
-from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
+from PyQt4.QtGui import QApplication, QGraphicsTextItem
+
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
 
@@ -85,11 +87,11 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
             modules.extend(glob.glob(
                 Utilities.normjoinpath(self.package, ext)))
         tot = len(modules)
+        progress = E5ProgressDialog(
+            self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(
-                self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             
@@ -144,11 +146,11 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         for ext in supportedExt:
             for subpackage in subpackagesList:
                 tot += len(glob.glob(Utilities.normjoinpath(subpackage, ext)))
+        progress = E5ProgressDialog(
+            self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(
-                self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             

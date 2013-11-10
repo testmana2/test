@@ -11,11 +11,12 @@ import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
     QCoreApplication, QXmlStreamReader
-from PyQt4.QtGui import QProgressDialog, QApplication
+from PyQt4.QtGui import QApplication
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebPage
 
 from E5Gui import E5MessageBox
+from E5Gui.E5ProgressDialog import E5ProgressDialog
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -602,9 +603,10 @@ class PasswordManager(QObject):
         if not self.__loaded:
             self.__load()
         
-        progress = QProgressDialog(
+        progress = E5ProgressDialog(
             self.trUtf8("Re-encoding saved passwords..."),
-            None, 0, len(self.__logins), QApplication.activeModalWidget())
+            None, 0, len(self.__logins), self.trUtf8("%v/%m Passwords"),
+            QApplication.activeModalWidget())
         progress.setMinimumDuration(0)
         count = 0
         

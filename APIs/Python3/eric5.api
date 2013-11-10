@@ -1394,6 +1394,9 @@ eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.setMaximum?4(value)
 eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.setMinimum?4(value)
 eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.setValue?4(value)
 eric5.E5Gui.E5PasswordMeter.E5PasswordMeter?1(parent=None)
+eric5.E5Gui.E5ProgressDialog.E5ProgressDialog.format?4()
+eric5.E5Gui.E5ProgressDialog.E5ProgressDialog.setFormat?4(format)
+eric5.E5Gui.E5ProgressDialog.E5ProgressDialog?1(labelText, cancelButtonText, minimum, maximum, format=None, parent=None, flags=Qt.WindowFlags())
 eric5.E5Gui.E5SideBar.E5SideBar.East?7
 eric5.E5Gui.E5SideBar.E5SideBar.North?7
 eric5.E5Gui.E5SideBar.E5SideBar.South?7

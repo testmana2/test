@@ -132,6 +132,7 @@
             <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
             <section title="eric5.E5Gui.E5PassivePopup" ref="eric5.E5Gui.E5PassivePopup.html" />
             <section title="eric5.E5Gui.E5PasswordMeter" ref="eric5.E5Gui.E5PasswordMeter.html" />
+            <section title="eric5.E5Gui.E5ProgressDialog" ref="eric5.E5Gui.E5ProgressDialog.html" />
             <section title="eric5.E5Gui.E5SideBar" ref="eric5.E5Gui.E5SideBar.html" />
             <section title="eric5.E5Gui.E5SingleApplication" ref="eric5.E5Gui.E5SingleApplication.html" />
             <section title="eric5.E5Gui.E5SqueezeLabels" ref="eric5.E5Gui.E5SqueezeLabels.html" />
@@ -3896,6 +3897,11 @@
       <keyword name="E5PasswordMeter.setMaximum" id="E5PasswordMeter.setMaximum" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setMaximum" />
       <keyword name="E5PasswordMeter.setMinimum" id="E5PasswordMeter.setMinimum" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setMinimum" />
       <keyword name="E5PasswordMeter.setValue" id="E5PasswordMeter.setValue" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setValue" />
+      <keyword name="E5ProgressDialog" id="E5ProgressDialog" ref="eric5.E5Gui.E5ProgressDialog.html#E5ProgressDialog" />
+      <keyword name="E5ProgressDialog (Constructor)" id="E5ProgressDialog (Constructor)" ref="eric5.E5Gui.E5ProgressDialog.html#E5ProgressDialog.__init__" />
+      <keyword name="E5ProgressDialog (Module)" id="E5ProgressDialog (Module)" ref="eric5.E5Gui.E5ProgressDialog.html" />
+      <keyword name="E5ProgressDialog.format" id="E5ProgressDialog.format" ref="eric5.E5Gui.E5ProgressDialog.html#E5ProgressDialog.format" />
+      <keyword name="E5ProgressDialog.setFormat" id="E5ProgressDialog.setFormat" ref="eric5.E5Gui.E5ProgressDialog.html#E5ProgressDialog.setFormat" />
       <keyword name="E5RequestModel" id="E5RequestModel" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel" />
       <keyword name="E5RequestModel (Constructor)" id="E5RequestModel (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__init__" />
       <keyword name="E5RequestModel.__addReply" id="E5RequestModel.__addReply" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__addReply" />
@@ -13509,6 +13515,7 @@
       <file>eric5.E5Gui.E5ModelToolBar.html</file>
       <file>eric5.E5Gui.E5PassivePopup.html</file>
       <file>eric5.E5Gui.E5PasswordMeter.html</file>
+      <file>eric5.E5Gui.E5ProgressDialog.html</file>
       <file>eric5.E5Gui.E5SideBar.html</file>
       <file>eric5.E5Gui.E5SingleApplication.html</file>
       <file>eric5.E5Gui.E5SqueezeLabels.html</file>

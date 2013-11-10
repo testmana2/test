@@ -888,7 +888,7 @@ class QsciScintillaCompat(QsciScintilla):
             QsciScintilla.INDIC_STRIKE, QsciScintilla.INDIC_HIDDEN,
             QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX,
             QsciScintilla.INDIC_STRAIGHTBOX, QsciScintilla.INDIC_DASH,
-            QsciScintilla.INDIC_DOTS, QsciScintilla.INDIC_SQUIGGLELOW, 
+            QsciScintilla.INDIC_DOTS, QsciScintilla.INDIC_SQUIGGLELOW,
             QsciScintilla.INDIC_DOTBOX, QsciScintilla.INDIC_SQUIGGLEPIXMAP,
             QsciScintilla.INDIC_COMPOSITIONTHICK depending upon QScintilla
             version)
