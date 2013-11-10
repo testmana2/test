@@ -83,10 +83,10 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         for ext in supportedExt:
             modules.extend(glob.glob(Utilities.normjoinpath(self.package, ext)))
         tot = len(modules)
+        progress = QProgressDialog(self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for module in modules:
@@ -135,10 +135,10 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         for ext in supportedExt:
             for subpackage in subpackagesList:
                 tot += len(glob.glob(Utilities.normjoinpath(subpackage, ext)))
+        progress = QProgressDialog(self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for subpackage in subpackagesList:

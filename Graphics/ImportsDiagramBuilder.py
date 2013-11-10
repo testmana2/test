@@ -82,10 +82,10 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                 glob.glob(Utilities.normjoinpath(self.packagePath, '*{0}'.format(ext))))
         
         tot = len(modules)
+        progress = QProgressDialog(self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for module in modules:

@@ -60,10 +60,10 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         for module in mods:
             modules.append(Utilities.normabsjoinpath(self.project.ppath, module))
         tot = len(modules)
+        progress = QProgressDialog(self.trUtf8("Parsing modules..."),
+            None, 0, tot, self.parent())
         try:
             prog = 0
-            progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for module in modules:
