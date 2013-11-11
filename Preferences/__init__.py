@@ -702,7 +702,7 @@ class Prefs(object):
     
     # defaults for the help settings
     helpDefaults = {
-        "HelpViewerType": 1,      # this coresponds with the radio button id
+        "HelpViewerType": 1,      # this corresponds with the radio button id
         "CustomViewer": "",
         "PythonDocDir": "",
         "Python2DocDir": "",
