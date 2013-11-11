@@ -1520,7 +1520,7 @@ reference to the mouse event (QMouseEvent)
 </dd>
 </dl><a NAME="HelpWindow.newTab" ID="HelpWindow.newTab"></a>
 <h4>HelpWindow.newTab</h4>
-<b>newTab</b>(<i>link=None, requestData=None</i>)
+<b>newTab</b>(<i>link=None, requestData=None, addNextTo=None</i>)
 <p>
         Public slot called to open a new help window tab.
 </p><dl>
@@ -1531,6 +1531,10 @@ file to be displayed in the new window (string or QUrl)
 <dd>
 tuple containing the request data (QNetworkRequest,
             QNetworkAccessManager.Operation, QByteArray)
+</dd><dt><i>addNextTo</i></dt>
+<dd>
+reference to the browser to open the tab after
+            (HelpBrowser)
 </dd>
 </dl><a NAME="HelpWindow.newWindow" ID="HelpWindow.newWindow"></a>
 <h4>HelpWindow.newWindow</h4>

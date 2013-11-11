@@ -5429,6 +5429,7 @@
       <keyword name="HelpTabWidget.currentUrlBar" id="HelpTabWidget.currentUrlBar" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.currentUrlBar" />
       <keyword name="HelpTabWidget.getSourceFileList" id="HelpTabWidget.getSourceFileList" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.getSourceFileList" />
       <keyword name="HelpTabWidget.newBrowser" id="HelpTabWidget.newBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.newBrowser" />
+      <keyword name="HelpTabWidget.newBrowserAfter" id="HelpTabWidget.newBrowserAfter" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.newBrowserAfter" />
       <keyword name="HelpTabWidget.preferencesChanged" id="HelpTabWidget.preferencesChanged" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.preferencesChanged" />
       <keyword name="HelpTabWidget.printBrowser" id="HelpTabWidget.printBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printBrowser" />
       <keyword name="HelpTabWidget.printBrowserPdf" id="HelpTabWidget.printBrowserPdf" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printBrowserPdf" />

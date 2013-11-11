@@ -1924,15 +1924,20 @@ class HelpWindow(E5MainWindow):
         self.historyManager().updateHistoryEntry(
             browser.url().toString(), title)
     
-    def newTab(self, link=None, requestData=None):
+    def newTab(self, link=None, requestData=None, addNextTo=None):
         """
         Public slot called to open a new help window tab.
         
         @param link file to be displayed in the new window (string or QUrl)
         @param requestData tuple containing the request data (QNetworkRequest,
             QNetworkAccessManager.Operation, QByteArray)
+        @param addNextTo reference to the browser to open the tab after
+            (HelpBrowser)
         """
-        self.tabWidget.newBrowser(link, requestData)
+        if addNextTo:
+            self.tabWidget.newBrowserAfter(addNextTo, link, requestData)
+        else:
+            self.tabWidget.newBrowser(link, requestData)
     
     def newWindow(self, link=None):
         """

@@ -370,6 +370,21 @@ class HelpTabWidget(E5TabWidget):
         elif requestData:
             browser.load(*requestData)
     
+    def newBrowserAfter(self, browser, link=None, requestData=None):
+        """
+        Public method to create a new web browser tab after a given one.
+        
+        @param browser reference to the browser to add after (HelpBrowser)
+        @param link link to be shown (string or QUrl)
+        @param requestData tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
+        """
+        if browser:
+            position = self.indexOf(browser) + 1
+        else:
+            position = -1
+        self.newBrowser(link, requestData, position)
+    
     def __showNavigationMenu(self):
         """
         Private slot to show the navigation button menu.

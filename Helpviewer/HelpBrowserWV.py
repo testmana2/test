@@ -2219,7 +2219,7 @@ class HelpBrowser(QWebView):
         @param windowType type of the requested window (QWebPage.WebWindowType)
         @return reference to the created browser window (HelpBrowser)
         """
-        self.mw.newTab()
+        self.mw.newTab(addNextTo=self)
         return self.mw.currentBrowser()
     
     def preferencesChanged(self):

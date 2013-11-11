@@ -202,6 +202,9 @@ E5TabWidget
 <td><a href="#HelpTabWidget.newBrowser">newBrowser</a></td>
 <td>Public method to create a new web browser tab.</td>
 </tr><tr>
+<td><a href="#HelpTabWidget.newBrowserAfter">newBrowserAfter</a></td>
+<td>Public method to create a new web browser tab after a given one.</td>
+</tr><tr>
 <td><a href="#HelpTabWidget.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
 </tr><tr>
@@ -585,6 +588,23 @@ tuple containing the request data (QNetworkRequest,
 <dd>
 position to create the new tab at or -1 to add it
             to the end (integer)
+</dd>
+</dl><a NAME="HelpTabWidget.newBrowserAfter" ID="HelpTabWidget.newBrowserAfter"></a>
+<h4>HelpTabWidget.newBrowserAfter</h4>
+<b>newBrowserAfter</b>(<i>browser, link=None, requestData=None</i>)
+<p>
+        Public method to create a new web browser tab after a given one.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser to add after (HelpBrowser)
+</dd><dt><i>link</i></dt>
+<dd>
+link to be shown (string or QUrl)
+</dd><dt><i>requestData</i></dt>
+<dd>
+tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
 </dd>
 </dl><a NAME="HelpTabWidget.preferencesChanged" ID="HelpTabWidget.preferencesChanged"></a>
 <h4>HelpTabWidget.preferencesChanged</h4>
