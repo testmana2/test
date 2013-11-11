@@ -34869,7 +34869,7 @@ the respective line and position.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../PluginManager/PluginInstallDialog.ui" line="150"/>
-        <source>%v/%m Plugins</source>
+        <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
