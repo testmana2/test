@@ -675,6 +675,8 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to determine, if the caret line is visible even if
         the editor doesn't have the focus.
+        
+        @return flag indicating an always visible caret line (boolean)
         """
         try:
             return self.SendScintilla(
