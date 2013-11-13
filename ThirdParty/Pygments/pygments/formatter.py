@@ -11,6 +11,11 @@
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
+try:
+    basestring    # __IGNORE_WARNING__
+except NameError:
+    basestring = str
+
 import codecs
 
 from pygments.util import get_bool_opt
@@ -20,7 +25,7 @@ __all__ = ['Formatter']
 
 
 def _lookup_style(style):
-    if isinstance(style, str):
+    if isinstance(style, basestring):
         return get_style_by_name(style)
     return style
 

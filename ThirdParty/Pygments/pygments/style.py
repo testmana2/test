@@ -9,8 +9,6 @@
     :license: BSD, see LICENSE for details.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
-
 from pygments.token import Token, STANDARD_TYPES
 
 def with_metaclass(meta, base=object):
@@ -22,6 +20,13 @@ def with_metaclass(meta, base=object):
 
 
 class StyleMeta(type):
+    background_color = '#ffffff'
+
+    #: highlight background color
+    highlight_color = '#ffffcc'
+
+    #: Style definitions for individual token types.
+    styles = {}
 
     def __new__(mcs, name, bases, dct):
         obj = type.__new__(mcs, name, bases, dct)
@@ -114,10 +119,4 @@ class StyleMeta(type):
 
 
 class Style(with_metaclass(StyleMeta, object)):
-    background_color = '#ffffff'
-
-    #: highlight background color
-    highlight_color = '#ffffcc'
-
-    #: Style definitions for individual token types.
-    styles = {}
+    pass

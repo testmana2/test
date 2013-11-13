@@ -11,7 +11,7 @@
 try:
     str = unicode   # __IGNORE_WARNING__
 except (NameError):
-    pass
+    basestring = str
 
 import re, itertools
 
@@ -409,7 +409,7 @@ class RegexLexerMeta(LexerMeta):
 
     def _process_new_state(cls, new_state, unprocessed, processed):
         """Preprocess the state transition action of a token definition."""
-        if isinstance(new_state, str):
+        if isinstance(new_state, basestring):
             # an existing state
             if new_state == '#pop':
                 return -1
@@ -444,7 +444,7 @@ class RegexLexerMeta(LexerMeta):
 
     def _process_state(cls, unprocessed, processed, state):
         """Preprocess a single state definition."""
-        assert type(state) is str, "wrong state name %r" % state
+        assert isinstance(state, basestring), "wrong state name %r" % state
         assert state[0] != '#', "invalid state name %r" % state
         if state in processed:
             return processed[state]
