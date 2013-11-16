@@ -7,6 +7,8 @@
 Module implementing the transplant extension project helper.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Action import E5Action
@@ -25,7 +27,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         """
         Constructor
         """
-        super().__init__()
+        super(TransplantProjectHelper, self).__init__()
     
     def setObjects(self, vcsObject, projectObject):
         """
@@ -34,7 +36,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         @param vcsObject reference to the vcs object
         @param projectObject reference to the project object
         """
-        super().setObjects(vcsObject, projectObject)
+        super(TransplantProjectHelper, self).setObjects(
+            vcsObject, projectObject)
         
         if self.vcs.version >= (2, 3):
             # transplant is deprecated as of Mercurial 2.3

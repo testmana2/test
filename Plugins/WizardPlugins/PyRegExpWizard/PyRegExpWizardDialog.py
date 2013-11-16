@@ -7,6 +7,8 @@
 Module implementing the Python re wizard dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import re
 
@@ -36,7 +38,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        super().__init__(parent)
+        super(PyRegExpWizardWidget, self).__init__(parent)
         self.setupUi(self)
         
         # initialize icons of the tool buttons
@@ -691,7 +693,7 @@ class PyRegExpWizardDialog(QDialog):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        super().__init__(parent)
+        super(PyRegExpWizardDialog, self).__init__(parent)
         self.setModal(fromEric)
         self.setSizeGripEnabled(True)
         
@@ -728,7 +730,7 @@ class PyRegExpWizardWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PyRegExpWizardWindow, self).__init__(parent)
         self.cw = PyRegExpWizardWidget(self, fromEric=False)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

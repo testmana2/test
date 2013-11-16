@@ -8,6 +8,8 @@ Module implementing a QNetworkReply subclass reporting an unknown protocol
 error.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QTimer
 from PyQt4.QtNetwork import QNetworkReply
 
@@ -24,7 +26,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         @param protocol protocol name (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(NetworkProtocolUnknownErrorReply, self).__init__(parent)
         self.setError(
             QNetworkReply.ProtocolUnknownError,
             self.trUtf8("Protocol '{0}' not supported.").format(protocol))

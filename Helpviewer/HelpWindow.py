@@ -7,6 +7,12 @@
 Module implementing the helpviewer main window.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, \
@@ -96,7 +102,7 @@ class HelpWindow(E5MainWindow):
             keyboard shortcuts (boolean)
         @keyparam searchWord word to search for (string)
         """
-        super().__init__(parent)
+        super(HelpWindow, self).__init__(parent)
         self.setObjectName(name)
         self.setWindowTitle(self.trUtf8("eric5 Web Browser"))
         
@@ -3419,7 +3425,7 @@ class HelpWindow(E5MainWindow):
         elif evt.button() == Qt.XButton2:
             self.currentBrowser().pageAction(QWebPage.Forward).trigger()
         else:
-            super().mousePressEvent(evt)
+            super(HelpWindow, self).mousePressEvent(evt)
 
     @classmethod
     def feedsManager(cls):
@@ -3559,7 +3565,7 @@ class HelpWindow(E5MainWindow):
                     self.__linkActivated(url)
                     return
         
-        super().keyPressEvent(evt)
+        super(HelpWindow, self).keyPressEvent(evt)
     
     ###########################################################################
     ## Interface to VirusTotal below                                         ##

@@ -7,6 +7,8 @@
 Module implementing a zoom widget for the status bar.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal
 from PyQt4.QtGui import QWidget
 
@@ -28,7 +30,7 @@ class E5ZoomWidget(QWidget, Ui_E5ZoomWidget):
         @param resetPix pixmap for the zoom reset button (QPixmap)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5ZoomWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.zoomOutLabel.setPixmap(outPix.scaled(16, 16))

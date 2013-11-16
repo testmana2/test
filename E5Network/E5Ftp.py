@@ -8,6 +8,8 @@ Module implementing an extension to the Python FTP class to support FTP
 proxies.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import ftplib
 from socket import _GLOBAL_DEFAULT_TIMEOUT
 
@@ -80,7 +82,7 @@ class E5Ftp(ftplib.FTP):
         @param proxyAccount accounting info for the proxy (string)
         @param timeout timeout in seconds for blocking operations (integer)
         """
-        super().__init__()
+        super(E5Ftp, self).__init__()
         
         self.__timeout = timeout
         
@@ -161,10 +163,11 @@ class E5Ftp(ftplib.FTP):
                 raise E5FtpProxyError(
                     "990 Proxy usage requested, but no proxy host given.")
             
-            return super().connect(
+            return super(E5Ftp, self).connect(
                 self.__proxyHost, self.__proxyPort, self.__timeout)
         else:
-            return super().connect(self.__host, self.__port, self.__timeout)
+            return super(E5Ftp, self).connect(
+                self.__host, self.__port, self.__timeout)
     
     def login(self, user="", password="", acct=""):
         """

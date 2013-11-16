@@ -7,6 +7,8 @@
 Module implementing a simple Python syntax checker.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import fnmatch
 
@@ -39,7 +41,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         @param parent The parent widget. (QWidget)
         """
-        super().__init__(parent)
+        super(SyntaxCheckerDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.showButton = self.buttonBox.addButton(
@@ -146,33 +148,21 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             files = fn
         elif os.path.isdir(fn):
             files = []
-            for ext in Preferences.getPython("Python3Extensions"):
+            extensions = set(Preferences.getPython("PythonExtensions") +
+                             Preferences.getPython("Python3Extensions"))
+            for ext in extensions:
                 files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+                    Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             files = [fn]
-        py3files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
         
-        if (codestring and len(py3files) == 1) or \
-           (codestring and len(py2files) == 1) or \
-           (not codestring and len(py3files) + len(py2files) > 0):
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
+        if codestring == '' and len(files) > 0:
+            self.checkProgress.setMaximum(len(files))
             QApplication.processEvents()
-            
-            ignoreStarImportWarnings = \
-                Preferences.getFlakes("IgnoreStarImportWarnings")
             
             # now go through all the files
             progress = 0
-            for file in py3files + py2files:
+            for file in files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
                 self.__resort()
@@ -187,12 +177,11 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 else:
                     try:
                         source = Utilities.readEncodedFile(file)[0]
-                        # convert eols
-                        source = Utilities.convertLineEnds(source, "\n")
+                        source = Utilities.normalizeCode(source)
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
                         self.__createResultItem(
-                            file, "1", 0,
+                            file, 1, 0,
                             self.trUtf8("Error: {0}").format(str(msg))
                             .rstrip()[1:-1], "")
                         progress += 1
@@ -200,64 +189,32 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 
                 flags = Utilities.extractFlags(source)
                 ext = os.path.splitext(file)[1]
-                if ("FileType" in flags and
-                    flags["FileType"] in ["Python", "Python2"]) or \
-                   file in py2files or \
-                   (ext in [".py", ".pyw"] and
-                    Preferences.getProject("DeterminePyFromProject") and
-                    self.__project.isOpen() and
-                    self.__project.isProjectFile(file) and
-                    self.__project.getProjectLanguage() in ["Python",
-                                                            "Python2"]):
-                    isPy3 = False
-                    nok, fname, line, index, code, error, warnings = \
-                        Utilities.py2compile(
-                            file,
-                            checkFlakes=Preferences.getFlakes(
-                                "IncludeInSyntaxCheck"))
+                if "FileType" in flags:
+                    isPy2 = flags["FileType"] in ["Python", "Python2"]
+                elif (Preferences.getProject("DeterminePyFromProject") and
+                      self.__project.isOpen() and
+                      self.__project.isProjectFile(file)):
+                            isPy2 = self.__project.getProjectLanguage() in \
+                                ["Python", "Python2"]
                 else:
-                    isPy3 = True
-                    nok, fname, line, index, code, error = \
-                        Utilities.compile(file, source)
+                    isPy2 = flags.get("FileType") in ["Python", "Python2"] or \
+                        ext in Preferences.getPython("PythonExtensions")
+                
+                nok, fname, line, index, code, error, warnings = \
+                    Utilities.compile(file, source, isPy2)
                 if nok:
                     self.noResults = False
-                    self.__createResultItem(fname, line, index, error, code)
+                    self.__createResultItem(
+                        fname, line, index, error, code.strip(), False)
                 else:
-                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
-                        if isPy3:
-                            try:
-                                from Utilities.py3flakes.checker import Checker
-                                from Utilities.py3flakes.messages import \
-                                    ImportStarUsed
-                                sourceLines = source.splitlines()
-                                warnings = Checker(source, file)
-                                warnings.messages.sort(key=lambda a: a.lineno)
-                                for warning in warnings.messages:
-                                    if ignoreStarImportWarnings and \
-                                       isinstance(warning, ImportStarUsed):
-                                        continue
-                                    fname, lineno, message = \
-                                        warning.getMessageData()
-                                    if "__IGNORE_WARNING__" not in \
-                                        Utilities.extractLineFlags(
-                                            sourceLines[lineno - 1].strip()):
-                                        self.noResults = False
-                                        self.__createResultItem(
-                                            fname, lineno, 0, message, "",
-                                            isWarning=True)
-                            except SyntaxError as err:
-                                if err.text.strip():
-                                    msg = err.text.strip()
-                                else:
-                                    msg = err.msg
-                                self.__createResultItem(
-                                    err.filename, err.lineno, 0, msg, "")
-                        else:
-                            for warning in warnings:
-                                self.noResults = False
-                                self.__createResultItem(
-                                    warning[0], int(warning[1]), 0,
-                                    warning[2], "", isWarning=True)
+                    source = source.splitlines()
+                    for warning in warnings:
+                        self.noResults = False
+                        scr_line = source[warning[2] - 1].strip()
+                        self.__createResultItem(
+                            warning[1], warning[2], 0,
+                            warning[3], scr_line, True)
+
                 progress += 1
             self.checkProgress.setValue(progress)
             QApplication.processEvents()

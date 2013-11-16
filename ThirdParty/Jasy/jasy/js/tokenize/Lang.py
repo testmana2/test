@@ -4,6 +4,8 @@
 #
 
 """JavaScript 1.7 keywords"""
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 keywords = set([
     "break",
     "case", "catch", "const", "continue",

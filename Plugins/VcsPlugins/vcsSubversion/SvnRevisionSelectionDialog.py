@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the revisions for the svn diff command.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QDate, QDateTime, Qt
 from PyQt4.QtGui import QDialog
 
@@ -24,7 +26,7 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
         
         @param parent parent widget of the dialog (QWidget)
         """
-        super().__init__(parent)
+        super(SvnRevisionSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.date1Edit.setDate(QDate.currentDate())

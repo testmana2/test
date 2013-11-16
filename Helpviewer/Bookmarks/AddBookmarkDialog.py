@@ -7,6 +7,8 @@
 Module implementing a dialog to add a bookmark or a bookmark folder.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QModelIndex
 from PyQt4.QtGui import QSortFilterProxyModel, QDialog, QTreeView
 
@@ -23,7 +25,7 @@ class AddBookmarkProxyModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(AddBookmarkProxyModel, self).__init__(parent)
     
     def columnCount(self, parent):
         """
@@ -78,7 +80,7 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         @param bookmarksManager reference to the bookmarks manager
             object (BookmarksManager)
         """
-        super().__init__(parent)
+        super(AddBookmarkDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__bookmarksManager = bookmarksManager
@@ -220,7 +222,7 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         """
         if (not self.__addFolder and not self.addressEdit.text()) or \
            not self.nameEdit.text():
-            super().accept()
+            super(AddBookmarkDialog, self).accept()
             return
         
         from .BookmarkNode import BookmarkNode
@@ -243,4 +245,4 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         self.__bookmarksManager.addBookmark(parent, bookmark)
         self.__addedNode = bookmark
         
-        super().accept()
+        super(AddBookmarkDialog, self).accept()

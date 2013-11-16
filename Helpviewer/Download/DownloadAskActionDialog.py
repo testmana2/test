@@ -7,6 +7,8 @@
 Module implementing a dialog to ask for a download action.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_DownloadAskActionDialog import Ui_DownloadAskActionDialog
@@ -27,7 +29,7 @@ class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
         @param baseUrl URL (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(DownloadAskActionDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.infoLabel.setText("<b>{0}</b>".format(fileName))

@@ -10,6 +10,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 from pygments.token import String, Comment, Keyword, Name, Error, Whitespace, \

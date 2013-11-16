@@ -7,6 +7,12 @@
 Module implementing a widget controlling a download.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, \
     QUrl, QIODevice, QCryptographicHash
 from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QDialog
@@ -52,7 +58,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @keyparam parent reference to the parent widget (QWidget)
         @keyparam mainWindow reference to the main window (HelpWindow)
         """
-        super().__init__(parent)
+        super(DownloadItem, self).__init__(parent)
         self.setupUi(self)
         
         p = self.infoLabel.palette()

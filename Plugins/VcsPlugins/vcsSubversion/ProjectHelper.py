@@ -7,6 +7,8 @@
 Module implementing the VCS project helper for Subversion.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from E5Gui.E5Application import e5App

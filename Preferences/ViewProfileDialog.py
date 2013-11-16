@@ -7,6 +7,8 @@
 Module implementing a dialog to configure the various view profiles.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_ViewProfileToolboxesDialog import Ui_ViewProfileToolboxesDialog
@@ -30,7 +32,7 @@ class ViewProfileDialog(QDialog):
         @param parent parent widget of this dialog (QWidget)
         @exception ValueError raised to indicate an invalid layout
         """
-        super().__init__(parent)
+        super(ViewProfileDialog, self).__init__(parent)
         
         self.__layout = layout
         if self.__layout == "Toolboxes":

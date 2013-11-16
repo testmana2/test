@@ -7,6 +7,8 @@
 Module implementing a dialog to enter data for signing a revision.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -27,7 +29,7 @@ class HgGpgSignDialog(QDialog, Ui_HgGpgSignDialog):
         @param bookmarksList list of bookmarks (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgGpgSignDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

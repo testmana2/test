@@ -7,6 +7,8 @@
 Module implementing a custom widget indicating the strength of a password.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QProgressBar
 
 from Utilities.PasswordChecker import PasswordChecker
@@ -22,10 +24,10 @@ class E5PasswordMeter(QProgressBar):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5PasswordMeter, self).__init__(parent)
         
-        super().setTextVisible(False)
-        super().setMaximum(100)
+        super(E5PasswordMeter, self).setTextVisible(False)
+        super(E5PasswordMeter, self).setMaximum(100)
         self.__increment = 100 // (PasswordChecker.Complexity_VeryStrong + 1)
         
         self.__indicatorColors = [
@@ -57,7 +59,8 @@ class E5PasswordMeter(QProgressBar):
         strength = PasswordChecker().checkPassword(password)
         self.setStyleSheet(self.__styleSheetTemplate.format(
             self.__indicatorColors[strength]))
-        super().setValue((strength + 1) * self.__increment)
+        super(E5PasswordMeter, self).setValue(
+            (strength + 1) * self.__increment)
     
     def setValue(self, value):
         """

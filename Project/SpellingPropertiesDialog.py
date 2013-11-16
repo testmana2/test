@@ -7,6 +7,8 @@
 Module implementing the Spelling Properties dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -33,7 +35,7 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         @param new flag indicating the generation of a new project
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(SpellingPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.project = project

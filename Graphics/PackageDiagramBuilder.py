@@ -7,9 +7,14 @@
 Module implementing a dialog showing a UML like class diagram of a package.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import glob
 import os.path
-import itertools
+try:  # Py3
+    from itertools import zip_longest
+except ImportError:
+    from itertools import izip_longest as zip_longest
 
 from PyQt4.QtGui import QApplication, QGraphicsTextItem
 
@@ -36,7 +41,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @keyparam noAttrs flag indicating, that no attributes should be shown
             (boolean)
         """
-        super().__init__(dialog, view, project)
+        super(PackageDiagramBuilder, self).__init__(dialog, view, project)
         self.setObjectName("PackageDiagram")
         
         self.package = Utilities.normabspath(package)
@@ -349,7 +354,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         # generations across height
         y = 10.0
         for currentWidth, currentHeight, generation in \
-                itertools.zip_longest(widths, heights, generations):
+                zip_longest(widths, heights, generations):
             x = 10.0
             # whiteSpace is the space between any two elements
             whiteSpace = (width - currentWidth - 20) / \

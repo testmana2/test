@@ -7,6 +7,8 @@
 Module implementing the editor highlighter keywords configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -23,7 +25,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorKeywordsPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorKeywordsPage")
         

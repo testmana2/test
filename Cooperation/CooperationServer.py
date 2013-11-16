@@ -7,6 +7,8 @@
 Module implementing the cooperation server.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal
 from PyQt4.QtNetwork import QTcpServer
 
@@ -31,7 +33,7 @@ class CooperationServer(QTcpServer):
         @param address address the server should listen on (QHostAddress)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(CooperationServer, self).__init__(parent)
         
         self.__address = address
     

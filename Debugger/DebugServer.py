@@ -7,6 +7,12 @@
 Module implementing the debug server.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QModelIndex
@@ -144,7 +150,7 @@ class DebugServer(QTcpServer):
         """
         Constructor
         """
-        super().__init__()
+        super(DebugServer, self).__init__()
         
         # create our models
         self.breakpointModel = BreakPointModel(self)
@@ -179,8 +185,24 @@ class DebugServer(QTcpServer):
         self.debugging = False
         self.running = False
         self.clientProcess = None
+        
         self.clientType = \
-            Preferences.Prefs.settings.value('DebugClient/Type', 'Python3')
+            Preferences.Prefs.settings.value('DebugClient/Type')
+        if self.clientType is None:
+            import sys
+            if sys.version_info[0] == 2:
+                self.clientType = 'Python2'
+            else:
+                self.clientType = 'Python3'
+        # Change clientType if dependent interpreter not exist anymore
+        # (maybe deinstalled,...)
+        elif self.clientType == 'Python2' and Preferences.getDebugger(
+                "PythonInterpreter") == '':
+            self.clientType = 'Python3'
+        elif self.clientType == 'Python3' and Preferences.getDebugger(
+                "Python3Interpreter") == '':
+            self.clientType = 'Python2'
+        
         self.lastClientType = ''
         self.__autoClearShell = False
         

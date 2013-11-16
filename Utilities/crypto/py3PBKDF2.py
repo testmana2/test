@@ -7,6 +7,8 @@
 Module implementing PBKDF2 functions.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import hashlib
 import hmac
 import os

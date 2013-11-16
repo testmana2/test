@@ -8,6 +8,11 @@
     :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
+try:
+    str = unicode   # __IGNORE_WARNING__
+except (NameError):
+    basestring = str
+
 import re, itertools
 
 from pygments.filter import apply_filters, Filter
@@ -31,6 +36,14 @@ _encoding_map = [('\xef\xbb\xbf', 'utf-8'),
 _default_analyse = staticmethod(lambda x: 0.0)
 
 
+def with_metaclass(meta, base=object):
+    """
+    Python independent version to create a base class with a metaclass.
+    Taken from six 1.3.0 (http://pythonhosted.org/six)
+    """
+    return meta("NewBase", (base,), {})
+
+
 class LexerMeta(type):
     """
     This metaclass automagically converts ``analyse_text`` methods into
@@ -43,7 +56,7 @@ class LexerMeta(type):
         return type.__new__(cls, name, bases, d)
 
 
-class Lexer(object, metaclass=LexerMeta):
+class Lexer(with_metaclass(LexerMeta, object)):
     """
     Lexer for a specific language.
 
@@ -396,7 +409,7 @@ class RegexLexerMeta(LexerMeta):
 
     def _process_new_state(cls, new_state, unprocessed, processed):
         """Preprocess the state transition action of a token definition."""
-        if isinstance(new_state, str):
+        if isinstance(new_state, basestring):
             # an existing state
             if new_state == '#pop':
                 return -1
@@ -431,7 +444,7 @@ class RegexLexerMeta(LexerMeta):
 
     def _process_state(cls, unprocessed, processed, state):
         """Preprocess a single state definition."""
-        assert type(state) is str, "wrong state name %r" % state
+        assert isinstance(state, basestring), "wrong state name %r" % state
         assert state[0] != '#', "invalid state name %r" % state
         if state in processed:
             return processed[state]
@@ -532,7 +545,7 @@ class RegexLexerMeta(LexerMeta):
         return type.__call__(cls, *args, **kwds)
 
 
-class RegexLexer(Lexer, metaclass=RegexLexerMeta):
+class RegexLexer(with_metaclass(RegexLexerMeta, Lexer)):
     """
     Base for simple stateful regular expression-based lexers.
     Simplifies the lexing process so that you need only

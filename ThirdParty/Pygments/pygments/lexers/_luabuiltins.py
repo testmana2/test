@@ -13,6 +13,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 MODULES = {'basic': ['_G',
            '_VERSION',
            'assert',
@@ -142,7 +144,11 @@ MODULES = {'basic': ['_G',
 
 if __name__ == '__main__':
     import re
-    import urllib.request, urllib.parse, urllib.error
+    try:  # Py3
+        import urllib.request as request
+    except (ImportError):
+        import urllib2 as request   # __IGNORE_WARNING__
+
     import pprint
 
     # you can't generally find out what module a function belongs to if you
@@ -188,7 +194,7 @@ if __name__ == '__main__':
 
 
     def get_newest_version():
-        f = urllib.request.urlopen('http://www.lua.org/manual/')
+        f = request.urlopen('http://www.lua.org/manual/')
         r = re.compile(r'^<A HREF="(\d\.\d)/">Lua \1</A>')
         for line in f:
             m = r.match(line)
@@ -196,7 +202,7 @@ if __name__ == '__main__':
                 return m.groups()[0]
 
     def get_lua_functions(version):
-        f = urllib.request.urlopen('http://www.lua.org/manual/%s/' % version)
+        f = request.urlopen('http://www.lua.org/manual/%s/' % version)
         r = re.compile(r'^<A HREF="manual.html#pdf-(.+)">\1</A>')
         functions = []
         for line in f:

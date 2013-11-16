@@ -7,6 +7,8 @@
 Module implementing an importer for HTML bookmark files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
@@ -59,7 +61,7 @@ class HtmlImporter(BookmarksImporter):
         @param id source ID (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(id, parent)
+        super(HtmlImporter, self).__init__(id, parent)
         
         self.__fileName = ""
         self.__inFile = None

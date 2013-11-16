@@ -7,6 +7,8 @@
 Module implementing a scheme access handler for AdBlock URLs.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QUrl
 from PyQt4.QtNetwork import QNetworkAccessManager
 

@@ -4,6 +4,8 @@
 Module implementing the download manager class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, Qt, QModelIndex, QFileInfo
 from PyQt4.QtGui import QDialog, QStyle, QFileIconProvider, QMenu, QCursor, \
     QApplication
@@ -37,7 +39,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(DownloadManager, self).__init__(parent)
         self.setupUi(self)
         
         self.__saveTimer = AutoSaver(self, self.save)

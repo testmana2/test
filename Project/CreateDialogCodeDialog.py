@@ -7,6 +7,8 @@
 Module implementing a dialog to generate code for a Qt4/Qt5 dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, \
@@ -46,7 +48,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         @param project reference to the project object
         @param parent parent widget if the dialog (QWidget)
         """
-        super().__init__(parent)
+        super(CreateDialogCodeDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

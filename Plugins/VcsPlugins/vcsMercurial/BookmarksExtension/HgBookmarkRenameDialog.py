@@ -7,6 +7,8 @@
 Module implementing a dialog to get the data to rename a bookmark.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -24,7 +26,7 @@ class HgBookmarkRenameDialog(QDialog, Ui_HgBookmarkRenameDialog):
         @param bookmarksList list of bookmarks (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgBookmarkRenameDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

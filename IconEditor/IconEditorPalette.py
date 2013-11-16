@@ -7,6 +7,8 @@
 Module implementing a palette widget for the icon editor.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QWidget, QColor, QPainter, QBoxLayout, QLabel, \
     QFrame, QPushButton, QSpinBox, QGroupBox, QVBoxLayout, QRadioButton, \
@@ -30,7 +32,7 @@ class IconEditorPalette(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IconEditorPalette, self).__init__(parent)
         
         if self.layoutDirection == Qt.Horizontal:
             direction = QBoxLayout.LeftToRight

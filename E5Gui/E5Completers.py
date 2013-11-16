@@ -7,6 +7,8 @@
 Module implementing various kinds of completers.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QDir, Qt
 from PyQt4.QtGui import QCompleter, QFileSystemModel, QStringListModel
 
@@ -29,7 +31,7 @@ class E5FileCompleter(QCompleter):
         @keyparam showHidden flag indicating to show hidden entries as well
             (boolean)
         """
-        super().__init__(parent)
+        super(E5FileCompleter, self).__init__(parent)
         self.__model = QFileSystemModel(self)
         if showHidden:
             self.__model.setFilter(
@@ -62,7 +64,7 @@ class E5DirCompleter(QCompleter):
         @keyparam showHidden flag indicating to show hidden entries as well
             (boolean)
         """
-        super().__init__(parent)
+        super(E5DirCompleter, self).__init__(parent)
         self.__model = QFileSystemModel(self)
         if showHidden:
             self.__model.setFilter(
@@ -93,7 +95,7 @@ class E5StringListCompleter(QCompleter):
         @keyparam completionMode completion mode of the
             completer (QCompleter.CompletionMode)
         """
-        super().__init__(parent)
+        super(E5StringListCompleter, self).__init__(parent)
         self.__model = QStringListModel(strings, parent)
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)

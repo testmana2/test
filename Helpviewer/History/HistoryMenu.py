@@ -7,6 +7,8 @@
 Module implementing the history menu.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 
 from PyQt4.QtCore import pyqtSignal, Qt, QMimeData, QUrl, QModelIndex
@@ -35,7 +37,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryMenuModel, self).__init__(parent)
         
         self.__treeModel = sourceModel
         
@@ -216,7 +218,7 @@ class HistoryMostVisitedMenuModel(QSortFilterProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryMostVisitedMenuModel, self).__init__(parent)
         
         self.setDynamicSortFilter(True)
         self.setSourceModel(sourceModel)

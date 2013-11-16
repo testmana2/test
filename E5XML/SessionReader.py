@@ -7,6 +7,8 @@
 Module implementing a class for reading an XML session file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from E5Gui.E5Application import e5App
 
 from .Config import sessionFileFormatVersion

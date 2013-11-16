@@ -7,6 +7,8 @@
 Module implementing the font dialog wizard dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -28,7 +30,7 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FontDialogWizardDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.bTest = self.buttonBox.addButton(

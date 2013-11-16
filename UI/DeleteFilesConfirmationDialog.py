@@ -7,6 +7,8 @@
 Module implementing a dialog to confirm deletion of multiple files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_DeleteFilesConfirmationDialog import Ui_DeleteFilesConfirmationDialog
@@ -25,7 +27,7 @@ class DeleteFilesConfirmationDialog(QDialog, Ui_DeleteFilesConfirmationDialog):
         @param message message to be shown (string)
         @param files list of filenames to be shown (list of strings)
         """
-        super().__init__(parent)
+        super(DeleteFilesConfirmationDialog, self).__init__(parent)
         self.setupUi(self)
         self.setModal(True)
         

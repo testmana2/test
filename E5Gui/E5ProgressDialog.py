@@ -7,6 +7,8 @@
 Module implementing a progress dialog allowing a customized progress bar label.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QProgressBar, QProgressDialog
 
@@ -29,7 +31,7 @@ class E5ProgressDialog(QProgressDialog):
         @keyparam parent reference to the parent widget (QWidget)
         @keyparam flags window flags of the dialog (Qt.WindowFlags)
         """
-        super().__init__(labelText, cancelButtonText, minimum, maximum,
+        super(E5ProgressDialog, self).__init__(labelText, cancelButtonText, minimum, maximum,
                          parent, flags)
         
         self.__progressBar = QProgressBar(self)

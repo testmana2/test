@@ -7,6 +7,8 @@
 Module implementing a manager for open search engines.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice
@@ -39,7 +41,7 @@ class OpenSearchManager(QObject):
         """
         if parent is None:
             parent = e5App()
-        super().__init__(parent)
+        super(OpenSearchManager, self).__init__(parent)
         
         self.__replies = []
         self.__engines = {}

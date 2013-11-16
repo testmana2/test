@@ -7,6 +7,8 @@
 Module implementing the Cooperation configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QRegExp
 from PyQt4.QtGui import QRegExpValidator, QValidator
 
@@ -24,7 +26,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         """
         Constructor
         """
-        super().__init__()
+        super(CooperationPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("CooperationPage")
         

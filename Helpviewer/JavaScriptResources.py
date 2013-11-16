@@ -7,6 +7,8 @@
 Module containing some HTML resources.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 parseForms_js = """
 (function (){
     var forms = new Array;

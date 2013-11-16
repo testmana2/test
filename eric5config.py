@@ -7,6 +7,8 @@
 Module containing the default configuration of the eric5 installation.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 

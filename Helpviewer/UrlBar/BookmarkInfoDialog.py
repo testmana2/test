@@ -7,6 +7,8 @@
 Module implementing a dialog to show some bookmark info.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QFont
 
@@ -26,7 +28,7 @@ class BookmarkInfoDialog(QDialog, Ui_BookmarkInfoDialog):
         @param bookmark reference to the bookmark to be shown (Bookmark)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(BookmarkInfoDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__bookmark = bookmark
