@@ -60,7 +60,7 @@ class Prefs(object):
         "PassiveDbgPort": 42424,
         "PassiveDbgType": "Python",
         "AutomaticReset": False,
-        "Autosave": False,
+        "Autosave": True,
         "ThreeStateBreakPoints": False,
         "SuppressClientExit": False,
         "BreakAlways": False,
