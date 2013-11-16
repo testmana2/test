@@ -364,9 +364,11 @@ class DebugClientBase(object):
         except SyntaxError:
             exctype, excval, exctb = sys.exc_info()
             try:
-                message, (filename, linenr, charnr, text) = \
-                    excval[0], excval[1]
-            except ValueError:
+                message = str(excval)
+                filename = excval.filename
+                linenr = excval.lineno
+                charnr = excval.offset
+            except (AttributeError, ValueError):
                 exclist = []
             else:
                 exclist = [message, [filename, linenr, charnr]]
