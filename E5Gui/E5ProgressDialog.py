@@ -31,8 +31,8 @@ class E5ProgressDialog(QProgressDialog):
         @keyparam parent reference to the parent widget (QWidget)
         @keyparam flags window flags of the dialog (Qt.WindowFlags)
         """
-        super(E5ProgressDialog, self).__init__(labelText, cancelButtonText, minimum, maximum,
-                         parent, flags)
+        super(E5ProgressDialog, self).__init__(
+            labelText, cancelButtonText, minimum, maximum, parent, flags)
         
         self.__progressBar = QProgressBar(self)
         self.__progressBar.setMinimum(minimum)
