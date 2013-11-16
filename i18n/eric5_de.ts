@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1948,8 +1949,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2185,8 +2186,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -6885,189 +6886,194 @@ Nicht verbunden
 <context>
     <name>DocStyleChecker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="123"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="127"/>
         <source>module is missing a docstring</source>
         <translation>Modul hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="125"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="129"/>
         <source>public function/method is missing a docstring</source>
         <translation>Öffentliche Funktion/Methode hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="128"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="132"/>
         <source>private function/method may be missing a docstring</source>
         <translation>Private Funktion/Methode hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="131"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="135"/>
         <source>public class is missing a docstring</source>
         <translation>Öffentliche Klasse hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="133"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="137"/>
         <source>private class may be missing a docstring</source>
         <translation>Private Klasse hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="135"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="139"/>
         <source>docstring not surrounded by &quot;&quot;&quot;</source>
         <translation>Docstring nicht durch &quot;&quot;&quot; eingeschlossen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="137"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="141"/>
         <source>docstring containing \ not surrounded by r&quot;&quot;&quot;</source>
         <translation>Docstring, der \ enthält, nicht durch r&quot;&quot;&quot; eingeschlossen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="140"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="144"/>
         <source>docstring containing unicode character not surrounded by u&quot;&quot;&quot;</source>
         <translation>Docstring, der Unicode Zeichen enthält, nicht durch u&quot;&quot;&quot; eingeschlossen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="143"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="147"/>
         <source>one-liner docstring on multiple lines</source>
         <translation>einzeiliger Docstring über mehrere Zeilen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="145"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="149"/>
         <source>docstring has wrong indentation</source>
         <translation>Docstring hat falsche Einrückung</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="186"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="190"/>
         <source>docstring summary does not end with a period</source>
         <translation>Docstring Zusammenfassung endet nicht mit einem Punkt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="149"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="153"/>
         <source>docstring summary is not in imperative mood (Does instead of Do)</source>
         <translation>Docstring Zusammenfassung nicht im Imperativ (Tut anstelle Tue)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="153"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="157"/>
         <source>docstring summary looks like a function&apos;s/method&apos;s signature</source>
         <translation>Docstring Zusammenfassung scheint Funktion-/Methodensignatur zu sein</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="156"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="160"/>
         <source>docstring does not mention the return value type</source>
         <translation>Docstring erwähnt nicht den Typ des Rückgabewertes</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="159"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="163"/>
         <source>function/method docstring is separated by a blank line</source>
         <translation>Funktions-/Methodendocstring ist durch eine Leerzeile abgetrennt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="162"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="166"/>
         <source>class docstring is not preceded by a blank line</source>
         <translation>Klassendocstring hat keine führende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="165"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="169"/>
         <source>class docstring is not followed by a blank line</source>
         <translation>Klassendocstring hat keine nachfolgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="218"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="222"/>
         <source>docstring summary is not followed by a blank line</source>
         <translation>Docstring Zusammenfassung hat keine folgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="171"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="175"/>
         <source>last paragraph of docstring is not followed by a blank line</source>
         <translation>letzter Abschnitt des Docstring hat keine folgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="175"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="179"/>
         <source>private function/method is missing a docstring</source>
         <translation>Private Funktion/Methode hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="178"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="182"/>
         <source>private class is missing a docstring</source>
         <translation>Private Klasse hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="180"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="184"/>
         <source>leading quotes of docstring not on separate line</source>
         <translation>einleitende Anführungszeichen nicht auf separater Zeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="183"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="187"/>
         <source>trailing quotes of docstring not on separate line</source>
         <translation>schließende Anführungszeichen nicht auf separater Zeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="188"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="192"/>
         <source>docstring does not contain a @return line but function/method returns something</source>
         <translation>Docstring enthält keine @return Zeile obwohl die Funktion/Methode etwas zurückgibt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="192"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="196"/>
         <source>docstring contains a @return line but function/method doesn&apos;t return anything</source>
         <translation>Docstring enthält eine @return Zeile obwohl die Funktion/Methode nichts zurückgibt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="196"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="200"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
         <translation>Docstring enthält nicht genügend @param/@keyparam Zeilen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="199"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="203"/>
         <source>docstring contains too many @param/@keyparam lines</source>
         <translation>Docstring enthält zu viele @param/@keyparam Zeilen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="202"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="206"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
         <translation>&apos;keyword only&apos; Argumente müssen mit @keyparam Zeilen dokumentiert werden</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="205"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="209"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
         <translation>Reihenfolge der @param/@keyparam Zeilen stimmt nicht mit der Funktions-/Methodensignatur überein</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="208"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="212"/>
         <source>class docstring is preceded by a blank line</source>
         <translation>Klassendocstring hat eine führende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="210"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="214"/>
         <source>class docstring is followed by a blank line</source>
         <translation>Klassendocstring hat eine nachfolgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="212"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="216"/>
         <source>function/method docstring is preceded by a blank line</source>
         <translation>Funktions-/Methodendocstring hat eine führende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="215"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="219"/>
         <source>function/method docstring is followed by a blank line</source>
         <translation>Funktions-/Methodendocstring hat eine nachfolgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="221"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="225"/>
         <source>last paragraph of docstring is followed by a blank line</source>
         <translation>letzter Abschnitt des Docstring hat eine folgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="224"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="228"/>
         <source>docstring does not contain a @exception line but function/method raises an exception</source>
         <translation>Docstring enthält keine @exception Zeile obwohl die Funktion/Methode eine Ausnahme erzeugt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="228"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="232"/>
         <source>docstring contains a @exception line but function/method doesn&apos;t raise an exception</source>
         <translation>Docstring enthält eine @exception Zeile obwohl die Funktion/Methode keine Ausnahme erzeugt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="411"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="436"/>
         <source>no message for this code defined</source>
         <translation>kein Schlüssel für diesen Code definiert</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="237"/>
+        <source>{0}: {1}</source>
+        <translation>{0}: {1}</translation>
     </message>
 </context>
 <context>
@@ -15720,8 +15726,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1156"/>
@@ -16293,32 +16299,32 @@ Ursache: {0}</translation>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="624"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="639"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Drucken ist wegen eine Fehlers in PyQt4 nicht verfügbar. Bitte aktualisieren.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="725"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="740"/>
         <source>Loading...</source>
         <translation>Lade...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="746"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="761"/>
         <source>Finished loading</source>
         <translation>Seite geladen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="748"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="763"/>
         <source>Failed to load</source>
         <translation>Fehler beim Laden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="788"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="803"/>
         <source>Are you sure you want to close the window?</source>
         <translation>Möchten Sie das Fenster wirklich schließen?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Helpviewer/HelpTabWidget.py" line="788"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="803"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation>
@@ -16329,22 +16335,22 @@ Es sind %n Unterfenster offen.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="796"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="811"/>
         <source>&amp;Close</source>
         <translation>Schl&amp;ießen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="800"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="815"/>
         <source>&amp;Quit</source>
         <translation>B&amp;eenden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="803"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="818"/>
         <source>C&amp;lose Current Tab</source>
         <translation>A&amp;ktuelles Unterfenster schließen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="624"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="639"/>
         <source>eric5 Web Browser</source>
         <translation>eric5-Webbrowser</translation>
     </message>
@@ -16364,17 +16370,17 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Geschlossenen Tabs wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="960"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="975"/>
         <source>Restore All Closed Tabs</source>
         <translation>Alle geschlossenen Tabs wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="962"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="977"/>
         <source>Clear List</source>
         <translation>Liste löschen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="571"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="586"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Drucken ist wegen eine Fehlers in PyQt4 nicht verfügbar. Bitte aktualisieren.&lt;/p&gt;</translation>
     </message>
@@ -17119,7 +17125,7 @@ Es sind %n Unterfenster offen.</numerusform>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2002"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2007"/>
         <source>Open File</source>
         <translation>Datei öffnen</translation>
     </message>
@@ -17445,7 +17451,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Gehe zu</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2002"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2007"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Hilfedateien (*.html *.htm);;PDF-Dateien (*.pdf);;CHM Dateien (*.chm);;Alle Dateien (*)</translation>
     </message>
@@ -17864,7 +17870,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Filter: </translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2648"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2653"/>
         <source>Could not find an associated content.</source>
         <translation>Konnte keinen zugehörigen Inhalt finden.</translation>
     </message>
@@ -17929,22 +17935,22 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Dokumentation reindizieren&lt;/b&gt;&lt;p&gt;Reindiziert die Dokumentation.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2771"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2776"/>
         <source>Updating search index</source>
         <translation>Aktualisiere Suchindex</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2841"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2846"/>
         <source>Looking for Documentation...</source>
         <translation>Suche nach Dokumentation...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2876"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2881"/>
         <source>Unfiltered</source>
         <translation>Ungefiltert</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2895"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2900"/>
         <source>Help Engine</source>
         <translation>Hilfe</translation>
     </message>
@@ -17964,7 +17970,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Privates Browsen&lt;/b&gt;&lt;p&gt;Schaltet das private Browsen ein. In diesem Modus wird keine Chronik mehr aufgezeichnet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2345"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2350"/>
         <source>Full Screen</source>
         <translation>Vollbild</translation>
     </message>
@@ -18272,7 +18278,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Lesezeichen für alle Tabs...&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog, um einen neuen Lesezeichenordner für alle offenen Tabs hinzuzufügen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2144"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2149"/>
         <source>Saved Tabs</source>
         <translation>Gesicherte Tabs</translation>
     </message>
@@ -18391,7 +18397,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum konfigurieren von AdBlock Abonnements und Regeln&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2851"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2856"/>
         <source>eric5 Web Browser</source>
         <translation>eric5-Webbrowser</translation>
     </message>
@@ -18436,7 +18442,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Such&amp;maschinen verwalten...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2375"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2380"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sind Sie sicher, dass Sie privates Browsen einschalten möchten?&lt;/b&gt;&lt;p&gt;Wenn das private Browsen eingeschaltet ist, werden keine Webseiten mehr zur Chronik hinzugefügt und Suchanfragen, Webseitenicons und Cookies werden nicht mehr gespeichert. HTML5-Offlinespeicher wird deaktiviert. Bis das Fenster geschlossen wird, können Sie jedoch weiterhin die Zurück- und Vorwärts-Knöpfe nutzen, um zu besuchten Webseiten zurückzukehren.&lt;/p&gt;</translation>
     </message>
@@ -18446,37 +18452,37 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Zeichenkodierung</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3326"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3331"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3327"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3332"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3328"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3333"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3329"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3334"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3330"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3335"/>
         <source>Other</source>
         <translation>Sonstige</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3331"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3336"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3353"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3358"/>
         <source>Default Encoding</source>
         <translation>Standardkodierung</translation>
     </message>
@@ -18516,12 +18522,12 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Aktuelle Seite prüfen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3613"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3618"/>
         <source>VirusTotal Scan</source>
         <translation>VirusTotal-Prüfung</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3613"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3618"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die VirusTotal-Prüfung konnte nicht beauftragt werden.&lt;p&gt;
@@ -18622,12 +18628,12 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Netzwerkmonitor...&lt;/b&gt;&lt;p&gt;Zeigt den Netzwerkmonitordialog an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2049"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2054"/>
         <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;eric5-Webbrowser – {0}&lt;/b&gt;&lt;p&gt;Der eric5-Webbrowser ist eine kombinierte Anzeige für Hilfe- und HTML-Dateien. Er ist Bestandteil der eric5-Entwicklungsumgebung.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2352"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2357"/>
         <source>Restore Window</source>
         <translation>Fenster wiederherstellen</translation>
     </message>

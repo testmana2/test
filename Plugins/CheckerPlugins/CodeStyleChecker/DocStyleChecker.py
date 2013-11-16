@@ -24,6 +24,8 @@ import sys
 
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
+PyCF_ONLY_AST = 1024
+
 
 class DocStyleContext(object):
     """
@@ -116,6 +118,8 @@ class DocStyleChecker(object):
         "D231", "D234", "D235", "D236", "D237", "D238", "D239",
         "D242", "D243", "D244", "D245", "D246", "D247",
         "D250", "D251",
+        
+        "D901",
     ]
     
     Messages = {
@@ -228,6 +232,13 @@ class DocStyleChecker(object):
             "DocStyleChecker",
             "docstring contains a @exception line but function/method doesn't"
             " raise an exception"),
+        
+        "D901": QT_TRANSLATE_NOOP(
+            "DocStyleChecker", "{0}: {1}"),
+    }
+
+    MessagesSampleArgs = {
+        "D901": ["SyntaxError", "Invalid Syntax"],
     }
     
     def __init__(self, source, filename, select, ignore, expected, repeat,
@@ -392,6 +403,20 @@ class DocStyleChecker(object):
             # record the issue with one based line number
             self.errors.append((self.__filename, lineNumber + 1, offset, text))
     
+    def __reportInvalidSyntax(self):
+        """
+        Private method to report a syntax error.
+        """
+        exc_type, exc = sys.exc_info()[:2]
+        if len(exc.args) > 1:
+            offset = exc.args[1]
+            if len(offset) > 2:
+                offset = offset[1:3]
+        else:
+            offset = (1, 0)
+        self.__error(offset[0] - 1, offset[1] or 0,
+                     'D901', exc_type.__name__, exc.args[0])
+    
     @classmethod
     def getMessage(cls, code, *args):
         """
@@ -438,6 +463,12 @@ class DocStyleChecker(object):
         
         if not self.__checkers:
             # don't do anything, if no codes were selected
+            return
+        
+        try:
+            compile(''.join(self.__source), '', 'exec', PyCF_ONLY_AST)
+        except (SyntaxError, TypeError):
+            self.__reportInvalidSyntax()
             return
         
         for keyword in self.__keywords:

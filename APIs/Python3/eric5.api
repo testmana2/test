@@ -3778,6 +3778,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter?1(source
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.CodeStyleStatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Codes?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Messages?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.MessagesSampleArgs?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.run?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.unpackArgs?4()
@@ -3789,6 +3790,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.so
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.ssource?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.start?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext?1(source, startLine, contextType)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.PyCF_ONLY_AST?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.CamelcaseRegexp?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Codes?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.LowercaseRegex?7

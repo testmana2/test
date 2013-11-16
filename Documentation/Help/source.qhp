@@ -3501,6 +3501,7 @@
       <keyword name="DocStyleChecker.__parseTopLevel" id="DocStyleChecker.__parseTopLevel" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__parseTopLevel" />
       <keyword name="DocStyleChecker.__readline" id="DocStyleChecker.__readline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__readline" />
       <keyword name="DocStyleChecker.__readline" id="DocStyleChecker.__readline" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__readline" />
+      <keyword name="DocStyleChecker.__reportInvalidSyntax" id="DocStyleChecker.__reportInvalidSyntax" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__reportInvalidSyntax" />
       <keyword name="DocStyleChecker.__resetReadline" id="DocStyleChecker.__resetReadline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__resetReadline" />
       <keyword name="DocStyleChecker.__resetReadline" id="DocStyleChecker.__resetReadline" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__resetReadline" />
       <keyword name="DocStyleChecker.__skipIndentedBlock" id="DocStyleChecker.__skipIndentedBlock" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__skipIndentedBlock" />
