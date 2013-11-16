@@ -426,8 +426,9 @@ class Shell(QsciScintillaCompat):
         @param on flag to indicate usage of a monospace font (boolean)
         """
         if on:
-            f = Preferences.getShell("MonospacedFont")
-            self.monospacedStyles(f)
+            if not self.lexer_:
+                f = Preferences.getShell("MonospacedFont")
+                self.monospacedStyles(f)
         else:
             if not self.lexer_:
                 self.clearStyles()

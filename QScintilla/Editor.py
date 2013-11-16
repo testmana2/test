@@ -3062,7 +3062,8 @@ class Editor(QsciScintillaCompat):
         Private slot to handle the Use Monospaced Font context menu entry.
         """
         if self.menuActs["MonospacedFont"].isChecked():
-            self.setMonospaced(True)
+            if not self.lexer_:
+                self.setMonospaced(True)
         else:
             if self.lexer_:
                 self.lexer_.readSettings(
@@ -4624,6 +4625,8 @@ class Editor(QsciScintillaCompat):
             else:
                 self.menuActs["OpenRejections"].setEnabled(False)
         
+        self.menuActs["MonospacedFont"].setEnabled(self.lexer_ is None)
+        
         self.showMenu.emit("Main", self.menu,  self)
         
     def __showContextMenuAutocompletion(self):
@@ -6138,8 +6141,9 @@ class Editor(QsciScintillaCompat):
         @param on flag to indicate usage of a monospace font (boolean)
         """
         if on:
-            f = Preferences.getEditorOtherFonts("MonospacedFont")
-            self.monospacedStyles(f)
+            if not self.lexer_:
+                f = Preferences.getEditorOtherFonts("MonospacedFont")
+                self.monospacedStyles(f)
         else:
             if not self.lexer_:
                 self.clearStyles()
