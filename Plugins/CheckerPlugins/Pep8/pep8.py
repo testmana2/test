@@ -1110,8 +1110,15 @@ class Checker(object):
                         # a comment which is on a line by itself.
                         self.tokens = []
         except (SyntaxError, tokenize.TokenError) as err:
-            msg, (lnum, pos) = err.args
-            self.report_error_args(lnum, pos, "E901", "TokenError", msg)
+            msg = err.args[0]
+            if len(err.args) > 1:
+                offset = err.args[1]
+                if len(offset) > 2:
+                    offset = offset[1:3]
+            else:
+                offset = (1, 0)
+            self.report_error_args(
+                offset[0], offset[1] or 0, "E901", "TokenError", msg)
         return self.file_errors
 
     def report_error(self, line_number, offset, text, check):
