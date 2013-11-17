@@ -60,6 +60,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.__project = None
         self.filterFrame.setVisible(False)
         
+        self.checkProgress.setVisible(False)
+        
     def __resort(self):
         """
         Private method to resort the tree.
@@ -138,6 +140,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
         self.__clearErrors()
@@ -165,6 +168,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
            (codestring and len(py2files) == 1) or \
            (not codestring and len(py3files) + len(py2files) > 0):
             self.checkProgress.setMaximum(len(py3files) + len(py2files))
+            self.checkProgressLabel.setVisible(
+                len(py3files) + len(py2files) > 1)
             QApplication.processEvents()
             
             ignoreStarImportWarnings = \
@@ -286,6 +291,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
+        
+        self.checkProgress.setVisible(False)
         
     def on_buttonBox_clicked(self, button):
         """

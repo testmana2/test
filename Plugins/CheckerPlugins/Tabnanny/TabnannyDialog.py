@@ -51,6 +51,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.__project = None
         self.filterFrame.setVisible(False)
         
+        self.checkProgress.setVisible(False)
+        
     def __resort(self):
         """
         Private method to resort the tree.
@@ -108,6 +110,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
         if isinstance(fn, list):
@@ -131,6 +134,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         if len(py3files) + len(py2files) > 0:
             self.checkProgress.setMaximum(len(py3files) + len(py2files))
+            self.checkProgressLabel.setVisible(
+                len(py3files) + len(py2files) > 1)
             QApplication.processEvents()
             
             # now go through all the files
@@ -198,6 +203,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             QApplication.processEvents()
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
+        
+        self.checkProgress.setVisible(False)
         
     def on_buttonBox_clicked(self, button):
         """
