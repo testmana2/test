@@ -11882,6 +11882,7 @@
       <keyword name="UserInterface.__exportPreferences" id="UserInterface.__exportPreferences" ref="eric5.UI.UserInterface.html#UserInterface.__exportPreferences" />
       <keyword name="UserInterface.__exportShortcuts" id="UserInterface.__exportShortcuts" ref="eric5.UI.UserInterface.html#UserInterface.__exportShortcuts" />
       <keyword name="UserInterface.__getFloatingGeometry" id="UserInterface.__getFloatingGeometry" ref="eric5.UI.UserInterface.html#UserInterface.__getFloatingGeometry" />
+      <keyword name="UserInterface.__hasErrorLog" id="UserInterface.__hasErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.__hasErrorLog" />
       <keyword name="UserInterface.__helpClosed" id="UserInterface.__helpClosed" ref="eric5.UI.UserInterface.html#UserInterface.__helpClosed" />
       <keyword name="UserInterface.__helpViewer" id="UserInterface.__helpViewer" ref="eric5.UI.UserInterface.html#UserInterface.__helpViewer" />
       <keyword name="UserInterface.__importPreferences" id="UserInterface.__importPreferences" ref="eric5.UI.UserInterface.html#UserInterface.__importPreferences" />
@@ -11927,6 +11928,7 @@
       <keyword name="UserInterface.__showAvailableVersionInfos" id="UserInterface.__showAvailableVersionInfos" ref="eric5.UI.UserInterface.html#UserInterface.__showAvailableVersionInfos" />
       <keyword name="UserInterface.__showCertificatesDialog" id="UserInterface.__showCertificatesDialog" ref="eric5.UI.UserInterface.html#UserInterface.__showCertificatesDialog" />
       <keyword name="UserInterface.__showEricDoc" id="UserInterface.__showEricDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showEricDoc" />
+      <keyword name="UserInterface.__showErrorLog" id="UserInterface.__showErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.__showErrorLog" />
       <keyword name="UserInterface.__showExternalTools" id="UserInterface.__showExternalTools" ref="eric5.UI.UserInterface.html#UserInterface.__showExternalTools" />
       <keyword name="UserInterface.__showExtrasMenu" id="UserInterface.__showExtrasMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showExtrasMenu" />
       <keyword name="UserInterface.__showFileMenu" id="UserInterface.__showFileMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showFileMenu" />

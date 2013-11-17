@@ -135,6 +135,8 @@ class UserInterface(E5MainWindow):
     BottomSide = 2
     RightSide = 3
     
+    ErrorLogFileName = "eric5_error.log"
+    
     def __init__(self, app, locale, splash, plugin, noOpenAtStartup,
                  restartArguments):
         """
@@ -1618,6 +1620,18 @@ class UserInterface(E5MainWindow):
             self.showAvailableVersionsInfo)
         self.actions.append(self.showVersionsAct)
 
+        self.showErrorLogAct = E5Action(
+            self.trUtf8('Show Error Log'),
+            self.trUtf8('Show Error &Log...'),
+            0, 0, self, 'show_error_log')
+        self.showErrorLogAct.setStatusTip(self.trUtf8('Show Error Log'))
+        self.showErrorLogAct.setWhatsThis(self.trUtf8(
+            """<b>Show Error Log...</b>"""
+            """<p>Opens a dialog showing the most recent error log.</p>"""
+        ))
+        self.showErrorLogAct.triggered[()].connect(self.__showErrorLog)
+        self.actions.append(self.showErrorLogAct)
+        
         self.reportBugAct = E5Action(
             self.trUtf8('Report Bug'),
             self.trUtf8('Report &Bug...'),
@@ -2492,6 +2506,7 @@ class UserInterface(E5MainWindow):
         self.__menus["help"].addAction(self.checkUpdateAct)
         self.__menus["help"].addAction(self.showVersionsAct)
         self.__menus["help"].addSeparator()
+        self.__menus["help"].addAction(self.showErrorLogAct)
         self.__menus["help"].addAction(self.reportBugAct)
         self.__menus["help"].addAction(self.requestFeatureAct)
         self.__menus["help"].addSeparator()
@@ -2835,6 +2850,7 @@ class UserInterface(E5MainWindow):
         """
         self.checkUpdateAct.setEnabled(not self.__inVersionCheck)
         self.showVersionsAct.setEnabled(not self.__inVersionCheck)
+        self.showErrorLogAct.setEnabled(self.__hasErrorLog())
         
         self.showMenu.emit("Help", self.__menus["help"])
     
@@ -3000,11 +3016,31 @@ class UserInterface(E5MainWindow):
         user, what to do with it.
         """
         if Preferences.getUI("CheckErrorLog"):
-            logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
+            logFile = os.path.join(Utilities.getConfigDir(),
+                                   self.ErrorLogFileName)
             if os.path.exists(logFile):
                 from .ErrorLogDialog import ErrorLogDialog
-                dlg = ErrorLogDialog(logFile, self)
+                dlg = ErrorLogDialog(logFile, False, self)
                 dlg.exec_()
+        
+    def __hasErrorLog(self):
+        """
+        Private method to check, if an error log file exists.
+        """
+        logFile = os.path.join(Utilities.getConfigDir(),
+                               self.ErrorLogFileName)
+        return os.path.exists(logFile)
+        
+    def __showErrorLog(self):
+        """
+        Private slot to show the most recent error log message.
+        """
+        logFile = os.path.join(Utilities.getConfigDir(),
+                               self.ErrorLogFileName)
+        if os.path.exists(logFile):
+            from .ErrorLogDialog import ErrorLogDialog
+            dlg = ErrorLogDialog(logFile, True, self)
+            dlg.show()
         
     def __compareFiles(self):
         """

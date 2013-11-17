@@ -7836,7 +7836,7 @@ eric5.UI.EmailDialog._encode_base64?5(msg)
 eric5.UI.ErrorLogDialog.ErrorLogDialog.on_deleteButton_clicked?4()
 eric5.UI.ErrorLogDialog.ErrorLogDialog.on_emailButton_clicked?4()
 eric5.UI.ErrorLogDialog.ErrorLogDialog.on_keepButton_clicked?4()
-eric5.UI.ErrorLogDialog.ErrorLogDialog?1(logFile, parent=None)
+eric5.UI.ErrorLogDialog.ErrorLogDialog?1(logFile, showMode, parent=None)
 eric5.UI.FindFileDialog.FindFileDialog.designerFile?7
 eric5.UI.FindFileDialog.FindFileDialog.endRole?7
 eric5.UI.FindFileDialog.FindFileDialog.lineRole?7
@@ -7988,6 +7988,7 @@ eric5.UI.UserInterface.Redirector.flush?4()
 eric5.UI.UserInterface.Redirector.write?4(s)
 eric5.UI.UserInterface.Redirector?1(stderr)
 eric5.UI.UserInterface.UserInterface.BottomSide?7
+eric5.UI.UserInterface.UserInterface.ErrorLogFileName?7
 eric5.UI.UserInterface.UserInterface.LeftSide?7
 eric5.UI.UserInterface.UserInterface.RightSide?7
 eric5.UI.UserInterface.UserInterface.activateCooperationViewer?4()
