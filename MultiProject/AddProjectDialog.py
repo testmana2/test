@@ -64,9 +64,9 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
                 self.trUtf8("Add Project"),
                 startdir,
                 self.trUtf8("Project Files (*.e4p)"))
-        
-        if projectFile:
-            self.filenameEdit.setText(Utilities.toNativeSeparators(projectFile))
+            
+            if projectFile:
+                self.filenameEdit.setText(Utilities.toNativeSeparators(projectFile))
     
     def getData(self):
         """
