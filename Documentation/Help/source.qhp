@@ -3988,6 +3988,7 @@
       <keyword name="Editor.clearBreakpoint" id="Editor.clearBreakpoint" ref="eric5.QScintilla.Editor.html#Editor.clearBreakpoint" />
       <keyword name="Editor.clearFlakesWarnings" id="Editor.clearFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearFlakesWarnings" />
       <keyword name="Editor.clearSearchIndicators" id="Editor.clearSearchIndicators" ref="eric5.QScintilla.Editor.html#Editor.clearSearchIndicators" />
+      <keyword name="Editor.clearStyles" id="Editor.clearStyles" ref="eric5.QScintilla.Editor.html#Editor.clearStyles" />
       <keyword name="Editor.clearSyntaxError" id="Editor.clearSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.clearSyntaxError" />
       <keyword name="Editor.close" id="Editor.close" ref="eric5.QScintilla.Editor.html#Editor.close" />
       <keyword name="Editor.closeIt" id="Editor.closeIt" ref="eric5.QScintilla.Editor.html#Editor.closeIt" />
