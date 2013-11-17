@@ -6152,6 +6152,16 @@ class Editor(QsciScintillaCompat):
         
         self.useMonospaced = on
     
+    def clearStyles(self):
+        """
+        Public method to set the styles according the selected Qt style
+        or the selected editor colours.
+        """
+        super().clearStyles()
+        if Preferences.getEditor("OverrideEditAreaColours"):
+            self.setColor(Preferences.getEditorColour("EditAreaForeground"))
+            self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+    
     #################################################################
     ## Drag and Drop Support
     #################################################################

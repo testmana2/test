@@ -4393,6 +4393,7 @@
       <keyword name="Editor.clearFlakesWarnings" id="Editor.clearFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearFlakesWarnings" />
       <keyword name="Editor.clearSearchIndicators" id="Editor.clearSearchIndicators" ref="eric5.QScintilla.Editor.html#Editor.clearSearchIndicators" />
       <keyword name="Editor.clearStyleWarnings" id="Editor.clearStyleWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearStyleWarnings" />
+      <keyword name="Editor.clearStyles" id="Editor.clearStyles" ref="eric5.QScintilla.Editor.html#Editor.clearStyles" />
       <keyword name="Editor.clearSyntaxError" id="Editor.clearSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.clearSyntaxError" />
       <keyword name="Editor.clearWarnings" id="Editor.clearWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearWarnings" />
       <keyword name="Editor.close" id="Editor.close" ref="eric5.QScintilla.Editor.html#Editor.close" />
