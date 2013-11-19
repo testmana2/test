@@ -463,8 +463,9 @@ def extractFlags(text):
     else:
         lines = text
     for line in reversed(lines):
-        index = line.find("eflag:")
-        if index == -1:
+        try:
+            index = line.index("eflag:")
+        except ValueError:
             # no flag found, don't look any further
             break
         

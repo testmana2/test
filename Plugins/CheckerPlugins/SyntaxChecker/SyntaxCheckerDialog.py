@@ -156,8 +156,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         else:
             files = [fn]
         
-        if codestring == '' and len(files) > 0:
-            self.checkProgress.setMaximum(len(files))
+        if codestring or len(files) > 0:
+            self.checkProgress.setMaximum(max(1, len(files)))
             QApplication.processEvents()
             
             # now go through all the files
