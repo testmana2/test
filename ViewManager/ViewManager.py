@@ -416,12 +416,20 @@ class ViewManager(QObject):
         """
         return False
         
+    def getSplitOrientation(self):
+        """
+        Public method to get the orientation of the split view.
+        
+        @return orientation of the split (Qt.Horizontal or Qt.Vertical)
+        """
+        return Qt.Vertical
+        
     def setSplitOrientation(self, orientation):
         """
         Public method used to set the orientation of the split view.
         
         @param orientation orientation of the split
-                (Qt.Horizontal or Qt.Vertical)
+            (Qt.Horizontal or Qt.Vertical)
         """
         pass
         

@@ -741,6 +741,9 @@ QObject
 <td><a href="#ViewManager.getSRHistory">getSRHistory</a></td>
 <td>Public method to get the search or replace history list.</td>
 </tr><tr>
+<td><a href="#ViewManager.getSplitOrientation">getSplitOrientation</a></td>
+<td>Public method to get the orientation of the split view.</td>
+</tr><tr>
 <td><a href="#ViewManager.handleResetUI">handleResetUI</a></td>
 <td>Public slot to handle the resetUI signal.</td>
 </tr><tr>
@@ -2342,6 +2345,16 @@ list to return (must be 'search' or 'replace')
 <dd>
 the requested history list (list of strings)
 </dd>
+</dl><a NAME="ViewManager.getSplitOrientation" ID="ViewManager.getSplitOrientation"></a>
+<h4>ViewManager.getSplitOrientation</h4>
+<b>getSplitOrientation</b>(<i></i>)
+<p>
+        Public method to get the orientation of the split view.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+orientation of the split (Qt.Horizontal or Qt.Vertical)
+</dd>
 </dl><a NAME="ViewManager.handleResetUI" ID="ViewManager.handleResetUI"></a>
 <h4>ViewManager.handleResetUI</h4>
 <b>handleResetUI</b>(<i></i>)
@@ -2891,7 +2904,7 @@ reference to the zoom widget (E5ZoomWidget)
 <dt><i>orientation</i></dt>
 <dd>
 orientation of the split
-                (Qt.Horizontal or Qt.Vertical)
+            (Qt.Horizontal or Qt.Vertical)
 </dd>
 </dl><a NAME="ViewManager.shareConnected" ID="ViewManager.shareConnected"></a>
 <h4>ViewManager.shareConnected</h4>

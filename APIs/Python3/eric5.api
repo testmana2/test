@@ -5425,6 +5425,7 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorTextChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.eventFilter?4(watched, event)
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.getSplitOrientation?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.nextSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.prevSplit?4()
@@ -5494,6 +5495,7 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorTextChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.eventFilter?4(watched, event)
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getSplitOrientation?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getTabWidgetById?4(id_)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.insertView?4(win, tabWidget, index, fn=None, noName="")
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.lastEditorClosed?7
@@ -8898,6 +8900,7 @@ eric5.ViewManager.ViewManager.ViewManager.getOpenEditors?4()
 eric5.ViewManager.ViewManager.ViewManager.getOpenEditorsCount?4()
 eric5.ViewManager.ViewManager.ViewManager.getOpenFilenames?4()
 eric5.ViewManager.ViewManager.ViewManager.getSRHistory?4(key)
+eric5.ViewManager.ViewManager.ViewManager.getSplitOrientation?4()
 eric5.ViewManager.ViewManager.ViewManager.handleResetUI?4()
 eric5.ViewManager.ViewManager.ViewManager.initActions?4()
 eric5.ViewManager.ViewManager.ViewManager.initBookmarkMenu?4()

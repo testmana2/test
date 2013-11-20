@@ -7539,6 +7539,7 @@
       <keyword name="Listspace.canTile" id="Listspace.canTile" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.canTile" />
       <keyword name="Listspace.cascade" id="Listspace.cascade" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.cascade" />
       <keyword name="Listspace.eventFilter" id="Listspace.eventFilter" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.eventFilter" />
+      <keyword name="Listspace.getSplitOrientation" id="Listspace.getSplitOrientation" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.getSplitOrientation" />
       <keyword name="Listspace.nextSplit" id="Listspace.nextSplit" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.nextSplit" />
       <keyword name="Listspace.prevSplit" id="Listspace.prevSplit" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.prevSplit" />
       <keyword name="Listspace.removeSplit" id="Listspace.removeSplit" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.removeSplit" />
@@ -11290,6 +11291,7 @@
       <keyword name="Tabview.canTile" id="Tabview.canTile" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.canTile" />
       <keyword name="Tabview.cascade" id="Tabview.cascade" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.cascade" />
       <keyword name="Tabview.eventFilter" id="Tabview.eventFilter" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.eventFilter" />
+      <keyword name="Tabview.getSplitOrientation" id="Tabview.getSplitOrientation" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.getSplitOrientation" />
       <keyword name="Tabview.getTabWidgetById" id="Tabview.getTabWidgetById" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.getTabWidgetById" />
       <keyword name="Tabview.insertView" id="Tabview.insertView" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.insertView" />
       <keyword name="Tabview.nextSplit" id="Tabview.nextSplit" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.nextSplit" />
@@ -12427,6 +12429,7 @@
       <keyword name="ViewManager.getOpenEditorsCount" id="ViewManager.getOpenEditorsCount" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenEditorsCount" />
       <keyword name="ViewManager.getOpenFilenames" id="ViewManager.getOpenFilenames" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenFilenames" />
       <keyword name="ViewManager.getSRHistory" id="ViewManager.getSRHistory" ref="eric5.ViewManager.ViewManager.html#ViewManager.getSRHistory" />
+      <keyword name="ViewManager.getSplitOrientation" id="ViewManager.getSplitOrientation" ref="eric5.ViewManager.ViewManager.html#ViewManager.getSplitOrientation" />
       <keyword name="ViewManager.handleResetUI" id="ViewManager.handleResetUI" ref="eric5.ViewManager.ViewManager.html#ViewManager.handleResetUI" />
       <keyword name="ViewManager.initActions" id="ViewManager.initActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.initActions" />
       <keyword name="ViewManager.initBookmarkMenu" id="ViewManager.initBookmarkMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.initBookmarkMenu" />

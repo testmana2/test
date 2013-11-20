@@ -714,11 +714,14 @@ class Editor(QsciScintillaCompat):
             self.menu.addSeparator()
             self.menuActs["Diagrams"] = self.menu.addMenu(self.graphicsMenu)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('New view'), self.__newView)
-        act = self.menu.addAction(
-            self.trUtf8('New view (with new split)'), self.__newViewNewSplit)
-        if not self.vm.canSplit():
-                act.setEnabled(False)
+        self.menu.addAction(
+            UI.PixmapCache.getIcon("documentNewView.png"),
+            self.trUtf8('New Document View'), self.__newView)
+        self.menuActs["NewSplit"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("splitVertical.png"),
+            self.trUtf8('New Document View (with new split)'),
+            self.__newViewNewSplit)
+        self.menuActs["NewSplit"].setEnabled(self.vm.canSplit())
         self.menu.addAction(
             UI.PixmapCache.getIcon("close.png"),
             self.trUtf8('Close'), self.__contextClose)
@@ -4626,6 +4629,14 @@ class Editor(QsciScintillaCompat):
                 self.menuActs["OpenRejections"].setEnabled(False)
         
         self.menuActs["MonospacedFont"].setEnabled(self.lexer_ is None)
+        
+        splitOrientation = self.vm.getSplitOrientation()
+        if splitOrientation == Qt.Horizontal:
+            self.menuActs["NewSplit"].setIcon(
+                UI.PixmapCache.getIcon("splitHorizontal.png"))
+        else:
+            self.menuActs["NewSplit"].setIcon(
+                UI.PixmapCache.getIcon("splitVertical.png"))
         
         self.showMenu.emit("Main", self.menu,  self)
         
