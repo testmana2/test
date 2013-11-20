@@ -104,7 +104,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             self.__currentAPI.apiPreparationStarted.connect(
                 self.__apiPreparationStarted)
             self.addInstalledApiFileButton.setEnabled(
-                self.__currentAPI.installedAPIFiles() != "")
+                len(self.__currentAPI.installedAPIFiles()) > 0)
         else:
             self.addInstalledApiFileButton.setEnabled(False)
         
