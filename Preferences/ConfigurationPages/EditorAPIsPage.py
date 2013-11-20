@@ -90,9 +90,14 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             return
             
         self.apiGroup.setEnabled(True)
+        self.deleteApiFileButton.setEnabled(False)
+        self.addApiFileButton.setEnabled(False)
+        self.apiFileEdit.clear()
+        
         for api in self.apis[self.currentApiLanguage]:
             if api:
                 self.apiList.addItem(api)
+        self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
         from QScintilla.APIsManager import APIsManager
         self.__currentAPI = APIsManager().getAPIs(self.currentApiLanguage)
@@ -104,7 +109,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             self.__currentAPI.apiPreparationStarted.connect(
                 self.__apiPreparationStarted)
             self.addInstalledApiFileButton.setEnabled(
-                self.__currentAPI.installedAPIFiles() != "")
+                len(self.__currentAPI.installedAPIFiles()) > 0)
         else:
             self.addInstalledApiFileButton.setEnabled(False)
         
@@ -146,6 +151,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         if file:
             self.apiList.addItem(Utilities.toNativeSeparators(file))
             self.apiFileEdit.clear()
+        self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
     @pyqtSlot()
     def on_deleteApiFileButton_clicked(self):
@@ -156,6 +162,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         if crow >= 0:
             itm = self.apiList.takeItem(crow)
             del itm
+        self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
     @pyqtSlot()
     def on_addInstalledApiFileButton_clicked(self):
@@ -187,6 +194,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
                 self.trUtf8("""There are no APIs installed yet."""
                             """ Selection is not available."""))
             self.addInstalledApiFileButton.setEnabled(False)
+        self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
     @pyqtSlot()
     def on_addPluginApiFileButton_clicked(self):
@@ -209,6 +217,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         if ok:
             self.apiList.addItem(Utilities.toNativeSeparators(
                 pluginAPIFilesDict[file]))
+        self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
     @pyqtSlot()
     def on_prepareApiButton_clicked(self):
@@ -266,6 +275,32 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.apiLanguageComboBox.setCurrentIndex(state)
         self.on_apiLanguageComboBox_activated(
             self.apiLanguageComboBox.currentText())
+    
+    @pyqtSlot()
+    def on_apiList_itemSelectionChanged(self):
+        """
+        Private slot to react on changes of API selections.
+        """
+        self.deleteApiFileButton.setEnabled(
+            len(self.apiList.selectedItems()) > 0)
+    
+    @pyqtSlot(str)
+    def on_apiFileEdit_textChanged(self, txt):
+        """
+        Private slot to handle the entering of an API file name.
+        
+        @param txt text of the line edit (string)
+        """
+        enable = txt != ""
+        
+        if enable:
+            # check for already added file
+            for row in range(self.apiList.count()):
+                if txt == self.apiList.item(row).text():
+                    enable = False
+                    break
+        
+        self.addApiFileButton.setEnabled(enable)
     
 
 def create(dlg):
