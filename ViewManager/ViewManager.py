@@ -5632,12 +5632,16 @@ class ViewManager(QObject):
                 UI.PixmapCache.getIcon("splitHorizontal.png"))
             self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitHorizontal.png"))
+            self.newDocumentSplitViewAct.setIcon(
+                UI.PixmapCache.getIcon("splitHorizontal.png"))
         else:
             self.setSplitOrientation(Qt.Vertical)
             self.splitViewAct.setIcon(
                 UI.PixmapCache.getIcon("splitVertical.png"))
             self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitVertical.png"))
+            self.newDocumentSplitViewAct.setIcon(
+                UI.PixmapCache.getIcon("splitVertical.png"))
     
     def __previewEditor(self, checked):
         """
