@@ -65327,403 +65327,403 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;取消所有高亮&lt;/b&gt;&lt;p&gt;取消所有编辑器中的高亮。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <location filename="../ViewManager/ViewManager.py" line="3369"/>
         <source>Split view</source>
         <translation>拆分视图</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <location filename="../ViewManager/ViewManager.py" line="3369"/>
         <source>&amp;Split view</source>
         <translation>拆分视图(&amp;)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3336"/>
+        <location filename="../ViewManager/ViewManager.py" line="3374"/>
         <source>Add a split to the view</source>
         <translation>对视图进行拆分</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3338"/>
+        <location filename="../ViewManager/ViewManager.py" line="3376"/>
         <source>&lt;b&gt;Split view&lt;/b&gt;&lt;p&gt;Add a split to the view.&lt;/p&gt;</source>
         <translation>&lt;b&gt;拆分视图&lt;/b&gt;&lt;p&gt;对视图进行拆分。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3346"/>
+        <location filename="../ViewManager/ViewManager.py" line="3384"/>
         <source>Arrange horizontally</source>
         <translation>水平排列</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3346"/>
+        <location filename="../ViewManager/ViewManager.py" line="3384"/>
         <source>Arrange &amp;horizontally</source>
         <translation>水平排列(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3350"/>
+        <location filename="../ViewManager/ViewManager.py" line="3388"/>
         <source>Arrange the splitted views horizontally</source>
         <translation>将拆分的视图进行水平排列</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3352"/>
+        <location filename="../ViewManager/ViewManager.py" line="3390"/>
         <source>&lt;b&gt;Arrange horizontally&lt;/b&gt;&lt;p&gt;Arrange the splitted views horizontally.&lt;/p&gt;</source>
         <translation>&lt;b&gt;水平排列&lt;/b&gt;&lt;p&gt;将拆分的视图进行水平排列。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3361"/>
+        <location filename="../ViewManager/ViewManager.py" line="3399"/>
         <source>Remove split</source>
         <translation>移除拆分</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3361"/>
+        <location filename="../ViewManager/ViewManager.py" line="3399"/>
         <source>&amp;Remove split</source>
         <translation>移除拆分(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3366"/>
+        <location filename="../ViewManager/ViewManager.py" line="3404"/>
         <source>Remove the current split</source>
         <translation>移除当前拆分</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3368"/>
+        <location filename="../ViewManager/ViewManager.py" line="3406"/>
         <source>&lt;b&gt;Remove split&lt;/b&gt;&lt;p&gt;Remove the current split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;移除拆分&lt;/b&gt;&lt;p&gt;移除当前拆分。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3376"/>
+        <location filename="../ViewManager/ViewManager.py" line="3414"/>
         <source>Next split</source>
         <translation>下一个拆分</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3376"/>
+        <location filename="../ViewManager/ViewManager.py" line="3414"/>
         <source>&amp;Next split</source>
         <translation>下一个拆分(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3376"/>
+        <location filename="../ViewManager/ViewManager.py" line="3414"/>
         <source>Ctrl+Alt+N</source>
         <comment>View|Next split</comment>
         <translation>Ctrl+Alt+N</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3383"/>
+        <location filename="../ViewManager/ViewManager.py" line="3421"/>
         <source>Move to the next split</source>
         <translation>移动到下一个拆分中</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3385"/>
+        <location filename="../ViewManager/ViewManager.py" line="3423"/>
         <source>&lt;b&gt;Next split&lt;/b&gt;&lt;p&gt;Move to the next split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;下一个拆分&lt;/b&gt;&lt;p&gt;移动到下一个拆分中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3393"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>Previous split</source>
         <translation>上一个拆分</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3393"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>&amp;Previous split</source>
         <translation>上一个拆分(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3393"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>Ctrl+Alt+P</source>
         <comment>View|Previous split</comment>
         <translation>Ctrl+Alt+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3399"/>
+        <location filename="../ViewManager/ViewManager.py" line="3437"/>
         <source>Move to the previous split</source>
         <translation>移动到上一个拆分中</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3401"/>
+        <location filename="../ViewManager/ViewManager.py" line="3439"/>
         <source>&lt;b&gt;Previous split&lt;/b&gt;&lt;p&gt;Move to the previous split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;上一个拆分&lt;/b&gt;&lt;p&gt;移动到上一个拆分中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3442"/>
+        <location filename="../ViewManager/ViewManager.py" line="3480"/>
         <source>&amp;View</source>
         <translation>视图(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3472"/>
+        <location filename="../ViewManager/ViewManager.py" line="3513"/>
         <source>View</source>
         <translation>视图</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3500"/>
+        <location filename="../ViewManager/ViewManager.py" line="3545"/>
         <source>Start Macro Recording</source>
         <translation>开始宏录制</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3496"/>
+        <location filename="../ViewManager/ViewManager.py" line="3541"/>
         <source>S&amp;tart Macro Recording</source>
         <translation>开始宏录制(&amp;t)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3502"/>
+        <location filename="../ViewManager/ViewManager.py" line="3547"/>
         <source>&lt;b&gt;Start Macro Recording&lt;/b&gt;&lt;p&gt;Start recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;开始宏录制&lt;/b&gt;&lt;p&gt;开始将编辑器命令录制到一个新宏中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3514"/>
+        <location filename="../ViewManager/ViewManager.py" line="3559"/>
         <source>Stop Macro Recording</source>
         <translation>中止宏录制</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3510"/>
+        <location filename="../ViewManager/ViewManager.py" line="3555"/>
         <source>Sto&amp;p Macro Recording</source>
         <translation>中止宏录制(&amp;p)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3516"/>
+        <location filename="../ViewManager/ViewManager.py" line="3561"/>
         <source>&lt;b&gt;Stop Macro Recording&lt;/b&gt;&lt;p&gt;Stop recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;中止宏录制&lt;/b&gt;&lt;p&gt;中止将编辑器命令录制到一个新宏中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3528"/>
+        <location filename="../ViewManager/ViewManager.py" line="3573"/>
         <source>Run Macro</source>
         <translation>运行宏</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3524"/>
+        <location filename="../ViewManager/ViewManager.py" line="3569"/>
         <source>&amp;Run Macro</source>
         <translation>运行宏(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3530"/>
+        <location filename="../ViewManager/ViewManager.py" line="3575"/>
         <source>&lt;b&gt;Run Macro&lt;/b&gt;&lt;p&gt;Run a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;运行宏&lt;/b&gt;&lt;p&gt;运行一个已经录制好的编辑器宏。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3542"/>
+        <location filename="../ViewManager/ViewManager.py" line="3587"/>
         <source>Delete Macro</source>
         <translation>删除宏</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3538"/>
+        <location filename="../ViewManager/ViewManager.py" line="3583"/>
         <source>&amp;Delete Macro</source>
         <translation>删除宏(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3544"/>
+        <location filename="../ViewManager/ViewManager.py" line="3589"/>
         <source>&lt;b&gt;Delete Macro&lt;/b&gt;&lt;p&gt;Delete a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;删除宏&lt;/b&gt;&lt;p&gt;删除一个已经录制好的编辑器宏。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3556"/>
+        <location filename="../ViewManager/ViewManager.py" line="3601"/>
         <source>Load Macro</source>
         <translation>载入宏</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3552"/>
+        <location filename="../ViewManager/ViewManager.py" line="3597"/>
         <source>&amp;Load Macro</source>
         <translation>载入宏(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3558"/>
+        <location filename="../ViewManager/ViewManager.py" line="3603"/>
         <source>&lt;b&gt;Load Macro&lt;/b&gt;&lt;p&gt;Load an editor macro from a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;载入宏&lt;/b&gt;&lt;p&gt;从文件中载入一个编辑器宏。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3570"/>
+        <location filename="../ViewManager/ViewManager.py" line="3615"/>
         <source>Save Macro</source>
         <translation>保存宏</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3566"/>
+        <location filename="../ViewManager/ViewManager.py" line="3611"/>
         <source>&amp;Save Macro</source>
         <translation>保存宏(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3572"/>
+        <location filename="../ViewManager/ViewManager.py" line="3617"/>
         <source>&lt;b&gt;Save Macro&lt;/b&gt;&lt;p&gt;Save a previously recorded editor macro to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;保存宏&lt;/b&gt;&lt;p&gt;将前面录制好的编辑器宏保存到一个文件中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3588"/>
+        <location filename="../ViewManager/ViewManager.py" line="3633"/>
         <source>&amp;Macros</source>
         <translation>宏(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3613"/>
+        <location filename="../ViewManager/ViewManager.py" line="3658"/>
         <source>Toggle Bookmark</source>
         <translation>切换书签</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3605"/>
+        <location filename="../ViewManager/ViewManager.py" line="3650"/>
         <source>&amp;Toggle Bookmark</source>
         <translation>切换书签(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3605"/>
+        <location filename="../ViewManager/ViewManager.py" line="3650"/>
         <source>Alt+Ctrl+T</source>
         <comment>Bookmark|Toggle</comment>
         <translation>Alt+Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3615"/>
+        <location filename="../ViewManager/ViewManager.py" line="3660"/>
         <source>&lt;b&gt;Toggle Bookmark&lt;/b&gt;&lt;p&gt;Toggle a bookmark at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换书签&lt;/b&gt;&lt;p&gt;在当前编辑器的当前行打开或关闭书签。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3632"/>
+        <location filename="../ViewManager/ViewManager.py" line="3677"/>
         <source>Next Bookmark</source>
         <translation>下一个书签</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3624"/>
+        <location filename="../ViewManager/ViewManager.py" line="3669"/>
         <source>&amp;Next Bookmark</source>
         <translation>下一个书签(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3624"/>
+        <location filename="../ViewManager/ViewManager.py" line="3669"/>
         <source>Ctrl+PgDown</source>
         <comment>Bookmark|Next</comment>
         <translation>Ctrl+PgDown</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3634"/>
+        <location filename="../ViewManager/ViewManager.py" line="3679"/>
         <source>&lt;b&gt;Next Bookmark&lt;/b&gt;&lt;p&gt;Go to next bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;下一个书签&lt;/b&gt;&lt;p&gt;跳转到当前编辑器的下一个书签处。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3650"/>
+        <location filename="../ViewManager/ViewManager.py" line="3695"/>
         <source>Previous Bookmark</source>
         <translation>上一个书签</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3642"/>
+        <location filename="../ViewManager/ViewManager.py" line="3687"/>
         <source>&amp;Previous Bookmark</source>
         <translation>上一个书签(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3642"/>
+        <location filename="../ViewManager/ViewManager.py" line="3687"/>
         <source>Ctrl+PgUp</source>
         <comment>Bookmark|Previous</comment>
         <translation>Ctrl+PgUp</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3652"/>
+        <location filename="../ViewManager/ViewManager.py" line="3697"/>
         <source>&lt;b&gt;Previous Bookmark&lt;/b&gt;&lt;p&gt;Go to previous bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;上一个书签&lt;/b&gt;&lt;p&gt;跳转到当前编辑器的上一个书签处。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3667"/>
+        <location filename="../ViewManager/ViewManager.py" line="3712"/>
         <source>Clear Bookmarks</source>
         <translation>清除书签</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3660"/>
+        <location filename="../ViewManager/ViewManager.py" line="3705"/>
         <source>&amp;Clear Bookmarks</source>
         <translation>清除书签(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3660"/>
+        <location filename="../ViewManager/ViewManager.py" line="3705"/>
         <source>Alt+Ctrl+C</source>
         <comment>Bookmark|Clear</comment>
         <translation>Alt+Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3669"/>
+        <location filename="../ViewManager/ViewManager.py" line="3714"/>
         <source>&lt;b&gt;Clear Bookmarks&lt;/b&gt;&lt;p&gt;Clear bookmarks of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;清除书签&lt;/b&gt;&lt;p&gt;清除所有编辑器的书签。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3683"/>
+        <location filename="../ViewManager/ViewManager.py" line="3728"/>
         <source>Goto Syntax Error</source>
         <translation>转到语法错误处</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3677"/>
+        <location filename="../ViewManager/ViewManager.py" line="3722"/>
         <source>&amp;Goto Syntax Error</source>
         <translation>转到语法错误处(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3685"/>
+        <location filename="../ViewManager/ViewManager.py" line="3730"/>
         <source>&lt;b&gt;Goto Syntax Error&lt;/b&gt;&lt;p&gt;Go to next syntax error of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;转到语法错误处&lt;/b&gt;&lt;p&gt;跳转到当前编辑器的下一个语法错误处。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3698"/>
+        <location filename="../ViewManager/ViewManager.py" line="3743"/>
         <source>Clear Syntax Errors</source>
         <translation>清除语法错误</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3693"/>
+        <location filename="../ViewManager/ViewManager.py" line="3738"/>
         <source>Clear &amp;Syntax Errors</source>
         <translation>清除语法错误(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3700"/>
+        <location filename="../ViewManager/ViewManager.py" line="3745"/>
         <source>&lt;b&gt;Clear Syntax Errors&lt;/b&gt;&lt;p&gt;Clear syntax errors of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;清除语法错误&lt;/b&gt;&lt;p&gt;清除所有编辑器的语法错误。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3765"/>
+        <location filename="../ViewManager/ViewManager.py" line="3810"/>
         <source>Next uncovered line</source>
         <translation>下一个未覆盖行</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3759"/>
+        <location filename="../ViewManager/ViewManager.py" line="3804"/>
         <source>&amp;Next uncovered line</source>
         <translation>下一个未覆盖行(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3767"/>
+        <location filename="../ViewManager/ViewManager.py" line="3812"/>
         <source>&lt;b&gt;Next uncovered line&lt;/b&gt;&lt;p&gt;Go to next line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;下一个未覆盖行&lt;/b&gt;&lt;p&gt;跳转到下一个当前编辑器标记为不覆盖的行。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3783"/>
+        <location filename="../ViewManager/ViewManager.py" line="3828"/>
         <source>Previous uncovered line</source>
         <translation>上一个未覆盖行</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3776"/>
+        <location filename="../ViewManager/ViewManager.py" line="3821"/>
         <source>&amp;Previous uncovered line</source>
         <translation>上一个未覆盖行(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3785"/>
+        <location filename="../ViewManager/ViewManager.py" line="3830"/>
         <source>&lt;b&gt;Previous uncovered line&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;上一个未覆盖行&lt;/b&gt;&lt;p&gt;跳转到上一个编辑器标记为不覆盖的行。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3801"/>
+        <location filename="../ViewManager/ViewManager.py" line="3846"/>
         <source>Next Task</source>
         <translation>下一个任务</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3795"/>
+        <location filename="../ViewManager/ViewManager.py" line="3840"/>
         <source>&amp;Next Task</source>
         <translation>下一个任务(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3803"/>
+        <location filename="../ViewManager/ViewManager.py" line="3848"/>
         <source>&lt;b&gt;Next Task&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;下一个任务&lt;/b&gt;&lt;p&gt;跳转到下一个包含任务的当前编辑器的行。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3818"/>
+        <location filename="../ViewManager/ViewManager.py" line="3863"/>
         <source>Previous Task</source>
         <translation>上一个任务</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3811"/>
+        <location filename="../ViewManager/ViewManager.py" line="3856"/>
         <source>&amp;Previous Task</source>
         <translation>上一个任务(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3820"/>
+        <location filename="../ViewManager/ViewManager.py" line="3865"/>
         <source>&lt;b&gt;Previous Task&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;上一个任务&lt;/b&gt;&lt;p&gt;跳转到上一个包含任务的当前编辑器的行。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3874"/>
+        <location filename="../ViewManager/ViewManager.py" line="3919"/>
         <source>&amp;Bookmarks</source>
         <translation>书签(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3920"/>
+        <location filename="../ViewManager/ViewManager.py" line="3965"/>
         <source>Bookmarks</source>
         <translation>书签</translation>
     </message>
@@ -65738,13 +65738,13 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">拼写检查(&amp;S)……</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
         <translation>Shift+F7</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3962"/>
+        <location filename="../ViewManager/ViewManager.py" line="4007"/>
         <source>Perform spell check of current editor</source>
         <translation>对当前编辑器进行拼写检查</translation>
     </message>
@@ -65754,37 +65754,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;拼写检查&lt;/b&gt;&lt;p&gt;对当前编辑器进行拼写检查。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3972"/>
+        <location filename="../ViewManager/ViewManager.py" line="4017"/>
         <source>Automatic spell checking</source>
         <translation>自动拼写检查</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3972"/>
+        <location filename="../ViewManager/ViewManager.py" line="4017"/>
         <source>&amp;Automatic spell checking</source>
         <translation>自动拼写检查(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3979"/>
+        <location filename="../ViewManager/ViewManager.py" line="4024"/>
         <source>(De-)Activate automatic spell checking</source>
         <translation>（不）激活自动拼写检查</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3981"/>
+        <location filename="../ViewManager/ViewManager.py" line="4026"/>
         <source>&lt;b&gt;Automatic spell checking&lt;/b&gt;&lt;p&gt;Activate or deactivate the automatic spell checking function of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;自动拼写检查&lt;/b&gt;&lt;p&gt;激活或不激活所有编辑器的自动拼写检查功能。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4047"/>
+        <location filename="../ViewManager/ViewManager.py" line="4092"/>
         <source>Spelling</source>
         <translation>拼写法</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4074"/>
+        <location filename="../ViewManager/ViewManager.py" line="4119"/>
         <source>Open files</source>
         <translation>打开多个文件</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4110"/>
+        <location filename="../ViewManager/ViewManager.py" line="4155"/>
         <source>File Modified</source>
         <translation>文件已改变</translation>
     </message>
@@ -65809,77 +65809,77 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">位置： %1</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4817"/>
+        <location filename="../ViewManager/ViewManager.py" line="4862"/>
         <source>&amp;Clear</source>
         <translation>清除(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4811"/>
+        <location filename="../ViewManager/ViewManager.py" line="4856"/>
         <source>&amp;Add</source>
         <translation>添加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4814"/>
+        <location filename="../ViewManager/ViewManager.py" line="4859"/>
         <source>&amp;Edit...</source>
         <translation>编辑(&amp;E)……</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4110"/>
+        <location filename="../ViewManager/ViewManager.py" line="4155"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4422"/>
+        <location filename="../ViewManager/ViewManager.py" line="4467"/>
         <source>Line: {0:5}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4428"/>
+        <location filename="../ViewManager/ViewManager.py" line="4473"/>
         <source>Pos: {0:5}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3715"/>
+        <location filename="../ViewManager/ViewManager.py" line="3760"/>
         <source>Next warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3709"/>
+        <location filename="../ViewManager/ViewManager.py" line="3754"/>
         <source>&amp;Next warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3717"/>
+        <location filename="../ViewManager/ViewManager.py" line="3762"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3733"/>
+        <location filename="../ViewManager/ViewManager.py" line="3778"/>
         <source>Previous warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3726"/>
+        <location filename="../ViewManager/ViewManager.py" line="3771"/>
         <source>&amp;Previous warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3735"/>
+        <location filename="../ViewManager/ViewManager.py" line="3780"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3749"/>
+        <location filename="../ViewManager/ViewManager.py" line="3794"/>
         <source>Clear Warning Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3744"/>
+        <location filename="../ViewManager/ViewManager.py" line="3789"/>
         <source>Clear &amp;Warning Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3751"/>
+        <location filename="../ViewManager/ViewManager.py" line="3796"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -65963,17 +65963,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3409"/>
+        <location filename="../ViewManager/ViewManager.py" line="3447"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3414"/>
+        <location filename="../ViewManager/ViewManager.py" line="3452"/>
         <source>Preview the current file in the web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3416"/>
+        <location filename="../ViewManager/ViewManager.py" line="3454"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;&lt;p&gt;This opens the web browser with a preview of the current file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -66387,97 +66387,97 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3835"/>
+        <location filename="../ViewManager/ViewManager.py" line="3880"/>
         <source>Next Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3829"/>
+        <location filename="../ViewManager/ViewManager.py" line="3874"/>
         <source>&amp;Next Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3837"/>
+        <location filename="../ViewManager/ViewManager.py" line="3882"/>
         <source>&lt;b&gt;Next Change&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a change marker.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3853"/>
+        <location filename="../ViewManager/ViewManager.py" line="3898"/>
         <source>Previous Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3846"/>
+        <location filename="../ViewManager/ViewManager.py" line="3891"/>
         <source>&amp;Previous Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3855"/>
+        <location filename="../ViewManager/ViewManager.py" line="3900"/>
         <source>&lt;b&gt;Previous Change&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a change marker.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Check spelling</source>
         <translation type="unfinished">拼写检查</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Check &amp;spelling...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3964"/>
+        <location filename="../ViewManager/ViewManager.py" line="4009"/>
         <source>&lt;b&gt;Check spelling&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4012"/>
+        <location filename="../ViewManager/ViewManager.py" line="4057"/>
         <source>Edit Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4014"/>
+        <location filename="../ViewManager/ViewManager.py" line="4059"/>
         <source>Project Word List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4017"/>
+        <location filename="../ViewManager/ViewManager.py" line="4062"/>
         <source>Project Exception List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4021"/>
+        <location filename="../ViewManager/ViewManager.py" line="4066"/>
         <source>User Word List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4024"/>
+        <location filename="../ViewManager/ViewManager.py" line="4069"/>
         <source>User Exception List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5983"/>
+        <location filename="../ViewManager/ViewManager.py" line="6045"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5958"/>
+        <location filename="../ViewManager/ViewManager.py" line="6020"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5943"/>
+        <location filename="../ViewManager/ViewManager.py" line="6005"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5970"/>
+        <location filename="../ViewManager/ViewManager.py" line="6032"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5983"/>
+        <location filename="../ViewManager/ViewManager.py" line="6045"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -66597,13 +66597,48 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4447"/>
+        <location filename="../ViewManager/ViewManager.py" line="4492"/>
         <source>Language: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4455"/>
+        <location filename="../ViewManager/ViewManager.py" line="4500"/>
         <source>EOL Mode: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <source>New Document View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <source>New &amp;Document View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3336"/>
+        <source>Open a new view of the current document</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3338"/>
+        <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3348"/>
+        <source>New Document View (with new split)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3355"/>
+        <source>Open a new view of the current document in a new split</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3358"/>
+        <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document in a new split. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

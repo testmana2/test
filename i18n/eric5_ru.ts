@@ -61283,7 +61283,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Свернуть/развернуть текущую ветвь текущего редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4110"/>
+        <location filename="../ViewManager/ViewManager.py" line="4155"/>
         <source>File Modified</source>
         <translation>Файл изменён</translation>
     </message>
@@ -61839,225 +61839,225 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <location filename="../ViewManager/ViewManager.py" line="3369"/>
         <source>Split view</source>
         <translation>Разделить вид</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <location filename="../ViewManager/ViewManager.py" line="3369"/>
         <source>&amp;Split view</source>
         <translation>&amp;Разделить вид</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3336"/>
+        <location filename="../ViewManager/ViewManager.py" line="3374"/>
         <source>Add a split to the view</source>
         <translation>Добавить разделитель к виду</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3338"/>
+        <location filename="../ViewManager/ViewManager.py" line="3376"/>
         <source>&lt;b&gt;Split view&lt;/b&gt;&lt;p&gt;Add a split to the view.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Разделить вид&lt;/b&gt;&lt;p&gt;Добавить разделитель к виду.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3346"/>
+        <location filename="../ViewManager/ViewManager.py" line="3384"/>
         <source>Arrange horizontally</source>
         <translation>Расположить горизонтально</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3346"/>
+        <location filename="../ViewManager/ViewManager.py" line="3384"/>
         <source>Arrange &amp;horizontally</source>
         <translation>Расположить &amp;горизонтально</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3350"/>
+        <location filename="../ViewManager/ViewManager.py" line="3388"/>
         <source>Arrange the splitted views horizontally</source>
         <translation>Расположить разделённые виды горизонтально</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3352"/>
+        <location filename="../ViewManager/ViewManager.py" line="3390"/>
         <source>&lt;b&gt;Arrange horizontally&lt;/b&gt;&lt;p&gt;Arrange the splitted views horizontally.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Расположить горизонтально&lt;/b&gt;
 &lt;p&gt;Расположить разделённые виды горизонтально.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3361"/>
+        <location filename="../ViewManager/ViewManager.py" line="3399"/>
         <source>Remove split</source>
         <translation>Удалить разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3361"/>
+        <location filename="../ViewManager/ViewManager.py" line="3399"/>
         <source>&amp;Remove split</source>
         <translation>&amp;Удалить разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3366"/>
+        <location filename="../ViewManager/ViewManager.py" line="3404"/>
         <source>Remove the current split</source>
         <translation>Удалить текущий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3368"/>
+        <location filename="../ViewManager/ViewManager.py" line="3406"/>
         <source>&lt;b&gt;Remove split&lt;/b&gt;&lt;p&gt;Remove the current split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Удалить разделитель&lt;/b&gt;&lt;p&gt;Удалить текущий разделитель.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3500"/>
+        <location filename="../ViewManager/ViewManager.py" line="3545"/>
         <source>Start Macro Recording</source>
         <translation>Начать запись макроса</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3496"/>
+        <location filename="../ViewManager/ViewManager.py" line="3541"/>
         <source>S&amp;tart Macro Recording</source>
         <translation>&amp;Начать запись макроса</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3502"/>
+        <location filename="../ViewManager/ViewManager.py" line="3547"/>
         <source>&lt;b&gt;Start Macro Recording&lt;/b&gt;&lt;p&gt;Start recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Начать запись макроса&lt;/b&gt;
 &lt;p&gt;Начать запись комнд редактора в новый макрос.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3514"/>
+        <location filename="../ViewManager/ViewManager.py" line="3559"/>
         <source>Stop Macro Recording</source>
         <translation>Закончить запись макроса</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3510"/>
+        <location filename="../ViewManager/ViewManager.py" line="3555"/>
         <source>Sto&amp;p Macro Recording</source>
         <translation>&amp;Закончить запись макроса</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3516"/>
+        <location filename="../ViewManager/ViewManager.py" line="3561"/>
         <source>&lt;b&gt;Stop Macro Recording&lt;/b&gt;&lt;p&gt;Stop recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закончить запись макроса&lt;/b&gt;
 &lt;p&gt;Закончить запись комнд редактора в новый макрос.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3528"/>
+        <location filename="../ViewManager/ViewManager.py" line="3573"/>
         <source>Run Macro</source>
         <translation>Выполнить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3524"/>
+        <location filename="../ViewManager/ViewManager.py" line="3569"/>
         <source>&amp;Run Macro</source>
         <translation>&amp;Выполнить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3530"/>
+        <location filename="../ViewManager/ViewManager.py" line="3575"/>
         <source>&lt;b&gt;Run Macro&lt;/b&gt;&lt;p&gt;Run a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выполнить макрос&lt;/b&gt;
 &lt;p&gt;Запустить записанный макрос.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3542"/>
+        <location filename="../ViewManager/ViewManager.py" line="3587"/>
         <source>Delete Macro</source>
         <translation>Удалить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3538"/>
+        <location filename="../ViewManager/ViewManager.py" line="3583"/>
         <source>&amp;Delete Macro</source>
         <translation>&amp;Удалить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3544"/>
+        <location filename="../ViewManager/ViewManager.py" line="3589"/>
         <source>&lt;b&gt;Delete Macro&lt;/b&gt;&lt;p&gt;Delete a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Удалить макрос&lt;/b&gt;&lt;p&gt;Удалить записанный макрос.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3556"/>
+        <location filename="../ViewManager/ViewManager.py" line="3601"/>
         <source>Load Macro</source>
         <translation>Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3552"/>
+        <location filename="../ViewManager/ViewManager.py" line="3597"/>
         <source>&amp;Load Macro</source>
         <translation>&amp;Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3558"/>
+        <location filename="../ViewManager/ViewManager.py" line="3603"/>
         <source>&lt;b&gt;Load Macro&lt;/b&gt;&lt;p&gt;Load an editor macro from a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Загрузить макрос&lt;/b&gt;
 &lt;p&gt;Загрузить из файла макрос для редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3570"/>
+        <location filename="../ViewManager/ViewManager.py" line="3615"/>
         <source>Save Macro</source>
         <translation>Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3566"/>
+        <location filename="../ViewManager/ViewManager.py" line="3611"/>
         <source>&amp;Save Macro</source>
         <translation>&amp;Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3572"/>
+        <location filename="../ViewManager/ViewManager.py" line="3617"/>
         <source>&lt;b&gt;Save Macro&lt;/b&gt;&lt;p&gt;Save a previously recorded editor macro to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить макрос&lt;/b&gt;&lt;p&gt;Сохранить записанный макрос в файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3613"/>
+        <location filename="../ViewManager/ViewManager.py" line="3658"/>
         <source>Toggle Bookmark</source>
         <translation>Поставить/убрать закладку</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3605"/>
+        <location filename="../ViewManager/ViewManager.py" line="3650"/>
         <source>&amp;Toggle Bookmark</source>
         <translation>&amp;Поставить/убрать закладку</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3615"/>
+        <location filename="../ViewManager/ViewManager.py" line="3660"/>
         <source>&lt;b&gt;Toggle Bookmark&lt;/b&gt;&lt;p&gt;Toggle a bookmark at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Поставить/убрать закладку&lt;/b&gt;
 &lt;p&gt;Поставить/убрать закладку на текущей строчке текущего редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3632"/>
+        <location filename="../ViewManager/ViewManager.py" line="3677"/>
         <source>Next Bookmark</source>
         <translation>Следующая закладка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3624"/>
+        <location filename="../ViewManager/ViewManager.py" line="3669"/>
         <source>&amp;Next Bookmark</source>
         <translation>&amp;Следующая закладка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3634"/>
+        <location filename="../ViewManager/ViewManager.py" line="3679"/>
         <source>&lt;b&gt;Next Bookmark&lt;/b&gt;&lt;p&gt;Go to next bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующая закладка&lt;/b&gt;
 &lt;p&gt;Перейти к следующей закладке в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3650"/>
+        <location filename="../ViewManager/ViewManager.py" line="3695"/>
         <source>Previous Bookmark</source>
         <translation>Предыдущая закладка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3642"/>
+        <location filename="../ViewManager/ViewManager.py" line="3687"/>
         <source>&amp;Previous Bookmark</source>
         <translation>&amp;Предыдущая закладка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3652"/>
+        <location filename="../ViewManager/ViewManager.py" line="3697"/>
         <source>&lt;b&gt;Previous Bookmark&lt;/b&gt;&lt;p&gt;Go to previous bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предыдущая закладка&lt;/b&gt;
 &lt;p&gt;Перейти к предыдущей закладке в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3667"/>
+        <location filename="../ViewManager/ViewManager.py" line="3712"/>
         <source>Clear Bookmarks</source>
         <translation>Стереть закладки</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3660"/>
+        <location filename="../ViewManager/ViewManager.py" line="3705"/>
         <source>&amp;Clear Bookmarks</source>
         <translation>&amp;Стереть закладки</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3669"/>
+        <location filename="../ViewManager/ViewManager.py" line="3714"/>
         <source>&lt;b&gt;Clear Bookmarks&lt;/b&gt;&lt;p&gt;Clear bookmarks of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Стереть закладки&lt;/b&gt;&lt;p&gt;Убрать закладки из всех редакторов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3874"/>
+        <location filename="../ViewManager/ViewManager.py" line="3919"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Закладки</translation>
     </message>
@@ -62097,17 +62097,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Открыть &amp;закладки на файлы</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4817"/>
+        <location filename="../ViewManager/ViewManager.py" line="4862"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистить</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4811"/>
+        <location filename="../ViewManager/ViewManager.py" line="4856"/>
         <source>&amp;Add</source>
         <translation>&amp;Добавить</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4814"/>
+        <location filename="../ViewManager/ViewManager.py" line="4859"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Правка...</translation>
     </message>
@@ -62268,33 +62268,33 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Автозавершение из API&lt;/b&gt;&lt;p&gt;Автоматически дополнить слово, содержащее курсор, из API.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3683"/>
+        <location filename="../ViewManager/ViewManager.py" line="3728"/>
         <source>Goto Syntax Error</source>
         <translation>Перейти к синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3677"/>
+        <location filename="../ViewManager/ViewManager.py" line="3722"/>
         <source>&amp;Goto Syntax Error</source>
         <translation>&amp;Перейти к синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3685"/>
+        <location filename="../ViewManager/ViewManager.py" line="3730"/>
         <source>&lt;b&gt;Goto Syntax Error&lt;/b&gt;&lt;p&gt;Go to next syntax error of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Перейти к синтаксической ошибке&lt;/b&gt;
 &lt;p&gt;Перейти к следующей синтаксической ошибке в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3698"/>
+        <location filename="../ViewManager/ViewManager.py" line="3743"/>
         <source>Clear Syntax Errors</source>
         <translation>Очистить синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3693"/>
+        <location filename="../ViewManager/ViewManager.py" line="3738"/>
         <source>Clear &amp;Syntax Errors</source>
         <translation>Очистить синтаксические &amp;ошибки</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3700"/>
+        <location filename="../ViewManager/ViewManager.py" line="3745"/>
         <source>&lt;b&gt;Clear Syntax Errors&lt;/b&gt;&lt;p&gt;Clear syntax errors of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Очистить синтаксические ошибки&lt;/b&gt;&lt;p&gt;Убрать сообщения об синтаксических ошибках во всех редакторах.&lt;/p&gt;</translation>
     </message>
@@ -62319,32 +62319,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Искать файл&lt;/b&gt;&lt;p&gt;Искать файл по имени.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3765"/>
+        <location filename="../ViewManager/ViewManager.py" line="3810"/>
         <source>Next uncovered line</source>
         <translation>Следующая неохваченная строка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3759"/>
+        <location filename="../ViewManager/ViewManager.py" line="3804"/>
         <source>&amp;Next uncovered line</source>
         <translation>&amp;Следующая неохваченная строка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3767"/>
+        <location filename="../ViewManager/ViewManager.py" line="3812"/>
         <source>&lt;b&gt;Next uncovered line&lt;/b&gt;&lt;p&gt;Go to next line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующая неохваченная строка&lt;/b&gt;&lt;p&gt;Перейти к строке в текущем редакторе, помеченной как неохваченная.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3783"/>
+        <location filename="../ViewManager/ViewManager.py" line="3828"/>
         <source>Previous uncovered line</source>
         <translation>Предыдущая неохваченная строка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3776"/>
+        <location filename="../ViewManager/ViewManager.py" line="3821"/>
         <source>&amp;Previous uncovered line</source>
         <translation>&amp;Предыдущая неохваченная строка</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3785"/>
+        <location filename="../ViewManager/ViewManager.py" line="3830"/>
         <source>&lt;b&gt;Previous uncovered line&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующая неохваченная строка&lt;/b&gt;&lt;p&gt;Перейти предыдущей к строке в текущем редакторе, помеченной как неохваченная.&lt;/p&gt;</translation>
     </message>
@@ -62372,7 +62372,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4110"/>
+        <location filename="../ViewManager/ViewManager.py" line="4155"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
@@ -62472,42 +62472,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Умные отступы&lt;/b&gt;&lt;p&gt;Расставить отступы для выбранной строки (строк) с помощью умного алгоритма.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3376"/>
+        <location filename="../ViewManager/ViewManager.py" line="3414"/>
         <source>Next split</source>
         <translation>Следующий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3376"/>
+        <location filename="../ViewManager/ViewManager.py" line="3414"/>
         <source>&amp;Next split</source>
         <translation>&amp;Следующий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3383"/>
+        <location filename="../ViewManager/ViewManager.py" line="3421"/>
         <source>Move to the next split</source>
         <translation>Переместиться на следующий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3385"/>
+        <location filename="../ViewManager/ViewManager.py" line="3423"/>
         <source>&lt;b&gt;Next split&lt;/b&gt;&lt;p&gt;Move to the next split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующий разделитель&lt;/b&gt;&lt;p&gt;Переместиться на следующий разделитель.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3393"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>Previous split</source>
         <translation>Предыдущий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3393"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>&amp;Previous split</source>
         <translation>&amp;Предыдущий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3399"/>
+        <location filename="../ViewManager/ViewManager.py" line="3437"/>
         <source>Move to the previous split</source>
         <translation>Переместиться на предыдущий разделитель</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3401"/>
+        <location filename="../ViewManager/ViewManager.py" line="3439"/>
         <source>&lt;b&gt;Previous split&lt;/b&gt;&lt;p&gt;Move to the previous split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предыдущий разделитель&lt;/b&gt;&lt;p&gt;Переместиться на предыдущий разделитель.&lt;/p&gt;</translation>
     </message>
@@ -62792,94 +62792,94 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Ctrl+#</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3376"/>
+        <location filename="../ViewManager/ViewManager.py" line="3414"/>
         <source>Ctrl+Alt+N</source>
         <comment>View|Next split</comment>
         <translation>Ctrl+Alt+N</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3393"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>Ctrl+Alt+P</source>
         <comment>View|Previous split</comment>
         <translation>Ctrl+Alt+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3442"/>
+        <location filename="../ViewManager/ViewManager.py" line="3480"/>
         <source>&amp;View</source>
         <translation>&amp;Вид</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3472"/>
+        <location filename="../ViewManager/ViewManager.py" line="3513"/>
         <source>View</source>
         <translation>Вид</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3588"/>
+        <location filename="../ViewManager/ViewManager.py" line="3633"/>
         <source>&amp;Macros</source>
         <translation>&amp;Макросы</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3605"/>
+        <location filename="../ViewManager/ViewManager.py" line="3650"/>
         <source>Alt+Ctrl+T</source>
         <comment>Bookmark|Toggle</comment>
         <translation>Alt+Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3624"/>
+        <location filename="../ViewManager/ViewManager.py" line="3669"/>
         <source>Ctrl+PgDown</source>
         <comment>Bookmark|Next</comment>
         <translation>Ctrl+PgDown</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3642"/>
+        <location filename="../ViewManager/ViewManager.py" line="3687"/>
         <source>Ctrl+PgUp</source>
         <comment>Bookmark|Previous</comment>
         <translation>Ctrl+PgUp</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3660"/>
+        <location filename="../ViewManager/ViewManager.py" line="3705"/>
         <source>Alt+Ctrl+C</source>
         <comment>Bookmark|Clear</comment>
         <translation>Alt+Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3920"/>
+        <location filename="../ViewManager/ViewManager.py" line="3965"/>
         <source>Bookmarks</source>
         <translation>Закладки</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4074"/>
+        <location filename="../ViewManager/ViewManager.py" line="4119"/>
         <source>Open files</source>
         <translation>Открыть файлы</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3801"/>
+        <location filename="../ViewManager/ViewManager.py" line="3846"/>
         <source>Next Task</source>
         <translation>Следующая задача</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3795"/>
+        <location filename="../ViewManager/ViewManager.py" line="3840"/>
         <source>&amp;Next Task</source>
         <translation>&amp;Следующая задача</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3803"/>
+        <location filename="../ViewManager/ViewManager.py" line="3848"/>
         <source>&lt;b&gt;Next Task&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующая задача&lt;/b&gt;
 &lt;p&gt;Перейти к следующей строчке редактора, где определена задача.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3818"/>
+        <location filename="../ViewManager/ViewManager.py" line="3863"/>
         <source>Previous Task</source>
         <translation>Предыдущая задача</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3811"/>
+        <location filename="../ViewManager/ViewManager.py" line="3856"/>
         <source>&amp;Previous Task</source>
         <translation>&amp;Предыдущая задача</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3820"/>
+        <location filename="../ViewManager/ViewManager.py" line="3865"/>
         <source>&lt;b&gt;Previous Task&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предыдущая задача&lt;/b&gt;&lt;p&gt;Перейти к предыдущей строчке редактора, где определена задача.&lt;/p&gt;</translation>
     </message>
@@ -63094,13 +63094,13 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Проверка &amp;орфографии...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
         <translation>Shift+F7</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3962"/>
+        <location filename="../ViewManager/ViewManager.py" line="4007"/>
         <source>Perform spell check of current editor</source>
         <translation>Проверить орфографию в текущем редакторе</translation>
     </message>
@@ -63110,82 +63110,82 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Проверка орфографии&lt;/b&gt;&lt;p&gt;Проверить орфографию в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3972"/>
+        <location filename="../ViewManager/ViewManager.py" line="4017"/>
         <source>Automatic spell checking</source>
         <translation>Автоматическая проверка орфографии</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3972"/>
+        <location filename="../ViewManager/ViewManager.py" line="4017"/>
         <source>&amp;Automatic spell checking</source>
         <translation>&amp;Автоматическая проверка орфографии</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3979"/>
+        <location filename="../ViewManager/ViewManager.py" line="4024"/>
         <source>(De-)Activate automatic spell checking</source>
         <translation>Запретить автоматическую проверку орфографии</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3981"/>
+        <location filename="../ViewManager/ViewManager.py" line="4026"/>
         <source>&lt;b&gt;Automatic spell checking&lt;/b&gt;&lt;p&gt;Activate or deactivate the automatic spell checking function of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Автоматическая проверка орфографии&lt;/b&gt;&lt;p&gt;Запретить или разрешить автоматическую проверку орфографии.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4047"/>
+        <location filename="../ViewManager/ViewManager.py" line="4092"/>
         <source>Spelling</source>
         <translation>Проверка орфографии</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4422"/>
+        <location filename="../ViewManager/ViewManager.py" line="4467"/>
         <source>Line: {0:5}</source>
         <translation>Строка: {0:5}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4428"/>
+        <location filename="../ViewManager/ViewManager.py" line="4473"/>
         <source>Pos: {0:5}</source>
         <translation>Позиция: {0:5}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3715"/>
+        <location filename="../ViewManager/ViewManager.py" line="3760"/>
         <source>Next warning message</source>
         <translation>Следующее предупреждение</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3709"/>
+        <location filename="../ViewManager/ViewManager.py" line="3754"/>
         <source>&amp;Next warning message</source>
         <translation>&amp;Следующее предупреждение</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3717"/>
+        <location filename="../ViewManager/ViewManager.py" line="3762"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующее предупреждение&lt;/b&gt;&lt;p&gt;Перейти к следующему предупреждению&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3733"/>
+        <location filename="../ViewManager/ViewManager.py" line="3778"/>
         <source>Previous warning message</source>
         <translation>Предыдущее предупреждение</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3726"/>
+        <location filename="../ViewManager/ViewManager.py" line="3771"/>
         <source>&amp;Previous warning message</source>
         <translation>&amp;Предыдущее предупреждение</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3735"/>
+        <location filename="../ViewManager/ViewManager.py" line="3780"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предыдущее предупреждение&lt;/b&gt;&lt;p&gt;Перейти к предыдущему предупреждению&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3749"/>
+        <location filename="../ViewManager/ViewManager.py" line="3794"/>
         <source>Clear Warning Messages</source>
         <translation>Очистить предупреждения</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3744"/>
+        <location filename="../ViewManager/ViewManager.py" line="3789"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>&amp;Очистить предупреждения</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3751"/>
+        <location filename="../ViewManager/ViewManager.py" line="3796"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Очистить предупреждения&lt;/b&gt;&lt;p&gt;Очистить предупреждения во всех окнах редактора.&lt;/p&gt;</translation>
     </message>
@@ -63269,17 +63269,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3409"/>
+        <location filename="../ViewManager/ViewManager.py" line="3447"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3414"/>
+        <location filename="../ViewManager/ViewManager.py" line="3452"/>
         <source>Preview the current file in the web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3416"/>
+        <location filename="../ViewManager/ViewManager.py" line="3454"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;&lt;p&gt;This opens the web browser with a preview of the current file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63693,97 +63693,97 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3835"/>
+        <location filename="../ViewManager/ViewManager.py" line="3880"/>
         <source>Next Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3829"/>
+        <location filename="../ViewManager/ViewManager.py" line="3874"/>
         <source>&amp;Next Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3837"/>
+        <location filename="../ViewManager/ViewManager.py" line="3882"/>
         <source>&lt;b&gt;Next Change&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a change marker.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3853"/>
+        <location filename="../ViewManager/ViewManager.py" line="3898"/>
         <source>Previous Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3846"/>
+        <location filename="../ViewManager/ViewManager.py" line="3891"/>
         <source>&amp;Previous Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3855"/>
+        <location filename="../ViewManager/ViewManager.py" line="3900"/>
         <source>&lt;b&gt;Previous Change&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a change marker.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Check spelling</source>
         <translation>Проверка орфографии</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Check &amp;spelling...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3964"/>
+        <location filename="../ViewManager/ViewManager.py" line="4009"/>
         <source>&lt;b&gt;Check spelling&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4012"/>
+        <location filename="../ViewManager/ViewManager.py" line="4057"/>
         <source>Edit Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4014"/>
+        <location filename="../ViewManager/ViewManager.py" line="4059"/>
         <source>Project Word List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4017"/>
+        <location filename="../ViewManager/ViewManager.py" line="4062"/>
         <source>Project Exception List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4021"/>
+        <location filename="../ViewManager/ViewManager.py" line="4066"/>
         <source>User Word List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4024"/>
+        <location filename="../ViewManager/ViewManager.py" line="4069"/>
         <source>User Exception List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5983"/>
+        <location filename="../ViewManager/ViewManager.py" line="6045"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5958"/>
+        <location filename="../ViewManager/ViewManager.py" line="6020"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5943"/>
+        <location filename="../ViewManager/ViewManager.py" line="6005"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5970"/>
+        <location filename="../ViewManager/ViewManager.py" line="6032"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5983"/>
+        <location filename="../ViewManager/ViewManager.py" line="6045"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63903,13 +63903,48 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4447"/>
+        <location filename="../ViewManager/ViewManager.py" line="4492"/>
         <source>Language: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4455"/>
+        <location filename="../ViewManager/ViewManager.py" line="4500"/>
         <source>EOL Mode: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <source>New Document View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3331"/>
+        <source>New &amp;Document View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3336"/>
+        <source>Open a new view of the current document</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3338"/>
+        <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3348"/>
+        <source>New Document View (with new split)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3355"/>
+        <source>Open a new view of the current document in a new split</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3358"/>
+        <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document in a new split. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

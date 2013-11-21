@@ -12332,6 +12332,8 @@
       <keyword name="ViewManager.__macroSave" id="ViewManager.__macroSave" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroSave" />
       <keyword name="ViewManager.__macroStartRecording" id="ViewManager.__macroStartRecording" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroStartRecording" />
       <keyword name="ViewManager.__macroStopRecording" id="ViewManager.__macroStopRecording" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroStopRecording" />
+      <keyword name="ViewManager.__newDocumentSplitView" id="ViewManager.__newDocumentSplitView" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newDocumentSplitView" />
+      <keyword name="ViewManager.__newDocumentView" id="ViewManager.__newDocumentView" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newDocumentView" />
       <keyword name="ViewManager.__newLineBelow" id="ViewManager.__newLineBelow" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newLineBelow" />
       <keyword name="ViewManager.__nextBookmark" id="ViewManager.__nextBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextBookmark" />
       <keyword name="ViewManager.__nextChange" id="ViewManager.__nextChange" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextChange" />
