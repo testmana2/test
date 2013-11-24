@@ -7,7 +7,7 @@
 Module implementing the Editor Highlighting Styles configuration page.
 """
 
-from PyQt4.QtCore import pyqtSlot, QFileInfo, QFile, QIODevice
+from PyQt4.QtCore import pyqtSlot, Qt, QFileInfo, QFile, QIODevice
 from PyQt4.QtGui import QPalette, QColorDialog, QFontDialog, \
     QInputDialog, QFont, QMenu
 
@@ -119,11 +119,16 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             colour = self.lexer.color(style)
             paper = self.lexer.paper(style)
             font = self.lexer.font(style)
+            eolfill = self.lexer.eolFill(style)
             
             itm = self.styleElementList.item(row)
             itm.setFont(font)
             itm.setBackground(paper)
             itm.setForeground(colour)
+            if eolfill:
+                itm.setCheckState(Qt.Checked)
+            else:
+                itm.setCheckState(Qt.Unchecked)
         
     def on_styleElementList_currentRowChanged(self, index):
         """
@@ -302,14 +307,16 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         sizeOnly = act.data() in [self.FAMILYANDSIZE, self.SIZEONLY]
         self.__changeFont(True, familyOnly, sizeOnly)
         
-    def on_eolfillCheckBox_toggled(self, b):
+    def on_eolfillCheckBox_toggled(self, on):
         """
         Private method used to set the eolfill for the selected style and
         lexer.
         
-        @param b Flag indicating enabled or disabled state.
+        @param on flag indicating enabled or disabled state (boolean)
         """
-        self.lexer.setEolFill(b, self.style)
+        self.lexer.setEolFill(on, self.style)
+        checkState = Qt.Checked if on else Qt.Unchecked
+        self.styleElementList.currentItem().setCheckState(checkState)
         
     @pyqtSlot()
     def on_allEolFillButton_clicked(self):
@@ -330,6 +337,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.eolfillCheckBox.setChecked(enabled)
             for style in list(self.lexer.ind2style.values()):
                 self.lexer.setEolFill(enabled, style)
+            self.__styleAllItems()
         
     @pyqtSlot()
     def on_defaultButton_clicked(self):
