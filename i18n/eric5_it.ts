@@ -11039,7 +11039,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Seleziona il riempimento di fine linea.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="296"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="329"/>
         <source>Fill to end of line</source>
         <translation>Riempi fino a fine linea</translation>
     </message>
@@ -11114,17 +11114,17 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Riempi tutto fino a fine linea</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="294"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="327"/>
         <source>Enabled</source>
         <translation>Abilitato</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="295"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="328"/>
         <source>Disabled</source>
         <translation>Disabilitato</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="296"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="329"/>
         <source>Select fill to end of line for all styles</source>
         <translation>Seleziona il riempimento fino a fine linea per tutti gli stili</translation>
     </message>
@@ -11189,27 +11189,27 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Esporta tutti gli stili</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="401"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="437"/>
         <source>Export Highlighting Styles</source>
         <translation>Esporta stili di evidenziazione</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="433"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="469"/>
         <source>Import Highlighting Styles</source>
         <translation>Importa gli stili di evidenziazione</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="417"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="453"/>
         <source>Highlighting styles file (*.e4h)</source>
         <translation>Highlighting styles file (*.e4h)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="401"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="437"/>
         <source>&lt;p&gt;The highlighting styles could not be exported to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Lo stile di evidenziazione non può essere esportato nel file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="433"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="469"/>
         <source>&lt;p&gt;The highlighting styles could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Gli stili di evidenziazione non possono essere letti dal file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -30358,147 +30358,147 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>VHDL</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="497"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="498"/>
         <source>Pyrex Files (*.pyx)</source>
         <translation>File Pyrex (*.pyx)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="500"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="501"/>
         <source>Quixote Template Files (*.ptl)</source>
         <translation>File template Quixote</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="503"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="504"/>
         <source>Ruby Files (*.rb)</source>
         <translation>File Ruby (*.rb)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="506"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="507"/>
         <source>IDL Files (*.idl)</source>
         <translation>File IDL (*.idl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="347"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="348"/>
         <source>C Files (*.h *.c)</source>
         <translation>File C (*.h *.c)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="350"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="351"/>
         <source>C++ Files (*.h *.hpp *.hh *.cxx *.cpp *.cc)</source>
         <translation>File C++ (*.h *.hpp *.hh *.cxx *.cpp *.cc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="518"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="519"/>
         <source>C# Files (*.cs)</source>
         <translation>File C# (*.cs)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="356"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="357"/>
         <source>HTML Files (*.html *.htm *.asp *.shtml)</source>
         <translation>File HTML (*.html *.htm *.asp *.shtml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="530"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="531"/>
         <source>CSS Files (*.css)</source>
         <translation>File CSS (*.css)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="533"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="534"/>
         <source>QSS Files (*.qss)</source>
         <translation>File QSS (*.qss)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="365"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="366"/>
         <source>PHP Files (*.php *.php3 *.php4 *.php5 *.phtml)</source>
         <translation>File PHP (*.php *.php3 *.php4 *.php5 *.phtml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="545"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="546"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>File Risorse Qt (*.qrc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="374"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="375"/>
         <source>D Files (*.d *.di)</source>
         <translation>File D (*.d *.di)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="554"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="555"/>
         <source>Java Files (*.java)</source>
         <translation>File Java (*.java)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="557"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="558"/>
         <source>JavaScript Files (*.js)</source>
         <translation>File JavaScript (*.js)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="560"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="561"/>
         <source>SQL Files (*.sql)</source>
         <translation>File SQL (*.sql)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="563"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="564"/>
         <source>Docbook Files (*.docbook)</source>
         <translation>File Docbook (*.docbook)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="389"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="390"/>
         <source>Perl Files (*.pl *.pm *.ph)</source>
         <translation>File Perl (*.pl *.pm *.ph)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="572"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="573"/>
         <source>Lua Files (*.lua)</source>
         <translation>File Lua (*.lua)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="395"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="396"/>
         <source>Tex Files (*.tex *.sty *.aux *.toc *.idx)</source>
         <translation>File TeX (*.tex *.sty *.aux *.toc *.idx)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="575"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="576"/>
         <source>Shell Files (*.sh)</source>
         <translation>File Shell (*.sh)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="401"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="402"/>
         <source>Batch Files (*.bat *.cmd)</source>
         <translation>File Batch (*.bat *.cmd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="404"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="405"/>
         <source>Diff Files (*.diff *.patch)</source>
         <translation>File Diff (*.diff *.patch)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="407"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="408"/>
         <source>Makefiles (*.mak)</source>
         <translation>Makefile (*,mak)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="410"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="411"/>
         <source>Properties Files (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</source>
         <translation>File proprietà (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="599"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="600"/>
         <source>Povray Files (*.pov)</source>
         <translation>File Povray (*.pov)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="417"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="418"/>
         <source>CMake Files (CMakeLists.txt *.cmake *.ctest)</source>
         <translation>File CMake (CMakeLists.txt *.cmake *.ctest)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="420"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="421"/>
         <source>VHDL Files (*.vhd *.vhdl)</source>
         <translation>File VHDL (*.vhd *.vhdl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="654"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="655"/>
         <source>All Files (*)</source>
         <translation>Tutti i file (*)</translation>
     </message>
@@ -30508,132 +30508,132 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>TCL</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="423"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="424"/>
         <source>TCL/Tk Files (*.tcl *.tk)</source>
         <translation>File TCL/Tk (*.tcl *.tk)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="509"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="510"/>
         <source>C Files (*.c)</source>
         <translation>File C (*.c)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="512"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="513"/>
         <source>C++ Files (*.cpp)</source>
         <translation>File C++ (*.cpp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="515"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="516"/>
         <source>C++/C Header Files (*.h)</source>
         <translation>File Header C/C++ (*.h)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="521"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="522"/>
         <source>HTML Files (*.html)</source>
         <translation>File HTML (*.html)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="524"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="525"/>
         <source>PHP Files (*.php)</source>
         <translation>File PHP (*.php)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="527"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="528"/>
         <source>ASP Files (*.asp)</source>
         <translation>File ASP (*.asp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="536"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="537"/>
         <source>XML Files (*.xml)</source>
         <translation>File XML (*.xml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="539"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="540"/>
         <source>XSL Files (*.xsl)</source>
         <translation>File XSL (*.xsl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="542"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="543"/>
         <source>DTD Files (*.dtd)</source>
         <translation>File DTD (*.dtd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="548"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="549"/>
         <source>D Files (*.d)</source>
         <translation>File D (*.d)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="551"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="552"/>
         <source>D Interface Files (*.di)</source>
         <translation>File interfaccia D (*.di)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="566"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="567"/>
         <source>Perl Files (*.pl)</source>
         <translation>File Perl (*.pl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="569"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="570"/>
         <source>Perl Module Files (*.pm)</source>
         <translation>File moduli Perl (*.pm)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="578"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="579"/>
         <source>Batch Files (*.bat)</source>
         <translation>File Batch (*.bat)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="581"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="582"/>
         <source>TeX Files (*.tex)</source>
         <translation>File TeX (*.tex)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="584"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="585"/>
         <source>TeX Template Files (*.sty)</source>
         <translation>File Template TeX (*.sty)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="587"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="588"/>
         <source>Diff Files (*.diff)</source>
         <translation>File Diff (*.diff)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="590"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="591"/>
         <source>Make Files (*.mak)</source>
         <translation>File Make (*.mak)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="593"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="594"/>
         <source>Properties Files (*.ini)</source>
         <translation>File proprietà (*.ini)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="596"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="597"/>
         <source>Configuration Files (*.cfg)</source>
         <translation>File configurazione (*.cfg)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="602"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="603"/>
         <source>CMake Files (CMakeLists.txt)</source>
         <translation>File CMake (CMakeList.txt)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="605"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="606"/>
         <source>CMake Macro Files (*.cmake)</source>
         <translation>File Macro CMake (*.cmake)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="608"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="609"/>
         <source>VHDL Files (*.vhd)</source>
         <translation>File VHDL (*.vhd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="611"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="612"/>
         <source>TCL Files (*.tcl)</source>
         <translation>File TCL (*.tcl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="614"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="615"/>
         <source>Tk Files (*.tk)</source>
         <translation>File Tk (*.tk)</translation>
     </message>
@@ -30668,87 +30668,87 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>YAML</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="368"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="369"/>
         <source>XML Files (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</source>
         <translation>File XML (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="426"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="427"/>
         <source>Fortran Files (*.f90 *.f95 *.f2k)</source>
         <translation>File Fortran (*.f90 *.f95 *.f2k)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="429"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="430"/>
         <source>Fortran77 Files (*.f *.for)</source>
         <translation>File Fortran77 (*.f *.for)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="432"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="433"/>
         <source>Pascal Files (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</source>
         <translation>File Pascal (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="626"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="627"/>
         <source>PostScript Files (*.ps)</source>
         <translation>File PostScript (*.ps)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="438"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="439"/>
         <source>YAML Files (*.yaml *.yml)</source>
         <translation>File YAML (*.yaml *.yml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="617"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="618"/>
         <source>Fortran Files (*.f95)</source>
         <translation>File Fortran (*.f95)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="620"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="621"/>
         <source>Fortran77 Files (*.f)</source>
         <translation>File Fortran77 (*.f)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="623"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="624"/>
         <source>Pascal Files (*.pas)</source>
         <translation>File Pascal (*.pas)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="629"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="630"/>
         <source>YAML Files (*.yml)</source>
         <translation>File YAML (*.yaml *.yml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="156"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="157"/>
         <source>Pygments</source>
         <translation>Pygments</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="329"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="330"/>
         <source>Python Files (*.py *.py2 *.py3)</source>
         <translation>Python Files (*.py *.py2 *.py3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="332"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="333"/>
         <source>Python GUI Files (*.pyw *.pyw2 *.pyw3)</source>
         <translation>Python GUI Files (*.pyw *.pyw2 *.pyw3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="488"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="489"/>
         <source>Python3 Files (*.py)</source>
         <translation>Python3 Files (*.py)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="494"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="495"/>
         <source>Python3 GUI Files (*.pyw)</source>
         <translation>Python3 GUI Files (*.pyw)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="485"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="486"/>
         <source>Python2 Files (*.py2)</source>
         <translation>Python Files (*.py2)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="491"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="492"/>
         <source>Python2 GUI Files (*.pyw2)</source>
         <translation>Python GUI Files (*.pyw2)</translation>
     </message>
@@ -30773,22 +30773,22 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="444"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
         <source>Matlab Files (*.m *.m.matlab)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="444"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
         <source>Octave Files (*.m *.m.octave)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="635"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="636"/>
         <source>Matlab Files (*.m)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="635"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="636"/>
         <source>Octave Files (*.m.octave)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47745,6 +47745,11 @@ Non connesso</translation>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2476"/>
+        <source>Upgrade</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SubversionPage</name>
@@ -50170,6 +50175,26 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="199"/>
         <source>&lt;b&gt;Show change lists&lt;/b&gt;&lt;p&gt;This shows the change lists and associated files of the local project.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="485"/>
+        <source>Upgrade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="485"/>
+        <source>Upgrade...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="489"/>
+        <source>Upgrade the working copy to the current format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="492"/>
+        <source>&lt;b&gt;Upgrade&lt;/b&gt;&lt;p&gt;Upgrades the working copy to the current format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -63583,27 +63608,27 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6045"/>
+        <location filename="../ViewManager/ViewManager.py" line="6049"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6020"/>
+        <location filename="../ViewManager/ViewManager.py" line="6024"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6005"/>
+        <location filename="../ViewManager/ViewManager.py" line="6009"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6032"/>
+        <location filename="../ViewManager/ViewManager.py" line="6036"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6045"/>
+        <location filename="../ViewManager/ViewManager.py" line="6049"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>

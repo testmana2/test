@@ -83,6 +83,7 @@ Version 5.4-snapshot-2013mmdd:
      --- added capability to compare files side-by-side
   -- Subversion
      --- added capability to compare files side-by-side
+     --- added cabaility to upgrade the working copy format
 - Web Browser
   -- reworked the various SSL info widgets to show more info
   -- added a dialog to configure hosts to be exempted from caching

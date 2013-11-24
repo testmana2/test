@@ -10295,6 +10295,8 @@
       <keyword name="Subversion.svnShowChangelists" id="Subversion.svnShowChangelists" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnShowChangelists" />
       <keyword name="Subversion.svnUnlock" id="Subversion.svnUnlock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUnlock" />
       <keyword name="Subversion.svnUnlock" id="Subversion.svnUnlock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUnlock" />
+      <keyword name="Subversion.svnUpgrade" id="Subversion.svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUpgrade" />
+      <keyword name="Subversion.svnUpgrade" id="Subversion.svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUpgrade" />
       <keyword name="Subversion.svnUrlDiff" id="Subversion.svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUrlDiff" />
       <keyword name="Subversion.svnUrlDiff" id="Subversion.svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUrlDiff" />
       <keyword name="Subversion.vcsAdd" id="Subversion.vcsAdd" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsAdd" />
@@ -10782,6 +10784,8 @@
       <keyword name="SvnProjectHelper.__svnResolve" id="SvnProjectHelper.__svnResolve" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnResolve" />
       <keyword name="SvnProjectHelper.__svnTagList" id="SvnProjectHelper.__svnTagList" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnTagList" />
       <keyword name="SvnProjectHelper.__svnTagList" id="SvnProjectHelper.__svnTagList" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnTagList" />
+      <keyword name="SvnProjectHelper.__svnUpgrade" id="SvnProjectHelper.__svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnUpgrade" />
+      <keyword name="SvnProjectHelper.__svnUpgrade" id="SvnProjectHelper.__svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnUpgrade" />
       <keyword name="SvnProjectHelper.__svnUrlDiff" id="SvnProjectHelper.__svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnUrlDiff" />
       <keyword name="SvnProjectHelper.__svnUrlDiff" id="SvnProjectHelper.__svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnUrlDiff" />
       <keyword name="SvnProjectHelper.getActions" id="SvnProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.getActions" />

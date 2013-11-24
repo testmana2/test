@@ -481,6 +481,20 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.svnConfigAct.triggered[()].connect(self.__svnConfigure)
         self.actions.append(self.svnConfigAct)
+        
+        self.svnUpgradeAct = E5Action(
+            self.trUtf8('Upgrade'),
+            self.trUtf8('Upgrade...'),
+            0, 0, self, 'subversion_upgrade')
+        self.svnUpgradeAct.setStatusTip(self.trUtf8(
+            'Upgrade the working copy to the current format'
+        ))
+        self.svnUpgradeAct.setWhatsThis(self.trUtf8(
+            """<b>Upgrade</b>"""
+            """<p>Upgrades the working copy to the current format.</p>"""
+        ))
+        self.svnUpgradeAct.triggered[()].connect(self.__svnUpgrade)
+        self.actions.append(self.svnUpgradeAct)
     
     def initMenu(self, menu):
         """
@@ -538,6 +552,7 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsCommandAct)
         menu.addAction(self.svnRepoBrowserAct)
+        menu.addAction(self.svnUpgradeAct)
         menu.addSeparator()
         menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
@@ -629,3 +644,9 @@ class SvnProjectHelper(VcsProjectHelper):
         Private slot used to show a list of change lists.
         """
         self.vcs.svnShowChangelists(self.project.ppath)
+    
+    def __svnUpgrade(self):
+        """
+        Private slot used to upgrade the working copy format.
+        """
+        self.vcs.svnUpgrade(self.project.ppath)

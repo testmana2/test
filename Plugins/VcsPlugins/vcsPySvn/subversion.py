@@ -2452,6 +2452,27 @@ class Subversion(VersionControl):
             locker.unlock()
         
         return changelists
+        
+    def svnUpgrade(self, path):
+        """
+        Public method to upgrade the working copy format.
+        
+        @param path directory name to show change lists for (string)
+        """
+        client = self.getClient()
+        dlg = \
+            SvnDialog(self.trUtf8('Upgrade'),
+                      "upgrade {0}".format(path),
+                      client)
+        QApplication.processEvents()
+        locker = QMutexLocker(self.vcsExecutionMutex)
+        try:
+            client.upgrade(path)
+        except pysvn.ClientError as e:
+            dlg.showError(e.args[0])
+        locker.unlock()
+        dlg.finish()
+        dlg.exec_()
 
     ###########################################################################
     ## Private Subversion specific methods are below.
