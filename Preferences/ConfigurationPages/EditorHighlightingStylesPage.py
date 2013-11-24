@@ -107,7 +107,23 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         self.styleGroup.setEnabled(True)
         self.styleElementList.addItems(self.lexer.styles)
+        self.__styleAllItems()
         self.styleElementList.setCurrentRow(0)
+        
+    def __styleAllItems(self):
+        """
+        Private method to style all items of the style element list.
+        """
+        for row in range(self.styleElementList.count()):
+            style = self.lexer.ind2style[row]
+            colour = self.lexer.color(style)
+            paper = self.lexer.paper(style)
+            font = self.lexer.font(style)
+            
+            itm = self.styleElementList.item(row)
+            itm.setFont(font)
+            itm.setBackground(paper)
+            itm.setForeground(colour)
         
     def on_styleElementList_currentRowChanged(self, index):
         """
@@ -150,8 +166,10 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                     style = self.lexer.ind2style[
                         self.styleElementList.row(selItem)]
                     self.lexer.setColor(colour, style)
+                    selItem.setForeground(colour)
             else:
                 self.lexer.setColor(colour, self.style)
+                self.styleElementList.currentItem().setForeground(colour)
         
     @pyqtSlot()
     def on_backgroundButton_clicked(self):
@@ -170,8 +188,10 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                     style = self.lexer.ind2style[
                         self.styleElementList.row(selItem)]
                     self.lexer.setPaper(colour, style)
+                    selItem.setBackground(colour)
             else:
                 self.lexer.setPaper(colour, self.style)
+                self.styleElementList.currentItem().setBackground(colour)
         
     @pyqtSlot()
     def on_allBackgroundColoursButton_clicked(self):
@@ -187,6 +207,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.sampleText.repaint()
             for style in list(self.lexer.ind2style.values()):
                 self.lexer.setPaper(colour, style)
+            self.__styleAllItems()
         
     def __changeFont(self, doAll, familyOnly, sizeOnly):
         """
@@ -242,13 +263,18 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             if doAll:
                 for style in list(self.lexer.ind2style.values()):
                     setFont(font, style, familyOnly, sizeOnly)
+                self.__styleAllItems()
             elif len(self.styleElementList.selectedItems()) > 1:
                 for selItem in self.styleElementList.selectedItems():
                     style = self.lexer.ind2style[
                         self.styleElementList.row(selItem)]
                     setFont(font, style, familyOnly, sizeOnly)
+                    itmFont = self.lexer.font(style)
+                    selItem.setFont(itmFont)
             else:
                 setFont(font, self.style, familyOnly, sizeOnly)
+                itmFont = self.lexer.font(self.style)
+                self.styleElementList.currentItem().setFont(itmFont)
         
     def __fontButtonMenuTriggered(self, act):
         """
@@ -319,6 +345,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.__setToDefault(self.style)
         self.on_styleElementList_currentRowChanged(
             self.styleElementList.currentRow())
+        self.__styleAllItems()
         
     @pyqtSlot()
     def on_allDefaultButton_clicked(self):
@@ -329,6 +356,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.__setToDefault(style)
         self.on_styleElementList_currentRowChanged(
             self.styleElementList.currentRow())
+        self.__styleAllItems()
         
     def __setToDefault(self, style):
         """
@@ -453,6 +481,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self.sampleText.setPalette(pl)
             self.sampleText.repaint()
             self.eolfillCheckBox.setChecked(eolfill)
+            
+            self.__styleAllItems()
         
     def saveState(self):
         """
