@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string/>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_10">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -68,58 +68,70 @@
      </property>
      <widget class="QWidget" name="emptyPage"/>
      <widget class="QWidget" name="htmlPage">
-      <layout class="QVBoxLayout">
-       <property name="margin">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
         <number>0</number>
        </property>
        <item>
-        <widget class="QCheckBox" name="htmlWysiwygCheckBox">
-         <property name="toolTip">
-          <string>Select to export in WYSIWYG mode</string>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string/>
          </property>
-         <property name="text">
-          <string>Use WYSIWYG mode</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="htmlFoldingCheckBox">
-         <property name="toolTip">
-          <string>Select to include folding functionality</string>
-         </property>
-         <property name="text">
-          <string>Include folding functionality</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="htmlStylesCheckBox">
-         <property name="toolTip">
-          <string>Select to include only used styles</string>
-         </property>
-         <property name="text">
-          <string>Include only used styles</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="htmlTitleCheckBox">
-         <property name="toolTip">
-          <string>Select to use the full pathname as the document title</string>
-         </property>
-         <property name="text">
-          <string>Use full pathname as document title</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="htmlTabsCheckBox">
-         <property name="toolTip">
-          <string>Select to use tabs in the generated file</string>
-         </property>
-         <property name="text">
-          <string>Use tabs</string>
-         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="htmlWysiwygCheckBox">
+            <property name="toolTip">
+             <string>Select to export in WYSIWYG mode</string>
+            </property>
+            <property name="text">
+             <string>Use WYSIWYG mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="htmlFoldingCheckBox">
+            <property name="toolTip">
+             <string>Select to include folding functionality</string>
+            </property>
+            <property name="text">
+             <string>Include folding functionality</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="htmlStylesCheckBox">
+            <property name="toolTip">
+             <string>Select to include only used styles</string>
+            </property>
+            <property name="text">
+             <string>Include only used styles</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="htmlTitleCheckBox">
+            <property name="toolTip">
+             <string>Select to use the full pathname as the document title</string>
+            </property>
+            <property name="text">
+             <string>Use full pathname as document title</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="htmlTabsCheckBox">
+            <property name="toolTip">
+             <string>Select to use tabs in the generated file</string>
+            </property>
+            <property name="text">
+             <string>Use tabs</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -139,34 +151,49 @@
      </widget>
      <widget class="QWidget" name="odtPage">
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
        <item>
-        <widget class="QCheckBox" name="odtWysiwygCheckBox">
-         <property name="toolTip">
-          <string>Select to export in WYSIWYG mode</string>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string/>
          </property>
-         <property name="text">
-          <string>Use WYSIWYG mode</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="odtStylesCheckBox">
-         <property name="toolTip">
-          <string>Select to include only used styles</string>
-         </property>
-         <property name="text">
-          <string>Include only used styles</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="odtTabsCheckBox">
-         <property name="toolTip">
-          <string>Select to use tabs in the generated file</string>
-         </property>
-         <property name="text">
-          <string>Use tabs</string>
-         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QCheckBox" name="odtWysiwygCheckBox">
+            <property name="toolTip">
+             <string>Select to export in WYSIWYG mode</string>
+            </property>
+            <property name="text">
+             <string>Use WYSIWYG mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="odtStylesCheckBox">
+            <property name="toolTip">
+             <string>Select to include only used styles</string>
+            </property>
+            <property name="text">
+             <string>Include only used styles</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="odtTabsCheckBox">
+            <property name="toolTip">
+             <string>Select to use tabs in the generated file</string>
+            </property>
+            <property name="text">
+             <string>Use tabs</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -185,138 +212,150 @@
       </layout>
      </widget>
      <widget class="QWidget" name="pdfPage">
-      <layout class="QGridLayout" name="gridLayout">
-       <property name="margin">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="leftMargin">
         <number>0</number>
        </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Magnification:</string>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string/>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QSlider" name="pdfMagnificationSlider">
-         <property name="toolTip">
-          <string>Select the magnification value to be added to the font sizes of the styles</string>
-         </property>
-         <property name="maximum">
-          <number>20</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLCDNumber" name="pdfMagnificationLCD">
-         <property name="toolTip">
-          <string>Displays the selected magnification value</string>
-         </property>
-         <property name="digitCount">
-          <number>2</number>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Font:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" colspan="2">
-        <widget class="QComboBox" name="pdfFontCombo">
-         <property name="toolTip">
-          <string>Select the font from the list</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Pagesize:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="2">
-        <widget class="QComboBox" name="pdfPageSizeCombo">
-         <property name="toolTip">
-          <string>Select the page size from the list</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="3">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QGroupBox" name="groupBox">
-           <property name="title">
-            <string>Margins</string>
-           </property>
-           <layout class="QGridLayout">
-            <item row="0" column="1">
-             <widget class="QSpinBox" name="pdfMarginTopSpin">
-              <property name="toolTip">
-               <string>Select the top margin in points (72 pt == 1&quot;)</string>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Magnification:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSlider" name="pdfMagnificationSlider">
+            <property name="toolTip">
+             <string>Select the magnification value to be added to the font sizes of the styles</string>
+            </property>
+            <property name="maximum">
+             <number>20</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLCDNumber" name="pdfMagnificationLCD">
+            <property name="toolTip">
+             <string>Displays the selected magnification value</string>
+            </property>
+            <property name="digitCount">
+             <number>2</number>
+            </property>
+            <property name="segmentStyle">
+             <enum>QLCDNumber::Flat</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Font:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QComboBox" name="pdfFontCombo">
+            <property name="toolTip">
+             <string>Select the font from the list</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Pagesize:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" colspan="2">
+           <widget class="QComboBox" name="pdfPageSizeCombo">
+            <property name="toolTip">
+             <string>Select the page size from the list</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="3">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>Margins</string>
               </property>
-              <property name="maximum">
-               <number>288</number>
-              </property>
+              <layout class="QGridLayout">
+               <item row="0" column="1">
+                <widget class="QSpinBox" name="pdfMarginTopSpin">
+                 <property name="toolTip">
+                  <string>Select the top margin in points (72 pt == 1&quot;)</string>
+                 </property>
+                 <property name="maximum">
+                  <number>288</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QSpinBox" name="pdfMarginLeftSpin">
+                 <property name="toolTip">
+                  <string>Select the left margin in points (72 pt == 1&quot;)</string>
+                 </property>
+                 <property name="maximum">
+                  <number>288</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="pdfMarginRightSpin">
+                 <property name="toolTip">
+                  <string>Select the right margin in points (72 pt == 1&quot;)</string>
+                 </property>
+                 <property name="maximum">
+                  <number>288</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="pdfMarginBottomSpin">
+                 <property name="toolTip">
+                  <string>Select the bottom margin in points (72 pt == 1&quot;)</string>
+                 </property>
+                 <property name="maximum">
+                  <number>288</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QSpinBox" name="pdfMarginLeftSpin">
-              <property name="toolTip">
-               <string>Select the left margin in points (72 pt == 1&quot;)</string>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
-              <property name="maximum">
-               <number>288</number>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
               </property>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QSpinBox" name="pdfMarginRightSpin">
-              <property name="toolTip">
-               <string>Select the right margin in points (72 pt == 1&quot;)</string>
-              </property>
-              <property name="maximum">
-               <number>288</number>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QSpinBox" name="pdfMarginBottomSpin">
-              <property name="toolTip">
-               <string>Select the bottom margin in points (72 pt == 1&quot;)</string>
-              </property>
-              <property name="maximum">
-               <number>288</number>
-              </property>
-             </widget>
+             </spacer>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
+          </item>
+         </layout>
+        </widget>
        </item>
-       <item row="4" column="1">
+       <item>
         <spacer>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -332,58 +371,70 @@
       </layout>
      </widget>
      <widget class="QWidget" name="rtfPage">
-      <layout class="QVBoxLayout">
-       <property name="margin">
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
         <number>0</number>
        </property>
        <item>
-        <widget class="QCheckBox" name="rtfWysiwygCheckBox">
-         <property name="toolTip">
-          <string>Select to export in WYSIWYG mode</string>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string/>
          </property>
-         <property name="text">
-          <string>Use WYSIWYG mode</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout">
-         <item>
-          <widget class="QPushButton" name="rtfFontButton">
-           <property name="toolTip">
-            <string>Press to select the font for the RTF export</string>
-           </property>
-           <property name="text">
-            <string>Select Font</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="rtfFontSample">
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="text">
-            <string>Font for RTF export</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter</set>
-           </property>
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="rtfTabsCheckBox">
-         <property name="toolTip">
-          <string>Select to use tabs in the generated file</string>
-         </property>
-         <property name="text">
-          <string>Use tabs</string>
-         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QCheckBox" name="rtfWysiwygCheckBox">
+            <property name="toolTip">
+             <string>Select to export in WYSIWYG mode</string>
+            </property>
+            <property name="text">
+             <string>Use WYSIWYG mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QPushButton" name="rtfFontButton">
+              <property name="toolTip">
+               <string>Press to select the font for the RTF export</string>
+              </property>
+              <property name="text">
+               <string>Select Font</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="rtfFontSample">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Font for RTF export</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="rtfTabsCheckBox">
+            <property name="toolTip">
+             <string>Select to use tabs in the generated file</string>
+            </property>
+            <property name="text">
+             <string>Use tabs</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -402,28 +453,40 @@
       </layout>
      </widget>
      <widget class="QWidget" name="texPage">
-      <layout class="QVBoxLayout">
-       <property name="margin">
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
         <number>0</number>
        </property>
        <item>
-        <widget class="QCheckBox" name="texStylesCheckBox">
-         <property name="toolTip">
-          <string>Select to include only used styles</string>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string/>
          </property>
-         <property name="text">
-          <string>Include only used styles</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="texTitleCheckBox">
-         <property name="toolTip">
-          <string>Select to use the full pathname as the document title</string>
-         </property>
-         <property name="text">
-          <string>Use full pathname as document title</string>
-         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QCheckBox" name="texStylesCheckBox">
+            <property name="toolTip">
+             <string>Select to include only used styles</string>
+            </property>
+            <property name="text">
+             <string>Include only used styles</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="texTitleCheckBox">
+            <property name="toolTip">
+             <string>Select to use the full pathname as the document title</string>
+            </property>
+            <property name="text">
+             <string>Use full pathname as document title</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
