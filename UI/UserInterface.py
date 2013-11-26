@@ -3026,6 +3026,8 @@ class UserInterface(E5MainWindow):
     def __hasErrorLog(self):
         """
         Private method to check, if an error log file exists.
+        
+        @return flag indicating the existence of an error log file (boolean)
         """
         logFile = os.path.join(Utilities.getConfigDir(),
                                self.ErrorLogFileName)
@@ -5787,7 +5789,8 @@ class UserInterface(E5MainWindow):
                         if period == 2 and lastCheck.day() == now.day():
                             # daily
                             return
-                        elif period == 3 and lastCheck.daysTo(now) < 7:
+                        elif (period == 3 and
+                              lastCheck.weekNumber() == now.weekNumber()):
                             # weekly
                             return
                         elif period == 4 and lastCheck.month() == now.month():
