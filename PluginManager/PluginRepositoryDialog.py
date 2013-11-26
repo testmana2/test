@@ -13,7 +13,7 @@ import os
 import zipfile
 
 from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, \
-    QProcess
+    QProcess, QDate
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
     QTreeWidgetItem, QDialog, QVBoxLayout
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
@@ -212,6 +212,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param filename full path of the downloaded file (string)
         """
         self.__populateList()
+        Preferences.Prefs.settings.setValue(
+            "Updates/LastCheckDate", QDate.currentDate())
     
     def __downloadPluginDone(self, status, filename):
         """

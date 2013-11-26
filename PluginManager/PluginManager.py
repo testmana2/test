@@ -10,11 +10,21 @@ Module implementing the Plugin Manager.
 import os
 import sys
 import imp
+import zipfile
 
-from PyQt4.QtCore import pyqtSignal, QObject
+from PyQt4.QtCore import pyqtSignal, QObject, QDate, QFile, QUrl, QIODevice
 from PyQt4.QtGui import QPixmap
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
+    QNetworkReply
 
 from E5Gui import E5MessageBox
+
+from E5Network.E5NetworkProxyFactory import proxyAuthenticationRequired
+try:
+    from E5Network.E5SslErrorHandler import E5SslErrorHandler
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from .PluginExceptions import PluginPathError, PluginModulesError, \
     PluginLoadError, PluginActivationError, PluginModuleFormatError, \
@@ -117,6 +127,18 @@ class PluginManager(QObject):
             self.__loadPlugins()
         
         self.__checkPluginsDownloadDirectory()
+        
+        self.pluginRepositoryFile = \
+            os.path.join(Utilities.getConfigDir(), "PluginRepository")
+        
+        # attributes for the network objects
+        self.__networkManager = QNetworkAccessManager(self)
+        self.__networkManager.proxyAuthenticationRequired.connect(
+            proxyAuthenticationRequired)
+        if SSL_AVAILABLE:
+            self.__sslErrorHandler = E5SslErrorHandler(self)
+            self.__networkManager.sslErrors.connect(self.__sslErrors)
+        self.__replies = []
     
     def finalizeSetup(self):
         """
@@ -1015,3 +1037,142 @@ class PluginManager(QObject):
         Public slot to react to changes in configuration.
         """
         self.__checkPluginsDownloadDirectory()
+    
+    ########################################################################
+    ## Methods for automatic plug-in update check below
+    ########################################################################
+    
+    def checkPluginUpdatesAvailable(self):
+        """
+        Public method to check the availability of updates of plug-ins.
+        """
+        period = Preferences.getPluginManager("UpdatesCheckInterval")
+        if period == 0:
+            return
+        elif period in [2, 3, 4]:
+            lastCheck = Preferences.Prefs.settings.value(
+                "PluginUpdates/LastCheckDate", QDate(1970, 1, 1))
+            if lastCheck.isValid():
+                now = QDate.currentDate()
+                if period == 2 and lastCheck.day() == now.day():
+                    # daily
+                    return
+                elif period == 3 and lastCheck.daysTo(now) < 7:
+                    # weekly
+                    return
+                elif period == 4 and lastCheck.month() == now.month():
+                    # monthly
+                    return
+        
+        self.__updateAvailable = False
+        
+        request = QNetworkRequest(
+            QUrl(Preferences.getUI("PluginRepositoryUrl5")))
+        request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                             QNetworkRequest.AlwaysNetwork)
+        reply = self.__networkManager.get(request)
+        reply.finished[()].connect(self.__downloadFileDone)
+        reply.downloadProgress.connect(self.__downloadRepositoryFileDone)
+        self.__replies.append(reply)
+    
+    def __downloadRepositoryFileDone(self):
+        """
+        Private method called after the repository file was downloaded.
+        """
+        reply = self.sender()
+        if reply in self.__replies:
+            self.__replies.remove(reply)
+        if reply.error() != QNetworkReply.NoError:
+            E5MessageBox.warning(
+                None,
+                self.trUtf8("Error downloading file"),
+                self.trUtf8(
+                    """<p>Could not download the requested file"""
+                    """ from {0}.</p><p>Error: {1}</p>"""
+                ).format(Preferences.getUI("PluginRepositoryUrl5"),
+                         reply.errorString())
+            )
+            return
+        
+        ioDevice = QFile(self.pluginRepositoryFile + ".tmp")
+        ioDevice.open(QIODevice.WriteOnly)
+        ioDevice.write(reply.readAll())
+        ioDevice.close()
+        if QFile.exists(self.pluginRepositoryFile):
+            QFile.remove(self.pluginRepositoryFile)
+        ioDevice.rename(self.pluginRepositoryFile)
+        
+        if os.path.exists(self.pluginRepositoryFile):
+            f = QFile(self.pluginRepositoryFile)
+            if f.open(QIODevice.ReadOnly):
+                from E5XML.PluginRepositoryReader import PluginRepositoryReader
+                reader = PluginRepositoryReader(f, self)
+                reader.readXML()
+                url = Preferences.getUI("PluginRepositoryUrl5")
+                if url != self.repositoryUrlEdit.text():
+                    self.checkPluginUpdatesAvailable()
+                    return
+                Preferences.Prefs.settings.setValue(
+                    "Updates/LastCheckDate", QDate.currentDate())
+                
+                if self.__updateAvailable:
+                    E5MessageBox.information(
+                        None,
+                        self.trUtf8("New plugin versions available"),
+                        self.trUtf8("<p>There are new plugins or plugin"
+                                    " updates available. Use the plugin"
+                                    " repository dialog to get them.</p>")
+                    )
+    
+    def addEntry(self, name, short, description, url, author, version,
+                 filename, status):
+        """
+        Public method to add an entry to the list.
+        
+        @param name data for the name field (string)
+        @param short data for the short field (string)
+        @param description data for the description field (list of strings)
+        @param url data for the url field (string)
+        @param author data for the author field (string)
+        @param version data for the version field (string)
+        @param filename data for the filename field (string)
+        @param status status of the plugin (string [stable, unstable, unknown])
+        """
+        archive = os.path.join(Preferences.getPluginManager("DownloadPath"),
+                               filename)
+
+        # check, if the archive exists
+        if not os.path.exists(archive) and \
+                not Preferences.getPluginManager("CheckInstalledOnly"):
+            self.__updateAvailable = True
+            return
+        
+        # check, if the archive is a valid zip file
+        if not zipfile.is_zipfile(archive) and \
+                not Preferences.getPluginManager("CheckInstalledOnly"):
+            self.__updateAvailable = True
+            return
+        
+        zip = zipfile.ZipFile(archive, "r")
+        try:
+            aversion = zip.read("VERSION").decode("utf-8")
+        except KeyError:
+            aversion = ""
+        zip.close()
+        
+        if aversion != version:
+            self.__updateAvailable = True
+    
+    def __sslErrors(self, reply, errors):
+        """
+        Private slot to handle SSL errors.
+        
+        @param reply reference to the reply object (QNetworkReply)
+        @param errors list of SSL errors (list of QSslError)
+        """
+        ignored = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
+        if ignored == E5SslErrorHandler.NotIgnored:
+            self.__downloadCancelled = True
+    
+    # TODO: test this stuff
+    # TODO: update the config page

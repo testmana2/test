@@ -953,7 +953,13 @@ class Prefs(object):
     # defaults for plugin manager related stuff
     pluginManagerDefaults = {
         "ActivateExternal": True,
-        "DownloadPath": ""
+        "DownloadPath": "",
+        "UpdatesCheckInterval": 3,
+        # 0 = off
+        # 1 = daily
+        # 2 = weekly
+        # 3 = monthly
+        "CheckInstalledOnly": True,
     }
     
     # defaults for the printer settings
@@ -2611,6 +2617,9 @@ def getPluginManager(key, prefClass=Prefs):
     if key in ["DownloadPath"]:
         return prefClass.settings.value(
             "PluginManager/" + key, prefClass.pluginManagerDefaults[key])
+    elif key in ["UpdatesCheckInterval"]:
+        return int(prefClass.settings.value(
+            "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
     else:
         return toBool(prefClass.settings.value(
             "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
