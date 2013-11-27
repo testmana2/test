@@ -5616,6 +5616,12 @@ class UserInterface(E5MainWindow):
         Private slot to show the plugin manager configuration page.
         """
         self.showPreferences("pluginManagerPage")
+        
+    def checkPluginUpdatesAvailable(self):
+        """
+        Public method to check the availability of updates of plug-ins.
+        """
+        self.pluginManager.checkPluginUpdatesAvailable()
     
     #################################################################
     ## Drag and Drop Support
@@ -5807,8 +5813,8 @@ class UserInterface(E5MainWindow):
             if self.__versionCheckProgress is None:
                 self.__versionCheckProgress = E5ProgressDialog(
                     "", self.trUtf8("&Cancel"),
-                    0,  len(self.__httpAlternatives),
-                    self.trUtf8("%v/%m"),  self)
+                    0, len(self.__httpAlternatives),
+                    self.trUtf8("%v/%m"), self)
                 self.__versionCheckProgress.setMinimumDuration(0)
                 self.__versionCheckProgress.canceled.connect(
                     self.__versionsDownloadCanceled)

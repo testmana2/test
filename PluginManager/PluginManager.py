@@ -12,7 +12,8 @@ import sys
 import imp
 import zipfile
 
-from PyQt4.QtCore import pyqtSignal, QObject, QDate, QFile, QUrl, QIODevice
+from PyQt4.QtCore import pyqtSignal, QObject, QDate, QFile, QFileInfo, QUrl, \
+    QIODevice
 from PyQt4.QtGui import QPixmap
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
     QNetworkReply
@@ -190,7 +191,7 @@ class PluginManager(QObject):
             fname = os.path.join(self.pluginDirs["user"], "__init__.py")
             if not os.path.exists(fname):
                 if not os.path.exists(self.pluginDirs["user"]):
-                    os.mkdir(self.pluginDirs["user"],  0o755)
+                    os.mkdir(self.pluginDirs["user"], 0o755)
                 try:
                     f = open(fname, "w")
                     f.close()
@@ -363,7 +364,7 @@ class PluginManager(QObject):
             module.error = self.trUtf8(
                 "Module failed to load. Error: {0}").format(str(err))
             self.__failedModules[name] = module
-            print("Error loading plugin module:",  name)
+            print("Error loading plugin module:", name)
             print(str(err))
     
     def unloadPlugin(self, name):
@@ -682,29 +683,29 @@ class PluginManager(QObject):
         infos = []
         
         for name in list(self.__activeModules.keys()):
-            pname,  shortDesc, error, version = \
+            pname, shortDesc, error, version = \
                 self.__getShortInfo(self.__activeModules[name])
-            infos.append((name,  pname, version, True, True, shortDesc, error))
+            infos.append((name, pname, version, True, True, shortDesc, error))
         for name in list(self.__inactiveModules.keys()):
-            pname,  shortDesc, error, version = \
+            pname, shortDesc, error, version = \
                 self.__getShortInfo(self.__inactiveModules[name])
             infos.append(
-                (name,  pname, version, True, False, shortDesc, error))
+                (name, pname, version, True, False, shortDesc, error))
         for name in list(self.__onDemandActiveModules.keys()):
-            pname,  shortDesc, error, version = \
+            pname, shortDesc, error, version = \
                 self.__getShortInfo(self.__onDemandActiveModules[name])
             infos.append(
-                (name,  pname, version, False, True, shortDesc, error))
+                (name, pname, version, False, True, shortDesc, error))
         for name in list(self.__onDemandInactiveModules.keys()):
-            pname,  shortDesc, error, version = \
+            pname, shortDesc, error, version = \
                 self.__getShortInfo(self.__onDemandInactiveModules[name])
             infos.append(
-                (name,  pname, version, False, False, shortDesc, error))
+                (name, pname, version, False, False, shortDesc, error))
         for name in list(self.__failedModules.keys()):
-            pname,  shortDesc, error, version = \
+            pname, shortDesc, error, version = \
                 self.__getShortInfo(self.__failedModules[name])
             infos.append(
-                (name,  pname, version, False, False, shortDesc, error))
+                (name, pname, version, False, False, shortDesc, error))
         return infos
     
     def __getShortInfo(self, module):
@@ -1050,17 +1051,17 @@ class PluginManager(QObject):
         if period == 0:
             return
         elif period in [2, 3, 4]:
-            lastCheck = Preferences.Prefs.settings.value(
-                "PluginUpdates/LastCheckDate", QDate(1970, 1, 1))
-            if lastCheck.isValid():
+            lastModified = QFileInfo(self.pluginRepositoryFile).lastModified()
+            if lastModified.isValid() and lastModified.date().isValid():
+                lastModifiedDate = lastModified.date()
                 now = QDate.currentDate()
-                if period == 2 and lastCheck.day() == now.day():
+                if period == 2 and lastModifiedDate.day() == now.day():
                     # daily
                     return
-                elif period == 3 and lastCheck.daysTo(now) < 7:
+                elif period == 3 and lastModifiedDate.daysTo(now) < 7:
                     # weekly
                     return
-                elif period == 4 and lastCheck.month() == now.month():
+                elif period == 4 and lastModifiedDate.month() == now.month():
                     # monthly
                     return
         
@@ -1071,8 +1072,7 @@ class PluginManager(QObject):
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
         reply = self.__networkManager.get(request)
-        reply.finished[()].connect(self.__downloadFileDone)
-        reply.downloadProgress.connect(self.__downloadRepositoryFileDone)
+        reply.finished[()].connect(self.__downloadRepositoryFileDone)
         self.__replies.append(reply)
     
     def __downloadRepositoryFileDone(self):
@@ -1105,29 +1105,31 @@ class PluginManager(QObject):
         if os.path.exists(self.pluginRepositoryFile):
             f = QFile(self.pluginRepositoryFile)
             if f.open(QIODevice.ReadOnly):
-                from E5XML.PluginRepositoryReader import PluginRepositoryReader
-                reader = PluginRepositoryReader(f, self)
-                reader.readXML()
+                # save current URL
                 url = Preferences.getUI("PluginRepositoryUrl5")
-                if url != self.repositoryUrlEdit.text():
+                
+                # read the repository file
+                from E5XML.PluginRepositoryReader import PluginRepositoryReader
+                reader = PluginRepositoryReader(f, self.checkPluginEntry)
+                reader.readXML()
+                if url != Preferences.getUI("PluginRepositoryUrl5"):
+                    # redo if it is a redirect
                     self.checkPluginUpdatesAvailable()
                     return
-                Preferences.Prefs.settings.setValue(
-                    "Updates/LastCheckDate", QDate.currentDate())
                 
                 if self.__updateAvailable:
                     E5MessageBox.information(
                         None,
                         self.trUtf8("New plugin versions available"),
-                        self.trUtf8("<p>There are new plugins or plugin"
-                                    " updates available. Use the plugin"
+                        self.trUtf8("<p>There are new plug-ins or plug-in"
+                                    " updates available. Use the plug-in"
                                     " repository dialog to get them.</p>")
                     )
     
-    def addEntry(self, name, short, description, url, author, version,
-                 filename, status):
+    def checkPluginEntry(self, name, short, description, url, author, version,
+                         filename, status):
         """
-        Public method to add an entry to the list.
+        Public method to check a plug-in's data for an update.
         
         @param name data for the name field (string)
         @param short data for the short field (string)
@@ -1140,17 +1142,19 @@ class PluginManager(QObject):
         """
         archive = os.path.join(Preferences.getPluginManager("DownloadPath"),
                                filename)
-
+        
+        # TODO: change logic for installed only check to check against loaded plugins
+        
         # check, if the archive exists
-        if not os.path.exists(archive) and \
-                not Preferences.getPluginManager("CheckInstalledOnly"):
-            self.__updateAvailable = True
+        if not os.path.exists(archive):
+            if not Preferences.getPluginManager("CheckInstalledOnly"):
+                self.__updateAvailable = True
             return
         
         # check, if the archive is a valid zip file
-        if not zipfile.is_zipfile(archive) and \
-                not Preferences.getPluginManager("CheckInstalledOnly"):
-            self.__updateAvailable = True
+        if not zipfile.is_zipfile(archive):
+            if not Preferences.getPluginManager("CheckInstalledOnly"):
+                self.__updateAvailable = True
             return
         
         zip = zipfile.ZipFile(archive, "r")
@@ -1173,6 +1177,3 @@ class PluginManager(QObject):
         ignored = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
         if ignored == E5SslErrorHandler.NotIgnored:
             self.__downloadCancelled = True
-    
-    # TODO: test this stuff
-    # TODO: update the config page

@@ -66,6 +66,9 @@ ConfigurationPageBase, Ui_PluginManagerPage
 <td><a href="#PluginManagerPage.on_downloadDirButton_clicked">on_downloadDirButton_clicked</a></td>
 <td>Private slot to handle the directory selection via dialog.</td>
 </tr><tr>
+<td><a href="#PluginManagerPage.on_repositoryUrlEditButton_toggled">on_repositoryUrlEditButton_toggled</a></td>
+<td>Private slot to set the read only status of the repository URL line edit.</td>
+</tr><tr>
 <td><a href="#PluginManagerPage.save">save</a></td>
 <td>Public slot to save the Viewmanager configuration.</td>
 </tr>
@@ -84,7 +87,18 @@ ConfigurationPageBase, Ui_PluginManagerPage
 <b>on_downloadDirButton_clicked</b>(<i></i>)
 <p>
         Private slot to handle the directory selection via dialog.
-</p><a NAME="PluginManagerPage.save" ID="PluginManagerPage.save"></a>
+</p><a NAME="PluginManagerPage.on_repositoryUrlEditButton_toggled" ID="PluginManagerPage.on_repositoryUrlEditButton_toggled"></a>
+<h4>PluginManagerPage.on_repositoryUrlEditButton_toggled</h4>
+<b>on_repositoryUrlEditButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to set the read only status of the repository URL line
+        edit.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the push button (boolean)
+</dd>
+</dl><a NAME="PluginManagerPage.save" ID="PluginManagerPage.save"></a>
 <h4>PluginManagerPage.save</h4>
 <b>save</b>(<i></i>)
 <p>

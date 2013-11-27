@@ -3565,17 +3565,17 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="401"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="403"/>
         <source>Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="881"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="883"/>
         <source>Fix: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="544"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="546"/>
         <source>No issues found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5227,7 +5227,7 @@ to display the configuration page.</source>
         <translation>过滤器(&amp;w)：</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="115"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="116"/>
         <source>Create Dialog Code</source>
         <translation>创建对话框代码</translation>
     </message>
@@ -5237,7 +5237,7 @@ to display the configuration page.</source>
         <translation type="obsolete">文件 &lt;b&gt;%1&lt;/b&gt; 存在但不包含任何类。</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="328"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="329"/>
         <source>uic error</source>
         <translation>uic 错误</translation>
     </message>
@@ -5247,7 +5247,7 @@ to display the configuration page.</source>
         <translation type="obsolete">&lt;p&gt;载入窗体 &lt;b&gt;%1&lt;/b&gt;出错。&lt;/p&gt;&lt;p&gt;%2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="512"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="513"/>
         <source>Code Generation</source>
         <translation>代码生成</translation>
     </message>
@@ -5272,27 +5272,27 @@ to display the configuration page.</source>
         <translation type="obsolete">……</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="115"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="116"/>
         <source>The file &lt;b&gt;{0}&lt;/b&gt; exists but does not contain any classes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="328"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="329"/>
         <source>&lt;p&gt;There was an error loading the form &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="397"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="398"/>
         <source>&lt;p&gt;Could not open the code template file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="433"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="434"/>
         <source>&lt;p&gt;Could not open the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="512"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="513"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10936,127 +10936,127 @@ whole selection.&lt;/li&gt;
         <translation>选择要配置的输出器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="342"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="390"/>
         <source>Select to export in WYSIWYG mode</source>
         <translation>选择以所见即所得方式进行导出</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="345"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="393"/>
         <source>Use WYSIWYG mode</source>
         <translation>使用所见即所得模式</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="97"/>
         <source>Select to include folding functionality</source>
         <translation>选择包含折叠功能</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="91"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="100"/>
         <source>Include folding functionality</source>
         <translation>包含折叠功能</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="412"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="472"/>
         <source>Select to include only used styles</source>
         <translation>选择只包含已使用的风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="415"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="475"/>
         <source>Include only used styles</source>
         <translation>仅包含已使用的风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="422"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="482"/>
         <source>Select to use the full pathname as the document title</source>
         <translation>选择使用全路径名作为文档标题</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="425"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="485"/>
         <source>Use full pathname as document title</source>
         <translation>使用全路径名作为文档标题</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="430"/>
         <source>Select to use tabs in the generated file</source>
         <translation>选择在产生的文件中使用制表符</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="433"/>
         <source>Use tabs</source>
         <translation>使用制表符</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="195"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="231"/>
         <source>Magnification:</source>
         <translation>缩放比例：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="202"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="238"/>
         <source>Select the magnification value to be added to the font sizes of the styles</source>
         <translation>选择要添加到风格的字体大小中的缩放值</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="215"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="251"/>
         <source>Displays the selected magnification value</source>
         <translation>显示已选缩放值</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="228"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="264"/>
         <source>Font:</source>
         <translation>字体：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="271"/>
         <source>Select the font from the list</source>
         <translation>从列表中选择字体</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="242"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="278"/>
         <source>Pagesize:</source>
         <translation>页面尺寸：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="249"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="285"/>
         <source>Select the page size from the list</source>
         <translation>从列表中选择页面尺寸</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="258"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="294"/>
         <source>Margins</source>
         <translation>页边空白</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="300"/>
         <source>Select the top margin in points (72 pt == 1&quot;)</source>
         <translation>以像素点选择顶部页边距（72 pt == 1&quot;）</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="274"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="310"/>
         <source>Select the left margin in points (72 pt == 1&quot;)</source>
         <translation>以像素点选择左边页边距（72 pt == 1&quot;）</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="284"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="320"/>
         <source>Select the right margin in points (72 pt == 1&quot;)</source>
         <translation>以像素点选择右边页边距（72 pt == 1&quot;）</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="294"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="330"/>
         <source>Select the bottom margin in points (72 pt == 1&quot;)</source>
         <translation>以像素点选择底部页边距（72 pt == 1&quot;）</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="354"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="402"/>
         <source>Press to select the font for the RTF export</source>
         <translation>点击为 RTF 导出选择字体</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="405"/>
         <source>Select Font</source>
         <translation>选择字体</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="367"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="415"/>
         <source>Font for RTF export</source>
         <translation>RTF 导出的字体</translation>
     </message>
@@ -13541,177 +13541,177 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EditorTypingPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="19"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="20"/>
         <source>&lt;b&gt;Configure typing&lt;/b&gt;</source>
         <translation>&lt;b&gt;配置输入&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="45"/>
         <source>Programming Language:</source>
         <translation>编程语言：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="61"/>
         <source>Select the programming language to be configured.</source>
         <translation>选择要配置的编程语言。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="87"/>
         <source>Select to enable Python typing aids</source>
         <translation>选择开启 Python 输入辅助</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="90"/>
         <source>Enable Python typing aids</source>
         <translation>开启 Python 输入辅助</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="325"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="332"/>
         <source>Select to insert a closing parenthesis</source>
         <translation>选择插入封闭括号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="328"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="335"/>
         <source>Automatic parenthesis insertion</source>
         <translation>自动插入括号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="335"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="342"/>
         <source>Select to skip matching braces when typing</source>
         <translation>选择在输入时跳过配对括号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="345"/>
         <source>Automatically skip matching braces when typing</source>
         <translation>输入时自动跳过配对括号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="155"/>
         <source>Select to skip a &apos;:&apos;, if typed next to another &apos;:&apos;</source>
         <translation>选择跳过“：”，如果输入的下一个符号是另一个“：”</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="158"/>
         <source>Automatic colon detection</source>
         <translation>自动检测冒号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="345"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="352"/>
         <source>Select to indent to the brace level after typing &apos;return&apos;</source>
         <translation>选择在输入“return”后缩进到括号层级</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="348"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="355"/>
         <source>After &apos;(&apos; indent to its level</source>
         <translation>在“( ”后进行缩进</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="355"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="362"/>
         <source>Select to insert the matching quote character</source>
         <translation>选择插入配对的引号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="358"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="365"/>
         <source>Automatic quote insertion</source>
         <translation>自动插入引号</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="178"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="185"/>
         <source>Select to dedent &apos;else:&apos; and &apos;elif&apos; to the matching &apos;if&apos;</source>
         <translation>选择对与“ if ”配对的“else:”和“ elif ”取消缩进</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="188"/>
         <source>Automatic dedent of &apos;else:&apos; and &apos;elif&apos;</source>
         <translation>自动取消“else:”和“ elif ”的缩进</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="188"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="195"/>
         <source>Select to dedent &apos;except&apos; and &apos;finally&apos; to the matching &apos;try:&apos;</source>
         <translation>选择对与“try:”配对的“except”和“finally”取消缩进</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="191"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="198"/>
         <source>Automatic dedent of &apos;except&apos; and &apos;finally&apos;</source>
         <translation>自动取消“except”和“finally”的缩进</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="219"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="226"/>
         <source>Select to treat code as Python 2.4 code</source>
         <translation>选择将代码看作 Python 2.4 代码</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="222"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="229"/>
         <source>Python 2.4 style &apos;try:&apos; blocks</source>
         <translation>Python 2.4 风格“try:”代码块</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="251"/>
         <source>Select to insert the &apos;import&apos; string</source>
         <translation>选择插入“import”字符串</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="254"/>
         <source>Automatic insertion of the &apos;import&apos; string on &apos;from xxx&apos;</source>
         <translation>在“from xxx”后自动插入“import”字符串</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="254"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="261"/>
         <source>Select to insert the &apos;self&apos; string when declaring a method</source>
         <translation>选择在声明方法时插入“self ”字符串</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="257"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="264"/>
         <source>Automatic insertion of &apos;self&apos; when declaring methods</source>
         <translation>在声明方法时自动插入“self ”</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="365"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="372"/>
         <source>Select to insert a blank after &apos;,&apos;</source>
         <translation>选择在“,”后插入一个空格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="368"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="375"/>
         <source>Automatic insertion of &apos; &apos; (blank) after &apos;,&apos;</source>
         <translation>在“,”后自动插入空格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="313"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="320"/>
         <source>Select to enable Ruby typing aids</source>
         <translation>选择开启 Ruby 输入辅助</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="316"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="323"/>
         <source>Enable Ruby typing aids</source>
         <translation>开启 Ruby 输入辅助</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="375"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="382"/>
         <source>Select to automatically complete a here document</source>
         <translation>选择自动完成这个文档</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="378"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="385"/>
         <source>Automatic completion of here document</source>
         <translation>自动完成这个文档</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="392"/>
         <source>Select to automatically insert &apos;=end&apos; after entering &apos;=begin&apos;</source>
         <translation>选择在输入“=begin”后自动插入“=end”</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="388"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="395"/>
         <source>Automatic insertion of &apos;=end&apos; after &apos;=begin&apos;</source>
         <translation>在“=begin”后自动插入“=end”</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="274"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="281"/>
         <source>Select to dedent &apos;def&apos; statements to the last &apos;def&apos; or &apos;class&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="277"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="284"/>
         <source>Automatic dedent of &apos;def&apos; statements</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35941,12 +35941,12 @@ Destination:
 <context>
     <name>PluginManager</name>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="317"/>
+        <location filename="../PluginManager/PluginManager.py" line="340"/>
         <source>Module is missing the &apos;autoactivate&apos; attribute.</source>
         <translation>模块丢失“autoactivate”属性。</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="327"/>
+        <location filename="../PluginManager/PluginManager.py" line="350"/>
         <source>Module is missing the &apos;pluginType&apos; and/or &apos;pluginTypename&apos; attributes.</source>
         <translation>模块丢失“pluginType”和/或“pluginTypename”属性。</translation>
     </message>
@@ -35956,12 +35956,12 @@ Destination:
         <translation type="obsolete">模块载入失败。错误： %1</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="498"/>
+        <location filename="../PluginManager/PluginManager.py" line="521"/>
         <source>Incompatible plugin activation method.</source>
         <translation>插件激活方法不兼容。</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1003"/>
+        <location filename="../PluginManager/PluginManager.py" line="1026"/>
         <source>Plugin Manager Error</source>
         <translation>插件管理错误</translation>
     </message>
@@ -35971,23 +35971,43 @@ Destination:
         <translation type="obsolete">&lt;p&gt;插件下载文件夹 &lt;b&gt;%1&lt;/b&gt; 无法创建。清通过配置对话框进行配置。&lt;/p&gt;&lt;p&gt;原因： %2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="162"/>
+        <location filename="../PluginManager/PluginManager.py" line="185"/>
         <source>Could not create a package for {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="197"/>
+        <location filename="../PluginManager/PluginManager.py" line="220"/>
         <source>The internal plugin directory &lt;b&gt;{0}&lt;/b&gt; does not exits.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="342"/>
+        <location filename="../PluginManager/PluginManager.py" line="365"/>
         <source>Module failed to load. Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1003"/>
+        <location filename="../PluginManager/PluginManager.py" line="1026"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1090"/>
+        <source>Error downloading file</source>
+        <translation type="unfinished">下载文件出错</translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1090"/>
+        <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1125"/>
+        <source>New plugin versions available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1125"/>
+        <source>&lt;p&gt;There are new plug-ins or plug-in updates available. Use the plug-in repository dialog to get them.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -35999,29 +36019,29 @@ Destination:
         <translation>&lt;b&gt;配置插件管理器&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="37"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="39"/>
         <source>Plugins download directory:</source>
         <translation>插件下载文件夹：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="46"/>
         <source>Enter the plugins download directory</source>
         <translation>输入插件下载文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
         <translation>通过文件夹选择对话框选择插件下载文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="54"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="56"/>
         <source>...</source>
         <translation>……</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following setting is activated at the next startup of the application.&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 以下设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
+        <translation type="obsolete">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 以下设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="67"/>
@@ -36034,18 +36054,98 @@ Destination:
         <translation type="obsolete">载入第三方插件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="94"/>
         <source>Select plugins download directory</source>
         <translation>选择插件下载文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
         <source>Load external plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="65"/>
+        <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="82"/>
+        <source>Check for plugin updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
+        <source>Select to disable update checking</source>
+        <translation type="unfinished">选择不进行更新检查</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="91"/>
+        <source>Never</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
+        <source>Select to check for updates once a day</source>
+        <translation type="unfinished">选择每天检查更新</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <source>Daily</source>
+        <translation type="unfinished">每天</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
+        <source>Select to check for updates once a week</source>
+        <translation type="unfinished">选择每周检查更新</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="111"/>
+        <source>Weekly</source>
+        <translation type="unfinished">每周</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
+        <source>Select to check for updates once a month</source>
+        <translation type="unfinished">选择每月检查更新</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
+        <source>Monthly</source>
+        <translation type="unfinished">每月</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="143"/>
+        <source>Repository URL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
+        <source>Shows the repository URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <source>Press to edit the plugin repository URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="163"/>
+        <source>Edit URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <source>Select to check only already installed plugins for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="134"/>
+        <source>Check only installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -36369,27 +36469,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1177"/>
+        <location filename="../Preferences/__init__.py" line="1182"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1205"/>
+        <location filename="../Preferences/__init__.py" line="1210"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1205"/>
+        <location filename="../Preferences/__init__.py" line="1210"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1304"/>
+        <location filename="../Preferences/__init__.py" line="1309"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1304"/>
+        <location filename="../Preferences/__init__.py" line="1309"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60296,7 +60396,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;脚本单元测试&lt;/b&gt;&lt;p&gt;对当前脚本运动单元测试。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4009"/>
+        <location filename="../UI/UserInterface.py" line="4011"/>
         <source>Unittest Project</source>
         <translation>项目单元测试</translation>
     </message>
@@ -60641,7 +60741,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;键盘快捷键&lt;/b&gt;&lt;p&gt;将程序的键盘快捷键设置成你喜欢的按键。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5259"/>
+        <location filename="../UI/UserInterface.py" line="5261"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>导出键盘快捷键</translation>
     </message>
@@ -60661,7 +60761,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;导出键盘快捷键&lt;/b&gt;&lt;p&gt;导出程序的键盘快捷键。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5283"/>
+        <location filename="../UI/UserInterface.py" line="5285"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>导入键盘快捷键</translation>
     </message>
@@ -60971,7 +61071,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4259"/>
+        <location filename="../UI/UserInterface.py" line="4261"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
@@ -61071,7 +61171,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;tr&gt;&lt;td&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;%2&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6019"/>
+        <location filename="../UI/UserInterface.py" line="6028"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -61081,52 +61181,52 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>电子邮件地址或邮件服务器地址为空。请在参数选择对话框中配置你的电子邮件设置。</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3241"/>
+        <location filename="../UI/UserInterface.py" line="3243"/>
         <source>Restart application</source>
         <translation>重启程序</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3241"/>
+        <location filename="../UI/UserInterface.py" line="3243"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>程序需要重启。现在重启？</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3275"/>
+        <location filename="../UI/UserInterface.py" line="3277"/>
         <source>Configure Tool Groups ...</source>
         <translation>配置工具组……</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3279"/>
+        <location filename="../UI/UserInterface.py" line="3281"/>
         <source>Configure current Tool Group ...</source>
         <translation>配置当前工具组……</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3329"/>
+        <location filename="../UI/UserInterface.py" line="3331"/>
         <source>&amp;Builtin Tools</source>
         <translation>内建工具(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3337"/>
+        <location filename="../UI/UserInterface.py" line="3339"/>
         <source>&amp;Plugin Tools</source>
         <translation>插件工具(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3427"/>
+        <location filename="../UI/UserInterface.py" line="3429"/>
         <source>&amp;Show all</source>
         <translation>全部显示(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3429"/>
+        <location filename="../UI/UserInterface.py" line="3431"/>
         <source>&amp;Hide all</source>
         <translation>全部隐藏(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4009"/>
+        <location filename="../UI/UserInterface.py" line="4011"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>当前项目未定义主脚本。终止</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4380"/>
+        <location filename="../UI/UserInterface.py" line="4382"/>
         <source>Problem</source>
         <translation>问题</translation>
     </message>
@@ -61136,7 +61236,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;文件 &lt;b&gt;%1&lt;/b&gt; 不存在或长度为零。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4549"/>
+        <location filename="../UI/UserInterface.py" line="4551"/>
         <source>Process Generation Error</source>
         <translation>进程生成错误</translation>
     </message>
@@ -61156,17 +61256,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法开启 Qt 助手。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5085"/>
+        <location filename="../UI/UserInterface.py" line="5087"/>
         <source>Open Browser</source>
         <translation type="unfinished">打开浏览器</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5085"/>
+        <location filename="../UI/UserInterface.py" line="5087"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished">无法启动网络浏览器</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4259"/>
+        <location filename="../UI/UserInterface.py" line="4261"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>目前没有选择自定义浏览器。请使用参数选择对话框指定一个。</translation>
     </message>
@@ -61176,7 +61276,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法开启自定义浏览器。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4293"/>
+        <location filename="../UI/UserInterface.py" line="4295"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;无法开启帮助浏览器。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
@@ -61191,7 +61291,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法开启翻译预览器。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4494"/>
+        <location filename="../UI/UserInterface.py" line="4496"/>
         <source>External Tools</source>
         <translation>外部工具</translation>
     </message>
@@ -61225,7 +61325,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4992"/>
+        <location filename="../UI/UserInterface.py" line="4994"/>
         <source>Documentation Missing</source>
         <translation>文档丢失</translation>
     </message>
@@ -61235,12 +61335,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;未找到文档起点“&lt;b&gt;%1&lt;/b&gt;”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4976"/>
+        <location filename="../UI/UserInterface.py" line="4978"/>
         <source>Documentation</source>
         <translation>文档</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4818"/>
+        <location filename="../UI/UserInterface.py" line="4820"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;未配置 PyQt4 文档起点。&lt;/p&gt;</translation>
     </message>
@@ -61265,7 +61365,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Eric4 键盘快捷键文件 (*.e4k *.e4kz);;Eric3 键盘快捷键文件 (*.e3k *.e3kz)</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5418"/>
+        <location filename="../UI/UserInterface.py" line="5420"/>
         <source>Save tasks</source>
         <translation>保存任务</translation>
     </message>
@@ -61275,7 +61375,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法写入任务文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5444"/>
+        <location filename="../UI/UserInterface.py" line="5446"/>
         <source>Read tasks</source>
         <translation>读取任务</translation>
     </message>
@@ -61290,7 +61390,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;不支持任务文件 &lt;b&gt;%1&lt;/b&gt; 的格式。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5462"/>
+        <location filename="../UI/UserInterface.py" line="5464"/>
         <source>Save session</source>
         <translation>保存会话</translation>
     </message>
@@ -61300,7 +61400,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;会话文件 &lt;b&gt;%1&lt;/b&gt; 无法写入。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5490"/>
+        <location filename="../UI/UserInterface.py" line="5492"/>
         <source>Read session</source>
         <translation>读取会话</translation>
     </message>
@@ -61315,7 +61415,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;不支持会话文件 &lt;b&gt;%1&lt;/b&gt; 的格式。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5673"/>
+        <location filename="../UI/UserInterface.py" line="5681"/>
         <source>Drop Error</source>
         <translation>降落误差</translation>
     </message>
@@ -61325,7 +61425,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; 不是一个文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5982"/>
+        <location filename="../UI/UserInterface.py" line="5991"/>
         <source>Error during updates check</source>
         <translation>检查更新时出错</translation>
     </message>
@@ -61335,7 +61435,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">代理使用被激活但是没有配置代理主机。</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5814"/>
+        <location filename="../UI/UserInterface.py" line="5823"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -61355,7 +61455,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">无法下载版本文件。</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5962"/>
+        <location filename="../UI/UserInterface.py" line="5971"/>
         <source>Update available</source>
         <translation>可用更新</translation>
     </message>
@@ -61375,12 +61475,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">当前使用的是 Eric4 最新的版本</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5982"/>
+        <location filename="../UI/UserInterface.py" line="5991"/>
         <source>Could not perform updates check.</source>
         <translation>无法完成更新检查。</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6005"/>
+        <location filename="../UI/UserInterface.py" line="6014"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;可用版本&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -61405,7 +61505,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;SSL 错误：&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;要忽略这些错误吗？&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6046"/>
+        <location filename="../UI/UserInterface.py" line="6055"/>
         <source>First time usage</source>
         <translation>第一次使用</translation>
     </message>
@@ -61495,12 +61595,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4206"/>
+        <location filename="../UI/UserInterface.py" line="4208"/>
         <source>Qt 3 support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4976"/>
+        <location filename="../UI/UserInterface.py" line="4978"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61580,129 +61680,129 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4206"/>
+        <location filename="../UI/UserInterface.py" line="4208"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4380"/>
+        <location filename="../UI/UserInterface.py" line="4382"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4115"/>
+        <location filename="../UI/UserInterface.py" line="4117"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4182"/>
+        <location filename="../UI/UserInterface.py" line="4184"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4231"/>
+        <location filename="../UI/UserInterface.py" line="4233"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4273"/>
+        <location filename="../UI/UserInterface.py" line="4275"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4339"/>
+        <location filename="../UI/UserInterface.py" line="4341"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4391"/>
+        <location filename="../UI/UserInterface.py" line="4393"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4412"/>
+        <location filename="../UI/UserInterface.py" line="4414"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4485"/>
+        <location filename="../UI/UserInterface.py" line="4487"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4494"/>
+        <location filename="../UI/UserInterface.py" line="4496"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4533"/>
+        <location filename="../UI/UserInterface.py" line="4535"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4549"/>
+        <location filename="../UI/UserInterface.py" line="4551"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4625"/>
+        <location filename="../UI/UserInterface.py" line="4627"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4992"/>
+        <location filename="../UI/UserInterface.py" line="4994"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5418"/>
+        <location filename="../UI/UserInterface.py" line="5420"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5444"/>
+        <location filename="../UI/UserInterface.py" line="5446"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5462"/>
+        <location filename="../UI/UserInterface.py" line="5464"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5490"/>
+        <location filename="../UI/UserInterface.py" line="5492"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5673"/>
+        <location filename="../UI/UserInterface.py" line="5681"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5821"/>
+        <location filename="../UI/UserInterface.py" line="5830"/>
         <source>Trying host {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5962"/>
+        <location filename="../UI/UserInterface.py" line="5971"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5975"/>
+        <location filename="../UI/UserInterface.py" line="5984"/>
         <source>Eric5 is up to date</source>
         <translation type="unfinished">Eric4 已是最新版本 {5 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5975"/>
+        <location filename="../UI/UserInterface.py" line="5984"/>
         <source>You are using the latest version of eric5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6046"/>
+        <location filename="../UI/UserInterface.py" line="6055"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation type="unfinished">尚未配置 Eric4。将打开配置对话框。 {5 ?}</translation>
     </message>
@@ -61737,7 +61837,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5283"/>
+        <location filename="../UI/UserInterface.py" line="5285"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61777,17 +61877,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5872"/>
+        <location filename="../UI/UserInterface.py" line="5881"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5865"/>
+        <location filename="../UI/UserInterface.py" line="5874"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5872"/>
+        <location filename="../UI/UserInterface.py" line="5881"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61898,12 +61998,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4464"/>
+        <location filename="../UI/UserInterface.py" line="4466"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6065"/>
+        <location filename="../UI/UserInterface.py" line="6074"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62288,7 +62388,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;PyQt4 文档&lt;/b&gt;&lt;p&gt;显示 PyQt4 文档。根据你的设置，显示 Eric 的联机帮助浏览器中的帮助，或者执行网络浏览器或 Qt 助手。&lt;/p&gt; {5 ?} {5 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4879"/>
+        <location filename="../UI/UserInterface.py" line="4881"/>
         <source>&lt;p&gt;The PyQt5 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;未配置 PyQt4 文档起点。&lt;/p&gt; {5 ?}</translation>
     </message>
@@ -62323,7 +62423,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5814"/>
+        <location filename="../UI/UserInterface.py" line="5823"/>
         <source>%v/%m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -67534,12 +67634,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">正在导入程序包……</translation>
     </message>
     <message>
-        <location filename="../eric5.py" line="263"/>
+        <location filename="../eric5.py" line="264"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">正在产生主窗口……</translation>
     </message>
     <message>
-        <location filename="../eric5.py" line="258"/>
+        <location filename="../eric5.py" line="259"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -41,6 +41,22 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.downloadDirEdit.setText(
             Preferences.getPluginManager("DownloadPath"))
         
+        period = Preferences.getPluginManager("UpdatesCheckInterval")
+        if period == 0:
+            self.noCheckRadioButton.setChecked(True)
+        elif period == 1:
+            self.dailyCheckRadioButton.setChecked(True)
+        elif period == 2:
+            self.weeklyCheckRadioButton.setChecked(True)
+        elif period == 3:
+            self.monthlyCheckRadioButton.setChecked(True)
+        
+        self.downloadedOnlyCheckBox.setChecked(
+            Preferences.getPluginManager("CheckInstalledOnly"))
+        
+        self.__repositoryUrl = Preferences.getUI("PluginRepositoryUrl5")
+        self.repositoryUrlEdit.setText(self.__repositoryUrl)
+    
     def save(self):
         """
         Public slot to save the Viewmanager configuration.
@@ -51,6 +67,24 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         Preferences.setPluginManager(
             "DownloadPath",
             self.downloadDirEdit.text())
+        
+        if self.noCheckRadioButton.isChecked():
+            period = 0
+        elif self.dailyCheckRadioButton.isChecked():
+            period = 1
+        elif self.weeklyCheckRadioButton.isChecked():
+            period = 2
+        elif self.monthlyCheckRadioButton.isChecked():
+            period = 3
+        Preferences.setPluginManager("UpdatesCheckInterval", period)
+        
+        Preferences.setPluginManager(
+            "CheckInstalledOnly",
+            self.downloadedOnlyCheckBox.isChecked())
+        
+        if self.repositoryUrlEdit.text() != self.__repositoryUrl:
+            Preferences.setUI(
+                "PluginRepositoryUrl5", self.repositoryUrlEdit.text())
     
     @pyqtSlot()
     def on_downloadDirButton_clicked(self):
@@ -68,6 +102,16 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
             while dn.endswith(os.sep):
                 dn = dn[:-1]
             self.downloadDirEdit.setText(dn)
+    
+    @pyqtSlot(bool)
+    def on_repositoryUrlEditButton_toggled(self, checked):
+        """
+        Private slot to set the read only status of the repository URL line
+        edit.
+        
+        @param checked state of the push button (boolean)
+        """
+        self.repositoryUrlEdit.setReadOnly(not checked)
     
 
 def create(dlg):

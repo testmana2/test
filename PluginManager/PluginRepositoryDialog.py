@@ -13,7 +13,7 @@ import os
 import zipfile
 
 from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, \
-    QProcess, QDate
+    QProcess
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
     QTreeWidgetItem, QDialog, QVBoxLayout
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
@@ -212,8 +212,6 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param filename full path of the downloaded file (string)
         """
         self.__populateList()
-        Preferences.Prefs.settings.setValue(
-            "Updates/LastCheckDate", QDate.currentDate())
     
     def __downloadPluginDone(self, status, filename):
         """
@@ -316,7 +314,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             f = QFile(self.pluginRepositoryFile)
             if f.open(QIODevice.ReadOnly):
                 from E5XML.PluginRepositoryReader import PluginRepositoryReader
-                reader = PluginRepositoryReader(f, self)
+                reader = PluginRepositoryReader(f, self.addEntry)
                 reader.readXML()
                 self.repositoryList.resizeColumnToContents(0)
                 self.repositoryList.resizeColumnToContents(1)

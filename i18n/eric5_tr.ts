@@ -3492,17 +3492,17 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="401"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="403"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Hata: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="881"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="883"/>
         <source>Fix: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="544"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="546"/>
         <source>No issues found.</source>
         <translation type="unfinished">Sorun bulunamadı.</translation>
     </message>
@@ -5137,42 +5137,42 @@ göstermek için gelen listeyi seçiniz.</translation>
         <translation>Bunun&amp;la Filtrele:</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="115"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="116"/>
         <source>Create Dialog Code</source>
         <translation>Diyalog Kodunu Oluştur</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="115"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="116"/>
         <source>The file &lt;b&gt;{0}&lt;/b&gt; exists but does not contain any classes.</source>
         <translation>&lt;b&gt;{0}&lt;/b&gt; dosyası mevcut ama hiçbir sınıf barındırmıyor.</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="328"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="329"/>
         <source>uic error</source>
         <translation>uic hatası</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="328"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="329"/>
         <source>&lt;p&gt;There was an error loading the form &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1} formlarını yüklerken hata meydana geldi&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="512"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="513"/>
         <source>Code Generation</source>
         <translation>Kod üretici</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="397"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="398"/>
         <source>&lt;p&gt;Could not open the code template file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kod şablon dosyası &quot;{0}&quot; açılamıyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="433"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="434"/>
         <source>&lt;p&gt;Could not open the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kaynak dosyası açılamıyor &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;.Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="512"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="513"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kaynak dosyası &quot;{0}&quot;yazılamıyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
@@ -10399,127 +10399,127 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Dışa aktarımı ayarlamak için seçiniz.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="342"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="390"/>
         <source>Select to export in WYSIWYG mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="345"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="393"/>
         <source>Use WYSIWYG mode</source>
         <translation>WYSIWYG modunu kullan</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="97"/>
         <source>Select to include folding functionality</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="91"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="100"/>
         <source>Include folding functionality</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="412"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="472"/>
         <source>Select to include only used styles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="415"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="475"/>
         <source>Include only used styles</source>
         <translation>Yalnızca kullanılan stilleri içer</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="422"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="482"/>
         <source>Select to use the full pathname as the document title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="425"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="485"/>
         <source>Use full pathname as document title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="430"/>
         <source>Select to use tabs in the generated file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="433"/>
         <source>Use tabs</source>
         <translation>Sekmeleri kullan</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="195"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="231"/>
         <source>Magnification:</source>
         <translation>Büyütme:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="202"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="238"/>
         <source>Select the magnification value to be added to the font sizes of the styles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="215"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="251"/>
         <source>Displays the selected magnification value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="228"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="264"/>
         <source>Font:</source>
         <translation>Yazı Tipi:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="271"/>
         <source>Select the font from the list</source>
         <translation>Yazı tipini listeden seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="242"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="278"/>
         <source>Pagesize:</source>
         <translation>Sayfa boyutu:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="249"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="285"/>
         <source>Select the page size from the list</source>
         <translation>Sayfa boyutunu listeden seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="258"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="294"/>
         <source>Margins</source>
         <translation>Sınırlar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="300"/>
         <source>Select the top margin in points (72 pt == 1&quot;)</source>
         <translation>Üst sınırı nokta bazında giriniz (72 pt==1&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="274"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="310"/>
         <source>Select the left margin in points (72 pt == 1&quot;)</source>
         <translation>Sol sınırı nokta bazında giriniz (72 pt==1&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="284"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="320"/>
         <source>Select the right margin in points (72 pt == 1&quot;)</source>
         <translation>Sağ sınırı nokta bazında giriniz (72 pt==1&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="294"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="330"/>
         <source>Select the bottom margin in points (72 pt == 1&quot;)</source>
         <translation>Alt sınırı nokta bazında giriniz (72 pt==1&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="354"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="402"/>
         <source>Press to select the font for the RTF export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="405"/>
         <source>Select Font</source>
         <translation>Yazı Tipini Seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="367"/>
+        <location filename="../Preferences/ConfigurationPages/EditorExportersPage.ui" line="415"/>
         <source>Font for RTF export</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12979,177 +12979,177 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>EditorTypingPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="19"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="20"/>
         <source>&lt;b&gt;Configure typing&lt;/b&gt;</source>
         <translation>&lt;b&gt;Yazımdili Ayarları&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="45"/>
         <source>Programming Language:</source>
         <translation>Programlama dili:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="61"/>
         <source>Select the programming language to be configured.</source>
         <translation>Programlama dilini ayarlamak için seç.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="87"/>
         <source>Select to enable Python typing aids</source>
         <translation>Python yazım yardımını aktif yapmak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="90"/>
         <source>Enable Python typing aids</source>
         <translation>Python yazım yardımını etkinleştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="325"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="332"/>
         <source>Select to insert a closing parenthesis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="328"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="335"/>
         <source>Automatic parenthesis insertion</source>
         <translation>Parantezleri otomatik olarak ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="335"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="342"/>
         <source>Select to skip matching braces when typing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="345"/>
         <source>Automatically skip matching braces when typing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="155"/>
         <source>Select to skip a &apos;:&apos;, if typed next to another &apos;:&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="158"/>
         <source>Automatic colon detection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="345"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="352"/>
         <source>Select to indent to the brace level after typing &apos;return&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="348"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="355"/>
         <source>After &apos;(&apos; indent to its level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="355"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="362"/>
         <source>Select to insert the matching quote character</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="358"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="365"/>
         <source>Automatic quote insertion</source>
         <translation>Otomatik tırnak işareti eklemek</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="178"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="185"/>
         <source>Select to dedent &apos;else:&apos; and &apos;elif&apos; to the matching &apos;if&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="188"/>
         <source>Automatic dedent of &apos;else:&apos; and &apos;elif&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="188"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="195"/>
         <source>Select to dedent &apos;except&apos; and &apos;finally&apos; to the matching &apos;try:&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="191"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="198"/>
         <source>Automatic dedent of &apos;except&apos; and &apos;finally&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="219"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="226"/>
         <source>Select to treat code as Python 2.4 code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="222"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="229"/>
         <source>Python 2.4 style &apos;try:&apos; blocks</source>
         <translation>Python 2.4 sitili &apos;try:&apos; bloğu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="251"/>
         <source>Select to insert the &apos;import&apos; string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="254"/>
         <source>Automatic insertion of the &apos;import&apos; string on &apos;from xxx&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="254"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="261"/>
         <source>Select to insert the &apos;self&apos; string when declaring a method</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="257"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="264"/>
         <source>Automatic insertion of &apos;self&apos; when declaring methods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="365"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="372"/>
         <source>Select to insert a blank after &apos;,&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="368"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="375"/>
         <source>Automatic insertion of &apos; &apos; (blank) after &apos;,&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="274"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="281"/>
         <source>Select to dedent &apos;def&apos; statements to the last &apos;def&apos; or &apos;class&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="277"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="284"/>
         <source>Automatic dedent of &apos;def&apos; statements</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="313"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="320"/>
         <source>Select to enable Ruby typing aids</source>
         <translation>Ruby yazım yardımını etkinleştirmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="316"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="323"/>
         <source>Enable Ruby typing aids</source>
         <translation>Ruby yazım yardımını etkinleştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="375"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="382"/>
         <source>Select to automatically complete a here document</source>
         <translation>Burdaki dökümanda otomatik tamamlama için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="378"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="385"/>
         <source>Automatic completion of here document</source>
         <translation>Burdaki dökümanda otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="392"/>
         <source>Select to automatically insert &apos;=end&apos; after entering &apos;=begin&apos;</source>
         <translation>=end ve =begin ifadelerinden sonra otomatik girinti için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="388"/>
+        <location filename="../Preferences/ConfigurationPages/EditorTypingPage.ui" line="395"/>
         <source>Automatic insertion of &apos;=end&apos; after &apos;=begin&apos;</source>
         <translation>=end ve =begin ifadelerinden sonra otomatik girinti</translation>
     </message>
@@ -34573,44 +34573,64 @@ Destination:
 <context>
     <name>PluginManager</name>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="162"/>
+        <location filename="../PluginManager/PluginManager.py" line="185"/>
         <source>Could not create a package for {0}.</source>
         <translation>{0} için paket üretilemiyor.</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="197"/>
+        <location filename="../PluginManager/PluginManager.py" line="220"/>
         <source>The internal plugin directory &lt;b&gt;{0}&lt;/b&gt; does not exits.</source>
         <translation>Dahili eklenti dizini &lt;b&gt;{0}&lt;/b&gt; mevcut değil.</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="317"/>
+        <location filename="../PluginManager/PluginManager.py" line="340"/>
         <source>Module is missing the &apos;autoactivate&apos; attribute.</source>
         <translation>Modülün &apos;otomatikaktileşme&apos; niteliği eksik.</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="327"/>
+        <location filename="../PluginManager/PluginManager.py" line="350"/>
         <source>Module is missing the &apos;pluginType&apos; and/or &apos;pluginTypename&apos; attributes.</source>
         <translation>Modülün &apos;eklentitipi&apos; ve/veya &apos;eklentiTipadı&apos; niteliği eksik.</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="342"/>
+        <location filename="../PluginManager/PluginManager.py" line="365"/>
         <source>Module failed to load. Error: {0}</source>
         <translation>Modül yüklemede başarısızlık. Hata: [0}</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="498"/>
+        <location filename="../PluginManager/PluginManager.py" line="521"/>
         <source>Incompatible plugin activation method.</source>
         <translation>Eklenti etkinleştirme yöntemi uyuşmuyor.</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1003"/>
+        <location filename="../PluginManager/PluginManager.py" line="1026"/>
         <source>Plugin Manager Error</source>
         <translation>Eklenti Yöneticisi Hatası</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1003"/>
+        <location filename="../PluginManager/PluginManager.py" line="1026"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;eklenti dizini &lt;b&gt;{0}&lt;/b&gt; oluşturulamıyor. Lütfen ayarlama diyaloğu aracılığı ile düzenleyin.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1090"/>
+        <source>Error downloading file</source>
+        <translation type="unfinished">Dosya yüklenirken hata</translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1090"/>
+        <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1125"/>
+        <source>New plugin versions available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginManager.py" line="1125"/>
+        <source>&lt;p&gt;There are new plug-ins or plug-in updates available. Use the plug-in repository dialog to get them.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -34621,29 +34641,29 @@ Destination:
         <translation>&lt;b&gt;Eklenti Yöneticisini Ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="37"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="39"/>
         <source>Plugins download directory:</source>
         <translation>Eklenti indirme dizini:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="46"/>
         <source>Enter the plugins download directory</source>
         <translation>eklenti indirme dizinini gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="54"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="56"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following setting is activated at the next startup of the application.&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
+        <translation type="obsolete">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
@@ -34651,18 +34671,98 @@ Destination:
         <translation type="obsolete">Üçüncü parti eklentileri yükle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="94"/>
         <source>Select plugins download directory</source>
         <translation>eklentileri indirme dizinini seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
         <source>Load external plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="65"/>
+        <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="82"/>
+        <source>Check for plugin updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
+        <source>Select to disable update checking</source>
+        <translation type="unfinished">Güncelleme kontrolünü iptal etmek için seçiniz</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="91"/>
+        <source>Never</source>
+        <translation type="unfinished">Asla</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
+        <source>Select to check for updates once a day</source>
+        <translation type="unfinished">Günde bir defa güncellemeleri kontrol için seç</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <source>Daily</source>
+        <translation type="unfinished">Günlük</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
+        <source>Select to check for updates once a week</source>
+        <translation type="unfinished">Haftada bir güncellemeleri kontrol için seçiniz</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="111"/>
+        <source>Weekly</source>
+        <translation type="unfinished">Haftalık</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
+        <source>Select to check for updates once a month</source>
+        <translation type="unfinished">Ayda bir güncellemeleri kontrol için seçiniz</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
+        <source>Monthly</source>
+        <translation type="unfinished">Aylık</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="143"/>
+        <source>Repository URL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
+        <source>Shows the repository URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <source>Press to edit the plugin repository URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="163"/>
+        <source>Edit URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <source>Select to check only already installed plugins for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="134"/>
+        <source>Check only installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -34930,27 +35030,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1177"/>
+        <location filename="../Preferences/__init__.py" line="1182"/>
         <source>Export Preferences</source>
         <translation>Seçenekleri Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1205"/>
+        <location filename="../Preferences/__init__.py" line="1210"/>
         <source>Import Preferences</source>
         <translation>Seçenekleri İçe Aktar</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1205"/>
+        <location filename="../Preferences/__init__.py" line="1210"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1304"/>
+        <location filename="../Preferences/__init__.py" line="1309"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1304"/>
+        <location filename="../Preferences/__init__.py" line="1309"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56696,7 +56796,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4009"/>
+        <location filename="../UI/UserInterface.py" line="4011"/>
         <source>Unittest Project</source>
         <translation>Proje Birimtesti</translation>
     </message>
@@ -57061,7 +57161,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5259"/>
+        <location filename="../UI/UserInterface.py" line="5261"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Kılavye Kısa Yollarını Dışa Aktar</translation>
     </message>
@@ -57081,7 +57181,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5283"/>
+        <location filename="../UI/UserInterface.py" line="5285"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Klavye kısayollarını İçe Aktar</translation>
     </message>
@@ -57356,7 +57456,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4259"/>
+        <location filename="../UI/UserInterface.py" line="4261"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
@@ -57411,7 +57511,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;h3&gt;Sürüm Numaraları&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6019"/>
+        <location filename="../UI/UserInterface.py" line="6028"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -57446,234 +57546,234 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Yoksay ama hatırla</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3241"/>
+        <location filename="../UI/UserInterface.py" line="3243"/>
         <source>Restart application</source>
         <translation>Uygulmayı yeniden başlat</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3241"/>
+        <location filename="../UI/UserInterface.py" line="3243"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Uygulama yeniden başlatılmaya ihtiyaç duyuyor. Şimdi yapılsın mı?</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3275"/>
+        <location filename="../UI/UserInterface.py" line="3277"/>
         <source>Configure Tool Groups ...</source>
         <translation>Alet Grupları Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3279"/>
+        <location filename="../UI/UserInterface.py" line="3281"/>
         <source>Configure current Tool Group ...</source>
         <translation>Geçerli alet grubunu ayarla...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3329"/>
+        <location filename="../UI/UserInterface.py" line="3331"/>
         <source>&amp;Builtin Tools</source>
         <translation>Ya&amp;pılandırma Araçları</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3337"/>
+        <location filename="../UI/UserInterface.py" line="3339"/>
         <source>&amp;Plugin Tools</source>
         <translation>Eklen&amp;ti Araçları</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3427"/>
+        <location filename="../UI/UserInterface.py" line="3429"/>
         <source>&amp;Show all</source>
         <translation>Hepsini Gö&amp;ster</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3429"/>
+        <location filename="../UI/UserInterface.py" line="3431"/>
         <source>&amp;Hide all</source>
         <translation>&amp;Hepsini gizle</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4009"/>
+        <location filename="../UI/UserInterface.py" line="4011"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Bugeçerli projede tanımlanan ana betik değil. Durduruluyor</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4206"/>
+        <location filename="../UI/UserInterface.py" line="4208"/>
         <source>Qt 3 support</source>
         <translation>Qt3 Desteği</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4206"/>
+        <location filename="../UI/UserInterface.py" line="4208"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt v.3 eric5 tarafından desteklenmiyor.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4380"/>
+        <location filename="../UI/UserInterface.py" line="4382"/>
         <source>Problem</source>
         <translation>Problem</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4380"/>
+        <location filename="../UI/UserInterface.py" line="4382"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4549"/>
+        <location filename="../UI/UserInterface.py" line="4551"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4115"/>
+        <location filename="../UI/UserInterface.py" line="4117"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4182"/>
+        <location filename="../UI/UserInterface.py" line="4184"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4231"/>
+        <location filename="../UI/UserInterface.py" line="4233"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4259"/>
+        <location filename="../UI/UserInterface.py" line="4261"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Hali hazırda kullanıcı göstericisi seçilmedi. Lütfen .birini belirlemek için özellikler diyaloğunu kullanının.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4273"/>
+        <location filename="../UI/UserInterface.py" line="4275"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4293"/>
+        <location filename="../UI/UserInterface.py" line="4295"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4339"/>
+        <location filename="../UI/UserInterface.py" line="4341"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4391"/>
+        <location filename="../UI/UserInterface.py" line="4393"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4412"/>
+        <location filename="../UI/UserInterface.py" line="4414"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4494"/>
+        <location filename="../UI/UserInterface.py" line="4496"/>
         <source>External Tools</source>
         <translation>Harici Araçlar</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4485"/>
+        <location filename="../UI/UserInterface.py" line="4487"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4494"/>
+        <location filename="../UI/UserInterface.py" line="4496"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4533"/>
+        <location filename="../UI/UserInterface.py" line="4535"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4549"/>
+        <location filename="../UI/UserInterface.py" line="4551"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4625"/>
+        <location filename="../UI/UserInterface.py" line="4627"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4992"/>
+        <location filename="../UI/UserInterface.py" line="4994"/>
         <source>Documentation Missing</source>
         <translation>Eksik Belgeleme</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4992"/>
+        <location filename="../UI/UserInterface.py" line="4994"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4976"/>
+        <location filename="../UI/UserInterface.py" line="4978"/>
         <source>Documentation</source>
         <translation>Belgeleme</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4818"/>
+        <location filename="../UI/UserInterface.py" line="4820"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;PyQt4 Belgelerinin başlama noktası ayarlanmamış.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4976"/>
+        <location filename="../UI/UserInterface.py" line="4978"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5418"/>
+        <location filename="../UI/UserInterface.py" line="5420"/>
         <source>Save tasks</source>
         <translation>Görevleri kaydet</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5418"/>
+        <location filename="../UI/UserInterface.py" line="5420"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5444"/>
+        <location filename="../UI/UserInterface.py" line="5446"/>
         <source>Read tasks</source>
         <translation>Görevler Okunuyor</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5444"/>
+        <location filename="../UI/UserInterface.py" line="5446"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5462"/>
+        <location filename="../UI/UserInterface.py" line="5464"/>
         <source>Save session</source>
         <translation>Oturumu kaydet</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5462"/>
+        <location filename="../UI/UserInterface.py" line="5464"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5490"/>
+        <location filename="../UI/UserInterface.py" line="5492"/>
         <source>Read session</source>
         <translation>Oturumu oku</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5490"/>
+        <location filename="../UI/UserInterface.py" line="5492"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5673"/>
+        <location filename="../UI/UserInterface.py" line="5681"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5673"/>
+        <location filename="../UI/UserInterface.py" line="5681"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; bir dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5814"/>
+        <location filename="../UI/UserInterface.py" line="5823"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Vazgeç</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5821"/>
+        <location filename="../UI/UserInterface.py" line="5830"/>
         <source>Trying host {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -57688,37 +57788,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Sürüm dosyası indirilemiyor.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5962"/>
+        <location filename="../UI/UserInterface.py" line="5971"/>
         <source>Update available</source>
         <translation>Güncelleme mümkün değil</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5962"/>
+        <location filename="../UI/UserInterface.py" line="5971"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5975"/>
+        <location filename="../UI/UserInterface.py" line="5984"/>
         <source>Eric5 is up to date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5975"/>
+        <location filename="../UI/UserInterface.py" line="5984"/>
         <source>You are using the latest version of eric5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5982"/>
+        <location filename="../UI/UserInterface.py" line="5991"/>
         <source>Error during updates check</source>
         <translation>Güncellemeleri kontrol esnasında hata</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5982"/>
+        <location filename="../UI/UserInterface.py" line="5991"/>
         <source>Could not perform updates check.</source>
         <translation>Güncellemelere ulaşamıyorum.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6005"/>
+        <location filename="../UI/UserInterface.py" line="6014"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Mümkün sürümler&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -57733,12 +57833,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">SSL Hataları</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6046"/>
+        <location filename="../UI/UserInterface.py" line="6055"/>
         <source>First time usage</source>
         <translation>İlk kullanım</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6046"/>
+        <location filename="../UI/UserInterface.py" line="6055"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>Eric5 henüz ayarlanmadı. Ayarlar Diyaloğu başlatılıyor.</translation>
     </message>
@@ -57798,32 +57898,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5283"/>
+        <location filename="../UI/UserInterface.py" line="5285"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5872"/>
+        <location filename="../UI/UserInterface.py" line="5881"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5865"/>
+        <location filename="../UI/UserInterface.py" line="5874"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5085"/>
+        <location filename="../UI/UserInterface.py" line="5087"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5085"/>
+        <location filename="../UI/UserInterface.py" line="5087"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5872"/>
+        <location filename="../UI/UserInterface.py" line="5881"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -57934,12 +58034,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4464"/>
+        <location filename="../UI/UserInterface.py" line="4466"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6065"/>
+        <location filename="../UI/UserInterface.py" line="6074"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -58314,7 +58414,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished">PyQt4 Begelerini aç {5 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4879"/>
+        <location filename="../UI/UserInterface.py" line="4881"/>
         <source>&lt;p&gt;The PyQt5 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;PyQt4 Belgelerinin başlama noktası ayarlanmamış.&lt;/p&gt; {5 ?}</translation>
     </message>
@@ -58349,7 +58449,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5814"/>
+        <location filename="../UI/UserInterface.py" line="5823"/>
         <source>%v/%m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63339,12 +63439,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Paketler içeri aktarılıyor...</translation>
     </message>
     <message>
-        <location filename="../eric5.py" line="263"/>
+        <location filename="../eric5.py" line="264"/>
         <source>Generating Main Window...</source>
         <translation>Anapencere üretiliyor...</translation>
     </message>
     <message>
-        <location filename="../eric5.py" line="258"/>
+        <location filename="../eric5.py" line="259"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>

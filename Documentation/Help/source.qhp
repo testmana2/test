@@ -8393,13 +8393,17 @@
       <keyword name="PluginManager.__canActivatePlugin" id="PluginManager.__canActivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.__canActivatePlugin" />
       <keyword name="PluginManager.__canDeactivatePlugin" id="PluginManager.__canDeactivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.__canDeactivatePlugin" />
       <keyword name="PluginManager.__checkPluginsDownloadDirectory" id="PluginManager.__checkPluginsDownloadDirectory" ref="eric5.PluginManager.PluginManager.html#PluginManager.__checkPluginsDownloadDirectory" />
+      <keyword name="PluginManager.__downloadRepositoryFileDone" id="PluginManager.__downloadRepositoryFileDone" ref="eric5.PluginManager.PluginManager.html#PluginManager.__downloadRepositoryFileDone" />
       <keyword name="PluginManager.__getShortInfo" id="PluginManager.__getShortInfo" ref="eric5.PluginManager.PluginManager.html#PluginManager.__getShortInfo" />
       <keyword name="PluginManager.__insertPluginsPaths" id="PluginManager.__insertPluginsPaths" ref="eric5.PluginManager.PluginManager.html#PluginManager.__insertPluginsPaths" />
       <keyword name="PluginManager.__loadPlugins" id="PluginManager.__loadPlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.__loadPlugins" />
       <keyword name="PluginManager.__pluginDirectoriesExist" id="PluginManager.__pluginDirectoriesExist" ref="eric5.PluginManager.PluginManager.html#PluginManager.__pluginDirectoriesExist" />
       <keyword name="PluginManager.__pluginModulesExist" id="PluginManager.__pluginModulesExist" ref="eric5.PluginManager.PluginManager.html#PluginManager.__pluginModulesExist" />
+      <keyword name="PluginManager.__sslErrors" id="PluginManager.__sslErrors" ref="eric5.PluginManager.PluginManager.html#PluginManager.__sslErrors" />
       <keyword name="PluginManager.activatePlugin" id="PluginManager.activatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.activatePlugin" />
       <keyword name="PluginManager.activatePlugins" id="PluginManager.activatePlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.activatePlugins" />
+      <keyword name="PluginManager.checkPluginEntry" id="PluginManager.checkPluginEntry" ref="eric5.PluginManager.PluginManager.html#PluginManager.checkPluginEntry" />
+      <keyword name="PluginManager.checkPluginUpdatesAvailable" id="PluginManager.checkPluginUpdatesAvailable" ref="eric5.PluginManager.PluginManager.html#PluginManager.checkPluginUpdatesAvailable" />
       <keyword name="PluginManager.deactivatePlugin" id="PluginManager.deactivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.deactivatePlugin" />
       <keyword name="PluginManager.deactivateVcsPlugins" id="PluginManager.deactivateVcsPlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.deactivateVcsPlugins" />
       <keyword name="PluginManager.doShutdown" id="PluginManager.doShutdown" ref="eric5.PluginManager.PluginManager.html#PluginManager.doShutdown" />
@@ -8428,6 +8432,7 @@
       <keyword name="PluginManagerPage (Constructor)" id="PluginManagerPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.__init__" />
       <keyword name="PluginManagerPage (Module)" id="PluginManagerPage (Module)" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html" />
       <keyword name="PluginManagerPage.on_downloadDirButton_clicked" id="PluginManagerPage.on_downloadDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.on_downloadDirButton_clicked" />
+      <keyword name="PluginManagerPage.on_repositoryUrlEditButton_toggled" id="PluginManagerPage.on_repositoryUrlEditButton_toggled" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.on_repositoryUrlEditButton_toggled" />
       <keyword name="PluginManagerPage.save" id="PluginManagerPage.save" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.save" />
       <keyword name="PluginModuleFormatError" id="PluginModuleFormatError" ref="eric5.PluginManager.PluginExceptions.html#PluginModuleFormatError" />
       <keyword name="PluginModuleFormatError (Constructor)" id="PluginModuleFormatError (Constructor)" ref="eric5.PluginManager.PluginExceptions.html#PluginModuleFormatError.__init__" />
@@ -12009,6 +12014,7 @@
       <keyword name="UserInterface.autoConnectIrc" id="UserInterface.autoConnectIrc" ref="eric5.UI.UserInterface.html#UserInterface.autoConnectIrc" />
       <keyword name="UserInterface.checkConfigurationStatus" id="UserInterface.checkConfigurationStatus" ref="eric5.UI.UserInterface.html#UserInterface.checkConfigurationStatus" />
       <keyword name="UserInterface.checkForErrorLog" id="UserInterface.checkForErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.checkForErrorLog" />
+      <keyword name="UserInterface.checkPluginUpdatesAvailable" id="UserInterface.checkPluginUpdatesAvailable" ref="eric5.UI.UserInterface.html#UserInterface.checkPluginUpdatesAvailable" />
       <keyword name="UserInterface.checkProjectsWorkspace" id="UserInterface.checkProjectsWorkspace" ref="eric5.UI.UserInterface.html#UserInterface.checkProjectsWorkspace" />
       <keyword name="UserInterface.closeEvent" id="UserInterface.closeEvent" ref="eric5.UI.UserInterface.html#UserInterface.closeEvent" />
       <keyword name="UserInterface.dragEnterEvent" id="UserInterface.dragEnterEvent" ref="eric5.UI.UserInterface.html#UserInterface.dragEnterEvent" />
