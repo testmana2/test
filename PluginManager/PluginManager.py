@@ -1143,29 +1143,40 @@ class PluginManager(QObject):
         archive = os.path.join(Preferences.getPluginManager("DownloadPath"),
                                filename)
         
-        # TODO: change logic for installed only check to check against loaded plugins
-        
-        # check, if the archive exists
-        if not os.path.exists(archive):
+        # Check against installed/loaded plug-ins
+        pluginName = os.path.splitext(url.rsplit("/", 1)[1])[0]
+        pluginDetails = self.getPluginDetails(pluginName)
+        if pluginDetails is None:
             if not Preferences.getPluginManager("CheckInstalledOnly"):
                 self.__updateAvailable = True
             return
         
-        # check, if the archive is a valid zip file
-        if not zipfile.is_zipfile(archive):
-            if not Preferences.getPluginManager("CheckInstalledOnly"):
-                self.__updateAvailable = True
-            return
-        
-        zip = zipfile.ZipFile(archive, "r")
-        try:
-            aversion = zip.read("VERSION").decode("utf-8")
-        except KeyError:
-            aversion = ""
-        zip.close()
-        
-        if aversion != version:
+        if pluginDetails["version"] < version:
             self.__updateAvailable = True
+            return
+        
+        if not Preferences.getPluginManager("CheckInstalledOnly"):
+            # Check against downloaded plugin archives
+            # 1. Check, if the archive file exists
+            if not os.path.exists(archive):
+                self.__updateAvailable = True
+                return
+            
+            # 2. Check, if the archive is a valid zip file
+            if not zipfile.is_zipfile(archive):
+                self.__updateAvailable = True
+                return
+            
+            # 3. Check the version of the archive file
+            zip = zipfile.ZipFile(archive, "r")
+            try:
+                aversion = zip.read("VERSION").decode("utf-8")
+            except KeyError:
+                aversion = ""
+            zip.close()
+            
+            if aversion != version:
+                self.__updateAvailable = True
     
     def __sslErrors(self, reply, errors):
         """
