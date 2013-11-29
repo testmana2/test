@@ -501,7 +501,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 msgdlg = "res = E5MessageBox.okToClearData({0}".format(
                     os.linesep)
             
-            msgdlg += '{0}{1}{2}'.format(istring, parent, os.linesep)
+            msgdlg += '{0}{1},{2}'.format(istring, parent, os.linesep)
             msgdlg += '{0}self.trUtf8("{1}")'.format(
                 istring, self.eCaption.text())
             
