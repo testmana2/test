@@ -2179,7 +2179,7 @@ class UserInterface(E5MainWindow):
             """<p>This opens a dialog, that shows a list of plugins """
             """available on the Internet.</p>"""
         ))
-        self.pluginRepoAct.triggered[()].connect(self.__showPluginsAvailable)
+        self.pluginRepoAct.triggered[()].connect(self.showPluginsAvailable)
         self.actions.append(self.pluginRepoAct)
         
         # initialize viewmanager actions
@@ -5601,9 +5601,9 @@ class UserInterface(E5MainWindow):
         dlg = PluginUninstallDialog(self.pluginManager, self)
         dlg.exec_()
         
-    def __showPluginsAvailable(self):
+    def showPluginsAvailable(self):
         """
-        Private slot to show the plugins available for download.
+        Public slot to show the plugins available for download.
         """
         from PluginManager.PluginRepositoryDialog import PluginRepositoryDialog
         dlg = PluginRepositoryDialog(self)

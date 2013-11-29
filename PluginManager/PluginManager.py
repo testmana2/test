@@ -1118,13 +1118,18 @@ class PluginManager(QObject):
                     return
                 
                 if self.__updateAvailable:
-                    E5MessageBox.information(
+                    res = E5MessageBox.information(
                         None,
                         self.trUtf8("New plugin versions available"),
                         self.trUtf8("<p>There are new plug-ins or plug-in"
                                     " updates available. Use the plug-in"
-                                    " repository dialog to get them.</p>")
-                    )
+                                    " repository dialog to get them.</p>"),
+                        E5MessageBox.StandardButtons(
+                            E5MessageBox.Ignore | \
+                            E5MessageBox.Open),
+                        E5MessageBox.Open)
+                    if res == E5MessageBox.Open:
+                        self.__ui.showPluginsAvailable()
     
     def checkPluginEntry(self, name, short, description, url, author, version,
                          filename, status):

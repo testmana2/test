@@ -11951,7 +11951,6 @@
       <keyword name="UserInterface.__showNext" id="UserInterface.__showNext" ref="eric5.UI.UserInterface.html#UserInterface.__showNext" />
       <keyword name="UserInterface.__showPixmap" id="UserInterface.__showPixmap" ref="eric5.UI.UserInterface.html#UserInterface.__showPixmap" />
       <keyword name="UserInterface.__showPluginInfo" id="UserInterface.__showPluginInfo" ref="eric5.UI.UserInterface.html#UserInterface.__showPluginInfo" />
-      <keyword name="UserInterface.__showPluginsAvailable" id="UserInterface.__showPluginsAvailable" ref="eric5.UI.UserInterface.html#UserInterface.__showPluginsAvailable" />
       <keyword name="UserInterface.__showPrevious" id="UserInterface.__showPrevious" ref="eric5.UI.UserInterface.html#UserInterface.__showPrevious" />
       <keyword name="UserInterface.__showPyQt4Doc" id="UserInterface.__showPyQt4Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPyQt4Doc" />
       <keyword name="UserInterface.__showPyQt5Doc" id="UserInterface.__showPyQt5Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPyQt5Doc" />
@@ -12046,6 +12045,7 @@
       <keyword name="UserInterface.showFindFilesDialog" id="UserInterface.showFindFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFilesDialog" />
       <keyword name="UserInterface.showLogTab" id="UserInterface.showLogTab" ref="eric5.UI.UserInterface.html#UserInterface.showLogTab" />
       <keyword name="UserInterface.showNotification" id="UserInterface.showNotification" ref="eric5.UI.UserInterface.html#UserInterface.showNotification" />
+      <keyword name="UserInterface.showPluginsAvailable" id="UserInterface.showPluginsAvailable" ref="eric5.UI.UserInterface.html#UserInterface.showPluginsAvailable" />
       <keyword name="UserInterface.showPreferences" id="UserInterface.showPreferences" ref="eric5.UI.UserInterface.html#UserInterface.showPreferences" />
       <keyword name="UserInterface.showReplaceFilesDialog" id="UserInterface.showReplaceFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showReplaceFilesDialog" />
       <keyword name="UserInterface.unregisterToolbar" id="UserInterface.unregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.unregisterToolbar" />

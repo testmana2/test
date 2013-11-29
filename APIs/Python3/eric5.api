@@ -8049,6 +8049,7 @@ eric5.UI.UserInterface.UserInterface.showFindFilesDialog?4(txt="", searchDir="",
 eric5.UI.UserInterface.UserInterface.showLogTab?4(tabname)
 eric5.UI.UserInterface.UserInterface.showMenu?7
 eric5.UI.UserInterface.UserInterface.showNotification?4(icon, heading, text)
+eric5.UI.UserInterface.UserInterface.showPluginsAvailable?4()
 eric5.UI.UserInterface.UserInterface.showPreferences?4(pageName=None)
 eric5.UI.UserInterface.UserInterface.showReplaceFilesDialog?4(txt="", searchDir="", openFiles=False)
 eric5.UI.UserInterface.UserInterface.unregisterToolbar?4(name)

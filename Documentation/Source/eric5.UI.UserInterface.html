@@ -470,9 +470,6 @@ E5MainWindow
 <td><a href="#UserInterface.__showPluginInfo">__showPluginInfo</a></td>
 <td>Private slot to show the plugin info dialog.</td>
 </tr><tr>
-<td><a href="#UserInterface.__showPluginsAvailable">__showPluginsAvailable</a></td>
-<td>Private slot to show the plugins available for download.</td>
-</tr><tr>
 <td><a href="#UserInterface.__showPrevious">__showPrevious</a></td>
 <td>Private slot used to show the previous tab or file.</td>
 </tr><tr>
@@ -754,6 +751,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.showNotification">showNotification</a></td>
 <td>Public method to show a desktop notification.</td>
+</tr><tr>
+<td><a href="#UserInterface.showPluginsAvailable">showPluginsAvailable</a></td>
+<td>Public slot to show the plugins available for download.</td>
 </tr><tr>
 <td><a href="#UserInterface.showPreferences">showPreferences</a></td>
 <td>Public slot to set the preferences.</td>
@@ -1484,11 +1484,6 @@ filename of the file to show (string)
 <b>__showPluginInfo</b>(<i></i>)
 <p>
         Private slot to show the plugin info dialog.
-</p><a NAME="UserInterface.__showPluginsAvailable" ID="UserInterface.__showPluginsAvailable"></a>
-<h4>UserInterface.__showPluginsAvailable</h4>
-<b>__showPluginsAvailable</b>(<i></i>)
-<p>
-        Private slot to show the plugins available for download.
 </p><a NAME="UserInterface.__showPrevious" ID="UserInterface.__showPrevious"></a>
 <h4>UserInterface.__showPrevious</h4>
 <b>__showPrevious</b>(<i></i>)
@@ -2335,7 +2330,12 @@ heading of the notification (string)
 <dd>
 text of the notification (string)
 </dd>
-</dl><a NAME="UserInterface.showPreferences" ID="UserInterface.showPreferences"></a>
+</dl><a NAME="UserInterface.showPluginsAvailable" ID="UserInterface.showPluginsAvailable"></a>
+<h4>UserInterface.showPluginsAvailable</h4>
+<b>showPluginsAvailable</b>(<i></i>)
+<p>
+        Public slot to show the plugins available for download.
+</p><a NAME="UserInterface.showPreferences" ID="UserInterface.showPreferences"></a>
 <h4>UserInterface.showPreferences</h4>
 <b>showPreferences</b>(<i>pageName=None</i>)
 <p>
