@@ -533,7 +533,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 msgdlg += ',{0}{1}{2}'.format(os.linesep, istring, saveFunc)
         else:
             msgdlg = "E5MessageBox.E5MessageBox({0}".format(os.linesep)
-            msgdlg += '{0}{1}{2}'.format(istring, icon, os.linesep)
+            msgdlg += '{0}{1},{2}'.format(istring, icon, os.linesep)
             msgdlg += '{0}self.trUtf8("{1}")'.format(
                 istring, self.eCaption.text())
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
