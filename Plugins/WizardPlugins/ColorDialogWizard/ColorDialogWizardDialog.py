@@ -124,27 +124,32 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         # now generate the code
         code = 'QColorDialog.'
         if self.rColor.isChecked():
-            code += 'getColor('
+            code += 'getColor({0}'.format(os.linesep)
             if self.eColor.currentText():
                 col = self.eColor.currentText()
                 if col.startswith('#'):
-                    code += 'QColor("{0}")'.format(col)
+                    code += '{0}QColor("{1}"),{2}'.format(
+                        istring, col, os.linesep)
                 else:
-                    code += 'QColor({0})'.format(col)
-            code += ', None,{0}'.format(os.linesep)
+                    code += '{0}QColor({1}),{2}'.format(
+                        istring, col, os.linesep)
+            else:
+                code += '{0}QColor(Qt.white),{1}'.format(istring, os.linesep)
+            code += '{0}None,{1}'.format(istring, os.linesep)
             code += '{0}self.trUtf8("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
             code += '{0}QColorDialog.ColorDialogOptions(' \
                 'QColorDialog.ShowAlphaChannel)'.format(istring)
             code += '){0}'.format(estring)
         elif self.rRGBA.isChecked():
-            code += 'getColor('
+            code += 'getColor({0}'.format(os.linesep)
             if not self.eRGB.text():
-                code += 'QColor({0:d}, {1:d}, {2:d}, {3:d}),{4}'.format(
-                    self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
-                    self.sAlpha.value(), os.linesep)
+                code += '{0}QColor({1:d}, {2:d}, {3:d}, {4:d}),{5}'.format(
+                    istring, self.sRed.value(), self.sGreen.value(),
+                    self.sBlue.value(), self.sAlpha.value(), os.linesep)
             else:
-                code += '{0},{1}'.format(self.eRGB.text(), os.linesep)
+                code += '{0}{1},{2}'.format(
+                    istring, self.eRGB.text(), os.linesep)
             code += '{0}None,{1}'.format(istring, os.linesep)
             code += '{0}self.trUtf8("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)

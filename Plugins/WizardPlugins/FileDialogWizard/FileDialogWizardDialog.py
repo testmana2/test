@@ -311,3 +311,5 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         @return generated code (string)
         """
         return self.__getCode4(indLevel, indString)
+    
+    # TODO: add getCode for PyQt5
