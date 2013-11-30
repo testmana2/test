@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1180,7 +1181,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="64"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Módulos</translation>
     </message>
 </context>
 <context>
@@ -1935,8 +1936,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2177,8 +2178,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -3094,7 +3095,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../DataViews/CodeMetricsDialog.ui" line="158"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -3351,7 +3352,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="442"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -7068,7 +7069,7 @@ Not connected
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="237"/>
         <source>{0}: {1}</source>
-        <translation type="unfinished">{0}: {1}</translation>
+        <translation>{0}: {1}</translation>
     </message>
 </context>
 <context>
@@ -9580,12 +9581,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="722"/>
         <source>New Document View</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva Vista de Documento</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="725"/>
         <source>New Document View (with new split)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva Vista de Documento (con nueva división)</translation>
     </message>
 </context>
 <context>
@@ -12457,12 +12458,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
         <source>Select, whether the caretline should be highlighted even if the editor doesn&apos;t have the focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar si se debe resaltar la línea del cursor incluso si el editor no tiene el foco</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="595"/>
         <source>Caretline always visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Línea del cursor siempre visible</translation>
     </message>
 </context>
 <context>
@@ -13729,17 +13730,17 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="41"/>
         <source>Delete</source>
-        <translation type="unfinished">Borrar</translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="42"/>
         <source>Close</source>
-        <translation type="unfinished">Cerrar</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="43"/>
         <source>Error Log</source>
-        <translation type="unfinished">Registro de Error</translation>
+        <translation>Registro de Error</translation>
     </message>
 </context>
 <context>
@@ -14774,7 +14775,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../UI/FindFileDialog.ui" line="347"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -15460,7 +15461,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -26623,7 +26624,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="90"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Módulos</translation>
     </message>
 </context>
 <context>
@@ -32490,7 +32491,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../Graphics/PackageDiagramBuilder.py" line="149"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Módulos</translation>
     </message>
 </context>
 <context>
@@ -32590,7 +32591,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../Helpviewer/Passwords/PasswordManager.py" line="609"/>
         <source>%v/%m Passwords</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Contraseñas</translation>
     </message>
 </context>
 <context>
@@ -33130,7 +33131,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../PluginManager/PluginInstallDialog.ui" line="150"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -33293,22 +33294,22 @@ Destination:
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1090"/>
         <source>Error downloading file</source>
-        <translation type="unfinished">Error al descargar el fichero</translation>
+        <translation>Error al descargar el fichero</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1090"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;No se pudo descargar el archivo solicitado desde {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;No se pudo descargar el archivo solicitado desde {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1125"/>
         <source>New plugin versions available</source>
-        <translation type="unfinished"></translation>
+        <translation>Existen nuevas versiones de plugins</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1125"/>
         <source>&lt;p&gt;There are new plug-ins or plug-in updates available. Use the plug-in repository dialog to get them.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Existen nuevos plug-ins o existen bien actualizaciones para plug-in. Utilice el repositorio de plug-ins para su obtención.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -33361,82 +33362,82 @@ Destination:
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="65"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estos ajustes se activarán la siguiente vez que se ejecute la aplicacion.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="82"/>
         <source>Check for plugin updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar actualizaciones de los plugins</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
         <source>Select to disable update checking</source>
-        <translation type="unfinished">Seleccione para deshabilitar el chequeo de actualización</translation>
+        <translation>Seleccionar para deshabilitar el chequeo de actualización</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="91"/>
         <source>Never</source>
-        <translation type="unfinished">Nunca</translation>
+        <translation>Nunca</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
         <source>Select to check for updates once a day</source>
-        <translation type="unfinished">Seleccione para buscar actualizaciones una vez al día</translation>
+        <translation>Seleccionar para buscar actualizaciones una vez al día</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
         <source>Daily</source>
-        <translation type="unfinished">Diariamente</translation>
+        <translation>Diariamente</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
         <source>Select to check for updates once a week</source>
-        <translation type="unfinished">Seleccione para buscar actualizaciones una vez a la semana</translation>
+        <translation>Seleccionar para buscar actualizaciones una vez a la semana</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="111"/>
         <source>Weekly</source>
-        <translation type="unfinished">Semanalmente</translation>
+        <translation>Semanalmente</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
         <source>Select to check for updates once a month</source>
-        <translation type="unfinished">Seleccione para buscar actualizaciones una vez al mes</translation>
+        <translation>Seleccionar para buscar actualizaciones una vez al mes</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
         <source>Monthly</source>
-        <translation type="unfinished">Mensualmente</translation>
+        <translation>Mensualmente</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="143"/>
         <source>Repository URL:</source>
-        <translation type="unfinished">URL de Repositorio:</translation>
+        <translation>URL de Repositorio:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
         <source>Shows the repository URL</source>
-        <translation type="unfinished">Muestra la URL del repositorio</translation>
+        <translation>Muestra la URL del repositorio</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
         <source>Press to edit the plugin repository URL</source>
-        <translation type="unfinished">Pulsar para editar la URL de repositorio de plugin</translation>
+        <translation>Pulsar para editar la URL de repositorio de plugin</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="163"/>
         <source>Edit URL</source>
-        <translation type="unfinished">Editar URL</translation>
+        <translation>Editar URL</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
         <source>Select to check only already installed plugins for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para comprobar únicamente actualizaciones para plugins ya instalados</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="134"/>
         <source>Check only installed plugins for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprobar únicamente actualizaciones para plugins instalados</translation>
     </message>
 </context>
 <context>
@@ -35675,7 +35676,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectFormsBrowser.py" line="930"/>
         <source>%v/%m Forms</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Formularios</translation>
     </message>
 </context>
 <context>
@@ -35808,7 +35809,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectInterfacesBrowser.py" line="609"/>
         <source>%v/%m Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Interfaces</translation>
     </message>
 </context>
 <context>
@@ -36237,7 +36238,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectResourcesBrowser.py" line="831"/>
         <source>%v/%m Resources</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Recursos</translation>
     </message>
 </context>
 <context>
@@ -37198,7 +37199,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../DataViews/PyCoverageDialog.py" line="345"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -37339,7 +37340,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../DataViews/PyProfileDialog.ui" line="141"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -45520,7 +45521,7 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2476"/>
         <source>Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar versión</translation>
     </message>
 </context>
 <context>
@@ -47811,22 +47812,22 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="485"/>
         <source>Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar versión</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="485"/>
         <source>Upgrade...</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar versión...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="489"/>
         <source>Upgrade the working copy to the current format</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar la copia de trabajo al formato actual</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="492"/>
         <source>&lt;b&gt;Upgrade&lt;/b&gt;&lt;p&gt;Upgrades the working copy to the current format.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Actualizar versión&lt;/b&gt;&lt;p&gt;Actualiza la versión de la copia de trabajo al formato actual.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -50899,7 +50900,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="117"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -51347,7 +51348,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="123"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -51784,7 +51785,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Tasks/TaskViewer.py" line="547"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Archivos</translation>
     </message>
 </context>
 <context>
@@ -54096,7 +54097,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../PyUnit/UnittestDialog.ui" line="185"/>
         <source>%v/%m Tests</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Tests</translation>
     </message>
 </context>
 <context>
@@ -56274,22 +56275,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../UI/UserInterface.py" line="5823"/>
         <source>%v/%m</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1633"/>
         <source>Show Error Log</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar Registro de Errores</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1629"/>
         <source>Show Error &amp;Log...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar &amp;Registro de Errores...</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1634"/>
         <source>&lt;b&gt;Show Error Log...&lt;/b&gt;&lt;p&gt;Opens a dialog showing the most recent error log.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar registro de errores...&lt;/b&gt;&lt;p&gt;Abre un diálogo mostrando el registro más reciente de errores.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -60398,37 +60399,37 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3331"/>
         <source>New Document View</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva Vista de Documento</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3331"/>
         <source>New &amp;Document View</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva Vista de &amp;Documento</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3336"/>
         <source>Open a new view of the current document</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir una nueva vista del documento actual</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3338"/>
         <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nueva Vista de Documento&lt;/b&gt;&lt;p&gt;Abre una nueva vista del documento actual. Ambas vistas muestran el mismo documento. Sin embargo, los cursores pueden estar ubicados de manera independiente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3348"/>
         <source>New Document View (with new split)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva Vista de Documento (con nueva división)</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3355"/>
         <source>Open a new view of the current document in a new split</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir una nueva vista del documento actual en una nueva división</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3358"/>
         <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document in a new split. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nueva Vista de Documento&lt;/b&gt;&lt;p&gt;Abre una nueva vista del documento actual en una nueva división. Ambas vistas muestran el mismo documento. Sin embargo, los cursores pueden estar ubicados de manera independiente.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
