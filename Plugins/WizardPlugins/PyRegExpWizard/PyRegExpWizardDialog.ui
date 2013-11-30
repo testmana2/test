@@ -511,6 +511,9 @@ expression; '(?&amp;lt;![abc])q' will match a 'q' only if not preceded by either
        </item>
        <item row="1" column="1">
         <widget class="QCheckBox" name="localeCheckBox">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Observe Locale</string>
          </property>

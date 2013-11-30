@@ -284,7 +284,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
             return ""
         
         istring2 = istring + indString
-        joinstring = ' | \\{0}{1}'.format(os.linesep, istring2)
+        joinstring = ' |{0}{1}'.format(os.linesep, istring2)
         btnCode = ',{0}{1}QMessageBox.StandardButtons('.format(
             os.linesep, istring)
         btnCode += '{0}{1}{2})'.format(
@@ -320,24 +320,32 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
                 parent = "None"
         
         if self.rAbout.isChecked():
-            msgdlg = "QMessageBox.about({0}".format(os.linesep)
+            msgdlg = "QMessageBox.about("
         elif self.rAboutQt.isChecked():
-            msgdlg = "QMessageBox.aboutQt({0}".format(os.linesep)
+            msgdlg = "QMessageBox.aboutQt("
         elif self.rInformation.isChecked():
-            msgdlg = "res = QMessageBox.information({0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.information("
         elif self.rQuestion.isChecked():
-            msgdlg = "res = QMessageBox.question({0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.question("
         elif self.rWarning.isChecked():
-            msgdlg = "res = QMessageBox.warning({0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.warning("
         else:
-            msgdlg = "res = QMessageBox.critical({0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.critical("
         
-        msgdlg += '{0}{1}{2}'.format(istring, parent, os.linesep)
-        msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
-        if not self.rAboutQt.isChecked():
+        if self.rAboutQt.isChecked():
+            if self.eCaption.text():
+                msgdlg += '{0}{1}{2}'.format(os.linesep, istring, parent)
+                msgdlg += ',{0}{1}self.trUtf8("{2}")'.format(
+                    os.linesep, istring, self.eCaption.text())
+            else:
+                msgdlg += parent
+        else:
+            msgdlg += '{0}{1}{2}'.format(os.linesep, istring, parent)
+            msgdlg += ',{0}{1}self.trUtf8("{2}")'.format(
+                os.linesep, istring, self.eCaption.text())
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
-        if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
-            msgdlg += self.__getButtonCode(istring, indString)
+            if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
+                msgdlg += self.__getButtonCode(istring, indString)
         msgdlg += '){0}'.format(estring)
         return msgdlg

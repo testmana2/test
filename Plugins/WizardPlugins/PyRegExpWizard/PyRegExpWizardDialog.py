@@ -613,7 +613,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         @param checked state of the Python 2 button (boolean)
         """
         # set the checkboxes
-        self.localeCheckBox.setHidden(not checked)
+        self.localeCheckBox.setEnabled(checked)
         if checked:
             self.unicodeCheckBox.setText(self.trUtf8("Unicode"))
         else:
@@ -672,10 +672,11 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         code = ''
         if self.importCheckBox.isChecked():
             code += 'import re{0}{1}'.format(os.linesep, istring)
-        code += '{0} = re.compile(r"""{1}"""'.format(
-            reVar, regexp.replace('"', '\\"'))
+        code += '{0} = re.compile('.format(reVar)
+        code += '{0}{1}r"""{2}"""'.format(
+            os.linesep, i1string, regexp.replace('"', '\\"'))
         if flags:
-            code += ', {0}{1}{2}'.format(os.linesep, i1string, flags)
+            code += ',{0}{1}{2}'.format(os.linesep, i1string, flags)
         code += '){0}'.format(estring)
         return code
 

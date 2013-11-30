@@ -110,7 +110,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 doubleTo,
                 self.sDoubleDecimals.value())
         
-    def __getCode4(self, indLevel, indString):
+    def getCode(self, indLevel, indString):
         """
         Private method to get the source code for Qt4/Qt5.
         
@@ -187,13 +187,3 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.sCurrentItem.value(), self.cEditable.isChecked(), estring)
             
         return code
-        
-    def getCode(self, indLevel, indString):
-        """
-        Public method to get the source code.
-        
-        @param indLevel indentation level (int)
-        @param indString string used for indentation (space or tab) (string)
-        @return generated code (string)
-        """
-        return self.__getCode4(indLevel, indString)
