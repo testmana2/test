@@ -4923,12 +4923,13 @@
       <keyword name="FileDialogWizardDialog (Constructor)" id="FileDialogWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__init__" />
       <keyword name="FileDialogWizardDialog (Module)" id="FileDialogWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html" />
       <keyword name="FileDialogWizardDialog.__adjustOptions" id="FileDialogWizardDialog.__adjustOptions" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__adjustOptions" />
-      <keyword name="FileDialogWizardDialog.__getCode4" id="FileDialogWizardDialog.__getCode4" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__getCode4" />
       <keyword name="FileDialogWizardDialog.__toggleConfirmCheckBox" id="FileDialogWizardDialog.__toggleConfirmCheckBox" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleConfirmCheckBox" />
       <keyword name="FileDialogWizardDialog.__toggleGroupsAndTest" id="FileDialogWizardDialog.__toggleGroupsAndTest" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleGroupsAndTest" />
+      <keyword name="FileDialogWizardDialog.__toggleInitialFilter" id="FileDialogWizardDialog.__toggleInitialFilter" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleInitialFilter" />
       <keyword name="FileDialogWizardDialog.getCode" id="FileDialogWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.getCode" />
       <keyword name="FileDialogWizardDialog.on_bTest_clicked" id="FileDialogWizardDialog.on_bTest_clicked" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_bTest_clicked" />
       <keyword name="FileDialogWizardDialog.on_buttonBox_clicked" id="FileDialogWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_buttonBox_clicked" />
+      <keyword name="FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged" id="FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged" />
       <keyword name="FileReply" id="FileReply" ref="eric5.Helpviewer.Network.FileReply.html#FileReply" />
       <keyword name="FileReply (Constructor)" id="FileReply (Constructor)" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.__init__" />
       <keyword name="FileReply (Module)" id="FileReply (Module)" ref="eric5.Helpviewer.Network.FileReply.html" />

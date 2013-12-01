@@ -10,7 +10,7 @@ Module implementing the file dialog wizard dialog.
 import os
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QFileDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QFileDialog, QButtonGroup
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
@@ -26,10 +26,11 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
     It displays a dialog for entering the parameters
     for the QFileDialog code generator.
     """
-    def __init__(self, parent=None):
+    def __init__(self, pyqtVariant, parent=None):
         """
         Constructor
         
+        @param pyqtVariant variant of PyQt (integer; 0, 4 or 5)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -37,6 +38,27 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         self.eStartWithCompleter = E5FileCompleter(self.eStartWith)
         self.eWorkDirCompleter = E5DirCompleter(self.eWorkDir)
+        
+        self.__pyqtVariant = pyqtVariant
+        
+        self.__typeButtonsGroup = QButtonGroup(self)
+        self.__typeButtonsGroup.setExclusive(True)
+        self.__typeButtonsGroup.addButton(self.rOpenFile, 1)
+        self.__typeButtonsGroup.addButton(self.rOpenFiles, 2)
+        self.__typeButtonsGroup.addButton(self.rSaveFile, 3)
+        self.__typeButtonsGroup.addButton(self.rfOpenFile, 11)
+        self.__typeButtonsGroup.addButton(self.rfOpenFiles, 12)
+        self.__typeButtonsGroup.addButton(self.rfSaveFile, 13)
+        self.__typeButtonsGroup.addButton(self.rDirectory, 20)
+        self.__typeButtonsGroup.buttonClicked[int].connect(
+            self.__toggleInitialFilter)
+        self.__toggleInitialFilter(1)
+        
+        self.pyqtComboBox.addItems(["PyQt4", "PyQt5"])
+        if self.__pyqtVariant == 5:
+            self.pyqtComboBox.setCurrentIndex(1)
+        else:
+            self.pyqtComboBox.setCurrentIndex(0)
         
         self.rSaveFile.toggled[bool].connect(self.__toggleConfirmCheckBox)
         self.rfSaveFile.toggled[bool].connect(self.__toggleConfirmCheckBox)
@@ -47,7 +69,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         self.bTest = self.buttonBox.addButton(
             self.trUtf8("Test"), QDialogButtonBox.ActionRole)
-        
+    
     def __adjustOptions(self, options):
         """
         Private method to adjust the file dialog options.
@@ -58,7 +80,30 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         if Globals.isLinuxPlatform():
             options |= QFileDialog.DontUseNativeDialog
         return options
+    
+    @pyqtSlot(str)
+    def on_pyqtComboBox_currentIndexChanged(self, txt):
+        """
+        Private slot to setup the dialog for the selected PyQt variant.
         
+        @param txt text of the selected combo box entry (string)
+        """
+        self.rfOpenFile.setEnabled(txt == "PyQt4")
+        self.rfOpenFiles.setEnabled(txt == "PyQt4")
+        self.rfSaveFile.setEnabled(txt == "PyQt4")
+        
+        if txt == "PyQt5":
+            if self.rfOpenFile.isChecked():
+                self.rOpenFile.setChecked(True)
+            elif self.rfOpenFiles.isChecked():
+                self.rOpenFiles.setChecked(True)
+            elif self.rfSaveFile.isChecked():
+                self.rSaveFile.setChecked(True)
+        
+        self.__pyqtVariant = 5 if txt == "PyQt5" else 4
+        
+        self.__toggleInitialFilter(self.__typeButtonsGroup.checkedId())
+    
     def on_buttonBox_clicked(self, button):
         """
         Private slot called by a button of the button box clicked.
@@ -79,36 +124,63 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             else:
                 options = QFileDialog.Options()
             options = self.__adjustOptions(options)
-            QFileDialog.getOpenFileName(
-                None,
-                self.eCaption.text(),
-                self.eStartWith.text(),
-                self.eFilters.text(),
-                options)
+            if self.rOpenFile.isChecked() and self.__pyqtVariant == 4:
+                QFileDialog.getOpenFileName(
+                    None,
+                    self.eCaption.text(),
+                    self.eStartWith.text(),
+                    self.eFilters.text(),
+                    options)
+            else:
+                QFileDialog.getOpenFileNameAndFilter(
+                    None,
+                    self.eCaption.text(),
+                    self.eStartWith.text(),
+                    self.eFilters.text(),
+                    self.eInitialFilter.text(),
+                    options)
         elif self.rOpenFiles.isChecked() or self.rfOpenFiles.isChecked():
             if not self.cSymlinks.isChecked():
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
             options = self.__adjustOptions(options)
-            QFileDialog.getOpenFileNames(
-                None,
-                self.eCaption.text(),
-                self.eStartWith.text(),
-                self.eFilters.text(),
-                options)
+            if self.rOpenFiles.isChecked() and self.__pyqtVariant == 4:
+                QFileDialog.getOpenFileNames(
+                    None,
+                    self.eCaption.text(),
+                    self.eStartWith.text(),
+                    self.eFilters.text(),
+                    options)
+            else:
+                QFileDialog.getOpenFileNamesAndFilter(
+                    None,
+                    self.eCaption.text(),
+                    self.eStartWith.text(),
+                    self.eFilters.text(),
+                    self.eInitialFilter.text(),
+                    options)
         elif self.rSaveFile.isChecked() or self.rfSaveFile.isChecked():
             if not self.cSymlinks.isChecked():
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
             options = self.__adjustOptions(options)
-            QFileDialog.getSaveFileName(
-                None,
-                self.eCaption.text(),
-                self.eStartWith.text(),
-                self.eFilters.text(),
-                options)
+            if self.rSaveFile.isChecked() and self.__pyqtVariant == 4:
+                QFileDialog.getSaveFileName(
+                    None,
+                    self.eCaption.text(),
+                    self.eStartWith.text(),
+                    self.eFilters.text(),
+                    options)
+            else:
+                QFileDialog.getSaveFileNameAndFilter(
+                    None,
+                    self.eCaption.text(),
+                    self.eStartWith.text(),
+                    self.eFilters.text(),
+                    self.eInitialFilter.text(),
+                    options)
         elif self.rDirectory.isChecked():
             options = QFileDialog.Options()
             if not self.cSymlinks.isChecked():
@@ -123,14 +195,14 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 self.eCaption.text(),
                 self.eWorkDir.text(),
                 options)
-        
+    
     def __toggleConfirmCheckBox(self):
         """
         Private slot to enable/disable the confirmation check box.
         """
         self.cConfirmOverwrite.setEnabled(
             self.rSaveFile.isChecked() or self.rfSaveFile.isChecked())
-        
+    
     def __toggleGroupsAndTest(self):
         """
         Private slot to enable/disable certain groups and the test button.
@@ -144,10 +216,25 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             self.dirPropertiesGroup.setEnabled(False)
             self.bTest.setDisabled(
                 self.cStartWith.isChecked() or self.cFilters.isChecked())
-        
-    def __getCode4(self, indLevel, indString):
+    
+    def __toggleInitialFilter(self, id):
         """
-        Private method to get the source code for Qt4/Qt5.
+        Private slot to enable/disable the initial filter elements.
+        
+        @param id id of the clicked button (integer)
+        """
+        if (self.__pyqtVariant == 4 and id in [11, 12, 13]) or \
+                (self.__pyqtVariant == 5 and id in [1, 2, 3]):
+            enable = True
+        else:
+            enable = False
+        self.lInitialFilter.setEnabled(enable)
+        self.eInitialFilter.setEnabled(enable)
+        self.cInitialFilter.setEnabled(enable)
+    
+    def getCode(self, indLevel, indString):
+        """
+        Public method to get the source code for Qt4 and Qt5.
         
         @param indLevel indentation level (int)
         @param indString string used for indentation (space or tab) (string)
@@ -159,6 +246,15 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
+        if self.parentSelf.isChecked():
+            parent = "self"
+        elif self.parentNone.isChecked():
+            parent = "None"
+        elif self.parentOther.isChecked():
+            parent = self.parentEdit.text()
+            if parent == "":
+                parent = "None"
+        
         code = 'QFileDialog.'
         if self.rOpenFile.isChecked() or self.rfOpenFile.isChecked():
             if self.rOpenFile.isChecked():
@@ -166,7 +262,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             else:
                 code += 'getOpenFileNameAndFilter({0}{1}'.format(
                     os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
@@ -188,8 +284,16 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 else:
                     fmt = 'self.trUtf8("{0}")'
                 code += fmt.format(self.eFilters.text())
-            if self.rfOpenFile.isChecked():
-                code += ',{0}{1}None'.format(os.linesep, istring)
+            if self.rfOpenFile.isChecked() or self.__pyqtVariant == 5:
+                if self.eInitialFilter.text() == "":
+                    filter = "None"
+                else:
+                    if self.cInitialFilter.isChecked():
+                        fmt = '{0}'
+                    else:
+                        fmt = 'self.trUtf8("{0}")'
+                    filter = fmt.format(self.eInitialFilter.text())
+                code += ',{0}{1}{2}'.format(os.linesep, istring, filter)
             if not self.cSymlinks.isChecked():
                 code += \
                     ',{0}{1}QFileDialog.Options(' \
@@ -202,7 +306,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             else:
                 code += 'getOpenFileNamesAndFilter({0}{1}'.format(
                     os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
@@ -224,8 +328,16 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 else:
                     fmt = 'self.trUtf8("{0}")'
                 code += fmt.format(self.eFilters.text())
-            if self.rfOpenFiles.isChecked():
-                code += ',{0}{1}None'.format(os.linesep, istring)
+            if self.rfOpenFiles.isChecked() or self.__pyqtVariant == 5:
+                if self.eInitialFilter.text() == "":
+                    filter = "None"
+                else:
+                    if self.cInitialFilter.isChecked():
+                        fmt = '{0}'
+                    else:
+                        fmt = 'self.trUtf8("{0}")'
+                    filter = fmt.format(self.eInitialFilter.text())
+                code += ',{0}{1}{2}'.format(os.linesep, istring, filter)
             if not self.cSymlinks.isChecked():
                 code += \
                     ',{0}{1}QFileDialog.Options(' \
@@ -238,7 +350,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             else:
                 code += 'getSaveFileNameAndFilter({0}{1}'.format(
                     os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
@@ -260,8 +372,16 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 else:
                     fmt = 'self.trUtf8("{0}")'
                 code += fmt.format(self.eFilters.text())
-            if self.rfSaveFile.isChecked():
-                code += ',{0}{1}None'.format(os.linesep, istring)
+            if self.rfSaveFile.isChecked() or self.__pyqtVariant == 5:
+                if self.eInitialFilter.text() == "":
+                    filter = "None"
+                else:
+                    if self.cInitialFilter.isChecked():
+                        fmt = '{0}'
+                    else:
+                        fmt = 'self.trUtf8("{0}")'
+                    filter = fmt.format(self.eInitialFilter.text())
+                code += ',{0}{1}{2}'.format(os.linesep, istring, filter)
             if (not self.cSymlinks.isChecked()) or \
                (not self.cConfirmOverwrite.isChecked()):
                 code += ',{0}{1}QFileDialog.Options('.format(
@@ -277,7 +397,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             code += '){0}'.format(estring)
         elif self.rDirectory.isChecked():
             code += 'getExistingDirectory({0}{1}'.format(os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
@@ -301,15 +421,3 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             code += ')){0}'.format(estring)
             
         return code
-        
-    def getCode(self, indLevel, indString):
-        """
-        Public method to get the source code.
-        
-        @param indLevel indentation level (int)
-        @param indString string used for indentation (space or tab) (string)
-        @return generated code (string)
-        """
-        return self.__getCode4(indLevel, indString)
-    
-    # TODO: add getCode for PyQt5

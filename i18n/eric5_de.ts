@@ -14182,27 +14182,27 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>FileDialogWizard</name>
     <message>
-        <location filename="../Plugins/PluginWizardQFileDialog.py" line="122"/>
+        <location filename="../Plugins/PluginWizardQFileDialog.py" line="132"/>
         <source>No current editor</source>
         <translation>Kein aktueller Editor</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginWizardQFileDialog.py" line="122"/>
+        <location filename="../Plugins/PluginWizardQFileDialog.py" line="132"/>
         <source>Please open or create a file first.</source>
         <translation>Bitte öffnen oder erzeugen Sie zuerst eine Datei.</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginWizardQFileDialog.py" line="75"/>
+        <location filename="../Plugins/PluginWizardQFileDialog.py" line="79"/>
         <source>QFileDialog Wizard</source>
         <translation>QFileDialog-Assistent</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginWizardQFileDialog.py" line="71"/>
+        <location filename="../Plugins/PluginWizardQFileDialog.py" line="75"/>
         <source>Q&amp;FileDialog Wizard...</source>
         <translation>Q&amp;FileDialog-Assistent...</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginWizardQFileDialog.py" line="76"/>
+        <location filename="../Plugins/PluginWizardQFileDialog.py" line="80"/>
         <source>&lt;b&gt;QFileDialog Wizard&lt;/b&gt;&lt;p&gt;This wizard opens a dialog for entering all the parameters needed to create a QFileDialog. The generated code is inserted at the current cursor position.&lt;/p&gt;</source>
         <translation>&lt;b&gt;QFileDialog-Assistent&lt;/b&gt;&lt;p&gt;Dieser Assistent öffnet einen Dialog zur Eingabe der Parameter, die zur Erzeugung eines QFileDialog benötigt werden. Der erzeugte Quelltext wird an der aktuellen Cursorposition eingefügt.&lt;/p&gt;</translation>
     </message>
@@ -14215,174 +14215,229 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>QFileDialog-Assistent</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="23"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="50"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="29"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="56"/>
         <source>Select to create an &apos;Open File&apos; dialog</source>
         <translation>Auswählen, um einen „Datei öffnen“-Dialog zu erzeugen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="32"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="59"/>
         <source>Open File</source>
         <translation>Datei öffnen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="42"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="69"/>
         <source>Select to create an &apos;Open Files&apos; dialog</source>
         <translation>Auswählen, um einen „Dateien öffnen“-Dialog zu erzeugen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="45"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="72"/>
         <source>Open Files</source>
         <translation>Dateien öffnen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="52"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="79"/>
         <source>Select to create a &apos;Save File&apos; dialog</source>
         <translation>Auswählen, um einen „Datei sichern“-Dialog zu erzeugen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="55"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="82"/>
         <source>Save File</source>
         <translation>Datei sichern</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="62"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="89"/>
         <source>Select to create a &apos;Select Directory&apos; dialog</source>
         <translation>Auswählen, um einen Verzeichnisauswahldialog zu erzeugen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="65"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="92"/>
         <source>Select Directory</source>
         <translation>Verzeichnis wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="108"/>
-        <source>Caption</source>
-        <translation>Titel</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="115"/>
-        <source>Enter the caption text</source>
-        <translation>Gib den Titeltext ein</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="122"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="149"/>
         <source>Check to resolve symbolic links</source>
         <translation>Anwählen, um symbolische Links aufzulösen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="125"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="152"/>
         <source>Resolve Symlinks</source>
         <translation>Symbolische Links auflösen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="218"/>
         <source>File Dialog Properties</source>
         <translation>Dateidialog-Eigenschaften</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="228"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="335"/>
         <source>Check this if the contents of the edit names a variable or variable function</source>
         <translation>Anwählen, wenn der Inhalt des Eingabefeldes eine Variable oder eine Variablenfunktion ist</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="231"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="338"/>
         <source>Is Variable</source>
         <translation>ist Variable</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="151"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="255"/>
         <source>Enter the filter specifications separated by &apos;;;&apos;</source>
         <translation>Gib die Filterspezifikationen getrennt durch „;;“ ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="168"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="231"/>
         <source>Enter the working directory or a filename</source>
         <translation>Gib das Arbeitsverzeichnis oder einen Dateinamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="175"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="248"/>
         <source>Filters</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="185"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="299"/>
         <source>Select to show an overwrite confirmation dialog</source>
         <translation>Auswählen, um eine Überschreiben Warnung anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="188"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="302"/>
         <source>Show overwrite confirmation</source>
         <translation>Überschreiben Warnung anzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="195"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="224"/>
         <source>Start With / Working Directory</source>
         <translation>Beginnen mit / Arbeitsverzeichnis</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="208"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="315"/>
         <source>Directory Dialog Properties</source>
         <translation>Verzeichnisdialog-Eigenschaften</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="214"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="321"/>
         <source>Enter the working directory</source>
         <translation>Gib das Arbeitsverzeichnis ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="221"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="328"/>
         <source>Working Directory</source>
         <translation>Arbeitsverzeichnis</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="238"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="345"/>
         <source>Check to display directories only</source>
         <translation>Anwählen, um nur Verzeichnisse anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="241"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="348"/>
         <source>Show Directories Only</source>
         <translation>nur Verzeichnisse anzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="48"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="70"/>
         <source>Test</source>
         <translation>Test</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="72"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="99"/>
         <source>Select to create an &apos;Open File&apos; dialog capturing the selected filter</source>
         <translation>Auswählen, um einen „Datei öffnen“-Dialog zu erzeugen, der den ausgewählten Filter zurückliefert</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="75"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="102"/>
         <source>Open File and Filter</source>
         <translation>Datei öffnen mit Filter</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="85"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="112"/>
         <source>Select to create an &apos;Open Files&apos; dialog capturing the selected filter</source>
         <translation>Auswählen, um einen „Dateien öffnen“-Dialog zu erzeugen, der den ausgewählten Filter zurückliefert</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="88"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="115"/>
         <source>Open Files and Filter</source>
         <translation>Dateien öffnen mit Filter</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="95"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="122"/>
         <source>Select to create a &apos;Save File&apos; dialog capturing the selected filter</source>
         <translation>Auswählen, um einen „Datei sichern“-Dialog zu erzeugen, der den ausgewählten Filter zurückliefert</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="98"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="125"/>
         <source>Save File and Filter</source>
         <translation>Datei sichern mit Filter</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="25"/>
+        <source>PyQt Variant:</source>
+        <translation>PyQt Variante:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="142"/>
+        <source>Enter the title text</source>
+        <translation>Gib den Titeltext ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="162"/>
+        <source>Parent</source>
+        <translation>Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="168"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation>Wähle „self“ als Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="171"/>
+        <source>self</source>
+        <translation>self</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="181"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation>Wähle „None“ als Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="184"/>
+        <source>None</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="193"/>
+        <source>Select to enter a parent expression</source>
+        <translation>Auswählen, um einen Ausdruck für den Vorgänger einzugeben</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="196"/>
+        <source>Expression:</source>
+        <translation>Ausdruck:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="206"/>
+        <source>Enter the parent expression</source>
+        <translation>Gib den Ausdruck für den Vorgänger ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="272"/>
+        <source>Initial Filter</source>
+        <translation>Initialer Filter</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="279"/>
+        <source>Enter the initial filter</source>
+        <translation>Gib den initialen Filter ein</translation>
     </message>
 </context>
 <context>
@@ -26675,11 +26730,6 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Auswahlliste</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="63"/>
-        <source>Caption</source>
-        <translation>Titel</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="73"/>
         <source>Label</source>
         <translation>Beschriftung</translation>
@@ -26763,6 +26813,11 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.py" line="43"/>
         <source>Test</source>
         <translation>Test</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="63"/>
+        <source>Title</source>
+        <translation>Titel</translation>
     </message>
 </context>
 <context>
@@ -30302,11 +30357,6 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Über Qt</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
-        <source>Enter the caption for the QMessageBox</source>
-        <translation>Gib den Fenstertitel der QMessageBox ein</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="124"/>
         <source>Message</source>
         <translation>Nachricht</translation>
@@ -30475,6 +30525,11 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
         <source>Enter the parent expression</source>
         <translation>Gib den Ausdruck für den Vorgänger ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
+        <source>Enter the title for the QMessageBox</source>
+        <translation>Gib den Fenstertitel für die QMessageBox ein</translation>
     </message>
 </context>
 <context>
@@ -37533,22 +37588,22 @@ Dialoges auswählen, indem Sie den Knopf rechts drücken.&lt;/p&gt;</translation
         <translation>Schreibweise beachten</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="515"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="518"/>
         <source>Observe Locale</source>
         <translation>Locale berücksichtigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="522"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
         <source>&quot;.&quot; matches linebreaks as well</source>
         <translation>„.“ findet auch einen Zeilenumbruch</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="528"/>
         <source>Dot matches Linebreak</source>
         <translation>Punkt findet Zeilenumbruch</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="534"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="537"/>
         <source>Text:</source>
         <translation>Text:</translation>
     </message>

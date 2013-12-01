@@ -91,6 +91,7 @@ Version 5.4-snapshot-2013mmdd:
      as a screen shot
 - Wizards
   -- added a wizard for the Qt5 QRegularExpression class (requires PyQt5)
+  -- added support for PyQt5 to the QFileDialog wizard
 - Third Party packages
   -- updated to Pygments 1.6
 

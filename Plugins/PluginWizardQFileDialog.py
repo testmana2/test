@@ -7,6 +7,8 @@
 Module implementing the QFileDialog wizard plugin.
 """
 
+import re
+
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
@@ -42,6 +44,8 @@ class FileDialogWizard(QObject):
         """
         super().__init__(ui)
         self.__ui = ui
+        
+        self.__pyqtRe = re.compile(r"(?:import|from)\s+PyQt([45])")
 
     def activate(self):
         """
@@ -97,9 +101,15 @@ class FileDialogWizard(QObject):
         @param editor reference to the current editor
         @return the generated code (string)
         """
+        match = self.__pyqtRe.search(editor.text())
+        if match is None:
+            pyqtVariant = 0    # unknown
+        else:
+            pyqtVariant = int(match.group(1))   # 4 or 5
+        
         from WizardPlugins.FileDialogWizard.FileDialogWizardDialog import \
             FileDialogWizardDialog
-        dlg = FileDialogWizardDialog(None)
+        dlg = FileDialogWizardDialog(pyqtVariant, None)
         if dlg.exec_() == QDialog.Accepted:
             line, index = editor.getCursorPosition()
             indLevel = editor.indentation(line) // editor.indentationWidth()

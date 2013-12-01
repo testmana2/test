@@ -114,7 +114,7 @@
    <item>
     <widget class="QLineEdit" name="eCaption">
      <property name="toolTip">
-      <string>Enter the caption for the QMessageBox</string>
+      <string>Enter the title for the QMessageBox</string>
      </property>
     </widget>
    </item>
