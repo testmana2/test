@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1936,8 +1935,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2178,8 +2177,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -8829,16 +8828,6 @@ selección completa.&lt;/li&gt;
         <translation>Autocompletar habilitado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="722"/>
-        <source>New view</source>
-        <translation type="obsolete">Nueva vista</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/Editor.py" line="723"/>
-        <source>New view (with new split)</source>
-        <translation type="obsolete">Nueva vista (con nueva división)</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/Editor.py" line="730"/>
         <source>Close</source>
         <translation>Cerrar</translation>
@@ -15461,7 +15450,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -33340,11 +33329,6 @@ Destination:
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
-        <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following setting is activated at the next startup of the application.&lt;/font&gt;</source>
-        <translation type="obsolete">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estas opciones de configuración se activarán la siguiente vez que se ejecute la aplicacion.&lt;/font&gt;</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="94"/>
         <source>Select plugins download directory</source>
         <translation>Seleccione directorio de descarga de plugins</translation>
@@ -37820,22 +37804,22 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>Sensible a mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="515"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="518"/>
         <source>Observe Locale</source>
         <translation>Tener en cuenta codificaciones locales</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="522"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
         <source>&quot;.&quot; matches linebreaks as well</source>
         <translation>&quot;.&quot; coincide tambien con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="528"/>
         <source>Dot matches Linebreak</source>
         <translation>El punto coincide con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="534"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="537"/>
         <source>Text:</source>
         <translation>Texto:</translation>
     </message>
