@@ -105,8 +105,8 @@ Version 5.3-snapshot-20130106:
 - Debug Viewer
   -- added a viewer for call trace logs
 - Editor
-  -- added actions to search for the next/previous occurence of the current word
-     (default shortcuts Ctrl+. and Ctrl+,)
+  -- added actions to search for the next/previous occurence of the current
+     word (default shortcuts Ctrl+. and Ctrl+,)
   -- added some icons to the "Languages" and "End-of-Line Type" context menus
 - IRC
   -- added a simple IRC client
@@ -120,10 +120,10 @@ Version 5.3-snapshot-20130106:
      for the switching between the 'inner' windows.
   -- added a notification system
 - View Manager
-  -- added actions to open the find in files and replace in files dialogs in a mode
-     that searches open files only
-  -- change the status labels for programming language and end-of-line type to show
-     an icon
+  -- added actions to open the find in files and replace in files dialogs in a
+     mode that searches open files only
+  -- change the status labels for programming language and end-of-line type to
+     show an icon
 
 Version 5.3-snapshot-20121101:
 - bug fixes
@@ -146,30 +146,33 @@ Version 5.3-snapshot-20121101:
   -- added the capability to rebuild a diagram without losing the current item
      positions
 - Plug-ins
-  -- added the 'addSideWidget()' and 'removeSideWidget()' methods to the UserInterface
-     class to allow plug-in developers to add a plug-in widget to the left or bottom
-     side containers
+  -- added the 'addSideWidget()' and 'removeSideWidget()' methods to the
+     UserInterface class to allow plug-in developers to add a plug-in widget
+     to the left or bottom side containers
 - Project
-  -- made the selectable project types of the project properties dialog dependent
-     upon the selected programming language
+  -- made the selectable project types of the project properties dialog
+     dependent upon the selected programming language
 - Version Control System Interfaces
   -- Mercurial
      --- added support for --log and --dry-run to the hg graft operation as of
          Mercurial 2.3.0
-     --- added code to disable the (deprecated) transplant menu for Mercurial 2.3.0
+     --- added code to disable the (deprecated) transplant menu for
+         Mercurial 2.3.0
 - Web Browser
   -- added context menu entries for HTML5 media elements
   -- added a personal information manager to assist in completing form fields
-     through field context menu entries or by pressing Ctrl+Return or Ctrl+Enter
+     through field context menu entries or by pressing Ctrl+Return or
+     Ctrl+Enter
   -- added support for GreaseMonkey scripts
   -- added an icon to the status bar to give direct access to AdBlock
   -- rewrote huge part of AdBlock to speed up
   -- added support for dependent AdBlock subscriptions
   -- added support for AdBlock exceptions
-  -- added support for AdBlock checksum checking when downloading a subscription
+  -- added support for AdBlock checksum checking when downloading a
+     subscription
   -- added support for variable AdBlock update periods (given in subscription)
-  -- changed FTP support to use Python's ftplib instead of QFtp because the later
-     is not supported in Qt5 anymore
+  -- changed FTP support to use Python's ftplib instead of QFtp because the
+     later is not supported in Qt5 anymore
   -- added a handler for file: schemes to allow directory listings
 
 Version 5.3-snapshot-20120624:
@@ -208,7 +211,8 @@ Version 5.3-snapshot-20120430:
   -- added capability to save project tasks automatically (configurable on
      project configuration page of configuration dialog)
 - Tasks
-  -- changed the tasks handling to allow for more fine grained task designations
+  -- changed the tasks handling to allow for more fine grained task
+     designations
 - Tools
   -- added a tool to take screenshots (fullscreen, selected screen, rectangular
      selection, elliptical selection or freehand selection)
@@ -222,21 +226,22 @@ Version 5.3-snapshot-20120430:
 - Web Browser
   -- extended the check for acceptable SSL certificates for indication via the
      URL entry field
-  -- extended the web page context menu by several entries to send links or the
-     selected text, handling the clicked frame, translate the selected text with
-     Google Translate and search it in Wictionary
-  -- extended the User Agent handling to be able to set the string on a host basis
-     (next to the global user agent string)
+  -- extended the web page context menu by several entries to send links or
+     the selected text, handling the clicked frame, translate the selected
+     text with Google Translate and search it in Wictionary
+  -- extended the User Agent handling to be able to set the string on a host
+     basis (next to the global user agent string)
   -- added code to save the current page as a screen shot
-  -- added capability to synchronize bookmarks, history, passwords and user agent
-     settings via an FTP server or a shared directory
-  -- added the ClickToFlash plug-in to (temporarily) block Flash and related content
-  -- added capability to suppress Referer Headers (configurable via eric4 Web Browser
-     configuration page)
-  -- added capability to select the first nine tabs by pressing Alt+1 to Alt+9 and to
-     switch to the last tab by pressing Alt+0
-  -- added a Speed Dial to the web browser including the capability to select the first
-     ten pages by pressing Meta+1 to Meta+0
+  -- added capability to synchronize bookmarks, history, passwords and user
+     agent settings via an FTP server or a shared directory
+  -- added the ClickToFlash plug-in to (temporarily) block Flash and related
+     content
+  -- added capability to suppress Referer Headers (configurable via eric4 Web
+     Browser configuration page)
+  -- added capability to select the first nine tabs by pressing Alt+1 to Alt+9
+     and to switch to the last tab by pressing Alt+0
+  -- added a Speed Dial to the web browser including the capability to select
+     the first ten pages by pressing Meta+1 to Meta+0
   -- added a history sub-menu showing the most visited sites
   -- added the capability to restore closed tabs
   -- added a bookmarks importer to get them directly from other browsers files
@@ -268,14 +273,19 @@ Version 5.2.0:
   -- added a syntax check while typing function
   -- added source navigation function for Python 2, Python 3 and Ruby sources
   -- added support for QScintilla 2.6 (and newer)
-  -- added capability to zoom by Ctrl + Mouse Wheel (same for the shell and terminal)
-  -- added capability to zoom by a pinch gesture (same for the shell and terminal)
-  -- added capability to go to method and class definitions by Shift + Mouse Wheel
-  -- added the capability to replace just the selected occurence of the search text
+  -- added capability to zoom by Ctrl + Mouse Wheel (same for the shell and
+     terminal)
+  -- added capability to zoom by a pinch gesture (same for the shell and
+     terminal)
+  -- added capability to go to method and class definitions by Shift + Mouse
+     Wheel
+  -- added the capability to replace just the selected occurence of the search
+     text
 - Plug-in Manager Tools
   -- added code to download and install plug-ins
 - Source Browser
-  -- show class attributes, class methods and static methods with different icons
+  -- show class attributes, class methods and static methods with different
+     icons
   -- added context menu for attributes
 - Source Documentor
   -- introduced separate sections for class methods and static methods
@@ -287,7 +297,8 @@ Version 5.2.0:
      --- added code to write base class information to be used by the
          eric assistant plug-in
 - Unit Test
-  -- extended the unit test module to allow to rerun only failed tests of the last
+  -- extended the unit test module to allow to rerun only failed tests of the
+     last
 - Version Control System Interfaces
   -- all
      --- made "Show Log" behave like "Show Limited Log" and removed the later
@@ -302,21 +313,24 @@ Version 5.2.0:
          file first (created by an hg incoming)
      --- added support for importing patches
      --- added support for exporting patches
-     --- added configuration option to create backup files when reverting changes
+     --- added configuration option to create backup files when reverting
+         changes
 - View Manager
   -- added an action to reset the zoom factor
 - Web Browser
   -- added the "Do Not Track" feature
-  -- added code to indicate invalid SSL certificates in the URL entry and the SSL
-     info dialog
+  -- added code to indicate invalid SSL certificates in the URL entry and the
+     SSL info dialog
   -- added a dialog to show RSS feeds
   -- added a dialog to show some information about the current site
   -- added the capability to go through the history via Shift + Mouse Wheel
   -- added capability to zoom by a pinch gesture
 - other enhancements
   -- added an action to launch another instantiation of eric5
-  -- added capability to zoom by Ctrl + Mouse Wheel to various graphics related windows
-  -- added capability to zoom by a pinch gesture to various graphics related windows
+  -- added capability to zoom by Ctrl + Mouse Wheel to various graphics
+     related windows
+  -- added capability to zoom by a pinch gesture to various graphics
+     related windows
 
 Version 5.2-snapshot-20110724:
 - bug fixes
@@ -335,16 +349,17 @@ Version 5.2-snapshot-20110724:
   -- added some more search engines to the web browser
   -- added capability to encrypt saved passwords with a master password
      and rearranged some configuration parameters related to security
-  -- improved the handling of mouse XButton1 and XButton2 handling in the web browser
+  -- improved the handling of mouse XButton1 and XButton2 handling in the
+     web browser
 - enhancements of the configuration dialog
   -- added function to test the login data to the Email config page
 - enhancements of the Unit Test module
-  -- extended the unit test interface to support skipped tests, expected failures
-     and unexpected successes and to better cope with Python2 scripts when run
-     from the eric IDE
+  -- extended the unit test interface to support skipped tests, expected
+     failures and unexpected successes and to better cope with Python2
+     scripts when run from the eric IDE
 - enhancements of the editor
-  -- added editor actions to go to the last edit location and to the previous or
-     next Python or Ruby class or method definition
+  -- added editor actions to go to the last edit location and to the previous
+     or next Python or Ruby class or method definition
 
 Version 5.2-snapshot-20110501:
 - bug fixes
