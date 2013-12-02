@@ -124,7 +124,11 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
-        code = 'QInputDialog.'
+        # TODO: support entering 'parent'
+        resvar = self.eResultVar.text()
+        if not resvar:
+            resvar = "result"
+        code = '{0}, ok = QInputDialog.'.format(resvar)
         if self.rText.isChecked():
             code += 'getText({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)

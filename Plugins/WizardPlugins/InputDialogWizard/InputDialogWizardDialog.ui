@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>501</width>
-    <height>581</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -55,6 +55,20 @@
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Result:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="eResultVar">
+     <property name="toolTip">
+      <string>Enter the result variable name</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -353,6 +367,7 @@
   <tabstop>rInteger</tabstop>
   <tabstop>rDouble</tabstop>
   <tabstop>rItem</tabstop>
+  <tabstop>eResultVar</tabstop>
   <tabstop>eCaption</tabstop>
   <tabstop>eLabel</tabstop>
   <tabstop>rEchoNormal</tabstop>
@@ -370,6 +385,7 @@
   <tabstop>eVariable</tabstop>
   <tabstop>sCurrentItem</tabstop>
   <tabstop>cEditable</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

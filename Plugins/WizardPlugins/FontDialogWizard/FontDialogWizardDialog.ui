@@ -1,32 +1,47 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>FontDialogWizardDialog</class>
- <widget class="QDialog" name="FontDialogWizardDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="FontDialogWizardDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>377</width>
-    <height>118</height>
+    <height>162</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>QFontDialog Wizard</string>
   </property>
-  <property name="sizeGripEnabled" >
+  <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" >
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Result:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="eResultVar">
+     <property name="toolTip">
+      <string>Enter the result variable name</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
      <item>
       <spacer>
-       <property name="orientation" >
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeType" >
+       <property name="sizeType">
         <enum>QSizePolicy::Expanding</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>30</width>
          <height>0</height>
@@ -35,24 +50,24 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="fontButton" >
-       <property name="toolTip" >
+      <widget class="QPushButton" name="fontButton">
+       <property name="toolTip">
         <string>Press to select a font via a dialog</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Select Font ...</string>
        </property>
       </widget>
      </item>
      <item>
       <spacer>
-       <property name="orientation" >
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeType" >
+       <property name="sizeType">
         <enum>QSizePolicy::Expanding</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>30</width>
          <height>0</height>
@@ -63,36 +78,38 @@
     </layout>
    </item>
    <item>
-    <widget class="QLabel" name="TextLabel1" >
-     <property name="text" >
-      <string>Variable</string>
+    <widget class="QLabel" name="TextLabel1">
+     <property name="text">
+      <string>Font Variable:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="eVariable" >
-     <property name="toolTip" >
+    <widget class="QLineEdit" name="eVariable">
+     <property name="toolTip">
       <string>Enter a variable name</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="11" />
+ <layoutdefault spacing="6" margin="11"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
+  <tabstop>eResultVar</tabstop>
   <tabstop>fontButton</tabstop>
   <tabstop>eVariable</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -102,11 +119,11 @@
    <receiver>FontDialogWizardDialog</receiver>
    <slot>accept()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>97</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>120</y>
     </hint>
@@ -118,11 +135,11 @@
    <receiver>FontDialogWizardDialog</receiver>
    <slot>reject()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>76</x>
      <y>100</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>76</x>
      <y>119</y>
     </hint>

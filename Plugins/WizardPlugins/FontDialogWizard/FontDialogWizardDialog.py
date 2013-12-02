@@ -92,7 +92,10 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # generate the code
-        code = 'QFontDialog.getFont('
+        resvar = self.eResultVar.text()
+        if not resvar:
+            resvar = "font"
+        code = '{0}, ok = QFontDialog.getFont('.format(resvar)
         if not self.eVariable.text():
             if self.font is not None:
                 code += 'QFont("{0}", {1:d}, {2:d}, {3:d})'.format(

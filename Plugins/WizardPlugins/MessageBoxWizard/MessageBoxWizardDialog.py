@@ -213,9 +213,10 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         """
         Private method to enable/disable some group boxes.
         """
-        self.standardButtons.setEnabled(not self.rAbout.isChecked() and
-                                        not self.rAboutQt.isChecked()
-                                        )
+        enable = not self.rAbout.isChecked() and not self.rAboutQt.isChecked()
+        self.standardButtons.setEnabled(enable)
+        self.lResultVar.setEnabled(enable)
+        self.eResultVar.setEnabled(enable)
         
         self.eMessage.setEnabled(not self.rAboutQt.isChecked())
     
@@ -319,18 +320,22 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
             if parent == "":
                 parent = "None"
         
+        resvar = self.eResultVar.text()
+        if not resvar:
+            resvar = "res"
+        
         if self.rAbout.isChecked():
             msgdlg = "QMessageBox.about("
         elif self.rAboutQt.isChecked():
             msgdlg = "QMessageBox.aboutQt("
         elif self.rInformation.isChecked():
-            msgdlg = "res = QMessageBox.information("
+            msgdlg = "{0} = QMessageBox.information(".format(resvar)
         elif self.rQuestion.isChecked():
-            msgdlg = "res = QMessageBox.question("
+            msgdlg = "{0} = QMessageBox.question(".format(resvar)
         elif self.rWarning.isChecked():
-            msgdlg = "res = QMessageBox.warning("
+            msgdlg = "{0} = QMessageBox.warning(".format(resvar)
         else:
-            msgdlg = "res = QMessageBox.critical("
+            msgdlg = "{0} = QMessageBox.critical(".format(resvar)
         
         if self.rAboutQt.isChecked():
             if self.eCaption.text():

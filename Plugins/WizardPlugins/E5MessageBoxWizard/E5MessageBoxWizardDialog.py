@@ -420,7 +420,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             return ""
         
         istring2 = istring + indString
-        joinstring = ' | \\{0}{1}'.format(os.linesep, istring2)
+        joinstring = ' |{0}{1}'.format(os.linesep, istring2)
         if withIntro:
             btnCode = ',{0}{1}E5MessageBox.StandardButtons('.format(
                 os.linesep, istring)
@@ -480,26 +480,35 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             icon = "E5MessageBox.Critical"
         
         if not self.rStandard.isChecked():
+            resvar = self.eResultVar.text()
+            if not resvar:
+                resvar = "res"
+            
             if self.rAbout.isChecked():
                 msgdlg = "E5MessageBox.about({0}".format(os.linesep)
             elif self.rAboutQt.isChecked():
                 msgdlg = "E5MessageBox.aboutQt({0}".format(os.linesep)
             elif self.rInformation.isChecked():
-                msgdlg = "res = E5MessageBox.information({0}".format(
-                    os.linesep)
+                msgdlg = "{0} = E5MessageBox.information({1}".format(
+                    resvar, os.linesep)
             elif self.rQuestion.isChecked():
-                msgdlg = "res = E5MessageBox.question({0}".format(os.linesep)
+                msgdlg = "{0} = E5MessageBox.question({1}".format(
+                    resvar, os.linesep)
             elif self.rWarning.isChecked():
-                msgdlg = "res = E5MessageBox.warning({0}".format(os.linesep)
+                msgdlg = "{0} = E5MessageBox.warning({1}".format(
+                    resvar, os.linesep)
             elif self.rCritical.isChecked():
-                msgdlg = "res = E5MessageBox.critical({0}".format(os.linesep)
+                msgdlg = "{0} = E5MessageBox.critical({1}".format(
+                    resvar, os.linesep)
             elif self.rYesNo.isChecked():
-                msgdlg = "res = E5MessageBox.yesNo({0}".format(os.linesep)
+                msgdlg = "{0} = E5MessageBox.yesNo({1}".format(
+                    resvar, os.linesep)
             elif self.rRetryAbort.isChecked():
-                msgdlg = "res = E5MessageBox.retryAbort({0}".format(os.linesep)
+                msgdlg = "{0} = E5MessageBox.retryAbort({1}".format(
+                    resvar, os.linesep)
             elif self.rOkToClearData.isChecked():
-                msgdlg = "res = E5MessageBox.okToClearData({0}".format(
-                    os.linesep)
+                msgdlg = "{0} = E5MessageBox.okToClearData({1}".format(
+                    resvar, os.linesep)
             
             msgdlg += '{0}{1},{2}'.format(istring, parent, os.linesep)
             msgdlg += '{0}self.trUtf8("{1}")'.format(
@@ -532,7 +541,12 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                     saveFunc = "lambda: True"
                 msgdlg += ',{0}{1}{2}'.format(os.linesep, istring, saveFunc)
         else:
-            msgdlg = "E5MessageBox.E5MessageBox({0}".format(os.linesep)
+            resvar = self.eResultVar.text()
+            if not resvar:
+                resvar = "dlg"
+            
+            msgdlg = "{0} = E5MessageBox.E5MessageBox({1}".format(
+                resvar, os.linesep)
             msgdlg += '{0}{1},{2}'.format(istring, icon, os.linesep)
             msgdlg += '{0}self.trUtf8("{1}")'.format(
                 istring, self.eCaption.text())

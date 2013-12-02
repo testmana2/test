@@ -51,8 +51,8 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.__typeButtonsGroup.addButton(self.rfSaveFile, 13)
         self.__typeButtonsGroup.addButton(self.rDirectory, 20)
         self.__typeButtonsGroup.buttonClicked[int].connect(
-            self.__toggleInitialFilter)
-        self.__toggleInitialFilter(1)
+            self.__toggleInitialFilterAndResult)
+        self.__toggleInitialFilterAndResult(1)
         
         self.pyqtComboBox.addItems(["PyQt4", "PyQt5"])
         if self.__pyqtVariant == 5:
@@ -102,7 +102,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         self.__pyqtVariant = 5 if txt == "PyQt5" else 4
         
-        self.__toggleInitialFilter(self.__typeButtonsGroup.checkedId())
+        self.__toggleInitialFilterAndResult(self.__typeButtonsGroup.checkedId())
     
     def on_buttonBox_clicked(self, button):
         """
@@ -217,9 +217,10 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             self.bTest.setDisabled(
                 self.cStartWith.isChecked() or self.cFilters.isChecked())
     
-    def __toggleInitialFilter(self, id):
+    def __toggleInitialFilterAndResult(self, id):
         """
-        Private slot to enable/disable the initial filter elements.
+        Private slot to enable/disable the initial filter elements and the
+        results entries.
         
         @param id id of the clicked button (integer)
         """
@@ -231,6 +232,9 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.lInitialFilter.setEnabled(enable)
         self.eInitialFilter.setEnabled(enable)
         self.cInitialFilter.setEnabled(enable)
+        
+        self.lFilterVariable.setEnabled(enable)
+        self.eFilterVariable.setEnabled(enable)
     
     def getCode(self, indLevel, indString):
         """
@@ -255,7 +259,33 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if parent == "":
                 parent = "None"
         
-        code = 'QFileDialog.'
+        # prepare the result variables
+        nameVariable = self.eNameVariable.text()
+        if not nameVariable:
+            if self.__typeButtonsGroup.checkedButton() in [
+                    self.rOpenFile, self.rfOpenFile,
+                    self.rSaveFile, self.rfSaveFile]:
+                nameVariable = "fileName"
+            elif self.__typeButtonsGroup.checkedButton() in [
+                    self.rOpenFiles, self.rfOpenFiles]:
+                nameVariable = "fileNames"
+            elif self.__typeButtonsGroup.checkedButton() == self.rDirectory:
+                nameVariable = "dirName"
+            else:
+                nameVariable = "res"
+        filterVariable = self.eFilterVariable.text()
+        if not filterVariable:
+            if (self.__pyqtVariant == 4 and
+                self.__typeButtonsGroup.checkedButton() in [
+                    self.rfOpenFile, self.rfOpenFiles, self.rfSaveFile]) or \
+                (self.__pyqtVariant == 5 and
+                self.__typeButtonsGroup.checkedButton() in [
+                    self.rOpenFile, self.rOpenFiles, self.rSaveFile]):
+                filterVariable = ", selectedFilter"
+            else:
+                filterVariable = ""
+        
+        code = '{0}{1} = QFileDialog.'.format(nameVariable, filterVariable)
         if self.rOpenFile.isChecked() or self.rfOpenFile.isChecked():
             if self.rOpenFile.isChecked():
                 code += 'getOpenFileName({0}{1}'.format(os.linesep, istring)

@@ -122,7 +122,11 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
-        code = 'QColorDialog.'
+        # TODO: support entering 'parent'
+        resvar = self.eResultVar.text()
+        if not resvar:
+            resvar = "color"
+        code = '{0} = QColorDialog.'.format(resvar)
         if self.rColor.isChecked():
             code += 'getColor({0}'.format(os.linesep)
             if self.eColor.currentText():
