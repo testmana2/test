@@ -122,7 +122,15 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
-        # TODO: support entering 'parent'
+        if self.parentSelf.isChecked():
+            parent = "self"
+        elif self.parentNone.isChecked():
+            parent = "None"
+        elif self.parentOther.isChecked():
+            parent = self.parentEdit.text()
+            if parent == "":
+                parent = "None"
+        
         resvar = self.eResultVar.text()
         if not resvar:
             resvar = "color"
@@ -139,7 +147,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                         istring, col, os.linesep)
             else:
                 code += '{0}QColor(Qt.white),{1}'.format(istring, os.linesep)
-            code += '{0}None,{1}'.format(istring, os.linesep)
+            code += '{0}{1},{2}'.format(istring, parent, os.linesep)
             code += '{0}self.trUtf8("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
             code += '{0}QColorDialog.ColorDialogOptions(' \
@@ -154,7 +162,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             else:
                 code += '{0}{1},{2}'.format(
                     istring, self.eRGB.text(), os.linesep)
-            code += '{0}None,{1}'.format(istring, os.linesep)
+            code += '{0}{1},{2}'.format(istring, parent, os.linesep)
             code += '{0}self.trUtf8("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
             code += '{0}QColorDialog.ColorDialogOptions(' \

@@ -3925,7 +3925,7 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Seleziona per generare un dialogo QColorDialog.getColor</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="87"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="143"/>
         <source>Colour</source>
         <translation>Colore</translation>
     </message>
@@ -3935,117 +3935,117 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Seleziona per generare un dialogo QColorDialog.getRgba</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="220"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="276"/>
         <source>RGBA</source>
         <translation>RGBA</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="99"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="155"/>
         <source>Enter a variable name or a colour</source>
         <translation>Inserisci un nome di variabile o un colore</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="111"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="167"/>
         <source>Qt.red</source>
         <translation>Qt.red</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="116"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="172"/>
         <source>Qt.darkRed</source>
         <translation>Qt.darkRed</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="121"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="177"/>
         <source>Qt.green</source>
         <translation>Qt.green</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="126"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="182"/>
         <source>Qt.darkGreen</source>
         <translation>Qt.darkGreen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="131"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="187"/>
         <source>Qt.blue</source>
         <translation>Qt.blue</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="136"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="192"/>
         <source>Qt.darkBlue</source>
         <translation>Qt.darkBlue</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="141"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="197"/>
         <source>Qt.cyan</source>
         <translation>Qt.cyan</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="146"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="202"/>
         <source>Qt.darkCyan</source>
         <translation>Qt.darkCyan</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="151"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="207"/>
         <source>Qt.magenta</source>
         <translation>Qt.magenta</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="156"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="212"/>
         <source>Qt.darkMagenta</source>
         <translation>Qt.darkMagenta</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="161"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="217"/>
         <source>Qt.yellow</source>
         <translation>Qt.yellow</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="166"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="222"/>
         <source>Qt.darkYellow</source>
         <translation>Qt.darkYellow</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="171"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="227"/>
         <source>Qt.white</source>
         <translation>Qt.white</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="176"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="232"/>
         <source>Qt.lightGray</source>
         <translation>Qt.lightGray</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="181"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="237"/>
         <source>Qt.gray</source>
         <translation>Qt.gray</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="186"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="242"/>
         <source>Qt.darkGray</source>
         <translation>Qt.darkGray</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="191"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="247"/>
         <source>Qt.black</source>
         <translation>Qt.black</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="196"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="252"/>
         <source>Qt.transparent</source>
         <translation>Qt.transparent</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="201"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="257"/>
         <source>Qt.color0</source>
         <translation>Qt.color0</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="206"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="262"/>
         <source>Qt.color1</source>
         <translation>Qt.color1</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="229"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="285"/>
         <source>Enter a variable name</source>
         <translation>Inserisci un nome di variabile</translation>
     </message>
@@ -4055,42 +4055,42 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="obsolete">Variabile</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="243"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="299"/>
         <source>Enter the alpha value</source>
         <translation>Inserisci il valore di alpha</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="253"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="309"/>
         <source>Enter the blue value</source>
         <translation>Inserisci il valore del blu</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="266"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="322"/>
         <source>Enter the green value</source>
         <translation>Inserisci il valore del verde</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="279"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="335"/>
         <source>Enter the red value</source>
         <translation>Inserisci il valore del rosso</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="292"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="348"/>
         <source>Alpha</source>
         <translation>Alpha</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="299"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="355"/>
         <source>Blue</source>
         <translation>Blue</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="306"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="362"/>
         <source>Red</source>
         <translation>Rosso</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="313"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="369"/>
         <source>Green</source>
         <translation>Verde</translation>
     </message>
@@ -4150,9 +4150,49 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="236"/>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="292"/>
         <source>Colour Variable</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="87"/>
+        <source>Parent</source>
+        <translation type="unfinished">Genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="93"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="96"/>
+        <source>self</source>
+        <translation type="unfinished">self</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="106"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="109"/>
+        <source>None</source>
+        <translation type="unfinished">Nessuno</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="118"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="121"/>
+        <source>Expression:</source>
+        <translation type="unfinished">Espressione:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="131"/>
+        <source>Enter the parent expression</source>
+        <translation type="unfinished">Inserisci il genitore</translation>
     </message>
 </context>
 <context>
@@ -15486,12 +15526,12 @@ Reason: {0}</source>
         <translation>Wizard QFontDialog</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="55"/>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="125"/>
         <source>Press to select a font via a dialog</source>
         <translation>Premi per selezionare un font con un dialog</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="58"/>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="128"/>
         <source>Select Font ...</source>
         <translation>Seleziona font...</translation>
     </message>
@@ -15501,7 +15541,7 @@ Reason: {0}</source>
         <translation type="obsolete">Variabile</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="90"/>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="160"/>
         <source>Enter a variable name</source>
         <translation>Inserisci un nome variabile</translation>
     </message>
@@ -15521,9 +15561,59 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="83"/>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="153"/>
         <source>Font Variable:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="37"/>
+        <source>Title:</source>
+        <translation type="unfinished">Titolo:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="44"/>
+        <source>Enter the title for the message box</source>
+        <translation type="unfinished">Inserisci il titolo del message box</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="51"/>
+        <source>Parent</source>
+        <translation type="unfinished">Genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="57"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="60"/>
+        <source>self</source>
+        <translation type="unfinished">self</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="70"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="73"/>
+        <source>None</source>
+        <translation type="unfinished">Nessuno</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="82"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="85"/>
+        <source>Expression:</source>
+        <translation type="unfinished">Espressione:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="95"/>
+        <source>Enter the parent expression</source>
+        <translation type="unfinished">Inserisci il genitore</translation>
     </message>
 </context>
 <context>
@@ -27639,22 +27729,22 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="97"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="153"/>
         <source>Text</source>
         <translation>Testo</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="152"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="208"/>
         <source>Integer</source>
         <translation>Intero</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="241"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="297"/>
         <source>Double</source>
         <translation>Double</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="315"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="371"/>
         <source>Item</source>
         <translation>Elemento</translation>
     </message>
@@ -27669,77 +27759,77 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Etichetta</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="103"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="159"/>
         <source>Echo Mode</source>
         <translation>Modalità Echo</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="109"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="165"/>
         <source>Normal</source>
         <translation>Normale</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="119"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="175"/>
         <source>No Echo</source>
         <translation>Nessun Echo</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="126"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="182"/>
         <source>Password</source>
         <translation>Password</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="281"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="337"/>
         <source>Default</source>
         <translation>Default</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="207"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="263"/>
         <source>Step</source>
         <translation>Passo</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="295"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="351"/>
         <source>To</source>
         <translation>A</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="288"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="344"/>
         <source>From</source>
         <translation>Da</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="260"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="316"/>
         <source>2147483647</source>
         <translation>2147483647</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="267"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="323"/>
         <source>-2147483647</source>
         <translation>-2147483647</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="274"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="330"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="302"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="358"/>
         <source>Decimals</source>
         <translation>Decimali</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="321"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="377"/>
         <source>Editable</source>
         <translation>Modificabile</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="337"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="393"/>
         <source>Current Item</source>
         <translation>Elemento corrente</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="344"/>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="400"/>
         <source>String List Variable</source>
         <translation>Lista variabili stringa</translation>
     </message>
@@ -27762,6 +27852,46 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="70"/>
         <source>Enter the result variable name</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="97"/>
+        <source>Parent</source>
+        <translation type="unfinished">Genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="103"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="106"/>
+        <source>self</source>
+        <translation type="unfinished">self</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="116"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="119"/>
+        <source>None</source>
+        <translation type="unfinished">Nessuno</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="128"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="131"/>
+        <source>Expression:</source>
+        <translation type="unfinished">Espressione:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="141"/>
+        <source>Enter the parent expression</source>
+        <translation type="unfinished">Inserisci il genitore</translation>
     </message>
 </context>
 <context>
