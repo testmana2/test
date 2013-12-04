@@ -2239,6 +2239,8 @@ class Project(QObject):
                             """Would you like to edit the VCS command"""
                             """ options?"""))
                     if vcores:
+                        from VCS.CommandOptionsDialog import \
+                            VcsCommandOptionsDialog
                         codlg = VcsCommandOptionsDialog(self.vcs)
                         if codlg.exec_() == QDialog.Accepted:
                             self.vcs.vcsSetOptions(codlg.getOptions())
