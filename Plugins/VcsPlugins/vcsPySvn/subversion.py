@@ -1494,7 +1494,7 @@ class Subversion(VersionControl):
                 dirs = [x for x in names.keys() if os.path.isdir(x)]
                 for file in allFiles:
                     name = os.path.normcase(file.path)
-                    if file.is_versioned:
+                    if self.__isVersioned(file):
                         if name in names:
                             names[name] = self.canBeCommitted
                             dn = name
@@ -1568,7 +1568,7 @@ class Subversion(VersionControl):
                 locker.unlock()
                 for file in allFiles:
                     name = os.path.normcase(file.path)
-                    if file.is_versioned:
+                    if self.__isVersioned(file):
                         if name in names:
                             names[name] = self.canBeCommitted
                         self.statusCache[name] = self.canBeCommitted
@@ -1578,6 +1578,25 @@ class Subversion(VersionControl):
                 locker.unlock()    # ignore pysvn errors
         
         return names
+        
+    def __isVersioned(self, status):
+        """
+        Private method to check, if the given status indicates a
+        versioned state.
+        
+        @param status status object to check (pysvn.PysvnStatus)
+        @return flag indicating a versioned state (boolean)
+        """
+        return status["text_status"] in [
+            pysvn.wc_status_kind.normal,
+            pysvn.wc_status_kind.added,
+            pysvn.wc_status_kind.missing,
+            pysvn.wc_status_kind.deleted,
+            pysvn.wc_status_kind.replaced,
+            pysvn.wc_status_kind.modified,
+            pysvn.wc_status_kind.merged,
+            pysvn.wc_status_kind.conflicted,
+        ]
         
     def clearStatusCache(self):
         """
