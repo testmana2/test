@@ -394,7 +394,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private slot to copy the snapshot to the clipboard.
         """
-        QApplication.clipboard().setPixmap(self.preview.pixmap())
+        if not self.__snapshot.isNull():
+            QApplication.clipboard().setPixmap(QPixmap(self.__snapshot))
     
     def __captured(self, pixmap):
         """
