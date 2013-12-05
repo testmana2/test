@@ -9943,6 +9943,7 @@
       <keyword name="SnapWidget.closeEvent" id="SnapWidget.closeEvent" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.closeEvent" />
       <keyword name="SnapWidget.eventFilter" id="SnapWidget.eventFilter" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.eventFilter" />
       <keyword name="SnapWidget.on_copyButton_clicked" id="SnapWidget.on_copyButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_copyButton_clicked" />
+      <keyword name="SnapWidget.on_copyPreviewButton_clicked" id="SnapWidget.on_copyPreviewButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_copyPreviewButton_clicked" />
       <keyword name="SnapWidget.on_saveButton_clicked" id="SnapWidget.on_saveButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_saveButton_clicked" />
       <keyword name="SnapWidget.on_takeButton_clicked" id="SnapWidget.on_takeButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_takeButton_clicked" />
       <keyword name="SnapWidget.resizeEvent" id="SnapWidget.resizeEvent" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.resizeEvent" />

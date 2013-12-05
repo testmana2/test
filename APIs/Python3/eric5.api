@@ -7434,6 +7434,7 @@ eric5.Snapshot.SnapWidget.SnapWidget.ModeScreen?7
 eric5.Snapshot.SnapWidget.SnapWidget.closeEvent?4(evt)
 eric5.Snapshot.SnapWidget.SnapWidget.eventFilter?4(obj, evt)
 eric5.Snapshot.SnapWidget.SnapWidget.on_copyButton_clicked?4()
+eric5.Snapshot.SnapWidget.SnapWidget.on_copyPreviewButton_clicked?4()
 eric5.Snapshot.SnapWidget.SnapWidget.on_saveButton_clicked?4()
 eric5.Snapshot.SnapWidget.SnapWidget.on_takeButton_clicked?4()
 eric5.Snapshot.SnapWidget.SnapWidget.resizeEvent?4(evt)
