@@ -66,6 +66,9 @@ VersionControl
 <td><a href="#Subversion.__init__">Subversion</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#Subversion.__isVersioned">__isVersioned</a></td>
+<td>Private method to check, if the given status indicates a versioned state.</td>
+</tr><tr>
 <td><a href="#Subversion.__svnURL">__svnURL</a></td>
 <td>Private method to format a url for subversion.</td>
 </tr><tr>
@@ -275,6 +278,22 @@ parent widget (QWidget)
 </dd><dt><i>name</i></dt>
 <dd>
 name of this object (string)
+</dd>
+</dl><a NAME="Subversion.__isVersioned" ID="Subversion.__isVersioned"></a>
+<h4>Subversion.__isVersioned</h4>
+<b>__isVersioned</b>(<i>status</i>)
+<p>
+        Private method to check, if the given status indicates a
+        versioned state.
+</p><dl>
+<dt><i>status</i></dt>
+<dd>
+status object to check (pysvn.PysvnStatus)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a versioned state (boolean)
 </dd>
 </dl><a NAME="Subversion.__svnURL" ID="Subversion.__svnURL"></a>
 <h4>Subversion.__svnURL</h4>

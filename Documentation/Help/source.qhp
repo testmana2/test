@@ -9650,6 +9650,7 @@
       <keyword name="Subversion" id="Subversion" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion" />
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__init__" />
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__init__" />
+      <keyword name="Subversion.__isVersioned" id="Subversion.__isVersioned" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__isVersioned" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__svnURL" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__svnURL" />
       <keyword name="Subversion.__vcsAllRegisteredStates_wc" id="Subversion.__vcsAllRegisteredStates_wc" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsAllRegisteredStates_wc" />
