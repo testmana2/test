@@ -91,17 +91,44 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         @param indString string used for indentation (space or tab) (string)
         @return generated code (string)
         """
+        # calculate our indentation level and the indentation string
+        il = indLevel + 1
+        istring = il * indString
         estring = os.linesep + indLevel * indString
         
         # generate the code
-        code = 'QFontDialog.getFont('
-        if not self.eVariable.text():
-            if self.font is not None:
-                code += 'QFont("{0}", {1:d}, {2:d}, {3:d})'.format(
-                    self.font.family(), self.font.pointSize(),
-                    self.font.weight(), self.font.italic())
-        else:
-            code += self.eVariable.text()
+        resvar = self.eResultVar.text()
+        if not resvar:
+            resvar = "font"
+        title = self.eCaption.text()
+        if self.parentSelf.isChecked():
+            parent = "self"
+        elif self.parentNone.isChecked():
+            parent = "None"
+        elif self.parentOther.isChecked():
+            parent = self.parentEdit.text()
+            if parent == "":
+                parent = "None"
+        
+        code = '{0}, ok = QFontDialog.getFont('.format(resvar)
+        if self.eVariable.text() or self.font is not None:
+            if title or parent != "None":
+                code += '{0}{1}'.format(os.linesep, istring)
+            if not self.eVariable.text():
+                if self.font is not None:
+                    code += 'QFont("{0}", {1:d}, {2:d}, {3:d})'.format(
+                        self.font.family(), self.font.pointSize(),
+                        self.font.weight(), self.font.italic())
+            else:
+                code += self.eVariable.text()
+            if title:
+                code += ',{0}{1}{2}'.format(
+                    os.linesep, istring, parent)
+                code += ',{0}{1}self.trUtf8("{2}")'.format(
+                    os.linesep, istring, title)
+            elif parent != "None":
+                code += ',{0}{1}{2}'.format(
+                    os.linesep, istring, parent)
         code += '){0}'.format(estring)
-            
+        
         return code

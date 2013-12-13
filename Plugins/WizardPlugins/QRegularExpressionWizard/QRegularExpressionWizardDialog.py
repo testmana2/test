@@ -758,12 +758,15 @@ class QRegularExpressionWizardWidget(QWidget,
             options.append("QRegularExpression.UseUnicodePropertiesOption")
         if self.captureCheckBox.isChecked():
             options.append("QRegularExpression.DontCaptureOption")
-        options = " | \\{0}{1}".format(os.linesep, i1string).join(options)
+        options = " |{0}{1}".format(os.linesep, i1string).join(options)
         
-        code = '{0} = QRegularExpression(r"""{1}"""'.format(
-            reVar, regexp.replace('"', '\\"'))
+        code = '{0} = QRegularExpression('.format(reVar)
         if options:
-            code += ', {0}{1}{2}'.format(os.linesep, i1string, options)
+            code += '{0}{1}r"""{2}""",'.format(
+                os.linesep, i1string, regexp.replace('"', '\\"'))
+            code += '{0}{1}{2}'.format(os.linesep, i1string, options)
+        else:
+            code += 'r"""{0}"""'.format(regexp.replace('"', '\\"'))
         code += '){0}'.format(estring)
         return code
 

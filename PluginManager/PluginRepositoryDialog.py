@@ -316,7 +316,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             f = QFile(self.pluginRepositoryFile)
             if f.open(QIODevice.ReadOnly):
                 from E5XML.PluginRepositoryReader import PluginRepositoryReader
-                reader = PluginRepositoryReader(f, self)
+                reader = PluginRepositoryReader(f, self.addEntry)
                 reader.readXML()
                 self.repositoryList.resizeColumnToContents(0)
                 self.repositoryList.resizeColumnToContents(1)

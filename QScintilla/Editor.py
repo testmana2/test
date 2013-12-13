@@ -721,11 +721,14 @@ class Editor(QsciScintillaCompat):
             self.menu.addSeparator()
             self.menuActs["Diagrams"] = self.menu.addMenu(self.graphicsMenu)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('New view'), self.__newView)
-        act = self.menu.addAction(
-            self.trUtf8('New view (with new split)'), self.__newViewNewSplit)
-        if not self.vm.canSplit():
-                act.setEnabled(False)
+        self.menu.addAction(
+            UI.PixmapCache.getIcon("documentNewView.png"),
+            self.trUtf8('New Document View'), self.__newView)
+        self.menuActs["NewSplit"] = self.menu.addAction(
+            UI.PixmapCache.getIcon("splitVertical.png"),
+            self.trUtf8('New Document View (with new split)'),
+            self.__newViewNewSplit)
+        self.menuActs["NewSplit"].setEnabled(self.vm.canSplit())
         self.menu.addAction(
             UI.PixmapCache.getIcon("close.png"),
             self.trUtf8('Close'), self.__contextClose)
@@ -3069,7 +3072,8 @@ class Editor(QsciScintillaCompat):
         Private slot to handle the Use Monospaced Font context menu entry.
         """
         if self.menuActs["MonospacedFont"].isChecked():
-            self.setMonospaced(True)
+            if not self.lexer_:
+                self.setMonospaced(True)
         else:
             if self.lexer_:
                 self.lexer_.readSettings(
@@ -4631,6 +4635,16 @@ class Editor(QsciScintillaCompat):
             else:
                 self.menuActs["OpenRejections"].setEnabled(False)
         
+        self.menuActs["MonospacedFont"].setEnabled(self.lexer_ is None)
+        
+        splitOrientation = self.vm.getSplitOrientation()
+        if splitOrientation == Qt.Horizontal:
+            self.menuActs["NewSplit"].setIcon(
+                UI.PixmapCache.getIcon("splitHorizontal.png"))
+        else:
+            self.menuActs["NewSplit"].setIcon(
+                UI.PixmapCache.getIcon("splitVertical.png"))
+        
         self.showMenu.emit("Main", self.menu,  self)
         
     def __showContextMenuAutocompletion(self):
@@ -6108,8 +6122,9 @@ class Editor(QsciScintillaCompat):
         @param on flag to indicate usage of a monospace font (boolean)
         """
         if on:
-            f = Preferences.getEditorOtherFonts("MonospacedFont")
-            self.monospacedStyles(f)
+            if not self.lexer_:
+                f = Preferences.getEditorOtherFonts("MonospacedFont")
+                self.monospacedStyles(f)
         else:
             if not self.lexer_:
                 self.clearStyles()
@@ -6117,6 +6132,16 @@ class Editor(QsciScintillaCompat):
             self.setFont(Preferences.getEditorOtherFonts("DefaultFont"))
         
         self.useMonospaced = on
+    
+    def clearStyles(self):
+        """
+        Public method to set the styles according the selected Qt style
+        or the selected editor colours.
+        """
+        super(Editor, self).clearStyles()
+        if Preferences.getEditor("OverrideEditAreaColours"):
+            self.setColor(Preferences.getEditorColour("EditAreaForeground"))
+            self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
     
     #################################################################
     ## Drag and Drop Support

@@ -21,6 +21,7 @@ from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
+from .NewDialogClassDialog import NewDialogClassDialog
 
 from eric5config import getConfig
 
@@ -553,7 +554,6 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         path, file = os.path.split(self.srcFile)
         objName = self.__objectName()
         if objName:
-            from .NewDialogClassDialog import NewDialogClassDialog
             dlg = NewDialogClassDialog(objName, file, path, self)
             if dlg.exec_() == QDialog.Accepted:
                 className, fileName = dlg.getData()

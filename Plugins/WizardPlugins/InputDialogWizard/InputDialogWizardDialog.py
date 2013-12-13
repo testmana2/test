@@ -112,7 +112,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 doubleTo,
                 self.sDoubleDecimals.value())
         
-    def __getCode4(self, indLevel, indString):
+    def getCode(self, indLevel, indString):
         """
         Private method to get the source code for Qt4/Qt5.
         
@@ -126,10 +126,23 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
-        code = 'QInputDialog.'
+        # TODO: support entering 'parent'
+        if self.parentSelf.isChecked():
+            parent = "self"
+        elif self.parentNone.isChecked():
+            parent = "None"
+        elif self.parentOther.isChecked():
+            parent = self.parentEdit.text()
+            if parent == "":
+                parent = "None"
+        
+        resvar = self.eResultVar.text()
+        if not resvar:
+            resvar = "result"
+        code = '{0}, ok = QInputDialog.'.format(resvar)
         if self.rText.isChecked():
             code += 'getText({0}{1}'.format(os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
@@ -146,7 +159,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             code += '){0}'.format(estring)
         elif self.rInteger.isChecked():
             code += 'getInt({0}{1}'.format(os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
@@ -168,7 +181,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             except ValueError:
                 doubleTo = 2147483647
             code += 'getDouble({0}{1}'.format(os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
@@ -178,7 +191,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.sDoubleDecimals.value(), estring)
         elif self.rItem.isChecked():
             code += 'getItem({0}{1}'.format(os.linesep, istring)
-            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += '{0},{1}{2}'.format(parent, os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
@@ -189,13 +202,3 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.sCurrentItem.value(), self.cEditable.isChecked(), estring)
             
         return code
-        
-    def getCode(self, indLevel, indString):
-        """
-        Public method to get the source code.
-        
-        @param indLevel indentation level (int)
-        @param indString string used for indentation (space or tab) (string)
-        @return generated code (string)
-        """
-        return self.__getCode4(indLevel, indString)

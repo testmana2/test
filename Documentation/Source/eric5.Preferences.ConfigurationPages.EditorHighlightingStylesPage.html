@@ -81,6 +81,9 @@ ConfigurationPageBase, Ui_EditorHighlightingStylesPage
 <td><a href="#EditorHighlightingStylesPage.__setToDefault">__setToDefault</a></td>
 <td>Private method to set a specific style to its default values.</td>
 </tr><tr>
+<td><a href="#EditorHighlightingStylesPage.__styleAllItems">__styleAllItems</a></td>
+<td>Private method to style all items of the style element list.</td>
+</tr><tr>
 <td><a href="#EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked">on_allBackgroundColoursButton_clicked</a></td>
 <td>Private method used to select the background colour of all styles of a selected lexer.</td>
 </tr><tr>
@@ -218,7 +221,12 @@ dictionary of lexer objects for which to import the
 <dd>
 style to be reset (integer)
 </dd>
-</dl><a NAME="EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked" ID="EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked"></a>
+</dl><a NAME="EditorHighlightingStylesPage.__styleAllItems" ID="EditorHighlightingStylesPage.__styleAllItems"></a>
+<h4>EditorHighlightingStylesPage.__styleAllItems</h4>
+<b>__styleAllItems</b>(<i></i>)
+<p>
+        Private method to style all items of the style element list.
+</p><a NAME="EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked" ID="EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked"></a>
 <h4>EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked</h4>
 <b>on_allBackgroundColoursButton_clicked</b>(<i></i>)
 <p>
@@ -248,14 +256,14 @@ style to be reset (integer)
         Private method to set the current style to its default values.
 </p><a NAME="EditorHighlightingStylesPage.on_eolfillCheckBox_toggled" ID="EditorHighlightingStylesPage.on_eolfillCheckBox_toggled"></a>
 <h4>EditorHighlightingStylesPage.on_eolfillCheckBox_toggled</h4>
-<b>on_eolfillCheckBox_toggled</b>(<i>b</i>)
+<b>on_eolfillCheckBox_toggled</b>(<i>on</i>)
 <p>
         Private method used to set the eolfill for the selected style and
         lexer.
 </p><dl>
-<dt><i>b</i></dt>
+<dt><i>on</i></dt>
 <dd>
-Flag indicating enabled or disabled state.
+flag indicating enabled or disabled state (boolean)
 </dd>
 </dl><a NAME="EditorHighlightingStylesPage.on_exportAllButton_clicked" ID="EditorHighlightingStylesPage.on_exportAllButton_clicked"></a>
 <h4>EditorHighlightingStylesPage.on_exportAllButton_clicked</h4>

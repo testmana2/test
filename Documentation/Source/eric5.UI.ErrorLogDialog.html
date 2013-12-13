@@ -76,13 +76,17 @@ QDialog, Ui_ErrorLogDialog
 </table>
 <a NAME="ErrorLogDialog.__init__" ID="ErrorLogDialog.__init__"></a>
 <h4>ErrorLogDialog (Constructor)</h4>
-<b>ErrorLogDialog</b>(<i>logFile, parent=None</i>)
+<b>ErrorLogDialog</b>(<i>logFile, showMode, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>logFile</i></dt>
 <dd>
 name of the log file containing the error info (string)
+</dd><dt><i>showMode</i></dt>
+<dd>
+flag indicating to just show the error log message
+            (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)

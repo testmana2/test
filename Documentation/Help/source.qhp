@@ -3511,6 +3511,7 @@
       <keyword name="DocStyleChecker.__parseTopLevel" id="DocStyleChecker.__parseTopLevel" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__parseTopLevel" />
       <keyword name="DocStyleChecker.__readline" id="DocStyleChecker.__readline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__readline" />
       <keyword name="DocStyleChecker.__readline" id="DocStyleChecker.__readline" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__readline" />
+      <keyword name="DocStyleChecker.__reportInvalidSyntax" id="DocStyleChecker.__reportInvalidSyntax" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__reportInvalidSyntax" />
       <keyword name="DocStyleChecker.__resetReadline" id="DocStyleChecker.__resetReadline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__resetReadline" />
       <keyword name="DocStyleChecker.__resetReadline" id="DocStyleChecker.__resetReadline" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__resetReadline" />
       <keyword name="DocStyleChecker.__skipIndentedBlock" id="DocStyleChecker.__skipIndentedBlock" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__skipIndentedBlock" />
@@ -4402,6 +4403,7 @@
       <keyword name="Editor.clearFlakesWarnings" id="Editor.clearFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearFlakesWarnings" />
       <keyword name="Editor.clearSearchIndicators" id="Editor.clearSearchIndicators" ref="eric5.QScintilla.Editor.html#Editor.clearSearchIndicators" />
       <keyword name="Editor.clearStyleWarnings" id="Editor.clearStyleWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearStyleWarnings" />
+      <keyword name="Editor.clearStyles" id="Editor.clearStyles" ref="eric5.QScintilla.Editor.html#Editor.clearStyles" />
       <keyword name="Editor.clearSyntaxError" id="Editor.clearSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.clearSyntaxError" />
       <keyword name="Editor.clearWarnings" id="Editor.clearWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearWarnings" />
       <keyword name="Editor.close" id="Editor.close" ref="eric5.QScintilla.Editor.html#Editor.close" />
@@ -4558,7 +4560,9 @@
       <keyword name="EditorAPIsPage.on_addInstalledApiFileButton_clicked" id="EditorAPIsPage.on_addInstalledApiFileButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_addInstalledApiFileButton_clicked" />
       <keyword name="EditorAPIsPage.on_addPluginApiFileButton_clicked" id="EditorAPIsPage.on_addPluginApiFileButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_addPluginApiFileButton_clicked" />
       <keyword name="EditorAPIsPage.on_apiFileButton_clicked" id="EditorAPIsPage.on_apiFileButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiFileButton_clicked" />
+      <keyword name="EditorAPIsPage.on_apiFileEdit_textChanged" id="EditorAPIsPage.on_apiFileEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiFileEdit_textChanged" />
       <keyword name="EditorAPIsPage.on_apiLanguageComboBox_activated" id="EditorAPIsPage.on_apiLanguageComboBox_activated" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiLanguageComboBox_activated" />
+      <keyword name="EditorAPIsPage.on_apiList_itemSelectionChanged" id="EditorAPIsPage.on_apiList_itemSelectionChanged" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiList_itemSelectionChanged" />
       <keyword name="EditorAPIsPage.on_deleteApiFileButton_clicked" id="EditorAPIsPage.on_deleteApiFileButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_deleteApiFileButton_clicked" />
       <keyword name="EditorAPIsPage.on_prepareApiButton_clicked" id="EditorAPIsPage.on_prepareApiButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_prepareApiButton_clicked" />
       <keyword name="EditorAPIsPage.save" id="EditorAPIsPage.save" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.save" />
@@ -4631,6 +4635,7 @@
       <keyword name="EditorHighlightingStylesPage.__fontButtonMenuTriggered" id="EditorHighlightingStylesPage.__fontButtonMenuTriggered" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.__fontButtonMenuTriggered" />
       <keyword name="EditorHighlightingStylesPage.__importStyles" id="EditorHighlightingStylesPage.__importStyles" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.__importStyles" />
       <keyword name="EditorHighlightingStylesPage.__setToDefault" id="EditorHighlightingStylesPage.__setToDefault" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.__setToDefault" />
+      <keyword name="EditorHighlightingStylesPage.__styleAllItems" id="EditorHighlightingStylesPage.__styleAllItems" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.__styleAllItems" />
       <keyword name="EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked" id="EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.on_allBackgroundColoursButton_clicked" />
       <keyword name="EditorHighlightingStylesPage.on_allDefaultButton_clicked" id="EditorHighlightingStylesPage.on_allDefaultButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.on_allDefaultButton_clicked" />
       <keyword name="EditorHighlightingStylesPage.on_allEolFillButton_clicked" id="EditorHighlightingStylesPage.on_allEolFillButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#EditorHighlightingStylesPage.on_allEolFillButton_clicked" />
@@ -4935,12 +4940,13 @@
       <keyword name="FileDialogWizardDialog (Constructor)" id="FileDialogWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__init__" />
       <keyword name="FileDialogWizardDialog (Module)" id="FileDialogWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html" />
       <keyword name="FileDialogWizardDialog.__adjustOptions" id="FileDialogWizardDialog.__adjustOptions" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__adjustOptions" />
-      <keyword name="FileDialogWizardDialog.__getCode4" id="FileDialogWizardDialog.__getCode4" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__getCode4" />
       <keyword name="FileDialogWizardDialog.__toggleConfirmCheckBox" id="FileDialogWizardDialog.__toggleConfirmCheckBox" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleConfirmCheckBox" />
       <keyword name="FileDialogWizardDialog.__toggleGroupsAndTest" id="FileDialogWizardDialog.__toggleGroupsAndTest" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleGroupsAndTest" />
+      <keyword name="FileDialogWizardDialog.__toggleInitialFilterAndResult" id="FileDialogWizardDialog.__toggleInitialFilterAndResult" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleInitialFilterAndResult" />
       <keyword name="FileDialogWizardDialog.getCode" id="FileDialogWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.getCode" />
       <keyword name="FileDialogWizardDialog.on_bTest_clicked" id="FileDialogWizardDialog.on_bTest_clicked" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_bTest_clicked" />
       <keyword name="FileDialogWizardDialog.on_buttonBox_clicked" id="FileDialogWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_buttonBox_clicked" />
+      <keyword name="FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged" id="FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged" />
       <keyword name="FileReply" id="FileReply" ref="eric5.Helpviewer.Network.FileReply.html#FileReply" />
       <keyword name="FileReply (Constructor)" id="FileReply (Constructor)" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.__init__" />
       <keyword name="FileReply (Module)" id="FileReply (Module)" ref="eric5.Helpviewer.Network.FileReply.html" />
@@ -6874,7 +6880,6 @@
       <keyword name="InputDialogWizardDialog" id="InputDialogWizardDialog" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html#InputDialogWizardDialog" />
       <keyword name="InputDialogWizardDialog (Constructor)" id="InputDialogWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html#InputDialogWizardDialog.__init__" />
       <keyword name="InputDialogWizardDialog (Module)" id="InputDialogWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html" />
-      <keyword name="InputDialogWizardDialog.__getCode4" id="InputDialogWizardDialog.__getCode4" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html#InputDialogWizardDialog.__getCode4" />
       <keyword name="InputDialogWizardDialog.getCode" id="InputDialogWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html#InputDialogWizardDialog.getCode" />
       <keyword name="InputDialogWizardDialog.on_bTest_clicked" id="InputDialogWizardDialog.on_bTest_clicked" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html#InputDialogWizardDialog.on_bTest_clicked" />
       <keyword name="InputDialogWizardDialog.on_buttonBox_clicked" id="InputDialogWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html#InputDialogWizardDialog.on_buttonBox_clicked" />
@@ -7552,6 +7557,7 @@
       <keyword name="Listspace.canTile" id="Listspace.canTile" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.canTile" />
       <keyword name="Listspace.cascade" id="Listspace.cascade" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.cascade" />
       <keyword name="Listspace.eventFilter" id="Listspace.eventFilter" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.eventFilter" />
+      <keyword name="Listspace.getSplitOrientation" id="Listspace.getSplitOrientation" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.getSplitOrientation" />
       <keyword name="Listspace.nextSplit" id="Listspace.nextSplit" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.nextSplit" />
       <keyword name="Listspace.prevSplit" id="Listspace.prevSplit" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.prevSplit" />
       <keyword name="Listspace.removeSplit" id="Listspace.removeSplit" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.removeSplit" />
@@ -8399,13 +8405,17 @@
       <keyword name="PluginManager.__canActivatePlugin" id="PluginManager.__canActivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.__canActivatePlugin" />
       <keyword name="PluginManager.__canDeactivatePlugin" id="PluginManager.__canDeactivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.__canDeactivatePlugin" />
       <keyword name="PluginManager.__checkPluginsDownloadDirectory" id="PluginManager.__checkPluginsDownloadDirectory" ref="eric5.PluginManager.PluginManager.html#PluginManager.__checkPluginsDownloadDirectory" />
+      <keyword name="PluginManager.__downloadRepositoryFileDone" id="PluginManager.__downloadRepositoryFileDone" ref="eric5.PluginManager.PluginManager.html#PluginManager.__downloadRepositoryFileDone" />
       <keyword name="PluginManager.__getShortInfo" id="PluginManager.__getShortInfo" ref="eric5.PluginManager.PluginManager.html#PluginManager.__getShortInfo" />
       <keyword name="PluginManager.__insertPluginsPaths" id="PluginManager.__insertPluginsPaths" ref="eric5.PluginManager.PluginManager.html#PluginManager.__insertPluginsPaths" />
       <keyword name="PluginManager.__loadPlugins" id="PluginManager.__loadPlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.__loadPlugins" />
       <keyword name="PluginManager.__pluginDirectoriesExist" id="PluginManager.__pluginDirectoriesExist" ref="eric5.PluginManager.PluginManager.html#PluginManager.__pluginDirectoriesExist" />
       <keyword name="PluginManager.__pluginModulesExist" id="PluginManager.__pluginModulesExist" ref="eric5.PluginManager.PluginManager.html#PluginManager.__pluginModulesExist" />
+      <keyword name="PluginManager.__sslErrors" id="PluginManager.__sslErrors" ref="eric5.PluginManager.PluginManager.html#PluginManager.__sslErrors" />
       <keyword name="PluginManager.activatePlugin" id="PluginManager.activatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.activatePlugin" />
       <keyword name="PluginManager.activatePlugins" id="PluginManager.activatePlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.activatePlugins" />
+      <keyword name="PluginManager.checkPluginEntry" id="PluginManager.checkPluginEntry" ref="eric5.PluginManager.PluginManager.html#PluginManager.checkPluginEntry" />
+      <keyword name="PluginManager.checkPluginUpdatesAvailable" id="PluginManager.checkPluginUpdatesAvailable" ref="eric5.PluginManager.PluginManager.html#PluginManager.checkPluginUpdatesAvailable" />
       <keyword name="PluginManager.deactivatePlugin" id="PluginManager.deactivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.deactivatePlugin" />
       <keyword name="PluginManager.deactivateVcsPlugins" id="PluginManager.deactivateVcsPlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.deactivateVcsPlugins" />
       <keyword name="PluginManager.doShutdown" id="PluginManager.doShutdown" ref="eric5.PluginManager.PluginManager.html#PluginManager.doShutdown" />
@@ -8434,6 +8444,7 @@
       <keyword name="PluginManagerPage (Constructor)" id="PluginManagerPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.__init__" />
       <keyword name="PluginManagerPage (Module)" id="PluginManagerPage (Module)" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html" />
       <keyword name="PluginManagerPage.on_downloadDirButton_clicked" id="PluginManagerPage.on_downloadDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.on_downloadDirButton_clicked" />
+      <keyword name="PluginManagerPage.on_repositoryUrlEditButton_toggled" id="PluginManagerPage.on_repositoryUrlEditButton_toggled" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.on_repositoryUrlEditButton_toggled" />
       <keyword name="PluginManagerPage.save" id="PluginManagerPage.save" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.save" />
       <keyword name="PluginModuleFormatError" id="PluginModuleFormatError" ref="eric5.PluginManager.PluginExceptions.html#PluginModuleFormatError" />
       <keyword name="PluginModuleFormatError (Constructor)" id="PluginModuleFormatError (Constructor)" ref="eric5.PluginManager.PluginExceptions.html#PluginModuleFormatError.__init__" />
@@ -9946,6 +9957,7 @@
       <keyword name="SnapWidget.closeEvent" id="SnapWidget.closeEvent" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.closeEvent" />
       <keyword name="SnapWidget.eventFilter" id="SnapWidget.eventFilter" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.eventFilter" />
       <keyword name="SnapWidget.on_copyButton_clicked" id="SnapWidget.on_copyButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_copyButton_clicked" />
+      <keyword name="SnapWidget.on_copyPreviewButton_clicked" id="SnapWidget.on_copyPreviewButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_copyPreviewButton_clicked" />
       <keyword name="SnapWidget.on_saveButton_clicked" id="SnapWidget.on_saveButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_saveButton_clicked" />
       <keyword name="SnapWidget.on_takeButton_clicked" id="SnapWidget.on_takeButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_takeButton_clicked" />
       <keyword name="SnapWidget.resizeEvent" id="SnapWidget.resizeEvent" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.resizeEvent" />
@@ -10241,6 +10253,7 @@
       <keyword name="Subversion" id="Subversion" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion" />
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__init__" />
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__init__" />
+      <keyword name="Subversion.__isVersioned" id="Subversion.__isVersioned" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__isVersioned" />
       <keyword name="Subversion.__svnGetFileForRevision" id="Subversion.__svnGetFileForRevision" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__svnGetFileForRevision" />
       <keyword name="Subversion.__svnGetFileForRevision" id="Subversion.__svnGetFileForRevision" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__svnGetFileForRevision" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__svnURL" />
@@ -10303,6 +10316,8 @@
       <keyword name="Subversion.svnShowChangelists" id="Subversion.svnShowChangelists" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnShowChangelists" />
       <keyword name="Subversion.svnUnlock" id="Subversion.svnUnlock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUnlock" />
       <keyword name="Subversion.svnUnlock" id="Subversion.svnUnlock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUnlock" />
+      <keyword name="Subversion.svnUpgrade" id="Subversion.svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUpgrade" />
+      <keyword name="Subversion.svnUpgrade" id="Subversion.svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUpgrade" />
       <keyword name="Subversion.svnUrlDiff" id="Subversion.svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUrlDiff" />
       <keyword name="Subversion.svnUrlDiff" id="Subversion.svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUrlDiff" />
       <keyword name="Subversion.vcsAdd" id="Subversion.vcsAdd" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsAdd" />
@@ -10790,6 +10805,8 @@
       <keyword name="SvnProjectHelper.__svnResolve" id="SvnProjectHelper.__svnResolve" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnResolve" />
       <keyword name="SvnProjectHelper.__svnTagList" id="SvnProjectHelper.__svnTagList" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnTagList" />
       <keyword name="SvnProjectHelper.__svnTagList" id="SvnProjectHelper.__svnTagList" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnTagList" />
+      <keyword name="SvnProjectHelper.__svnUpgrade" id="SvnProjectHelper.__svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnUpgrade" />
+      <keyword name="SvnProjectHelper.__svnUpgrade" id="SvnProjectHelper.__svnUpgrade" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnUpgrade" />
       <keyword name="SvnProjectHelper.__svnUrlDiff" id="SvnProjectHelper.__svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnUrlDiff" />
       <keyword name="SvnProjectHelper.__svnUrlDiff" id="SvnProjectHelper.__svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnUrlDiff" />
       <keyword name="SvnProjectHelper.getActions" id="SvnProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.getActions" />
@@ -11298,6 +11315,7 @@
       <keyword name="Tabview.canTile" id="Tabview.canTile" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.canTile" />
       <keyword name="Tabview.cascade" id="Tabview.cascade" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.cascade" />
       <keyword name="Tabview.eventFilter" id="Tabview.eventFilter" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.eventFilter" />
+      <keyword name="Tabview.getSplitOrientation" id="Tabview.getSplitOrientation" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.getSplitOrientation" />
       <keyword name="Tabview.getTabWidgetById" id="Tabview.getTabWidgetById" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.getTabWidgetById" />
       <keyword name="Tabview.insertView" id="Tabview.insertView" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.insertView" />
       <keyword name="Tabview.nextSplit" id="Tabview.nextSplit" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.nextSplit" />
@@ -11893,6 +11911,7 @@
       <keyword name="UserInterface.__exportPreferences" id="UserInterface.__exportPreferences" ref="eric5.UI.UserInterface.html#UserInterface.__exportPreferences" />
       <keyword name="UserInterface.__exportShortcuts" id="UserInterface.__exportShortcuts" ref="eric5.UI.UserInterface.html#UserInterface.__exportShortcuts" />
       <keyword name="UserInterface.__getFloatingGeometry" id="UserInterface.__getFloatingGeometry" ref="eric5.UI.UserInterface.html#UserInterface.__getFloatingGeometry" />
+      <keyword name="UserInterface.__hasErrorLog" id="UserInterface.__hasErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.__hasErrorLog" />
       <keyword name="UserInterface.__helpClosed" id="UserInterface.__helpClosed" ref="eric5.UI.UserInterface.html#UserInterface.__helpClosed" />
       <keyword name="UserInterface.__helpViewer" id="UserInterface.__helpViewer" ref="eric5.UI.UserInterface.html#UserInterface.__helpViewer" />
       <keyword name="UserInterface.__importPreferences" id="UserInterface.__importPreferences" ref="eric5.UI.UserInterface.html#UserInterface.__importPreferences" />
@@ -11938,6 +11957,7 @@
       <keyword name="UserInterface.__showAvailableVersionInfos" id="UserInterface.__showAvailableVersionInfos" ref="eric5.UI.UserInterface.html#UserInterface.__showAvailableVersionInfos" />
       <keyword name="UserInterface.__showCertificatesDialog" id="UserInterface.__showCertificatesDialog" ref="eric5.UI.UserInterface.html#UserInterface.__showCertificatesDialog" />
       <keyword name="UserInterface.__showEricDoc" id="UserInterface.__showEricDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showEricDoc" />
+      <keyword name="UserInterface.__showErrorLog" id="UserInterface.__showErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.__showErrorLog" />
       <keyword name="UserInterface.__showExternalTools" id="UserInterface.__showExternalTools" ref="eric5.UI.UserInterface.html#UserInterface.__showExternalTools" />
       <keyword name="UserInterface.__showExtrasMenu" id="UserInterface.__showExtrasMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showExtrasMenu" />
       <keyword name="UserInterface.__showFileMenu" id="UserInterface.__showFileMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showFileMenu" />
@@ -11945,7 +11965,6 @@
       <keyword name="UserInterface.__showNext" id="UserInterface.__showNext" ref="eric5.UI.UserInterface.html#UserInterface.__showNext" />
       <keyword name="UserInterface.__showPixmap" id="UserInterface.__showPixmap" ref="eric5.UI.UserInterface.html#UserInterface.__showPixmap" />
       <keyword name="UserInterface.__showPluginInfo" id="UserInterface.__showPluginInfo" ref="eric5.UI.UserInterface.html#UserInterface.__showPluginInfo" />
-      <keyword name="UserInterface.__showPluginsAvailable" id="UserInterface.__showPluginsAvailable" ref="eric5.UI.UserInterface.html#UserInterface.__showPluginsAvailable" />
       <keyword name="UserInterface.__showPrevious" id="UserInterface.__showPrevious" ref="eric5.UI.UserInterface.html#UserInterface.__showPrevious" />
       <keyword name="UserInterface.__showPyQt4Doc" id="UserInterface.__showPyQt4Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPyQt4Doc" />
       <keyword name="UserInterface.__showPyQt5Doc" id="UserInterface.__showPyQt5Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPyQt5Doc" />
@@ -12008,6 +12027,7 @@
       <keyword name="UserInterface.autoConnectIrc" id="UserInterface.autoConnectIrc" ref="eric5.UI.UserInterface.html#UserInterface.autoConnectIrc" />
       <keyword name="UserInterface.checkConfigurationStatus" id="UserInterface.checkConfigurationStatus" ref="eric5.UI.UserInterface.html#UserInterface.checkConfigurationStatus" />
       <keyword name="UserInterface.checkForErrorLog" id="UserInterface.checkForErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.checkForErrorLog" />
+      <keyword name="UserInterface.checkPluginUpdatesAvailable" id="UserInterface.checkPluginUpdatesAvailable" ref="eric5.UI.UserInterface.html#UserInterface.checkPluginUpdatesAvailable" />
       <keyword name="UserInterface.checkProjectsWorkspace" id="UserInterface.checkProjectsWorkspace" ref="eric5.UI.UserInterface.html#UserInterface.checkProjectsWorkspace" />
       <keyword name="UserInterface.closeEvent" id="UserInterface.closeEvent" ref="eric5.UI.UserInterface.html#UserInterface.closeEvent" />
       <keyword name="UserInterface.dragEnterEvent" id="UserInterface.dragEnterEvent" ref="eric5.UI.UserInterface.html#UserInterface.dragEnterEvent" />
@@ -12039,6 +12059,7 @@
       <keyword name="UserInterface.showFindFilesDialog" id="UserInterface.showFindFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFilesDialog" />
       <keyword name="UserInterface.showLogTab" id="UserInterface.showLogTab" ref="eric5.UI.UserInterface.html#UserInterface.showLogTab" />
       <keyword name="UserInterface.showNotification" id="UserInterface.showNotification" ref="eric5.UI.UserInterface.html#UserInterface.showNotification" />
+      <keyword name="UserInterface.showPluginsAvailable" id="UserInterface.showPluginsAvailable" ref="eric5.UI.UserInterface.html#UserInterface.showPluginsAvailable" />
       <keyword name="UserInterface.showPreferences" id="UserInterface.showPreferences" ref="eric5.UI.UserInterface.html#UserInterface.showPreferences" />
       <keyword name="UserInterface.showReplaceFilesDialog" id="UserInterface.showReplaceFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showReplaceFilesDialog" />
       <keyword name="UserInterface.unregisterToolbar" id="UserInterface.unregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.unregisterToolbar" />
@@ -12336,6 +12357,8 @@
       <keyword name="ViewManager.__macroSave" id="ViewManager.__macroSave" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroSave" />
       <keyword name="ViewManager.__macroStartRecording" id="ViewManager.__macroStartRecording" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroStartRecording" />
       <keyword name="ViewManager.__macroStopRecording" id="ViewManager.__macroStopRecording" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroStopRecording" />
+      <keyword name="ViewManager.__newDocumentSplitView" id="ViewManager.__newDocumentSplitView" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newDocumentSplitView" />
+      <keyword name="ViewManager.__newDocumentView" id="ViewManager.__newDocumentView" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newDocumentView" />
       <keyword name="ViewManager.__newLineBelow" id="ViewManager.__newLineBelow" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newLineBelow" />
       <keyword name="ViewManager.__nextBookmark" id="ViewManager.__nextBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextBookmark" />
       <keyword name="ViewManager.__nextChange" id="ViewManager.__nextChange" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextChange" />
@@ -12433,6 +12456,7 @@
       <keyword name="ViewManager.getOpenEditorsCount" id="ViewManager.getOpenEditorsCount" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenEditorsCount" />
       <keyword name="ViewManager.getOpenFilenames" id="ViewManager.getOpenFilenames" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenFilenames" />
       <keyword name="ViewManager.getSRHistory" id="ViewManager.getSRHistory" ref="eric5.ViewManager.ViewManager.html#ViewManager.getSRHistory" />
+      <keyword name="ViewManager.getSplitOrientation" id="ViewManager.getSplitOrientation" ref="eric5.ViewManager.ViewManager.html#ViewManager.getSplitOrientation" />
       <keyword name="ViewManager.handleResetUI" id="ViewManager.handleResetUI" ref="eric5.ViewManager.ViewManager.html#ViewManager.handleResetUI" />
       <keyword name="ViewManager.initActions" id="ViewManager.initActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.initActions" />
       <keyword name="ViewManager.initBookmarkMenu" id="ViewManager.initBookmarkMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.initBookmarkMenu" />

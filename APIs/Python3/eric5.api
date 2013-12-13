@@ -1707,7 +1707,7 @@ eric5.E5XML.MultiProjectWriter.MultiProjectWriter.writeXML?4()
 eric5.E5XML.MultiProjectWriter.MultiProjectWriter?1(device, multiProject, multiProjectName)
 eric5.E5XML.PluginRepositoryReader.PluginRepositoryReader.readXML?4()
 eric5.E5XML.PluginRepositoryReader.PluginRepositoryReader.supportedVersions?7
-eric5.E5XML.PluginRepositoryReader.PluginRepositoryReader?1(device, dlg)
+eric5.E5XML.PluginRepositoryReader.PluginRepositoryReader?1(device, entryCallback)
 eric5.E5XML.ProjectReader.ProjectReader.readXML?4()
 eric5.E5XML.ProjectReader.ProjectReader.supportedVersions?7
 eric5.E5XML.ProjectReader.ProjectReader?1(device, project)
@@ -3675,6 +3675,8 @@ eric5.PluginManager.PluginInstallDialog.PluginInstallWindow?1(pluginFileNames, p
 eric5.PluginManager.PluginManager.PluginManager.activatePlugin?4(name, onDemand=False)
 eric5.PluginManager.PluginManager.PluginManager.activatePlugins?4()
 eric5.PluginManager.PluginManager.PluginManager.allPlugginsActivated?7
+eric5.PluginManager.PluginManager.PluginManager.checkPluginEntry?4(name, short, description, url, author, version, filename, status)
+eric5.PluginManager.PluginManager.PluginManager.checkPluginUpdatesAvailable?4()
 eric5.PluginManager.PluginManager.PluginManager.deactivatePlugin?4(name, onDemand=False)
 eric5.PluginManager.PluginManager.PluginManager.deactivateVcsPlugins?4()
 eric5.PluginManager.PluginManager.PluginManager.doShutdown?4()
@@ -3778,6 +3780,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter?1(source
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.CodeStyleStatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Codes?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Messages?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.MessagesSampleArgs?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.run?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.unpackArgs?4()
@@ -3789,6 +3792,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.so
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.ssource?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.start?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext?1(source, startLine, contextType)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.PyCF_ONLY_AST?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.CamelcaseRegexp?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Codes?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.LowercaseRegex?7
@@ -5121,6 +5125,7 @@ eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnSbsDiff?4(name, exten
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnSetProp?4(name, recursive=False)
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnShowChangelists?4(path)
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnUnlock?4(name, breakIt=False, parent=None)
+eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnUpgrade?4(path)
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnUrlDiff?4(name)
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.vcsAdd?4(name, isDir=False, noDialog=False)
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.vcsAddBinary?4(name, isDir=False)
@@ -5360,6 +5365,7 @@ eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnSbsDiff?4(name, 
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnSetProp?4(name, recursive=False)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnShowChangelists?4(path)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnUnlock?4(name, breakIt=False, parent=None)
+eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnUpgrade?4(path)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnUrlDiff?4(name)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.vcsAdd?4(name, isDir=False, noDialog=False)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.vcsAddBinary?4(name, isDir=False)
@@ -5423,6 +5429,7 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorTextChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.eventFilter?4(watched, event)
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.getSplitOrientation?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.nextSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.prevSplit?4()
@@ -5492,6 +5499,7 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorTextChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.eventFilter?4(watched, event)
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getSplitOrientation?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getTabWidgetById?4(id_)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.insertView?4(win, tabWidget, index, fn=None, noName="")
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.lastEditorClosed?7
@@ -5529,7 +5537,8 @@ eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5Messag
 eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.getCode?4(indLevel, indString)
 eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.on_bTest_clicked?4()
 eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.on_buttonBox_clicked?4(button)
-eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.on_pyqtComboBox_currentIndexChanged?4(txt)
+eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog?1(pyqtVariant, parent=None)
 eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog.FontDialogWizardDialog.getCode?4(indLevel, indString)
 eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog.FontDialogWizardDialog.on_bTest_clicked?4()
 eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog.FontDialogWizardDialog.on_buttonBox_clicked?4(button)
@@ -5756,7 +5765,9 @@ eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_addApiFile
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_addInstalledApiFileButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_addPluginApiFileButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_apiFileButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_apiFileEdit_textChanged?4(txt)
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_apiLanguageComboBox_activated?4(language)
+eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_apiList_itemSelectionChanged?4()
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_deleteApiFileButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.on_prepareApiButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorAPIsPage.EditorAPIsPage.save?4()
@@ -5810,7 +5821,7 @@ eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighligh
 eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_allEolFillButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_backgroundButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_defaultButton_clicked?4()
-eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_eolfillCheckBox_toggled?4(b)
+eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_eolfillCheckBox_toggled?4(on)
 eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_exportAllButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_exportCurrentButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorHighlightingStylesPage.EditorHighlightingStylesPage.on_foregroundButton_clicked?4()
@@ -5957,6 +5968,7 @@ eric5.Preferences.ConfigurationPages.NotificationsPage.NotificationsPage.save?4(
 eric5.Preferences.ConfigurationPages.NotificationsPage.NotificationsPage?1()
 eric5.Preferences.ConfigurationPages.NotificationsPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage.on_downloadDirButton_clicked?4()
+eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage.on_repositoryUrlEditButton_toggled?4(checked)
 eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage.save?4()
 eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage?1()
 eric5.Preferences.ConfigurationPages.PluginManagerPage.create?4(dlg)
@@ -6685,6 +6697,7 @@ eric5.QScintilla.Editor.Editor.clearBreakpoint?4(line)
 eric5.QScintilla.Editor.Editor.clearFlakesWarnings?4()
 eric5.QScintilla.Editor.Editor.clearSearchIndicators?4()
 eric5.QScintilla.Editor.Editor.clearStyleWarnings?4()
+eric5.QScintilla.Editor.Editor.clearStyles?4()
 eric5.QScintilla.Editor.Editor.clearSyntaxError?4()
 eric5.QScintilla.Editor.Editor.clearWarnings?4()
 eric5.QScintilla.Editor.Editor.close?4(alsoDelete=False)
@@ -7420,6 +7433,7 @@ eric5.Snapshot.SnapWidget.SnapWidget.ModeScreen?7
 eric5.Snapshot.SnapWidget.SnapWidget.closeEvent?4(evt)
 eric5.Snapshot.SnapWidget.SnapWidget.eventFilter?4(obj, evt)
 eric5.Snapshot.SnapWidget.SnapWidget.on_copyButton_clicked?4()
+eric5.Snapshot.SnapWidget.SnapWidget.on_copyPreviewButton_clicked?4()
 eric5.Snapshot.SnapWidget.SnapWidget.on_saveButton_clicked?4()
 eric5.Snapshot.SnapWidget.SnapWidget.on_takeButton_clicked?4()
 eric5.Snapshot.SnapWidget.SnapWidget.resizeEvent?4(evt)
@@ -7833,7 +7847,7 @@ eric5.UI.EmailDialog._encode_base64?5(msg)
 eric5.UI.ErrorLogDialog.ErrorLogDialog.on_deleteButton_clicked?4()
 eric5.UI.ErrorLogDialog.ErrorLogDialog.on_emailButton_clicked?4()
 eric5.UI.ErrorLogDialog.ErrorLogDialog.on_keepButton_clicked?4()
-eric5.UI.ErrorLogDialog.ErrorLogDialog?1(logFile, parent=None)
+eric5.UI.ErrorLogDialog.ErrorLogDialog?1(logFile, showMode, parent=None)
 eric5.UI.FindFileDialog.FindFileDialog.designerFile?7
 eric5.UI.FindFileDialog.FindFileDialog.endRole?7
 eric5.UI.FindFileDialog.FindFileDialog.lineRole?7
@@ -7985,6 +7999,7 @@ eric5.UI.UserInterface.Redirector.flush?4()
 eric5.UI.UserInterface.Redirector.write?4(s)
 eric5.UI.UserInterface.Redirector?1(stderr)
 eric5.UI.UserInterface.UserInterface.BottomSide?7
+eric5.UI.UserInterface.UserInterface.ErrorLogFileName?7
 eric5.UI.UserInterface.UserInterface.LeftSide?7
 eric5.UI.UserInterface.UserInterface.RightSide?7
 eric5.UI.UserInterface.UserInterface.activateCooperationViewer?4()
@@ -7997,6 +8012,7 @@ eric5.UI.UserInterface.UserInterface.appendToStdout?4(s)
 eric5.UI.UserInterface.UserInterface.autoConnectIrc?4()
 eric5.UI.UserInterface.UserInterface.checkConfigurationStatus?4()
 eric5.UI.UserInterface.UserInterface.checkForErrorLog?4()
+eric5.UI.UserInterface.UserInterface.checkPluginUpdatesAvailable?4()
 eric5.UI.UserInterface.UserInterface.checkProjectsWorkspace?4()
 eric5.UI.UserInterface.UserInterface.closeEvent?4(event)
 eric5.UI.UserInterface.UserInterface.dragEnterEvent?4(event)
@@ -8034,6 +8050,7 @@ eric5.UI.UserInterface.UserInterface.showFindFilesDialog?4(txt="", searchDir="",
 eric5.UI.UserInterface.UserInterface.showLogTab?4(tabname)
 eric5.UI.UserInterface.UserInterface.showMenu?7
 eric5.UI.UserInterface.UserInterface.showNotification?4(icon, heading, text)
+eric5.UI.UserInterface.UserInterface.showPluginsAvailable?4()
 eric5.UI.UserInterface.UserInterface.showPreferences?4(pageName=None)
 eric5.UI.UserInterface.UserInterface.showReplaceFilesDialog?4(txt="", searchDir="", openFiles=False)
 eric5.UI.UserInterface.UserInterface.unregisterToolbar?4(name)
@@ -8899,6 +8916,7 @@ eric5.ViewManager.ViewManager.ViewManager.getOpenEditors?4()
 eric5.ViewManager.ViewManager.ViewManager.getOpenEditorsCount?4()
 eric5.ViewManager.ViewManager.ViewManager.getOpenFilenames?4()
 eric5.ViewManager.ViewManager.ViewManager.getSRHistory?4(key)
+eric5.ViewManager.ViewManager.ViewManager.getSplitOrientation?4()
 eric5.ViewManager.ViewManager.ViewManager.handleResetUI?4()
 eric5.ViewManager.ViewManager.ViewManager.initActions?4()
 eric5.ViewManager.ViewManager.ViewManager.initBookmarkMenu?4()

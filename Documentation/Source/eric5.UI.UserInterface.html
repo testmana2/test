@@ -170,7 +170,7 @@ emitted when a menu is about to be shown. The
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>BottomSide</td></tr><tr><td>LeftSide</td></tr><tr><td>RightSide</td></tr><tr><td>maxFilePathLen</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+<tr><td>BottomSide</td></tr><tr><td>ErrorLogFileName</td></tr><tr><td>LeftSide</td></tr><tr><td>RightSide</td></tr><tr><td>maxFilePathLen</td></tr><tr><td>maxMenuFilePathLen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -308,6 +308,9 @@ E5MainWindow
 <td><a href="#UserInterface.__getFloatingGeometry">__getFloatingGeometry</a></td>
 <td>Private method to get the geometry of a floating windows.</td>
 </tr><tr>
+<td><a href="#UserInterface.__hasErrorLog">__hasErrorLog</a></td>
+<td>Private method to check, if an error log file exists.</td>
+</tr><tr>
 <td><a href="#UserInterface.__helpClosed">__helpClosed</a></td>
 <td>Private slot to handle the helpClosed signal of the help window.</td>
 </tr><tr>
@@ -443,6 +446,9 @@ E5MainWindow
 <td><a href="#UserInterface.__showEricDoc">__showEricDoc</a></td>
 <td>Private slot to show the Eric documentation.</td>
 </tr><tr>
+<td><a href="#UserInterface.__showErrorLog">__showErrorLog</a></td>
+<td>Private slot to show the most recent error log message.</td>
+</tr><tr>
 <td><a href="#UserInterface.__showExternalTools">__showExternalTools</a></td>
 <td>Private slot to display a dialog show a list of external tools used by eric5.</td>
 </tr><tr>
@@ -463,9 +469,6 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.__showPluginInfo">__showPluginInfo</a></td>
 <td>Private slot to show the plugin info dialog.</td>
-</tr><tr>
-<td><a href="#UserInterface.__showPluginsAvailable">__showPluginsAvailable</a></td>
-<td>Private slot to show the plugins available for download.</td>
 </tr><tr>
 <td><a href="#UserInterface.__showPrevious">__showPrevious</a></td>
 <td>Private slot used to show the previous tab or file.</td>
@@ -653,6 +656,9 @@ E5MainWindow
 <td><a href="#UserInterface.checkForErrorLog">checkForErrorLog</a></td>
 <td>Public method to check for the presence of an error log and ask the user, what to do with it.</td>
 </tr><tr>
+<td><a href="#UserInterface.checkPluginUpdatesAvailable">checkPluginUpdatesAvailable</a></td>
+<td>Public method to check the availability of updates of plug-ins.</td>
+</tr><tr>
 <td><a href="#UserInterface.checkProjectsWorkspace">checkProjectsWorkspace</a></td>
 <td>Public method to check, if a projects workspace has been configured.</td>
 </tr><tr>
@@ -745,6 +751,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.showNotification">showNotification</a></td>
 <td>Public method to show a desktop notification.</td>
+</tr><tr>
+<td><a href="#UserInterface.showPluginsAvailable">showPluginsAvailable</a></td>
+<td>Public slot to show the plugins available for download.</td>
 </tr><tr>
 <td><a href="#UserInterface.showPreferences">showPreferences</a></td>
 <td>Public slot to set the preferences.</td>
@@ -1112,6 +1121,16 @@ reference to the widget to be saved (QWidget)
 <dd>
 list giving the widget's geometry and its visibility
 </dd>
+</dl><a NAME="UserInterface.__hasErrorLog" ID="UserInterface.__hasErrorLog"></a>
+<h4>UserInterface.__hasErrorLog</h4>
+<b>__hasErrorLog</b>(<i></i>)
+<p>
+        Private method to check, if an error log file exists.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the existence of an error log file (boolean)
+</dd>
 </dl><a NAME="UserInterface.__helpClosed" ID="UserInterface.__helpClosed"></a>
 <h4>UserInterface.__helpClosed</h4>
 <b>__helpClosed</b>(<i></i>)
@@ -1419,6 +1438,11 @@ contents of the downloaded versions file (list of
 <b>__showEricDoc</b>(<i></i>)
 <p>
         Private slot to show the Eric documentation.
+</p><a NAME="UserInterface.__showErrorLog" ID="UserInterface.__showErrorLog"></a>
+<h4>UserInterface.__showErrorLog</h4>
+<b>__showErrorLog</b>(<i></i>)
+<p>
+        Private slot to show the most recent error log message.
 </p><a NAME="UserInterface.__showExternalTools" ID="UserInterface.__showExternalTools"></a>
 <h4>UserInterface.__showExternalTools</h4>
 <b>__showExternalTools</b>(<i></i>)
@@ -1460,11 +1484,6 @@ filename of the file to show (string)
 <b>__showPluginInfo</b>(<i></i>)
 <p>
         Private slot to show the plugin info dialog.
-</p><a NAME="UserInterface.__showPluginsAvailable" ID="UserInterface.__showPluginsAvailable"></a>
-<h4>UserInterface.__showPluginsAvailable</h4>
-<b>__showPluginsAvailable</b>(<i></i>)
-<p>
-        Private slot to show the plugins available for download.
 </p><a NAME="UserInterface.__showPrevious" ID="UserInterface.__showPrevious"></a>
 <h4>UserInterface.__showPrevious</h4>
 <b>__showPrevious</b>(<i></i>)
@@ -1910,6 +1929,11 @@ output to be appended (string)
 <p>
         Public method to check for the presence of an error log and ask the
         user, what to do with it.
+</p><a NAME="UserInterface.checkPluginUpdatesAvailable" ID="UserInterface.checkPluginUpdatesAvailable"></a>
+<h4>UserInterface.checkPluginUpdatesAvailable</h4>
+<b>checkPluginUpdatesAvailable</b>(<i></i>)
+<p>
+        Public method to check the availability of updates of plug-ins.
 </p><a NAME="UserInterface.checkProjectsWorkspace" ID="UserInterface.checkProjectsWorkspace"></a>
 <h4>UserInterface.checkProjectsWorkspace</h4>
 <b>checkProjectsWorkspace</b>(<i></i>)
@@ -2306,7 +2330,12 @@ heading of the notification (string)
 <dd>
 text of the notification (string)
 </dd>
-</dl><a NAME="UserInterface.showPreferences" ID="UserInterface.showPreferences"></a>
+</dl><a NAME="UserInterface.showPluginsAvailable" ID="UserInterface.showPluginsAvailable"></a>
+<h4>UserInterface.showPluginsAvailable</h4>
+<b>showPluginsAvailable</b>(<i></i>)
+<p>
+        Public slot to show the plugins available for download.
+</p><a NAME="UserInterface.showPreferences" ID="UserInterface.showPreferences"></a>
 <h4>UserInterface.showPreferences</h4>
 <b>showPreferences</b>(<i>pageName=None</i>)
 <p>

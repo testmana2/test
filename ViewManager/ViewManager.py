@@ -418,12 +418,20 @@ class ViewManager(QObject):
         """
         return False
         
+    def getSplitOrientation(self):
+        """
+        Public method to get the orientation of the split view.
+        
+        @return orientation of the split (Qt.Horizontal or Qt.Vertical)
+        """
+        return Qt.Vertical
+        
     def setSplitOrientation(self, orientation):
         """
         Public method used to set the orientation of the split view.
         
         @param orientation orientation of the split
-                (Qt.Horizontal or Qt.Vertical)
+            (Qt.Horizontal or Qt.Vertical)
         """
         pass
         
@@ -3321,6 +3329,44 @@ class ViewManager(QObject):
         self.unhighlightAct.triggered[()].connect(self.unhighlight)
         self.viewActions.append(self.unhighlightAct)
         
+        self.newDocumentViewAct = E5Action(
+            QApplication.translate('ViewManager', 'New Document View'),
+            UI.PixmapCache.getIcon("documentNewView.png"),
+            QApplication.translate('ViewManager', 'New &Document View'),
+            0, 0, self, 'vm_view_new_document_view')
+        self.newDocumentViewAct.setStatusTip(QApplication.translate(
+            'ViewManager', 'Open a new view of the current document'))
+        self.newDocumentViewAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>New Document View</b>"""
+            """<p>Opens a new view of the current document. Both views show"""
+            """ the same document. However, the cursors may be positioned"""
+            """ independently.</p>"""
+        ))
+        self.newDocumentViewAct.triggered[()].connect(self.__newDocumentView)
+        self.viewActions.append(self.newDocumentViewAct)
+        
+        self.newDocumentSplitViewAct = E5Action(
+            QApplication.translate(
+                'ViewManager', 'New Document View (with new split)'),
+            UI.PixmapCache.getIcon("splitVertical.png"),
+            QApplication.translate(
+                'ViewManager', 'New Document View (with new split)'),
+            0, 0, self, 'vm_view_new_document_split_view')
+        self.newDocumentSplitViewAct.setStatusTip(QApplication.translate(
+            'ViewManager',
+            'Open a new view of the current document in a new split'))
+        self.newDocumentSplitViewAct.setWhatsThis(QApplication.translate(
+            'ViewManager',
+            """<b>New Document View</b>"""
+            """<p>Opens a new view of the current document in a new split."""
+            """ Both views show the same document. However, the cursors may"""
+            """ be positioned independently.</p>"""
+        ))
+        self.newDocumentSplitViewAct.triggered[()].connect(
+            self.__newDocumentSplitView)
+        self.viewActions.append(self.newDocumentSplitViewAct)
+        
         self.splitViewAct = E5Action(
             QApplication.translate('ViewManager', 'Split view'),
             UI.PixmapCache.getIcon("splitVertical.png"),
@@ -3441,7 +3487,10 @@ class ViewManager(QObject):
         menu.addAction(self.previewAct)
         menu.addSeparator()
         menu.addAction(self.unhighlightAct)
+        menu.addSeparator()
+        menu.addAction(self.newDocumentViewAct)
         if self.canSplit():
+            menu.addAction(self.newDocumentSplitViewAct)
             menu.addSeparator()
             menu.addAction(self.splitViewAct)
             menu.addAction(self.splitOrientationAct)
@@ -3467,6 +3516,10 @@ class ViewManager(QObject):
         tb.addActions(self.viewActGrp.actions())
         tb.addSeparator()
         tb.addAction(self.previewAct)
+        tb.addSeparator()
+        tb.addAction(self.newDocumentViewAct)
+        if self.canSplit():
+            tb.addAction(self.newDocumentSplitViewAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
         toolbarManager.addAction(self.unhighlightAct, tb.windowTitle())
@@ -5545,6 +5598,23 @@ class ViewManager(QObject):
             line, index = aw.getCursorPosition()
             aw.foldLine(line)
         
+    def __newDocumentView(self):
+        """
+        Private method to open a new view of the current editor.
+        """
+        aw = self.activeWindow()
+        if aw:
+            self.newEditorView(aw.getFileName(), aw, aw.getFileType())
+        
+    def __newDocumentSplitView(self):
+        """
+        Private method to open a new view of the current editor in a new split.
+        """
+        aw = self.activeWindow()
+        if aw:
+            self.addSplit()
+            self.newEditorView(aw.getFileName(), aw, aw.getFileType())
+        
     def __splitView(self):
         """
         Private method to handle the split view action.
@@ -5564,12 +5634,16 @@ class ViewManager(QObject):
                 UI.PixmapCache.getIcon("splitHorizontal.png"))
             self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitHorizontal.png"))
+            self.newDocumentSplitViewAct.setIcon(
+                UI.PixmapCache.getIcon("splitHorizontal.png"))
         else:
             self.setSplitOrientation(Qt.Vertical)
             self.splitViewAct.setIcon(
                 UI.PixmapCache.getIcon("splitVertical.png"))
             self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitVertical.png"))
+            self.newDocumentSplitViewAct.setIcon(
+                UI.PixmapCache.getIcon("splitVertical.png"))
     
     def __previewEditor(self, checked):
         """
@@ -6039,6 +6113,8 @@ class ViewManager(QObject):
         self.viewActGrp.setEnabled(False)
         self.viewFoldActGrp.setEnabled(False)
         self.unhighlightAct.setEnabled(False)
+        self.newDocumentViewAct.setEnabled(False)
+        self.newDocumentSplitViewAct.setEnabled(False)
         self.splitViewAct.setEnabled(False)
         self.splitOrientationAct.setEnabled(False)
         self.previewAct.setEnabled(True)
@@ -6076,7 +6152,9 @@ class ViewManager(QObject):
         self.viewActGrp.setEnabled(True)
         self.viewFoldActGrp.setEnabled(True)
         self.unhighlightAct.setEnabled(True)
+        self.newDocumentViewAct.setEnabled(True)
         if self.canSplit():
+            self.newDocumentSplitViewAct.setEnabled(True)
             self.splitViewAct.setEnabled(True)
             self.splitOrientationAct.setEnabled(True)
         self.macroActGrp.setEnabled(True)

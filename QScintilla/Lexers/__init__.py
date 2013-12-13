@@ -151,8 +151,9 @@ def getSupportedLanguages():
         })
     
     for name in LexerRegistry:
-        supportedLanguages[name] = \
-            LexerRegistry[name][:2] + [LexerRegistry[name][6]]
+        if not name.startswith("Pygments|"):
+            supportedLanguages[name] = \
+                LexerRegistry[name][:2] + [LexerRegistry[name][6]]
     
     supportedLanguages["Guessed"] = \
         [QApplication.translate('Lexers', "Pygments"), 'dummy.pygments', ""]

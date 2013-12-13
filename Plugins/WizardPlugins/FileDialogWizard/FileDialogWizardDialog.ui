@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>557</width>
-    <height>479</height>
+    <width>604</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,34 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>PyQt Variant:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="pyqtComboBox"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="typeGroupBox">
      <property name="title">
       <string>Type</string>
      </property>
@@ -103,18 +130,51 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="TextLabel1">
-     <property name="text">
-      <string>Caption</string>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Results</string>
      </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Name Variable:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="eNameVariable"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lFilterVariable">
+        <property name="text">
+         <string>Filter Variable:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="eFilterVariable"/>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="eCaption">
-     <property name="toolTip">
-      <string>Enter the caption text</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="TextLabel1">
+       <property name="text">
+        <string>Title:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="eCaption">
+       <property name="toolTip">
+        <string>Enter the title text</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QCheckBox" name="cSymlinks">
@@ -130,25 +190,78 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="parentGroup">
+     <property name="title">
+      <string>Parent</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="parentSelf">
+        <property name="toolTip">
+         <string>Select &quot;self&quot; as parent</string>
+        </property>
+        <property name="text">
+         <string>self</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="parentNone">
+        <property name="toolTip">
+         <string>Select &quot;None&quot; as parent</string>
+        </property>
+        <property name="text">
+         <string>None</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="parentOther">
+          <property name="toolTip">
+           <string>Select to enter a parent expression</string>
+          </property>
+          <property name="text">
+           <string>Expression:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="parentEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>Enter the parent expression</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="filePropertiesGroup">
      <property name="title">
       <string>File Dialog Properties</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="3" column="1">
-       <widget class="QCheckBox" name="cFilters">
-        <property name="toolTip">
-         <string>Check this if the contents of the edit names a variable or variable function</string>
-        </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="TextLabel3">
         <property name="text">
-         <string>Is Variable</string>
+         <string>Start With / Working Directory</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QLineEdit" name="eFilters">
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="eStartWith">
         <property name="toolTip">
-         <string>Enter the filter specifications separated by ';;'</string>
+         <string>Enter the working directory or a filename</string>
         </property>
        </widget>
       </item>
@@ -162,13 +275,6 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="eStartWith">
-        <property name="toolTip">
-         <string>Enter the working directory or a filename</string>
-        </property>
-       </widget>
-      </item>
       <item row="2" column="0" colspan="2">
        <widget class="QLabel" name="TextLabel2">
         <property name="text">
@@ -176,7 +282,48 @@
         </property>
        </widget>
       </item>
+      <item row="3" column="0">
+       <widget class="QLineEdit" name="eFilters">
+        <property name="toolTip">
+         <string>Enter the filter specifications separated by ';;'</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="cFilters">
+        <property name="toolTip">
+         <string>Check this if the contents of the edit names a variable or variable function</string>
+        </property>
+        <property name="text">
+         <string>Is Variable</string>
+        </property>
+       </widget>
+      </item>
       <item row="4" column="0" colspan="2">
+       <widget class="QLabel" name="lInitialFilter">
+        <property name="text">
+         <string>Initial Filter</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLineEdit" name="eInitialFilter">
+        <property name="toolTip">
+         <string>Enter the initial filter</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QCheckBox" name="cInitialFilter">
+        <property name="toolTip">
+         <string>Check this if the contents of the edit names a variable or variable function</string>
+        </property>
+        <property name="text">
+         <string>Is Variable</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
        <widget class="QCheckBox" name="cConfirmOverwrite">
         <property name="enabled">
          <bool>false</bool>
@@ -186,13 +333,6 @@
         </property>
         <property name="text">
          <string>Show overwrite confirmation</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QLabel" name="TextLabel3">
-        <property name="text">
-         <string>Start With / Working Directory</string>
         </property>
        </widget>
       </item>
@@ -263,19 +403,28 @@
  <layoutdefault spacing="6" margin="11"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
+  <tabstop>pyqtComboBox</tabstop>
   <tabstop>rOpenFile</tabstop>
-  <tabstop>rfOpenFile</tabstop>
   <tabstop>rOpenFiles</tabstop>
-  <tabstop>rfOpenFiles</tabstop>
   <tabstop>rSaveFile</tabstop>
-  <tabstop>rfSaveFile</tabstop>
   <tabstop>rDirectory</tabstop>
+  <tabstop>rfOpenFile</tabstop>
+  <tabstop>rfOpenFiles</tabstop>
+  <tabstop>rfSaveFile</tabstop>
+  <tabstop>eNameVariable</tabstop>
+  <tabstop>eFilterVariable</tabstop>
   <tabstop>eCaption</tabstop>
   <tabstop>cSymlinks</tabstop>
+  <tabstop>parentSelf</tabstop>
+  <tabstop>parentNone</tabstop>
+  <tabstop>parentOther</tabstop>
+  <tabstop>parentEdit</tabstop>
   <tabstop>eStartWith</tabstop>
   <tabstop>cStartWith</tabstop>
   <tabstop>eFilters</tabstop>
   <tabstop>cFilters</tabstop>
+  <tabstop>eInitialFilter</tabstop>
+  <tabstop>cInitialFilter</tabstop>
   <tabstop>cConfirmOverwrite</tabstop>
   <tabstop>eWorkDir</tabstop>
   <tabstop>cWorkDir</tabstop>
@@ -291,8 +440,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>25</x>
-     <y>464</y>
+     <x>29</x>
+     <y>615</y>
     </hint>
     <hint type="destinationlabel">
      <x>24</x>
@@ -307,12 +456,28 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>124</x>
-     <y>470</y>
+     <x>128</x>
+     <y>615</y>
     </hint>
     <hint type="destinationlabel">
      <x>124</x>
      <y>485</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>parentOther</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>parentEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>260</y>
     </hint>
    </hints>
   </connection>

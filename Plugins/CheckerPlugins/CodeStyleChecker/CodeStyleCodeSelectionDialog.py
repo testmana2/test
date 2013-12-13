@@ -58,6 +58,11 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
                 message = QCoreApplication.translate(
                     "NamingStyleChecker",
                     NamingStyleChecker.Messages[code])
+            elif code in DocStyleChecker.MessagesSampleArgs:
+                message = QCoreApplication.translate(
+                    "DocStyleChecker",
+                    DocStyleChecker.Messages[code].format(
+                        *DocStyleChecker.MessagesSampleArgs[code]))
             elif code in DocStyleChecker.Messages:
                 message = QCoreApplication.translate(
                     "DocStyleChecker", DocStyleChecker.Messages[code])

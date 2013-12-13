@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>535</width>
-    <height>728</height>
+    <height>681</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -142,6 +142,20 @@
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lResultVar">
+     <property name="text">
+      <string>Result:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="eResultVar">
+     <property name="toolTip">
+      <string>Enter the result variable name</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -526,6 +540,8 @@
   <tabstop>rOkToClearData</tabstop>
   <tabstop>rAbout</tabstop>
   <tabstop>rAboutQt</tabstop>
+  <tabstop>rStandard</tabstop>
+  <tabstop>eResultVar</tabstop>
   <tabstop>eCaption</tabstop>
   <tabstop>eMessage</tabstop>
   <tabstop>parentSelf</tabstop>

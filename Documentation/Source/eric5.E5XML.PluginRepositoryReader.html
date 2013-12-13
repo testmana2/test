@@ -73,16 +73,17 @@ XMLStreamReaderBase
 </table>
 <a NAME="PluginRepositoryReader.__init__" ID="PluginRepositoryReader.__init__"></a>
 <h4>PluginRepositoryReader (Constructor)</h4>
-<b>PluginRepositoryReader</b>(<i>device, dlg</i>)
+<b>PluginRepositoryReader</b>(<i>device, entryCallback</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>device</i></dt>
 <dd>
 reference to the I/O device to read from (QIODevice)
-</dd><dt><i>dlg</i></dt>
+</dd><dt><i>entryCallback</i></dt>
 <dd>
-reference to the plug-in repository dialog
+reference to a function to be called once the
+            data for a plug-in has been read (function)
 </dd>
 </dl><a NAME="PluginRepositoryReader.__readPlugin" ID="PluginRepositoryReader.__readPlugin"></a>
 <h4>PluginRepositoryReader.__readPlugin</h4>

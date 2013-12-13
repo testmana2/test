@@ -2262,6 +2262,21 @@ class Subversion(VersionControl):
                                 changelists.append(changelist)
         
         return changelists
+        
+    def svnUpgrade(self, path):
+        """
+        Public method to upgrade the working copy format.
+        
+        @param path directory name to show change lists for (string)
+        """
+        args = []
+        args.append("upgrade")
+        args.append(".")
+        
+        dia = SvnDialog(self.trUtf8('Upgrade'))
+        res = dia.startProcess(args, path)
+        if res:
+            dia.exec_()
 
     ###########################################################################
     ## Private Subversion specific methods are below.

@@ -51,6 +51,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         self.saveButton.setIcon(UI.PixmapCache.getIcon("fileSaveAs.png"))
         self.takeButton.setIcon(UI.PixmapCache.getIcon("cameraPhoto.png"))
         self.copyButton.setIcon(UI.PixmapCache.getIcon("editCopy.png"))
+        self.copyPreviewButton.setIcon(UI.PixmapCache.getIcon("editCopy.png"))
         self.setWindowIcon(UI.PixmapCache.getIcon("ericSnap.png"))
         
         self.modeCombo.addItem(self.trUtf8("Fullscreen"),
@@ -404,11 +405,20 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         self.saveButton.setEnabled(not self.__snapshot.isNull())
         self.copyButton.setEnabled(not self.__snapshot.isNull())
+        self.copyPreviewButton.setEnabled(not self.__snapshot.isNull())
     
     @pyqtSlot()
     def on_copyButton_clicked(self):
         """
         Private slot to copy the snapshot to the clipboard.
+        """
+        if not self.__snapshot.isNull():
+            QApplication.clipboard().setPixmap(QPixmap(self.__snapshot))
+    
+    @pyqtSlot()
+    def on_copyPreviewButton_clicked(self):
+        """
+        Private slot to copy the snapshot preview to the clipboard.
         """
         QApplication.clipboard().setPixmap(self.preview.pixmap())
     

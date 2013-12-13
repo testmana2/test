@@ -362,6 +362,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.checkProgress.setMaximum(len(py3files) + len(py2files))
             self.checkProgressLabel.setVisible(
                 len(py3files) + len(py2files) > 1)
+            self.checkProgress.setVisible(
+                len(py3files) + len(py2files) > 1)
             QApplication.processEvents()
             
             # extract the configuration values

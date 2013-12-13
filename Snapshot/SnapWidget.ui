@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>350</height>
+    <width>500</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -187,13 +187,26 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="copyPreviewButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Press to copy the snapshot preview to the clipboard</string>
+       </property>
+       <property name="text">
+        <string>Copy &amp;Preview</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_5">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
+         <width>28</width>
          <height>20</height>
         </size>
        </property>
@@ -224,9 +237,10 @@
   <tabstop>modeCombo</tabstop>
   <tabstop>delaySpin</tabstop>
   <tabstop>takeButton</tabstop>
+  <tabstop>pathNameEdit</tabstop>
   <tabstop>saveButton</tabstop>
   <tabstop>copyButton</tabstop>
-  <tabstop>pathNameEdit</tabstop>
+  <tabstop>copyPreviewButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

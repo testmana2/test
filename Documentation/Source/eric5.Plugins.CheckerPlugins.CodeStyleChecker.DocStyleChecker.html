@@ -25,7 +25,7 @@ Module implementing a checker for documentation string conventions.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>PyCF_ONLY_AST</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -51,7 +51,7 @@ Module implementing a checker for documentation string conventions.
 object
 <h3>Class Attributes</h3>
 <table>
-<tr><td>Codes</td></tr><tr><td>Messages</td></tr>
+<tr><td>Codes</td></tr><tr><td>Messages</td></tr><tr><td>MessagesSampleArgs</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -176,6 +176,9 @@ object
 </tr><tr>
 <td><a href="#DocStyleChecker.__readline">__readline</a></td>
 <td>Private method to get the next line from the source.</td>
+</tr><tr>
+<td><a href="#DocStyleChecker.__reportInvalidSyntax">__reportInvalidSyntax</a></td>
+<td>Private method to report a syntax error.</td>
 </tr><tr>
 <td><a href="#DocStyleChecker.__resetReadline">__resetReadline</a></td>
 <td>Private method to reset the internal readline function.</td>
@@ -748,7 +751,12 @@ extracted function or class contexts (list of DocStyleContext)
 <dd>
 next line of source (string)
 </dd>
-</dl><a NAME="DocStyleChecker.__resetReadline" ID="DocStyleChecker.__resetReadline"></a>
+</dl><a NAME="DocStyleChecker.__reportInvalidSyntax" ID="DocStyleChecker.__reportInvalidSyntax"></a>
+<h4>DocStyleChecker.__reportInvalidSyntax</h4>
+<b>__reportInvalidSyntax</b>(<i></i>)
+<p>
+        Private method to report a syntax error.
+</p><a NAME="DocStyleChecker.__resetReadline" ID="DocStyleChecker.__resetReadline"></a>
 <h4>DocStyleChecker.__resetReadline</h4>
 <b>__resetReadline</b>(<i></i>)
 <p>

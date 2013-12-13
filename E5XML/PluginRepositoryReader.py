@@ -21,16 +21,17 @@ class PluginRepositoryReader(XMLStreamReaderBase):
     """
     supportedVersions = ["4.1", "4.2"]
     
-    def __init__(self, device, dlg):
+    def __init__(self, device, entryCallback):
         """
         Constructor
         
         @param device reference to the I/O device to read from (QIODevice)
-        @param dlg reference to the plug-in repository dialog
+        @param entryCallback reference to a function to be called once the
+            data for a plug-in has been read (function)
         """
         XMLStreamReaderBase.__init__(self, device)
         
-        self.dlg = dlg
+        self.__entryCallback = entryCallback
         
         self.version = ""
     
@@ -74,10 +75,11 @@ class PluginRepositoryReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Plugin":
-                self.dlg.addEntry(pluginInfo["name"], pluginInfo["short"],
-                                  pluginInfo["description"], pluginInfo["url"],
-                                  pluginInfo["author"], pluginInfo["version"],
-                                  pluginInfo["filename"], pluginInfo["status"])
+                self.__entryCallback(
+                    pluginInfo["name"], pluginInfo["short"],
+                    pluginInfo["description"], pluginInfo["url"],
+                    pluginInfo["author"], pluginInfo["version"],
+                    pluginInfo["filename"], pluginInfo["status"])
                 break
             
             if self.isStartElement():

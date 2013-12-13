@@ -2462,8 +2462,9 @@ class MiniEditor(E5MainWindow):
         @param on flag to indicate usage of a monospace font (boolean)
         """
         if on:
-            f = Preferences.getEditorOtherFonts("MonospacedFont")
-            self.__textEdit.monospacedStyles(f)
+            if not self.lexer_:
+                f = Preferences.getEditorOtherFonts("MonospacedFont")
+                self.__textEdit.monospacedStyles(f)
         else:
             if not self.lexer_:
                 self.__textEdit.clearStyles()

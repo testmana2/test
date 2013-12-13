@@ -1497,7 +1497,7 @@ class Subversion(VersionControl):
                 for file in allFiles:
                     # file.path is always unicode in Python 2
                     name = os.path.normcase(file.path)
-                    if file.is_versioned:
+                    if self.__isVersioned(file):
                         if name in names:
                             names[name] = self.canBeCommitted
                             dn = name
@@ -1572,7 +1572,7 @@ class Subversion(VersionControl):
                 for file in allFiles:
                     # file.path is always unicode in Python 2
                     name = os.path.normcase(file.path)
-                    if file.is_versioned:
+                    if self.__isVersioned(file):
                         if name in names:
                             names[name] = self.canBeCommitted
                         self.statusCache[name] = self.canBeCommitted
@@ -1582,6 +1582,25 @@ class Subversion(VersionControl):
                 locker.unlock()    # ignore pysvn errors
         
         return names
+        
+    def __isVersioned(self, status):
+        """
+        Private method to check, if the given status indicates a
+        versioned state.
+        
+        @param status status object to check (pysvn.PysvnStatus)
+        @return flag indicating a versioned state (boolean)
+        """
+        return status["text_status"] in [
+            pysvn.wc_status_kind.normal,
+            pysvn.wc_status_kind.added,
+            pysvn.wc_status_kind.missing,
+            pysvn.wc_status_kind.deleted,
+            pysvn.wc_status_kind.replaced,
+            pysvn.wc_status_kind.modified,
+            pysvn.wc_status_kind.merged,
+            pysvn.wc_status_kind.conflicted,
+        ]
         
     def clearStatusCache(self):
         """
@@ -2461,6 +2480,27 @@ class Subversion(VersionControl):
             locker.unlock()
         
         return changelists
+        
+    def svnUpgrade(self, path):
+        """
+        Public method to upgrade the working copy format.
+        
+        @param path directory name to show change lists for (string)
+        """
+        client = self.getClient()
+        dlg = \
+            SvnDialog(self.trUtf8('Upgrade'),
+                      "upgrade {0}".format(path),
+                      client)
+        QApplication.processEvents()
+        locker = QMutexLocker(self.vcsExecutionMutex)
+        try:
+            client.upgrade(path)
+        except pysvn.ClientError as e:
+            dlg.showError(e.args[0])
+        locker.unlock()
+        dlg.finish()
+        dlg.exec_()
 
     ###########################################################################
     ## Private Subversion specific methods are below.

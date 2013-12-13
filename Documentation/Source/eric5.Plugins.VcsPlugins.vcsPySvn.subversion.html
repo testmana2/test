@@ -66,6 +66,9 @@ VersionControl
 <td><a href="#Subversion.__init__">Subversion</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#Subversion.__isVersioned">__isVersioned</a></td>
+<td>Private method to check, if the given status indicates a versioned state.</td>
+</tr><tr>
 <td><a href="#Subversion.__svnGetFileForRevision">__svnGetFileForRevision</a></td>
 <td>Private method to get a file for a specific revision from the repository.</td>
 </tr><tr>
@@ -161,6 +164,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Subversion.svnUnlock">svnUnlock</a></td>
 <td>Public method used to unlock a file in the Subversion repository.</td>
+</tr><tr>
+<td><a href="#Subversion.svnUpgrade">svnUpgrade</a></td>
+<td>Public method to upgrade the working copy format.</td>
 </tr><tr>
 <td><a href="#Subversion.svnUrlDiff">svnUrlDiff</a></td>
 <td>Public method used to view the difference of a file/directory of two repository URLs.</td>
@@ -281,6 +287,22 @@ parent widget (QWidget)
 </dd><dt><i>name</i></dt>
 <dd>
 name of this object (string)
+</dd>
+</dl><a NAME="Subversion.__isVersioned" ID="Subversion.__isVersioned"></a>
+<h4>Subversion.__isVersioned</h4>
+<b>__isVersioned</b>(<i>status</i>)
+<p>
+        Private method to check, if the given status indicates a
+        versioned state.
+</p><dl>
+<dt><i>status</i></dt>
+<dd>
+status object to check (pysvn.PysvnStatus)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a versioned state (boolean)
 </dd>
 </dl><a NAME="Subversion.__svnGetFileForRevision" ID="Subversion.__svnGetFileForRevision"></a>
 <h4>Subversion.__svnGetFileForRevision</h4>
@@ -752,6 +774,16 @@ flag indicating a forced operation (boolean)
 <dd>
 reference to the parent object of the subversion dialog
             (QWidget)
+</dd>
+</dl><a NAME="Subversion.svnUpgrade" ID="Subversion.svnUpgrade"></a>
+<h4>Subversion.svnUpgrade</h4>
+<b>svnUpgrade</b>(<i>path</i>)
+<p>
+        Public method to upgrade the working copy format.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name to show change lists for (string)
 </dd>
 </dl><a NAME="Subversion.svnUrlDiff" ID="Subversion.svnUrlDiff"></a>
 <h4>Subversion.svnUrlDiff</h4>

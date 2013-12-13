@@ -21,11 +21,13 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
     """
     Class implementing a dialog to display an error log.
     """
-    def __init__(self, logFile, parent=None):
+    def __init__(self, logFile, showMode, parent=None):
         """
         Constructor
         
         @param logFile name of the log file containing the error info (string)
+        @param showMode flag indicating to just show the error log message
+            (boolean)
         @param parent reference to the parent widget (QWidget)
         """
         super(ErrorLogDialog, self).__init__(parent)
@@ -34,6 +36,13 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
         pixmap = self.style().standardIcon(QStyle.SP_MessageBoxQuestion)\
             .pixmap(32, 32)
         self.icon.setPixmap(pixmap)
+        
+        if showMode:
+            self.icon.hide()
+            self.label.hide()
+            self.deleteButton.setText(self.trUtf8("Delete"))
+            self.keepButton.setText(self.trUtf8("Close"))
+            self.setWindowTitle(self.trUtf8("Error Log"))
         
         self.__ui = parent
         self.__logFile = logFile

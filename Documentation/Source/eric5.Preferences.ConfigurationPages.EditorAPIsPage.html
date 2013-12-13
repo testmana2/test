@@ -87,8 +87,14 @@ ConfigurationPageBase, Ui_EditorAPIsPage
 <td><a href="#EditorAPIsPage.on_apiFileButton_clicked">on_apiFileButton_clicked</a></td>
 <td>Private method to select an api file.</td>
 </tr><tr>
+<td><a href="#EditorAPIsPage.on_apiFileEdit_textChanged">on_apiFileEdit_textChanged</a></td>
+<td>Private slot to handle the entering of an API file name.</td>
+</tr><tr>
 <td><a href="#EditorAPIsPage.on_apiLanguageComboBox_activated">on_apiLanguageComboBox_activated</a></td>
 <td>Private slot to fill the api listbox of the api page.</td>
+</tr><tr>
+<td><a href="#EditorAPIsPage.on_apiList_itemSelectionChanged">on_apiList_itemSelectionChanged</a></td>
+<td>Private slot to react on changes of API selections.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_deleteApiFileButton_clicked">on_deleteApiFileButton_clicked</a></td>
 <td>Private slot to delete the currently selected file of the listbox.</td>
@@ -162,7 +168,17 @@ list of api filenames (list of strings)
 <b>on_apiFileButton_clicked</b>(<i></i>)
 <p>
         Private method to select an api file.
-</p><a NAME="EditorAPIsPage.on_apiLanguageComboBox_activated" ID="EditorAPIsPage.on_apiLanguageComboBox_activated"></a>
+</p><a NAME="EditorAPIsPage.on_apiFileEdit_textChanged" ID="EditorAPIsPage.on_apiFileEdit_textChanged"></a>
+<h4>EditorAPIsPage.on_apiFileEdit_textChanged</h4>
+<b>on_apiFileEdit_textChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle the entering of an API file name.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the line edit (string)
+</dd>
+</dl><a NAME="EditorAPIsPage.on_apiLanguageComboBox_activated" ID="EditorAPIsPage.on_apiLanguageComboBox_activated"></a>
 <h4>EditorAPIsPage.on_apiLanguageComboBox_activated</h4>
 <b>on_apiLanguageComboBox_activated</b>(<i>language</i>)
 <p>
@@ -172,7 +188,12 @@ list of api filenames (list of strings)
 <dd>
 selected API language (string)
 </dd>
-</dl><a NAME="EditorAPIsPage.on_deleteApiFileButton_clicked" ID="EditorAPIsPage.on_deleteApiFileButton_clicked"></a>
+</dl><a NAME="EditorAPIsPage.on_apiList_itemSelectionChanged" ID="EditorAPIsPage.on_apiList_itemSelectionChanged"></a>
+<h4>EditorAPIsPage.on_apiList_itemSelectionChanged</h4>
+<b>on_apiList_itemSelectionChanged</b>(<i></i>)
+<p>
+        Private slot to react on changes of API selections.
+</p><a NAME="EditorAPIsPage.on_deleteApiFileButton_clicked" ID="EditorAPIsPage.on_deleteApiFileButton_clicked"></a>
 <h4>EditorAPIsPage.on_deleteApiFileButton_clicked</h4>
 <b>on_deleteApiFileButton_clicked</b>(<i></i>)
 <p>
