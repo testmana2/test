@@ -133,6 +133,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         os.chdir(dname)
         try:
             entries = self.client.list(path, recurse=False)
+            # dirent, lock already unicode in Python 2
             for dirent, lock in entries:
                 if dirent["path"] != path:
                     name = dirent["path"].replace(path + '/', "")

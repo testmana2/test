@@ -16,7 +16,6 @@ except (NameError):
 import os
 import re
 import shutil
-import urllib.parse
 
 from PyQt4.QtCore import pyqtSignal, QProcess, QRegExp
 from PyQt4.QtGui import QLineEdit, QDialog, QInputDialog, QApplication
@@ -995,10 +994,10 @@ class Subversion(VersionControl):
             
             reposRoot = rx_base.cap(1)
             if tagOp in [1, 4]:
-                url = '{0}/tags/{1}'.format(reposRoot, urllib.parse.quote(tag))
+                url = '{0}/tags/{1}'.format(reposRoot, Utilities.quote(tag))
             elif tagOp in [2, 8]:
                 url = '{0}/branches/{1}'.format(
-                    reposRoot, urllib.parse.quote(tag))
+                    reposRoot, Utilities.quote(tag))
         else:
             url = self.__svnURL(tag)
         
@@ -1118,10 +1117,10 @@ class Subversion(VersionControl):
             reposRoot = rx_base.cap(1)
             tn = tag
             if tagType == 1:
-                url = '{0}/tags/{1}'.format(reposRoot, urllib.parse.quote(tag))
+                url = '{0}/tags/{1}'.format(reposRoot, Utilities.quote(tag))
             elif tagType == 2:
                 url = '{0}/branches/{1}'.format(
-                    reposRoot, urllib.parse.quote(tag))
+                    reposRoot, Utilities.quote(tag))
             elif tagType == 4:
                 url = '{0}/trunk'.format(reposRoot)
                 tn = 'HEAD'
@@ -2282,11 +2281,11 @@ class Subversion(VersionControl):
             host = url[1]
             port, path = url[2].split("/", 1)
             return "{0}:{1}:{2}/{3}".format(
-                scheme, host, port, urllib.parse.quote(path))
+                scheme, host, port, Utilities.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
+                return "{0}:{1}".format(scheme, Utilities.quote(url[1]))
             else:
                 try:
                     host, path = url[1][2:].split("/", 1)
@@ -2294,7 +2293,7 @@ class Subversion(VersionControl):
                     host = url[1][2:]
                     path = ""
                 return "{0}://{1}/{2}".format(
-                    scheme, host, urllib.parse.quote(path))
+                    scheme, host, Utilities.quote(path))
 
     def svnNormalizeURL(self, url):
         """

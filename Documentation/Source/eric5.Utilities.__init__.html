@@ -193,6 +193,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#prepareQtMacBundle">prepareQtMacBundle</a></td>
 <td>Module function for starting Qt tools that are Mac OS X bundles.</td>
 </tr><tr>
+<td><a href="#quote">quote</a></td>
+<td>Replacement for the urllib.quote function because of unicode problems.</td>
+</tr><tr>
 <td><a href="#readEncodedFileWithHash">readEncodedFileWithHash</a></td>
 <td>Function to read a file, calculate a hash value and decode its contents into proper text.</td>
 </tr><tr>
@@ -1327,6 +1330,24 @@ name of input file for tool, if any (list of strings)
 <dt>Returns:</dt>
 <dd>
 command-name and args for QProcess (tuple)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="quote" ID="quote"></a>
+<h2>quote</h2>
+<b>quote</b>(<i>url</i>)
+<p>
+        Replacement for the urllib.quote function because of unicode problems.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+text to quote
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+quoted url
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

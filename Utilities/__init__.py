@@ -10,8 +10,19 @@ Package implementing various functions/classes needed everywhere within eric5.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 try:
     str = unicode   # __IGNORE_WARNING__
+    import urllib
+
+    def quote(url):
+        """
+        Replacement for the urllib.quote function because of unicode problems.
+        
+        @param url text to quote
+        @return quoted url
+        """
+        return urllib.quote(url.encode('utf-8'))
 except (NameError):
     basestring = str
+    from urllib.parse import quote    # __IGNORE_WARNING__
 
 import os
 import sys

@@ -161,6 +161,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
             try:
                 entries = self.client.list(url, recurse=False)
                 firstTime = parent == self.repoTree
+                # dirent elements are all unicode in Python 2
                 for dirent, lock in entries:
                     if (firstTime and dirent["path"] != url) or \
                        (parent != self.repoTree and dirent["path"] == url):

@@ -8539,6 +8539,7 @@ eric5.Utilities.py3flakes.messages.UnusedImport.message?7
 eric5.Utilities.py3flakes.messages.UnusedImport?1(filename, lineno, name)
 eric5.Utilities.py3flakes.messages.UnusedVariable.message?7
 eric5.Utilities.py3flakes.messages.UnusedVariable?1(filename, lineno, name)
+eric5.Utilities.quote?4(url)
 eric5.Utilities.readEncodedFileWithHash?4(filename)
 eric5.Utilities.readStringFromStream?4(stream)
 eric5.Utilities.relpath?4(path, start=os.path.curdir)

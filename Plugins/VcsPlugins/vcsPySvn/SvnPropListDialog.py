@@ -11,6 +11,7 @@ process.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
+import sys
 
 import pysvn
 
@@ -104,7 +105,12 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
                 proplist = self.client.proplist(name, recurse=recursive)
                 counter = 0
                 for path, prop in proplist:
+                    if sys.version_info[0] == 2:
+                        path = path.decode('utf-8')
                     for propName, propVal in list(prop.items()):
+                        if sys.version_info[0] == 2:
+                            propName = propName.decode('utf-8')
+                            propVal = propVal.decode('utf-8')
                         self.__generateItem(path, propName, propVal)
                         self.propsFound = True
                     counter += 1

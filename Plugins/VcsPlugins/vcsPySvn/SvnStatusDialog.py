@@ -11,6 +11,7 @@ process.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
+import sys
 
 import pysvn
 
@@ -317,6 +318,9 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                         depth = pysvn.depth.immediate
                     changelists = self.client.get_changelist(name, depth=depth)
                     for fpath, changelist in changelists:
+                        if sys.version_info[0] == 2:
+                            fpath = fpath.decode('utf-8')
+                            changelist = changelist.decode('utf-8')
                         fpath = Utilities.normcasepath(fpath)
                         changelistsDict[fpath] = changelist
                 hideChangelistColumn = hideChangelistColumn and \

@@ -11,6 +11,7 @@ file/directory.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
+import sys
 
 import pysvn
 
@@ -65,6 +66,8 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
             entries = self.client.info2(fn, recurse=False)
             infoStr = "<table>"
             for path, info in entries:
+                if sys.version_info[0] == 2:
+                    path = path.decode('utf-8')
                 infoStr += self.trUtf8(
                     "<tr><td><b>Path (relative to project):</b></td>"
                     "<td>{0}</td></tr>").format(path)

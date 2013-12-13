@@ -13243,6 +13243,7 @@
       <keyword name="qtHandler" id="qtHandler" ref="eric5.E5Gui.E5ErrorMessage.html#qtHandler" />
       <keyword name="question" id="question" ref="eric5.E5Gui.E5MessageBox.html#question" />
       <keyword name="queues (Module)" id="queues (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
+      <keyword name="quote" id="quote" ref="eric5.Utilities.__init__.html#quote" />
       <keyword name="rbclbr (Module)" id="rbclbr (Module)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html" />
       <keyword name="read" id="read" ref="eric5.DebugClients.Ruby.AsyncFile.html#read" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.Utilities.SyntaxCheck.html#readEncodedFile" />

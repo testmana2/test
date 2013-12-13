@@ -10,6 +10,7 @@ Module implementing a dialog to browse the change lists.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
+import sys
 
 import pysvn
 
@@ -87,6 +88,9 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
             for entry in entries:
                 file = entry[0]
                 changelist = entry[1]
+                if sys.version_info[0] == 2:
+                    file = file.decode('utf-8')
+                    changelist = changelist.decode('utf-8')
                 if changelist not in self.changeListsDict:
                     self.changeListsDict[changelist] = []
                 filename = file.replace(path + os.sep, "")

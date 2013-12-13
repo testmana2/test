@@ -9,6 +9,10 @@ side.
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    basestring    # __IGNORE_WARNING__
+except NameError:
+    basestring = str
 
 import re
 from difflib import _mdiff, IS_CHARACTER_JUNK
@@ -276,9 +280,9 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.diffButton.setEnabled(False)
         self.diffButton.hide()
         
-        if isinstance(lines1, str):
+        if isinstance(lines1, basestring):
             lines1 = lines1.splitlines(True)
-        if isinstance(lines2, str):
+        if isinstance(lines2, basestring):
             lines2 = lines2.splitlines(True)
         
         self.__compare(lines1, lines2)

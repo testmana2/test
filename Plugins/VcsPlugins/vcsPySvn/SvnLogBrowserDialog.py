@@ -10,6 +10,7 @@ Module implementing a dialog to browse the log history.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
+import sys
 
 import pysvn
 
@@ -260,8 +261,13 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             locker.unlock()
             
             for log in logs:
+                author = log["author"]
+                message = log["message"]
+                if sys.version_info[0] == 2:
+                    author = author.decode('utf-8')
+                    message = message.decode('utf-8')
                 self.__generateLogItem(
-                    log["author"], log["date"], log["message"],
+                    author, log["date"], message,
                     log["revision"], log['changed_paths'])
                 dt = dateFromTime_t(log["date"])
                 if not self.__maxDate.isValid() and \
