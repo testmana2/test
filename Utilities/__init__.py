@@ -16,8 +16,8 @@ try:
         """
         Replacement for the urllib.quote function because of unicode problems.
         
-        @param url text to quote
-        @return quoted url
+        @param url text to quote (string)
+        @return quoted url (string)
         """
         return urllib.quote(url.encode('utf-8'))
 except (NameError):
