@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1935,8 +1936,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2177,8 +2178,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -3958,57 +3959,57 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="55"/>
         <source>Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="61"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el nombre para la variable.de resultado</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="292"/>
         <source>Colour Variable</source>
-        <translation type="unfinished"></translation>
+        <translation>Variable para Color</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="87"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="93"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;self&quot; como padre</translation>
+        <translation>Seleccionar &quot;self&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="96"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="106"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;None&quot; como padre</translation>
+        <translation>Seleccionar &quot;None&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="109"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="118"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleccionar para introducir una expresión padre</translation>
+        <translation>Seleccionar para introducir una expresión padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="121"/>
         <source>Expression:</source>
-        <translation type="unfinished">Expresión:</translation>
+        <translation>Expresión:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="131"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Introduzca la expresión padre</translation>
+        <translation>Introducir la expresión padre</translation>
     </message>
 </context>
 <context>
@@ -7962,12 +7963,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="150"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="157"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el nombre para la variable.de resultado</translation>
     </message>
 </context>
 <context>
@@ -14452,7 +14453,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="25"/>
         <source>PyQt Variant:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variante de PyQt:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
@@ -14462,77 +14463,77 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="173"/>
         <source>Enter the title text</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el texto del título</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="195"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="201"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;self&quot; como padre</translation>
+        <translation>Seleccionar &quot;self&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="204"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="214"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;None&quot; como padre</translation>
+        <translation>Seleccionar &quot;None&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="217"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="226"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleccionar para introducir una expresión padre</translation>
+        <translation>Seleccionar para introducir una expresión padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="229"/>
         <source>Expression:</source>
-        <translation type="unfinished">Expresión:</translation>
+        <translation>Expresión:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="239"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Introduzca la expresión padre</translation>
+        <translation>Introducir la expresión padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="305"/>
         <source>Initial Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Ffiltro Inicial</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="312"/>
         <source>Enter the initial filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el filtro inicial</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
         <source>Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultados</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="141"/>
         <source>Name Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variable para Nombre:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="151"/>
         <source>Filter Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variable para Filtro:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="166"/>
         <source>Title:</source>
-        <translation type="unfinished">Título:</translation>
+        <translation>Título:</translation>
     </message>
 </context>
 <context>
@@ -15128,67 +15129,67 @@ Razón: {0}</translation>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="23"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="30"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el nombre para la variable.de resultado</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="153"/>
         <source>Font Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variable para la Fuente:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="37"/>
         <source>Title:</source>
-        <translation type="unfinished">Título:</translation>
+        <translation>Título:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="44"/>
         <source>Enter the title for the message box</source>
-        <translation type="unfinished">Introduzca el título para la ventana de mensaje</translation>
+        <translation>Introducir el título para la ventana de mensaje</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="51"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="57"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;self&quot; como padre</translation>
+        <translation>Seleccionar &quot;self&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="60"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="70"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;None&quot; como padre</translation>
+        <translation>Seleccionar &quot;None&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="73"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="82"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleccionar para introducir una expresión padre</translation>
+        <translation>Seleccionar para introducir una expresión padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="85"/>
         <source>Expression:</source>
-        <translation type="unfinished">Expresión:</translation>
+        <translation>Expresión:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="95"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Introduzca la expresión padre</translation>
+        <translation>Introduzca la expresión padre</translation>
     </message>
 </context>
 <context>
@@ -15665,7 +15666,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -26984,57 +26985,57 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="77"/>
         <source>Title</source>
-        <translation type="unfinished">Título</translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="63"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="70"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el nombre para la variable.de resultado</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="97"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="103"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;self&quot; como padre</translation>
+        <translation>Seleccionar &quot;self&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="106"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="116"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleccionar &quot;None&quot; como padre</translation>
+        <translation>Seleccionar &quot;None&quot; como padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="119"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="128"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleccionar para introducir una expresión padre</translation>
+        <translation>Seleccionar para introducir una expresión padre</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="131"/>
         <source>Expression:</source>
-        <translation type="unfinished">Expresión:</translation>
+        <translation>Expresión:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="141"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Introduzca la expresión padre</translation>
+        <translation>Introduzca la expresión padre</translation>
     </message>
 </context>
 <context>
@@ -30751,17 +30752,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="131"/>
         <source>Enter the title for the QMessageBox</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el título para la QMessageBox</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el nombre para la variable.de resultado</translation>
     </message>
 </context>
 <context>
@@ -43906,12 +43907,12 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="195"/>
         <source>Press to copy the snapshot preview to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para copiar la vista preliminar de la captura de pantalla al portapapeles</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="198"/>
         <source>Copy &amp;Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar y Vista &amp;Preliminar</translation>
     </message>
 </context>
 <context>
