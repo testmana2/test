@@ -7,14 +7,14 @@
 Module implementing a widget to select a symbol in various formats.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import sys
 import unicodedata
 try:  # Py3
     import html.entities as html_entities
 except (ImportError):
-    chr = unichr
+    chr = unichr    # __IGNORE_WARNING__
     import htmlentitydefs as html_entities    # __IGNORE_WARNING__
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, \

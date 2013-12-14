@@ -8,7 +8,7 @@ Module implementing a dialog mixin class providing common callback methods for
 the pysvn client.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QApplication, QDialog, QWidget, QCursor
 

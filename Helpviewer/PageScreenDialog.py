@@ -7,7 +7,7 @@
 Module implementing a dialog to save a screenshot of a web page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractButton, QImage, \

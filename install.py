@@ -9,8 +9,8 @@
 Installation script for the eric5 IDE and all eric5 related tools.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
-from __future__ import print_function    # __IGNORE_WARNING__
+from __future__ import unicode_literals
+from __future__ import print_function
 try:
     import cStringIO as io
     import sip
@@ -18,7 +18,7 @@ try:
     sip.setapi('QVariant', 2)
     sip.setapi('QTextStream',  2)
 except (ImportError):
-    import io
+    import io    # __IGNORE_WARNING__
 
 import sys
 import os

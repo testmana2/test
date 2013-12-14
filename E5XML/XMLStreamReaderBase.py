@@ -7,7 +7,7 @@
 Module implementing a base class for all of eric5s XML stream writers.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import pickle
 import base64

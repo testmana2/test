@@ -7,7 +7,7 @@
 Module implementing a network reply object for special data.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QTimer, QIODevice, QByteArray
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest

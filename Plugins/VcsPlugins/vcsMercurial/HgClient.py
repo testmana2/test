@@ -8,7 +8,7 @@ Module implementing an interface to the Mercurial command server.
 """
 
 try:
-    str = unicode
+    str = unicode    # __IGNORE_WARNING__
 except (NameError):
     pass
 

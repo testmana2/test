@@ -7,7 +7,7 @@
 Module implementing the multi project browser.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QListWidget, QListWidgetItem, QDialog, QMenu

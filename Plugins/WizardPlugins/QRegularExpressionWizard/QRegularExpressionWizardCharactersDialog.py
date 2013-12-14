@@ -7,7 +7,7 @@
 Module implementing a dialog for entering character classes.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QRegExp
 from PyQt4.QtGui import QWidget, QDialog, QVBoxLayout, QHBoxLayout, \

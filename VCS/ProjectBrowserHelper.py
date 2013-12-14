@@ -7,7 +7,7 @@
 Module implementing the base class of the VCS project browser helper.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

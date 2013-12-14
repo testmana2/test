@@ -7,7 +7,7 @@
 Module implementing a sidebar class.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, \
     QIODevice, QTimer

@@ -7,7 +7,7 @@
 Module implementing the subversion repository browser dialog.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import pysvn
 

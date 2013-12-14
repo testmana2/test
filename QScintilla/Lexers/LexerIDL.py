@@ -7,7 +7,7 @@
 Module implementing an IDL lexer with some additional methods.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.Qsci import QsciLexerIDL,  QsciScintilla
 

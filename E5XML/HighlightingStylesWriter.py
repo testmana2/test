@@ -8,7 +8,7 @@ Module implementing the writer class for writing a highlighting styles XML
 file.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import time
 

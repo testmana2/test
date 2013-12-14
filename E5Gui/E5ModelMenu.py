@@ -7,7 +7,7 @@
 Module implementing a menu populated from a QAbstractItemModel.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint
 from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, \

@@ -4,7 +4,7 @@
 Module implementing a dialog to enter the icon size.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QDialog
 

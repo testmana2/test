@@ -7,7 +7,7 @@
 Module implementing the UI Previewer main window.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import qVersion, QDir, QFileInfo, QEvent, QSize, Qt
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \

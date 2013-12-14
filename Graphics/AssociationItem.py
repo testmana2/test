@@ -7,7 +7,7 @@
 Module implementing a graphics item for an association between two items.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QPointF, QRectF, QLineF
 from PyQt4.QtGui import QGraphicsItem

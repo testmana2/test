@@ -48,7 +48,7 @@ W warnings
 900 syntax error
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 #
 # This is a modified version to make the original pep8.py better suitable

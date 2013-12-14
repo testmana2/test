@@ -7,7 +7,7 @@
 Module implementing a main window class with styling support.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QMainWindow, QStyleFactory,  QApplication
 

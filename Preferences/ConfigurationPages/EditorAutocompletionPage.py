@@ -7,7 +7,7 @@
 Module implementing the Editor Autocompletion configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAutocompletionPage import Ui_EditorAutocompletionPage

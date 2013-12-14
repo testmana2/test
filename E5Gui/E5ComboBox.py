@@ -7,7 +7,7 @@
 Module implementing combobox classes using the eric5 line edits.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QComboBox
 

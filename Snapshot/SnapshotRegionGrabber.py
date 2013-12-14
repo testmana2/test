@@ -7,7 +7,7 @@
 Module implementing a grabber widget for a rectangular snapshot region.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
 from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \

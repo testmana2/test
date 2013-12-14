@@ -7,7 +7,7 @@
 Module implementing the client of the cooperation package.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import collections
 

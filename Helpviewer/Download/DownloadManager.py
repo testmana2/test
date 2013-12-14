@@ -4,7 +4,7 @@
 Module implementing the download manager class.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, Qt, QModelIndex, QFileInfo
 from PyQt4.QtGui import QDialog, QStyle, QFileIconProvider, QMenu, QCursor, \

@@ -7,7 +7,7 @@
 Module implementing a custom lexer using pygments.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from pygments.token import Token
 from pygments.lexers import guess_lexer_for_filename, guess_lexer, \

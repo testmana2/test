@@ -7,7 +7,7 @@
 Module implementing a dialog to show all saved user agent settings.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 

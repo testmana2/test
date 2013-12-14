@@ -11,7 +11,7 @@ Python file. The appearance is determined by several templates defined within
 this module.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import sys
 import re

@@ -11,7 +11,7 @@ This is the main Python script to install eric5 plugins from outside of the
 IDE.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:  # Only for Py2
     import sip
     sip.setapi('QString', 2)

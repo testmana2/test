@@ -7,7 +7,7 @@
 Module defining configuration variables for the Mercurial package.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 # Available protocols fpr the repository URL
 ConfigHgProtocols = [

@@ -8,7 +8,7 @@ Package implementing lexers for the various supported programming languages.
 """
 
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 
 def getCompleter(language, editor, parent=None):

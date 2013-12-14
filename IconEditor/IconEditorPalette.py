@@ -7,7 +7,7 @@
 Module implementing a palette widget for the icon editor.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QWidget, QColor, QPainter, QBoxLayout, QLabel, \

@@ -7,7 +7,7 @@
 Module implementing a dialog to enter the parameters for eric5_doc.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import sys
 import os

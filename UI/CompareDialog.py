@@ -8,7 +8,7 @@ Module implementing a dialog to compare two files and show the result side by
 side.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:
     basestring    # __IGNORE_WARNING__
 except NameError:

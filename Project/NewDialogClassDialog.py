@@ -7,7 +7,7 @@
 Module implementing a dialog to enter the data for a new dialog class file.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

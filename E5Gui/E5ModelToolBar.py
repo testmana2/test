@@ -7,7 +7,7 @@
 Module implementing a tool bar populated from a QAbstractItemModel.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint, QEvent
 from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, \

@@ -11,7 +11,7 @@ that are performed while the user is typing (e.g. insert ')' when the
 user types '(').
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QObject
 

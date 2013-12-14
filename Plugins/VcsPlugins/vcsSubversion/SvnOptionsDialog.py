@@ -8,7 +8,7 @@ Module implementing a dialog to enter options used to start a project in
 the VCS.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

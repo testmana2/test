@@ -10,7 +10,7 @@
 """
 
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from pygments.formatter import Formatter
 from pygments.util import get_bool_opt

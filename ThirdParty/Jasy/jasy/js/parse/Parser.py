@@ -10,7 +10,7 @@
 #   - Sebastian Werner <info@sebastian-werner.net> (Python Port) (2010-2012)
 #
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import jasy.js.tokenize.Tokenizer
 import jasy.js.parse.VanillaBuilder

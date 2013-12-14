@@ -7,7 +7,7 @@
 Package implementing various functions/classes needed everywhere within eric5.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:
     str = unicode   # __IGNORE_WARNING__
     import urllib

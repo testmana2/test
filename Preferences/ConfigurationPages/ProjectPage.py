@@ -7,7 +7,7 @@
 Module implementing the Project configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ProjectPage import Ui_ProjectPage

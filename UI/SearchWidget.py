@@ -7,7 +7,7 @@
 Module implementing the search box for the shel, terminal and log viewer.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt
 from PyQt4.QtGui import QWidget, QSpacerItem, QSizePolicy

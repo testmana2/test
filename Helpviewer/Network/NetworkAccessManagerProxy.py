@@ -7,7 +7,7 @@
 Module implementing a network access manager proxy for web pages.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 try:

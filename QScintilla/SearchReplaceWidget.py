@@ -7,7 +7,7 @@
 Module implementing the search and replace widget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, \

@@ -7,7 +7,7 @@
 Module implementing a previewer widget for HTML, Markdown and ReST files.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 import threading

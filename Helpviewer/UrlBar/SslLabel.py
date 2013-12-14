@@ -7,7 +7,7 @@
 Module implementing the label to show some SSL info.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, pyqtSignal, QPoint
 from PyQt4.QtGui import QLabel

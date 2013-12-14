@@ -7,7 +7,7 @@
 Module implementing a specialized line edit for entering IRC messages.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt
 

@@ -7,7 +7,7 @@
 Module implementing a dialog to manage the QtHelp filters.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import sqlite3
 

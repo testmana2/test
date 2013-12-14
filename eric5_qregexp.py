@@ -12,7 +12,7 @@ of the QRegExp wizard module and starts the Qt event loop. This is a standalone
 version of the integrated QRegExp wizard.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:  # Only for Py2
     import sip
     sip.setapi('QString', 2)

@@ -7,7 +7,7 @@
 Module implementing the Editor APIs configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QDir, pyqtSlot, QFileInfo
 from PyQt4.QtGui import QInputDialog

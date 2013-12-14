@@ -7,7 +7,7 @@
 Module implementing a specialized error message dialog.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import qInstallMsgHandler, QCoreApplication, QtDebugMsg, \
     QtWarningMsg, QtCriticalMsg, QtFatalMsg, QThread, QMetaObject, Qt, Q_ARG, \

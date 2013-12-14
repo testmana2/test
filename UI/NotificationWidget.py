@@ -7,7 +7,7 @@
 Module implementing a Notification widget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QTimer, QPoint
 from PyQt4.QtGui import QWidget, QPixmap

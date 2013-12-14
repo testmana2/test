@@ -7,7 +7,7 @@
 Module implementing specialized line edits.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
 from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, \

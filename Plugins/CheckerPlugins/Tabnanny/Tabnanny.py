@@ -18,7 +18,7 @@ for being called from within the eric5 IDE.
 @exception ValueError The tokenize module is too old.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 # Released to the public domain, by Tim Peters, 15 April 1998.
 

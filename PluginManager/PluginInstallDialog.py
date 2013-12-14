@@ -7,7 +7,7 @@
 Module implementing the Plugin installation dialog.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 import sys
@@ -18,7 +18,7 @@ import glob
 try:  # Py3
     import urllib.parse as parse
 except (ImportError):
-    import urlparse as parse
+    import urlparse as parse    # __IGNORE_WARNING__
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \

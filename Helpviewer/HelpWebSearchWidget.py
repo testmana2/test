@@ -7,7 +7,7 @@
 Module implementing a web search widget for the web browser.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer, Qt
 from PyQt4.QtGui import QMenu, QStandardItem, QStandardItemModel, \

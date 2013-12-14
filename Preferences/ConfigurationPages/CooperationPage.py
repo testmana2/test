@@ -7,7 +7,7 @@
 Module implementing the Cooperation configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, QRegExp
 from PyQt4.QtGui import QRegExpValidator, QValidator

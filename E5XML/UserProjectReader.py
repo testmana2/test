@@ -7,7 +7,7 @@
 Module implementing a class for reading an XML user project properties file.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from .Config import userProjectFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase

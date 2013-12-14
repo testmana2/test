@@ -7,7 +7,7 @@
 Module implementing a dialog to edit watch expression properties.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 

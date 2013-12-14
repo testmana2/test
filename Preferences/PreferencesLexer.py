@@ -7,7 +7,7 @@
 Module implementing a special QextScintilla lexer to handle the preferences.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QColor, QFont, QApplication
 from PyQt4.Qsci import QsciLexer

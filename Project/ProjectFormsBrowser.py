@@ -7,9 +7,9 @@
 Module implementing a class used to display the forms part of the project.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:
-    str = unicode
+    str = unicode    # __IGNORE_WARNING__
 except (NameError):
     pass
 

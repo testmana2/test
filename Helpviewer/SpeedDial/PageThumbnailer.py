@@ -7,7 +7,7 @@
 Module implementing an object to create a thumbnail image of a web site.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, QObject, QSize, Qt, QUrl
 from PyQt4.QtGui import QPixmap, QImage, QPainter

@@ -7,7 +7,7 @@
 Module implementing a dialog for importing bookmarks from other sources.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

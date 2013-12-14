@@ -8,7 +8,7 @@ Module implementing a function to compile all user interface files of a
 directory or directory tree.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

@@ -7,7 +7,7 @@
 Module implementing a modified QSortFilterProxyModel.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QModelIndex
 from PyQt4.QtGui import QSortFilterProxyModel

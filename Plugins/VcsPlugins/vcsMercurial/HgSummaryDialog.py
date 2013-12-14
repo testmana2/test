@@ -8,9 +8,9 @@ Module implementing a dialog to show some summary information of the working
 directory state.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:
-    str = unicode
+    str = unicode    # __IGNORE_WARNING__
 except (NameError):
     pass
 

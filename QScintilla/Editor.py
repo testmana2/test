@@ -6,7 +6,7 @@
 """
 Module implementing the editor component of the eric5 IDE.
 """
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:
     str = unicode   # __IGNORE_WARNING__
     chr = unichr   # __IGNORE_WARNING__

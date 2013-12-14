@@ -7,7 +7,7 @@
 Module implementing a function to generate an application info.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from UI.Info import Version
 

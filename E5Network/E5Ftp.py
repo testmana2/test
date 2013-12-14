@@ -8,7 +8,7 @@ Module implementing an extension to the Python FTP class to support FTP
 proxies.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import ftplib
 from socket import _GLOBAL_DEFAULT_TIMEOUT

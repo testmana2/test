@@ -9,7 +9,7 @@
     :license: BSD, see LICENSE for details.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 OPENEDGEKEYWORDS = [
     'ABSOLUTE', 'ABS', 'ABSO', 'ABSOL', 'ABSOLU', 'ABSOLUT', 'ACCELERATOR',

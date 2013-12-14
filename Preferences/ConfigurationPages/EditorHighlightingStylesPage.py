@@ -7,7 +7,7 @@
 Module implementing the Editor Highlighting Styles configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, Qt, QFileInfo, QFile, QIODevice
 from PyQt4.QtGui import QPalette, QColorDialog, QFontDialog, \

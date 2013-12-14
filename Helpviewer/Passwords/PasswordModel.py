@@ -7,7 +7,7 @@
 Module implementing a model for password management.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QModelIndex, QAbstractTableModel
 

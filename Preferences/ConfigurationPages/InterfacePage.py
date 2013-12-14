@@ -7,7 +7,7 @@
 Module implementing the Interface configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import glob
 import os

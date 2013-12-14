@@ -7,7 +7,7 @@
 Module implementing a dialog to select a help topic to display.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import QUrl

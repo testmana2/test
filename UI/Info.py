@@ -7,7 +7,7 @@
 Module defining some informational strings.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 Program = 'eric5'
 Version = '@@VERSION@@ (rev @@REVISION@@)'

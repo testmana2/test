@@ -8,7 +8,7 @@ Module implementing alternative functions for the QFileDialog static methods
 to cope with distributor's usage of KDE wrapper dialogs for Qt file dialogs.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QFileDialog
 

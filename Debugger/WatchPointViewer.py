@@ -7,7 +7,7 @@
 Module implementing the watch expression viewer widget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QModelIndex, qVersion
 from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, \

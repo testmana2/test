@@ -7,9 +7,9 @@
 Module implementing a dialog to show the output of the svn blame command.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:
-    str = unicode
+    str = unicode    # __IGNORE_WARNING__
 except (NameError):
     pass
 

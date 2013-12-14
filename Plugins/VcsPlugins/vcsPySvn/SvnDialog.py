@@ -7,7 +7,7 @@
 Module implementing a dialog to show the output of a pysvn action.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import pysvn
 

@@ -7,7 +7,7 @@
 Module implementing the Application configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ApplicationPage import Ui_ApplicationPage

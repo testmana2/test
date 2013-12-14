@@ -7,7 +7,7 @@
 Module implementing a class to read XBEL bookmark files.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, \
     QIODevice, QFile, QCoreApplication, QXmlStreamNamespaceDeclaration, \

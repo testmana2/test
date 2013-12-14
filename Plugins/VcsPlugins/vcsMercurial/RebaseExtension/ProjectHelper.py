@@ -7,7 +7,7 @@
 Module implementing the rebase extension project helper.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QMenu
 

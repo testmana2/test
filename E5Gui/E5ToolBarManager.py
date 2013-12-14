@@ -7,7 +7,7 @@
 Module implementing a toolbar manager class.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QObject, QByteArray, QDataStream, QIODevice
 from PyQt4.QtGui import QToolBar

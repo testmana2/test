@@ -7,7 +7,7 @@
 Module implementing an importer for Opera bookmarks.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

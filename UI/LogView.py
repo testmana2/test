@@ -7,7 +7,7 @@
 Module implementing the log viewer widget and the log widget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, pyqtSignal
 from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, \

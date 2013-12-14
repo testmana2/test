@@ -8,7 +8,7 @@ Module implementing a class for reading an XML project debugger properties
 file.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from .Config import debuggerPropertiesFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase

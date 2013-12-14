@@ -7,7 +7,7 @@
 Module implementing the network part of the IRC widget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QPoint, QFileInfo, QUrl
 from PyQt4.QtGui import QWidget, QApplication, QMenu, QDesktopServices

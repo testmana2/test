@@ -7,7 +7,7 @@
 Module implementing a class to write login data files.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile
 

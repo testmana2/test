@@ -7,7 +7,7 @@
 Module implementing a simple Python syntax checker.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 import fnmatch

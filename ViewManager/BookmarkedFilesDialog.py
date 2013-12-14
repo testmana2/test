@@ -7,7 +7,7 @@
 Module implementing a configuration dialog for the bookmarked files menu.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QFileInfo, Qt, pyqtSlot
 from PyQt4.QtGui import QListWidgetItem, QColor, QDialog

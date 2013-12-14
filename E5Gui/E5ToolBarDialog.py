@@ -7,7 +7,7 @@
 Module implementing a toolbar configuration dialog.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, QColor, \

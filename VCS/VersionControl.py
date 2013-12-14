@@ -8,7 +8,7 @@ Module implementing an abstract base class to be subclassed by all specific
 VCS interfaces.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 

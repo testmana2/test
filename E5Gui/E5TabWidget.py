@@ -7,7 +7,7 @@
 Module implementing a TabWidget class substituting QTabWidget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
 from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, \

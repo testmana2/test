@@ -8,7 +8,7 @@ Module implementing a thread class populating and updating the QtHelp
 documentation database.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, QThread, Qt, QMutex, QDateTime, QDir, \
     QLibraryInfo, QFileInfo

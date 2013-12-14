@@ -12,7 +12,7 @@ of the system-tray application. This acts as a quickstarter by providing a
 context menu to start the eric5 IDE and the eric5 tools.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 try:  # Only for Py2
     import sip
     sip.setapi('QString', 2)

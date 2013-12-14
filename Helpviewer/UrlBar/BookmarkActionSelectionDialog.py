@@ -8,7 +8,7 @@ Module implementing a dialog to select the action to be performed on the
 bookmark.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog

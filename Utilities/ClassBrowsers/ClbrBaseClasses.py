@@ -8,7 +8,7 @@ Module implementing base classes used by the various class browsers.
 """
 
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 
 class _ClbrBase(object):

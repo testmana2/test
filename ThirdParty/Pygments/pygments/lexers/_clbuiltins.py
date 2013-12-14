@@ -9,7 +9,7 @@
     :license: BSD, see LICENSE for details.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 BUILTIN_FUNCTIONS = [ # 638 functions
     '<', '<=', '=', '>', '>=', '-', '/', '/=', '*', '+', '1-', '1+',

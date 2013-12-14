@@ -9,7 +9,7 @@ Module implementing a LED widget.
 It was inspired by KLed.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QSize
 from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, \

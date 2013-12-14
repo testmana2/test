@@ -7,7 +7,7 @@
 Module implementing a dialog for the configuration of eric5.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 import types

@@ -7,7 +7,7 @@
 Module implementing the Help Viewers configuration page.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QButtonGroup

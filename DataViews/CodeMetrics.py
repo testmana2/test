@@ -14,7 +14,7 @@ Module implementing a simple Python code metrics analyzer.
 @exception ValueError the tokenize module is too old
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import os
 import io

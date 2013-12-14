@@ -7,7 +7,7 @@
 Module implementing the project browser part of the eric5 UI.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QColor, QApplication

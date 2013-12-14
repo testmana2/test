@@ -7,7 +7,7 @@
 Module implementing a special list widget for GreaseMonkey scripts.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, QRect
 from PyQt4.QtGui import QListWidget, QListWidgetItem

@@ -7,7 +7,7 @@
 Module implementing a dialog showing an imports diagram of a package.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import glob
 import os

@@ -7,7 +7,7 @@
 Module implementing a configuration dialog for the tools menu.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import copy
 

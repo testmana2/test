@@ -7,7 +7,7 @@
 Module implementing the snapshot timer widget.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSignal, Qt, QTimer, QRect
 from PyQt4.QtGui import QWidget, QApplication, QPainter, QToolTip, QPalette

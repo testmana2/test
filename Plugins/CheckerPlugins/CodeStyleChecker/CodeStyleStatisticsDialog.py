@@ -8,7 +8,7 @@ Module implementing a dialog showing statistical data for the last code
 style checker run.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem

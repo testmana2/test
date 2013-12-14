@@ -7,7 +7,7 @@
 Module implementing functions used by several IRC objects.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import re
 

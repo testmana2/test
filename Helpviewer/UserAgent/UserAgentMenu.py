@@ -7,7 +7,7 @@
 Module implementing a menu to select the user agent string.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QXmlStreamReader, QFile, QIODevice
 from PyQt4.QtGui import QMenu, QAction, QActionGroup, QInputDialog, QLineEdit

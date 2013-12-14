@@ -7,7 +7,7 @@
 Module implementing a SSL error handler.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import qVersion, QObject, QByteArray
 from PyQt4.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket, \

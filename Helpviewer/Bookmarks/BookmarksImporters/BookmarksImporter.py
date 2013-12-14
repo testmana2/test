@@ -7,7 +7,7 @@
 Module implementing a base class for the bookmarks importers.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtCore import QObject
 

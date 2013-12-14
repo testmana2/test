@@ -7,7 +7,7 @@
 Module implementing a dialog to add a new Python package.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 from PyQt4.QtCore import pyqtSlot

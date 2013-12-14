@@ -3,7 +3,7 @@
 # Copyright (c) 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import logging
 

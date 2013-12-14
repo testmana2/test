@@ -10,7 +10,7 @@ The Eric5 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 """
 
-from __future__ import unicode_literals    # __IGNORE_WARNING__
+from __future__ import unicode_literals
 
 import __builtin__
 import codecs
@@ -74,7 +74,7 @@ class File(file):   #__IGNORE_WARNING__
         else:
             self.__errors = errors
 
-        file.__init__(self, filein,  mode,  buffering)
+        file.__init__(self, filein,  mode,  buffering)    #__IGNORE_WARNING__
 
     def read(self,  n=-1):
         """
