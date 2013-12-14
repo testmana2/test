@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>650</width>
-    <height>350</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -109,6 +109,19 @@ the respective line.&lt;/p&gt;</string>
     </widget>
    </item>
    <item>
+    <widget class="E5SqueezeLabelPath" name="checkProgressLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QProgressBar" name="checkProgress">
      <property name="toolTip">
       <string>Shows the progress of the tabnanny action</string>
@@ -139,6 +152,11 @@ the respective line.&lt;/p&gt;</string>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
+  <customwidget>
+   <class>E5SqueezeLabelPath</class>
+   <extends>QLabel</extends>
+   <header>E5Gui/E5SqueezeLabels.h</header>
+  </customwidget>
   <customwidget>
    <class>E5ClearableLineEdit</class>
    <extends>QLineEdit</extends>

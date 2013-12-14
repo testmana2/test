@@ -56,6 +56,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.filterFrame.setVisible(False)
         
         self.checkProgress.setVisible(False)
+        self.checkProgressLabel.setVisible(False)
+        self.checkProgressLabel.setMaximumWidth(600)
         
     def __resort(self):
         """
@@ -131,12 +133,15 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         if len(files) > 0:
             self.checkProgress.setMaximum(len(files))
+            self.checkProgress.setVisible(len(files) > 1)
+            self.checkProgressLabel.setVisible(len(files) > 1)
             QApplication.processEvents()
             
             # now go through all the files
             progress = 0
             for file in files:
                 self.checkProgress.setValue(progress)
+                self.checkProgressLabel.setPath(file)
                 QApplication.processEvents()
                 self.__resort()
                 
@@ -162,6 +167,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                 progress += 1
                 
             self.checkProgress.setValue(progress)
+            self.checkProgressLabel.setPath("")
             QApplication.processEvents()
             self.__resort()
         else:
@@ -186,6 +192,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.resultList.header().setStretchLastSection(True)
         
         self.checkProgress.setVisible(False)
+        self.checkProgressLabel.setVisible(False)
         
     def on_buttonBox_clicked(self, button):
         """
