@@ -133,7 +133,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         # attach to the reply object
         self.__url = self.__reply.url()
         self.__reply.setParent(self)
-        self.__reply.setReadBufferSize(0)
+        self.__reply.setReadBufferSize(16 * 1024 * 1024)
         self.__reply.readyRead[()].connect(self.__readyRead)
         self.__reply.error.connect(self.__networkError)
         self.__reply.downloadProgress.connect(self.__downloadProgress)
@@ -346,7 +346,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.__reply.setReadBufferSize(16 * 1024)
         else:
             self.__reply.readyRead[()].connect(self.__readyRead)
-            self.__reply.setReadBufferSize(0)
+            self.__reply.setReadBufferSize(16 * 1024 * 1024)
+            self.__readyRead()
     
     @pyqtSlot()
     def on_stopButton_clicked(self):
