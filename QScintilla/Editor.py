@@ -5365,6 +5365,9 @@ class Editor(QsciScintillaCompat):
             line = self.markerLine(handle) + 1
             self.toggleSyntaxError(line, 0, False)
         
+        self.syntaxerrors = {}
+        self.syntaxerrorToggled.emit(self)
+    
     def __showSyntaxError(self, line=-1):
         """
         Private slot to handle the 'Show syntax error message'
