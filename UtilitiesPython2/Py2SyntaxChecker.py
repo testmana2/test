@@ -11,6 +11,7 @@ Module implementing the syntax check for Python 2.
 import sys
 import re
 import traceback
+import warnings
 
 from Tools import readEncodedFile, normalizeCode, extractLineFlags
 
@@ -107,9 +108,9 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     strings = []
     lines = codestring.splitlines()
     try:
-        warnings = Checker(codestring, fileName)
-        warnings.messages.sort(key=lambda a: a.lineno)
-        for warning in warnings.messages:
+        warnings_ = Checker(codestring, fileName)
+        warnings_.messages.sort(key=lambda a: a.lineno)
+        for warning in warnings_.messages:
             if ignoreStarImportWarnings and \
                isinstance(warning, ImportStarUsed):
                 continue
@@ -137,6 +138,7 @@ if __name__ == "__main__":
         print ""
         print "No file name given."
     else:
+        warnings.simplefilter("error")
         filename = sys.argv[-1]
         try:
             codestring = readEncodedFile(filename)[0]
