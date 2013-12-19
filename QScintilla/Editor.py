@@ -2853,7 +2853,8 @@ class Editor(QsciScintillaCompat):
                 if self.project.isOpen() and self.project.startswithProjectPath(fn):
                     self.project.appendFile(self.fileName)
                     self.addedToProject()
-                    self.setLanguage(self.fileName)
+                
+                self.setLanguage(self.fileName)
             
             self.lastModified = QFileInfo(self.fileName).lastModified()
             if newName is not None:
