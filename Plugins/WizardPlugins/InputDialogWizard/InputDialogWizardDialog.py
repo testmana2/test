@@ -124,7 +124,6 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
-        # TODO: support entering 'parent'
         if self.parentSelf.isChecked():
             parent = "self"
         elif self.parentNone.isChecked():
