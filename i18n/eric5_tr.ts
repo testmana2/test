@@ -7614,22 +7614,22 @@ Bağlantı yok
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="421"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="422"/>
         <source>Error opening save file: {0}</source>
         <translation>kaydedilen dosyanın açılışında hata:{0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="434"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="435"/>
         <source>Error saving: {0}</source>
         <translation>Kaydederken hata: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="446"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="447"/>
         <source>Network Error: {0}</source>
         <translation>Ağ hatası: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="560"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="561"/>
         <source>?</source>
         <translation>?</translation>
     </message>
@@ -7639,7 +7639,7 @@ Bağlantı yok
         <translation type="obsolete">{0} indirildi</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="576"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="577"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} nın{1} - Durdu</translation>
     </message>
@@ -7654,13 +7654,13 @@ Bağlantı yok
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="559"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="560"/>
         <source>{0} of {1} ({2}/sec)
 {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="568"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="569"/>
         <source>{0} downloaded
 SHA1: {1}
 MD5: {2}</source>
@@ -9156,7 +9156,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2749"/>
+        <location filename="../QScintilla/Editor.py" line="2763"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
@@ -9171,117 +9171,117 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>&lt;b&gt;Kaynak Düzenleme Penceresi&lt;/b&gt;&lt;p&gt;Bu pencere kaynak kod dosyalarını düzenlemek ve göstermek için kullanılır.Bunu pekçok kez kullanmak üzere açabilirsiniz. Dosyanın isim başlıkçubuğunda gösterilir.&lt;/p&gt;&lt;p&gt;Bekleme noktaların kolayca ekleyip düzenleyebilmeniz için satır numaraları ve işaret alanı vardır..İçerik  menüsü aracılığı ile sınırları düzenleyebilirsiniz.&lt;/p&gt;&lt;p&gt;Bekleme noktalarını ayarlamak için Shift ve ara çubuğuna beraber basabilirsiniz.&lt;/p&gt;&lt;p&gt;Bu işlem içerik menüsü ilede yapılabilir.&lt;/p&gt;&lt;p&gt;Bir yazım hatasının üzerinde Ctrl ile tıklarsanız o hata ile ilgili ayrıntılı yardım alırsınız.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="624"/>
+        <location filename="../QScintilla/Editor.py" line="626"/>
         <source>Undo</source>
         <translation>Geri Al</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="627"/>
+        <location filename="../QScintilla/Editor.py" line="629"/>
         <source>Redo</source>
         <translation>İleri al</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="630"/>
+        <location filename="../QScintilla/Editor.py" line="632"/>
         <source>Revert to last saved state</source>
         <translation>En son kaydedileni eski haline getir</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="634"/>
+        <location filename="../QScintilla/Editor.py" line="636"/>
         <source>Cut</source>
         <translation>Kes</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="637"/>
+        <location filename="../QScintilla/Editor.py" line="639"/>
         <source>Copy</source>
         <translation>Kopyala</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="640"/>
+        <location filename="../QScintilla/Editor.py" line="642"/>
         <source>Paste</source>
         <translation>Yapıştır</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="645"/>
+        <location filename="../QScintilla/Editor.py" line="647"/>
         <source>Indent</source>
         <translation>Girinti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="648"/>
+        <location filename="../QScintilla/Editor.py" line="650"/>
         <source>Unindent</source>
         <translation>Girintisiz</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="651"/>
+        <location filename="../QScintilla/Editor.py" line="653"/>
         <source>Comment</source>
         <translation>Yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="654"/>
+        <location filename="../QScintilla/Editor.py" line="656"/>
         <source>Uncomment</source>
         <translation>Yorumlanamaz</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="657"/>
+        <location filename="../QScintilla/Editor.py" line="659"/>
         <source>Stream Comment</source>
         <translation>Yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="660"/>
+        <location filename="../QScintilla/Editor.py" line="662"/>
         <source>Box Comment</source>
         <translation>Kutu Yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="664"/>
+        <location filename="../QScintilla/Editor.py" line="666"/>
         <source>Select to brace</source>
         <translation>Köşeli ayracı seç</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="666"/>
+        <location filename="../QScintilla/Editor.py" line="668"/>
         <source>Select all</source>
         <translation>Hepsini seç</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="667"/>
+        <location filename="../QScintilla/Editor.py" line="669"/>
         <source>Deselect all</source>
         <translation>Tüm seçimi iptal et</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6728"/>
+        <location filename="../QScintilla/Editor.py" line="6755"/>
         <source>Check spelling...</source>
         <translation>Yazım Kontrolü...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="673"/>
+        <location filename="../QScintilla/Editor.py" line="675"/>
         <source>Check spelling of selection...</source>
         <translation>Seçilen alanın yazım kontrolü...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="677"/>
+        <location filename="../QScintilla/Editor.py" line="679"/>
         <source>Remove from dictionary</source>
         <translation>Sözlükten çıkar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="681"/>
+        <location filename="../QScintilla/Editor.py" line="683"/>
         <source>Shorten empty lines</source>
         <translation>Boş satırları kısalt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="688"/>
+        <location filename="../QScintilla/Editor.py" line="690"/>
         <source>Use Monospaced Font</source>
         <translation>Tek hacimli yazıtipi kullan</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="693"/>
+        <location filename="../QScintilla/Editor.py" line="695"/>
         <source>Autosave enabled</source>
         <translation>Otomatik kayıt kabul edildi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="697"/>
+        <location filename="../QScintilla/Editor.py" line="699"/>
         <source>Typing aids enabled</source>
         <translation>Yazım yardımı etkinleştirildi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="704"/>
+        <location filename="../QScintilla/Editor.py" line="706"/>
         <source>Autocompletion enabled</source>
         <translation>Otomatik tamamlama onaylı</translation>
     </message>
@@ -9296,372 +9296,372 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">Yeni görünüm (yeni ayraç ile)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="730"/>
+        <location filename="../QScintilla/Editor.py" line="734"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="734"/>
+        <location filename="../QScintilla/Editor.py" line="738"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="737"/>
+        <location filename="../QScintilla/Editor.py" line="741"/>
         <source>Save As...</source>
         <translation>Farklı Kaydet...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="747"/>
+        <location filename="../QScintilla/Editor.py" line="751"/>
         <source>Print Preview</source>
         <translation>Baskı Öngörünümü</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="750"/>
+        <location filename="../QScintilla/Editor.py" line="754"/>
         <source>Print</source>
         <translation>Yazdır</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="771"/>
+        <location filename="../QScintilla/Editor.py" line="775"/>
         <source>Autocomplete</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="773"/>
+        <location filename="../QScintilla/Editor.py" line="777"/>
         <source>dynamic</source>
         <translation>dinamik</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="776"/>
+        <location filename="../QScintilla/Editor.py" line="780"/>
         <source>from Document</source>
         <translation>Belgeden</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="778"/>
+        <location filename="../QScintilla/Editor.py" line="782"/>
         <source>from APIs</source>
         <translation>API&apos;den</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="780"/>
+        <location filename="../QScintilla/Editor.py" line="784"/>
         <source>from Document and APIs</source>
         <translation>Belgeden ve API&apos;den</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="783"/>
+        <location filename="../QScintilla/Editor.py" line="787"/>
         <source>Calltip</source>
         <translation>İpucu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="796"/>
+        <location filename="../QScintilla/Editor.py" line="800"/>
         <source>Check</source>
         <translation>Kontrol</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="806"/>
+        <location filename="../QScintilla/Editor.py" line="820"/>
         <source>Show</source>
         <translation>Göster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="808"/>
+        <location filename="../QScintilla/Editor.py" line="822"/>
         <source>Code metrics...</source>
         <translation>Metrik Kod...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="809"/>
+        <location filename="../QScintilla/Editor.py" line="823"/>
         <source>Code coverage...</source>
         <translation>Kod koruyucu...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="811"/>
+        <location filename="../QScintilla/Editor.py" line="825"/>
         <source>Show code coverage annotations</source>
         <translation>Kodun dipnotunu göster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="814"/>
+        <location filename="../QScintilla/Editor.py" line="828"/>
         <source>Hide code coverage annotations</source>
         <translation>Kod koruyucu dipnotunu gizle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="817"/>
+        <location filename="../QScintilla/Editor.py" line="831"/>
         <source>Profile data...</source>
         <translation>Veri kesiti...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="830"/>
+        <location filename="../QScintilla/Editor.py" line="844"/>
         <source>Diagrams</source>
         <translation>Şema</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="832"/>
+        <location filename="../QScintilla/Editor.py" line="846"/>
         <source>Class Diagram...</source>
         <translation>Sınıf Şeması...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="834"/>
+        <location filename="../QScintilla/Editor.py" line="848"/>
         <source>Package Diagram...</source>
         <translation>Paket Şeması...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="836"/>
+        <location filename="../QScintilla/Editor.py" line="850"/>
         <source>Imports Diagram...</source>
         <translation>Şemayı İçe aktar...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="838"/>
+        <location filename="../QScintilla/Editor.py" line="852"/>
         <source>Application Diagram...</source>
         <translation>Uygulama Şeması...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="856"/>
+        <location filename="../QScintilla/Editor.py" line="870"/>
         <source>Languages</source>
         <translation>Diller</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="859"/>
+        <location filename="../QScintilla/Editor.py" line="873"/>
         <source>No Language</source>
         <translation>Dil Yok</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="882"/>
+        <location filename="../QScintilla/Editor.py" line="896"/>
         <source>Guessed</source>
         <translation>Tahmin edilen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1200"/>
+        <location filename="../QScintilla/Editor.py" line="1214"/>
         <source>Alternatives</source>
         <translation>Alternatifler</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="902"/>
+        <location filename="../QScintilla/Editor.py" line="916"/>
         <source>Encodings</source>
         <translation>Kodlama</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="926"/>
+        <location filename="../QScintilla/Editor.py" line="940"/>
         <source>End-of-Line Type</source>
         <translation>Yazım satırının sonu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="930"/>
+        <location filename="../QScintilla/Editor.py" line="944"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="937"/>
+        <location filename="../QScintilla/Editor.py" line="951"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="944"/>
+        <location filename="../QScintilla/Editor.py" line="958"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="962"/>
+        <location filename="../QScintilla/Editor.py" line="976"/>
         <source>Export as</source>
         <translation>Farklı Dışaktar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1085"/>
+        <location filename="../QScintilla/Editor.py" line="1099"/>
         <source>Toggle bookmark</source>
         <translation>Yerimi açkapa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1087"/>
+        <location filename="../QScintilla/Editor.py" line="1101"/>
         <source>Next bookmark</source>
         <translation>Sonraki yerimi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1089"/>
+        <location filename="../QScintilla/Editor.py" line="1103"/>
         <source>Previous bookmark</source>
         <translation>Önceki yerimi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1091"/>
+        <location filename="../QScintilla/Editor.py" line="1105"/>
         <source>Clear all bookmarks</source>
         <translation>Tüm yerimlerini temizle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1111"/>
+        <location filename="../QScintilla/Editor.py" line="1125"/>
         <source>Toggle breakpoint</source>
         <translation>Beklemenoktası açkapa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1113"/>
+        <location filename="../QScintilla/Editor.py" line="1127"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Geçici bekleme noktası açkapa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1116"/>
+        <location filename="../QScintilla/Editor.py" line="1130"/>
         <source>Edit breakpoint...</source>
         <translation>Bekleme noktasını düzenle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4753"/>
+        <location filename="../QScintilla/Editor.py" line="4770"/>
         <source>Enable breakpoint</source>
         <translation>Beklemenoktasını etkinleştir</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1121"/>
+        <location filename="../QScintilla/Editor.py" line="1135"/>
         <source>Next breakpoint</source>
         <translation>Sonraki Beklemenoktası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1123"/>
+        <location filename="../QScintilla/Editor.py" line="1137"/>
         <source>Previous breakpoint</source>
         <translation>Önceki bekleme noktası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1125"/>
+        <location filename="../QScintilla/Editor.py" line="1139"/>
         <source>Clear all breakpoints</source>
         <translation>Tüm beklemenoktalarını temizle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1094"/>
+        <location filename="../QScintilla/Editor.py" line="1108"/>
         <source>Goto syntax error</source>
         <translation>Sözdizimi hatasına git</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1096"/>
+        <location filename="../QScintilla/Editor.py" line="1110"/>
         <source>Show syntax error message</source>
         <translation>Sözdizimi hata mesajını göster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1098"/>
+        <location filename="../QScintilla/Editor.py" line="1112"/>
         <source>Clear syntax error</source>
         <translation>Sözdizimi hatalarını sil</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1101"/>
+        <location filename="../QScintilla/Editor.py" line="1115"/>
         <source>Next warning</source>
         <translation>Sonraki Uyarı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1104"/>
+        <location filename="../QScintilla/Editor.py" line="1118"/>
         <source>Previous warning</source>
         <translation>Önceki Uyarı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1106"/>
+        <location filename="../QScintilla/Editor.py" line="1120"/>
         <source>Show warning message</source>
         <translation>Uyarı mesajını göster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1108"/>
+        <location filename="../QScintilla/Editor.py" line="1122"/>
         <source>Clear warnings</source>
         <translation>Uyarıları temizle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1128"/>
+        <location filename="../QScintilla/Editor.py" line="1142"/>
         <source>Next uncovered line</source>
         <translation>Sonraki kapanmamış satır</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1131"/>
+        <location filename="../QScintilla/Editor.py" line="1145"/>
         <source>Previous uncovered line</source>
         <translation>Önceki kaplanmamış satır</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1134"/>
+        <location filename="../QScintilla/Editor.py" line="1148"/>
         <source>Next task</source>
         <translation>Sonraki görev</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1136"/>
+        <location filename="../QScintilla/Editor.py" line="1150"/>
         <source>Previous task</source>
         <translation>Önceki görev</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1145"/>
+        <location filename="../QScintilla/Editor.py" line="1159"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB açkapa yerimleri</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1149"/>
+        <location filename="../QScintilla/Editor.py" line="1163"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB açkapa bekleme noktası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1185"/>
+        <location filename="../QScintilla/Editor.py" line="1199"/>
         <source>Export source</source>
         <translation>Kaynağı dışaktar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1177"/>
+        <location filename="../QScintilla/Editor.py" line="1191"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;dışa katarma tipi &lt;b&gt;{0}&lt;/b&gt;için dışaaktarıcı yok. Vazgeçiliyior...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1185"/>
+        <location filename="../QScintilla/Editor.py" line="1199"/>
         <source>No export format given. Aborting...</source>
         <translation>Girilen dışaaktarma formatı yok. İptal edildi...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1196"/>
+        <location filename="../QScintilla/Editor.py" line="1210"/>
         <source>Alternatives ({0})</source>
         <translation>Alternatifler ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1216"/>
+        <location filename="../QScintilla/Editor.py" line="1230"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1216"/>
+        <location filename="../QScintilla/Editor.py" line="1230"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Kullanmak için Pygment lexer seç.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1658"/>
+        <location filename="../QScintilla/Editor.py" line="1672"/>
         <source>Modification of Read Only file</source>
         <translation>Yalnızca okunabilir dosyada değişiklik</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1658"/>
+        <location filename="../QScintilla/Editor.py" line="1672"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Yalnızca okunabilir bir dosyayı değiştirmeşe çalışıyorsunuz. Lütfen önce farklı bir isimde kaydediniz.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2356"/>
+        <location filename="../QScintilla/Editor.py" line="2370"/>
         <source>Printing...</source>
         <translation>Yazılıyor...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2373"/>
+        <location filename="../QScintilla/Editor.py" line="2387"/>
         <source>Printing completed</source>
         <translation>Yazdırma tamalandı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2375"/>
+        <location filename="../QScintilla/Editor.py" line="2389"/>
         <source>Error while printing</source>
         <translation>Yazdırılırken hata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2378"/>
+        <location filename="../QScintilla/Editor.py" line="2392"/>
         <source>Printing aborted</source>
         <translation>Yazdırma iptal edildi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2700"/>
+        <location filename="../QScintilla/Editor.py" line="2714"/>
         <source>File Modified</source>
         <translation>Dosya Değiştirildi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2700"/>
+        <location filename="../QScintilla/Editor.py" line="2714"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyasında kaydedilmemiş değişiklikler var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2749"/>
+        <location filename="../QScintilla/Editor.py" line="2763"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; açılamıyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2919"/>
+        <location filename="../QScintilla/Editor.py" line="2933"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2852"/>
+        <location filename="../QScintilla/Editor.py" line="2866"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; kaydedilemiyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
@@ -9671,62 +9671,62 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4229"/>
+        <location filename="../QScintilla/Editor.py" line="4244"/>
         <source>Autocompletion</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4229"/>
+        <location filename="../QScintilla/Editor.py" line="4244"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Otomatiktamamlama uygun değil çünkü bu otomatiktamamlama kaynağı değil.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4756"/>
+        <location filename="../QScintilla/Editor.py" line="4773"/>
         <source>Disable breakpoint</source>
         <translation>Durmanoktasını iptal et</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5103"/>
+        <location filename="../QScintilla/Editor.py" line="5127"/>
         <source>Code Coverage</source>
         <translation>Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5103"/>
+        <location filename="../QScintilla/Editor.py" line="5127"/>
         <source>Please select a coverage file</source>
         <translation>Lütfen bir koruyucu dosya seçiniz</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5166"/>
+        <location filename="../QScintilla/Editor.py" line="5190"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Kodların Dipnotunu Göster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5159"/>
+        <location filename="../QScintilla/Editor.py" line="5183"/>
         <source>All lines have been covered.</source>
         <translation>Tüm satırlar korumaya alındı.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5166"/>
+        <location filename="../QScintilla/Editor.py" line="5190"/>
         <source>There is no coverage file available.</source>
         <translation>Hazırda koruma dosyası yok.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5264"/>
+        <location filename="../QScintilla/Editor.py" line="5288"/>
         <source>Profile Data</source>
         <translation>Veri Kesiti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5264"/>
+        <location filename="../QScintilla/Editor.py" line="5288"/>
         <source>Please select a profile file</source>
         <translation>Lütfen kesit dosyasını seçiniz</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5404"/>
+        <location filename="../QScintilla/Editor.py" line="5431"/>
         <source>Syntax Error</source>
         <translation>Sözdizimi Hatası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5404"/>
+        <location filename="../QScintilla/Editor.py" line="5431"/>
         <source>No syntax error message available.</source>
         <translation>Uygun söz dizimi hata mesajı yok.</translation>
     </message>
@@ -9741,47 +9741,47 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">Hazırda Pyparçaları &quot;uyarı mesajı&quot; yok.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5698"/>
+        <location filename="../QScintilla/Editor.py" line="5725"/>
         <source>Macro Name</source>
         <translation>Makro Adı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5698"/>
+        <location filename="../QScintilla/Editor.py" line="5725"/>
         <source>Select a macro name:</source>
         <translation>Bir makro ismi seç:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5726"/>
+        <location filename="../QScintilla/Editor.py" line="5753"/>
         <source>Load macro file</source>
         <translation>Makro dosyasını yükle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5769"/>
+        <location filename="../QScintilla/Editor.py" line="5796"/>
         <source>Macro files (*.macro)</source>
         <translation>Makro dosyaları (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5749"/>
+        <location filename="../QScintilla/Editor.py" line="5776"/>
         <source>Error loading macro</source>
         <translation>Makronun yüklenmesinde hata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5740"/>
+        <location filename="../QScintilla/Editor.py" line="5767"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5749"/>
+        <location filename="../QScintilla/Editor.py" line="5776"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; bozuk.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5769"/>
+        <location filename="../QScintilla/Editor.py" line="5796"/>
         <source>Save macro file</source>
         <translation>Makro Dosyasını Kaydet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5786"/>
+        <location filename="../QScintilla/Editor.py" line="5813"/>
         <source>Save macro</source>
         <translation>Makro Kaydet</translation>
     </message>
@@ -9791,37 +9791,37 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten açık.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5802"/>
+        <location filename="../QScintilla/Editor.py" line="5829"/>
         <source>Error saving macro</source>
         <translation>Makronun kaydedilmesinde hata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5802"/>
+        <location filename="../QScintilla/Editor.py" line="5829"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5815"/>
+        <location filename="../QScintilla/Editor.py" line="5842"/>
         <source>Start Macro Recording</source>
         <translation>Makro Kaydı Başladı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5815"/>
+        <location filename="../QScintilla/Editor.py" line="5842"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Makro kaydı şuan aktif. Yeniden başlasın mı?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5841"/>
+        <location filename="../QScintilla/Editor.py" line="5868"/>
         <source>Macro Recording</source>
         <translation>Makro Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5841"/>
+        <location filename="../QScintilla/Editor.py" line="5868"/>
         <source>Enter name of the macro:</source>
         <translation>Makronun ismini gir:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5963"/>
+        <location filename="../QScintilla/Editor.py" line="5990"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eric5 ile açıldıktan sonra &lt;b&gt;{0}&lt;/b&gt; dosyasında değişiklik olmuş. Yeniden açılsın mı?&lt;/p&gt;</translation>
     </message>
@@ -9831,214 +9831,219 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Uyarı:&lt;/b&gt; Yapılan değişiklikleri yeniden açarken kaybedebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5973"/>
+        <location filename="../QScintilla/Editor.py" line="6000"/>
         <source>File changed</source>
         <translation>Dosya değiştirilmiş</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6112"/>
+        <location filename="../QScintilla/Editor.py" line="6139"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6245"/>
+        <location filename="../QScintilla/Editor.py" line="6272"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6245"/>
+        <location filename="../QScintilla/Editor.py" line="6272"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; bir dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6266"/>
+        <location filename="../QScintilla/Editor.py" line="6293"/>
         <source>Resources</source>
         <translation>Kaynaklar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6268"/>
+        <location filename="../QScintilla/Editor.py" line="6295"/>
         <source>Add file...</source>
         <translation>Dosya ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6270"/>
+        <location filename="../QScintilla/Editor.py" line="6297"/>
         <source>Add files...</source>
         <translation>Dosyaları ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6272"/>
+        <location filename="../QScintilla/Editor.py" line="6299"/>
         <source>Add aliased file...</source>
         <translation>Kısaltmalar dosyasına ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6275"/>
+        <location filename="../QScintilla/Editor.py" line="6302"/>
         <source>Add localized resource...</source>
         <translation>Yaral kaynak ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6279"/>
+        <location filename="../QScintilla/Editor.py" line="6306"/>
         <source>Add resource frame</source>
         <translation>Çerçeve kaynağı ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6298"/>
+        <location filename="../QScintilla/Editor.py" line="6325"/>
         <source>Add file resource</source>
         <translation>Dosya kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6314"/>
+        <location filename="../QScintilla/Editor.py" line="6341"/>
         <source>Add file resources</source>
         <translation>Dosya kaynaklarını ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6342"/>
+        <location filename="../QScintilla/Editor.py" line="6369"/>
         <source>Add aliased file resource</source>
         <translation>Kısaltmalar dosyası kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6342"/>
+        <location filename="../QScintilla/Editor.py" line="6369"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>&lt;b&gt;{0} dosyası için takma ad&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6406"/>
+        <location filename="../QScintilla/Editor.py" line="6433"/>
         <source>Package Diagram</source>
         <translation>Paket Şeması</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6406"/>
+        <location filename="../QScintilla/Editor.py" line="6433"/>
         <source>Include class attributes?</source>
         <translation>Sınıf nitelikleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6426"/>
+        <location filename="../QScintilla/Editor.py" line="6453"/>
         <source>Imports Diagram</source>
         <translation>Şemayı İçe Aktar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6426"/>
+        <location filename="../QScintilla/Editor.py" line="6453"/>
         <source>Include imports from external modules?</source>
         <translation>Harici modüllerdan içe aktarım dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6440"/>
+        <location filename="../QScintilla/Editor.py" line="6467"/>
         <source>Application Diagram</source>
         <translation>Uygulama Şeması</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6440"/>
+        <location filename="../QScintilla/Editor.py" line="6467"/>
         <source>Include module names?</source>
         <translation>Modül isimleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6731"/>
+        <location filename="../QScintilla/Editor.py" line="6758"/>
         <source>Add to dictionary</source>
         <translation>Sözlüğe ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6733"/>
+        <location filename="../QScintilla/Editor.py" line="6760"/>
         <source>Ignore All</source>
         <translation>Hepsini Yoksay</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2919"/>
+        <location filename="../QScintilla/Editor.py" line="2933"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5637"/>
+        <location filename="../QScintilla/Editor.py" line="5664"/>
         <source>Warning: {0}</source>
         <translation>Dikkat: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5644"/>
+        <location filename="../QScintilla/Editor.py" line="5671"/>
         <source>Error: {0}</source>
         <translation>Hata: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5786"/>
+        <location filename="../QScintilla/Editor.py" line="5813"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5969"/>
+        <location filename="../QScintilla/Editor.py" line="5996"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4330"/>
+        <location filename="../QScintilla/Editor.py" line="4345"/>
         <source>Activating Auto-Completion Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4330"/>
+        <location filename="../QScintilla/Editor.py" line="4345"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4520"/>
+        <location filename="../QScintilla/Editor.py" line="4535"/>
         <source>Activating Calltip Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4520"/>
+        <location filename="../QScintilla/Editor.py" line="4535"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="743"/>
+        <location filename="../QScintilla/Editor.py" line="747"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="842"/>
+        <location filename="../QScintilla/Editor.py" line="856"/>
         <source>Load Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1139"/>
+        <location filename="../QScintilla/Editor.py" line="1153"/>
         <source>Next change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1142"/>
+        <location filename="../QScintilla/Editor.py" line="1156"/>
         <source>Previous change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7144"/>
+        <location filename="../QScintilla/Editor.py" line="7171"/>
         <source>Sort Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7144"/>
+        <location filename="../QScintilla/Editor.py" line="7171"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5573"/>
+        <location filename="../QScintilla/Editor.py" line="5600"/>
         <source>Warning</source>
         <translation type="unfinished">Dikkat</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5573"/>
+        <location filename="../QScintilla/Editor.py" line="5600"/>
         <source>No warning messages available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5634"/>
+        <location filename="../QScintilla/Editor.py" line="5661"/>
         <source>Style: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="722"/>
+        <location filename="../QScintilla/Editor.py" line="726"/>
         <source>New Document View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="725"/>
+        <location filename="../QScintilla/Editor.py" line="729"/>
         <source>New Document View (with new split)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="810"/>
+        <source>Tools</source>
+        <translation type="unfinished">Araçlar</translation>
     </message>
 </context>
 <context>
@@ -52694,7 +52699,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Kaynak</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="108"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="121"/>
         <source>Shows the progress of the syntax check action</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52709,7 +52714,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="286"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="292"/>
         <source>No issues found.</source>
         <translation>Sorun bulunamadı.</translation>
     </message>
@@ -52734,12 +52739,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>Başla</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="199"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="204"/>
         <source>Error: {0}</source>
         <translation>Hata: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="117"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="130"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53148,12 +53153,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>Kaynak</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="114"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="127"/>
         <source>Shows the progress of the tabnanny action</source>
         <translation>Sekme yardımcısı işlem sürecini göster</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="201"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="207"/>
         <source>No indentation errors found.</source>
         <translation>Hiç girintileme hatası bulunamadı.</translation>
     </message>
@@ -53178,17 +53183,17 @@ the respective line.&lt;/p&gt;</source>
         <translation>Başla</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="275"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="282"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Python2 yorumlayıcı ayarlanmadı.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="299"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="306"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation>Python2 yorumlayıcı 15 s. de bitmedi.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="123"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="136"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>

@@ -4289,6 +4289,7 @@
       <keyword name="Editor.__initContextMenuResources" id="Editor.__initContextMenuResources" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuResources" />
       <keyword name="Editor.__initContextMenuSeparateMargins" id="Editor.__initContextMenuSeparateMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuSeparateMargins" />
       <keyword name="Editor.__initContextMenuShow" id="Editor.__initContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuShow" />
+      <keyword name="Editor.__initContextMenuTools" id="Editor.__initContextMenuTools" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuTools" />
       <keyword name="Editor.__initContextMenuUnifiedMargins" id="Editor.__initContextMenuUnifiedMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuUnifiedMargins" />
       <keyword name="Editor.__initOnlineChangeTrace" id="Editor.__initOnlineChangeTrace" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineChangeTrace" />
       <keyword name="Editor.__initOnlineSyntaxCheck" id="Editor.__initOnlineSyntaxCheck" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineSyntaxCheck" />
@@ -4360,6 +4361,7 @@
       <keyword name="Editor.__showContextMenuResources" id="Editor.__showContextMenuResources" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuResources" />
       <keyword name="Editor.__showContextMenuShow" id="Editor.__showContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuShow" />
       <keyword name="Editor.__showContextMenuSpelling" id="Editor.__showContextMenuSpelling" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuSpelling" />
+      <keyword name="Editor.__showContextMenuTools" id="Editor.__showContextMenuTools" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuTools" />
       <keyword name="Editor.__showImportsDiagram" id="Editor.__showImportsDiagram" ref="eric5.QScintilla.Editor.html#Editor.__showImportsDiagram" />
       <keyword name="Editor.__showPackageDiagram" id="Editor.__showPackageDiagram" ref="eric5.QScintilla.Editor.html#Editor.__showPackageDiagram" />
       <keyword name="Editor.__showProfileData" id="Editor.__showProfileData" ref="eric5.QScintilla.Editor.html#Editor.__showProfileData" />

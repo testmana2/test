@@ -335,6 +335,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__initContextMenuShow">__initContextMenuShow</a></td>
 <td>Private method used to setup the Show context sub menu.</td>
 </tr><tr>
+<td><a href="#Editor.__initContextMenuTools">__initContextMenuTools</a></td>
+<td>Private method used to setup the Tools context sub menu.</td>
+</tr><tr>
 <td><a href="#Editor.__initContextMenuUnifiedMargins">__initContextMenuUnifiedMargins</a></td>
 <td>Private method used to setup the context menu for the unified margins.</td>
 </tr><tr>
@@ -547,6 +550,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__showContextMenuSpelling">__showContextMenuSpelling</a></td>
 <td>Private slot to set up the spelling menu before it is shown.</td>
+</tr><tr>
+<td><a href="#Editor.__showContextMenuTools">__showContextMenuTools</a></td>
+<td>Private slot handling the aboutToShow signal of the tools context menu.</td>
 </tr><tr>
 <td><a href="#Editor.__showImportsDiagram">__showImportsDiagram</a></td>
 <td>Private method to handle the Imports Diagram context menu action.</td>
@@ -1720,6 +1726,16 @@ reference to the generated menu (QMenu)
 <dd>
 reference to the generated menu (QMenu)
 </dd>
+</dl><a NAME="Editor.__initContextMenuTools" ID="Editor.__initContextMenuTools"></a>
+<h4>Editor.__initContextMenuTools</h4>
+<b>__initContextMenuTools</b>(<i></i>)
+<p>
+        Private method used to setup the Tools context sub menu.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
 </dl><a NAME="Editor.__initContextMenuUnifiedMargins" ID="Editor.__initContextMenuUnifiedMargins"></a>
 <h4>Editor.__initContextMenuUnifiedMargins</h4>
 <b>__initContextMenuUnifiedMargins</b>(<i></i>)
@@ -2261,6 +2277,12 @@ name of the personal/project exclude list (string)
 <b>__showContextMenuSpelling</b>(<i></i>)
 <p>
         Private slot to set up the spelling menu before it is shown.
+</p><a NAME="Editor.__showContextMenuTools" ID="Editor.__showContextMenuTools"></a>
+<h4>Editor.__showContextMenuTools</h4>
+<b>__showContextMenuTools</b>(<i></i>)
+<p>
+        Private slot handling the aboutToShow signal of the tools context
+        menu.
 </p><a NAME="Editor.__showImportsDiagram" ID="Editor.__showImportsDiagram"></a>
 <h4>Editor.__showImportsDiagram</h4>
 <b>__showImportsDiagram</b>(<i></i>)
