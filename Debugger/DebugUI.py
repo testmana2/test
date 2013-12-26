@@ -1500,7 +1500,7 @@ class DebugUI(QObject):
             eraseCoverage = dlg.getCoverageData()
             
             if runProject:
-                fn = self.project.getMainScript(1)
+                fn = self.project.getMainScript(True)
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
@@ -1618,7 +1618,7 @@ class DebugUI(QObject):
             eraseTimings = dlg.getProfilingData()
             
             if runProject:
-                fn = self.project.getMainScript(1)
+                fn = self.project.getMainScript(True)
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
@@ -1738,7 +1738,7 @@ class DebugUI(QObject):
             forkAutomatically, forkIntoChild = dlg.getRunData()
             
             if runProject:
-                fn = self.project.getMainScript(1)
+                fn = self.project.getMainScript(True)
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
