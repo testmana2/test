@@ -2715,7 +2715,7 @@ class Project(QObject):
             if normalized:
                 return os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
             else:
-                return self.pdata["MAINSCRIPT"]
+                return self.pdata["MAINSCRIPT"][0]
         else:
             return None
         
