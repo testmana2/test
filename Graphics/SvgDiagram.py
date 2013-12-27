@@ -274,7 +274,7 @@ class SvgDiagram(E5MainWindow):
             printer.setPageOrder(QPrinter.LastPageFirst)
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_():
@@ -305,7 +305,7 @@ class SvgDiagram(E5MainWindow):
         )
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         
         preview = QPrintPreviewDialog(printer, self)
         preview.paintRequested[QPrinter].connect(self.__print)

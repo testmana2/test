@@ -491,7 +491,7 @@ class UIPreviewer(E5MainWindow):
         
         printerName = Preferences.getPrinter("UIPreviewer/printername")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         printer.setPageSize(
             QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
@@ -532,7 +532,7 @@ class UIPreviewer(E5MainWindow):
         
         printerName = Preferences.getPrinter("UIPreviewer/printername")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         printer.setPageSize(
             QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
