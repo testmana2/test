@@ -2310,7 +2310,7 @@ class HelpBrowser(QWebView):
         )
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_() == QDialog.Accepted:
@@ -2348,7 +2348,7 @@ class HelpBrowser(QWebView):
         )
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         
         preview = QPrintPreviewDialog(printer, self)
         preview.paintRequested.connect(self.__generatePrintPreviewClickedFrame)
@@ -2382,7 +2382,7 @@ class HelpBrowser(QWebView):
             printer.setColorMode(QPrinter.GrayScale)
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         printer.setOutputFormat(QPrinter.PdfFormat)
         name = self.__clickedFrame.url().path().rsplit('/', 1)[-1]
         if name:

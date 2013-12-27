@@ -418,7 +418,7 @@ class UMLGraphicsView(E5GraphicsView):
         )
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_():
@@ -449,7 +449,7 @@ class UMLGraphicsView(E5GraphicsView):
         )
         printerName = Preferences.getPrinter("PrinterName")
         if printerName:
-            self.setPrinterName(printerName)
+            printer.setPrinterName(printerName)
         
         preview = QPrintPreviewDialog(printer, self)
         preview.paintRequested[QPrinter].connect(self.__printPreviewPrint)
