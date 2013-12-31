@@ -202,6 +202,10 @@ class UserInterface(E5MainWindow):
         from Debugger.DebugServer import DebugServer
         debugServer = DebugServer()
         
+        # Create the background service object
+        from Utilities.BackgroundService import BackgroundService
+        self.backgroundService = BackgroundService()
+        
         # Generate an empty project object and multi project object
         from Project.Project import Project
         self.project = Project(self)
@@ -450,6 +454,7 @@ class UserInterface(E5MainWindow):
         e5App().registerObject("UserInterface", self)
         e5App().registerObject("DebugUI", self.debuggerUI)
         e5App().registerObject("DebugServer", debugServer)
+        e5App().registerObject("BackgroundService", self.backgroundService)
         e5App().registerObject("ViewManager", self.viewmanager)
         e5App().registerObject("Project", self.project)
         e5App().registerObject("ProjectBrowser", self.projectBrowser)
@@ -5740,6 +5745,8 @@ class UserInterface(E5MainWindow):
         if not self.debuggerUI.shutdownServer():
             return False
         self.debuggerUI.shutdown()
+        
+        self.backgroundService.shutdown()
         
         self.cooperation.shutdown()
         

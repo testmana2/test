@@ -66,6 +66,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
         
+        self.backgroundService = e5App().getObject('BackgroundService')
+        self.backgroundService.syntaxChecked.connect(self.processResult)
+        
     def __resort(self):
         """
         Private method to resort the tree.
@@ -135,7 +138,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param fn file or list of files or directory to be checked
                 (string or list of strings)
         @param codestring string containing the code to be checked (string).
-            If this is given, file must be a single file name.
+            If this is given, fn must be a single file name.
         """
         if self.__project is None:
             self.__project = e5App().getObject("Project")
@@ -150,88 +153,127 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.__clearErrors()
         
         if isinstance(fn, list):
-            files = fn
+            self.files = fn
         elif os.path.isdir(fn):
-            files = []
+            self.files = []
             extensions = set(Preferences.getPython("PythonExtensions") +
                              Preferences.getPython("Python3Extensions"))
             for ext in extensions:
-                files.extend(
+                self.files.extend(
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
-            files = [fn]
+            self.files = [fn]
         
-        if codestring or len(files) > 0:
-            self.checkProgress.setMaximum(max(1, len(files)))
-            self.checkProgress.setVisible(len(files) > 1)
-            self.checkProgressLabel.setVisible(len(files) > 1)
+        if codestring or len(self.files) > 0:
+            self.checkProgress.setMaximum(max(1, len(self.files)))
+            self.checkProgress.setVisible(len(self.files) > 1)
+            self.checkProgressLabel.setVisible(len(self.files) > 1)
             QApplication.processEvents()
+
+            self.checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
+            self.ignoreStarImportWarnings = Preferences.getFlakes(
+                "IgnoreStarImportWarnings")
             
             # now go through all the files
-            progress = 0
-            for file in files:
-                self.checkProgress.setValue(progress)
-                self.checkProgressLabel.setPath(file)
-                QApplication.processEvents()
-                self.__resort()
-                
-                if self.cancelled:
-                    return
-                
-                self.__lastFileItem = None
-                
-                if codestring:
-                    source = codestring
-                else:
-                    try:
-                        source = Utilities.readEncodedFile(file)[0]
-                        source = Utilities.normalizeCode(source)
-                    except (UnicodeError, IOError) as msg:
-                        self.noResults = False
-                        self.__createResultItem(
-                            file, 1, 0,
-                            self.trUtf8("Error: {0}").format(str(msg))
-                            .rstrip()[1:-1], "")
-                        progress += 1
-                        continue
-                
-                flags = Utilities.extractFlags(source)
-                ext = os.path.splitext(file)[1]
-                if "FileType" in flags:
-                    isPy2 = flags["FileType"] in ["Python", "Python2"]
-                elif (Preferences.getProject("DeterminePyFromProject") and
-                      self.__project.isOpen() and
-                      self.__project.isProjectFile(file)):
-                            isPy2 = self.__project.getProjectLanguage() in \
-                                ["Python", "Python2"]
-                else:
-                    isPy2 = flags.get("FileType") in ["Python", "Python2"] or \
-                        ext in Preferences.getPython("PythonExtensions")
-                
-                nok, fname, line, index, code, error, warnings = \
-                    Utilities.compile(file, source, isPy2)
-                if nok:
-                    self.noResults = False
-                    self.__createResultItem(
-                        fname, line, index, error, code.strip(), False)
-                else:
-                    source = source.splitlines()
-                    for warning in warnings:
-                        self.noResults = False
-                        scr_line = source[warning[2] - 1].strip()
-                        self.__createResultItem(
-                            warning[1], warning[2], 0,
-                            warning[3], scr_line, True)
+            self.progress = 0
+            self.check(codestring)
+    
+    def check(self, codestring=''):
+        """
+        Start a check for one file.
+        
+        The results are reported to the processResult slot.
+        @param codestring optional sourcestring (str)
+        """
+        self.filename = self.files.pop(0)
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.filename)
+        QApplication.processEvents()
+        self.__resort()
+        
+        if self.cancelled:  # ???
+            return
+        
+        self.__lastFileItem = None
+        
+        if codestring:
+            self.source = codestring
+        else:
+            try:
+                self.source = Utilities.readEncodedFile(self.filename)[0]
+                self.source = Utilities.normalizeCode(self.source)
+            except (UnicodeError, IOError) as msg:
+                self.noResults = False
+                self.__createResultItem(
+                    self.filename, 1, 0,
+                    self.trUtf8("Error: {0}").format(str(msg))
+                    .rstrip()[1:-1], "")
+                self.progress += 1
+                # Continue with next file
+                self.check()
+                return
+        
+        self.backgroundService.syntaxCheck(
+            self.filename, self.source, self.checkFlakes,
+            self.ignoreStarImportWarnings)
 
-                progress += 1
-            self.checkProgress.setValue(progress)
-            self.checkProgressLabel.setPath("")
-            QApplication.processEvents()
-            self.__resort()
+    def processResult(
+            self, fn, nok, fname, line, index, code, error, warnings):
+        """
+        Slot which reports the resulting messages.
+        
+        If checkFlakes is True, warnings contains a list of strings containing
+        the warnings (marker, file name, line number, message)
+        The values are only valid, if nok is False.
+        
+        @param fn filename of the checked file (str)
+        @param nok flag if an error in the source was found (boolean)
+        @param fname filename of the checked file (str)  # TODO: remove dubl.
+        @param line number where the error occured (int)
+        @param index the column where the error occured (int)
+        @param code the part of the code where the error occured (str)
+        @param error the name of the error (str)
+        @param warnings a list of strings containing the warnings
+            (marker, file name, line number, message)
+        """
+        # Check if it's the requested file, otherwise ignore signal
+        if fn != self.filename:
+            return
+        
+        if nok:
+            self.noResults = False
+            self.__createResultItem(
+                fname, line, index, error, code.strip(), False)
+        else:
+            source = self.source.splitlines()
+            for warning in warnings:
+                # TODO: Move to BackgroundService
+                # Translate messages
+                msg_args = warning.pop()
+                translated = QApplication.translate(
+                    'py3Flakes', warning[-1]).format(*msg_args)
+                # Avoid leading "u" at Python2 unicode strings
+                if translated.startswith("u'"):
+                    translated = translated[1:]
+                warning[3] = translated.replace(" u'", " '")
+                
+                self.noResults = False
+                scr_line = source[warning[2] - 1].strip()
+                self.__createResultItem(
+                    warning[1], warning[2], 0,
+                    warning[3], scr_line, True)
+        self.progress += 1
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath("")
+        QApplication.processEvents()
+        self.__resort()
+
+        if self.files:
+            self.check()
         else:
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
-        self.__finish()
+            self.__finish()
         
     def __finish(self):
         """

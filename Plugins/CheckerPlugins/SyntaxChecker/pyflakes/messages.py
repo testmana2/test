@@ -8,19 +8,11 @@
 # work within Eric5 and Qt (translatable messages)
 
 """
-Module implementing the messages for py2flakes.
+Module implementing the messages for pyflakes.
 """
 
-
-def QT_TRANSLATE_NOOP(mod, txt):
-    """
-    Function to tell 'lupdate' which strings to keep for translation.
-    
-    @param mod module name
-    @param txt translatable string
-    @return the untranslated! string
-    """
-    return txt
+# Tell 'lupdate' which strings to keep for translation.
+QT_TRANSLATE_NOOP = lambda mod, txt: txt
 
 
 class Message(object):
@@ -304,6 +296,3 @@ class UnusedVariable(Message):
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (names,)
-    
-#
-# eflag: FileType = Python2
