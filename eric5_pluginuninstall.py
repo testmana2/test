@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2007 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2007 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """

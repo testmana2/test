@@ -102,7 +102,7 @@ for space.
 #
 # - made messages translatable via Qt
 #
-# Copyright (c) 2011 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2011 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 __version__ = '0.6.1'
