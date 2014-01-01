@@ -5,7 +5,7 @@
 
 #
 # minimized for using just the parser within eric5
-# Copyright (c) 2013 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2013 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 pseudoTypes = set(["any", "var", "undefined", "null", "true", "false", "this",

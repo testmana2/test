@@ -56,7 +56,7 @@ W warnings
 # - made messages translatable via Qt
 # - added code for eric5 integration
 #
-# Copyright (c) 2011 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2011 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 __version__ = '1.4.6'
