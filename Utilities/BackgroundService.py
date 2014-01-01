@@ -58,11 +58,16 @@ class BackgroundService(QTcpServer):
         port = self.serverPort()
         ## NOTE: Need the port if started external in debugger:
         print('BackgroundService listening on: %i' % port)
+        if sys.platform == 'win32':
+            pyCompare = Utilities.samefilepath
+        else:
+            pyCompare = Utilities.samepath
+        
         for pyIdx, pyName in enumerate(['Python', 'Python3']):
             interpreter = Preferences.getDebugger(
                 pyName + "Interpreter")
             
-            if Utilities.samefilepath(interpreter, sys.executable):
+            if pyCompare(interpreter, sys.executable):
                 process = self.__startInternalClient(port)
             else:
                 process = self.__startExternalClient(interpreter, port)
@@ -151,7 +156,8 @@ class BackgroundService(QTcpServer):
                 fx, fn, [
                     True, fn, 0, 0, '',
                     'No connection to Python{0} interpreter. '
-                    'Check your debugger settings.'.format(int(isPy3) + 2)])
+                    'Check your debugger settings.'.format(int(isPy3) + 2),
+                    []])
         else:
             header = struct.pack(
                 b'!II', len(packedData), adler32(packedData) & 0xffffffff)
