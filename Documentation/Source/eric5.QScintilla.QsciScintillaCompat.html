@@ -223,6 +223,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.hasIndicator">hasIndicator</a></td>
 <td>Public method to test for the existence of an indicator.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.hasSelectedText">hasSelectedText</a></td>
+<td>Public method to indicate the presence of selected text.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.hasSelection">hasSelection</a></td>
 <td>Public method to check for a selection.</td>
 </tr><tr>
@@ -940,6 +943,18 @@ position to test (integer)
 <dt>Returns:</dt>
 <dd>
 flag indicating the existence of the indicator (boolean)
+</dd>
+</dl><a NAME="QsciScintillaCompat.hasSelectedText" ID="QsciScintillaCompat.hasSelectedText"></a>
+<h4>QsciScintillaCompat.hasSelectedText</h4>
+<b>hasSelectedText</b>(<i></i>)
+<p>
+        Public method to indicate the presence of selected text.
+</p><p>
+        This is an overriding method to cope with a bug in QsciScintilla.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of selected text (boolean)
 </dd>
 </dl><a NAME="QsciScintillaCompat.hasSelection" ID="QsciScintillaCompat.hasSelection"></a>
 <h4>QsciScintillaCompat.hasSelection</h4>

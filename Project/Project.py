@@ -2081,16 +2081,12 @@ class Project(QObject):
                         os.makedirs(tpd)
                 
                 # create management directory if not present
-                mgmtDir = self.getProjectManagementDir()
-                if not os.path.exists(mgmtDir):
-                    os.makedirs(mgmtDir)
+                self.createProjectManagementDir()
                 
                 self.saveProject()
             else:
                 # create management directory if not present
-                mgmtDir = self.getProjectManagementDir()
-                if not os.path.exists(mgmtDir):
-                    os.makedirs(mgmtDir)
+                self.createProjectManagementDir()
                 
                 try:
                     ms = os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
@@ -2514,9 +2510,7 @@ class Project(QObject):
                     QApplication.processEvents()
                     
                     # create the management directory if not present
-                    mgmtDir = self.getProjectManagementDir()
-                    if not os.path.exists(mgmtDir):
-                        os.mkdir(mgmtDir)
+                    self.createProjectManagementDir()
                     
                     # read a user specific project file
                     self.__readUserProperties()
@@ -2701,9 +2695,7 @@ class Project(QObject):
             
             if ok:
                 # create management directory if not present
-                mgmtDir = self.getProjectManagementDir()
-                if not os.path.exists(mgmtDir):
-                    os.makedirs(mgmtDir)
+                self.createProjectManagementDir()
                 
                 # now save the tasks
                 self.writeTasks()
@@ -3070,6 +3062,17 @@ class Project(QObject):
             return os.path.join(self.ppath, "_eric5project")
         else:
             return os.path.join(self.ppath, ".eric5project")
+        
+    def createProjectManagementDir(self):
+        """
+        Public method to create the project management directory.
+        
+        It does nothing, if it already exists.
+        """
+        # create management directory if not present
+        mgmtDir = self.getProjectManagementDir()
+        if not os.path.exists(mgmtDir):
+            os.makedirs(mgmtDir)
         
     def getHash(self):
         """

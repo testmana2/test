@@ -258,6 +258,7 @@ class VcsProjectHelper(QObject):
                                 except IndexError:
                                     ms = ""
                                 self.project.newProjectAddFiles(ms)
+                                self.project.createProjectManagementDir()
                                 self.project.saveProject()
                                 self.project.openProject(self.project.pfile)
                                 if not export:

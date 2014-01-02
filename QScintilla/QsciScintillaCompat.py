@@ -488,6 +488,16 @@ class QsciScintillaCompat(QsciScintilla):
         """
         return self.getSelection()[0] != -1
     
+    def hasSelectedText(self):
+        """
+        Public method to indicate the presence of selected text.
+        
+        This is an overriding method to cope with a bug in QsciScintilla.
+        
+        @return flag indicating the presence of selected text (boolean)
+        """
+        return bool(self.selectedText())
+    
     def selectionIsRectangle(self):
         """
         Public method to check, if the current selection is rectangular.

@@ -8664,6 +8664,7 @@
       <keyword name="Project.closeProject" id="Project.closeProject" ref="eric5.Project.Project.html#Project.closeProject" />
       <keyword name="Project.copyDirectory" id="Project.copyDirectory" ref="eric5.Project.Project.html#Project.copyDirectory" />
       <keyword name="Project.createNewProject" id="Project.createNewProject" ref="eric5.Project.Project.html#Project.createNewProject" />
+      <keyword name="Project.createProjectManagementDir" id="Project.createProjectManagementDir" ref="eric5.Project.Project.html#Project.createProjectManagementDir" />
       <keyword name="Project.deleteDirectory" id="Project.deleteDirectory" ref="eric5.Project.Project.html#Project.deleteDirectory" />
       <keyword name="Project.deleteFile" id="Project.deleteFile" ref="eric5.Project.Project.html#Project.deleteFile" />
       <keyword name="Project.deleteLanguageFile" id="Project.deleteLanguageFile" ref="eric5.Project.Project.html#Project.deleteLanguageFile" />
@@ -9409,6 +9410,7 @@
       <keyword name="QsciScintillaCompat.getSelections" id="QsciScintillaCompat.getSelections" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelections" />
       <keyword name="QsciScintillaCompat.getZoom" id="QsciScintillaCompat.getZoom" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getZoom" />
       <keyword name="QsciScintillaCompat.hasIndicator" id="QsciScintillaCompat.hasIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasIndicator" />
+      <keyword name="QsciScintillaCompat.hasSelectedText" id="QsciScintillaCompat.hasSelectedText" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasSelectedText" />
       <keyword name="QsciScintillaCompat.hasSelection" id="QsciScintillaCompat.hasSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasSelection" />
       <keyword name="QsciScintillaCompat.hideFindIndicator" id="QsciScintillaCompat.hideFindIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hideFindIndicator" />
       <keyword name="QsciScintillaCompat.indentationGuideView" id="QsciScintillaCompat.indentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indentationGuideView" />
