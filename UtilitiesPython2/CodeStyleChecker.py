@@ -120,47 +120,55 @@ if __name__ == "__main__":
         else:
             ignore = []
         
-        # check coding style
-        styleGuide = pep8.StyleGuide(
-            reporter=CodeStyleReport,
-            repeat=repeat,
-            select=select,
-            ignore=ignore,
-            max_line_length=max_line_length,
-            hang_closing=hang_closing,
-        )
-        report = styleGuide.check_files([filename])
-        
-        # check documentation style
-        docStyleChecker = DocStyleChecker(
-            source, filename, select, ignore, [], repeat,
-            maxLineLength=max_line_length, docType=docType)
-        docStyleChecker.run()
-        
-        errors = report.errors + docStyleChecker.errors
-        
-        if len(errors) > 0:
-            errors.sort(key=lambda a: a[1])
-            for error in errors:
-                fname, lineno, position, code, args = error
-                print "PEP8"
-                print fname
-                print lineno
-                print position
-                print code
-                print len(args)
-                for a in args:
-                    print a
-            print "PEP8_STATISTICS"
-            for key in report.counters:
-                if key.startswith(("E", "N", "W")):
-                    print key, report.counters[key]
-            for key in docStyleChecker.counters:
-                if key.startswith("D"):
-                    print key, docStyleChecker.counters[key]
-        else:
-            print "NO_PEP8"
-            print filename
+        try:
+            # check coding style
+            styleGuide = pep8.StyleGuide(
+                reporter=CodeStyleReport,
+                repeat=repeat,
+                select=select,
+                ignore=ignore,
+                max_line_length=max_line_length,
+                hang_closing=hang_closing,
+            )
+            report = styleGuide.check_files([filename])
+            
+            # check documentation style
+            docStyleChecker = DocStyleChecker(
+                source, filename, select, ignore, [], repeat,
+                maxLineLength=max_line_length, docType=docType)
+            docStyleChecker.run()
+            
+            errors = report.errors + docStyleChecker.errors
+            
+            if len(errors) > 0:
+                errors.sort(key=lambda a: a[1])
+                for error in errors:
+                    fname, lineno, position, code, args = error
+                    print "PEP8"
+                    print fname
+                    print lineno
+                    print position
+                    print code
+                    print len(args)
+                    for a in args:
+                        print a
+                print "PEP8_STATISTICS"
+                for key in report.counters:
+                    if key.startswith(("E", "N", "W")):
+                        print key, report.counters[key]
+                for key in docStyleChecker.counters:
+                    if key.startswith("D"):
+                        print key, docStyleChecker.counters[key]
+            else:
+                print "NO_PEP8"
+                print filename
+        except StandardError, msg:
+            import traceback
+            print "EXCEPTION"
+            print ""
+            print "Error in eric5 code:"
+            print traceback.format_exc()
+            sys.exit(1)
 
 #
 # eflag: FileType = Python2

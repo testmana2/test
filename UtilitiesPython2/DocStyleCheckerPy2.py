@@ -106,7 +106,7 @@ class DocStyleChecker(object):
         "D101", "D102", "D103", "D104", "D105",
         "D111", "D112", "D113",
         "D121", "D122",
-        "D131", "D132", "D133", "D134",
+        "D130", "D131", "D132", "D133", "D134",
         "D141", "D142", "D143", "D144", "D145",
         
         "D203", "D205",
@@ -187,6 +187,7 @@ class DocStyleChecker(object):
                     (self.__checkUnicode, ("D113",)),
                     (self.__checkOneLiner, ("D121",)),
                     (self.__checkIndent, ("D122",)),
+                    (self.__checkSummary, ("D130")),
                     (self.__checkEndsWithPeriod, ("D131",)),
                     (self.__checkBlankAfterSummary, ("D144",)),
                     (self.__checkBlankAfterLastParagraph, ("D145",)),
@@ -222,6 +223,7 @@ class DocStyleChecker(object):
                     (self.__checkBackslashes, ("D112",)),
                     (self.__checkUnicode, ("D113",)),
                     (self.__checkIndent, ("D122",)),
+                    (self.__checkSummary, ("D130")),
                     (self.__checkEricEndsWithPeriod, ("D231",)),
                     (self.__checkEricBlankAfterSummary, ("D246",)),
                     (self.__checkEricNBlankAfterLastParagraph, ("D247",)),
@@ -771,6 +773,20 @@ class DocStyleChecker(object):
         if indent != expectedIndent:
             self.__error(docstringContext.start(), 0, "D122")
     
+    def __checkSummary(self, docstringContext, context):
+        """
+        Private method to check, that docstring summaries contain some text.
+        
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
+        """
+        if docstringContext is None:
+            return
+        
+        summary, lineNumber = self.__getSummaryLine(docstringContext)
+        if summary == "":
+            self.__error(docstringContext.start() + lineNumber, 0, "D130")
+    
     def __checkEndsWithPeriod(self, docstringContext, context):
         """
         Private method to check, that docstring summaries end with a period.
@@ -797,9 +813,10 @@ class DocStyleChecker(object):
             return
         
         summary, lineNumber = self.__getSummaryLine(docstringContext)
-        firstWord = summary.strip().split()[0]
-        if firstWord.endswith("s") and not firstWord.endswith("ss"):
-            self.__error(docstringContext.start() + lineNumber, 0, "D132")
+        if summary:
+            firstWord = summary.strip().split()[0]
+            if firstWord.endswith("s") and not firstWord.endswith("ss"):
+                self.__error(docstringContext.start() + lineNumber, 0, "D132")
     
     def __checkNoSignature(self, docstringContext, context):
         """
@@ -972,14 +989,16 @@ class DocStyleChecker(object):
             return
         
         summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
-        if summaryLines[-1].lstrip().startswith("@"):
-            summaryLines.pop(-1)
-        summary = " ".join([s.strip() for s in summaryLines if s])
-        if not summary.endswith(".") and \
-                not summary.split(None, 1)[0].lower() == "constructor":
-            self.__error(
-                docstringContext.start() + lineNumber + len(summaryLines) - 1,
-                0, "D231")
+        if summaryLines:
+            if summaryLines[-1].lstrip().startswith("@"):
+                summaryLines.pop(-1)
+            summary = " ".join([s.strip() for s in summaryLines if s])
+            if summary and not summary.endswith(".") and \
+                    not summary.split(None, 1)[0].lower() == "constructor":
+                self.__error(
+                    docstringContext.start() + lineNumber +
+                    len(summaryLines) - 1,
+                    0, "D231")
     
     def __checkEricReturn(self, docstringContext, context):
         """

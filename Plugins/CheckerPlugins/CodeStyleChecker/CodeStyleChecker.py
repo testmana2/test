@@ -100,6 +100,10 @@ class CodeStyleCheckerPy2(object):
                     index += 1
                     break
                 
+                if output[index] == "EXCEPTION":
+                    exceptionText = os.linesep.join(output[index + 2:])
+                    raise RuntimeError(exceptionText)
+                
                 fname = output[index + 1]
                 lineno = int(output[index + 2])
                 position = int(output[index + 3])

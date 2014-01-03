@@ -3471,6 +3471,8 @@
       <keyword name="DocStyleChecker.__checkOneLiner" id="DocStyleChecker.__checkOneLiner" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__checkOneLiner" />
       <keyword name="DocStyleChecker.__checkReturnType" id="DocStyleChecker.__checkReturnType" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__checkReturnType" />
       <keyword name="DocStyleChecker.__checkReturnType" id="DocStyleChecker.__checkReturnType" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__checkReturnType" />
+      <keyword name="DocStyleChecker.__checkSummary" id="DocStyleChecker.__checkSummary" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__checkSummary" />
+      <keyword name="DocStyleChecker.__checkSummary" id="DocStyleChecker.__checkSummary" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__checkSummary" />
       <keyword name="DocStyleChecker.__checkTripleDoubleQuotes" id="DocStyleChecker.__checkTripleDoubleQuotes" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__checkTripleDoubleQuotes" />
       <keyword name="DocStyleChecker.__checkTripleDoubleQuotes" id="DocStyleChecker.__checkTripleDoubleQuotes" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html#DocStyleChecker.__checkTripleDoubleQuotes" />
       <keyword name="DocStyleChecker.__checkUnicode" id="DocStyleChecker.__checkUnicode" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__checkUnicode" />
