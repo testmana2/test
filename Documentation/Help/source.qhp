@@ -9417,6 +9417,8 @@
       <keyword name="QsciScintillaCompat.hideFindIndicator" id="QsciScintillaCompat.hideFindIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hideFindIndicator" />
       <keyword name="QsciScintillaCompat.indentationGuideView" id="QsciScintillaCompat.indentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indentationGuideView" />
       <keyword name="QsciScintillaCompat.indicatorDefine" id="QsciScintillaCompat.indicatorDefine" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indicatorDefine" />
+      <keyword name="QsciScintillaCompat.inputMethodEvent" id="QsciScintillaCompat.inputMethodEvent" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.inputMethodEvent" />
+      <keyword name="QsciScintillaCompat.inputMethodQuery" id="QsciScintillaCompat.inputMethodQuery" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.inputMethodQuery" />
       <keyword name="QsciScintillaCompat.lineAt" id="QsciScintillaCompat.lineAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineAt" />
       <keyword name="QsciScintillaCompat.lineEndPosition" id="QsciScintillaCompat.lineEndPosition" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineEndPosition" />
       <keyword name="QsciScintillaCompat.lineIndexFromPosition" id="QsciScintillaCompat.lineIndexFromPosition" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineIndexFromPosition" />

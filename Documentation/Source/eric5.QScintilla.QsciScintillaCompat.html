@@ -238,6 +238,12 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.indicatorDefine">indicatorDefine</a></td>
 <td>Public method to define the appearance of an indicator.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.inputMethodEvent">inputMethodEvent</a></td>
+<td>Protected method to cope with a glitch in some Qscintilla versions handling input events.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.inputMethodQuery">inputMethodQuery</a></td>
+<td>Protected method to cope with a glitch in some Qscintilla versions handling input events.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.lineAt">lineAt</a></td>
 <td>Public method to calculate the line at a position.</td>
 </tr><tr>
@@ -1012,6 +1018,34 @@ color to be used by the indicator (QColor)
 <dt>Raises <b>ValueError</b>:</dt>
 <dd>
 the indicator or style are not valid
+</dd>
+</dl><a NAME="QsciScintillaCompat.inputMethodEvent" ID="QsciScintillaCompat.inputMethodEvent"></a>
+<h4>QsciScintillaCompat.inputMethodEvent</h4>
+<b>inputMethodEvent</b>(<i>evt</i>)
+<p>
+        Protected method to cope with a glitch in some Qscintilla versions
+        handling input events.
+</p><p>
+        Note: This simply disables the Qscintilla behavior.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the input method event object
+            (QInputMethodEvent)
+</dd>
+</dl><a NAME="QsciScintillaCompat.inputMethodQuery" ID="QsciScintillaCompat.inputMethodQuery"></a>
+<h4>QsciScintillaCompat.inputMethodQuery</h4>
+<b>inputMethodQuery</b>(<i>query</i>)
+<p>
+        Protected method to cope with a glitch in some Qscintilla versions
+        handling input events.
+</p><p>
+        Note: This simply disables the Qscintilla behavior.
+</p><dl>
+<dt><i>query</i></dt>
+<dd>
+reference to the input method query object
+            (Qt.InputMethodQuery)
 </dd>
 </dl><a NAME="QsciScintillaCompat.lineAt" ID="QsciScintillaCompat.lineAt"></a>
 <h4>QsciScintillaCompat.lineAt</h4>

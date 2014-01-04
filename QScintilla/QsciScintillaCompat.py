@@ -709,7 +709,7 @@ class QsciScintillaCompat(QsciScintilla):
             pass
     
     ###########################################################################
-    # methods to perform searches in target range
+    ## methods to perform searches in target range
     ###########################################################################
     
     def positionFromPoint(self, point):
@@ -885,7 +885,7 @@ class QsciScintillaCompat(QsciScintilla):
         self.__targetSearchStart = start + len(r)
     
     ###########################################################################
-    # indicator handling methods
+    ## indicator handling methods
     ###########################################################################
     
     def indicatorDefine(self, indicator, style, color):
@@ -1050,7 +1050,7 @@ class QsciScintillaCompat(QsciScintilla):
             self.SendScintilla(QsciScintilla.SCI_FINDINDICATORHIDE)
     
     ###########################################################################
-    # methods to perform folding related stuff
+    ## methods to perform folding related stuff
     ###########################################################################
     
     def __setFoldMarker(self, marknr, mark=QsciScintilla.SC_MARK_EMPTY):
@@ -1151,7 +1151,7 @@ class QsciScintillaCompat(QsciScintilla):
                            QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
     
     ###########################################################################
-    # interface methods to the standard keyboard command set
+    ## interface methods to the standard keyboard command set
     ###########################################################################
     
     def clearKeys(self):
@@ -1169,7 +1169,7 @@ class QsciScintillaCompat(QsciScintilla):
         self.standardCommands().clearAlternateKeys()
 
     ###########################################################################
-    # specialized event handlers
+    ## specialized event handlers
     ###########################################################################
     
     def focusOutEvent(self, event):
@@ -1194,9 +1194,33 @@ class QsciScintillaCompat(QsciScintilla):
         @return result of the event handling (boolean)
         """
         return QsciScintillaBase.event(self, evt)
+    
+    def inputMethodEvent(self, evt):
+        """
+        Protected method to cope with a glitch in some Qscintilla versions
+        handling input events.
+        
+        Note: This simply disables the Qscintilla behavior.
+        
+        @param evt reference to the input method event object
+            (QInputMethodEvent)
+        """
+        pass
+    
+    def inputMethodQuery(self, query):
+        """
+        Protected method to cope with a glitch in some Qscintilla versions
+        handling input events.
+        
+        Note: This simply disables the Qscintilla behavior.
+        
+        @param query reference to the input method query object
+            (Qt.InputMethodQuery)
+        """
+        pass
 
     ###########################################################################
-    # interface methods to the mini editor
+    ## interface methods to the mini editor
     ###########################################################################
 
     def getFileName(self):
@@ -1215,7 +1239,7 @@ class QsciScintillaCompat(QsciScintilla):
                 return ""
     
     ###########################################################################
-    # replacements for buggy methods
+    ## replacements for buggy methods
     ###########################################################################
     
     def showUserList(self, id, lst):
@@ -1234,7 +1258,7 @@ class QsciScintillaCompat(QsciScintilla):
                            self._encodeString(self.UserSeparator.join(lst)))
     
     ###########################################################################
-    # utility methods
+    ## utility methods
     ###########################################################################
     
     def _encodeString(self, string):
@@ -1253,7 +1277,7 @@ class QsciScintillaCompat(QsciScintilla):
                 return string.encode("latin-1")
     
     ###########################################################################
-    # methods below have been added to QScintilla starting with version 2.5
+    ## methods below have been added to QScintilla starting with version 2.5
     ###########################################################################
     
     if "positionFromLineIndex" not in QsciScintilla.__dict__:
