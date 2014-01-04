@@ -43,6 +43,8 @@ class CodeStyleCheckerPy2(object):
             brackets (boolean)
         @keyparam docType type of the documentation strings
             (string, one of 'eric' or 'pep257')
+        @exception AssertionError raised if the docType argument is not
+            "eric" or "pep257"
         """
         assert docType in ("eric", "pep257")
         
