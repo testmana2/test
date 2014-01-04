@@ -2,6 +2,7 @@
 
 # Copyright (c) 2013 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
+# pylint: disable=C0103
 
 """
 Module implementing a background service for the various checkers and other
@@ -18,10 +19,7 @@ import threading
 from zlib import adler32
 
 from PyQt4.QtCore import QProcess, pyqtSignal
-from PyQt4.QtGui import QApplication
 from PyQt4.QtNetwork import QTcpServer, QHostAddress
-
-from E5Gui.E5Application import e5App
 
 import Preferences
 import Utilities
@@ -34,9 +32,7 @@ class BackgroundService(QTcpServer):
     """
     Class implementing the main part of the background service.
     """
-    syntaxChecked = pyqtSignal(str, bool, str, int, int, str, str, list)
-    #styleChecked = pyqtSignal(TBD)
-    #indentChecked = pyqtSignal(TBD)
+    serviceNotAvailable = pyqtSignal(str, str, int, str)
     
     def __init__(self):
         """
@@ -44,6 +40,9 @@ class BackgroundService(QTcpServer):
         """
         self.processes = [None, None]
         self.connections = [None, None]
+        self.isWorking = False
+        self.__queue = []
+        self.services = {}
 
         super(BackgroundService, self).__init__()
 
@@ -73,34 +72,6 @@ class BackgroundService(QTcpServer):
                 process = self.__startExternalClient(interpreter, port)
             self.processes[pyIdx] = process
 
-    def on_newConnection(self):
-        """
-        Slot for new incomming connections from the clients.
-        """
-        connection = self.nextPendingConnection()
-        if not connection.waitForReadyRead(1000):
-            return
-        ch = 0 if connection.read(1) == b'2' else 1
-        self.connections[ch] = connection
-        connection.readyRead.connect(
-            lambda x=ch: self.__receive(x))
-
-    def shutdown(self):
-        """
-        Cleanup the connections and processes when Eric is shuting down.
-        """
-        for connection in self.connections:
-            if connection:
-                connection.close()
-        
-        for process in self.processes:
-            if isinstance(process, QProcess):
-                process.close()
-                process = None
-            elif isinstance(process, threading.Thread):
-                process.join(0.1)
-                process = None
-
     def __startExternalClient(self, interpreter, port):
         """
         Private method to start the background client as external process.
@@ -129,35 +100,43 @@ class BackgroundService(QTcpServer):
         @param port socket port to which the interpreter should connect (int)
         @return the thread object (Thread) or None
         """
-        self.backgroundClient = BackgroundClient(
+        backgroundClient = BackgroundClient(
             self.hostAddress, port)
-        thread = threading.Thread(target=self.backgroundClient.run)
+        thread = threading.Thread(target=backgroundClient.run)
         thread.start()
         return thread
-
-    # TODO: Implement a queued processing of incomming events. Dublicate file
-    # checks should update an older request to avoid overrun or starving of
-    # the check.
-    def __send(self, fx, fn, data, isPy3):
+    
+    def __processQueue(self):
+        """
+        Private method to take the next service request and send it to the
+        client.
+        """
+        if self.__queue and self.isWorking is False:
+            self.isWorking = True
+            fx, fn, pyVer, data = self.__queue.pop(0)
+            self.__send(fx, fn, pyVer, data)
+    
+    def __send(self, fx, fn, pyVer, data):
         """
         Private method to send a job request to one of the clients.
         
         @param fx remote function name to execute (str)
         @param fn filename for identification (str)
+        @param pyVer version for the required interpreter (int)
         @param data function argument(s) (any basic datatype)
-        @param isPy3 flag for the required interpreter (boolean)
         """
         packedData = json.dumps([fx, fn, data])
         if sys.version_info[0] == 3:
             packedData = bytes(packedData, 'utf-8')
-        connection = self.connections[int(isPy3)]
+        connection = self.connections[pyVer - 2]
         if connection is None:
-            self.__postResult(
-                fx, fn, [
-                    True, fn, 0, 0, '',
-                    'No connection to Python{0} interpreter. '
-                    'Check your debugger settings.'.format(int(isPy3) + 2),
-                    []])
+            if fx != 'INIT':
+                self.serviceNotAvailable.emit(
+                    fx, fn, pyVer, self.trUtf8(
+                        'Python{0} interpreter not configured.').format(pyVer))
+            # Reset flag and continue processing queue
+            self.isWorking = False
+            self.__processQueue()
         else:
             header = struct.pack(
                 b'!II', len(packedData), adler32(packedData) & 0xffffffff)
@@ -183,12 +162,9 @@ class BackgroundService(QTcpServer):
         if sys.version_info[0] == 3:
             packedData = packedData.decode('utf-8')
         # "check" if is's a tuple of 3 values
-        try:
-            fx, fn, data = json.loads(packedData)
-            self.__postResult(fx, fn, data)
-        except:
-            pass
-
+        fx, fn, data = json.loads(packedData)
+        self.__postResult(fx, fn, data)
+        
     def __postResult(self, fx, fn, data):
         """
         Private method to emit the correspondig signal for the returned
@@ -198,57 +174,96 @@ class BackgroundService(QTcpServer):
         @param fn filename for identification (str)
         @param data function argument(s) (any basic datatype)
         """
-        if fx == 'syntax':
-            self.syntaxChecked.emit(fn, *data)
-        elif fx == 'style':
-            pass
-        elif fx == 'indent':
+        if fx == 'INIT':
             pass
         elif fx == 'exception':
             # Call sys.excepthook(type, value, traceback) to emulate the
             # exception which was caught on the client
-            sys.excepthook(*data)
-        
-        #QApplication.translate(packedData)
-        
-    # ggf. nach Utilities verschieben
-    def determinePythonVersion(self, filename, source):
-        """
-        Determine the python version of a given file.
-        
-        @param filename name of the file with extension (str)
-        @param source of the file (str)
-        @return flag if file is Python2 or Python3 (boolean)
-        """
-        flags = Utilities.extractFlags(source)
-        ext = os.path.splitext(filename)[1]
-        project = e5App().getObject('Project')
-        if "FileType" in flags:
-            isPy3 = flags["FileType"] not in ["Python", "Python2"]
-        elif (Preferences.getProject("DeterminePyFromProject") and
-              project.isOpen() and
-              project.isProjectFile(filename)):
-                    isPy3 = project.getProjectLanguage() == "Python3"
+            #sys.excepthook(*data)
+            print(data)
         else:
-            isPy3 = ext in Preferences.getPython("PythonExtensions")
-        return isPy3
+            callback = self.services.get(fx)
+            if callback:
+                callback[2](fn, *data)
+        
+        self.isWorking = False
+        self.__processQueue()
 
-    def syntaxCheck(self, filename, source="", checkFlakes=True,
-                    ignoreStarImportWarnings=False, isPy3=None):
+    def enqueueRequest(self, fx, fn, pyVer, data):
         """
-        Function to compile one Python source file to Python bytecode
-        and to perform a pyflakes check.
+        Implement a queued processing of incomming events.
         
-        @param filename source filename (string)
-        @keyparam source string containing the code to check (string)
-        @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
-        @keyparam ignoreStarImportWarnings flag indicating to
-            ignore 'star import' warnings (boolean)
-        @keyparam isPy3 flag sets the interpreter to use or None for autodetect
-            corresponding interpreter (boolean or None)
+        Dublicate file checks update an older request to avoid overrun or
+        starving of the check.
+        @param fx function name of the service (str)
+        @param fn filename for identification (str)
+        @param pyVer version for the required interpreter (int)
+        @param data function argument(s) (any basic datatype)
         """
-        if isPy3 is None:
-            isPy3 = self.determinePythonVersion(filename, source)
+        args = [fx, fn, pyVer, data]
+        if fx == 'INIT':
+            self.__queue.insert(0, args)
+        else:
+            for pendingArg in self.__queue:
+                if pendingArg[:3] == args[:3]:
+                    pendingArg[3] = args[3]
+                    break
+            else:
+                self.__queue.append(args)
+        self.__processQueue()
+    
+    def serviceConnect(
+            self, fx, modulepath, module, callback, onErrorCallback=None):
+        """
+        Announce a new service to the background service/ client.
         
-        data = [source, checkFlakes, ignoreStarImportWarnings]
-        self.__send('syntax', filename, data, isPy3)
+        @param fx function name of the service (str)
+        @param modulepath full path to the module (str)
+        @param module name to import (str)
+        @param callback function on service response (function)
+        @param onErrorCallback function if client isn't available (function)
+        """
+        self.services[fx] = modulepath, module, callback, onErrorCallback
+        self.enqueueRequest('INIT', fx, 0, [modulepath, module])
+        self.enqueueRequest('INIT', fx, 1, [modulepath, module])
+        if onErrorCallback:
+            self.serviceNotAvailable.connect(onErrorCallback)
+    
+    def serviceDisconnect(self, fx):
+        """
+        Remove the service from the service list.
+        
+        @param fx function name of the service
+        """
+        self.services.pop(fx, None)
+
+    def on_newConnection(self):
+        """
+        Slot for new incomming connections from the clients.
+        """
+        connection = self.nextPendingConnection()
+        if not connection.waitForReadyRead(1000):
+            return
+        ch = 0 if connection.read(1) == b'2' else 1
+        self.connections[ch] = connection
+        connection.readyRead.connect(
+            lambda x=ch: self.__receive(x))
+        
+        for fx, args in self.services.items():
+            self.enqueueRequest('INIT', fx, ch, args[:2])
+
+    def shutdown(self):
+        """
+        Cleanup the connections and processes when Eric is shuting down.
+        """
+        for connection in self.connections:
+            if connection:
+                connection.close()
+        
+        for process in self.processes:
+            if isinstance(process, QProcess):
+                process.close()
+                process = None
+            elif isinstance(process, threading.Thread):
+                process.join(0.1)
+                process = None

@@ -2,6 +2,7 @@
 
 # Copyright (c) 2011 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #
+# pylint: disable=C0103
 
 """
 Module implementing the syntax check for Python 2/3.
@@ -12,8 +13,20 @@ import re
 import sys
 import traceback
 
-from .pyflakes.checker import Checker
-from .pyflakes.messages import ImportStarUsed
+try:
+    from pyflakes.checker import Checker
+    from pyflakes.messages import ImportStarUsed
+except ImportError:
+    pass
+
+
+def initService():
+    """
+    Initialize the service and return the entry point.
+    
+    @return the entry point for the background client (function)
+    """
+    return syntaxAndPyflakesCheck
 
 
 def normalizeCode(codestring):

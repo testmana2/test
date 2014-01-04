@@ -66,8 +66,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
         
-        self.backgroundService = e5App().getObject('BackgroundService')
-        self.backgroundService.syntaxChecked.connect(self.processResult)
+        self.internalServices = e5App().getObject('InternalServices')
+        self.internalServices.syntaxChecked.connect(self.__processResult)
         
     def __resort(self):
         """
@@ -191,7 +191,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         QApplication.processEvents()
         self.__resort()
         
-        if self.cancelled:  # ???
+        if self.cancelled:
             return
         
         self.__lastFileItem = None
@@ -213,14 +213,14 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 self.check()
                 return
         
-        self.backgroundService.syntaxCheck(
+        self.internalServices.syntaxCheck(
             self.filename, self.source, self.checkFlakes,
             self.ignoreStarImportWarnings)
 
-    def processResult(
+    def __processResult(
             self, fn, nok, fname, line, index, code, error, warnings):
         """
-        Slot which reports the resulting messages.
+        Slot to display the reported messages.
         
         If checkFlakes is True, warnings contains a list of strings containing
         the warnings (marker, file name, line number, message)
@@ -247,16 +247,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         else:
             source = self.source.splitlines()
             for warning in warnings:
-                # TODO: Move to BackgroundService
-                # Translate messages
-                msg_args = warning.pop()
-                translated = QApplication.translate(
-                    'py3Flakes', warning[-1]).format(*msg_args)
-                # Avoid leading "u" at Python2 unicode strings
-                if translated.startswith("u'"):
-                    translated = translated[1:]
-                warning[3] = translated.replace(" u'", " '")
-                
                 self.noResults = False
                 scr_line = source[warning[2] - 1].strip()
                 self.__createResultItem(

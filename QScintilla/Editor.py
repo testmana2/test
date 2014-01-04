@@ -312,6 +312,8 @@ class Editor(QsciScintillaCompat):
         self.__setTextDisplay()
         
         # initialize the online syntax check timer
+        self.internalServices = e5App().getObject('InternalServices')
+        self.internalServices.syntaxChecked.connect(self.__processResult)
         self.__initOnlineSyntaxCheck()
         
         self.isResourcesFile = False
@@ -1763,13 +1765,13 @@ class Editor(QsciScintillaCompat):
                         if isProjectPy2:
                             self.filetype = "Python2"
                         return isProjectPy2
-                    else:
-                        # 3) determine by compiling the sources
-                        syntaxError = Utilities.compile(
-                            self.fileName, self.text(), True)[0]
-                        if not syntaxError:
-                            self.filetype = "Python2"
-                            return True
+#                    else:
+#                        # 3) determine by compiling the sources
+#                        syntaxError = Utilities.compile(
+#                            self.fileName, self.text(), True)[0]
+#                        if not syntaxError:
+#                            self.filetype = "Python2"
+#                            return True
                 
                 if ext in self.dbs.getExtensions('Python2'):
                     self.filetype = "Python2"
@@ -1806,13 +1808,13 @@ class Editor(QsciScintillaCompat):
                         if isProjectPy3:
                             self.filetype = "Python3"
                         return isProjectPy3
-                    else:
-                        # 3) determine by compiling the sources
-                        syntaxError = Utilities.compile(
-                            self.fileName, self.text(), False)[0]
-                        if not syntaxError:
-                            self.filetype = "Python3"
-                            return True
+#                    else:
+#                        # 3) determine by compiling the sources
+#                        syntaxError = Utilities.compile(
+#                            self.fileName, self.text(), False)[0]
+#                        if not syntaxError:
+#                            self.filetype = "Python3"
+#                            return True
                 
                 if ext in self.dbs.getExtensions('Python3'):
                     self.filetype = "Python3"
@@ -4960,25 +4962,53 @@ class Editor(QsciScintillaCompat):
         """
         Private method to perform an automatic syntax check of the file.
         """
-        isPy2 = self.isPy2File()
-        if (isPy2 or self.isPy3File()) is False:
+        if (self.isPy2File() or self.isPy3File()) is False:
             return
         
         if Preferences.getEditor("AutoCheckSyntax"):
             if Preferences.getEditor("OnlineSyntaxCheck"):
                 self.__onlineSyntaxCheckTimer.stop()
-            self.clearSyntaxError()
-            self.clearFlakesWarnings()
+            
+            checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
+            ignoreStarImportWarnings = Preferences.getFlakes(
+                "IgnoreStarImportWarnings")
+                
+            self.internalServices.syntaxCheck(
+                self.fileName or "(Unnamed)", self.text(), checkFlakes,
+                ignoreStarImportWarnings, editor=self)
 
-            syntaxError, _fn, errorline, errorindex, _code, _error, warnings =\
-                Utilities.compile(
-                    self.fileName or "(Unnamed)", self.text(), isPy2)
-            if syntaxError:
-                self.toggleSyntaxError(errorline, errorindex, True, _error)
-            else:
-                for warning in warnings:
-                        self.toggleWarning(
-                            warning[2], True, warning[3])
+    def __processResult(
+            self, fn, nok, fname, line, index, code, error, warnings):
+        """
+        Slot to report the resulting messages.
+        
+        If checkFlakes is True, warnings contains a list of strings containing
+        the warnings (marker, file name, line number, message)
+        The values are only valid, if nok is False.
+        
+        @param fn filename of the checked file (str)
+        @param nok flag if an error in the source was found (boolean)
+        @param fname filename of the checked file (str)  # TODO: remove dubl.
+        @param line number where the error occured (int)
+        @param index the column where the error occured (int)
+        @param code the part of the code where the error occured (str)
+        @param error the name of the error (str)
+        @param warnings a list of strings containing the warnings
+            (marker, file name, line number, message)
+        """
+        # Check if it's the requested file, otherwise ignore signal
+        if fn != self.fileName and (
+                self.fileName is not None or fn != "(Unnamed)"):
+            return
+        
+        self.clearSyntaxError()
+        self.clearFlakesWarnings()
+        
+        if nok:
+            self.toggleSyntaxError(line, index, True, error)
+        else:
+            for warning in warnings:
+                self.toggleWarning(warning[2], True, warning[3])
 
     def __initOnlineSyntaxCheck(self):
         """
@@ -5854,6 +5884,8 @@ class Editor(QsciScintillaCompat):
             self.__changeBreakPoints)
         self.breakpointModel.rowsInserted.disconnect(
             self.__addBreakPoints)
+        
+        self.internalServices.syntaxChecked.disconnect(self.__processResult)
         
         if self.spell:
             self.spell.stopIncrementalCheck()

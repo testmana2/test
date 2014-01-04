@@ -2,6 +2,7 @@
 
 # Copyright (c) 2013 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
+# pylint: disable=C0103
 
 """
 Module implementing a Qt free version of a background client for the various
@@ -15,20 +16,10 @@ except NameError:
     pass
 
 import json
-import os
 import socket
 import struct
 import sys
 from zlib import adler32
-
-if __name__ == '__main__':
-    # Add Eric basepath to sys.path to be able to import modules which are
-    # laying not only below Utilities
-    path = os.path.dirname(sys.argv[0])
-    path = os.path.dirname(path)
-    sys.path.append(path)
-
-from Plugins.CheckerPlugins.SyntaxChecker import SyntaxCheck
 
 
 class BackgroundClient(object):
@@ -42,10 +33,29 @@ class BackgroundClient(object):
         @param host ip address the background service is listening
         @param port port of the background service
         """
+        self.services = {}
+        
         self.connection = socket.create_connection((host, port))
         ver = b'2' if sys.version_info[0] == 2 else b'3'
         self.connection.sendall(ver)
         self.connection.settimeout(0.25)
+
+    def __initClientService(self, fn, path, module):
+        """
+        Import the given module and register it as service.
+        
+        @param fn service name to register (str)
+        @param path contains the path to the module (str)
+        @param module name to import (str)
+        @return text result of the import action (str)
+        """
+        sys.path.append(path)
+        try:
+            importedModule = __import__(module, globals(), locals(), [], 0)
+            self.services[fn] = importedModule.initService()
+            return 'ok'
+        except ImportError:
+            return 'Import Error'
 
     def __send(self, fx, fn, data):
         """
@@ -80,7 +90,6 @@ class BackgroundClient(object):
                 break
             
             length, datahash = struct.unpack(b'!II', header)
-            
             packedData = b''
             while len(packedData) < length:
                 packedData += self.connection.recv(length - len(packedData))
@@ -89,15 +98,16 @@ class BackgroundClient(object):
                 'Hashes not equal'
             if sys.version_info[0] == 3:
                 packedData = packedData.decode('utf-8')
+            
             fx, fn, data = json.loads(packedData)
-            if fx == 'syntax':
-                ret = SyntaxCheck.syntaxAndPyflakesCheck(fn, *data)
-            elif fx == 'style':
-                print(data)
-            elif fx == 'indent':
-                pass
+            if fx == 'INIT':
+                ret = self.__initClientService(fn, *data)
             else:
-                continue
+                callback = self.services.get(fx)
+                if callback:
+                    ret = callback(fn, *data)
+                else:
+                    ret = 'Unknown service.'
             
             self.__send(fx, fn, ret)
             

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-01-01, 22:56:51 -->
+<!-- Saved: 2014-01-04, 21:59:29 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -706,9 +706,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Gui/E5ToolBox.py</Source>
     <Source>E5Gui/E5TreeSortFilterProxyModel.py</Source>
     <Source>E5Gui/E5TreeView.py</Source>
-    <Source>Utilities/py3flakes/__init__.py</Source>
-    <Source>Utilities/py3flakes/checker.py</Source>
-    <Source>Utilities/py3flakes/messages.py</Source>
     <Source>Preferences/ConfigurationPages/EditorKeywordsPage.py</Source>
     <Source>Cooperation/__init__.py</Source>
     <Source>Cooperation/Connection.py</Source>
@@ -1053,10 +1050,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>QScintilla/SortOptionsDialog.py</Source>
     <Source>Debugger/CallStackViewer.py</Source>
     <Source>Utilities/compatibility_fixes.py</Source>
-    <Source>Utilities/SyntaxCheck.py</Source>
-    <Source>Utilities/py2flakes/checker.py</Source>
-    <Source>Utilities/py2flakes/messages.py</Source>
-    <Source>Utilities/py2flakes/__init__.py</Source>
     <Source>Examples/hallo.py</Source>
     <Source>Examples/modpython.py</Source>
     <Source>Examples/modpython_dbg.py</Source>
@@ -1114,14 +1107,12 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UtilitiesPython2/__init__.py</Source>
     <Source>UtilitiesPython2/Tools.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/py3flakes/checker.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/py3flakes/messages.py</Source>
     <Source>Utilities/BackgroundClient.py</Source>
     <Source>Utilities/BackgroundService.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/checker.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/__init__.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/py3flakes/__init__.py</Source>
+    <Source>Utilities/InternalServices.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
