@@ -150,8 +150,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
-        self.__clearErrors()
-        
         if isinstance(fn, list):
             self.files = fn
         elif os.path.isdir(fn):
@@ -163,6 +161,15 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             self.files = [fn]
+        
+        # Reset marker for every file which is open and getting checked
+        vm = e5App().getObject("ViewManager")
+        openFiles = vm.getOpenFilenames()
+        for openFile in openFiles:
+            if openFile in self.files:
+                editor = vm.getOpenEditor(openFile)
+                editor.clearSyntaxError()
+                editor.clearFlakesWarnings()
         
         if codestring or len(self.files) > 0:
             self.checkProgress.setMaximum(max(1, len(self.files)))
@@ -279,7 +286,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
             QApplication.processEvents()
             self.showButton.setEnabled(False)
-            self.__clearErrors()
         else:
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
