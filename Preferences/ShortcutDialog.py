@@ -131,15 +131,9 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         
         @param evt the key event (QKeyEvent)
         """
-        if evt.key() == Qt.Key_Control:
-            return
-        if evt.key() == Qt.Key_Meta:
-            return
-        if evt.key() == Qt.Key_Shift:
-            return
-        if evt.key() == Qt.Key_Alt:
-            return
-        if evt.key() == Qt.Key_Menu:
+        if evt.key() in [Qt.Key_Control, Qt.Key_Meta, Qt.Key_Shift, Qt.Key_Alt,
+                         Qt.Key_Menu, Qt.Key_Hyper_L, Qt.Key_Hyper_R,
+                         Qt.Key_Super_L, Qt.Key_Super_R]:
             return
     
         if self.keyIndex == 4:
