@@ -7,6 +7,8 @@
 Module implementing the browser sort filter proxy model.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QModelIndex
 from PyQt4.QtGui import QSortFilterProxyModel
 
@@ -23,7 +25,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(BrowserSortFilterProxyModel, self).__init__(parent)
         self.hideNonPublic = Preferences.getUI("BrowsersHideNonPublic")
         
     def sort(self, column, order):
@@ -35,7 +37,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         """
         self.__sortColumn = column
         self.__sortOrder = order
-        super().sort(column, order)
+        super(BrowserSortFilterProxyModel, self).sort(column, order)
         
     def lessThan(self, left, right):
         """

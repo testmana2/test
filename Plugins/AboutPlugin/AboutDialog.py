@@ -7,6 +7,8 @@
 Module implementing an 'About Eric' dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QApplication, QDialog
 
 from .Ui_AboutDialog import Ui_AboutDialog
@@ -739,7 +741,7 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(AboutDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.ericLabel.setText(titleText)

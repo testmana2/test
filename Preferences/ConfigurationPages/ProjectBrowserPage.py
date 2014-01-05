@@ -7,6 +7,8 @@
 Module implementing the Project Browser configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Application import e5App
@@ -25,7 +27,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         """
         Constructor
         """
-        super().__init__()
+        super(ProjectBrowserPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("ProjectBrowserPage")
         

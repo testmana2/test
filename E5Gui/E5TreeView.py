@@ -7,6 +7,8 @@
 Module implementing specialized tree views.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QTreeView
 
@@ -26,7 +28,7 @@ class E5TreeView(QTreeView):
             self.removeSelected()
             evt.setAccepted(True)
         else:
-            super().keyPressEvent(evt)
+            super(E5TreeView, self).keyPressEvent(evt)
     
     def removeSelected(self):
         """

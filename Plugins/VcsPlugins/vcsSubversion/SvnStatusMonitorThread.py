@@ -7,6 +7,12 @@
 Module implementing the VCS status monitor thread class for Subversion.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 from PyQt4.QtCore import QRegExp, QProcess
 
 from VCS.StatusMonitorThread import VcsStatusMonitorThread

@@ -7,6 +7,8 @@
 Module implementing a dialog to show a list of tags or branches.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 import pysvn
@@ -35,7 +37,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnTagBranchListDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -131,6 +133,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         os.chdir(dname)
         try:
             entries = self.client.list(path, recurse=False)
+            # dirent, lock already unicode in Python 2
             for dirent, lock in entries:
                 if dirent["path"] != path:
                     name = dirent["path"].replace(path + '/', "")

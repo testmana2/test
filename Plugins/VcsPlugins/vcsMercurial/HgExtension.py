@@ -7,6 +7,8 @@
 Module implementing the base class for Mercurial extension interfaces.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 
 
@@ -20,7 +22,7 @@ class HgExtension(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(HgExtension, self).__init__(vcs)
         
         self.vcs = vcs
     

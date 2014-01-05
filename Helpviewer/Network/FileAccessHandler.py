@@ -7,6 +7,8 @@
 Module implementing a scheme access handler for file.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QFileInfo
 from PyQt4.QtNetwork import QNetworkAccessManager
 
@@ -23,7 +25,7 @@ class FileAccessHandler(SchemeAccessHandler):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(FileAccessHandler, self).__init__(parent)
     
     def createRequest(self, op, request, outgoingData=None):
         """

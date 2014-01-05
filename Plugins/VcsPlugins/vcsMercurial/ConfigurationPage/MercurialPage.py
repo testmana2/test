@@ -7,6 +7,8 @@
 Module implementing the Mercurial configuration page.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -27,7 +29,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         
         @param plugin reference to the plugin object
         """
-        super().__init__()
+        super(MercurialPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("MercurialPage")
         

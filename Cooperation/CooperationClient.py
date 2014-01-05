@@ -7,6 +7,8 @@
 Module implementing the client of the cooperation package.
 """
 
+from __future__ import unicode_literals
+
 import collections
 
 from PyQt4.QtCore import QObject, pyqtSignal, QProcess, QRegExp
@@ -47,7 +49,7 @@ class CooperationClient(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(CooperationClient, self).__init__(parent)
         
         self.__chatWidget = parent
         

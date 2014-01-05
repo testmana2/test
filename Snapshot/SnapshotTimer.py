@@ -7,6 +7,8 @@
 Module implementing the snapshot timer widget.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, QTimer, QRect
 from PyQt4.QtGui import QWidget, QApplication, QPainter, QToolTip, QPalette
 
@@ -23,7 +25,7 @@ class SnapshotTimer(QWidget):
         """
         Constructor
         """
-        super().__init__(None)
+        super(SnapshotTimer, self).__init__(None)
         
         self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint |
                             Qt.X11BypassWindowManagerHint)

@@ -7,6 +7,8 @@
 Module implementing the Breakpoint model.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
 
 
@@ -22,7 +24,7 @@ class BreakPointModel(QAbstractItemModel):
         
         @param parent reference to the parent widget (QObject)
         """
-        super().__init__(parent)
+        super(BreakPointModel, self).__init__(parent)
         
         self.breakpoints = []
         self.header = [

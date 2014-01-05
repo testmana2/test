@@ -7,6 +7,8 @@
 Module implementing a widget to show SSL information.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import qVersion, Qt, QUrl, QPoint
 from PyQt4.QtGui import QMenu, QGridLayout, QLabel, QSizePolicy
 from PyQt4.QtNetwork import QSsl, QSslConfiguration, QSslCertificate
@@ -27,7 +29,7 @@ class E5SslInfoWidget(QMenu):
         @param configuration SSL configuration (QSslConfiguration)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SslInfoWidget, self).__init__(parent)
         
         self.__url = QUrl(url)
         self.__configuration = QSslConfiguration(configuration)

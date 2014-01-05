@@ -7,6 +7,8 @@
 Module implementing a dialog to show all saved user agent settings.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 
 import Helpviewer.HelpWindow
@@ -26,7 +28,7 @@ class UserAgentsDialog(QDialog, Ui_UserAgentsDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(UserAgentsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.removeButton.clicked[()].connect(

@@ -7,6 +7,8 @@
 Module implementing a model for user agent management.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QModelIndex, QAbstractTableModel
 
 
@@ -21,7 +23,7 @@ class UserAgentModel(QAbstractTableModel):
         @param manager reference to the user agent manager (UserAgentManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(UserAgentModel, self).__init__(parent)
         
         self.__manager = manager
         self.__manager.changed.connect(self.__userAgentsChanged)

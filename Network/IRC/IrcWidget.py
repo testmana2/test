@@ -7,6 +7,12 @@
 Module implementing the IRC window.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import re
 import logging
 
@@ -50,7 +56,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcWidget, self).__init__(parent)
         self.setupUi(self)
         
         from .IrcNetworkManager import IrcNetworkManager

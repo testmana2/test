@@ -7,6 +7,8 @@
 Module implementing the IRC data structures and their manager.
 """
 
+from __future__ import unicode_literals
+
 import copy
 
 from PyQt4.QtCore import pyqtSignal, QObject, QCoreApplication
@@ -38,7 +40,7 @@ class IrcIdentity(object):
         
         @param name name of the identity (string)
         """
-        super().__init__()
+        super(IrcIdentity, self).__init__()
         
         self.__name = name
         self.__realName = ""
@@ -293,7 +295,7 @@ class IrcServer(object):
         
         @param name name of the server (string)
         """
-        super().__init__()
+        super(IrcServer, self).__init__()
         
         self.__server = name
         self.__port = IrcServer.DefaultPort
@@ -397,7 +399,7 @@ class IrcChannel(object):
         
         @param name name of the network (string)
         """
-        super().__init__()
+        super(IrcChannel, self).__init__()
         
         self.__name = name
         self.__key = ""
@@ -475,7 +477,7 @@ class IrcNetwork(object):
         
         @param name name of the network (string)
         """
-        super().__init__()
+        super(IrcNetwork, self).__init__()
         
         self.__name = name
         self.__identity = ""
@@ -726,7 +728,7 @@ class IrcNetworkManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(IrcNetworkManager, self).__init__(parent)
         
         self.__loaded = False
         self.__saveTimer = AutoSaver(self, self.save)

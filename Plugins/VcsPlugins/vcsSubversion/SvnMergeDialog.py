@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a merge operation.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QRegExp
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -30,7 +32,7 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         @param force flag indicating a forced merge (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnMergeDialog, self).__init__(parent)
         self.setupUi(self)
        
         self.forceCheckBox.setChecked(force)

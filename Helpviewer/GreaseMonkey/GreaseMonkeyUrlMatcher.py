@@ -7,6 +7,8 @@
 Module implementing the GreaseMonkey URL matcher.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 from PyQt4.QtCore import Qt, QRegExp

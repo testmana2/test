@@ -7,6 +7,8 @@
 Module implementing a network reply delegate allowing to check redirects.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, QObject
 from PyQt4.QtNetwork import QNetworkRequest
 
@@ -26,7 +28,7 @@ class FollowRedirectReply(QObject):
             (QNetworkAccessManager)
         @keyparam maxRedirects maximum allowed redirects (integer)
         """
-        super().__init__()
+        super(FollowRedirectReply, self).__init__()
         
         self.__manager = manager
         self.__maxRedirects = maxRedirects

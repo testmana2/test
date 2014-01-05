@@ -7,6 +7,8 @@
 Module implementing the VCS status monitor thread class for Subversion.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 import pysvn

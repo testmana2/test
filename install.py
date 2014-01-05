@@ -9,6 +9,17 @@
 Installation script for the eric5 IDE and all eric5 related tools.
 """
 
+from __future__ import unicode_literals
+from __future__ import print_function
+try:
+    import cStringIO as io
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    sip.setapi('QTextStream',  2)
+except (ImportError):
+    import io    # __IGNORE_WARNING__
+
 import sys
 import os
 import re
@@ -18,6 +29,7 @@ import glob
 import shutil
 import fnmatch
 import distutils.sysconfig
+import codecs
 
 # Define the globals.
 progName = None
@@ -74,9 +86,10 @@ def exit(rcode=0):
     global currDir
     
     if sys.platform.startswith("win"):
+        # different meaning of input between Py2 and Py3
         try:
             input("Press enter to continue...")
-        except EOFError:
+        except (EOFError, SyntaxError):
             pass
     
     os.chdir(currDir)
@@ -184,7 +197,9 @@ def copyToFile(name, text):
     @param name the name of the file.
     @param text the contents to copy to the file.
     """
-    f = open(name, "w", encoding="utf-8")
+    f = open(name, "w")
+    if sys.version_info[0] == 2:
+        text = codecs.encode(text, "utf-8")
     f.write(text)
     f.close()
 
@@ -308,7 +323,7 @@ def createGlobalPluginsDir():
     if not os.path.exists(fname):
         if not os.path.exists(pdir):
             os.mkdir(pdir,  0o755)
-        f = open(fname, "w", encoding="utf-8")
+        f = open(fname, "w")
         f.write(
 '''# -*- coding: utf-8 -*-
 
@@ -827,7 +842,11 @@ def doDependancyChecks():
     print('Checking dependencies')
     
     # perform dependency checks
-    if sys.version_info < (3, 1, 0):
+    if sys.version_info < (2, 6, 0):
+        print('Sorry, you must have Python 2.6.0 or higher or '
+              'Python 3.1.0 or higher.')
+        exit(5)
+    elif sys.version_info < (3, 1, 0) and sys.version_info[0] == 3:
         print('Sorry, you must have Python 3.1.0 or higher.')
         exit(5)
     if sys.version_info > (3, 9, 9):
@@ -838,7 +857,7 @@ def doDependancyChecks():
     try:
         import xml.etree            # __IGNORE_WARNING__
     except ImportError as msg:
-        print('Your Python3 installation is missing the XML module.')
+        print('Your Python installation is missing the XML module.')
         print('Please install it and try again.')
         exit(5)
     
@@ -1064,8 +1083,9 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, macAppBundleName, macPythonExe
     
-    if sys.version_info > (3, 9, 9) or sys.version_info < (3, 0, 0):
-        print('Sorry, eric5 requires Python 3 for running.')
+    if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
+        print('Sorry, eric5 requires at least Python 2.6 or '
+              'Python 3 for running.')
         exit(5)
     
     progName = os.path.basename(argv[0])
@@ -1169,12 +1189,13 @@ def main(argv):
     
     if doCompile:
         print("\nCompiling source files ...")
+        # Hide compile errors (mainly because of Py2/Py3 differences)
+        sys.stdout = io.StringIO()
         if distDir:
             compileall.compile_dir(
                 sourceDir,
                 ddir=os.path.join(distDir, modDir, cfg['ericDir']),
-                rx=re.compile(
-                    r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
+                rx=re.compile(r"DebugClients[\\/]Python[\\/]"),
                 quiet=True)
             py_compile.compile(
                 configName,
@@ -1183,11 +1204,11 @@ def main(argv):
             compileall.compile_dir(
                 sourceDir,
                 ddir=os.path.join(modDir, cfg['ericDir']),
-                rx=re.compile(
-                    r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
+                rx=re.compile(r"DebugClients[\\/]Python[\\/]"),
                 quiet=True)
             py_compile.compile(configName,
                                dfile=os.path.join(modDir, "eric5config.py"))
+        sys.stdout = sys.__stdout__
     print("\nInstalling eric5 ...")
     res = installEric()
     

@@ -7,6 +7,8 @@
 Module implementing a widget to show numbers in different formats.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel, \
     qVersion
 from PyQt4.QtGui import QWidget, QHeaderView
@@ -28,7 +30,7 @@ class BinaryModel(QAbstractTableModel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(BinaryModel, self).__init__(parent)
         
         self.__bits = 0
         self.__value = 0
@@ -163,7 +165,7 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(NumbersWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

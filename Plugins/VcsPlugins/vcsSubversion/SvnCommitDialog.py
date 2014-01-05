@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the commit message.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QDialogButtonBox
 
@@ -32,7 +34,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent, Qt.WindowFlags(Qt.Window))
+        super(SvnCommitDialog, self).__init__(
+            parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
         if vcs.version < (1, 5, 0):

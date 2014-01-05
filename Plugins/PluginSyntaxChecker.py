@@ -7,6 +7,8 @@
 Module implementing the Syntax Checker plugin.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QObject
@@ -45,7 +47,7 @@ class SyntaxCheckerPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(SyntaxCheckerPlugin, self).__init__(ui)
         self.__ui = ui
         self.__initialize()
         

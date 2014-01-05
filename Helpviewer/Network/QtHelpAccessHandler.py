@@ -7,6 +7,8 @@
 Module implementing a scheme access handler for QtHelp.
 """
 
+from __future__ import unicode_literals
+
 import mimetypes
 import os
 

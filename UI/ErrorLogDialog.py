@@ -7,6 +7,8 @@
 Module implementing a dialog to display an error log.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -28,7 +30,7 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
             (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ErrorLogDialog, self).__init__(parent)
         self.setupUi(self)
         
         pixmap = self.style().standardIcon(QStyle.SP_MessageBoxQuestion)\

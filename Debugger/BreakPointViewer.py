@@ -7,6 +7,8 @@
 Module implementing the Breakpoint viewer widget.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, qVersion
 from PyQt4.QtGui import QTreeView, QAbstractItemView, QSortFilterProxyModel, \
     QHeaderView, QItemSelectionModel, QMenu, QDialog
@@ -31,7 +33,7 @@ class BreakPointViewer(QTreeView):
         
         @param parent the parent (QWidget)
         """
-        super().__init__(parent)
+        super(BreakPointViewer, self).__init__(parent)
         self.setObjectName("BreakPointViewer")
         
         self.__model = None
@@ -65,7 +67,7 @@ class BreakPointViewer(QTreeView):
         self.sortingModel = QSortFilterProxyModel()
         self.sortingModel.setDynamicSortFilter(True)
         self.sortingModel.setSourceModel(self.__model)
-        super().setModel(self.sortingModel)
+        super(BreakPointViewer, self).setModel(self.sortingModel)
         
         header = self.header()
         header.setSortIndicator(0, Qt.AscendingOrder)

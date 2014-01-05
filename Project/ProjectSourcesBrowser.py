@@ -7,6 +7,8 @@
 Module implementing a class used to display the Sources part of the project.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal

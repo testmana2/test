@@ -7,6 +7,8 @@
 Module implementing a dialog to select code style message codes.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
@@ -32,7 +34,7 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
             issues (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CodeStyleCodeSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         codeList = [code.strip() for code in codes.split(",") if code.strip()]

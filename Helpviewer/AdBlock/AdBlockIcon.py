@@ -7,6 +7,8 @@
 Module implementing the AdBlock icon for the main window status bar.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QAction, QMenu
 
@@ -25,7 +27,7 @@ class AdBlockIcon(E5ClickableLabel):
         
         @param parent reference to the parent widget (HelpWindow)
         """
-        super().__init__(parent)
+        super(AdBlockIcon, self).__init__(parent)
         
         self.__mw = parent
         self.__menuAction = None

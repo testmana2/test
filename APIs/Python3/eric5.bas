@@ -64,6 +64,7 @@ ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
 Class ClbrBaseClasses.Class VisibilityMixin
+ClassDefinition Definition
 ClassItem UMLItem
 ClassModel UMLModel
 ClassScope Scope
@@ -127,6 +128,7 @@ DebuggerPropertiesWriter XMLStreamWriterBase
 DebuggerPython3Page ConfigurationPageBase Ui_DebuggerPython3Page
 DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
+Definition Binding
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
 DiffReport StandardReport
@@ -240,6 +242,7 @@ FeedsDialog QDialog Ui_FeedsDialog
 FeedsManager QDialog Ui_FeedsManager
 Fetch HgExtension
 FetchProjectHelper HgExtensionProjectHelper
+File file
 FileAccessHandler SchemeAccessHandler
 FileDialogWizard QObject
 FileDialogWizardDialog QDialog Ui_FileDialogWizardDialog
@@ -571,7 +574,9 @@ RbModule Class
 Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
 RecursionError OverflowError ValueError
+Redefined Message
 RedefinedFunction Message
+RedefinedInListComp Message
 RedefinedWhileUnused Message
 Redirector QObject
 RemoveBookmarksCommand QUndoCommand

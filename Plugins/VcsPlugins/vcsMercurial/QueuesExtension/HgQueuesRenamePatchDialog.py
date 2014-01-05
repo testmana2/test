@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data to rename a patch.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -25,7 +27,7 @@ class HgQueuesRenamePatchDialog(QDialog, Ui_HgQueuesRenamePatchDialog):
         @param patchesList list of patches to select from (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesRenamePatchDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.currentButton.setText(

@@ -9,6 +9,8 @@ Module implementing a LED widget.
 It was inspired by KLed.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QSize
 from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, \
     QBrush
@@ -31,7 +33,7 @@ class E5Led(QWidget):
         @param shape shape of the LED (E5LedCircular, E5LedRectangular)
         @param rectRatio ratio width to height, if shape is rectangular (float)
         """
-        super().__init__(parent)
+        super(E5Led, self).__init__(parent)
         
         if color is None:
             color = QColor("green")

@@ -7,6 +7,8 @@
 Module implementing a configuration dialog for the tools menu.
 """
 
+from __future__ import unicode_literals
+
 import copy
 
 from PyQt4.QtCore import Qt, pyqtSlot
@@ -30,7 +32,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         @param toollist list of configured tools
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ToolConfigurationDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconCompleter = E5FileCompleter(self.iconEdit)

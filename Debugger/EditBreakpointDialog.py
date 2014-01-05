@@ -7,6 +7,8 @@
 Module implementing a dialog to edit breakpoint properties.
 """
 
+from __future__ import unicode_literals
+
 import os.path
 
 from PyQt4.QtCore import pyqtSlot
@@ -41,7 +43,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         @param filenameHistory list of recently used file names
             (list of strings)
         """
-        super().__init__(parent)
+        super(EditBreakpointDialog, self).__init__(parent)
         self.setupUi(self)
         if name:
             self.setObjectName(name)

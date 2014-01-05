@@ -7,6 +7,8 @@
 Module implementing a button class to be used with E5LineEdit.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QPoint, QPointF
 from PyQt4.QtGui import QAbstractButton, QPainter, QPainterPath
 
@@ -21,7 +23,7 @@ class E5LineEditButton(QAbstractButton):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5LineEditButton, self).__init__(parent)
         
         self.__menu = None
         self.__image = None
@@ -59,7 +61,7 @@ class E5LineEditButton(QAbstractButton):
             self.__image = None
         else:
             self.__image = icon.pixmap(16, 16).toImage()
-        super().setIcon(icon)
+        super(E5LineEditButton, self).setIcon(icon)
     
     def __clicked(self):
         """

@@ -7,6 +7,12 @@
 Module implementing a dialog to show all guards for all patches.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess, QCoreApplication
@@ -29,7 +35,7 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
         @param vcs reference to the VCS object (Hg)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesListAllGuardsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.vcs = vcs

@@ -7,6 +7,8 @@
 Module implementing functions dealing with keyboard shortcuts.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QFile, QIODevice
 from PyQt4.QtGui import QKeySequence, QApplication
 

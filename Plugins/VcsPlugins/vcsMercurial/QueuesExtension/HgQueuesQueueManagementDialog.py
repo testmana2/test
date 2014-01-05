@@ -7,6 +7,12 @@
 Module implementing a dialog used by the queue management functions.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSlot, QProcess, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, \
     QListWidgetItem, QAbstractButton
@@ -39,7 +45,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         @param parent reference to the parent widget (QWidget)
         @exception ValueError raised to indicate an invalid dialog mode
         """
-        super().__init__(parent)
+        super(HgQueuesQueueManagementDialog, self).__init__(parent)
         self.setupUi(self)
         
         if mode not in (HgQueuesQueueManagementDialog.NO_INPUT,

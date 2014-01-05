@@ -7,6 +7,8 @@
 Module implementing the file dialog wizard dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -33,7 +35,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         @param pyqtVariant variant of PyQt (integer; 0, 4 or 5)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(FileDialogWizardDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.eStartWithCompleter = E5FileCompleter(self.eStartWith)

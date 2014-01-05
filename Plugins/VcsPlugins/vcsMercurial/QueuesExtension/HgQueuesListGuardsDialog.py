@@ -7,6 +7,12 @@
 Module implementing a dialog to show the guards of a selected patch.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QCoreApplication
@@ -30,7 +36,7 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         @param patchesList list of patches (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesListGuardsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.process = QProcess()

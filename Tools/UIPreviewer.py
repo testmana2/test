@@ -7,6 +7,8 @@
 Module implementing the UI Previewer main window.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import qVersion, QDir, QFileInfo, QEvent, QSize, Qt
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
     QCursor, QPrinter, QKeySequence, QPrintDialog, QWhatsThis, QPixmap, \
@@ -38,7 +40,7 @@ class UIPreviewer(E5MainWindow):
         self.mainWidget = None
         self.currentFile = QDir.currentPath()
         
-        super().__init__(parent)
+        super(UIPreviewer, self).__init__(parent)
         if not name:
             self.setObjectName("UIPreviewer")
         else:
@@ -115,7 +117,7 @@ class UIPreviewer(E5MainWindow):
         the main window has been shown. This way, previewing a dialog
         doesn't interfere with showing the main window.
         """
-        super().show()
+        super(UIPreviewer, self).show()
         if self.fileToLoad is not None:
             fn, self.fileToLoad = (self.fileToLoad, None)
             self.__loadFile(fn)

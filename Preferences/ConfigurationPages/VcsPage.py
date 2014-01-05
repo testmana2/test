@@ -7,6 +7,8 @@
 Module implementing the VCS configuration page.
 """
 
+from __future__ import unicode_literals
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_VcsPage import Ui_VcsPage
 
@@ -21,7 +23,7 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         """
         Constructor
         """
-        super().__init__()
+        super(VcsPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("VcsPage")
         

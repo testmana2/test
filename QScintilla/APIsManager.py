@@ -7,6 +7,8 @@
 Module implementing the APIsManager.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QDir, QFileInfo, pyqtSignal, QObject
@@ -41,7 +43,7 @@ class APIs(QObject):
             for a preparation process (boolean)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(APIs, self).__init__(parent)
         self.setObjectName("APIs_{0}".format(language))
         
         self.__inPreparation = False
@@ -222,7 +224,7 @@ class APIsManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(APIsManager, self).__init__(parent)
         self.setObjectName("APIsManager")
         
         self.__apis = {}

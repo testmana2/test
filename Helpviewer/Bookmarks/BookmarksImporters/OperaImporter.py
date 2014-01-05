@@ -7,6 +7,8 @@
 Module implementing an importer for Opera bookmarks.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
@@ -64,7 +66,7 @@ class OperaImporter(BookmarksImporter):
         @param id source ID (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(id, parent)
+        super(OperaImporter, self).__init__(id, parent)
         
         self.__fileName = ""
     

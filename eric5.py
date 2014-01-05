@@ -11,10 +11,21 @@ This is the main Python script that performs the necessary initialization
 of the IDE and starts the Qt event loop.
 """
 
+from __future__ import unicode_literals
+
+try:  # Only for Py2
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    sip.setapi('QTextStream', 2)
+    import StringIO as io
+    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+except (ImportError):
+    import io       # __IGNORE_WARNING__
+
 import sys
 import os
 import traceback
-import io
 import time
 import logging
 

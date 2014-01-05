@@ -7,6 +7,8 @@
 Module implementing a browser with class browsing capabilities.
 """
 
+from __future__ import unicode_literals
+
 import os
 import mimetypes
 
@@ -65,7 +67,7 @@ class Browser(QTreeView):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Browser, self).__init__(parent)
         
         self.setWindowTitle(QApplication.translate('Browser', 'File-Browser'))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

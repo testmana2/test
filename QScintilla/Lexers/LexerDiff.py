@@ -7,6 +7,8 @@
 Module implementing a Diff lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerDiff
 
 from .Lexer import Lexer
@@ -22,7 +24,7 @@ class LexerDiff(QsciLexerDiff, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        super(LexerDiff, self).__init__(parent)
         Lexer.__init__(self)
     
     def isCommentStyle(self, style):

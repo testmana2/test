@@ -7,6 +7,8 @@
 Module implementing a typing completer for Python.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 from PyQt4.QtCore import QRegExp

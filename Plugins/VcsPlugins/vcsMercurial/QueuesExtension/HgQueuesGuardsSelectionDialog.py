@@ -7,6 +7,8 @@
 Module implementing a dialog to select a list of guards.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, \
     QAbstractItemView
 
@@ -26,7 +28,7 @@ class HgQueuesGuardsSelectionDialog(QDialog, Ui_HgQueuesGuardsSelectionDialog):
         @param listOnly flag indicating to only list the guards (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesGuardsSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         for guard in guards:

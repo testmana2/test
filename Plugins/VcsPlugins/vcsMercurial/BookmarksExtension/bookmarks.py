@@ -7,6 +7,12 @@
 Module implementing the bookmarks extension interface.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess
@@ -28,7 +34,7 @@ class Bookmarks(HgExtension):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(Bookmarks, self).__init__(vcs)
         
         self.bookmarksListDlg = None
         self.bookmarksInOutDlg = None

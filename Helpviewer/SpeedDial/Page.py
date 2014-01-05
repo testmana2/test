@@ -8,6 +8,9 @@ Module implementing a structure to hold the data for a speed dial page.
 """
 
 
+from __future__ import unicode_literals
+
+
 class Page(object):
     """
     Class to hold the data for a speed dial page.

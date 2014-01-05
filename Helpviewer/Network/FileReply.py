@@ -7,6 +7,12 @@
 Module implementing a network reply class for directory resources.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 from PyQt4.QtCore import Qt, QByteArray, QTimer, QDir, QIODevice, QUrl, QBuffer
 from PyQt4.QtGui import QPixmap
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
@@ -105,7 +111,7 @@ class FileReply(QNetworkReply):
         @param url requested FTP URL (QUrl)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(FileReply, self).__init__(parent)
         
         self.__content = QByteArray()
         self.__units = ["Bytes", "KB", "MB", "GB", "TB",

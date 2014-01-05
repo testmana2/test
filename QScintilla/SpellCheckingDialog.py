@@ -7,6 +7,8 @@
 Module implementing the spell checking dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -28,7 +30,7 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         @param endPos end position for spell checking (integer)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SpellCheckingDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__spell = spellChecker

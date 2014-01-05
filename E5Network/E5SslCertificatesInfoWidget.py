@@ -7,6 +7,12 @@
 Module implementing a widget to show SSL certificate infos.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSlot, QCryptographicHash, QDateTime, qVersion
 from PyQt4.QtGui import QWidget
 from PyQt4.QtNetwork import QSslCertificate
@@ -26,7 +32,7 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SslCertificatesInfoWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.__chain = []

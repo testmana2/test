@@ -7,6 +7,12 @@
 Module implementing the speed dial.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, pyqtSlot, QObject, QCryptographicHash, \
@@ -35,7 +41,7 @@ class SpeedDial(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(SpeedDial, self).__init__(parent)
         
         self.__regenerateScript = True
         

@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a copy operation.
 """
 
+from __future__ import unicode_literals
+
 import os.path
 
 from PyQt4.QtCore import pyqtSlot
@@ -34,7 +36,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         @param move flag indicating a move operation (boolean)
         @param force flag indicating a forced operation (boolean)
         """
-        super().__init__(parent)
+        super(SvnCopyDialog, self).__init__(parent)
         self.setupUi(self)
        
         self.source = source

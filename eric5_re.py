@@ -12,6 +12,15 @@ of the PyRegExp wizard module and starts the Qt event loop. This is a
 standalone version of the integrated PyRegExp wizard.
 """
 
+from __future__ import unicode_literals
+try:  # Only for Py2
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+except (ImportError):
+    pass
+
 import sys
 
 for arg in sys.argv:

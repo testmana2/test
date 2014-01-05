@@ -24,6 +24,8 @@ Module implementing classes for encryption according
 Advanced Encryption Standard.
 """
 
+from __future__ import unicode_literals
+
 import os
 import math
 

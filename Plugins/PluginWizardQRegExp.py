@@ -7,6 +7,8 @@
 Module implementing the QRegExp wizard plugin.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
@@ -40,7 +42,7 @@ class QRegExpWizard(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(QRegExpWizard, self).__init__(ui)
         self.__ui = ui
 
     def activate(self):

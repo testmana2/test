@@ -7,6 +7,8 @@
 Module implementing HelpVirusTotalPage.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -25,7 +27,7 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__()
+        super(HelpVirusTotalPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("HelpVirusTotalPage")
         

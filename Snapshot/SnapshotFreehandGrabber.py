@@ -7,6 +7,8 @@
 Module implementing a grabber widget for a freehand snapshot region.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
 from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \
     QPainter, QPalette, QToolTip, QPolygon, QPen, QBrush, QPaintEngine
@@ -48,7 +50,7 @@ class SnapshotFreehandGrabber(QWidget):
         """
         Constructor
         """
-        super().__init__(
+        super(SnapshotFreehandGrabber, self).__init__(
             None,
             Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint |
             Qt.FramelessWindowHint | Qt.Tool)

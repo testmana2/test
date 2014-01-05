@@ -7,6 +7,8 @@
 Module implementing the watch expression viewer widget.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QModelIndex, qVersion
 from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, \
     QSortFilterProxyModel, QHeaderView, QItemSelectionModel, QDialog
@@ -30,7 +32,7 @@ class WatchPointViewer(QTreeView):
         
         @param parent the parent (QWidget)
         """
-        super().__init__(parent)
+        super(WatchPointViewer, self).__init__(parent)
         self.setObjectName("WatchExpressionViewer")
         
         self.__model = None
@@ -60,7 +62,7 @@ class WatchPointViewer(QTreeView):
         self.sortingModel = QSortFilterProxyModel()
         self.sortingModel.setDynamicSortFilter(True)
         self.sortingModel.setSourceModel(self.__model)
-        super().setModel(self.sortingModel)
+        super(WatchPointViewer, self).setModel(self.sortingModel)
         
         header = self.header()
         header.setSortIndicator(0, Qt.AscendingOrder)

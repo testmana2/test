@@ -7,6 +7,8 @@
 Module implementing a Fortran lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerFortran77
 
 from .Lexer import Lexer
@@ -23,7 +25,7 @@ class LexerFortran77(QsciLexerFortran77, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        super(LexerFortran77, self).__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "c"

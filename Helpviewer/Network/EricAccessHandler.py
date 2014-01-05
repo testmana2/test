@@ -7,6 +7,8 @@
 Module implementing a scheme access handler for Python resources.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QFile, QByteArray
 
 from .SchemeAccessHandler import SchemeAccessHandler

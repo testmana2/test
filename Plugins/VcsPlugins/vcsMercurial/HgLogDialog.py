@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the hg log command process.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QUrl, QByteArray
@@ -41,7 +47,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgLogDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -518,4 +524,4 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgLogDialog, self).keyPressEvent(evt)

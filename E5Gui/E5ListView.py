@@ -7,6 +7,8 @@
 Module implementing specialized list views.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QListView, QItemSelectionModel
 
@@ -26,7 +28,7 @@ class E5ListView(QListView):
             self.removeSelected()
             evt.setAccepted(True)
         else:
-            super().keyPressEvent(evt)
+            super(E5ListView, self).keyPressEvent(evt)
     
     def removeSelected(self):
         """

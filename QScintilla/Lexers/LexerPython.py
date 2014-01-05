@@ -7,6 +7,8 @@
 Module implementing a Python lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 from PyQt4.Qsci import QsciLexerPython,  QsciScintilla
@@ -26,7 +28,7 @@ class LexerPython(QsciLexerPython, Lexer):
         @param variant name of the language variant (string)
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        super(LexerPython, self).__init__(parent)
         Lexer.__init__(self)
         
         self.variant = variant

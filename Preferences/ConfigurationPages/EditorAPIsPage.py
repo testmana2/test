@@ -7,6 +7,8 @@
 Module implementing the Editor APIs configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QDir, pyqtSlot, QFileInfo
 from PyQt4.QtGui import QInputDialog
 
@@ -29,7 +31,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorAPIsPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorAPIsPage")
         

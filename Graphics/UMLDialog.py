@@ -7,6 +7,8 @@
 Module implementing a dialog showing UML like diagrams.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QFileInfo
 from PyQt4.QtGui import QAction, QToolBar, QGraphicsScene
 
@@ -43,7 +45,7 @@ class UMLDialog(E5MainWindow):
             builder (boolean)
         @keyparam kwargs diagram specific data
         """
-        super().__init__(parent)
+        super(UMLDialog, self).__init__(parent)
         self.setObjectName("UMLDialog")
         
         self.__diagramType = diagramType
@@ -142,7 +144,7 @@ class UMLDialog(E5MainWindow):
         """
         if not fromFile and self.builder:
             self.builder.buildDiagram()
-        super().show()
+        super(UMLDialog, self).show()
     
     def __relayout(self):
         """

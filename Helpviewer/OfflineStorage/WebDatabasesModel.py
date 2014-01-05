@@ -7,6 +7,8 @@
 Module implementing the web databases model.
 """
 
+from __future__ import unicode_literals
+
 import sys
 
 from PyQt4.QtCore import QAbstractItemModel, QModelIndex, Qt
@@ -23,7 +25,7 @@ class WebDatabasesModel(QAbstractItemModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(WebDatabasesModel, self).__init__(parent)
         self.__headers = [
             self.trUtf8("Name"),
             self.trUtf8("Size")

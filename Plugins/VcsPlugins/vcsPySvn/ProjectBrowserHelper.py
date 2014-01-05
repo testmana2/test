@@ -6,6 +6,8 @@
 """
 Module implementing the VCS project browser helper for subversion.
 """
+from __future__ import unicode_literals
+
 import os
 
 import pysvn

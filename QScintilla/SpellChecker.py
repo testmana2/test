@@ -9,6 +9,8 @@ Module implementing the spell checker for the editor component.
 The spell checker is based on pyenchant.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QTimer, QObject
@@ -43,7 +45,7 @@ class SpellChecker(QObject):
         @keyparam checkRegion reference to a function to check for a valid
             region
         """
-        super().__init__(editor)
+        super(SpellChecker, self).__init__(editor)
         
         self.editor = editor
         self.indicator = indicator

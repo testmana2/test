@@ -7,6 +7,8 @@
 Module implementing the shell history dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -27,7 +29,7 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         @param vm reference to the viewmanager object
         @param shell reference to the shell object
         """
-        super().__init__(shell)
+        super(ShellHistoryDialog, self).__init__(shell)
         self.setupUi(self)
         
         self.historyList.addItems(history)

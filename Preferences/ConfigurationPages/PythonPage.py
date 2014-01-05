@@ -7,6 +7,8 @@
 Module implementing the Python configuration page.
 """
 
+from __future__ import unicode_literals
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_PythonPage import Ui_PythonPage
 
@@ -22,7 +24,7 @@ class PythonPage(ConfigurationPageBase, Ui_PythonPage):
         """
         Constructor
         """
-        super().__init__()
+        super(PythonPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("PythonPage")
         

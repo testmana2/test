@@ -7,6 +7,8 @@
 Module implementing the Multi Project configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -26,7 +28,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         """
         Constructor
         """
-        super().__init__()
+        super(MultiProjectPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("MultiProjectPage")
         

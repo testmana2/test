@@ -7,6 +7,12 @@
 Module implementing a dialog to show a list of tags or branches.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QTimer, QProcess, QRegExp, Qt, pyqtSlot
@@ -31,7 +37,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnTagBranchListDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -335,4 +341,4 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnTagBranchListDialog, self).keyPressEvent(evt)

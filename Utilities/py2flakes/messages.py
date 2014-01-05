@@ -5,11 +5,22 @@
 # Original (c) 2005 Divmod, Inc.  See LICENSE file for details
 #
 # This module is based on pyflakes for Python2 but was heavily hacked to
-# work within eric5
+# work within Eric5 and Qt (translatable messages)
 
 """
-Module implementing the messages for pyflakes.
+Module implementing the messages for py2flakes.
 """
+
+
+def QT_TRANSLATE_NOOP(mod, txt):
+    """
+    Function to tell 'lupdate' which strings to keep for translation.
+    
+    @param mod module name
+    @param txt translatable string
+    @return the untranslated! string
+    """
+    return txt
 
 
 class Message(object):
@@ -45,14 +56,16 @@ class Message(object):
         @return tuple containing file name, line number and message
             (string, integer, string)
         """
-        return (self.filename, self.lineno, self.message % self.message_args)
+        return (self.filename, self.lineno, self.message, self.message_args)
 
 
 class UnusedImport(Message):
     """
     Class defining the "Unused Import" message.
     """
-    message = '%r imported but unused'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        '{0!r} imported but unused.')
     
     def __init__(self, filename, lineno, name):
         """
@@ -70,8 +83,31 @@ class RedefinedWhileUnused(Message):
     """
     Class defining the "Redefined While Unused" message.
     """
-    message = 'redefinition of unused %r from line %r'
-    
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Redefinition of unused {0!r} from line {1!r}.')
+
+    def __init__(self, filename, lineno, name, orig_lineno):
+        """
+        Constructor
+        
+        @param filename name of the file (string)
+        @param lineno line number (integer)
+        @param name name of the redefined object (string)
+        @param orig_lineno line number of the original definition (integer)
+        """
+        Message.__init__(self, filename, lineno)
+        self.message_args = (name, orig_lineno)
+
+
+class RedefinedInListComp(Message):
+    """
+    Class defining the list comprehension redefinition.
+    """
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'List comprehension redefines {0!r} from line {1!r}.')
+
     def __init__(self, filename, lineno, name, orig_lineno):
         """
         Constructor
@@ -89,7 +125,9 @@ class ImportShadowedByLoopVar(Message):
     """
     Class defining the "Import Shadowed By Loop Var" message.
     """
-    message = 'import %r from line %r shadowed by loop variable'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Import {0!r} from line {1!r} shadowed by loop variable.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
         """
@@ -108,7 +146,9 @@ class ImportStarUsed(Message):
     """
     Class defining the "Import Star Used" message.
     """
-    message = "'from %s import *' used; unable to detect undefined names"
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        "'from {0} import *' used; unable to detect undefined names.")
     
     def __init__(self, filename, lineno, modname):
         """
@@ -126,7 +166,7 @@ class UndefinedName(Message):
     """
     Class defining the "Undefined Name" message.
     """
-    message = 'undefined name %r'
+    message = QT_TRANSLATE_NOOP('py3Flakes', 'Undefined name {0!r}.')
     
     def __init__(self, filename, lineno, name):
         """
@@ -144,7 +184,9 @@ class UndefinedExport(Message):
     """
     Class defining the "Undefined Export" message.
     """
-    message = 'undefined name %r in __all__'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Undefined name {0!r} in __all__.')
     
     def __init__(self, filename, lineno, name):
         """
@@ -162,8 +204,10 @@ class UndefinedLocal(Message):
     """
     Class defining the "Undefined Local Variable" message.
     """
-    message = "local variable %r (defined in enclosing scope on line %r)" \
-              " referenced before assignment"
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        "Local variable {0!r} (defined in enclosing scope on line {1!r})"
+        " referenced before assignment.")
     
     def __init__(self, filename, lineno, name, orig_lineno):
         """
@@ -182,7 +226,9 @@ class DuplicateArgument(Message):
     """
     Class defining the "Duplicate Argument" message.
     """
-    message = 'duplicate argument %r in function definition'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Duplicate argument {0!r} in function definition.')
     
     def __init__(self, filename, lineno, name):
         """
@@ -196,11 +242,13 @@ class DuplicateArgument(Message):
         self.message_args = (name,)
 
 
-class RedefinedFunction(Message):
+class Redefined(Message):
     """
-    Class defining the "Redefined Function" message.
+    Class defining the "Redefined" message.
     """
-    message = 'redefinition of function %r from line %r'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Redefinition of {0!r} from line {1!r}.')
     
     def __init__(self, filename, lineno, name, orig_lineno):
         """
@@ -219,7 +267,9 @@ class LateFutureImport(Message):
     """
     Class defining the "Late Future Import" message.
     """
-    message = 'future import(s) %r after other statements'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Future import(s) {0!r} after other statements.')
     
     def __init__(self, filename, lineno, names):
         """
@@ -240,7 +290,9 @@ class UnusedVariable(Message):
     Indicates that a variable has been explicitly assigned to but not actually
     used.
     """
-    message = 'local variable %r is assigned to but never used'
+    message = QT_TRANSLATE_NOOP(
+        'py3Flakes',
+        'Local variable {0!r} is assigned to but never used.')
     
     def __init__(self, filename, lineno, names):
         """
@@ -248,7 +300,7 @@ class UnusedVariable(Message):
         
         @param filename name of the file (string)
         @param lineno line number (integer)
-        @param names name of the unused variable (string)
+        @param names names of the unused variable (string)
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (names,)

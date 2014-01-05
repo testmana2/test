@@ -7,6 +7,8 @@
 Module implementing the Editor Search configuration page.
 """
 
+from __future__ import unicode_literals
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSearchPage import Ui_EditorSearchPage
 
@@ -21,7 +23,7 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorSearchPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorSearchPage")
         

@@ -8,6 +8,12 @@ Module implementing the <a href="http://www.virustotal.com">VirusTotal</a>
 API class.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import json
 
 from PyQt4.QtCore import QObject, QUrl, QByteArray, pyqtSignal
@@ -61,7 +67,7 @@ class VirusTotalAPI(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(VirusTotalAPI, self).__init__(parent)
         
         self.__replies = []
         

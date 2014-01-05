@@ -7,6 +7,8 @@
 Module implementing a dialog to configure the offline storage.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 from PyQt4.QtWebKit import QWebSettings
@@ -26,7 +28,7 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(OfflineStorageConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.databaseEnabledCheckBox.setChecked(

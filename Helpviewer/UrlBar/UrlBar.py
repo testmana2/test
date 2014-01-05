@@ -7,6 +7,12 @@
 Module implementing the URL bar widget.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime, qVersion
 from PyQt4.QtGui import QColor, QPalette, QLinearGradient, QIcon, QDialog, \
     QApplication
@@ -327,8 +333,8 @@ class UrlBar(E5LineEdit):
                 gradient = QLinearGradient(
                     QPointF(0, 0), QPointF(self.width(), 0))
                 gradient.setColorAt(0, loadingColor)
-                gradient.setColorAt(progress / 100 - 0.000001, loadingColor)
-                gradient.setColorAt(progress / 100, backgroundColor)
+                gradient.setColorAt(progress / 100.0 - 0.000001, loadingColor)
+                gradient.setColorAt(progress / 100.0, backgroundColor)
                 p.setBrush(QPalette.Base, gradient)
             
             self.setPalette(p)
@@ -356,7 +362,7 @@ class UrlBar(E5LineEdit):
         elif evt.button() == Qt.XButton2:
             self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
         else:
-            super().mousePressEvent(evt)
+            super(UrlBar, self).mousePressEvent(evt)
     
     def mouseDoubleClickEvent(self, evt):
         """

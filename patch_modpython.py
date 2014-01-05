@@ -8,6 +8,8 @@
 Script to patch mod_python for usage with the eric5 IDE.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import shutil

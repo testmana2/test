@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a new property.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_SvnPropDelDialog import Ui_SvnPropDelDialog
@@ -23,7 +25,7 @@ class SvnPropDelDialog(QDialog, Ui_SvnPropDelDialog):
         @param recursive flag indicating a recursive set is requested
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnPropDelDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

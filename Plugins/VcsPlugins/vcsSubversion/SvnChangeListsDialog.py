@@ -7,6 +7,12 @@
 Module implementing a dialog to browse the change lists.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode    # __IGNORE_WARNING__
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QRegExp, QTimer
@@ -30,7 +36,7 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnChangeListsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -264,4 +270,4 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnChangeListsDialog, self).keyPressEvent(evt)

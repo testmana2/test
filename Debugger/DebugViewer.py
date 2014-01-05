@@ -20,6 +20,8 @@ The views avaliable are:
 </ul>
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal
@@ -63,7 +65,7 @@ class DebugViewer(QWidget):
             have the file browser in a separate window or embedded
             in the project browser instead.
         """
-        super().__init__(parent)
+        super(DebugViewer, self).__init__(parent)
         
         self.debugServer = debugServer
         self.debugUI = None

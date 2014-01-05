@@ -7,6 +7,8 @@
 Module implementing a CSS lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerCSS
 
 from .Lexer import Lexer
@@ -23,7 +25,7 @@ class LexerCSS(QsciLexerCSS, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        super(LexerCSS, self).__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

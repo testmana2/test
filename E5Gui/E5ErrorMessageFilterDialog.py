@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the list of messages to be ignored.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel, \
     QInputDialog, QLineEdit
@@ -26,7 +28,7 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
             (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5ErrorMessageFilterDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__model = QStringListModel(messageFilters, self)

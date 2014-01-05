@@ -7,6 +7,8 @@
 Module implementing a network monitor dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 from PyQt4.QtGui import QDialog, QStandardItemModel, QSortFilterProxyModel
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
@@ -70,7 +72,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
             (QNetworkAccessManager)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5NetworkMonitor, self).__init__(parent)
         self.setupUi(self)
         
         self.__requestHeaders = QStandardItemModel(self)
@@ -124,14 +126,14 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         @param evt reference to the close event object (QCloseEvent)
         """
         self.__class__._monitor = None
-        super().closeEvent(evt)
+        super(E5NetworkMonitor, self).closeEvent(evt)
     
     def reject(self):
         """
         Public slot to close the dialog with a Reject status.
         """
         self.__class__._monitor = None
-        super().reject()
+        super(E5NetworkMonitor, self).reject()
     
     def __currentChanged(self, current, previous):
         """
@@ -212,7 +214,7 @@ class E5RequestModel(QAbstractTableModel):
             (QNetworkAccessManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(E5RequestModel, self).__init__(parent)
         
         self.__headerData = [
             self.trUtf8("Method"),

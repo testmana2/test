@@ -7,6 +7,8 @@
 Module implementing the multi project browser.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QListWidget, QListWidgetItem, QDialog, QMenu
 
@@ -26,7 +28,7 @@ class MultiProjectBrowser(QListWidget):
         @param multiProject reference to the multi project object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(MultiProjectBrowser, self).__init__(parent)
         self.multiProject = multiProject
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

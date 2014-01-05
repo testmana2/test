@@ -7,6 +7,8 @@
 Module implementing a dialog for entering repeat counts.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -23,7 +25,7 @@ class PyRegExpWizardRepeatDialog(QDialog, Ui_PyRegExpWizardRepeatDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PyRegExpWizardRepeatDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.unlimitedButton.setChecked(True)

@@ -7,6 +7,8 @@
 Module implementing the downloader for GreaseMonkey scripts.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QSettings, QRegExp, QUrl
@@ -33,7 +35,7 @@ class GreaseMonkeyDownloader(QObject):
         @param manager reference to the GreaseMonkey manager
             (GreaseMonkeyManager)
         """
-        super().__init__()
+        super(GreaseMonkeyDownloader, self).__init__()
         
         self.__manager = manager
         

@@ -7,6 +7,8 @@
 Module implementing the About plugin.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QAction
 
@@ -42,7 +44,7 @@ class AboutPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(AboutPlugin, self).__init__(ui)
         self.__ui = ui
 
     def activate(self):

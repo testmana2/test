@@ -7,6 +7,8 @@
 Module implementing the Debugger General configuration page.
 """
 
+from __future__ import unicode_literals
+
 import socket
 
 from PyQt4.QtCore import QRegExp, pyqtSlot
@@ -32,7 +34,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         """
         Constructor
         """
-        super().__init__()
+        super(DebuggerGeneralPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerGeneralPage")
         

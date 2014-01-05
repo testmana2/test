@@ -7,6 +7,8 @@
 Module implementing a CPP lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerCPP,  QsciScintilla
 
 from .Lexer import Lexer
@@ -25,7 +27,7 @@ class LexerCPP(QsciLexerCPP, Lexer):
         @param caseInsensitiveKeywords flag indicating keywords are case
             insensitive (boolean)
         """
-        super().__init__(parent, caseInsensitiveKeywords)
+        super(LexerCPP, self).__init__(parent, caseInsensitiveKeywords)
         Lexer.__init__(self)
         
         self.commentString = "//"

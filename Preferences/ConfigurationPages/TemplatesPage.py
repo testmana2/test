@@ -7,6 +7,8 @@
 Module implementing the Templates configuration page.
 """
 
+from __future__ import unicode_literals
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_TemplatesPage import Ui_TemplatesPage
 
@@ -21,7 +23,7 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
         """
         Constructor
         """
-        super().__init__()
+        super(TemplatesPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("TemplatesPage")
         

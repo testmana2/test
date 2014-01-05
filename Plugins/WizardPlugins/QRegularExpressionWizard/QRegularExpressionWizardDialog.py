@@ -7,6 +7,8 @@
 Module implementing the QRegularExpression wizard dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 import re
 import sys
@@ -40,7 +42,7 @@ class QRegularExpressionWizardWidget(QWidget,
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        super().__init__(parent)
+        super(QRegularExpressionWizardWidget, self).__init__(parent)
         self.setupUi(self)
         
         # initialize icons of the tool buttons
@@ -780,7 +782,7 @@ class QRegularExpressionWizardDialog(QDialog):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        super().__init__(parent)
+        super(QRegularExpressionWizardDialog, self).__init__(parent)
         self.setModal(fromEric)
         self.setSizeGripEnabled(True)
         
@@ -812,14 +814,14 @@ class QRegularExpressionWizardDialog(QDialog):
         Public slot to hide the dialog and set the result code to Accepted.
         """
         self.cw.shutdown()
-        super().accept()
+        super(QRegularExpressionWizardDialog, self).accept()
     
     def reject(self):
         """
         Public slot to hide the dialog and set the result code to Rejected.
         """
         self.cw.shutdown()
-        super().reject()
+        super(QRegularExpressionWizardDialog, self).reject()
 
 
 class QRegularExpressionWizardWindow(E5MainWindow):
@@ -832,7 +834,7 @@ class QRegularExpressionWizardWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(QRegularExpressionWizardWindow, self).__init__(parent)
         self.cw = QRegularExpressionWizardWidget(self, fromEric=False)
         size = self.cw.size()
         self.setCentralWidget(self.cw)
@@ -852,4 +854,4 @@ class QRegularExpressionWizardWindow(E5MainWindow):
         @param evt close event (QCloseEvent)
         """
         self.cw.shutdown()
-        super().closeEvent(evt)
+        super(QRegularExpressionWizardWindow, self).closeEvent(evt)

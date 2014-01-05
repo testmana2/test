@@ -11,8 +11,22 @@
 
 from pygments.token import Token, STANDARD_TYPES
 
+def with_metaclass(meta, base=object):
+    """
+    Python independent version to create a base class with a metaclass.
+    Taken from six 1.3.0 (http://pythonhosted.org/six)
+    """
+    return meta("NewBase", (base,), {})
+
 
 class StyleMeta(type):
+    background_color = '#ffffff'
+
+    #: highlight background color
+    highlight_color = '#ffffcc'
+
+    #: Style definitions for individual token types.
+    styles = {}
 
     def __new__(mcs, name, bases, dct):
         obj = type.__new__(mcs, name, bases, dct)
@@ -104,11 +118,5 @@ class StyleMeta(type):
         return len(cls._styles)
 
 
-class Style(object, metaclass=StyleMeta):
-    background_color = '#ffffff'
-
-    #: highlight background color
-    highlight_color = '#ffffcc'
-
-    #: Style definitions for individual token types.
-    styles = {}
+class Style(with_metaclass(StyleMeta, object)):
+    pass

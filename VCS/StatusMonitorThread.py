@@ -7,6 +7,8 @@
 Module implementing the VCS status monitor thread base class.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QThread, QMutex, QWaitCondition, pyqtSignal
 
 
@@ -30,7 +32,7 @@ class VcsStatusMonitorThread(QThread):
         @param vcs reference to the version control object
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(VcsStatusMonitorThread, self).__init__(parent)
         self.setObjectName("VcsStatusMonitorThread")
         
         self.setTerminationEnabled(True)

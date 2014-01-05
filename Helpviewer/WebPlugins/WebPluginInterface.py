@@ -8,6 +8,9 @@ Module implementing the web plug-in interface.
 """
 
 
+from __future__ import unicode_literals
+
+
 class WebPluginInterface(object):
     """
     Class implementing the web plug-in interface.
