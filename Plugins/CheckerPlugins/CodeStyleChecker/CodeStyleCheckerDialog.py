@@ -320,9 +320,6 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
-        self.__resetStatistics()
-        self.__clearErrors()
-        
         if save:
             self.__fileOrFileList = fn
         
@@ -348,6 +345,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 files = \
                     [f for f in files
                      if not fnmatch.fnmatch(f, filter.strip())]
+        
+        self.__resetStatistics()
+        self.__clearErrors(files)
         
         py3files = [f for f in files
                     if f.endswith(
@@ -546,7 +546,6 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             QApplication.processEvents()
             self.statisticsButton.setEnabled(False)
             self.showButton.setEnabled(False)
-            self.__clearErrors()
         else:
             self.statisticsButton.setEnabled(True)
             self.showButton.setEnabled(True)
@@ -801,13 +800,16 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         elif button == self.statisticsButton:
             self.on_statisticsButton_clicked()
     
-    def __clearErrors(self):
+    def __clearErrors(self, files):
         """
-        Private method to clear all warning markers of open editors.
+        Private method to clear all warning markers of open editors to be
+        checked.
+        
+        @param files list of files to be checked (list of string)
         """
         vm = e5App().getObject("ViewManager")
         openFiles = vm.getOpenFilenames()
-        for file in openFiles:
+        for file in [f for f in openFiles if f in files]:
             editor = vm.getOpenEditor(file)
             editor.clearStyleWarnings()
     

@@ -145,8 +145,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
-        self.__clearErrors()
-        
         if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
@@ -159,6 +157,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
+        
+        self.__clearErrors(files)
+        
         py3files = [f for f in files
                     if f.endswith(
                         tuple(Preferences.getPython("Python3Extensions")))]
@@ -292,7 +293,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
             QApplication.processEvents()
             self.showButton.setEnabled(False)
-            self.__clearErrors()
         else:
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
@@ -424,13 +424,16 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 editor.clearSyntaxError()
                 editor.clearFlakesWarnings()
         
-    def __clearErrors(self):
+    def __clearErrors(self, files):
         """
-        Private method to clear all error markers of open editors.
+        Private method to clear all error and warning markers of
+        open editors to be checked.
+        
+        @param files list of files to be checked (list of string)
         """
         vm = e5App().getObject("ViewManager")
         openFiles = vm.getOpenFilenames()
-        for file in openFiles:
+        for file in [f for f in openFiles if f in files]:
             editor = vm.getOpenEditor(file)
             editor.clearSyntaxError()
             editor.clearFlakesWarnings()

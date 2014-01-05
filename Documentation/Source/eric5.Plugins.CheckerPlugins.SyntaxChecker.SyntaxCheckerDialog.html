@@ -61,7 +61,7 @@ QDialog, Ui_SyntaxCheckerDialog
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__clearErrors">__clearErrors</a></td>
-<td>Private method to clear all error markers of open editors.</td>
+<td>Private method to clear all error and warning markers of open editors to be checked.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__createResultItem">__createResultItem</a></td>
 <td>Private method to create an entry in the result list.</td>
@@ -107,10 +107,16 @@ The parent widget. (QWidget)
 </dd>
 </dl><a NAME="SyntaxCheckerDialog.__clearErrors" ID="SyntaxCheckerDialog.__clearErrors"></a>
 <h4>SyntaxCheckerDialog.__clearErrors</h4>
-<b>__clearErrors</b>(<i></i>)
+<b>__clearErrors</b>(<i>files</i>)
 <p>
-        Private method to clear all error markers of open editors.
-</p><a NAME="SyntaxCheckerDialog.__createResultItem" ID="SyntaxCheckerDialog.__createResultItem"></a>
+        Private method to clear all error and warning markers of
+        open editors to be checked.
+</p><dl>
+<dt><i>files</i></dt>
+<dd>
+list of files to be checked (list of string)
+</dd>
+</dl><a NAME="SyntaxCheckerDialog.__createResultItem" ID="SyntaxCheckerDialog.__createResultItem"></a>
 <h4>SyntaxCheckerDialog.__createResultItem</h4>
 <b>__createResultItem</b>(<i>file, line, index, error, sourcecode, isWarning=False</i>)
 <p>

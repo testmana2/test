@@ -64,7 +64,7 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__clearErrors">__clearErrors</a></td>
-<td>Private method to clear all warning markers of open editors.</td>
+<td>Private method to clear all warning markers of open editors to be checked.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__createResultItem">__createResultItem</a></td>
 <td>Private method to create an entry in the result list.</td>
@@ -161,10 +161,16 @@ reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__clearErrors" ID="CodeStyleCheckerDialog.__clearErrors"></a>
 <h4>CodeStyleCheckerDialog.__clearErrors</h4>
-<b>__clearErrors</b>(<i></i>)
+<b>__clearErrors</b>(<i>files</i>)
 <p>
-        Private method to clear all warning markers of open editors.
-</p><a NAME="CodeStyleCheckerDialog.__createResultItem" ID="CodeStyleCheckerDialog.__createResultItem"></a>
+        Private method to clear all warning markers of open editors to be
+        checked.
+</p><dl>
+<dt><i>files</i></dt>
+<dd>
+list of files to be checked (list of string)
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__createResultItem" ID="CodeStyleCheckerDialog.__createResultItem"></a>
 <h4>CodeStyleCheckerDialog.__createResultItem</h4>
 <b>__createResultItem</b>(<i>file, line, pos, message, fixed, autofixing</i>)
 <p>
