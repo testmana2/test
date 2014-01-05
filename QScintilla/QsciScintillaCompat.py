@@ -1195,29 +1195,33 @@ class QsciScintillaCompat(QsciScintilla):
         """
         return QsciScintillaBase.event(self, evt)
     
-    def inputMethodEvent(self, evt):
-        """
-        Protected method to cope with a glitch in some Qscintilla versions
-        handling input events.
+    # TODO: adjust this once we have a working QScintilla version
+    if "inputMethodEvent" in QsciScintillaBase.__dict__ and \
+            QSCINTILLA_VERSION() < 0x020900:
+        def inputMethodEvent(self, evt):
+            """
+            Protected method to cope with a glitch in some Qscintilla versions
+            handling input events.
+            
+            Note: This simply disables the Qscintilla behavior.
+            
+            @param evt reference to the input method event object
+                (QInputMethodEvent)
+            """
+            pass
         
-        Note: This simply disables the Qscintilla behavior.
-        
-        @param evt reference to the input method event object
-            (QInputMethodEvent)
-        """
-        pass
-    
-    def inputMethodQuery(self, query):
-        """
-        Protected method to cope with a glitch in some Qscintilla versions
-        handling input events.
-        
-        Note: This simply disables the Qscintilla behavior.
-        
-        @param query reference to the input method query object
-            (Qt.InputMethodQuery)
-        """
-        pass
+        def inputMethodQuery(self, query):
+            """
+            Protected method to cope with a glitch in some Qscintilla versions
+            handling input events.
+            
+            Note: This simply disables the Qscintilla behavior.
+            
+            @param query reference to the input method query object
+                (Qt.InputMethodQuery)
+            @return object containing the requested information
+            """
+            return None
 
     ###########################################################################
     ## interface methods to the mini editor
