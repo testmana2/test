@@ -83,17 +83,17 @@ class InternalServices(QObject):
         @param code the part of the code where the error occured (str)
         @param error the name of the error (str)
         @param warnings a list of strings containing the warnings
-            (marker, file name, line number, message)
+            (marker, file name, line number, col, message, list(msg_args))
         """
         for warning in warnings:
             # Translate messages
             msg_args = warning.pop()
             translated = QApplication.translate(
-                'py3Flakes', warning[3]).format(*msg_args)
+                'py3Flakes', warning[4]).format(*msg_args)
             # Avoid leading "u" at Python2 unicode strings
             if translated.startswith("u'"):
                 translated = translated[1:]
-            warning[3] = translated.replace(" u'", " '")
+            warning[4] = translated.replace(" u'", " '")
         
         self.syntaxChecked.emit(
             fn, nok, fname, line, index, code, error, warnings)

@@ -241,7 +241,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param code the part of the code where the error occured (str)
         @param error the name of the error (str)
         @param warnings a list of strings containing the warnings
-            (marker, file name, line number, message)
+            (marker, file name, line number, col, message)
         """
         # Check if it's the requested file, otherwise ignore signal
         if fn != self.filename:
@@ -253,12 +253,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 fname, line, index, error, code.strip(), False)
         else:
             source = self.source.splitlines()
-            for warning in warnings:
+            for marker, _fn, lineno, col, msg in warnings:
                 self.noResults = False
-                scr_line = source[warning[2] - 1].strip()
-                self.__createResultItem(
-                    warning[1], warning[2], 0,
-                    warning[3], scr_line, True)
+                scr_line = source[lineno - 1].strip()
+                self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
         self.progress += 1
         self.checkProgress.setValue(self.progress)
         self.checkProgressLabel.setPath("")

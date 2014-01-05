@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2010 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2010 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
-Package containg the pyflakes Python2 port adapted for Qt.
+Package containg pyflakes adapted for Qt.
 """
 
 """ License
@@ -32,6 +32,40 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 """ Changes
+0.7.3 (2013-07-02):
+  - Do not report undefined name for generator expression and dict or
+    set comprehension at class level.
+  - Deprecate `Checker.pushFunctionScope` and `Checker.pushClassScope`:
+    use `Checker.pushScope` instead.
+  - Remove dependency on Unittest2 for the tests.
+
+0.7.2 (2013-04-24):
+  - Fix computation of `DoctestSyntaxError.lineno` and `col`.
+  - Add boolean attribute `Checker.withDoctest` to ignore doctests.
+  - If environment variable `PYFLAKES_NODOCTEST` is set, skip doctests.
+  - Environment variable `PYFLAKES_BUILTINS` accepts a comma-separated
+    list of additional built-in names.
+
+0.7.1 (2013-04-23):
+  - File `bin/pyflakes` was missing in tarball generated with distribute.
+  - Fix reporting errors in non-ASCII filenames (Python 2.x).
+
+0.7.0 (2013-04-17):
+  - Add --version and --help options.
+  - Support `python -m pyflakes` (Python 2.7 and Python 3.x).
+  - Add attribute `Message.col` to report column offset.
+  - Do not report redefinition of variable for a variable used in a list
+    comprehension in a conditional.
+  - Do not report redefinition of variable for generator expressions and
+    set or dict comprehensions.
+  - Do not report undefined name when the code is protected with a
+    `NameError` exception handler.
+  - Do not report redefinition of variable when unassigning a module imported
+    for its side-effect.
+  - Support special locals like `__tracebackhide__` for py.test.
+  - Support checking doctests.
+  - Fix issue with Turkish locale where `'i'.upper() == 'i'` in Python 2.
+
 0.6.1 (2013-01-29):
   - Fix detection of variables in augmented assignments.
 
@@ -59,4 +93,4 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   - Make sure class names don't get bound until after class definition.
 """
 
-__version__ = '0.6.1'
+__version__ = '0.7.3'

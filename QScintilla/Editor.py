@@ -8,9 +8,9 @@ Module implementing the editor component of the eric5 IDE.
 """
 from __future__ import unicode_literals
 try:
-    str = unicode   # __IGNORE_WARNING__
-    chr = unichr   # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+    chr = unichr
+except NameError:
     pass
 
 import os
@@ -4994,7 +4994,7 @@ class Editor(QsciScintillaCompat):
         @param code the part of the code where the error occured (str)
         @param error the name of the error (str)
         @param warnings a list of strings containing the warnings
-            (marker, file name, line number, message)
+            (marker, file name, line number, col, message)
         """
         # Check if it's the requested file, otherwise ignore signal
         if fn != self.fileName and (
@@ -5007,8 +5007,8 @@ class Editor(QsciScintillaCompat):
         if nok:
             self.toggleSyntaxError(line, index, True, error)
         else:
-            for warning in warnings:
-                self.toggleWarning(warning[2], True, warning[3])
+            for marker, _fn, lineno, col, msg in warnings:
+                self.toggleWarning(lineno, True, msg)
 
     def __initOnlineSyntaxCheck(self):
         """

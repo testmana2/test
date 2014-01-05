@@ -143,8 +143,6 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
             error = detail.msg
         return (True, fn, int(line), index, code, error, [])
     except ValueError as detail:
-        index = 0
-        code = ""
         try:
             fn = detail.filename
             line = detail.lineno
@@ -153,15 +151,13 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
             fn = filename
             line = 1
             error = str(detail)
-        return (True, fn, line, index, code, error, [])
+        return (True, fn, line, 0, "", error, [])
     except Exception as detail:
         try:
             fn = detail.filename
             line = detail.lineno
-            index = 0
-            code = ""
             error = detail.msg
-            return (True, fn, line, index, code, error, [])
+            return (True, fn, line, 0, "", error, [])
         except:         # this catchall is intentional
             pass
     
@@ -179,16 +175,16 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
                     isinstance(warning, ImportStarUsed):
                 continue
             
-            _fn, lineno, message, msg_args = warning.getMessageData()
+            _fn, lineno, col, message, msg_args = warning.getMessageData()
             if "__IGNORE_WARNING__" not in extractLineFlags(
                     lines[lineno - 1].strip()):
                 strings.append([
-                    "FLAKES_WARNING", _fn, lineno, message, msg_args])
+                    "FLAKES_WARNING", _fn, lineno, col, message, msg_args])
     except SyntaxError as err:
         if err.text.strip():
             msg = err.text.strip()
         else:
             msg = err.msg
-        strings.append(["FLAKES_ERROR", filename, err.lineno, msg, ()])
+        strings.append(["FLAKES_ERROR", filename, err.lineno, 0, msg, ()])
     
     return (False, "", -1, -1, "", "", strings)
