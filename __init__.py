@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing the eric5 Python IDE (version 5.4).
+Package implementing the eric5 Python IDE (version 5.5).
 
 To get more information about eric5 please see the
 <a href="http://eric-ide.python-projects.org/index.html">eric web site</a>.

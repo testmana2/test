@@ -1855,7 +1855,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>qtHelpFilterAttributes</string>
             </key>
             <value>
-              <string>eric5:ide:5.4</string>
+              <string>eric5:ide:5.5</string>
             </value>
             <key>
               <string>qtHelpFilterName</string>
@@ -1867,7 +1867,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>qtHelpNamespace</string>
             </key>
             <value>
-              <string>org.eric5.ide.54</string>
+              <string>org.eric5.ide.55</string>
             </value>
             <key>
               <string>qtHelpOutputDirectory</string>

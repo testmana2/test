@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-  <namespace>org.eric5.ide.54</namespace>
+  <namespace>org.eric5.ide.55</namespace>
   <virtualFolder>eric5</virtualFolder>
   <customFilter name="eric5">
-    <filterAttribute>5.4</filterAttribute>
+    <filterAttribute>5.5</filterAttribute>
     <filterAttribute>eric5</filterAttribute>
     <filterAttribute>ide</filterAttribute>
   </customFilter>
   <filterSection>
-    <filterAttribute>5.4</filterAttribute>
+    <filterAttribute>5.5</filterAttribute>
     <filterAttribute>eric5</filterAttribute>
     <filterAttribute>ide</filterAttribute>
     <toc>
