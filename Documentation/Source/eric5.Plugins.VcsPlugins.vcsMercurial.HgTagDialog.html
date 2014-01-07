@@ -48,7 +48,7 @@ Module implementing a dialog to enter the data for a tagging operation.
 QDialog, Ui_HgTagDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>CreateBranch</td></tr><tr><td>CreateLocalTag</td></tr><tr><td>CreateRegularTag</td></tr><tr><td>DeleteTag</td></tr>
+<tr><td>CreateGlobalTag</td></tr><tr><td>CreateLocalTag</td></tr><tr><td>DeleteGlobalTag</td></tr><tr><td>DeleteLocalTag</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -63,6 +63,9 @@ QDialog, Ui_HgTagDialog
 <td><a href="#HgTagDialog.getParameters">getParameters</a></td>
 <td>Public method to retrieve the tag data.</td>
 </tr><tr>
+<td><a href="#HgTagDialog.on_tagCombo_currentIndexChanged">on_tagCombo_currentIndexChanged</a></td>
+<td>Private slot setting the local status of the selected entry.</td>
+</tr><tr>
 <td><a href="#HgTagDialog.on_tagCombo_editTextChanged">on_tagCombo_editTextChanged</a></td>
 <td>Private method used to enable/disable the OK-button.</td>
 </tr>
@@ -73,13 +76,19 @@ QDialog, Ui_HgTagDialog
 </table>
 <a NAME="HgTagDialog.__init__" ID="HgTagDialog.__init__"></a>
 <h4>HgTagDialog (Constructor)</h4>
-<b>HgTagDialog</b>(<i>taglist, parent=None</i>)
+<b>HgTagDialog</b>(<i>taglist, revision=None, tagName=None, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>taglist</i></dt>
 <dd>
 list of previously entered tags (list of strings)
+</dd><dt><i>revision</i></dt>
+<dd>
+revision to set tag for (string)
+</dd><dt><i>tagName</i></dt>
+<dd>
+name of the tag (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -92,9 +101,14 @@ parent widget (QWidget)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of string and int (tag, tag operation)
+tuple of two strings and int (tag, revision, tag operation)
 </dd>
-</dl><a NAME="HgTagDialog.on_tagCombo_editTextChanged" ID="HgTagDialog.on_tagCombo_editTextChanged"></a>
+</dl><a NAME="HgTagDialog.on_tagCombo_currentIndexChanged" ID="HgTagDialog.on_tagCombo_currentIndexChanged"></a>
+<h4>HgTagDialog.on_tagCombo_currentIndexChanged</h4>
+<b>on_tagCombo_currentIndexChanged</b>(<i>index</i>)
+<p>
+        Private slot setting the local status of the selected entry.
+</p><a NAME="HgTagDialog.on_tagCombo_editTextChanged" ID="HgTagDialog.on_tagCombo_editTextChanged"></a>
 <h4>HgTagDialog.on_tagCombo_editTextChanged</h4>
 <b>on_tagCombo_editTextChanged</b>(<i>text</i>)
 <p>

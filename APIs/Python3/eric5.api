@@ -4556,13 +4556,11 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_d
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_diffRevisionsButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_fieldCombo_activated?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_fromDate_dateChanged?4(date)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_graftButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_input_returnPressed?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_logTree_currentItemChanged?4(current, previous)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_logTree_itemSelectionChanged?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_nextButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_passwordCheckBox_toggled?4(isOn)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_phaseButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_refreshButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_rxEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_sendButton_clicked?4()
@@ -4679,13 +4677,14 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.HgTagBranchListDialo
 eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.HgTagBranchListDialog.on_sendButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.HgTagBranchListDialog.start?4(path, tags, tagsList, allTagsList)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.HgTagBranchListDialog?1(vcs, parent=None)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.CreateBranch?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.CreateGlobalTag?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.CreateLocalTag?7
-eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.CreateRegularTag?7
-eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.DeleteTag?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.DeleteGlobalTag?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.DeleteLocalTag?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.getParameters?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.on_tagCombo_currentIndexChanged?4(index)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog.on_tagCombo_editTextChanged?4(text)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog?1(taglist, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.HgTagDialog?1(taglist, revision=None, tagName=None, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.getConfigPath?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.prepareProcess?4(proc, encoding="", language="")
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.HgProjectBrowserHelper._addVCSMenu?5(mainMenu)
@@ -4878,7 +4877,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgExport?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgExtendedDiff?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgForget?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGetBranchesList?4(repodir)
-eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGetTagsList?4(repodir)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGetTagsList?4(repodir, withType=False)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGraft?4(path, revs=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGraftContinue?4(path)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgIdentify?4(name)
@@ -4937,7 +4936,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsRepositoryInfos?4(ppath)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsShutdown?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsStatus?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsSwitch?4(name)
-eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsTag?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsTag?4(name, revision=None, tagName=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsUpdate?4(name, noDialog=False, revision=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg?1(plugin, parent=None, name=None)
 eric5.Plugins.VcsPlugins.vcsPySvn.Config.ConfigSvnProtocols?7

@@ -13,7 +13,7 @@ from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
     QSize, QPoint
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
     QTreeWidgetItem, QApplication, QCursor, QLineEdit, QColor, \
-    QPixmap, QPainter, QPen, QBrush, QIcon
+    QPixmap, QPainter, QPen, QBrush, QIcon, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -21,6 +21,7 @@ from E5Gui import E5MessageBox
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 
 import Preferences
+import UI.PixmapCache
 
 COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
               "cyan", "olive", "magenta", "darkred", "darkmagenta",
@@ -134,14 +135,32 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.logTree.columnCount(), self.trUtf8("Bookmarks"))
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
-            self.phaseLine.hide()
-            self.phaseButton.hide()
-        if self.vcs.version < (2, 0):
-            self.graftButton.setEnabled(False)
-            self.graftButton.hide()
-        if self.phaseButton.isHidden() and \
-           self.graftButton.isHidden():
-            self.phaseLine.hide()
+        
+        self.__actionsMenu = QMenu()
+        if self.vcs.version >= (2, 0):
+            self.__graftAct = self.__actionsMenu.addAction(
+                self.trUtf8("Copy Changesets"), self.__graftActTriggered)
+            self.__graftAct.setToolTip(self.trUtf8(
+                "Copy the selected changesets to the current branch"))
+        else:
+            self.__graftAct = None
+        if self.vcs.version >= (2, 1):
+            self.__phaseAct = self.__actionsMenu.addAction(
+                self.trUtf8("Change Phase"), self.__phaseActTriggered)
+            self.__phaseAct.setToolTip(self.trUtf8(
+                "Change the phase of the selected revisions"))
+            self.__phaseAct.setWhatsThis(self.trUtf8(
+                """<b>Change Phase</b>\n<p>This changes the phase of the"""
+                """ selected revisions. The selected revisions have to have"""
+                """ the same current phase.</p>"""))
+        else:
+            self.__phaseAct = None
+        self.__tagAct = self.__actionsMenu.addAction(
+            self.trUtf8("Tag"), self.__tagActTriggered)
+        self.__tagAct.setToolTip(self.trUtf8("Tag the selected revision"))
+        self.actionsButton.setIcon(
+            UI.PixmapCache.getIcon("actionsToolButton.png"))
+        self.actionsButton.setMenu(self.__actionsMenu)
     
     def __initData(self):
         """
@@ -920,8 +939,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__filterLogs()
         
         self.__updateDiffButtons()
-        self.__updatePhaseButton()
-        self.__updateGraftButton()
+        self.__updatePhaseAction()
+        self.__updateGraftAction()
     
     def __readStdout(self):
         """
@@ -1021,7 +1040,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             
             self.diffRevisionsButton.setEnabled(False)
     
-    def __updatePhaseButton(self):
+    def __updatePhaseAction(self):
         """
         Private slot to update the status of the phase button.
         """
@@ -1043,17 +1062,17 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if public == 0 and \
                ((secret > 0 and draft == 0) or
                     (secret == 0 and draft > 0)):
-                self.phaseButton.setEnabled(True)
+                self.__phaseAct.setEnabled(True)
             else:
-                self.phaseButton.setEnabled(False)
+                self.__phaseAct.setEnabled(False)
         else:
-            self.phaseButton.setEnabled(False)
+            self.__phaseAct.setEnabled(False)
     
-    def __updateGraftButton(self):
+    def __updateGraftAction(self):
         """
         Private slot to update the status of the graft button.
         """
-        if self.graftButton.isVisible():
+        if self.__graftAct is not None:
             if self.initialCommandMode == "log":
                 # step 1: count selected entries not belonging to the
                 #         current branch
@@ -1063,10 +1082,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     if branch != self.__projectBranch:
                         otherBranches += 1
                 
-                # step 2: set the status of the graft button
-                self.graftButton.setEnabled(otherBranches > 0)
+                # step 2: set the status of the graft action
+                self.__graftAct.setEnabled(otherBranches > 0)
             else:
-                self.graftButton.setEnabled(False)
+                self.__graftAct.setEnabled(False)
     
     def __updateGui(self, itm):
         """
@@ -1100,8 +1119,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         self.__updateGui(current)
         self.__updateDiffButtons()
-        self.__updatePhaseButton()
-        self.__updateGraftButton()
+        self.__updatePhaseAction()
+        self.__updateGraftAction()
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -1110,10 +1129,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if len(self.logTree.selectedItems()) == 1:
             self.__updateGui(self.logTree.selectedItems()[0])
+            self.__tagAct.setEnabled(True)
+        else:
+            self.__tagAct.setEnabled(False)
         
         self.__updateDiffButtons()
-        self.__updatePhaseButton()
-        self.__updateGraftButton()
+        self.__updatePhaseAction()
+        self.__updateGraftAction()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -1348,9 +1370,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         super().keyPressEvent(evt)
     
     @pyqtSlot()
-    def on_phaseButton_clicked(self):
+    def __phaseActTriggered(self):
         """
-        Private slot to handle the Change Phase button.
+        Private slot to handle the Change Phase action.
         """
         currentPhase = self.logTree.selectedItems()[0].text(self.PhaseColumn)
         revs = []
@@ -1360,7 +1382,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     itm.text(self.RevisionColumn).split(":")[0].strip())
         
         if not revs:
-            self.phaseButton.setEnabled(False)
+            self.__phaseAct.setEnabled(False)
             return
         
         if currentPhase == "draft":
@@ -1375,9 +1397,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 itm.setText(self.PhaseColumn, newPhase)
     
     @pyqtSlot()
-    def on_graftButton_clicked(self):
+    def __graftActTriggered(self):
         """
-        Private slot to handle the Copy Changesets button.
+        Private slot to handle the Copy Changesets action.
         """
         revs = []
         
@@ -1399,4 +1421,17 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if res:
                     e5App().getObject("Project").reopenProject()
             else:
+                self.on_refreshButton_clicked()
+    
+    @pyqtSlot()
+    def __tagActTriggered(self):
+        """
+        Private slot to tag the selected revision.
+        """
+        if len(self.logTree.selectedItems()):
+            itm = self.logTree.selectedItems()[0]
+            rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+            tag = itm.text(self.TagsColumn).strip().split(", ", 1)[0]
+            res = self.vcs.vcsTag(self.repodir, revision=rev, tagName=tag)
+            if res:
                 self.on_refreshButton_clicked()

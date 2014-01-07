@@ -12,21 +12,25 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgTagDialog import Ui_HgTagDialog
 
+import UI.PixmapCache
+
 
 class HgTagDialog(QDialog, Ui_HgTagDialog):
     """
     Class implementing a dialog to enter the data for a tagging operation.
     """
-    CreateRegularTag = 1
+    CreateGlobalTag = 1
     CreateLocalTag = 2
-    DeleteTag = 3
-    CreateBranch = 4
+    DeleteGlobalTag = 3
+    DeleteLocalTag = 4
     
-    def __init__(self, taglist, parent=None):
+    def __init__(self, taglist, revision=None, tagName=None, parent=None):
         """
         Constructor
         
         @param taglist list of previously entered tags (list of strings)
+        @param revision revision to set tag for (string)
+        @param tagName name of the tag (string)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -36,7 +40,25 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         self.okButton.setEnabled(False)
         
         self.tagCombo.clear()
-        self.tagCombo.addItems(sorted(taglist))
+        self.tagCombo.addItem("", False)
+        for tag, isLocal in sorted(taglist):
+            if isLocal:
+                icon = UI.PixmapCache.getIcon("vcsTagLocal.png")
+            else:
+                icon = UI.PixmapCache.getIcon("vcsTagGlobal.png")
+            self.tagCombo.addItem(icon, tag, isLocal)
+        
+        if revision:
+            self.revisionEdit.setText(revision)
+        
+        if tagName:
+            index = self.tagCombo.findText(tagName)
+            if index > -1:
+                self.tagCombo.setCurrentIndex(index)
+                # suggest the most relevant tag action
+                self.deleteTagButton.setChecked(True)
+            else:
+                self.tagCombo.setEditText(tagName)
     
     @pyqtSlot(str)
     def on_tagCombo_editTextChanged(self, text):
@@ -47,18 +69,33 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         """
         self.okButton.setDisabled(text == "")
     
+    @pyqtSlot(int)
+    def on_tagCombo_currentIndexChanged(self, index):
+        """
+        Private slot setting the local status of the selected entry.
+        """
+        isLocal = self.tagCombo.itemData(index)
+        if isLocal:
+            self.localTagButton.setChecked(True)
+        else:
+            self.globalTagButton.setChecked(True)
+    
     def getParameters(self):
         """
         Public method to retrieve the tag data.
         
-        @return tuple of string and int (tag, tag operation)
+        @return tuple of two strings and int (tag, revision, tag operation)
         """
         tag = self.tagCombo.currentText()
         tagOp = 0
-        if self.createRegularButton.isChecked():
-            tagOp = HgTagDialog.CreateRegularTag
-        elif self.createLocalButton.isChecked():
-            tagOp = HgTagDialog.CreateLocalTag
-        elif self.deleteButton.isChecked():
-            tagOp = HgTagDialog.DeleteTag
-        return (tag, tagOp)
+        if self.createTagButton.isChecked():
+            if self.globalTagButton.isChecked():
+                tagOp = HgTagDialog.CreateGlobalTag
+            else:
+                tagOp = HgTagDialog.CreateLocalTag
+        else:
+            if self.globalTagButton.isChecked():
+                tagOp = HgTagDialog.DeleteGlobalTag
+            else:
+                tagOp = HgTagDialog.DeleteLocalTag
+        return (tag, self.revisionEdit.text(), tagOp)

@@ -332,7 +332,7 @@ VersionControl
 <td>Public method used to switch a working directory to a different revision.</td>
 </tr><tr>
 <td><a href="#Hg.vcsTag">vcsTag</a></td>
-<td>Public method used to set the tag in the Mercurial repository.</td>
+<td>Public method used to set/remove a tag in the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsUpdate">vcsUpdate</a></td>
 <td>Public method used to update a file/directory with the Mercurial repository.</td>
@@ -683,18 +683,23 @@ list of branches (list of string)
 </dd>
 </dl><a NAME="Hg.hgGetTagsList" ID="Hg.hgGetTagsList"></a>
 <h4>Hg.hgGetTagsList</h4>
-<b>hgGetTagsList</b>(<i>repodir</i>)
+<b>hgGetTagsList</b>(<i>repodir, withType=False</i>)
 <p>
         Public method to get the list of tags.
 </p><dl>
 <dt><i>repodir</i></dt>
 <dd>
 directory name of the repository (string)
+</dd><dt><i>withType</i></dt>
+<dd>
+flag indicating to get the tag type as well (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-list of tags (list of string)
+list of tags (list of string) or list of tuples of
+            tag name and flag indicating a local tag (list of tuple of string
+            and boolean), if withType is True
 </dd>
 </dl><a NAME="Hg.hgGraft" ID="Hg.hgGraft"></a>
 <h4>Hg.hgGraft</h4>
@@ -1555,13 +1560,25 @@ flag indicating, that the switch contained an add
 </dd>
 </dl><a NAME="Hg.vcsTag" ID="Hg.vcsTag"></a>
 <h4>Hg.vcsTag</h4>
-<b>vcsTag</b>(<i>name</i>)
+<b>vcsTag</b>(<i>name, revision=None, tagName=None</i>)
 <p>
-        Public method used to set the tag in the Mercurial repository.
+        Public method used to set/remove a tag in the Mercurial repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be tagged (string)
+file/directory name to determine the repo root from
+            (string)
+</dd><dt><i>revision</i></dt>
+<dd>
+revision to set tag for (string)
+</dd><dt><i>tagName</i></dt>
+<dd>
+name of the tag (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a performed tag action (boolean)
 </dd>
 </dl><a NAME="Hg.vcsUpdate" ID="Hg.vcsUpdate"></a>
 <h4>Hg.vcsUpdate</h4>

@@ -881,11 +881,15 @@ class Hg(VersionControl):
         self.summary.start(self.__projectHelper.getProject().getProjectPath(),
                            mq=mq)
     
-    def vcsTag(self, name):
+    def vcsTag(self, name, revision=None, tagName=None):
         """
-        Public method used to set the tag in the Mercurial repository.
+        Public method used to set/remove a tag in the Mercurial repository.
         
-        @param name file/directory name to be tagged (string)
+        @param name file/directory name to determine the repo root from
+            (string)
+        @param revision revision to set tag for (string)
+        @param tagName name of the tag (string)
+        @return flag indicating a performed tag action (boolean)
         """
         dname, fname = self.splitPath(name)
         
@@ -897,30 +901,42 @@ class Hg(VersionControl):
                 return
         
         from .HgTagDialog import HgTagDialog
-        dlg = HgTagDialog(self.hgGetTagsList(repodir))
+        dlg = HgTagDialog(self.hgGetTagsList(repodir, withType=True),
+                          revision, tagName)
         if dlg.exec_() == QDialog.Accepted:
-            tag, tagOp = dlg.getParameters()
+            tag, revision, tagOp = dlg.getParameters()
         else:
-            return
+            return False
         
         args = []
         args.append('tag')
-        if tagOp == HgTagDialog.CreateLocalTag:
+        msgPart = ""
+        if tagOp in [HgTagDialog.CreateLocalTag, HgTagDialog.DeleteLocalTag]:
             args.append('--local')
-        elif tagOp == HgTagDialog.DeleteTag:
-            args.append('--remove')
-        args.append('--message')
-        if tagOp != HgTagDialog.DeleteTag:
-            tag = tag.strip().replace(" ", "_")
-            args.append("Created tag <{0}>.".format(tag))
+            msgPart = "local "
         else:
-            args.append("Removed tag <{0}>.".format(tag))
+            msgPart = "global "
+        if tagOp in [HgTagDialog.DeleteGlobalTag, HgTagDialog.DeleteLocalTag]:
+            args.append('--remove')
+        if tagOp in [HgTagDialog.CreateGlobalTag, HgTagDialog.CreateLocalTag]:
+            if revision:
+                args.append("--rev")
+                args.append(revision)
+        args.append('--message')
+        if tagOp in [HgTagDialog.CreateGlobalTag, HgTagDialog.CreateLocalTag]:
+            tag = tag.strip().replace(" ", "_")
+            args.append("Created {1}tag <{0}>.".format(tag, msgPart))
+        else:
+            args.append("Removed {1}tag <{0}>.".format(tag, msgPart))
         args.append(tag)
         
-        dia = HgDialog(self.trUtf8('Taging in the Mercurial repository'), self)
+        dia = HgDialog(self.trUtf8('Tagging in the Mercurial repository'),
+                       self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
+        
+        return True
     
     def hgRevert(self, name):
         """
@@ -1511,12 +1527,15 @@ class Hg(VersionControl):
                         project.appendFile(target)
         return res
     
-    def hgGetTagsList(self, repodir):
+    def hgGetTagsList(self, repodir, withType=False):
         """
         Public method to get the list of tags.
         
         @param repodir directory name of the repository (string)
-        @return list of tags (list of string)
+        @param withType flag indicating to get the tag type as well (boolean)
+        @return list of tags (list of string) or list of tuples of
+            tag name and flag indicating a local tag (list of tuple of string
+            and boolean), if withType is True
         """
         args = []
         args.append('tags')
@@ -1538,20 +1557,30 @@ class Hg(VersionControl):
         else:
             output, error = self.__client.runcommand(args)
         
+        tagsList = []
         if output:
-            self.tagsList = []
             for line in output.splitlines():
                 li = line.strip().split()
                 if li[-1][0] in "1234567890":
                     # last element is a rev:changeset
                     del li[-1]
+                    isLocal = False
                 else:
                     del li[-2:]
+                    isLocal = True
                 name = " ".join(li)
                 if name not in ["tip", "default"]:
-                    self.tagsList.append(name)
+                    if withType:
+                        tagsList.append((name, isLocal))
+                    else:
+                        tagsList.append(name)
         
-        return self.tagsList[:]
+        if withType:
+            return tagsList
+        else:
+            if tagsList:
+                self.tagsList = tagsList
+            return self.tagsList[:]
     
     def hgGetBranchesList(self, repodir):
         """
