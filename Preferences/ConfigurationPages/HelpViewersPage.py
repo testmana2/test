@@ -32,7 +32,8 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         self.setupUi(self)
         self.setObjectName("HelpViewersPage")
         
-        self.customViewerButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.customViewerSelectionButton.setIcon(
+            UI.PixmapCache.getIcon("open.png"))
         
         self.helpViewerGroup = QButtonGroup()
         self.helpViewerGroup.addButton(self.helpBrowserButton)
