@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
@@ -30,6 +31,8 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.propFileCompleter = E5FileCompleter(self.propFileEdit)
         

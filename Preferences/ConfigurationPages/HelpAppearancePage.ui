@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>497</width>
+    <width>499</width>
     <height>547</height>
    </rect>
   </property>
@@ -177,12 +177,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="styleSheetButton">
+       <widget class="QToolButton" name="styleSheetButton">
         <property name="toolTip">
          <string>Select the user style sheet via a file selection dialog</string>
-        </property>
-        <property name="text">
-         <string>...</string>
         </property>
        </widget>
       </item>

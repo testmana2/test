@@ -17,6 +17,7 @@ from .Ui_DebuggerRubyPage import Ui_DebuggerRubyPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
@@ -30,6 +31,8 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerRubyPage")
+        
+        self.rubyInterpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.rubyInterpreterCompleter = E5FileCompleter(
             self.rubyInterpreterEdit)

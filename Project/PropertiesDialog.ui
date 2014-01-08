@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>550</height>
+    <height>555</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -130,20 +130,6 @@
        </property>
       </widget>
      </item>
-     <item row="5" column="2">
-      <widget class="QPushButton" name="dirButton">
-       <property name="toolTip">
-        <string>Show directory selection dialog</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Project Directory&lt;/b&gt;
-&lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-      </widget>
-     </item>
      <item row="6" column="0">
       <widget class="QLabel" name="versionLabel">
        <property name="text">
@@ -184,20 +170,6 @@
         <string>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="2">
-      <widget class="QPushButton" name="mainscriptButton">
-       <property name="toolTip">
-        <string>Show file selection dialog</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Main Script&lt;/b&gt;
-&lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -320,6 +292,28 @@
        </property>
       </widget>
      </item>
+     <item row="5" column="2">
+      <widget class="QToolButton" name="dirButton">
+       <property name="toolTip">
+        <string>Show directory selection dialog</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Project Directory&lt;/b&gt;
+&lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QToolButton" name="mainscriptButton">
+       <property name="toolTip">
+        <string>Show file selection dialog</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Main Script&lt;/b&gt;
+&lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -374,7 +368,6 @@
    </item>
   </layout>
   <zorder>buttonBox</zorder>
-  <zorder>vcsInfoButton</zorder>
   <zorder>vcsCheckBox</zorder>
  </widget>
  <layoutdefault spacing="6" margin="6"/>

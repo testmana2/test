@@ -20,6 +20,7 @@ from .Ui_PropertiesDialog import Ui_PropertiesDialog
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
@@ -39,6 +40,9 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if name:
             self.setObjectName(name)
         self.setupUi(self)
+        
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.mainscriptButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.project = project
         self.newProject = new

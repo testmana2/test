@@ -17,6 +17,8 @@ from E5Gui import E5FileDialog
 
 from .Ui_NewDialogClassDialog import Ui_NewDialogClassDialog
 
+import UI.PixmapCache
+
 
 class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
     """
@@ -34,6 +36,8 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.pathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)

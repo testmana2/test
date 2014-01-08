@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 from .Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
@@ -31,6 +32,8 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.fileCompleter = E5FileCompleter(self.fileEdit)
         

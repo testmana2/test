@@ -21,6 +21,7 @@ from .Ui_InterfacePage import Ui_InterfacePage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 from eric5config import getConfig
 
@@ -36,6 +37,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("InterfacePage")
+        
+        self.styleSheetButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         

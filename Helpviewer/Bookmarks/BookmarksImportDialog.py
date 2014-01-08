@@ -20,6 +20,7 @@ from . import BookmarksImporters
 
 import Utilities
 import Globals
+import UI.PixmapCache
 
 
 class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
@@ -36,6 +37,8 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.chooseButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.sourcesList.setIconSize(QSize(48, 48))
         for icon, displayText, idText in BookmarksImporters.getImporters():

@@ -17,6 +17,7 @@ from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
@@ -30,6 +31,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("HelpAppearancePage")
+        
+        self.styleSheetButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         

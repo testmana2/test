@@ -19,6 +19,7 @@ from .Ui_PluginManagerPage import Ui_PluginManagerPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
@@ -32,6 +33,8 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
+        
+        self.downloadDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         

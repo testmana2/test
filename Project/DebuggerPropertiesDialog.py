@@ -19,6 +19,7 @@ from E5Gui import E5FileDialog
 from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
 import Utilities
+import UI.PixmapCache
 
 from eric5config import getConfig
 
@@ -40,6 +41,9 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         if name:
             self.setObjectName(name)
         self.setupUi(self)
+        
+        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)

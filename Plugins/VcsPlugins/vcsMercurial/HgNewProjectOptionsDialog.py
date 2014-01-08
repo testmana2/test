@@ -21,6 +21,7 @@ from .Config import ConfigHgProtocols
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
@@ -37,6 +38,9 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.projectDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         self.vcsProjectDirCompleter = E5DirCompleter(self.vcsProjectDirEdit)

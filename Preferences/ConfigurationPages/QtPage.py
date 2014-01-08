@@ -17,6 +17,7 @@ from .Ui_QtPage import Ui_QtPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class QtPage(ConfigurationPageBase, Ui_QtPage):
@@ -30,6 +31,8 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("QtPage")
+        
+        self.qt4TransButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.qt4TransCompleter = E5DirCompleter(self.qt4TransEdit)
         

@@ -12,12 +12,13 @@ import os
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
-from E5Gui.E5Completers import E5DirCompleter
+from E5Gui.E5Completers import E5DirCompleter, E5FileCompleter
 from E5Gui import E5FileDialog
 
 from .Ui_AddFileDialog import Ui_AddFileDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class AddFileDialog(QDialog, Ui_AddFileDialog):
@@ -40,7 +41,11 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
+        self.targetDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.sourceFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
+        self.sourceFileCompleter = E5FileCompleter(self.sourceFileCompleter)
         
         self.targetDirEdit.setText(pro.ppath)
         self.filter = filter

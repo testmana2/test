@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 from .Ui_SvnCommandDialog import Ui_SvnCommandDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
@@ -37,6 +38,8 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.workdirCompleter = E5DirCompleter(self.workdirCombo)
         

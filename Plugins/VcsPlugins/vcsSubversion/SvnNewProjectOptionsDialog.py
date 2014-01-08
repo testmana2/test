@@ -21,6 +21,7 @@ from .Config import ConfigSvnProtocols
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
@@ -37,6 +38,9 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.projectDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         self.vcsProjectDirCompleter = E5DirCompleter(self.vcsProjectDirEdit)

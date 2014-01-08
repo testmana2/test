@@ -18,6 +18,7 @@ from .Ui_IconsPage import Ui_IconsPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class IconsPage(ConfigurationPageBase, Ui_IconsPage):
@@ -31,6 +32,8 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("IconsPage")
+        
+        self.iconDirectoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.iconDirectoryCompleter = E5DirCompleter(self.iconDirectoryEdit)
         

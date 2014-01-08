@@ -60,6 +60,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
+        self.fileDialogButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.startButton = self.buttonBox.addButton(
             self.trUtf8("Start"), QDialogButtonBox.ActionRole)
         self.startButton.setToolTip(self.trUtf8(

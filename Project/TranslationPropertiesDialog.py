@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
@@ -34,6 +35,9 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.transBinPathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.transPatternButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.project = project
         self.parent = parent

@@ -17,6 +17,7 @@ from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class EditorSpellCheckingPage(ConfigurationPageBase,
@@ -31,6 +32,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorSpellCheckingPage")
+        
+        self.pwlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pelButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         from QScintilla.SpellChecker import SpellChecker
         languages = sorted(SpellChecker.getAvailableLanguages())

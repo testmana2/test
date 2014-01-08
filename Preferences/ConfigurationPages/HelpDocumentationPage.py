@@ -17,6 +17,7 @@ from .Ui_HelpDocumentationPage import Ui_HelpDocumentationPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
@@ -31,9 +32,18 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.setupUi(self)
         self.setObjectName("HelpDocumentationPage")
         
+        self.python2DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pythonDocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.qt4DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.qt5DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pyqt4DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pyqt5DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pysideDocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.python2DocDirCompleter = E5FileCompleter(self.python2DocDirEdit)
         self.pythonDocDirCompleter = E5FileCompleter(self.pythonDocDirEdit)
         self.qt4DocDirCompleter = E5FileCompleter(self.qt4DocDirEdit)
+        self.qt5DocDirCompleter = E5FileCompleter(self.qt5DocDirEdit)
         self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
         self.pyqt5DocDirCompleter = E5FileCompleter(self.pyqt5DocDirEdit)
         self.pysideDocDirCompleter = E5FileCompleter(self.pysideDocDirEdit)

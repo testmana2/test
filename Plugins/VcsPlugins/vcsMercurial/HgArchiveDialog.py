@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 from .Ui_HgArchiveDialog import Ui_HgArchiveDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
@@ -31,6 +32,8 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.archiveButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.__archiveFileCompleter = E5FileCompleter()
         self.__archiveDirCompleter = E5DirCompleter()

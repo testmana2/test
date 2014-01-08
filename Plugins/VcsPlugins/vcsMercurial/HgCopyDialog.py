@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_HgCopyDialog import Ui_HgCopyDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class HgCopyDialog(QDialog, Ui_HgCopyDialog):
@@ -36,6 +37,8 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
        
         self.source = source
         if os.path.isdir(self.source):

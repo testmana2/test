@@ -423,24 +423,24 @@
 <context>
     <name>AddDirectoryDialog</name>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="13"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="14"/>
         <source>Add Directory</source>
         <translation>Agregar Directorio</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="16"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="17"/>
         <source>Add a directory to the current project</source>
         <translation>Agregar Directorio al proyecto actual</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="19"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="20"/>
         <source>&lt;b&gt;Add Directory Dialog&lt;/b&gt;
 &lt;p&gt;This dialog is used to add a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diálogo Agregar Directorio&lt;/b&gt;
 &lt;p&gt;Este dialogo se utiliza para agregar un directorio al proyecto actual&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="34"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de Destino&lt;/b&gt;
@@ -449,20 +449,20 @@
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="94"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="35"/>
         <source>&amp;Target Directory:</source>
         <translation>Direc&amp;torio de Destino:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="55"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
         <source>Enter the name of the directory to add</source>
         <translation>Introduzca el nombre del directorio a agregar</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="58"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="48"/>
         <source>&lt;b&gt;Source Directory&lt;/b&gt;
 &lt;p&gt;Enter the name of the directory to add to the current project.
  You may select it with a dialog by pressing the button to
@@ -472,22 +472,22 @@
 Para seleccionarlo a través de un cuadro diálogo, presione el botón de la derecha &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="68"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="58"/>
         <source>Select, whether a recursive add should be performed</source>
         <translation>Seleccione, si debe realizarse un agregado recursivo </translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="71"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="61"/>
         <source>&amp;Recurse into subdirectories</source>
         <translation>&amp;Incluir subdirectorios recursivamente</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="78"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="68"/>
         <source>Enter the target directory for the file</source>
         <translation>Introduzca el directorio de destino para el archivo</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="81"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="71"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -496,49 +496,49 @@ Para seleccionarlo a través de un cuadro diálogo, presione el botón de la der
  presione el botón de la derecha&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="100"/>
         <source>&lt;b&gt;Source Directory&lt;/b&gt;
 &lt;p&gt;Select the source directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio origen&lt;/b&gt;
 &lt;p&gt;Seleccione the directorio de origen utilizando un cuadro de diálogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="101"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="80"/>
         <source>&amp;Source Directory:</source>
         <translation>Direc&amp;torio de origen:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="111"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
         <source>&amp;File Type:</source>
         <translation>&amp;Tipo de Archivo:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="66"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="70"/>
         <source>Source Files</source>
         <translation>Archivos de Origen</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="68"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
         <source>Forms Files</source>
         <translation>Archivos de Formularios</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="70"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
         <source>Resource Files</source>
         <translation>Archivos de Recursos</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="76"/>
         <source>Interface Files</source>
         <translation>Archivos de Intefaces</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="78"/>
         <source>Other Files (*)</source>
         <translation>Otros archivos(*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="107"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="111"/>
         <source>Select directory</source>
         <translation>Seleccione directorio</translation>
     </message>
@@ -546,19 +546,19 @@ Para seleccionarlo a través de un cuadro diálogo, presione el botón de la der
 <context>
     <name>AddFileDialog</name>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="13"/>
+        <location filename="../Project/AddFileDialog.ui" line="14"/>
         <source>Add Files</source>
         <translation>Añadir archivos</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="16"/>
+        <location filename="../Project/AddFileDialog.ui" line="17"/>
         <source>&lt;b&gt;Add Files Dialog&lt;/b&gt;
 &lt;p&gt;This dialog is used to add files to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dialog de añadir archivos&lt;/b&gt;
 &lt;p&gt;Este diálogo se usa para añadir archivos al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="28"/>
+        <location filename="../Project/AddFileDialog.ui" line="74"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Select the source files via a files selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Archivos de origen&lt;/b&gt;
@@ -567,20 +567,20 @@ Para seleccionarlo a través de un cuadro diálogo, presione el botón de la der
     <message>
         <location filename="../Project/AddFileDialog.ui" line="65"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="39"/>
+        <location filename="../Project/AddFileDialog.ui" line="29"/>
         <source>&amp;Target Directory:</source>
         <translation>Direc&amp;torio de Destino:</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="49"/>
+        <location filename="../Project/AddFileDialog.ui" line="39"/>
         <source>Enter the target directory for the file</source>
         <translation>Introduzca el directorio de destino para el archivo</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="52"/>
+        <location filename="../Project/AddFileDialog.ui" line="42"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -589,24 +589,24 @@ Para seleccionarlo a través de un cuadro diálogo, presione el botón de la der
 haciendo click en el botón de la derecha&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="61"/>
+        <location filename="../Project/AddFileDialog.ui" line="82"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio Destino&lt;/b&gt;
 &lt;p&gt;Seleccione el directorio de destino con un cuadro de diálogo de selección de directorios.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="72"/>
+        <location filename="../Project/AddFileDialog.ui" line="51"/>
         <source>&amp;Source Files:</source>
         <translation>&amp;Archivos de origen:</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="82"/>
+        <location filename="../Project/AddFileDialog.ui" line="61"/>
         <source>Enter the name of files to add separated by the path separator</source>
         <translation>Introduzca el nombre de los archivos para añadir separados por el carácter de separación de rutas</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="85"/>
+        <location filename="../Project/AddFileDialog.ui" line="64"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Enter the name of files to add to the current project separated
 by the path separator. You may select them with a dialog by pressing 
@@ -617,92 +617,92 @@ por el carácter de separación de rutas. Puede seleccionarlos utilizando un di�
 el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="97"/>
+        <location filename="../Project/AddFileDialog.ui" line="92"/>
         <source>Select, if the files should be added as sourcecode (overriding automatic detection)</source>
         <translation>Seleccione si los archivos se deberían añadir como código fuente (anula la detección automática)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="100"/>
+        <location filename="../Project/AddFileDialog.ui" line="95"/>
         <source>Is source&amp;code files</source>
         <translation>Son archivos de &amp;código fuente</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="103"/>
+        <location filename="../Project/AddFileDialog.ui" line="98"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="63"/>
+        <location filename="../Project/AddFileDialog.py" line="68"/>
         <source>Select target directory</source>
         <translation>Seleccione directorio de destino</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="106"/>
+        <location filename="../Project/AddFileDialog.py" line="111"/>
         <source>Select Files</source>
         <translation>Seleccione Archivos</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="114"/>
+        <location filename="../Project/AddFileDialog.py" line="119"/>
         <source>Select user-interface files</source>
         <translation>Seleccione archivos de interfaz de usuario</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="122"/>
+        <location filename="../Project/AddFileDialog.py" line="127"/>
         <source>Select resource files</source>
         <translation>Seleccione archivos de recursos</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="130"/>
+        <location filename="../Project/AddFileDialog.py" line="135"/>
         <source>Select source files</source>
         <translation>Seleccione archivos de código fuente</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="138"/>
+        <location filename="../Project/AddFileDialog.py" line="143"/>
         <source>Select interface files</source>
         <translation>Seleccione archivos de interfaz de usuario</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="146"/>
+        <location filename="../Project/AddFileDialog.py" line="151"/>
         <source>Select translation files</source>
         <translation>Seleccione archivos de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="148"/>
+        <location filename="../Project/AddFileDialog.py" line="153"/>
         <source>All Files (*)</source>
         <translation>Todos los Archivos</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="149"/>
+        <location filename="../Project/AddFileDialog.py" line="154"/>
         <source>Select files</source>
         <translation>Seleccione archivos</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="93"/>
+        <location filename="../Project/AddFileDialog.py" line="98"/>
         <source>Source Files ({0});;Forms Files ({1});;Resource Files ({2});;Interface Files ({3});;Translation Files ({4});;All Files (*)</source>
         <translation>Archivos de Código fuente ({0});;Archivos de Formularios ({1});;Archivos de Recursos({2});;Archivos de interfaz de usuario({3});;Archivos de traducción({4});;Todos los archivos(*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="112"/>
+        <location filename="../Project/AddFileDialog.py" line="117"/>
         <source>Forms Files ({0})</source>
         <translation>Archivos de Formularios ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="120"/>
+        <location filename="../Project/AddFileDialog.py" line="125"/>
         <source>Resource Files ({0})</source>
         <translation>Archivos de Recursos ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="128"/>
+        <location filename="../Project/AddFileDialog.py" line="133"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation>Archivos de Código Fuente ({0});;Todos los Archivos(*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="136"/>
+        <location filename="../Project/AddFileDialog.py" line="141"/>
         <source>Interface Files ({0})</source>
         <translation>Archivos de Interfaz de Usuario({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="144"/>
+        <location filename="../Project/AddFileDialog.py" line="149"/>
         <source>Translation Files ({0})</source>
         <translation>Archivos de traducción ({0})</translation>
     </message>
@@ -1080,7 +1080,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
 <context>
     <name>AddProjectDialog</name>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="62"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
         <source>Add Project</source>
         <translation>Añadir Proyecto</translation>
     </message>
@@ -1105,42 +1105,42 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Introduzca el nombre del archivo de proyecto</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="95"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Seleccione el archivo de proyecto utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="62"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="82"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="72"/>
         <source>Enter a short description for the project</source>
         <translation>Introduzca una descripción corta para el proyecto</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="69"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
         <source>&amp;Description:</source>
         <translation>&amp;Descripción:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="44"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="47"/>
         <source>Project Properties</source>
         <translation>Propiedades del Proyecto</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="62"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
         <source>Project Files (*.e4p)</source>
         <translation>Archivos de proyecto (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="95"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="85"/>
         <source>Select to make this project the main project</source>
         <translation>Seleccionar para hacer este proyecto el proyecto principal</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="98"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="88"/>
         <source>Is &amp;main project</source>
         <translation>Es el proyecto &amp;principal</translation>
     </message>
@@ -1491,61 +1491,61 @@ el botón de la derecha.&lt;/p&gt;</translation>
 <context>
     <name>BookmarkedFilesDialog</name>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="13"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="14"/>
         <source>Configure Bookmarked Files Menu</source>
         <translation>Menu de configuración de Archivos en marcadores</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="34"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="35"/>
         <source>Delete the selected entry</source>
         <translation>Borrar la entrada seleccionada</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="37"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="38"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar&lt;/b&gt;
 &lt;p&gt;Borrar la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="41"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="42"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="114"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="101"/>
         <source>Alt+D</source>
         <translation>Alt+B</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="70"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="71"/>
         <source>Move up</source>
         <translation>Mover hacia arriba</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="73"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="74"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mover hacia Arriba&lt;/b&gt;
 &lt;p&gt;Mueve hacia arriba la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="77"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="78"/>
         <source>&amp;Up</source>
         <translation>&amp;Arriba</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="80"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="81"/>
         <source>Alt+U</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="87"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="169"/>
         <source>Select the file via a file selection dialog</source>
         <translation>Seleccionar el archivo utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="90"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="172"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Select the file to be bookmarked via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Archivo&lt;/b&gt;
@@ -1554,81 +1554,81 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="104"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="91"/>
         <source>Move down</source>
         <translation>Mover hacia abajo</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="107"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mover hacia Abajo&lt;/b&gt;
 &lt;p&gt;Mueve hacia abajo la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="111"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="98"/>
         <source>&amp;Down</source>
         <translation>A&amp;bajo</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="124"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="111"/>
         <source>Add a new bookmarked file</source>
         <translation>Añadir un nuevo archivo como marcador</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="127"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="114"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new bookmarked file with the value entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir&lt;/b&gt;
 &lt;p&gt;Añadir un nuevo archivo como marcador con el valor introducido debajo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="131"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="118"/>
         <source>&amp;Add</source>
         <translation>Aña&amp;dir</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="134"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="121"/>
         <source>Alt+A</source>
         <translation>Alt+D</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="141"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="128"/>
         <source>&amp;File:</source>
         <translation>A&amp;rchivo:</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="154"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="141"/>
         <source>Change the value of the selected entry</source>
         <translation>Cambiar el valor de la entrada seleccionada</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="157"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="144"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the value of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cambiar&lt;/b&gt;
 &lt;p&gt;Cambiar el valor de la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="161"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="148"/>
         <source>C&amp;hange</source>
         <translation>Cam&amp;biar</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="164"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="151"/>
         <source>Alt+H</source>
         <translation>Alt+B</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="171"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="158"/>
         <source>Enter the filename of the file</source>
         <translation>Introducir el nombre del archivo</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="174"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="161"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Enter the filename of the bookmarked file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Archivo&lt;/b&gt;&lt;p&gt;Introducir el nombre del fichero añadido a los marcadores.&lt;/p&gt;</translation>
@@ -1768,52 +1768,52 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Importar Marcadores</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="36"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="48"/>
         <source>Choose source from which you want to import bookmarks:</source>
         <translation>Elija la fuente desde la que desea importar los marcadores:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="43"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="55"/>
         <source>Choose the source to import from</source>
         <translation>Elegir la fuente desde la que importar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="179"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="196"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="89"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="92"/>
         <source>Choose Directory ...</source>
         <translation>Elegir Directorio ...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="99"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="102"/>
         <source>Choose File ...</source>
         <translation>Elegir Archivo ...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="124"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="127"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
         <translation>&lt;b&gt;Importando desde{0}&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="131"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="134"/>
         <source>Finish</source>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="146"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="149"/>
         <source>Error importing bookmarks</source>
         <translation>Error al importar marcadores</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="124"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="145"/>
         <source>Shows the name of the bookmarks file or directory</source>
         <translation>Muestra el nombre del archivoo directorio de marcadores</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="189"/>
         <source>Next &gt;</source>
         <translation>Siguiente &gt;</translation>
     </message>
@@ -2538,52 +2538,52 @@ Línea: {1}</translation>
 <context>
     <name>ChatWidget</name>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="54"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="63"/>
         <source>Chat</source>
         <translation>Chat</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="29"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="38"/>
         <source>Users</source>
         <translation>Usuarios</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="80"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="89"/>
         <source>Press to send the text above</source>
         <translation>Pulsar para enviar el texto de encima</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="83"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="92"/>
         <source>Send</source>
         <translation>Enviar</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="189"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="186"/>
         <source>Connection</source>
         <translation>Conexión</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="197"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="194"/>
         <source>Host:</source>
         <translation>Host:</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="277"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="274"/>
         <source>Port:</source>
         <translation>Puerto:</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="259"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="256"/>
         <source>Shows the connection status</source>
         <translation>Muestra el estado de la conexión</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="271"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="268"/>
         <source>Server</source>
         <translation>Servidor</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="319"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="316"/>
         <source>Shows the status of the server</source>
         <translation>Muestra el estado del servidor</translation>
     </message>
@@ -2636,27 +2636,27 @@ Línea: {1}</translation>
         <translation>Conectar</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="96"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="105"/>
         <source>Share Editor</source>
         <translation>Compartir Editor</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="118"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="127"/>
         <source>Press to toggle the shared status of the current editor</source>
         <translation>Pulsar para conmutar el estado de compartición del editor actual</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.ui" line="166"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="134"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="140"/>
         <source>Press to start a shared edit</source>
         <translation>Pulsar para iniciar una edición compartida</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="150"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="153"/>
         <source>Press to end the edit and send the changes</source>
         <translation>Pulsar para finalizar la edición y enviar los cambios</translation>
     </message>
@@ -2701,17 +2701,17 @@ Línea: {1}</translation>
         <translation>&lt;p&gt;Los contenidos del chat no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="73"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="82"/>
         <source>Enter the text to send</source>
         <translation>Introducir el texto a enviar</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="284"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="281"/>
         <source>Enter the server port</source>
         <translation>Introducir el puerto del servidor</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="230"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="227"/>
         <source>Press to clear the hosts list</source>
         <translation>Pulse para limpiar la lista de hosts</translation>
     </message>
@@ -2792,7 +2792,7 @@ Línea: {1}</translation>
         <translation>Mensaje de &lt;{0}&gt;</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="210"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="207"/>
         <source>Enter the host and port to connect to in the form &quot;host@port&quot;</source>
         <translation>Introduzca el host y puerto de conexión de la forma &quot;host:puerto&quot;</translation>
     </message>
@@ -3114,72 +3114,72 @@ entry will open an editor window and position the cursor at the respective line 
 sobre una entrada, la abrirá en una ventana de edición posicionando el cursor en la línea y posición correspondiente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="37"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="46"/>
         <source>Exclude Files:</source>
         <translation>Excluir Archivos:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="44"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="53"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Introducir patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="63"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="72"/>
         <source>Press to start the code style check run</source>
         <translation>Pulsar para iniciar la comprobación de estilo de código</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="66"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="75"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="73"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="82"/>
         <source>Press to fix the selected issues</source>
         <translation>Pulsar para arreglar los problemas seleccionados</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="76"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="85"/>
         <source>Fix Selected</source>
         <translation>Arreglar seleccionados</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="96"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="105"/>
         <source>Press to load the default values</source>
         <translation>Pulsar para cargar los valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="99"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="108"/>
         <source>Load Defaults</source>
         <translation>Cargar Valores por Defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="106"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="115"/>
         <source>Press to store the current values as defaults</source>
         <translation>Pulsar para almacenar los valores actuales como valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="109"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="118"/>
         <source>Store Defaults</source>
         <translation>Almacenar valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="116"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="125"/>
         <source>Press to reset the default values</source>
         <translation>Pulsar para resetear los valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="119"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
         <source>Reset Defaults</source>
         <translation>Resetear Valores por Defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="137"/>
         <source>Exclude Messages:</source>
         <translation>Excluir Mensajes:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="135"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="144"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
         <translation>Introduzca códigos de mensaje o categorías a excluir separados por comas</translation>
     </message>
@@ -3191,25 +3191,25 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="217"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="152"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="158"/>
         <source>Included Messages:</source>
         <translation>Mensajes Incluidos:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="159"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="165"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation>Introduzcir códigos de mensaje o categorías a incluir separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="176"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="179"/>
         <source>Fix Issues:</source>
         <translation>Arreglar Problemas:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="183"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="186"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
         <translation>Introducir los códigos de mensaje de los problemas que se desea arreglar automáticamente (dejar en blanco para arreglar todos)</translation>
     </message>
@@ -3224,57 +3224,57 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Introducir los códigos de mensaje de los problemas que se se van a arreglar automáticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="224"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="221"/>
         <source>Max. Line Length:</source>
         <translation>Máxima Longitud de Línea:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="233"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="230"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
         <translation>Introducir el máximo permitido para longitud de línea (PEP-8: 79 caracteres)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="267"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="264"/>
         <source>Docstring Type:</source>
         <translation>Tipo de Docstring:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="276"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="273"/>
         <source>Select the rule set for docstrings</source>
         <translation>Seleccionar conjunto de reglas para docstrings</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="297"/>
         <source>Select to allow hanging closing brackets</source>
         <translation>Seleccionar para permitir hanging closing brackets </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="303"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
         <source>Allow hanging closing brackets</source>
         <translation>Permitir hanging closing brackets</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="327"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="324"/>
         <source>Select to repeat each message type</source>
         <translation>Seleccionar para repetir cada tipo de mensaje</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="330"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="327"/>
         <source>Repeat messages</source>
         <translation>Repetir mensajes</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="340"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="337"/>
         <source>Select to fix some issues</source>
         <translation>Seleccionar para arreglar problemas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="343"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="340"/>
         <source>Fix issues automatically</source>
         <translation>Arreglar problemas automaticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="386"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="383"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -3284,72 +3284,72 @@ the respective line and position.&lt;/p&gt;</source>
 sobre una entrada, la abrirá en una ventana de edición posicionando el cursor en la línea y posición correspondiente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="402"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="399"/>
         <source>File/Line</source>
         <translation>Archivo/Línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="407"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="404"/>
         <source>Code</source>
         <translation>Código</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="412"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="409"/>
         <source>Message</source>
         <translation>Mensaje</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="92"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="101"/>
         <source>PEP-257</source>
         <translation>Muestra el progreso de la comprobación del estilo de código</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="93"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="102"/>
         <source>Eric</source>
         <translation>Eric</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="95"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="104"/>
         <source>Statistics...</source>
         <translation>Estadísticas...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="97"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="106"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Pulsar para mostrar algunas estadísticas de la última ejecución</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="100"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="109"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="102"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="111"/>
         <source>Press to show all files containing an issue</source>
         <translation>Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="403"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="412"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="885"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="894"/>
         <source>Fix: {0}</source>
         <translation>Arreglar: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="546"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="555"/>
         <source>No issues found.</source>
         <translation>No se han encontrado problemas.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="433"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="430"/>
         <source>Shows the progress of the code style check</source>
         <translation>Muestra el progreso de la revisión de estilo de código </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="442"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="439"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Archivos</translation>
     </message>
@@ -4014,112 +4014,112 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Comparación de archivos</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="32"/>
+        <location filename="../UI/CompareDialog.ui" line="41"/>
         <source>File &amp;1:</source>
         <translation>Archivo &amp;1:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="42"/>
+        <location filename="../UI/CompareDialog.ui" line="51"/>
         <source>Enter the name of the first file</source>
         <translation>Introduzca el nombre del primer archivo</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="76"/>
+        <location filename="../UI/CompareDialog.ui" line="82"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Presione para seleccionar el archivo utilizando un diálogo de selección de archivo</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.ui" line="79"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="59"/>
+        <location filename="../UI/CompareDialog.ui" line="65"/>
         <source>File &amp;2:</source>
         <translation>Archivo &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="69"/>
+        <location filename="../UI/CompareDialog.ui" line="75"/>
         <source>Enter the name of the second file</source>
         <translation>Introduzca el nombre del segundo archivo</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="148"/>
+        <location filename="../UI/CompareDialog.ui" line="151"/>
         <source>Press to move to the first difference</source>
         <translation>Presione para posicionarse en la primera diferencia</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="158"/>
+        <location filename="../UI/CompareDialog.ui" line="161"/>
         <source>Press to move to the previous difference</source>
         <translation>Presione para posicionarse en la diferencia anterior</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="168"/>
+        <location filename="../UI/CompareDialog.ui" line="171"/>
         <source>Press to move to the next difference</source>
         <translation>Presione para posicionarse en la siguiente diferencia</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="178"/>
+        <location filename="../UI/CompareDialog.ui" line="181"/>
         <source>Press to move to the last difference</source>
         <translation>Presione para posicionarse en la última diferencia</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="227"/>
+        <location filename="../UI/CompareDialog.ui" line="230"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="102"/>
+        <location filename="../UI/CompareDialog.py" line="105"/>
         <source>Compare</source>
         <translation>Comparar</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="104"/>
+        <location filename="../UI/CompareDialog.py" line="107"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>Pulse para realizar la comparación de los dos archivos</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="246"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>Compare Files</source>
         <translation>Comparar Archivos</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="441"/>
+        <location filename="../UI/CompareDialog.py" line="444"/>
         <source>Select file to compare</source>
         <translation>Seleccione el archivo para comparar</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="221"/>
+        <location filename="../UI/CompareDialog.ui" line="224"/>
         <source>Select, if the horizontal scrollbars should be synchronized</source>
         <translation>Seleccione si las barras de desplazamiento horizontales deben ser sincronizadas</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="224"/>
+        <location filename="../UI/CompareDialog.ui" line="227"/>
         <source>&amp;Synchronize horizontal scrollbars</source>
         <translation>&amp;Sincronizar barras de desplazamiento horizontales</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="353"/>
+        <location filename="../UI/CompareDialog.py" line="356"/>
         <source>Total: {0}</source>
         <translation>Total: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="355"/>
+        <location filename="../UI/CompareDialog.py" line="358"/>
         <source>Changed: {0}</source>
         <translation>Cambiado: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="356"/>
+        <location filename="../UI/CompareDialog.py" line="359"/>
         <source>Added: {0}</source>
         <translation>Añadido: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="357"/>
+        <location filename="../UI/CompareDialog.py" line="360"/>
         <source>Deleted: {0}</source>
         <translation>Borrado: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="246"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no se ha podido leer.&lt;/p&gt;</translation>
     </message>
@@ -4886,37 +4886,37 @@ para visualizar la página de configuración.</translation>
 <context>
     <name>CorbaPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="17"/>
         <source>&lt;b&gt;Configure CORBA support&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar soporte a CORBA&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="37"/>
         <source>IDL Compiler</source>
         <translation>Compilador IDL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="42"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="57"/>
         <source>Press to select the IDL compiler via a file selection dialog.</source>
         <translation>Presione para seleccionar el compilador IDL utilizando un diálogo de selección de archivos.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="45"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="52"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="43"/>
         <source>Enter the path to the IDL compiler.</source>
         <translation>Intruduzca la ruta del compilador IDL.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="50"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the default value (omniidl or omniidl.exe).</source>
         <translation>&lt;b&gt;Nota: /b&gt; Deje esta entrada vacía para utilizar el valor por defecto (omniidl o omniidl.exe).</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.py" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.py" line="53"/>
         <source>Select IDL compiler</source>
         <translation>Seleccionar compilador IDL</translation>
     </message>
@@ -6287,45 +6287,45 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="65"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="49"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="46"/>
         <source>Interpreter for Debug Client</source>
         <translation>Intérprete para el cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="55"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="52"/>
         <source>Enter the path of the interpreter to be used by the debug client.</source>
         <translation>Introduzca la ruta del intérprete que debe utilizar el cliente de depuración.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="62"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="59"/>
         <source>Press to select the interpreter via a file selection dialog</source>
         <translation>Pulsar para seleccionar el intérprete utilizando un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="69"/>
         <source>Environment for Debug Client</source>
         <translation>Entorno para el Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="81"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
         <source>Select, if the environment of the debug client should be replaced</source>
         <translation>Seleccionar si el entorno del cliente de depuración debe ser reemplazado</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="84"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="78"/>
         <source>Replace Environment</source>
         <translation>Reemplazar Entorno</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="91"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="85"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="94"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="88"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the debugger. The individual settings must be separate by whitespace and be given in the form &apos;var=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</source>
@@ -6333,143 +6333,143 @@ Not connected
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="103"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="97"/>
         <source>Environment:</source>
         <translation>Entorno:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="113"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="107"/>
         <source>Select, if the debugger should be run remotely</source>
         <translation>Seleccionar si el depurador debe ser ejecutado remotamente</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="116"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="110"/>
         <source>Remote Debugger</source>
         <translation>Depurador Remoto</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="125"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="119"/>
         <source>Select, if path translation for remote debugging should be done</source>
         <translation>Seleccionar si se debe llevar a cabo la traducción de rutas para el depurador remoto</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="128"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="122"/>
         <source>Perform Path Translation</source>
         <translation>Llevar a cabo Traducción de Rutas</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="137"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="131"/>
         <source>Local Path:</source>
         <translation>Ruta Local:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="144"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="138"/>
         <source>Enter the local path</source>
         <translation>Introduzca la ruta local</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="151"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="145"/>
         <source>Enter the remote path</source>
         <translation>Introduzca la ruta remota</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="158"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="152"/>
         <source>Remote Path:</source>
         <translation>Ruta Remota:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="168"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="162"/>
         <source>Remote Host:</source>
         <translation>Host Remoto:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="175"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="169"/>
         <source>Enter the remote execution command.</source>
         <translation>Introduzca el comando de ejecución remota.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="178"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="172"/>
         <source>&lt;b&gt;Remote Execution&lt;/b&gt;
 &lt;p&gt;Enter the remote execution command (e.g. ssh). This command is used to log into the remote host and execute the remote debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ejecución Remota&lt;/b&gt;
 &lt;p&gt;Introduzca el comando de ejecución remota (por ejemplo ssh). Este comando se utiliza para autenticarse en el host remoto y ejecutar el depurador remoto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="186"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="180"/>
         <source>Remote Execution:</source>
         <translation>Ejecución Remota:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="193"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="187"/>
         <source>Enter the hostname of the remote machine.</source>
         <translation>Introduzca el nombre de host de la máquina remota.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="196"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="190"/>
         <source>&lt;b&gt;Remote Host&lt;/b&gt;
 &lt;p&gt;Enter the hostname of the remote machine.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Host Remoto&lt;/b&gt;
 &lt;p&gt;Introduzca el nombre de host de la máquina remota.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="207"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="201"/>
         <source>Select, if the debugger should be executed in a console window</source>
         <translation>Seleccionar si el depurador debe ejecutarse en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="210"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="204"/>
         <source>Console Debugger</source>
         <translation>Depurador de Consola</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="219"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="213"/>
         <source>Console Command:</source>
         <translation>Comando de Consola:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="226"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="220"/>
         <source>Enter the console command (e.g. xterm -e)</source>
         <translation>Introduzca el comando de consola (por ejemplo xterm -e)</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="229"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="223"/>
         <source>&lt;b&gt;Console Command&lt;/b&gt;
 &lt;p&gt;Enter the console command (e.g. xterm -e). This command is used to open a command window for the debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Comando para la Consola&lt;/b&gt;
 &lt;p&gt;Introduzca el comando para la consola (por ejemplo xterm -e). Este comando se utiliza para abrir una ventana de comandos para el depurador.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="243"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="237"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="250"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="244"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Seleccionar para no establecer la codificación del cliente de depuración</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="253"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="247"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>No establecer la codificación del cliente de depuración</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="110"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="114"/>
         <source>Select interpreter for Debug Client</source>
         <translation>Seleccionar intérprete para el Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="126"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="130"/>
         <source>All Files (*)</source>
         <translation>Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="127"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="131"/>
         <source>Select Debug Client</source>
         <translation>Seleccionar Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="240"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
     </message>
@@ -6494,90 +6494,90 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="97"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="70"/>
         <source>Debug Client Type</source>
         <translation>Tipo de Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="84"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="81"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Introduzca la ruta del Cliente de Depuración a utilizar.  Deje en blanco para usar el cliente por defecto.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="91"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>Pulse para seleccionar el Cliente de Depuración utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="100"/>
         <source>Select the standard debug client</source>
         <translation>Seleccionar el Cliente de Depuracion estándar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="103"/>
         <source>Standard</source>
         <translation>Estándar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="110"/>
         <source>Select the custom selected debug client</source>
         <translation>Seleccione el cliente de depuración personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="113"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="126"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="120"/>
         <source>Select the multi threaded debug client</source>
         <translation>Seleccionar el cliente de depuración multihilo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="123"/>
         <source>Multi Threaded</source>
         <translation>Multihilo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="139"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="133"/>
         <source>Source association</source>
         <translation>Asociación de fuentes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="139"/>
         <source>Enter the file extensions to be associated with the Python3 debugger separated by a space. They must not overlap with the ones for Python2.</source>
         <translation>Introduzca las extensiones de archivo a ser asociadas con el depurador de Python3 separadas por un espacio. No debe haber solapamiento con las que se usan para Python2.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="164"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="158"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="171"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="165"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Seleccionar para no establecer la codificación del cliente de depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="174"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="168"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>No establecer la codificación del cliente de depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="97"/>
         <source>Select Python interpreter for Debug Client</source>
         <translation>Seleccionar intérprete de Python para el Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="112"/>
         <source>Select Debug Client</source>
         <translation>Seleccionar Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="112"/>
         <source>Python Files (*.py *.py3)</source>
         <translation>Archivos Python (*.py, *.py3)</translation>
     </message>
@@ -6592,7 +6592,7 @@ Not connected
         <translation>Interprete de Python Personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="155"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
     </message>
@@ -6622,95 +6622,95 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="87"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="60"/>
         <source>Debug Client Type</source>
         <translation>Tipo de Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="74"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="71"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Introduzca la ruta del Cliente de Depuración a utilizar. Deje en blanco para utilizar el valor por defecto.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="84"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="81"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>Pulse para seleccionar el Cliente de Depuración utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="96"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="90"/>
         <source>Select the standard debug client</source>
         <translation>Seleccionar el Cliente de Depuracion estándar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="99"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="93"/>
         <source>Standard</source>
         <translation>Estándar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="100"/>
         <source>Select the custom selected debug client</source>
         <translation>Seleccione el cliente de depuración personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="103"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="110"/>
         <source>Select the multi threaded debug client</source>
         <translation>Seleccionar el cliente de depuración multihilo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="113"/>
         <source>Multi Threaded</source>
         <translation>Multihilo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="154"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="148"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="155"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Seleccionar para no establecer la codificación del cliente de depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="164"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="158"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>No establecer la codificación del cliente de depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="92"/>
         <source>Select Python interpreter for Debug Client</source>
         <translation>Seleccionar intérprete de Python para el Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="107"/>
         <source>Select Debug Client</source>
         <translation>Seleccionar Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="123"/>
         <source>Source association</source>
         <translation>Asociación de fuentes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="135"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
         <source>Enter the file extensions to be associated with the Python2 debugger separated by a space. They must not overlap with the ones for Python3.</source>
         <translation>Introduzca las extensiones de archivo a ser asociadas con el depurador de Python2 separadas por un espacio. No debe haber solapamiento con las que se usan para Python3.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="107"/>
         <source>Python Files (*.py *.py2)</source>
         <translation>Archivos Python (*.py *.py2)</translation>
     </message>
@@ -6745,20 +6745,20 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="53"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="66"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="62"/>
         <source>Select Ruby interpreter for Debug Client</source>
         <translation>Seleccionar intérprete de Ruby para el Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
     </message>
@@ -6789,112 +6789,112 @@ Not connected
         <translation>Introduzca el nombre del primer archivo</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="70"/>
+        <location filename="../UI/DiffDialog.ui" line="67"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Pulse para seleccionar el archivo utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.ui" line="73"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="53"/>
+        <location filename="../UI/DiffDialog.ui" line="50"/>
         <source>File &amp;2:</source>
         <translation>Archivo &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="63"/>
+        <location filename="../UI/DiffDialog.ui" line="60"/>
         <source>Enter the name of the second file</source>
         <translation>Introduzca el nombre del segundo archivo</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="88"/>
+        <location filename="../UI/DiffDialog.ui" line="82"/>
         <source>Select to generate a unified diff</source>
         <translation>Seleccionar para generar un diff unificado</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="91"/>
+        <location filename="../UI/DiffDialog.ui" line="85"/>
         <source>&amp;Unified Diff</source>
         <translation>Diff &amp;Unificado</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="94"/>
+        <location filename="../UI/DiffDialog.ui" line="88"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="104"/>
+        <location filename="../UI/DiffDialog.ui" line="98"/>
         <source>Select to generate a context diff</source>
         <translation>Seleccionar para generar un diff de contexto</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="107"/>
+        <location filename="../UI/DiffDialog.ui" line="101"/>
         <source>Co&amp;ntext Diff</source>
         <translation>Diff de Co&amp;ntexto</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="110"/>
+        <location filename="../UI/DiffDialog.ui" line="104"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="216"/>
+        <location filename="../UI/DiffDialog.py" line="220"/>
         <source>Compare</source>
         <translation>Comparar</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="218"/>
+        <location filename="../UI/DiffDialog.py" line="222"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>Pulse para realizar la comparación de los dos archivos</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="220"/>
+        <location filename="../UI/DiffDialog.py" line="224"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="222"/>
+        <location filename="../UI/DiffDialog.py" line="226"/>
         <source>Save the output to a patch file</source>
         <translation>Guardar la salida a un fichero de parche</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="324"/>
+        <location filename="../UI/DiffDialog.py" line="328"/>
         <source>Save Diff</source>
         <translation>Guardar Diff</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="288"/>
+        <location filename="../UI/DiffDialog.py" line="292"/>
         <source>Patch Files (*.diff)</source>
         <translation>Archivos de Parche (*.diff)</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="365"/>
+        <location filename="../UI/DiffDialog.py" line="369"/>
         <source>Compare Files</source>
         <translation>Comparar Archivos</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="469"/>
+        <location filename="../UI/DiffDialog.py" line="473"/>
         <source>There is no difference.</source>
         <translation>No hay ninguna diferencia.</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="489"/>
+        <location filename="../UI/DiffDialog.py" line="493"/>
         <source>Select file to compare</source>
         <translation>Seleccione el archivo a comparar</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="324"/>
+        <location filename="../UI/DiffDialog.py" line="328"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="365"/>
+        <location filename="../UI/DiffDialog.py" line="369"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no se ha podido leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="305"/>
+        <location filename="../UI/DiffDialog.py" line="309"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
@@ -8632,87 +8632,87 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EditBreakpointDialog</name>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="13"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="14"/>
         <source>Edit Breakpoint</source>
         <translation>Editar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="32"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="33"/>
         <source>Select, whether the breakpoint is enabled</source>
         <translation>Seleccionar si el punto de interrupción esta habilitado</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="35"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="36"/>
         <source>Enabled</source>
         <translation>Habilitado</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="45"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="46"/>
         <source>Select whether this is a temporary breakpoint</source>
         <translation>Seleccione si este es un punto de interrupción temporal</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="48"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="49"/>
         <source>Temporary Breakpoint</source>
         <translation>Punto de Interrupción Temporal</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="55"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="56"/>
         <source>Enter the filename of the breakpoint</source>
         <translation>Introduzca el nombre de archivo del punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="74"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="75"/>
         <source>Enter or select a condition for the breakpoint</source>
         <translation>Introduzca o seleccione una condición para el punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="87"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="88"/>
         <source>Enter an ignore count for the breakpoint</source>
         <translation>Introduzca un conteo de ignoración para el punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="113"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="114"/>
         <source>Enter the linenumber of the breakpoint</source>
         <translation>Introduzca el número de línea del punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="142"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="171"/>
         <source>Press to open a file selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección de archivo</translation>
     </message>
     <message>
         <location filename="../Debugger/EditBreakpointDialog.ui" line="145"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="152"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="143"/>
         <source>Linenumber:</source>
         <translation>Número de línea:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="159"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="150"/>
         <source>Filename:</source>
         <translation>Nombre de archivo:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="166"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="157"/>
         <source>Condition:</source>
         <translation>Condición:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="173"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="164"/>
         <source>Ignore Count:</source>
         <translation>Conteo de ignoración:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.py" line="89"/>
+        <location filename="../Debugger/EditBreakpointDialog.py" line="92"/>
         <source>Add Breakpoint</source>
         <translation>Añadir Punto de Interrupción</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.py" line="121"/>
+        <location filename="../Debugger/EditBreakpointDialog.py" line="124"/>
         <source>Select filename of the breakpoint</source>
         <translation>Seleccionar nombre de archivo del punto de interrupción</translation>
     </message>
@@ -9651,132 +9651,132 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EditorAPIsPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="17"/>
         <source>&lt;b&gt;Configure API files&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar archivos de API &lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="37"/>
         <source>Select to compile the APIs automatically upon loading</source>
         <translation>Seleccione para compilar las APIs automaticamente durante la carga</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="39"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="40"/>
         <source>Compile APIs automatically</source>
         <translation>Compilar APIs automaticamente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="52"/>
         <source>Language:</source>
         <translation>Lenguaje:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="68"/>
         <source>Select the language to be configured.</source>
         <translation>Seleccione el lenguage a configurar.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="80"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="132"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="123"/>
         <source>Press to select an API file from the list of installed API files</source>
         <translation>Presione para seleccionar un archivo API desde la lista de APIs instaladas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="195"/>
         <source>Add from installed APIs</source>
         <translation>Añadir de las APIs instaladas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="159"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="150"/>
         <source>Press to compile the selected APIs definition</source>
         <translation>Pulse para compilar la definición de las APIs seleccionadas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="247"/>
         <source>Compile APIs</source>
         <translation>Compilar APIs</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="105"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="106"/>
         <source>Press to add the entered file to the list</source>
         <translation>Pulse para añadir a la lista el archivo introducido</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="109"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="85"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="86"/>
         <source>List of API files</source>
         <translation>Lista de archivos de API</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="115"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="116"/>
         <source>Enter a file to be added</source>
         <translation>Introduzca un archivo para añadir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="122"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="173"/>
         <source>Press to select an API file via a selection dialog</source>
         <translation>Pulse para seleccionar un archivo API utilizando un cuadro de diálogo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="125"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="95"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="96"/>
         <source>Press to delete the selected file from the list</source>
         <translation>Pulse para borrar el archivo seleccionado de la lista</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="98"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="99"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="137"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="140"/>
         <source>Select API file</source>
         <translation>Seleccionar archivo API</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="137"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="140"/>
         <source>API File (*.api);;All Files (*)</source>
         <translation>Archivos API (*.api);; Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="184"/>
         <source>Select from the list of installed API files</source>
         <translation>Seleccione de la lista de archivos API instalados</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="259"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="262"/>
         <source>Cancel compilation</source>
         <translation>Cancelar compilación</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="133"/>
         <source>Press to select an API file from the list of API files installed by plugins</source>
         <translation>Pulse para seleccionar un archivo de API de la lista de archivos de API instalados por los plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="211"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="214"/>
         <source>Add from Plugin APIs</source>
         <translation>Añadir desde las APIs de plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="211"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="214"/>
         <source>Select from the list of API files installed by plugins</source>
         <translation>Seleccione de la lista de archivos de API instalados por plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="195"/>
         <source>There are no APIs installed yet. Selection is not available.</source>
         <translation>Todavía no se han instalado APIs. La selección no está disponible.</translation>
     </message>
@@ -11587,47 +11587,47 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EditorSpellCheckingPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="292"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
         <source>Select to enable spellchecking</source>
         <translation>Seleccionar para habilitar corrección ortográfica</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="117"/>
         <source>Select to check strings only</source>
         <translation>Seleccionar para comprobar solamente cadenas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="129"/>
         <source>Minimum word size:</source>
         <translation>Tamaño mínimo de palabra:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="127"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="136"/>
         <source>Move to set the minimum size of words to be checked</source>
         <translation>Mover para establecer el tamaño mínimo de las palabras a comprobar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="149"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="158"/>
         <source>Displays the minimum size of words to be checked</source>
         <translation>Muestra el tamaño mínimo de las palabras a comprobar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="81"/>
         <source>Default language:</source>
         <translation>Lenguaje por defecto:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="88"/>
         <source>Select the default language</source>
         <translation>Seleccionar el lenguaje por defecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="176"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="185"/>
         <source>Marker Colour:</source>
         <translation>Color del Marcador:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="198"/>
         <source>Select the colour for the spelling markers.</source>
         <translation>Seleccionar el color para los marcadores de corrección ortográfica.</translation>
     </message>
@@ -11642,117 +11642,117 @@ selección completa.&lt;/li&gt;
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;La corrección ortográfica con PyEnchant no está disponible.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="66"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="75"/>
         <source>Defaults</source>
         <translation>Por defecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="102"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="111"/>
         <source>Spell checking options</source>
         <translation>Opciones de corrección ortográfica</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="111"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="120"/>
         <source>Spell check strings only</source>
         <translation>Comprobar solamente cadenas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="170"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="179"/>
         <source>Colours</source>
         <translation>Colores</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="215"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="224"/>
         <source>Personal lists</source>
         <translation>Listas personales</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="221"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="230"/>
         <source>Personal word list file:</source>
         <translation>Archivo con listado de palabras personal:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="228"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="237"/>
         <source>Enter the filename of the personal word list</source>
         <translation>Introduzca el nombre de archivo del listado de palabras personal</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="272"/>
         <source>Select the personal word list file via a file selection dialog</source>
         <translation>Seleccionar archivo con listado de palabras personal a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="262"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="245"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="244"/>
         <source>Personal exclude list file:</source>
         <translation>Archivo con listado de exclusión personal:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="252"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="251"/>
         <source>Enter the filename of the personal exclude list</source>
         <translation>Introduzca el nombre de archivo del listado de exclusión personal</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="259"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="279"/>
         <source>Select the personal exclude list file via a file selection dialog</source>
         <translation>Seleccionar archivo con listado de exclusión personal a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="269"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="258"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; leave these entries empty to use the default</source>
         <translation>&lt;b&gt;Nota:&lt;/b&gt; dejar estas entradas vacías para utilizar valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="276"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="265"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; valid for all newly opened editors</source>
         <translation>&lt;b&gt;Nota:&lt;/b&gt; válido para todos los editores abiertos nuevamente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="286"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="289"/>
         <source>Automatic spell checking</source>
         <translation>Corrección ortográfica automática</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="298"/>
         <source>Automatic spell checking enabled</source>
         <translation>Corrección ortográfica automática habilitada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="304"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="307"/>
         <source>Amount of lines to autocheck at once:</source>
         <translation>Cantidad de líneas para auto-chequear de una sola vez:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="311"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="314"/>
         <source>Enter the number of lines to check per go. Higher values increase checking speed but decrease GUI responsivenes</source>
         <translation>Intruduzca el número de líneas para chequear de una sola vez. Valores más altos incrementan la velocidad de corrección pero disminuyen la capacidad de respuesta de la GUI</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="113"/>
         <source>Select personal word list</source>
         <translation>Seleccionar listado personal de palabras</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="127"/>
         <source>Select personal exclude list</source>
         <translation>Seleccionar listado personal de exclusión</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="127"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Archivo de Diccionario (*.dict);;Todos los Archivos(*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="56"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="65"/>
         <source>Select to enable spell checking</source>
         <translation>Seleccionar para habilitar corrección ortográfica</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="68"/>
         <source>Spell checking enabled</source>
         <translation>Corrección ortográfica habilitada</translation>
     </message>
@@ -13103,122 +13103,122 @@ selección completa.&lt;/li&gt;
         <translation>Introducir un nombre de fichero de salida</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="38"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="45"/>
         <source>Press to open a file selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección de archivo</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="221"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="48"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="35"/>
         <source>Output File:</source>
         <translation>Archivo de salida:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="84"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="81"/>
         <source>Additional source extensions:</source>
         <translation>Extensiones de códigos fuente adicionales:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="91"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="88"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>Introduzca extensiones de códigos fuente adicionales separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="115"/>
         <source>Select to recurse into subdirectories</source>
         <translation>Seleccionar para acceder a los subdirectorios recursivamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="121"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
         <source>Recurse into subdirectories</source>
         <translation>Acceder a los subdirectorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="125"/>
         <source>Select to include private classes, methods and functions in the API file</source>
         <translation>Seleccionar para incluir clases privadas, métodos y funciones en el archivo de API</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="131"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
         <source>Include private classes, methods and functions</source>
         <translation>Incluir clases privadas, métodos y funciones</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="142"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="139"/>
         <source>Base package name:</source>
         <translation>Nombre base del paquete:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="149"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="146"/>
         <source>Enter the name of the base package</source>
         <translation>Introduzca el nombre base del paquete</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="160"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="157"/>
         <source>Exclude Files:</source>
         <translation>Excluir archivos:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="167"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="164"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="182"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="179"/>
         <source>Exclude Directories</source>
         <translation>Excluir directorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="188"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="185"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>Introduzca un nombre base de directorio a ser ignorado</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="192"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Pulse para añadir el directorio introducido a la lista</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="198"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="202"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Pulse para borrar el directorio seleccionado de la lista</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="208"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="218"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="222"/>
         <source>Press to open a directory selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="228"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="212"/>
         <source>List of directory basenames to be ignored</source>
         <translation>Lista de nombres base de directorios a ignorar</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="183"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
         <source>Select output file</source>
         <translation>Seleccione archivo de salida</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="183"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>Archivos API (*.api);; Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="214"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="218"/>
         <source>Select directory to exclude</source>
         <translation>Seleccionar directorio a excluir</translation>
     </message>
@@ -13228,12 +13228,12 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Nombre de archivo de salida&lt;/b&gt;&lt;p&gt;Introduzca el nombre de archivo de salida. Un marcador de posición &apos;%L&apos; se reemplaza por el lenguaje del archivo de API.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="63"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="60"/>
         <source>Languages</source>
         <translation>Idiomas</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="69"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="66"/>
         <source>Select the languages of the  APIs to generate</source>
         <translation>Seleccione los idiomas de las APIs a generar</translation>
     </message>
@@ -13322,337 +13322,337 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EricdocConfigDialog</name>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="13"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="14"/>
         <source>Ericdoc Configuration</source>
         <translation>Configuración de Ericdoc</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="26"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="27"/>
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="389"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="381"/>
         <source>Output Directory:</source>
         <translation>Directorio de salida:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="398"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="390"/>
         <source>Enter an output directory</source>
         <translation>Introducir un directorio de salida</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="408"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="400"/>
         <source>Press to open a directory selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="411"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="65"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="63"/>
         <source>Additional source extensions:</source>
         <translation>Extensiones de códigos fuente adicionales:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="72"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="70"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>Introduzca extensiones de códigos fuente adicionales separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="83"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="81"/>
         <source>Select to recurse into subdirectories</source>
         <translation>Seleccionar para acceder a los subdirectorios recursivamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="86"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="84"/>
         <source>Recurse into subdirectories</source>
         <translation>Acceder a los subdirectorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="93"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="91"/>
         <source>Select, if no index files should be generated</source>
         <translation>Seleccionar si no se deben generar archivos de índice</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="96"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="94"/>
         <source>Don&apos;t generate index files</source>
         <translation>No generar archivos de índice</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="123"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="121"/>
         <source>Select to exclude empty modules</source>
         <translation>Seleccionar para excluir módulos vacíos</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="126"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="124"/>
         <source>Don&apos;t include empty modules</source>
         <translation>No incluir módulos vacíos</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="153"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="151"/>
         <source>Exclude Files:</source>
         <translation>Excluir archivos:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="160"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="158"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="169"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="167"/>
         <source>Exclude Directories</source>
         <translation>Excluir directorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="175"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="173"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>Introduzca un nombre base de directorio a ser ignorado</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="182"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="180"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Pulse para añadir el directorio introducido a la lista</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="185"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="183"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="192"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="190"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Pulse para borrar el directorio seleccionado de la lista</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="195"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="193"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="215"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="200"/>
         <source>List of directory basenames to be ignored</source>
         <translation>Lista de nombres base de directorios a ignorar</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="226"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="221"/>
         <source>Style</source>
         <translation>Estilo</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="232"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="227"/>
         <source>Style Sheet</source>
         <translation>Hoja de Estilo</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="238"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="233"/>
         <source>Enter the filename of a CSS style sheet. Leave empty to use the colours defined below.</source>
         <translation>Introduzca el nombre de una hoja de estilos CSS. Deje en blanco para utilizar los colores definidos debajo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="248"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="243"/>
         <source>Press to open a file selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="261"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="253"/>
         <source>Colours</source>
         <translation>Colores</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="267"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="259"/>
         <source>Press to select the class and function header background colour.</source>
         <translation>Pulse para seleccionar el color de fondo de la clase y del encabezamiento de función.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="270"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="262"/>
         <source>Class/Function Header Background</source>
         <translation>Color de fondo para Clase/Encabezamiento de Función </translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="277"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="269"/>
         <source>Press to select the class and function header foreground colour.</source>
         <translation>Pulse para seleccionar el color de primer plano de la clase y del encabezamiento de función.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="280"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="272"/>
         <source>Class/Function Header Foreground</source>
         <translation>Color de primer plano para Clase/Encabezamiento de Función </translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="287"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="279"/>
         <source>Press to select the level 2 header background colour.</source>
         <translation>Pulse para seleccionar el color de fondo del encabezamiento de nivel 2.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="290"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="282"/>
         <source>Level 2 Header Background</source>
         <translation>Color de fondo de la Encabezamiento de nivel 2</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="297"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="289"/>
         <source>Press to select the level 2 header foreground colour.</source>
         <translation>Pulse para seleccionar el color de primer plano del encabezamiento de nivel 2.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="300"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="292"/>
         <source>Level 2 Header Foreground</source>
         <translation>Color de primer plano del Encabezamiento de nivel 2</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="307"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="299"/>
         <source>Press to select the level 1 header background colour.</source>
         <translation>Pulse para seleccionar el color de fondo del encabezamiento de nivel 1.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="310"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="302"/>
         <source>Level 1 Header Background</source>
         <translation>Color de fondo del Encabezamiento de nivel 1</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="317"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="309"/>
         <source>Press to select the level 1 header foreground colour.</source>
         <translation>Pulse para seleccionar el color de primer plano del encabezamiento de nivel 1.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="320"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="312"/>
         <source>Level 1 Header Foreground</source>
         <translation>Color de primer plano del Encabezamiento de nivel 1</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="327"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="319"/>
         <source>Press to select the body background colour.</source>
         <translation>Pulse para seleccionar el color de fondo del cuerpo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="330"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="322"/>
         <source>Body Background</source>
         <translation>Color de Fondo del Cuerpo</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="337"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="329"/>
         <source>Press to select the body foreground colour.</source>
         <translation>Pulse para seleccionar el color de primer plano del cuerpo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="340"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="332"/>
         <source>Body Foreground</source>
         <translation>Color de primer plano del Cuerpo</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="347"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="339"/>
         <source>Press to select the foreground colour of links.</source>
         <translation>Pulse para seleccionar el color de primer plano de los enlaces .</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="350"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="342"/>
         <source>Links</source>
         <translation>Enlaces</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="357"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="349"/>
         <source>This shows an example of the selected colours.</source>
         <translation>Esto es una muestra de los colores seleccionados.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="290"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="296"/>
         <source>Select output directory</source>
         <translation>Seleccionar Directorio de salida </translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="315"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="321"/>
         <source>Select directory to exclude</source>
         <translation>Seleccionar directorios a excluir</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="355"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
         <source>Select CSS style sheet</source>
         <translation>Seleccionar hoja de estilos CSS</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="355"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Hojas de estilos (*.css);; Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="371"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="363"/>
         <source>QtHelp</source>
         <translation>QtHelp</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="377"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="369"/>
         <source>Generate QtHelp Files</source>
         <translation>Generar archivos de QtHelp</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="420"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="409"/>
         <source>Namespace:</source>
         <translation>Espacio de nombres:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="427"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="416"/>
         <source>Enter the namespace</source>
         <translation>Introduzca el espacio de nombres</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="434"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="423"/>
         <source>Virtual Folder:</source>
         <translation>Carpeta Virtual:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="441"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="430"/>
         <source>Enter the name of the virtual folder (must not contain &apos;/&apos;)</source>
         <translation>Introduzca el nombre de la carpeta virtual (no debe contener &apos;/&apos;)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="448"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="437"/>
         <source>Filter Name:</source>
         <translation>Nombre de Filtro:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="455"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="444"/>
         <source>Enter the name of the custom filter</source>
         <translation>Introduzca el nombre del filtro personalizado</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="462"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="451"/>
         <source>Filter Attributes:</source>
         <translation>Atributos del Filtro:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="469"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="458"/>
         <source>Enter the filter attributes separated by &apos;:&apos;</source>
         <translation>Introduzca los atributos del filtro separados por &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="476"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="465"/>
         <source>Title:</source>
         <translation>Título:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="483"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="472"/>
         <source>Enter a short title for the top entry</source>
         <translation>Introduzca un título corto para la entrada superior</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="490"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="479"/>
         <source>Select to generate the QtHelp collection files</source>
         <translation>Seleccionar para generar la colección de archivos de QtHelp</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="493"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="482"/>
         <source>Generate QtHelp collection files</source>
         <translation>Generar colección de archivos de QtHelp</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="504"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="510"/>
         <source>Select output directory for QtHelp files</source>
         <translation>Seleccionar directorio de salida para los archivos de QtHelp</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="47"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="53"/>
         <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:{LinkColor}&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Encabezado de Nivel 1&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Encabezado de Nivel 2&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Clase y Encabezado de Función&lt;/h2&gt;Texto estándar del cuerpo con &lt;a style=&quot;color:{LinkColor}&quot;&gt;algunos enlaces&lt;/a&gt; embebidos.&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -14729,7 +14729,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../UI/FindFileDialog.ui" line="297"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.ui" line="96"/>
@@ -14767,27 +14767,27 @@ selección completa.&lt;/li&gt;
         <translation>Buscar &amp;texto:</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="338"/>
+        <location filename="../UI/FindFileDialog.ui" line="335"/>
         <source>Shows the progress of the search action</source>
         <translation>Muestra el progreso de la acción de búsqueda</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="375"/>
+        <location filename="../UI/FindFileDialog.ui" line="372"/>
         <source>Text</source>
         <translation>Texto</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="67"/>
+        <location filename="../UI/FindFileDialog.py" line="69"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="538"/>
+        <location filename="../UI/FindFileDialog.py" line="540"/>
         <source>Select directory</source>
         <translation>Seleccionar un directorio</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="62"/>
+        <location filename="../UI/FindFileDialog.py" line="64"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
@@ -14827,32 +14827,32 @@ selección completa.&lt;/li&gt;
         <translation>Introduzca el texto de reemplazo o la expresión regular</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="308"/>
+        <location filename="../UI/FindFileDialog.ui" line="305"/>
         <source>Search in open files only </source>
         <translation>Buscar solamente en archivos abiertos</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="311"/>
+        <location filename="../UI/FindFileDialog.ui" line="308"/>
         <source>&amp;Open files only</source>
         <translation>S&amp;olo en archivos abiertos</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="370"/>
+        <location filename="../UI/FindFileDialog.ui" line="367"/>
         <source>File/Line</source>
         <translation>Archivo/Línea</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="383"/>
+        <location filename="../UI/FindFileDialog.ui" line="380"/>
         <source>Press to apply the selected replacements</source>
         <translation>Pulse para aplicar los reemplazos seleccionados</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="386"/>
+        <location filename="../UI/FindFileDialog.ui" line="383"/>
         <source>Replace</source>
         <translation>Reemplazar</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="649"/>
+        <location filename="../UI/FindFileDialog.py" line="651"/>
         <source>Replace in Files</source>
         <translation>Reemplazar en Archivos</translation>
     </message>
@@ -14867,42 +14867,42 @@ selección completa.&lt;/li&gt;
         <translation>Abrir primera ocurrencia</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="676"/>
+        <location filename="../UI/FindFileDialog.py" line="678"/>
         <source>Open</source>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="677"/>
+        <location filename="../UI/FindFileDialog.py" line="679"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="371"/>
+        <location filename="../UI/FindFileDialog.py" line="373"/>
         <source>Invalid search expression</source>
         <translation>Expresión de búsqueda no válida</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="371"/>
+        <location filename="../UI/FindFileDialog.py" line="373"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La expresión de búsqueda no es válida.&lt;/p&gt;&lt;p&gt;Error:{0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="608"/>
+        <location filename="../UI/FindFileDialog.py" line="610"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo leer el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="649"/>
+        <location filename="../UI/FindFileDialog.py" line="651"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo guardar el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="623"/>
+        <location filename="../UI/FindFileDialog.py" line="625"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los hash actual y original del archivos &lt;b&gt;{0}&lt;/b&gt; son distintos. Abandonando.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="347"/>
+        <location filename="../UI/FindFileDialog.ui" line="344"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Archivos</translation>
     </message>
@@ -14910,112 +14910,112 @@ selección completa.&lt;/li&gt;
 <context>
     <name>FindFileNameDialog</name>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="13"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="14"/>
         <source>Find File</source>
         <translation>Buscar archivo</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="19"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="20"/>
         <source>Enter filename (? matches any single character, * matches everything)</source>
         <translation>Introduzca el nombre de archivo (? reemplaza un caracter, * reemplaza cualquier expresión)</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="34"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="35"/>
         <source>Enter file name to search for </source>
         <translation>Introduzca el nombre del archivo a buscar </translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="41"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="42"/>
         <source>.</source>
         <translation>.</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="54"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="55"/>
         <source>Enter file extension to search for</source>
         <translation>Introduzca la extensión del archivo a buscar</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="68"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="69"/>
         <source>Enabled to include the entered directory into the search</source>
         <translation>Habilitado para incluir en la búsqueda el directorio introducido</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="71"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="72"/>
         <source>Search Path:</source>
         <translation>Ruta de búsqueda:</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="78"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="79"/>
         <source>Enter the directory, the file should be searched in</source>
         <translation>Introduzca el directorio en que se debería buscar el archivo</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="85"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="86"/>
         <source>Press to select the directory, the file should be searched in</source>
         <translation>Presione para seleccionar el directorio en que se debería buscar el archivo</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.ui" line="88"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="99"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="97"/>
         <source>Select to search in the project path</source>
         <translation>Seleccione para buscar en la ruta del proyeco</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="102"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="100"/>
         <source>Search in &amp;project</source>
         <translation>Buscar en el &amp;proyecto</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="105"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="103"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="112"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="110"/>
         <source>Select to search in sys.path</source>
         <translation>Seleccione para buscar en sys.path</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="115"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="113"/>
         <source>Search in &amp;sys.path</source>
         <translation>Buscar en &amp;sys.path</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="118"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="116"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="134"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="132"/>
         <source>Filename</source>
         <translation>Nombre de archivo</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="139"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="137"/>
         <source>Path</source>
         <translation>Ruta</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="53"/>
+        <location filename="../UI/FindFileNameDialog.py" line="56"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="55"/>
+        <location filename="../UI/FindFileNameDialog.py" line="58"/>
         <source>Press to stop the search</source>
         <translation>Presione para detener la búsqueda</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="57"/>
+        <location filename="../UI/FindFileNameDialog.py" line="60"/>
         <source>Opens the selected file</source>
         <translation>Abre el archivo seleccionado</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="199"/>
+        <location filename="../UI/FindFileNameDialog.py" line="202"/>
         <source>Select search directory</source>
         <translation>Seleleccione el directorio de búsqueda</translation>
     </message>
@@ -15603,10 +15603,10 @@ Razón: {0}</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="185"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="132"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="135"/>
         <source>Select Style Sheet</source>
         <translation>Seleccionar Hoja de Estilos</translation>
     </message>
@@ -15626,22 +15626,22 @@ Razón: {0}</translation>
         <translation>Seleccione el color de fondo para las URLs seguras.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="195"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="192"/>
         <source>Tabs</source>
         <translation>Pestañas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="201"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="198"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation>Mostrar solamente un boton de cerrar en lugar de uno por cada pestaña</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="211"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>Warn, if multiple tabs are about to be closed</source>
         <translation>Avisar cuando se vayan a cerrar múltiples pestañas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="205"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
         <translation>Seleccionar para generar un aviso cuando estén a punto de cerrarse múltiples pestañas</translation>
     </message>
@@ -16130,90 +16130,90 @@ Razón: {0}</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="262"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="103"/>
         <source>Qt4 Documentation</source>
         <translation>Documentación de Qt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="115"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="126"/>
         <source>Press to select the Qt4 documentation directory via a dialog</source>
         <translation>Pulse para seleccionar el directorio con la documentación de Qt4 a través de un diálogo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="125"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
         <source>Enter the Qt4 documentation directory</source>
         <translation>Introduzca el directorio con la documentación de Qt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="132"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="116"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT4DOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="169"/>
         <source>PyQt4 Documentation</source>
         <translation>Documentación de PyQt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="187"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="192"/>
         <source>Press to select the PyQt4 documentation directory via a dialog</source>
         <translation>Pulse para seleccionar el directorio con la documentación de PyQt4 a través de un diálogo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="175"/>
         <source>Enter the PyQt4 documentation directory</source>
         <translation>Introduzca el directorio con la documentación de PyQt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="204"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="182"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYQT4DOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="253"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="235"/>
         <source>PySide Documentation</source>
         <translation>Documentación de PySide</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="259"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="258"/>
         <source>Press to select the PySide documentation directory via a dialog</source>
         <translation>Pulse para seleccionar el directorio con la documentación de PySide a través de un diálogo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="269"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="241"/>
         <source>Enter the PySide documentation directory</source>
         <translation>Introduzca el directorio con la documentación de PySide</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="276"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="248"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYSIDEDOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="199"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation>Archivos HTML (*.html *.htm);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="133"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="143"/>
         <source>Select Qt4 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de Qt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="171"/>
         <source>Select PyQt4 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de PyQt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="199"/>
         <source>Select PySide documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de PySide</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="126"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
         <translation>Archivos HTML (*.html *.htm);;Archivos Comprimidos de Ayuda (*.chm);;Todos los Archivos(*)</translation>
     </message>
@@ -16223,97 +16223,97 @@ Razón: {0}</translation>
         <translation>Documentación de Python 2</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
         <source>Press to select the Python 2 documentation directory via a dialog</source>
         <translation>Pulse para seleccionar el directorio con la documentación de Python 2 a través de un diálogo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
         <source>Enter the Python 2 documentation directory</source>
         <translation>Introduzca el directorio con la documentación de Python 2</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="50"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON2DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYTHON2DOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="70"/>
         <source>Python 3 Documentation</source>
         <translation>Documentación de Python 3</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="93"/>
         <source>Press to select the Python 3 documentation directory via a dialog</source>
         <translation>Pulse para seleccionar el directorio con la documentación de Python 3 a través de un diálogo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="89"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="76"/>
         <source>Enter the Python 3 documentation directory</source>
         <translation>Introduzca el directorio con la documentación de Python 3</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="96"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="83"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON3DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYTHON3DOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="99"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="109"/>
         <source>Select Python 2 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de Python 2</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="126"/>
         <source>Select Python 3 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de Python 3</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="136"/>
         <source>Qt5 Documentation</source>
         <translation>Documentación de Qt5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="159"/>
         <source>Press to select the Qt5 documentation directory via a dialog</source>
         <translation>Pulse para seleccionar el directorio con la documentación de Qt5 a través de un diálogo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="142"/>
         <source>Enter the Qt5 documentation directory</source>
         <translation>Introduzca el directorio con la documentación de Qt5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="168"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="149"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT5DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT5DOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="147"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="157"/>
         <source>Select Qt5 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de Qt5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="217"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="202"/>
         <source>PyQt5 Documentation</source>
         <translation>Documentación de PyQt5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="223"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="225"/>
         <source>Press to select the PyQt5 documentation directory via a dialog</source>
         <translation>Pulsar para seleccionar el directorio con la documentación de PyQt5 a través de un diálogo </translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="208"/>
         <source>Enter the PyQt5 documentation directory</source>
         <translation>Introducir el directorio con la documentación de PyQt5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="240"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="215"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYQT5DOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="175"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="185"/>
         <source>Select PyQt5 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de PyQt5</translation>
     </message>
@@ -16371,20 +16371,20 @@ Razón: {0}</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="70"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="59"/>
         <source>System</source>
         <translation>Sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
         <source>Select style sheet file</source>
         <translation>Seleccionar archivo de hoja de estilos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Hojas de Estilos Qt (*.qss);;Hojas de Estilos CSS (*.css);;Todos los Archivos(*)</translation>
     </message>
@@ -16655,65 +16655,65 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="61"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="67"/>
         <source>Select to use a custom viewer</source>
         <translation>Seleccionar para utilizar un visor personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="77"/>
         <source>Select to use Qt Assistant</source>
         <translation>Seleccionar para utilizar el Qt Assistant</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="80"/>
         <source>Qt Assistant</source>
         <translation>Qt Assistant</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="80"/>
         <source>Select Custom Viewer</source>
         <translation>Seleccionar visor personalizado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="94"/>
         <source>Select Web-Browser</source>
         <translation>Seleccionar Navegador Web</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="108"/>
         <source>Select PDF-Viewer</source>
         <translation>Seleccionar Visor de PDF</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="122"/>
         <source>Select CHM-Viewer</source>
         <translation>Seleccionar Visor de CHM</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="87"/>
         <source>Select to use the Eric Web Browser</source>
         <translation>Seleccionar para utilizar el Navegador Web de Eric</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
         <source>Eric Web Browser</source>
         <translation>Navegador Web de Eric</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="100"/>
         <source>Select to use the configured web browser of the system</source>
         <translation>Seleccionar para utilizar el navegador web configurado en el sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
         <source>System Web Browser</source>
         <translation>Navegador Web del Sistema</translation>
     </message>
@@ -19403,7 +19403,7 @@ Tiene %n pestañas abiertas.</numerusform>
 <context>
     <name>HgAddSubrepositoryDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>Add Sub-repository</source>
         <translation>Añadir Sub-repositorio</translation>
     </message>
@@ -19423,27 +19423,27 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Seleccionar la ruta del sub-repositorio con un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="51"/>
         <source>&amp;Type:</source>
         <translation>&amp;Tipo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="63"/>
         <source>Select the type of the sub-repository</source>
         <translation>Seleccionar el tipo de sub-repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="85"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="98"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="95"/>
         <source>Enter the URL of the sub-repository</source>
         <translation>Introducir la URL del sub-repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>The sub-repository path must be inside the project.</source>
         <translation>La ruta del sub-repositorio debe estar dentro del proyecto.</translation>
     </message>
@@ -19554,117 +19554,117 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Introducir el nombre del archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="85"/>
         <source>Press to select the archive file name via a file selection dialog</source>
         <translation>Pulsar para seleccionar el nombre de fichero del archivo a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="40"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
         <source>Type:</source>
         <translation>Tipo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="44"/>
         <source>Select the archive type</source>
         <translation>Seleccionar el tipo de archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="61"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="51"/>
         <source>Prefix:</source>
         <translation>Prefijo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="58"/>
         <source>Enter the directory prefix for the files in the archive</source>
         <translation>Introducir el prefijo de directorio para los ficheros dentro del archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="75"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="65"/>
         <source>Select to recurse into subrepositories</source>
         <translation>Seleccionar para acceder a los subdirectorios recursivamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
         <source>Include Subrepositories</source>
         <translation>Incluir Sub-repositorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="44"/>
         <source>Detect Automatically</source>
         <translation>Detectar automaticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="46"/>
         <source>Directory of Files</source>
         <translation>Directorio del Archivos</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="48"/>
         <source>Uncompressed TAR-Archive</source>
         <translation>Archivo TAR sin comprimir</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="50"/>
         <source>Bzip2 compressed TAR-Archive</source>
         <translation>Archivo TAR comprimido como Bzip2</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="52"/>
         <source>Gzip compressed TAR-Archive</source>
         <translation>Archivo TAR comprimido como Gzip</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="54"/>
         <source>Uncompressed ZIP-Archive</source>
         <translation>Archivo ZIP sin comprimir</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="53"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
         <source>Compressed ZIP-Archive</source>
         <translation>Archivo ZIP comprimido</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="60"/>
         <source>Bzip2 compressed TAR-Archive (*.tar.bz2)</source>
         <translation>Archivo TAR comprimido como Bzip2 (*.tar.bz2)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="61"/>
         <source>Gzip compressed TAR-Archive (*.tar.gz)</source>
         <translation>Archivo TAR comprimido como Gzip (*.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="59"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
         <source>Uncompressed TAR-Archive (*.tar)</source>
         <translation>Archivo TAR sin comprimir (*.tar)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="65"/>
         <source>Compressed ZIP-Archive (*.zip)</source>
         <translation>Archivo ZIP comprimido (*.zip)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="66"/>
         <source>Uncompressed ZIP-Archive (*.uzip)</source>
         <translation>Archivo ZIP sin comprimir (*.uzip)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="74"/>
         <source>All Files (*)</source>
         <translation>Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="109"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="112"/>
         <source>Select Archive Directory</source>
         <translation>Seleccionar Directorio para el Archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="118"/>
         <source>Select Archive File</source>
         <translation>Seleccionar Fichero de Archivo</translation>
     </message>
@@ -20443,12 +20443,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Copia de Mercurial</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="28"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de destino&lt;/b&gt;
@@ -20457,57 +20457,57 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="39"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
         <source>Source:</source>
         <translation>Origen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
         <source>Shows the name of the source</source>
         <translation>Muestra el nombre del origen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="35"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de origen&lt;/b&gt;
 &lt;p&gt;Este campo muestra el nombre del origen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
         <source>Enter the target name</source>
         <translation>Introduzca el nombre de destino</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="57"/>
         <source>Target:</source>
         <translation>Destino:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="77"/>
         <source>Select to force the operation</source>
         <translation>Seleccionar para forzar la operación</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
         <source>Enforce operation</source>
         <translation>Imponer operación</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="50"/>
         <source>Mercurial Move</source>
         <translation>Mercurial Move</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="86"/>
         <source>Select target</source>
         <translation>Seleccionar destino</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de destino&lt;/b&gt;
@@ -20698,7 +20698,7 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
 <context>
     <name>HgExportDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="73"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="76"/>
         <source>Export Patches</source>
         <translation>Exportar Patches</translation>
     </message>
@@ -20708,22 +20708,22 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Exportar Directorio:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="85"/>
         <source>Press to select the export directory via a directory selection dialog</source>
         <translation>Pulsar para seleccionar el directorio de exportación a través de un diálogo de selección de directorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
         <source>File Name Pattern:</source>
         <translation>Patrón de Nombres de Archivo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="42"/>
         <source>Enter the file name pattern for the export files</source>
         <translation>Introducir el patrón de nombres de archivo para los archivos de exportación</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
         <source>&lt;b&gt;File Name Pattern&lt;/b&gt;
 &lt;p&gt;Enter the file name pattern to be used to generate the export files
 here. Valid recognized patterns are:&lt;/p&gt;
@@ -20754,32 +20754,32 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="75"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
         <source>Changesets:</source>
         <translation>Changesets:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="72"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
         <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="97"/>
         <source>Compare Against Second Parent</source>
         <translation>Comparar Contra el Segundo Parent</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="107"/>
         <source>Treat all Files as Text</source>
         <translation>Tratar todos los Archivos como Texto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="114"/>
         <source>Omit Dates</source>
         <translation>Omitir Fechas</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="124"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="121"/>
         <source>Use Git extended Diff-Format</source>
         <translation>Utilizar Formato de Diff extendido de Git</translation>
     </message>
@@ -21244,22 +21244,22 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>Pulsar para seleccionar el archivo de patch a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="187"/>
         <source>Select to enforce the import</source>
         <translation>Seleccionar para hacer cumplir el import</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="193"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
         <source>Enforce Import</source>
         <translation>Hacer Cumplir el Import</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="68"/>
         <source>Select patch file</source>
         <translation>Seleccionar archivo de patch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="68"/>
         <source>Patch Files (*.diff *.patch);;All Files (*)</source>
         <translation>Archivos de Patch (*.diff *.patch);;Todos los Archivos (*)</translation>
     </message>
@@ -22029,30 +22029,30 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="116"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
         <source>&amp;Revision:</source>
         <translation>&amp;Revisión:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="74"/>
         <source>Enter the revision the new project should be generated from</source>
         <translation>Introduzca la revisión a partir de la cual el proyecto debería ser generado</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="84"/>
         <source>Project &amp;Directory:</source>
         <translation>&amp;Directorio del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="94"/>
         <source>Enter the directory of the new project.</source>
         <translation>Introduzca el directorio del nuevo proyecto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="97"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -22061,17 +22061,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 y se ubicará en este directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="71"/>
         <source>Select Repository-Directory</source>
         <translation>Seleccionar Repositorio-Directorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="86"/>
         <source>Select Project Directory</source>
         <translation>Seleccionar Directorio del Proyecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="106"/>
         <source>Select the repository url via a directory selection dialog</source>
         <translation>Seleccione la url del repositorio a través de un diálogo de selección de directorio</translation>
     </message>
@@ -26786,72 +26786,72 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>IconsPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="17"/>
         <source>&lt;b&gt;Configure icon directories&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar directorios de iconos&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="37"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estas opciones de configuración se activarán la siguiente vez que se ejecute la aplicacion.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="48"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="49"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Pulse para borrar el directorio seleccionado de la lista</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="52"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="61"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="62"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Pulse para añadir el directorio introducido a la lista</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="64"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="65"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="72"/>
         <source>Enter a directory to be added</source>
         <translation>Introduzca un archivo para añadir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="79"/>
         <source>Press to select an icon directory via a selection dialog</source>
         <translation>Pulse para seleccionar un directorio de iconos utilizando un diálogo de selección</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="81"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="91"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="121"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="119"/>
         <source>Up</source>
         <translation>Arriba</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="129"/>
         <source>Down</source>
         <translation>Abajo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="156"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="154"/>
         <source>List of icon directories</source>
         <translation>Lista de directorios de iconos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.py" line="127"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.py" line="130"/>
         <source>Select icon directory</source>
         <translation>Seleccione directorio de iconos</translation>
     </message>
@@ -27096,7 +27096,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>InterfacePage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="236"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>Español</translation>
@@ -27174,165 +27174,165 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="249"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="258"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="255"/>
         <source>Dockarea Corner Usage</source>
         <translation>Esquina de área de anclaje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="261"/>
         <source>Top Left Corner</source>
         <translation>Esquina superior izquierda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="267"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation>Seleccionar para asignar la esquina superior izquierda como zona de anclaje superior</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
         <source>Top dockarea</source>
         <translation>Zona de anclaje superior</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="277"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation>Seleccionar para asignar la esquina superior izquierda para la zona de anclaje de la izquierda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
         <source>Left dockarea</source>
         <translation>Zona de anclaje izquierda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="290"/>
         <source>Top Right Corner</source>
         <translation>Esquina superior izquierda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="296"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation>Seleccionar para asignar la esquina superior derecha para la zona de anclaje superior</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="306"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation>Seleccionar para asignar la esquina superior derecha para la zona de anclaje de la derecha</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="370"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
         <source>Right dockarea</source>
         <translation>Zona de anclaje de la derecha</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="322"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="319"/>
         <source>Bottom Left Corner</source>
         <translation>Esquina inferior izquierda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="328"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="325"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation>Seleccionar para asignar la esquina inferior izquierda para la zona de anclaje inferior</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="360"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
         <source>Bottom dockarea</source>
         <translation>Zona de anclaje inferior</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="335"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation>Seleccionar para asignar la esquina inferior izquierda para la zona de anclaje de la izquierda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="351"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="348"/>
         <source>Bottom Right Corner</source>
         <translation>Esquina inferior derecha</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="354"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation>Seleccionar para asignar la esquina inferior derecha para la zona de anclaje inferior</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="364"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation>Seleccionar para asignar la esquina inferior derecha para la zona de anclaje de la derecha</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="444"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="441"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estas opciones de configuración se activarán la siguiente vez que se ejecute la aplicacion.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="459"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="456"/>
         <source>Language:</source>
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="475"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="472"/>
         <source>Select the interface language.</source>
         <translation>Seleccione el idioma de la interfaz.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="478"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="475"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation>El idioma de la interfaz se puede seleccionar de esta lista. Si se ha seleccionado &quot;sistema&quot;, el idioma lo determina el sistema. La selección de &quot;ninguno&quot; significa que se utilizará el idioma por defecto.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="485"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="482"/>
         <source>Layout:</source>
         <translation>Disposición:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="498"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="495"/>
         <source>Select the layout type.</source>
         <translation>Seleccione el tipo de disposición.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="525"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="522"/>
         <source>Select to get a separate shell window</source>
         <translation>Seleccionar para tener una ventana de shell separada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="557"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="554"/>
         <source>separate window</source>
         <translation>Ventana separada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="548"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="545"/>
         <source>File-Browser</source>
         <translation>Explorador de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="554"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="551"/>
         <source>Select to get a separate file browser window</source>
         <translation>Seleccionar para tener un explorador de archivos en ventana separada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="618"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="615"/>
         <source>Reset layout to factory defaults</source>
         <translation>Restablecer disposición a valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="251"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
         <source>System</source>
         <translation>Sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="261"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="264"/>
         <source>Select style sheet file</source>
         <translation>Seleccionar archivo de hoja de estilos CSS</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="261"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="264"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>hojas de Estilos Qt (*.qss);;hojas de Estilos CSS (*.css);;Todos los Archivos(*)</translation>
     </message>
@@ -27352,7 +27352,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccionar el color para el texto enviado a stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="507"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="504"/>
         <source>Toolboxes</source>
         <translation>Cajas de herramientas</translation>
     </message>
@@ -27362,32 +27362,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Configurar la Interfaz de Usuario&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="502"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="499"/>
         <source>Sidebars</source>
         <translation>Barras laterales</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="535"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="532"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation>Seleccionar para embeber la shell en el Visor de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="567"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="564"/>
         <source>embed in Debug-Viewer</source>
         <translation>Embeber en el Visor de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="564"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="561"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation>Seleccionar para embeber el navegador de archivos en el Visor de Depuración</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="574"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="571"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation>Seleccionar para embeber el navegador de archivos en el Visor de Proyectos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="577"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="574"/>
         <source>embed in Project-Viewer</source>
         <translation>Embeber en el Visor de Proyectos</translation>
     </message>
@@ -27412,12 +27412,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Mostrar con el siguiente output</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="589"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="586"/>
         <source>Tabs</source>
         <translation>Pestañas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="595"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="592"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation>Mostrar solamente un boton de cerrar en lugar de uno por cada pestaña</translation>
     </message>
@@ -27442,12 +27442,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Introducir patrones de comodín para archivos separados por punto y coma. Los archivos que concuerden con estos patrones no serán mostrados por los navegadores de archivos.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
         <source>Delay:</source>
         <translation>Retraso:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="399"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="396"/>
         <source> ms</source>
         <translation>ms</translation>
     </message>
@@ -31674,47 +31674,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Configurar opciones de multiproyecto&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="64"/>
         <source>Master Project</source>
         <translation>Proyecto maestro</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
         <source>Open master project automatically</source>
         <translation>Abrir proyecto maestro automáticamente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="86"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="83"/>
         <source>XML</source>
         <translation>XML</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="89"/>
         <source>Select, if a timestamp should be written to all multiproject related XML files</source>
         <translation>Seleccione si una marca de tiempo debe escribirse en todos los archivos XML relacionados con el multiproyecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="95"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
         <source>Include timestamp in multiproject related XML files</source>
         <translation>Incluir marca de tiempo en los archivos XML relacionados con el multiproyecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="105"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="102"/>
         <source>Recent Multiprojects</source>
         <translation>Multiproyectos recientes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="117"/>
         <source>Enter the number of recent multiprojects to remember</source>
         <translation>Introduzca el número de multiproyectos recientes a recordar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="70"/>
         <source>Select to open the master project automatically upon opening the multiproject</source>
         <translation>Seleccionar para abrir el proyecto maestro automáticamente al abrir el multiproyecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="110"/>
         <source>Number of recent multiprojects:</source>
         <translation>Número de multiproyectos recientes:</translation>
     </message>
@@ -31741,7 +31741,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccionar el directorio para el espacio de trabajo a través de un botón de selección de directorios</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="73"/>
         <source>Select Workspace Directory</source>
         <translation>Seleccionar Directorio para el Espacio de Trabajo</translation>
     </message>
@@ -31862,100 +31862,100 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="62"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="120"/>
         <source>Select to use a web proxy</source>
         <translation>Seleccione para usar un proxy web</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="126"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
         <source>Use network proxy</source>
         <translation>Utilizar proxy de red</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="180"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="183"/>
         <source>Select download directory</source>
         <translation>Seleccione directorio de descarga</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="68"/>
         <source>Select to ask the user for a download filename</source>
         <translation>Seleccionar para preguntar al usuario por un nombre de archivo para la descarga</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="74"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="71"/>
         <source>Request name of downloaded file</source>
         <translation>Solicitar nombre para el archivo descargado</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="135"/>
         <source>Select to use the system proxy configuration</source>
         <translation>Seleccionar para utilizar la configuración de proxy de sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="141"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
         <source>Use system proxy configuration</source>
         <translation>Utilizar configuración de proxy de sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="148"/>
         <source>Select to use an application specific proxy configuration</source>
         <translation>Seleccionar para utilizar una configuración de proxy específica de aplicación</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="154"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="151"/>
         <source>Manual proxy configuration:</source>
         <translation>Configuración manual de proxy:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="167"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="164"/>
         <source>Manual proxy settings</source>
         <translation>Ajustes manuales de proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="180"/>
         <source>Enter the name of the HTTP proxy host</source>
         <translation>Introduzca el nombre del host HTTP proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="286"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="283"/>
         <source>Port:</source>
         <translation>Puerto:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="194"/>
         <source>Enter the HTTP proxy port</source>
         <translation>Introduzca el puerto del HTTP proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="216"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="213"/>
         <source>Select to use the HTTP proxy for all</source>
         <translation>Seleccionar para utilizar el proxy HTTP para todo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="219"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="216"/>
         <source>Use this proxy for all protocols</source>
         <translation>Utilizar este proxy para todos los protocolos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="230"/>
         <source>Enter the name of the HTTPS proxy host</source>
         <translation>Introduzca el nombre del host HTTPS proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="244"/>
         <source>Enter the HTTPS proxy port</source>
         <translation>Introduzca el puerto del HTTPS proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="279"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="276"/>
         <source>Enter the name of the FTP proxy host</source>
         <translation>Introduzca el nombre del host FTP proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="293"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="290"/>
         <source>Enter the FTP proxy port</source>
         <translation>Introduzca el puerto del FTP proxy</translation>
     </message>
@@ -31965,152 +31965,152 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Descargas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="81"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="78"/>
         <source>Download Manager Cleanup Policy</source>
         <translation>Política de Limpieza del Gestor de Descargas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="84"/>
         <source>Select to never cleanup automatically</source>
         <translation>Seleccionar para no limpiar automaticamente nunca</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
         <source>Never</source>
         <translation>Nunca</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="94"/>
         <source>Select to cleanup upon exiting</source>
         <translation>Seleccionar para hacer limpieza al salir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
         <source>When exiting the application</source>
         <translation>Al salir de la aplicación</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="104"/>
         <source>Select to cleanup after a successful download</source>
         <translation>Seleccionar para limpiar despues de una descarga con éxito</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
         <source>When download finished successfully</source>
         <translation>Al terminar una descarga con éxito</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="173"/>
         <source>HTTP-Proxy:</source>
         <translation>HTTP-Proxy:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="226"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="223"/>
         <source>HTTPS-Proxy:</source>
         <translation>HTTPS-Proxy:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="266"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="263"/>
         <source>FTP-Proxy</source>
         <translation>FTP-Proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="272"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="269"/>
         <source>Hostname:</source>
         <translation>Nombre de Host:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="312"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="309"/>
         <source>Proxy Type:</source>
         <translation>Tipo de Proxy:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="319"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="316"/>
         <source>Select the type of the FTP proxy</source>
         <translation>Seleccione el tipo de proxy FTP</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="326"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="323"/>
         <source>User Name:</source>
         <translation>Nombre de Usuario:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="333"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="330"/>
         <source>Enter the user name for the proxy authentication</source>
         <translation>Introducir el nombre de usuario para la autenticación del proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="340"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="337"/>
         <source>Password:</source>
         <translation>Contraseña:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="347"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="344"/>
         <source>Enter the password for the proxy authentication</source>
         <translation>Introducir la contraseña para la autenticación del proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="354"/>
         <source>Account:</source>
         <translation>Cuenta:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="364"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="361"/>
         <source>Enter the account info for the proxy authentication</source>
         <translation>Introducir la información de la cuenta para la autenticación del proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="377"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="374"/>
         <source>Press to clear the saved passwords for the Http(s) proxy</source>
         <translation>Pulsar para limpiar las contraseñas almacenadas para el proxy Http(s)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="380"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="377"/>
         <source>Clear HTTP(S) Proxy Passwords</source>
         <translation>Limpiar Contraseñas del Proxy HTTP(S)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="39"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="42"/>
         <source>No FTP Proxy</source>
         <translation>No FTP Proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="41"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="44"/>
         <source>No Proxy Authentication required</source>
         <translation>No es necesaria autenticación para el Proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="47"/>
         <source>User@Server</source>
         <translation>Usuario@Servidor</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="49"/>
         <source>SITE</source>
         <translation>SITE</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="48"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="51"/>
         <source>OPEN</source>
         <translation>ABIERTO</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
         <source>User@Proxyuser@Server</source>
         <translation>Usuario@UsuarioProxy@Servidor</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="56"/>
         <source>Proxyuser@Server</source>
         <translation>UsuarioProxy@Servidor</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="58"/>
         <source>AUTH and RESP</source>
         <translation>AUTH y RESP</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="60"/>
         <source>Bluecoat Proxy</source>
         <translation>Bluecoat Proxy</translation>
     </message>
@@ -32126,52 +32126,52 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>NewDialogClassDialog</name>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="13"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="14"/>
         <source>New Dialog Class</source>
         <translation>Nueva clase de diálogo</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="24"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="25"/>
         <source>Enter the path of the file for the forms code</source>
         <translation>Introducir la ruta del archivo para el código del formulario</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="31"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="32"/>
         <source>&amp;Classname:</source>
         <translation>Nombre de &amp;Clase:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="41"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="76"/>
         <source>Select the source file path via a directory selection dialog</source>
         <translation>Seleccione la ruta del archivo con el codigo fuente utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="44"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="51"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="42"/>
         <source>&amp;Filename:</source>
         <translation>&amp;Nombre de archivo:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="61"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="52"/>
         <source>&amp;Path:</source>
         <translation>&amp;Ruta:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="71"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="62"/>
         <source>Enter the name of the new class</source>
         <translation>Introduzca el nombre de la nueva clase</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="78"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="69"/>
         <source>Enter the name of the file for the forms code</source>
         <translation>Introduzca el nombre del archivo para el código del formulario</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.py" line="52"/>
+        <location filename="../Project/NewDialogClassDialog.py" line="56"/>
         <source>Select source directory</source>
         <translation>Seleccionar directorio para el codigo fuente</translation>
     </message>
@@ -32323,117 +32323,117 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Formato de números</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="25"/>
+        <location filename="../UI/NumbersWidget.ui" line="34"/>
         <source>Binary</source>
         <translation>Binario</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="34"/>
+        <location filename="../UI/NumbersWidget.ui" line="52"/>
         <source>Press to import the selected binary number</source>
         <translation>Pulse para importar el número binario seleccionado</translation>
     </message>
     <message>
         <location filename="../UI/NumbersWidget.ui" line="183"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="44"/>
+        <location filename="../UI/NumbersWidget.ui" line="59"/>
         <source>Enter the binary number</source>
         <translation>Introduzca el número binario</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="54"/>
+        <location filename="../UI/NumbersWidget.ui" line="69"/>
         <source>Press to send the binary number to the current editor</source>
         <translation>Pulse para enviar el número binario al editor actual</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="67"/>
+        <location filename="../UI/NumbersWidget.ui" line="79"/>
         <source>Octal</source>
         <translation>Octal</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="76"/>
+        <location filename="../UI/NumbersWidget.ui" line="97"/>
         <source>Press to import the selected octal number</source>
         <translation>Pulse para importar el número octal seleccionado</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="86"/>
+        <location filename="../UI/NumbersWidget.ui" line="104"/>
         <source>Enter the octal number</source>
         <translation>Introduzca el número octal</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="96"/>
+        <location filename="../UI/NumbersWidget.ui" line="114"/>
         <source>Press to send the octal number to the current editor</source>
         <translation>Pulse para enviar el número octal al editor actual</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="109"/>
+        <location filename="../UI/NumbersWidget.ui" line="124"/>
         <source>Decimal</source>
         <translation>Decimal</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="118"/>
+        <location filename="../UI/NumbersWidget.ui" line="142"/>
         <source>Press to import the selected decimal number</source>
         <translation>Pulse para importar el número decimal seleccionado</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="128"/>
+        <location filename="../UI/NumbersWidget.ui" line="149"/>
         <source>Enter the decimal number</source>
         <translation>Introduzca el número decimal</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="138"/>
+        <location filename="../UI/NumbersWidget.ui" line="159"/>
         <source>Press to send the decimal number to the current editor</source>
         <translation>Pulse para enviar el número decimal al editor actual</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="151"/>
+        <location filename="../UI/NumbersWidget.ui" line="169"/>
         <source>Hexadecimal</source>
         <translation>Hexadecimal</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="160"/>
+        <location filename="../UI/NumbersWidget.ui" line="187"/>
         <source>Press to import the selected hex number</source>
         <translation>Pulse para importar el número hexadecimal seleccionado</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="170"/>
+        <location filename="../UI/NumbersWidget.ui" line="194"/>
         <source>Enter the hex number</source>
         <translation>Introduzca el número hexadecimal</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="180"/>
+        <location filename="../UI/NumbersWidget.ui" line="204"/>
         <source>Press to send the hex number to the current editor</source>
         <translation>Pulse para enviar el número hexadecimal al editor actual</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="231"/>
+        <location filename="../UI/NumbersWidget.ui" line="249"/>
         <source>Input Format:</source>
         <translation>Formato de Entrada:</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="238"/>
+        <location filename="../UI/NumbersWidget.ui" line="256"/>
         <source>Select the input format</source>
         <translation>Seleccione el formato de entrada</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="251"/>
+        <location filename="../UI/NumbersWidget.ui" line="269"/>
         <source>Bitsize:</source>
         <translation>Tamaño de bit:</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="258"/>
+        <location filename="../UI/NumbersWidget.ui" line="276"/>
         <source>Select the bit size</source>
         <translation>Seleccionar el tamaño de bit</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="271"/>
+        <location filename="../UI/NumbersWidget.ui" line="289"/>
         <source>Press to swap the current byte order</source>
         <translation>Pulse para invertir el orden actual del byte</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="274"/>
+        <location filename="../UI/NumbersWidget.ui" line="292"/>
         <source>Swap byte order</source>
         <translation>Invertir orden del byte</translation>
     </message>
@@ -33662,100 +33662,100 @@ Destination:
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="56"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="97"/>
         <source>Select plugins download directory</source>
         <translation>Seleccione directorio de descarga de plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="69"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation>Seleccionar para habilitar la carga de plugins externos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
         <source>Load external plugins</source>
         <translation>Cargar plugins externos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="62"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estos ajustes se activarán la siguiente vez que se ejecute la aplicacion.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="82"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="79"/>
         <source>Check for plugin updates</source>
         <translation>Buscar actualizaciones de los plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="85"/>
         <source>Select to disable update checking</source>
         <translation>Seleccionar para deshabilitar el chequeo de actualización</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="91"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
         <source>Never</source>
         <translation>Nunca</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="95"/>
         <source>Select to check for updates once a day</source>
         <translation>Seleccionar para buscar actualizaciones una vez al día</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
         <source>Daily</source>
         <translation>Diariamente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="105"/>
         <source>Select to check for updates once a week</source>
         <translation>Seleccionar para buscar actualizaciones una vez a la semana</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="111"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
         <source>Weekly</source>
         <translation>Semanalmente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="115"/>
         <source>Select to check for updates once a month</source>
         <translation>Seleccionar para buscar actualizaciones una vez al mes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
         <source>Monthly</source>
         <translation>Mensualmente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="143"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="140"/>
         <source>Repository URL:</source>
         <translation>URL de Repositorio:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="147"/>
         <source>Shows the repository URL</source>
         <translation>Muestra la URL del repositorio</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="157"/>
         <source>Press to edit the plugin repository URL</source>
         <translation>Pulsar para editar la URL de repositorio de plugin</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="163"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
         <source>Edit URL</source>
         <translation>Editar URL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="128"/>
         <source>Select to check only already installed plugins for updates</source>
         <translation>Seleccionar para comprobar únicamente actualizaciones para plugins ya instalados</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="134"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
         <source>Check only installed plugins for updates</source>
         <translation>Comprobar únicamente actualizaciones para plugins instalados</translation>
     </message>
@@ -36984,17 +36984,17 @@ Seleccione Actualizar.</translation>
         <translation>&amp;Tipo de Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="254"/>
+        <location filename="../Project/PropertiesDialog.ui" line="226"/>
         <source>&amp;Author:</source>
         <translation>&amp;Autor:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="264"/>
+        <location filename="../Project/PropertiesDialog.ui" line="236"/>
         <source>Enter authors name</source>
         <translation>Introduzca el nombre de los autores</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="267"/>
+        <location filename="../Project/PropertiesDialog.ui" line="239"/>
         <source>&lt;b&gt;Author&lt;/b&gt;
 &lt;p&gt;Enter the name of the author.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Autor&lt;/b&gt;￼
@@ -37011,12 +37011,12 @@ Seleccione Actualizar.</translation>
         <translation>&amp;Nombre del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="160"/>
+        <location filename="../Project/PropertiesDialog.ui" line="146"/>
         <source>Enter the version number</source>
         <translation>Introduzca el número de versión</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="163"/>
+        <location filename="../Project/PropertiesDialog.ui" line="149"/>
         <source>&lt;b&gt;Version No.&lt;/b&gt;
 &lt;p&gt;Enter the version no.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Número de Version&lt;/b&gt;￼
@@ -37028,7 +37028,7 @@ Seleccione Actualizar.</translation>
         <translation>Introduzca la descripción</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="312"/>
+        <location filename="../Project/PropertiesDialog.ui" line="284"/>
         <source>&lt;b&gt;Description&lt;/b&gt;
 &lt;p&gt;Enter a short description for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Descripcion&lt;/b&gt;￼&lt;p&gt;Introduzca una descripción corta para el proyecto.&lt;/p&gt;</translation>
@@ -37048,29 +37048,29 @@ Seleccione Actualizar.</translation>
  presione el botón de la derecha&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="275"/>
+        <location filename="../Project/PropertiesDialog.ui" line="247"/>
         <source>&amp;Email:</source>
         <translation>&amp;Correo electrónico:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="285"/>
+        <location filename="../Project/PropertiesDialog.ui" line="257"/>
         <source>Enter authors email</source>
         <translation>Introduzca el correo electrónico de los autores</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="288"/>
+        <location filename="../Project/PropertiesDialog.ui" line="260"/>
         <source>&lt;b&gt;Email&lt;/b&gt;
 &lt;p&gt;Enter the email address of the author&lt;/p&gt;</source>
         <translation>&lt;b&gt;Email&lt;/b&gt;￼
 &lt;p&gt;Introduzca la dirección de correo electrónico del autor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="193"/>
+        <location filename="../Project/PropertiesDialog.ui" line="309"/>
         <source>Show file selection dialog</source>
         <translation>Mostrar diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="196"/>
+        <location filename="../Project/PropertiesDialog.ui" line="312"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Script Principal&lt;/b&gt;￼&lt;p&gt;Seleccione el script principal del proyecto a través de un diálogo de selección de archivo.&lt;/p&gt;</translation>
@@ -37078,7 +37078,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="200"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="46"/>
@@ -37093,7 +37093,7 @@ Seleccione Actualizar.</translation>
 &lt;p&gt;Introduzca el nombre del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="171"/>
+        <location filename="../Project/PropertiesDialog.ui" line="157"/>
         <source>&amp;Main Script:</source>
         <translation>&amp;Script principal:</translation>
     </message>
@@ -37103,12 +37103,12 @@ Seleccione Actualizar.</translation>
         <translation>&amp;Directorio del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="181"/>
+        <location filename="../Project/PropertiesDialog.ui" line="167"/>
         <source>Enter the main script</source>
         <translation>Introducir el script principal</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="184"/>
+        <location filename="../Project/PropertiesDialog.ui" line="170"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -37117,27 +37117,27 @@ Seleccione Actualizar.</translation>
  a través de un diálogo pulsando el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="207"/>
+        <location filename="../Project/PropertiesDialog.ui" line="179"/>
         <source>Press to edit the translations properties</source>
         <translation>Pulse para editar las propiedades de las traducciones</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="210"/>
+        <location filename="../Project/PropertiesDialog.ui" line="182"/>
         <source>Translations Properties...</source>
         <translation>Propiedades de las traducciones...</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="150"/>
+        <location filename="../Project/PropertiesDialog.ui" line="136"/>
         <source>&amp;Version No.:</source>
         <translation>Número de &amp;versión:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="136"/>
+        <location filename="../Project/PropertiesDialog.ui" line="298"/>
         <source>Show directory selection dialog</source>
         <translation>Mostrar diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="139"/>
+        <location filename="../Project/PropertiesDialog.ui" line="301"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de Proyecto&lt;/b&gt;
@@ -37159,32 +37159,32 @@ Seleccione Actualizar.</translation>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="353"/>
+        <location filename="../Project/PropertiesDialog.ui" line="347"/>
         <source>Press to show information about the repository</source>
         <translation>Pulse para mostrar información acerca del repositorio</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="356"/>
+        <location filename="../Project/PropertiesDialog.ui" line="350"/>
         <source>Show &amp;Repository Info</source>
         <translation>Mostrar Información del &amp;Repositorio</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="359"/>
+        <location filename="../Project/PropertiesDialog.ui" line="353"/>
         <source>Alt+R</source>
         <translation>Alt+R</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="114"/>
+        <location filename="../Project/PropertiesDialog.py" line="118"/>
         <source>The project is not version controlled.</source>
         <translation>El proyecto no tiene control de versiones.</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="155"/>
+        <location filename="../Project/PropertiesDialog.py" line="159"/>
         <source>Select project directory</source>
         <translation>Seleccionar directorio de proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="208"/>
+        <location filename="../Project/PropertiesDialog.py" line="212"/>
         <source>Select main script file</source>
         <translation>Seleccionar el archivo con el script principal</translation>
     </message>
@@ -37225,52 +37225,52 @@ Seleccione Actualizar.</translation>
         <translation>Propiedades de la Corrección Ortográfica...</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="108"/>
+        <location filename="../Project/PropertiesDialog.py" line="112"/>
         <source>The project is version controlled by &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>El proyecto está bajo control de versiones de &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="206"/>
+        <location filename="../Project/PropertiesDialog.py" line="210"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation>Archivos fuente ({0});;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="217"/>
+        <location filename="../Project/PropertiesDialog.ui" line="189"/>
         <source>End of &amp;Line Character:</source>
         <translation>Carácter de Fin de &amp;Línea:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="227"/>
+        <location filename="../Project/PropertiesDialog.ui" line="199"/>
         <source>Select the end of line character to be used by the project</source>
         <translation>Seleccionar el carácter de fin de línea a utilizar en este proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="231"/>
+        <location filename="../Project/PropertiesDialog.ui" line="203"/>
         <source>System</source>
         <translation>Sistema</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="236"/>
+        <location filename="../Project/PropertiesDialog.ui" line="208"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="241"/>
+        <location filename="../Project/PropertiesDialog.ui" line="213"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="246"/>
+        <location filename="../Project/PropertiesDialog.ui" line="218"/>
         <source>Windows/DOS</source>
         <translation>Windows/DOS</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="328"/>
+        <location filename="../Project/PropertiesDialog.ui" line="322"/>
         <source>Select to create a version controlled project</source>
         <translation>Seleccionar para crear un proyecto con control de versiones</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="331"/>
+        <location filename="../Project/PropertiesDialog.ui" line="325"/>
         <source>Version Controlled Project</source>
         <translation>Proyecto con Control de Versiones</translation>
     </message>
@@ -37850,26 +37850,26 @@ El siguiente ejemplo puede ilustra una regexp que coincide con una fecha valida:
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="416"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="118"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="124"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico. El diálogo ayuda a editar el rango de carácter y a añadir algunas condiciones específicas&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="134"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="128"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cualquier carácter: &apos;.&apos;&lt;/b&gt;￼&lt;p&gt;Seleccionar para insertar un punto (.) en la regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="138"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="132"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -37878,19 +37878,19 @@ character class is faster and more precise.&lt;/p&gt;</source>
 Por ej. &apos;gr.y&apos; coincide con &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use el punto con frugalidad. A menudo una clase de caracteres o clase de caracteres negada es más rápida y precisa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="155"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="146"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repetir contenidos&lt;/b&gt;￼&lt;p&gt;Seleccionar una condición de repetición a traves de un diálogo específico. Este diálogo ayuda a especificar el rango permitido para repeticiones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="166"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="154"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Paréntesis de no captura: (?:)&lt;/b&gt;￼&lt;p&gt;Seleccionar para insertar paréntesis de no captura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="170"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="158"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -37898,13 +37898,13 @@ means that the content of the match (called the backreference) is not stored for
         <translation>&lt;b&gt;Paréntesis sin captura: (?:)&lt;/b&gt;￼&lt;p&gt;Seleccionar para insertar paréntesis de no captura. Se puede utilizar para aplicar una expresión regular de cuantificación (por ejemplo &apos;?&apos; or &apos;+&apos;) al grupo completo de caracteres  dentro de los paréntesis. Por ej. la Regex &apos;Set(?:Value)?&apos; coincide con &apos;Set&apos; o con &apos;SetValue&apos;. El &apos;?:&apos; dentro de los paréntesis significa que el contenido de la parte que coincide (llamado &apos;referencia hacia atras&apos; o &apos;retroreferencia&apos;, de &apos;backreference&apos;) no se almacena para uso posterior.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="183"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="168"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Agrupar: ()&lt;/b&gt;&lt;p&gt;Seleccionar para insertar paréntesis de captura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="187"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="172"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -37916,13 +37916,13 @@ Contrariamente a los paréntesis de no captura, la referencia hacia atrás o ret
 Se puede acceder a la retroreferencia con la expresión &apos;º1&apos;.&lt;/p&gt;￼&lt;p&gt;P. e.  &apos;([a-c])x\1x\1&apos; coincide con &apos;axaxa&apos;, &apos;bxbxb&apos; y &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="202"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="184"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Grupo con nombre: (?P&amp;lt;&lt;i&gt;nombredegrupo&lt;/i&gt;&amp;gt;)&lt;/b&gt;￼&lt;p&gt;Seleccionar para insertar paréntesis de grupos con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="206"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="188"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
 backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
@@ -37931,14 +37931,14 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
         <translation>&lt;b&gt;Grupo con nombre: (?P&amp;lt;&lt;i&gt;nombredegrupo&lt;/i&gt;&amp;gt;)&lt;/b&gt;￼&lt;p&gt;Seleccionar para insertar paréntesis de grupo con nombre. El uso es similar a los paréntesis de grupo normales ya que las retroreferencias de la parte coincidente se almacenan para uso posterior. La diferencia es que se le da un nombre. Puede ser útil cuando la tarea a llevar a cabo con la parte que coincide se vuelve complicada. Se puede acceder a la retroreferencia a traves del nombre de grupo (es decir (?P=&lt;i&gt;nombredegrupo&lt;/i&gt;)).￼P. e. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x coincide con &apos;axaxax&apos;,&apos;bxbxbx&apos; o &apos;cxcxcx&apos; (&apos;foo&apos; es el nombre de grupo)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="220"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="199"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Referenciar grupo con nombre: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar una referencia a un grupo con nombre previamente declarado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="224"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="203"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
@@ -37949,14 +37949,14 @@ a la coincidencia encontrada por el grupo con nombre correspondiente. El el sigu
 &lt;p&gt;Ejemplo. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x coincide con  &apos;axaxax&apos;,&apos;bxbxbx&apos; o &apos;cxcxcx&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="237"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="213"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Alternativas: &apos;|&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el símbolo de alternación &apos;|&apos;. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -37969,14 +37969,14 @@ Cuidado con el ejemplo anterior, las alternativas se refieren a la palabra compl
 palabras &apos;cat&apos;, &apos;dog&apos;, ... debe expresar el hecho de que solamente quiere coincidir con palabras completas: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="255"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Principio de línea: &apos;^&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de principio de línea (^).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="259"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
@@ -37985,28 +37985,28 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 Por ejemplo,  &apos;^[A-Z] coincide con líneas que comienzan con un carácter en mayúscula.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="271"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Final de línea: &apos;$&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de final de línea ($).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="275"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="245"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Final de línea: &apos;$&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de final de línea ($). Se utiliza para encontrar expresiones en los finales de línea.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="286"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="253"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Límite de palabra&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar el carácter de límite de palabra (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="290"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="257"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
@@ -38015,14 +38015,14 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 debe comenzar o terminar en esta posición. Por ejemplo, &apos;\bcat\b&apos; coincide exactamente con la palabra &apos;cat&apos; mientras que &apos;concatenation&apos; es ignorada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="302"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="266"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Límite de no palabra&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar el carácter de límite de no palabra (\B). Es la versión negada de \b.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="306"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="270"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
@@ -38031,14 +38031,14 @@ does not. Effectively, \B matches at any position between two word characters as
 Efectivamente, \B coincide en cualquier posición entre dos caracteres de palabra al igual que en cualquier posición entre dos caracteres de no palabra. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="318"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="279"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar delante positivo: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar delante positivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="322"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -38049,14 +38049,14 @@ Escribir &apos;q(?=u)&apos; significa que se desea coincidir con el carácter &a
 que puede ser reemplazada por una expresión más compleja; q(?=[abc])&apos; coincidirá con una &apos;q&apos; si está seguida de &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="335"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="293"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar delante positivo:(?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar delante negativo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="339"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="297"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -38067,14 +38067,14 @@ están seguidos de otro.Escribir &apos;q(?!u)&apos; significa que se desea coinc
 es una expresión regular trivial que puede ser reemplazada por una expresión más compleja; q(?=[abc])&apos; coincidirá con una &apos;q&apos; si está seguida de cualquier cosa que no sea &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="352"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="307"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar detrás positivo: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar detrás positivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="356"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="311"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
 It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
@@ -38085,14 +38085,14 @@ Se utiliza para coincidir un carácter solamente si está precedido por otro. Es
 por &apos;u&apos;. Como con buscar delante, &apos;u&apos; puede reemplazarse por expresiones más complejas;  &apos;(?&amp;lt;=[abc])q&apos; coincidirá con una &apos;q&apos; si está precedida por &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="369"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="321"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar detrás negativo: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar detrás negativo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="373"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="325"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
 but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
@@ -38105,57 +38105,57 @@ pero funciona hacia atrás. Se utiliza para coincidir con un carácter solamente
 compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; solamente si no está precedida por &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="403"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="352"/>
         <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Deshacer última edición&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="413"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="359"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Rehacer última edición&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="443"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="386"/>
         <source>Regexp:</source>
         <translation>Regexp:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="481"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="424"/>
         <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
         <translation>&quot;^&quot; coincide con el principio de línea, &quot;$&quot; con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="484"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="427"/>
         <source>Match Linebreaks</source>
         <translation>Coincidir con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="498"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="441"/>
         <source>Verbose Regexp</source>
         <translation>Regexp con mucha información</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="505"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="448"/>
         <source>Case Sensitive</source>
         <translation>Sensible a mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="518"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="461"/>
         <source>Observe Locale</source>
         <translation>Tener en cuenta codificaciones locales</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="468"/>
         <source>&quot;.&quot; matches linebreaks as well</source>
         <translation>&quot;.&quot; coincide tambien con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="528"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="471"/>
         <source>Dot matches Linebreak</source>
         <translation>El punto coincide con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="537"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="480"/>
         <source>Text:</source>
         <translation>Texto:</translation>
     </message>
@@ -38175,7 +38175,7 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>Python 3</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="491"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="434"/>
         <source>ASCII</source>
         <translation>ASCII</translation>
     </message>
@@ -39548,32 +39548,32 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="477"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="89"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="86"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Rehacer última edición&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="407"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="383"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="410"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="386"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico. El diálogo ayuda a editar el rango de carácter y a añadir algunas condiciones específicas&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="420"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="393"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cualquier carácter: &apos;.&apos;&lt;/b&gt;
 ￼&lt;p&gt;Seleccionar para insertar un punto (.) en la regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="424"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -39583,21 +39583,21 @@ character class is faster and more precise.&lt;/p&gt;</source>
 Por ej. &apos;gr.y&apos; coincide con &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use el punto con frugalidad. A menudo una clase de caracteres o clase de caracteres negada es más rápida y precisa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="441"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="411"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repetir contenidos&lt;/b&gt;
 ￼&lt;p&gt;Seleccionar una condición de repetición a traves de un diálogo específico. Este diálogo ayuda a especificar el rango permitido para repeticiones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="165"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="159"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Paréntesis de no captura: (?:)&lt;/b&gt;
 ￼&lt;p&gt;Seleccionar para insertar paréntesis de no captura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="169"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="163"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -39606,14 +39606,14 @@ means that the content of the match (called the backreference) is not stored for
 &lt;p&gt;Seleccionar para insertar paréntesis de no captura. Se puede utilizar para aplicar una expresión regular de cuantificación (por ejemplo &apos;?&apos; or &apos;+&apos;) al grupo completo de caracteres  dentro de los paréntesis. Por ej. la Regex &apos;Set(?:Value)?&apos; coincide con &apos;Set&apos; o con &apos;SetValue&apos;. El &apos;?:&apos; dentro de los paréntesis significa que el contenido de la parte que coincide (llamado &apos;referencia hacia atras&apos; o &apos;retroreferencia&apos;, de &apos;backreference&apos;) no se almacena para uso posterior.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="452"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="419"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Agrupar: ()&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar paréntesis de captura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="186"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -39626,14 +39626,14 @@ Contrariamente a los paréntesis de no captura, la referencia hacia atrás o ret
 Se puede acceder a la retroreferencia con la expresión &apos;º1&apos;.&lt;/p&gt;￼&lt;p&gt;P. e.  &apos;([a-c])x\1x\1&apos; coincide con &apos;axaxa&apos;, &apos;bxbxb&apos; y &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="468"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="432"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Alternativas: &apos;|&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el símbolo de alternación &apos;|&apos;. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="205"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -39646,14 +39646,14 @@ Cuidado con el ejemplo anterior, las alternativas se refieren a la palabra compl
 palabras &apos;cat&apos;, &apos;dog&apos;, ... debe expresar el hecho de que solamente quiere coincidir con palabras completas: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="219"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="204"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Principio de línea: &apos;^&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de principio de línea (^).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="223"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="208"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
@@ -39662,28 +39662,28 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 Por ejemplo,  &apos;^[A-Z] coincide con líneas que comienzan con un carácter en mayúscula.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="235"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Final de línea: &apos;$&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de final de línea ($).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="239"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="221"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Final de línea: &apos;$&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de final de línea ($). Se utiliza para encontrar expresiones en los finales de línea.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="250"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="229"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Límite de palabra&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar el carácter de límite de palabra (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="254"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
@@ -39692,14 +39692,14 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 debe comenzar o terminar en esta posición. Por ejemplo, &apos;\bcat\b&apos; coincide exactamente con la palabra &apos;cat&apos; mientras que &apos;concatenation&apos; es ignorada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="266"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="242"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Límite de no palabra&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar el carácter de límite de no palabra (\B). Es la versión negada de \b.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="270"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
@@ -39708,14 +39708,14 @@ does not. Effectively, \B matches at any position between two word characters as
 Efectivamente, \B coincide en cualquier posición entre dos caracteres de palabra al igual que en cualquier posición entre dos caracteres de no palabra. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="282"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar delante positivo: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar delante positivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="286"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -39726,14 +39726,14 @@ Escribir &apos;q(?=u)&apos; significa que se desea coincidir con el carácter &a
 que puede ser reemplazada por una expresión más compleja; q(?=[abc])&apos; coincidirá con una &apos;q&apos; si está seguida de &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="299"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="269"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar delante negativo:(?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar delante negativo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="303"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="273"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -39744,14 +39744,14 @@ están seguidos de otro.Escribir &apos;q(?!u)&apos; significa que se desea coinc
 es una expresión regular trivial que puede ser reemplazada por una expresión más compleja; q(?=[abc])&apos; coincidirá con una &apos;q&apos; si está seguida de cualquier cosa que no sea &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="354"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="327"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a question mark (?) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cualquier carácter: &apos;.&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para un interrogante (?) en la regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="358"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="331"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a question mark (?) in your regexp. The question mark matches a single character. 
 E.g. &apos;gr?y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc.&lt;/p&gt;</source>
@@ -39760,21 +39760,21 @@ E.g. &apos;gr?y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apo
 Por ej. &apos;gr?y&apos; coincide &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="370"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="340"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Inserts a repetition (*) character into the regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repetir contenidos&lt;/b&gt;
 &lt;p&gt;Inserta un carácter de repetición (*) en la regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="374"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="344"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Inserts a repetition (*) character into the regexp. That will match zero or more of any character.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repetir contenidos&lt;/b&gt;
 &lt;p&gt;Inserta un carácter de repetición (*) en la regexp. Esto coincidirá con cero o ḿas de cualquier carácter&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="456"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="423"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;.&lt;/p&gt;</source>
@@ -39782,7 +39782,7 @@ characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &a
 ￼&lt;p&gt;Seleccionar para insertar paréntesis de captura. Se pueden usar para aplicar a una regexp de cuantificación (p. e. &apos;?&apos; or &apos;+&apos;) al grupo entero de caracteres dentro de los paréntesis. P. e. la regex &apos;Set(Value)?&apos; coincide con &apos;Set&apos; o con &apos;SetValue&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="472"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="436"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.&lt;/p&gt;</source>
@@ -39791,32 +39791,32 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
 de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos; coincide con palabras que contengan la palabra &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; o &apos;fish&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="502"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="463"/>
         <source>&amp;Regexp:</source>
         <translation>&amp;Regexp:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="512"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="473"/>
         <source>&amp;Text:</source>
         <translation>&amp;Texto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="535"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="496"/>
         <source>Case &amp;Sensitive</source>
         <translation>&amp;Sensible a mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="538"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="499"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="548"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="509"/>
         <source>&amp;Minimal</source>
         <translation>&amp;Mínimo</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="551"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="512"/>
         <source>Alt+M</source>
         <translation>Alt+M</translation>
     </message>
@@ -40860,27 +40860,27 @@ El siguiente ejemplo puede ilustra una regexp que coincide con una fecha valida:
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="381"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="69"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="66"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="72"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="69"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico. El diálogo ayuda a editar el rango de carácter y a añadir algunas condiciones específicas&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="82"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="76"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cualquier carácter: &apos;.&apos;&lt;/b&gt;
 ￼&lt;p&gt;Seleccionar para insertar un punto (.) en la regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="86"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -40891,21 +40891,21 @@ Por ej. &apos;gr.y&apos; coincide con &apos;gray&apos;, &apos;grey&apos;, &apos;
 clase de caracteres negada es más rápida y precisa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="103"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="94"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repetir contenidos&lt;/b&gt;
 ￼&lt;p&gt;Seleccionar una condición de repetición a traves de un diálogo específico. Este diálogo ayuda a especificar el rango permitido para repeticiones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="114"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="102"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Paréntesis de no captura: (?:)&lt;/b&gt;
 ￼&lt;p&gt;Seleccionar para insertar paréntesis de no captura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="118"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="106"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -40914,14 +40914,14 @@ means that the content of the match (called the backreference) is not stored for
 ￼&lt;p&gt;Seleccionar para insertar paréntesis de no captura. Se puede utilizar para aplicar una expresión regular de cuantificación (por ejemplo &apos;?&apos; or &apos;+&apos;) al grupo completo de caracteres  dentro de los paréntesis. Por ej. la Regex &apos;Set(?:Value)?&apos; coincide con &apos;Set&apos; o con &apos;SetValue&apos;. El &apos;?:&apos; dentro de los paréntesis significa que el contenido de la parte que coincide (llamado &apos;referencia hacia atras&apos; o &apos;retroreferencia&apos;) no se almacena para uso posterior.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="131"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="116"/>
         <source>&lt;b&gt;Atomic non capturing parentheses: (?&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some atomic non capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Paréntesis de no captura atómicos: (?&gt;)&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar paréntesis de no captura atómicos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="135"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="120"/>
         <source>&lt;b&gt;Atomic non capturing parentheses: (?&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some atomic non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?&gt;Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?&gt;&apos; inside the brakets
@@ -40932,14 +40932,14 @@ dentro de los paréntesis. Por ejemplo la regexp &apos;Set(?&gt;Value)?&apos; co
 el contenido de la coincidencia (llamado retroreferencia) no se almacena para uso posterior.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="148"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="130"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Agrupar: ()&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar paréntesis de captura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="152"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -40952,13 +40952,13 @@ Contrariamente a los paréntesis de no captura, la referencia hacia atrás o ret
 &lt;p&gt;P. e.  &apos;([a-c])x\1x\1&apos; coincide con &apos;axaxa&apos;, &apos;bxbxb&apos; y &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="167"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="146"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Grupo con nombre: (?P&amp;lt;&lt;i&gt;nombredegrupo&lt;/i&gt;&amp;gt;)&lt;/b&gt;￼&lt;p&gt;Seleccionar para insertar paréntesis de grupos con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="171"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="150"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
 backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
@@ -40969,14 +40969,14 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 ￼P. e. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x coincide con &apos;axaxax&apos;,&apos;bxbxbx&apos; o &apos;cxcxcx&apos; (&apos;foo&apos; es el nombre de grupo)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="185"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="161"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Referenciar grupo con nombre: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar una referencia a un grupo con nombre previamente declarado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="189"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="165"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
@@ -40987,14 +40987,14 @@ a la coincidencia encontrada por el grupo con nombre correspondiente. El el sigu
 &lt;p&gt;Ejemplo. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x coincide con  &apos;axaxax&apos;,&apos;bxbxbx&apos; o &apos;cxcxcx&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="202"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="175"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Alternativas: &apos;|&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el símbolo de alternación &apos;|&apos;. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="206"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -41007,14 +41007,14 @@ Cuidado con el ejemplo anterior, las alternativas se refieren a la palabra compl
 palabras &apos;cat&apos;, &apos;dog&apos;, ... debe expresar el hecho de que solamente quiere coincidir con palabras completas: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="220"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="190"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Principio de línea: &apos;^&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de principio de línea (^).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="224"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="194"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
@@ -41023,28 +41023,28 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 Por ejemplo,  &apos;^[A-Z] coincide con líneas que comienzan con un carácter en mayúscula.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="236"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="203"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Final de línea: &apos;$&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de final de línea ($).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="240"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="207"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Final de línea: &apos;$&apos;&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar el carácter de final de línea ($). Se utiliza para encontrar expresiones en los finales de línea.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="251"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="215"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Límite de palabra&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar el carácter de límite de palabra (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
@@ -41053,14 +41053,14 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 debe comenzar o terminar en esta posición. Por ejemplo, &apos;\bcat\b&apos; coincide exactamente con la palabra &apos;cat&apos; mientras que &apos;concatenation&apos; es ignorada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="267"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Límite de no palabra&lt;/b&gt;
 &lt;p&gt;Seleccionar para insertar el carácter de límite de no palabra (\B). Es la versión negada de \b.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="271"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
@@ -41069,14 +41069,14 @@ does not. Effectively, \B matches at any position between two word characters as
 Efectivamente, \B coincide en cualquier posición entre dos caracteres de palabra al igual que en cualquier posición entre dos caracteres de no palabra. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar delante positivo: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar delante positivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -41087,14 +41087,14 @@ Escribir &apos;q(?=u)&apos; significa que se desea coincidir con el carácter &a
 que puede ser reemplazada por una expresión más compleja; q(?=[abc])&apos; coincidirá con una &apos;q&apos; si está seguida de &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="300"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar delante negativo: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar delante negativo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="304"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -41105,14 +41105,14 @@ están seguidos de otro.Escribir &apos;q(?!u)&apos; significa que se desea coinc
 es una expresión regular trivial que puede ser reemplazada por una expresión más compleja; q(?=[abc])&apos; coincidirá con una &apos;q&apos; si está seguida de cualquier cosa que no sea &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="317"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="269"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar detrás positivo: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar detrás positivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="321"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="273"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
 It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
@@ -41123,14 +41123,14 @@ Se utiliza para coincidir un carácter solamente si está precedido por otro. Es
 por &apos;u&apos;. Como con buscar delante, &apos;u&apos; puede reemplazarse por expresiones más complejas;  &apos;(?&amp;lt;=[abc])q&apos; coincidirá con una &apos;q&apos; si está precedida por &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="334"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar detrás negativo: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;￼
 &lt;p&gt;Seleccionar para insertar llaves de buscar detrás negativo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="338"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
 but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
@@ -41143,72 +41143,72 @@ pero funciona hacia atrás. Se utiliza para coincidir con un carácter solamente
 compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; solamente si no está precedida por &apos;a&apos;, &apos;b&apos; o &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="368"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="314"/>
         <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Deshacer última edición&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="378"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="321"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Rehacer última edición&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="408"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="348"/>
         <source>Regexp:</source>
         <translation>Regexp:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="431"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="371"/>
         <source>Text:</source>
         <translation>Texto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="456"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="396"/>
         <source>Case Insensitive</source>
         <translation>Indistintamente mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="463"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="403"/>
         <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
         <translation>&quot;^&quot; coincide con el principio de línea, &quot;$&quot; con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="466"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="406"/>
         <source>Match Linebreaks</source>
         <translation>Coincidir con fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="473"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="413"/>
         <source>&quot;.&quot; matches everything including linebreaks</source>
         <translation>&quot;.&quot; coincide con cualquier carácter incluyendo fin de línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="476"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="416"/>
         <source>Dot matches everything</source>
         <translation>El punto coincide con cualquiera carácter</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="483"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="423"/>
         <source>Extended Pattern Syntax</source>
         <translation>Sintaxis de patrón Extendida</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="490"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="430"/>
         <source>Inverted Greediness</source>
         <translation>Codicia Inversa</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="497"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="437"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="504"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="444"/>
         <source>Non-named capturing groups do not capture substrings</source>
         <translation>Grupos de captura sin nombre no capturan subcadenas</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="507"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="447"/>
         <source>Don&apos;t Capture</source>
         <translation>No Capturar</translation>
     </message>
@@ -41628,35 +41628,35 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="46"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="77"/>
         <source>Qt Tools</source>
         <translation>Herramientas Qt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="130"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="127"/>
         <source>This gives an example of the complete tool name</source>
         <translation>Proporciona un ejemplo del nombre completo de la herramienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="133"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="130"/>
         <source>designer</source>
         <translation>designer</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="58"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Seleccionar el directorio de Traducciones Qt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estas opciones de configuración serán activadas la siguiente vez que se inicie la aplicación.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="83"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>El ejecutable de la herramienta se compone del prefijo, el nombre de la herramienta y el postfijo. Para win, la extensión se añade automáticamente.</translation>
     </message>
@@ -41666,37 +41666,37 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>Directorio de Traducciones de Qt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="67"/>
         <source>Press to select the Qt translations directory via a directory selection dialog</source>
         <translation>Pulse para seleccionar el directorio de traducciones de Qt a través de un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation>Introeucir la ruta del directorio de traducciones de Qt.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT4TRANSLATIONSDIR o la ruta compilada en la biblioteca de Qt.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="96"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="93"/>
         <source>Qt-Prefix:</source>
         <translation>Prefijo de Qt:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="100"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation>Introducir el prefijo para nombre de las herramientas Qt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="107"/>
         <source>Qt-Postfix:</source>
         <translation>Postfijo de Qt:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="117"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation>Introducir el postfijo para nombre de las herramientas Qt</translation>
     </message>
@@ -44240,72 +44240,72 @@ Not connected</source>
 <context>
     <name>SpellingPropertiesDialog</name>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="13"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="14"/>
         <source>Spelling Properties</source>
         <translation>Propiedades de la Corrección</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="22"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="23"/>
         <source>Project &amp;Language:</source>
         <translation>Lenguaje de&amp;l Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="32"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="33"/>
         <source>Select the project&apos;s language</source>
         <translation>Seleccionar el lenguaje del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="39"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="40"/>
         <source>Project &amp;Word List:</source>
         <translation>Lista de &amp;Palabras del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="49"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="50"/>
         <source>Enter the filename of the project word list</source>
         <translation>Introduzca el nombre de archivo de la lista de palabras del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="56"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="97"/>
         <source>Select the project word list file via a file selection dialog</source>
         <translation>Seleccionar archivo con listado de palabras del proyecto a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.ui" line="86"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="66"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="57"/>
         <source>Project E&amp;xclude List:</source>
         <translation>Lista de E&amp;xclusión del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="76"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="67"/>
         <source>Enter the filename of the project exclude list</source>
         <translation>Introduzca el nombre de archivo del listado de exclusión del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="83"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="104"/>
         <source>Select the project exclude list file via a file selection dialog</source>
         <translation>Seleccionar archivo con listado de exclusión del proyecto a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="46"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="50"/>
         <source>&lt;default&gt;</source>
         <translation>&lt;Por defecto&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="80"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="84"/>
         <source>Select project word list</source>
         <translation>Seleccionar listado de palabras del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="101"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="105"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Archivo de Diccionario (*.dict);;Todos los Archivos(*)</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="101"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="105"/>
         <source>Select project exclude list</source>
         <translation>Seleccionar listado de exclusión del proyecto</translation>
     </message>
@@ -44560,62 +44560,62 @@ Not connected</source>
         <translation>Introduzca el nombre de la base de datos</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="155"/>
         <source>Press to select a database file</source>
         <translation>Pulse para seleccionar un archivo de base de datos</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="78"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="85"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
         <source>&amp;Username:</source>
         <translation>Nombre de &amp;Usuario:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="95"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="85"/>
         <source>Enter the user name</source>
         <translation>Introduzca el nombre de usuario</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="102"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="92"/>
         <source>&amp;Password:</source>
         <translation>&amp;Contraseña:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="119"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="109"/>
         <source>&amp;Hostname:</source>
         <translation>Nombre de &amp;Host:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="129"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="119"/>
         <source>Enter the hostname</source>
         <translation>Introduzca el nombre de host</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="136"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="126"/>
         <source>P&amp;ort:</source>
         <translation>Puert&amp;o:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="146"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="136"/>
         <source>Enter the port number</source>
         <translation>Introduzca el número de puerto</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="149"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="139"/>
         <source>Default</source>
         <translation>Por defecto</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="98"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="101"/>
         <source>Select Database File</source>
         <translation>Seleccionar el archivo de base de datos</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="98"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="101"/>
         <source>All Files (*)</source>
         <translation>Todos los archivos (*)</translation>
     </message>
@@ -44668,12 +44668,12 @@ Not connected</source>
         <translation>Directorio de &amp;Trabajo:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="107"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="227"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="110"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="230"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
@@ -44682,7 +44682,7 @@ Not connected</source>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="81"/>
@@ -44697,17 +44697,17 @@ Not connected</source>
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="121"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="137"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="140"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -44716,78 +44716,78 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="214"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="200"/>
         <source>Select this to erase the collected coverage information</source>
         <translation>Seleccionar para borrar la información recogida de cobertura</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="217"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="203"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar información de cobertura&lt;/b&gt;
 &lt;p&gt;Seleccionar para borrar la información recogida de cobertura antes de la siguiente ejecución de cobertura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="221"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="207"/>
         <source>Erase &amp;coverage information</source>
         <translation>Borrar información de &amp;cobertura</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="224"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="210"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="164"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="167"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="171"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="174"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="184"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="187"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="190"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="200"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="203"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="207"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
@@ -44800,12 +44800,12 @@ Not connected</source>
         <translation>Comenzar depuración</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="137"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="140"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -44814,7 +44814,7 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="121"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
@@ -44831,12 +44831,12 @@ Not connected</source>
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="107"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="279"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="110"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="282"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
@@ -44845,7 +44845,7 @@ Not connected</source>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="65"/>
@@ -44870,125 +44870,125 @@ Not connected</source>
         <translation>Línea de coman&amp;dos:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="164"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="167"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="171"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="174"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="214"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="200"/>
         <source>Select to trace into the Python library</source>
         <translation>Seleccionar para trazar dentro de la biblioteca de Python</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="217"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="203"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation>&amp;Trazar dentro de bibliotecas del intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="220"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="206"/>
         <source>Alt+T</source>
         <translation>Alt+T</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="184"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="187"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="190"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="227"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="213"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation>Seleccionar para no parar el depurador en la primera línea ejecutable.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="230"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="216"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;No detener el la primera línea&lt;/b&gt;&lt;p&gt;Hace que el depurador no se detenga en la primera línea ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="233"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="219"/>
         <source>Don&apos;t stop at first line</source>
         <translation>No detener en la primera línea </translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="200"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="203"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="207"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="229"/>
         <source>Forking</source>
         <translation>Haciendo un fork</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="249"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="235"/>
         <source>Select to go through the fork without asking</source>
         <translation>Seleccionar para ir a través del fork sin preguntar</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="252"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="238"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork sin pausa&lt;/b&gt;
 &lt;p&gt;Seleccionar para ir a traves del fork sin preguntar, basando la decisión sobre el fork en la selección Padre/Hijo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="256"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="242"/>
         <source>Fork without pausing</source>
         <translation>Fork sin pausa</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="266"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="252"/>
         <source>Select to debug the child process after forking</source>
         <translation>Seleccionar para depurar el proceso hijo despues del fork</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="269"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="255"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Depurar Proceso Hijo&lt;/b&gt;
 &lt;p&gt;Seleccionar para depurar el proceso hijo despues del fork. Si no se selecciona, se depurará el proceso padre. No tiene efecto si no se selecciona &apos;fork sin pausa&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="273"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="259"/>
         <source>Follow Child Process</source>
         <translation>Seguir Proceso Hijo</translation>
     </message>
@@ -44996,12 +44996,12 @@ Not connected</source>
 <context>
     <name>StartDialog</name>
     <message>
-        <location filename="../Debugger/StartDialog.py" line="79"/>
+        <location filename="../Debugger/StartDialog.py" line="81"/>
         <source>Clear Histories</source>
         <translation>Borrar Histórico</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDialog.py" line="123"/>
+        <location filename="../Debugger/StartDialog.py" line="125"/>
         <source>Working directory</source>
         <translation>Directorio de trabajo</translation>
     </message>
@@ -45014,12 +45014,12 @@ Not connected</source>
         <translation>Comenzar profiling</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="137"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="140"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -45028,7 +45028,7 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="121"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
@@ -45045,12 +45045,12 @@ Not connected</source>
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="107"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="227"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="110"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="230"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
@@ -45059,7 +45059,7 @@ Not connected</source>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="65"/>
@@ -45084,78 +45084,78 @@ Not connected</source>
         <translation>&amp;Línea de comandos:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="214"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="200"/>
         <source>Select this to erase the collected timing data</source>
         <translation>Seleccionar para borrar la información recogida  de tiempos</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="217"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="203"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar datos de timing&lt;/b&gt;
 &lt;p&gt;Seleccionar para borrar los datos recogidos de timing antes de la siguiente ejecución de cobertura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="221"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="207"/>
         <source>Erase &amp;timing data</source>
         <translation>Borrar datos de &amp;timing</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="224"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="210"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="167"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="171"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="174"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="184"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="187"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="190"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="200"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="203"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="207"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
@@ -45190,12 +45190,12 @@ Not connected</source>
         <translation>Directorio de &amp;Trabajo:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="107"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="250"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="110"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="253"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
@@ -45204,7 +45204,7 @@ Not connected</source>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="81"/>
@@ -45219,17 +45219,17 @@ Not connected</source>
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="121"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="137"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="140"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -45238,95 +45238,95 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="164"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="167"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="171"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="174"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="184"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="187"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="190"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="200"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="203"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="207"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="200"/>
         <source>Forking</source>
         <translation>Haciendo un fork</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="220"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="206"/>
         <source>Select to go through the fork without asking</source>
         <translation>Seleccionar para ir a través del fork sin preguntar</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="223"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="209"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork sin pausa&lt;/b&gt;
 &lt;p&gt;Seleccionar para ir a traves del fork sin preguntar, basando la decisión sobre el fork en la selección Padre/Hijo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="227"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="213"/>
         <source>Fork without pausing</source>
         <translation>Fork sin pausa</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="237"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="223"/>
         <source>Select to debug the child process after forking</source>
         <translation>Seleccionar para depurar el proceso hijo despues del fork</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="240"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="226"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Depurar Proceso Hijo&lt;/b&gt;
 &lt;p&gt;Seleccionar para depurar el proceso hijo despues del fork. Si no se selecciona, se depurará el proceso padre. No tiene efecto si no se selecciona &apos;fork sin pausa&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="244"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="230"/>
         <source>Follow Child Process</source>
         <translation>Seguir Proceso Hijo</translation>
     </message>
@@ -46133,12 +46133,12 @@ Not connected</source>
         <translation>Comando de Subversion:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="131"/>
         <source>Select the working directory via a directory selection dialog</source>
         <translation>Seleccione el directorio de trabajo utilizando un diálogo de selección de directorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="134"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Select the working directory for the Subversion command via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de trabajo&lt;/b&gt;
@@ -46147,15 +46147,15 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="71"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
         <source>Enter the working directory for the Subversion command</source>
         <translation>Introducir el directorio de trabajo para el comando Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="87"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="73"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory for the Subversion command.
 This is an optional entry. The button to the right will open a 
@@ -46165,27 +46165,27 @@ Esta es una entrada opcional. El boton de la derecha abre un cuadro diálogo de 
 de directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="109"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="95"/>
         <source>Working Directory:&lt;br&gt;(optional)</source>
         <translation>Directorio de Trabajo:&lt;br&gt;(opcional)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="122"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="108"/>
         <source>Project Directory:</source>
         <translation>Directorio del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="135"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="121"/>
         <source>This shows the root directory of the current project.</source>
         <translation>Muestra el directorio raíz del proyecto actual.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="138"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="124"/>
         <source>project directory</source>
         <translation>directorio del proyecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="72"/>
         <source>Working directory</source>
         <translation>Directorio de trabajo</translation>
     </message>
@@ -46271,12 +46271,12 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <translation>Copy de Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="28"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de destino&lt;/b&gt;&lt;p&gt;Seleccione el nombre de destino para la operación a través de un diálogo de selección.&lt;/p&gt;</translation>
@@ -46284,63 +46284,63 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="32"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="39"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="25"/>
         <source>Source:</source>
         <translation>Origen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="32"/>
         <source>Shows the name of the source</source>
         <translation>Muestra el nombre del origen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="35"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de origen&lt;/b&gt;&lt;p&gt;Este campo muestra el nombre del origen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="46"/>
         <source>Enter the target name</source>
         <translation>Introduzca el nombre de destino</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="57"/>
         <source>Target:</source>
         <translation>Destino:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="77"/>
         <source>Select to force the operation</source>
         <translation>Seleccionar para forzar la operación</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="80"/>
         <source>Enforce operation</source>
         <translation>Imponer operación</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="28"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de destino&lt;/b&gt;
 &lt;p&gt;Seleccione el nombre de destino para la operación a través de un diálogo de selección.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="50"/>
         <source>Subversion Move</source>
         <translation>Move de Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="86"/>
         <source>Select target</source>
         <translation>Seleccionar destino</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de destino&lt;/b&gt;
@@ -47214,30 +47214,30 @@ en la copia de trabajo.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="119"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleccionar el protocolo para acceder al repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="48"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protocolo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="131"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="134"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="78"/>
         <source>Enter the directory of the new project.</source>
         <translation>Introduzca el directorio del nuevo proyecto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="81"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -47245,62 +47245,62 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 y se ubicará en este directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="90"/>
         <source>Select to indicate, that the repository has a standard layout (projectdir/trunk, projectdir/tags, projectdir/branches)</source>
         <translation>Seleccionar para indicar que el repositorio tiene una disposición estandar (directorio de proyecto/trunk, directorio de proyecto/tags, directorio de proyecto/branches)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="93"/>
         <source>Repository has standard &amp;layout</source>
         <translation>&amp;La disposición del repositorio es estándar</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="106"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="96"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="126"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="106"/>
         <source>Project &amp;Directory:</source>
         <translation>&amp;Directorio del Proyecto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="116"/>
         <source>&amp;Tag:</source>
         <translation>&amp;Tag:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="69"/>
         <source>Select Repository-Directory</source>
         <translation>Seleccionar Repositorio-Directorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="97"/>
         <source>Select Project Directory</source>
         <translation>Seleccionar Directorio del Proyecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="61"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Introduzca la URL del módulo. Para un repositorio con disposición estándar, no debe contener la parte trunk, tags o branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="116"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="126"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleccionar la url del repositorio a traves de un diálogo de selección de directorio o del navegador de repositorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="133"/>
         <source>Select the project directory via a directory selection dialog</source>
         <translation>Seleccione el directorio del proyecto utilizando un diálogo de selección de directorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="125"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="128"/>
         <source>Pat&amp;h:</source>
         <translation>&amp;Ruta:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation>Introducir la ruta url del módulo en el repositorio (sin la parte de protocolo)</translation>
     </message>
@@ -47349,57 +47349,57 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="66"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="105"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="73"/>
         <source>Enter the log message for the new project.</source>
         <translation>Introduzca el mensaje de log para el nuevo proyecto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="86"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="76"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mensaje de Log&lt;/b&gt;￼
 &lt;p&gt;Introduzca el mensaje de log para utilizar para el nuevo proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="90"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="80"/>
         <source>new project started</source>
         <translation>se ha iniciado el nuevo proyecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="87"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protocolo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="66"/>
         <source>Select Repository-Directory</source>
         <translation>Seleccionar Repositorio-Directorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleccionar la url del repositorio a traves de un diálogo de selección de directorio o del navegador de repositorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="100"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Introduzca la URL del módulo. Para un repositorio con disposición estándar, no debe contener la parte trunk, tags o branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="99"/>
         <source>Pat&amp;h:</source>
         <translation>&amp;Ruta:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation>Introducir la ruta url del módulo en el repositorio (sin la parte de protocolo)</translation>
     </message>
@@ -48260,7 +48260,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Asignar Propiedad de Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="24"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="25"/>
         <source>Property Name:</source>
         <translation>Nombre de Propiedad:</translation>
     </message>
@@ -48270,17 +48270,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Introduzca el nombre de la propiedad a establecer</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="40"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="41"/>
         <source>Select property source</source>
         <translation>Seleccione origen de propiedades</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="50"/>
         <source>File</source>
         <translation>Archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="57"/>
         <source>Text</source>
         <translation>Texto</translation>
     </message>
@@ -48290,17 +48290,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Introduzca el texto de la propiedad</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="93"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Pulse para seleccionar el archivo utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="85"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="83"/>
         <source>Enter the name of a file for the property</source>
         <translation>Introduzca el nombre de un archivo para la propiedad</translation>
     </message>
@@ -48325,7 +48325,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&amp;Valor de la Propiedad:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.py" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.py" line="44"/>
         <source>Select file for property</source>
         <translation>Seleccionar archivo para la propiedad</translation>
     </message>
@@ -50756,10 +50756,10 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="49"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="67"/>
+        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="70"/>
         <source>Shared Directory</source>
         <translation>Directorio Compartido</translation>
     </message>
@@ -52549,142 +52549,142 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
 <context>
     <name>ToolConfigurationDialog</name>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="13"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="14"/>
         <source>Configure Tools Menu</source>
         <translation>Configurar Menú de Herramientas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="24"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="25"/>
         <source>Add a separator</source>
         <translation>Añadir separador</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="27"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="28"/>
         <source>&lt;b&gt;Add separator&lt;/b&gt;&lt;p&gt;Add a separator for the menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir separador&lt;/b&gt;&lt;p&gt;Añadir un separador para el menú.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="30"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="31"/>
         <source>Add &amp;Separator</source>
         <translation>Añadir &amp;separador</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="37"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="38"/>
         <source>Add a new tools entry</source>
         <translation>Añadir nueva entrada de herramienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="40"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="41"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new tools entry with the values entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir&lt;/b&gt;
 &lt;p&gt;Añadir una nueva entrada de herramienta con los valores introducidos debajo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="44"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="45"/>
         <source>&amp;Add</source>
         <translation>&amp;Añadir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="47"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="48"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="57"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="58"/>
         <source>Select the output redirection mode</source>
         <translation>Seleccionar modo de redirección de salida</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="60"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="61"/>
         <source>&lt;b&gt;Redirect output&lt;b&gt;&lt;p&gt;Select the output redirection mode. The standard error channel is either not redirected or shown in the log viewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Redirigir salida&lt;/b&gt;&lt;p&gt;Seleccionar el modo de redirección de salida. El canal de error estándar bien no está redirigido o bien no se muestra en el visor de registros.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="67"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="68"/>
         <source>Enter the arguments for the executable</source>
         <translation>Introducir los argumentos para el ejecutable</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="70"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="71"/>
         <source>&lt;b&gt;Arguments&lt;/b&gt;
 &lt;p&gt;Enter the arguments for the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Argumentos&lt;/b&gt;
 &lt;p&gt;Introducir los argumentos para el ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="81"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="82"/>
         <source>Move up</source>
         <translation>Mover hacia arriba</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="84"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="85"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mover hacia Arriba&lt;/b&gt;
 &lt;p&gt;Mueve hacia arriba la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="88"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="89"/>
         <source>&amp;Up</source>
         <translation>A&amp;rriba</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="91"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="92"/>
         <source>Alt+U</source>
         <translation>Alt+R</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="101"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="102"/>
         <source>Delete the selected entry</source>
         <translation>Borrar la entrada seleccionada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="104"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="105"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar&lt;/b&gt;
 &lt;p&gt;Borrar la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="108"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="109"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="111"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="112"/>
         <source>Alt+D</source>
         <translation>Alt+B</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="118"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="119"/>
         <source>Clear all entry fields</source>
         <translation>Limpiar todos los campos de entrada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="121"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="122"/>
         <source>&lt;b&gt;New&lt;/b&gt;
 &lt;p&gt;Clear all entry fields for entering a new tools entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo&lt;/b&gt;
 &lt;p&gt;Limpiar todos los campos de entrada para introducir una nueva entrada de herramientas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="125"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="126"/>
         <source>&amp;New</source>
         <translation>&amp;Nuevo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="128"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="129"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="135"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="282"/>
         <source>Select the icon via a file selection dialog</source>
         <translation>Seleccionar el icono a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="138"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="285"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Select the icon via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Icono&lt;/b&gt;
@@ -52693,207 +52693,207 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="271"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="149"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="136"/>
         <source>Enter the filename of the executable</source>
         <translation>Introducir el nombre de archivo del ejecutable</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="152"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="139"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Enter the filename of the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ejecutable&lt;/b&gt;
 &lt;p&gt;Introduzca el nombre de archivo del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="163"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="150"/>
         <source>Move down</source>
         <translation>Mover hacia Abajo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="166"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="153"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mover hacia Abajo&lt;/b&gt;
 &lt;p&gt;Mueve hacia abajo la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="170"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="157"/>
         <source>Do&amp;wn</source>
         <translation>Aba&amp;jo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="173"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="160"/>
         <source>Alt+W</source>
         <translation>Alt+J</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="196"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="183"/>
         <source>Enter the menu text</source>
         <translation>Introducir el texto del menú</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="199"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="186"/>
         <source>&lt;b&gt;Menu text&lt;/b&gt;
 &lt;p&gt;Enter the menu text. Precede the accelerator key with an &amp; character.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Texto del menú&lt;/b&gt;
 &lt;p&gt;Introduzca el texto del menú. Marque el acelerador de teclado con un carácter &amp;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="210"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="197"/>
         <source>Change the values of the selected entry</source>
         <translation>Cambiar los valores de la entrada seleccionada</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="213"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="200"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the values of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cambiar&lt;/b&gt;
 &lt;p&gt;Cambiar el valor de la entrada seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="217"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="204"/>
         <source>C&amp;hange</source>
         <translation>Ca&amp;mbiar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="220"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="207"/>
         <source>Alt+H</source>
         <translation>Alt+M</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="227"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="214"/>
         <source>&amp;Icon file:</source>
         <translation>Archivo de &amp;icono:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="237"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="224"/>
         <source>Ar&amp;guments:</source>
         <translation>Ar&amp;gumentos:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="247"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="234"/>
         <source>&amp;Menu text:</source>
         <translation>Texto del men&amp;u:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="264"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="293"/>
         <source>Select the executable via a file selection dialog</source>
         <translation>Seleccionar el ejecutable a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="267"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="296"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Select the executable via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ejecutable&lt;/b&gt;
 &lt;p&gt;Seleccione el ejecutable a traves de un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="278"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="251"/>
         <source>Enter the filename of the icon</source>
         <translation>Introducir el nombre de archivo del icono</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="281"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="254"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Enter the filename of the icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Icono&lt;/b&gt;￼
 &lt;p&gt;Introduzca el nombre archivo del icono.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="289"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="262"/>
         <source>&amp;Redirect output</source>
         <translation>Re&amp;dirigir salida</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="299"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="272"/>
         <source>&amp;Executable file:</source>
         <translation>Archivo &amp;ejecutable:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="40"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="44"/>
         <source>no redirection</source>
         <translation>sin redirección</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="41"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
         <source>show output</source>
         <translation>mostrar salida</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="42"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
         <source>insert into current editor</source>
         <translation>insertar en el editor actual</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="43"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
         <source>replace selection of current editor</source>
         <translation>reemplazar selección en el editor actual</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="129"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>Add tool entry</source>
         <translation>Añadir entrada de herramienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="100"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="104"/>
         <source>You have to set an executable to add to the Tools-Menu first.</source>
         <translation>Primero debe establecer un ejecutable para añadir al menú de herramientas.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="109"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="113"/>
         <source>You have to insert a menuentry text to add the selected program to the Tools-Menu first.</source>
         <translation>Primero debe insertar un texto de entrada de menú para añadir el programa seleccionado al menú de herramientas.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="118"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="122"/>
         <source>The selected file could not be found or is not an executable. Please choose an executable filename.</source>
         <translation>No ha podido encontrarse el archivo seleccionado, o no es un ejecutable. Por favor, escoja un nombre de archivo de un ejecutable.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="180"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>Change tool entry</source>
         <translation>Cambiar entrada de herramienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="162"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="166"/>
         <source>You have to set an executable to change the Tools-Menu entry.</source>
         <translation>Primero debe establecer un ejecutable para cambiar la entrada del menú de herramientas.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="171"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="175"/>
         <source>You have to insert a menuentry text to change the selected Tools-Menu entry.</source>
         <translation>Primero debe insertar un texto de entrada de menú para cambiar la entrada del menú de herramientas seleccionada.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="180"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>The selected file could not be found or is not an executable. Please choose an existing executable filename.</source>
         <translation>No ha podido encontrarse el archivo seleccionado, o no es un ejecutable. Por favor, escoja un nombre de archivo de un ejecutable.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
         <source>Select executable</source>
         <translation>Seleccionar ejecutable</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
         <source>The selected file is not an executable. Please choose an executable filename.</source>
         <translation>El archivo seleccionado no es un ejecutable. Por favor, escoja un nombre de archivo de un ejecutable.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="290"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
         <source>Select icon file</source>
         <translation>Seleccionar archivo de icono</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="290"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
         <source>Icon files (*.png)</source>
         <translation>Archivos de Iconos (*.png)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="129"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>An entry for the menu text {0} already exists.</source>
         <translation>Ya existe una entrada para el texto de menú {0}.</translation>
     </message>
@@ -53088,12 +53088,12 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Propiedades de Traducción</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="50"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="82"/>
         <source>Show directory selection dialog</source>
         <translation>Mostrar diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="28"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="85"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Select the directory for the binary translations via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ruta de Binarios de Traducciones&lt;/b&gt;￼&lt;p&gt;Seleccione el directorio para los binarios de las traducciones a traves de un diálogo de selección de directorio.&lt;/p&gt;</translation>
@@ -53101,138 +53101,138 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="39"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="25"/>
         <source>Enter the path for the binary translation files (*.qm)</source>
         <translation>Introduzca la ruta para los archivos binarios de traducciones (*.qm)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="42"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="28"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Enter the directory for the binary translation files (*.qm). Leave it empty to store them together with the *.ts files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ruta de Binarios de Traducciones&lt;/b&gt;
 ￼&lt;p&gt;Introduzca el directorio para los archivos binarios de traducciones (*.qm). Déjelo en blanco para almacenarlos junto con los archivos *.ts.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="64"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="36"/>
         <source>&amp;Binary Translations Path:</source>
         <translation>Ruta de &amp;Binarios de Traducciones:</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="101"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="95"/>
         <source>Exclude from translation</source>
         <translation>Excluir de la traducción</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="107"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="101"/>
         <source>Press to select a directory via a selection dialog</source>
         <translation>Pulse para seleccionar un directorio a través de un diálogo de selección</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="110"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="104"/>
         <source>Select d&amp;irectory...</source>
         <translation>Seleccionar &amp;directorio...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="117"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="111"/>
         <source>Press to select a file via a selection dialog</source>
         <translation>Pulse para seleccionar un archivo a través de un diálogo de selección</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="120"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="114"/>
         <source>Select &amp;file...</source>
         <translation>Seleccionar &amp;archivo...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="130"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="124"/>
         <source>Press to add the entered path or file to the list</source>
         <translation>Pulse para añadir la ruta o archivo introducidos a la lista</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="133"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="127"/>
         <source>&amp;Add</source>
         <translation>Aña&amp;dir</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="143"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="137"/>
         <source>Press to delete the selected entry from the list</source>
         <translation>Pulse para borrar la entrada seleccionada de la lista</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="146"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="140"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="153"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="147"/>
         <source>Enter a path or file to be added</source>
         <translation>Introduzca un archivo o ruta para añadir</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="160"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="154"/>
         <source>List of paths or files to excude from translation</source>
         <translation>Lista de rutas o archivos a excluir de la traducción</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="64"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="68"/>
         <source>All Files (*)</source>
         <translation>Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="169"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="173"/>
         <source>Exempt file from translation</source>
         <translation>Eximir archivo de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="182"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="186"/>
         <source>Exempt directory from translation</source>
         <translation>Eximir directorio de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="53"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="74"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Select a translation file via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Patrón de Traducción&lt;/b&gt;
 &lt;p&gt;Seleccione un archivo de traducción a través de un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="74"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="46"/>
         <source>Enter the path pattern for the translation files</source>
         <translation>Introducir el patrón de la ruta para los archivos de traducciones</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="97"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="101"/>
         <source>Select translation file</source>
         <translation>Seleccione archivos de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="126"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="130"/>
         <source>Select directory for binary translations</source>
         <translation>Seleccionar directorio para binarios de traducciones</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="77"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="49"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Enter the path pattern for the translation files using %language% at the place of the language code (e.g. /path_to_eric/i18n/eric5_%language%.ts). This will result in translation files like /path_to_eric/i18n/eric5_de.ts.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Patrón de Traducción&lt;/b&gt;
 &lt;p&gt;Introduzca el patrón de la ruta de los archivos de traducción utilizando %language% en lugar del código de idioma (p. e. /path_to_eric/i18n/eric5_%language%.ts). Esto resultará en archivos de traducción como /path_to_eric/i18n/eric5_es.ts.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="85"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</source>
         <translation>Patrón de Ruta de &amp;Traducción:
 (Utilice &apos;%language%&apos; en el lugar donde se desea insertar el código de idioma, p. e. i18n/eric5_%language%.ts)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="60"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="64"/>
         <source>Source Files ({0});;</source>
         <translation>Archivos de fuentes ({0});;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="62"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="66"/>
         <source>Forms Files ({0});;</source>
         <translation>Archivos de Formularios ({0});;</translation>
     </message>
@@ -54113,7 +54113,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="394"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="396"/>
         <source>Unittest</source>
         <translation>Test Unitario</translation>
     </message>
@@ -54151,112 +54151,112 @@ adecuados.&lt;/p&gt;</translation>
         <translation>Introducir nombre del &amp;test:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="81"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
         <source>Open a file selection dialog</source>
         <translation>Abrir un diálogo de selección de archivo</translation>
     </message>
     <message>
         <location filename="../PyUnit/UnittestDialog.ui" line="84"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="81"/>
         <source>Enter test &amp;filename:</source>
         <translation>Introducir nombre de &amp;archivo de test:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="110"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="107"/>
         <source>Select whether you want to run the test locally</source>
         <translation>Seleccionar si desea ejecutar el test en local</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="113"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="110"/>
         <source>Run &amp;local</source>
         <translation>Ejecuta&amp;r en local</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="120"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="117"/>
         <source>Select whether coverage data should be collected</source>
         <translation>Seleccione si se deben recoger datos de cobertura</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="123"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="120"/>
         <source>C&amp;ollect coverage data</source>
         <translation>Rec&amp;oger datos de cobertura</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="133"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="130"/>
         <source>Select whether old coverage data should be erased</source>
         <translation>Seleccionar si se deben borrar antiguos datos de cobertura</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="136"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="133"/>
         <source>&amp;Erase coverage data</source>
         <translation>Borrar datos de cob&amp;ertura</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="154"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="151"/>
         <source>Progress:</source>
         <translation>Progreso:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="194"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="191"/>
         <source>Run:</source>
         <translation>Ejecutar:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="201"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="198"/>
         <source>Number of tests run</source>
         <translation>Número de tests ejecutados</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="245"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="242"/>
         <source>Failures:</source>
         <translation>Fallidos:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="252"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="249"/>
         <source>Number of test failures</source>
         <translation>Número de tests fallidos</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="262"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="259"/>
         <source>Errors:</source>
         <translation>Errores:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="269"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="266"/>
         <source>Number of test errors</source>
         <translation>Número de errores de test</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="211"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="208"/>
         <source>Remaining:</source>
         <translation>Quedan:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="218"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="215"/>
         <source>Number of tests to be run</source>
         <translation>Número de tests a ejecutar</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="351"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="348"/>
         <source>Tests performed:</source>
         <translation>Tests ejecutados:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="361"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="358"/>
         <source>Failures and errors:</source>
         <translation>Fallidos y con error:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="368"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="365"/>
         <source>Failures and Errors list</source>
         <translation>Lista de fallidos y con error</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="371"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="368"/>
         <source>&lt;b&gt;Failures and Errors list&lt;/b&gt;
 &lt;p&gt;This list shows all failed and errored tests.
 Double clicking on an entry will show the respective traceback.&lt;/p&gt;</source>
@@ -54265,167 +54265,167 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="398"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="395"/>
         <source>Idle</source>
         <translation>Desocupado</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="63"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="65"/>
         <source>Start</source>
         <translation>Comenzar</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="65"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="67"/>
         <source>Start the selected testsuite</source>
         <translation>Comenzar la suite de tests seleccionada</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="67"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="69"/>
         <source>&lt;b&gt;Start Test&lt;/b&gt;&lt;p&gt;This button starts the selected testsuite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Comenzar Test&lt;/b&gt;&lt;p&gt;Este botón comienza la suite de tests seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="78"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="80"/>
         <source>Stop</source>
         <translation>PararDetener</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="80"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="82"/>
         <source>Stop the running unittest</source>
         <translation>Detener el test unitario en ejecución</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="81"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="83"/>
         <source>&lt;b&gt;Stop Test&lt;/b&gt;&lt;p&gt;This button stops a running unittest.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Detener Test&lt;/b&gt;&lt;p&gt;Este botón detiene un test unitario en ejecución.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="115"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="117"/>
         <source>^Failure: </source>
         <translation>^Fallido:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="116"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="118"/>
         <source>^Error: </source>
         <translation>^Error:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="259"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="261"/>
         <source>You must enter a test suite file.</source>
         <translation>Debe introducir un archivo de suite de tests.</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="267"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="269"/>
         <source>Preparing Testsuite</source>
         <translation>Preparando Suite de Tests</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="463"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="465"/>
         <source>Running</source>
         <translation>Ejecutando</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="626"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="628"/>
         <source>Show Source</source>
         <translation>Mostrar código fuente</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="200"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="202"/>
         <source>Python Files (*.py);;All Files (*)</source>
         <translation>Archivos Python (*.py);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="196"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="198"/>
         <source>Python3 Files ({1});;Python2 Files ({0});;All Files (*)</source>
         <translation>Archivos Python3 ({1});;Archivos Python2 ({0});;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="394"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="396"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Imposible ejecutar el test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="487"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="489"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation>Se ha ejecutado {0} test en {1:.3f}s</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="490"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="492"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation>Se han ejecutado {0} tests en {1:.3f}s</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="506"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="508"/>
         <source>Failure: {0}</source>
         <translation>Fallido: {0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="521"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="523"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="279"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="276"/>
         <source>Skipped:</source>
         <translation>Ignorados:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="286"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="283"/>
         <source>Number of tests skipped</source>
         <translation>Número de tests ignorados</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="296"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="293"/>
         <source>Expected Failures:</source>
         <translation>Fallos Esperados:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="303"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="300"/>
         <source>Number of tests with expected failure</source>
         <translation>Número de tests con fallo esperado</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="313"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="310"/>
         <source>Unexpected Successes:</source>
         <translation>Éxitos Inesperados:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="320"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="317"/>
         <source>Number of tests with unexpected success</source>
         <translation>Número de tests con éxito inesperado</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="536"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="538"/>
         <source>    Skipped: {0}</source>
         <translation>    Ignorados: {0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="551"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="553"/>
         <source>    Expected Failure</source>
         <translation>    Fallo Esperado</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="565"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="567"/>
         <source>    Unexpected Success</source>
         <translation>    Éxito Inesperado</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="70"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="72"/>
         <source>Rerun Failed</source>
         <translation>Re-ejecución Fallida</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="72"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="74"/>
         <source>Reruns failed tests of the selected testsuite</source>
         <translation>La re-ejecución ha fallado tests del testsuite seleccionado</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="74"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="76"/>
         <source>&lt;b&gt;Rerun Failed&lt;/b&gt;&lt;p&gt;This button reruns all failed tests of the selected testsuite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Re-ejecución Fallida&lt;/b&gt;&lt;p&gt;Este botón re-ejecuta todos los tests fallidos del testsuite seleccionado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="185"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="182"/>
         <source>%v/%m Tests</source>
         <translation>%v/%m Tests</translation>
     </message>

@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
@@ -29,6 +30,8 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("MultiProjectPage")
+        
+        self.workspaceButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         # set initial values
         self.openMasterAutomaticallyCheckBox.setChecked(

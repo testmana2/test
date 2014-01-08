@@ -16,6 +16,7 @@ from .Ui_SyncDirectorySettingsPage import Ui_SyncDirectorySettingsPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
@@ -30,6 +31,8 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.directoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.directoryEdit.setText(Preferences.getHelp("SyncDirectoryPath"))
         

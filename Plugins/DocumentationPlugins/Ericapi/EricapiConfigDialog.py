@@ -19,6 +19,7 @@ from E5Gui import E5FileDialog
 
 from .Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
 import Utilities
+import UI.PixmapCache
 import DocumentationTools
 
 from eric5config import getConfig
@@ -38,6 +39,9 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.outputDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         for language in sorted(

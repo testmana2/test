@@ -18,7 +18,7 @@ from .Ui_HelpViewersPage import Ui_HelpViewersPage
 
 import Preferences
 import Utilities
-
+import UI.PixmapCache
 
 class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
     """
@@ -31,6 +31,8 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("HelpViewersPage")
+        
+        self.customViewerButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.helpViewerGroup = QButtonGroup()
         self.helpViewerGroup.addButton(self.helpBrowserButton)

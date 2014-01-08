@@ -17,6 +17,7 @@ from .Ui_DebuggerPython3Page import Ui_DebuggerPython3Page
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
@@ -30,6 +31,9 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerPython3Page")
+        
+        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)

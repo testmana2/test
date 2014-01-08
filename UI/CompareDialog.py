@@ -96,6 +96,9 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         super().__init__(parent)
         self.setupUi(self)
         
+        self.file1Button.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.file2Button.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.file1Completer = E5FileCompleter(self.file1Edit)
         self.file2Completer = E5FileCompleter(self.file2Edit)
         

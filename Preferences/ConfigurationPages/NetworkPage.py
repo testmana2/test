@@ -20,6 +20,7 @@ from .Ui_NetworkPage import Ui_NetworkPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
@@ -33,6 +34,8 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("NetworkPage")
+        
+        self.downloadDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         

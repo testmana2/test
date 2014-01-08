@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class AddProjectDialog(QDialog, Ui_AddProjectDialog):
@@ -32,6 +33,8 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.fileCompleter = E5FileCompleter(self.filenameEdit)
         

@@ -469,24 +469,24 @@
 <context>
     <name>AddDirectoryDialog</name>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="13"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="14"/>
         <source>Add Directory</source>
         <translation>Dizin Ekle</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="16"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="17"/>
         <source>Add a directory to the current project</source>
         <translation>Geçerli projeye bir dizin ekleyiniz</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="19"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="20"/>
         <source>&lt;b&gt;Add Directory Dialog&lt;/b&gt;
 &lt;p&gt;This dialog is used to add a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dizin Ekleme Diyaloğu&lt;/b&gt;
 &lt;p&gt;Bu diyalog geçerli projeye bir dizin eklemek için kullanılır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="34"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hedef Dizin&lt;/b&gt;
@@ -495,20 +495,20 @@
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="94"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="35"/>
         <source>&amp;Target Directory:</source>
         <translation>Hede&amp;f Dizin:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="55"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
         <source>Enter the name of the directory to add</source>
         <translation>Ekleyeceğiniz dizin için isim giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="58"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="48"/>
         <source>&lt;b&gt;Source Directory&lt;/b&gt;
 &lt;p&gt;Enter the name of the directory to add to the current project.
  You may select it with a dialog by pressing the button to
@@ -518,22 +518,22 @@
 Sağdaki düğmeye seçiminizi gerçekleştirmek için basabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="68"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="58"/>
         <source>Select, whether a recursive add should be performed</source>
         <translation>Elle yazmak yerine eklemeyi tercih ediyorsanız seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="71"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="61"/>
         <source>&amp;Recurse into subdirectories</source>
         <translation>Altdizinle&amp;rin içine kaynak</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="78"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="68"/>
         <source>Enter the target directory for the file</source>
         <translation>Dosya için hedef dizini giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="81"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="71"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -542,49 +542,49 @@ Sağdaki düğmeye seçiminizi gerçekleştirmek için basabilirsiniz.&lt;/p&gt;
  diyalog aracılığıyla seçiminizi yapabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="100"/>
         <source>&lt;b&gt;Source Directory&lt;/b&gt;
 &lt;p&gt;Select the source directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaynak Dizin&lt;/b&gt;
 &lt;p&gt;Dizin seçme diyaloğu ile kaynak dizinini seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="101"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="80"/>
         <source>&amp;Source Directory:</source>
         <translation>&amp;Kaynak Dizini:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="111"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
         <source>&amp;File Type:</source>
         <translation>&amp;Dosya Tipi:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="66"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="70"/>
         <source>Source Files</source>
         <translation>Kaynak Dosyaları</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="68"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
         <source>Forms Files</source>
         <translation>Form Dosyaları</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="70"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
         <source>Resource Files</source>
         <translation>Kaynak Dosyalar</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="76"/>
         <source>Interface Files</source>
         <translation>Arayüz Dosyaları</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="78"/>
         <source>Other Files (*)</source>
         <translation>Diğer Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="107"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="111"/>
         <source>Select directory</source>
         <translation>Dizin Seçiniz</translation>
     </message>
@@ -592,19 +592,19 @@ Sağdaki düğmeye seçiminizi gerçekleştirmek için basabilirsiniz.&lt;/p&gt;
 <context>
     <name>AddFileDialog</name>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="13"/>
+        <location filename="../Project/AddFileDialog.ui" line="14"/>
         <source>Add Files</source>
         <translation>Dosyaları Ekle</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="16"/>
+        <location filename="../Project/AddFileDialog.ui" line="17"/>
         <source>&lt;b&gt;Add Files Dialog&lt;/b&gt;
 &lt;p&gt;This dialog is used to add files to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dosya Ekleme Diyaloğu&lt;/b&gt;
 &lt;p&gt;Bu diyalog geçerli projeye dosya eklemek için kullanılır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="28"/>
+        <location filename="../Project/AddFileDialog.ui" line="74"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Select the source files via a files selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaynak Dosyalar&lt;/b&gt;
@@ -613,20 +613,20 @@ Sağdaki düğmeye seçiminizi gerçekleştirmek için basabilirsiniz.&lt;/p&gt;
     <message>
         <location filename="../Project/AddFileDialog.ui" line="65"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="39"/>
+        <location filename="../Project/AddFileDialog.ui" line="29"/>
         <source>&amp;Target Directory:</source>
         <translation>Hede&amp;f Dizin:</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="49"/>
+        <location filename="../Project/AddFileDialog.ui" line="39"/>
         <source>Enter the target directory for the file</source>
         <translation>Dosya için hedef dizini giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="52"/>
+        <location filename="../Project/AddFileDialog.ui" line="42"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -635,24 +635,24 @@ Sağdaki düğmeye seçiminizi gerçekleştirmek için basabilirsiniz.&lt;/p&gt;
  diyalog aracılığıyla seçiminizi yapabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="61"/>
+        <location filename="../Project/AddFileDialog.ui" line="82"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hedef Dizin&lt;/b&gt;
 &lt;p&gt;Dizin seçme diyaloğu ile hedef dizini seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="72"/>
+        <location filename="../Project/AddFileDialog.ui" line="51"/>
         <source>&amp;Source Files:</source>
         <translation>Kaynak Do&amp;syalar:</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="82"/>
+        <location filename="../Project/AddFileDialog.ui" line="61"/>
         <source>Enter the name of files to add separated by the path separator</source>
         <translation>Yol ayracı tarafından ayrılmış ayraçların adlarını giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="85"/>
+        <location filename="../Project/AddFileDialog.ui" line="64"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Enter the name of files to add to the current project separated
 by the path separator. You may select them with a dialog by pressing 
@@ -661,92 +661,92 @@ the button to the right.&lt;/p&gt;</source>
 &lt;p&gt;Yol ayracı ile ayrılmış geçerli projeye eklemek için dosyanın adını giriniz. sağdaki düğmeye basarak bir diyalog aracılığıyla seçem yapabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="97"/>
+        <location filename="../Project/AddFileDialog.ui" line="92"/>
         <source>Select, if the files should be added as sourcecode (overriding automatic detection)</source>
         <translation>Eğir bir dosya kaynak kodu olarak eklenmeli ise(otomatik seçim önemliyse), SEÇ</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="100"/>
+        <location filename="../Project/AddFileDialog.ui" line="95"/>
         <source>Is source&amp;code files</source>
         <translation>Bu Kaynak&amp;kod dosyası mı</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="103"/>
+        <location filename="../Project/AddFileDialog.ui" line="98"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="63"/>
+        <location filename="../Project/AddFileDialog.py" line="68"/>
         <source>Select target directory</source>
         <translation>Hedef dizini seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="93"/>
+        <location filename="../Project/AddFileDialog.py" line="98"/>
         <source>Source Files ({0});;Forms Files ({1});;Resource Files ({2});;Interface Files ({3});;Translation Files ({4});;All Files (*)</source>
         <translation>Kaynak Dosyaları ({0});;Form Dosyaları ({1});; Kaynak Dosyalar({2});;Arayüz Dosyaları ({3});;Çeviri Dosyaları ({4});;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="106"/>
+        <location filename="../Project/AddFileDialog.py" line="111"/>
         <source>Select Files</source>
         <translation>Dosyaları Seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="112"/>
+        <location filename="../Project/AddFileDialog.py" line="117"/>
         <source>Forms Files ({0})</source>
         <translation>Form Dosyaları ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="114"/>
+        <location filename="../Project/AddFileDialog.py" line="119"/>
         <source>Select user-interface files</source>
         <translation>Kullanıcı-arayüz dosyalarını seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="120"/>
+        <location filename="../Project/AddFileDialog.py" line="125"/>
         <source>Resource Files ({0})</source>
         <translation>Kaynak Dosyalar ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="122"/>
+        <location filename="../Project/AddFileDialog.py" line="127"/>
         <source>Select resource files</source>
         <translation>Kaynak(resource) dosyalarını seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="128"/>
+        <location filename="../Project/AddFileDialog.py" line="133"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation>Kaynak Dosyaları ({0});; Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="130"/>
+        <location filename="../Project/AddFileDialog.py" line="135"/>
         <source>Select source files</source>
         <translation>Kaynak dosyalarını seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="136"/>
+        <location filename="../Project/AddFileDialog.py" line="141"/>
         <source>Interface Files ({0})</source>
         <translation>Arayüz Dosyaları ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="138"/>
+        <location filename="../Project/AddFileDialog.py" line="143"/>
         <source>Select interface files</source>
         <translation>Arayüz dosyalarını seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="144"/>
+        <location filename="../Project/AddFileDialog.py" line="149"/>
         <source>Translation Files ({0})</source>
         <translation>Çeviri Dosyaları ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="146"/>
+        <location filename="../Project/AddFileDialog.py" line="151"/>
         <source>Select translation files</source>
         <translation>Çeviri dosyalarını seç</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="148"/>
+        <location filename="../Project/AddFileDialog.py" line="153"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="149"/>
+        <location filename="../Project/AddFileDialog.py" line="154"/>
         <source>Select files</source>
         <translation>Dosyaları seç</translation>
     </message>
@@ -1123,7 +1123,7 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>AddProjectDialog</name>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="62"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
         <source>Add Project</source>
         <translation>Proje Ekle</translation>
     </message>
@@ -1148,22 +1148,22 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Proje dosyasının adını giriniz</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="95"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir proje dosyası seç</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="62"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="69"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
         <source>&amp;Description:</source>
         <translation>A&amp;çıklama:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="82"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="72"/>
         <source>Enter a short description for the project</source>
         <translation>Proje için kısa bir açıklama giriniz</translation>
     </message>
@@ -1178,7 +1178,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Ana proje &amp;mi</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="44"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="47"/>
         <source>Project Properties</source>
         <translation>Proje Özellikleri</translation>
     </message>
@@ -1188,17 +1188,17 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Proje Dosyaları (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="62"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
         <source>Project Files (*.e4p)</source>
         <translation>Proje Dosyaları (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="95"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="85"/>
         <source>Select to make this project the main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="98"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="88"/>
         <source>Is &amp;main project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1567,61 +1567,61 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarkedFilesDialog</name>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="13"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="14"/>
         <source>Configure Bookmarked Files Menu</source>
         <translation>Yerimi Dosyaları Menüsünü Ayarla</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="34"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="35"/>
         <source>Delete the selected entry</source>
         <translation>Seçilen girişi sil</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="37"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="38"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sil&lt;/b&gt;
 &lt;p&gt;Seçilen girişi sil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="41"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="42"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="114"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="101"/>
         <source>Alt+D</source>
         <translation>Alt+D</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="70"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="71"/>
         <source>Move up</source>
         <translation>Yukarı Götür</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="73"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="74"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yukarı Götür&lt;/b&gt;
 &lt;p&gt;Seçileni yukarı götür.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="77"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="78"/>
         <source>&amp;Up</source>
         <translation>Y&amp;ukarı</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="80"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="81"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="87"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="169"/>
         <source>Select the file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir dosya seç</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="90"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="172"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Select the file to be bookmarked via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dosya&lt;/b&gt;&lt;p&gt;Dosya seçme diyaloğu ile yerimi dosyasını seç.&lt;/p&gt;</translation>
@@ -1629,80 +1629,80 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="104"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="91"/>
         <source>Move down</source>
         <translation>Aşağı götür</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="107"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aşağı taşı&lt;/b&gt;
 &lt;p&gt;Seçileni aşağı taşı.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="111"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="98"/>
         <source>&amp;Down</source>
         <translation>&amp;Asağı</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="124"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="111"/>
         <source>Add a new bookmarked file</source>
         <translation>Yeni bir yerimi dosyası ekle</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="127"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="114"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new bookmarked file with the value entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ekle&lt;/b&gt;&lt;p&gt;Aşağıda girilen değerde yeni bir yerimi dosyası ekler.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="131"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="118"/>
         <source>&amp;Add</source>
         <translation>&amp;Ekle</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="134"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="121"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="141"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="128"/>
         <source>&amp;File:</source>
         <translation>&amp;Dosya:</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="154"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="141"/>
         <source>Change the value of the selected entry</source>
         <translation>Seçilen kalemin değerini değiştir</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="157"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="144"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the value of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Değiştir&lt;/b&gt;
 &lt;p&gt;Değeri seçilen ile değiştir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="161"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="148"/>
         <source>C&amp;hange</source>
         <translation>Deği&amp;ştir</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="164"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="151"/>
         <source>Alt+H</source>
         <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="171"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="158"/>
         <source>Enter the filename of the file</source>
         <translation>Dosyanın dosyaadını giriniz</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="174"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="161"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Enter the filename of the bookmarked file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dosya&lt;/b&gt;&lt;p&gt;Yerimi dosyası için dosyaadı giriniz.&lt;/p&gt;</translation>
@@ -1847,12 +1847,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished">Yerimlerini İçeaktar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="36"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="48"/>
         <source>Choose source from which you want to import bookmarks:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="43"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="55"/>
         <source>Choose the source to import from</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1862,42 +1862,42 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Sonraki</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="179"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="196"/>
         <source>Cancel</source>
         <translation type="unfinished">Vazgeç</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="89"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="92"/>
         <source>Choose Directory ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="99"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="102"/>
         <source>Choose File ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="124"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="127"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="131"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="134"/>
         <source>Finish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="146"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="149"/>
         <source>Error importing bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="124"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="145"/>
         <source>Shows the name of the bookmarks file or directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="189"/>
         <source>Next &gt;</source>
         <translation type="unfinished">Sonraki &gt;</translation>
     </message>
@@ -2672,17 +2672,17 @@ Line: {1}</source>
 <context>
     <name>ChatWidget</name>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="54"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="63"/>
         <source>Chat</source>
         <translation>Sohbet</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="29"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="38"/>
         <source>Users</source>
         <translation>Kullanıcılar</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="73"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="82"/>
         <source>Enter the text to send</source>
         <translation>Gönderilecek metni giriniz</translation>
     </message>
@@ -2694,35 +2694,35 @@ Line: {1}</source>
     <message>
         <location filename="../Cooperation/ChatWidget.ui" line="166"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="80"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="89"/>
         <source>Press to send the text above</source>
         <translation>Metini göndermek için basınız</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="83"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="92"/>
         <source>Send</source>
         <translation>Gönder</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="96"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="105"/>
         <source>Share Editor</source>
         <translation>Paylaşım Düzenleyici</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="118"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="127"/>
         <source>Press to toggle the shared status of the current editor</source>
         <translation>Geçerli düzenleyicideki ortak durum satırını genişletmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="134"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="140"/>
         <source>Press to start a shared edit</source>
         <translation>Bir paylaşım (ortak )düzenleyiciyi başlatmak için basınız</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="150"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="153"/>
         <source>Press to end the edit and send the changes</source>
         <translation>Düzenlemeyi bitirmek ve değişiklikleri göndermek için basınız</translation>
     </message>
@@ -2732,12 +2732,12 @@ Line: {1}</source>
         <translation>Ortak düzenleyiciyi iptal için basınız</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="189"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="186"/>
         <source>Connection</source>
         <translation>Bağlantı</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="197"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="194"/>
         <source>Host:</source>
         <translation>Sunucu:</translation>
     </message>
@@ -2752,7 +2752,7 @@ Line: {1}</source>
         <translation type="obsolete">Barınağı temizlemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="230"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="227"/>
         <source>Press to clear the hosts list</source>
         <translation>Sunucu listesini temizlemek için basınız</translation>
     </message>
@@ -2762,27 +2762,27 @@ Line: {1}</source>
         <translation>Temizle</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="259"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="256"/>
         <source>Shows the connection status</source>
         <translation>Bağlantı durumunu göster</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="271"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="268"/>
         <source>Server</source>
         <translation>Sunucu</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="277"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="274"/>
         <source>Port:</source>
         <translation>Bağlantı Noktası:</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="284"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="281"/>
         <source>Enter the server port</source>
         <translation>Sunucu bağlantı noktsasını giriniz</translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="319"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="316"/>
         <source>Shows the status of the server</source>
         <translation>Sunucunun durumunu göster</translation>
     </message>
@@ -2951,7 +2951,7 @@ Line: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="210"/>
+        <location filename="../Cooperation/ChatWidget.ui" line="207"/>
         <source>Enter the host and port to connect to in the form &quot;host@port&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3279,72 +3279,72 @@ entry will open an editor window and position the cursor at the respective line 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="37"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="46"/>
         <source>Exclude Files:</source>
         <translation type="unfinished">Dışarda Tutulan Dosyalar:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="44"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="53"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation type="unfinished">Dosyaadılarını  virgül ile ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="63"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="72"/>
         <source>Press to start the code style check run</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="66"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="75"/>
         <source>Start</source>
         <translation type="unfinished">Başla</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="73"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="82"/>
         <source>Press to fix the selected issues</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="76"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="85"/>
         <source>Fix Selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="96"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="105"/>
         <source>Press to load the default values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="99"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="108"/>
         <source>Load Defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="106"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="115"/>
         <source>Press to store the current values as defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="109"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="118"/>
         <source>Store Defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="116"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="125"/>
         <source>Press to reset the default values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="119"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
         <source>Reset Defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="137"/>
         <source>Exclude Messages:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="135"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="144"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3356,25 +3356,25 @@ entry will open an editor window and position the cursor at the respective line 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="217"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="152"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="158"/>
         <source>Included Messages:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="159"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="165"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="176"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="179"/>
         <source>Fix Issues:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="183"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="186"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3389,57 +3389,57 @@ entry will open an editor window and position the cursor at the respective line 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="224"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="221"/>
         <source>Max. Line Length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="233"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="230"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="267"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="264"/>
         <source>Docstring Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="276"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="273"/>
         <source>Select the rule set for docstrings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="297"/>
         <source>Select to allow hanging closing brackets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="303"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
         <source>Allow hanging closing brackets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="327"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="324"/>
         <source>Select to repeat each message type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="330"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="327"/>
         <source>Repeat messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="340"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="337"/>
         <source>Select to fix some issues</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="343"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="340"/>
         <source>Fix issues automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="386"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="383"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -3447,72 +3447,72 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="402"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="399"/>
         <source>File/Line</source>
         <translation type="unfinished">Dosya/Satır</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="407"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="404"/>
         <source>Code</source>
         <translation type="unfinished">Kod</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="412"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="409"/>
         <source>Message</source>
         <translation type="unfinished">Mesaj</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="92"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="101"/>
         <source>PEP-257</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="93"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="102"/>
         <source>Eric</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="95"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="104"/>
         <source>Statistics...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="97"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="106"/>
         <source>Press to show some statistics for the last run</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="100"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="109"/>
         <source>Show</source>
         <translation type="unfinished">Göster</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="102"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="111"/>
         <source>Press to show all files containing an issue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="403"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="412"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Hata: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="885"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="894"/>
         <source>Fix: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="546"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="555"/>
         <source>No issues found.</source>
         <translation type="unfinished">Sorun bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="433"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="430"/>
         <source>Shows the progress of the code style check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="442"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="439"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4207,112 +4207,112 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Dosya Karşılaştırma</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="32"/>
+        <location filename="../UI/CompareDialog.ui" line="41"/>
         <source>File &amp;1:</source>
         <translation>Dosya &amp;1:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="42"/>
+        <location filename="../UI/CompareDialog.ui" line="51"/>
         <source>Enter the name of the first file</source>
         <translation>İlk dosyanın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="76"/>
+        <location filename="../UI/CompareDialog.ui" line="82"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir dosya seç</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.ui" line="79"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="59"/>
+        <location filename="../UI/CompareDialog.ui" line="65"/>
         <source>File &amp;2:</source>
         <translation>Dosya &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="69"/>
+        <location filename="../UI/CompareDialog.ui" line="75"/>
         <source>Enter the name of the second file</source>
         <translation>İkinci dosyanın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="148"/>
+        <location filename="../UI/CompareDialog.ui" line="151"/>
         <source>Press to move to the first difference</source>
         <translation>İlk farka taşımak için basınız</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="158"/>
+        <location filename="../UI/CompareDialog.ui" line="161"/>
         <source>Press to move to the previous difference</source>
         <translation>Birönceki farka taşımak için basınız</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="168"/>
+        <location filename="../UI/CompareDialog.ui" line="171"/>
         <source>Press to move to the next difference</source>
         <translation>Sonraki farka taşımak için basınız</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="178"/>
+        <location filename="../UI/CompareDialog.ui" line="181"/>
         <source>Press to move to the last difference</source>
         <translation>Son farka taşımak için basınız</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="221"/>
+        <location filename="../UI/CompareDialog.ui" line="224"/>
         <source>Select, if the horizontal scrollbars should be synchronized</source>
         <translation>Yatay kaydırma çubuğu senkronize edilecekse, seç</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="224"/>
+        <location filename="../UI/CompareDialog.ui" line="227"/>
         <source>&amp;Synchronize horizontal scrollbars</source>
         <translation>Yatay Kaydırma çubuğunu &amp;senkronize et</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="227"/>
+        <location filename="../UI/CompareDialog.ui" line="230"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="102"/>
+        <location filename="../UI/CompareDialog.py" line="105"/>
         <source>Compare</source>
         <translation>Karşılaştırma</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="104"/>
+        <location filename="../UI/CompareDialog.py" line="107"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>İki dosya arasındaki karşılaştırmayı başlatmak için basınız</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="353"/>
+        <location filename="../UI/CompareDialog.py" line="356"/>
         <source>Total: {0}</source>
         <translation>Toplam: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="355"/>
+        <location filename="../UI/CompareDialog.py" line="358"/>
         <source>Changed: {0}</source>
         <translation>Değişti: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="356"/>
+        <location filename="../UI/CompareDialog.py" line="359"/>
         <source>Added: {0}</source>
         <translation>Eklendi: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="357"/>
+        <location filename="../UI/CompareDialog.py" line="360"/>
         <source>Deleted: {0}</source>
         <translation>Silindi: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="246"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>Compare Files</source>
         <translation>Dosyaları Karşılaştır</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="246"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="441"/>
+        <location filename="../UI/CompareDialog.py" line="444"/>
         <source>Select file to compare</source>
         <translation>Karşılaştırma için dosya seç</translation>
     </message>
@@ -5109,37 +5109,37 @@ göstermek için gelen listeyi seçiniz.</translation>
 <context>
     <name>CorbaPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="17"/>
         <source>&lt;b&gt;Configure CORBA support&lt;/b&gt;</source>
         <translation>&lt;b&gt;CORBA yardımını ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="37"/>
         <source>IDL Compiler</source>
         <translation>IDL Derleyicisi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="42"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="57"/>
         <source>Press to select the IDL compiler via a file selection dialog.</source>
         <translation>Dosya seçim diyaloğu yolu ile IDL derliyicisini seçiniz.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="45"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="52"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="43"/>
         <source>Enter the path to the IDL compiler.</source>
         <translation>IDL derleyicisinin yolunu giriniz.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="50"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the default value (omniidl or omniidl.exe).</source>
         <translation>&lt;b&gt;Not:&lt;/b&gt; Varsayılan değerleri kullanmak için girişi boş bırakınız (omniidl veya omniidl.exe).</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.py" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.py" line="53"/>
         <source>Select IDL compiler</source>
         <translation>IDL derleyicisini seçiniz</translation>
     </message>
@@ -6516,187 +6516,187 @@ Bağlantı yok
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="65"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="49"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="46"/>
         <source>Interpreter for Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisi için yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="55"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="52"/>
         <source>Enter the path of the interpreter to be used by the debug client.</source>
         <translation>Hata ayıklayıcı istemcisinde kullanılacak olan yorumlayıcının yolunu giriniz.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="62"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="59"/>
         <source>Press to select the interpreter via a file selection dialog</source>
         <translation>Bir dosya seçim diyaloğu ile yorumlayıcıyı seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="69"/>
         <source>Environment for Debug Client</source>
         <translation>Hata ayıklayıcı istemci ortamı</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="81"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
         <source>Select, if the environment of the debug client should be replaced</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="84"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="78"/>
         <source>Replace Environment</source>
         <translation>Ortamı Değiştir</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="91"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="85"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Ortam değişkenlerini belirlemek için giriniz.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="94"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="88"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the debugger. The individual settings must be separate by whitespace and be given in the form &apos;var=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="103"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="97"/>
         <source>Environment:</source>
         <translation>Ortam:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="113"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="107"/>
         <source>Select, if the debugger should be run remotely</source>
         <translation>Hata ayıklayıcı uzaktan yürütülecekse, seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="116"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="110"/>
         <source>Remote Debugger</source>
         <translation>Uzuktan Hata Ayıklayıcı</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="125"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="119"/>
         <source>Select, if path translation for remote debugging should be done</source>
         <translation>Uzak Hata ayıklayıcının çeviri yolu olacaksa, seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="128"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="122"/>
         <source>Perform Path Translation</source>
         <translation>Uygulanacak Çeviri Yolu</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="137"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="131"/>
         <source>Local Path:</source>
         <translation>Yerel Yol:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="144"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="138"/>
         <source>Enter the local path</source>
         <translation>Yerel yolu gir</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="151"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="145"/>
         <source>Enter the remote path</source>
         <translation>Uzak yolu gir</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="158"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="152"/>
         <source>Remote Path:</source>
         <translation>Uzak Yol:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="168"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="162"/>
         <source>Remote Host:</source>
         <translation>Uzak Host:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="175"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="169"/>
         <source>Enter the remote execution command.</source>
         <translation>Uzaktan yürütme komutunu gir.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="178"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="172"/>
         <source>&lt;b&gt;Remote Execution&lt;/b&gt;
 &lt;p&gt;Enter the remote execution command (e.g. ssh). This command is used to log into the remote host and execute the remote debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uzaktan Ayarlama&lt;/b&gt;&lt;p&gt;Uzaktan ayarlama komutunu girin (ör. ssh). Bu komut uzak hostun ve uzaktan ayarlamanın kayıtlarını tutar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="186"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="180"/>
         <source>Remote Execution:</source>
         <translation>Uzaktan Yürütme:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="193"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="187"/>
         <source>Enter the hostname of the remote machine.</source>
         <translation>Uzak makinanın hostadını giriniz.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="196"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="190"/>
         <source>&lt;b&gt;Remote Host&lt;/b&gt;
 &lt;p&gt;Enter the hostname of the remote machine.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uzak Host&lt;/b&gt;
 &lt;p&gt;Uzak makinanın hostadını giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="207"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="201"/>
         <source>Select, if the debugger should be executed in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="210"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="204"/>
         <source>Console Debugger</source>
         <translation>Konsol Hata Ayıklayıcısı</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="219"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="213"/>
         <source>Console Command:</source>
         <translation>Konsol Komutu:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="226"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="220"/>
         <source>Enter the console command (e.g. xterm -e)</source>
         <translation>Konsol komutunu giriniz (ör. xterm -e)</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="229"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="223"/>
         <source>&lt;b&gt;Console Command&lt;/b&gt;
 &lt;p&gt;Enter the console command (e.g. xterm -e). This command is used to open a command window for the debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konsol Komutu&lt;/b&gt;
 &lt;p&gt;Konsol komutunu giriniz (ör. xterm -e). Bu komut Hata ayıklayıcı için kullanılacak olan bir komut penceresi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="240"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Eric5 IDE tarafından hata ayıklamaya başlatılan programın stdgirdi, stdçıktı ve stdhata yolunu yeniden yönlendirmek için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="243"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="237"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Stdin/Stdout/Stderr u yeniden yönlendir</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="250"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="244"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Hata ayıklayıcı istemcisi şifrelemesini ayarlamayı iptal için seç</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="253"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="247"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>Hata ayıklayıcı istemcisini şifreleme ayarlarını yapma</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="110"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="114"/>
         <source>Select interpreter for Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisi için yorumlayıcı seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="126"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="130"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="127"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="131"/>
         <source>Select Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisini Seç</translation>
     </message>
@@ -6736,95 +6736,95 @@ Bağlantı yok
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="97"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="70"/>
         <source>Debug Client Type</source>
         <translation>Hata Ayıklayıcı İstemcisi Tipi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="84"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="81"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Kullanmak için hata ayıklayıcısının yolunu giriniz. Boş bırakırsanız varsayılan yol kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="91"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>Hata ayıklayıcı istemcisini dosya seçme diyaloğu ile seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="100"/>
         <source>Select the standard debug client</source>
         <translation>Standart hata ayıklayıcı istemcisini seçin</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="103"/>
         <source>Standard</source>
         <translation>Standart</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="110"/>
         <source>Select the custom selected debug client</source>
         <translation>Seçilmiş kullanıcı hata ayıklayıcı istemcisini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="113"/>
         <source>Custom</source>
         <translation>Geleneksel</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="126"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="120"/>
         <source>Select the multi threaded debug client</source>
         <translation>Çok görevli hata ayıklayıcı istemcisini seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="123"/>
         <source>Multi Threaded</source>
         <translation>Çoklu Görev</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="139"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="133"/>
         <source>Source association</source>
         <translation>Kaynak birlikteliği</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="139"/>
         <source>Enter the file extensions to be associated with the Python3 debugger separated by a space. They must not overlap with the ones for Python2.</source>
         <translation>Dosya uzantılarını Python3 hata ayıklayıcısı ile birleştirmek için bir boşluk ile ayırarak giriniz. Python2 ile örtüşmemektedir.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="155"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Stdin/Stdout/Stderr gönderilerinin Eric5 IDE&apos;de hata ayıklamasının yapılması için, seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="164"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="158"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Stdin/Stdout/Stderr u yeniden yönlendir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="171"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="165"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Hata ayıklayıcı istemcisi şifrelemesini ayarlamayı iptal için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="174"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="168"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>Hata ayıklayıcı istemcisini şifreleme ayarlarını yapma</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="97"/>
         <source>Select Python interpreter for Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisi için Python yorumlayıcısını seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="112"/>
         <source>Select Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisini Seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="112"/>
         <source>Python Files (*.py *.py3)</source>
         <translation>Python Dosyaları (*.py *.py3)</translation>
     </message>
@@ -6859,90 +6859,90 @@ Bağlantı yok
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="87"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="60"/>
         <source>Debug Client Type</source>
         <translation>Hata Ayıklayıcı İstemcisi Tipi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="74"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="71"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Kullanmak için hata ayıklayıcısının yolunu giriniz. Boş bırakırsanız varsayılan yol kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="84"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="81"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>Hata ayıklayıcı istemcisini dosya seçme diyaloğu ile seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="96"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="90"/>
         <source>Select the standard debug client</source>
         <translation>Standart hata ayıklayıcı istemcisini seçin</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="99"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="93"/>
         <source>Standard</source>
         <translation>Standart</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="100"/>
         <source>Select the custom selected debug client</source>
         <translation>Seçilmiş kullanıcı hata ayıklayıcı istemcisini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="103"/>
         <source>Custom</source>
         <translation>Geleneksel</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="110"/>
         <source>Select the multi threaded debug client</source>
         <translation>Çok görevli hata ayıklayıcı istemcisini seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="113"/>
         <source>Multi Threaded</source>
         <translation>Çoklu Görev</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="123"/>
         <source>Source association</source>
         <translation>Kaynak birlikteliği</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="135"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
         <source>Enter the file extensions to be associated with the Python2 debugger separated by a space. They must not overlap with the ones for Python3.</source>
         <translation>Dosya uzantılarını Python2 hata ayıklayıcısı ile birleştirmek için bir boşluk ile ayırarak giriniz. Python3 ile örtüşmemektedir.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Stdin/Stdout/Stderr gönderilerinin Eric5 IDE&apos;de hata ayıklamasının yapılması için, seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="154"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="148"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Stdin/Stdout/Stderr u yeniden yönlendir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="155"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Hata ayıklayıcı istemcisi şifrelemesini ayarlamayı iptal için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="164"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="158"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>Hata ayıklayıcı istemcisini şifreleme ayarlarını yapma</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="92"/>
         <source>Select Python interpreter for Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisi için Python yorumlayıcısını seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="107"/>
         <source>Select Debug Client</source>
         <translation>Hata Ayıklayıcı İstemcisini Seç</translation>
     </message>
@@ -6952,7 +6952,7 @@ Bağlantı yok
         <translation type="obsolete">Python Dosyaları (*.py)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="107"/>
         <source>Python Files (*.py *.py2)</source>
         <translation>Python Dosyaları (*.py *.py2)</translation>
     </message>
@@ -6987,20 +6987,20 @@ Bağlantı yok
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="53"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Stdin/Stdout/Stderr gönderilerinin Eric5 IDE&apos;de hata ayıklamasının yapılması için, seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="66"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Stdin/Stdout/Stderr u yeniden yönlendir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="62"/>
         <source>Select Ruby interpreter for Debug Client</source>
         <translation>Hata Ayıklayıcısı için Ruby yorumlayıcısını seç</translation>
     </message>
@@ -7031,82 +7031,82 @@ Bağlantı yok
         <translation>İlk dosyanın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="70"/>
+        <location filename="../UI/DiffDialog.ui" line="67"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir dosya seç</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.ui" line="73"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="53"/>
+        <location filename="../UI/DiffDialog.ui" line="50"/>
         <source>File &amp;2:</source>
         <translation>Dosya &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="63"/>
+        <location filename="../UI/DiffDialog.ui" line="60"/>
         <source>Enter the name of the second file</source>
         <translation>İkinci dosyanın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="88"/>
+        <location filename="../UI/DiffDialog.ui" line="82"/>
         <source>Select to generate a unified diff</source>
         <translation>Birleşik farkları üretmek için sç</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="91"/>
+        <location filename="../UI/DiffDialog.ui" line="85"/>
         <source>&amp;Unified Diff</source>
         <translation>Birleşik farklar &amp;U</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="94"/>
+        <location filename="../UI/DiffDialog.ui" line="88"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="104"/>
+        <location filename="../UI/DiffDialog.ui" line="98"/>
         <source>Select to generate a context diff</source>
         <translation>İçerik farklarını üretmek için seç</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="107"/>
+        <location filename="../UI/DiffDialog.ui" line="101"/>
         <source>Co&amp;ntext Diff</source>
         <translation>İçerik farkları &amp;n</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="110"/>
+        <location filename="../UI/DiffDialog.ui" line="104"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="216"/>
+        <location filename="../UI/DiffDialog.py" line="220"/>
         <source>Compare</source>
         <translation>Karşılaştırma</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="218"/>
+        <location filename="../UI/DiffDialog.py" line="222"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>İki dosya arasındaki karşılaştırmayı başlatmak için basınız</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="220"/>
+        <location filename="../UI/DiffDialog.py" line="224"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="222"/>
+        <location filename="../UI/DiffDialog.py" line="226"/>
         <source>Save the output to a patch file</source>
         <translation>Çıktıyı yama dosyasına kaydet</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="324"/>
+        <location filename="../UI/DiffDialog.py" line="328"/>
         <source>Save Diff</source>
         <translation>Farklılıkları Kaydet</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="288"/>
+        <location filename="../UI/DiffDialog.py" line="292"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch Dosyaları (*.diff)</translation>
     </message>
@@ -7116,32 +7116,32 @@ Bağlantı yok
         <translation type="obsolete">&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="324"/>
+        <location filename="../UI/DiffDialog.py" line="328"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt; kayıt edilemedi.&lt;br /&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="365"/>
+        <location filename="../UI/DiffDialog.py" line="369"/>
         <source>Compare Files</source>
         <translation>Dosyaları Karşılaştır</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="365"/>
+        <location filename="../UI/DiffDialog.py" line="369"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="469"/>
+        <location filename="../UI/DiffDialog.py" line="473"/>
         <source>There is no difference.</source>
         <translation>Herhangi bir farklılık bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="489"/>
+        <location filename="../UI/DiffDialog.py" line="493"/>
         <source>Select file to compare</source>
         <translation>Karşılaştırma için dosya seç</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="305"/>
+        <location filename="../UI/DiffDialog.py" line="309"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt;  zaten var. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
@@ -9000,87 +9000,87 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>EditBreakpointDialog</name>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="13"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="14"/>
         <source>Edit Breakpoint</source>
         <translation>Bekleme Noktasını Düzenle</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="32"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="33"/>
         <source>Select, whether the breakpoint is enabled</source>
         <translation>seçin, bekleme noktasının olup olmadığını görmek için</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="35"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="36"/>
         <source>Enabled</source>
         <translation>Etkinleştirilmiş</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="45"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="46"/>
         <source>Select whether this is a temporary breakpoint</source>
         <translation>bunun bir geçici bekleme noktası olup olmadığını anlamak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="48"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="49"/>
         <source>Temporary Breakpoint</source>
         <translation>Geçici Beklemenoktası</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="55"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="56"/>
         <source>Enter the filename of the breakpoint</source>
         <translation>Beklemenokttasının dosyaadını giriniz</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="74"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="75"/>
         <source>Enter or select a condition for the breakpoint</source>
         <translation>Beklemenoktası koşullarını girin yada seçin</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="87"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="88"/>
         <source>Enter an ignore count for the breakpoint</source>
         <translation>Beklemenoktası yoksayma sayısını giriniz</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="113"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="114"/>
         <source>Enter the linenumber of the breakpoint</source>
         <translation>Beklemenoktası satırnumarasını giriniz</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="142"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="171"/>
         <source>Press to open a file selection dialog</source>
         <translation>Dosya seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
         <location filename="../Debugger/EditBreakpointDialog.ui" line="145"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="152"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="143"/>
         <source>Linenumber:</source>
         <translation>Satır Numarası:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="159"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="150"/>
         <source>Filename:</source>
         <translation>Dosyaadı:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="166"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="157"/>
         <source>Condition:</source>
         <translation>Koşul:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="173"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="164"/>
         <source>Ignore Count:</source>
         <translation>Sayımı Yoksay:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.py" line="89"/>
+        <location filename="../Debugger/EditBreakpointDialog.py" line="92"/>
         <source>Add Breakpoint</source>
         <translation>Bekleme Noktası Ekle</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.py" line="121"/>
+        <location filename="../Debugger/EditBreakpointDialog.py" line="124"/>
         <source>Select filename of the breakpoint</source>
         <translation>Bekleme noktasının dosyaadını seç</translation>
     </message>
@@ -10054,132 +10054,132 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>EditorAPIsPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="17"/>
         <source>&lt;b&gt;Configure API files&lt;/b&gt;</source>
         <translation>&lt;b&gt;API Dosyalarını Ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="37"/>
         <source>Select to compile the APIs automatically upon loading</source>
         <translation>API&apos;ler yüklenirken otomatik olarak derlenmesi için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="39"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="40"/>
         <source>Compile APIs automatically</source>
         <translation>API&apos;leri otomatik olarak derle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="52"/>
         <source>Language:</source>
         <translation>Dil:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="68"/>
         <source>Select the language to be configured.</source>
         <translation>Ayarlamak için dili seç.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="80"/>
         <source>APIs</source>
         <translation>API&apos;ler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="85"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="86"/>
         <source>List of API files</source>
         <translation>API Dosyalarının Listesi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="95"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="96"/>
         <source>Press to delete the selected file from the list</source>
         <translation>Listeden seçilen dosyayı silmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="98"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="99"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="105"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="106"/>
         <source>Press to add the entered file to the list</source>
         <translation>Girilen dosyayı listeye eklemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="109"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="115"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="116"/>
         <source>Enter a file to be added</source>
         <translation>Eklemek için dosya gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="122"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="173"/>
         <source>Press to select an API file via a selection dialog</source>
         <translation>Seçim diyaloğu ile bir API dosyası seçmek için basınız</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="125"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="132"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="123"/>
         <source>Press to select an API file from the list of installed API files</source>
         <translation>Kurulan API dosyalarının listesinden bir API dosyası seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="195"/>
         <source>Add from installed APIs</source>
         <translation>Kurulan API&apos;lerden ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="133"/>
         <source>Press to select an API file from the list of API files installed by plugins</source>
         <translation>Kurulen eklentilerin API dosya listesinden bir API dosyası seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="211"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="214"/>
         <source>Add from Plugin APIs</source>
         <translation>Eklenti API&apos;lerinden ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="159"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="150"/>
         <source>Press to compile the selected APIs definition</source>
         <translation>Seçilen API&apos;lerin tanımlarının derlenmesi için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="247"/>
         <source>Compile APIs</source>
         <translation>API&apos;leri Derle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="137"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="140"/>
         <source>Select API file</source>
         <translation>API dosyasını seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="137"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="140"/>
         <source>API File (*.api);;All Files (*)</source>
         <translation>API Dosyası (*.api);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="184"/>
         <source>Select from the list of installed API files</source>
         <translation>Kurulan API dosyalırının listesinden seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="211"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="214"/>
         <source>Select from the list of API files installed by plugins</source>
         <translation>Kurulan eklentilerin API dosyalırının listesinden seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="259"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="262"/>
         <source>Cancel compilation</source>
         <translation>Derlemeden Vazgeç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="195"/>
         <source>There are no APIs installed yet. Selection is not available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12030,162 +12030,162 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="56"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="65"/>
         <source>Select to enable spell checking</source>
         <translation>Yazım kontrolünü onaylamak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="68"/>
         <source>Spell checking enabled</source>
         <translation>Yazım denetimi onaylı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="66"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="75"/>
         <source>Defaults</source>
         <translation>Varsayılanlar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="81"/>
         <source>Default language:</source>
         <translation>Varsayılan Dil:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="88"/>
         <source>Select the default language</source>
         <translation>Varsayılan dili seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="102"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="111"/>
         <source>Spell checking options</source>
         <translation>Yazım kontrolü seçenekleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="117"/>
         <source>Select to check strings only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="111"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="120"/>
         <source>Spell check strings only</source>
         <translation>Yazım kontrolü yalnızca metinlerde yap</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="129"/>
         <source>Minimum word size:</source>
         <translation>Minimum kelime boyutu:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="127"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="136"/>
         <source>Move to set the minimum size of words to be checked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="149"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="158"/>
         <source>Displays the minimum size of words to be checked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="170"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="179"/>
         <source>Colours</source>
         <translation>Renkler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="176"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="185"/>
         <source>Marker Colour:</source>
         <translation>İşaretleme Rengi:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="198"/>
         <source>Select the colour for the spelling markers.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="215"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="224"/>
         <source>Personal lists</source>
         <translation>Kişise listeler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="221"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="230"/>
         <source>Personal word list file:</source>
         <translation>Kişisel kelime liste dosyası:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="228"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="237"/>
         <source>Enter the filename of the personal word list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="272"/>
         <source>Select the personal word list file via a file selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="262"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="245"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="244"/>
         <source>Personal exclude list file:</source>
         <translation>Dışarıda tutulan kişisel dosya listesi:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="252"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="251"/>
         <source>Enter the filename of the personal exclude list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="259"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="279"/>
         <source>Select the personal exclude list file via a file selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="269"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="258"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; leave these entries empty to use the default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="276"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="265"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; valid for all newly opened editors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="286"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="289"/>
         <source>Automatic spell checking</source>
         <translation>Otomatik yazım kontrolü</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="292"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
         <source>Select to enable spellchecking</source>
         <translation>yazımkontrolünü onaylamak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="298"/>
         <source>Automatic spell checking enabled</source>
         <translation>Otomatik yazım kontrolüc onuylı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="304"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="307"/>
         <source>Amount of lines to autocheck at once:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="311"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="314"/>
         <source>Enter the number of lines to check per go. Higher values increase checking speed but decrease GUI responsivenes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="113"/>
         <source>Select personal word list</source>
         <translation>kişisel sözcük listesini seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="127"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Sözlük Dosyaları (*.dic);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="127"/>
         <source>Select personal exclude list</source>
         <translation>Dışarıda tutulan kişisel dosya listesi</translation>
     </message>
@@ -13551,132 +13551,132 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>&lt;b&gt;Çıktı Dosyaadı&lt;/b&gt;&lt;p&gt;Çıktı dosyaadını giriniz. A &apos;%L&apos; Boşluklar API dosyasından gelen dil ile değişecektir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="38"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="45"/>
         <source>Press to open a file selection dialog</source>
         <translation>Dosya seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="221"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="48"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="35"/>
         <source>Output File:</source>
         <translation>Çıktı Dosyası:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="63"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="60"/>
         <source>Languages</source>
         <translation>Diller</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="69"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="66"/>
         <source>Select the languages of the  APIs to generate</source>
         <translation>APIsi üretilecek dilleri seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="84"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="81"/>
         <source>Additional source extensions:</source>
         <translation>İlave kaynak eklentileri:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="91"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="88"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>İlave kaynak eklentilerini virgülle ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="115"/>
         <source>Select to recurse into subdirectories</source>
         <translation>kaynaklara altdizinlrde de bakmak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="121"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
         <source>Recurse into subdirectories</source>
         <translation>Altdizinlerin içine kaynak</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="125"/>
         <source>Select to include private classes, methods and functions in the API file</source>
         <translation>API dosyasının içereceği sınıf, yöntem ve fonksiyonları seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="131"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
         <source>Include private classes, methods and functions</source>
         <translation>Özel sınıfları, yöntem ve fonksiyonları içerir</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="142"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="139"/>
         <source>Base package name:</source>
         <translation>Ana packet adı:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="149"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="146"/>
         <source>Enter the name of the base package</source>
         <translation>Ana paket adını giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="160"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="157"/>
         <source>Exclude Files:</source>
         <translation>Dışarda Tutulan Dosyalar:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="167"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="164"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Dosyaadılarını  virgül ile ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="182"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="179"/>
         <source>Exclude Directories</source>
         <translation>Dışarda Tutulan Dizinler</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="188"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="185"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>yoksayılacak anadosyaların dizini giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="192"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Girilen dizini eklemek ve listelemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="198"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="202"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Seçilen dizini listeden silmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="208"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="218"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="222"/>
         <source>Press to open a directory selection dialog</source>
         <translation>Dizin seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="228"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="212"/>
         <source>List of directory basenames to be ignored</source>
         <translation>yoksayılacak anadosyaların dizin listesi</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="183"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
         <source>Select output file</source>
         <translation>Çıktı dosyasının seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="183"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>API dosyaları (*.api);;Tüm dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="214"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="218"/>
         <source>Select directory to exclude</source>
         <translation>Dışırıda tutulacak dizinleri seçiniz</translation>
     </message>
@@ -13787,307 +13787,307 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>EricdocConfigDialog</name>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="13"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="14"/>
         <source>Ericdoc Configuration</source>
         <translation>Eric Dökümanı Ayarları</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="26"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="27"/>
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="389"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="381"/>
         <source>Output Directory:</source>
         <translation>Çıktı Dizini:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="398"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="390"/>
         <source>Enter an output directory</source>
         <translation>Çıktı dizinin girin</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="408"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="400"/>
         <source>Press to open a directory selection dialog</source>
         <translation>Dizin seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="411"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="65"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="63"/>
         <source>Additional source extensions:</source>
         <translation>İlave kaynak eklentileri:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="72"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="70"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>İlave kaynak eklentilerini virgülle ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="83"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="81"/>
         <source>Select to recurse into subdirectories</source>
         <translation>kaynaklara altdizinlrde de bakmak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="86"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="84"/>
         <source>Recurse into subdirectories</source>
         <translation>Altdizinlerin içine kaynak</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="93"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="91"/>
         <source>Select, if no index files should be generated</source>
         <translation>İndeks dosyaları üretilmeyecekse, seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="96"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="94"/>
         <source>Don&apos;t generate index files</source>
         <translation>Dizin dosyalarını üretme</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="123"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="121"/>
         <source>Select to exclude empty modules</source>
         <translation>Dışarıda tutulacak boş modülleri seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="126"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="124"/>
         <source>Don&apos;t include empty modules</source>
         <translation>Boş modülleri içerme</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="153"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="151"/>
         <source>Exclude Files:</source>
         <translation>Dışarda Tutulan Dosyalar:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="160"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="158"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Dosyaadılarını  virgül ile ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="169"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="167"/>
         <source>Exclude Directories</source>
         <translation>Dışarda Tutulan Dizinler</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="175"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="173"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>yoksayılacak anadosyaların dizini giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="182"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="180"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Girilen dizini eklemek ve listelemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="185"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="183"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="192"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="190"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Seçilen dizini listeden silmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="195"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="193"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="215"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="200"/>
         <source>List of directory basenames to be ignored</source>
         <translation>yoksayılacak anadosyaların dizin listesi</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="226"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="221"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="232"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="227"/>
         <source>Style Sheet</source>
         <translation>Sayfa Stili</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="238"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="233"/>
         <source>Enter the filename of a CSS style sheet. Leave empty to use the colours defined below.</source>
         <translation>CSS sayfa stilinin dosya adını giriniz. Boş bırakırsanız önceden tanımlı renkler kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="248"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="243"/>
         <source>Press to open a file selection dialog</source>
         <translation>Dosya seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="261"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="253"/>
         <source>Colours</source>
         <translation>Renkler</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="267"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="259"/>
         <source>Press to select the class and function header background colour.</source>
         <translation>Sınıf ve fonksiyon başlıklarının arkaalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="270"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="262"/>
         <source>Class/Function Header Background</source>
         <translation>Sınıf/Fonksiyon Başlık arkaalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="277"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="269"/>
         <source>Press to select the class and function header foreground colour.</source>
         <translation>Sınıf ve fonksiyon başlıklarının önalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="280"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="272"/>
         <source>Class/Function Header Foreground</source>
         <translation>Sınıf/Fonksiyon Başlık Önalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="287"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="279"/>
         <source>Press to select the level 2 header background colour.</source>
         <translation>Başlık 2nci seviye arkaalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="290"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="282"/>
         <source>Level 2 Header Background</source>
         <translation>Seviye 2 Başlık Arkaalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="297"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="289"/>
         <source>Press to select the level 2 header foreground colour.</source>
         <translation>Başlık 2nci seviye önalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="300"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="292"/>
         <source>Level 2 Header Foreground</source>
         <translation>Seviye 2 Başlık Önalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="307"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="299"/>
         <source>Press to select the level 1 header background colour.</source>
         <translation>Başlık 1nci seviye arkaalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="310"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="302"/>
         <source>Level 1 Header Background</source>
         <translation>Seviye 1 Başlık Arkaalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="317"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="309"/>
         <source>Press to select the level 1 header foreground colour.</source>
         <translation>Başlık 1nci seviye önalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="320"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="312"/>
         <source>Level 1 Header Foreground</source>
         <translation>Seviye 1 Başlık Önalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="327"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="319"/>
         <source>Press to select the body background colour.</source>
         <translation>Gövde arkalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="330"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="322"/>
         <source>Body Background</source>
         <translation>Gövde Arkaplanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="337"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="329"/>
         <source>Press to select the body foreground colour.</source>
         <translation>Gövde önalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="340"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="332"/>
         <source>Body Foreground</source>
         <translation>Gövde Önalanı</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="347"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="339"/>
         <source>Press to select the foreground colour of links.</source>
         <translation>Bağlantıların önalan rengini seçmek için basınız.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="350"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="342"/>
         <source>Links</source>
         <translation>Bağlantılar</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="357"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="349"/>
         <source>This shows an example of the selected colours.</source>
         <translation>Bu seçilen renklerin örneklerini gösterir.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="371"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="363"/>
         <source>QtHelp</source>
         <translation>QtYardım</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="377"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="369"/>
         <source>Generate QtHelp Files</source>
         <translation>QtYardım Dosyaları Üretimi</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="420"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="409"/>
         <source>Namespace:</source>
         <translation>İsimboşluğu:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="427"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="416"/>
         <source>Enter the namespace</source>
         <translation>İsimboşluğunu giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="434"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="423"/>
         <source>Virtual Folder:</source>
         <translation>xsanal Dizin:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="441"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="430"/>
         <source>Enter the name of the virtual folder (must not contain &apos;/&apos;)</source>
         <translation>Sanal dizinin adını giriniz (&apos;/&apos; içermemesi gerekir)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="448"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="437"/>
         <source>Filter Name:</source>
         <translation>Süzgeç Adı:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="455"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="444"/>
         <source>Enter the name of the custom filter</source>
         <translation>Özel süzgeçin adını giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="462"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="451"/>
         <source>Filter Attributes:</source>
         <translation>Süzgeç Nitelikleri:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="469"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="458"/>
         <source>Enter the filter attributes separated by &apos;:&apos;</source>
         <translation>Süzgeç elemanlarını &apos;:&apos; ile ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="476"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="465"/>
         <source>Title:</source>
         <translation>Başlık:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="483"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="472"/>
         <source>Enter a short title for the top entry</source>
         <translation>Üst taraf için kısa başlık giriniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="490"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="479"/>
         <source>Select to generate the QtHelp collection files</source>
         <translation>QtHelp koleksiyonu dosyalarını üretmek için seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="493"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="482"/>
         <source>Generate QtHelp collection files</source>
         <translation>QtHelp koleksiyonu dosyalarını üret</translation>
     </message>
@@ -14097,32 +14097,32 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;?xml sürüm=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;%%(Başlık)lar&lt;/title&gt;&lt;/head&gt;&lt;body stil=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 stil=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Seviye 1 Başlık&lt;/h1&gt;&lt;h3 stil=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Seviye 2 Başlık &lt;/h3&gt;&lt;h2 stil=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Sınıf ve Fonksiyon Başlığı&lt;/h2&gt;Standart gövde metni &lt;a stil=&quot;color:%(LinkColor)s&quot;&gt;Bazı bağlantılar&lt;/a&gt; gömülüdür.&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="290"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="296"/>
         <source>Select output directory</source>
         <translation>Çıktı dizinini seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="315"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="321"/>
         <source>Select directory to exclude</source>
         <translation>Dışırıda tutulacak dizinleri seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="355"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
         <source>Select CSS style sheet</source>
         <translation>CSS sayfa stilini seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="355"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Sayfa stili (*.css);;Tüm dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="504"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="510"/>
         <source>Select output directory for QtHelp files</source>
         <translation>QtHelp dosyalarının çıktı dizinini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="47"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="53"/>
         <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:{LinkColor}&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15324,100 +15324,100 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="../UI/FindFileDialog.ui" line="297"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="308"/>
+        <location filename="../UI/FindFileDialog.ui" line="305"/>
         <source>Search in open files only </source>
         <translation>Yalnızca açık dosyalarda ara</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="311"/>
+        <location filename="../UI/FindFileDialog.ui" line="308"/>
         <source>&amp;Open files only</source>
         <translation>Yalnızca açık d&amp;osyalar</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="338"/>
+        <location filename="../UI/FindFileDialog.ui" line="335"/>
         <source>Shows the progress of the search action</source>
         <translation>Arama işlemi sırasında süreci göster</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="370"/>
+        <location filename="../UI/FindFileDialog.ui" line="367"/>
         <source>File/Line</source>
         <translation>Dosya/Satır</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="375"/>
+        <location filename="../UI/FindFileDialog.ui" line="372"/>
         <source>Text</source>
         <translation>Metin</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="383"/>
+        <location filename="../UI/FindFileDialog.ui" line="380"/>
         <source>Press to apply the selected replacements</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="386"/>
+        <location filename="../UI/FindFileDialog.ui" line="383"/>
         <source>Replace</source>
         <translation>Yerdeğiştir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="62"/>
+        <location filename="../UI/FindFileDialog.py" line="64"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="67"/>
+        <location filename="../UI/FindFileDialog.py" line="69"/>
         <source>Find</source>
         <translation>Bul</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="649"/>
+        <location filename="../UI/FindFileDialog.py" line="651"/>
         <source>Replace in Files</source>
         <translation>Dosyalarda yer değiştir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="371"/>
+        <location filename="../UI/FindFileDialog.py" line="373"/>
         <source>Invalid search expression</source>
         <translation>Geçersiz arama ifadesi</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="371"/>
+        <location filename="../UI/FindFileDialog.py" line="373"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="538"/>
+        <location filename="../UI/FindFileDialog.py" line="540"/>
         <source>Select directory</source>
         <translation>Dizin Seçiniz</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="608"/>
+        <location filename="../UI/FindFileDialog.py" line="610"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="649"/>
+        <location filename="../UI/FindFileDialog.py" line="651"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="676"/>
+        <location filename="../UI/FindFileDialog.py" line="678"/>
         <source>Open</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="677"/>
+        <location filename="../UI/FindFileDialog.py" line="679"/>
         <source>Copy Path to Clipboard</source>
         <translation>Yolu Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="623"/>
+        <location filename="../UI/FindFileDialog.py" line="625"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="347"/>
+        <location filename="../UI/FindFileDialog.ui" line="344"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15425,112 +15425,112 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>FindFileNameDialog</name>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="13"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="14"/>
         <source>Find File</source>
         <translation>Dosya Bul</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="19"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="20"/>
         <source>Enter filename (? matches any single character, * matches everything)</source>
         <translation>Dosya adını gir (? uyan her bir karakter için, * uyan tüm karakter dizinleri için)</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="34"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="35"/>
         <source>Enter file name to search for </source>
         <translation>Dosya adına göre aramak için gir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="41"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="42"/>
         <source>.</source>
         <translation>.</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="54"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="55"/>
         <source>Enter file extension to search for</source>
         <translation>aramak için dosya uzantısını seç</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="68"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="69"/>
         <source>Enabled to include the entered directory into the search</source>
         <translation>Girilen dizininin alt dizinlerinde de aramayı etkinleştir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="71"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="72"/>
         <source>Search Path:</source>
         <translation>Arama Yolu:</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="78"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="79"/>
         <source>Enter the directory, the file should be searched in</source>
         <translation>İçinde dosya aranacak dizini gir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="85"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="86"/>
         <source>Press to select the directory, the file should be searched in</source>
         <translation>İçinde dosya aranacak dizini seçmek için basınız</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.ui" line="88"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="99"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="97"/>
         <source>Select to search in the project path</source>
         <translation>Proje yolunda aramak için seç</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="102"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="100"/>
         <source>Search in &amp;project</source>
         <translation>&amp;Projede ara</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="105"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="103"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="112"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="110"/>
         <source>Select to search in sys.path</source>
         <translation>Sys.path&apos;te aramak için seç</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="115"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="113"/>
         <source>Search in &amp;sys.path</source>
         <translation> &amp;Sys.path&apos; te ara</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="118"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="116"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="134"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="132"/>
         <source>Filename</source>
         <translation>Dosyaadı</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="139"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="137"/>
         <source>Path</source>
         <translation>Yol</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="53"/>
+        <location filename="../UI/FindFileNameDialog.py" line="56"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="55"/>
+        <location filename="../UI/FindFileNameDialog.py" line="58"/>
         <source>Press to stop the search</source>
         <translation>Aramayı durdurmak için bas</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="57"/>
+        <location filename="../UI/FindFileNameDialog.py" line="60"/>
         <source>Opens the selected file</source>
         <translation>Seçilen dosya açılıyor</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="199"/>
+        <location filename="../UI/FindFileNameDialog.py" line="202"/>
         <source>Select search directory</source>
         <translation>Arama dizinini seç</translation>
     </message>
@@ -16140,10 +16140,10 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="185"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="132"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="135"/>
         <source>Select Style Sheet</source>
         <translation>Sayfa Stilini seç</translation>
     </message>
@@ -16153,22 +16153,22 @@ Reason: {0}</source>
         <translation type="obsolete">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="195"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="192"/>
         <source>Tabs</source>
         <translation type="unfinished">Sekmeler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="201"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="198"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished">Her bir sekmede bir tane yerine tek bir kapatma düğmesi göster</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="211"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>Warn, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="205"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16677,7 +16677,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="262"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
@@ -16690,82 +16690,82 @@ Reason: {0}</source>
         <translation type="obsolete">&lt;b&gt;Not&lt;/b&gt;: Ayarlandığında Boş bıraktıysanız PYTHONDOCDIR ortam değişkeni kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="103"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 Belgeleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="115"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="126"/>
         <source>Press to select the Qt4 documentation directory via a dialog</source>
         <translation>Bir diyalog ile Qt4 belgelerini seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="125"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
         <source>Enter the Qt4 documentation directory</source>
         <translation>Qt4 belgelirinin dizini gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="132"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="116"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Not&lt;/b&gt;: Ayarlandığında Boş bıraktıysanız QT4DOCDIR ortam değişkeni kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="169"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 Belgeleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="187"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="192"/>
         <source>Press to select the PyQt4 documentation directory via a dialog</source>
         <translation>Bir diyalog ile PyQt4 belgelerini seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="175"/>
         <source>Enter the PyQt4 documentation directory</source>
         <translation>PyQt4 belgelirinin dizini gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="204"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="182"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Not&lt;/b&gt;: Ayarlandığında Boş bıraktıysanız PYQT4DOCDIR ortam değişkeni kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="253"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="235"/>
         <source>PySide Documentation</source>
         <translation>PySide Belgeleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="259"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="258"/>
         <source>Press to select the PySide documentation directory via a dialog</source>
         <translation>Bir diyalog ile PySide belgelerini seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="269"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="241"/>
         <source>Enter the PySide documentation directory</source>
         <translation>Pyside belgelerinin dizinini gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="276"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="248"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Not&lt;/b&gt;: Ayarlarken boş bırakırsanız PYSIDEDOCDIR ortam değişkeni kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="199"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation>HTML Dosyaları (*.html *.htm);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="133"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="143"/>
         <source>Select Qt4 documentation entry</source>
         <translation>Qt4 belgelerine giriş için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="171"/>
         <source>Select PyQt4 documentation entry</source>
         <translation>PyQt4 belgelerine giriş için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="199"/>
         <source>Select PySide documentation entry</source>
         <translation>PySide belgelerine giriş için seçiniz</translation>
     </message>
@@ -16775,102 +16775,102 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
         <source>Press to select the Python 2 documentation directory via a dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
         <source>Enter the Python 2 documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="50"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON2DOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="70"/>
         <source>Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="93"/>
         <source>Press to select the Python 3 documentation directory via a dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="89"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="76"/>
         <source>Enter the Python 3 documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="96"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="83"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON3DOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="99"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="109"/>
         <source>Select Python 2 documentation entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="126"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="126"/>
         <source>Select Python 3 documentation entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="136"/>
         <source>Qt5 Documentation</source>
         <translation type="unfinished">Qt4 Belgeleri {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="159"/>
         <source>Press to select the Qt5 documentation directory via a dialog</source>
         <translation type="unfinished">Bir diyalog ile Qt4 belgelerini seçmek için basınız {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="142"/>
         <source>Enter the Qt5 documentation directory</source>
         <translation type="unfinished">Qt4 belgelirinin dizini gir {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="168"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="149"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT5DOCDIR environment variable, if set.</source>
         <translation type="unfinished">&lt;b&gt;Not&lt;/b&gt;: Ayarlandığında Boş bıraktıysanız QT4DOCDIR ortam değişkeni kullanılır. {5D?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="147"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="157"/>
         <source>Select Qt5 documentation entry</source>
         <translation type="unfinished">Qt4 belgelerine giriş için seçiniz {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="217"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="202"/>
         <source>PyQt5 Documentation</source>
         <translation type="unfinished">PyQt4 Belgeleri {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="223"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="225"/>
         <source>Press to select the PyQt5 documentation directory via a dialog</source>
         <translation type="unfinished">Bir diyalog ile PyQt4 belgelerini seçmek için basınız {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="208"/>
         <source>Enter the PyQt5 documentation directory</source>
         <translation type="unfinished">PyQt4 belgelirinin dizini gir {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="240"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="215"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</source>
         <translation type="unfinished">&lt;b&gt;Not&lt;/b&gt;: Ayarlandığında Boş bıraktıysanız PYQT4DOCDIR ortam değişkeni kullanılır. {5D?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="175"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="185"/>
         <source>Select PyQt5 documentation entry</source>
         <translation type="unfinished">PyQt4 belgelerine giriş için seçiniz {5 ?}</translation>
     </message>
@@ -16928,20 +16928,20 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="70"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="59"/>
         <source>System</source>
         <translation type="unfinished">Sistem</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
         <source>Select style sheet file</source>
         <translation type="unfinished">Sayfa stil dosyasını seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished">Qt Sayfa stili (*.qss);;Üstüste Sayfa Stili (*.css);;Tüm Dosyalar (*)</translation>
     </message>
@@ -17215,35 +17215,35 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="61"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="67"/>
         <source>Select to use a custom viewer</source>
         <translation>Kullanmak için geleneksel görüntüleyeceye seçin</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
         <source>Custom</source>
         <translation>Geleneksel</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="77"/>
         <source>Select to use Qt Assistant</source>
         <translation>Qt Yardımcısını kullanmak için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="80"/>
         <source>Qt Assistant</source>
         <translation>Qt Yardımcı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="87"/>
         <source>Select to use the Eric Web Browser</source>
         <translation>Eric Web Gözatıcısını kullanmak için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
         <source>Eric Web Browser</source>
         <translation>Eric Web Gözatıcısı</translation>
     </message>
@@ -17258,32 +17258,32 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="80"/>
         <source>Select Custom Viewer</source>
         <translation>Geleneksel-Görüntüleyiciyi seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="94"/>
         <source>Select Web-Browser</source>
         <translation>Web-Gözatıcısını seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="108"/>
         <source>Select PDF-Viewer</source>
         <translation>PDF-Görüntüleyicisini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="122"/>
         <source>Select CHM-Viewer</source>
         <translation>CHM-Görüntüleyicisini Seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="100"/>
         <source>Select to use the configured web browser of the system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
         <source>System Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20094,7 +20094,7 @@ You have %n tab(s) open.</source>
 <context>
     <name>HgAddSubrepositoryDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20114,27 +20114,27 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="51"/>
         <source>&amp;Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="63"/>
         <source>Select the type of the sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="85"/>
         <source>&amp;URL:</source>
         <translation type="unfinished">&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="98"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="95"/>
         <source>Enter the URL of the sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>The sub-repository path must be inside the project.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20245,117 +20245,117 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="85"/>
         <source>Press to select the archive file name via a file selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="40"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
         <source>Type:</source>
         <translation type="unfinished">Tip:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="44"/>
         <source>Select the archive type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="61"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="51"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="58"/>
         <source>Enter the directory prefix for the files in the archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="75"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="65"/>
         <source>Select to recurse into subrepositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
         <source>Include Subrepositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="44"/>
         <source>Detect Automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="46"/>
         <source>Directory of Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="48"/>
         <source>Uncompressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="50"/>
         <source>Bzip2 compressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="52"/>
         <source>Gzip compressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="54"/>
         <source>Uncompressed ZIP-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="53"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
         <source>Compressed ZIP-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="60"/>
         <source>Bzip2 compressed TAR-Archive (*.tar.bz2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="61"/>
         <source>Gzip compressed TAR-Archive (*.tar.gz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="59"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
         <source>Uncompressed TAR-Archive (*.tar)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="65"/>
         <source>Compressed ZIP-Archive (*.zip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="66"/>
         <source>Uncompressed ZIP-Archive (*.uzip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="74"/>
         <source>All Files (*)</source>
         <translation type="unfinished">Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="109"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="112"/>
         <source>Select Archive Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="118"/>
         <source>Select Archive File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21152,12 +21152,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Mercurial Kopya</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
         <translation>Bir seçim diyaloğu açmak için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="28"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hedef Dizin&lt;/b&gt;
@@ -21166,27 +21166,27 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="39"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
         <source>Source:</source>
         <translation>Kaynak:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
         <source>Shows the name of the source</source>
         <translation>Kaynağın adını göster</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="35"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaynak adı&lt;/b&gt;
 &lt;p&gt;Bu alan kaynağın adını gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
         <source>Enter the target name</source>
         <translation>Hedefin adını gir</translation>
     </message>
@@ -21198,32 +21198,32 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
 &lt;p&gt;Bu alanın yeni adını giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="57"/>
         <source>Target:</source>
         <translation>Hedef:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="77"/>
         <source>Select to force the operation</source>
         <translation>Zorunlu çalıştırlacakları seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
         <source>Enforce operation</source>
         <translation>Zorunlu çalışma</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="50"/>
         <source>Mercurial Move</source>
         <translation>Mercurial Taşıma</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="86"/>
         <source>Select target</source>
         <translation>Hedefi seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -21418,7 +21418,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
 <context>
     <name>HgExportDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="73"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="76"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21428,22 +21428,22 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="85"/>
         <source>Press to select the export directory via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
         <source>File Name Pattern:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="42"/>
         <source>Enter the file name pattern for the export files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
         <source>&lt;b&gt;File Name Pattern&lt;/b&gt;
 &lt;p&gt;Enter the file name pattern to be used to generate the export files
 here. Valid recognized patterns are:&lt;/p&gt;
@@ -21461,32 +21461,32 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="75"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
         <source>Changesets:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="72"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="97"/>
         <source>Compare Against Second Parent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="107"/>
         <source>Treat all Files as Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="114"/>
         <source>Omit Dates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="124"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="121"/>
         <source>Use Git extended Diff-Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21951,22 +21951,22 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="187"/>
         <source>Select to enforce the import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="193"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
         <source>Enforce Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="68"/>
         <source>Select patch file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="68"/>
         <source>Patch Files (*.diff *.patch);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22720,49 +22720,49 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="106"/>
         <source>Select the repository url via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="116"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
         <source>&amp;Revision:</source>
         <translation>Gözden geçi&amp;rme:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="74"/>
         <source>Enter the revision the new project should be generated from</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="84"/>
         <source>Project &amp;Directory:</source>
         <translation>Proje &amp;Dizini:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="94"/>
         <source>Enter the directory of the new project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="97"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="71"/>
         <source>Select Repository-Directory</source>
         <translation>Kaynak Havuzu- Dizinin Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="86"/>
         <source>Select Project Directory</source>
         <translation>Proje Dizinini Seç</translation>
     </message>
@@ -27609,72 +27609,72 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>IconsPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="17"/>
         <source>&lt;b&gt;Configure icon directories&lt;/b&gt;</source>
         <translation>&lt;b&gt;İkon dizinini ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="37"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="48"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="49"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Seçilen dizini listeden silmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="52"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="61"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="62"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Girilen dizini eklemek ve listelemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="64"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="65"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="72"/>
         <source>Enter a directory to be added</source>
         <translation>Eklemek için dizin seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="79"/>
         <source>Press to select an icon directory via a selection dialog</source>
         <translation>İcon dizinini siçim diyaloğu ile seçmek için basınız</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="81"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="91"/>
         <source>Show</source>
         <translation>Göster</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="121"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="119"/>
         <source>Up</source>
         <translation>Up</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="129"/>
         <source>Down</source>
         <translation>Down</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="156"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="154"/>
         <source>List of icon directories</source>
         <translation>İcın dizinleri listesi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.py" line="127"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.py" line="130"/>
         <source>Select icon directory</source>
         <translation>İcon dizinin seçiniz</translation>
     </message>
@@ -28049,120 +28049,120 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="249"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="258"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="255"/>
         <source>Dockarea Corner Usage</source>
         <translation>Rıhtım Alanı Köşe Kullanımı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="261"/>
         <source>Top Left Corner</source>
         <translation>Sol Üst Köşe</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="267"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation>Üst rıhtım alanının sol üst köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
         <source>Top dockarea</source>
         <translation>Üst rıhtım alanı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="277"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation>Sol rıhtım alanının sol üst köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
         <source>Left dockarea</source>
         <translation>Sol rıhtım alanı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="290"/>
         <source>Top Right Corner</source>
         <translation>Sağ Üst Köşe</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="296"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation>Üst rıhtım alanının sağ üst köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="306"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation>Sağ rıhtım alanının sağ üst köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="370"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
         <source>Right dockarea</source>
         <translation>Sağ rıhtım alanı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="322"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="319"/>
         <source>Bottom Left Corner</source>
         <translation>Sol Alt Köşe</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="328"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="325"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation>Alt rıhtım alanının sol alt köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="360"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
         <source>Bottom dockarea</source>
         <translation>Alt rıhtım alanı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="335"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation>Sol rıhtım alanının alt sol köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="351"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="348"/>
         <source>Bottom Right Corner</source>
         <translation>Sağ Alt Köşe</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="354"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation>Alt rıhtım alanının sağ alt köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="364"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation>Sağ rıhtım alanının alt sağ köşesini tahsis etmek için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="444"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="441"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="459"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="456"/>
         <source>Language:</source>
         <translation>Dil:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="475"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="472"/>
         <source>Select the interface language.</source>
         <translation>Arayüz dilini seçiniz.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="478"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="475"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation>Arayüz dili bu listeden seçilebilir. &quot;system&quot; seçilirse,arayüz dili sistem tarafından belirlenir.  &quot;none&quot; seçiminin anlamı,ön tanmlı dili kullan demektir.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="485"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="482"/>
         <source>Layout:</source>
         <translation>Yerleşim:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="498"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="495"/>
         <source>Select the layout type.</source>
         <translation>Yerleşim tipini seçin.</translation>
     </message>
@@ -28177,98 +28177,98 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Kayan Pencereler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="507"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="504"/>
         <source>Toolboxes</source>
         <translation>Araçkutuları</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="502"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="499"/>
         <source>Sidebars</source>
         <translation>Durumçubukları</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
         <source>Shell</source>
         <translation>Kabuk</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="525"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="522"/>
         <source>Select to get a separate shell window</source>
         <translation>Ayrılmış pencere kabuğu için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="557"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="554"/>
         <source>separate window</source>
         <translation>ayrılmış pencere</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="535"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="532"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation>Kabuğu Hata Ayıklama-Göstericisi içene gömmek için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="567"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="564"/>
         <source>embed in Debug-Viewer</source>
         <translation>Hata Ayıklama-Görüntüleyicisene gömülü</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="548"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="545"/>
         <source>File-Browser</source>
         <translation>Dosya-Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="554"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="551"/>
         <source>Select to get a separate file browser window</source>
         <translation>Dosya gözatıcısı penceresine bir ayraç eklemek için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="564"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="561"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation>Dosya Gözatıcısını Hata Ayıklama-Göstericisi içene gömmek için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="574"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="571"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation>Dosya Gözatıcısını Proje-Göstericisi içene gömmek için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="577"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="574"/>
         <source>embed in Project-Viewer</source>
         <translation>Proje-Görüntüleyici içine gömülü</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="589"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="586"/>
         <source>Tabs</source>
         <translation>Sekmeler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="595"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="592"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation>Her bir sekmede bir tane yerine tek bir kapatma düğmesi göster</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="618"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="615"/>
         <source>Reset layout to factory defaults</source>
         <translation>Yerleşimi fabrika ayarlarına döndür</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="251"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
         <source>System</source>
         <translation>Sistem</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="236"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>Türkçe</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="261"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="264"/>
         <source>Select style sheet file</source>
         <translation>Sayfa stil dosyasını seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="261"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="264"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Qt Sayfa stili (*.qss);;Üstüste Sayfa Stili (*.css);;Tüm Dosyalar (*)</translation>
     </message>
@@ -28293,12 +28293,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
         <source>Delay:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="399"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="396"/>
         <source> ms</source>
         <translation type="unfinished">ms</translation>
     </message>
@@ -32797,47 +32797,47 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation>&lt;b&gt;Çokluproje Özelliklerini Ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="64"/>
         <source>Master Project</source>
         <translation>Ana Proje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="70"/>
         <source>Select to open the master project automatically upon opening the multiproject</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
         <source>Open master project automatically</source>
         <translation>Ana projeyi otomatik olarak aç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="86"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="83"/>
         <source>XML</source>
         <translation>XML</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="89"/>
         <source>Select, if a timestamp should be written to all multiproject related XML files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="95"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
         <source>Include timestamp in multiproject related XML files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="105"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="102"/>
         <source>Recent Multiprojects</source>
         <translation>Geçmiş Çokluprojeler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="110"/>
         <source>Number of recent multiprojects:</source>
         <translation>Geçmiş çokluprojelerin sayısı:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="117"/>
         <source>Enter the number of recent multiprojects to remember</source>
         <translation>Hatırlanacak geçmiş anaprojelerin sayısını girin</translation>
     </message>
@@ -32863,7 +32863,7 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="73"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33019,50 +33019,50 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="62"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="68"/>
         <source>Select to ask the user for a download filename</source>
         <translation>Kullanıcıya indirilecek dosyanının adının sorulması için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="74"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="71"/>
         <source>Request name of downloaded file</source>
         <translation>İndirilecek dosya için gerekli ad</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="120"/>
         <source>Select to use a web proxy</source>
         <translation>Kullanmak için web proxy seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="126"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
         <source>Use network proxy</source>
         <translation>Şebeke proxysini kullan</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="135"/>
         <source>Select to use the system proxy configuration</source>
         <translation>Sistem vekil sunucusu ayaralrını kullanmak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="141"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
         <source>Use system proxy configuration</source>
         <translation>Sistemin vekil sunucu ayarlarını kullan</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="148"/>
         <source>Select to use an application specific proxy configuration</source>
         <translation>Bir uygulamanın özel vekil sunucu ayarlarını kullanmak için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="154"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="151"/>
         <source>Manual proxy configuration:</source>
         <translation>Elle yapılan proxy ayarları:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="167"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="164"/>
         <source>Manual proxy settings</source>
         <translation>Elle yapılan proxy ayarları</translation>
     </message>
@@ -33107,7 +33107,7 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="obsolete">Proxy için kullanıcı adı gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="340"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="337"/>
         <source>Password:</source>
         <translation type="unfinished">Parola:</translation>
     </message>
@@ -33132,7 +33132,7 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="obsolete">Socks5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="180"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="183"/>
         <source>Select download directory</source>
         <translation>İndirme dizinini seç</translation>
     </message>
@@ -33142,192 +33142,192 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="81"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="78"/>
         <source>Download Manager Cleanup Policy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="84"/>
         <source>Select to never cleanup automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
         <source>Never</source>
         <translation>Asla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="94"/>
         <source>Select to cleanup upon exiting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
         <source>When exiting the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="104"/>
         <source>Select to cleanup after a successful download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
         <source>When download finished successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="180"/>
         <source>Enter the name of the HTTP proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="286"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="283"/>
         <source>Port:</source>
         <translation>Bağlantı Noktası:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="194"/>
         <source>Enter the HTTP proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="216"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="213"/>
         <source>Select to use the HTTP proxy for all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="219"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="216"/>
         <source>Use this proxy for all protocols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="230"/>
         <source>Enter the name of the HTTPS proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="244"/>
         <source>Enter the HTTPS proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="279"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="276"/>
         <source>Enter the name of the FTP proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="293"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="290"/>
         <source>Enter the FTP proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="173"/>
         <source>HTTP-Proxy:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="226"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="223"/>
         <source>HTTPS-Proxy:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="266"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="263"/>
         <source>FTP-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="272"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="269"/>
         <source>Hostname:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="312"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="309"/>
         <source>Proxy Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="319"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="316"/>
         <source>Select the type of the FTP proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="326"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="323"/>
         <source>User Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="333"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="330"/>
         <source>Enter the user name for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="347"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="344"/>
         <source>Enter the password for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="354"/>
         <source>Account:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="364"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="361"/>
         <source>Enter the account info for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="377"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="374"/>
         <source>Press to clear the saved passwords for the Http(s) proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="380"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="377"/>
         <source>Clear HTTP(S) Proxy Passwords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="39"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="42"/>
         <source>No FTP Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="41"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="44"/>
         <source>No Proxy Authentication required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="47"/>
         <source>User@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="49"/>
         <source>SITE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="48"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="51"/>
         <source>OPEN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
         <source>User@Proxyuser@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="56"/>
         <source>Proxyuser@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="58"/>
         <source>AUTH and RESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="60"/>
         <source>Bluecoat Proxy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33343,52 +33343,52 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
 <context>
     <name>NewDialogClassDialog</name>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="13"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="14"/>
         <source>New Dialog Class</source>
         <translation>Yeni Diyalog Sınıfı</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="24"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="25"/>
         <source>Enter the path of the file for the forms code</source>
         <translation>Form kodu için dosyanın yolunu giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="31"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="32"/>
         <source>&amp;Classname:</source>
         <translation>Sınıfa&amp;dı:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="41"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="76"/>
         <source>Select the source file path via a directory selection dialog</source>
         <translation>Dizin seçme diyaloğu ile kuynak dosya yolunun seçiniz</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="44"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="51"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="42"/>
         <source>&amp;Filename:</source>
         <translation>Dosyaad&amp;ı:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="61"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="52"/>
         <source>&amp;Path:</source>
         <translation>&amp;Yol:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="71"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="62"/>
         <source>Enter the name of the new class</source>
         <translation>Yeni sınıfın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="78"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="69"/>
         <source>Enter the name of the file for the forms code</source>
         <translation>Form kodu için dosyanın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.py" line="52"/>
+        <location filename="../Project/NewDialogClassDialog.py" line="56"/>
         <source>Select source directory</source>
         <translation>Kaynak dizinini seçiniz</translation>
     </message>
@@ -33540,117 +33540,117 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation>Sayıların Formatları</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="25"/>
+        <location filename="../UI/NumbersWidget.ui" line="34"/>
         <source>Binary</source>
         <translation>İkili</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="34"/>
+        <location filename="../UI/NumbersWidget.ui" line="52"/>
         <source>Press to import the selected binary number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../UI/NumbersWidget.ui" line="183"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="44"/>
+        <location filename="../UI/NumbersWidget.ui" line="59"/>
         <source>Enter the binary number</source>
         <translation>İkili numarayı giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="54"/>
+        <location filename="../UI/NumbersWidget.ui" line="69"/>
         <source>Press to send the binary number to the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="67"/>
+        <location filename="../UI/NumbersWidget.ui" line="79"/>
         <source>Octal</source>
         <translation>Sekizli</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="76"/>
+        <location filename="../UI/NumbersWidget.ui" line="97"/>
         <source>Press to import the selected octal number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="86"/>
+        <location filename="../UI/NumbersWidget.ui" line="104"/>
         <source>Enter the octal number</source>
         <translation>Sekizli numarayı giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="96"/>
+        <location filename="../UI/NumbersWidget.ui" line="114"/>
         <source>Press to send the octal number to the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="109"/>
+        <location filename="../UI/NumbersWidget.ui" line="124"/>
         <source>Decimal</source>
         <translation>Onlu</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="118"/>
+        <location filename="../UI/NumbersWidget.ui" line="142"/>
         <source>Press to import the selected decimal number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="128"/>
+        <location filename="../UI/NumbersWidget.ui" line="149"/>
         <source>Enter the decimal number</source>
         <translation>Onlu sayıyı giriniz</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="138"/>
+        <location filename="../UI/NumbersWidget.ui" line="159"/>
         <source>Press to send the decimal number to the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="151"/>
+        <location filename="../UI/NumbersWidget.ui" line="169"/>
         <source>Hexadecimal</source>
         <translation>Onaltılı</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="160"/>
+        <location filename="../UI/NumbersWidget.ui" line="187"/>
         <source>Press to import the selected hex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="170"/>
+        <location filename="../UI/NumbersWidget.ui" line="194"/>
         <source>Enter the hex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="180"/>
+        <location filename="../UI/NumbersWidget.ui" line="204"/>
         <source>Press to send the hex number to the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="231"/>
+        <location filename="../UI/NumbersWidget.ui" line="249"/>
         <source>Input Format:</source>
         <translation>Girdi Formatı:</translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="238"/>
+        <location filename="../UI/NumbersWidget.ui" line="256"/>
         <source>Select the input format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="251"/>
+        <location filename="../UI/NumbersWidget.ui" line="269"/>
         <source>Bitsize:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="258"/>
+        <location filename="../UI/NumbersWidget.ui" line="276"/>
         <source>Select the bit size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="271"/>
+        <location filename="../UI/NumbersWidget.ui" line="289"/>
         <source>Press to swap the current byte order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/NumbersWidget.ui" line="274"/>
+        <location filename="../UI/NumbersWidget.ui" line="292"/>
         <source>Swap byte order</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35019,7 +35019,7 @@ Destination:
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="56"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
@@ -35032,97 +35032,97 @@ Destination:
         <translation type="obsolete">Üçüncü parti eklentileri yükle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="97"/>
         <source>Select plugins download directory</source>
         <translation>eklentileri indirme dizinini seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="69"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
         <source>Load external plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="62"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="82"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="79"/>
         <source>Check for plugin updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="85"/>
         <source>Select to disable update checking</source>
         <translation type="unfinished">Güncelleme kontrolünü iptal etmek için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="91"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
         <source>Never</source>
         <translation type="unfinished">Asla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="95"/>
         <source>Select to check for updates once a day</source>
         <translation type="unfinished">Günde bir defa güncellemeleri kontrol için seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
         <source>Daily</source>
         <translation type="unfinished">Günlük</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="105"/>
         <source>Select to check for updates once a week</source>
         <translation type="unfinished">Haftada bir güncellemeleri kontrol için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="111"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
         <source>Weekly</source>
         <translation type="unfinished">Haftalık</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="115"/>
         <source>Select to check for updates once a month</source>
         <translation type="unfinished">Ayda bir güncellemeleri kontrol için seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
         <source>Monthly</source>
         <translation type="unfinished">Aylık</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="143"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="140"/>
         <source>Repository URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="147"/>
         <source>Shows the repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="157"/>
         <source>Press to edit the plugin repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="163"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
         <source>Edit URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="128"/>
         <source>Select to check only already installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="134"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
         <source>Check only installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
@@ -38541,12 +38541,12 @@ Select Update.</source>
  gelecek olan diyalog ile yapabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="136"/>
+        <location filename="../Project/PropertiesDialog.ui" line="298"/>
         <source>Show directory selection dialog</source>
         <translation>Dizin seçme diyaloğunu göster</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="139"/>
+        <location filename="../Project/PropertiesDialog.ui" line="301"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proje Dizini&lt;/b&gt;
@@ -38555,37 +38555,37 @@ Select Update.</source>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="200"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="150"/>
+        <location filename="../Project/PropertiesDialog.ui" line="136"/>
         <source>&amp;Version No.:</source>
         <translation>&amp;Sürüm No.:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="160"/>
+        <location filename="../Project/PropertiesDialog.ui" line="146"/>
         <source>Enter the version number</source>
         <translation>Sürüm numarasını giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="163"/>
+        <location filename="../Project/PropertiesDialog.ui" line="149"/>
         <source>&lt;b&gt;Version No.&lt;/b&gt;
 &lt;p&gt;Enter the version no.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sürüm No.&lt;/b&gt;
 &lt;p&gt;Sürüm numarasını gir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="171"/>
+        <location filename="../Project/PropertiesDialog.ui" line="157"/>
         <source>&amp;Main Script:</source>
         <translation>Ana B&amp;etik:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="181"/>
+        <location filename="../Project/PropertiesDialog.ui" line="167"/>
         <source>Enter the main script</source>
         <translation>Ana betiği gir</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="184"/>
+        <location filename="../Project/PropertiesDialog.ui" line="170"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -38593,85 +38593,85 @@ Select Update.</source>
 &lt;p&gt;Projenin ana betiğini giriniz. sağdaki düğmeye basarak bir diyalog ile seçiminizi yapabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="193"/>
+        <location filename="../Project/PropertiesDialog.ui" line="309"/>
         <source>Show file selection dialog</source>
         <translation>Dosya seçim diyaloğunu göster</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="196"/>
+        <location filename="../Project/PropertiesDialog.ui" line="312"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ana betik&lt;/b&gt;
 &lt;p&gt;Dosya seçim diyaloğu ile projenin ana betiğini seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="207"/>
+        <location filename="../Project/PropertiesDialog.ui" line="179"/>
         <source>Press to edit the translations properties</source>
         <translation>Çeviri özelliklerini düzenlemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="210"/>
+        <location filename="../Project/PropertiesDialog.ui" line="182"/>
         <source>Translations Properties...</source>
         <translation>Çeviriler Özellikleri...</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="217"/>
+        <location filename="../Project/PropertiesDialog.ui" line="189"/>
         <source>End of &amp;Line Character:</source>
         <translation>Satır Sonu &amp;Karakteri:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="227"/>
+        <location filename="../Project/PropertiesDialog.ui" line="199"/>
         <source>Select the end of line character to be used by the project</source>
         <translation>Projede kullanılacak satır sonu karakterini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="231"/>
+        <location filename="../Project/PropertiesDialog.ui" line="203"/>
         <source>System</source>
         <translation>Sistem</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="236"/>
+        <location filename="../Project/PropertiesDialog.ui" line="208"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="241"/>
+        <location filename="../Project/PropertiesDialog.ui" line="213"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="246"/>
+        <location filename="../Project/PropertiesDialog.ui" line="218"/>
         <source>Windows/DOS</source>
         <translation>Windows/DOS</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="254"/>
+        <location filename="../Project/PropertiesDialog.ui" line="226"/>
         <source>&amp;Author:</source>
         <translation>Y&amp;azar:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="264"/>
+        <location filename="../Project/PropertiesDialog.ui" line="236"/>
         <source>Enter authors name</source>
         <translation>Yazarların adını gir</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="267"/>
+        <location filename="../Project/PropertiesDialog.ui" line="239"/>
         <source>&lt;b&gt;Author&lt;/b&gt;
 &lt;p&gt;Enter the name of the author.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yazar&lt;/b&gt;&lt;p&gt;Yazarın adını giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="275"/>
+        <location filename="../Project/PropertiesDialog.ui" line="247"/>
         <source>&amp;Email:</source>
         <translation>&amp;E-Posta:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="285"/>
+        <location filename="../Project/PropertiesDialog.ui" line="257"/>
         <source>Enter authors email</source>
         <translation>Yazarların emailini gir</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="288"/>
+        <location filename="../Project/PropertiesDialog.ui" line="260"/>
         <source>&lt;b&gt;Email&lt;/b&gt;
 &lt;p&gt;Enter the email address of the author&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eposta&lt;/b&gt;
@@ -38688,24 +38688,24 @@ Select Update.</source>
         <translation>Açıklamayı gir</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="312"/>
+        <location filename="../Project/PropertiesDialog.ui" line="284"/>
         <source>&lt;b&gt;Description&lt;/b&gt;
 &lt;p&gt;Enter a short description for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Açıklama&lt;/b&gt;
 &lt;p&gt;Proje için kısa bir açıklama giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="353"/>
+        <location filename="../Project/PropertiesDialog.ui" line="347"/>
         <source>Press to show information about the repository</source>
         <translation>Kayna havuzu hakkında bilgi göstermek için basınız</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="356"/>
+        <location filename="../Project/PropertiesDialog.ui" line="350"/>
         <source>Show &amp;Repository Info</source>
         <translation>Kaynak Havuzu Bilgisini Göste&amp;r</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="359"/>
+        <location filename="../Project/PropertiesDialog.ui" line="353"/>
         <source>Alt+R</source>
         <translation>Alt+R</translation>
     </message>
@@ -38722,37 +38722,37 @@ Select Update.</source>
 &lt;p&gt;Çokluproje için kısa bir açıklama giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="108"/>
+        <location filename="../Project/PropertiesDialog.py" line="112"/>
         <source>The project is version controlled by &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Proje sürümü &lt;b&gt;{0}&lt;/b&gt; tarafından yapılmaktadır.</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="114"/>
+        <location filename="../Project/PropertiesDialog.py" line="118"/>
         <source>The project is not version controlled.</source>
         <translation>Projenin sürüm kontrolü yapılmadı.</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="155"/>
+        <location filename="../Project/PropertiesDialog.py" line="159"/>
         <source>Select project directory</source>
         <translation>Proje dizinini seç</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="206"/>
+        <location filename="../Project/PropertiesDialog.py" line="210"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation>Kaynak Dosyaları ({0});; Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="208"/>
+        <location filename="../Project/PropertiesDialog.py" line="212"/>
         <source>Select main script file</source>
         <translation>Ana betik dosyasını seç</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="328"/>
+        <location filename="../Project/PropertiesDialog.ui" line="322"/>
         <source>Select to create a version controlled project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="331"/>
+        <location filename="../Project/PropertiesDialog.ui" line="325"/>
         <source>Version Controlled Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39361,26 +39361,26 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="416"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="118"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="124"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="134"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="128"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="138"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="132"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -39388,19 +39388,19 @@ character class is faster and more precise.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="155"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="146"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="166"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="154"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="170"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="158"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -39408,13 +39408,13 @@ means that the content of the match (called the backreference) is not stored for
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="183"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="168"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="187"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="172"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -39424,13 +39424,13 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="202"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="184"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="206"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="188"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
 backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
@@ -39439,13 +39439,13 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="220"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="199"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="224"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="203"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
@@ -39453,13 +39453,13 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="237"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="213"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -39468,64 +39468,64 @@ Be aware that in the above example, the alternatives refer to whole or part of w
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="255"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="259"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="271"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="275"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="245"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="286"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="253"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="290"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="257"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="302"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="266"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="306"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="270"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="318"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="279"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="322"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -39533,13 +39533,13 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="335"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="293"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="339"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="297"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -39547,13 +39547,13 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="352"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="307"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="356"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="311"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
 It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
@@ -39561,13 +39561,13 @@ only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="369"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="321"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="373"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="325"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
 but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
@@ -39576,62 +39576,62 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="403"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="352"/>
         <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Son düzeltmeyi geri al&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="413"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="359"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Son düzeltmeyi ileri al&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="443"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="386"/>
         <source>Regexp:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="481"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="424"/>
         <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="484"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="427"/>
         <source>Match Linebreaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="491"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="434"/>
         <source>ASCII</source>
         <translation>ASCII</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="498"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="441"/>
         <source>Verbose Regexp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="505"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="448"/>
         <source>Case Sensitive</source>
         <translation>Duyarlılığı Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="518"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="461"/>
         <source>Observe Locale</source>
         <translation>Yerel Gözlem</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="468"/>
         <source>&quot;.&quot; matches linebreaks as well</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="528"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="471"/>
         <source>Dot matches Linebreak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="537"/>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="480"/>
         <source>Text:</source>
         <translation>Metin:</translation>
     </message>
@@ -41105,31 +41105,31 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="477"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="89"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="86"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation type="unfinished">&lt;b&gt;Son düzeltmeyi ileri al&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="407"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="383"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="410"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="386"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="420"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="393"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="424"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -41137,19 +41137,19 @@ character class is faster and more precise.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="441"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="411"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="165"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="159"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="169"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="163"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -41157,13 +41157,13 @@ means that the content of the match (called the backreference) is not stored for
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="452"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="419"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="186"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -41173,13 +41173,13 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="468"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="432"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="205"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -41188,64 +41188,64 @@ Be aware that in the above example, the alternatives refer to whole or part of w
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="219"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="204"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="223"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="208"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="235"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="239"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="221"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="250"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="229"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="254"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="266"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="242"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="270"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="282"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="286"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -41253,13 +41253,13 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="299"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="269"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="303"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="273"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -41267,71 +41267,71 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="354"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="327"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a question mark (?) in your regexp.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="358"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="331"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a question mark (?) in your regexp. The question mark matches a single character. 
 E.g. &apos;gr?y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="370"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="340"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Inserts a repetition (*) character into the regexp.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="374"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="344"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Inserts a repetition (*) character into the regexp. That will match zero or more of any character.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="456"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="423"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="472"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="436"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="502"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="463"/>
         <source>&amp;Regexp:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="512"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="473"/>
         <source>&amp;Text:</source>
         <translation type="unfinished">Me&amp;tin:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="535"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="496"/>
         <source>Case &amp;Sensitive</source>
         <translation type="unfinished">Duyarlılığı &amp;Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="538"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="499"/>
         <source>Alt+S</source>
         <translation type="unfinished">Alt+S</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="548"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="509"/>
         <source>&amp;Minimal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="551"/>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="512"/>
         <source>Alt+M</source>
         <translation type="unfinished">Alt+M</translation>
     </message>
@@ -42371,26 +42371,26 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="381"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="69"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="66"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="72"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="69"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="82"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="76"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="86"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -42398,19 +42398,19 @@ character class is faster and more precise.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="103"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="94"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="114"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="102"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="118"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="106"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -42418,13 +42418,13 @@ means that the content of the match (called the backreference) is not stored for
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="131"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="116"/>
         <source>&lt;b&gt;Atomic non capturing parentheses: (?&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some atomic non capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="135"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="120"/>
         <source>&lt;b&gt;Atomic non capturing parentheses: (?&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some atomic non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?&gt;Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?&gt;&apos; inside the brakets
@@ -42432,13 +42432,13 @@ means that the content of the match (called the backreference) is not stored for
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="148"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="130"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="152"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -42448,13 +42448,13 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="167"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="146"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="171"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="150"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
 backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
@@ -42463,13 +42463,13 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="185"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="161"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="189"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="165"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
@@ -42477,13 +42477,13 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="202"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="175"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="206"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -42492,64 +42492,64 @@ Be aware that in the above example, the alternatives refer to whole or part of w
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="220"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="190"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="224"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="194"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="236"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="203"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="240"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="207"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="251"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="215"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="267"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="271"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -42557,13 +42557,13 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="300"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="304"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -42571,13 +42571,13 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="317"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="269"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="321"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="273"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
 It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
@@ -42585,13 +42585,13 @@ only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="334"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="338"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
 but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
@@ -42600,72 +42600,72 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="368"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="314"/>
         <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
         <translation type="unfinished">&lt;b&gt;Son düzeltmeyi geri al&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="378"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="321"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation type="unfinished">&lt;b&gt;Son düzeltmeyi ileri al&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="408"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="348"/>
         <source>Regexp:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="431"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="371"/>
         <source>Text:</source>
         <translation type="unfinished">Metin:</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="456"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="396"/>
         <source>Case Insensitive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="463"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="403"/>
         <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="466"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="406"/>
         <source>Match Linebreaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="473"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="413"/>
         <source>&quot;.&quot; matches everything including linebreaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="476"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="416"/>
         <source>Dot matches everything</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="483"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="423"/>
         <source>Extended Pattern Syntax</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="490"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="430"/>
         <source>Inverted Greediness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="497"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="437"/>
         <source>Unicode</source>
         <translation type="unfinished">Evrensel kod</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="504"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="444"/>
         <source>Non-named capturing groups do not capture substrings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="507"/>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="447"/>
         <source>Don&apos;t Capture</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43098,7 +43098,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="obsolete">Qt4 Dizini</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
@@ -43115,7 +43115,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="46"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
@@ -43138,12 +43138,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="obsolete">&lt;b&gt;Not:&lt;/b&gt; Ayarlandığında Boş bıraktıysanız QT4TRANSLATIONSDIR ortam değişkeni veya Qt3 kütüphanesi için belirlenen yol kullanılır.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="77"/>
         <source>Qt Tools</source>
         <translation>QT Araçları</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="83"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>çalışabilen araçların kendiliğinden oluşan ön eki. başarı için, kendiliğinden eklenir.</translation>
     </message>
@@ -43168,12 +43168,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="obsolete">Qt4 araç adlarının son ekini giriniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="130"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="127"/>
         <source>This gives an example of the complete tool name</source>
         <translation>Bu tüm araç isimlerinin bir örneğini verir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="133"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="130"/>
         <source>designer</source>
         <translation>dizayncı</translation>
     </message>
@@ -43183,7 +43183,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="obsolete">Qt4 Dizinini Seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="58"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Qt4 Çeviri Dizinini Seç</translation>
     </message>
@@ -43193,37 +43193,37 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="67"/>
         <source>Press to select the Qt translations directory via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="96"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="93"/>
         <source>Qt-Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="100"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="107"/>
         <source>Qt-Postfix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="117"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45756,72 +45756,72 @@ Bağlantı yok</translation>
 <context>
     <name>SpellingPropertiesDialog</name>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="13"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="14"/>
         <source>Spelling Properties</source>
         <translation>Yazım Kontrol Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="22"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="23"/>
         <source>Project &amp;Language:</source>
         <translation>Proje Di&amp;li:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="32"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="33"/>
         <source>Select the project&apos;s language</source>
         <translation>Proje dilini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="39"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="40"/>
         <source>Project &amp;Word List:</source>
         <translation>Proje &amp;Kelime Listesi:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="49"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="50"/>
         <source>Enter the filename of the project word list</source>
         <translation>Proje kelime listesi dosyaadını giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="56"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="97"/>
         <source>Select the project word list file via a file selection dialog</source>
         <translation>Proje kelime listesini bir seçim diyaloğu ile seçiniz</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.ui" line="86"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="66"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="57"/>
         <source>Project E&amp;xclude List:</source>
         <translation>Proje İ&amp;stisna Listesi:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="76"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="67"/>
         <source>Enter the filename of the project exclude list</source>
         <translation>Projenin istisna listesinin dosyaadını giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="83"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="104"/>
         <source>Select the project exclude list file via a file selection dialog</source>
         <translation>İstisna listesini bir seçim diyaloğu ile seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="46"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="50"/>
         <source>&lt;default&gt;</source>
         <translation>&lt;default&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="80"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="84"/>
         <source>Select project word list</source>
         <translation>Proje kelime listesini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="101"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="105"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Sözlük Dosyaları (*.dic);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="101"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="105"/>
         <source>Select project exclude list</source>
         <translation>Proje istisna listesini seçiniz</translation>
     </message>
@@ -46081,62 +46081,62 @@ Bağlantı yok</translation>
         <translation>Veritabanı adını giriniz</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="155"/>
         <source>Press to select a database file</source>
         <translation>Veritabanı adı seçmek için basınız</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="78"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="85"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
         <source>&amp;Username:</source>
         <translation>K&amp;ullanıcı Adı:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="95"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="85"/>
         <source>Enter the user name</source>
         <translation>Kullanıcı adını giriniz</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="102"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="92"/>
         <source>&amp;Password:</source>
         <translation>&amp;Parola:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="119"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="109"/>
         <source>&amp;Hostname:</source>
         <translation>&amp;Host adı:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="129"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="119"/>
         <source>Enter the hostname</source>
         <translation>Host adını giriniz</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="136"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="126"/>
         <source>P&amp;ort:</source>
         <translation>Bağlantı N&amp;oktası:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="146"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="136"/>
         <source>Enter the port number</source>
         <translation>Port numarasını giriniz</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="149"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="139"/>
         <source>Default</source>
         <translation>Varsayılan</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="98"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="101"/>
         <source>Select Database File</source>
         <translation>Veritabanı adını seçiniz</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="98"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="101"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
@@ -46213,12 +46213,12 @@ Bağlantı yok</translation>
 &lt;p&gt;Hata ayıklaması yapılacak uygulamaının çalışma dizinini giriniz.Bo olarak bırakırsanız çalışma dizini uygulama dizini olur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="107"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="227"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Dizini dizin seçme diyaloğunu kullanarak seç</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="110"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="230"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dizin seçimi&lt;/b&gt;
@@ -46227,95 +46227,95 @@ Bağlantı yok</translation>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="121"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>Ortam &amp;e:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="137"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Ortam değişkenlerini belirlemek için giriniz.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="140"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="164"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="167"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="171"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>İstisnal&amp;ar Raporu</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="174"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="184"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="187"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="190"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Yorumlayıcı penceresini tem&amp;izle</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="200"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="203"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="207"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Konsolda başlat</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="214"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="200"/>
         <source>Select this to erase the collected coverage information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="217"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="203"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="221"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="207"/>
         <source>Erase &amp;coverage information</source>
         <translation>Kapsama bilgisi sil</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="224"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="210"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
@@ -46361,12 +46361,12 @@ Bağlantı yok</translation>
 &lt;p&gt;Hata ayıklaması yapılacak uygulamaının çalışma dizinini giriniz.Bo olarak bırakırsanız çalışma dizini uygulama dizini olur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="107"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="279"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Dizini dizin seçme diyaloğunu kullanarak seç</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="110"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="282"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dizin seçimi&lt;/b&gt;
@@ -46375,141 +46375,141 @@ Bağlantı yok</translation>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="121"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>Ortam &amp;e:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="137"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Ortam değişkenlerini belirlemek için giriniz.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="140"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="164"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="167"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="171"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>İstisnal&amp;ar Raporu</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="174"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="184"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="187"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="190"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Yorumlayıcı penceresini tem&amp;izle</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="200"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="203"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="207"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Konsolda başlat</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="214"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="200"/>
         <source>Select to trace into the Python library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="217"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="203"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="220"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="206"/>
         <source>Alt+T</source>
         <translation>Alt+T</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="227"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="213"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="230"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="216"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="233"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="219"/>
         <source>Don&apos;t stop at first line</source>
         <translation>İlksatıra kadar durma</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="229"/>
         <source>Forking</source>
         <translation>Çatallaşma</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="249"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="235"/>
         <source>Select to go through the fork without asking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="252"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="238"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="256"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="242"/>
         <source>Fork without pausing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="266"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="252"/>
         <source>Select to debug the child process after forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="269"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="255"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="273"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="259"/>
         <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46517,12 +46517,12 @@ Bağlantı yok</translation>
 <context>
     <name>StartDialog</name>
     <message>
-        <location filename="../Debugger/StartDialog.py" line="79"/>
+        <location filename="../Debugger/StartDialog.py" line="81"/>
         <source>Clear Histories</source>
         <translation>Geçmişi temizle</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDialog.py" line="123"/>
+        <location filename="../Debugger/StartDialog.py" line="125"/>
         <source>Working directory</source>
         <translation>Çalışma dizini</translation>
     </message>
@@ -46568,12 +46568,12 @@ Bağlantı yok</translation>
 &lt;p&gt;Hata ayıklaması yapılacak uygulamaının çalışma dizinini giriniz.Bo olarak bırakırsanız çalışma dizini uygulama dizini olur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="107"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="227"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Dizini dizin seçme diyaloğunu kullanarak seç</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="110"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="230"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dizin seçimi&lt;/b&gt;
@@ -46582,95 +46582,95 @@ Bağlantı yok</translation>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="121"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>Ortam &amp;e:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="137"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Ortam değişkenlerini belirlemek için giriniz.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="140"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="167"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="171"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>İstisnal&amp;ar Raporu</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="174"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="184"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="187"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="190"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Yorumlayıcı penceresini tem&amp;izle</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="200"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="203"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="207"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Konsolda başlat</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="214"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="200"/>
         <source>Select this to erase the collected timing data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="217"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="203"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="221"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="207"/>
         <source>Erase &amp;timing data</source>
         <translation>Zamanlama &amp;verisin sil</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="224"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="210"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
@@ -46716,12 +46716,12 @@ Bağlantı yok</translation>
 &lt;p&gt;Hata ayıklaması yapılacak uygulamaının çalışma dizinini giriniz.Bo olarak bırakırsanız çalışma dizini uygulama dizini olur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="107"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="250"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Dizini dizin seçme diyaloğunu kullanarak seç</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="110"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="253"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dizin seçimi&lt;/b&gt;
@@ -46730,111 +46730,111 @@ Bağlantı yok</translation>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="114"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="121"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="107"/>
         <source>&amp;Environment:</source>
         <translation>Ortam &amp;e:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="137"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="123"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Ortam değişkenlerini belirlemek için giriniz.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="140"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="126"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="164"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="150"/>
         <source>Uncheck to disable exception reporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="167"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="153"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="171"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="157"/>
         <source>Report &amp;exceptions</source>
         <translation>İstisnal&amp;ar Raporu</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="174"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="160"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="184"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="170"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="187"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="173"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="190"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="176"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Yorumlayıcı penceresini tem&amp;izle</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="200"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="186"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="203"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="189"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="207"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="193"/>
         <source>Start in console</source>
         <translation>Konsolda başlat</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="200"/>
         <source>Forking</source>
         <translation>Çatallaşma</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="220"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="206"/>
         <source>Select to go through the fork without asking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="223"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="209"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="227"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="213"/>
         <source>Fork without pausing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="237"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="223"/>
         <source>Select to debug the child process after forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="240"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="226"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="244"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="230"/>
         <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47674,12 +47674,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="131"/>
         <source>Select the working directory via a directory selection dialog</source>
         <translation>Dizin seçme diyaloğu ile çalışma dizinini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="134"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Select the working directory for the Subversion command via a directory selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -47687,15 +47687,15 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="71"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
         <source>Enter the working directory for the Subversion command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="87"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="73"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory for the Subversion command.
 This is an optional entry. The button to the right will open a 
@@ -47703,27 +47703,27 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="109"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="95"/>
         <source>Working Directory:&lt;br&gt;(optional)</source>
         <translation>Çalışma Dizini:&lt;br&gt;(seçimli)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="122"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="108"/>
         <source>Project Directory:</source>
         <translation>Proje Dizini:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="135"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="121"/>
         <source>This shows the root directory of the current project.</source>
         <translation>Bu geçerli projenin ana dizinini gösterir.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="138"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="124"/>
         <source>project directory</source>
         <translation>proje dizini</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="72"/>
         <source>Working directory</source>
         <translation>Çalışma dizini</translation>
     </message>
@@ -47791,12 +47791,12 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation>Altsürüm Kopyası</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
         <translation>Bir seçim diyaloğu açmak için basınız</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="28"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hedef Dizin&lt;/b&gt;
@@ -47805,27 +47805,27 @@ directory selection dialog.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="32"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="39"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="25"/>
         <source>Source:</source>
         <translation>Kaynak:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="32"/>
         <source>Shows the name of the source</source>
         <translation>Kaynağın adını göster</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="35"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaynak adı&lt;/b&gt;
 &lt;p&gt;Bu alan kaynağın adını gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="46"/>
         <source>Enter the target name</source>
         <translation>Hedefin adını gir</translation>
     </message>
@@ -47837,38 +47837,38 @@ directory selection dialog.&lt;/p&gt;</source>
 &lt;p&gt;Bu alanın yeni adını giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="57"/>
         <source>Target:</source>
         <translation>Hedef:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="77"/>
         <source>Select to force the operation</source>
         <translation>Zorunlu çalıştırlacakları seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="80"/>
         <source>Enforce operation</source>
         <translation>Zorunlu çalışma</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="28"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="50"/>
         <source>Subversion Move</source>
         <translation>Altsürüm Taşıma</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="86"/>
         <source>Select target</source>
         <translation>Hedefi seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -48741,92 +48741,92 @@ the working copy.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="119"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
         <source>Select the protocol to access the repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="48"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protokol:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="61"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="131"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="134"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="78"/>
         <source>Enter the directory of the new project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="81"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="90"/>
         <source>Select to indicate, that the repository has a standard layout (projectdir/trunk, projectdir/tags, projectdir/branches)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="93"/>
         <source>Repository has standard &amp;layout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="106"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="96"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="116"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="126"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="126"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="106"/>
         <source>Project &amp;Directory:</source>
         <translation>Proje &amp;Dizini:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="116"/>
         <source>&amp;Tag:</source>
         <translation>E&amp;tiket:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="133"/>
         <source>Select the project directory via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="69"/>
         <source>Select Repository-Directory</source>
         <translation>Kaynak Havuzu- Dizinin Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="97"/>
         <source>Select Project Directory</source>
         <translation>Proje Dizinini Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="125"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="128"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48871,59 +48871,59 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="66"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="105"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="73"/>
         <source>Enter the log message for the new project.</source>
         <translation>Yeni proje için kayıt mesajlarını giriniz.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="86"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="76"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mesaj Günlüğü&lt;/b&gt;
 &lt;p&gt;Kullanılan yeni projenin mesaj günlüğünü gir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="90"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="80"/>
         <source>new project started</source>
         <translation>yeni proje başladı</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="87"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protokol:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="100"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="66"/>
         <source>Select Repository-Directory</source>
         <translation>Kaynak Havuzu- Dizinin Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="99"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49849,7 +49849,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="24"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="25"/>
         <source>Property Name:</source>
         <translation>Özellik Adı:</translation>
     </message>
@@ -49859,17 +49859,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="40"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="41"/>
         <source>Select property source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="50"/>
         <source>File</source>
         <translation>Dosya</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="57"/>
         <source>Text</source>
         <translation>Metin</translation>
     </message>
@@ -49879,17 +49879,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Mülkün metnini gir</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="93"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir dosya seç</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="85"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="83"/>
         <source>Enter the name of a file for the property</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49914,7 +49914,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Mülk &amp;Değeri:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.py" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.py" line="44"/>
         <source>Select file for property</source>
         <translation>Mülk için dosya seç</translation>
     </message>
@@ -52345,10 +52345,10 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="49"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="67"/>
+        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="70"/>
         <source>Shared Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54430,141 +54430,141 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>ToolConfigurationDialog</name>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="13"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="14"/>
         <source>Configure Tools Menu</source>
         <translation>Araç Menüsü Ayarlama</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="24"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="25"/>
         <source>Add a separator</source>
         <translation>Ayırıcı ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="27"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="28"/>
         <source>&lt;b&gt;Add separator&lt;/b&gt;&lt;p&gt;Add a separator for the menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ayırıcı Ekle&lt;/b&gt;&lt;p&gt;Menüye bir ayırıcı ekle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="30"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="31"/>
         <source>Add &amp;Separator</source>
         <translation>Ayırıcı &amp;Ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="37"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="38"/>
         <source>Add a new tools entry</source>
         <translation>Yeni bir araç boşluğu ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="40"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="41"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new tools entry with the values entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ekle&lt;/b&gt;
 &lt;p&gt;aşağıda girilen bilgileri yeni bir araç olarak ekle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="44"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="45"/>
         <source>&amp;Add</source>
         <translation>&amp;Ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="47"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="48"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="57"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="58"/>
         <source>Select the output redirection mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="60"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="61"/>
         <source>&lt;b&gt;Redirect output&lt;b&gt;&lt;p&gt;Select the output redirection mode. The standard error channel is either not redirected or shown in the log viewer.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="67"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="68"/>
         <source>Enter the arguments for the executable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="70"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="71"/>
         <source>&lt;b&gt;Arguments&lt;/b&gt;
 &lt;p&gt;Enter the arguments for the executable.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="81"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="82"/>
         <source>Move up</source>
         <translation>Yukarı Götür</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="84"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="85"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yukarı Götür&lt;/b&gt;
 &lt;p&gt;Seçileni yukarı götür.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="88"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="89"/>
         <source>&amp;Up</source>
         <translation>Y&amp;ukarı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="91"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="92"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="101"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="102"/>
         <source>Delete the selected entry</source>
         <translation>Seçilen girişi sil</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="104"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="105"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sil&lt;/b&gt;
 &lt;p&gt;Seçilen girişi sil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="108"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="109"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="111"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="112"/>
         <source>Alt+D</source>
         <translation>Alt+D</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="118"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="119"/>
         <source>Clear all entry fields</source>
         <translation>Girilen tüm alanları temizle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="121"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="122"/>
         <source>&lt;b&gt;New&lt;/b&gt;
 &lt;p&gt;Clear all entry fields for entering a new tools entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni&lt;/b&gt;
 &lt;p&gt;yeni araç girişi için giriş alanlarını boşalt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="125"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="126"/>
         <source>&amp;New</source>
         <translation>Ye&amp;ni</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="128"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="129"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="135"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="282"/>
         <source>Select the icon via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile iconu seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="138"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="285"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Select the icon via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;İkon&lt;/b&gt;
@@ -54573,204 +54573,204 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="271"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="149"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="136"/>
         <source>Enter the filename of the executable</source>
         <translation>Çalıştıracak dosyanın adını giriniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="152"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="139"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Enter the filename of the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Çalışmaya hazır&lt;/b&gt;
 &lt;p&gt;Çalışmaya hazır dosyanın adını giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="163"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="150"/>
         <source>Move down</source>
         <translation>Aşağı götür</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="166"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="153"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aşağı taşı&lt;/b&gt;
 &lt;p&gt;Seçileni aşağı taşı.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="170"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="157"/>
         <source>Do&amp;wn</source>
         <translation>Asağı &amp;w</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="173"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="160"/>
         <source>Alt+W</source>
         <translation>Alt+W</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="196"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="183"/>
         <source>Enter the menu text</source>
         <translation>Menu metnini gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="199"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="186"/>
         <source>&lt;b&gt;Menu text&lt;/b&gt;
 &lt;p&gt;Enter the menu text. Precede the accelerator key with an &amp; character.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="210"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="197"/>
         <source>Change the values of the selected entry</source>
         <translation>Seçilen girişin değerini değiştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="213"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="200"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the values of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Değiştir&lt;/b&gt;
 &lt;p&gt;Değeri seçilen ile değiştir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="217"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="204"/>
         <source>C&amp;hange</source>
         <translation>Deği&amp;ştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="220"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="207"/>
         <source>Alt+H</source>
         <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="227"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="214"/>
         <source>&amp;Icon file:</source>
         <translation>&amp;Icon dosyası:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="237"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="224"/>
         <source>Ar&amp;guments:</source>
         <translation>Ar&amp;gumanlar:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="247"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="234"/>
         <source>&amp;Menu text:</source>
         <translation>&amp;Menu metni:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="264"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="293"/>
         <source>Select the executable via a file selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="267"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="296"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Select the executable via a file selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="278"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="251"/>
         <source>Enter the filename of the icon</source>
         <translation>İconun dosya adını gir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="281"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="254"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Enter the filename of the icon.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="289"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="262"/>
         <source>&amp;Redirect output</source>
         <translation>Çıktıyı yeniden yönlendi&amp;rmek</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="299"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="272"/>
         <source>&amp;Executable file:</source>
         <translation>Yürütül&amp;ebilir dosya:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="40"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="44"/>
         <source>no redirection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="41"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
         <source>show output</source>
         <translation>çıktıyı göster</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="42"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
         <source>insert into current editor</source>
         <translation>geçerli dosyaya ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="43"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
         <source>replace selection of current editor</source>
         <translation>Seçimi geçerli düzenleyiciye yerleştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="129"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>Add tool entry</source>
         <translation>Araç boşluğu ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="100"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="104"/>
         <source>You have to set an executable to add to the Tools-Menu first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="109"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="113"/>
         <source>You have to insert a menuentry text to add the selected program to the Tools-Menu first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="118"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="122"/>
         <source>The selected file could not be found or is not an executable. Please choose an executable filename.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="129"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>An entry for the menu text {0} already exists.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="180"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>Change tool entry</source>
         <translation>Araç boşluğunu değiştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="162"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="166"/>
         <source>You have to set an executable to change the Tools-Menu entry.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="171"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="175"/>
         <source>You have to insert a menuentry text to change the selected Tools-Menu entry.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="180"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>The selected file could not be found or is not an executable. Please choose an existing executable filename.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
         <source>Select executable</source>
         <translation>Yürütülebileceği seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
         <source>The selected file is not an executable. Please choose an executable filename.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="290"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
         <source>Select icon file</source>
         <translation>İcon dosyasını seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="290"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
         <source>Icon files (*.png)</source>
         <translation>Ikon dosyaları(*.png)</translation>
     </message>
@@ -54962,12 +54962,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Çeviri Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="50"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="82"/>
         <source>Show directory selection dialog</source>
         <translation>Dizin seçme diyaloğunu göster</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="28"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="85"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Select the directory for the binary translations via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;İkili Çeviri Yolu&lt;/b&gt;
@@ -54976,135 +54976,135 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="39"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="25"/>
         <source>Enter the path for the binary translation files (*.qm)</source>
         <translation>İkili çeviri dosyalarının (*.qm) yolunu giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="42"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="28"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Enter the directory for the binary translation files (*.qm). Leave it empty to store them together with the *.ts files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;İkili Çeviri Yolu&lt;/b&gt;
 &lt;p&gt;İkil çeviri dosyaları için (*.qm) dizini giriniz. Boş bırakırsanız  *.ts dosyalırının bulunduğu yere yüklenir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="53"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="74"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Select a translation file via a file selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="64"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="36"/>
         <source>&amp;Binary Translations Path:</source>
         <translation>&amp;İkili Çeviri Yolu:</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="74"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="46"/>
         <source>Enter the path pattern for the translation files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="77"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="49"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Enter the path pattern for the translation files using %language% at the place of the language code (e.g. /path_to_eric/i18n/eric5_%language%.ts). This will result in translation files like /path_to_eric/i18n/eric5_de.ts.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="85"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="101"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="95"/>
         <source>Exclude from translation</source>
         <translation>Çevirinin dışında tut</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="107"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="101"/>
         <source>Press to select a directory via a selection dialog</source>
         <translation>Seçim diyaloğu ile bir dizin seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="110"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="104"/>
         <source>Select d&amp;irectory...</source>
         <translation>D&amp;izini seçiniz...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="117"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="111"/>
         <source>Press to select a file via a selection dialog</source>
         <translation>Dosya seçme  diyaloğu ile bir dosya seçmek için basın</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="120"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="114"/>
         <source>Select &amp;file...</source>
         <translation>Dosya a&amp;ra...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="130"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="124"/>
         <source>Press to add the entered path or file to the list</source>
         <translation>Girilen yolu yada dosyayı listeye eklemek için basınız</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="133"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="127"/>
         <source>&amp;Add</source>
         <translation>&amp;Ekle</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="143"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="137"/>
         <source>Press to delete the selected entry from the list</source>
         <translation>Seçilen girişi listeden silmek için basınız</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="146"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="140"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="153"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="147"/>
         <source>Enter a path or file to be added</source>
         <translation>Eklemek için bir yol yada dosya giriniz</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="160"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="154"/>
         <source>List of paths or files to excude from translation</source>
         <translation>Çevirisi yapılmayacak yol veya dizinlerin listesi</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="60"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="64"/>
         <source>Source Files ({0});;</source>
         <translation>Kaynak Dosyaları ({0});;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="62"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="66"/>
         <source>Forms Files ({0});;</source>
         <translation>Form Dosyaları ({0});;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="64"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="68"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="97"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="101"/>
         <source>Select translation file</source>
         <translation>Çeviri dosyasını seç</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="126"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="130"/>
         <source>Select directory for binary translations</source>
         <translation>İkili çeviri için dizini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="169"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="173"/>
         <source>Exempt file from translation</source>
         <translation>Çeviriden muaf tutulacak dosya</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="182"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="186"/>
         <source>Exempt directory from translation</source>
         <translation>Çeviriden muaf tutlacak dizin</translation>
     </message>
@@ -56053,7 +56053,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="394"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="396"/>
         <source>Unittest</source>
         <translation>Birimtest</translation>
     </message>
@@ -56087,62 +56087,62 @@ cases.&lt;/p&gt;</source>
         <translation>Test &amp;Adı:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="81"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
         <source>Open a file selection dialog</source>
         <translation>Dosya seçim diyaloğu aç</translation>
     </message>
     <message>
         <location filename="../PyUnit/UnittestDialog.ui" line="84"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="81"/>
         <source>Enter test &amp;filename:</source>
         <translation>Test &amp;Dosyası:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="110"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="107"/>
         <source>Select whether you want to run the test locally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="113"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="110"/>
         <source>Run &amp;local</source>
         <translation>Yere&amp;l çalıştır</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="120"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="117"/>
         <source>Select whether coverage data should be collected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="123"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="120"/>
         <source>C&amp;ollect coverage data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="133"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="130"/>
         <source>Select whether old coverage data should be erased</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="136"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="133"/>
         <source>&amp;Erase coverage data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="154"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="151"/>
         <source>Progress:</source>
         <translation>İşlem:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="194"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="191"/>
         <source>Run:</source>
         <translation>Çalıştır:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="201"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="198"/>
         <source>Number of tests run</source>
         <translation>Çalışan testlerin sayısı</translation>
     </message>
@@ -56152,219 +56152,219 @@ cases.&lt;/p&gt;</source>
         <translation type="obsolete">0</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="245"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="242"/>
         <source>Failures:</source>
         <translation>Başarısızlıklar:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="252"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="249"/>
         <source>Number of test failures</source>
         <translation>Test başarısızlıklarının sayısı</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="262"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="259"/>
         <source>Errors:</source>
         <translation>Hatalar:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="269"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="266"/>
         <source>Number of test errors</source>
         <translation>Test hatalarının sayısı</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="211"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="208"/>
         <source>Remaining:</source>
         <translation>Geride kalan:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="218"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="215"/>
         <source>Number of tests to be run</source>
         <translation>Koşturulacak test sayısı</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="351"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="348"/>
         <source>Tests performed:</source>
         <translation>Başarılan test:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="361"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="358"/>
         <source>Failures and errors:</source>
         <translation>Başarısızlık ve Hatalar:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="368"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="365"/>
         <source>Failures and Errors list</source>
         <translation>Başarısızlık ve Hata listesi</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="371"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="368"/>
         <source>&lt;b&gt;Failures and Errors list&lt;/b&gt;
 &lt;p&gt;This list shows all failed and errored tests.
 Double clicking on an entry will show the respective traceback.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="398"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="395"/>
         <source>Idle</source>
         <translation>Idle</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="63"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="65"/>
         <source>Start</source>
         <translation>Başla</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="65"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="67"/>
         <source>Start the selected testsuite</source>
         <translation>Seçilen test yöntemini başmat</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="67"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="69"/>
         <source>&lt;b&gt;Start Test&lt;/b&gt;&lt;p&gt;This button starts the selected testsuite.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="78"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="80"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="80"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="82"/>
         <source>Stop the running unittest</source>
         <translation>Çalışan birimtestini durdur</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="81"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="83"/>
         <source>&lt;b&gt;Stop Test&lt;/b&gt;&lt;p&gt;This button stops a running unittest.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="115"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="117"/>
         <source>^Failure: </source>
         <translation>^Başarısızlık: </translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="116"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="118"/>
         <source>^Error: </source>
         <translation>^Hata: </translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="196"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="198"/>
         <source>Python3 Files ({1});;Python2 Files ({0});;All Files (*)</source>
         <translation>Python3 Dosyaları ({1});;Python2 Dosyaları ({0});; Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="200"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="202"/>
         <source>Python Files (*.py);;All Files (*)</source>
         <translation>Python Dosyaları (*.py);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="259"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="261"/>
         <source>You must enter a test suite file.</source>
         <translation>Testyönteminin dosyasını girmelisiniz.</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="267"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="269"/>
         <source>Preparing Testsuite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="394"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="396"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="463"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="465"/>
         <source>Running</source>
         <translation>Çalışıyor</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="487"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="489"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="490"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="492"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="506"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="508"/>
         <source>Failure: {0}</source>
         <translation>Başarısızlık:{0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="521"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="523"/>
         <source>Error: {0}</source>
         <translation>Hata: {0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="626"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="628"/>
         <source>Show Source</source>
         <translation>Kaynağı Göster</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="279"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="276"/>
         <source>Skipped:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="286"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="283"/>
         <source>Number of tests skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="296"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="293"/>
         <source>Expected Failures:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="303"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="300"/>
         <source>Number of tests with expected failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="313"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="310"/>
         <source>Unexpected Successes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="320"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="317"/>
         <source>Number of tests with unexpected success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="536"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="538"/>
         <source>    Skipped: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="551"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="553"/>
         <source>    Expected Failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="565"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="567"/>
         <source>    Unexpected Success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="70"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="72"/>
         <source>Rerun Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="72"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="74"/>
         <source>Reruns failed tests of the selected testsuite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="74"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="76"/>
         <source>&lt;b&gt;Rerun Failed&lt;/b&gt;&lt;p&gt;This button reruns all failed tests of the selected testsuite.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="185"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="182"/>
         <source>%v/%m Tests</source>
         <translation type="unfinished"></translation>
     </message>

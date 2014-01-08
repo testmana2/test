@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>565</width>
-    <height>167</height>
+    <height>169</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,16 +57,6 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="vcsUrlButton">
-       <property name="toolTip">
-        <string>Select the repository url via a directory selection dialog or the repository browser</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="vcsUrlLabel">
        <property name="text">
@@ -108,6 +98,13 @@
        </property>
        <property name="whatsThis">
         <string>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QToolButton" name="vcsUrlButton">
+       <property name="toolTip">
+        <string>Select the repository url via a directory selection dialog or the repository browser</string>
        </property>
       </widget>
      </item>

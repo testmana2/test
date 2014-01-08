@@ -15,6 +15,7 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 from E5Gui import E5FileDialog, E5MessageBox
 
 import Utilities
+import UI.PixmapCache
 
 from .Ui_HgAddSubrepositoryDialog import Ui_HgAddSubrepositoryDialog
 
@@ -32,6 +33,8 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.pathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.__ok = self.buttonBox.button(QDialogButtonBox.Ok)
         self.__ok.setEnabled(False)

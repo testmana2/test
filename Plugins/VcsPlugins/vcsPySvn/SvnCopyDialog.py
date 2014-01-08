@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
@@ -36,6 +37,8 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.source = source
         if os.path.isdir(self.source):

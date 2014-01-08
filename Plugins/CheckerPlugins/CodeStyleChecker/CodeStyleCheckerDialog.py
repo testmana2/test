@@ -89,6 +89,15 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         super().__init__(parent)
         self.setupUi(self)
         
+        self.excludeMessagesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        self.includeMessagesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        self.fixIssuesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        self.noFixIssuesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        
         self.docTypeComboBox.addItem(self.trUtf8("PEP-257"), "pep257")
         self.docTypeComboBox.addItem(self.trUtf8("Eric"), "eric")
         

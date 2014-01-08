@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>494</width>
-    <height>357</height>
+    <height>359</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -49,12 +49,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="workspaceButton">
+       <widget class="QToolButton" name="workspaceButton">
         <property name="toolTip">
          <string>Select the workspace directory via a directory selection button</string>
-        </property>
-        <property name="text">
-         <string notr="true">...</string>
         </property>
        </widget>
       </item>

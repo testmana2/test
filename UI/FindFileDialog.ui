@@ -286,15 +286,12 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="dirSelectButton">
+           <widget class="QToolButton" name="dirSelectButton">
             <property name="enabled">
              <bool>false</bool>
             </property>
             <property name="toolTip">
              <string>Select the directory via a directory selection dialog</string>
-            </property>
-            <property name="text">
-             <string>...</string>
             </property>
            </widget>
           </item>
@@ -430,22 +427,6 @@
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>dirButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dirSelectButton</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>392</x>
-     <y>136</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>577</x>
-     <y>168</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>

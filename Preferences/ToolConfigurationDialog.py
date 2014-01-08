@@ -16,8 +16,9 @@ from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
-import Utilities
 
+import Utilities
+import UI.PixmapCache
 
 class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
     """
@@ -32,6 +33,9 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.iconButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.executableButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.iconCompleter = E5FileCompleter(self.iconEdit)
         self.executableCompleter = E5FileCompleter(self.executableEdit)

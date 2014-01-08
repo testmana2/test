@@ -19,6 +19,7 @@ from .Ui_SpellingPropertiesDialog import Ui_SpellingPropertiesDialog
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
@@ -35,6 +36,9 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.pwlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pelButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.project = project
         self.parent = parent

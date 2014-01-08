@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
@@ -37,6 +38,9 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         if name:
             self.setObjectName(name)
         self.setupUi(self)
+        
+        self.sourceDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.targetDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.sourceDirCompleter = E5DirCompleter(self.sourceDirEdit)
         self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)

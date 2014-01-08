@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
@@ -46,6 +47,8 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         if name:
             self.setObjectName(name)
         self.setModal(modal)
+        
+        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.filenameCompleter = E5FileCompleter(self.filenameCombo)

@@ -17,6 +17,7 @@ from E5Gui import E5FileDialog
 from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
@@ -31,6 +32,8 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.databaseFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.databaseFileCompleter = E5FileCompleter()
         

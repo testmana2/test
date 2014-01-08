@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>374</height>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -173,12 +173,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="patchFileButton">
+      <widget class="QToolButton" name="patchFileButton">
        <property name="toolTip">
         <string>Press to select the patch file via a file selection dialog</string>
-       </property>
-       <property name="text">
-        <string notr="true">...</string>
        </property>
       </widget>
      </item>

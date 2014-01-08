@@ -20,6 +20,7 @@ from .Ui_SvnOptionsDialog import Ui_SvnOptionsDialog
 from .Config import ConfigSvnProtocols
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
@@ -37,6 +38,8 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         

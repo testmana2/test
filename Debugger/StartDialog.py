@@ -15,6 +15,7 @@ from E5Gui import E5FileDialog
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class StartDialog(QDialog):
@@ -75,6 +76,7 @@ class StartDialog(QDialog):
             from .Ui_StartProfileDialog import Ui_StartProfileDialog
             self.ui = Ui_StartProfileDialog()
         self.ui.setupUi(self)
+        self.ui.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.clearButton = self.ui.buttonBox.addButton(
             self.trUtf8("Clear Histories"), QDialogButtonBox.ActionRole)

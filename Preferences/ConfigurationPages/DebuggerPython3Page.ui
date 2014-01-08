@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>453</width>
+    <width>455</width>
     <height>449</height>
    </rect>
   </property>
@@ -55,12 +55,9 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="interpreterButton">
+       <widget class="QToolButton" name="interpreterButton">
         <property name="toolTip">
          <string>Press to select the Python3 interpreter via a file selection dialog</string>
-        </property>
-        <property name="text">
-         <string>...</string>
         </property>
        </widget>
       </item>
@@ -86,15 +83,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="debugClientButton">
+         <widget class="QToolButton" name="debugClientButton">
           <property name="enabled">
            <bool>false</bool>
           </property>
           <property name="toolTip">
            <string>Press to select the Debug Client via a file selection dialog</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>
@@ -218,22 +212,6 @@
     <hint type="destinationlabel">
      <x>332</x>
      <y>219</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>customButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>debugClientButton</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>455</x>
-     <y>195</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>463</x>
-     <y>222</y>
     </hint>
    </hints>
   </connection>

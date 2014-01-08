@@ -37,16 +37,6 @@
       <string>Qt Translations Directory</string>
      </property>
      <layout class="QGridLayout">
-      <item row="1" column="1">
-       <widget class="QPushButton" name="qt4TransButton">
-        <property name="toolTip">
-         <string>Press to select the Qt translations directory via a directory selection dialog</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="0">
        <widget class="QLineEdit" name="qt4TransEdit">
         <property name="toolTip">
@@ -68,6 +58,13 @@
         </property>
         <property name="wordWrap">
          <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QToolButton" name="qt4TransButton">
+        <property name="toolTip">
+         <string>Press to select the Qt translations directory via a directory selection dialog</string>
         </property>
        </widget>
       </item>

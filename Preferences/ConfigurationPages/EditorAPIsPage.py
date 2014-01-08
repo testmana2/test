@@ -19,6 +19,7 @@ from .Ui_EditorAPIsPage import Ui_EditorAPIsPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
@@ -32,6 +33,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorAPIsPage")
+        
+        self.apiFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.prepareApiButton.setText(self.trUtf8("Compile APIs"))
         self.__currentAPI = None

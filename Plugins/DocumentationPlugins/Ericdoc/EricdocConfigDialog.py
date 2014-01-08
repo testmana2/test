@@ -21,6 +21,7 @@ from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
 from DocumentationTools.Config import eric5docDefaultColors, \
     eric5docColorParameterNames
 import Utilities
+import UI.PixmapCache
 
 from eric5config import getConfig
 
@@ -39,6 +40,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.outputDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.cssButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.qtHelpDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         

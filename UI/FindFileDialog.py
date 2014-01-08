@@ -21,7 +21,7 @@ from .Ui_FindFileDialog import Ui_FindFileDialog
 
 import Utilities
 import Preferences
-
+import UI.PixmapCache
 
 class FindFileDialog(QDialog, Ui_FindFileDialog):
     """
@@ -55,6 +55,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         super().__init__(parent)
         self.setupUi(self)
         self.setWindowFlags(Qt.WindowFlags(Qt.Window))
+        
+        self.dirSelectButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.__replaceMode = replaceMode
         

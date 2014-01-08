@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>135</height>
+    <height>142</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,9 +40,6 @@
       <widget class="QToolButton" name="pathButton">
        <property name="toolTip">
         <string>Select the path of the sub-repository with a directory selection dialog</string>
-       </property>
-       <property name="text">
-        <string notr="true">...</string>
        </property>
       </widget>
      </item>

@@ -18,9 +18,10 @@ from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
 
 from .Ui_FindFileNameDialog import Ui_FindFileNameDialog
+
 from Utilities import direntries
 import Utilities
-
+import UI.PixmapCache
 
 class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     """
@@ -45,6 +46,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.searchDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.searchDirCompleter = E5DirCompleter(self.searchDirEdit)
         
