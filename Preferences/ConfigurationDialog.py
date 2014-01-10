@@ -779,6 +779,7 @@ class ConfigurationDialog(QDialog):
         size = self.cw.size()
         self.layout.addWidget(self.cw)
         self.resize(size)
+        self.setWindowTitle(self.cw.windowTitle())
         
         self.cw.accepted[()].connect(self.accept)
         self.cw.rejected[()].connect(self.reject)
@@ -846,6 +847,7 @@ class ConfigurationWindow(E5MainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        self.setWindowTitle(self.cw.windowTitle())
         
         self.setStyle(Preferences.getUI("Style"),
                       Preferences.getUI("StyleSheet"))
