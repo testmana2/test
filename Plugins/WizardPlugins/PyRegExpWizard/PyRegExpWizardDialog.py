@@ -704,6 +704,7 @@ class PyRegExpWizardDialog(QDialog):
         size = self.cw.size()
         self.__layout.addWidget(self.cw)
         self.resize(size)
+        self.setWindowTitle(self.cw.windowTitle())
         
         self.cw.buttonBox.accepted[()].connect(self.accept)
         self.cw.buttonBox.rejected[()].connect(self.reject)
@@ -734,6 +735,7 @@ class PyRegExpWizardWindow(E5MainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        self.setWindowTitle(self.cw.windowTitle())
         
         self.setStyle(
             Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
