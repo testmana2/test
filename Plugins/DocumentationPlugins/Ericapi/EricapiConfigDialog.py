@@ -40,7 +40,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.outputDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.outputFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
