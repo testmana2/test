@@ -442,7 +442,7 @@ ModuleItem UMLItem
 ModuleModel UMLModel
 ModuleScope Scope
 MultiProject QObject
-MultiProjectBrowser QListWidget
+MultiProjectBrowser QTreeWidget
 MultiProjectPage ConfigurationPageBase Ui_MultiProjectPage
 MultiProjectReader XMLStreamReaderBase
 MultiProjectWriter XMLStreamWriterBase

@@ -45,7 +45,7 @@ Module implementing the multi project browser.
     Class implementing the multi project browser.
 </p>
 <h3>Derived from</h3>
-QListWidget
+QTreeWidget
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -74,6 +74,9 @@ QListWidget
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__createPopupMenu">__createPopupMenu</a></td>
 <td>Private method to create the popup menu.</td>
+</tr><tr>
+<td><a href="#MultiProjectBrowser.__findCategoryItem">__findCategoryItem</a></td>
+<td>Private method to find the item for a category.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__findProjectItem">__findProjectItem</a></td>
 <td>Private method to search a specific project item.</td>
@@ -164,7 +167,23 @@ the position of the mouse pointer (QPoint)
 <b>__createPopupMenu</b>(<i></i>)
 <p>
         Private method to create the popup menu.
-</p><a NAME="MultiProjectBrowser.__findProjectItem" ID="MultiProjectBrowser.__findProjectItem"></a>
+</p><a NAME="MultiProjectBrowser.__findCategoryItem" ID="MultiProjectBrowser.__findCategoryItem"></a>
+<h4>MultiProjectBrowser.__findCategoryItem</h4>
+<b>__findCategoryItem</b>(<i>category</i>)
+<p>
+        Private method to find the item for a category.
+</p><dl>
+<dt><i>category</i></dt>
+<dd>
+category to search for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the category item or None, if there is
+            no such item (QTreeWidgetItem or None)
+</dd>
+</dl><a NAME="MultiProjectBrowser.__findProjectItem" ID="MultiProjectBrowser.__findProjectItem"></a>
 <h4>MultiProjectBrowser.__findProjectItem</h4>
 <b>__findProjectItem</b>(<i>project</i>)
 <p>
@@ -177,7 +196,7 @@ reference to the project data dictionary
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-row number of the project, -1 if not found (integer)
+reference to the item (QTreeWidgetItem) or None
 </dd>
 </dl><a NAME="MultiProjectBrowser.__multiProjectClosed" ID="MultiProjectBrowser.__multiProjectClosed"></a>
 <h4>MultiProjectBrowser.__multiProjectClosed</h4>
@@ -202,7 +221,7 @@ row number of the project, -1 if not found (integer)
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
-reference to the project item to be opened (QListWidgetItem)
+reference to the project item to be opened (QTreeWidgetItem)
 </dd>
 </dl><a NAME="MultiProjectBrowser.__projectAdded" ID="MultiProjectBrowser.__projectAdded"></a>
 <h4>MultiProjectBrowser.__projectAdded</h4>
@@ -257,7 +276,7 @@ reference to the project data dictionary
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
-reference to the item to be set (QListWidgetItem)
+reference to the item to be set (QTreeWidgetItem)
 </dd><dt><i>project</i></dt>
 <dd>
 reference to the project data dictionary

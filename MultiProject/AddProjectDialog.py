@@ -23,13 +23,15 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
     """
     Class implementing the add project dialog.
     """
-    def __init__(self, parent=None, startdir=None, project=None):
+    def __init__(self, parent=None, startdir=None, project=None,
+                 categories=None):
         """
         Constructor
         
         @param parent parent widget of this dialog (QWidget)
         @param startdir start directory for the selection dialog (string)
         @param project dictionary containing project data
+        @param categories list of already used categories (list of string)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -37,6 +39,10 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.fileCompleter = E5FileCompleter(self.filenameEdit)
+        
+        if categories:
+            self.categoryComboBox.addItem("")
+            self.categoryComboBox.addItems(sorted(categories))
         
         self.startdir = startdir
         
@@ -53,6 +59,10 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             self.filenameEdit.setText(project['file'])
             self.descriptionEdit.setPlainText(project['description'])
             self.masterCheckBox.setChecked(project['master'])
+            index = self.categoryComboBox.findText(project['category'])
+            if index == -1:
+                index = 0
+            self.categoryComboBox.setCurrentIndex(index)
     
     @pyqtSlot()
     def on_fileButton_clicked(self):
@@ -76,14 +86,16 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         """
         Public slot to retrieve the dialogs data.
         
-        @return tuple of four values (string, string, boolean, string) giving
-            the project name, the name of the project file, a flag telling,
-            whether the project shall be the main project and a short
-            description for the project
+        @return tuple of five values (string, string, boolean, string, string)
+            giving the project name, the name of the project file, a flag
+            telling whether the project shall be the main project, a short
+            description for the project and the project category
         """
-        return (self.nameEdit.text(), self.filenameEdit.text(),
+        return (self.nameEdit.text(),
+                self.filenameEdit.text(),
                 self.masterCheckBox.isChecked(),
-                self.descriptionEdit.toPlainText())
+                self.descriptionEdit.toPlainText(),
+                self.categoryComboBox.currentText())
     
     @pyqtSlot(str)
     def on_nameEdit_textChanged(self, txt):

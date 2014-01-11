@@ -7775,6 +7775,7 @@
       <keyword name="MultiProject (Package)" id="MultiProject (Package)" ref="index-eric5.MultiProject.html" />
       <keyword name="MultiProject.__checkFilesExist" id="MultiProject.__checkFilesExist" ref="eric5.MultiProject.MultiProject.html#MultiProject.__checkFilesExist" />
       <keyword name="MultiProject.__clearRecent" id="MultiProject.__clearRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__clearRecent" />
+      <keyword name="MultiProject.__extractCategories" id="MultiProject.__extractCategories" ref="eric5.MultiProject.MultiProject.html#MultiProject.__extractCategories" />
       <keyword name="MultiProject.__initData" id="MultiProject.__initData" ref="eric5.MultiProject.MultiProject.html#MultiProject.__initData" />
       <keyword name="MultiProject.__loadRecent" id="MultiProject.__loadRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__loadRecent" />
       <keyword name="MultiProject.__newMultiProject" id="MultiProject.__newMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__newMultiProject" />
@@ -7793,6 +7794,7 @@
       <keyword name="MultiProject.checkDirty" id="MultiProject.checkDirty" ref="eric5.MultiProject.MultiProject.html#MultiProject.checkDirty" />
       <keyword name="MultiProject.closeMultiProject" id="MultiProject.closeMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.closeMultiProject" />
       <keyword name="MultiProject.getActions" id="MultiProject.getActions" ref="eric5.MultiProject.MultiProject.html#MultiProject.getActions" />
+      <keyword name="MultiProject.getCategories" id="MultiProject.getCategories" ref="eric5.MultiProject.MultiProject.html#MultiProject.getCategories" />
       <keyword name="MultiProject.getDependantProjectFiles" id="MultiProject.getDependantProjectFiles" ref="eric5.MultiProject.MultiProject.html#MultiProject.getDependantProjectFiles" />
       <keyword name="MultiProject.getMasterProjectFile" id="MultiProject.getMasterProjectFile" ref="eric5.MultiProject.MultiProject.html#MultiProject.getMasterProjectFile" />
       <keyword name="MultiProject.getMenu" id="MultiProject.getMenu" ref="eric5.MultiProject.MultiProject.html#MultiProject.getMenu" />
@@ -7821,6 +7823,7 @@
       <keyword name="MultiProjectBrowser.__configure" id="MultiProjectBrowser.__configure" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__configure" />
       <keyword name="MultiProjectBrowser.__contextMenuRequested" id="MultiProjectBrowser.__contextMenuRequested" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__contextMenuRequested" />
       <keyword name="MultiProjectBrowser.__createPopupMenu" id="MultiProjectBrowser.__createPopupMenu" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__createPopupMenu" />
+      <keyword name="MultiProjectBrowser.__findCategoryItem" id="MultiProjectBrowser.__findCategoryItem" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__findCategoryItem" />
       <keyword name="MultiProjectBrowser.__findProjectItem" id="MultiProjectBrowser.__findProjectItem" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__findProjectItem" />
       <keyword name="MultiProjectBrowser.__multiProjectClosed" id="MultiProjectBrowser.__multiProjectClosed" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__multiProjectClosed" />
       <keyword name="MultiProjectBrowser.__multiProjectOpened" id="MultiProjectBrowser.__multiProjectOpened" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__multiProjectOpened" />

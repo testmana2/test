@@ -1123,32 +1123,32 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>AddProjectDialog</name>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="75"/>
         <source>Add Project</source>
         <translation>Proje Ekle</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="25"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="23"/>
         <source>&amp;Name:</source>
         <translation>A&amp;dı:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="35"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="33"/>
         <source>Enter the name of the project</source>
         <translation>Projenin adını giriniz</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="42"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="40"/>
         <source>Project&amp;file:</source>
         <translation>Proje &amp;Dosyası:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="52"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="50"/>
         <source>Enter the name of the project file</source>
         <translation>Proje dosyasının adını giriniz</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="95"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="57"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir proje dosyası seç</translation>
     </message>
@@ -1158,12 +1158,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="64"/>
         <source>&amp;Description:</source>
         <translation>A&amp;çıklama:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="72"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="77"/>
         <source>Enter a short description for the project</source>
         <translation>Proje için kısa bir açıklama giriniz</translation>
     </message>
@@ -1178,7 +1178,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Ana proje &amp;mi</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="47"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="53"/>
         <source>Project Properties</source>
         <translation>Proje Özellikleri</translation>
     </message>
@@ -1188,18 +1188,28 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Proje Dosyaları (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="75"/>
         <source>Project Files (*.e4p)</source>
         <translation>Proje Dosyaları (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="85"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
         <source>Select to make this project the main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="88"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
         <source>Is &amp;main project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
+        <source>&amp;Category:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
+        <source>Select a project category</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -15362,57 +15372,57 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Yerdeğiştir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="64"/>
+        <location filename="../UI/FindFileDialog.py" line="65"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="69"/>
+        <location filename="../UI/FindFileDialog.py" line="70"/>
         <source>Find</source>
         <translation>Bul</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="651"/>
+        <location filename="../UI/FindFileDialog.py" line="648"/>
         <source>Replace in Files</source>
         <translation>Dosyalarda yer değiştir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="373"/>
+        <location filename="../UI/FindFileDialog.py" line="370"/>
         <source>Invalid search expression</source>
         <translation>Geçersiz arama ifadesi</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="373"/>
+        <location filename="../UI/FindFileDialog.py" line="370"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="540"/>
+        <location filename="../UI/FindFileDialog.py" line="537"/>
         <source>Select directory</source>
         <translation>Dizin Seçiniz</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="610"/>
+        <location filename="../UI/FindFileDialog.py" line="607"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="651"/>
+        <location filename="../UI/FindFileDialog.py" line="648"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="678"/>
+        <location filename="../UI/FindFileDialog.py" line="675"/>
         <source>Open</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="679"/>
+        <location filename="../UI/FindFileDialog.py" line="676"/>
         <source>Copy Path to Clipboard</source>
         <translation>Yolu Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="625"/>
+        <location filename="../UI/FindFileDialog.py" line="622"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15515,22 +15525,22 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Yol</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="56"/>
+        <location filename="../UI/FindFileNameDialog.py" line="57"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="58"/>
+        <location filename="../UI/FindFileNameDialog.py" line="59"/>
         <source>Press to stop the search</source>
         <translation>Aramayı durdurmak için bas</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="60"/>
+        <location filename="../UI/FindFileNameDialog.py" line="61"/>
         <source>Opens the selected file</source>
         <translation>Seçilen dosya açılıyor</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="202"/>
+        <location filename="../UI/FindFileNameDialog.py" line="203"/>
         <source>Select search directory</source>
         <translation>Arama dizinini seç</translation>
     </message>
@@ -16931,17 +16941,17 @@ Reason: {0}</source>
         <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="60"/>
         <source>System</source>
         <translation type="unfinished">Sistem</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="73"/>
         <source>Select style sheet file</source>
         <translation type="unfinished">Sayfa stil dosyasını seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="73"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished">Qt Sayfa stili (*.qss);;Üstüste Sayfa Stili (*.css);;Tüm Dosyalar (*)</translation>
     </message>
@@ -17258,22 +17268,22 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="82"/>
         <source>Select Custom Viewer</source>
         <translation>Geleneksel-Görüntüleyiciyi seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="96"/>
         <source>Select Web-Browser</source>
         <translation>Web-Gözatıcısını seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="110"/>
         <source>Select PDF-Viewer</source>
         <translation>PDF-Görüntüleyicisini seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="122"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="124"/>
         <source>Select CHM-Viewer</source>
         <translation>CHM-Görüntüleyicisini Seçiniz</translation>
     </message>
@@ -20217,12 +20227,12 @@ You have %n tab(s) open.</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="131"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="131"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
@@ -32521,7 +32531,7 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
 <context>
     <name>MultiProject</name>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="209"/>
+        <location filename="../MultiProject/MultiProject.py" line="228"/>
         <source>Read multiproject file</source>
         <translation>Çokluproje dosyasını oku</translation>
     </message>
@@ -32531,7 +32541,7 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="obsolete">Sıkıştırılmış çokluproje dosyaları desteklenmiyor. Sıkıştırma kütüphanesi kayıp.</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="209"/>
+        <location filename="../MultiProject/MultiProject.py" line="228"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Çoklu Proje dosyası &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
@@ -32546,17 +32556,17 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="obsolete">&lt;p&gt;Çokluproje dosyası &lt;b&gt;{0}&lt;/b&gt; uygunsuz içirğe sahip.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="252"/>
+        <location filename="../MultiProject/MultiProject.py" line="273"/>
         <source>Save multiproject file</source>
         <translation>Çokluproje Dosyasını kaydet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="252"/>
+        <location filename="../MultiProject/MultiProject.py" line="273"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Çoklu Proje dosyası &lt;b&gt;{0}&lt;/b&gt; yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="588"/>
+        <location filename="../MultiProject/MultiProject.py" line="619"/>
         <source>Open multiproject</source>
         <translation>Çokluproje Aç</translation>
     </message>
@@ -32573,10 +32583,10 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="480"/>
         <source>Multiproject Files (*.e4m)</source>
-        <translation>Çokluproje Dosyaları (*.e4m)</translation>
+        <translation type="obsolete">Çokluproje Dosyaları (*.e4m)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="626"/>
+        <location filename="../MultiProject/MultiProject.py" line="657"/>
         <source>Save multiproject as</source>
         <translation>Çokluprojeleri olarak kaydet</translation>
     </message>
@@ -32586,7 +32596,7 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="obsolete">Çokluproje Dosyaları (*.e4m);;Sıkıştırılmış Çokluproje Dosyaları (*.e4mz)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="495"/>
+        <location filename="../MultiProject/MultiProject.py" line="526"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
@@ -32596,196 +32606,211 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="520"/>
+        <location filename="../MultiProject/MultiProject.py" line="551"/>
         <source>Close Multiproject</source>
         <translation>Çokluprojeyi Kapat</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="520"/>
+        <location filename="../MultiProject/MultiProject.py" line="551"/>
         <source>The current multiproject has unsaved changes.</source>
         <translation>Geçerli çokluprojede kaydedilmemiş değişiklikler var.</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="574"/>
+        <location filename="../MultiProject/MultiProject.py" line="605"/>
         <source>New multiproject</source>
         <translation>Yeni Çokluproje</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="574"/>
+        <location filename="../MultiProject/MultiProject.py" line="605"/>
         <source>&amp;New...</source>
         <translation>Ye&amp;ni...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="579"/>
+        <location filename="../MultiProject/MultiProject.py" line="610"/>
         <source>Generate a new multiproject</source>
         <translation>Yeni bir Çokluproje üret</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="580"/>
+        <location filename="../MultiProject/MultiProject.py" line="611"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni...&lt;/b&gt;&lt;p&gt;Bu yeni bir çokluproje için gerekli bilgilerin girileceği bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="588"/>
+        <location filename="../MultiProject/MultiProject.py" line="619"/>
         <source>&amp;Open...</source>
         <translation>&amp;Aç...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="593"/>
+        <location filename="../MultiProject/MultiProject.py" line="624"/>
         <source>Open an existing multiproject</source>
         <translation>Var olan Çokluprojeyi aç</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="594"/>
+        <location filename="../MultiProject/MultiProject.py" line="625"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aç...&lt;/b&gt;&lt;p&gt;Bu varolon bir projeyi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="601"/>
+        <location filename="../MultiProject/MultiProject.py" line="632"/>
         <source>Close multiproject</source>
         <translation>Çokluprojeyi kapat</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="601"/>
+        <location filename="../MultiProject/MultiProject.py" line="632"/>
         <source>&amp;Close</source>
         <translation>&amp;Kapat</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="605"/>
+        <location filename="../MultiProject/MultiProject.py" line="636"/>
         <source>Close the current multiproject</source>
         <translation>Geçerli çokluprojeyi kapat</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="607"/>
+        <location filename="../MultiProject/MultiProject.py" line="638"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kapat&lt;/b&gt;&lt;p&gt;Bu geçerli çokluprojeyi kapatır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="614"/>
+        <location filename="../MultiProject/MultiProject.py" line="645"/>
         <source>Save multiproject</source>
         <translation>Çokluprojeyi kaydet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="614"/>
+        <location filename="../MultiProject/MultiProject.py" line="645"/>
         <source>&amp;Save</source>
         <translation>&amp;Kaydet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="618"/>
+        <location filename="../MultiProject/MultiProject.py" line="649"/>
         <source>Save the current multiproject</source>
         <translation>Geçerli çokluprojeyi kaydet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="619"/>
+        <location filename="../MultiProject/MultiProject.py" line="650"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaydet&lt;/b&gt;&lt;p&gt;Bu geçerli çokluprojeyi kaydeder.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="626"/>
+        <location filename="../MultiProject/MultiProject.py" line="657"/>
         <source>Save &amp;as...</source>
         <translation>Farklı k&amp;aydet...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="631"/>
+        <location filename="../MultiProject/MultiProject.py" line="662"/>
         <source>Save the current multiproject to a new file</source>
         <translation>Geçerli çokluprojeyi yeni bir dosya olarak kaydet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="633"/>
+        <location filename="../MultiProject/MultiProject.py" line="664"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current multiproject to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Farklı kaydet&lt;/b&gt;&lt;p&gt;Bu geçerli çokluprojeyi yeni bir dosyaya kaydeder.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="640"/>
+        <location filename="../MultiProject/MultiProject.py" line="671"/>
         <source>Add project to multiproject</source>
         <translation>Çokluprojeye proje ekle</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="640"/>
+        <location filename="../MultiProject/MultiProject.py" line="671"/>
         <source>Add &amp;project...</source>
         <translation>&amp;Proje ekle...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="645"/>
+        <location filename="../MultiProject/MultiProject.py" line="676"/>
         <source>Add a project to the current multiproject</source>
         <translation>Geçerli çokluprojeye bir proje ekle</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="647"/>
+        <location filename="../MultiProject/MultiProject.py" line="678"/>
         <source>&lt;b&gt;Add project...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a project to the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proje ekle...&lt;/b&gt;&lt;p&gt;Bu geçerli çokluprojeye bir proje eklemek için diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="655"/>
+        <location filename="../MultiProject/MultiProject.py" line="686"/>
         <source>Multiproject properties</source>
         <translation>Çokluproje özellikleri</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="655"/>
+        <location filename="../MultiProject/MultiProject.py" line="686"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Özellikler...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="660"/>
+        <location filename="../MultiProject/MultiProject.py" line="691"/>
         <source>Show the multiproject properties</source>
         <translation>Çokluproje özelliklerini göster</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="662"/>
+        <location filename="../MultiProject/MultiProject.py" line="693"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the multiproject properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Özellikler...&lt;/b&gt;&lt;p&gt;Bu çokluproje özelliklerini düzenlemek için sir diyalog gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="682"/>
+        <location filename="../MultiProject/MultiProject.py" line="713"/>
         <source>&amp;Multiproject</source>
         <translation>&amp;Çokluproje</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="683"/>
+        <location filename="../MultiProject/MultiProject.py" line="714"/>
         <source>Open &amp;Recent Multiprojects</source>
         <translation>Geçmiş Çoklup&amp;rojeleri Aç</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="724"/>
+        <location filename="../MultiProject/MultiProject.py" line="755"/>
         <source>Multiproject</source>
         <translation>Çokluproje</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="783"/>
+        <location filename="../MultiProject/MultiProject.py" line="814"/>
         <source>&amp;Clear</source>
         <translation>T&amp;emizle</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="495"/>
+        <location filename="../MultiProject/MultiProject.py" line="526"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/MultiProject.py" line="447"/>
+        <source>Multiproject Files (*.e5m *.e4m)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/MultiProject.py" line="511"/>
+        <source>Multiproject Files (*.e5m)</source>
+        <translation type="unfinished">Çokluproje Dosyaları (*.e4m) {5m?}</translation>
     </message>
 </context>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="248"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="290"/>
         <source>Open</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="249"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="291"/>
         <source>Remove</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="250"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="292"/>
         <source>Properties</source>
         <translation>Özellikler</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="262"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="304"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="259"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Add Project...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="206"/>
+        <source>Not categorized</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -35307,17 +35332,17 @@ Select Update.</source>
 <context>
     <name>PluginRepositoryWindow</name>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="633"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="633"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;İşlem başlatılamıyor.&lt;br&gt;Bu durum büyük olasılıkla şundan kaynaklanıyto &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="633"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
         <source>OK</source>
         <translation>TAMAM</translation>
     </message>
@@ -35689,7 +35714,7 @@ Select Update.</source>
         <translation>CORBA IDL Derleyicisi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ProgramsDialog.py" line="325"/>
+        <location filename="../Preferences/ProgramsDialog.py" line="327"/>
         <source>(unknown)</source>
         <translation>(bilinmeyen)</translation>
     </message>
@@ -35704,12 +35729,12 @@ Select Update.</source>
         <translation>(ayarlanmadı)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ProgramsDialog.py" line="327"/>
+        <location filename="../Preferences/ProgramsDialog.py" line="329"/>
         <source>(not executable)</source>
         <translation>(yürütülemez)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ProgramsDialog.py" line="354"/>
+        <location filename="../Preferences/ProgramsDialog.py" line="356"/>
         <source>(not found)</source>
         <translation>(bulunamadı)</translation>
     </message>
@@ -47547,12 +47572,12 @@ Bağlantı yok</translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="94"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="94"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
@@ -47723,7 +47748,7 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation>proje dizini</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="72"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="73"/>
         <source>Working directory</source>
         <translation>Çalışma dizini</translation>
     </message>
@@ -48759,7 +48784,7 @@ the working copy.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="134"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="135"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
@@ -48811,17 +48836,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="70"/>
         <source>Select Repository-Directory</source>
         <translation>Kaynak Havuzu- Dizinin Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="98"/>
         <source>Select Project Directory</source>
         <translation>Proje Dizinini Seç</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="129"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54690,87 +54715,87 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Yürütül&amp;ebilir dosya:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="44"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
         <source>no redirection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
         <source>show output</source>
         <translation>çıktıyı göster</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
         <source>insert into current editor</source>
         <translation>geçerli dosyaya ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="48"/>
         <source>replace selection of current editor</source>
         <translation>Seçimi geçerli düzenleyiciye yerleştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="134"/>
         <source>Add tool entry</source>
         <translation>Araç boşluğu ekle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="104"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="105"/>
         <source>You have to set an executable to add to the Tools-Menu first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="113"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="114"/>
         <source>You have to insert a menuentry text to add the selected program to the Tools-Menu first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="122"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="123"/>
         <source>The selected file could not be found or is not an executable. Please choose an executable filename.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="134"/>
         <source>An entry for the menu text {0} already exists.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="185"/>
         <source>Change tool entry</source>
         <translation>Araç boşluğunu değiştir</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="166"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="167"/>
         <source>You have to set an executable to change the Tools-Menu entry.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="175"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="176"/>
         <source>You have to insert a menuentry text to change the selected Tools-Menu entry.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="185"/>
         <source>The selected file could not be found or is not an executable. Please choose an existing executable filename.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="280"/>
         <source>Select executable</source>
         <translation>Yürütülebileceği seç</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="280"/>
         <source>The selected file is not an executable. Please choose an executable filename.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="295"/>
         <source>Select icon file</source>
         <translation>İcon dosyasını seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="295"/>
         <source>Icon files (*.png)</source>
         <translation>Ikon dosyaları(*.png)</translation>
     </message>

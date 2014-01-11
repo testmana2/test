@@ -1171,32 +1171,32 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
 <context>
     <name>AddProjectDialog</name>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="75"/>
         <source>Add Project</source>
         <translation>Ajouter un projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="25"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="23"/>
         <source>&amp;Name:</source>
         <translation>&amp;Nom:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="35"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="33"/>
         <source>Enter the name of the project</source>
         <translation>Entrer le nom du projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="42"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="40"/>
         <source>Project&amp;file:</source>
         <translation>&amp;Fichier projet:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="52"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="50"/>
         <source>Enter the name of the project file</source>
         <translation>Entrer le nom du fichier projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="95"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="57"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Sélection du fichier projet via une boite de sélection</translation>
     </message>
@@ -1206,12 +1206,12 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="64"/>
         <source>&amp;Description:</source>
         <translation>&amp;Description:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="72"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="77"/>
         <source>Enter a short description for the project</source>
         <translation>Entrer une courte description du projet</translation>
     </message>
@@ -1226,7 +1226,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="obsolete">Est le projet &amp;principal</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="47"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="53"/>
         <source>Project Properties</source>
         <translation>Propriétés du projet</translation>
     </message>
@@ -1236,18 +1236,28 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="obsolete">Fichiers projets (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="65"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="75"/>
         <source>Project Files (*.e4p)</source>
         <translation>Fichiers projets (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="85"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
         <source>Select to make this project the main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="88"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
         <source>Is &amp;main project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
+        <source>&amp;Category:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
+        <source>Select a project category</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -15969,7 +15979,7 @@ et le curseurest placé après la parenthèse fermante</translation>
 <context>
     <name>FindFileDialog</name>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="540"/>
+        <location filename="../UI/FindFileDialog.py" line="537"/>
         <source>Select directory</source>
         <translation>Sélection répertoire</translation>
     </message>
@@ -16104,12 +16114,12 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation>Texte</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="69"/>
+        <location filename="../UI/FindFileDialog.py" line="70"/>
         <source>Find</source>
         <translation>Trouver</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="64"/>
+        <location filename="../UI/FindFileDialog.py" line="65"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
@@ -16174,7 +16184,7 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation>Remplacer</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="651"/>
+        <location filename="../UI/FindFileDialog.py" line="648"/>
         <source>Replace in Files</source>
         <translation>Remplacer dans les fichiers</translation>
     </message>
@@ -16199,37 +16209,37 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="678"/>
+        <location filename="../UI/FindFileDialog.py" line="675"/>
         <source>Open</source>
         <translation type="unfinished">Ouvrir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="679"/>
+        <location filename="../UI/FindFileDialog.py" line="676"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished">Copier chemin dans le Presse-Papiers</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="373"/>
+        <location filename="../UI/FindFileDialog.py" line="370"/>
         <source>Invalid search expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="373"/>
+        <location filename="../UI/FindFileDialog.py" line="370"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="610"/>
+        <location filename="../UI/FindFileDialog.py" line="607"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="651"/>
+        <location filename="../UI/FindFileDialog.py" line="648"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="625"/>
+        <location filename="../UI/FindFileDialog.py" line="622"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16332,22 +16342,22 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation>Chemin</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="60"/>
+        <location filename="../UI/FindFileNameDialog.py" line="61"/>
         <source>Opens the selected file</source>
         <translation>Ouvre le fichier sélectionné</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="58"/>
+        <location filename="../UI/FindFileNameDialog.py" line="59"/>
         <source>Press to stop the search</source>
         <translation>Cliquer pour stopper la recherche</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="202"/>
+        <location filename="../UI/FindFileNameDialog.py" line="203"/>
         <source>Select search directory</source>
         <translation>Sélectionne un répertoire de recherche</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="56"/>
+        <location filename="../UI/FindFileNameDialog.py" line="57"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
@@ -17823,17 +17833,17 @@ Reason: {0}</source>
         <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="60"/>
         <source>System</source>
         <translation type="unfinished">Système</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="73"/>
         <source>Select style sheet file</source>
         <translation type="unfinished">Sélectionne une feuille de style</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="73"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished">Feuilles Qt Style (*.qss);;Feuilles CSS (*.css);;Tous les fichiers (*)</translation>
     </message>
@@ -18168,22 +18178,22 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Navigateur Web</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="82"/>
         <source>Select Custom Viewer</source>
         <translation>Sélection d&apos;un Navigateur Personalisé</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="96"/>
         <source>Select Web-Browser</source>
         <translation>Sélection d&apos;un Navigateur Web</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="110"/>
         <source>Select PDF-Viewer</source>
         <translation>Sélection d&apos;un visualiseur de PDF</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="122"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="124"/>
         <source>Select CHM-Viewer</source>
         <translation>Sélection d&apos;un visualiseur CHM</translation>
     </message>
@@ -21248,12 +21258,12 @@ Zoom avant</translation>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="131"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Erreur du processus</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="131"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished">Impossible de lancer le processus {0}. Assurez-vous qu&apos;il est bien dans le chemin de recherche.</translation>
     </message>
@@ -33892,7 +33902,7 @@ Voulez-vous enregistrer les modifications?</translation>
 <context>
     <name>MultiProject</name>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="209"/>
+        <location filename="../MultiProject/MultiProject.py" line="228"/>
         <source>Read multiproject file</source>
         <translation>Lecture d&apos;un fichier multi-projet</translation>
     </message>
@@ -33917,7 +33927,7 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="obsolete">&lt;p&gt;Le fichier multi-projet &lt;b&gt;%1&lt;/b&gt; possède un contenu non valide.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="252"/>
+        <location filename="../MultiProject/MultiProject.py" line="273"/>
         <source>Save multiproject file</source>
         <translation>Enregistre le fichier multi-projet</translation>
     </message>
@@ -33927,7 +33937,7 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="obsolete">&lt;p&gt;Impossible d&apos;écrire le fichier multi-projet &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="588"/>
+        <location filename="../MultiProject/MultiProject.py" line="619"/>
         <source>Open multiproject</source>
         <translation>Ouvrir un multi-projet</translation>
     </message>
@@ -33944,10 +33954,10 @@ Voulez-vous enregistrer les modifications?</translation>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="480"/>
         <source>Multiproject Files (*.e4m)</source>
-        <translation>Fichiers multi-projets (*.e4m)</translation>
+        <translation type="obsolete">Fichiers multi-projets (*.e4m)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="626"/>
+        <location filename="../MultiProject/MultiProject.py" line="657"/>
         <source>Save multiproject as</source>
         <translation>Enregistre le fichier multi-projet en tant que</translation>
     </message>
@@ -33957,7 +33967,7 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="obsolete">Fichiers multi-projets (*.e4m);;Fichiers multi-projets compressés (*.e4mz)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="495"/>
+        <location filename="../MultiProject/MultiProject.py" line="526"/>
         <source>Save File</source>
         <translation>Enregistrer fichier</translation>
     </message>
@@ -33967,206 +33977,221 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="obsolete">&lt;p&gt;Le fichier &lt;b&gt;%1&lt;/b&gt; existe déjà.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="520"/>
+        <location filename="../MultiProject/MultiProject.py" line="551"/>
         <source>Close Multiproject</source>
         <translation>Ferme le multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="520"/>
+        <location filename="../MultiProject/MultiProject.py" line="551"/>
         <source>The current multiproject has unsaved changes.</source>
         <translation>Le multi-projet courant a des modifications non-enregistrées.</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="574"/>
+        <location filename="../MultiProject/MultiProject.py" line="605"/>
         <source>New multiproject</source>
         <translation>Nouveau multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="574"/>
+        <location filename="../MultiProject/MultiProject.py" line="605"/>
         <source>&amp;New...</source>
         <translation>&amp;Nouveau...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="579"/>
+        <location filename="../MultiProject/MultiProject.py" line="610"/>
         <source>Generate a new multiproject</source>
         <translation>Génère un nouveau multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="580"/>
+        <location filename="../MultiProject/MultiProject.py" line="611"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nouveau...&lt;/b&gt;&lt;p&gt;Ouvre une boite de dialogue pour saisir les informations du nouveau multi-projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="588"/>
+        <location filename="../MultiProject/MultiProject.py" line="619"/>
         <source>&amp;Open...</source>
         <translation>&amp;Ouvrir...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="593"/>
+        <location filename="../MultiProject/MultiProject.py" line="624"/>
         <source>Open an existing multiproject</source>
         <translation>Ouvre un multi-projet existant</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="594"/>
+        <location filename="../MultiProject/MultiProject.py" line="625"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ouvre...&lt;/b&gt;&lt;p&gt;Ouvre un multi-projet existant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="601"/>
+        <location filename="../MultiProject/MultiProject.py" line="632"/>
         <source>Close multiproject</source>
         <translation>Ferme le multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="601"/>
+        <location filename="../MultiProject/MultiProject.py" line="632"/>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="605"/>
+        <location filename="../MultiProject/MultiProject.py" line="636"/>
         <source>Close the current multiproject</source>
         <translation>Fermer le multi-projet en cours</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="607"/>
+        <location filename="../MultiProject/MultiProject.py" line="638"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fermer&lt;/b&gt;&lt;p&gt;Ferme le multi-projet en cours.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="614"/>
+        <location filename="../MultiProject/MultiProject.py" line="645"/>
         <source>Save multiproject</source>
         <translation>Enregistre le multiprojet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="614"/>
+        <location filename="../MultiProject/MultiProject.py" line="645"/>
         <source>&amp;Save</source>
         <translation>&amp;Enregistrer</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="618"/>
+        <location filename="../MultiProject/MultiProject.py" line="649"/>
         <source>Save the current multiproject</source>
         <translation>Enregistre le multi-projet courant</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="619"/>
+        <location filename="../MultiProject/MultiProject.py" line="650"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Enregistrer&lt;/b&gt;&lt;p&gt;Enregistre le multi-projet courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="626"/>
+        <location filename="../MultiProject/MultiProject.py" line="657"/>
         <source>Save &amp;as...</source>
         <translation>&amp;Enregistrer sous...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="631"/>
+        <location filename="../MultiProject/MultiProject.py" line="662"/>
         <source>Save the current multiproject to a new file</source>
         <translation>Enregistre le multi-projet courant dans un nouveau fichier</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="633"/>
+        <location filename="../MultiProject/MultiProject.py" line="664"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current multiproject to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Enregistrer sous&lt;/b&gt;&lt;p&gt;Enregistre le multi-projet en cours dans un nouveau fichier.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="640"/>
+        <location filename="../MultiProject/MultiProject.py" line="671"/>
         <source>Add project to multiproject</source>
         <translation>Ajoute un projet au multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="640"/>
+        <location filename="../MultiProject/MultiProject.py" line="671"/>
         <source>Add &amp;project...</source>
         <translation>Ajouter un &amp;projet...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="645"/>
+        <location filename="../MultiProject/MultiProject.py" line="676"/>
         <source>Add a project to the current multiproject</source>
         <translation>Ajoute un projet au multi-projet courant</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="647"/>
+        <location filename="../MultiProject/MultiProject.py" line="678"/>
         <source>&lt;b&gt;Add project...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a project to the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ajouter un projet...&lt;/b&gt;&lt;p&gt;Ouvre une fenêtre permettant d&apos;ajouter un projet au multi-projet courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="655"/>
+        <location filename="../MultiProject/MultiProject.py" line="686"/>
         <source>Multiproject properties</source>
         <translation>Propriétés du multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="655"/>
+        <location filename="../MultiProject/MultiProject.py" line="686"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propriétés...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="660"/>
+        <location filename="../MultiProject/MultiProject.py" line="691"/>
         <source>Show the multiproject properties</source>
         <translation>Affiche les propriétés du multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="662"/>
+        <location filename="../MultiProject/MultiProject.py" line="693"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the multiproject properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propriétés...&lt;/b&gt;&lt;p&gt;Affiche une boite de dialogue pour éditer les propriétés du multi-projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="682"/>
+        <location filename="../MultiProject/MultiProject.py" line="713"/>
         <source>&amp;Multiproject</source>
         <translation>&amp;Multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="683"/>
+        <location filename="../MultiProject/MultiProject.py" line="714"/>
         <source>Open &amp;Recent Multiprojects</source>
         <translation>Ouvre les multi-projets &amp;récents</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="724"/>
+        <location filename="../MultiProject/MultiProject.py" line="755"/>
         <source>Multiproject</source>
         <translation>Multi-projet</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="783"/>
+        <location filename="../MultiProject/MultiProject.py" line="814"/>
         <source>&amp;Clear</source>
         <translation>&amp;Effacer</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="209"/>
+        <location filename="../MultiProject/MultiProject.py" line="228"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="252"/>
+        <location filename="../MultiProject/MultiProject.py" line="273"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="495"/>
+        <location filename="../MultiProject/MultiProject.py" line="526"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Le fichier &lt;b&gt;{0}&lt;/b&gt;existe déjà. Écraser ?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/MultiProject.py" line="447"/>
+        <source>Multiproject Files (*.e5m *.e4m)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/MultiProject.py" line="511"/>
+        <source>Multiproject Files (*.e5m)</source>
+        <translation type="unfinished">Fichiers multi-projets (*.e4m) {5m?}</translation>
     </message>
 </context>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="248"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="290"/>
         <source>Open</source>
         <translation>Ouvrir</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="249"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="291"/>
         <source>Remove</source>
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="250"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="292"/>
         <source>Properties</source>
         <translation>Propriétés</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="262"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="304"/>
         <source>Configure...</source>
         <translation>Configuration...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="259"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Add Project...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="206"/>
+        <source>Not categorized</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -36768,7 +36793,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>PluginRepositoryWindow</name>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="633"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
@@ -36778,12 +36803,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de démarrer le processus.&lt;br&gt;Assurez-vous qu&apos;il est bien disponible &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="633"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="633"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -37210,17 +37235,17 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>(non configuré)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ProgramsDialog.py" line="327"/>
+        <location filename="../Preferences/ProgramsDialog.py" line="329"/>
         <source>(not executable)</source>
         <translation>(non executable)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ProgramsDialog.py" line="354"/>
+        <location filename="../Preferences/ProgramsDialog.py" line="356"/>
         <source>(not found)</source>
         <translation>(non trouvé)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ProgramsDialog.py" line="325"/>
+        <location filename="../Preferences/ProgramsDialog.py" line="327"/>
         <source>(unknown)</source>
         <translation>(inconnu)</translation>
     </message>
@@ -50646,7 +50671,7 @@ Plus d&apos;infos sur Cyclops et les objets SCC dans la documentation d&apos;Eri
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="94"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
@@ -50656,7 +50681,7 @@ Plus d&apos;infos sur Cyclops et les objets SCC dans la documentation d&apos;Eri
         <translation type="obsolete">Impossible de lancer le processus %1. Assurez-vous qu&apos;il est bien dans le chemin de recherche.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="94"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished">Impossible de lancer le processus {0}. Assurez-vous qu&apos;il est bien dans le chemin de recherche.</translation>
     </message>
@@ -50754,7 +50779,7 @@ Plus d&apos;infos sur Cyclops et les objets SCC dans la documentation d&apos;Eri
 <context>
     <name>SvnCommandDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="72"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="73"/>
         <source>Working directory</source>
         <translation>Répertoire de travail</translation>
     </message>
@@ -52011,12 +52036,12 @@ des numéros de révision au dessus.&lt;/p&gt;</translation>
 <context>
     <name>SvnNewProjectOptionsDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="70"/>
         <source>Select Repository-Directory</source>
         <translation>Sélection du répertoire référentiel</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="98"/>
         <source>Select Project Directory</source>
         <translation>Selection d&apos;un répertoire projet</translation>
     </message>
@@ -52063,7 +52088,7 @@ Laisser vide pour  utiliser les dernières données enregistrées.&lt;/p&gt;</tr
         <translation>&amp;Protocole:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="134"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="135"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
@@ -52127,7 +52152,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation>Sélection du répertoire du projet via une boite de sélection</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="129"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -57907,52 +57932,52 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>ToolConfigurationDialog</name>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="134"/>
         <source>Add tool entry</source>
         <translation>Ajouter un outil</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="104"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="105"/>
         <source>You have to set an executable to add to the Tools-Menu first.</source>
         <translation>Vous devez d&apos;abord définir un executable à ajouter dans le menu Outils.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="113"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="114"/>
         <source>You have to insert a menuentry text to add the selected program to the Tools-Menu first.</source>
         <translation>Pour ajouter le programme sélectionné au menu Outils, vous devez d&apos;abord indiquer le texte figurant dans le menu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="122"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="123"/>
         <source>The selected file could not be found or is not an executable. Please choose an executable filename.</source>
         <translation>Le fichier sélectionné est introuvable ou non-executable. Prière de choisir un fichier executable.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="185"/>
         <source>Change tool entry</source>
         <translation>Modifier l&apos;entrée Outil</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="166"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="167"/>
         <source>You have to set an executable to change the Tools-Menu entry.</source>
         <translation>Vous devez définir un executable pour modifier l&apos;entrée du menu Outils.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="175"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="176"/>
         <source>You have to insert a menuentry text to change the selected Tools-Menu entry.</source>
         <translation>Vous devez indiquer entrée de menu pour modifier l&apos;entrée du menu Outils sélectionnée.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="185"/>
         <source>The selected file could not be found or is not an executable. Please choose an existing executable filename.</source>
         <translation>Le fichier sélectionné est introuvable ou non-executable. Prière de choisir un fichier executable.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="280"/>
         <source>Select executable</source>
         <translation>Sélectionner un executable</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="279"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="280"/>
         <source>The selected file is not an executable. Please choose an executable filename.</source>
         <translation>Le fichier sélectionné n&apos;est pas executable. Prière de choisir un fichier executable.</translation>
     </message>
@@ -58216,22 +58241,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>&amp;Fichier executable:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="44"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
         <source>no redirection</source>
         <translation>pas de redirection</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
         <source>show output</source>
         <translation>afficher la sortie</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
         <source>insert into current editor</source>
         <translation>insérer la sortie dans l&apos;éditeur courant</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="48"/>
         <source>replace selection of current editor</source>
         <translation>remplacer la sélection dans l&apos;éditeur courant</translation>
     </message>
@@ -58241,12 +58266,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">Le menu comporte déjà une entrée %1.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="295"/>
         <source>Select icon file</source>
         <translation>Sélection d&apos;un fichier icône</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="294"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="295"/>
         <source>Icon files (*.png)</source>
         <translation>Fichiers icônes (*.png)</translation>
     </message>
@@ -58256,7 +58281,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>&lt;b&gt;Redirection de la sortie&lt;b&gt;&lt;p&gt;Sélectionner le type de redirection de la sortie standard. La sortie d&apos;erreur peut ne pas être redirigée ou bien être affichée dans la fenêtre de log .&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="134"/>
         <source>An entry for the menu text {0} already exists.</source>
         <translation type="unfinished"></translation>
     </message>

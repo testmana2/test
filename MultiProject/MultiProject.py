@@ -89,11 +89,13 @@ class MultiProject(QObject):
         self.opened = False
         self.projects = []      # list of project info; each info entry is
                                 # a dictionary
-                                # 'name'        : Name of the project
-                                # 'file'        : project filename
+                                # 'name'        : name of the project
+                                # 'file'        : project file name
                                 # 'master'      : flag indicating the master
                                 #                 project
                                 # 'description' : description of the project
+                                # 'category'    : name of the group
+        self.categories = []
     
     def __loadRecent(self):
         """
@@ -188,6 +190,23 @@ class MultiProject(QObject):
                 self.projects.remove(project)
             self.setDirty(True)
     
+    def __extractCategories(self):
+        """
+        Private slot to extract the categories used in the project definitions.
+        """
+        for project in self.projects:
+            if project['category'] and \
+                    project['category'] not in self.categories:
+                self.categories.append(project['category'])
+    
+    def getCategories(self):
+        """
+        Public method to get the list of defined categories.
+        
+        @return list of categories (list of string)
+        """
+        return [c for c in self.categories if c]
+    
     def __readMultiProject(self, fn):
         """
         Private method to read in a multi project (.e4m) file.
@@ -215,6 +234,8 @@ class MultiProject(QObject):
             
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
+        
+        self.__extractCategories()
         
         # insert filename into list of recently opened multi projects
         self.__syncRecent()
@@ -278,9 +299,10 @@ class MultiProject(QObject):
             startdir = self.ppath
         if not startdir:
             startdir = Preferences.getMultiProject("Workspace")
-        dlg = AddProjectDialog(self.ui, startdir=startdir)
+        dlg = AddProjectDialog(self.ui, startdir=startdir,
+                               categories=self.categories)
         if dlg.exec_() == QDialog.Accepted:
-            name, filename, isMaster, description = dlg.getData()
+            name, filename, isMaster, description, category = dlg.getData()
             
             # step 1: check, if project was already added
             for project in self.projects:
@@ -302,8 +324,11 @@ class MultiProject(QObject):
                 'file': filename,
                 'master': isMaster,
                 'description': description,
+                'category': category,
             }
             self.projects.append(project)
+            if category not in self.categories:
+                self.categories.append(category)
             self.projectAdded.emit(project)
             self.setDirty(True)
     
@@ -326,10 +351,13 @@ class MultiProject(QObject):
         # step 2: change the entry
         for project in self.projects:
             if project['file'] == pro['file']:
-                # project filename is not changeable via interface
+                # project file name is not changeable via interface
                 project['name'] = pro['name']
                 project['master'] = pro['master']
                 project['description'] = pro['description']
+                project['category'] = pro['category']
+                if project['category'] not in self.categories:
+                    self.categories.append(project['category'])
                 self.projectDataChanged.emit(project)
                 self.setDirty(True)
     
@@ -420,7 +448,7 @@ class MultiProject(QObject):
                 self.tr("Open multiproject"),
                 Preferences.getMultiProject("Workspace") or
                 Utilities.getHomeDir(),
-                self.tr("Multiproject Files (*.e4m)"))
+                self.tr("Multiproject Files (*.e5m *.e4m)"))
             
             if fn == "":
                 fn = None
@@ -457,6 +485,9 @@ class MultiProject(QObject):
         """
         if self.isDirty():
             if len(self.pfile) > 0:
+                if self.pfile.endswith(".e4m"):
+                    self.pfile = self.pfile.replace(".e4m", ".e5m")
+                    self.__syncRecent()
                 ok = self.__writeMultiProject()
             else:
                 ok = self.saveMultiProjectAs()
@@ -470,7 +501,7 @@ class MultiProject(QObject):
         
         @return flag indicating success (boolean)
         """
-        defaultFilter = self.tr("Multiproject Files (*.e4m)")
+        defaultFilter = self.tr("Multiproject Files (*.e5m)")
         if self.ppath:
             defaultPath = self.ppath
         else:
@@ -480,7 +511,7 @@ class MultiProject(QObject):
             self.parent(),
             self.tr("Save multiproject as"),
             defaultPath,
-            self.tr("Multiproject Files (*.e4m)"),
+            self.tr("Multiproject Files (*.e5m)"),
             defaultFilter,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         

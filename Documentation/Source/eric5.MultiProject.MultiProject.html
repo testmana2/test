@@ -104,6 +104,9 @@ QObject
 <td><a href="#MultiProject.__clearRecent">__clearRecent</a></td>
 <td>Private method to clear the recent multi projects menu.</td>
 </tr><tr>
+<td><a href="#MultiProject.__extractCategories">__extractCategories</a></td>
+<td>Private slot to extract the categories used in the project definitions.</td>
+</tr><tr>
 <td><a href="#MultiProject.__initData">__initData</a></td>
 <td>Private method to initialize the multi project data part.</td>
 </tr><tr>
@@ -157,6 +160,9 @@ QObject
 </tr><tr>
 <td><a href="#MultiProject.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
+</tr><tr>
+<td><a href="#MultiProject.getCategories">getCategories</a></td>
+<td>Public method to get the list of defined categories.</td>
 </tr><tr>
 <td><a href="#MultiProject.getDependantProjectFiles">getDependantProjectFiles</a></td>
 <td>Public method to get the filenames of the dependant projects.</td>
@@ -254,6 +260,11 @@ optional filename of a multi project file to open
 <b>__clearRecent</b>(<i></i>)
 <p>
         Private method to clear the recent multi projects menu.
+</p><a NAME="MultiProject.__extractCategories" ID="MultiProject.__extractCategories"></a>
+<h4>MultiProject.__extractCategories</h4>
+<b>__extractCategories</b>(<i></i>)
+<p>
+        Private slot to extract the categories used in the project definitions.
 </p><a NAME="MultiProject.__initData" ID="MultiProject.__initData"></a>
 <h4>MultiProject.__initData</h4>
 <b>__initData</b>(<i></i>)
@@ -413,6 +424,16 @@ flag indicating success (boolean)
 <dt>Returns:</dt>
 <dd>
 list of all actions (list of E5Action)
+</dd>
+</dl><a NAME="MultiProject.getCategories" ID="MultiProject.getCategories"></a>
+<h4>MultiProject.getCategories</h4>
+<b>getCategories</b>(<i></i>)
+<p>
+        Public method to get the list of defined categories.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of categories (list of string)
 </dd>
 </dl><a NAME="MultiProject.getDependantProjectFiles" ID="MultiProject.getDependantProjectFiles"></a>
 <h4>MultiProject.getDependantProjectFiles</h4>

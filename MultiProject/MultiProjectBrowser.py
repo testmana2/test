@@ -8,14 +8,14 @@ Module implementing the multi project browser.
 """
 
 from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QListWidget, QListWidgetItem, QDialog, QMenu
+from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QDialog, QMenu
 
 from E5Gui.E5Application import e5App
 
 import UI.PixmapCache
 
 
-class MultiProjectBrowser(QListWidget):
+class MultiProjectBrowser(QTreeWidget):
     """
     Class implementing the multi project browser.
     """
@@ -31,6 +31,10 @@ class MultiProjectBrowser(QListWidget):
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         self.setAlternatingRowColors(True)
+        self.setHeaderHidden(True)
+        self.setItemsExpandable(False)
+        self.setRootIsDecorated(False)
+        self.setSortingEnabled(True)
         
         self.__openingProject = False
         
@@ -71,7 +75,7 @@ class MultiProjectBrowser(QListWidget):
         for project in self.multiProject.getProjects():
             self.__addProject(project)
         
-        self.sortItems()
+        self.sortItems(0, Qt.AscendingOrder)
     
     def __multiProjectClosed(self):
         """
@@ -86,7 +90,7 @@ class MultiProjectBrowser(QListWidget):
         @param project reference to the project data dictionary
         """
         self.__addProject(project)
-        self.sortItems()
+        self.sortItems(0, Qt.AscendingOrder)
     
     def __projectRemoved(self, project):
         """
@@ -94,10 +98,14 @@ class MultiProjectBrowser(QListWidget):
         
         @param project reference to the project data dictionary
         """
-        row = self.__findProjectItem(project)
-        if row > -1:
-            itm = self.takeItem(row)
+        itm = self.__findProjectItem(project)
+        if itm:
+            parent = itm.parent()
+            parent.removeChild(itm)
             del itm
+            if parent.childCount() == 0:
+                top = self.takeTopLevelItem(self.indexOfTopLevelItem(parent))
+                del top
     
     def __projectDataChanged(self, project):
         """
@@ -105,11 +113,16 @@ class MultiProjectBrowser(QListWidget):
         
         @param project reference to the project data dictionary
         """
-        row = self.__findProjectItem(project)
-        if row > -1:
-            self.__setItemData(self.item(row), project)
+        itm = self.__findProjectItem(project)
+        if itm:
+            parent = itm.parent()
+            if parent.text(0) != project["category"]:
+                self.__projectRemoved(project)
+                self.__addProject(project)
+            else:
+                self.__setItemData(itm, project)
             
-            self.sortItems()
+        self.sortItems(0, Qt.AscendingOrder)
     
     def __projectOpened(self, projectfile):
         """
@@ -122,10 +135,11 @@ class MultiProjectBrowser(QListWidget):
             'file': projectfile,
             'master': False,
             'description': "",
+            'category': "",
         }
-        row = self.__findProjectItem(project)
-        if row > -1:
-            self.item(row).setSelected(True)
+        itm = self.__findProjectItem(project)
+        if itm:
+            itm.setSelected(True)
     
     def __contextMenuRequested(self, coord):
         """
@@ -134,7 +148,7 @@ class MultiProjectBrowser(QListWidget):
         @param coord the position of the mouse pointer (QPoint)
         """
         itm = self.itemAt(coord)
-        if itm is None:
+        if itm is None or itm.parent() is None:
             self.__backMenu.popup(self.mapToGlobal(coord))
         else:
             self.__menu.popup(self.mapToGlobal(coord))
@@ -143,15 +157,15 @@ class MultiProjectBrowser(QListWidget):
         """
         Private slot to open a project.
         
-        @param itm reference to the project item to be opened (QListWidgetItem)
+        @param itm reference to the project item to be opened (QTreeWidgetItem)
         """
         if itm is None:
             itm = self.currentItem()
-            if itm is None:
+            if itm is None or itm.parent() is None:
                 return
         
         if not self.__openingProject:
-            filename = itm.data(Qt.UserRole)
+            filename = itm.data(0, Qt.UserRole)
             if filename:
                 self.__openingProject = True
                 self.multiProject.openProject(filename)
@@ -161,54 +175,78 @@ class MultiProjectBrowser(QListWidget):
     ## Private methods below
     ###########################################################################
     
+    def __findCategoryItem(self, category):
+        """
+        Private method to find the item for a category.
+        
+        @param category category to search for (string)
+        @return reference to the category item or None, if there is
+            no such item (QTreeWidgetItem or None)
+        """
+        if category == "":
+            category = self.tr("Not categorized")
+        for index in range(self.topLevelItemCount()):
+            itm = self.topLevelItem(index)
+            if itm.text(0) == category:
+                return itm
+        
+        return None
+    
     def __addProject(self, project):
         """
         Private method to add a project to the list.
         
         @param project reference to the project data dictionary
         """
-        itm = QListWidgetItem(self)
+        parent = self.__findCategoryItem(project['category'])
+        if parent is None:
+            if project['category']:
+                parent = QTreeWidgetItem(self, [project['category']])
+            else:
+                parent = QTreeWidgetItem(self, [self.tr("Not categorized")])
+            parent.setExpanded(True)
+        itm = QTreeWidgetItem(parent)
         self.__setItemData(itm, project)
     
     def __setItemData(self, itm, project):
         """
         Private method to set the data of a project item.
         
-        @param itm reference to the item to be set (QListWidgetItem)
+        @param itm reference to the item to be set (QTreeWidgetItem)
         @param project reference to the project data dictionary
         """
-        itm.setText(project['name'])
+        itm.setText(0, project['name'])
         if project['master']:
-            itm.setIcon(UI.PixmapCache.getIcon("masterProject.png"))
+            itm.setIcon(0, UI.PixmapCache.getIcon("masterProject.png"))
         else:
-            itm.setIcon(UI.PixmapCache.getIcon("empty.png"))
-        itm.setToolTip(project['file'])
-        itm.setData(Qt.UserRole, project['file'])
+            itm.setIcon(0, UI.PixmapCache.getIcon("empty.png"))
+        itm.setToolTip(0, project['file'])
+        itm.setData(0, Qt.UserRole, project['file'])
     
     def __findProjectItem(self, project):
         """
         Private method to search a specific project item.
         
         @param project reference to the project data dictionary
-        @return row number of the project, -1 if not found (integer)
+        @return reference to the item (QTreeWidgetItem) or None
         """
-        row = 0
-        while row < self.count():
-            itm = self.item(row)
-            data = itm.data(Qt.UserRole)
-            if data == project['file']:
-                return row
-            row += 1
+        for topIndex in range(self.topLevelItemCount()):
+            topItm = self.topLevelItem(topIndex)
+            for childIndex in range(topItm.childCount()):
+                itm = topItm.child(childIndex)
+                data = itm.data(0, Qt.UserRole)
+                if data == project['file']:
+                    return itm
         
-        return -1
+        return None
     
     def __removeProject(self):
         """
         Private method to handle the Remove context menu entry.
         """
         itm = self.currentItem()
-        if itm is not None:
-            filename = itm.data(Qt.UserRole)
+        if itm is not None and itm.parent() is not None:
+            filename = itm.data(0, Qt.UserRole)
             if filename:
                 self.multiProject.removeProject(filename)
     
@@ -217,20 +255,24 @@ class MultiProjectBrowser(QListWidget):
         Private method to show the data of a project entry.
         """
         itm = self.currentItem()
-        if itm is not None:
-            filename = itm.data(Qt.UserRole)
+        if itm is not None and itm.parent() is not None:
+            filename = itm.data(0, Qt.UserRole)
             if filename:
                 project = self.multiProject.getProject(filename)
                 if project is not None:
                     from .AddProjectDialog import AddProjectDialog
-                    dlg = AddProjectDialog(self, project=project)
+                    dlg = AddProjectDialog(
+                        self, project=project,
+                        categories=self.multiProject.getCategories())
                     if dlg.exec_() == QDialog.Accepted:
-                        name, filename, isMaster, description = dlg.getData()
+                        name, filename, isMaster, description, category = \
+                            dlg.getData()
                         project = {
                             'name': name,
                             'file': filename,
                             'master': isMaster,
                             'description': description,
+                            'category': category,
                         }
                         self.multiProject.changeProjectProperties(project)
     

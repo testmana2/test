@@ -17,7 +17,7 @@ class MultiProjectReader(XMLStreamReaderBase):
     """
     Class for reading an XML multi project file.
     """
-    supportedVersions = ["4.2"]
+    supportedVersions = ["4.2", "5.0"]
     
     def __init__(self, device, multiProject):
         """
@@ -61,7 +61,7 @@ class MultiProjectReader(XMLStreamReaderBase):
         """
         while not self.atEnd():
             self.readNext()
-            if self.isEndElement() and self.name() == "Task":
+            if self.isEndElement() and self.name() == "Projects":
                 break
             
             if self.isStartElement():
@@ -81,6 +81,9 @@ class MultiProjectReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Project":
+                if 'category' not in project:
+                    # upgrade from 4.2 format
+                    project["category"] = ""
                 self.multiProject.projects.append(project)
                 break
             
@@ -92,5 +95,7 @@ class MultiProjectReader(XMLStreamReaderBase):
                         self.readElementText())
                 elif self.name() == "ProjectDescription":
                     project["description"] = self.readElementText()
+                elif self.name() == "ProjectCategory":
+                    project["category"] = self.readElementText()
                 else:
                     self.raiseUnexpectedStartTag(self.name())
