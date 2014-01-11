@@ -205,7 +205,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         if self.noResults:
             self.__createResultItem(
-                self.trUtf8('No indentation errors found.'), "", "")
+                self.tr('No indentation errors found.'), "", "")
             QApplication.processEvents()
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
@@ -280,7 +280,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
             return (True, filename, "1",
-                    self.trUtf8("Python2 interpreter not configured."))
+                    self.tr("Python2 interpreter not configured."))
         
         checker = os.path.join(getConfig('ericDir'),
                                "UtilitiesPython2", "TabnannyChecker.py")
@@ -304,4 +304,4 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                 return (False, None, None, None)
         
         return (True, filename, "1",
-                self.trUtf8("Python2 interpreter did not finish within 15s."))
+                self.tr("Python2 interpreter did not finish within 15s."))

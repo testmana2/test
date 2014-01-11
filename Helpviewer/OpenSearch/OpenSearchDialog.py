@@ -54,17 +54,17 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         """
         fileNames = E5FileDialog.getOpenFileNames(
             self,
-            self.trUtf8("Add search engine"),
+            self.tr("Add search engine"),
             "",
-            self.trUtf8("OpenSearch (*.xml);;All Files (*)"))
+            self.tr("OpenSearch (*.xml);;All Files (*)"))
         
         osm = self.__mw.openSearchManager()
         for fileName in fileNames:
             if not osm.addEngine(fileName):
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Add search engine"),
-                    self.trUtf8(
+                    self.tr("Add search engine"),
+                    self.tr(
                         """{0} is not a valid OpenSearch 1.1 description or"""
                         """ is already on your list.""").format(fileName))
     
@@ -76,8 +76,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         if self.enginesTable.model().rowCount() == 1:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Delete selected engines"),
-                self.trUtf8("""You must have at least one search engine."""))
+                self.tr("Delete selected engines"),
+                self.tr("""You must have at least one search engine."""))
         
         self.enginesTable.removeSelected()
     

@@ -164,8 +164,8 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 
@@ -211,8 +211,8 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 return process, self.__isNetworked
@@ -224,8 +224,8 @@ class DebuggerInterfaceRuby(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
 
@@ -264,8 +264,8 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 # set translation function
@@ -311,8 +311,8 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 return process, self.__isNetworked
@@ -324,8 +324,8 @@ class DebuggerInterfaceRuby(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
 

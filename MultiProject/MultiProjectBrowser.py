@@ -245,21 +245,21 @@ class MultiProjectBrowser(QListWidget):
         Private method to create the popup menu.
         """
         self.__menu = QMenu(self)
-        self.__menu.addAction(self.trUtf8("Open"), self.__openItem)
-        self.__menu.addAction(self.trUtf8("Remove"), self.__removeProject)
-        self.__menu.addAction(self.trUtf8("Properties"),
+        self.__menu.addAction(self.tr("Open"), self.__openItem)
+        self.__menu.addAction(self.tr("Remove"), self.__removeProject)
+        self.__menu.addAction(self.tr("Properties"),
                               self.__showProjectProperties)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Add Project..."),
+        self.__menu.addAction(self.tr("Add Project..."),
                               self.__addNewProject)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.__backMenu = QMenu(self)
-        self.__backMenu.addAction(self.trUtf8("Add Project..."),
+        self.__backMenu.addAction(self.tr("Add Project..."),
                                   self.__addNewProject)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Configure..."),
+        self.__backMenu.addAction(self.tr("Configure..."),
                                   self.__configure)
     
     def __configure(self):

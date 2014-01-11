@@ -96,7 +96,7 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Python interpreter for Debug Client"),
+            self.tr("Select Python interpreter for Debug Client"),
             self.interpreterEdit.text(),
             "")
             
@@ -111,9 +111,9 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         file = E5FileDialog.getOpenFileName(
             None,
-            self.trUtf8("Select Debug Client"),
+            self.tr("Select Debug Client"),
             self.debugClientEdit.text(),
-            self.trUtf8("Python Files (*.py *.py3)"))
+            self.tr("Python Files (*.py *.py3)"))
             
         if file:
             self.debugClientEdit.setText(

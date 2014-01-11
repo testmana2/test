@@ -42,7 +42,7 @@ class StatusMonitorLed(E5Led):
         }
         self.__on = False
         
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<p>This LED indicates the operating"""
             """ status of the VCS monitor thread (off = monitoring off,"""
             """ green = monitoring on and ok, red = monitoring on, but"""
@@ -50,21 +50,21 @@ class StatusMonitorLed(E5Led):
             """ is given in the tooltip.</p>"""
         ))
         self.setToolTip(
-            self.trUtf8("Repository status checking is switched off")
+            self.tr("Repository status checking is switched off")
         )
         self.setColor(self.vcsMonitorLedColors["off"])
         
         # define a context menu
         self.__menu = QMenu(self)
         self.__checkAct = self.__menu.addAction(
-            self.trUtf8("Check status"), self.__checkStatus)
+            self.tr("Check status"), self.__checkStatus)
         self.__intervalAct = self.__menu.addAction(
-            self.trUtf8("Set interval..."), self.__setInterval)
+            self.tr("Set interval..."), self.__setInterval)
         self.__menu.addSeparator()
         self.__onAct = self.__menu.addAction(
-            self.trUtf8("Switch on"), self.__switchOn)
+            self.tr("Switch on"), self.__switchOn)
         self.__offAct = self.__menu.addAction(
-            self.trUtf8("Switch off"), self.__switchOff)
+            self.tr("Switch off"), self.__switchOff)
         self.__checkActions()
         
         # connect signals to our slots
@@ -125,8 +125,8 @@ class StatusMonitorLed(E5Led):
         """
         interval,  ok = QInputDialog.getInt(
             None,
-            self.trUtf8("VCS Status Monitor"),
-            self.trUtf8("Enter monitor interval [s]"),
+            self.tr("VCS Status Monitor"),
+            self.tr("Enter monitor interval [s]"),
             self.project.getStatusMonitorInterval(),
             0, 3600, 1)
         if ok:

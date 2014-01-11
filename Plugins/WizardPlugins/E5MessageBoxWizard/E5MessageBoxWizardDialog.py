@@ -32,25 +32,25 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         
         # keep the following three lists in sync
         self.buttonsList = [
-            self.trUtf8("No button"),
-            self.trUtf8("Abort"),
-            self.trUtf8("Apply"),
-            self.trUtf8("Cancel"),
-            self.trUtf8("Close"),
-            self.trUtf8("Discard"),
-            self.trUtf8("Help"),
-            self.trUtf8("Ignore"),
-            self.trUtf8("No"),
-            self.trUtf8("No to all"),
-            self.trUtf8("Ok"),
-            self.trUtf8("Open"),
-            self.trUtf8("Reset"),
-            self.trUtf8("Restore defaults"),
-            self.trUtf8("Retry"),
-            self.trUtf8("Save"),
-            self.trUtf8("Save all"),
-            self.trUtf8("Yes"),
-            self.trUtf8("Yes to all"),
+            self.tr("No button"),
+            self.tr("Abort"),
+            self.tr("Apply"),
+            self.tr("Cancel"),
+            self.tr("Close"),
+            self.tr("Discard"),
+            self.tr("Help"),
+            self.tr("Ignore"),
+            self.tr("No"),
+            self.tr("No to all"),
+            self.tr("Ok"),
+            self.tr("Open"),
+            self.tr("Reset"),
+            self.tr("Restore defaults"),
+            self.tr("Retry"),
+            self.tr("Save"),
+            self.tr("Save all"),
+            self.tr("Yes"),
+            self.tr("Yes to all"),
         ]
         self.buttonsCodeListBinary = [
             E5MessageBox.NoButton,
@@ -98,7 +98,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         self.defaultCombo.addItems(self.buttonsList)
         
         self.bTest = self.buttonBox.addButton(
-            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+            self.tr("Test"), QDialogButtonBox.ActionRole)
         
         self.__enabledGroups()
 
@@ -511,11 +511,11 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                     resvar, os.linesep)
             
             msgdlg += '{0}{1},{2}'.format(istring, parent, os.linesep)
-            msgdlg += '{0}self.trUtf8("{1}")'.format(
+            msgdlg += '{0}self.tr("{1}")'.format(
                 istring, self.eCaption.text())
             
             if not self.rAboutQt.isChecked():
-                msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
+                msgdlg += ',{0}{1}self.tr("""{2}""")'.format(
                     os.linesep, istring, self.eMessage.toPlainText())
             
             if self.rInformation.isChecked() or \
@@ -548,9 +548,9 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             msgdlg = "{0} = E5MessageBox.E5MessageBox({1}".format(
                 resvar, os.linesep)
             msgdlg += '{0}{1},{2}'.format(istring, icon, os.linesep)
-            msgdlg += '{0}self.trUtf8("{1}")'.format(
+            msgdlg += '{0}self.tr("{1}")'.format(
                 istring, self.eCaption.text())
-            msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
+            msgdlg += ',{0}{1}self.tr("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
             if self.modalCheck.isChecked():
                 msgdlg += ',{0}{1}modal=True'.format(os.linesep, istring)

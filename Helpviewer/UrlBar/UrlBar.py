@@ -41,8 +41,8 @@ class UrlBar(E5LineEdit):
         @param parent reference to the parent widget (HelpBrowser)
         """
         E5LineEdit.__init__(self, parent)
-        self.setInactiveText(self.trUtf8("Enter the URL here."))
-        self.setWhatsThis(self.trUtf8("Enter the URL here."))
+        self.setInactiveText(self.tr("Enter the URL here."))
+        self.setWhatsThis(self.tr("Enter the URL here."))
         
         self.__mw = mainWindow
         self.__browser = None
@@ -198,7 +198,7 @@ class UrlBar(E5LineEdit):
                         if cn != "":
                             org = cn.split(".", 1)[1]
                         if org == "":
-                            org = self.trUtf8("Unknown")
+                            org = self.tr("Unknown")
                     self.__sslLabel.setText(" {0} ".format(org))
                     self.__sslLabel.setVisible(True)
                     if qVersion() >= "5.0.0":

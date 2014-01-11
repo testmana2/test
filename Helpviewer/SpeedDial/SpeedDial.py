@@ -204,8 +204,8 @@ class SpeedDial(QObject):
                             self.__pagesPerRow, self.__speedDialSize):
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Saving Speed Dial data"),
-                self.trUtf8(
+                self.tr("Saving Speed Dial data"),
+                self.tr(
                     """<p>Speed Dial data could not be saved to"""
                     """ <b>{0}</b></p>""").format(speedDialFile))
         else:
@@ -373,7 +373,7 @@ class SpeedDial(QObject):
         
         if image.isNull():
             fileName = "qrc:icons/brokenPage.png"
-            title = self.trUtf8("Unable to load")
+            title = self.tr("Unable to load")
             loadTitle = True
             page = self.pageForUrl(thumbnailer.url())
             page.broken = True

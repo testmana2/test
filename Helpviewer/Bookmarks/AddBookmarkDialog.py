@@ -107,8 +107,8 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         self.locationCombo.setModel(self.__proxyModel)
         self.locationCombo.setView(self.__treeView)
         
-        self.addressEdit.setInactiveText(self.trUtf8("Url"))
-        self.nameEdit.setInactiveText(self.trUtf8("Title"))
+        self.addressEdit.setInactiveText(self.tr("Url"))
+        self.nameEdit.setInactiveText(self.tr("Title"))
         
         self.resize(self.sizeHint())
     
@@ -190,10 +190,10 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         self.__addFolder = folder
         
         if folder:
-            self.setWindowTitle(self.trUtf8("Add Folder"))
+            self.setWindowTitle(self.tr("Add Folder"))
             self.addressEdit.setVisible(False)
         else:
-            self.setWindowTitle(self.trUtf8("Add Bookmark"))
+            self.setWindowTitle(self.tr("Add Bookmark"))
             self.addressEdit.setVisible(True)
         
         self.resize(self.sizeHint())

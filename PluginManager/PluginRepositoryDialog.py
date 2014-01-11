@@ -66,18 +66,18 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.setupUi(self)
         
         self.__updateButton = self.buttonBox.addButton(
-            self.trUtf8("Update"), QDialogButtonBox.ActionRole)
+            self.tr("Update"), QDialogButtonBox.ActionRole)
         self.__downloadButton = self.buttonBox.addButton(
-            self.trUtf8("Download"), QDialogButtonBox.ActionRole)
+            self.tr("Download"), QDialogButtonBox.ActionRole)
         self.__downloadButton.setEnabled(False)
         self.__downloadInstallButton = self.buttonBox.addButton(
-            self.trUtf8("Download && Install"),
+            self.tr("Download && Install"),
             QDialogButtonBox.ActionRole)
         self.__downloadInstallButton.setEnabled(False)
         self.__downloadCancelButton = self.buttonBox.addButton(
-            self.trUtf8("Cancel"), QDialogButtonBox.ActionRole)
+            self.tr("Cancel"), QDialogButtonBox.ActionRole)
         self.__installButton = \
-            self.buttonBox.addButton(self.trUtf8("Close && Install"),
+            self.buttonBox.addButton(self.tr("Close && Install"),
                                      QDialogButtonBox.ActionRole)
         self.__downloadCancelButton.setEnabled(False)
         self.__installButton.setEnabled(False)
@@ -273,8 +273,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if ui and ui.notificationsEnabled():
             ui.showNotification(
                 UI.PixmapCache.getPixmap("plugin48.png"),
-                self.trUtf8("Download Plugin Files"),
-                self.trUtf8("""The requested plugins were downloaded."""))
+                self.tr("Download Plugin Files"),
+                self.tr("""The requested plugins were downloaded."""))
         
         if self.__isDownloadInstall:
             self.closeAndInstall.emit()
@@ -282,8 +282,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             if ui is None or not ui.notificationsEnabled():
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Download Plugin Files"),
-                    self.trUtf8("""The requested plugins were downloaded."""))
+                    self.tr("Download Plugin Files"),
+                    self.tr("""The requested plugins were downloaded."""))
             self.downloadProgress.setValue(0)
             
             # repopulate the list to update the refresh icons
@@ -325,23 +325,23 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self.repositoryUrlEdit.setText(url)
                     E5MessageBox.warning(
                         self,
-                        self.trUtf8("Plugins Repository URL Changed"),
-                        self.trUtf8(
+                        self.tr("Plugins Repository URL Changed"),
+                        self.tr(
                             """The URL of the Plugins Repository has"""
                             """ changed. Select the "Update" button to get"""
                             """ the new repository file."""))
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Read plugins repository file"),
-                    self.trUtf8("<p>The plugins repository file <b>{0}</b> "
-                                "could not be read. Select Update</p>")
+                    self.tr("Read plugins repository file"),
+                    self.tr("<p>The plugins repository file <b>{0}</b> "
+                            "could not be read. Select Update</p>")
                     .format(self.pluginRepositoryFile))
         else:
             self.__repositoryMissing = True
             QTreeWidgetItem(
                 self.repositoryList,
-                ["", self.trUtf8(
+                ["", self.tr(
                     "No plugin repository file available.\nSelect Update.")
                  ])
             self.repositoryList.resizeColumnToContents(1)
@@ -393,8 +393,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             if not self.__downloadCancelled:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Error downloading file"),
-                    self.trUtf8(
+                    self.tr("Error downloading file"),
+                    self.tr(
                         """<p>Could not download the requested file"""
                         """ from {0}.</p><p>Error: {1}</p>"""
                     ).format(self.__downloadURL, reply.errorString())
@@ -465,21 +465,21 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             if self.__stableItem is None:
                 self.__stableItem = \
                     QTreeWidgetItem(self.repositoryList,
-                                    [self.trUtf8("Stable")])
+                                    [self.tr("Stable")])
                 self.__stableItem.setExpanded(True)
             parent = self.__stableItem
         elif status == "unstable":
             if self.__unstableItem is None:
                 self.__unstableItem = \
                     QTreeWidgetItem(self.repositoryList,
-                                    [self.trUtf8("Unstable")])
+                                    [self.tr("Unstable")])
                 self.__unstableItem.setExpanded(True)
             parent = self.__unstableItem
         else:
             if self.__unknownItem is None:
                 self.__unknownItem = \
                     QTreeWidgetItem(self.repositoryList,
-                                    [self.trUtf8("Unknown")])
+                                    [self.tr("Unknown")])
                 self.__unknownItem.setExpanded(True)
             parent = self.__unknownItem
         itm = QTreeWidgetItem(parent, [name, version, short])
@@ -633,11 +633,11 @@ class PluginRepositoryWindow(E5MainWindow):
                 not proc.startDetached(sys.executable, args):
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     '<p>Could not start the process.<br>'
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(applPath),
-                self.trUtf8('OK'))
+                self.tr('OK'))
         
         self.close()

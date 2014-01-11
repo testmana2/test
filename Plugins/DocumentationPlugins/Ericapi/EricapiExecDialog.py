@@ -80,14 +80,14 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process.finished.connect(self.__finish)
             
         self.setWindowTitle(
-            self.trUtf8('{0} - {1}').format(self.cmdname, self.filename))
+            self.tr('{0} - {1}').format(self.cmdname, self.filename))
         self.process.start(program, args)
         procStarted = self.process.waitForStarted(5000)
         if not procStarted:
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format(program))
@@ -124,7 +124,7 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process = None
         
         self.contents.insertPlainText(
-            self.trUtf8('\n{0} finished.\n').format(self.cmdname))
+            self.tr('\n{0} finished.\n').format(self.cmdname))
         self.contents.ensureCursorVisible()
         
     def __readStdout(self):

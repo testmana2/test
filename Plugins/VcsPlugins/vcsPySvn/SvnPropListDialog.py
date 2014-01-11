@@ -125,7 +125,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         button.
         """
         if not self.propsFound:
-            self.__generateItem("", self.trUtf8("None"), "")
+            self.__generateItem("", self.tr("None"), "")
         
         self.__resort()
         self.__resizeColumns()

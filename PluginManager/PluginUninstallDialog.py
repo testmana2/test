@@ -52,13 +52,13 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             self.__external = False
         
         self.pluginDirectoryCombo.addItem(
-            self.trUtf8("User plugins directory"),
+            self.tr("User plugins directory"),
             self.__pluginManager.getPluginDir("user"))
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
             self.pluginDirectoryCombo.addItem(
-                self.trUtf8("Global plugins directory"),
+                self.tr("Global plugins directory"),
                 globalDir)
     
     @pyqtSlot(int)
@@ -102,8 +102,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         if not self.__pluginManager.unloadPlugin(pluginName):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8(
+                self.tr("Plugin Uninstallation"),
+                self.tr(
                     """<p>The plugin <b>{0}</b> could not be unloaded."""
                     """ Aborting...</p>""").format(pluginName))
             return False
@@ -114,8 +114,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         if not hasattr(module, "packageName"):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8(
+                self.tr("Plugin Uninstallation"),
+                self.tr(
                     """<p>The plugin <b>{0}</b> has no 'packageName'"""
                     """ attribute. Aborting...</p>""").format(pluginName))
             return False
@@ -167,8 +167,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         except OSError as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Plugin Uninstallation"),
-                self.trUtf8(
+                self.tr("Plugin Uninstallation"),
+                self.tr(
                     """<p>The plugin package <b>{0}</b> could not be"""
                     """ removed. Aborting...</p>"""
                     """<p>Reason: {1}</p>""").format(packageDir, str(err)))
@@ -179,8 +179,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             if ui.notificationsEnabled():
                 ui.showNotification(
                     UI.PixmapCache.getPixmap("plugin48.png"),
-                    self.trUtf8("Plugin Uninstallation"),
-                    self.trUtf8(
+                    self.tr("Plugin Uninstallation"),
+                    self.tr(
                         """<p>The plugin <b>{0}</b> was uninstalled"""
                         """ successfully from {1}.</p>""")
                     .format(pluginName, pluginDirectory))
@@ -188,8 +188,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         
         E5MessageBox.information(
             self,
-            self.trUtf8("Plugin Uninstallation"),
-            self.trUtf8(
+            self.tr("Plugin Uninstallation"),
+            self.tr(
                 """<p>The plugin <b>{0}</b> was uninstalled successfully"""
                 """ from {1}.</p>""")
             .format(pluginName, pluginDirectory))

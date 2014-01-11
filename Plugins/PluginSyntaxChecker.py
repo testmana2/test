@@ -73,12 +73,12 @@ class SyntaxCheckerPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
             self.__projectAct = E5Action(
-                self.trUtf8('Check Syntax'),
-                self.trUtf8('&Syntax...'), 0, 0,
+                self.tr('Check Syntax'),
+                self.tr('&Syntax...'), 0, 0,
                 self, 'project_check_syntax')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Check syntax.'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+                self.tr('Check syntax.'))
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Check Syntax...</b>"""
                 """<p>This checks Python files for syntax errors.</p>"""
             ))
@@ -87,10 +87,10 @@ class SyntaxCheckerPlugin(QObject):
             menu.addAction(self.__projectAct)
         
         self.__editorAct = E5Action(
-            self.trUtf8('Check Syntax'),
-            self.trUtf8('&Syntax...'), 0, 0,
+            self.tr('Check Syntax'),
+            self.tr('&Syntax...'), 0, 0,
             self, "")
-        self.__editorAct.setWhatsThis(self.trUtf8(
+        self.__editorAct.setWhatsThis(self.tr(
             """<b>Check Syntax...</b>"""
             """<p>This checks Python files for syntax errors.</p>"""
         ))
@@ -166,10 +166,10 @@ class SyntaxCheckerPlugin(QObject):
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
-                    self.trUtf8('Check Syntax'),
-                    self.trUtf8('&Syntax...'), 0, 0,
+                    self.tr('Check Syntax'),
+                    self.tr('&Syntax...'), 0, 0,
                     self, "")
-                self.__projectBrowserAct.setWhatsThis(self.trUtf8(
+                self.__projectBrowserAct.setWhatsThis(self.tr(
                     """<b>Check Syntax...</b>"""
                     """<p>This checks Python files for syntax errors.</p>"""
                 ))

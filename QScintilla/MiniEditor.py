@@ -249,8 +249,8 @@ class MiniEditor(E5MainWindow):
         """
         E5MessageBox.about(
             self,
-            self.trUtf8("About eric5 Mini Editor"),
-            self.trUtf8(
+            self.tr("About eric5 Mini Editor"),
+            self.tr(
                 "The eric5 Mini Editor is an editor component"
                 " based on QScintilla. It may be used for simple"
                 " editing tasks, that don't need the power of"
@@ -310,11 +310,11 @@ class MiniEditor(E5MainWindow):
         
         if line is None:
             line = ''
-        self.sbLine.setText(self.trUtf8('Line: {0:5}').format(line))
+        self.sbLine.setText(self.tr('Line: {0:5}').format(line))
         
         if pos is None:
             pos = ''
-        self.sbPos.setText(self.trUtf8('Pos: {0:5}').format(pos))
+        self.sbPos.setText(self.tr('Pos: {0:5}').format(pos))
     
     def __readShortcut(self, act, category):
         """
@@ -364,13 +364,13 @@ class MiniEditor(E5MainWindow):
         Private method to create the File actions.
         """
         self.newAct = E5Action(
-            self.trUtf8('New'),
+            self.tr('New'),
             UI.PixmapCache.getIcon("new.png"),
-            self.trUtf8('&New'),
-            QKeySequence(self.trUtf8("Ctrl+N", "File|New")),
+            self.tr('&New'),
+            QKeySequence(self.tr("Ctrl+N", "File|New")),
             0, self, 'vm_file_new')
-        self.newAct.setStatusTip(self.trUtf8('Open an empty editor window'))
-        self.newAct.setWhatsThis(self.trUtf8(
+        self.newAct.setStatusTip(self.tr('Open an empty editor window'))
+        self.newAct.setWhatsThis(self.tr(
             """<b>New</b>"""
             """<p>An empty editor window will be created.</p>"""
         ))
@@ -378,13 +378,13 @@ class MiniEditor(E5MainWindow):
         self.fileActions.append(self.newAct)
         
         self.openAct = E5Action(
-            self.trUtf8('Open'),
+            self.tr('Open'),
             UI.PixmapCache.getIcon("open.png"),
-            self.trUtf8('&Open...'),
-            QKeySequence(self.trUtf8("Ctrl+O", "File|Open")),
+            self.tr('&Open...'),
+            QKeySequence(self.tr("Ctrl+O", "File|Open")),
             0, self, 'vm_file_open')
-        self.openAct.setStatusTip(self.trUtf8('Open a file'))
-        self.openAct.setWhatsThis(self.trUtf8(
+        self.openAct.setStatusTip(self.tr('Open a file'))
+        self.openAct.setWhatsThis(self.tr(
             """<b>Open a file</b>"""
             """<p>You will be asked for the name of a file to be opened.</p>"""
         ))
@@ -392,13 +392,13 @@ class MiniEditor(E5MainWindow):
         self.fileActions.append(self.openAct)
         
         self.saveAct = E5Action(
-            self.trUtf8('Save'),
+            self.tr('Save'),
             UI.PixmapCache.getIcon("fileSave.png"),
-            self.trUtf8('&Save'),
-            QKeySequence(self.trUtf8("Ctrl+S", "File|Save")),
+            self.tr('&Save'),
+            QKeySequence(self.tr("Ctrl+S", "File|Save")),
             0, self, 'vm_file_save')
-        self.saveAct.setStatusTip(self.trUtf8('Save the current file'))
-        self.saveAct.setWhatsThis(self.trUtf8(
+        self.saveAct.setStatusTip(self.tr('Save the current file'))
+        self.saveAct.setWhatsThis(self.tr(
             """<b>Save File</b>"""
             """<p>Save the contents of current editor window.</p>"""
         ))
@@ -406,14 +406,14 @@ class MiniEditor(E5MainWindow):
         self.fileActions.append(self.saveAct)
         
         self.saveAsAct = E5Action(
-            self.trUtf8('Save as'),
+            self.tr('Save as'),
             UI.PixmapCache.getIcon("fileSaveAs.png"),
-            self.trUtf8('Save &as...'),
-            QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")),
+            self.tr('Save &as...'),
+            QKeySequence(self.tr("Shift+Ctrl+S", "File|Save As")),
             0, self, 'vm_file_save_as')
-        self.saveAsAct.setStatusTip(self.trUtf8(
+        self.saveAsAct.setStatusTip(self.tr(
             'Save the current file to a new one'))
-        self.saveAsAct.setWhatsThis(self.trUtf8(
+        self.saveAsAct.setWhatsThis(self.tr(
             """<b>Save File as</b>"""
             """<p>Save the contents of current editor window to a new file."""
             """ The file can be entered in a file selection dialog.</p>"""
@@ -422,13 +422,13 @@ class MiniEditor(E5MainWindow):
         self.fileActions.append(self.saveAsAct)
         
         self.closeAct = E5Action(
-            self.trUtf8('Close'),
+            self.tr('Close'),
             UI.PixmapCache.getIcon("close.png"),
-            self.trUtf8('&Close'),
-            QKeySequence(self.trUtf8("Ctrl+W", "File|Close")),
+            self.tr('&Close'),
+            QKeySequence(self.tr("Ctrl+W", "File|Close")),
             0, self, 'vm_file_close')
-        self.closeAct.setStatusTip(self.trUtf8('Close the editor window'))
-        self.closeAct.setWhatsThis(self.trUtf8(
+        self.closeAct.setStatusTip(self.tr('Close the editor window'))
+        self.closeAct.setWhatsThis(self.tr(
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
@@ -436,13 +436,13 @@ class MiniEditor(E5MainWindow):
         self.fileActions.append(self.closeAct)
         
         self.printAct = E5Action(
-            self.trUtf8('Print'),
+            self.tr('Print'),
             UI.PixmapCache.getIcon("print.png"),
-            self.trUtf8('&Print'),
-            QKeySequence(self.trUtf8("Ctrl+P", "File|Print")),
+            self.tr('&Print'),
+            QKeySequence(self.tr("Ctrl+P", "File|Print")),
             0, self, 'vm_file_print')
-        self.printAct.setStatusTip(self.trUtf8('Print the current file'))
-        self.printAct.setWhatsThis(self.trUtf8(
+        self.printAct.setStatusTip(self.tr('Print the current file'))
+        self.printAct.setWhatsThis(self.tr(
             """<b>Print File</b>"""
             """<p>Print the contents of the current file.</p>"""
         ))
@@ -450,13 +450,13 @@ class MiniEditor(E5MainWindow):
         self.fileActions.append(self.printAct)
         
         self.printPreviewAct = E5Action(
-            self.trUtf8('Print Preview'),
+            self.tr('Print Preview'),
             UI.PixmapCache.getIcon("printPreview.png"),
             QApplication.translate('ViewManager', 'Print Preview'),
             0, 0, self, 'vm_file_print_preview')
-        self.printPreviewAct.setStatusTip(self.trUtf8(
+        self.printPreviewAct.setStatusTip(self.tr(
             'Print preview of the current file'))
-        self.printPreviewAct.setWhatsThis(self.trUtf8(
+        self.printPreviewAct.setWhatsThis(self.tr(
             """<b>Print Preview</b>"""
             """<p>Print preview of the current file.</p>"""
         ))
@@ -468,14 +468,14 @@ class MiniEditor(E5MainWindow):
         Private method to create the Edit actions.
         """
         self.undoAct = E5Action(
-            self.trUtf8('Undo'),
+            self.tr('Undo'),
             UI.PixmapCache.getIcon("editUndo.png"),
-            self.trUtf8('&Undo'),
-            QKeySequence(self.trUtf8("Ctrl+Z", "Edit|Undo")),
-            QKeySequence(self.trUtf8("Alt+Backspace", "Edit|Undo")),
+            self.tr('&Undo'),
+            QKeySequence(self.tr("Ctrl+Z", "Edit|Undo")),
+            QKeySequence(self.tr("Alt+Backspace", "Edit|Undo")),
             self, 'vm_edit_undo')
-        self.undoAct.setStatusTip(self.trUtf8('Undo the last change'))
-        self.undoAct.setWhatsThis(self.trUtf8(
+        self.undoAct.setStatusTip(self.tr('Undo the last change'))
+        self.undoAct.setWhatsThis(self.tr(
             """<b>Undo</b>"""
             """<p>Undo the last change done in the current editor.</p>"""
         ))
@@ -483,13 +483,13 @@ class MiniEditor(E5MainWindow):
         self.editActions.append(self.undoAct)
         
         self.redoAct = E5Action(
-            self.trUtf8('Redo'),
+            self.tr('Redo'),
             UI.PixmapCache.getIcon("editRedo.png"),
-            self.trUtf8('&Redo'),
-            QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")),
+            self.tr('&Redo'),
+            QKeySequence(self.tr("Ctrl+Shift+Z", "Edit|Redo")),
             0, self, 'vm_edit_redo')
-        self.redoAct.setStatusTip(self.trUtf8('Redo the last change'))
-        self.redoAct.setWhatsThis(self.trUtf8(
+        self.redoAct.setStatusTip(self.tr('Redo the last change'))
+        self.redoAct.setWhatsThis(self.tr(
             """<b>Redo</b>"""
             """<p>Redo the last change done in the current editor.</p>"""
         ))
@@ -497,14 +497,14 @@ class MiniEditor(E5MainWindow):
         self.editActions.append(self.redoAct)
         
         self.cutAct = E5Action(
-            self.trUtf8('Cut'),
+            self.tr('Cut'),
             UI.PixmapCache.getIcon("editCut.png"),
-            self.trUtf8('Cu&t'),
-            QKeySequence(self.trUtf8("Ctrl+X", "Edit|Cut")),
-            QKeySequence(self.trUtf8("Shift+Del", "Edit|Cut")),
+            self.tr('Cu&t'),
+            QKeySequence(self.tr("Ctrl+X", "Edit|Cut")),
+            QKeySequence(self.tr("Shift+Del", "Edit|Cut")),
             self, 'vm_edit_cut')
-        self.cutAct.setStatusTip(self.trUtf8('Cut the selection'))
-        self.cutAct.setWhatsThis(self.trUtf8(
+        self.cutAct.setStatusTip(self.tr('Cut the selection'))
+        self.cutAct.setWhatsThis(self.tr(
             """<b>Cut</b>"""
             """<p>Cut the selected text of the current editor to the"""
             """ clipboard.</p>"""
@@ -513,14 +513,14 @@ class MiniEditor(E5MainWindow):
         self.editActions.append(self.cutAct)
         
         self.copyAct = E5Action(
-            self.trUtf8('Copy'),
+            self.tr('Copy'),
             UI.PixmapCache.getIcon("editCopy.png"),
-            self.trUtf8('&Copy'),
-            QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")),
-            QKeySequence(self.trUtf8("Ctrl+Ins", "Edit|Copy")),
+            self.tr('&Copy'),
+            QKeySequence(self.tr("Ctrl+C", "Edit|Copy")),
+            QKeySequence(self.tr("Ctrl+Ins", "Edit|Copy")),
             self, 'vm_edit_copy')
-        self.copyAct.setStatusTip(self.trUtf8('Copy the selection'))
-        self.copyAct.setWhatsThis(self.trUtf8(
+        self.copyAct.setStatusTip(self.tr('Copy the selection'))
+        self.copyAct.setWhatsThis(self.tr(
             """<b>Copy</b>"""
             """<p>Copy the selected text of the current editor to the"""
             """ clipboard.</p>"""
@@ -529,15 +529,15 @@ class MiniEditor(E5MainWindow):
         self.editActions.append(self.copyAct)
         
         self.pasteAct = E5Action(
-            self.trUtf8('Paste'),
+            self.tr('Paste'),
             UI.PixmapCache.getIcon("editPaste.png"),
-            self.trUtf8('&Paste'),
-            QKeySequence(self.trUtf8("Ctrl+V", "Edit|Paste")),
-            QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")),
+            self.tr('&Paste'),
+            QKeySequence(self.tr("Ctrl+V", "Edit|Paste")),
+            QKeySequence(self.tr("Shift+Ins", "Edit|Paste")),
             self, 'vm_edit_paste')
-        self.pasteAct.setStatusTip(self.trUtf8(
+        self.pasteAct.setStatusTip(self.tr(
             'Paste the last cut/copied text'))
-        self.pasteAct.setWhatsThis(self.trUtf8(
+        self.pasteAct.setWhatsThis(self.tr(
             """<b>Paste</b>"""
             """<p>Paste the last cut/copied text from the clipboard to"""
             """ the current editor.</p>"""
@@ -546,14 +546,14 @@ class MiniEditor(E5MainWindow):
         self.editActions.append(self.pasteAct)
         
         self.deleteAct = E5Action(
-            self.trUtf8('Clear'),
+            self.tr('Clear'),
             UI.PixmapCache.getIcon("editDelete.png"),
-            self.trUtf8('Cl&ear'),
-            QKeySequence(self.trUtf8("Alt+Shift+C", "Edit|Clear")),
+            self.tr('Cl&ear'),
+            QKeySequence(self.tr("Alt+Shift+C", "Edit|Clear")),
             0,
             self, 'vm_edit_clear')
-        self.deleteAct.setStatusTip(self.trUtf8('Clear all text'))
-        self.deleteAct.setWhatsThis(self.trUtf8(
+        self.deleteAct.setStatusTip(self.tr('Clear all text'))
+        self.deleteAct.setWhatsThis(self.tr(
             """<b>Clear</b>"""
             """<p>Delete all text of the current editor.</p>"""
         ))
@@ -1957,24 +1957,24 @@ class MiniEditor(E5MainWindow):
         Private method to create the Help actions.
         """
         self.aboutAct = E5Action(
-            self.trUtf8('About'),
-            self.trUtf8('&About'),
+            self.tr('About'),
+            self.tr('&About'),
             0, 0, self, 'about_eric')
-        self.aboutAct.setStatusTip(self.trUtf8(
+        self.aboutAct.setStatusTip(self.tr(
             'Display information about this software'))
-        self.aboutAct.setWhatsThis(self.trUtf8(
+        self.aboutAct.setWhatsThis(self.tr(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
         self.aboutAct.triggered[()].connect(self.__about)
         self.helpActions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
-            self.trUtf8('About Qt'),
-            self.trUtf8('About &Qt'),
+            self.tr('About Qt'),
+            self.tr('About &Qt'),
             0, 0, self, 'about_qt')
         self.aboutQtAct.setStatusTip(
-            self.trUtf8('Display information about the Qt toolkit'))
-        self.aboutQtAct.setWhatsThis(self.trUtf8(
+            self.tr('Display information about the Qt toolkit'))
+        self.aboutQtAct.setWhatsThis(self.tr(
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
@@ -1982,13 +1982,13 @@ class MiniEditor(E5MainWindow):
         self.helpActions.append(self.aboutQtAct)
         
         self.whatsThisAct = E5Action(
-            self.trUtf8('What\'s This?'),
+            self.tr('What\'s This?'),
             UI.PixmapCache.getIcon("whatsThis.png"),
-            self.trUtf8('&What\'s This?'),
-            QKeySequence(self.trUtf8("Shift+F1", "Help|What's This?'")),
+            self.tr('&What\'s This?'),
+            QKeySequence(self.tr("Shift+F1", "Help|What's This?'")),
             0, self, 'help_help_whats_this')
-        self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
-        self.whatsThisAct.setWhatsThis(self.trUtf8(
+        self.whatsThisAct.setStatusTip(self.tr('Context sensitive help'))
+        self.whatsThisAct.setWhatsThis(self.tr(
             """<b>Display context sensitive help</b>"""
             """<p>In What's This? mode, the mouse cursor shows an arrow"""
             """ with a question mark, and you can click on the interface"""
@@ -2004,7 +2004,7 @@ class MiniEditor(E5MainWindow):
         """
         Private method to create the menus of the menu bar.
         """
-        self.fileMenu = self.menuBar().addMenu(self.trUtf8("&File"))
+        self.fileMenu = self.menuBar().addMenu(self.tr("&File"))
         self.fileMenu.addAction(self.newAct)
         self.fileMenu.addAction(self.openAct)
         self.fileMenu.addAction(self.saveAct)
@@ -2015,7 +2015,7 @@ class MiniEditor(E5MainWindow):
         self.fileMenu.addSeparator()
         self.fileMenu.addAction(self.closeAct)
         
-        self.editMenu = self.menuBar().addMenu(self.trUtf8("&Edit"))
+        self.editMenu = self.menuBar().addMenu(self.tr("&Edit"))
         self.editMenu.addAction(self.undoAct)
         self.editMenu.addAction(self.redoAct)
         self.editMenu.addSeparator()
@@ -2032,7 +2032,7 @@ class MiniEditor(E5MainWindow):
         
         self.menuBar().addSeparator()
         
-        self.helpMenu = self.menuBar().addMenu(self.trUtf8("&Help"))
+        self.helpMenu = self.menuBar().addMenu(self.tr("&Help"))
         self.helpMenu.addAction(self.aboutAct)
         self.helpMenu.addAction(self.aboutQtAct)
         self.helpMenu.addSeparator()
@@ -2044,7 +2044,7 @@ class MiniEditor(E5MainWindow):
         """
         Private method to create the various toolbars.
         """
-        filetb = self.addToolBar(self.trUtf8("File"))
+        filetb = self.addToolBar(self.tr("File"))
         filetb.setIconSize(UI.Config.ToolBarIconSize)
         filetb.addAction(self.newAct)
         filetb.addAction(self.openAct)
@@ -2056,7 +2056,7 @@ class MiniEditor(E5MainWindow):
         filetb.addSeparator()
         filetb.addAction(self.closeAct)
         
-        edittb = self.addToolBar(self.trUtf8("Edit"))
+        edittb = self.addToolBar(self.tr("Edit"))
         edittb.setIconSize(UI.Config.ToolBarIconSize)
         edittb.addAction(self.undoAct)
         edittb.addAction(self.redoAct)
@@ -2066,14 +2066,14 @@ class MiniEditor(E5MainWindow):
         edittb.addAction(self.pasteAct)
         edittb.addAction(self.deleteAct)
         
-        findtb = self.addToolBar(self.trUtf8("Find"))
+        findtb = self.addToolBar(self.tr("Find"))
         findtb.setIconSize(UI.Config.ToolBarIconSize)
         findtb.addAction(self.searchAct)
         findtb.addAction(self.searchNextAct)
         findtb.addAction(self.searchPrevAct)
         findtb.addAction(self.searchClearMarkersAct)
         
-        helptb = self.addToolBar(self.trUtf8("Help"))
+        helptb = self.addToolBar(self.tr("Help"))
         helptb.setIconSize(UI.Config.ToolBarIconSize)
         helptb.addAction(self.whatsThisAct)
     
@@ -2086,26 +2086,26 @@ class MiniEditor(E5MainWindow):
 
         self.sbWritable = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbWritable)
-        self.sbWritable.setWhatsThis(self.trUtf8(
+        self.sbWritable.setWhatsThis(self.tr(
             """<p>This part of the status bar displays an indication of the"""
             """ editors files writability.</p>"""
         ))
 
         self.sbLine = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbLine)
-        self.sbLine.setWhatsThis(self.trUtf8(
+        self.sbLine.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the line number of"""
             """ the editor.</p>"""
         ))
 
         self.sbPos = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbPos)
-        self.sbPos.setWhatsThis(self.trUtf8(
+        self.sbPos.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the cursor position"""
             """ of the editor.</p>"""
         ))
         
-        self.__statusBar.showMessage(self.trUtf8("Ready"))
+        self.__statusBar.showMessage(self.tr("Ready"))
     
     def __readSettings(self):
         """
@@ -2134,8 +2134,8 @@ class MiniEditor(E5MainWindow):
         if self.__textEdit.isModified():
             ret = E5MessageBox.okToClearData(
                 self,
-                self.trUtf8("eric5 Mini Editor"),
-                self.trUtf8("The document has unsaved changes."),
+                self.tr("eric5 Mini Editor"),
+                self.tr("The document has unsaved changes."),
                 self.__save)
             return ret
         return True
@@ -2154,9 +2154,9 @@ class MiniEditor(E5MainWindow):
         except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(
-                self, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
+                self, self.tr('Open File'),
+                self.tr('<p>The file <b>{0}</b> could not be opened.</p>'
+                        '<p>Reason: {1}</p>')
                 .format(fileName, str(why)))
             QApplication.restoreOverrideCursor()
             return
@@ -2173,7 +2173,7 @@ class MiniEditor(E5MainWindow):
         fileEol = self.__textEdit.detectEolString(txt)
         self.__textEdit.setEolModeByEolString(fileEol)
         
-        self.__statusBar.showMessage(self.trUtf8("File loaded"), 2000)
+        self.__statusBar.showMessage(self.tr("File loaded"), 2000)
 
     def __saveFile(self, fileName):
         """
@@ -2189,9 +2189,9 @@ class MiniEditor(E5MainWindow):
                 fileName, txt, self.encoding)
         except (IOError, Utilities.CodingError, UnicodeError) as why:
             E5MessageBox.critical(
-                self, self.trUtf8('Save File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
-                            'Reason: {1}</p>')
+                self, self.tr('Save File'),
+                self.tr('<p>The file <b>{0}</b> could not be saved.<br/>'
+                        'Reason: {1}</p>')
                 .format(fileName, str(why)))
             QApplication.restoreOverrideCursor()
         
@@ -2203,7 +2203,7 @@ class MiniEditor(E5MainWindow):
         self.editorSaved.emit()
         
         self.__setCurrentFile(fileName)
-        self.__statusBar.showMessage(self.trUtf8("File saved"), 2000)
+        self.__statusBar.showMessage(self.tr("File saved"), 2000)
         
         self.__checkActions()
         
@@ -2218,12 +2218,12 @@ class MiniEditor(E5MainWindow):
         self.__curFile = fileName
         
         if not self.__curFile:
-            shownName = self.trUtf8("Untitled")
+            shownName = self.tr("Untitled")
         else:
             shownName = self.__strippedName(self.__curFile)
         
-        self.setWindowTitle(self.trUtf8("{0}[*] - {1}")
-                            .format(shownName, self.trUtf8("Mini Editor")))
+        self.setWindowTitle(self.tr("{0}[*] - {1}")
+                            .format(shownName, self.tr("Mini Editor")))
         
         self.__textEdit.setModified(False)
         self.setWindowModified(False)
@@ -2483,12 +2483,12 @@ class MiniEditor(E5MainWindow):
         if self.__textEdit.hasSelectedText():
             printDialog.addEnabledOption(QAbstractPrintDialog.PrintSelection)
         if printDialog.exec_() == QDialog.Accepted:
-            sb.showMessage(self.trUtf8('Printing...'))
+            sb.showMessage(self.tr('Printing...'))
             QApplication.processEvents()
             if self.__curFile:
                 printer.setDocName(QFileInfo(self.__curFile).fileName())
             else:
-                printer.setDocName(self.trUtf8("Untitled"))
+                printer.setDocName(self.tr("Untitled"))
             if printDialog.printRange() == QAbstractPrintDialog.Selection:
                 # get the selection
                 fromLine, fromIndex, toLine, toIndex = \
@@ -2500,12 +2500,12 @@ class MiniEditor(E5MainWindow):
             else:
                 res = printer.printRange(self.__textEdit)
             if res:
-                sb.showMessage(self.trUtf8('Printing completed'), 2000)
+                sb.showMessage(self.tr('Printing completed'), 2000)
             else:
-                sb.showMessage(self.trUtf8('Error while printing'), 2000)
+                sb.showMessage(self.tr('Error while printing'), 2000)
             QApplication.processEvents()
         else:
-            sb.showMessage(self.trUtf8('Printing aborted'), 2000)
+            sb.showMessage(self.tr('Printing aborted'), 2000)
             QApplication.processEvents()
     
     def __printPreviewFile(self):
@@ -2519,7 +2519,7 @@ class MiniEditor(E5MainWindow):
         if self.__curFile:
             printer.setDocName(QFileInfo(self.__curFile).fileName())
         else:
-            printer.setDocName(self.trUtf8("Untitled"))
+            printer.setDocName(self.tr("Untitled"))
         preview = QPrintPreviewDialog(printer, self)
         preview.paintRequested.connect(self.__printPreview)
         preview.exec_()
@@ -2560,9 +2560,9 @@ class MiniEditor(E5MainWindow):
         self.contextMenu.addAction(self.copyAct)
         self.contextMenu.addAction(self.pasteAct)
         self.contextMenu.addSeparator()
-        self.contextMenu.addAction(self.trUtf8('Select all'), self.__selectAll)
+        self.contextMenu.addAction(self.tr('Select all'), self.__selectAll)
         self.contextMenu.addAction(
-            self.trUtf8('Deselect all'), self.__deselectAll)
+            self.tr('Deselect all'), self.__deselectAll)
         self.contextMenu.addSeparator()
         self.languagesMenuAct = self.contextMenu.addMenu(self.languagesMenu)
         self.contextMenu.addSeparator()
@@ -2575,10 +2575,10 @@ class MiniEditor(E5MainWindow):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8("Languages"))
+        menu = QMenu(self.tr("Languages"))
         
         self.languagesActGrp = QActionGroup(self)
-        self.noLanguageAct = menu.addAction(self.trUtf8("No Language"))
+        self.noLanguageAct = menu.addAction(self.tr("No Language"))
         self.noLanguageAct.setCheckable(True)
         self.noLanguageAct.setData("None")
         self.languagesActGrp.addAction(self.noLanguageAct)
@@ -2601,11 +2601,11 @@ class MiniEditor(E5MainWindow):
                 self.languagesActGrp.addAction(act)
         
         menu.addSeparator()
-        self.pygmentsAct = menu.addAction(self.trUtf8("Guessed"))
+        self.pygmentsAct = menu.addAction(self.tr("Guessed"))
         self.pygmentsAct.setCheckable(True)
         self.pygmentsAct.setData("Guessed")
         self.languagesActGrp.addAction(self.pygmentsAct)
-        self.pygmentsSelAct = menu.addAction(self.trUtf8("Alternatives"))
+        self.pygmentsSelAct = menu.addAction(self.tr("Alternatives"))
         self.pygmentsSelAct.setData("Alternatives")
         
         menu.triggered.connect(self.__languageMenuTriggered)
@@ -2620,9 +2620,9 @@ class MiniEditor(E5MainWindow):
         """
         if self.apiLanguage.startswith("Pygments|"):
             self.pygmentsSelAct.setText(
-                self.trUtf8("Alternatives ({0})").format(self.getLanguage()))
+                self.tr("Alternatives ({0})").format(self.getLanguage()))
         else:
-            self.pygmentsSelAct.setText(self.trUtf8("Alternatives"))
+            self.pygmentsSelAct.setText(self.tr("Alternatives"))
     
     def __selectPygmentsLexer(self):
         """
@@ -2638,8 +2638,8 @@ class MiniEditor(E5MainWindow):
             lexerSel = 0
         lexerName, ok = QInputDialog.getItem(
             self,
-            self.trUtf8("Pygments Lexer"),
-            self.trUtf8("Select the Pygments lexer to apply."),
+            self.tr("Pygments Lexer"),
+            self.tr("Select the Pygments lexer to apply."),
             lexerList,
             lexerSel,
             False)

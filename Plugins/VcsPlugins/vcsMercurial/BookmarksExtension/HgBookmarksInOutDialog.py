@@ -47,9 +47,9 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         if mode not in [self.INCOMING, self.OUTGOING]:
             raise ValueError("Bad value for mode")
         if mode == self.INCOMING:
-            self.setWindowTitle(self.trUtf8("Mercurial Incoming Bookmarks"))
+            self.setWindowTitle(self.tr("Mercurial Incoming Bookmarks"))
         elif mode == self.OUTGOING:
-            self.setWindowTitle(self.trUtf8("Mercurial Outgoing Bookmarks"))
+            self.setWindowTitle(self.tr("Mercurial Outgoing Bookmarks"))
         
         self.process = QProcess()
         self.vcs = vcs
@@ -139,8 +139,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -172,7 +172,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
-            self.__generateItem(self.trUtf8("no bookmarks found"), "")
+            self.__generateItem(self.tr("no bookmarks found"), "")
         self.__resizeColumns()
         self.__resort()
     

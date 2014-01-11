@@ -39,14 +39,14 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         keys = sorted(self.viewmanagers.keys())
         for key in keys:
             self.windowComboBox.addItem(
-                self.trUtf8(self.viewmanagers[key]), key)
+                self.tr(self.viewmanagers[key]), key)
         currentIndex = self.windowComboBox.findText(
-            self.trUtf8(self.viewmanagers[currentVm]))
+            self.tr(self.viewmanagers[currentVm]))
         self.windowComboBox.setCurrentIndex(currentIndex)
         self.on_windowComboBox_activated(currentIndex)
         
         self.tabViewGroupBox.setTitle(
-            self.trUtf8(self.viewmanagers["tabview"]))
+            self.tr(self.viewmanagers["tabview"]))
         
         self.filenameLengthSpinBox.setValue(
             Preferences.getUI("TabViewManagerFilenameLength"))

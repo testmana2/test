@@ -42,7 +42,7 @@ class BreakPointViewer(QTreeView):
         self.setSelectionMode(QAbstractItemView.ExtendedSelection)
         self.setSelectionBehavior(QAbstractItemView.SelectRows)
         
-        self.setWindowTitle(self.trUtf8("Breakpoints"))
+        self.setWindowTitle(self.tr("Breakpoints"))
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
@@ -142,58 +142,58 @@ class BreakPointViewer(QTreeView):
         Private method to generate the popup menus.
         """
         self.menu = QMenu()
-        self.menu.addAction(self.trUtf8("Add"), self.__addBreak)
-        self.menu.addAction(self.trUtf8("Edit..."), self.__editBreak)
+        self.menu.addAction(self.tr("Add"), self.__addBreak)
+        self.menu.addAction(self.tr("Edit..."), self.__editBreak)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Enable"), self.__enableBreak)
-        self.menu.addAction(self.trUtf8("Enable all"), self.__enableAllBreaks)
+        self.menu.addAction(self.tr("Enable"), self.__enableBreak)
+        self.menu.addAction(self.tr("Enable all"), self.__enableAllBreaks)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Disable"), self.__disableBreak)
-        self.menu.addAction(self.trUtf8("Disable all"),
+        self.menu.addAction(self.tr("Disable"), self.__disableBreak)
+        self.menu.addAction(self.tr("Disable all"),
                             self.__disableAllBreaks)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Delete"), self.__deleteBreak)
-        self.menu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
+        self.menu.addAction(self.tr("Delete"), self.__deleteBreak)
+        self.menu.addAction(self.tr("Delete all"), self.__deleteAllBreaks)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Goto"), self.__showSource)
+        self.menu.addAction(self.tr("Goto"), self.__showSource)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.menu.addAction(self.tr("Configure..."), self.__configure)
 
         self.backMenuActions = {}
         self.backMenu = QMenu()
-        self.backMenu.addAction(self.trUtf8("Add"), self.__addBreak)
+        self.backMenu.addAction(self.tr("Add"), self.__addBreak)
         self.backMenuActions["EnableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Enable all"),
+            self.backMenu.addAction(self.tr("Enable all"),
                                     self.__enableAllBreaks)
         self.backMenuActions["DisableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Disable all"),
+            self.backMenu.addAction(self.tr("Disable all"),
                                     self.__disableAllBreaks)
         self.backMenuActions["DeleteAll"] = \
-            self.backMenu.addAction(self.trUtf8("Delete all"),
+            self.backMenu.addAction(self.tr("Delete all"),
                                     self.__deleteAllBreaks)
         self.backMenu.aboutToShow.connect(self.__showBackMenu)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.backMenu.addAction(self.tr("Configure..."), self.__configure)
 
         self.multiMenu = QMenu()
-        self.multiMenu.addAction(self.trUtf8("Add"), self.__addBreak)
+        self.multiMenu.addAction(self.tr("Add"), self.__addBreak)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Enable selected"),
+        self.multiMenu.addAction(self.tr("Enable selected"),
                                  self.__enableSelectedBreaks)
-        self.multiMenu.addAction(self.trUtf8("Enable all"),
+        self.multiMenu.addAction(self.tr("Enable all"),
                                  self.__enableAllBreaks)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Disable selected"),
+        self.multiMenu.addAction(self.tr("Disable selected"),
                                  self.__disableSelectedBreaks)
-        self.multiMenu.addAction(self.trUtf8("Disable all"),
+        self.multiMenu.addAction(self.tr("Disable all"),
                                  self.__disableAllBreaks)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Delete selected"),
+        self.multiMenu.addAction(self.tr("Delete selected"),
                                  self.__deleteSelectedBreaks)
-        self.multiMenu.addAction(self.trUtf8("Delete all"),
+        self.multiMenu.addAction(self.tr("Delete all"),
                                  self.__deleteAllBreaks)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.multiMenu.addAction(self.tr("Configure..."), self.__configure)
     
     def __showContextMenu(self, coord):
         """

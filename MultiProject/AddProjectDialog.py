@@ -44,7 +44,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         self.__okButton.setEnabled(False)
         
         if project is not None:
-            self.setWindowTitle(self.trUtf8("Project Properties"))
+            self.setWindowTitle(self.tr("Project Properties"))
             
             self.filenameEdit.setReadOnly(True)
             self.fileButton.setEnabled(False)
@@ -64,9 +64,9 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             startdir = self.startdir
             projectFile = E5FileDialog.getOpenFileName(
                 self,
-                self.trUtf8("Add Project"),
+                self.tr("Add Project"),
                 startdir,
-                self.trUtf8("Project Files (*.e4p)"))
+                self.tr("Project Files (*.e4p)"))
             
             if projectFile:
                 self.filenameEdit.setText(

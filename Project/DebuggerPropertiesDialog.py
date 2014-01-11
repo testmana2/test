@@ -112,7 +112,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select interpreter for Debug Client"),
+            self.tr("Select interpreter for Debug Client"),
             self.interpreterEdit.text(),
             "")
             
@@ -126,10 +126,10 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         filters = self.project.dbgFilters[
             self.project.pdata["PROGLANGUAGE"][0]]
-        filters += self.trUtf8("All Files (*)")
+        filters += self.tr("All Files (*)")
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Debug Client"),
+            self.tr("Select Debug Client"),
             self.debugClientEdit.text(),
             filters)
             

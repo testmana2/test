@@ -112,9 +112,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select personal word list"),
+            self.tr("Select personal word list"),
             self.pwlEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.tr("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pwlEdit.setText(Utilities.toNativeSeparators(file))
@@ -126,9 +126,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select personal exclude list"),
+            self.tr("Select personal exclude list"),
             self.pelEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.tr("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))

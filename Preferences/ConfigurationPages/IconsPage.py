@@ -129,7 +129,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         dir = E5FileDialog.getExistingDirectory(
             None,
-            self.trUtf8("Select icon directory"),
+            self.tr("Select icon directory"),
             "",
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

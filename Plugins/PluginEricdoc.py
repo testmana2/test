@@ -128,12 +128,12 @@ class EricdocPlugin(QObject):
         if menu:
             self.__projectAct = \
                 E5Action(
-                    self.trUtf8('Generate documentation (eric5_doc)'),
-                    self.trUtf8('Generate &documentation (eric5_doc)'), 0, 0,
+                    self.tr('Generate documentation (eric5_doc)'),
+                    self.tr('Generate &documentation (eric5_doc)'), 0, 0,
                     self, 'doc_eric5_doc')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Generate API documentation using eric5_doc'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+                self.tr('Generate API documentation using eric5_doc'))
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Generate documentation</b>"""
                 """<p>Generate API documentation using eric5_doc.</p>"""
             ))

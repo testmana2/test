@@ -218,13 +218,13 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.file2Completer = E5FileCompleter(self.file2Edit)
         
         self.diffButton = self.buttonBox.addButton(
-            self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
+            self.tr("Compare"), QDialogButtonBox.ActionRole)
         self.diffButton.setToolTip(
-            self.trUtf8("Press to perform the comparison of the two files"))
+            self.tr("Press to perform the comparison of the two files"))
         self.saveButton = self.buttonBox.addButton(
-            self.trUtf8("Save"), QDialogButtonBox.ActionRole)
+            self.tr("Save"), QDialogButtonBox.ActionRole)
         self.saveButton.setToolTip(
-            self.trUtf8("Save the output to a patch file"))
+            self.tr("Save the output to a patch file"))
         self.diffButton.setEnabled(False)
         self.saveButton.setEnabled(False)
         self.diffButton.setDefault(True)
@@ -289,9 +289,9 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save Diff"),
+            self.tr("Save Diff"),
             fname,
-            self.trUtf8("Patch Files (*.diff)"),
+            self.tr("Patch Files (*.diff)"),
             None,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -306,9 +306,9 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         if QFileInfo(fname).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save Diff"),
-                self.trUtf8("<p>The patch file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                self.tr("Save Diff"),
+                self.tr("<p>The patch file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fname),
                 icon=E5MessageBox.Warning)
             if not res:
                 return
@@ -324,8 +324,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             f.close()
         except IOError as why:
             E5MessageBox.critical(
-                self, self.trUtf8('Save Diff'),
-                self.trUtf8(
+                self, self.tr('Save Diff'),
+                self.tr(
                     '<p>The patch file <b>{0}</b> could not be saved.<br />'
                     'Reason: {1}</p>').format(fname, str(why)))
 
@@ -346,8 +346,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Compare Files"),
-                self.trUtf8(
+                self.tr("Compare Files"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
                 .format(self.filename1))
             return
@@ -364,8 +364,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Compare Files"),
-                self.trUtf8(
+                self.tr("Compare Files"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
                 .format(self.filename2))
             return
@@ -432,7 +432,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             
         if paras == 0:
             self.__appendText(
-                self.trUtf8('There is no difference.'), self.cNormalFormat)
+                self.tr('There is no difference.'), self.cNormalFormat)
 
     def __generateContextDiff(self, a, b, fromfile, tofile,
                               fromfiledate, tofiledate):
@@ -467,7 +467,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             
         if paras == 0:
             self.__appendText(
-                self.trUtf8('There is no difference.'), self.cNormalFormat)
+                self.tr('There is no difference.'), self.cNormalFormat)
 
     def __fileChanged(self):
         """
@@ -488,7 +488,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         filename = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select file to compare"),
+            self.tr("Select file to compare"),
             lineEdit.text(),
             "")
             

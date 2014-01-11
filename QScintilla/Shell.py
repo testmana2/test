@@ -109,11 +109,11 @@ class Shell(QsciScintillaCompat):
         
         self.passive = Preferences.getDebugger("PassiveDbgEnabled")
         if self.passive:
-            self.setWindowTitle(self.trUtf8('Shell - Passive'))
+            self.setWindowTitle(self.tr('Shell - Passive'))
         else:
-            self.setWindowTitle(self.trUtf8('Shell'))
+            self.setWindowTitle(self.tr('Shell'))
         
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>The Shell Window</b>"""
             """<p>This is simply an interpreter running in a window. The"""
             """ interpreter is the one that is used to run the program"""
@@ -183,7 +183,7 @@ class Shell(QsciScintillaCompat):
         
         # Make sure we have prompts.
         if self.passive:
-            sys.ps1 = self.trUtf8("Passive >>> ")
+            sys.ps1 = self.tr("Passive >>> ")
         else:
             try:
                 sys.ps1
@@ -198,7 +198,7 @@ class Shell(QsciScintillaCompat):
             self.__getBanner()
         
         # Create a little language context menu
-        self.lmenu = QMenu(self.trUtf8('Start'))
+        self.lmenu = QMenu(self.tr('Start'))
         self.clientLanguages = self.dbs.getSupportedLanguages(shellOnly=True)
         self.clientLanguages.sort()
         for language in self.clientLanguages:
@@ -207,28 +207,28 @@ class Shell(QsciScintillaCompat):
         self.lmenu.triggered.connect(self.__startDebugClient)
         
         # Create the history context menu
-        self.hmenu = QMenu(self.trUtf8('History'))
-        self.hmenu.addAction(self.trUtf8('Select entry'), self.__selectHistory)
-        self.hmenu.addAction(self.trUtf8('Show'), self.__showHistory)
-        self.hmenu.addAction(self.trUtf8('Clear'), self.__clearHistory)
+        self.hmenu = QMenu(self.tr('History'))
+        self.hmenu.addAction(self.tr('Select entry'), self.__selectHistory)
+        self.hmenu.addAction(self.tr('Show'), self.__showHistory)
+        self.hmenu.addAction(self.tr('Clear'), self.__clearHistory)
         
         # Create a little context menu
         self.menu = QMenu(self)
-        self.menu.addAction(self.trUtf8('Cut'), self.cut)
-        self.menu.addAction(self.trUtf8('Copy'), self.copy)
-        self.menu.addAction(self.trUtf8('Paste'), self.paste)
+        self.menu.addAction(self.tr('Cut'), self.cut)
+        self.menu.addAction(self.tr('Copy'), self.copy)
+        self.menu.addAction(self.tr('Paste'), self.paste)
         self.menu.addMenu(self.hmenu)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Find'), self.__find)
+        self.menu.addAction(self.tr('Find'), self.__find)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Clear'), self.clear)
-        self.menu.addAction(self.trUtf8('Reset'), self.__reset)
+        self.menu.addAction(self.tr('Clear'), self.clear)
+        self.menu.addAction(self.tr('Reset'), self.__reset)
         self.menu.addAction(
-            self.trUtf8('Reset and Clear'), self.__resetAndClear)
+            self.tr('Reset and Clear'), self.__resetAndClear)
         self.menu.addSeparator()
         self.menu.addMenu(self.lmenu)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.__bindLexer()
         self.__setTextDisplay()
@@ -574,9 +574,9 @@ class Shell(QsciScintillaCompat):
         """
         cmd, ok = QInputDialog.getItem(
             self,
-            self.trUtf8("Select History"),
-            self.trUtf8("Select the history entry to execute"
-                        " (most recent shown last)."),
+            self.tr("Select History"),
+            self.tr("Select the history entry to execute"
+                    " (most recent shown last)."),
             self.history,
             0, False)
         if ok:
@@ -623,12 +623,12 @@ class Shell(QsciScintillaCompat):
         """
         super().clear()
         if self.passive and not self.dbs.isConnected():
-            self.__write(self.trUtf8('Passive Debug Mode'))
-            self.__write(self.trUtf8('\nNot connected'))
+            self.__write(self.tr('Passive Debug Mode'))
+            self.__write(self.tr('\nNot connected'))
         else:
-            version = version.replace("#", self.trUtf8("No."))
+            version = version.replace("#", self.tr("No."))
             if platform != "" and dbgclient != "":
-                self.__write(self.trUtf8('{0} on {1}, {2}')
+                self.__write(self.tr('{0} on {1}, {2}')
                     .format(version, platform, dbgclient))
             else:
                 self.__write(version)
@@ -689,7 +689,7 @@ class Shell(QsciScintillaCompat):
         
         @param s text to be displayed (string)
         """
-        self.__write(self.trUtf8("StdOut: {0}").format(s))
+        self.__write(self.tr("StdOut: {0}").format(s))
         
     def __writeStdErr(self, s):
         """
@@ -697,7 +697,7 @@ class Shell(QsciScintillaCompat):
         
         @param s text to be displayed (string)
         """
-        self.__write(self.trUtf8("StdErr: {0}").format(s))
+        self.__write(self.tr("StdErr: {0}").format(s))
         
     def __raw_input(self, s, echo):
         """
@@ -1266,7 +1266,7 @@ class Shell(QsciScintillaCompat):
                         else:
                             # language not supported or typo
                             self.__write(
-                                self.trUtf8(
+                                self.tr(
                                     'Shell language "{0}" not supported.\n')
                                 .format(cmdList[1]))
                             self.__clientStatement(False)
@@ -1540,8 +1540,8 @@ class Shell(QsciScintillaCompat):
                     else:
                         E5MessageBox.information(
                             self,
-                            self.trUtf8("Drop Error"),
-                            self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
+                            self.tr("Drop Error"),
+                            self.tr("""<p><b>{0}</b> is not a file.</p>""")
                             .format(fname))
             event.acceptProposedAction()
         elif event.mimeData().hasText():

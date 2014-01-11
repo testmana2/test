@@ -32,7 +32,7 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
             self.currentPasswordEdit.setEnabled(False)
             if hasattr(self.currentPasswordEdit, "setPlaceholderText"):
                 self.currentPasswordEdit.setPlaceholderText(
-                    self.trUtf8("(not defined yet)"))
+                    self.tr("(not defined yet)"))
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
     
@@ -47,22 +47,22 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
             enable = verifyPassword(
                 self.currentPasswordEdit.text(), self.__oldPasswordHash)
             if not enable:
-                error = error or self.trUtf8("Wrong password entered.")
+                error = error or self.tr("Wrong password entered.")
         
         if self.newPasswordEdit.text() == "":
             enable = False
-            error = error or self.trUtf8("New password must not be empty.")
+            error = error or self.tr("New password must not be empty.")
         
         if self.newPasswordEdit.text() != "" and \
            self.newPasswordEdit.text() != self.newPasswordAgainEdit.text():
             enable = False
-            error = error or self.trUtf8("Repeated password is wrong.")
+            error = error or self.tr("Repeated password is wrong.")
         
         if self.currentPasswordEdit.isEnabled():
             if self.newPasswordEdit.text() == self.currentPasswordEdit.text():
                 enable = False
                 error = error or \
-                    self.trUtf8("Old and new password must not be the same.")
+                    self.tr("Old and new password must not be the same.")
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enable)
         self.errorLabel.setText(error)

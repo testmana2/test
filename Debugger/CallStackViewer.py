@@ -42,23 +42,23 @@ class CallStackViewer(QTreeWidget):
         self.setAlternatingRowColors(True)
         self.setItemsExpandable(False)
         self.setRootIsDecorated(False)
-        self.setWindowTitle(self.trUtf8("Call Stack"))
+        self.setWindowTitle(self.tr("Call Stack"))
         
         self.__menu = QMenu(self)
         self.__sourceAct = self.__menu.addAction(
-            self.trUtf8("Show source"), self.__openSource)
-        self.__menu.addAction(self.trUtf8("Clear"), self.clear)
+            self.tr("Show source"), self.__openSource)
+        self.__menu.addAction(self.tr("Clear"), self.clear)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Save"), self.__saveStackTrace)
+        self.__menu.addAction(self.tr("Save"), self.__saveStackTrace)
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
         
         self.__dbs = debugServer
         
         # file name, line number, function name, arguments
-        self.__entryFormat = self.trUtf8("File: {0}\nLine: {1}\n{2}{3}")
+        self.__entryFormat = self.tr("File: {0}\nLine: {1}\n{2}{3}")
         # file name, line number
-        self.__entryFormatShort = self.trUtf8("File: {0}\nLine: {1}")
+        self.__entryFormatShort = self.tr("File: {0}\nLine: {1}")
         
         self.__projectMode = False
         self.__project = None
@@ -155,9 +155,9 @@ class CallStackViewer(QTreeWidget):
         if self.topLevelItemCount() > 0:
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Save Call Stack Info"),
+                self.tr("Save Call Stack Info"),
                 "",
-                self.trUtf8("Text Files (*.txt);;All Files (*)"),
+                self.tr("Text Files (*.txt);;All Files (*)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
@@ -169,9 +169,9 @@ class CallStackViewer(QTreeWidget):
                 if QFileInfo(fname).exists():
                     res = E5MessageBox.yesNo(
                         self,
-                        self.trUtf8("Save Call Stack Info"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                    " Overwrite it?</p>").format(fname),
+                        self.tr("Save Call Stack Info"),
+                        self.tr("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fname),
                         icon=E5MessageBox.Warning)
                     if not res:
                         return
@@ -188,8 +188,8 @@ class CallStackViewer(QTreeWidget):
                 except IOError as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Error saving Call Stack Info"),
-                        self.trUtf8("""<p>The call stack info could not be"""
-                                    """ written to <b>{0}</b></p>"""
-                                    """<p>Reason: {1}</p>""")
+                        self.tr("Error saving Call Stack Info"),
+                        self.tr("""<p>The call stack info could not be"""
+                                """ written to <b>{0}</b></p>"""
+                                """<p>Reason: {1}</p>""")
                         .format(fname, str(err)))

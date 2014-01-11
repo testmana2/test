@@ -136,8 +136,8 @@ class BookmarksManager(QObject):
         if reader.error() != QXmlStreamReader.NoError:
             E5MessageBox.warning(
                 None,
-                self.trUtf8("Loading Bookmarks"),
-                self.trUtf8(
+                self.tr("Loading Bookmarks"),
+                self.tr(
                     """Error when loading bookmarks on line {0},"""
                     """ column {1}:\n {2}""")
                 .format(reader.lineNumber(),
@@ -149,16 +149,16 @@ class BookmarksManager(QObject):
                 len(self.__bookmarkRootNode.children()) - 1, -1, -1):
             node = self.__bookmarkRootNode.children()[index]
             if node.type() == BookmarkNode.Folder:
-                if (node.title == self.trUtf8("Toolbar Bookmarks") or
+                if (node.title == self.tr("Toolbar Bookmarks") or
                     node.title == BOOKMARKBAR) and \
                    self.__toolbar is None:
-                    node.title = self.trUtf8(BOOKMARKBAR)
+                    node.title = self.tr(BOOKMARKBAR)
                     self.__toolbar = node
                 
-                if (node.title == self.trUtf8("Menu") or
+                if (node.title == self.tr("Menu") or
                     node.title == BOOKMARKMENU) and \
                    self.__menu is None:
-                    node.title = self.trUtf8(BOOKMARKMENU)
+                    node.title = self.tr(BOOKMARKMENU)
                     self.__menu = node
             else:
                 others.append(node)
@@ -170,14 +170,14 @@ class BookmarksManager(QObject):
         if self.__toolbar is None:
             self.__toolbar = BookmarkNode(BookmarkNode.Folder,
                                           self.__bookmarkRootNode)
-            self.__toolbar.title = self.trUtf8(BOOKMARKBAR)
+            self.__toolbar.title = self.tr(BOOKMARKBAR)
         else:
             self.__bookmarkRootNode.add(self.__toolbar)
         
         if self.__menu is None:
             self.__menu = BookmarkNode(BookmarkNode.Folder,
                                        self.__bookmarkRootNode)
-            self.__menu.title = self.trUtf8(BOOKMARKMENU)
+            self.__menu.title = self.tr(BOOKMARKMENU)
         else:
             self.__bookmarkRootNode.add(self.__menu)
         
@@ -203,13 +203,13 @@ class BookmarksManager(QObject):
         if not writer.write(bookmarkFile, self.__bookmarkRootNode):
             E5MessageBox.warning(
                 None,
-                self.trUtf8("Saving Bookmarks"),
-                self.trUtf8("""Error saving bookmarks to <b>{0}</b>.""")
+                self.tr("Saving Bookmarks"),
+                self.tr("""Error saving bookmarks to <b>{0}</b>.""")
                 .format(bookmarkFile))
         
         # restore localized titles
-        self.__menu.title = self.trUtf8(BOOKMARKMENU)
-        self.__toolbar.title = self.trUtf8(BOOKMARKBAR)
+        self.__menu.title = self.tr(BOOKMARKMENU)
+        self.__toolbar.title = self.tr(BOOKMARKBAR)
         
         self.bookmarksSaved.emit()
     
@@ -365,11 +365,11 @@ class BookmarksManager(QObject):
         """
         fileName, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             None,
-            self.trUtf8("Export Bookmarks"),
+            self.tr("Export Bookmarks"),
             "eric5_bookmarks.xbel",
-            self.trUtf8("XBEL bookmarks (*.xbel);;"
-                        "XBEL bookmarks (*.xml);;"
-                        "HTML Bookmarks (*.html)"))
+            self.tr("XBEL bookmarks (*.xbel);;"
+                    "XBEL bookmarks (*.xml);;"
+                    "HTML Bookmarks (*.html)"))
         if not fileName:
             return
         
@@ -389,8 +389,8 @@ class BookmarksManager(QObject):
         if not writer.write(fileName, self.__bookmarkRootNode):
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Exporting Bookmarks"),
-                self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")
+                self.tr("Exporting Bookmarks"),
+                self.tr("""Error exporting bookmarks to <b>{0}</b>.""")
                 .format(fileName))
     
     def __convertFromOldBookmarks(self):
@@ -403,7 +403,7 @@ class BookmarksManager(QObject):
         if bmNames is not None and bmFiles is not None:
             if len(bmNames) == len(bmFiles):
                 convertedRootNode = BookmarkNode(BookmarkNode.Folder)
-                convertedRootNode.title = self.trUtf8("Converted {0}")\
+                convertedRootNode.title = self.tr("Converted {0}")\
                     .format(QDate.currentDate().toString(
                         Qt.SystemLocaleShortDate))
                 for i in range(len(bmNames)):

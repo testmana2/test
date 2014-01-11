@@ -43,8 +43,8 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             return None
         res = E5MessageBox.yesNo(
             None,
-            self.trUtf8("Subscribe?"),
-            self.trUtf8(
+            self.tr("Subscribe?"),
+            self.tr(
                 """<p>Subscribe to this AdBlock subscription?</p>"""
                 """<p>{0}</p>""").format(title))
         if res:

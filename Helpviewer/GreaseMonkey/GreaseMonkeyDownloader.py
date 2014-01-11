@@ -68,8 +68,8 @@ class GreaseMonkeyDownloader(QObject):
             except (IOError, OSError) as err:
                 E5MessageBox.critical(
                     None,
-                    self.trUtf8("GreaseMonkey Download"),
-                    self.trUtf8(
+                    self.tr("GreaseMonkey Download"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be opened"""
                         """ for writing.<br/>Reason: {1}</p>""").format(
                         self.__fileName, str(err)))
@@ -119,8 +119,8 @@ class GreaseMonkeyDownloader(QObject):
             except (IOError, OSError) as err:
                 E5MessageBox.critical(
                     None,
-                    self.trUtf8("GreaseMonkey Download"),
-                    self.trUtf8(
+                    self.tr("GreaseMonkey Download"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be opened"""
                         """ for writing.<br/>Reason: {1}</p>""").format(
                         fileName, str(err)))
@@ -164,8 +164,8 @@ class GreaseMonkeyDownloader(QObject):
                 else:
                     E5MessageBox.information(
                         None,
-                        self.trUtf8("GreaseMonkey Download"),
-                        self.trUtf8(
+                        self.tr("GreaseMonkey Download"),
+                        self.tr(
                             """<p><b>{0}</b> is already installed.</p>""")
                         .format(script.name()))
             

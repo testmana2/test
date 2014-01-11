@@ -33,18 +33,18 @@ class ExceptionLogger(QTreeWidget):
         super().__init__(parent)
         self.setObjectName("ExceptionLogger")
         
-        self.setWindowTitle(self.trUtf8("Exceptions"))
+        self.setWindowTitle(self.tr("Exceptions"))
         
         self.setWordWrap(True)
         self.setRootIsDecorated(True)
-        self.setHeaderLabels([self.trUtf8("Exception")])
+        self.setHeaderLabels([self.tr("Exception")])
         self.setSortingEnabled(False)
 
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
         self.itemDoubleClicked.connect(self.__itemDoubleClicked)
 
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>Exceptions Logger</b>"""
             """<p>This windows shows a trace of all exceptions, that have"""
             """ occured during the last debugging session. Initially only"""
@@ -55,15 +55,15 @@ class ExceptionLogger(QTreeWidget):
         ))
         
         self.menu = QMenu(self)
-        self.menu.addAction(self.trUtf8("Show source"), self.__openSource)
-        self.menu.addAction(self.trUtf8("Clear"), self.clear)
+        self.menu.addAction(self.tr("Show source"), self.__openSource)
+        self.menu.addAction(self.tr("Clear"), self.clear)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.backMenu = QMenu(self)
-        self.backMenu.addAction(self.trUtf8("Clear"), self.clear)
+        self.backMenu.addAction(self.tr("Clear"), self.clear)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.backMenu.addAction(self.tr("Configure..."), self.__configure)
         
     def __itemDoubleClicked(self, itm):
         """
@@ -97,8 +97,8 @@ class ExceptionLogger(QTreeWidget):
         itm = QTreeWidgetItem(self)
         if exceptionType is None:
             itm.setText(
-                0, self.trUtf8('An unhandled exception occured.'
-                               ' See the shell window for details.'))
+                0, self.tr('An unhandled exception occured.'
+                           ' See the shell window for details.'))
             return
         
         if exceptionMessage == '':

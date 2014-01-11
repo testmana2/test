@@ -92,13 +92,13 @@ class Purge(HgExtension):
                 return
         
         if all:
-            title = self.trUtf8("Purge All Files")
-            message = self.trUtf8(
+            title = self.tr("Purge All Files")
+            message = self.tr(
                 """Do really want to delete all files not tracked by"""
                 """ Mercurial (including ignored ones)?""")
         else:
-            title = self.trUtf8("Purge Files")
-            message = self.trUtf8(
+            title = self.tr("Purge Files")
+            message = self.tr(
                 """Do really want to delete files not tracked by Mercurial?""")
         entries = self.__getEntries(repodir, all)
         from UI.DeleteFilesConfirmationDialog import \

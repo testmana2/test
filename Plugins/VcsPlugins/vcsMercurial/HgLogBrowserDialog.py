@@ -57,11 +57,11 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.setupUi(self)
         
         if mode == "log":
-            self.setWindowTitle(self.trUtf8("Mercurial Log"))
+            self.setWindowTitle(self.tr("Mercurial Log"))
         elif mode == "incoming":
-            self.setWindowTitle(self.trUtf8("Mercurial Log (Incoming)"))
+            self.setWindowTitle(self.tr("Mercurial Log (Incoming)"))
         elif mode == "outgoing":
-            self.setWindowTitle(self.trUtf8("Mercurial Log (Outgoing)"))
+            self.setWindowTitle(self.tr("Mercurial Log (Outgoing)"))
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -70,9 +70,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
         self.refreshButton = self.buttonBox.addButton(
-            self.trUtf8("&Refresh"), QDialogButtonBox.ActionRole)
+            self.tr("&Refresh"), QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
-            self.trUtf8("Press to refresh the list of changesets"))
+            self.tr("Press to refresh the list of changesets"))
         self.refreshButton.setEnabled(False)
         
         self.sbsCheckBox.setEnabled(isFile)
@@ -89,14 +89,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__initData()
         
-        self.__allBranchesFilter = self.trUtf8("All")
+        self.__allBranchesFilter = self.tr("All")
         
         self.fromDate.setDisplayFormat("yyyy-MM-dd")
         self.toDate.setDisplayFormat("yyyy-MM-dd")
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
         self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
-            self.trUtf8("Message")))
+            self.tr("Message")))
         self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
             "LogLimit"))
         self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
@@ -120,9 +120,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.flags = {
-            'A': self.trUtf8('Added'),
-            'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified'),
+            'A': self.tr('Added'),
+            'D': self.tr('Deleted'),
+            'M': self.tr('Modified'),
         }
         
         self.__dotRadius = 8
@@ -132,32 +132,32 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             QSize(100 * self.__rowHeight, self.__rowHeight))
         if self.vcs.version >= (1, 8):
             self.logTree.headerItem().setText(
-                self.logTree.columnCount(), self.trUtf8("Bookmarks"))
+                self.logTree.columnCount(), self.tr("Bookmarks"))
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
         
         self.__actionsMenu = QMenu()
         if self.vcs.version >= (2, 0):
             self.__graftAct = self.__actionsMenu.addAction(
-                self.trUtf8("Copy Changesets"), self.__graftActTriggered)
-            self.__graftAct.setToolTip(self.trUtf8(
+                self.tr("Copy Changesets"), self.__graftActTriggered)
+            self.__graftAct.setToolTip(self.tr(
                 "Copy the selected changesets to the current branch"))
         else:
             self.__graftAct = None
         if self.vcs.version >= (2, 1):
             self.__phaseAct = self.__actionsMenu.addAction(
-                self.trUtf8("Change Phase"), self.__phaseActTriggered)
-            self.__phaseAct.setToolTip(self.trUtf8(
+                self.tr("Change Phase"), self.__phaseActTriggered)
+            self.__phaseAct.setToolTip(self.tr(
                 "Change the phase of the selected revisions"))
-            self.__phaseAct.setWhatsThis(self.trUtf8(
+            self.__phaseAct.setWhatsThis(self.tr(
                 """<b>Change Phase</b>\n<p>This changes the phase of the"""
                 """ selected revisions. The selected revisions have to have"""
                 """ the same current phase.</p>"""))
         else:
             self.__phaseAct = None
         self.__tagAct = self.__actionsMenu.addAction(
-            self.trUtf8("Tag"), self.__tagActTriggered)
-        self.__tagAct.setToolTip(self.trUtf8("Tag the selected revision"))
+            self.tr("Tag"), self.__tagActTriggered)
+        self.__tagAct.setToolTip(self.tr("Tag the selected revision"))
         self.actionsButton.setIcon(
             UI.PixmapCache.getIcon("actionsToolButton.png"))
         self.actionsButton.setMenu(self.__actionsMenu)
@@ -437,15 +437,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                                 'replace')
                     else:
                         if not finished:
-                            errMsg = self.trUtf8(
+                            errMsg = self.tr(
                                 "The hg process did not finish within 30s.")
                 else:
-                    errMsg = self.trUtf8("Could not start the hg executable.")
+                    errMsg = self.tr("Could not start the hg executable.")
             
             if errMsg:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Mercurial Error"),
+                    self.tr("Mercurial Error"),
                     errMsg)
             
             if output:
@@ -480,15 +480,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                             'replace')
                 else:
                     if not finished:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "The hg process did not finish within 30s.")
             else:
-                errMsg = self.trUtf8("Could not start the hg executable.")
+                errMsg = self.tr("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Mercurial Error"),
+                self.tr("Mercurial Error"),
                 errMsg)
         
         if output:
@@ -527,15 +527,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                             'replace')
                 else:
                     if not finished:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "The hg process did not finish within 30s.")
             else:
-                errMsg = self.trUtf8("Could not start the hg executable.")
+                errMsg = self.tr("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Mercurial Error"),
+                self.tr("Mercurial Error"),
                 errMsg)
         
         if output:
@@ -731,8 +731,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -1255,10 +1255,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             closedBranch = branch + '--'
             
             txt = self.fieldCombo.currentText()
-            if txt == self.trUtf8("Author"):
+            if txt == self.tr("Author"):
                 fieldIndex = self.AuthorColumn
                 searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-            elif txt == self.trUtf8("Revision"):
+            elif txt == self.tr("Revision"):
                 fieldIndex = self.RevisionColumn
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
@@ -1414,8 +1414,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if shouldReopen:
                 res = E5MessageBox.yesNo(
                     None,
-                    self.trUtf8("Copy Changesets"),
-                    self.trUtf8(
+                    self.tr("Copy Changesets"),
+                    self.tr(
                         """The project should be reread. Do this now?"""),
                     yesDefault=True)
                 if res:

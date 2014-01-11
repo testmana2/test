@@ -96,7 +96,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select plugins download directory"),
+            self.tr("Select plugins download directory"),
             self.downloadDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

@@ -150,9 +150,9 @@ class DebugServer(QTcpServer):
         self.breakpointModel = BreakPointModel(self)
         self.watchpointModel = WatchPointModel(self)
         self.watchSpecialCreated = \
-            self.trUtf8("created", "must be same as in EditWatchpointDialog")
+            self.tr("created", "must be same as in EditWatchpointDialog")
         self.watchSpecialChanged = \
-            self.trUtf8("changed", "must be same as in EditWatchpointDialog")
+            self.tr("changed", "must be same as in EditWatchpointDialog")
         
         self.networkInterface = Preferences.getDebugger("NetworkInterface")
         if self.networkInterface == "all":
@@ -634,8 +634,8 @@ class DebugServer(QTcpServer):
             # the peer is not allowed to connect
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Connection from illegal host"),
-                self.trUtf8(
+                self.tr("Connection from illegal host"),
+                self.tr(
                     """<p>A connection was attempted by the illegal host"""
                     """ <b>{0}</b>. Accept this connection?</p>""")
                 .format(peerAddress),
@@ -1234,7 +1234,7 @@ class DebugServer(QTcpServer):
             self.startClient(False)
         if self.passive:
             self.__createDebuggerInterface("None")
-            self.signalClientOutput(self.trUtf8('\nNot connected\n'))
+            self.signalClientOutput(self.tr('\nNot connected\n'))
             self.signalClientStatement(False)
         self.running = False
         
@@ -1414,7 +1414,7 @@ class DebugServer(QTcpServer):
         @param fn filename of the debugged script (string)
         @param exc flag to enable exception reporting of the IDE (boolean)
         """
-        print(self.trUtf8("Passive debug connection received"))
+        print(self.tr("Passive debug connection received"))
         self.passiveClientExited = False
         self.debugging = True
         self.running = True
@@ -1428,7 +1428,7 @@ class DebugServer(QTcpServer):
         """
         self.passiveClientExited = True
         self.shutdownServer()
-        print(self.trUtf8("Passive debug connection closed"))
+        print(self.tr("Passive debug connection closed"))
         
     def __restoreBreakpoints(self):
         """

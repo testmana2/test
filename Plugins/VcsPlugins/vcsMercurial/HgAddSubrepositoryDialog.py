@@ -84,7 +84,7 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         """
         path = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Add Sub-repository"),
+            self.tr("Add Sub-repository"),
             os.path.join(self.__projectPath, self.pathEdit.text()),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         
@@ -96,9 +96,9 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Add Sub-repository"),
-                    self.trUtf8("""The sub-repository path must be inside"""
-                                """ the project."""))
+                    self.tr("Add Sub-repository"),
+                    self.tr("""The sub-repository path must be inside"""
+                            """ the project."""))
                 return
     
     def getData(self):

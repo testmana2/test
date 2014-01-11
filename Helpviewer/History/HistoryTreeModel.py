@@ -62,10 +62,10 @@ class HistoryTreeModel(QAbstractProxyModel):
                     idx = self.sourceModel().index(offset, 0)
                     date = idx.data(HistoryModel.DateRole)
                     if date == QDate.currentDate():
-                        return self.trUtf8("Earlier Today")
+                        return self.tr("Earlier Today")
                     return date.toString("yyyy-MM-dd")
                 if index.column() == 1:
-                    return self.trUtf8(
+                    return self.tr(
                         "%n item(s)", "",
                         self.rowCount(index.sibling(index.row(), 0)))
         

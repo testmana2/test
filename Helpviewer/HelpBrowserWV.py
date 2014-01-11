@@ -118,7 +118,7 @@ class JavaScriptEricObject(QObject):
             else:
                 return "RTL"
         
-        return self.trUtf8(trans)
+        return self.tr(trans)
     
     @pyqtSlot(result=str)
     def providerString(self):
@@ -127,7 +127,7 @@ class JavaScriptEricObject(QObject):
         
         @return string for the search provider (string)
         """
-        return self.trUtf8("Search results provided by {0}")\
+        return self.tr("Search results provided by {0}")\
             .format(self.__mw.openSearchManager().currentEngineName())
     
     @pyqtSlot(str, result=str)
@@ -201,8 +201,8 @@ class HelpWebPage(QWebPage):
         if type_ == QWebPage.NavigationTypeFormResubmitted:
             res = E5MessageBox.yesNo(
                 self.view(),
-                self.trUtf8("Resending POST request"),
-                self.trUtf8(
+                self.tr("Resending POST request"),
+                self.tr(
                     """In order to display the site, the request along with"""
                     """ all the data must be sent once again, which may lead"""
                     """ to some unexpected behaviour of the site e.g. the"""
@@ -281,7 +281,7 @@ class HelpWebPage(QWebPage):
             
             files.fileNames = E5FileDialog.getOpenFileNames(
                 None,
-                self.trUtf8("Select files to upload..."),
+                self.tr("Select files to upload..."),
                 suggestedFileName)
             return True
         
@@ -310,8 +310,8 @@ class HelpWebPage(QWebPage):
                 else:
                     # the whole page is blocked
                     rule = info.errorString.replace("AdBlockRule:", "")
-                    title = self.trUtf8("Content blocked by AdBlock Plus")
-                    message = self.trUtf8(
+                    title = self.tr("Content blocked by AdBlock Plus")
+                    message = self.tr(
                         "Blocked by rule: <i>{0}</i>").format(rule)
                     
                     htmlFile = QFile(":/html/adblockPage.html")
@@ -331,7 +331,7 @@ class HelpWebPage(QWebPage):
                info.errorString == "eric5:No Error":
                 return False
             
-            title = self.trUtf8("Error loading page: {0}").format(urlString)
+            title = self.tr("Error loading page: {0}").format(urlString)
             htmlFile = QFile(":/html/notFoundPage.html")
             htmlFile.open(QFile.ReadOnly)
             html = htmlFile.readAll()
@@ -351,31 +351,31 @@ class HelpWebPage(QWebPage):
             html = html.replace("@TITLE@", title.encode("utf8"))
             html = html.replace("@H1@", info.errorString.encode("utf8"))
             html = html.replace(
-                "@H2@", self.trUtf8("When connecting to: {0}.")
+                "@H2@", self.tr("When connecting to: {0}.")
                 .format(urlString).encode("utf8"))
             html = html.replace(
                 "@LI-1@",
-                self.trUtf8("Check the address for errors such as "
-                            "<b>ww</b>.example.org instead of "
-                            "<b>www</b>.example.org").encode("utf8"))
+                self.tr("Check the address for errors such as "
+                        "<b>ww</b>.example.org instead of "
+                        "<b>www</b>.example.org").encode("utf8"))
             html = html.replace(
                 "@LI-2@",
-                self.trUtf8(
+                self.tr(
                     "If the address is correct, try checking the network "
                     "connection.").encode("utf8"))
             html = html.replace(
                 "@LI-3@",
-                self.trUtf8(
+                self.tr(
                     "If your computer or network is protected by a firewall "
                     "or proxy, make sure that the browser is permitted to "
                     "access the network.").encode("utf8"))
             html = html.replace(
                 "@LI-4@",
-                self.trUtf8("If your cache policy is set to offline browsing,"
-                            "only pages in the local cache are available.")
+                self.tr("If your cache policy is set to offline browsing,"
+                        "only pages in the local cache are available.")
                 .encode("utf8"))
             html = html.replace(
-                "@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+                "@BUTTON@", self.tr("Try Again").encode("utf8"))
             errorPage.content = html
             return True
         
@@ -541,8 +541,8 @@ class HelpWebPage(QWebPage):
         else:
             E5MessageBox.warning(
                 self.view(),
-                self.trUtf8("SSL Info"),
-                self.trUtf8("""This site does not contain SSL information."""))
+                self.tr("SSL Info"),
+                self.tr("""This site does not contain SSL information."""))
     
     def hasValidSslInfo(self):
         """
@@ -647,7 +647,7 @@ class HelpBrowser(QWebView):
         """
         super().__init__(parent)
         self.setObjectName(name)
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>Help Window</b>"""
             """<p>This window displays the selected help information.</p>"""
         ))
@@ -821,8 +821,8 @@ class HelpBrowser(QWebView):
             if not QFileInfo(name.toLocalFile()).exists():
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8(
+                    self.tr("eric5 Web Browser"),
+                    self.tr(
                         """<p>The file <b>{0}</b> does not exist.</p>""")
                     .format(name.toLocalFile()))
                 return
@@ -835,8 +835,8 @@ class HelpBrowser(QWebView):
                 if not started:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("eric5 Web Browser"),
-                        self.trUtf8(
+                        self.tr("eric5 Web Browser"),
+                        self.tr(
                             """<p>Could not start a viewer"""
                             """ for file <b>{0}</b>.</p>""")
                         .format(name.path()))
@@ -846,8 +846,8 @@ class HelpBrowser(QWebView):
             if not started:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8(
+                    self.tr("eric5 Web Browser"),
+                    self.tr(
                         """<p>Could not start an application"""
                         """ for URL <b>{0}</b>.</p>""")
                     .format(name.toString()))
@@ -866,8 +866,8 @@ class HelpBrowser(QWebView):
                 if not started:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("eric5 Web Browser"),
-                        self.trUtf8(
+                        self.tr("eric5 Web Browser"),
+                        self.tr(
                             """<p>Could not start a viewer"""
                             """ for file <b>{0}</b>.</p>""")
                         .format(name.path()))
@@ -1076,29 +1076,29 @@ class HelpBrowser(QWebView):
         if not hit.linkUrl().isEmpty():
             menu.addAction(
                 UI.PixmapCache.getIcon("openNewTab.png"),
-                self.trUtf8("Open Link in New Tab\tCtrl+LMB"),
+                self.tr("Open Link in New Tab\tCtrl+LMB"),
                 self.__openLinkInNewTab).setData(hit.linkUrl())
             menu.addSeparator()
             menu.addAction(
                 UI.PixmapCache.getIcon("download.png"),
-                self.trUtf8("Save Lin&k"), self.__downloadLink)
+                self.tr("Save Lin&k"), self.__downloadLink)
             menu.addAction(
                 UI.PixmapCache.getIcon("bookmark22.png"),
-                self.trUtf8("Bookmark this Link"), self.__bookmarkLink)\
+                self.tr("Bookmark this Link"), self.__bookmarkLink)\
                 .setData(hit.linkUrl())
             menu.addSeparator()
             menu.addAction(
                 UI.PixmapCache.getIcon("editCopy.png"),
-                self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
+                self.tr("Copy Link to Clipboard"), self.__copyLink)
             menu.addAction(
                 UI.PixmapCache.getIcon("mailSend.png"),
-                self.trUtf8("Send Link"),
+                self.tr("Send Link"),
                 self.__sendLink).setData(hit.linkUrl())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
                 menu.addAction(
                     UI.PixmapCache.getIcon("virustotal.png"),
-                    self.trUtf8("Scan Link with VirusTotal"),
+                    self.tr("Scan Link with VirusTotal"),
                     self.__virusTotal).setData(hit.linkUrl())
         
         if not hit.imageUrl().isEmpty():
@@ -1106,32 +1106,32 @@ class HelpBrowser(QWebView):
                 menu.addSeparator()
             menu.addAction(
                 UI.PixmapCache.getIcon("openNewTab.png"),
-                self.trUtf8("Open Image in New Tab"),
+                self.tr("Open Image in New Tab"),
                 self.__openLinkInNewTab).setData(hit.imageUrl())
             menu.addSeparator()
             menu.addAction(
                 UI.PixmapCache.getIcon("download.png"),
-                self.trUtf8("Save Image"), self.__downloadImage)
+                self.tr("Save Image"), self.__downloadImage)
             menu.addAction(
-                self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
+                self.tr("Copy Image to Clipboard"), self.__copyImage)
             menu.addAction(
                 UI.PixmapCache.getIcon("editCopy.png"),
-                self.trUtf8("Copy Image Location to Clipboard"),
+                self.tr("Copy Image Location to Clipboard"),
                 self.__copyLocation).setData(hit.imageUrl().toString())
             menu.addAction(
                 UI.PixmapCache.getIcon("mailSend.png"),
-                self.trUtf8("Send Image Link"),
+                self.tr("Send Image Link"),
                 self.__sendLink).setData(hit.imageUrl())
             menu.addSeparator()
             menu.addAction(
                 UI.PixmapCache.getIcon("adBlockPlus.png"),
-                self.trUtf8("Block Image"), self.__blockImage)\
+                self.tr("Block Image"), self.__blockImage)\
                 .setData(hit.imageUrl().toString())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
                 menu.addAction(
                     UI.PixmapCache.getIcon("virustotal.png"),
-                    self.trUtf8("Scan Image with VirusTotal"),
+                    self.tr("Scan Image with VirusTotal"),
                     self.__virusTotal).setData(hit.imageUrl())
         
         element = hit.element()
@@ -1149,31 +1149,31 @@ class HelpBrowser(QWebView):
                 if paused:
                     menu.addAction(
                         UI.PixmapCache.getIcon("mediaPlaybackStart.png"),
-                        self.trUtf8("Play"), self.__pauseMedia)
+                        self.tr("Play"), self.__pauseMedia)
                 else:
                     menu.addAction(
                         UI.PixmapCache.getIcon("mediaPlaybackPause.png"),
-                        self.trUtf8("Pause"), self.__pauseMedia)
+                        self.tr("Pause"), self.__pauseMedia)
                 if muted:
                     menu.addAction(
                         UI.PixmapCache.getIcon("audioVolumeHigh.png"),
-                        self.trUtf8("Unmute"), self.__muteMedia)
+                        self.tr("Unmute"), self.__muteMedia)
                 else:
                     menu.addAction(
                         UI.PixmapCache.getIcon("audioVolumeMuted.png"),
-                        self.trUtf8("Mute"), self.__muteMedia)
+                        self.tr("Mute"), self.__muteMedia)
                 menu.addSeparator()
                 menu.addAction(
                     UI.PixmapCache.getIcon("editCopy.png"),
-                    self.trUtf8("Copy Media Address to Clipboard"),
+                    self.tr("Copy Media Address to Clipboard"),
                     self.__copyLocation).setData(videoUrl.toString())
                 menu.addAction(
                     UI.PixmapCache.getIcon("mailSend.png"),
-                    self.trUtf8("Send Media Address"), self.__sendLink)\
+                    self.tr("Send Media Address"), self.__sendLink)\
                     .setData(videoUrl)
                 menu.addAction(
                     UI.PixmapCache.getIcon("download.png"),
-                    self.trUtf8("Save Media"), self.__downloadMedia)\
+                    self.tr("Save Media"), self.__downloadMedia)\
                     .setData(videoUrl)
             
             if element.tagName().lower() in ["input", "textarea"]:
@@ -1214,39 +1214,39 @@ class HelpBrowser(QWebView):
         
         if frameAtPos and self.page().mainFrame() != frameAtPos:
             self.__clickedFrame = frameAtPos
-            fmenu = QMenu(self.trUtf8("This Frame"))
+            fmenu = QMenu(self.tr("This Frame"))
             frameUrl = self.__clickedFrame.url()
             if frameUrl.isValid():
                 fmenu.addAction(
-                    self.trUtf8("Show &only this frame"),
+                    self.tr("Show &only this frame"),
                     self.__loadClickedFrame)
                 fmenu.addAction(
                     UI.PixmapCache.getIcon("openNewTab.png"),
-                    self.trUtf8("Show in new &tab"),
+                    self.tr("Show in new &tab"),
                     self.__openLinkInNewTab).setData(self.__clickedFrame.url())
                 fmenu.addSeparator()
             fmenu.addAction(
                 UI.PixmapCache.getIcon("print.png"),
-                self.trUtf8("&Print"), self.__printClickedFrame)
+                self.tr("&Print"), self.__printClickedFrame)
             fmenu.addAction(
                 UI.PixmapCache.getIcon("printPreview.png"),
-                self.trUtf8("Print Preview"), self.__printPreviewClickedFrame)
+                self.tr("Print Preview"), self.__printPreviewClickedFrame)
             fmenu.addAction(
                 UI.PixmapCache.getIcon("printPdf.png"),
-                self.trUtf8("Print as PDF"), self.__printPdfClickedFrame)
+                self.tr("Print as PDF"), self.__printPdfClickedFrame)
             fmenu.addSeparator()
             fmenu.addAction(
                 UI.PixmapCache.getIcon("zoomIn.png"),
-                self.trUtf8("Zoom &in"), self.__zoomInClickedFrame)
+                self.tr("Zoom &in"), self.__zoomInClickedFrame)
             fmenu.addAction(
                 UI.PixmapCache.getIcon("zoomReset.png"),
-                self.trUtf8("Zoom &reset"), self.__zoomResetClickedFrame)
+                self.tr("Zoom &reset"), self.__zoomResetClickedFrame)
             fmenu.addAction(
                 UI.PixmapCache.getIcon("zoomOut.png"),
-                self.trUtf8("Zoom &out"), self.__zoomOutClickedFrame)
+                self.tr("Zoom &out"), self.__zoomOutClickedFrame)
             fmenu.addSeparator()
             fmenu.addAction(
-                self.trUtf8("Show frame so&urce"),
+                self.tr("Show frame so&urce"),
                 self.__showClickedFrameSource)
             
             menu.addMenu(fmenu)
@@ -1254,12 +1254,12 @@ class HelpBrowser(QWebView):
         
         menu.addAction(
             UI.PixmapCache.getIcon("bookmark22.png"),
-            self.trUtf8("Bookmark this Page"), self.addBookmark)
+            self.tr("Bookmark this Page"), self.addBookmark)
         menu.addAction(
             UI.PixmapCache.getIcon("mailSend.png"),
-            self.trUtf8("Send Page Link"), self.__sendLink).setData(self.url())
+            self.tr("Send Page Link"), self.__sendLink).setData(self.url())
         menu.addSeparator()
-        self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"),
+        self.__userAgentMenu = UserAgentMenu(self.tr("User Agent"),
                                              url=self.url())
         menu.addMenu(self.__userAgentMenu)
         menu.addSeparator()
@@ -1275,12 +1275,12 @@ class HelpBrowser(QWebView):
             menu.addAction(self.mw.copyAct)
             menu.addAction(
                 UI.PixmapCache.getIcon("mailSend.png"),
-                self.trUtf8("Send Text"),
+                self.tr("Send Text"),
                 self.__sendLink).setData(self.selectedText())
         menu.addAction(self.mw.findAct)
         menu.addSeparator()
         if self.selectedText():
-            self.__searchMenu = menu.addMenu(self.trUtf8("Search with..."))
+            self.__searchMenu = menu.addMenu(self.tr("Search with..."))
             
             from .OpenSearch.OpenSearchEngineAction import \
                 OpenSearchEngineAction
@@ -1307,21 +1307,21 @@ class HelpBrowser(QWebView):
                         langCode, self.selectedText()))
                 menu.addAction(
                     UI.PixmapCache.getIcon("translate.png"),
-                    self.trUtf8("Google Translate"), self.__openLinkInNewTab)\
+                    self.tr("Google Translate"), self.__openLinkInNewTab)\
                     .setData(googleTranslatorUrl)
                 wiktionaryUrl = QUrl(
                     "http://{0}.wiktionary.org/wiki/Special:Search?search={1}"
                     .format(langCode, self.selectedText()))
                 menu.addAction(
                     UI.PixmapCache.getIcon("wikipedia.png"),
-                    self.trUtf8("Dictionary"), self.__openLinkInNewTab)\
+                    self.tr("Dictionary"), self.__openLinkInNewTab)\
                     .setData(wiktionaryUrl)
                 menu.addSeparator()
             
             guessedUrl = QUrl.fromUserInput(self.selectedText().strip())
             if self.__isUrlValid(guessedUrl):
                 menu.addAction(
-                    self.trUtf8("Go to web address"),
+                    self.tr("Go to web address"),
                     self.__openLinkInNewTab).setData(guessedUrl)
                 menu.addSeparator()
         
@@ -1329,13 +1329,13 @@ class HelpBrowser(QWebView):
         if not element.isNull() and \
            element.tagName().lower() == "input" and \
            element.attribute("type", "text") == "text":
-            menu.addAction(self.trUtf8("Add to web search toolbar"),
+            menu.addAction(self.tr("Add to web search toolbar"),
                            self.__addSearchEngine).setData(element)
             menu.addSeparator()
         
         menu.addAction(
             UI.PixmapCache.getIcon("webInspector.png"),
-            self.trUtf8("Web Inspector..."), self.__webInspector)
+            self.tr("Web Inspector..."), self.__webInspector)
         
         menu.exec_(evt.globalPos())
     
@@ -1510,8 +1510,8 @@ class HelpBrowser(QWebView):
         if method != "get":
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Method not supported"),
-                self.trUtf8(
+                self.tr("Method not supported"),
+                self.tr(
                     """{0} method is not supported.""").format(method.upper()))
             return
         
@@ -1555,8 +1555,8 @@ class HelpBrowser(QWebView):
         if len(searchEngines) > 1:
             searchEngine, ok = QInputDialog.getItem(
                 self,
-                self.trUtf8("Search engine"),
-                self.trUtf8("Choose the desired search engine"),
+                self.tr("Search engine"),
+                self.tr("Choose the desired search engine"),
                 sorted(searchEngines.keys()), 0, False)
             
             if not ok:
@@ -1573,8 +1573,8 @@ class HelpBrowser(QWebView):
         
         engineName, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Engine name"),
-            self.trUtf8("Enter a name for the engine"),
+            self.tr("Engine name"),
+            self.tr("Enter a name for the engine"),
             QLineEdit.Normal,
             engineName)
         if not ok:
@@ -1933,7 +1933,7 @@ class HelpBrowser(QWebView):
                 return
         
         urlString = bytes(replyUrl.toEncoded()).decode()
-        title = self.trUtf8("Error loading page: {0}").format(urlString)
+        title = self.tr("Error loading page: {0}").format(urlString)
         htmlFile = QFile(":/html/notFoundPage.html")
         htmlFile.open(QFile.ReadOnly)
         html = htmlFile.readAll()
@@ -1952,30 +1952,30 @@ class HelpBrowser(QWebView):
         html = html.replace("@TITLE@", title.encode("utf8"))
         html = html.replace("@H1@", reply.errorString().encode("utf8"))
         html = html.replace(
-            "@H2@", self.trUtf8("When connecting to: {0}.")
+            "@H2@", self.tr("When connecting to: {0}.")
             .format(urlString).encode("utf8"))
         html = html.replace(
             "@LI-1@",
-            self.trUtf8("Check the address for errors such as "
-                        "<b>ww</b>.example.org instead of "
-                        "<b>www</b>.example.org").encode("utf8"))
+            self.tr("Check the address for errors such as "
+                    "<b>ww</b>.example.org instead of "
+                    "<b>www</b>.example.org").encode("utf8"))
         html = html.replace(
             "@LI-2@",
-            self.trUtf8("If the address is correct, try checking the network "
-                        "connection.").encode("utf8"))
+            self.tr("If the address is correct, try checking the network "
+                    "connection.").encode("utf8"))
         html = html.replace(
             "@LI-3@",
-            self.trUtf8(
+            self.tr(
                 "If your computer or network is protected by a firewall "
                 "or proxy, make sure that the browser is permitted to "
                 "access the network.").encode("utf8"))
         html = html.replace(
             "@LI-4@",
-            self.trUtf8("If your cache policy is set to offline browsing,"
-                        "only pages in the local cache are available.")
+            self.tr("If your cache policy is set to offline browsing,"
+                    "only pages in the local cache are available.")
             .encode("utf8"))
         html = html.replace(
-            "@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+            "@BUTTON@", self.tr("Try Again").encode("utf8"))
         notFoundFrame.setHtml(bytes(html).decode("utf8"), replyUrl)
         self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
         self.loadFinished.emit(False)
@@ -2004,8 +2004,8 @@ class HelpBrowser(QWebView):
         
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Web Database Quota"),
-            self.trUtf8(
+            self.tr("Web Database Quota"),
+            self.tr(
                 """<p>The database quota of <strong>{0}</strong> has"""
                 """ been exceeded while accessing database <strong>{1}"""
                 """</strong>.</p><p>Shall it be changed?</p>""")
@@ -2015,8 +2015,8 @@ class HelpBrowser(QWebView):
         if res:
             newQuota, ok = QInputDialog.getInt(
                 self,
-                self.trUtf8("New Web Database Quota"),
-                self.trUtf8(
+                self.tr("New Web Database Quota"),
+                self.tr(
                     "Enter the new quota in MB (current = {0}, used = {1}; "
                     "step size = 5 MB):"
                     .format(
@@ -2036,13 +2036,13 @@ class HelpBrowser(QWebView):
         """
         unit = ""
         if size < 1024:
-            unit = self.trUtf8("bytes")
+            unit = self.tr("bytes")
         elif size < 1024 * 1024:
             size /= 1024
-            unit = self.trUtf8("kB")
+            unit = self.tr("kB")
         else:
             size /= 1024 * 1024
-            unit = self.trUtf8("MB")
+            unit = self.tr("MB")
         return "{0:.1f} {1}".format(size, unit)
     
     ###########################################################################
@@ -2319,8 +2319,8 @@ class HelpBrowser(QWebView):
             except AttributeError:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8(
+                    self.tr("eric5 Web Browser"),
+                    self.tr(
                         """<p>Printing is not available due to a bug in"""
                         """ PyQt4. Please upgrade.</p>"""))
     
@@ -2365,8 +2365,8 @@ class HelpBrowser(QWebView):
         except AttributeError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("eric5 Web Browser"),
-                self.trUtf8(
+                self.tr("eric5 Web Browser"),
+                self.tr(
                     """<p>Printing is not available due to a bug in PyQt4."""
                     """Please upgrade.</p>"""))
             return
@@ -2397,8 +2397,8 @@ class HelpBrowser(QWebView):
             except AttributeError:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("eric5 Web Browser"),
-                    self.trUtf8(
+                    self.tr("eric5 Web Browser"),
+                    self.tr(
                         """<p>Printing is not available due to a bug in"""
                         """ PyQt4. Please upgrade.</p>"""))
                 return

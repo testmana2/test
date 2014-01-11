@@ -67,9 +67,9 @@ class HgImportDialog(QDialog, Ui_HgImportDialog):
         """
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select patch file"),
+            self.tr("Select patch file"),
             self.patchFileEdit.text(),
-            self.trUtf8("Patch Files (*.diff *.patch);;All Files (*)"))
+            self.tr("Patch Files (*.diff *.patch);;All Files (*)"))
         
         if fn:
             self.patchFileEdit.setText(Utilities.toNativeSeparators(fn))

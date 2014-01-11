@@ -391,36 +391,36 @@ class TemplateViewer(QTreeWidget):
         
         self.__menu = QMenu(self)
         self.applyAct = self.__menu.addAction(
-            self.trUtf8("Apply"), self.__templateItemActivated)
+            self.tr("Apply"), self.__templateItemActivated)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Add entry..."), self.__addEntry)
-        self.__menu.addAction(self.trUtf8("Add group..."), self.__addGroup)
-        self.__menu.addAction(self.trUtf8("Edit..."), self.__edit)
-        self.__menu.addAction(self.trUtf8("Remove"), self.__remove)
+        self.__menu.addAction(self.tr("Add entry..."), self.__addEntry)
+        self.__menu.addAction(self.tr("Add group..."), self.__addGroup)
+        self.__menu.addAction(self.tr("Edit..."), self.__edit)
+        self.__menu.addAction(self.tr("Remove"), self.__remove)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Save"), self.save)
-        self.__menu.addAction(self.trUtf8("Import..."), self.__import)
-        self.__menu.addAction(self.trUtf8("Export..."), self.__export)
-        self.__menu.addAction(self.trUtf8("Reload"), self.__reload)
+        self.__menu.addAction(self.tr("Save"), self.save)
+        self.__menu.addAction(self.tr("Import..."), self.__import)
+        self.__menu.addAction(self.tr("Export..."), self.__export)
+        self.__menu.addAction(self.tr("Reload"), self.__reload)
         self.__menu.addSeparator()
         self.__menu.addAction(
-            self.trUtf8("Help about Templates..."), self.__showHelp)
+            self.tr("Help about Templates..."), self.__showHelp)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.__backMenu = QMenu(self)
-        self.__backMenu.addAction(self.trUtf8("Add group..."), self.__addGroup)
+        self.__backMenu.addAction(self.tr("Add group..."), self.__addGroup)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Save"), self.save)
-        self.__backMenu.addAction(self.trUtf8("Import..."), self.__import)
-        self.__backMenu.addAction(self.trUtf8("Export..."), self.__export)
-        self.__backMenu.addAction(self.trUtf8("Reload"), self.__reload)
-        self.__backMenu.addSeparator()
-        self.__backMenu.addAction(
-            self.trUtf8("Help about Templates..."), self.__showHelp)
+        self.__backMenu.addAction(self.tr("Save"), self.save)
+        self.__backMenu.addAction(self.tr("Import..."), self.__import)
+        self.__backMenu.addAction(self.tr("Export..."), self.__export)
+        self.__backMenu.addAction(self.tr("Reload"), self.__reload)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(
-            self.trUtf8("Configure..."), self.__configure)
+            self.tr("Help about Templates..."), self.__showHelp)
+        self.__backMenu.addSeparator()
+        self.__backMenu.addAction(
+            self.tr("Configure..."), self.__configure)
         
         self.__activating = False
         self.__dirty = False
@@ -523,8 +523,8 @@ class TemplateViewer(QTreeWidget):
         itm = self.currentItem()
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Remove Template"),
-            self.trUtf8("""<p>Do you really want to remove <b>{0}</b>?</p>""")
+            self.tr("Remove Template"),
+            self.tr("""<p>Do you really want to remove <b>{0}</b>?</p>""")
             .format(itm.getName()))
         if not res:
             return
@@ -550,9 +550,9 @@ class TemplateViewer(QTreeWidget):
         """
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Import Templates"),
+            self.tr("Import Templates"),
             "",
-            self.trUtf8("Templates Files (*.e4c);; All Files (*)"))
+            self.tr("Templates Files (*.e4c);; All Files (*)"))
         
         if fn:
             self.readTemplates(fn)
@@ -564,9 +564,9 @@ class TemplateViewer(QTreeWidget):
         """
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Export Templates"),
+            self.tr("Export Templates"),
             "",
-            self.trUtf8("Templates Files (*.e4c);; All Files (*)"),
+            self.tr("Templates Files (*.e4c);; All Files (*)"),
             "",
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -585,8 +585,8 @@ class TemplateViewer(QTreeWidget):
         if self.__dirty:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Reload Templates"),
-                self.trUtf8(
+                self.tr("Reload Templates"),
+                self.tr(
                     """The templates contain unsaved changes. Shall these"""
                     """ changes be discarded?"""),
                 icon=E5MessageBox.Warning)
@@ -604,8 +604,8 @@ class TemplateViewer(QTreeWidget):
         """
         E5MessageBox.information(
             self,
-            self.trUtf8("Template Help"),
-            self.trUtf8(
+            self.tr("Template Help"),
+            self.tr(
                 """<p><b>Template groups</b> are a means of grouping"""
                 """ individual templates. Groups have an attribute that"""
                 """ specifies, which programming language they apply for."""
@@ -848,9 +848,9 @@ class TemplateViewer(QTreeWidget):
             if newname in self.groups:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Edit Template Group"),
-                    self.trUtf8("""<p>A template group with the name"""
-                                """ <b>{0}</b> already exists.</p>""")
+                    self.tr("Edit Template Group"),
+                    self.tr("""<p>A template group with the name"""
+                            """ <b>{0}</b> already exists.</p>""")
                     .format(newname))
                 return
             
@@ -942,8 +942,8 @@ class TemplateViewer(QTreeWidget):
         if not ok:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save templates"),
-                self.trUtf8(
+                self.tr("Save templates"),
+                self.tr(
                     "<p>The templates file <b>{0}</b> could not be"
                     " written.</p>")
                 .format(filename))
@@ -976,8 +976,8 @@ class TemplateViewer(QTreeWidget):
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Read templates"),
-                self.trUtf8(
+                self.tr("Read templates"),
+                self.tr(
                     "<p>The templates file <b>{0}</b> could not be read.</p>")
                 .format(filename))
     

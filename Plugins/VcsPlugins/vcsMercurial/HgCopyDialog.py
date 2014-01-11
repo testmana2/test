@@ -47,7 +47,7 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
             self.targetCompleter = E5FileCompleter(self.targetEdit)
         
         if move:
-            self.setWindowTitle(self.trUtf8('Mercurial Move'))
+            self.setWindowTitle(self.tr('Mercurial Move'))
         else:
             self.forceCheckBox.setEnabled(False)
         self.forceCheckBox.setChecked(force)
@@ -79,13 +79,13 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         if os.path.isdir(self.source):
             target = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         else:
             target = E5FileDialog.getSaveFileName(
                 self,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))

@@ -145,7 +145,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         
         if counter == 0:
             itm = QListWidgetItem(self.databasesList)
-            itm.setText(self.trUtf8("No databases are used by this page."))
+            itm.setText(self.tr("No databases are used by this page."))
             itm.setFlags(itm.flags() & Qt.ItemIsSelectable)
     
     @pyqtSlot()
@@ -188,7 +188,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             if pixmap.isNull():
                 invalidPixmap = True
         if invalidPixmap:
-            scene.addText(self.trUtf8("Preview not available."))
+            scene.addText(self.tr("Preview not available."))
         else:
             scene.addPixmap(pixmap)
         self.imagePreview.setScene(scene)
@@ -205,15 +205,15 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         
         menu = QMenu()
         act = menu.addAction(
-            self.trUtf8("Copy Image Location to Clipboard"),
+            self.tr("Copy Image Location to Clipboard"),
             self.__copyAction)
         act.setData(itm.text(1))
         act = menu.addAction(
-            self.trUtf8("Copy Image Name to Clipboard"),
+            self.tr("Copy Image Name to Clipboard"),
             self.__copyAction)
         act.setData(itm.text(0))
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8("Save Image"), self.__saveImage)
+        act = menu.addAction(self.tr("Save Image"), self.__saveImage)
         act.setData(self.imagesTree.indexOfTopLevelItem(itm))
         menu.exec_(QCursor.pos())
     
@@ -248,8 +248,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         if not cacheData:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save Image"),
-                self.trUtf8("""This image is not available."""))
+                self.tr("Save Image"),
+                self.tr("""This image is not available."""))
             return
         
         downloadDirectory = Helpviewer.HelpWindow.HelpWindow\
@@ -257,9 +257,9 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         fn = os.path.join(downloadDirectory, os.path.basename(itm.text(1)))
         filename = E5FileDialog.getSaveFileName(
             self,
-            self.trUtf8("Save Image"),
+            self.tr("Save Image"),
             fn,
-            self.trUtf8("All Files (*)"),
+            self.tr("All Files (*)"),
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not filename:
@@ -269,8 +269,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         if not f.open(QFile.WriteOnly):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save Image"),
-                self.trUtf8(
+                self.tr("Save Image"),
+                self.tr(
                     """<p>Cannot write to file <b>{0}</b>.</p>""")
                 .format(filename))
             return

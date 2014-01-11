@@ -125,8 +125,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         if not procStarted:
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))

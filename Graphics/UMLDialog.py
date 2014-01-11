@@ -74,37 +74,37 @@ class UMLDialog(E5MainWindow):
         """
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
-                    self.trUtf8("Close"), self)
+                    self.tr("Close"), self)
         self.closeAct.triggered[()].connect(self.close)
         
         self.openAct = \
             QAction(UI.PixmapCache.getIcon("open.png"),
-                    self.trUtf8("Load"), self)
+                    self.tr("Load"), self)
         self.openAct.triggered[()].connect(self.load)
         
         self.saveAct = \
             QAction(UI.PixmapCache.getIcon("fileSave.png"),
-                    self.trUtf8("Save"), self)
+                    self.tr("Save"), self)
         self.saveAct.triggered[()].connect(self.__save)
         
         self.saveAsAct = \
             QAction(UI.PixmapCache.getIcon("fileSaveAs.png"),
-                    self.trUtf8("Save As..."), self)
+                    self.tr("Save As..."), self)
         self.saveAsAct.triggered[()].connect(self.__saveAs)
         
         self.saveImageAct = \
             QAction(UI.PixmapCache.getIcon("fileSavePixmap.png"),
-                    self.trUtf8("Save as Image"), self)
+                    self.tr("Save as Image"), self)
         self.saveImageAct.triggered[()].connect(self.umlView.saveImage)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
-                    self.trUtf8("Print"), self)
+                    self.tr("Print"), self)
         self.printAct.triggered[()].connect(self.umlView.printDiagram)
         
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
-                    self.trUtf8("Print Preview"), self)
+                    self.tr("Print Preview"), self)
         self.printPreviewAct.triggered[()].connect(
             self.umlView.printPreviewDiagram)
     
@@ -112,11 +112,11 @@ class UMLDialog(E5MainWindow):
         """
         Private slot to initialize the toolbars.
         """
-        self.windowToolBar = QToolBar(self.trUtf8("Window"), self)
+        self.windowToolBar = QToolBar(self.tr("Window"), self)
         self.windowToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.windowToolBar.addAction(self.closeAct)
         
-        self.fileToolBar = QToolBar(self.trUtf8("File"), self)
+        self.fileToolBar = QToolBar(self.tr("File"), self)
         self.fileToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.fileToolBar.addAction(self.openAct)
         self.fileToolBar.addSeparator()
@@ -182,7 +182,7 @@ class UMLDialog(E5MainWindow):
         elif diagramType == UMLDialog.NoDiagram:
             return None
         else:
-            raise ValueError(self.trUtf8(
+            raise ValueError(self.tr(
                 "Illegal diagram type '{0}' given.").format(diagramType))
     
     def __diagramTypeString(self):
@@ -217,9 +217,9 @@ class UMLDialog(E5MainWindow):
         if not filename:
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Save Diagram"),
+                self.tr("Save Diagram"),
                 "",
-                self.trUtf8("Eric5 Graphics File (*.e5g);;All Files (*)"),
+                self.tr("Eric5 Graphics File (*.e5g);;All Files (*)"),
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if not fname:
@@ -232,9 +232,9 @@ class UMLDialog(E5MainWindow):
             if QFileInfo(fname).exists():
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Save Diagram"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fname),
+                    self.tr("Save Diagram"),
+                    self.tr("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
@@ -259,8 +259,8 @@ class UMLDialog(E5MainWindow):
         except (IOError, OSError) as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save Diagram"),
-                self.trUtf8(
+                self.tr("Save Diagram"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be saved.</p>"""
                     """<p>Reason: {1}</p>""").format(filename, str(err)))
             return
@@ -275,9 +275,9 @@ class UMLDialog(E5MainWindow):
         """
         filename = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Load Diagram"),
+            self.tr("Load Diagram"),
             "",
-            self.trUtf8("Eric5 Graphics File (*.e5g);;All Files (*)"))
+            self.tr("Eric5 Graphics File (*.e5g);;All Files (*)"))
         if not filename:
             # Cancelled by user
             return False
@@ -289,8 +289,8 @@ class UMLDialog(E5MainWindow):
         except (IOError, OSError) as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Load Diagram"),
-                self.trUtf8(
+                self.tr("Load Diagram"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be read.</p>"""
                     """<p>Reason: {1}</p>""").format(filename, str(err)))
             return False
@@ -371,10 +371,10 @@ class UMLDialog(E5MainWindow):
         @param linenum number of the invalid line (integer)
         """
         if linenum < 0:
-            msg = self.trUtf8("""<p>The file <b>{0}</b> does not contain"""
-                              """ valid data.</p>""").format(filename)
+            msg = self.tr("""<p>The file <b>{0}</b> does not contain"""
+                          """ valid data.</p>""").format(filename)
         else:
-            msg = self.trUtf8("""<p>The file <b>{0}</b> does not contain"""
-                              """ valid data.</p><p>Invalid line: {1}</p>"""
-                              ).format(filename, linenum + 1)
-        E5MessageBox.critical(self, self.trUtf8("Load Diagram"), msg)
+            msg = self.tr("""<p>The file <b>{0}</b> does not contain"""
+                          """ valid data.</p><p>Invalid line: {1}</p>"""
+                          ).format(filename, linenum + 1)
+        E5MessageBox.critical(self, self.tr("Load Diagram"), msg)

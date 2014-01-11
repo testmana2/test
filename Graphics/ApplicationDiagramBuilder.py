@@ -41,7 +41,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         self.noModules = noModules
         
         self.umlView.setDiagramName(
-            self.trUtf8("Application Diagram {0}").format(
+            self.tr("Application Diagram {0}").format(
                 self.project.getProjectName()))
         
     def __buildModulesDict(self):
@@ -62,8 +62,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                 self.project.ppath, module))
         tot = len(modules)
         progress = E5ProgressDialog(
-            self.trUtf8("Parsing modules..."),
-            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
+            self.tr("Parsing modules..."),
+            None, 0, tot, self.tr("%v/%m Modules"), self.parent())
         try:
             prog = 0
             progress.show()
@@ -189,9 +189,9 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                 if relPackage and relPackage[0] == '.':
                     relPackage = relPackage[1:]
                 else:
-                    relPackage = self.trUtf8("<<Application>>")
+                    relPackage = self.tr("<<Application>>")
             else:
-                relPackage = self.trUtf8("<<Others>>")
+                relPackage = self.tr("<<Others>>")
             shape = self.__addPackage(
                 relPackage, packages[package][0], 0.0, 0.0)
             shapeRect = shape.sceneBoundingRect()
@@ -278,8 +278,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         if projectFile != self.project.getProjectFile():
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Load Diagram"),
-                self.trUtf8(
+                self.tr("Load Diagram"),
+                self.tr(
                     """<p>The diagram belongs to the project <b>{0}</b>."""
                     """ Shall this project be opened?</p>""").format(
                     projectFile))

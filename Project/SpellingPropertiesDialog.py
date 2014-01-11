@@ -47,7 +47,7 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         self.pelCompleter = E5FileCompleter(self.pelEdit)
         
         from QScintilla.SpellChecker import SpellChecker
-        self.spellingComboBox.addItem(self.trUtf8("<default>"))
+        self.spellingComboBox.addItem(self.tr("<default>"))
         self.spellingComboBox.addItems(
             sorted(SpellChecker.getAvailableLanguages()))
         
@@ -83,9 +83,9 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
                 os.path.join(self.project.ppath, pwl))
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select project word list"),
+            self.tr("Select project word list"),
             pwl,
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.tr("Dictionary File (*.dic);;All Files (*)"))
         
         if file:
             self.pwlEdit.setText(self.project.getRelativePath(
@@ -104,9 +104,9 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
                 os.path.join(self.project.ppath, pel))
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select project exclude list"),
+            self.tr("Select project exclude list"),
             pel,
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.tr("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pelEdit.setText(self.project.getRelativePath(

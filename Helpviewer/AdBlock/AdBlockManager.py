@@ -137,7 +137,7 @@ class AdBlockManager(QObject):
         location = self.__customSubscriptionLocation()
         encodedUrl = bytes(location.toEncoded()).decode()
         url = QUrl("abp:subscribe?location={0}&title={1}".format(
-            encodedUrl, self.trUtf8("Custom Rules")))
+            encodedUrl, self.tr("Custom Rules")))
         return url
     
     def customRules(self):

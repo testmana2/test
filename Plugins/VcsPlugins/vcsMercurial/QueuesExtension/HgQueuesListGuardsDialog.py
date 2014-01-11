@@ -122,7 +122,7 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
                     guard = guard[1:]
                 else:
                     icon = None
-                    guard = self.trUtf8("Unguarded")
+                    guard = self.tr("Unguarded")
                 itm = QListWidgetItem(guard, self.guardsList)
                 if icon:
                     itm.setIcon(icon)

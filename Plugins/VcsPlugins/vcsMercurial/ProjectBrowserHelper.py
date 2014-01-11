@@ -182,7 +182,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions = []
         self.vcsAddMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -196,83 +196,83 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'),
+            self.tr('Add to repository'),
             self._VCSAdd)
         self.vcsAddMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository only'),
+            self.tr('Remove from repository only'),
             self.__HgForget)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Copy'), self.__HgCopy)
+        act = menu.addAction(self.tr('Copy'), self.__HgCopy)
         self.vcsMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Move'), self.__HgMove)
+        act = menu.addAction(self.tr('Move'), self.__HgMove)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log'), self._VCSLog)
+            self.tr('Show log'), self._VCSLog)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log browser'), self.__HgLogBrowser)
+            self.tr('Show log browser'), self.__HgLogBrowser)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side'), self.__HgSbsDiff)
+            self.tr('Show difference side-by-side'), self.__HgSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side (extended)'),
+            self.tr('Show difference side-by-side (extended)'),
             self.__HgSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         self.annotateAct = menu.addAction(
-            self.trUtf8('Show annotated file'),
+            self.tr('Show annotated file'),
             self.__HgAnnotate)
         self.vcsMenuActions.append(self.annotateAct)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self.__HgRevert)
+            self.tr('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflict resolved'), self.__HgResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
@@ -290,7 +290,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMultiMenuActions = []
         self.vcsAddMultiMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -304,55 +304,55 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), self._VCSAdd)
+            self.tr('Add to repository'), self._VCSAdd)
         self.vcsAddMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository only'),
+            self.tr('Remove from repository only'),
             self.__HgForget)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self.__HgRevert)
+            self.tr('Revert changes'), self.__HgRevert)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflict resolved'), self.__HgResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
@@ -366,7 +366,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         @param mainMenu reference to the menu to be amended
         """
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -378,13 +378,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act.setFont(font)
         menu.addSeparator()
         
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
@@ -404,7 +404,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions = []
         self.vcsAddDirMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -418,64 +418,64 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), self._VCSAdd)
+            self.tr('Add to repository'), self._VCSAdd)
         self.vcsAddDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Copy'), self.__HgCopy)
+        act = menu.addAction(self.tr('Copy'), self.__HgCopy)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Move'), self.__HgMove)
+        act = menu.addAction(self.tr('Move'), self.__HgMove)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log'), self._VCSLog)
+            self.tr('Show log'), self._VCSLog)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log browser'), self.__HgLogBrowser)
+            self.tr('Show log browser'), self.__HgLogBrowser)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self.__HgRevert)
+            self.tr('Revert changes'), self.__HgRevert)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflict resolved'), self.__HgResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
@@ -495,7 +495,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMultiMenuActions = []
         self.vcsAddDirMultiMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -509,50 +509,50 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), self._VCSAdd)
+            self.tr('Add to repository'), self._VCSAdd)
         self.vcsAddDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self.__HgRevert)
+            self.tr('Revert changes'), self.__HgRevert)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflict resolved'), self.__HgResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
         
@@ -689,8 +689,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Remove from repository only"),
-                self.trUtf8(
+                self.tr("Remove from repository only"),
+                self.tr(
                     "Do you really want to remove these files"
                     " from the repository?"),
                 names)
@@ -702,8 +702,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Remove from repository only"),
-                self.trUtf8(
+                self.tr("Remove from repository only"),
+                self.tr(
                     "Do you really want to remove these files"
                     " from the repository?"),
                 files)

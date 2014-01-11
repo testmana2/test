@@ -27,8 +27,8 @@ class UserAgentModel(QAbstractTableModel):
         self.__manager.changed.connect(self.__userAgentsChanged)
         
         self.__headers = [
-            self.trUtf8("Host"),
-            self.trUtf8("User Agent String"),
+            self.tr("Host"),
+            self.tr("User Agent String"),
         ]
     
     def __userAgentsChanged(self):

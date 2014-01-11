@@ -49,10 +49,10 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.__statusDict = {
-            "A": self.trUtf8("applied"),
-            "U": self.trUtf8("not applied"),
-            "G": self.trUtf8("guarded"),
-            "D": self.trUtf8("missing"),
+            "A": self.tr("applied"),
+            "U": self.tr("not applied"),
+            "G": self.tr("guarded"),
+            "D": self.tr("missing"),
         }
         
         self.show()
@@ -149,8 +149,8 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -191,8 +191,8 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -225,7 +225,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         if self.patchesList.topLevelItemCount() == 0:
             # no patches present
             self.__generateItem(
-                0, "", self.trUtf8("no patches found"), "", True)
+                0, "", self.tr("no patches found"), "", True)
         self.__resizeColumns()
         self.__resort()
     
@@ -296,7 +296,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             try:
                 statusStr = self.__statusDict[status]
             except KeyError:
-                statusStr = self.trUtf8("unknown")
+                statusStr = self.tr("unknown")
             itm = QTreeWidgetItem(self.patchesList)
             itm.setData(0, Qt.DisplayRole, index)
             itm.setData(1, Qt.DisplayRole, name)

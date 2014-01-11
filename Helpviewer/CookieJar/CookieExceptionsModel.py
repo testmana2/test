@@ -30,8 +30,8 @@ class CookieExceptionsModel(QAbstractTableModel):
         self.__sessionCookies = self.__cookieJar.allowForSessionCookies()
         
         self.__headers = [
-            self.trUtf8("Website"),
-            self.trUtf8("Status"),
+            self.tr("Website"),
+            self.tr("Status"),
         ]
     
     def headerData(self, section, orientation, role):
@@ -75,7 +75,7 @@ class CookieExceptionsModel(QAbstractTableModel):
                 if index.column() == 0:
                     return self.__allowedCookies[row]
                 elif index.column() == 1:
-                    return self.trUtf8("Allow")
+                    return self.tr("Allow")
                 else:
                     return None
             
@@ -84,7 +84,7 @@ class CookieExceptionsModel(QAbstractTableModel):
                 if index.column() == 0:
                     return self.__blockedCookies[row]
                 elif index.column() == 1:
-                    return self.trUtf8("Block")
+                    return self.tr("Block")
                 else:
                     return None
             
@@ -93,7 +93,7 @@ class CookieExceptionsModel(QAbstractTableModel):
                 if index.column() == 0:
                     return self.__sessionCookies[row]
                 elif index.column() == 1:
-                    return self.trUtf8("Allow For Session")
+                    return self.tr("Allow For Session")
                 else:
                     return None
             

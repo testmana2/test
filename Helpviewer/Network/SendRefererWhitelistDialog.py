@@ -50,8 +50,8 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         """
         host, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Send Referer Whitelist"),
-            self.trUtf8("Enter host name to add to the whitelist:"),
+            self.tr("Send Referer Whitelist"),
+            self.tr("Enter host name to add to the whitelist:"),
             QLineEdit.Normal)
         if ok and host != "" and host not in self.__model.stringList():
             self.__model.insertRow(self.__model.rowCount())

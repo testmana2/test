@@ -134,7 +134,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Style Sheet"),
+            self.tr("Select Style Sheet"),
             self.styleSheetEdit.text(),
             "")
         

@@ -176,8 +176,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
@@ -194,7 +194,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         
         if self.paras == 0:
             self.contents.insertPlainText(
-                self.trUtf8('There is no difference.'))
+                self.tr('There is no difference.'))
             return
             
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
@@ -207,8 +207,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         self.contents.setTextCursor(tc)
         self.contents.ensureCursorVisible()
         
-        self.filesCombo.addItem(self.trUtf8("<Start>"), 0)
-        self.filesCombo.addItem(self.trUtf8("<End>"), -1)
+        self.filesCombo.addItem(self.tr("<Start>"), 0)
+        self.filesCombo.addItem(self.tr("<End>"), -1)
         for oldFile, newFile, pos in sorted(self.__fileSeparators):
             if oldFile != newFile:
                 self.filesCombo.addItem(
@@ -366,9 +366,9 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save Diff"),
+            self.tr("Save Diff"),
             fname,
-            self.trUtf8("Patch Files (*.diff)"),
+            self.tr("Patch Files (*.diff)"),
             None,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -383,9 +383,9 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         if QFileInfo(fname).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save Diff"),
-                self.trUtf8("<p>The patch file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                self.tr("Save Diff"),
+                self.tr("<p>The patch file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fname),
                 icon=E5MessageBox.Warning)
             if not res:
                 return
@@ -398,8 +398,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             f.close()
         except IOError as why:
             E5MessageBox.critical(
-                self, self.trUtf8('Save Diff'),
-                self.trUtf8(
+                self, self.tr('Save Diff'),
+                self.tr(
                     '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                 .format(fname, str(why)))

@@ -208,7 +208,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         curStyle = Preferences.getUI("Style")
         styles = sorted(list(QStyleFactory.keys()))
-        self.styleComboBox.addItem(self.trUtf8('System'), "System")
+        self.styleComboBox.addItem(self.tr('System'), "System")
         for style in styles:
             self.styleComboBox.addItem(style, style)
         currentIndex = self.styleComboBox.findData(curStyle)
@@ -251,7 +251,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.languageComboBox.clear()
         
         self.languageComboBox.addItem("English (default)", "None")
-        self.languageComboBox.addItem(self.trUtf8('System'), "System")
+        self.languageComboBox.addItem(self.tr('System'), "System")
         for locale in localeList:
             self.languageComboBox.addItem(locales[locale], locale)
         self.languageComboBox.setCurrentIndex(currentIndex)
@@ -263,9 +263,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select style sheet file"),
+            self.tr("Select style sheet file"),
             self.styleSheetEdit.text(),
-            self.trUtf8(
+            self.tr(
                 "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
                 "All files (*)"))
         

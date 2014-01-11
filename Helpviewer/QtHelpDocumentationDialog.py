@@ -57,9 +57,9 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         fileNames = E5FileDialog.getOpenFileNames(
             self,
-            self.trUtf8("Add Documentation"),
+            self.tr("Add Documentation"),
             "",
-            self.trUtf8("Qt Compressed Help Files (*.qch)"))
+            self.tr("Qt Compressed Help Files (*.qch)"))
         if not fileNames:
             return
         
@@ -68,8 +68,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             if not ns:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Add Documentation"),
-                    self.trUtf8(
+                    self.tr("Add Documentation"),
+                    self.tr(
                         """The file <b>{0}</b> is not a valid"""
                         """ Qt Help File.""").format(fileName)
                 )
@@ -78,8 +78,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             if len(self.documentsList.findItems(ns, Qt.MatchFixedString)):
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Add Documentation"),
-                    self.trUtf8(
+                    self.tr("Add Documentation"),
+                    self.tr(
                         """The namespace <b>{0}</b> is already registered.""")
                     .format(ns)
                 )
@@ -98,8 +98,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         res = E5MessageBox.question(
             self,
-            self.trUtf8("Remove Documentation"),
-            self.trUtf8(
+            self.tr("Remove Documentation"),
+            self.tr(
                 """Do you really want to remove the selected documentation """
                 """sets from the database?"""))
         if not res:
@@ -113,8 +113,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             if ns in list(openedDocs.values()):
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Remove Documentation"),
-                    self.trUtf8(
+                    self.tr("Remove Documentation"),
+                    self.tr(
                         """Some documents currently opened reference the """
                         """documentation you are attempting to remove. """
                         """Removing the documentation will close those """

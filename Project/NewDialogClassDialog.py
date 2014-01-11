@@ -55,7 +55,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         path = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select source directory"),
+            self.tr("Select source directory"),
             QDir.fromNativeSeparators(self.pathnameEdit.text()))
         if path:
             self.pathnameEdit.setText(QDir.toNativeSeparators(path))

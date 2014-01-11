@@ -238,8 +238,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         """
         allowedHost, ok = QInputDialog.getText(
             None,
-            self.trUtf8("Add allowed host"),
-            self.trUtf8("Enter the IP address of an allowed host"),
+            self.tr("Add allowed host"),
+            self.tr("Enter the IP address of an allowed host"),
             QLineEdit.Normal)
         if ok and allowedHost:
             if QHostAddress(allowedHost).protocol() in \
@@ -248,8 +248,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Add allowed host"),
-                    self.trUtf8(
+                    self.tr("Add allowed host"),
+                    self.tr(
                         """<p>The entered address <b>{0}</b> is not"""
                         """ a valid IP v4 or IP v6 address."""
                         """ Aborting...</p>""")
@@ -270,8 +270,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         allowedHost = self.allowedHostsList.currentItem().text()
         allowedHost, ok = QInputDialog.getText(
             None,
-            self.trUtf8("Edit allowed host"),
-            self.trUtf8("Enter the IP address of an allowed host"),
+            self.tr("Edit allowed host"),
+            self.tr("Enter the IP address of an allowed host"),
             QLineEdit.Normal,
             allowedHost)
         if ok and allowedHost:
@@ -281,8 +281,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Edit allowed host"),
-                    self.trUtf8(
+                    self.tr("Edit allowed host"),
+                    self.tr(
                         """<p>The entered address <b>{0}</b> is not"""
                         """ a valid IP v4 or IP v6 address."""
                         """ Aborting...</p>""")

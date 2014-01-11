@@ -26,12 +26,12 @@ class BreakPointModel(QAbstractItemModel):
         
         self.breakpoints = []
         self.header = [
-            self.trUtf8("Filename"),
-            self.trUtf8("Line"),
-            self.trUtf8('Condition'),
-            self.trUtf8('Temporary'),
-            self.trUtf8('Enabled'),
-            self.trUtf8('Ignore Count'),
+            self.tr("Filename"),
+            self.tr("Line"),
+            self.tr('Condition'),
+            self.tr('Temporary'),
+            self.tr('Enabled'),
+            self.tr('Ignore Count'),
         ]
         self.alignments = [Qt.Alignment(Qt.AlignLeft),
                            Qt.Alignment(Qt.AlignRight),

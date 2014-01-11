@@ -186,9 +186,9 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         """
         filename = E5FileDialog.getSaveFileName(
             self,
-            self.trUtf8("Select output file"),
+            self.tr("Select output file"),
             self.outputFileEdit.text(),
-            self.trUtf8("API files (*.api);;All files (*)"))
+            self.tr("API files (*.api);;All files (*)"))
             
         if filename:
             # make it relative, if it is in a subdirectory of the project path
@@ -217,7 +217,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             startDir = self.ppath
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory to exclude"),
+            self.tr("Select directory to exclude"),
             startDir,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

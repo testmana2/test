@@ -3139,7 +3139,7 @@ class ViewManager(QObject):
         self.quickFindtextAction = QWidgetAction(self)
         self.quickFindtextAction.setDefaultWidget(self.quickFindtextCombo)
         self.quickFindtextAction.setObjectName("vm_quickfindtext_action")
-        self.quickFindtextAction.setText(self.trUtf8("Quicksearch Textedit"))
+        self.quickFindtextAction.setText(self.tr("Quicksearch Textedit"))
         qtb.addAction(self.quickFindtextAction)
         qtb.addAction(self.quickSearchAct)
         qtb.addAction(self.quickSearchBackAct)

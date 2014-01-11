@@ -48,10 +48,10 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         """
         pname = self.project.getProjectName()
         if pname:
-            name = self.trUtf8("Package Diagram {0}: {1}").format(
+            name = self.tr("Package Diagram {0}: {1}").format(
                 pname, self.project.getRelativePath(self.package))
         else:
-            name = self.trUtf8("Package Diagram: {0}").format(self.package)
+            name = self.tr("Package Diagram: {0}").format(self.package)
         self.umlView.setDiagramName(name)
     
     def __getCurrentShape(self, name):
@@ -88,8 +88,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 Utilities.normjoinpath(self.package, ext)))
         tot = len(modules)
         progress = E5ProgressDialog(
-            self.trUtf8("Parsing modules..."),
-            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
+            self.tr("Parsing modules..."),
+            None, 0, tot, self.tr("%v/%m Modules"), self.parent())
         try:
             prog = 0
             progress.show()
@@ -147,8 +147,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
             for subpackage in subpackagesList:
                 tot += len(glob.glob(Utilities.normjoinpath(subpackage, ext)))
         progress = E5ProgressDialog(
-            self.trUtf8("Parsing modules..."),
-            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
+            self.tr("Parsing modules..."),
+            None, 0, tot, self.tr("%v/%m Modules"), self.parent())
         try:
             prog = 0
             progress.show()
@@ -197,7 +197,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
-                self.trUtf8("The directory <b>'{0}'</b> is not a package.")
+                self.tr("The directory <b>'{0}'</b> is not a package.")
                     .format(self.package))
             return
         
@@ -205,7 +205,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         if not modules:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
-                self.trUtf8(
+                self.tr(
                     "The package <b>'{0}'</b> does not contain any modules.")
                 .format(self.package))
             return
@@ -221,7 +221,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         if not classesFound:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
-                self.trUtf8(
+                self.tr(
                     "The package <b>'{0}'</b> does not contain any classes.")
                 .format(self.package))
             return

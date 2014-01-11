@@ -46,18 +46,18 @@ class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
         if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
            .bookmarkForUrl(url) is None:
             self.__bmAction = self.AddBookmark
-            self.bookmarkPushButton.setText(self.trUtf8("Add Bookmark"))
+            self.bookmarkPushButton.setText(self.tr("Add Bookmark"))
         else:
             self.__bmAction = self.EditBookmark
-            self.bookmarkPushButton.setText(self.trUtf8("Edit Bookmark"))
+            self.bookmarkPushButton.setText(self.tr("Edit Bookmark"))
         
         if Helpviewer.HelpWindow.HelpWindow.speedDial().pageForUrl(url).url:
             self.__sdAction = self.RemoveSpeeddial
             self.speeddialPushButton.setText(
-                self.trUtf8("Remove from Speed Dial"))
+                self.tr("Remove from Speed Dial"))
         else:
             self.__sdAction = self.AddSpeeddial
-            self.speeddialPushButton.setText(self.trUtf8("Add to Speed Dial"))
+            self.speeddialPushButton.setText(self.tr("Add to Speed Dial"))
     
     @pyqtSlot()
     def on_bookmarkPushButton_clicked(self):

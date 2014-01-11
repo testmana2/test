@@ -10,7 +10,7 @@ Module implementing some startup helper funcions.
 import os
 import sys
 
-from PyQt4.QtCore import QTranslator, QLocale, QLibraryInfo, QDir
+from PyQt4.QtCore import QTranslator, QLocale, QLibraryInfo, QDir, QTextCodec
 from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import E5Application
@@ -160,6 +160,9 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
     import Preferences
     
     global loaded_translators
+    
+    # set the default encoding for tr()
+    QTextCodec.setCodecForTr(QTextCodec.codecForName("utf-8"))
     
     translations = ("qt", "eric5") + translationFiles
     loc = Preferences.getUILanguage()

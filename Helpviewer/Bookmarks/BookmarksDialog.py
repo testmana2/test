@@ -140,20 +140,20 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         node = self.__bookmarksModel.node(sourceIndex)
         if idx.isValid() and node.type() != BookmarkNode.Folder:
             menu.addAction(
-                self.trUtf8("&Open"), self.__openBookmarkInCurrentTab)
+                self.tr("&Open"), self.__openBookmarkInCurrentTab)
             menu.addAction(
-                self.trUtf8("Open in New &Tab"), self.__openBookmarkInNewTab)
+                self.tr("Open in New &Tab"), self.__openBookmarkInNewTab)
             menu.addSeparator()
-        act = menu.addAction(self.trUtf8("Edit &Name"), self.__editName)
+        act = menu.addAction(self.tr("Edit &Name"), self.__editName)
         act.setEnabled(idx.flags() & Qt.ItemIsEditable)
         if idx.isValid() and node.type() != BookmarkNode.Folder:
-            menu.addAction(self.trUtf8("Edit &Address"), self.__editAddress)
+            menu.addAction(self.tr("Edit &Address"), self.__editAddress)
         menu.addSeparator()
         act = menu.addAction(
-            self.trUtf8("&Delete"), self.bookmarksTree.removeSelected)
+            self.tr("&Delete"), self.bookmarksTree.removeSelected)
         act.setEnabled(idx.flags() & Qt.ItemIsDragEnabled)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
+        act = menu.addAction(self.tr("&Properties..."), self.__edit)
         act.setEnabled(idx.flags() & Qt.ItemIsEditable)
         menu.exec_(QCursor.pos())
     
@@ -258,5 +258,5 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         idx = self.__proxyModel.mapToSource(idx)
         parent = self.__bookmarksModel.node(idx)
         node = BookmarkNode(BookmarkNode.Folder)
-        node.title = self.trUtf8("New Folder")
+        node.title = self.tr("New Folder")
         self.__bookmarksManager.addBookmark(parent, node, row)

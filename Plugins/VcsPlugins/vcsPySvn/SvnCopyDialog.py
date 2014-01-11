@@ -47,7 +47,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
             self.targetCompleter = E5FileCompleter(self.targetEdit)
         
         if move:
-            self.setWindowTitle(self.trUtf8('Subversion Move'))
+            self.setWindowTitle(self.tr('Subversion Move'))
         else:
             self.forceCheckBox.setEnabled(False)
         self.forceCheckBox.setChecked(force)
@@ -79,13 +79,13 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         if os.path.isdir(self.source):
             target = E5FileDialog.getExistingDirectory(
                 None,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         else:
             target = E5FileDialog.getSaveFileName(
                 None,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))

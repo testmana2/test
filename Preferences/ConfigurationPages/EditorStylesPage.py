@@ -48,20 +48,20 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         ]
         
         self.wrapModeComboBox.addItem(
-            self.trUtf8("Disabled"), QsciScintilla.WrapNone)
+            self.tr("Disabled"), QsciScintilla.WrapNone)
         self.wrapModeComboBox.addItem(
-            self.trUtf8("Word Boundary"), QsciScintilla.WrapWord)
+            self.tr("Word Boundary"), QsciScintilla.WrapWord)
         self.wrapModeComboBox.addItem(
-            self.trUtf8("Character Boundary"), QsciScintilla.WrapCharacter)
+            self.tr("Character Boundary"), QsciScintilla.WrapCharacter)
         self.wrapVisualComboBox.addItem(
-            self.trUtf8("No Indicator"), QsciScintilla.WrapFlagNone)
+            self.tr("No Indicator"), QsciScintilla.WrapFlagNone)
         self.wrapVisualComboBox.addItem(
-            self.trUtf8("Indicator by Text"), QsciScintilla.WrapFlagByText)
+            self.tr("Indicator by Text"), QsciScintilla.WrapFlagByText)
         self.wrapVisualComboBox.addItem(
-            self.trUtf8("Indicator by Margin"), QsciScintilla.WrapFlagByBorder)
+            self.tr("Indicator by Margin"), QsciScintilla.WrapFlagByBorder)
         if QSCINTILLA_VERSION() >= 0x020700:
             self.wrapVisualComboBox.addItem(
-                self.trUtf8("Indicator in Line Number Margin"),
+                self.tr("Indicator in Line Number Margin"),
                 QsciScintilla.WrapFlagInMargin)
         
         if QSCINTILLA_VERSION() < 0x020800:

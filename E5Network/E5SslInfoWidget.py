@@ -53,7 +53,7 @@ class E5SslInfoWidget(QMenu):
         label = QLabel(self)
         label.setWordWrap(True)
         label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        label.setText(self.trUtf8("Identity"))
+        label.setText(self.tr("Identity"))
         font = label.font()
         font.setBold(True)
         label.setFont(font)
@@ -63,7 +63,7 @@ class E5SslInfoWidget(QMenu):
         label = QLabel(self)
         label.setWordWrap(True)
         if cert.isNull():
-            label.setText(self.trUtf8(
+            label.setText(self.tr(
                 "Warning: this site is NOT carrying a certificate."))
             imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
         else:
@@ -77,14 +77,14 @@ class E5SslInfoWidget(QMenu):
                         cert.issuerInfo(QSslCertificate.CommonName))
                 else:
                     txt = cert.issuerInfo(QSslCertificate.CommonName)
-                label.setText(self.trUtf8(
+                label.setText(self.tr(
                     "The certificate for this site is valid"
                     " and has been verified by:\n{0}").format(
                     Utilities.decodeString(txt)))
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityHigh32.png"))
             else:
-                label.setText(self.trUtf8(
+                label.setText(self.tr(
                     "The certificate for this site is NOT valid."))
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityLow32.png"))
@@ -95,7 +95,7 @@ class E5SslInfoWidget(QMenu):
             label.setWordWrap(True)
             label.setText(
                 '<a href="moresslinfos">' +
-                self.trUtf8("Certificate Information") + "</a>")
+                self.tr("Certificate Information") + "</a>")
             label.linkActivated.connect(self.__showCertificateInfos)
             layout.addWidget(label, rows, 1)
             rows += 1
@@ -108,7 +108,7 @@ class E5SslInfoWidget(QMenu):
         
         label = QLabel(self)
         label.setWordWrap(True)
-        label.setText(self.trUtf8("Encryption"))
+        label.setText(self.tr("Encryption"))
         font = label.font()
         font.setBold(True)
         label.setFont(font)
@@ -119,7 +119,7 @@ class E5SslInfoWidget(QMenu):
         if cipher.isNull():
             label = QLabel(self)
             label.setWordWrap(True)
-            label.setText(self.trUtf8(
+            label.setText(self.tr(
                 'Your connection to "{0}" is NOT encrypted.\n').format(
                 self.__url.host()))
             layout.addWidget(label, rows, 1)
@@ -128,7 +128,7 @@ class E5SslInfoWidget(QMenu):
         else:
             label = QLabel(self)
             label.setWordWrap(True)
-            label.setText(self.trUtf8(
+            label.setText(self.tr(
                 'Your connection to "{0}" is encrypted.').format(
                 self.__url.host()))
             layout.addWidget(label, rows, 1)
@@ -147,21 +147,21 @@ class E5SslInfoWidget(QMenu):
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityLow32.png"))
             else:
-                sslVersion = self.trUtf8("unknown")
+                sslVersion = self.tr("unknown")
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityLow32.png"))
             rows += 1
             
             label = QLabel(self)
             label.setWordWrap(True)
-            label.setText(self.trUtf8(
+            label.setText(self.tr(
                 "It uses protocol: {0}").format(sslVersion))
             layout.addWidget(label, rows, 1)
             rows += 1
             
             label = QLabel(self)
             label.setWordWrap(True)
-            label.setText(self.trUtf8(
+            label.setText(self.tr(
                 "It is encrypted using {0} at {1} bits, "
                 "with {2} for message authentication and "
                 "{3} as key exchange mechanism.\n\n").format(

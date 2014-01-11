@@ -314,10 +314,10 @@ class Editor(QsciScintillaCompat):
                    Preferences.getEditor("WarnFilesize"):
                     res = E5MessageBox.yesNo(
                         self,
-                        self.trUtf8("Open File"),
-                        self.trUtf8("""<p>The size of the file <b>{0}</b>"""
-                                    """ is <b>{1} KB</b>."""
-                                    """ Do you really want to load it?</p>""")
+                        self.tr("Open File"),
+                        self.tr("""<p>The size of the file <b>{0}</b>"""
+                                """ is <b>{1} KB</b>."""
+                                """ Do you really want to load it?</p>""")
                         .format(self.fileName,
                                 QFileInfo(self.fileName).size() // 1024),
                         icon=E5MessageBox.Warning)
@@ -366,7 +366,7 @@ class Editor(QsciScintillaCompat):
         
         self.__updateReadOnly(True)
         
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>A Source Editor Window</b>"""
             """<p>This window is used to display and edit a source file."""
             """  You can open as many of these as you like. The name of the"""
@@ -620,86 +620,86 @@ class Editor(QsciScintillaCompat):
         
         self.menuActs["Undo"] = self.menu.addAction(
             UI.PixmapCache.getIcon("editUndo.png"),
-            self.trUtf8('Undo'), self.undo)
+            self.tr('Undo'), self.undo)
         self.menuActs["Redo"] = self.menu.addAction(
             UI.PixmapCache.getIcon("editRedo.png"),
-            self.trUtf8('Redo'), self.redo)
+            self.tr('Redo'), self.redo)
         self.menuActs["Revert"] = self.menu.addAction(
-            self.trUtf8("Revert to last saved state"),
+            self.tr("Revert to last saved state"),
             self.revertToUnmodified)
         self.menu.addSeparator()
         self.menuActs["Cut"] = self.menu.addAction(
             UI.PixmapCache.getIcon("editCut.png"),
-            self.trUtf8('Cut'), self.cut)
+            self.tr('Cut'), self.cut)
         self.menuActs["Copy"] = self.menu.addAction(
             UI.PixmapCache.getIcon("editCopy.png"),
-            self.trUtf8('Copy'), self.copy)
+            self.tr('Copy'), self.copy)
         self.menu.addAction(
             UI.PixmapCache.getIcon("editPaste.png"),
-            self.trUtf8('Paste'), self.paste)
+            self.tr('Paste'), self.paste)
         if not self.miniMenu:
             self.menu.addSeparator()
             self.menu.addAction(
                 UI.PixmapCache.getIcon("editIndent.png"),
-                self.trUtf8('Indent'), self.indentLineOrSelection)
+                self.tr('Indent'), self.indentLineOrSelection)
             self.menu.addAction(
                 UI.PixmapCache.getIcon("editUnindent.png"),
-                self.trUtf8('Unindent'), self.unindentLineOrSelection)
+                self.tr('Unindent'), self.unindentLineOrSelection)
             self.menuActs["Comment"] = self.menu.addAction(
                 UI.PixmapCache.getIcon("editComment.png"),
-                self.trUtf8('Comment'), self.commentLineOrSelection)
+                self.tr('Comment'), self.commentLineOrSelection)
             self.menuActs["Uncomment"] = self.menu.addAction(
                 UI.PixmapCache.getIcon("editUncomment.png"),
-                self.trUtf8('Uncomment'), self.uncommentLineOrSelection)
+                self.tr('Uncomment'), self.uncommentLineOrSelection)
             self.menuActs["StreamComment"] = self.menu.addAction(
-                self.trUtf8('Stream Comment'),
+                self.tr('Stream Comment'),
                 self.streamCommentLineOrSelection)
             self.menuActs["BoxComment"] = self.menu.addAction(
-                self.trUtf8('Box Comment'),
+                self.tr('Box Comment'),
                 self.boxCommentLineOrSelection)
             self.menu.addSeparator()
             self.menu.addAction(
-                self.trUtf8('Select to brace'), self.selectToMatchingBrace)
-            self.menu.addAction(self.trUtf8('Select all'), self.__selectAll)
+                self.tr('Select to brace'), self.selectToMatchingBrace)
+            self.menu.addAction(self.tr('Select all'), self.__selectAll)
             self.menu.addAction(
-                self.trUtf8('Deselect all'), self.__deselectAll)
+                self.tr('Deselect all'), self.__deselectAll)
             self.menu.addSeparator()
         self.menuActs["SpellCheck"] = self.menu.addAction(
             UI.PixmapCache.getIcon("spellchecking.png"),
-            self.trUtf8('Check spelling...'), self.checkSpelling)
+            self.tr('Check spelling...'), self.checkSpelling)
         self.menuActs["SpellCheckSelection"] = self.menu.addAction(
             UI.PixmapCache.getIcon("spellchecking.png"),
-            self.trUtf8('Check spelling of selection...'),
+            self.tr('Check spelling of selection...'),
             self.__checkSpellingSelection)
         self.menuActs["SpellCheckRemove"] = self.menu.addAction(
-            self.trUtf8("Remove from dictionary"),
+            self.tr("Remove from dictionary"),
             self.__removeFromSpellingDictionary)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Shorten empty lines'), self.shortenEmptyLines)
+            self.tr('Shorten empty lines'), self.shortenEmptyLines)
         self.menu.addSeparator()
         self.menuActs["Languages"] = self.menu.addMenu(self.languagesMenu)
         self.menuActs["Encodings"] = self.menu.addMenu(self.encodingsMenu)
         self.menuActs["Eol"] = self.menu.addMenu(self.eolMenu)
         self.menu.addSeparator()
         self.menuActs["MonospacedFont"] = self.menu.addAction(
-            self.trUtf8("Use Monospaced Font"),
+            self.tr("Use Monospaced Font"),
             self.handleMonospacedEnable)
         self.menuActs["MonospacedFont"].setCheckable(True)
         self.menuActs["MonospacedFont"].setChecked(self.useMonospaced)
         self.menuActs["AutosaveEnable"] = self.menu.addAction(
-            self.trUtf8("Autosave enabled"), self.__autosaveEnable)
+            self.tr("Autosave enabled"), self.__autosaveEnable)
         self.menuActs["AutosaveEnable"].setCheckable(True)
         self.menuActs["AutosaveEnable"].setChecked(self.autosaveEnabled)
         self.menuActs["TypingAidsEnabled"] = self.menu.addAction(
-            self.trUtf8("Typing aids enabled"), self.__toggleTypingAids)
+            self.tr("Typing aids enabled"), self.__toggleTypingAids)
         self.menuActs["TypingAidsEnabled"].setCheckable(True)
         self.menuActs["TypingAidsEnabled"].setEnabled(
             self.completer is not None)
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         self.menuActs["AutoCompletionEnable"] = self.menu.addAction(
-            self.trUtf8("Autocompletion enabled"),
+            self.tr("Autocompletion enabled"),
             self.__toggleAutoCompletionEnable)
         self.menuActs["AutoCompletionEnable"].setCheckable(True)
         self.menuActs["AutoCompletionEnable"].setChecked(
@@ -720,35 +720,35 @@ class Editor(QsciScintillaCompat):
         self.menu.addSeparator()
         self.menu.addAction(
             UI.PixmapCache.getIcon("documentNewView.png"),
-            self.trUtf8('New Document View'), self.__newView)
+            self.tr('New Document View'), self.__newView)
         self.menuActs["NewSplit"] = self.menu.addAction(
             UI.PixmapCache.getIcon("splitVertical.png"),
-            self.trUtf8('New Document View (with new split)'),
+            self.tr('New Document View (with new split)'),
             self.__newViewNewSplit)
         self.menuActs["NewSplit"].setEnabled(self.vm.canSplit())
         self.menu.addAction(
             UI.PixmapCache.getIcon("close.png"),
-            self.trUtf8('Close'), self.__contextClose)
+            self.tr('Close'), self.__contextClose)
         self.menu.addSeparator()
         self.menuActs["Save"] = self.menu.addAction(
             UI.PixmapCache.getIcon("fileSave.png"),
-            self.trUtf8('Save'), self.__contextSave)
+            self.tr('Save'), self.__contextSave)
         self.menu.addAction(
             UI.PixmapCache.getIcon("fileSaveAs.png"),
-            self.trUtf8('Save As...'), self.__contextSaveAs)
+            self.tr('Save As...'), self.__contextSaveAs)
         if not self.miniMenu:
             self.menu.addMenu(self.exportersMenu)
             self.menu.addSeparator()
             self.menuActs["OpenRejections"] = self.menu.addAction(
-                self.trUtf8("Open 'rejection' file"),
+                self.tr("Open 'rejection' file"),
                 self.__contextOpenRejections)
             self.menu.addSeparator()
             self.menu.addAction(
                 UI.PixmapCache.getIcon("printPreview.png"),
-                self.trUtf8("Print Preview"), self.printPreviewFile)
+                self.tr("Print Preview"), self.printPreviewFile)
             self.menu.addAction(
                 UI.PixmapCache.getIcon("print.png"),
-                self.trUtf8('Print'), self.printFile)
+                self.tr('Print'), self.printFile)
         else:
             self.menuActs["OpenRejections"] = None
         
@@ -767,20 +767,20 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8('Autocomplete'))
+        menu = QMenu(self.tr('Autocomplete'))
         
         self.menuActs["acDynamic"] = menu.addAction(
-            self.trUtf8('dynamic'), self.autoComplete)
+            self.tr('dynamic'), self.autoComplete)
         menu.addSeparator()
         menu.addAction(
-            self.trUtf8('from Document'), self.autoCompleteFromDocument)
+            self.tr('from Document'), self.autoCompleteFromDocument)
         self.menuActs["acAPI"] = menu.addAction(
-            self.trUtf8('from APIs'), self.autoCompleteFromAPIs)
+            self.tr('from APIs'), self.autoCompleteFromAPIs)
         self.menuActs["acAPIDocument"] = menu.addAction(
-            self.trUtf8('from Document and APIs'), self.autoCompleteFromAll)
+            self.tr('from Document and APIs'), self.autoCompleteFromAll)
         menu.addSeparator()
         self.menuActs["calltip"] = menu.addAction(
-            self.trUtf8('Calltip'), self.callTip)
+            self.tr('Calltip'), self.callTip)
         
         menu.aboutToShow.connect(self.__showContextMenuAutocompletion)
         
@@ -792,7 +792,7 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8('Check'))
+        menu = QMenu(self.tr('Check'))
         menu.aboutToShow.connect(self.__showContextMenuChecks)
         return menu
 
@@ -802,7 +802,7 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8('Tools'))
+        menu = QMenu(self.tr('Tools'))
         menu.aboutToShow.connect(self.__showContextMenuTools)
         return menu
 
@@ -812,19 +812,19 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8('Show'))
+        menu = QMenu(self.tr('Show'))
         
-        menu.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
+        menu.addAction(self.tr('Code metrics...'), self.__showCodeMetrics)
         self.coverageMenuAct = menu.addAction(
-            self.trUtf8('Code coverage...'), self.__showCodeCoverage)
+            self.tr('Code coverage...'), self.__showCodeCoverage)
         self.coverageShowAnnotationMenuAct = menu.addAction(
-            self.trUtf8('Show code coverage annotations'),
+            self.tr('Show code coverage annotations'),
             self.codeCoverageShowAnnotations)
         self.coverageHideAnnotationMenuAct = menu.addAction(
-            self.trUtf8('Hide code coverage annotations'),
+            self.tr('Hide code coverage annotations'),
             self.__codeCoverageHideAnnotations)
         self.profileMenuAct = menu.addAction(
-            self.trUtf8('Profile data...'), self.__showProfileData)
+            self.tr('Profile data...'), self.__showProfileData)
         
         menu.aboutToShow.connect(self.__showContextMenuShow)
         
@@ -836,21 +836,21 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8('Diagrams'))
+        menu = QMenu(self.tr('Diagrams'))
         
         menu.addAction(
-            self.trUtf8('Class Diagram...'), self.__showClassDiagram)
+            self.tr('Class Diagram...'), self.__showClassDiagram)
         menu.addAction(
-            self.trUtf8('Package Diagram...'), self.__showPackageDiagram)
+            self.tr('Package Diagram...'), self.__showPackageDiagram)
         menu.addAction(
-            self.trUtf8('Imports Diagram...'), self.__showImportsDiagram)
+            self.tr('Imports Diagram...'), self.__showImportsDiagram)
         self.applicationDiagramMenuAct = menu.addAction(
-            self.trUtf8('Application Diagram...'),
+            self.tr('Application Diagram...'),
             self.__showApplicationDiagram)
         menu.addSeparator()
         menu.addAction(
             UI.PixmapCache.getIcon("open.png"),
-            self.trUtf8("Load Diagram..."), self.__loadDiagram)
+            self.tr("Load Diagram..."), self.__loadDiagram)
         
         menu.aboutToShow.connect(self.__showContextMenuGraphics)
         
@@ -862,10 +862,10 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8("Languages"))
+        menu = QMenu(self.tr("Languages"))
         
         self.languagesActGrp = QActionGroup(self)
-        self.noLanguageAct = menu.addAction(self.trUtf8("No Language"))
+        self.noLanguageAct = menu.addAction(self.tr("No Language"))
         self.noLanguageAct.setCheckable(True)
         self.noLanguageAct.setData("None")
         self.languagesActGrp.addAction(self.noLanguageAct)
@@ -888,11 +888,11 @@ class Editor(QsciScintillaCompat):
                 self.languagesActGrp.addAction(act)
         
         menu.addSeparator()
-        self.pygmentsAct = menu.addAction(self.trUtf8("Guessed"))
+        self.pygmentsAct = menu.addAction(self.tr("Guessed"))
         self.pygmentsAct.setCheckable(True)
         self.pygmentsAct.setData("Guessed")
         self.languagesActGrp.addAction(self.pygmentsAct)
-        self.pygmentsSelAct = menu.addAction(self.trUtf8("Alternatives"))
+        self.pygmentsSelAct = menu.addAction(self.tr("Alternatives"))
         self.pygmentsSelAct.setData("Alternatives")
         
         menu.triggered.connect(self.__languageMenuTriggered)
@@ -908,7 +908,7 @@ class Editor(QsciScintillaCompat):
         """
         self.supportedEncodings = {}
         
-        menu = QMenu(self.trUtf8("Encodings"))
+        menu = QMenu(self.tr("Encodings"))
         
         self.encodingsActGrp = QActionGroup(self)
         
@@ -932,26 +932,26 @@ class Editor(QsciScintillaCompat):
         """
         self.supportedEols = {}
         
-        menu = QMenu(self.trUtf8("End-of-Line Type"))
+        menu = QMenu(self.tr("End-of-Line Type"))
         
         self.eolActGrp = QActionGroup(self)
         
         act = menu.addAction(UI.PixmapCache.getIcon("eolLinux.png"),
-                             self.trUtf8("Unix"))
+                             self.tr("Unix"))
         act.setCheckable(True)
         act.setData('\n')
         self.supportedEols['\n'] = act
         self.eolActGrp.addAction(act)
         
         act = menu.addAction(UI.PixmapCache.getIcon("eolWindows.png"),
-                             self.trUtf8("Windows"))
+                             self.tr("Windows"))
         act.setCheckable(True)
         act.setData('\r\n')
         self.supportedEols['\r\n'] = act
         self.eolActGrp.addAction(act)
         
         act = menu.addAction(UI.PixmapCache.getIcon("eolMac.png"),
-                             self.trUtf8("Macintosh"))
+                             self.tr("Macintosh"))
         act.setCheckable(True)
         act.setData('\r')
         self.supportedEols['\r'] = act
@@ -968,7 +968,7 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8("Export as"))
+        menu = QMenu(self.tr("Export as"))
         
         from . import Exporters
         supportedExporters = Exporters.getSupportedFormats()
@@ -1001,13 +1001,13 @@ class Editor(QsciScintillaCompat):
         self.bmMarginMenu = QMenu()
         
         self.bmMarginMenu.addAction(
-            self.trUtf8('Toggle bookmark'), self.menuToggleBookmark)
+            self.tr('Toggle bookmark'), self.menuToggleBookmark)
         self.marginMenuActs["NextBookmark"] = self.bmMarginMenu.addAction(
-            self.trUtf8('Next bookmark'), self.nextBookmark)
+            self.tr('Next bookmark'), self.nextBookmark)
         self.marginMenuActs["PreviousBookmark"] = self.bmMarginMenu.addAction(
-            self.trUtf8('Previous bookmark'), self.previousBookmark)
+            self.tr('Previous bookmark'), self.previousBookmark)
         self.marginMenuActs["ClearBookmark"] = self.bmMarginMenu.addAction(
-            self.trUtf8('Clear all bookmarks'), self.clearBookmarks)
+            self.tr('Clear all bookmarks'), self.clearBookmarks)
         
         self.bmMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
@@ -1015,23 +1015,23 @@ class Editor(QsciScintillaCompat):
         self.bpMarginMenu = QMenu()
         
         self.marginMenuActs["Breakpoint"] = self.bpMarginMenu.addAction(
-            self.trUtf8('Toggle breakpoint'), self.menuToggleBreakpoint)
+            self.tr('Toggle breakpoint'), self.menuToggleBreakpoint)
         self.marginMenuActs["TempBreakpoint"] = self.bpMarginMenu.addAction(
-            self.trUtf8('Toggle temporary breakpoint'),
+            self.tr('Toggle temporary breakpoint'),
             self.__menuToggleTemporaryBreakpoint)
         self.marginMenuActs["EditBreakpoint"] = self.bpMarginMenu.addAction(
-            self.trUtf8('Edit breakpoint...'), self.menuEditBreakpoint)
+            self.tr('Edit breakpoint...'), self.menuEditBreakpoint)
         self.marginMenuActs["EnableBreakpoint"] = self.bpMarginMenu.addAction(
-            self.trUtf8('Enable breakpoint'),
+            self.tr('Enable breakpoint'),
             self.__menuToggleBreakpointEnabled)
         self.marginMenuActs["NextBreakpoint"] = self.bpMarginMenu.addAction(
-            self.trUtf8('Next breakpoint'), self.menuNextBreakpoint)
+            self.tr('Next breakpoint'), self.menuNextBreakpoint)
         self.marginMenuActs["PreviousBreakpoint"] = \
             self.bpMarginMenu.addAction(
-                self.trUtf8('Previous breakpoint'),
+                self.tr('Previous breakpoint'),
                 self.menuPreviousBreakpoint)
         self.marginMenuActs["ClearBreakpoint"] = self.bpMarginMenu.addAction(
-            self.trUtf8('Clear all breakpoints'), self.__menuClearBreakpoints)
+            self.tr('Clear all breakpoints'), self.__menuClearBreakpoints)
         
         self.bpMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
@@ -1040,48 +1040,48 @@ class Editor(QsciScintillaCompat):
         
         self.marginMenuActs["GotoSyntaxError"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Goto syntax error'), self.gotoSyntaxError)
+                self.tr('Goto syntax error'), self.gotoSyntaxError)
         self.marginMenuActs["ShowSyntaxError"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Show syntax error message'),
+                self.tr('Show syntax error message'),
                 self.__showSyntaxError)
         self.marginMenuActs["ClearSyntaxError"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Clear syntax error'), self.clearSyntaxError)
+                self.tr('Clear syntax error'), self.clearSyntaxError)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextWarningMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8("Next warning"), self.nextWarning)
+                self.tr("Next warning"), self.nextWarning)
         self.marginMenuActs["PreviousWarningMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8("Previous warning"), self.previousWarning)
+                self.tr("Previous warning"), self.previousWarning)
         self.marginMenuActs["ShowWarning"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Show warning message'), self.__showWarning)
+                self.tr('Show warning message'), self.__showWarning)
         self.marginMenuActs["ClearWarnings"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Clear warnings'), self.clearWarnings)
+                self.tr('Clear warnings'), self.clearWarnings)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextCoverageMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Next uncovered line'), self.nextUncovered)
+                self.tr('Next uncovered line'), self.nextUncovered)
         self.marginMenuActs["PreviousCoverageMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Previous uncovered line'), self.previousUncovered)
+                self.tr('Previous uncovered line'), self.previousUncovered)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextTaskMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Next task'), self.nextTask)
+                self.tr('Next task'), self.nextTask)
         self.marginMenuActs["PreviousTaskMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Previous task'), self.previousTask)
+                self.tr('Previous task'), self.previousTask)
         self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextChangeMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Next change'), self.nextChange)
+                self.tr('Next change'), self.nextChange)
         self.marginMenuActs["PreviousChangeMarker"] = \
             self.indicMarginMenu.addAction(
-                self.trUtf8('Previous change'), self.previousChange)
+                self.tr('Previous change'), self.previousChange)
         
         self.indicMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
@@ -1092,71 +1092,71 @@ class Editor(QsciScintillaCompat):
         self.marginMenu = QMenu()
         
         self.marginMenu.addAction(
-            self.trUtf8('Toggle bookmark'), self.menuToggleBookmark)
+            self.tr('Toggle bookmark'), self.menuToggleBookmark)
         self.marginMenuActs["NextBookmark"] = self.marginMenu.addAction(
-            self.trUtf8('Next bookmark'), self.nextBookmark)
+            self.tr('Next bookmark'), self.nextBookmark)
         self.marginMenuActs["PreviousBookmark"] = self.marginMenu.addAction(
-            self.trUtf8('Previous bookmark'), self.previousBookmark)
+            self.tr('Previous bookmark'), self.previousBookmark)
         self.marginMenuActs["ClearBookmark"] = self.marginMenu.addAction(
-            self.trUtf8('Clear all bookmarks'), self.clearBookmarks)
+            self.tr('Clear all bookmarks'), self.clearBookmarks)
         self.marginMenu.addSeparator()
         self.marginMenuActs["GotoSyntaxError"] = self.marginMenu.addAction(
-            self.trUtf8('Goto syntax error'), self.gotoSyntaxError)
+            self.tr('Goto syntax error'), self.gotoSyntaxError)
         self.marginMenuActs["ShowSyntaxError"] = self.marginMenu.addAction(
-            self.trUtf8('Show syntax error message'), self.__showSyntaxError)
+            self.tr('Show syntax error message'), self.__showSyntaxError)
         self.marginMenuActs["ClearSyntaxError"] = self.marginMenu.addAction(
-            self.trUtf8('Clear syntax error'), self.clearSyntaxError)
+            self.tr('Clear syntax error'), self.clearSyntaxError)
         self.marginMenu.addSeparator()
         self.marginMenuActs["NextWarningMarker"] = self.marginMenu.addAction(
-            self.trUtf8("Next warning"), self.nextWarning)
+            self.tr("Next warning"), self.nextWarning)
         self.marginMenuActs["PreviousWarningMarker"] = \
             self.marginMenu.addAction(
-                self.trUtf8("Previous warning"), self.previousWarning)
+                self.tr("Previous warning"), self.previousWarning)
         self.marginMenuActs["ShowWarning"] = self.marginMenu.addAction(
-            self.trUtf8('Show warning message'), self.__showWarning)
+            self.tr('Show warning message'), self.__showWarning)
         self.marginMenuActs["ClearWarnings"] = self.marginMenu.addAction(
-            self.trUtf8('Clear warnings'), self.clearWarnings)
+            self.tr('Clear warnings'), self.clearWarnings)
         self.marginMenu.addSeparator()
         self.marginMenuActs["Breakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Toggle breakpoint'), self.menuToggleBreakpoint)
+            self.tr('Toggle breakpoint'), self.menuToggleBreakpoint)
         self.marginMenuActs["TempBreakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Toggle temporary breakpoint'),
+            self.tr('Toggle temporary breakpoint'),
             self.__menuToggleTemporaryBreakpoint)
         self.marginMenuActs["EditBreakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Edit breakpoint...'), self.menuEditBreakpoint)
+            self.tr('Edit breakpoint...'), self.menuEditBreakpoint)
         self.marginMenuActs["EnableBreakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Enable breakpoint'),
+            self.tr('Enable breakpoint'),
             self.__menuToggleBreakpointEnabled)
         self.marginMenuActs["NextBreakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Next breakpoint'), self.menuNextBreakpoint)
+            self.tr('Next breakpoint'), self.menuNextBreakpoint)
         self.marginMenuActs["PreviousBreakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Previous breakpoint'), self.menuPreviousBreakpoint)
+            self.tr('Previous breakpoint'), self.menuPreviousBreakpoint)
         self.marginMenuActs["ClearBreakpoint"] = self.marginMenu.addAction(
-            self.trUtf8('Clear all breakpoints'), self.__menuClearBreakpoints)
+            self.tr('Clear all breakpoints'), self.__menuClearBreakpoints)
         self.marginMenu.addSeparator()
         self.marginMenuActs["NextCoverageMarker"] = self.marginMenu.addAction(
-            self.trUtf8('Next uncovered line'), self.nextUncovered)
+            self.tr('Next uncovered line'), self.nextUncovered)
         self.marginMenuActs["PreviousCoverageMarker"] = \
             self.marginMenu.addAction(
-                self.trUtf8('Previous uncovered line'), self.previousUncovered)
+                self.tr('Previous uncovered line'), self.previousUncovered)
         self.marginMenu.addSeparator()
         self.marginMenuActs["NextTaskMarker"] = self.marginMenu.addAction(
-            self.trUtf8('Next task'), self.nextTask)
+            self.tr('Next task'), self.nextTask)
         self.marginMenuActs["PreviousTaskMarker"] = self.marginMenu.addAction(
-            self.trUtf8('Previous task'), self.previousTask)
+            self.tr('Previous task'), self.previousTask)
         self.marginMenu.addSeparator()
         self.marginMenuActs["NextChangeMarker"] = self.marginMenu.addAction(
-            self.trUtf8('Next change'), self.nextChange)
+            self.tr('Next change'), self.nextChange)
         self.marginMenuActs["PreviousChangeMarker"] = \
             self.marginMenu.addAction(
-                self.trUtf8('Previous change'), self.previousChange)
+                self.tr('Previous change'), self.previousChange)
         self.marginMenu.addSeparator()
         self.marginMenuActs["LMBbookmarks"] = self.marginMenu.addAction(
-            self.trUtf8('LMB toggles bookmarks'), self.__lmBbookmarks)
+            self.tr('LMB toggles bookmarks'), self.__lmBbookmarks)
         self.marginMenuActs["LMBbookmarks"].setCheckable(True)
         self.marginMenuActs["LMBbookmarks"].setChecked(False)
         self.marginMenuActs["LMBbreakpoints"] = self.marginMenu.addAction(
-            self.trUtf8('LMB toggles breakpoints'), self.__lmBbreakpoints)
+            self.tr('LMB toggles breakpoints'), self.__lmBbreakpoints)
         self.marginMenuActs["LMBbreakpoints"].setCheckable(True)
         self.marginMenuActs["LMBbreakpoints"].setChecked(True)
         
@@ -1185,16 +1185,16 @@ class Editor(QsciScintillaCompat):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Export source"),
-                    self.trUtf8(
+                    self.tr("Export source"),
+                    self.tr(
                         """<p>No exporter available for the """
                         """export format <b>{0}</b>. Aborting...</p>""")
                     .format(exporterFormat))
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Export source"),
-                self.trUtf8("""No export format given. Aborting..."""))
+                self.tr("Export source"),
+                self.tr("""No export format given. Aborting..."""))
         
     def __showContextMenuLanguages(self):
         """
@@ -1203,10 +1203,10 @@ class Editor(QsciScintillaCompat):
         """
         if self.apiLanguage.startswith("Pygments|"):
             self.pygmentsSelAct.setText(
-                self.trUtf8("Alternatives ({0})").format(
+                self.tr("Alternatives ({0})").format(
                     self.getLanguage(normalized=False)))
         else:
-            self.pygmentsSelAct.setText(self.trUtf8("Alternatives"))
+            self.pygmentsSelAct.setText(self.tr("Alternatives"))
         self.showMenu.emit("Languages", self.languagesMenu,  self)
         
     def __selectPygmentsLexer(self):
@@ -1224,8 +1224,8 @@ class Editor(QsciScintillaCompat):
             lexerSel = 0
         lexerName, ok = QInputDialog.getItem(
             self,
-            self.trUtf8("Pygments Lexer"),
-            self.trUtf8("Select the Pygments lexer to apply."),
+            self.tr("Pygments Lexer"),
+            self.tr("Select the Pygments lexer to apply."),
             lexerList,
             lexerSel,
             False)
@@ -1661,9 +1661,9 @@ class Editor(QsciScintillaCompat):
         """
         E5MessageBox.warning(
             self,
-            self.trUtf8("Modification of Read Only file"),
-            self.trUtf8("""You are attempting to change a read only file. """
-                        """Please save to a different file first."""))
+            self.tr("Modification of Read Only file"),
+            self.tr("""You are attempting to change a read only file. """
+                    """Please save to a different file first."""))
         
     def setNoName(self, noName):
         """
@@ -2355,7 +2355,7 @@ class Editor(QsciScintillaCompat):
         if self.hasSelectedText():
             printDialog.addEnabledOption(QAbstractPrintDialog.PrintSelection)
         if printDialog.exec_() == QDialog.Accepted:
-            sb.showMessage(self.trUtf8('Printing...'))
+            sb.showMessage(self.tr('Printing...'))
             QApplication.processEvents()
             fn = self.getFileName()
             if fn is not None:
@@ -2372,12 +2372,12 @@ class Editor(QsciScintillaCompat):
             else:
                 res = printer.printRange(self)
             if res:
-                sb.showMessage(self.trUtf8('Printing completed'), 2000)
+                sb.showMessage(self.tr('Printing completed'), 2000)
             else:
-                sb.showMessage(self.trUtf8('Error while printing'), 2000)
+                sb.showMessage(self.tr('Error while printing'), 2000)
             QApplication.processEvents()
         else:
-            sb.showMessage(self.trUtf8('Printing aborted'), 2000)
+            sb.showMessage(self.tr('Printing aborted'), 2000)
             QApplication.processEvents()
 
     def printPreviewFile(self):
@@ -2700,8 +2700,8 @@ class Editor(QsciScintillaCompat):
                 fn = self.noName
             res = E5MessageBox.okToClearData(
                 self,
-                self.trUtf8("File Modified"),
-                self.trUtf8("<p>The file <b>{0}</b> has unsaved changes.</p>")
+                self.tr("File Modified"),
+                self.tr("<p>The file <b>{0}</b> has unsaved changes.</p>")
                 .format(fn),
                 self.saveFile)
             if res:
@@ -2749,9 +2749,9 @@ class Editor(QsciScintillaCompat):
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(
                 self.vm,
-                self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
+                self.tr('Open File'),
+                self.tr('<p>The file <b>{0}</b> could not be opened.</p>'
+                        '<p>Reason: {1}</p>')
                     .format(fn, str(why)))
             QApplication.restoreOverrideCursor()
             raise
@@ -2852,9 +2852,9 @@ class Editor(QsciScintillaCompat):
         except (IOError, Utilities.CodingError, UnicodeError) as why:
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Save File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
-                            'Reason: {1}</p>')
+                self.tr('Save File'),
+                self.tr('<p>The file <b>{0}</b> could not be saved.<br/>'
+                        'Reason: {1}</p>')
                 .format(fn, str(why)))
             return False
         
@@ -2901,7 +2901,7 @@ class Editor(QsciScintillaCompat):
                 defaultFilter = Preferences.getEditor("DefaultSaveFilter")
             fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Save File"),
+                self.tr("Save File"),
                 path,
                 Lexers.getSaveFileFiltersList(True, True),
                 defaultFilter,
@@ -2919,9 +2919,9 @@ class Editor(QsciScintillaCompat):
                 if QFileInfo(fn).exists():
                     res = E5MessageBox.yesNo(
                         self,
-                        self.trUtf8("Save File"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                    " Overwrite it?</p>").format(fn),
+                        self.tr("Save File"),
+                        self.tr("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fn),
                         icon=E5MessageBox.Warning)
                     if not res:
                         return False
@@ -4226,8 +4226,8 @@ class Editor(QsciScintillaCompat):
         else:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Autocompletion"),
-                self.trUtf8(
+                self.tr("Autocompletion"),
+                self.tr(
                     """Autocompletion is not available because"""
                     """ there is no autocompletion source set."""))
         
@@ -4327,10 +4327,10 @@ class Editor(QsciScintillaCompat):
             # there is another provider registered already
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Activating Auto-Completion Provider"),
-                self.trUtf8("""Auto-completion provider cannot be connected"""
-                            """ because there is already another one active."""
-                            """ Please check your configuration."""))
+                self.tr("Activating Auto-Completion Provider"),
+                self.tr("""Auto-completion provider cannot be connected"""
+                        """ because there is already another one active."""
+                        """ Please check your configuration."""))
             return
         
         if self.autoCompletionThreshold() > 0:
@@ -4517,10 +4517,10 @@ class Editor(QsciScintillaCompat):
             # there is another provider registered already
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Activating Calltip Provider"),
-                self.trUtf8("""Calltip provider cannot be connected"""
-                            """ because there is already another one active."""
-                            """ Please check your configuration."""))
+                self.tr("Activating Calltip Provider"),
+                self.tr("""Calltip provider cannot be connected"""
+                        """ because there is already another one active."""
+                        """ Please check your configuration."""))
             return
         
         self.__ctHookFunction = func
@@ -4751,10 +4751,10 @@ class Editor(QsciScintillaCompat):
                 self.marginMenuActs["EnableBreakpoint"].setEnabled(False)
             if self.markersAtLine(self.line) & (1 << self.dbreakpoint):
                 self.marginMenuActs["EnableBreakpoint"].setText(
-                    self.trUtf8('Enable breakpoint'))
+                    self.tr('Enable breakpoint'))
             else:
                 self.marginMenuActs["EnableBreakpoint"].setText(
-                    self.trUtf8('Disable breakpoint'))
+                    self.tr('Disable breakpoint'))
             if self.breaks:
                 self.marginMenuActs["NextBreakpoint"].setEnabled(True)
                 self.marginMenuActs["PreviousBreakpoint"].setEnabled(True)
@@ -5109,8 +5109,8 @@ class Editor(QsciScintillaCompat):
             if len(files) > 1:
                 fn, ok = QInputDialog.getItem(
                     self,
-                    self.trUtf8("Code Coverage"),
-                    self.trUtf8("Please select a coverage file"),
+                    self.tr("Code Coverage"),
+                    self.tr("Please select a coverage file"),
                     files,
                     0, False)
                 if not ok:
@@ -5165,15 +5165,15 @@ class Editor(QsciScintillaCompat):
                 if not silent:
                     E5MessageBox.information(
                         self,
-                        self.trUtf8("Show Code Coverage Annotations"),
-                        self.trUtf8("""All lines have been covered."""))
+                        self.tr("Show Code Coverage Annotations"),
+                        self.tr("""All lines have been covered."""))
             self.showingNotcoveredMarkers = True
         else:
             if not silent:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Show Code Coverage Annotations"),
-                    self.trUtf8("""There is no coverage file available."""))
+                    self.tr("Show Code Coverage Annotations"),
+                    self.tr("""There is no coverage file available."""))
         
     def __codeCoverageHideAnnotations(self):
         """
@@ -5270,8 +5270,8 @@ class Editor(QsciScintillaCompat):
             if len(files) > 1:
                 fn, ok = QInputDialog.getItem(
                     self,
-                    self.trUtf8("Profile Data"),
-                    self.trUtf8("Please select a profile file"),
+                    self.tr("Profile Data"),
+                    self.tr("Please select a profile file"),
                     files,
                     0, False)
                 if not ok:
@@ -5407,14 +5407,14 @@ class Editor(QsciScintillaCompat):
                 errors = [e[0] for e in self.syntaxerrors[handle]]
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Syntax Error"),
+                    self.tr("Syntax Error"),
                     "\n".join(errors))
                 break
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Syntax Error"),
-                self.trUtf8("No syntax error message available."))
+                self.tr("Syntax Error"),
+                self.tr("No syntax error message available."))
     
     ###########################################################################
     ## Warning handling methods below
@@ -5576,14 +5576,14 @@ class Editor(QsciScintillaCompat):
             if self.markerLine(handle) == line:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Warning"),
+                    self.tr("Warning"),
                     '\n'.join([w[0] for w in self.warnings[handle]]))
                 break
         else:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Warning"),
-                self.trUtf8("No warning messages available."))
+                self.tr("Warning"),
+                self.tr("No warning messages available."))
     
     ###########################################################################
     ## Annotation handling methods below
@@ -5642,17 +5642,17 @@ class Editor(QsciScintillaCompat):
                     for msg, warningType in self.warnings[handle]:
                         if warningType == self.WarningStyle:
                             styleAnnotations.append(
-                                self.trUtf8("Style: {0}").format(msg))
+                                self.tr("Style: {0}").format(msg))
                         else:
                             warningAnnotations.append(
-                                self.trUtf8("Warning: {0}").format(msg))
+                                self.tr("Warning: {0}").format(msg))
             
             # step 2: do syntax errors
             for handle in self.syntaxerrors.keys():
                 if self.markerLine(handle) == line:
                     for msg, _ in self.syntaxerrors[handle]:
                         errorAnnotations.append(
-                            self.trUtf8("Error: {0}").format(msg))
+                            self.tr("Error: {0}").format(msg))
             
             annotations = []
             if styleAnnotations:
@@ -5707,8 +5707,8 @@ class Editor(QsciScintillaCompat):
         qs.sort()
         return QInputDialog.getItem(
             self,
-            self.trUtf8("Macro Name"),
-            self.trUtf8("Select a macro name:"),
+            self.tr("Macro Name"),
+            self.tr("Select a macro name:"),
             qs,
             0, False)
         
@@ -5735,9 +5735,9 @@ class Editor(QsciScintillaCompat):
         configDir = Utilities.getConfigDir()
         fname = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Load macro file"),
+            self.tr("Load macro file"),
             configDir,
-            self.trUtf8("Macro files (*.macro)"))
+            self.tr("Macro files (*.macro)"))
         
         if not fname:
             return  # user aborted
@@ -5749,8 +5749,8 @@ class Editor(QsciScintillaCompat):
         except IOError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Error loading macro"),
-                self.trUtf8(
+                self.tr("Error loading macro"),
+                self.tr(
                     "<p>The macro file <b>{0}</b> could not be read.</p>")
                 .format(fname))
             return
@@ -5758,8 +5758,8 @@ class Editor(QsciScintillaCompat):
         if len(lines) != 2:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Error loading macro"),
-                self.trUtf8("<p>The macro file <b>{0}</b> is corrupt.</p>")
+                self.tr("Error loading macro"),
+                self.tr("<p>The macro file <b>{0}</b> is corrupt.</p>")
                 .format(fname))
             return
         
@@ -5778,9 +5778,9 @@ class Editor(QsciScintillaCompat):
         
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save macro file"),
+            self.tr("Save macro file"),
             configDir,
-            self.trUtf8("Macro files (*.macro)"),
+            self.tr("Macro files (*.macro)"),
             "",
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -5795,9 +5795,9 @@ class Editor(QsciScintillaCompat):
         if QFileInfo(fname).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save macro"),
-                self.trUtf8("<p>The macro file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                self.tr("Save macro"),
+                self.tr("<p>The macro file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fname),
                 icon=E5MessageBox.Warning)
             if not res:
                 return
@@ -5811,8 +5811,8 @@ class Editor(QsciScintillaCompat):
         except IOError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Error saving macro"),
-                self.trUtf8(
+                self.tr("Error saving macro"),
+                self.tr(
                     "<p>The macro file <b>{0}</b> could not be written.</p>")
                 .format(fname))
             return
@@ -5824,8 +5824,8 @@ class Editor(QsciScintillaCompat):
         if self.recording:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Start Macro Recording"),
-                self.trUtf8("Macro recording is already active. Start new?"),
+                self.tr("Start Macro Recording"),
+                self.tr("Macro recording is already active. Start new?"),
                 icon=E5MessageBox.Warning,
                 yesDefault=True)
             if res:
@@ -5850,8 +5850,8 @@ class Editor(QsciScintillaCompat):
         
         name, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Macro Recording"),
-            self.trUtf8("Enter name of the macro:"),
+            self.tr("Macro Recording"),
+            self.tr("Enter name of the macro:"),
             QLineEdit.Normal)
         
         if ok and name:
@@ -5970,19 +5970,19 @@ class Editor(QsciScintillaCompat):
             if Preferences.getEditor("AutoReopen") and not self.isModified():
                 self.refresh()
             else:
-                msg = self.trUtf8(
+                msg = self.tr(
                     """<p>The file <b>{0}</b> has been changed while it"""
                     """ was opened in eric5. Reread it?</p>""")\
                     .format(self.fileName)
                 yesDefault = True
                 if self.isModified():
-                    msg += self.trUtf8(
+                    msg += self.tr(
                         """<br><b>Warning:</b> You will lose"""
                         """ your changes upon reopening it.""")
                     yesDefault = False
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("File changed"), msg,
+                    self.tr("File changed"), msg,
                     icon=E5MessageBox.Warning,
                     yesDefault=yesDefault)
                 if res:
@@ -6026,7 +6026,7 @@ class Editor(QsciScintillaCompat):
             else:
                 cap = self.fileName
             if self.isReadOnly():
-                cap = self.trUtf8("{0} (ro)").format(cap)
+                cap = self.tr("{0} (ro)").format(cap)
             self.setWindowTitle(cap)
         
         super().changeEvent(evt)
@@ -6119,7 +6119,7 @@ class Editor(QsciScintillaCompat):
             return
         cap = self.fileName
         if readOnly:
-            cap = self.trUtf8("{0} (ro)".format(cap))
+            cap = self.tr("{0} (ro)".format(cap))
         self.setReadOnly(readOnly)
         self.setWindowTitle(cap)
         self.captionChanged.emit(cap, self)
@@ -6254,8 +6254,8 @@ class Editor(QsciScintillaCompat):
                     else:
                         E5MessageBox.information(
                             self,
-                            self.trUtf8("Drop Error"),
-                            self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
+                            self.tr("Drop Error"),
+                            self.tr("""<p><b>{0}</b> is not a file.</p>""")
                             .format(fname))
             event.acceptProposedAction()
         else:
@@ -6273,21 +6273,21 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8('Resources'))
+        menu = QMenu(self.tr('Resources'))
         
         menu.addAction(
-            self.trUtf8('Add file...'), self.__addFileResource)
+            self.tr('Add file...'), self.__addFileResource)
         menu.addAction(
-            self.trUtf8('Add files...'), self.__addFileResources)
+            self.tr('Add files...'), self.__addFileResources)
         menu.addAction(
-            self.trUtf8('Add aliased file...'),
+            self.tr('Add aliased file...'),
             self.__addFileAliasResource)
         menu.addAction(
-            self.trUtf8('Add localized resource...'),
+            self.tr('Add localized resource...'),
             self.__addLocalizedResource)
         menu.addSeparator()
         menu.addAction(
-            self.trUtf8('Add resource frame'), self.__addResourceFrame)
+            self.tr('Add resource frame'), self.__addResourceFrame)
         
         menu.aboutToShow.connect(self.__showContextMenuResources)
         
@@ -6307,7 +6307,7 @@ class Editor(QsciScintillaCompat):
         dirStr = os.path.dirname(self.fileName)
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Add file resource"),
+            self.tr("Add file resource"),
             dirStr,
             "")
         if file:
@@ -6323,7 +6323,7 @@ class Editor(QsciScintillaCompat):
         dirStr = os.path.dirname(self.fileName)
         files = E5FileDialog.getOpenFileNames(
             self,
-            self.trUtf8("Add file resources"),
+            self.tr("Add file resources"),
             dirStr,
             "")
         if files:
@@ -6343,15 +6343,15 @@ class Editor(QsciScintillaCompat):
         dirStr = os.path.dirname(self.fileName)
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Add aliased file resource"),
+            self.tr("Add aliased file resource"),
             dirStr,
             "")
         if file:
             relFile = QDir(dirStr).relativeFilePath(file)
             alias, ok = QInputDialog.getText(
                 self,
-                self.trUtf8("Add aliased file resource"),
-                self.trUtf8("Alias for file <b>{0}</b>:").format(relFile),
+                self.tr("Add aliased file resource"),
+                self.tr("Alias for file <b>{0}</b>:").format(relFile),
                 QLineEdit.Normal,
                 relFile)
             if ok and alias:
@@ -6414,8 +6414,8 @@ class Editor(QsciScintillaCompat):
             self.fileName or os.path.dirname(self.fileName)
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Package Diagram"),
-            self.trUtf8("""Include class attributes?"""),
+            self.tr("Package Diagram"),
+            self.tr("""Include class attributes?"""),
             yesDefault=True)
         self.packageDiagram = UMLDialog(
             UMLDialog.PackageDiagram, self.project, package,
@@ -6434,8 +6434,8 @@ class Editor(QsciScintillaCompat):
             or os.path.dirname(self.fileName)
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Imports Diagram"),
-            self.trUtf8("""Include imports from external modules?"""))
+            self.tr("Imports Diagram"),
+            self.tr("""Include imports from external modules?"""))
         self.importsDiagram = UMLDialog(
             UMLDialog.ImportsDiagram, self.project, package,
             self, showExternalImports=res)
@@ -6448,8 +6448,8 @@ class Editor(QsciScintillaCompat):
         from Graphics.UMLDialog import UMLDialog
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Application Diagram"),
-            self.trUtf8("""Include module names?"""),
+            self.tr("Application Diagram"),
+            self.tr("""Include module names?"""),
             yesDefault=True)
         self.applicationDiagram = UMLDialog(
             UMLDialog.ApplicationDiagram, self.project,
@@ -6736,11 +6736,11 @@ class Editor(QsciScintillaCompat):
             self.spellingMenu.addSeparator()
         self.spellingMenu.addAction(
             UI.PixmapCache.getIcon("spellchecking.png"),
-            self.trUtf8("Check spelling..."), self.__checkSpellingWord)
+            self.tr("Check spelling..."), self.__checkSpellingWord)
         self.spellingMenu.addAction(
-            self.trUtf8("Add to dictionary"), self.__addToSpellingDictionary)
+            self.tr("Add to dictionary"), self.__addToSpellingDictionary)
         self.spellingMenu.addAction(
-            self.trUtf8("Ignore All"), self.__ignoreSpellingAlways)
+            self.tr("Ignore All"), self.__ignoreSpellingAlways)
         
         self.showMenu.emit("Spelling", self.spellingMenu,  self)
     
@@ -7149,8 +7149,8 @@ class Editor(QsciScintillaCompat):
                     except ValueError:
                         E5MessageBox.critical(
                             self,
-                            self.trUtf8("Sort Lines"),
-                            self.trUtf8(
+                            self.tr("Sort Lines"),
+                            self.tr(
                                 """The selection contains illegal data for a"""
                                 """ numerical sort."""))
                         return

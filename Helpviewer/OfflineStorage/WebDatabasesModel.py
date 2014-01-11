@@ -25,8 +25,8 @@ class WebDatabasesModel(QAbstractItemModel):
         """
         super().__init__(parent)
         self.__headers = [
-            self.trUtf8("Name"),
-            self.trUtf8("Size")
+            self.tr("Name"),
+            self.tr("Size")
         ]
         
         self.__data = []
@@ -97,7 +97,7 @@ class WebDatabasesModel(QAbstractItemModel):
                 origin = self.__data[index.row()][0]
                 if index.column() == 0:
                     if origin.host() == "":
-                        return self.trUtf8("Local")
+                        return self.tr("Local")
                     elif origin.port() == 0:
                         return "{0}://{1}".format(
                             origin.scheme(),
@@ -115,7 +115,7 @@ class WebDatabasesModel(QAbstractItemModel):
                 # web database
                 db = self.__data[parent.row()][1][index.row()]
                 if index.column() == 0:
-                    return self.trUtf8("{0} ({1})").format(
+                    return self.tr("{0} ({1})").format(
                         db.displayName(), db.name())
                 elif index.column() == 1:
                     return self.__dataString(db.size())
@@ -204,11 +204,11 @@ class WebDatabasesModel(QAbstractItemModel):
         """
         unit = ""
         if size < 1024:
-            unit = self.trUtf8("bytes")
+            unit = self.tr("bytes")
         elif size < 1024 * 1024:
             size /= 1024
-            unit = self.trUtf8("kB")
+            unit = self.tr("kB")
         else:
             size /= 1024 * 1024
-            unit = self.trUtf8("MB")
+            unit = self.tr("MB")
         return "{0:.1f} {1}".format(size, unit)

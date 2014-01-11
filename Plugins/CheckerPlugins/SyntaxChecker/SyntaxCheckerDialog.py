@@ -43,9 +43,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.setupUi(self)
         
         self.showButton = self.buttonBox.addButton(
-            self.trUtf8("Show"), QDialogButtonBox.ActionRole)
+            self.tr("Show"), QDialogButtonBox.ActionRole)
         self.showButton.setToolTip(
-            self.trUtf8("Press to show all files containing an issue"))
+            self.tr("Press to show all files containing an issue"))
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
@@ -204,7 +204,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         self.noResults = False
                         self.__createResultItem(
                             file, "1", 0,
-                            self.trUtf8("Error: {0}").format(str(msg))
+                            self.tr("Error: {0}").format(str(msg))
                             .rstrip()[1:-1], "")
                         progress += 1
                         continue
@@ -290,7 +290,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         if self.noResults:
-            QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
+            QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
             QApplication.processEvents()
             self.showButton.setEnabled(False)
         else:

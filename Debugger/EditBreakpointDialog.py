@@ -88,7 +88,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             self.linenoSpinBox.setEnabled(False)
             self.conditionCombo.setFocus()
         else:
-            self.setWindowTitle(self.trUtf8("Add Breakpoint"))
+            self.setWindowTitle(self.tr("Add Breakpoint"))
             # set the filename
             if fn is None:
                 fn = ""
@@ -120,7 +120,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select filename of the breakpoint"),
+            self.tr("Select filename of the breakpoint"),
             self.filenameCombo.currentText(),
             "")
             

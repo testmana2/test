@@ -31,14 +31,14 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgPurgeAct = E5Action(
-            self.trUtf8('Purge Files'),
+            self.tr('Purge Files'),
             UI.PixmapCache.getIcon("fileDelete.png"),
-            self.trUtf8('Purge Files'),
+            self.tr('Purge Files'),
             0, 0, self, 'mercurial_purge')
-        self.hgPurgeAct.setStatusTip(self.trUtf8(
+        self.hgPurgeAct.setStatusTip(self.tr(
             'Delete files and directories not known to Mercurial'
         ))
-        self.hgPurgeAct.setWhatsThis(self.trUtf8(
+        self.hgPurgeAct.setWhatsThis(self.tr(
             """<b>Purge Files</b>"""
             """<p>This deletes files and directories not known to Mercurial."""
             """ That means that purge will delete:<ul>"""
@@ -51,14 +51,14 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgPurgeAct)
         
         self.hgPurgeAllAct = E5Action(
-            self.trUtf8('Purge All Files'),
-            self.trUtf8('Purge All Files'),
+            self.tr('Purge All Files'),
+            self.tr('Purge All Files'),
             0, 0, self, 'mercurial_purge_all')
-        self.hgPurgeAllAct.setStatusTip(self.trUtf8(
+        self.hgPurgeAllAct.setStatusTip(self.tr(
             'Delete files and directories not known to Mercurial including'
             ' ignored ones'
         ))
-        self.hgPurgeAllAct.setWhatsThis(self.trUtf8(
+        self.hgPurgeAllAct.setWhatsThis(self.tr(
             """<b>Purge All Files</b>"""
             """<p>This deletes files and directories not known to Mercurial."""
             """ That means that purge will delete:<ul>"""
@@ -72,14 +72,14 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgPurgeAllAct)
         
         self.hgPurgeListAct = E5Action(
-            self.trUtf8('List Files to be Purged'),
+            self.tr('List Files to be Purged'),
             UI.PixmapCache.getIcon("fileDeleteList.png"),
-            self.trUtf8('List Files to be Purged...'),
+            self.tr('List Files to be Purged...'),
             0, 0, self, 'mercurial_purge_list')
-        self.hgPurgeListAct.setStatusTip(self.trUtf8(
+        self.hgPurgeListAct.setStatusTip(self.tr(
             'List files and directories not known to Mercurial'
         ))
-        self.hgPurgeListAct.setWhatsThis(self.trUtf8(
+        self.hgPurgeListAct.setWhatsThis(self.tr(
             """<b>List Files to be Purged</b>"""
             """<p>This lists files and directories not known to Mercurial."""
             """ These would be deleted by the "Purge Files" menu entry.</p>"""
@@ -88,14 +88,14 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgPurgeListAct)
         
         self.hgPurgeAllListAct = E5Action(
-            self.trUtf8('List All Files to be Purged'),
-            self.trUtf8('List All Files to be Purged...'),
+            self.tr('List All Files to be Purged'),
+            self.tr('List All Files to be Purged...'),
             0, 0, self, 'mercurial_purge_all_list')
-        self.hgPurgeAllListAct.setStatusTip(self.trUtf8(
+        self.hgPurgeAllListAct.setStatusTip(self.tr(
             'List files and directories not known to Mercurial including'
             ' ignored ones'
         ))
-        self.hgPurgeAllListAct.setWhatsThis(self.trUtf8(
+        self.hgPurgeAllListAct.setWhatsThis(self.tr(
             """<b>List All Files to be Purged</b>"""
             """<p>This lists files and directories not known to Mercurial"""
             """ including ignored ones. These would be deleted by the"""
@@ -129,7 +129,7 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         
         @return title of the menu (string)
         """
-        return self.trUtf8("Purge")
+        return self.tr("Purge")
     
     def __hgPurge(self):
         """

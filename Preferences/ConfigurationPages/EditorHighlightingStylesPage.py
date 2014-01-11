@@ -40,29 +40,29 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         self.setObjectName("EditorHighlightingStylesPage")
         
         self.__fontButtonMenu = QMenu()
-        act = self.__fontButtonMenu.addAction(self.trUtf8("Font"))
+        act = self.__fontButtonMenu.addAction(self.tr("Font"))
         act.setData(self.FONT)
         self.__fontButtonMenu.addSeparator()
         act = self.__fontButtonMenu.addAction(
-            self.trUtf8("Family and Size only"))
+            self.tr("Family and Size only"))
         act.setData(self.FAMILYANDSIZE)
-        act = self.__fontButtonMenu.addAction(self.trUtf8("Family only"))
+        act = self.__fontButtonMenu.addAction(self.tr("Family only"))
         act.setData(self.FAMILYONLY)
-        act = self.__fontButtonMenu.addAction(self.trUtf8("Size only"))
+        act = self.__fontButtonMenu.addAction(self.tr("Size only"))
         act.setData(self.SIZEONLY)
         self.__fontButtonMenu.triggered.connect(self.__fontButtonMenuTriggered)
         self.fontButton.setMenu(self.__fontButtonMenu)
         
         self.__allFontsButtonMenu = QMenu()
-        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Font"))
+        act = self.__allFontsButtonMenu.addAction(self.tr("Font"))
         act.setData(self.FONT)
         self.__allFontsButtonMenu.addSeparator()
         act = self.__allFontsButtonMenu.addAction(
-            self.trUtf8("Family and Size only"))
+            self.tr("Family and Size only"))
         act.setData(self.FAMILYANDSIZE)
-        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Family only"))
+        act = self.__allFontsButtonMenu.addAction(self.tr("Family only"))
         act.setData(self.FAMILYONLY)
-        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Size only"))
+        act = self.__allFontsButtonMenu.addAction(self.tr("Size only"))
         act.setData(self.SIZEONLY)
         self.__allFontsButtonMenu.triggered.connect(
             self.__allFontsButtonMenuTriggered)
@@ -324,12 +324,12 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         Private method used to set the eolfill for all styles of a selected
         lexer.
         """
-        on = self.trUtf8("Enabled")
-        off = self.trUtf8("Disabled")
+        on = self.tr("Enabled")
+        off = self.tr("Disabled")
         selection, ok = QInputDialog.getItem(
             self,
-            self.trUtf8("Fill to end of line"),
-            self.trUtf8("Select fill to end of line for all styles"),
+            self.tr("Fill to end of line"),
+            self.tr("Select fill to end of line for all styles"),
             [on, off],
             0, False)
         if ok:
@@ -413,9 +413,9 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Export Highlighting Styles"),
+            self.tr("Export Highlighting Styles"),
             "",
-            self.trUtf8("Highlighting styles file (*.e4h)"),
+            self.tr("Highlighting styles file (*.e4h)"),
             "",
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -436,8 +436,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Export Highlighting Styles"),
-                self.trUtf8(
+                self.tr("Export Highlighting Styles"),
+                self.tr(
                     """<p>The highlighting styles could not be exported"""
                     """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")
                 .format(fn, f.errorString())
@@ -452,9 +452,9 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Import Highlighting Styles"),
+            self.tr("Import Highlighting Styles"),
             "",
-            self.trUtf8("Highlighting styles file (*.e4h)"))
+            self.tr("Highlighting styles file (*.e4h)"))
         
         if not fn:
             return
@@ -468,8 +468,8 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Import Highlighting Styles"),
-                self.trUtf8(
+                self.tr("Import Highlighting Styles"),
+                self.tr(
                     """<p>The highlighting styles could not be read"""
                     """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")
                 .format(fn, f.errorString())

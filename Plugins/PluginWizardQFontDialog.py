@@ -68,11 +68,11 @@ class FontDialogWizard(QObject):
         Private method to initialize the action.
         """
         self.action = E5Action(
-            self.trUtf8('QFontDialog Wizard'),
-            self.trUtf8('Q&FontDialog Wizard...'), 0, 0, self,
+            self.tr('QFontDialog Wizard'),
+            self.tr('Q&FontDialog Wizard...'), 0, 0, self,
             'wizards_qfontdialog')
-        self.action.setStatusTip(self.trUtf8('QFontDialog Wizard'))
-        self.action.setWhatsThis(self.trUtf8(
+        self.action.setStatusTip(self.tr('QFontDialog Wizard'))
+        self.action.setWhatsThis(self.tr(
             """<b>QFontDialog Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
             """ needed to create a QFontDialog. The generated code is"""
@@ -120,8 +120,8 @@ class FontDialogWizard(QObject):
         if editor is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8('No current editor'),
-                self.trUtf8('Please open or create a file first.'))
+                self.tr('No current editor'),
+                self.tr('Please open or create a file first.'))
         else:
             code, ok = self.__callForm(editor)
             if ok:

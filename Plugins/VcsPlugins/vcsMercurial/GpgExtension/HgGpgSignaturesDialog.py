@@ -115,8 +115,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -148,7 +148,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         
         if self.signaturesList.topLevelItemCount() == 0:
             # no patches present
-            self.__generateItem("", "", self.trUtf8("no signatures found"))
+            self.__generateItem("", "", self.tr("no signatures found"))
         self.__resizeColumns()
         self.__resort()
     
@@ -314,7 +314,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         Private method to filter the log entries.
         """
         searchRxText = self.rxEdit.text()
-        filterTop = self.categoryCombo.currentText() == self.trUtf8("Revision")
+        filterTop = self.categoryCombo.currentText() == self.tr("Revision")
         if filterTop and searchRxText.startswith("^"):
             searchRx = QRegExp(
                 "^\s*{0}".format(searchRxText[1:]), Qt.CaseInsensitive)

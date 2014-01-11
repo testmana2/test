@@ -83,12 +83,12 @@ class IExplorerImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("Folder '{0}' does not exist.")\
+            self._errorString = self.tr("Folder '{0}' does not exist.")\
                 .format(self.__fileName)
             return False
         if not os.path.isdir(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("'{0}' is not a folder.")\
+            self._errorString = self.tr("'{0}' is not a folder.")\
                 .format(self.__fileName)
         return True
     
@@ -141,8 +141,8 @@ class IExplorerImporter(BookmarksImporter):
                         bookmark.title = name.replace("&", "&&")
         
         if self._id == "ie":
-            importRootNode.title = self.trUtf8("Internet Explorer Import")
+            importRootNode.title = self.tr("Internet Explorer Import")
         else:
-            importRootNode.title = self.trUtf8("Imported {0}")\
+            importRootNode.title = self.tr("Imported {0}")\
                 .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
         return importRootNode

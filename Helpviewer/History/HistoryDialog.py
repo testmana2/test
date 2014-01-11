@@ -84,12 +84,12 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         idx = idx.sibling(idx.row(), 0)
         if idx.isValid() and not self.historyTree.model().hasChildren(idx):
             menu.addAction(
-                self.trUtf8("&Open"), self.__openHistoryInCurrentTab)
+                self.tr("&Open"), self.__openHistoryInCurrentTab)
             menu.addAction(
-                self.trUtf8("Open in New &Tab"), self.__openHistoryInNewTab)
+                self.tr("Open in New &Tab"), self.__openHistoryInNewTab)
             menu.addSeparator()
-            menu.addAction(self.trUtf8("&Copy"), self.__copyHistory)
-        menu.addAction(self.trUtf8("&Remove"), self.historyTree.removeSelected)
+            menu.addAction(self.tr("&Copy"), self.__copyHistory)
+        menu.addAction(self.tr("&Remove"), self.historyTree.removeSelected)
         menu.exec_(QCursor.pos())
     
     def __activated(self, idx):

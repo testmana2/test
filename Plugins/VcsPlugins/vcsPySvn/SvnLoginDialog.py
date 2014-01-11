@@ -30,7 +30,7 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         self.setupUi(self)
         
         self.realmLabel.setText(
-            self.trUtf8("<b>Enter login data for realm {0}.</b>")
+            self.tr("<b>Enter login data for realm {0}.</b>")
             .format(realm))
         self.usernameEdit.setText(username)
         self.saveCheckBox.setEnabled(may_save)

@@ -43,8 +43,8 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
             self.bookmarkCombo.setHidden(True)
         
         if showNone:
-            self.tipButton.setText(self.trUtf8("No revision selected"))
-            self.tipButton.setToolTip(self.trUtf8(
+            self.tipButton.setText(self.tr("No revision selected"))
+            self.tipButton.setToolTip(self.tr(
                 "Select to not specify a specific revision"))
     
     def __updateOK(self):

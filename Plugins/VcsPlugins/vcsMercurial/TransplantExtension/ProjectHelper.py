@@ -46,14 +46,14 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgTransplantAct = E5Action(
-            self.trUtf8('Transplant Changesets'),
+            self.tr('Transplant Changesets'),
             UI.PixmapCache.getIcon("vcsTransplant.png"),
-            self.trUtf8('Transplant Changesets'),
+            self.tr('Transplant Changesets'),
             0, 0, self, 'mercurial_transplant')
-        self.hgTransplantAct.setStatusTip(self.trUtf8(
+        self.hgTransplantAct.setStatusTip(self.tr(
             'Transplant changesets from another branch'
         ))
-        self.hgTransplantAct.setWhatsThis(self.trUtf8(
+        self.hgTransplantAct.setWhatsThis(self.tr(
             """<b>Transplant Changesets</b>"""
             """<p>This transplants changesets from another branch on top"""
             """ of the current working directory with the log of the"""
@@ -63,13 +63,13 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgTransplantAct)
         
         self.hgTransplantContinueAct = E5Action(
-            self.trUtf8('Continue Transplant Session'),
-            self.trUtf8('Continue Transplant Session'),
+            self.tr('Continue Transplant Session'),
+            self.tr('Continue Transplant Session'),
             0, 0, self, 'mercurial_transplant_continue')
-        self.hgTransplantContinueAct.setStatusTip(self.trUtf8(
+        self.hgTransplantContinueAct.setStatusTip(self.tr(
             'Continue the last transplant session after repair'
         ))
-        self.hgTransplantContinueAct.setWhatsThis(self.trUtf8(
+        self.hgTransplantContinueAct.setWhatsThis(self.tr(
             """<b>Continue Transplant Session</b>"""
             """<p>This continues the last transplant session after"""
             """ repair.</p>"""
@@ -90,7 +90,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         if self.vcs.version >= (2, 3):
             # transplant is deprecated as of Mercurial 2.3
             menu.addAction(
-                self.trUtf8("Transplant is deprecated")).setEnabled(False)
+                self.tr("Transplant is deprecated")).setEnabled(False)
         else:
             menu.setTearOffEnabled(True)
             
@@ -105,7 +105,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         
         @return title of the menu (string)
         """
-        return self.trUtf8("Transplant")
+        return self.tr("Transplant")
     
     def __hgTransplant(self):
         """
@@ -116,8 +116,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Transplant Changesets"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Transplant Changesets"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -131,8 +131,8 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Transplant Changesets (Continue)"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Transplant Changesets (Continue)"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()

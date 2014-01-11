@@ -117,16 +117,16 @@ class DebugViewer(QWidget):
             QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.glvWidgetHLayout.addWidget(self.globalsFilterEdit)
         self.globalsFilterEdit.setToolTip(
-            self.trUtf8("Enter regular expression patterns separated by ';'"
-                        " to define variable filters. "))
+            self.tr("Enter regular expression patterns separated by ';'"
+                    " to define variable filters. "))
         self.globalsFilterEdit.setWhatsThis(
-            self.trUtf8("Enter regular expression patterns separated by ';'"
-                        " to define variable filters. All variables and"
-                        " class attributes matched by one of the expressions"
-                        " are not shown in the list above."))
+            self.tr("Enter regular expression patterns separated by ';'"
+                    " to define variable filters. All variables and"
+                    " class attributes matched by one of the expressions"
+                    " are not shown in the list above."))
         
         self.setGlobalsFilterButton = QPushButton(
-            self.trUtf8('Set'), self.glvWidget)
+            self.tr('Set'), self.glvWidget)
         self.glvWidgetHLayout.addWidget(self.setGlobalsFilterButton)
         self.glvWidgetVLayout.addLayout(self.glvWidgetHLayout)
         
@@ -154,7 +154,7 @@ class DebugViewer(QWidget):
             QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.lvWidgetHLayout1.addWidget(self.stackComboBox)
 
-        self.sourceButton = QPushButton(self.trUtf8('Source'), self.lvWidget)
+        self.sourceButton = QPushButton(self.tr('Source'), self.lvWidget)
         self.lvWidgetHLayout1.addWidget(self.sourceButton)
         self.sourceButton.setEnabled(False)
         self.lvWidgetVLayout.addLayout(self.lvWidgetHLayout1)
@@ -170,17 +170,17 @@ class DebugViewer(QWidget):
             QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.lvWidgetHLayout2.addWidget(self.localsFilterEdit)
         self.localsFilterEdit.setToolTip(
-            self.trUtf8(
+            self.tr(
                 "Enter regular expression patterns separated by ';' to define "
                 "variable filters. "))
         self.localsFilterEdit.setWhatsThis(
-            self.trUtf8(
+            self.tr(
                 "Enter regular expression patterns separated by ';' to define "
                 "variable filters. All variables and class attributes matched"
                 " by one of the expressions are not shown in the list above."))
         
         self.setLocalsFilterButton = QPushButton(
-            self.trUtf8('Set'), self.lvWidget)
+            self.tr('Set'), self.lvWidget)
         self.lvWidgetHLayout2.addWidget(self.setLocalsFilterButton)
         self.lvWidgetVLayout.addLayout(self.lvWidgetHLayout2)
         
@@ -256,11 +256,11 @@ class DebugViewer(QWidget):
                 self.__tabWidget.setCurrentWidget(self.lvWidget)
         
         # add the threads viewer
-        self.__mainLayout.addWidget(QLabel(self.trUtf8("Threads:")))
+        self.__mainLayout.addWidget(QLabel(self.tr("Threads:")))
         self.__threadList = QTreeWidget()
         self.__threadList.setHeaderLabels(
-            [self.trUtf8("ID"), self.trUtf8("Name"),
-             self.trUtf8("State"), ""])
+            [self.tr("ID"), self.tr("Name"),
+             self.tr("State"), ""])
         self.__threadList.setSortingEnabled(True)
         self.__mainLayout.addWidget(self.__threadList)
         
@@ -514,9 +514,9 @@ class DebugViewer(QWidget):
         self.__threadList.clear()
         for thread in threadList:
             if thread['broken']:
-                state = self.trUtf8("waiting at breakpoint")
+                state = self.tr("waiting at breakpoint")
             else:
-                state = self.trUtf8("running")
+                state = self.tr("running")
             itm = QTreeWidgetItem(self.__threadList,
                                   ["{0:d}".format(thread['id']),
                                    thread['name'], state])

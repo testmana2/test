@@ -109,7 +109,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     if name not in states:
                         self.statusList.append("  {0}".format(name))
                 self.reportedStates = states
-                return True, self.trUtf8(
+                return True, self.tr(
                     "Subversion status checked successfully (using svn)")
             else:
                 process.kill()
@@ -121,5 +121,5 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         else:
             process.kill()
             process.waitForFinished()
-            return False, self.trUtf8(
+            return False, self.tr(
                 "Could not start the Subversion process.")

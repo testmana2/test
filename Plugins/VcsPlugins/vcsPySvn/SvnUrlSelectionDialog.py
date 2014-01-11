@@ -52,8 +52,8 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         if reposURL is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Subversion Error"),
-                self.trUtf8(
+                self.tr("Subversion Error"),
+                self.tr(
                     """The URL of the project repository could not be"""
                     """ retrieved from the working copy. The operation will"""
                     """ be aborted"""))
@@ -66,8 +66,8 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
             if not rx_base.exactMatch(reposURL):
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Subversion Error"),
-                    self.trUtf8(
+                    self.tr("Subversion Error"),
+                    self.tr(
                         """The URL of the project repository has an"""
                         """ invalid format. The operation will"""
                         """ be aborted"""))

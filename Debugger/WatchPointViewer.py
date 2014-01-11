@@ -41,7 +41,7 @@ class WatchPointViewer(QTreeView):
         self.setSelectionMode(QAbstractItemView.ExtendedSelection)
         self.setSelectionBehavior(QAbstractItemView.SelectRows)
         
-        self.setWindowTitle(self.trUtf8("Watchpoints"))
+        self.setWindowTitle(self.tr("Watchpoints"))
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
@@ -137,58 +137,58 @@ class WatchPointViewer(QTreeView):
         Private method to generate the popup menus.
         """
         self.menu = QMenu()
-        self.menu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
-        self.menu.addAction(self.trUtf8("Edit..."), self.__editWatchPoint)
+        self.menu.addAction(self.tr("Add"), self.__addWatchPoint)
+        self.menu.addAction(self.tr("Edit..."), self.__editWatchPoint)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Enable"), self.__enableWatchPoint)
-        self.menu.addAction(self.trUtf8("Enable all"),
+        self.menu.addAction(self.tr("Enable"), self.__enableWatchPoint)
+        self.menu.addAction(self.tr("Enable all"),
                             self.__enableAllWatchPoints)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Disable"), self.__disableWatchPoint)
-        self.menu.addAction(self.trUtf8("Disable all"),
+        self.menu.addAction(self.tr("Disable"), self.__disableWatchPoint)
+        self.menu.addAction(self.tr("Disable all"),
                             self.__disableAllWatchPoints)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Delete"), self.__deleteWatchPoint)
-        self.menu.addAction(self.trUtf8("Delete all"),
+        self.menu.addAction(self.tr("Delete"), self.__deleteWatchPoint)
+        self.menu.addAction(self.tr("Delete all"),
                             self.__deleteAllWatchPoints)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.menu.addAction(self.tr("Configure..."), self.__configure)
 
         self.backMenuActions = {}
         self.backMenu = QMenu()
-        self.backMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
+        self.backMenu.addAction(self.tr("Add"), self.__addWatchPoint)
         self.backMenuActions["EnableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Enable all"),
+            self.backMenu.addAction(self.tr("Enable all"),
                                     self.__enableAllWatchPoints)
         self.backMenuActions["DisableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Disable all"),
+            self.backMenu.addAction(self.tr("Disable all"),
                                     self.__disableAllWatchPoints)
         self.backMenuActions["DeleteAll"] = \
-            self.backMenu.addAction(self.trUtf8("Delete all"),
+            self.backMenu.addAction(self.tr("Delete all"),
                                     self.__deleteAllWatchPoints)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.backMenu.addAction(self.tr("Configure..."), self.__configure)
         self.backMenu.aboutToShow.connect(self.__showBackMenu)
 
         self.multiMenu = QMenu()
-        self.multiMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
+        self.multiMenu.addAction(self.tr("Add"), self.__addWatchPoint)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Enable selected"),
+        self.multiMenu.addAction(self.tr("Enable selected"),
                                  self.__enableSelectedWatchPoints)
-        self.multiMenu.addAction(self.trUtf8("Enable all"),
+        self.multiMenu.addAction(self.tr("Enable all"),
                                  self.__enableAllWatchPoints)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Disable selected"),
+        self.multiMenu.addAction(self.tr("Disable selected"),
                                  self.__disableSelectedWatchPoints)
-        self.multiMenu.addAction(self.trUtf8("Disable all"),
+        self.multiMenu.addAction(self.tr("Disable all"),
                                  self.__disableAllWatchPoints)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Delete selected"),
+        self.multiMenu.addAction(self.tr("Delete selected"),
                                  self.__deleteSelectedWatchPoints)
-        self.multiMenu.addAction(self.trUtf8("Delete all"),
+        self.multiMenu.addAction(self.tr("Delete all"),
                                  self.__deleteAllWatchPoints)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.multiMenu.addAction(self.tr("Configure..."), self.__configure)
     
     def __showContextMenu(self, coord):
         """
@@ -235,17 +235,17 @@ class WatchPointViewer(QTreeView):
             idx.internalPointer() != index.internalPointer()
         if showMessage and duplicate:
             if not special:
-                msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
-                                  """ already exists.</p>""")\
+                msg = self.tr("""<p>A watch expression '<b>{0}</b>'"""
+                              """ already exists.</p>""")\
                     .format(Utilities.html_encode(cond))
             else:
-                msg = self.trUtf8(
+                msg = self.tr(
                     """<p>A watch expression '<b>{0}</b>'"""
                     """ for the variable <b>{1}</b> already exists.</p>""")\
                     .format(special, Utilities.html_encode(cond))
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Watch expression already exists"),
+                self.tr("Watch expression already exists"),
                 msg)
         
         return duplicate

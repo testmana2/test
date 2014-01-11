@@ -98,18 +98,18 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.noFixIssuesSelectButton.setIcon(
             UI.PixmapCache.getIcon("select.png"))
         
-        self.docTypeComboBox.addItem(self.trUtf8("PEP-257"), "pep257")
-        self.docTypeComboBox.addItem(self.trUtf8("Eric"), "eric")
+        self.docTypeComboBox.addItem(self.tr("PEP-257"), "pep257")
+        self.docTypeComboBox.addItem(self.tr("Eric"), "eric")
         
         self.statisticsButton = self.buttonBox.addButton(
-            self.trUtf8("Statistics..."), QDialogButtonBox.ActionRole)
+            self.tr("Statistics..."), QDialogButtonBox.ActionRole)
         self.statisticsButton.setToolTip(
-            self.trUtf8("Press to show some statistics for the last run"))
+            self.tr("Press to show some statistics for the last run"))
         self.statisticsButton.setEnabled(False)
         self.showButton = self.buttonBox.addButton(
-            self.trUtf8("Show"), QDialogButtonBox.ActionRole)
+            self.tr("Show"), QDialogButtonBox.ActionRole)
         self.showButton.setToolTip(
-            self.trUtf8("Press to show all files containing an issue"))
+            self.tr("Press to show all files containing an issue"))
         self.showButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -410,7 +410,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         self.noResults = False
                         self.__createResultItem(
                             file, "1", "1",
-                            self.trUtf8("Error: {0}").format(str(msg))
+                            self.tr("Error: {0}").format(str(msg))
                             .rstrip()[1:-1], False, False)
                         progress += 1
                         continue
@@ -493,7 +493,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                                                                position, text)
                                 if res == 1:
                                     text += "\n" + \
-                                            self.trUtf8("Fix: {0}").format(msg)
+                                            self.tr("Fix: {0}").format(msg)
                                     self.__createResultItem(
                                         fname, lineno, position, text, True,
                                         True)
@@ -517,7 +517,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                             itm = deferredFixes[id_]
                             if fixed == 1:
                                 text = "\n" + \
-                                    self.trUtf8("Fix: {0}").format(msg)
+                                    self.tr("Fix: {0}").format(msg)
                                 self.__modifyFixedResultItem(itm, text, True)
                             else:
                                 self.__modifyFixedResultItem(itm, "", False)
@@ -551,7 +551,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.startButton.setEnabled(True)
         
         if self.noResults:
-            QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
+            QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
             QApplication.processEvents()
             self.statisticsButton.setEnabled(False)
             self.showButton.setEnabled(False)
@@ -878,7 +878,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         lineno = len(source)
                     fixed, msg, id_ = fixer.fixIssue(lineno, position, text)
                     if fixed == 1:
-                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                        text = "\n" + self.tr("Fix: {0}").format(msg)
                         self.__modifyFixedResultItem(itm, text, True)
                     elif fixed == 0:
                         self.__modifyFixedResultItem(itm, "", False)
@@ -890,7 +890,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     fixed, msg = deferredResults[id_]
                     itm = deferredFixes[id_]
                     if fixed == 1:
-                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                        text = "\n" + self.tr("Fix: {0}").format(msg)
                         self.__modifyFixedResultItem(itm, text, True)
                     else:
                         self.__modifyFixedResultItem(itm, "", False)

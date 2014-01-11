@@ -36,12 +36,12 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
         self.setupUi(self)
         
         self.addAllButton = self.buttonBox.addButton(
-            self.trUtf8("Add All"), QDialogButtonBox.AcceptRole)
-        self.addAllButton.setToolTip(self.trUtf8("Add all files."))
+            self.tr("Add All"), QDialogButtonBox.AcceptRole)
+        self.addAllButton.setToolTip(self.tr("Add all files."))
         self.addSelectedButton = self.buttonBox.addButton(
-            self.trUtf8("Add Selected"), QDialogButtonBox.AcceptRole)
+            self.tr("Add Selected"), QDialogButtonBox.AcceptRole)
         self.addSelectedButton.setToolTip(
-            self.trUtf8("Add selected files only."))
+            self.tr("Add selected files only."))
         
         self.fileList.addItems(files)
         

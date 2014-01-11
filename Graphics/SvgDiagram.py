@@ -46,7 +46,7 @@ class SvgDiagram(E5MainWindow):
             self.setObjectName(name)
         else:
             self.setObjectName("SvgDiagram")
-        self.setWindowTitle(self.trUtf8("SVG-Viewer"))
+        self.setWindowTitle(self.tr("SVG-Viewer"))
         
         self.svgWidget = QSvgWidget()
         self.svgWidget.setObjectName("svgWidget")
@@ -89,17 +89,17 @@ class SvgDiagram(E5MainWindow):
         """
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
-                    self.trUtf8("Close"), self)
+                    self.tr("Close"), self)
         self.closeAct.triggered[()].connect(self.close)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
-                    self.trUtf8("Print"), self)
+                    self.tr("Print"), self)
         self.printAct.triggered[()].connect(self.__printDiagram)
         
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
-                    self.trUtf8("Print Preview"), self)
+                    self.tr("Print Preview"), self)
         self.printPreviewAct.triggered[()].connect(self.__printPreviewDiagram)
         
     def __initContextMenu(self):
@@ -127,11 +127,11 @@ class SvgDiagram(E5MainWindow):
         """
         Private method to populate the toolbars with our actions.
         """
-        self.windowToolBar = QToolBar(self.trUtf8("Window"), self)
+        self.windowToolBar = QToolBar(self.tr("Window"), self)
         self.windowToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.windowToolBar.addAction(self.closeAct)
         
-        self.graphicsToolBar = QToolBar(self.trUtf8("Graphics"), self)
+        self.graphicsToolBar = QToolBar(self.tr("Graphics"), self)
         self.graphicsToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.graphicsToolBar.addAction(self.printPreviewAct)
         self.graphicsToolBar.addAction(self.printAct)
@@ -349,7 +349,7 @@ class SvgDiagram(E5MainWindow):
             int(printer.resolution() / 2.54)
 
         # write a foot note
-        s = self.trUtf8("Diagram: {0}").format(self.getDiagramName())
+        s = self.tr("Diagram: {0}").format(self.getDiagramName())
         tc = QColor(50, 50, 50)
         painter.setPen(tc)
         painter.drawRect(marginX, marginY, width, height)

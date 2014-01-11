@@ -120,27 +120,27 @@ class IconEditorWindow(E5MainWindow):
         Private method to define the supported image file filters.
         """
         filters = {
-            'bmp': self.trUtf8("Windows Bitmap File (*.bmp)"),
-            'gif': self.trUtf8("Graphic Interchange Format File (*.gif)"),
-            'ico': self.trUtf8("Windows Icon File (*.ico)"),
-            'jpg': self.trUtf8("JPEG File (*.jpg)"),
-            'jpeg': self.trUtf8("JPEG File (*.jpeg)"),
-            'mng': self.trUtf8("Multiple-Image Network Graphics File (*.mng)"),
-            'pbm': self.trUtf8("Portable Bitmap File (*.pbm)"),
-            'pcx': self.trUtf8("Paintbrush Bitmap File (*.pcx)"),
-            'pgm': self.trUtf8("Portable Graymap File (*.pgm)"),
-            'png': self.trUtf8("Portable Network Graphics File (*.png)"),
-            'ppm': self.trUtf8("Portable Pixmap File (*.ppm)"),
-            'sgi': self.trUtf8("Silicon Graphics Image File (*.sgi)"),
-            'svg': self.trUtf8("Scalable Vector Graphics File (*.svg)"),
-            'svgz': self.trUtf8("Compressed Scalable Vector Graphics File"
-                                " (*.svgz)"),
-            'tga': self.trUtf8("Targa Graphic File (*.tga)"),
-            'tif': self.trUtf8("TIFF File (*.tif)"),
-            'tiff': self.trUtf8("TIFF File (*.tiff)"),
-            'wbmp': self.trUtf8("WAP Bitmap File (*.wbmp)"),
-            'xbm': self.trUtf8("X11 Bitmap File (*.xbm)"),
-            'xpm': self.trUtf8("X11 Pixmap File (*.xpm)"),
+            'bmp': self.tr("Windows Bitmap File (*.bmp)"),
+            'gif': self.tr("Graphic Interchange Format File (*.gif)"),
+            'ico': self.tr("Windows Icon File (*.ico)"),
+            'jpg': self.tr("JPEG File (*.jpg)"),
+            'jpeg': self.tr("JPEG File (*.jpeg)"),
+            'mng': self.tr("Multiple-Image Network Graphics File (*.mng)"),
+            'pbm': self.tr("Portable Bitmap File (*.pbm)"),
+            'pcx': self.tr("Paintbrush Bitmap File (*.pcx)"),
+            'pgm': self.tr("Portable Graymap File (*.pgm)"),
+            'png': self.tr("Portable Network Graphics File (*.png)"),
+            'ppm': self.tr("Portable Pixmap File (*.ppm)"),
+            'sgi': self.tr("Silicon Graphics Image File (*.sgi)"),
+            'svg': self.tr("Scalable Vector Graphics File (*.svg)"),
+            'svgz': self.tr("Compressed Scalable Vector Graphics File"
+                            " (*.svgz)"),
+            'tga': self.tr("Targa Graphic File (*.tga)"),
+            'tif': self.tr("TIFF File (*.tif)"),
+            'tiff': self.tr("TIFF File (*.tiff)"),
+            'wbmp': self.tr("WAP Bitmap File (*.wbmp)"),
+            'xbm': self.tr("X11 Bitmap File (*.xbm)"),
+            'xpm': self.tr("X11 Pixmap File (*.xpm)"),
         }
         
         inputFormats = []
@@ -151,7 +151,7 @@ class IconEditorWindow(E5MainWindow):
             except KeyError:
                 pass
         inputFormats.sort()
-        inputFormats.append(self.trUtf8("All Files (*)"))
+        inputFormats.append(self.tr("All Files (*)"))
         self.__inputFilter = ';;'.join(inputFormats)
         
         outputFormats = []
@@ -184,13 +184,13 @@ class IconEditorWindow(E5MainWindow):
         Private method to define the file related user interface actions.
         """
         self.newAct = E5Action(
-            self.trUtf8('New'),
+            self.tr('New'),
             UI.PixmapCache.getIcon("new.png"),
-            self.trUtf8('&New'),
-            QKeySequence(self.trUtf8("Ctrl+N", "File|New")),
+            self.tr('&New'),
+            QKeySequence(self.tr("Ctrl+N", "File|New")),
             0, self, 'iconEditor_file_new')
-        self.newAct.setStatusTip(self.trUtf8('Create a new icon'))
-        self.newAct.setWhatsThis(self.trUtf8(
+        self.newAct.setStatusTip(self.tr('Create a new icon'))
+        self.newAct.setWhatsThis(self.tr(
             """<b>New</b>"""
             """<p>This creates a new icon.</p>"""
         ))
@@ -198,13 +198,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.newAct)
         
         self.newWindowAct = E5Action(
-            self.trUtf8('New Window'),
+            self.tr('New Window'),
             UI.PixmapCache.getIcon("newWindow.png"),
-            self.trUtf8('New &Window'),
+            self.tr('New &Window'),
             0, 0, self, 'iconEditor_file_new_window')
-        self.newWindowAct.setStatusTip(self.trUtf8(
+        self.newWindowAct.setStatusTip(self.tr(
             'Open a new icon editor window'))
-        self.newWindowAct.setWhatsThis(self.trUtf8(
+        self.newWindowAct.setWhatsThis(self.tr(
             """<b>New Window</b>"""
             """<p>This opens a new icon editor window.</p>"""
         ))
@@ -212,13 +212,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.newWindowAct)
         
         self.openAct = E5Action(
-            self.trUtf8('Open'),
+            self.tr('Open'),
             UI.PixmapCache.getIcon("open.png"),
-            self.trUtf8('&Open...'),
-            QKeySequence(self.trUtf8("Ctrl+O", "File|Open")),
+            self.tr('&Open...'),
+            QKeySequence(self.tr("Ctrl+O", "File|Open")),
             0, self, 'iconEditor_file_open')
-        self.openAct.setStatusTip(self.trUtf8('Open an icon file for editing'))
-        self.openAct.setWhatsThis(self.trUtf8(
+        self.openAct.setStatusTip(self.tr('Open an icon file for editing'))
+        self.openAct.setWhatsThis(self.tr(
             """<b>Open File</b>"""
             """<p>This opens a new icon file for editing."""
             """ It pops up a file selection dialog.</p>"""
@@ -227,13 +227,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.openAct)
         
         self.saveAct = E5Action(
-            self.trUtf8('Save'),
+            self.tr('Save'),
             UI.PixmapCache.getIcon("fileSave.png"),
-            self.trUtf8('&Save'),
-            QKeySequence(self.trUtf8("Ctrl+S", "File|Save")),
+            self.tr('&Save'),
+            QKeySequence(self.tr("Ctrl+S", "File|Save")),
             0, self, 'iconEditor_file_save')
-        self.saveAct.setStatusTip(self.trUtf8('Save the current icon'))
-        self.saveAct.setWhatsThis(self.trUtf8(
+        self.saveAct.setStatusTip(self.tr('Save the current icon'))
+        self.saveAct.setWhatsThis(self.tr(
             """<b>Save File</b>"""
             """<p>Save the contents of the icon editor window.</p>"""
         ))
@@ -241,14 +241,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.saveAct)
         
         self.saveAsAct = E5Action(
-            self.trUtf8('Save As'),
+            self.tr('Save As'),
             UI.PixmapCache.getIcon("fileSaveAs.png"),
-            self.trUtf8('Save &As...'),
-            QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")),
+            self.tr('Save &As...'),
+            QKeySequence(self.tr("Shift+Ctrl+S", "File|Save As")),
             0, self, 'iconEditor_file_save_as')
         self.saveAsAct.setStatusTip(
-            self.trUtf8('Save the current icon to a new file'))
-        self.saveAsAct.setWhatsThis(self.trUtf8(
+            self.tr('Save the current icon to a new file'))
+        self.saveAsAct.setWhatsThis(self.tr(
             """<b>Save As...</b>"""
             """<p>Saves the current icon to a new file.</p>"""
         ))
@@ -256,14 +256,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.saveAsAct)
         
         self.closeAct = E5Action(
-            self.trUtf8('Close'),
+            self.tr('Close'),
             UI.PixmapCache.getIcon("close.png"),
-            self.trUtf8('&Close'),
-            QKeySequence(self.trUtf8("Ctrl+W", "File|Close")),
+            self.tr('&Close'),
+            QKeySequence(self.tr("Ctrl+W", "File|Close")),
             0, self, 'iconEditor_file_close')
-        self.closeAct.setStatusTip(self.trUtf8(
+        self.closeAct.setStatusTip(self.tr(
             'Close the current icon editor window'))
-        self.closeAct.setWhatsThis(self.trUtf8(
+        self.closeAct.setWhatsThis(self.tr(
             """<b>Close</b>"""
             """<p>Closes the current icon editor window.</p>"""
         ))
@@ -271,12 +271,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.closeAct)
         
         self.closeAllAct = E5Action(
-            self.trUtf8('Close All'),
-            self.trUtf8('Close &All'),
+            self.tr('Close All'),
+            self.tr('Close &All'),
             0, 0, self, 'iconEditor_file_close_all')
-        self.closeAllAct.setStatusTip(self.trUtf8(
+        self.closeAllAct.setStatusTip(self.tr(
             'Close all icon editor windows'))
-        self.closeAllAct.setWhatsThis(self.trUtf8(
+        self.closeAllAct.setWhatsThis(self.tr(
             """<b>Close All</b>"""
             """<p>Closes all icon editor windows except the first one.</p>"""
         ))
@@ -284,13 +284,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.closeAllAct)
         
         self.exitAct = E5Action(
-            self.trUtf8('Quit'),
+            self.tr('Quit'),
             UI.PixmapCache.getIcon("exit.png"),
-            self.trUtf8('&Quit'),
-            QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
+            self.tr('&Quit'),
+            QKeySequence(self.tr("Ctrl+Q", "File|Quit")),
             0, self, 'iconEditor_file_quit')
-        self.exitAct.setStatusTip(self.trUtf8('Quit the icon editor'))
-        self.exitAct.setWhatsThis(self.trUtf8(
+        self.exitAct.setStatusTip(self.tr('Quit the icon editor'))
+        self.exitAct.setWhatsThis(self.tr(
             """<b>Quit</b>"""
             """<p>Quit the icon editor.</p>"""
         ))
@@ -303,14 +303,14 @@ class IconEditorWindow(E5MainWindow):
         Private method to create the Edit actions.
         """
         self.undoAct = E5Action(
-            self.trUtf8('Undo'),
+            self.tr('Undo'),
             UI.PixmapCache.getIcon("editUndo.png"),
-            self.trUtf8('&Undo'),
-            QKeySequence(self.trUtf8("Ctrl+Z", "Edit|Undo")),
-            QKeySequence(self.trUtf8("Alt+Backspace", "Edit|Undo")),
+            self.tr('&Undo'),
+            QKeySequence(self.tr("Ctrl+Z", "Edit|Undo")),
+            QKeySequence(self.tr("Alt+Backspace", "Edit|Undo")),
             self, 'iconEditor_edit_undo')
-        self.undoAct.setStatusTip(self.trUtf8('Undo the last change'))
-        self.undoAct.setWhatsThis(self.trUtf8(
+        self.undoAct.setStatusTip(self.tr('Undo the last change'))
+        self.undoAct.setWhatsThis(self.tr(
             """<b>Undo</b>"""
             """<p>Undo the last change done.</p>"""
         ))
@@ -318,13 +318,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.undoAct)
         
         self.redoAct = E5Action(
-            self.trUtf8('Redo'),
+            self.tr('Redo'),
             UI.PixmapCache.getIcon("editRedo.png"),
-            self.trUtf8('&Redo'),
-            QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")),
+            self.tr('&Redo'),
+            QKeySequence(self.tr("Ctrl+Shift+Z", "Edit|Redo")),
             0, self, 'iconEditor_edit_redo')
-        self.redoAct.setStatusTip(self.trUtf8('Redo the last change'))
-        self.redoAct.setWhatsThis(self.trUtf8(
+        self.redoAct.setStatusTip(self.tr('Redo the last change'))
+        self.redoAct.setWhatsThis(self.tr(
             """<b>Redo</b>"""
             """<p>Redo the last change done.</p>"""
         ))
@@ -332,14 +332,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.redoAct)
         
         self.cutAct = E5Action(
-            self.trUtf8('Cut'),
+            self.tr('Cut'),
             UI.PixmapCache.getIcon("editCut.png"),
-            self.trUtf8('Cu&t'),
-            QKeySequence(self.trUtf8("Ctrl+X", "Edit|Cut")),
-            QKeySequence(self.trUtf8("Shift+Del", "Edit|Cut")),
+            self.tr('Cu&t'),
+            QKeySequence(self.tr("Ctrl+X", "Edit|Cut")),
+            QKeySequence(self.tr("Shift+Del", "Edit|Cut")),
             self, 'iconEditor_edit_cut')
-        self.cutAct.setStatusTip(self.trUtf8('Cut the selection'))
-        self.cutAct.setWhatsThis(self.trUtf8(
+        self.cutAct.setStatusTip(self.tr('Cut the selection'))
+        self.cutAct.setWhatsThis(self.tr(
             """<b>Cut</b>"""
             """<p>Cut the selected image area to the clipboard.</p>"""
         ))
@@ -347,14 +347,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.cutAct)
         
         self.copyAct = E5Action(
-            self.trUtf8('Copy'),
+            self.tr('Copy'),
             UI.PixmapCache.getIcon("editCopy.png"),
-            self.trUtf8('&Copy'),
-            QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")),
-            QKeySequence(self.trUtf8("Ctrl+Ins", "Edit|Copy")),
+            self.tr('&Copy'),
+            QKeySequence(self.tr("Ctrl+C", "Edit|Copy")),
+            QKeySequence(self.tr("Ctrl+Ins", "Edit|Copy")),
             self, 'iconEditor_edit_copy')
-        self.copyAct.setStatusTip(self.trUtf8('Copy the selection'))
-        self.copyAct.setWhatsThis(self.trUtf8(
+        self.copyAct.setStatusTip(self.tr('Copy the selection'))
+        self.copyAct.setWhatsThis(self.tr(
             """<b>Copy</b>"""
             """<p>Copy the selected image area to the clipboard.</p>"""
         ))
@@ -362,14 +362,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.copyAct)
         
         self.pasteAct = E5Action(
-            self.trUtf8('Paste'),
+            self.tr('Paste'),
             UI.PixmapCache.getIcon("editPaste.png"),
-            self.trUtf8('&Paste'),
-            QKeySequence(self.trUtf8("Ctrl+V", "Edit|Paste")),
-            QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")),
+            self.tr('&Paste'),
+            QKeySequence(self.tr("Ctrl+V", "Edit|Paste")),
+            QKeySequence(self.tr("Shift+Ins", "Edit|Paste")),
             self, 'iconEditor_edit_paste')
-        self.pasteAct.setStatusTip(self.trUtf8('Paste the clipboard image'))
-        self.pasteAct.setWhatsThis(self.trUtf8(
+        self.pasteAct.setStatusTip(self.tr('Paste the clipboard image'))
+        self.pasteAct.setWhatsThis(self.tr(
             """<b>Paste</b>"""
             """<p>Paste the clipboard image.</p>"""
         ))
@@ -377,12 +377,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.pasteAct)
         
         self.pasteNewAct = E5Action(
-            self.trUtf8('Paste as New'),
-            self.trUtf8('Paste as &New'),
+            self.tr('Paste as New'),
+            self.tr('Paste as &New'),
             0, 0, self, 'iconEditor_edit_paste_as_new')
-        self.pasteNewAct.setStatusTip(self.trUtf8(
+        self.pasteNewAct.setStatusTip(self.tr(
             'Paste the clipboard image replacing the current one'))
-        self.pasteNewAct.setWhatsThis(self.trUtf8(
+        self.pasteNewAct.setWhatsThis(self.tr(
             """<b>Paste as New</b>"""
             """<p>Paste the clipboard image replacing the current one.</p>"""
         ))
@@ -390,14 +390,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.pasteNewAct)
         
         self.deleteAct = E5Action(
-            self.trUtf8('Clear'),
+            self.tr('Clear'),
             UI.PixmapCache.getIcon("editDelete.png"),
-            self.trUtf8('Cl&ear'),
-            QKeySequence(self.trUtf8("Alt+Shift+C", "Edit|Clear")),
+            self.tr('Cl&ear'),
+            QKeySequence(self.tr("Alt+Shift+C", "Edit|Clear")),
             0,
             self, 'iconEditor_edit_clear')
-        self.deleteAct.setStatusTip(self.trUtf8('Clear the icon image'))
-        self.deleteAct.setWhatsThis(self.trUtf8(
+        self.deleteAct.setStatusTip(self.tr('Clear the icon image'))
+        self.deleteAct.setWhatsThis(self.tr(
             """<b>Clear</b>"""
             """<p>Clear the icon image and set it to be completely"""
             """ transparent.</p>"""
@@ -406,14 +406,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.deleteAct)
         
         self.selectAllAct = E5Action(
-            self.trUtf8('Select All'),
-            self.trUtf8('&Select All'),
-            QKeySequence(self.trUtf8("Ctrl+A", "Edit|Select All")),
+            self.tr('Select All'),
+            self.tr('&Select All'),
+            QKeySequence(self.tr("Ctrl+A", "Edit|Select All")),
             0,
             self, 'iconEditor_edit_select_all')
-        self.selectAllAct.setStatusTip(self.trUtf8(
+        self.selectAllAct.setStatusTip(self.tr(
             'Select the complete icon image'))
-        self.selectAllAct.setWhatsThis(self.trUtf8(
+        self.selectAllAct.setWhatsThis(self.tr(
             """<b>Select All</b>"""
             """<p>Selects the complete icon image.</p>"""
         ))
@@ -421,13 +421,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.selectAllAct)
         
         self.resizeAct = E5Action(
-            self.trUtf8('Change Size'),
+            self.tr('Change Size'),
             UI.PixmapCache.getIcon("transformResize.png"),
-            self.trUtf8('Change Si&ze...'),
+            self.tr('Change Si&ze...'),
             0, 0,
             self, 'iconEditor_edit_change_size')
-        self.resizeAct.setStatusTip(self.trUtf8('Change the icon size'))
-        self.resizeAct.setWhatsThis(self.trUtf8(
+        self.resizeAct.setStatusTip(self.tr('Change the icon size'))
+        self.resizeAct.setWhatsThis(self.tr(
             """<b>Change Size...</b>"""
             """<p>Changes the icon size.</p>"""
         ))
@@ -435,14 +435,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.resizeAct)
         
         self.grayscaleAct = E5Action(
-            self.trUtf8('Grayscale'),
+            self.tr('Grayscale'),
             UI.PixmapCache.getIcon("grayscale.png"),
-            self.trUtf8('&Grayscale'),
+            self.tr('&Grayscale'),
             0, 0,
             self, 'iconEditor_edit_grayscale')
-        self.grayscaleAct.setStatusTip(self.trUtf8(
+        self.grayscaleAct.setStatusTip(self.tr(
             'Change the icon to grayscale'))
-        self.grayscaleAct.setWhatsThis(self.trUtf8(
+        self.grayscaleAct.setWhatsThis(self.tr(
             """<b>Grayscale</b>"""
             """<p>Changes the icon to grayscale.</p>"""
         ))
@@ -472,13 +472,13 @@ class IconEditorWindow(E5MainWindow):
         Private method to create the View actions.
         """
         self.zoomInAct = E5Action(
-            self.trUtf8('Zoom in'),
+            self.tr('Zoom in'),
             UI.PixmapCache.getIcon("zoomIn.png"),
-            self.trUtf8('Zoom &in'),
-            QKeySequence(self.trUtf8("Ctrl++", "View|Zoom in")),
+            self.tr('Zoom &in'),
+            QKeySequence(self.tr("Ctrl++", "View|Zoom in")),
             0, self, 'iconEditor_view_zoom_in')
-        self.zoomInAct.setStatusTip(self.trUtf8('Zoom in on the icon'))
-        self.zoomInAct.setWhatsThis(self.trUtf8(
+        self.zoomInAct.setStatusTip(self.tr('Zoom in on the icon'))
+        self.zoomInAct.setWhatsThis(self.tr(
             """<b>Zoom in</b>"""
             """<p>Zoom in on the icon. This makes the grid bigger.</p>"""
         ))
@@ -486,13 +486,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(
-            self.trUtf8('Zoom out'),
+            self.tr('Zoom out'),
             UI.PixmapCache.getIcon("zoomOut.png"),
-            self.trUtf8('Zoom &out'),
-            QKeySequence(self.trUtf8("Ctrl+-", "View|Zoom out")),
+            self.tr('Zoom &out'),
+            QKeySequence(self.tr("Ctrl+-", "View|Zoom out")),
             0, self, 'iconEditor_view_zoom_out')
-        self.zoomOutAct.setStatusTip(self.trUtf8('Zoom out on the icon'))
-        self.zoomOutAct.setWhatsThis(self.trUtf8(
+        self.zoomOutAct.setStatusTip(self.tr('Zoom out on the icon'))
+        self.zoomOutAct.setWhatsThis(self.tr(
             """<b>Zoom out</b>"""
             """<p>Zoom out on the icon. This makes the grid smaller.</p>"""
         ))
@@ -500,14 +500,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.zoomOutAct)
         
         self.zoomResetAct = E5Action(
-            self.trUtf8('Zoom reset'),
+            self.tr('Zoom reset'),
             UI.PixmapCache.getIcon("zoomReset.png"),
-            self.trUtf8('Zoom &reset'),
-            QKeySequence(self.trUtf8("Ctrl+0", "View|Zoom reset")),
+            self.tr('Zoom &reset'),
+            QKeySequence(self.tr("Ctrl+0", "View|Zoom reset")),
             0, self, 'iconEditor_view_zoom_reset')
-        self.zoomResetAct.setStatusTip(self.trUtf8(
+        self.zoomResetAct.setStatusTip(self.tr(
             'Reset the zoom of the icon'))
-        self.zoomResetAct.setWhatsThis(self.trUtf8(
+        self.zoomResetAct.setWhatsThis(self.tr(
             """<b>Zoom reset</b>"""
             """<p>Reset the zoom of the icon. """
             """This sets the zoom factor to 100%.</p>"""
@@ -516,14 +516,14 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.zoomResetAct)
         
         self.showGridAct = E5Action(
-            self.trUtf8('Show Grid'),
+            self.tr('Show Grid'),
             UI.PixmapCache.getIcon("grid.png"),
-            self.trUtf8('Show &Grid'),
+            self.tr('Show &Grid'),
             0, 0,
             self, 'iconEditor_view_show_grid')
-        self.showGridAct.setStatusTip(self.trUtf8(
+        self.showGridAct.setStatusTip(self.tr(
             'Toggle the display of the grid'))
-        self.showGridAct.setWhatsThis(self.trUtf8(
+        self.showGridAct.setWhatsThis(self.tr(
             """<b>Show Grid</b>"""
             """<p>Toggle the display of the grid.</p>"""
         ))
@@ -543,12 +543,12 @@ class IconEditorWindow(E5MainWindow):
         self.drawingActGrp.setExclusive(True)
         
         self.drawPencilAct = E5Action(
-            self.trUtf8('Freehand'),
+            self.tr('Freehand'),
             UI.PixmapCache.getIcon("drawBrush.png"),
-            self.trUtf8('&Freehand'),
+            self.tr('&Freehand'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_pencil')
-        self.drawPencilAct.setWhatsThis(self.trUtf8(
+        self.drawPencilAct.setWhatsThis(self.tr(
             """<b>Free hand</b>"""
             """<p>Draws non linear lines.</p>"""
         ))
@@ -558,12 +558,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawPencilAct)
         
         self.drawColorPickerAct = E5Action(
-            self.trUtf8('Color Picker'),
+            self.tr('Color Picker'),
             UI.PixmapCache.getIcon("colorPicker.png"),
-            self.trUtf8('&Color Picker'),
+            self.tr('&Color Picker'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_color_picker')
-        self.drawColorPickerAct.setWhatsThis(self.trUtf8(
+        self.drawColorPickerAct.setWhatsThis(self.tr(
             """<b>Color Picker</b>"""
             """<p>The color of the pixel clicked on will become """
             """the current draw color.</p>"""
@@ -575,12 +575,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawColorPickerAct)
         
         self.drawRectangleAct = E5Action(
-            self.trUtf8('Rectangle'),
+            self.tr('Rectangle'),
             UI.PixmapCache.getIcon("drawRectangle.png"),
-            self.trUtf8('&Rectangle'),
+            self.tr('&Rectangle'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_rectangle')
-        self.drawRectangleAct.setWhatsThis(self.trUtf8(
+        self.drawRectangleAct.setWhatsThis(self.tr(
             """<b>Rectangle</b>"""
             """<p>Draw a rectangle.</p>"""
         ))
@@ -590,12 +590,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawRectangleAct)
         
         self.drawFilledRectangleAct = E5Action(
-            self.trUtf8('Filled Rectangle'),
+            self.tr('Filled Rectangle'),
             UI.PixmapCache.getIcon("drawRectangleFilled.png"),
-            self.trUtf8('F&illed Rectangle'),
+            self.tr('F&illed Rectangle'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_filled_rectangle')
-        self.drawFilledRectangleAct.setWhatsThis(self.trUtf8(
+        self.drawFilledRectangleAct.setWhatsThis(self.tr(
             """<b>Filled Rectangle</b>"""
             """<p>Draw a filled rectangle.</p>"""
         ))
@@ -606,12 +606,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawFilledRectangleAct)
         
         self.drawCircleAct = E5Action(
-            self.trUtf8('Circle'),
+            self.tr('Circle'),
             UI.PixmapCache.getIcon("drawCircle.png"),
-            self.trUtf8('Circle'),
+            self.tr('Circle'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_circle')
-        self.drawCircleAct.setWhatsThis(self.trUtf8(
+        self.drawCircleAct.setWhatsThis(self.tr(
             """<b>Circle</b>"""
             """<p>Draw a circle.</p>"""
         ))
@@ -621,12 +621,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawCircleAct)
         
         self.drawFilledCircleAct = E5Action(
-            self.trUtf8('Filled Circle'),
+            self.tr('Filled Circle'),
             UI.PixmapCache.getIcon("drawCircleFilled.png"),
-            self.trUtf8('Fille&d Circle'),
+            self.tr('Fille&d Circle'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_filled_circle')
-        self.drawFilledCircleAct.setWhatsThis(self.trUtf8(
+        self.drawFilledCircleAct.setWhatsThis(self.tr(
             """<b>Filled Circle</b>"""
             """<p>Draw a filled circle.</p>"""
         ))
@@ -637,12 +637,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawFilledCircleAct)
         
         self.drawEllipseAct = E5Action(
-            self.trUtf8('Ellipse'),
+            self.tr('Ellipse'),
             UI.PixmapCache.getIcon("drawEllipse.png"),
-            self.trUtf8('&Ellipse'),
+            self.tr('&Ellipse'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_ellipse')
-        self.drawEllipseAct.setWhatsThis(self.trUtf8(
+        self.drawEllipseAct.setWhatsThis(self.tr(
             """<b>Ellipse</b>"""
             """<p>Draw an ellipse.</p>"""
         ))
@@ -652,12 +652,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawEllipseAct)
         
         self.drawFilledEllipseAct = E5Action(
-            self.trUtf8('Filled Ellipse'),
+            self.tr('Filled Ellipse'),
             UI.PixmapCache.getIcon("drawEllipseFilled.png"),
-            self.trUtf8('Fille&d Elli&pse'),
+            self.tr('Fille&d Elli&pse'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_filled_ellipse')
-        self.drawFilledEllipseAct.setWhatsThis(self.trUtf8(
+        self.drawFilledEllipseAct.setWhatsThis(self.tr(
             """<b>Filled Ellipse</b>"""
             """<p>Draw a filled ellipse.</p>"""
         ))
@@ -668,12 +668,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawFilledEllipseAct)
         
         self.drawFloodFillAct = E5Action(
-            self.trUtf8('Flood Fill'),
+            self.tr('Flood Fill'),
             UI.PixmapCache.getIcon("drawFill.png"),
-            self.trUtf8('Fl&ood Fill'),
+            self.tr('Fl&ood Fill'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_flood_fill')
-        self.drawFloodFillAct.setWhatsThis(self.trUtf8(
+        self.drawFloodFillAct.setWhatsThis(self.tr(
             """<b>Flood Fill</b>"""
             """<p>Fill adjoining pixels with the same color with """
             """the current color.</p>"""
@@ -684,12 +684,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawFloodFillAct)
         
         self.drawLineAct = E5Action(
-            self.trUtf8('Line'),
+            self.tr('Line'),
             UI.PixmapCache.getIcon("drawLine.png"),
-            self.trUtf8('&Line'),
+            self.tr('&Line'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_line')
-        self.drawLineAct.setWhatsThis(self.trUtf8(
+        self.drawLineAct.setWhatsThis(self.tr(
             """<b>Line</b>"""
             """<p>Draw a line.</p>"""
         ))
@@ -699,12 +699,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawLineAct)
         
         self.drawEraserAct = E5Action(
-            self.trUtf8('Eraser (Transparent)'),
+            self.tr('Eraser (Transparent)'),
             UI.PixmapCache.getIcon("drawEraser.png"),
-            self.trUtf8('Eraser (&Transparent)'),
+            self.tr('Eraser (&Transparent)'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_eraser')
-        self.drawEraserAct.setWhatsThis(self.trUtf8(
+        self.drawEraserAct.setWhatsThis(self.tr(
             """<b>Eraser (Transparent)</b>"""
             """<p>Erase pixels by setting them to transparent.</p>"""
         ))
@@ -714,12 +714,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawEraserAct)
         
         self.drawRectangleSelectionAct = E5Action(
-            self.trUtf8('Rectangular Selection'),
+            self.tr('Rectangular Selection'),
             UI.PixmapCache.getIcon("selectRectangle.png"),
-            self.trUtf8('Rect&angular Selection'),
+            self.tr('Rect&angular Selection'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_selection_rectangle')
-        self.drawRectangleSelectionAct.setWhatsThis(self.trUtf8(
+        self.drawRectangleSelectionAct.setWhatsThis(self.tr(
             """<b>Rectangular Selection</b>"""
             """<p>Select a rectangular section of the icon using"""
             """ the mouse.</p>"""
@@ -731,12 +731,12 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.drawRectangleSelectionAct)
         
         self.drawCircleSelectionAct = E5Action(
-            self.trUtf8('Circular Selection'),
+            self.tr('Circular Selection'),
             UI.PixmapCache.getIcon("selectCircle.png"),
-            self.trUtf8('Rect&angular Selection'),
+            self.tr('Rect&angular Selection'),
             0, 0,
             self.drawingActGrp, 'iconEditor_tools_selection_circle')
-        self.drawCircleSelectionAct.setWhatsThis(self.trUtf8(
+        self.drawCircleSelectionAct.setWhatsThis(self.tr(
             """<b>Circular Selection</b>"""
             """<p>Select a circular section of the icon using"""
             """ the mouse.</p>"""
@@ -754,24 +754,24 @@ class IconEditorWindow(E5MainWindow):
         Private method to create the Help actions.
         """
         self.aboutAct = E5Action(
-            self.trUtf8('About'),
-            self.trUtf8('&About'),
+            self.tr('About'),
+            self.tr('&About'),
             0, 0, self, 'iconEditor_help_about')
-        self.aboutAct.setStatusTip(self.trUtf8(
+        self.aboutAct.setStatusTip(self.tr(
             'Display information about this software'))
-        self.aboutAct.setWhatsThis(self.trUtf8(
+        self.aboutAct.setWhatsThis(self.tr(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
         self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
-            self.trUtf8('About Qt'),
-            self.trUtf8('About &Qt'),
+            self.tr('About Qt'),
+            self.tr('About &Qt'),
             0, 0, self, 'iconEditor_help_about_qt')
         self.aboutQtAct.setStatusTip(
-            self.trUtf8('Display information about the Qt toolkit'))
-        self.aboutQtAct.setWhatsThis(self.trUtf8(
+            self.tr('Display information about the Qt toolkit'))
+        self.aboutQtAct.setWhatsThis(self.tr(
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
@@ -779,13 +779,13 @@ class IconEditorWindow(E5MainWindow):
         self.__actions.append(self.aboutQtAct)
         
         self.whatsThisAct = E5Action(
-            self.trUtf8('What\'s This?'),
+            self.tr('What\'s This?'),
             UI.PixmapCache.getIcon("whatsThis.png"),
-            self.trUtf8('&What\'s This?'),
-            QKeySequence(self.trUtf8("Shift+F1", "Help|What's This?'")),
+            self.tr('&What\'s This?'),
+            QKeySequence(self.tr("Shift+F1", "Help|What's This?'")),
             0, self, 'iconEditor_help_whats_this')
-        self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
-        self.whatsThisAct.setWhatsThis(self.trUtf8(
+        self.whatsThisAct.setStatusTip(self.tr('Context sensitive help'))
+        self.whatsThisAct.setWhatsThis(self.tr(
             """<b>Display context sensitive help</b>"""
             """<p>In What's This? mode, the mouse cursor shows an arrow"""
             """ with a question mark, and you can click on the interface"""
@@ -802,7 +802,7 @@ class IconEditorWindow(E5MainWindow):
         """
         mb = self.menuBar()
         
-        menu = mb.addMenu(self.trUtf8('&File'))
+        menu = mb.addMenu(self.tr('&File'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.newAct)
         menu.addAction(self.newWindowAct)
@@ -817,7 +817,7 @@ class IconEditorWindow(E5MainWindow):
             menu.addSeparator()
             menu.addAction(self.exitAct)
         
-        menu = mb.addMenu(self.trUtf8("&Edit"))
+        menu = mb.addMenu(self.tr("&Edit"))
         menu.setTearOffEnabled(True)
         menu.addAction(self.undoAct)
         menu.addAction(self.redoAct)
@@ -833,7 +833,7 @@ class IconEditorWindow(E5MainWindow):
         menu.addAction(self.resizeAct)
         menu.addAction(self.grayscaleAct)
         
-        menu = mb.addMenu(self.trUtf8('&View'))
+        menu = mb.addMenu(self.tr('&View'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.zoomInAct)
         menu.addAction(self.zoomResetAct)
@@ -841,7 +841,7 @@ class IconEditorWindow(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.showGridAct)
         
-        menu = mb.addMenu(self.trUtf8('&Tools'))
+        menu = mb.addMenu(self.tr('&Tools'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.drawPencilAct)
         menu.addAction(self.drawColorPickerAct)
@@ -860,7 +860,7 @@ class IconEditorWindow(E5MainWindow):
         
         mb.addSeparator()
         
-        menu = mb.addMenu(self.trUtf8("&Help"))
+        menu = mb.addMenu(self.tr("&Help"))
         menu.addAction(self.aboutAct)
         menu.addAction(self.aboutQtAct)
         menu.addSeparator()
@@ -870,7 +870,7 @@ class IconEditorWindow(E5MainWindow):
         """
         Private method to create the toolbars.
         """
-        filetb = self.addToolBar(self.trUtf8("File"))
+        filetb = self.addToolBar(self.tr("File"))
         filetb.setObjectName("FileToolBar")
         filetb.setIconSize(UI.Config.ToolBarIconSize)
         filetb.addAction(self.newAct)
@@ -884,7 +884,7 @@ class IconEditorWindow(E5MainWindow):
         if not self.fromEric:
             filetb.addAction(self.exitAct)
         
-        edittb = self.addToolBar(self.trUtf8("Edit"))
+        edittb = self.addToolBar(self.tr("Edit"))
         edittb.setObjectName("EditToolBar")
         edittb.setIconSize(UI.Config.ToolBarIconSize)
         edittb.addAction(self.undoAct)
@@ -897,12 +897,12 @@ class IconEditorWindow(E5MainWindow):
         edittb.addAction(self.resizeAct)
         edittb.addAction(self.grayscaleAct)
         
-        viewtb = self.addToolBar(self.trUtf8("View"))
+        viewtb = self.addToolBar(self.tr("View"))
         viewtb.setObjectName("ViewToolBar")
         viewtb.setIconSize(UI.Config.ToolBarIconSize)
         viewtb.addAction(self.showGridAct)
         
-        toolstb = self.addToolBar(self.trUtf8("Tools"))
+        toolstb = self.addToolBar(self.tr("Tools"))
         toolstb.setObjectName("ToolsToolBar")
         toolstb.setIconSize(UI.Config.ToolBarIconSize)
         toolstb.addAction(self.drawPencilAct)
@@ -920,7 +920,7 @@ class IconEditorWindow(E5MainWindow):
         toolstb.addAction(self.drawRectangleSelectionAct)
         toolstb.addAction(self.drawCircleSelectionAct)
         
-        helptb = self.addToolBar(self.trUtf8("Help"))
+        helptb = self.addToolBar(self.tr("Help"))
         helptb.setObjectName("HelpToolBar")
         helptb.setIconSize(UI.Config.ToolBarIconSize)
         helptb.addAction(self.whatsThisAct)
@@ -934,14 +934,14 @@ class IconEditorWindow(E5MainWindow):
 
         self.__sbSize = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.__sbSize)
-        self.__sbSize.setWhatsThis(self.trUtf8(
+        self.__sbSize.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the icon size.</p>"""
         ))
         self.__updateSize(*self.__editor.iconSize())
 
         self.__sbPos = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.__sbPos)
-        self.__sbPos.setWhatsThis(self.trUtf8(
+        self.__sbPos.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the cursor"""
             """ position.</p>"""
         ))
@@ -1039,7 +1039,7 @@ class IconEditorWindow(E5MainWindow):
             
             fileName = E5FileDialog.getOpenFileNameAndFilter(
                 self,
-                self.trUtf8("Open icon file"),
+                self.tr("Open icon file"),
                 self.__lastOpenPath,
                 self.__inputFilter,
                 self.__defaultFilter)[0]
@@ -1073,7 +1073,7 @@ class IconEditorWindow(E5MainWindow):
         
         fileName, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save icon file"),
+            self.tr("Save icon file"),
             self.__lastSavePath,
             self.__outputFilter,
             self.__defaultFilter,
@@ -1089,9 +1089,9 @@ class IconEditorWindow(E5MainWindow):
         if QFileInfo(fileName).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save icon file"),
-                self.trUtf8("<p>The file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fileName),
+                self.tr("Save icon file"),
+                self.tr("<p>The file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fileName),
                 icon=E5MessageBox.Warning)
             if not res:
                 return False
@@ -1118,15 +1118,15 @@ class IconEditorWindow(E5MainWindow):
         file = QFile(fileName)
         if not file.exists():
             E5MessageBox.warning(
-                self, self.trUtf8("eric5 Icon Editor"),
-                self.trUtf8("The file '{0}' does not exist.")
+                self, self.tr("eric5 Icon Editor"),
+                self.tr("The file '{0}' does not exist.")
                 .format(fileName))
             return
         
         if not file.open(QFile.ReadOnly):
             E5MessageBox.warning(
-                self, self.trUtf8("eric5 Icon Editor"),
-                self.trUtf8("Cannot read file '{0}:\n{1}.")
+                self, self.tr("eric5 Icon Editor"),
+                self.tr("Cannot read file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return
         file.close()
@@ -1145,8 +1145,8 @@ class IconEditorWindow(E5MainWindow):
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
             E5MessageBox.warning(
-                self, self.trUtf8("eric5 Icon Editor"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                self, self.tr("eric5 Icon Editor"),
+                self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
         
             self.__checkActions()
@@ -1159,8 +1159,8 @@ class IconEditorWindow(E5MainWindow):
         
         if not res:
             E5MessageBox.warning(
-                self, self.trUtf8("eric5 Icon Editor"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                self, self.tr("eric5 Icon Editor"),
+                self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
         
             self.__checkActions()
@@ -1170,7 +1170,7 @@ class IconEditorWindow(E5MainWindow):
         self.__editor.setDirty(False, setCleanState=True)
         
         self.__setCurrentFile(fileName)
-        self.__statusBar.showMessage(self.trUtf8("Icon saved"), 2000)
+        self.__statusBar.showMessage(self.tr("Icon saved"), 2000)
         
         self.__checkActions()
         
@@ -1185,12 +1185,12 @@ class IconEditorWindow(E5MainWindow):
         self.__fileName = fileName
         
         if not self.__fileName:
-            shownName = self.trUtf8("Untitled")
+            shownName = self.tr("Untitled")
         else:
             shownName = self.__strippedName(self.__fileName)
         
-        self.setWindowTitle(self.trUtf8("{0}[*] - {1}")
-                            .format(shownName, self.trUtf8("Icon Editor")))
+        self.setWindowTitle(self.tr("{0}[*] - {1}")
+                            .format(shownName, self.tr("Icon Editor")))
         
         self.setWindowModified(self.__editor.isDirty())
     
@@ -1212,8 +1212,8 @@ class IconEditorWindow(E5MainWindow):
         if self.__editor.isDirty():
             ret = E5MessageBox.okToClearData(
                 self,
-                self.trUtf8("eric5 Icon Editor"),
-                self.trUtf8("""The icon image has unsaved changes."""),
+                self.tr("eric5 Icon Editor"),
+                self.tr("""The icon image has unsaved changes."""),
                 self.__saveIcon)
             if not ret:
                 return False
@@ -1301,9 +1301,9 @@ class IconEditorWindow(E5MainWindow):
         Private slot to show a little About message.
         """
         E5MessageBox.about(
-            self, self.trUtf8("About eric5 Icon Editor"),
-            self.trUtf8("The eric5 Icon Editor is a simple editor component"
-                        " to perform icon drawing tasks."))
+            self, self.tr("About eric5 Icon Editor"),
+            self.tr("The eric5 Icon Editor is a simple editor component"
+                    " to perform icon drawing tasks."))
     
     def __aboutQt(self):
         """

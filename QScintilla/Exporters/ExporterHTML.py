@@ -367,7 +367,7 @@ class ExporterHTML(ExporterBase):
         """
         Public method performing the export.
         """
-        filename = self._getFileName(self.trUtf8("HTML Files (*.html)"))
+        filename = self._getFileName(self.tr("HTML Files (*.html)"))
         if not filename:
             return
         
@@ -404,8 +404,8 @@ class ExporterHTML(ExporterBase):
                 QApplication.restoreOverrideCursor()
                 E5MessageBox.critical(
                     self.editor,
-                    self.trUtf8("Export source"),
-                    self.trUtf8(
+                    self.tr("Export source"),
+                    self.tr(
                         """<p>The source could not be exported to"""
                         """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
                     .format(filename, str(err)))

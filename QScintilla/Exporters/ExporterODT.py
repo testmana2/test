@@ -36,7 +36,7 @@ class ExporterODT(ExporterBase):
         """
         Public method performing the export.
         """
-        filename = self._getFileName(self.trUtf8("ODT Files (*.odt)"))
+        filename = self._getFileName(self.tr("ODT Files (*.odt)"))
         if not filename:
             return
         
@@ -70,7 +70,7 @@ class ExporterODT(ExporterBase):
         if not ok:
             E5MessageBox.critical(
                 self.editor,
-                self.trUtf8("Export source"),
-                self.trUtf8(
+                self.tr("Export source"),
+                self.tr(
                     """<p>The source could not be exported to"""
                     """ <b>{0}</b>.</p>""").format(filename))

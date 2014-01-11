@@ -32,14 +32,14 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgFetchAct = E5Action(
-            self.trUtf8('Fetch changes'),
+            self.tr('Fetch changes'),
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Fetch changes'),
+            self.tr('Fetch changes'),
             0, 0, self, 'mercurial_fetch')
-        self.hgFetchAct.setStatusTip(self.trUtf8(
+        self.hgFetchAct.setStatusTip(self.tr(
             'Fetch changes from a remote repository'
         ))
-        self.hgFetchAct.setWhatsThis(self.trUtf8(
+        self.hgFetchAct.setWhatsThis(self.tr(
             """<b>Fetch changes</b>"""
             """<p>This pulls changes from a remote repository into the """
             """local repository. If the pulled changes add a new branch"""
@@ -71,7 +71,7 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         
         @return title of the menu (string)
         """
-        return self.trUtf8("Fetch")
+        return self.tr("Fetch")
     
     def __hgFetch(self):
         """
@@ -82,8 +82,8 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Fetch"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Fetch"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()

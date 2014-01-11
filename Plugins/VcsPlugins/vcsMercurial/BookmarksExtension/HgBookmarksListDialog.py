@@ -121,8 +121,8 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -155,7 +155,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
             self.__generateItem(
-                self.trUtf8("no bookmarks defined"), "", "", "")
+                self.tr("no bookmarks defined"), "", "", "")
         self.__resizeColumns()
         self.__resort()
     

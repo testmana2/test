@@ -23,6 +23,7 @@ from Utilities import direntries
 import Utilities
 import UI.PixmapCache
 
+
 class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     """
     Class implementing a dialog to search for files.
@@ -54,11 +55,11 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         self.fileList.headerItem().setText(self.fileList.columnCount(), "")
         
         self.stopButton = self.buttonBox.addButton(
-            self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
-        self.stopButton.setToolTip(self.trUtf8("Press to stop the search"))
+            self.tr("Stop"), QDialogButtonBox.ActionRole)
+        self.stopButton.setToolTip(self.tr("Press to stop the search"))
         self.stopButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Open).setToolTip(
-            self.trUtf8("Opens the selected file"))
+            self.tr("Opens the selected file"))
         self.buttonBox.button(QDialogButtonBox.Open).setEnabled(False)
         
         self.project = project
@@ -201,7 +202,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         """
         searchDir = E5FileDialog.getExistingDirectory(
             None,
-            self.trUtf8("Select search directory"),
+            self.tr("Select search directory"),
             self.searchDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         

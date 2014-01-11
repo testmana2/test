@@ -29,7 +29,7 @@ class HgQueuesRenamePatchDialog(QDialog, Ui_HgQueuesRenamePatchDialog):
         self.setupUi(self)
         
         self.currentButton.setText(
-            self.trUtf8("Current Patch ({0})").format(currentPatch))
+            self.tr("Current Patch ({0})").format(currentPatch))
         self.nameCombo.addItems([""] + patchesList)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

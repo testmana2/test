@@ -63,24 +63,24 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.fileDialogButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.startButton = self.buttonBox.addButton(
-            self.trUtf8("Start"), QDialogButtonBox.ActionRole)
-        self.startButton.setToolTip(self.trUtf8(
+            self.tr("Start"), QDialogButtonBox.ActionRole)
+        self.startButton.setToolTip(self.tr(
             "Start the selected testsuite"))
-        self.startButton.setWhatsThis(self.trUtf8(
+        self.startButton.setWhatsThis(self.tr(
             """<b>Start Test</b>"""
             """<p>This button starts the selected testsuite.</p>"""))
         self.startFailedButton = self.buttonBox.addButton(
-            self.trUtf8("Rerun Failed"), QDialogButtonBox.ActionRole)
+            self.tr("Rerun Failed"), QDialogButtonBox.ActionRole)
         self.startFailedButton.setToolTip(
-            self.trUtf8("Reruns failed tests of the selected testsuite"))
-        self.startFailedButton.setWhatsThis(self.trUtf8(
+            self.tr("Reruns failed tests of the selected testsuite"))
+        self.startFailedButton.setWhatsThis(self.tr(
             """<b>Rerun Failed</b>"""
             """<p>This button reruns all failed tests of the selected"""
             """ testsuite.</p>"""))
         self.stopButton = self.buttonBox.addButton(
-            self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
-        self.stopButton.setToolTip(self.trUtf8("Stop the running unittest"))
-        self.stopButton.setWhatsThis(self.trUtf8(
+            self.tr("Stop"), QDialogButtonBox.ActionRole)
+        self.stopButton.setToolTip(self.tr("Stop the running unittest"))
+        self.stopButton.setWhatsThis(self.tr(
             """<b>Stop Test</b>"""
             """<p>This button stops a running unittest.</p>"""))
         self.stopButton.setEnabled(False)
@@ -94,7 +94,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.windowFlags() | Qt.WindowFlags(
                 Qt.WindowContextHelpButtonHint))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
-        self.setWindowTitle(self.trUtf8("Unittest"))
+        self.setWindowTitle(self.tr("Unittest"))
         if dbs:
             self.ui = ui
         else:
@@ -114,8 +114,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.insertProg(prog)
         
         self.rxPatterns = [
-            self.trUtf8("^Failure: "),
-            self.trUtf8("^Error: "),
+            self.tr("^Failure: "),
+            self.tr("^Error: "),
         ]
         
         self.__failedTests = []
@@ -193,11 +193,11 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             py3Extensions = \
                 ' '.join(["*{0}".format(ext)
                           for ext in self.dbs.getExtensions('Python3')])
-            filter = self.trUtf8(
+            filter = self.tr(
                 "Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
                 .format(py2Extensions, py3Extensions)
         else:
-            filter = self.trUtf8("Python Files (*.py);;All Files (*)")
+            filter = self.tr("Python Files (*.py);;All Files (*)")
         prog = E5FileDialog.getOpenFileName(
             self,
             "",
@@ -258,13 +258,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if not prog:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Unittest"),
-                self.trUtf8("You must enter a test suite file."))
+                self.tr("Unittest"),
+                self.tr("You must enter a test suite file."))
             return
         
         # prepend the selected file to the testsuite combobox
         self.insertProg(prog)
-        self.sbLabel.setText(self.trUtf8("Preparing Testsuite"))
+        self.sbLabel.setText(self.tr("Preparing Testsuite"))
         QApplication.processEvents()
         
         testFunctionName = self.testComboBox.currentText()
@@ -333,8 +333,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 exc_type, exc_value, exc_tb = sys.exc_info()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Unittest"),
-                    self.trUtf8(
+                    self.tr("Unittest"),
+                    self.tr(
                         "<p>Unable to run test <b>{0}</b>.<br>"
                         "{1}<br>{2}</p>")
                     .format(self.testName, str(exc_type),
@@ -392,8 +392,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if nrTests == 0:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Unittest"),
-                self.trUtf8(
+                self.tr("Unittest"),
+                self.tr(
                     "<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
                 .format(self.testName, exc_type, exc_value))
             return
@@ -459,7 +459,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.stopButton.setEnabled(True)
         self.startButton.setEnabled(False)
         self.stopButton.setDefault(True)
-        self.sbLabel.setText(self.trUtf8("Running"))
+        self.sbLabel.setText(self.tr("Running"))
         self.progressLed.on()
         QApplication.processEvents()
         
@@ -483,10 +483,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.startFailedButton.setDefault(False)
             self.startButton.setDefault(True)
         if self.runCount == 1:
-            self.sbLabel.setText(self.trUtf8("Ran {0} test in {1:.3f}s")
+            self.sbLabel.setText(self.tr("Ran {0} test in {1:.3f}s")
                 .format(self.runCount, self.timeTaken))
         else:
-            self.sbLabel.setText(self.trUtf8("Ran {0} tests in {1:.3f}s")
+            self.sbLabel.setText(self.tr("Ran {0} tests in {1:.3f}s")
                 .format(self.runCount, self.timeTaken))
         self.progressLed.off()
         
@@ -502,7 +502,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         self.failCount += 1
         self.progressCounterFailureCount.setText(str(self.failCount))
-        itm = QListWidgetItem(self.trUtf8("Failure: {0}").format(test))
+        itm = QListWidgetItem(self.tr("Failure: {0}").format(test))
         itm.setData(Qt.UserRole, (test, exc))
         self.errorsListWidget.insertItem(0, itm)
         self.__failedTests.append(id)
@@ -517,7 +517,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         self.errorCount += 1
         self.progressCounterErrorCount.setText(str(self.errorCount))
-        itm = QListWidgetItem(self.trUtf8("Error: {0}").format(test))
+        itm = QListWidgetItem(self.tr("Error: {0}").format(test))
         itm.setData(Qt.UserRole, (test, exc))
         self.errorsListWidget.insertItem(0, itm)
         self.__failedTests.append(id)
@@ -532,7 +532,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         self.skippedCount += 1
         self.progressCounterSkippedCount.setText(str(self.skippedCount))
-        itm = QListWidgetItem(self.trUtf8("    Skipped: {0}").format(reason))
+        itm = QListWidgetItem(self.tr("    Skipped: {0}").format(reason))
         itm.setForeground(Qt.blue)
         self.testsListWidget.insertItem(1, itm)
         
@@ -547,7 +547,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.expectedFailureCount += 1
         self.progressCounterExpectedFailureCount.setText(
             str(self.expectedFailureCount))
-        itm = QListWidgetItem(self.trUtf8("    Expected Failure"))
+        itm = QListWidgetItem(self.tr("    Expected Failure"))
         itm.setForeground(Qt.blue)
         self.testsListWidget.insertItem(1, itm)
         
@@ -561,7 +561,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.unexpectedSuccessCount += 1
         self.progressCounterUnexpectedSuccessCount.setText(
             str(self.unexpectedSuccessCount))
-        itm = QListWidgetItem(self.trUtf8("    Unexpected Success"))
+        itm = QListWidgetItem(self.tr("    Unexpected Success"))
         itm.setForeground(Qt.red)
         self.testsListWidget.insertItem(1, itm)
         
@@ -623,7 +623,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.dlg.traceback = ui.traceback
         
         ui.showButton = ui.buttonBox.addButton(
-            self.trUtf8("Show Source"), QDialogButtonBox.ActionRole)
+            self.tr("Show Source"), QDialogButtonBox.ActionRole)
         ui.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         self.dlg.setWindowTitle(text)

@@ -84,7 +84,7 @@ class Gpg(HgExtension):
             args.append("sigcheck")
             args.append(rev)
             
-            dia = HgDialog(self.trUtf8('Verify Signatures'), self.vcs)
+            dia = HgDialog(self.tr('Verify Signatures'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -132,7 +132,7 @@ class Gpg(HgExtension):
             if revision:
                 args.append(revision)
             
-            dia = HgDialog(self.trUtf8('Sign Revision'), self.vcs)
+            dia = HgDialog(self.tr('Sign Revision'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()

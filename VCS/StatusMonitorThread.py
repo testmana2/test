@@ -58,7 +58,7 @@ class VcsStatusMonitorThread(QThread):
             # perform the checking task
             self.statusList = []
             self.vcsStatusMonitorStatus.emit(
-                "wait", self.trUtf8("Waiting for lock"))
+                "wait", self.tr("Waiting for lock"))
             try:
                 locked = self.vcs.vcsExecutionMutex.tryLock(5000)
             except TypeError:
@@ -66,7 +66,7 @@ class VcsStatusMonitorThread(QThread):
             if locked:
                 try:
                     self.vcsStatusMonitorStatus.emit(
-                        "op", self.trUtf8("Checking repository status"))
+                        "op", self.tr("Checking repository status"))
                     res, statusMsg = self._performMonitor()
                 finally:
                     self.vcs.vcsExecutionMutex.unlock()
@@ -75,12 +75,12 @@ class VcsStatusMonitorThread(QThread):
                 else:
                     status = "nok"
                 self.vcsStatusMonitorStatus.emit(
-                    "send", self.trUtf8("Sending data"))
+                    "send", self.tr("Sending data"))
                 self.vcsStatusMonitorData.emit(self.statusList)
                 self.vcsStatusMonitorStatus.emit(status, statusMsg)
             else:
                 self.vcsStatusMonitorStatus.emit(
-                    "timeout", self.trUtf8("Timed out waiting for lock"))
+                    "timeout", self.tr("Timed out waiting for lock"))
             
             if self.autoUpdate and self.shouldUpdate:
                 self.vcs.vcsUpdate(self.projectDir, True)

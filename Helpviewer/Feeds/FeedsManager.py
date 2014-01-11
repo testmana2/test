@@ -174,8 +174,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
                     if feed[0] == urlString:
                         E5MessageBox.critical(
                             self,
-                            self.trUtf8("Duplicate Feed URL"),
-                            self.trUtf8(
+                            self.tr("Duplicate Feed URL"),
+                            self.tr(
                                 """A feed with the URL {0} exists already."""
                                 """ Aborting...""".format(urlString)))
                         return
@@ -196,8 +196,8 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         title = itm.text(0)
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Delete Feed"),
-            self.trUtf8(
+            self.tr("Delete Feed"),
+            self.tr(
                 """<p>Do you really want to delete the feed"""
                 """ <b>{0}</b>?</p>""".format(title)))
         if res:
@@ -303,7 +303,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
             
             if topItem.childCount() == 0:
                 itm = QTreeWidgetItem(topItem)
-                itm.setText(0, self.trUtf8("Error fetching feed"))
+                itm.setText(0, self.tr("Error fetching feed"))
                 itm.setData(0, FeedsManager.UrlStringRole, "")
                 itm.setData(0, FeedsManager.ErrorDataRole,
                             str(xmlData, encoding="utf-8"))
@@ -334,11 +334,11 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         if urlString:
             menu = QMenu()
             menu.addAction(
-                self.trUtf8("&Open"), self.__openMessageInCurrentTab)
+                self.tr("&Open"), self.__openMessageInCurrentTab)
             menu.addAction(
-                self.trUtf8("Open in New &Tab"), self.__openMessageInNewTab)
+                self.tr("Open in New &Tab"), self.__openMessageInNewTab)
             menu.addSeparator()
-            menu.addAction(self.trUtf8("&Copy URL to Clipboard"),
+            menu.addAction(self.tr("&Copy URL to Clipboard"),
                            self.__copyUrlToClipboard)
             menu.exec_(QCursor.pos())
         else:
@@ -346,7 +346,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
             if errorString:
                 menu = QMenu()
                 menu.addAction(
-                    self.trUtf8("&Show error data"), self.__showError)
+                    self.tr("&Show error data"), self.__showError)
                 menu.exec_(QCursor.pos())
     
     def __itemActivated(self, itm, column):
@@ -426,5 +426,5 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         if errorStr:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Error loading feed"),
+                self.tr("Error loading feed"),
                 "{0}".format(errorStr))

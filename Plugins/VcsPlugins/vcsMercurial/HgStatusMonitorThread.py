@@ -99,7 +99,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
             else:
                 process.kill()
                 process.waitForFinished()
-                error = self.trUtf8("Could not start the Mercurial process.")
+                error = self.tr("Could not start the Mercurial process.")
         
         if error:
             return False, error
@@ -154,7 +154,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         self.reportedStates = states
         
         return True, \
-            self.trUtf8("Mercurial status checked successfully")
+            self.tr("Mercurial status checked successfully")
     
     def _shutdown(self):
         """

@@ -268,8 +268,8 @@ class VcsProjectBrowserHelper(QObject):
             
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Remove from repository (and disk)"),
-                self.trUtf8(
+                self.tr("Remove from repository (and disk)"),
+                self.tr(
                     "Do you really want to remove these translation files from"
                     " the repository (and disk)?"),
                 names)
@@ -288,8 +288,8 @@ class VcsProjectBrowserHelper(QObject):
             
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Remove from repository (and disk)"),
-                self.trUtf8(
+                self.tr("Remove from repository (and disk)"),
+                self.tr(
                     "Do you really want to remove these files/directories"
                     " from the repository (and disk)?"),
                 files)

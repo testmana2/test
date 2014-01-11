@@ -57,7 +57,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         dir = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Qt4 Translations Directory"),
+            self.tr("Select Qt4 Translations Directory"),
             self.qt4TransEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

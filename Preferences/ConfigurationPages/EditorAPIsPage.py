@@ -36,7 +36,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         
         self.apiFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
-        self.prepareApiButton.setText(self.trUtf8("Compile APIs"))
+        self.prepareApiButton.setText(self.tr("Compile APIs"))
         self.__currentAPI = None
         self.__inPreparation = False
         
@@ -138,9 +138,9 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select API file"),
+            self.tr("Select API file"),
             self.apiFileEdit.text(),
-            self.trUtf8("API File (*.api);;All Files (*)"))
+            self.tr("API File (*.api);;All Files (*)"))
             
         if file:
             self.apiFileEdit.setText(Utilities.toNativeSeparators(file))
@@ -182,8 +182,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
                     QFileInfo(installedAPIFile).fileName())
             file, ok = QInputDialog.getItem(
                 self,
-                self.trUtf8("Add from installed APIs"),
-                self.trUtf8("Select from the list of installed API files"),
+                self.tr("Add from installed APIs"),
+                self.tr("Select from the list of installed API files"),
                 installedAPIFilesShort,
                 0, False)
             if ok:
@@ -193,9 +193,9 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         else:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Add from installed APIs"),
-                self.trUtf8("""There are no APIs installed yet."""
-                            """ Selection is not available."""))
+                self.tr("Add from installed APIs"),
+                self.tr("""There are no APIs installed yet."""
+                        """ Selection is not available."""))
             self.addInstalledApiFileButton.setEnabled(False)
         self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
@@ -212,8 +212,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             pluginAPIFilesDict[QFileInfo(apiFile).fileName()] = apiFile
         file, ok = QInputDialog.getItem(
             self,
-            self.trUtf8("Add from Plugin APIs"),
-            self.trUtf8(
+            self.tr("Add from Plugin APIs"),
+            self.tr(
                 "Select from the list of API files installed by plugins"),
             sorted(pluginAPIFilesDict.keys()),
             0, False)
@@ -243,7 +243,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.prepareApiProgressBar.reset()
         self.prepareApiProgressBar.setRange(0, 100)
         self.prepareApiProgressBar.setValue(0)
-        self.prepareApiButton.setText(self.trUtf8("Compile APIs"))
+        self.prepareApiButton.setText(self.tr("Compile APIs"))
         self.__inPreparation = False
     
     def __apiPreparationCancelled(self):
@@ -258,7 +258,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         self.prepareApiProgressBar.setRange(0, 0)
         self.prepareApiProgressBar.setValue(0)
-        self.prepareApiButton.setText(self.trUtf8("Cancel compilation"))
+        self.prepareApiButton.setText(self.tr("Cancel compilation"))
         self.__inPreparation = True
         
     def saveState(self):

@@ -106,8 +106,8 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             if not procStarted:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -194,5 +194,5 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         
         @param out error to be shown (string)
         """
-        self.messageEdit.appendPlainText(self.trUtf8("Error: "))
+        self.messageEdit.appendPlainText(self.tr("Error: "))
         self.messageEdit.appendPlainText(out)

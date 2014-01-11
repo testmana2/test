@@ -50,10 +50,10 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.__lastColumn = self.statusList.columnCount()
         
         self.refreshButton = \
-            self.buttonBox.addButton(self.trUtf8("Refresh"),
+            self.buttonBox.addButton(self.tr("Refresh"),
                                      QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
-            self.trUtf8("Press to refresh the status display"))
+            self.tr("Press to refresh the status display"))
         self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -72,44 +72,44 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.menuactions = []
         self.menu = QMenu()
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Commit changes to repository..."), self.__commit))
+            self.tr("Commit changes to repository..."), self.__commit))
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Select all for commit"), self.__commitSelectAll))
+            self.tr("Select all for commit"), self.__commitSelectAll))
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Deselect all from commit"), self.__commitDeselectAll))
+            self.tr("Deselect all from commit"), self.__commitDeselectAll))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Add to repository"), self.__add))
+            self.tr("Add to repository"), self.__add))
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Show differences"), self.__diff))
+            self.tr("Show differences"), self.__diff))
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Show differences side-by-side"), self.__sbsDiff))
+            self.tr("Show differences side-by-side"), self.__sbsDiff))
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Revert changes"), self.__revert))
+            self.tr("Revert changes"), self.__revert))
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Restore missing"), self.__restoreMissing))
+            self.tr("Restore missing"), self.__restoreMissing))
         if self.vcs.version >= (1, 5, 0):
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Add to Changelist"), self.__addToChangelist))
+                self.tr("Add to Changelist"), self.__addToChangelist))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Remove from Changelist"),
+                self.tr("Remove from Changelist"),
                 self.__removeFromChangelist))
         if self.vcs.version >= (1, 2, 0):
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Lock"), self.__lock))
+                self.tr("Lock"), self.__lock))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Unlock"), self.__unlock))
+                self.tr("Unlock"), self.__unlock))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Break lock"),
+                self.tr("Break lock"),
                 self.__breakLock))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Steal lock"),
+                self.tr("Steal lock"),
                 self.__stealLock))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Adjust column sizes"),
+            self.tr("Adjust column sizes"),
             self.__resizeColumns))
         for act in self.menuactions:
             act.setEnabled(False)
@@ -119,73 +119,73 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.__showContextMenu)
         
         self.modifiedIndicators = [
-            self.trUtf8('added'),
-            self.trUtf8('deleted'),
-            self.trUtf8('modified'),
+            self.tr('added'),
+            self.tr('deleted'),
+            self.tr('modified'),
         ]
         
         self.missingIndicators = [
-            self.trUtf8('missing'),
+            self.tr('missing'),
         ]
         
         self.unversionedIndicators = [
-            self.trUtf8('unversioned'),
+            self.tr('unversioned'),
         ]
         
         self.lockedIndicators = [
-            self.trUtf8('locked'),
+            self.tr('locked'),
         ]
         
         self.stealBreakLockIndicators = [
-            self.trUtf8('other lock'),
-            self.trUtf8('stolen lock'),
-            self.trUtf8('broken lock'),
+            self.tr('other lock'),
+            self.tr('stolen lock'),
+            self.tr('broken lock'),
         ]
         
         self.unlockedIndicators = [
-            self.trUtf8('not locked'),
+            self.tr('not locked'),
         ]
         
         self.status = {
-            ' ': self.trUtf8('normal'),
-            'A': self.trUtf8('added'),
-            'D': self.trUtf8('deleted'),
-            'M': self.trUtf8('modified'),
-            'R': self.trUtf8('replaced'),
-            'C': self.trUtf8('conflict'),
-            'X': self.trUtf8('external'),
-            'I': self.trUtf8('ignored'),
-            '?': self.trUtf8('unversioned'),
-            '!': self.trUtf8('missing'),
-            '~': self.trUtf8('type error'),
+            ' ': self.tr('normal'),
+            'A': self.tr('added'),
+            'D': self.tr('deleted'),
+            'M': self.tr('modified'),
+            'R': self.tr('replaced'),
+            'C': self.tr('conflict'),
+            'X': self.tr('external'),
+            'I': self.tr('ignored'),
+            '?': self.tr('unversioned'),
+            '!': self.tr('missing'),
+            '~': self.tr('type error'),
         }
         self.propStatus = {
-            ' ': self.trUtf8('normal'),
-            'M': self.trUtf8('modified'),
-            'C': self.trUtf8('conflict'),
+            ' ': self.tr('normal'),
+            'M': self.tr('modified'),
+            'C': self.tr('conflict'),
         }
         self.locked = {
-            ' ': self.trUtf8('no'),
-            'L': self.trUtf8('yes'),
+            ' ': self.tr('no'),
+            'L': self.tr('yes'),
         }
         self.history = {
-            ' ': self.trUtf8('no'),
-            '+': self.trUtf8('yes'),
+            ' ': self.tr('no'),
+            '+': self.tr('yes'),
         }
         self.switched = {
-            ' ': self.trUtf8('no'),
-            'S': self.trUtf8('yes'),
+            ' ': self.tr('no'),
+            'S': self.tr('yes'),
         }
         self.lockinfo = {
-            ' ': self.trUtf8('not locked'),
-            'K': self.trUtf8('locked'),
-            'O': self.trUtf8('other lock'),
-            'T': self.trUtf8('stolen lock'),
-            'B': self.trUtf8('broken lock'),
+            ' ': self.tr('not locked'),
+            'K': self.tr('locked'),
+            'O': self.tr('other lock'),
+            'T': self.tr('stolen lock'),
+            'B': self.tr('broken lock'),
         }
         self.uptodate = {
-            ' ': self.trUtf8('yes'),
-            '*': self.trUtf8('no'),
+            ' ': self.tr('yes'),
+            '*': self.tr('no'),
         }
         
         self.rx_status = QRegExp(
@@ -383,7 +383,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         self.process.setWorkingDirectory(self.dname)
         
-        self.setWindowTitle(self.trUtf8('Subversion Status'))
+        self.setWindowTitle(self.tr('Subversion Status'))
         
         self.process.start('svn', args)
         procStarted = self.process.waitForStarted(5000)
@@ -392,8 +392,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
@@ -423,7 +423,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.refreshButton.setEnabled(True)
         
         self.__statusFilters.sort()
-        self.__statusFilters.insert(0, "<{0}>".format(self.trUtf8("all")))
+        self.__statusFilters.insert(0, "<{0}>".format(self.tr("all")))
         self.statusFilterCombo.addItems(self.__statusFilters)
         
         for act in self.menuactions:
@@ -619,7 +619,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         @param txt selected status filter (string)
         """
-        if txt == "<{0}>".format(self.trUtf8("all")):
+        if txt == "<{0}>".format(self.tr("all")):
             for topIndex in range(self.statusList.topLevelItemCount()):
                 topItem = self.statusList.topLevelItem(topIndex)
                 topItem.setHidden(False)
@@ -709,9 +709,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Commit"),
-                self.trUtf8("""There are no entries selected to be"""
-                            """ committed."""))
+                self.tr("Commit"),
+                self.tr("""There are no entries selected to be"""
+                        """ committed."""))
             return
         
         if Preferences.getVCS("AutoSaveFiles"):
@@ -749,9 +749,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Add"),
-                self.trUtf8("""There are no unversioned entries"""
-                            """ available/selected."""))
+                self.tr("Add"),
+                self.tr("""There are no unversioned entries"""
+                        """ available/selected."""))
             return
         
         self.vcs.vcsAdd(names)
@@ -771,9 +771,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Revert"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.tr("Revert"),
+                self.tr("""There are no uncommitted changes"""
+                        """ available/selected."""))
             return
         
         self.vcs.vcsRevert(names)
@@ -795,9 +795,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Revert"),
-                self.trUtf8("""There are no missing entries"""
-                            """ available/selected."""))
+                self.tr("Revert"),
+                self.tr("""There are no missing entries"""
+                        """ available/selected."""))
             return
         
         self.vcs.vcsRevert(names)
@@ -813,9 +813,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Differences"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.tr("Differences"),
+                self.tr("""There are no uncommitted changes"""
+                        """ available/selected."""))
             return
         
         if self.diff is None:
@@ -834,16 +834,16 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Side-by-Side Diff"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.tr("Side-by-Side Diff"),
+                self.tr("""There are no uncommitted changes"""
+                        """ available/selected."""))
             return
         elif len(names) > 1:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Side-by-Side Diff"),
-                self.trUtf8("""Only one file with uncommitted changes"""
-                            """ must be selected."""))
+                self.tr("Side-by-Side Diff"),
+                self.tr("""Only one file with uncommitted changes"""
+                        """ must be selected."""))
             return
         
         self.vcs.svnSbsDiff(names[0])
@@ -857,9 +857,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Lock"),
-                self.trUtf8("""There are no unlocked files"""
-                            """ available/selected."""))
+                self.tr("Lock"),
+                self.tr("""There are no unlocked files"""
+                        """ available/selected."""))
             return
         
         self.vcs.svnLock(names, parent=self)
@@ -874,9 +874,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Unlock"),
-                self.trUtf8("""There are no locked files"""
-                            """ available/selected."""))
+                self.tr("Unlock"),
+                self.tr("""There are no locked files"""
+                        """ available/selected."""))
             return
         
         self.vcs.svnUnlock(names, parent=self)
@@ -892,9 +892,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Break Lock"),
-                self.trUtf8("""There are no locked files"""
-                            """ available/selected."""))
+                self.tr("Break Lock"),
+                self.tr("""There are no locked files"""
+                        """ available/selected."""))
             return
         
         self.vcs.svnUnlock(names, parent=self, breakIt=True)
@@ -910,9 +910,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Steal Lock"),
-                self.trUtf8("""There are no locked files"""
-                            """ available/selected."""))
+                self.tr("Steal Lock"),
+                self.tr("""There are no locked files"""
+                        """ available/selected."""))
             return
         
         self.vcs.svnLock(names, parent=self, stealIt=True)
@@ -927,8 +927,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Remove from Changelist"),
-                self.trUtf8(
+                self.tr("Remove from Changelist"),
+                self.tr(
                     """There are no files available/selected not """
                     """belonging to a changelist."""
                 )
@@ -946,8 +946,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Remove from Changelist"),
-                self.trUtf8(
+                self.tr("Remove from Changelist"),
+                self.tr(
                     """There are no files available/selected belonging"""
                     """ to a changelist."""
                 )

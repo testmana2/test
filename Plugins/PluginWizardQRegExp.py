@@ -68,11 +68,11 @@ class QRegExpWizard(QObject):
         Private method to initialize the action.
         """
         self.action = E5Action(
-            self.trUtf8('QRegExp Wizard'),
-            self.trUtf8('Q&RegExp Wizard...'), 0, 0, self,
+            self.tr('QRegExp Wizard'),
+            self.tr('Q&RegExp Wizard...'), 0, 0, self,
             'wizards_qregexp')
-        self.action.setStatusTip(self.trUtf8('QRegExp Wizard'))
-        self.action.setWhatsThis(self.trUtf8(
+        self.action.setStatusTip(self.tr('QRegExp Wizard'))
+        self.action.setWhatsThis(self.tr(
             """<b>QRegExp Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
             """ needed to create a QRegExp. The generated code is inserted"""
@@ -120,8 +120,8 @@ class QRegExpWizard(QObject):
         if editor is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8('No current editor'),
-                self.trUtf8('Please open or create a file first.'))
+                self.tr('No current editor'),
+                self.tr('Please open or create a file first.'))
         else:
             code, ok = self.__callForm(editor)
             if ok:

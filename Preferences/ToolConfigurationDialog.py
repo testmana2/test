@@ -20,6 +20,7 @@ from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 import Utilities
 import UI.PixmapCache
 
+
 class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
     """
     Class implementing a configuration dialog for the tools menu.
@@ -41,11 +42,11 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         self.executableCompleter = E5FileCompleter(self.executableEdit)
         
         self.redirectionModes = [
-            ("no", self.trUtf8("no redirection")),
-            ("show", self.trUtf8("show output")),
-            ("insert", self.trUtf8("insert into current editor")),
+            ("no", self.tr("no redirection")),
+            ("show", self.tr("show output")),
+            ("insert", self.tr("insert into current editor")),
             ("replaceSelection",
-             self.trUtf8("replace selection of current editor")),
+             self.tr("replace selection of current editor")),
         ]
         
         self.toollist = copy.deepcopy(toollist)
@@ -103,8 +104,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if not executable:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Add tool entry"),
-                self.trUtf8(
+                self.tr("Add tool entry"),
+                self.tr(
                     "You have to set an executable to add to the"
                     " Tools-Menu first."))
             return
@@ -112,8 +113,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if not menutext:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Add tool entry"),
-                self.trUtf8(
+                self.tr("Add tool entry"),
+                self.tr(
                     "You have to insert a menuentry text to add the"
                     " selected program to the Tools-Menu first."))
             return
@@ -121,8 +122,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if not Utilities.isinpath(executable):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Add tool entry"),
-                self.trUtf8(
+                self.tr("Add tool entry"),
+                self.tr(
                     "The selected file could not be found or"
                     " is not an executable."
                     " Please choose an executable filename."))
@@ -132,8 +133,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
                 menutext, Qt.MatchFlags(Qt.MatchExactly))):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Add tool entry"),
-                self.trUtf8("An entry for the menu text {0} already exists.")
+                self.tr("Add tool entry"),
+                self.tr("An entry for the menu text {0} already exists.")
                 .format(menutext))
             return
         
@@ -165,8 +166,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if not executable:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Change tool entry"),
-                self.trUtf8(
+                self.tr("Change tool entry"),
+                self.tr(
                     "You have to set an executable to change the"
                     " Tools-Menu entry."))
             return
@@ -174,8 +175,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if not menutext:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Change tool entry"),
-                self.trUtf8(
+                self.tr("Change tool entry"),
+                self.tr(
                     "You have to insert a menuentry text to change the"
                     " selected Tools-Menu entry."))
             return
@@ -183,8 +184,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if not Utilities.isinpath(executable):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Change tool entry"),
-                self.trUtf8(
+                self.tr("Change tool entry"),
+                self.tr(
                     "The selected file could not be found or"
                     " is not an executable."
                     " Please choose an existing executable filename."))
@@ -270,7 +271,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         execfile = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select executable"),
+            self.tr("Select executable"),
             self.executableEdit.text(),
             "")
         if execfile:
@@ -278,8 +279,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             if not Utilities.isinpath(execfile):
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Select executable"),
-                    self.trUtf8(
+                    self.tr("Select executable"),
+                    self.tr(
                         "The selected file is not an executable."
                         " Please choose an executable filename."))
                 return
@@ -293,9 +294,9 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         icon = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select icon file"),
+            self.tr("Select icon file"),
             self.iconEdit.text(),
-            self.trUtf8("Icon files (*.png)"))
+            self.tr("Icon files (*.png)"))
         if icon:
             self.iconEdit.setText(icon)
     

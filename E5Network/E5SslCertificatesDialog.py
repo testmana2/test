@@ -94,9 +94,9 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             commonName = Utilities.decodeString(
                 cert.subjectInfo(QSslCertificate.CommonName))
         if organisation is None or organisation == "":
-            organisation = self.trUtf8("(Unknown)")
+            organisation = self.tr("(Unknown)")
         if commonName is None or commonName == "":
-            commonName = self.trUtf8("(Unknown common name)")
+            commonName = self.tr("(Unknown common name)")
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
@@ -150,13 +150,13 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         itm = self.serversCertificatesTree.currentItem()
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Delete Server Certificate"),
-            self.trUtf8("""<p>Shall the server certificate really be"""
-                        """ deleted?</p><p>{0}</p>"""
-                        """<p>If the server certificate is deleted, the"""
-                        """ normal security checks will be reinstantiated"""
-                        """ and the server has to present a valid"""
-                        """ certificate.</p>""")
+            self.tr("Delete Server Certificate"),
+            self.tr("""<p>Shall the server certificate really be"""
+                    """ deleted?</p><p>{0}</p>"""
+                    """<p>If the server certificate is deleted, the"""
+                    """ normal security checks will be reinstantiated"""
+                    """ and the server has to present a valid"""
+                    """ certificate.</p>""")
             .format(itm.text(0)))
         if res:
             server = itm.text(1)
@@ -218,8 +218,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                             QSslCertificate.CommonName)
                     E5MessageBox.warning(
                         self,
-                        self.trUtf8("Import Certificate"),
-                        self.trUtf8(
+                        self.tr("Import Certificate"),
+                        self.tr(
                             """<p>The certificate <b>{0}</b> already exists."""
                             """ Skipping.</p>""")
                         .format(Utilities.decodeString(commonStr)))
@@ -305,9 +305,9 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             commonName = Utilities.decodeString(
                 cert.subjectInfo(QSslCertificate.CommonName))
         if organisation is None or organisation == "":
-            organisation = self.trUtf8("(Unknown)")
+            organisation = self.tr("(Unknown)")
         if commonName is None or commonName == "":
-            commonName = self.trUtf8("(Unknown common name)")
+            commonName = self.tr("(Unknown common name)")
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
@@ -359,8 +359,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         itm = self.caCertificatesTree.currentItem()
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Delete CA Certificate"),
-            self.trUtf8(
+            self.tr("Delete CA Certificate"),
+            self.tr(
                 """<p>Shall the CA certificate really be deleted?</p>"""
                 """<p>{0}</p>"""
                 """<p>If the CA certificate is deleted, the browser"""
@@ -408,8 +408,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                             QSslCertificate.CommonName)
                     E5MessageBox.warning(
                         self,
-                        self.trUtf8("Import Certificate"),
-                        self.trUtf8(
+                        self.tr("Import Certificate"),
+                        self.tr(
                             """<p>The certificate <b>{0}</b> already exists."""
                             """ Skipping.</p>""")
                         .format(Utilities.decodeString(commonStr)))
@@ -447,10 +447,10 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         if cert is not None:
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Export Certificate"),
+                self.tr("Export Certificate"),
                 name,
-                self.trUtf8("Certificate File (PEM) (*.pem);;"
-                            "Certificate File (DER) (*.der)"),
+                self.tr("Certificate File (PEM) (*.pem);;"
+                        "Certificate File (DER) (*.der)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
@@ -463,9 +463,9 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                 if QFileInfo(fname).exists():
                     res = E5MessageBox.yesNo(
                         self,
-                        self.trUtf8("Export Certificate"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                    " Overwrite it?</p>").format(fname),
+                        self.tr("Export Certificate"),
+                        self.tr("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fname),
                         icon=E5MessageBox.Warning)
                     if not res:
                         return
@@ -474,8 +474,8 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                 if not f.open(QIODevice.WriteOnly):
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Export Certificate"),
-                        self.trUtf8(
+                        self.tr("Export Certificate"),
+                        self.tr(
                             """<p>The certificate could not be written"""
                             """ to file <b>{0}</b></p><p>Error: {1}</p>""")
                         .format(fname, f.errorString()))
@@ -496,18 +496,18 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         fname = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Import Certificate"),
+            self.tr("Import Certificate"),
             "",
-            self.trUtf8("Certificate Files (*.pem *.crt *.der *.cer *.ca);;"
-                        "All Files (*)"))
+            self.tr("Certificate Files (*.pem *.crt *.der *.cer *.ca);;"
+                    "All Files (*)"))
         
         if fname:
             f = QFile(fname)
             if not f.open(QIODevice.ReadOnly):
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Export Certificate"),
-                    self.trUtf8(
+                    self.tr("Export Certificate"),
+                    self.tr(
                         """<p>The certificate could not be read from file"""
                         """ <b>{0}</b></p><p>Error: {1}</p>""")
                     .format(fname, f.errorString()))

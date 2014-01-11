@@ -32,7 +32,7 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         self.setupUi(self)
         
         self.bTest = self.buttonBox.addButton(
-            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+            self.tr("Test"), QDialogButtonBox.ActionRole)
         
         self.font = None
         
@@ -122,7 +122,7 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
             if title:
                 code += ',{0}{1}{2}'.format(
                     os.linesep, istring, parent)
-                code += ',{0}{1}self.trUtf8("{2}")'.format(
+                code += ',{0}{1}self.tr("{2}")'.format(
                     os.linesep, istring, title)
             elif parent != "None":
                 code += ',{0}{1}{2}'.format(

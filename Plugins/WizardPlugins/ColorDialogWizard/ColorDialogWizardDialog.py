@@ -34,7 +34,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         self.setupUi(self)
         
         self.bTest = self.buttonBox.addButton(
-            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+            self.tr("Test"), QDialogButtonBox.ActionRole)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -66,8 +66,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 except:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("QColorDialog Wizard Error"),
-                        self.trUtf8(
+                        self.tr("QColorDialog Wizard Error"),
+                        self.tr(
                             """<p>The colour <b>{0}</b> is not valid.</p>""")
                         .format(coStr))
             
@@ -148,7 +148,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             else:
                 code += '{0}QColor(Qt.white),{1}'.format(istring, os.linesep)
             code += '{0}{1},{2}'.format(istring, parent, os.linesep)
-            code += '{0}self.trUtf8("{1}"),{2}'.format(
+            code += '{0}self.tr("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
             code += '{0}QColorDialog.ColorDialogOptions(' \
                 'QColorDialog.ShowAlphaChannel)'.format(istring)
@@ -163,7 +163,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 code += '{0}{1},{2}'.format(
                     istring, self.eRGB.text(), os.linesep)
             code += '{0}{1},{2}'.format(istring, parent, os.linesep)
-            code += '{0}self.trUtf8("{1}"),{2}'.format(
+            code += '{0}self.tr("{1}"),{2}'.format(
                 istring, self.eTitle.text(), os.linesep)
             code += '{0}QColorDialog.ColorDialogOptions(' \
                 'QColorDialog.ShowAlphaChannel)'.format(istring)

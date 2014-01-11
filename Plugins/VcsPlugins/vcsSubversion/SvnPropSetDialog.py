@@ -43,7 +43,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         """
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select file for property"),
+            self.tr("Select file for property"),
             self.propFileEdit.text(),
             "")
         

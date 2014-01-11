@@ -74,13 +74,13 @@ class AboutPlugin(QObject):
         acts = []
         
         self.aboutAct = E5Action(
-            self.trUtf8('About {0}').format(UI.Info.Program),
+            self.tr('About {0}').format(UI.Info.Program),
             UI.PixmapCache.getIcon("helpAbout.png"),
-            self.trUtf8('&About {0}').format(UI.Info.Program),
+            self.tr('&About {0}').format(UI.Info.Program),
             0, 0, self, 'about_eric')
-        self.aboutAct.setStatusTip(self.trUtf8(
+        self.aboutAct.setStatusTip(self.tr(
             'Display information about this software'))
-        self.aboutAct.setWhatsThis(self.trUtf8(
+        self.aboutAct.setWhatsThis(self.tr(
             """<b>About {0}</b>"""
             """<p>Display some information about this software.</p>"""
         ).format(UI.Info.Program))
@@ -89,12 +89,12 @@ class AboutPlugin(QObject):
         acts.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
-            self.trUtf8('About Qt'),
+            self.tr('About Qt'),
             UI.PixmapCache.getIcon("helpAboutQt.png"),
-            self.trUtf8('About &Qt'), 0, 0, self, 'about_qt')
+            self.tr('About &Qt'), 0, 0, self, 'about_qt')
         self.aboutQtAct.setStatusTip(
-            self.trUtf8('Display information about the Qt toolkit'))
-        self.aboutQtAct.setWhatsThis(self.trUtf8(
+            self.tr('Display information about the Qt toolkit'))
+        self.aboutQtAct.setWhatsThis(self.tr(
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))

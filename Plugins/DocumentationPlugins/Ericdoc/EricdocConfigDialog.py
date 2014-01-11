@@ -50,7 +50,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         self.__initializeDefaults()
         
-        self.sampleText = self.trUtf8(
+        self.sampleText = self.tr(
             '''<?xml version="1.0" encoding="utf-8"?>'''
             '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"'''
             '''"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'''
@@ -295,7 +295,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select output directory"),
+            self.tr("Select output directory"),
             self.outputDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -320,7 +320,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             startDir = self.ppath
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory to exclude"),
+            self.tr("Select directory to exclude"),
             startDir,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -360,9 +360,9 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         cssFile = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select CSS style sheet"),
+            self.tr("Select CSS style sheet"),
             getConfig('ericCSSDir'),
-            self.trUtf8("Style sheet (*.css);;All files (*)"))
+            self.tr("Style sheet (*.css);;All files (*)"))
             
         if cssFile:
             # make it relative, if it is in a subdirectory of the project path
@@ -509,7 +509,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select output directory for QtHelp files"),
+            self.tr("Select output directory for QtHelp files"),
             self.qtHelpDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

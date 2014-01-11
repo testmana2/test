@@ -65,9 +65,9 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             self.buttonBox.removeButton(
                 self.buttonBox.button(QDialogButtonBox.Cancel))
             self.refreshButton = self.buttonBox.addButton(
-                self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
+                self.tr("Refresh"), QDialogButtonBox.ActionRole)
             self.refreshButton.setToolTip(
-                self.trUtf8("Press to refresh the queues list"))
+                self.tr("Press to refresh the queues list"))
             self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         else:
             self.buttonBox.removeButton(

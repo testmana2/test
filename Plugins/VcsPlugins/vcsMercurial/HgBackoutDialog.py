@@ -171,7 +171,7 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         if self.messageEdit.toPlainText():
             msg = self.messageEdit.toPlainText()
         else:
-            msg = self.trUtf8("Backed out changeset <{0}>.").format(rev)
+            msg = self.tr("Backed out changeset <{0}>.").format(rev)
         
         return (rev,
                 self.mergeCheckBox.isChecked,

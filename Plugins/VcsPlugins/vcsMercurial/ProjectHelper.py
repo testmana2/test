@@ -97,14 +97,14 @@ class HgProjectHelper(VcsProjectHelper):
         Public method to generate the action objects.
         """
         self.vcsNewAct = E5Action(
-            self.trUtf8('New from repository'),
+            self.tr('New from repository'),
             UI.PixmapCache.getIcon("vcsCheckout.png"),
-            self.trUtf8('&New from repository...'), 0, 0,
+            self.tr('&New from repository...'), 0, 0,
             self, 'mercurial_new')
-        self.vcsNewAct.setStatusTip(self.trUtf8(
+        self.vcsNewAct.setStatusTip(self.tr(
             'Create (clone) a new project from a Mercurial repository'
         ))
-        self.vcsNewAct.setWhatsThis(self.trUtf8(
+        self.vcsNewAct.setWhatsThis(self.tr(
             """<b>New from repository</b>"""
             """<p>This creates (clones) a new local project from """
             """a Mercurial repository.</p>"""
@@ -113,14 +113,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsNewAct)
         
         self.hgIncomingAct = E5Action(
-            self.trUtf8('Show incoming log'),
+            self.tr('Show incoming log'),
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Show incoming log'),
+            self.tr('Show incoming log'),
             0, 0, self, 'mercurial_incoming')
-        self.hgIncomingAct.setStatusTip(self.trUtf8(
+        self.hgIncomingAct.setStatusTip(self.tr(
             'Show the log of incoming changes'
         ))
-        self.hgIncomingAct.setWhatsThis(self.trUtf8(
+        self.hgIncomingAct.setWhatsThis(self.tr(
             """<b>Show incoming log</b>"""
             """<p>This shows the log of changes coming into the"""
             """ repository.</p>"""
@@ -129,14 +129,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgIncomingAct)
         
         self.hgPullAct = E5Action(
-            self.trUtf8('Pull changes'),
+            self.tr('Pull changes'),
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Pull changes'),
+            self.tr('Pull changes'),
             0, 0, self, 'mercurial_pull')
-        self.hgPullAct.setStatusTip(self.trUtf8(
+        self.hgPullAct.setStatusTip(self.tr(
             'Pull changes from a remote repository'
         ))
-        self.hgPullAct.setWhatsThis(self.trUtf8(
+        self.hgPullAct.setWhatsThis(self.tr(
             """<b>Pull changes</b>"""
             """<p>This pulls changes from a remote repository into the """
             """local repository.</p>"""
@@ -145,14 +145,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgPullAct)
         
         self.vcsUpdateAct = E5Action(
-            self.trUtf8('Update from repository'),
+            self.tr('Update from repository'),
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('&Update from repository'), 0, 0, self,
+            self.tr('&Update from repository'), 0, 0, self,
             'mercurial_update')
-        self.vcsUpdateAct.setStatusTip(self.trUtf8(
+        self.vcsUpdateAct.setStatusTip(self.tr(
             'Update the local project from the Mercurial repository'
         ))
-        self.vcsUpdateAct.setWhatsThis(self.trUtf8(
+        self.vcsUpdateAct.setWhatsThis(self.tr(
             """<b>Update from repository</b>"""
             """<p>This updates the local project from the Mercurial"""
             """ repository.</p>"""
@@ -161,14 +161,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsUpdateAct)
         
         self.vcsCommitAct = E5Action(
-            self.trUtf8('Commit changes to repository'),
+            self.tr('Commit changes to repository'),
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('&Commit changes to repository...'), 0, 0, self,
+            self.tr('&Commit changes to repository...'), 0, 0, self,
             'mercurial_commit')
-        self.vcsCommitAct.setStatusTip(self.trUtf8(
+        self.vcsCommitAct.setStatusTip(self.tr(
             'Commit changes to the local project to the Mercurial repository'
         ))
-        self.vcsCommitAct.setWhatsThis(self.trUtf8(
+        self.vcsCommitAct.setWhatsThis(self.tr(
             """<b>Commit changes to repository</b>"""
             """<p>This commits changes to the local project to the """
             """Mercurial repository.</p>"""
@@ -177,14 +177,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsCommitAct)
         
         self.hgOutgoingAct = E5Action(
-            self.trUtf8('Show outgoing log'),
+            self.tr('Show outgoing log'),
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Show outgoing log'),
+            self.tr('Show outgoing log'),
             0, 0, self, 'mercurial_outgoing')
-        self.hgOutgoingAct.setStatusTip(self.trUtf8(
+        self.hgOutgoingAct.setStatusTip(self.tr(
             'Show the log of outgoing changes'
         ))
-        self.hgOutgoingAct.setWhatsThis(self.trUtf8(
+        self.hgOutgoingAct.setWhatsThis(self.tr(
             """<b>Show outgoing log</b>"""
             """<p>This shows the log of changes outgoing out of the"""
             """ repository.</p>"""
@@ -193,14 +193,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgOutgoingAct)
         
         self.hgPushAct = E5Action(
-            self.trUtf8('Push changes'),
+            self.tr('Push changes'),
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Push changes'),
+            self.tr('Push changes'),
             0, 0, self, 'mercurial_push')
-        self.hgPushAct.setStatusTip(self.trUtf8(
+        self.hgPushAct.setStatusTip(self.tr(
             'Push changes to a remote repository'
         ))
-        self.hgPushAct.setWhatsThis(self.trUtf8(
+        self.hgPushAct.setWhatsThis(self.tr(
             """<b>Push changes</b>"""
             """<p>This pushes changes from the local repository to a """
             """remote repository.</p>"""
@@ -209,14 +209,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgPushAct)
         
         self.hgPushForcedAct = E5Action(
-            self.trUtf8('Push changes (force)'),
+            self.tr('Push changes (force)'),
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Push changes (force)'),
+            self.tr('Push changes (force)'),
             0, 0, self, 'mercurial_push_forced')
-        self.hgPushForcedAct.setStatusTip(self.trUtf8(
+        self.hgPushForcedAct.setStatusTip(self.tr(
             'Push changes to a remote repository with force option'
         ))
-        self.hgPushForcedAct.setWhatsThis(self.trUtf8(
+        self.hgPushForcedAct.setWhatsThis(self.tr(
             """<b>Push changes (force)</b>"""
             """<p>This pushes changes from the local repository to a """
             """remote repository using the 'force' option.</p>"""
@@ -225,14 +225,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgPushForcedAct)
         
         self.vcsExportAct = E5Action(
-            self.trUtf8('Export from repository'),
+            self.tr('Export from repository'),
             UI.PixmapCache.getIcon("vcsExport.png"),
-            self.trUtf8('&Export from repository...'),
+            self.tr('&Export from repository...'),
             0, 0, self, 'mercurial_export_repo')
-        self.vcsExportAct.setStatusTip(self.trUtf8(
+        self.vcsExportAct.setStatusTip(self.tr(
             'Export a project from the repository'
         ))
-        self.vcsExportAct.setWhatsThis(self.trUtf8(
+        self.vcsExportAct.setWhatsThis(self.tr(
             """<b>Export from repository</b>"""
             """<p>This exports a project from the repository.</p>"""
         ))
@@ -240,14 +240,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsExportAct)
         
         self.vcsLogAct = E5Action(
-            self.trUtf8('Show log'),
+            self.tr('Show log'),
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show &log'),
+            self.tr('Show &log'),
             0, 0, self, 'mercurial_log')
-        self.vcsLogAct.setStatusTip(self.trUtf8(
+        self.vcsLogAct.setStatusTip(self.tr(
             'Show the log of the local project'
         ))
-        self.vcsLogAct.setWhatsThis(self.trUtf8(
+        self.vcsLogAct.setWhatsThis(self.tr(
             """<b>Show log</b>"""
             """<p>This shows the log of the local project.</p>"""
         ))
@@ -255,14 +255,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsLogAct)
         
         self.hgLogBrowserAct = E5Action(
-            self.trUtf8('Show log browser'),
+            self.tr('Show log browser'),
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log browser'),
+            self.tr('Show log browser'),
             0, 0, self, 'mercurial_log_browser')
-        self.hgLogBrowserAct.setStatusTip(self.trUtf8(
+        self.hgLogBrowserAct.setStatusTip(self.tr(
             'Show a dialog to browse the log of the local project'
         ))
-        self.hgLogBrowserAct.setWhatsThis(self.trUtf8(
+        self.hgLogBrowserAct.setWhatsThis(self.tr(
             """<b>Show log browser</b>"""
             """<p>This shows a dialog to browse the log of the local"""
             """ project. A limited number of entries is shown first."""
@@ -272,14 +272,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
-            self.trUtf8('Show difference'),
+            self.tr('Show difference'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show &difference'),
+            self.tr('Show &difference'),
             0, 0, self, 'mercurial_diff')
-        self.vcsDiffAct.setStatusTip(self.trUtf8(
+        self.vcsDiffAct.setStatusTip(self.tr(
             'Show the difference of the local project to the repository'
         ))
-        self.vcsDiffAct.setWhatsThis(self.trUtf8(
+        self.vcsDiffAct.setWhatsThis(self.tr(
             """<b>Show difference</b>"""
             """<p>This shows the difference of the local project to the"""
             """ repository.</p>"""
@@ -288,14 +288,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsDiffAct)
         
         self.hgExtDiffAct = E5Action(
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             0, 0, self, 'mercurial_extendeddiff')
-        self.hgExtDiffAct.setStatusTip(self.trUtf8(
+        self.hgExtDiffAct.setStatusTip(self.tr(
             'Show the difference of revisions of the project to the repository'
         ))
-        self.hgExtDiffAct.setWhatsThis(self.trUtf8(
+        self.hgExtDiffAct.setWhatsThis(self.tr(
             """<b>Show difference (extended)</b>"""
             """<p>This shows the difference of selectable revisions of the"""
             """ project.</p>"""
@@ -304,14 +304,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgExtDiffAct)
         
         self.vcsStatusAct = E5Action(
-            self.trUtf8('Show status'),
+            self.tr('Show status'),
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show &status...'),
+            self.tr('Show &status...'),
             0, 0, self, 'mercurial_status')
-        self.vcsStatusAct.setStatusTip(self.trUtf8(
+        self.vcsStatusAct.setStatusTip(self.tr(
             'Show the status of the local project'
         ))
-        self.vcsStatusAct.setWhatsThis(self.trUtf8(
+        self.vcsStatusAct.setWhatsThis(self.tr(
             """<b>Show status</b>"""
             """<p>This shows the status of the local project.</p>"""
         ))
@@ -319,14 +319,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsStatusAct)
         
         self.hgSummaryAct = E5Action(
-            self.trUtf8('Show Summary'),
+            self.tr('Show Summary'),
             UI.PixmapCache.getIcon("vcsSummary.png"),
-            self.trUtf8('Show summary...'),
+            self.tr('Show summary...'),
             0, 0, self, 'mercurial_summary')
-        self.hgSummaryAct.setStatusTip(self.trUtf8(
+        self.hgSummaryAct.setStatusTip(self.tr(
             'Show summary information of the working directory status'
         ))
-        self.hgSummaryAct.setWhatsThis(self.trUtf8(
+        self.hgSummaryAct.setWhatsThis(self.tr(
             """<b>Show summary</b>"""
             """<p>This shows some summary information of the working"""
             """ directory status.</p>"""
@@ -335,13 +335,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgSummaryAct)
         
         self.hgHeadsAct = E5Action(
-            self.trUtf8('Show heads'),
-            self.trUtf8('Show heads'),
+            self.tr('Show heads'),
+            self.tr('Show heads'),
             0, 0, self, 'mercurial_heads')
-        self.hgHeadsAct.setStatusTip(self.trUtf8(
+        self.hgHeadsAct.setStatusTip(self.tr(
             'Show the heads of the repository'
         ))
-        self.hgHeadsAct.setWhatsThis(self.trUtf8(
+        self.hgHeadsAct.setWhatsThis(self.tr(
             """<b>Show heads</b>"""
             """<p>This shows the heads of the repository.</p>"""
         ))
@@ -349,13 +349,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgHeadsAct)
         
         self.hgParentsAct = E5Action(
-            self.trUtf8('Show parents'),
-            self.trUtf8('Show parents'),
+            self.tr('Show parents'),
+            self.tr('Show parents'),
             0, 0, self, 'mercurial_parents')
-        self.hgParentsAct.setStatusTip(self.trUtf8(
+        self.hgParentsAct.setStatusTip(self.tr(
             'Show the parents of the repository'
         ))
-        self.hgParentsAct.setWhatsThis(self.trUtf8(
+        self.hgParentsAct.setWhatsThis(self.tr(
             """<b>Show parents</b>"""
             """<p>This shows the parents of the repository.</p>"""
         ))
@@ -363,13 +363,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgParentsAct)
         
         self.hgTipAct = E5Action(
-            self.trUtf8('Show tip'),
-            self.trUtf8('Show tip'),
+            self.tr('Show tip'),
+            self.tr('Show tip'),
             0, 0, self, 'mercurial_tip')
-        self.hgTipAct.setStatusTip(self.trUtf8(
+        self.hgTipAct.setStatusTip(self.tr(
             'Show the tip of the repository'
         ))
-        self.hgTipAct.setWhatsThis(self.trUtf8(
+        self.hgTipAct.setWhatsThis(self.tr(
             """<b>Show tip</b>"""
             """<p>This shows the tip of the repository.</p>"""
         ))
@@ -377,14 +377,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgTipAct)
         
         self.vcsRevertAct = E5Action(
-            self.trUtf8('Revert changes'),
+            self.tr('Revert changes'),
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Re&vert changes'),
+            self.tr('Re&vert changes'),
             0, 0, self, 'mercurial_revert')
-        self.vcsRevertAct.setStatusTip(self.trUtf8(
+        self.vcsRevertAct.setStatusTip(self.tr(
             'Revert all changes made to the local project'
         ))
-        self.vcsRevertAct.setWhatsThis(self.trUtf8(
+        self.vcsRevertAct.setWhatsThis(self.tr(
             """<b>Revert changes</b>"""
             """<p>This reverts all changes made to the local project.</p>"""
         ))
@@ -392,14 +392,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsRevertAct)
         
         self.vcsMergeAct = E5Action(
-            self.trUtf8('Merge'),
+            self.tr('Merge'),
             UI.PixmapCache.getIcon("vcsMerge.png"),
-            self.trUtf8('Mer&ge changes...'),
+            self.tr('Mer&ge changes...'),
             0, 0, self, 'mercurial_merge')
-        self.vcsMergeAct.setStatusTip(self.trUtf8(
+        self.vcsMergeAct.setStatusTip(self.tr(
             'Merge changes of a revision into the local project'
         ))
-        self.vcsMergeAct.setWhatsThis(self.trUtf8(
+        self.vcsMergeAct.setWhatsThis(self.tr(
             """<b>Merge</b>"""
             """<p>This merges changes of a revision into the local"""
             """ project.</p>"""
@@ -408,13 +408,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsMergeAct)
         
         self.vcsResolveAct = E5Action(
-            self.trUtf8('Conflicts resolved'),
-            self.trUtf8('Con&flicts resolved'),
+            self.tr('Conflicts resolved'),
+            self.tr('Con&flicts resolved'),
             0, 0, self, 'mercurial_resolve')
-        self.vcsResolveAct.setStatusTip(self.trUtf8(
+        self.vcsResolveAct.setStatusTip(self.tr(
             'Mark all conflicts of the local project as resolved'
         ))
-        self.vcsResolveAct.setWhatsThis(self.trUtf8(
+        self.vcsResolveAct.setWhatsThis(self.tr(
             """<b>Conflicts resolved</b>"""
             """<p>This marks all conflicts of the local project as"""
             """ resolved.</p>"""
@@ -423,14 +423,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsResolveAct)
         
         self.vcsTagAct = E5Action(
-            self.trUtf8('Tag in repository'),
+            self.tr('Tag in repository'),
             UI.PixmapCache.getIcon("vcsTag.png"),
-            self.trUtf8('&Tag in repository...'),
+            self.tr('&Tag in repository...'),
             0, 0, self, 'mercurial_tag')
-        self.vcsTagAct.setStatusTip(self.trUtf8(
+        self.vcsTagAct.setStatusTip(self.tr(
             'Tag the local project in the repository'
         ))
-        self.vcsTagAct.setWhatsThis(self.trUtf8(
+        self.vcsTagAct.setWhatsThis(self.tr(
             """<b>Tag in repository</b>"""
             """<p>This tags the local project in the repository.</p>"""
         ))
@@ -438,13 +438,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsTagAct)
         
         self.hgTagListAct = E5Action(
-            self.trUtf8('List tags'),
-            self.trUtf8('List tags...'),
+            self.tr('List tags'),
+            self.tr('List tags...'),
             0, 0, self, 'mercurial_list_tags')
-        self.hgTagListAct.setStatusTip(self.trUtf8(
+        self.hgTagListAct.setStatusTip(self.tr(
             'List tags of the project'
         ))
-        self.hgTagListAct.setWhatsThis(self.trUtf8(
+        self.hgTagListAct.setWhatsThis(self.tr(
             """<b>List tags</b>"""
             """<p>This lists the tags of the project.</p>"""
         ))
@@ -452,13 +452,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgTagListAct)
         
         self.hgBranchListAct = E5Action(
-            self.trUtf8('List branches'),
-            self.trUtf8('List branches...'),
+            self.tr('List branches'),
+            self.tr('List branches...'),
             0, 0, self, 'mercurial_list_branches')
-        self.hgBranchListAct.setStatusTip(self.trUtf8(
+        self.hgBranchListAct.setStatusTip(self.tr(
             'List branches of the project'
         ))
-        self.hgBranchListAct.setWhatsThis(self.trUtf8(
+        self.hgBranchListAct.setWhatsThis(self.tr(
             """<b>List branches</b>"""
             """<p>This lists the branches of the project.</p>"""
         ))
@@ -466,14 +466,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBranchListAct)
         
         self.hgBranchAct = E5Action(
-            self.trUtf8('Create branch'),
+            self.tr('Create branch'),
             UI.PixmapCache.getIcon("vcsBranch.png"),
-            self.trUtf8('Create &branch...'),
+            self.tr('Create &branch...'),
             0, 0, self, 'mercurial_branch')
-        self.hgBranchAct.setStatusTip(self.trUtf8(
+        self.hgBranchAct.setStatusTip(self.tr(
             'Create a new branch for the local project in the repository'
         ))
-        self.hgBranchAct.setWhatsThis(self.trUtf8(
+        self.hgBranchAct.setWhatsThis(self.tr(
             """<b>Create branch</b>"""
             """<p>This creates a new branch for the local project """
             """in the repository.</p>"""
@@ -482,14 +482,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBranchAct)
         
         self.hgPushBranchAct = E5Action(
-            self.trUtf8('Push new branch'),
-            self.trUtf8('Push new branch'),
+            self.tr('Push new branch'),
+            self.tr('Push new branch'),
             0, 0, self, 'mercurial_push_branch')
-        self.hgPushBranchAct.setStatusTip(self.trUtf8(
+        self.hgPushBranchAct.setStatusTip(self.tr(
             'Push the current branch of the local project as a new named'
             ' branch'
         ))
-        self.hgPushBranchAct.setWhatsThis(self.trUtf8(
+        self.hgPushBranchAct.setWhatsThis(self.tr(
             """<b>Push new branch</b>"""
             """<p>This pushes the current branch of the local project"""
             """ as a new named branch.</p>"""
@@ -498,13 +498,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgPushBranchAct)
         
         self.hgCloseBranchAct = E5Action(
-            self.trUtf8('Close branch'),
-            self.trUtf8('Close branch'),
+            self.tr('Close branch'),
+            self.tr('Close branch'),
             0, 0, self, 'mercurial_close_branch')
-        self.hgCloseBranchAct.setStatusTip(self.trUtf8(
+        self.hgCloseBranchAct.setStatusTip(self.tr(
             'Close the current branch of the local project'
         ))
-        self.hgCloseBranchAct.setWhatsThis(self.trUtf8(
+        self.hgCloseBranchAct.setWhatsThis(self.tr(
             """<b>Close branch</b>"""
             """<p>This closes the current branch of the local project.</p>"""
         ))
@@ -512,13 +512,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgCloseBranchAct)
         
         self.hgShowBranchAct = E5Action(
-            self.trUtf8('Show current branch'),
-            self.trUtf8('Show current branch'),
+            self.tr('Show current branch'),
+            self.tr('Show current branch'),
             0, 0, self, 'mercurial_show_branch')
-        self.hgShowBranchAct.setStatusTip(self.trUtf8(
+        self.hgShowBranchAct.setStatusTip(self.tr(
             'Show the current branch of the project'
         ))
-        self.hgShowBranchAct.setWhatsThis(self.trUtf8(
+        self.hgShowBranchAct.setWhatsThis(self.tr(
             """<b>Show current branch</b>"""
             """<p>This shows the current branch of the project.</p>"""
         ))
@@ -526,14 +526,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgShowBranchAct)
         
         self.vcsSwitchAct = E5Action(
-            self.trUtf8('Switch'),
+            self.tr('Switch'),
             UI.PixmapCache.getIcon("vcsSwitch.png"),
-            self.trUtf8('S&witch...'),
+            self.tr('S&witch...'),
             0, 0, self, 'mercurial_switch')
-        self.vcsSwitchAct.setStatusTip(self.trUtf8(
+        self.vcsSwitchAct.setStatusTip(self.tr(
             'Switch the working directory to another revision'
         ))
-        self.vcsSwitchAct.setWhatsThis(self.trUtf8(
+        self.vcsSwitchAct.setWhatsThis(self.tr(
             """<b>Switch</b>"""
             """<p>This switches the working directory to another"""
             """ revision.</p>"""
@@ -542,13 +542,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsSwitchAct)
         
         self.vcsCleanupAct = E5Action(
-            self.trUtf8('Cleanup'),
-            self.trUtf8('Cleanu&p'),
+            self.tr('Cleanup'),
+            self.tr('Cleanu&p'),
             0, 0, self, 'mercurial_cleanup')
-        self.vcsCleanupAct.setStatusTip(self.trUtf8(
+        self.vcsCleanupAct.setStatusTip(self.tr(
             'Cleanup the local project'
         ))
-        self.vcsCleanupAct.setWhatsThis(self.trUtf8(
+        self.vcsCleanupAct.setWhatsThis(self.tr(
             """<b>Cleanup</b>"""
             """<p>This performs a cleanup of the local project.</p>"""
         ))
@@ -556,13 +556,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsCleanupAct)
         
         self.vcsCommandAct = E5Action(
-            self.trUtf8('Execute command'),
-            self.trUtf8('E&xecute command...'),
+            self.tr('Execute command'),
+            self.tr('E&xecute command...'),
             0, 0, self, 'mercurial_command')
-        self.vcsCommandAct.setStatusTip(self.trUtf8(
+        self.vcsCommandAct.setStatusTip(self.tr(
             'Execute an arbitrary Mercurial command'
         ))
-        self.vcsCommandAct.setWhatsThis(self.trUtf8(
+        self.vcsCommandAct.setWhatsThis(self.tr(
             """<b>Execute command</b>"""
             """<p>This opens a dialog to enter an arbitrary Mercurial"""
             """ command.</p>"""
@@ -571,12 +571,12 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsCommandAct)
         
         self.vcsPropsAct = E5Action(
-            self.trUtf8('Command options'),
-            self.trUtf8('Command &options...'), 0, 0, self,
+            self.tr('Command options'),
+            self.tr('Command &options...'), 0, 0, self,
             'mercurial_options')
-        self.vcsPropsAct.setStatusTip(self.trUtf8(
+        self.vcsPropsAct.setStatusTip(self.tr(
             'Show the Mercurial command options'))
-        self.vcsPropsAct.setWhatsThis(self.trUtf8(
+        self.vcsPropsAct.setWhatsThis(self.tr(
             """<b>Command options...</b>"""
             """<p>This shows a dialog to edit the Mercurial command"""
             """ options.</p>"""
@@ -585,13 +585,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsPropsAct)
         
         self.hgConfigAct = E5Action(
-            self.trUtf8('Configure'),
-            self.trUtf8('Configure...'),
+            self.tr('Configure'),
+            self.tr('Configure...'),
             0, 0, self, 'mercurial_configure')
-        self.hgConfigAct.setStatusTip(self.trUtf8(
+        self.hgConfigAct.setStatusTip(self.tr(
             'Show the configuration dialog with the Mercurial page selected'
         ))
-        self.hgConfigAct.setWhatsThis(self.trUtf8(
+        self.hgConfigAct.setWhatsThis(self.tr(
             """<b>Configure</b>"""
             """<p>Show the configuration dialog with the Mercurial page"""
             """ selected.</p>"""
@@ -600,13 +600,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgConfigAct)
         
         self.hgEditUserConfigAct = E5Action(
-            self.trUtf8('Edit user configuration'),
-            self.trUtf8('Edit user configuration...'),
+            self.tr('Edit user configuration'),
+            self.tr('Edit user configuration...'),
             0, 0, self, 'mercurial_user_configure')
-        self.hgEditUserConfigAct.setStatusTip(self.trUtf8(
+        self.hgEditUserConfigAct.setStatusTip(self.tr(
             'Show an editor to edit the user configuration file'
         ))
-        self.hgEditUserConfigAct.setWhatsThis(self.trUtf8(
+        self.hgEditUserConfigAct.setWhatsThis(self.tr(
             """<b>Edit user configuration</b>"""
             """<p>Show an editor to edit the user configuration file.</p>"""
         ))
@@ -614,13 +614,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgEditUserConfigAct)
         
         self.hgRepoConfigAct = E5Action(
-            self.trUtf8('Edit repository configuration'),
-            self.trUtf8('Edit repository configuration...'),
+            self.tr('Edit repository configuration'),
+            self.tr('Edit repository configuration...'),
             0, 0, self, 'mercurial_repo_configure')
-        self.hgRepoConfigAct.setStatusTip(self.trUtf8(
+        self.hgRepoConfigAct.setStatusTip(self.tr(
             'Show an editor to edit the repository configuration file'
         ))
-        self.hgRepoConfigAct.setWhatsThis(self.trUtf8(
+        self.hgRepoConfigAct.setWhatsThis(self.tr(
             """<b>Edit repository configuration</b>"""
             """<p>Show an editor to edit the repository configuration"""
             """ file.</p>"""
@@ -629,14 +629,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgRepoConfigAct)
         
         self.hgShowConfigAct = E5Action(
-            self.trUtf8('Show combined configuration settings'),
-            self.trUtf8('Show combined configuration settings...'),
+            self.tr('Show combined configuration settings'),
+            self.tr('Show combined configuration settings...'),
             0, 0, self, 'mercurial_show_config')
-        self.hgShowConfigAct.setStatusTip(self.trUtf8(
+        self.hgShowConfigAct.setStatusTip(self.tr(
             'Show the combined configuration settings from all configuration'
             ' files'
         ))
-        self.hgShowConfigAct.setWhatsThis(self.trUtf8(
+        self.hgShowConfigAct.setWhatsThis(self.tr(
             """<b>Show combined configuration settings</b>"""
             """<p>This shows the combined configuration settings"""
             """ from all configuration files.</p>"""
@@ -645,13 +645,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgShowConfigAct)
         
         self.hgShowPathsAct = E5Action(
-            self.trUtf8('Show paths'),
-            self.trUtf8('Show paths...'),
+            self.tr('Show paths'),
+            self.tr('Show paths...'),
             0, 0, self, 'mercurial_show_paths')
-        self.hgShowPathsAct.setStatusTip(self.trUtf8(
+        self.hgShowPathsAct.setStatusTip(self.tr(
             'Show the aliases for remote repositories'
         ))
-        self.hgShowPathsAct.setWhatsThis(self.trUtf8(
+        self.hgShowPathsAct.setWhatsThis(self.tr(
             """<b>Show paths</b>"""
             """<p>This shows the aliases for remote repositories.</p>"""
         ))
@@ -659,13 +659,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgShowPathsAct)
         
         self.hgVerifyAct = E5Action(
-            self.trUtf8('Verify repository'),
-            self.trUtf8('Verify repository...'),
+            self.tr('Verify repository'),
+            self.tr('Verify repository...'),
             0, 0, self, 'mercurial_verify')
-        self.hgVerifyAct.setStatusTip(self.trUtf8(
+        self.hgVerifyAct.setStatusTip(self.tr(
             'Verify the integrity of the repository'
         ))
-        self.hgVerifyAct.setWhatsThis(self.trUtf8(
+        self.hgVerifyAct.setWhatsThis(self.tr(
             """<b>Verify repository</b>"""
             """<p>This verifies the integrity of the repository.</p>"""
         ))
@@ -673,13 +673,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgVerifyAct)
         
         self.hgRecoverAct = E5Action(
-            self.trUtf8('Recover'),
-            self.trUtf8('Recover...'),
+            self.tr('Recover'),
+            self.tr('Recover...'),
             0, 0, self, 'mercurial_recover')
-        self.hgRecoverAct.setStatusTip(self.trUtf8(
+        self.hgRecoverAct.setStatusTip(self.tr(
             'Recover from an interrupted transaction'
         ))
-        self.hgRecoverAct.setWhatsThis(self.trUtf8(
+        self.hgRecoverAct.setWhatsThis(self.tr(
             """<b>Recover</b>"""
             """<p>This recovers from an interrupted transaction.</p>"""
         ))
@@ -687,13 +687,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgRecoverAct)
         
         self.hgIdentifyAct = E5Action(
-            self.trUtf8('Identify'),
-            self.trUtf8('Identify...'),
+            self.tr('Identify'),
+            self.tr('Identify...'),
             0, 0, self, 'mercurial_identify')
-        self.hgIdentifyAct.setStatusTip(self.trUtf8(
+        self.hgIdentifyAct.setStatusTip(self.tr(
             'Identify the project directory'
         ))
-        self.hgIdentifyAct.setWhatsThis(self.trUtf8(
+        self.hgIdentifyAct.setWhatsThis(self.tr(
             """<b>Identify</b>"""
             """<p>This identifies the project directory.</p>"""
         ))
@@ -701,13 +701,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgIdentifyAct)
         
         self.hgCreateIgnoreAct = E5Action(
-            self.trUtf8('Create .hgignore'),
-            self.trUtf8('Create .hgignore'),
+            self.tr('Create .hgignore'),
+            self.tr('Create .hgignore'),
             0, 0, self, 'mercurial_create ignore')
-        self.hgCreateIgnoreAct.setStatusTip(self.trUtf8(
+        self.hgCreateIgnoreAct.setStatusTip(self.tr(
             'Create a .hgignore file with default values'
         ))
-        self.hgCreateIgnoreAct.setWhatsThis(self.trUtf8(
+        self.hgCreateIgnoreAct.setWhatsThis(self.tr(
             """<b>Create .hgignore</b>"""
             """<p>This creates a .hgignore file with default values.</p>"""
         ))
@@ -715,13 +715,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgCreateIgnoreAct)
         
         self.hgBundleAct = E5Action(
-            self.trUtf8('Create changegroup'),
-            self.trUtf8('Create changegroup...'),
+            self.tr('Create changegroup'),
+            self.tr('Create changegroup...'),
             0, 0, self, 'mercurial_bundle')
-        self.hgBundleAct.setStatusTip(self.trUtf8(
+        self.hgBundleAct.setStatusTip(self.tr(
             'Create changegroup file collecting changesets'
         ))
-        self.hgBundleAct.setWhatsThis(self.trUtf8(
+        self.hgBundleAct.setWhatsThis(self.tr(
             """<b>Create changegroup</b>"""
             """<p>This creates a changegroup file collecting selected"""
             """ changesets (hg bundle).</p>"""
@@ -730,13 +730,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBundleAct)
         
         self.hgPreviewBundleAct = E5Action(
-            self.trUtf8('Preview changegroup'),
-            self.trUtf8('Preview changegroup...'),
+            self.tr('Preview changegroup'),
+            self.tr('Preview changegroup...'),
             0, 0, self, 'mercurial_preview_bundle')
-        self.hgPreviewBundleAct.setStatusTip(self.trUtf8(
+        self.hgPreviewBundleAct.setStatusTip(self.tr(
             'Preview a changegroup file containing a collection of changesets'
         ))
-        self.hgPreviewBundleAct.setWhatsThis(self.trUtf8(
+        self.hgPreviewBundleAct.setWhatsThis(self.tr(
             """<b>Preview changegroup</b>"""
             """<p>This previews a changegroup file containing a collection"""
             """ of changesets.</p>"""
@@ -745,13 +745,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgPreviewBundleAct)
         
         self.hgIdentifyBundleAct = E5Action(
-            self.trUtf8('Identify changegroup'),
-            self.trUtf8('Identify changegroup...'),
+            self.tr('Identify changegroup'),
+            self.tr('Identify changegroup...'),
             0, 0, self, 'mercurial_identify_bundle')
-        self.hgIdentifyBundleAct.setStatusTip(self.trUtf8(
+        self.hgIdentifyBundleAct.setStatusTip(self.tr(
             'Identify a changegroup file containing a collection of changesets'
         ))
-        self.hgIdentifyBundleAct.setWhatsThis(self.trUtf8(
+        self.hgIdentifyBundleAct.setWhatsThis(self.tr(
             """<b>Identify changegroup</b>"""
             """<p>This identifies a changegroup file containing a"""
             """ collection of changesets.</p>"""
@@ -760,13 +760,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgIdentifyBundleAct)
         
         self.hgUnbundleAct = E5Action(
-            self.trUtf8('Apply changegroups'),
-            self.trUtf8('Apply changegroups...'),
+            self.tr('Apply changegroups'),
+            self.tr('Apply changegroups...'),
             0, 0, self, 'mercurial_unbundle')
-        self.hgUnbundleAct.setStatusTip(self.trUtf8(
+        self.hgUnbundleAct.setStatusTip(self.tr(
             'Apply one or several changegroup files'
         ))
-        self.hgUnbundleAct.setWhatsThis(self.trUtf8(
+        self.hgUnbundleAct.setWhatsThis(self.tr(
             """<b>Apply changegroups</b>"""
             """<p>This applies one or several changegroup files generated by"""
             """ the 'Create changegroup' action (hg unbundle).</p>"""
@@ -775,13 +775,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgUnbundleAct)
         
         self.hgBisectGoodAct = E5Action(
-            self.trUtf8('Mark as "good"'),
-            self.trUtf8('Mark as "good"...'),
+            self.tr('Mark as "good"'),
+            self.tr('Mark as "good"...'),
             0, 0, self, 'mercurial_bisect_good')
-        self.hgBisectGoodAct.setStatusTip(self.trUtf8(
+        self.hgBisectGoodAct.setStatusTip(self.tr(
             'Mark a selectable changeset as good'
         ))
-        self.hgBisectGoodAct.setWhatsThis(self.trUtf8(
+        self.hgBisectGoodAct.setWhatsThis(self.tr(
             """<b>Mark as good</b>"""
             """<p>This marks a selectable changeset as good.</p>"""
         ))
@@ -789,13 +789,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBisectGoodAct)
         
         self.hgBisectBadAct = E5Action(
-            self.trUtf8('Mark as "bad"'),
-            self.trUtf8('Mark as "bad"...'),
+            self.tr('Mark as "bad"'),
+            self.tr('Mark as "bad"...'),
             0, 0, self, 'mercurial_bisect_bad')
-        self.hgBisectBadAct.setStatusTip(self.trUtf8(
+        self.hgBisectBadAct.setStatusTip(self.tr(
             'Mark a selectable changeset as bad'
         ))
-        self.hgBisectBadAct.setWhatsThis(self.trUtf8(
+        self.hgBisectBadAct.setWhatsThis(self.tr(
             """<b>Mark as bad</b>"""
             """<p>This marks a selectable changeset as bad.</p>"""
         ))
@@ -803,13 +803,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBisectBadAct)
         
         self.hgBisectSkipAct = E5Action(
-            self.trUtf8('Skip'),
-            self.trUtf8('Skip...'),
+            self.tr('Skip'),
+            self.tr('Skip...'),
             0, 0, self, 'mercurial_bisect_skip')
-        self.hgBisectSkipAct.setStatusTip(self.trUtf8(
+        self.hgBisectSkipAct.setStatusTip(self.tr(
             'Skip a selectable changeset'
         ))
-        self.hgBisectSkipAct.setWhatsThis(self.trUtf8(
+        self.hgBisectSkipAct.setWhatsThis(self.tr(
             """<b>Skip</b>"""
             """<p>This skips a selectable changeset.</p>"""
         ))
@@ -817,13 +817,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBisectSkipAct)
         
         self.hgBisectResetAct = E5Action(
-            self.trUtf8('Reset'),
-            self.trUtf8('Reset'),
+            self.tr('Reset'),
+            self.tr('Reset'),
             0, 0, self, 'mercurial_bisect_reset')
-        self.hgBisectResetAct.setStatusTip(self.trUtf8(
+        self.hgBisectResetAct.setStatusTip(self.tr(
             'Reset the bisect search data'
         ))
-        self.hgBisectResetAct.setWhatsThis(self.trUtf8(
+        self.hgBisectResetAct.setWhatsThis(self.tr(
             """<b>Reset</b>"""
             """<p>This resets the bisect search data.</p>"""
         ))
@@ -831,13 +831,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBisectResetAct)
         
         self.hgBackoutAct = E5Action(
-            self.trUtf8('Back out changeset'),
-            self.trUtf8('Back out changeset'),
+            self.tr('Back out changeset'),
+            self.tr('Back out changeset'),
             0, 0, self, 'mercurial_backout')
-        self.hgBackoutAct.setStatusTip(self.trUtf8(
+        self.hgBackoutAct.setStatusTip(self.tr(
             'Back out changes of an earlier changeset'
         ))
-        self.hgBackoutAct.setWhatsThis(self.trUtf8(
+        self.hgBackoutAct.setWhatsThis(self.tr(
             """<b>Back out changeset</b>"""
             """<p>This backs out changes of an earlier changeset.</p>"""
         ))
@@ -845,13 +845,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBackoutAct)
         
         self.hgRollbackAct = E5Action(
-            self.trUtf8('Rollback last transaction'),
-            self.trUtf8('Rollback last transaction'),
+            self.tr('Rollback last transaction'),
+            self.tr('Rollback last transaction'),
             0, 0, self, 'mercurial_rollback')
-        self.hgRollbackAct.setStatusTip(self.trUtf8(
+        self.hgRollbackAct.setStatusTip(self.tr(
             'Rollback the last transaction'
         ))
-        self.hgRollbackAct.setWhatsThis(self.trUtf8(
+        self.hgRollbackAct.setWhatsThis(self.tr(
             """<b>Rollback last transaction</b>"""
             """<p>This performs a rollback of the last transaction."""
             """ Transactions are used to encapsulate the effects of all"""
@@ -872,13 +872,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgRollbackAct)
         
         self.hgServeAct = E5Action(
-            self.trUtf8('Serve project repository'),
-            self.trUtf8('Serve project repository...'),
+            self.tr('Serve project repository'),
+            self.tr('Serve project repository...'),
             0, 0, self, 'mercurial_serve')
-        self.hgServeAct.setStatusTip(self.trUtf8(
+        self.hgServeAct.setStatusTip(self.tr(
             'Serve the project repository'
         ))
-        self.hgServeAct.setWhatsThis(self.trUtf8(
+        self.hgServeAct.setWhatsThis(self.tr(
             """<b>Serve project repository</b>"""
             """<p>This serves the project repository.</p>"""
         ))
@@ -886,13 +886,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgServeAct)
         
         self.hgImportAct = E5Action(
-            self.trUtf8('Import Patch'),
-            self.trUtf8('Import Patch...'),
+            self.tr('Import Patch'),
+            self.tr('Import Patch...'),
             0, 0, self, 'mercurial_import')
-        self.hgImportAct.setStatusTip(self.trUtf8(
+        self.hgImportAct.setStatusTip(self.tr(
             'Import a patch from a patch file'
         ))
-        self.hgImportAct.setWhatsThis(self.trUtf8(
+        self.hgImportAct.setWhatsThis(self.tr(
             """<b>Import Patch</b>"""
             """<p>This imports a patch from a patch file into the"""
             """ project.</p>"""
@@ -901,13 +901,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgImportAct)
         
         self.hgExportAct = E5Action(
-            self.trUtf8('Export Patches'),
-            self.trUtf8('Export Patches...'),
+            self.tr('Export Patches'),
+            self.tr('Export Patches...'),
             0, 0, self, 'mercurial_export')
-        self.hgExportAct.setStatusTip(self.trUtf8(
+        self.hgExportAct.setStatusTip(self.tr(
             'Export revisions to patch files'
         ))
-        self.hgExportAct.setWhatsThis(self.trUtf8(
+        self.hgExportAct.setWhatsThis(self.tr(
             """<b>Export Patches</b>"""
             """<p>This exports revisions of the project to patch files.</p>"""
         ))
@@ -915,13 +915,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgExportAct)
         
         self.hgPhaseAct = E5Action(
-            self.trUtf8('Change Phase'),
-            self.trUtf8('Change Phase...'),
+            self.tr('Change Phase'),
+            self.tr('Change Phase...'),
             0, 0, self, 'mercurial_change_phase')
-        self.hgPhaseAct.setStatusTip(self.trUtf8(
+        self.hgPhaseAct.setStatusTip(self.tr(
             'Change the phase of revisions'
         ))
-        self.hgPhaseAct.setWhatsThis(self.trUtf8(
+        self.hgPhaseAct.setWhatsThis(self.tr(
             """<b>Change Phase</b>"""
             """<p>This changes the phase of revisions.</p>"""
         ))
@@ -929,14 +929,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgPhaseAct)
         
         self.hgGraftAct = E5Action(
-            self.trUtf8('Copy Changesets'),
+            self.tr('Copy Changesets'),
             UI.PixmapCache.getIcon("vcsGraft.png"),
-            self.trUtf8('Copy Changesets'),
+            self.tr('Copy Changesets'),
             0, 0, self, 'mercurial_graft')
-        self.hgGraftAct.setStatusTip(self.trUtf8(
+        self.hgGraftAct.setStatusTip(self.tr(
             'Copies changesets from another branch'
         ))
-        self.hgGraftAct.setWhatsThis(self.trUtf8(
+        self.hgGraftAct.setWhatsThis(self.tr(
             """<b>Copy Changesets</b>"""
             """<p>This copies changesets from another branch on top of the"""
             """ current working directory with the user, date and"""
@@ -946,13 +946,13 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgGraftAct)
         
         self.hgGraftContinueAct = E5Action(
-            self.trUtf8('Continue Copying Session'),
-            self.trUtf8('Continue Copying Session'),
+            self.tr('Continue Copying Session'),
+            self.tr('Continue Copying Session'),
             0, 0, self, 'mercurial_graft_continue')
-        self.hgGraftContinueAct.setStatusTip(self.trUtf8(
+        self.hgGraftContinueAct.setStatusTip(self.tr(
             'Continue the last copying session after conflicts were resolved'
         ))
-        self.hgGraftContinueAct.setWhatsThis(self.trUtf8(
+        self.hgGraftContinueAct.setWhatsThis(self.tr(
             """<b>Continue Copying Session</b>"""
             """<p>This continues the last copying session after conflicts"""
             """ were resolved.</p>"""
@@ -961,14 +961,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgGraftContinueAct)
         
         self.hgAddSubrepoAct = E5Action(
-            self.trUtf8('Add'),
+            self.tr('Add'),
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add...'),
+            self.tr('Add...'),
             0, 0, self, 'mercurial_add_subrepo')
-        self.hgAddSubrepoAct.setStatusTip(self.trUtf8(
+        self.hgAddSubrepoAct.setStatusTip(self.tr(
             'Add a sub-repository'
         ))
-        self.hgAddSubrepoAct.setWhatsThis(self.trUtf8(
+        self.hgAddSubrepoAct.setWhatsThis(self.tr(
             """<b>Add...</b>"""
             """<p>Add a sub-repository to the project.</p>"""
         ))
@@ -976,14 +976,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgAddSubrepoAct)
         
         self.hgRemoveSubreposAct = E5Action(
-            self.trUtf8('Remove'),
+            self.tr('Remove'),
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove...'),
+            self.tr('Remove...'),
             0, 0, self, 'mercurial_remove_subrepos')
-        self.hgRemoveSubreposAct.setStatusTip(self.trUtf8(
+        self.hgRemoveSubreposAct.setStatusTip(self.tr(
             'Remove sub-repositories'
         ))
-        self.hgRemoveSubreposAct.setWhatsThis(self.trUtf8(
+        self.hgRemoveSubreposAct.setWhatsThis(self.tr(
             """<b>Remove...</b>"""
             """<p>Remove sub-repositories from the project.</p>"""
         ))
@@ -992,14 +992,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgRemoveSubreposAct)
         
         self.hgArchiveAct = E5Action(
-            self.trUtf8('Create unversioned archive'),
+            self.tr('Create unversioned archive'),
             UI.PixmapCache.getIcon("vcsExport.png"),
-            self.trUtf8('Create unversioned archive...'),
+            self.tr('Create unversioned archive...'),
             0, 0, self, 'mercurial_archive')
-        self.hgArchiveAct.setStatusTip(self.trUtf8(
+        self.hgArchiveAct.setStatusTip(self.tr(
             'Create an unversioned archive from the repository'
         ))
-        self.hgArchiveAct.setWhatsThis(self.trUtf8(
+        self.hgArchiveAct.setWhatsThis(self.tr(
             """<b>Create unversioned archive...</b>"""
             """<p>This creates an unversioned archive from the"""
             """ repository.</p>"""
@@ -1017,7 +1017,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         self.subMenus = []
         
-        adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
+        adminMenu = QMenu(self.tr("Repository Administration"), menu)
         adminMenu.setTearOffEnabled(True)
         adminMenu.addAction(self.hgHeadsAct)
         adminMenu.addAction(self.hgParentsAct)
@@ -1040,7 +1040,7 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgVerifyAct)
         self.subMenus.append(adminMenu)
         
-        specialsMenu = QMenu(self.trUtf8("Specials"), menu)
+        specialsMenu = QMenu(self.tr("Specials"), menu)
         specialsMenu.setTearOffEnabled(True)
         specialsMenu.addAction(self.hgArchiveAct)
         specialsMenu.addSeparator()
@@ -1049,7 +1049,7 @@ class HgProjectHelper(VcsProjectHelper):
         specialsMenu.addAction(self.hgServeAct)
         self.subMenus.append(specialsMenu)
         
-        bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
+        bundleMenu = QMenu(self.tr("Changegroup Management"), menu)
         bundleMenu.setTearOffEnabled(True)
         bundleMenu.addAction(self.hgBundleAct)
         bundleMenu.addAction(self.hgIdentifyBundleAct)
@@ -1057,13 +1057,13 @@ class HgProjectHelper(VcsProjectHelper):
         bundleMenu.addAction(self.hgUnbundleAct)
         self.subMenus.append(bundleMenu)
         
-        patchMenu = QMenu(self.trUtf8("Patch Management"), menu)
+        patchMenu = QMenu(self.tr("Patch Management"), menu)
         patchMenu.setTearOffEnabled(True)
         patchMenu.addAction(self.hgImportAct)
         patchMenu.addAction(self.hgExportAct)
         self.subMenus.append(patchMenu)
         
-        bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
+        bisectMenu = QMenu(self.tr("Bisect"), menu)
         bisectMenu.setTearOffEnabled(True)
         bisectMenu.addAction(self.hgBisectGoodAct)
         bisectMenu.addAction(self.hgBisectBadAct)
@@ -1071,7 +1071,7 @@ class HgProjectHelper(VcsProjectHelper):
         bisectMenu.addAction(self.hgBisectResetAct)
         self.subMenus.append(bisectMenu)
         
-        self.__extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
+        self.__extensionsMenu = QMenu(self.tr("Extensions"), menu)
         self.__extensionsMenu.setTearOffEnabled(True)
         self.__extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
         self.extensionMenus = {}
@@ -1083,7 +1083,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcs.activeExtensionsChanged.connect(self.__showExtensionMenu)
         
         if self.vcs.version >= (2, 0):
-            graftMenu = QMenu(self.trUtf8("Graft"), menu)
+            graftMenu = QMenu(self.tr("Graft"), menu)
             graftMenu.setIcon(UI.PixmapCache.getIcon("vcsGraft.png"))
             graftMenu.setTearOffEnabled(True)
             graftMenu.addAction(self.hgGraftAct)
@@ -1092,7 +1092,7 @@ class HgProjectHelper(VcsProjectHelper):
             graftMenu = None
         
         if self.vcs.version >= (1, 8):
-            subrepoMenu = QMenu(self.trUtf8("Sub-Repository"), menu)
+            subrepoMenu = QMenu(self.tr("Sub-Repository"), menu)
             subrepoMenu.setTearOffEnabled(True)
             subrepoMenu.addAction(self.hgAddSubrepoAct)
             subrepoMenu.addAction(self.hgRemoveSubreposAct)
@@ -1237,8 +1237,8 @@ class HgProjectHelper(VcsProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 self.parent(),
-                self.trUtf8("Pull"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Pull"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -1400,8 +1400,8 @@ class HgProjectHelper(VcsProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 self.parent(),
-                self.trUtf8("Apply changegroups"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Apply changegroups"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -1456,8 +1456,8 @@ class HgProjectHelper(VcsProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 self.parent(),
-                self.trUtf8("Import Patch"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Import Patch"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -1476,8 +1476,8 @@ class HgProjectHelper(VcsProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 self.parent(),
-                self.trUtf8("Revert Changes"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Revert Changes"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -1496,8 +1496,8 @@ class HgProjectHelper(VcsProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Copy Changesets"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Copy Changesets"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -1511,8 +1511,8 @@ class HgProjectHelper(VcsProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Copy Changesets (Continue)"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Copy Changesets (Continue)"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()

@@ -79,7 +79,7 @@ class StartDialog(QDialog):
         self.ui.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.clearButton = self.ui.buttonBox.addButton(
-            self.trUtf8("Clear Histories"), QDialogButtonBox.ActionRole)
+            self.tr("Clear Histories"), QDialogButtonBox.ActionRole)
         
         self.workdirCompleter = E5DirCompleter(self.ui.workdirCombo)
         
@@ -124,7 +124,7 @@ class StartDialog(QDialog):
         cwd = self.ui.workdirCombo.currentText()
         d = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Working directory"),
+            self.tr("Working directory"),
             cwd,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

@@ -75,7 +75,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         """
         dn = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Export Patches"),
+            self.tr("Export Patches"),
             self.directoryEdit.text(),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         

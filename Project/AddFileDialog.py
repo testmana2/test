@@ -67,7 +67,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             startdir = self.startdir
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select target directory"),
+            self.tr("Select target directory"),
             startdir)
             
         if directory:
@@ -95,7 +95,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype in patterns:
                     patterns[filetype].append(pattern)
-            dfilter = self.trUtf8(
+            dfilter = self.tr(
                 "Source Files ({0});;"
                 "Forms Files ({1});;"
                 "Resource Files ({2});;"
@@ -108,50 +108,50 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
                     " ".join(patterns["RESOURCES"]),
                     " ".join(patterns["INTERFACES"]),
                     " ".join(patterns["TRANSLATIONS"]))
-            caption = self.trUtf8("Select Files")
+            caption = self.tr("Select Files")
         elif self.filter == 'form':
             patterns = []
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "FORMS":
                     patterns.append(pattern)
-            dfilter = self.trUtf8("Forms Files ({0})")\
+            dfilter = self.tr("Forms Files ({0})")\
                 .format(" ".join(patterns))
-            caption = self.trUtf8("Select user-interface files")
+            caption = self.tr("Select user-interface files")
         elif self.filter == "resource":
             patterns = []
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "RESOURCES":
                     patterns.append(pattern)
-            dfilter = self.trUtf8("Resource Files ({0})")\
+            dfilter = self.tr("Resource Files ({0})")\
                 .format(" ".join(patterns))
-            caption = self.trUtf8("Select resource files")
+            caption = self.tr("Select resource files")
         elif self.filter == 'source':
             patterns = []
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "SOURCES":
                     patterns.append(pattern)
-            dfilter = self.trUtf8("Source Files ({0});;All Files (*)")\
+            dfilter = self.tr("Source Files ({0});;All Files (*)")\
                 .format(" ".join(patterns))
-            caption = self.trUtf8("Select source files")
+            caption = self.tr("Select source files")
         elif self.filter == 'interface':
             patterns = []
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "INTERFACES":
                     patterns.append(pattern)
-            dfilter = self.trUtf8("Interface Files ({0})")\
+            dfilter = self.tr("Interface Files ({0})")\
                 .format(" ".join(patterns))
-            caption = self.trUtf8("Select interface files")
+            caption = self.tr("Select interface files")
         elif self.filter == 'translation':
             patterns = []
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "TRANSLATIONS":
                     patterns.append(pattern)
-            dfilter = self.trUtf8("Translation Files ({0})")\
+            dfilter = self.tr("Translation Files ({0})")\
                 .format(" ".join(patterns))
-            caption = self.trUtf8("Select translation files")
+            caption = self.tr("Select translation files")
         elif self.filter == 'others':
-            dfilter = self.trUtf8("All Files (*)")
-            caption = self.trUtf8("Select files")
+            dfilter = self.tr("All Files (*)")
+            caption = self.tr("Select files")
         else:
             return
         

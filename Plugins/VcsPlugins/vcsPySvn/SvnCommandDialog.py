@@ -18,6 +18,7 @@ from .Ui_SvnCommandDialog import Ui_SvnCommandDialog
 import Utilities
 import UI.PixmapCache
 
+
 class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
     """
     Class implementing the Subversion command dialog.
@@ -71,7 +72,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
             cwd = self.projectDirLabel.text()
         d = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Working directory"),
+            self.tr("Working directory"),
             cwd,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         

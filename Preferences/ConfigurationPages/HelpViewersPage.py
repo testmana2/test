@@ -20,6 +20,7 @@ import Preferences
 import Utilities
 import UI.PixmapCache
 
+
 class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
     """
     Class implementing the Help Viewers configuration page.
@@ -80,7 +81,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Custom Viewer"),
+            self.tr("Select Custom Viewer"),
             self.customViewerEdit.text(),
             "")
         
@@ -94,7 +95,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Web-Browser"),
+            self.tr("Select Web-Browser"),
             self.webbrowserEdit.text(),
             "")
         
@@ -108,7 +109,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select PDF-Viewer"),
+            self.tr("Select PDF-Viewer"),
             self.pdfviewerEdit.text(),
             "")
         
@@ -122,7 +123,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select CHM-Viewer"),
+            self.tr("Select CHM-Viewer"),
             self.chmviewerEdit.text(),
             "")
         

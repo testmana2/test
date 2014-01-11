@@ -31,14 +31,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgBookmarksListAct = E5Action(
-            self.trUtf8('List bookmarks'),
+            self.tr('List bookmarks'),
             UI.PixmapCache.getIcon("listBookmarks.png"),
-            self.trUtf8('List bookmarks...'),
+            self.tr('List bookmarks...'),
             0, 0, self, 'mercurial_list_bookmarks')
-        self.hgBookmarksListAct.setStatusTip(self.trUtf8(
+        self.hgBookmarksListAct.setStatusTip(self.tr(
             'List bookmarks of the project'
         ))
-        self.hgBookmarksListAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarksListAct.setWhatsThis(self.tr(
             """<b>List bookmarks</b>"""
             """<p>This lists the bookmarks of the project.</p>"""
         ))
@@ -46,14 +46,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarksListAct)
     
         self.hgBookmarkDefineAct = E5Action(
-            self.trUtf8('Define bookmark'),
+            self.tr('Define bookmark'),
             UI.PixmapCache.getIcon("addBookmark.png"),
-            self.trUtf8('Define bookmark...'),
+            self.tr('Define bookmark...'),
             0, 0, self, 'mercurial_define_bookmark')
-        self.hgBookmarkDefineAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkDefineAct.setStatusTip(self.tr(
             'Define a bookmark for the project'
         ))
-        self.hgBookmarkDefineAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkDefineAct.setWhatsThis(self.tr(
             """<b>Define bookmark</b>"""
             """<p>This defines a bookmark for the project.</p>"""
         ))
@@ -61,14 +61,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkDefineAct)
     
         self.hgBookmarkDeleteAct = E5Action(
-            self.trUtf8('Delete bookmark'),
+            self.tr('Delete bookmark'),
             UI.PixmapCache.getIcon("deleteBookmark.png"),
-            self.trUtf8('Delete bookmark...'),
+            self.tr('Delete bookmark...'),
             0, 0, self, 'mercurial_delete_bookmark')
-        self.hgBookmarkDeleteAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkDeleteAct.setStatusTip(self.tr(
             'Delete a bookmark of the project'
         ))
-        self.hgBookmarkDeleteAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkDeleteAct.setWhatsThis(self.tr(
             """<b>Delete bookmark</b>"""
             """<p>This deletes a bookmark of the project.</p>"""
         ))
@@ -76,14 +76,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkDeleteAct)
     
         self.hgBookmarkRenameAct = E5Action(
-            self.trUtf8('Rename bookmark'),
+            self.tr('Rename bookmark'),
             UI.PixmapCache.getIcon("renameBookmark.png"),
-            self.trUtf8('Rename bookmark...'),
+            self.tr('Rename bookmark...'),
             0, 0, self, 'mercurial_rename_bookmark')
-        self.hgBookmarkRenameAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkRenameAct.setStatusTip(self.tr(
             'Rename a bookmark of the project'
         ))
-        self.hgBookmarkRenameAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkRenameAct.setWhatsThis(self.tr(
             """<b>Rename bookmark</b>"""
             """<p>This renames a bookmark of the project.</p>"""
         ))
@@ -91,14 +91,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkRenameAct)
     
         self.hgBookmarkMoveAct = E5Action(
-            self.trUtf8('Move bookmark'),
+            self.tr('Move bookmark'),
             UI.PixmapCache.getIcon("moveBookmark.png"),
-            self.trUtf8('Move bookmark...'),
+            self.tr('Move bookmark...'),
             0, 0, self, 'mercurial_move_bookmark')
-        self.hgBookmarkMoveAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkMoveAct.setStatusTip(self.tr(
             'Move a bookmark of the project'
         ))
-        self.hgBookmarkMoveAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkMoveAct.setWhatsThis(self.tr(
             """<b>Move bookmark</b>"""
             """<p>This moves a bookmark of the project to another"""
             """ changeset.</p>"""
@@ -107,14 +107,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkMoveAct)
         
         self.hgBookmarkIncomingAct = E5Action(
-            self.trUtf8('Show incoming bookmarks'),
+            self.tr('Show incoming bookmarks'),
             UI.PixmapCache.getIcon("incomingBookmark.png"),
-            self.trUtf8('Show incoming bookmarks'),
+            self.tr('Show incoming bookmarks'),
             0, 0, self, 'mercurial_incoming_bookmarks')
-        self.hgBookmarkIncomingAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkIncomingAct.setStatusTip(self.tr(
             'Show a list of incoming bookmarks'
         ))
-        self.hgBookmarkIncomingAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkIncomingAct.setWhatsThis(self.tr(
             """<b>Show incoming bookmarks</b>"""
             """<p>This shows a list of new bookmarks available at the remote"""
             """ repository.</p>"""
@@ -124,14 +124,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkIncomingAct)
         
         self.hgBookmarkPullAct = E5Action(
-            self.trUtf8('Pull bookmark'),
+            self.tr('Pull bookmark'),
             UI.PixmapCache.getIcon("pullBookmark.png"),
-            self.trUtf8('Pull bookmark'),
+            self.tr('Pull bookmark'),
             0, 0, self, 'mercurial_pull_bookmark')
-        self.hgBookmarkPullAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkPullAct.setStatusTip(self.tr(
             'Pull a bookmark from a remote repository'
         ))
-        self.hgBookmarkPullAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkPullAct.setWhatsThis(self.tr(
             """<b>Pull bookmark</b>"""
             """<p>This pulls a bookmark from a remote repository into the """
             """local repository.</p>"""
@@ -140,14 +140,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkPullAct)
         
         self.hgBookmarkOutgoingAct = E5Action(
-            self.trUtf8('Show outgoing bookmarks'),
+            self.tr('Show outgoing bookmarks'),
             UI.PixmapCache.getIcon("outgoingBookmark.png"),
-            self.trUtf8('Show outgoing bookmarks'),
+            self.tr('Show outgoing bookmarks'),
             0, 0, self, 'mercurial_outgoing_bookmarks')
-        self.hgBookmarkOutgoingAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkOutgoingAct.setStatusTip(self.tr(
             'Show a list of outgoing bookmarks'
         ))
-        self.hgBookmarkOutgoingAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkOutgoingAct.setWhatsThis(self.tr(
             """<b>Show outgoing bookmarks</b>"""
             """<p>This shows a list of new bookmarks available at the local"""
             """ repository.</p>"""
@@ -157,14 +157,14 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgBookmarkOutgoingAct)
         
         self.hgBookmarkPushAct = E5Action(
-            self.trUtf8('Push bookmark'),
+            self.tr('Push bookmark'),
             UI.PixmapCache.getIcon("pushBookmark.png"),
-            self.trUtf8('Push bookmark'),
+            self.tr('Push bookmark'),
             0, 0, self, 'mercurial_push_bookmark')
-        self.hgBookmarkPushAct.setStatusTip(self.trUtf8(
+        self.hgBookmarkPushAct.setStatusTip(self.tr(
             'Push a bookmark to a remote repository'
         ))
-        self.hgBookmarkPushAct.setWhatsThis(self.trUtf8(
+        self.hgBookmarkPushAct.setWhatsThis(self.tr(
             """<b>Push bookmark</b>"""
             """<p>This pushes a bookmark from the local repository to a """
             """remote repository.</p>"""
@@ -204,7 +204,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         
         @return title of the menu (string)
         """
-        return self.trUtf8("Bookmarks")
+        return self.tr("Bookmarks")
     
     def __hgBookmarksList(self):
         """

@@ -56,7 +56,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.__hgClient = self.vcs.getClient()
         
         self.contents.setHtml(
-            self.trUtf8('<b>Processing your request, please wait...</b>'))
+            self.tr('<b>Processing your request, please wait...</b>'))
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -65,7 +65,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.revisions = []  # stack of remembered revisions
-        self.revString = self.trUtf8('Revision')
+        self.revString = self.tr('Revision')
         self.projectMode = False
         
         self.logEntries = []        # list of log entries
@@ -190,8 +190,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -242,15 +242,15 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                                 'replace')
                     else:
                         if not finished:
-                            errMsg = self.trUtf8(
+                            errMsg = self.tr(
                                 "The hg process did not finish within 30s.")
                 else:
-                    errMsg = self.trUtf8("Could not start the hg executable.")
+                    errMsg = self.tr("Could not start the hg executable.")
             
             if errMsg:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Mercurial Error"),
+                    self.tr("Mercurial Error"),
                     errMsg)
             
             if output:
@@ -278,7 +278,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.contents.clear()
         
         if not self.logEntries:
-            self.errors.append(self.trUtf8("No log available for '{0}'")
+            self.errors.append(self.tr("No log available for '{0}'")
                                .format(self.filename))
             self.errorGroup.show()
             return
@@ -314,32 +314,32 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 dstr += ' [<a href="{0}" name="{1}" id="{1}">{2}</a>]'.format(
                     url.toString(),
                     str(query, encoding="ascii"),
-                    self.trUtf8('diff to {0}').format(parent),
+                    self.tr('diff to {0}').format(parent),
                 )
             dstr += '<br />\n'
             html += dstr
             
             if "phase" in entry:
-                html += self.trUtf8("Phase: {0}<br />\n")\
+                html += self.tr("Phase: {0}<br />\n")\
                     .format(entry["phase"])
             
-            html += self.trUtf8("Branches: {0}<br />\n")\
+            html += self.tr("Branches: {0}<br />\n")\
                 .format(entry["branches"])
             
-            html += self.trUtf8("Tags: {0}<br />\n").format(entry["tags"])
+            html += self.tr("Tags: {0}<br />\n").format(entry["tags"])
             
             if "bookmarks" in entry:
-                html += self.trUtf8("Bookmarks: {0}<br />\n")\
+                html += self.tr("Bookmarks: {0}<br />\n")\
                     .format(entry["bookmarks"])
             
-            html += self.trUtf8("Parents: {0}<br />\n")\
+            html += self.tr("Parents: {0}<br />\n")\
                 .format(entry["parents"])
             
-            html += self.trUtf8('<i>Author: {0}</i><br />\n')\
+            html += self.tr('<i>Author: {0}</i><br />\n')\
                 .format(entry["user"])
             
             date, time = entry["date"].split()[:2]
-            html += self.trUtf8('<i>Date: {0}, {1}</i><br />\n')\
+            html += self.tr('<i>Date: {0}, {1}</i><br />\n')\
                 .format(date, time)
             
             for line in entry["description"]:
@@ -350,24 +350,24 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 html += '<br />\n'
                 for f in entry["file_adds"].strip().split(", "):
                     if f in fileCopies:
-                        html += self.trUtf8(
+                        html += self.tr(
                             'Added {0} (copied from {1})<br />\n')\
                             .format(Utilities.html_encode(f),
                                     Utilities.html_encode(fileCopies[f]))
                     else:
-                        html += self.trUtf8('Added {0}<br />\n')\
+                        html += self.tr('Added {0}<br />\n')\
                             .format(Utilities.html_encode(f))
             
             if entry["files_mods"]:
                 html += '<br />\n'
                 for f in entry["files_mods"].strip().split(", "):
-                    html += self.trUtf8('Modified {0}<br />\n')\
+                    html += self.tr('Modified {0}<br />\n')\
                         .format(Utilities.html_encode(f))
             
             if entry["file_dels"]:
                 html += '<br />\n'
                 for f in entry["file_dels"].strip().split(", "):
-                    html += self.trUtf8('Deleted {0}<br />\n')\
+                    html += self.tr('Deleted {0}<br />\n')\
                         .format(Utilities.html_encode(f))
             
             html += '</p>{0}<br/>\n'.format(80 * "=")

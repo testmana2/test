@@ -225,14 +225,14 @@ class Hg(VersionControl):
                 return True, errMsg
             else:
                 if finished:
-                    errMsg = self.trUtf8(
+                    errMsg = self.tr(
                         "The hg process finished with the exit code {0}")\
                         .format(process.exitCode())
                 else:
-                    errMsg = self.trUtf8(
+                    errMsg = self.tr(
                         "The hg process did not finish within 30s.")
         else:
-            errMsg = self.trUtf8("Could not start the hg executable.")
+            errMsg = self.tr("Could not start the hg executable.")
         
         return False, errMsg
     
@@ -262,8 +262,8 @@ class Hg(VersionControl):
         if not success:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Create project repository"),
-                self.trUtf8(
+                self.tr("Create project repository"),
+                self.tr(
                     """The project repository could not be created."""))
         else:
             pfn = project.pfile
@@ -290,7 +290,7 @@ class Hg(VersionControl):
         args.append('init')
         args.append(projectDir)
         # init is not possible with the command server
-        dia = HgDialog(self.trUtf8('Creating Mercurial repository'), self)
+        dia = HgDialog(self.tr('Creating Mercurial repository'), self)
         res = dia.startProcess(args)
         if res:
             dia.exec_()
@@ -308,7 +308,7 @@ class Hg(VersionControl):
                 args.append('--message')
                 args.append(msg)
                 dia = HgDialog(
-                    self.trUtf8('Initial commit to Mercurial repository'),
+                    self.tr('Initial commit to Mercurial repository'),
                     self)
                 res = dia.startProcess(args, projectDir)
                 if res:
@@ -356,7 +356,7 @@ class Hg(VersionControl):
                 return err == ""
         else:
             dia = HgDialog(
-                self.trUtf8('Cloning project from a Mercurial repository'),
+                self.tr('Cloning project from a Mercurial repository'),
                 self)
             res = dia.startProcess(args)
             if res:
@@ -453,8 +453,8 @@ class Hg(VersionControl):
             if not ok:
                 res = E5MessageBox.yesNo(
                     self.__ui,
-                    self.trUtf8("Commit Changes"),
-                    self.trUtf8(
+                    self.tr("Commit Changes"),
+                    self.tr(
                         """The commit affects files, that have unsaved"""
                         """ changes. Shall the commit be continued?"""),
                     icon=E5MessageBox.Warning)
@@ -520,7 +520,7 @@ class Hg(VersionControl):
             self.startSynchronizedProcess(QProcess(), "hg", args, dname)
         else:
             dia = HgDialog(
-                self.trUtf8('Committing changes to Mercurial repository'),
+                self.tr('Committing changes to Mercurial repository'),
                 self)
             res = dia.startProcess(args, dname)
             if res:
@@ -574,7 +574,7 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
             res = False
         else:
-            dia = HgDialog(self.trUtf8(
+            dia = HgDialog(self.tr(
                 'Synchronizing with the Mercurial repository'),
                 self)
             res = dia.startProcess(args, repodir)
@@ -628,7 +628,7 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
         else:
             dia = HgDialog(
-                self.trUtf8(
+                self.tr(
                     'Adding files/directories to the Mercurial repository'),
                 self)
             res = dia.startProcess(args, repodir)
@@ -700,7 +700,7 @@ class Hg(VersionControl):
                 res = err == ""
         else:
             dia = HgDialog(
-                self.trUtf8(
+                self.tr(
                     'Removing files/directories from the Mercurial'
                     ' repository'),
                 self)
@@ -766,7 +766,7 @@ class Hg(VersionControl):
                     out, err = self.__client.runcommand(args)
                     res = err == ""
             else:
-                dia = HgDialog(self.trUtf8('Renaming {0}').format(name), self)
+                dia = HgDialog(self.tr('Renaming {0}').format(name), self)
                 res = dia.startProcess(args, repodir)
                 if res:
                     dia.exec_()
@@ -930,7 +930,7 @@ class Hg(VersionControl):
             args.append("Removed {1}tag <{0}>.".format(tag, msgPart))
         args.append(tag)
         
-        dia = HgDialog(self.trUtf8('Tagging in the Mercurial repository'),
+        dia = HgDialog(self.tr('Tagging in the Mercurial repository'),
                        self)
         res = dia.startProcess(args, repodir)
         if res:
@@ -975,8 +975,8 @@ class Hg(VersionControl):
                 DeleteFilesConfirmationDialog
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Revert changes"),
-                self.trUtf8(
+                self.tr("Revert changes"),
+                self.tr(
                     "Do you really want to revert all changes to these files"
                     " or directories?"),
                 names)
@@ -984,11 +984,11 @@ class Hg(VersionControl):
         else:
             yes = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Revert changes"),
-                self.trUtf8("""Do you really want to revert all changes of"""
-                            """ the project?"""))
+                self.tr("Revert changes"),
+                self.tr("""Do you really want to revert all changes of"""
+                        """ the project?"""))
         if yes:
-            dia = HgDialog(self.trUtf8('Reverting changes'), self)
+            dia = HgDialog(self.tr('Reverting changes'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1043,7 +1043,7 @@ class Hg(VersionControl):
             args.append("--rev")
             args.append(rev)
         
-        dia = HgDialog(self.trUtf8('Merging').format(name), self)
+        dia = HgDialog(self.tr('Merging').format(name), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1301,7 +1301,7 @@ class Hg(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return
             
-            dia = HgDialog(self.trUtf8('Mercurial command'), self)
+            dia = HgDialog(self.tr('Mercurial command'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1514,7 +1514,7 @@ class Hg(VersionControl):
                     return False
             
             dia = HgDialog(
-                self.trUtf8('Copying {0}').format(name), self)
+                self.tr('Copying {0}').format(name), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1763,10 +1763,10 @@ class Hg(VersionControl):
                             process.readAllStandardError(),
                             Preferences.getSystem("IOEncoding"), 'replace')
                 else:
-                    error = self.trUtf8(
+                    error = self.tr(
                         "The hg process did not finish within 30s.")
             else:
-                error = self.trUtf8(
+                error = self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.').format('hg')
         else:
@@ -1817,7 +1817,7 @@ class Hg(VersionControl):
         if error:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Mercurial Side-by-Side Difference"),
+                self.tr("Mercurial Side-by-Side Difference"),
                 error)
             return
         name1 = "{0} (rev. {1})".format(name, rev1 and rev1 or ".")
@@ -1827,7 +1827,7 @@ class Hg(VersionControl):
             if error:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Mercurial Side-by-Side Difference"),
+                    self.tr("Mercurial Side-by-Side Difference"),
                     error)
                 return
             name2 = "{0} (rev. {1})".format(name, rev2)
@@ -1840,8 +1840,8 @@ class Hg(VersionControl):
             except IOError:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Mercurial Side-by-Side Difference"),
-                    self.trUtf8(
+                    self.tr("Mercurial Side-by-Side Difference"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(name))
                 return
@@ -1914,10 +1914,10 @@ class Hg(VersionControl):
            self.bundleFile and \
            os.path.exists(self.bundleFile):
             command = "unbundle"
-            title = self.trUtf8('Apply changegroups')
+            title = self.tr('Apply changegroups')
         else:
             command = "pull"
-            title = self.trUtf8('Pulling from a remote Mercurial repository')
+            title = self.tr('Pulling from a remote Mercurial repository')
         
         args = []
         args.append(command)
@@ -1971,7 +1971,7 @@ class Hg(VersionControl):
                 return
         
         dia = HgDialog(
-            self.trUtf8('Pushing to a remote Mercurial repository'), self)
+            self.tr('Pushing to a remote Mercurial repository'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2101,7 +2101,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Resolving files/directories'), self)
+        dia = HgDialog(self.tr('Resolving files/directories'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2124,8 +2124,8 @@ class Hg(VersionControl):
         
         name, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("Create Branch"),
-            self.trUtf8("Enter branch name"),
+            self.tr("Create Branch"),
+            self.tr("Enter branch name"),
             sorted(self.hgGetBranchesList(repodir)),
             0, True)
         if ok and name:
@@ -2134,7 +2134,7 @@ class Hg(VersionControl):
             args.append(name.strip().replace(" ", "_"))
             
             dia = HgDialog(
-                self.trUtf8('Creating branch in the Mercurial repository'),
+                self.tr('Creating branch in the Mercurial repository'),
                 self)
             res = dia.startProcess(args, repodir)
             if res:
@@ -2158,7 +2158,7 @@ class Hg(VersionControl):
         args = []
         args.append("branch")
         
-        dia = HgDialog(self.trUtf8('Showing current branch'), self)
+        dia = HgDialog(self.tr('Showing current branch'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2226,7 +2226,7 @@ class Hg(VersionControl):
         args.append('verify')
         
         dia = HgDialog(
-            self.trUtf8('Verifying the integrity of the Mercurial repository'),
+            self.tr('Verifying the integrity of the Mercurial repository'),
             self)
         res = dia.startProcess(args, repodir)
         if res:
@@ -2252,7 +2252,7 @@ class Hg(VersionControl):
         args.append("--untrusted")
         
         dia = HgDialog(
-            self.trUtf8('Showing the combined configuration settings'),
+            self.tr('Showing the combined configuration settings'),
             self)
         res = dia.startProcess(args, repodir, False)
         if res:
@@ -2277,7 +2277,7 @@ class Hg(VersionControl):
         args.append('paths')
         
         dia = HgDialog(
-            self.trUtf8('Showing aliases for remote repositories'),
+            self.tr('Showing aliases for remote repositories'),
             self)
         res = dia.startProcess(args, repodir, False)
         if res:
@@ -2302,7 +2302,7 @@ class Hg(VersionControl):
         args.append('recover')
         
         dia = HgDialog(
-            self.trUtf8('Recovering from interrupted transaction'),
+            self.tr('Recovering from interrupted transaction'),
             self)
         res = dia.startProcess(args, repodir, False)
         if res:
@@ -2326,7 +2326,7 @@ class Hg(VersionControl):
         args = []
         args.append('identify')
         
-        dia = HgDialog(self.trUtf8('Identifying project directory'), self)
+        dia = HgDialog(self.tr('Identifying project directory'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2364,9 +2364,9 @@ class Hg(VersionControl):
         if os.path.exists(ignoreName):
             res = E5MessageBox.yesNo(
                 self.__ui,
-                self.trUtf8("Create .hgignore file"),
-                self.trUtf8("""<p>The file <b>{0}</b> exists already."""
-                            """ Overwrite it?</p>""").format(ignoreName),
+                self.tr("Create .hgignore file"),
+                self.tr("""<p>The file <b>{0}</b> exists already."""
+                        """ Overwrite it?</p>""").format(ignoreName),
                 icon=E5MessageBox.Warning)
         else:
             res = True
@@ -2418,9 +2418,9 @@ class Hg(VersionControl):
             
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 None,
-                self.trUtf8("Create changegroup"),
+                self.tr("Create changegroup"),
                 self.__lastChangeGroupPath or repodir,
-                self.trUtf8("Mercurial Changegroup Files (*.hg)"),
+                self.tr("Mercurial Changegroup Files (*.hg)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
@@ -2435,9 +2435,9 @@ class Hg(VersionControl):
             if QFileInfo(fname).exists():
                 res = E5MessageBox.yesNo(
                     self.__ui,
-                    self.trUtf8("Create changegroup"),
-                    self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
-                                "already exists. Overwrite it?</p>")
+                    self.tr("Create changegroup"),
+                    self.tr("<p>The Mercurial changegroup file <b>{0}</b> "
+                            "already exists. Overwrite it?</p>")
                         .format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
@@ -2460,7 +2460,7 @@ class Hg(VersionControl):
                 args.append(compression)
             args.append(fname)
             
-            dia = HgDialog(self.trUtf8('Create changegroup'), self)
+            dia = HgDialog(self.tr('Create changegroup'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2483,9 +2483,9 @@ class Hg(VersionControl):
         
         file = E5FileDialog.getOpenFileName(
             None,
-            self.trUtf8("Preview changegroup"),
+            self.tr("Preview changegroup"),
             self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.tr("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             self.__lastChangeGroupPath = os.path.dirname(file)
             
@@ -2518,9 +2518,9 @@ class Hg(VersionControl):
         
         file = E5FileDialog.getOpenFileName(
             None,
-            self.trUtf8("Preview changegroup"),
+            self.tr("Preview changegroup"),
             self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.tr("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             self.__lastChangeGroupPath = os.path.dirname(file)
             
@@ -2528,7 +2528,7 @@ class Hg(VersionControl):
             args.append('identify')
             args.append(file)
             
-            dia = HgDialog(self.trUtf8('Identifying changegroup file'), self)
+            dia = HgDialog(self.tr('Identifying changegroup file'), self)
             res = dia.startProcess(args, repodir, False)
             if res:
                 dia.exec_()
@@ -2553,16 +2553,16 @@ class Hg(VersionControl):
         res = False
         files = E5FileDialog.getOpenFileNames(
             None,
-            self.trUtf8("Apply changegroups"),
+            self.tr("Apply changegroups"),
             self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.tr("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
             self.__lastChangeGroupPath = os.path.dirname(files[0])
             
             update = E5MessageBox.yesNo(
                 self.__ui,
-                self.trUtf8("Apply changegroups"),
-                self.trUtf8("""Shall the working directory be updated?"""),
+                self.tr("Apply changegroups"),
+                self.tr("""Shall the working directory be updated?"""),
                 yesDefault=True)
             
             args = []
@@ -2572,7 +2572,7 @@ class Hg(VersionControl):
                 args.append("--verbose")
             args.extend(files)
             
-            dia = HgDialog(self.trUtf8('Apply changegroups'), self)
+            dia = HgDialog(self.tr('Apply changegroups'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2591,7 +2591,7 @@ class Hg(VersionControl):
         """
         if subcommand not in ("good", "bad", "skip", "reset"):
             raise ValueError(
-                self.trUtf8("Bisect subcommand ({0}) invalid.")
+                self.tr("Bisect subcommand ({0}) invalid.")
                     .format(subcommand))
         
         dname, fname = self.splitPath(name)
@@ -2628,7 +2628,7 @@ class Hg(VersionControl):
             args.append(rev)
         
         dia = HgDialog(
-            self.trUtf8('Mercurial Bisect ({0})').format(subcommand), self)
+            self.tr('Mercurial Bisect ({0})').format(subcommand), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2662,7 +2662,7 @@ class Hg(VersionControl):
                 return
         
         dia = HgDialog(
-            self.trUtf8('Removing files from the Mercurial repository only'),
+            self.tr('Removing files from the Mercurial repository only'),
             self)
         res = dia.startProcess(args, repodir)
         if res:
@@ -2703,8 +2703,8 @@ class Hg(VersionControl):
             if not rev:
                 E5MessageBox.warning(
                     self.__ui,
-                    self.trUtf8("Backing out changeset"),
-                    self.trUtf8("""No revision given. Aborting..."""))
+                    self.tr("Backing out changeset"),
+                    self.tr("""No revision given. Aborting..."""))
                 return
             
             args = []
@@ -2722,7 +2722,7 @@ class Hg(VersionControl):
             args.append(message)
             args.append(rev)
             
-            dia = HgDialog(self.trUtf8('Backing out changeset'), self)
+            dia = HgDialog(self.tr('Backing out changeset'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2744,12 +2744,12 @@ class Hg(VersionControl):
         
         res = E5MessageBox.yesNo(
             None,
-            self.trUtf8("Rollback last transaction"),
-            self.trUtf8("""Are you sure you want to rollback the last"""
-                        """ transaction?"""),
+            self.tr("Rollback last transaction"),
+            self.tr("""Are you sure you want to rollback the last"""
+                    """ transaction?"""),
             icon=E5MessageBox.Warning)
         if res:
-            dia = HgDialog(self.trUtf8('Rollback last transaction'), self)
+            dia = HgDialog(self.tr('Rollback last transaction'), self)
             res = dia.startProcess(["rollback"], repodir)
             if res:
                 dia.exec_()
@@ -2818,7 +2818,7 @@ class Hg(VersionControl):
                 args.append("--force")
             args.append(patchFile)
             
-            dia = HgDialog(self.trUtf8("Import Patch"), self)
+            dia = HgDialog(self.tr("Import Patch"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2866,7 +2866,7 @@ class Hg(VersionControl):
             for rev in revisions:
                 args.append(rev)
             
-            dia = HgDialog(self.trUtf8("Export Patches"), self)
+            dia = HgDialog(self.tr("Export Patches"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2914,7 +2914,7 @@ class Hg(VersionControl):
             for rev in revs:
                 args.append(rev)
             
-            dia = HgDialog(self.trUtf8("Change Phase"), self)
+            dia = HgDialog(self.tr("Change Phase"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2968,7 +2968,7 @@ class Hg(VersionControl):
                 args.append("--dry-run")
             args.extend(revs)
             
-            dia = HgDialog(self.trUtf8('Copy Changesets'), self)
+            dia = HgDialog(self.tr('Copy Changesets'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2995,7 +2995,7 @@ class Hg(VersionControl):
         args.append("--continue")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Copy Changesets (Continue)'), self)
+        dia = HgDialog(self.tr('Copy Changesets (Continue)'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -3031,7 +3031,7 @@ class Hg(VersionControl):
                 args.append("--subrepos")
             args.append(archive)
             
-            dia = HgDialog(self.trUtf8("Create Unversioned Archive"), self)
+            dia = HgDialog(self.tr("Create Unversioned Archive"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -3086,8 +3086,8 @@ class Hg(VersionControl):
                 except IOError as err:
                     E5MessageBox.critical(
                         self.__ui,
-                        self.trUtf8("Add Sub-repository"),
-                        self.trUtf8(
+                        self.tr("Add Sub-repository"),
+                        self.tr(
                             """<p>The sub-repositories file .hgsub could not"""
                             """ be read.</p><p>Reason: {0}</p>""")
                         .format(str(err)))
@@ -3096,8 +3096,8 @@ class Hg(VersionControl):
                 if entry in contents:
                     E5MessageBox.critical(
                         self.__ui,
-                        self.trUtf8("Add Sub-repository"),
-                        self.trUtf8(
+                        self.tr("Add Sub-repository"),
+                        self.tr(
                             """<p>The sub-repositories file .hgsub already"""
                             """ contains an entry <b>{0}</b>."""
                             """ Aborting...</p>""").format(entry))
@@ -3115,8 +3115,8 @@ class Hg(VersionControl):
             except IOError as err:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Add Sub-repository"),
-                    self.trUtf8(
+                    self.tr("Add Sub-repository"),
+                    self.tr(
                         """<p>The sub-repositories file .hgsub could not"""
                         """ be written to.</p><p>Reason: {0}</p>""")
                     .format(str(err)))
@@ -3136,9 +3136,9 @@ class Hg(VersionControl):
         if not os.path.isfile(hgsub):
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Remove Sub-repositories"),
-                self.trUtf8("""<p>The sub-repositories file .hgsub does not"""
-                            """ exist. Aborting...</p>"""))
+                self.tr("Remove Sub-repositories"),
+                self.tr("""<p>The sub-repositories file .hgsub does not"""
+                        """ exist. Aborting...</p>"""))
             return
             
         try:
@@ -3148,9 +3148,9 @@ class Hg(VersionControl):
         except IOError as err:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Remove Sub-repositories"),
-                self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
-                            """ be read.</p><p>Reason: {0}</p>""")
+                self.tr("Remove Sub-repositories"),
+                self.tr("""<p>The sub-repositories file .hgsub could not"""
+                        """ be read.</p><p>Reason: {0}</p>""")
                 .format(str(err)))
             return
         
@@ -3167,8 +3167,8 @@ class Hg(VersionControl):
             except IOError as err:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Remove Sub-repositories"),
-                    self.trUtf8(
+                    self.tr("Remove Sub-repositories"),
+                    self.tr(
                         """<p>The sub-repositories file .hgsub could not"""
                         """ be written to.</p><p>Reason: {0}</p>""")
                     .format(str(err)))
@@ -3198,8 +3198,8 @@ class Hg(VersionControl):
             if not ok:
                 E5MessageBox.warning(
                     None,
-                    self.trUtf8("Mercurial Command Server"),
-                    self.trUtf8(
+                    self.tr("Mercurial Command Server"),
+                    self.tr(
                         """<p>The Mercurial Command Server could not be"""
                         """ restarted.</p><p>Reason: {0}</p>""").format(err))
                 self.__client = None
@@ -3336,8 +3336,8 @@ class Hg(VersionControl):
                 else:
                     E5MessageBox.warning(
                         None,
-                        self.trUtf8("Mercurial Command Server"),
-                        self.trUtf8(
+                        self.tr("Mercurial Command Server"),
+                        self.tr(
                             """<p>The Mercurial Command Server could not be"""
                             """ started.</p><p>Reason: {0}</p>""").format(err))
         

@@ -72,7 +72,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             default = Utilities.getHomeDir()
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Workspace Directory"),
+            self.tr("Select Workspace Directory"),
             default,
             E5FileDialog.Options(0))
         

@@ -90,26 +90,26 @@ class QRegularExpressionWizardWidget(QWidget,
                     self.__pyqt5Available = True
         
         self.saveButton = self.buttonBox.addButton(
-            self.trUtf8("Save"), QDialogButtonBox.ActionRole)
+            self.tr("Save"), QDialogButtonBox.ActionRole)
         self.saveButton.setToolTip(
-            self.trUtf8("Save the regular expression to a file"))
+            self.tr("Save the regular expression to a file"))
         self.loadButton = self.buttonBox.addButton(
-            self.trUtf8("Load"), QDialogButtonBox.ActionRole)
+            self.tr("Load"), QDialogButtonBox.ActionRole)
         self.loadButton.setToolTip(
-            self.trUtf8("Load a regular expression from a file"))
+            self.tr("Load a regular expression from a file"))
         if qVersion() >= "5.0.0" and self.__pyqt5Available:
             self.validateButton = self.buttonBox.addButton(
-                self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
+                self.tr("Validate"), QDialogButtonBox.ActionRole)
             self.validateButton.setToolTip(
-                self.trUtf8("Validate the regular expression"))
+                self.tr("Validate the regular expression"))
             self.executeButton = self.buttonBox.addButton(
-                self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
+                self.tr("Execute"), QDialogButtonBox.ActionRole)
             self.executeButton.setToolTip(
-                self.trUtf8("Execute the regular expression"))
+                self.tr("Execute the regular expression"))
             self.nextButton = self.buttonBox.addButton(
-                self.trUtf8("Next match"), QDialogButtonBox.ActionRole)
+                self.tr("Next match"), QDialogButtonBox.ActionRole)
             self.nextButton.setToolTip(
-                self.trUtf8("Show the next match of the regular expression"))
+                self.tr("Show the next match of the regular expression"))
             self.nextButton.setEnabled(False)
         else:
             self.validateButton = None
@@ -122,9 +122,9 @@ class QRegularExpressionWizardWidget(QWidget,
             self.copyButton = None
         else:
             self.copyButton = self.buttonBox.addButton(
-                self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
+                self.tr("Copy"), QDialogButtonBox.ActionRole)
             self.copyButton.setToolTip(
-                self.trUtf8("Copy the regular expression to the clipboard"))
+                self.tr("Copy the regular expression to the clipboard"))
             self.buttonBox.setStandardButtons(QDialogButtonBox.Close)
             self.variableLabel.hide()
             self.variableLineEdit.hide()
@@ -164,9 +164,9 @@ class QRegularExpressionWizardWidget(QWidget,
             if responseDict["error"]:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Communication Error"),
-                    self.trUtf8("""<p>The PyQt5 backend reported"""
-                                """ an error.</p><p>{0}</p>""")
+                    self.tr("Communication Error"),
+                    self.tr("""<p>The PyQt5 backend reported"""
+                            """ an error.</p><p>{0}</p>""")
                     .format(responseDict["error"]))
                 responseDict = {}
         
@@ -279,14 +279,14 @@ class QRegularExpressionWizardWidget(QWidget,
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Named reference"),
-                self.trUtf8("""No named groups have been defined yet."""))
+                self.tr("Named reference"),
+                self.tr("""No named groups have been defined yet."""))
             return
         
         groupName, ok = QInputDialog.getItem(
             self,
-            self.trUtf8("Named reference"),
-            self.trUtf8("Select group name:"),
+            self.tr("Named reference"),
+            self.tr("Select group name:"),
             names,
             0, True)
         if ok and groupName:
@@ -395,9 +395,9 @@ class QRegularExpressionWizardWidget(QWidget,
         """
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save regular expression"),
+            self.tr("Save regular expression"),
             "",
-            self.trUtf8("RegExp Files (*.rx);;All Files (*)"),
+            self.tr("RegExp Files (*.rx);;All Files (*)"),
             None,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if fname:
@@ -409,9 +409,9 @@ class QRegularExpressionWizardWidget(QWidget,
             if QFileInfo(fname).exists():
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Save regular expression"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fname),
+                    self.tr("Save regular expression"),
+                    self.tr("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
@@ -424,9 +424,9 @@ class QRegularExpressionWizardWidget(QWidget,
             except IOError as err:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not"""
-                                """ be saved.</p><p>Reason: {0}</p>""")
+                    self.tr("Save regular expression"),
+                    self.tr("""<p>The regular expression could not"""
+                            """ be saved.</p><p>Reason: {0}</p>""")
                     .format(str(err)))
     
     @pyqtSlot()
@@ -436,9 +436,9 @@ class QRegularExpressionWizardWidget(QWidget,
         """
         fname = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Load regular expression"),
+            self.tr("Load regular expression"),
             "",
-            self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
+            self.tr("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
                 f = open(
@@ -449,9 +449,9 @@ class QRegularExpressionWizardWidget(QWidget,
             except IOError as err:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Save regular expression"),
-                    self.trUtf8("""<p>The regular expression could not"""
-                                """ be saved.</p><p>Reason: {0}</p>""")
+                    self.tr("Save regular expression"),
+                    self.tr("""<p>The regular expression could not"""
+                            """ be saved.</p><p>Reason: {0}</p>""")
                     .format(str(err)))
 
     @pyqtSlot()
@@ -502,14 +502,14 @@ class QRegularExpressionWizardWidget(QWidget,
                     if response["valid"]:
                         E5MessageBox.information(
                             self,
-                            self.trUtf8("Validation"),
-                            self.trUtf8(
+                            self.tr("Validation"),
+                            self.tr(
                                 """The regular expression is valid."""))
                     else:
                         E5MessageBox.critical(
                             self,
-                            self.trUtf8("Error"),
-                            self.trUtf8("""Invalid regular expression: {0}""")
+                            self.tr("Error"),
+                            self.tr("""Invalid regular expression: {0}""")
                             .format(response["errorMessage"]))
                         # move cursor to error offset
                         offset = response["errorOffset"]
@@ -521,20 +521,20 @@ class QRegularExpressionWizardWidget(QWidget,
                 else:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Communication Error"),
-                        self.trUtf8("""Invalid response received from"""
-                                    """ PyQt5 backend."""))
+                        self.tr("Communication Error"),
+                        self.tr("""Invalid response received from"""
+                                """ PyQt5 backend."""))
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Communication Error"),
-                    self.trUtf8("""Communication with PyQt5 backend"""
-                                """ failed."""))
+                    self.tr("Communication Error"),
+                    self.tr("""Communication with PyQt5 backend"""
+                            """ failed."""))
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Error"),
-                self.trUtf8("""A regular expression must be given."""))
+                self.tr("Error"),
+                self.tr("""A regular expression must be given."""))
 
     @pyqtSlot()
     def on_executeButton_clicked(self, startpos=0):
@@ -577,8 +577,8 @@ class QRegularExpressionWizardWidget(QWidget,
                     if "valid" in response:
                         E5MessageBox.critical(
                             self,
-                            self.trUtf8("Error"),
-                            self.trUtf8("""Invalid regular expression: {0}""")
+                            self.tr("Error"),
+                            self.tr("""Invalid regular expression: {0}""")
                             .format(response["errorMessage"]))
                         # move cursor to error offset
                         offset = response["errorOffset"]
@@ -596,7 +596,7 @@ class QRegularExpressionWizardWidget(QWidget,
                         self.resultTable.setRowCount(0)
                         self.resultTable.setRowCount(OFFSET)
                         self.resultTable.setItem(
-                            row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
+                            row, 0, QTableWidgetItem(self.tr("Regexp")))
                         self.resultTable.setItem(
                             row, 1, QTableWidgetItem(regexp))
                         if response["matched"]:
@@ -608,7 +608,7 @@ class QRegularExpressionWizardWidget(QWidget,
                             row += 1
                             self.resultTable.setItem(
                                 row, 0,
-                                QTableWidgetItem(self.trUtf8("Offset")))
+                                QTableWidgetItem(self.tr("Offset")))
                             self.resultTable.setItem(
                                 row, 1,
                                 QTableWidgetItem("{0:d}".format(offset)))
@@ -616,7 +616,7 @@ class QRegularExpressionWizardWidget(QWidget,
                             row += 1
                             self.resultTable.setItem(
                                 row, 0,
-                                QTableWidgetItem(self.trUtf8("Captures")))
+                                QTableWidgetItem(self.tr("Captures")))
                             self.resultTable.setItem(
                                 row, 1,
                                 QTableWidgetItem(
@@ -624,15 +624,15 @@ class QRegularExpressionWizardWidget(QWidget,
                             row += 1
                             self.resultTable.setItem(
                                 row, 1,
-                                QTableWidgetItem(self.trUtf8("Text")))
+                                QTableWidgetItem(self.tr("Text")))
                             self.resultTable.setItem(
                                 row, 2,
-                                QTableWidgetItem(self.trUtf8("Characters")))
+                                QTableWidgetItem(self.tr("Characters")))
                             
                             row += 1
                             self.resultTable.setItem(
                                 row, 0,
-                                QTableWidgetItem(self.trUtf8("Match")))
+                                QTableWidgetItem(self.tr("Match")))
                             self.resultTable.setItem(
                                 row, 1,
                                 QTableWidgetItem(captures[0][0]))
@@ -648,7 +648,7 @@ class QRegularExpressionWizardWidget(QWidget,
                                     self.resultTable.setItem(
                                         row, 0,
                                         QTableWidgetItem(
-                                            self.trUtf8("Capture #{0}")
+                                            self.tr("Capture #{0}")
                                             .format(i)))
                                     self.resultTable.setItem(
                                         row, 1,
@@ -672,12 +672,12 @@ class QRegularExpressionWizardWidget(QWidget,
                                 self.resultTable.setItem(
                                     row, 0,
                                     QTableWidgetItem(
-                                        self.trUtf8("No more matches")))
+                                        self.tr("No more matches")))
                             else:
                                 self.resultTable.setItem(
                                     row, 0,
                                     QTableWidgetItem(
-                                        self.trUtf8("No matches")))
+                                        self.tr("No matches")))
                             
                             # remove the highlight
                             tc = self.textTextEdit.textCursor()
@@ -691,21 +691,21 @@ class QRegularExpressionWizardWidget(QWidget,
                 else:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Communication Error"),
-                        self.trUtf8("""Invalid response received from"""
-                                    """ PyQt5 backend."""))
+                        self.tr("Communication Error"),
+                        self.tr("""Invalid response received from"""
+                                """ PyQt5 backend."""))
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Communication Error"),
-                    self.trUtf8("""Communication with PyQt5"""
-                                """ backend failed."""))
+                    self.tr("Communication Error"),
+                    self.tr("""Communication with PyQt5"""
+                            """ backend failed."""))
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Error"),
-                self.trUtf8("""A regular expression and a text must"""
-                            """ be given."""))
+                self.tr("Error"),
+                self.tr("""A regular expression and a text must"""
+                        """ be given."""))
     
     @pyqtSlot()
     def on_nextButton_clicked(self):

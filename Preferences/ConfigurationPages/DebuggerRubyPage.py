@@ -61,7 +61,7 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Ruby interpreter for Debug Client"),
+            self.tr("Select Ruby interpreter for Debug Client"),
             self.rubyInterpreterEdit.text())
             
         if file:

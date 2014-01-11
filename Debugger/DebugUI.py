@@ -169,12 +169,12 @@ class DebugUI(QObject):
         self.actions = []
         
         self.runAct = E5Action(
-            self.trUtf8('Run Script'),
+            self.tr('Run Script'),
             UI.PixmapCache.getIcon("runScript.png"),
-            self.trUtf8('&Run Script...'),
+            self.tr('&Run Script...'),
             Qt.Key_F2, 0, self, 'dbg_run_script')
-        self.runAct.setStatusTip(self.trUtf8('Run the current Script'))
-        self.runAct.setWhatsThis(self.trUtf8(
+        self.runAct.setStatusTip(self.tr('Run the current Script'))
+        self.runAct.setWhatsThis(self.tr(
             """<b>Run Script</b>"""
             """<p>Set the command line arguments and run the script outside"""
             """ the debugger. If the file has unsaved changes it may be"""
@@ -184,12 +184,12 @@ class DebugUI(QObject):
         self.actions.append(self.runAct)
 
         self.runProjectAct = E5Action(
-            self.trUtf8('Run Project'),
+            self.tr('Run Project'),
             UI.PixmapCache.getIcon("runProject.png"),
-            self.trUtf8('Run &Project...'), Qt.SHIFT + Qt.Key_F2, 0, self,
+            self.tr('Run &Project...'), Qt.SHIFT + Qt.Key_F2, 0, self,
             'dbg_run_project')
-        self.runProjectAct.setStatusTip(self.trUtf8('Run the current Project'))
-        self.runProjectAct.setWhatsThis(self.trUtf8(
+        self.runProjectAct.setStatusTip(self.tr('Run the current Project'))
+        self.runProjectAct.setWhatsThis(self.tr(
             """<b>Run Project</b>"""
             """<p>Set the command line arguments and run the current project"""
             """ outside the debugger."""
@@ -200,13 +200,13 @@ class DebugUI(QObject):
         self.actions.append(self.runProjectAct)
 
         self.coverageAct = E5Action(
-            self.trUtf8('Coverage run of Script'),
+            self.tr('Coverage run of Script'),
             UI.PixmapCache.getIcon("coverageScript.png"),
-            self.trUtf8('Coverage run of Script...'), 0, 0, self,
+            self.tr('Coverage run of Script...'), 0, 0, self,
             'dbg_coverage_script')
         self.coverageAct.setStatusTip(
-            self.trUtf8('Perform a coverage run of the current Script'))
-        self.coverageAct.setWhatsThis(self.trUtf8(
+            self.tr('Perform a coverage run of the current Script'))
+        self.coverageAct.setWhatsThis(self.tr(
             """<b>Coverage run of Script</b>"""
             """<p>Set the command line arguments and run the script under"""
             """ the control of a coverage analysis tool. If the file has"""
@@ -216,13 +216,13 @@ class DebugUI(QObject):
         self.actions.append(self.coverageAct)
 
         self.coverageProjectAct = E5Action(
-            self.trUtf8('Coverage run of Project'),
+            self.tr('Coverage run of Project'),
             UI.PixmapCache.getIcon("coverageProject.png"),
-            self.trUtf8('Coverage run of Project...'), 0, 0, self,
+            self.tr('Coverage run of Project...'), 0, 0, self,
             'dbg_coverage_project')
         self.coverageProjectAct.setStatusTip(
-            self.trUtf8('Perform a coverage run of the current Project'))
-        self.coverageProjectAct.setWhatsThis(self.trUtf8(
+            self.tr('Perform a coverage run of the current Project'))
+        self.coverageProjectAct.setWhatsThis(self.tr(
             """<b>Coverage run of Project</b>"""
             """<p>Set the command line arguments and run the current project"""
             """ under the control of a coverage analysis tool."""
@@ -233,11 +233,11 @@ class DebugUI(QObject):
         self.actions.append(self.coverageProjectAct)
 
         self.profileAct = E5Action(
-            self.trUtf8('Profile Script'),
+            self.tr('Profile Script'),
             UI.PixmapCache.getIcon("profileScript.png"),
-            self.trUtf8('Profile Script...'), 0, 0, self, 'dbg_profile_script')
-        self.profileAct.setStatusTip(self.trUtf8('Profile the current Script'))
-        self.profileAct.setWhatsThis(self.trUtf8(
+            self.tr('Profile Script...'), 0, 0, self, 'dbg_profile_script')
+        self.profileAct.setStatusTip(self.tr('Profile the current Script'))
+        self.profileAct.setWhatsThis(self.tr(
             """<b>Profile Script</b>"""
             """<p>Set the command line arguments and profile the script."""
             """ If the file has unsaved changes it may be saved first.</p>"""
@@ -246,13 +246,13 @@ class DebugUI(QObject):
         self.actions.append(self.profileAct)
 
         self.profileProjectAct = E5Action(
-            self.trUtf8('Profile Project'),
+            self.tr('Profile Project'),
             UI.PixmapCache.getIcon("profileProject.png"),
-            self.trUtf8('Profile Project...'), 0, 0, self,
+            self.tr('Profile Project...'), 0, 0, self,
             'dbg_profile_project')
         self.profileProjectAct.setStatusTip(
-            self.trUtf8('Profile the current Project'))
-        self.profileProjectAct.setWhatsThis(self.trUtf8(
+            self.tr('Profile the current Project'))
+        self.profileProjectAct.setWhatsThis(self.tr(
             """<b>Profile Project</b>"""
             """<p>Set the command line arguments and profile the current"""
             """ project. If files of the current project have unsaved"""
@@ -262,12 +262,12 @@ class DebugUI(QObject):
         self.actions.append(self.profileProjectAct)
 
         self.debugAct = E5Action(
-            self.trUtf8('Debug Script'),
+            self.tr('Debug Script'),
             UI.PixmapCache.getIcon("debugScript.png"),
-            self.trUtf8('&Debug Script...'), Qt.Key_F5, 0, self,
+            self.tr('&Debug Script...'), Qt.Key_F5, 0, self,
             'dbg_debug_script')
-        self.debugAct.setStatusTip(self.trUtf8('Debug the current Script'))
-        self.debugAct.setWhatsThis(self.trUtf8(
+        self.debugAct.setStatusTip(self.tr('Debug the current Script'))
+        self.debugAct.setWhatsThis(self.tr(
             """<b>Debug Script</b>"""
             """<p>Set the command line arguments and set the current line"""
             """ to be the first executable Python statement of the current"""
@@ -278,13 +278,13 @@ class DebugUI(QObject):
         self.actions.append(self.debugAct)
 
         self.debugProjectAct = E5Action(
-            self.trUtf8('Debug Project'),
+            self.tr('Debug Project'),
             UI.PixmapCache.getIcon("debugProject.png"),
-            self.trUtf8('Debug &Project...'), Qt.SHIFT + Qt.Key_F5, 0, self,
+            self.tr('Debug &Project...'), Qt.SHIFT + Qt.Key_F5, 0, self,
             'dbg_debug_project')
-        self.debugProjectAct.setStatusTip(self.trUtf8(
+        self.debugProjectAct.setStatusTip(self.tr(
             'Debug the current Project'))
-        self.debugProjectAct.setWhatsThis(self.trUtf8(
+        self.debugProjectAct.setWhatsThis(self.tr(
             """<b>Debug Project</b>"""
             """<p>Set the command line arguments and set the current line"""
             """ to be the first executable Python statement of the main"""
@@ -295,12 +295,12 @@ class DebugUI(QObject):
         self.actions.append(self.debugProjectAct)
 
         self.restartAct = E5Action(
-            self.trUtf8('Restart'),
+            self.tr('Restart'),
             UI.PixmapCache.getIcon("restart.png"),
-            self.trUtf8('Restart'), Qt.Key_F4, 0, self, 'dbg_restart_script')
-        self.restartAct.setStatusTip(self.trUtf8(
+            self.tr('Restart'), Qt.Key_F4, 0, self, 'dbg_restart_script')
+        self.restartAct.setStatusTip(self.tr(
             'Restart the last debugged script'))
-        self.restartAct.setWhatsThis(self.trUtf8(
+        self.restartAct.setWhatsThis(self.tr(
             """<b>Restart</b>"""
             """<p>Set the command line arguments and set the current line"""
             """ to be the first executable Python statement of the script"""
@@ -311,12 +311,12 @@ class DebugUI(QObject):
         self.actions.append(self.restartAct)
 
         self.stopAct = E5Action(
-            self.trUtf8('Stop'),
+            self.tr('Stop'),
             UI.PixmapCache.getIcon("stopScript.png"),
-            self.trUtf8('Stop'), Qt.SHIFT + Qt.Key_F10, 0,
+            self.tr('Stop'), Qt.SHIFT + Qt.Key_F10, 0,
             self, 'dbg_stop_script')
-        self.stopAct.setStatusTip(self.trUtf8("""Stop the running script."""))
-        self.stopAct.setWhatsThis(self.trUtf8(
+        self.stopAct.setStatusTip(self.tr("""Stop the running script."""))
+        self.stopAct.setWhatsThis(self.tr(
             """<b>Stop</b>"""
             """<p>This stops the script running in the debugger backend.</p>"""
         ))
@@ -326,13 +326,13 @@ class DebugUI(QObject):
         self.debugActGrp = createActionGroup(self)
 
         act = E5Action(
-            self.trUtf8('Continue'),
+            self.tr('Continue'),
             UI.PixmapCache.getIcon("continue.png"),
-            self.trUtf8('&Continue'), Qt.Key_F6, 0,
+            self.tr('&Continue'), Qt.Key_F6, 0,
             self.debugActGrp, 'dbg_continue')
         act.setStatusTip(
-            self.trUtf8('Continue running the program from the current line'))
-        act.setWhatsThis(self.trUtf8(
+            self.tr('Continue running the program from the current line'))
+        act.setWhatsThis(self.tr(
             """<b>Continue</b>"""
             """<p>Continue running the program from the current line. The"""
             """ program will stop when it terminates or when a breakpoint"""
@@ -342,14 +342,14 @@ class DebugUI(QObject):
         self.actions.append(act)
 
         act = E5Action(
-            self.trUtf8('Continue to Cursor'),
+            self.tr('Continue to Cursor'),
             UI.PixmapCache.getIcon("continueToCursor.png"),
-            self.trUtf8('Continue &To Cursor'), Qt.SHIFT + Qt.Key_F6, 0,
+            self.tr('Continue &To Cursor'), Qt.SHIFT + Qt.Key_F6, 0,
             self.debugActGrp, 'dbg_continue_to_cursor')
-        act.setStatusTip(self.trUtf8(
+        act.setStatusTip(self.tr(
             """Continue running the program from the"""
             """ current line to the current cursor position"""))
-        act.setWhatsThis(self.trUtf8(
+        act.setWhatsThis(self.tr(
             """<b>Continue To Cursor</b>"""
             """<p>Continue running the program from the current line to the"""
             """ current cursor position.</p>"""
@@ -358,12 +358,12 @@ class DebugUI(QObject):
         self.actions.append(act)
 
         act = E5Action(
-            self.trUtf8('Single Step'),
+            self.tr('Single Step'),
             UI.PixmapCache.getIcon("step.png"),
-            self.trUtf8('Sin&gle Step'), Qt.Key_F7, 0,
+            self.tr('Sin&gle Step'), Qt.Key_F7, 0,
             self.debugActGrp, 'dbg_single_step')
-        act.setStatusTip(self.trUtf8('Execute a single Python statement'))
-        act.setWhatsThis(self.trUtf8(
+        act.setStatusTip(self.tr('Execute a single Python statement'))
+        act.setWhatsThis(self.tr(
             """<b>Single Step</b>"""
             """<p>Execute a single Python statement. If the statement"""
             """ is an <tt>import</tt> statement, a class constructor, or a"""
@@ -374,14 +374,14 @@ class DebugUI(QObject):
         self.actions.append(act)
 
         act = E5Action(
-            self.trUtf8('Step Over'),
+            self.tr('Step Over'),
             UI.PixmapCache.getIcon("stepOver.png"),
-            self.trUtf8('Step &Over'), Qt.Key_F8, 0,
+            self.tr('Step &Over'), Qt.Key_F8, 0,
             self.debugActGrp, 'dbg_step_over')
-        act.setStatusTip(self.trUtf8(
+        act.setStatusTip(self.tr(
             """Execute a single Python statement staying"""
             """ in the current frame"""))
-        act.setWhatsThis(self.trUtf8(
+        act.setWhatsThis(self.tr(
             """<b>Step Over</b>"""
             """<p>Execute a single Python statement staying in the same"""
             """ frame. If the statement is an <tt>import</tt> statement,"""
@@ -393,14 +393,14 @@ class DebugUI(QObject):
         self.actions.append(act)
 
         act = E5Action(
-            self.trUtf8('Step Out'),
+            self.tr('Step Out'),
             UI.PixmapCache.getIcon("stepOut.png"),
-            self.trUtf8('Step Ou&t'), Qt.Key_F9, 0,
+            self.tr('Step Ou&t'), Qt.Key_F9, 0,
             self.debugActGrp, 'dbg_step_out')
-        act.setStatusTip(self.trUtf8(
+        act.setStatusTip(self.tr(
             """Execute Python statements until leaving"""
             """ the current frame"""))
-        act.setWhatsThis(self.trUtf8(
+        act.setWhatsThis(self.tr(
             """<b>Step Out</b>"""
             """<p>Execute Python statements until leaving the current"""
             """ frame. If the statements are inside an <tt>import</tt>"""
@@ -412,12 +412,12 @@ class DebugUI(QObject):
         self.actions.append(act)
 
         act = E5Action(
-            self.trUtf8('Stop'),
+            self.tr('Stop'),
             UI.PixmapCache.getIcon("stepQuit.png"),
-            self.trUtf8('&Stop'), Qt.Key_F10, 0,
+            self.tr('&Stop'), Qt.Key_F10, 0,
             self.debugActGrp, 'dbg_stop')
-        act.setStatusTip(self.trUtf8('Stop debugging'))
-        act.setWhatsThis(self.trUtf8(
+        act.setStatusTip(self.tr('Stop debugging'))
+        act.setWhatsThis(self.tr(
             """<b>Stop</b>"""
             """<p>Stop the running debugging session.</p>"""
         ))
@@ -427,11 +427,11 @@ class DebugUI(QObject):
         self.debugActGrp2 = createActionGroup(self)
 
         act = E5Action(
-            self.trUtf8('Evaluate'),
-            self.trUtf8('E&valuate...'),
+            self.tr('Evaluate'),
+            self.tr('E&valuate...'),
             0, 0, self.debugActGrp2, 'dbg_evaluate')
-        act.setStatusTip(self.trUtf8('Evaluate in current context'))
-        act.setWhatsThis(self.trUtf8(
+        act.setStatusTip(self.tr('Evaluate in current context'))
+        act.setWhatsThis(self.tr(
             """<b>Evaluate</b>"""
             """<p>Evaluate an expression in the current context of the"""
             """ debugged program. The result is displayed in the"""
@@ -441,12 +441,12 @@ class DebugUI(QObject):
         self.actions.append(act)
         
         act = E5Action(
-            self.trUtf8('Execute'),
-            self.trUtf8('E&xecute...'),
+            self.tr('Execute'),
+            self.tr('E&xecute...'),
             0, 0, self.debugActGrp2, 'dbg_execute')
         act.setStatusTip(
-            self.trUtf8('Execute a one line statement in the current context'))
-        act.setWhatsThis(self.trUtf8(
+            self.tr('Execute a one line statement in the current context'))
+        act.setWhatsThis(self.tr(
             """<b>Execute</b>"""
             """<p>Execute a one line statement in the current context"""
             """ of the debugged program.</p>"""
@@ -455,12 +455,12 @@ class DebugUI(QObject):
         self.actions.append(act)
         
         self.dbgFilterAct = E5Action(
-            self.trUtf8('Variables Type Filter'),
-            self.trUtf8('Varia&bles Type Filter...'), 0, 0, self,
+            self.tr('Variables Type Filter'),
+            self.tr('Varia&bles Type Filter...'), 0, 0, self,
             'dbg_variables_filter')
-        self.dbgFilterAct.setStatusTip(self.trUtf8(
+        self.dbgFilterAct.setStatusTip(self.tr(
             'Configure variables type filter'))
-        self.dbgFilterAct.setWhatsThis(self.trUtf8(
+        self.dbgFilterAct.setWhatsThis(self.tr(
             """<b>Variables Type Filter</b>"""
             """<p>Configure the variables type filter. Only variable types"""
             """ that are not selected are displayed in the global or local"""
@@ -471,12 +471,12 @@ class DebugUI(QObject):
         self.actions.append(self.dbgFilterAct)
 
         self.excFilterAct = E5Action(
-            self.trUtf8('Exceptions Filter'),
-            self.trUtf8('&Exceptions Filter...'), 0, 0, self,
+            self.tr('Exceptions Filter'),
+            self.tr('&Exceptions Filter...'), 0, 0, self,
             'dbg_exceptions_filter')
-        self.excFilterAct.setStatusTip(self.trUtf8(
+        self.excFilterAct.setStatusTip(self.tr(
             'Configure exceptions filter'))
-        self.excFilterAct.setWhatsThis(self.trUtf8(
+        self.excFilterAct.setWhatsThis(self.tr(
             """<b>Exceptions Filter</b>"""
             """<p>Configure the exceptions filter. Only exception types"""
             """ that are listed are highlighted during a debugging"""
@@ -488,12 +488,12 @@ class DebugUI(QObject):
         self.actions.append(self.excFilterAct)
         
         self.excIgnoreFilterAct = E5Action(
-            self.trUtf8('Ignored Exceptions'),
-            self.trUtf8('&Ignored Exceptions...'), 0, 0,
+            self.tr('Ignored Exceptions'),
+            self.tr('&Ignored Exceptions...'), 0, 0,
             self, 'dbg_ignored_exceptions')
-        self.excIgnoreFilterAct.setStatusTip(self.trUtf8(
+        self.excIgnoreFilterAct.setStatusTip(self.tr(
             'Configure ignored exceptions'))
-        self.excIgnoreFilterAct.setWhatsThis(self.trUtf8(
+        self.excIgnoreFilterAct.setWhatsThis(self.tr(
             """<b>Ignored Exceptions</b>"""
             """<p>Configure the ignored exceptions. Only exception types"""
             """ that are not listed are highlighted during a debugging"""
@@ -507,13 +507,13 @@ class DebugUI(QObject):
         self.dbgSetBpActGrp = createActionGroup(self)
 
         self.dbgToggleBpAct = E5Action(
-            self.trUtf8('Toggle Breakpoint'),
+            self.tr('Toggle Breakpoint'),
             UI.PixmapCache.getIcon("breakpointToggle.png"),
-            self.trUtf8('Toggle Breakpoint'),
-            QKeySequence(self.trUtf8("Shift+F11", "Debug|Toggle Breakpoint")),
+            self.tr('Toggle Breakpoint'),
+            QKeySequence(self.tr("Shift+F11", "Debug|Toggle Breakpoint")),
             0, self.dbgSetBpActGrp, 'dbg_toggle_breakpoint')
-        self.dbgToggleBpAct.setStatusTip(self.trUtf8('Toggle Breakpoint'))
-        self.dbgToggleBpAct.setWhatsThis(self.trUtf8(
+        self.dbgToggleBpAct.setStatusTip(self.tr('Toggle Breakpoint'))
+        self.dbgToggleBpAct.setWhatsThis(self.tr(
             """<b>Toggle Breakpoint</b>"""
             """<p>Toggles a breakpoint at the current line of the"""
             """ current editor.</p>"""
@@ -522,13 +522,13 @@ class DebugUI(QObject):
         self.actions.append(self.dbgToggleBpAct)
         
         self.dbgEditBpAct = E5Action(
-            self.trUtf8('Edit Breakpoint'),
+            self.tr('Edit Breakpoint'),
             UI.PixmapCache.getIcon("cBreakpointToggle.png"),
-            self.trUtf8('Edit Breakpoint...'),
-            QKeySequence(self.trUtf8("Shift+F12", "Debug|Edit Breakpoint")), 0,
+            self.tr('Edit Breakpoint...'),
+            QKeySequence(self.tr("Shift+F12", "Debug|Edit Breakpoint")), 0,
             self.dbgSetBpActGrp, 'dbg_edit_breakpoint')
-        self.dbgEditBpAct.setStatusTip(self.trUtf8('Edit Breakpoint'))
-        self.dbgEditBpAct.setWhatsThis(self.trUtf8(
+        self.dbgEditBpAct.setStatusTip(self.tr('Edit Breakpoint'))
+        self.dbgEditBpAct.setWhatsThis(self.tr(
             """<b>Edit Breakpoint</b>"""
             """<p>Opens a dialog to edit the breakpoints properties."""
             """ It works at the current line of the current editor.</p>"""
@@ -537,14 +537,14 @@ class DebugUI(QObject):
         self.actions.append(self.dbgEditBpAct)
 
         self.dbgNextBpAct = E5Action(
-            self.trUtf8('Next Breakpoint'),
+            self.tr('Next Breakpoint'),
             UI.PixmapCache.getIcon("breakpointNext.png"),
-            self.trUtf8('Next Breakpoint'),
+            self.tr('Next Breakpoint'),
             QKeySequence(
-                self.trUtf8("Ctrl+Shift+PgDown", "Debug|Next Breakpoint")), 0,
+                self.tr("Ctrl+Shift+PgDown", "Debug|Next Breakpoint")), 0,
             self.dbgSetBpActGrp, 'dbg_next_breakpoint')
-        self.dbgNextBpAct.setStatusTip(self.trUtf8('Next Breakpoint'))
-        self.dbgNextBpAct.setWhatsThis(self.trUtf8(
+        self.dbgNextBpAct.setStatusTip(self.tr('Next Breakpoint'))
+        self.dbgNextBpAct.setWhatsThis(self.tr(
             """<b>Next Breakpoint</b>"""
             """<p>Go to next breakpoint of the current editor.</p>"""
         ))
@@ -552,14 +552,14 @@ class DebugUI(QObject):
         self.actions.append(self.dbgNextBpAct)
 
         self.dbgPrevBpAct = E5Action(
-            self.trUtf8('Previous Breakpoint'),
+            self.tr('Previous Breakpoint'),
             UI.PixmapCache.getIcon("breakpointPrevious.png"),
-            self.trUtf8('Previous Breakpoint'),
+            self.tr('Previous Breakpoint'),
             QKeySequence(
-                self.trUtf8("Ctrl+Shift+PgUp", "Debug|Previous Breakpoint")),
+                self.tr("Ctrl+Shift+PgUp", "Debug|Previous Breakpoint")),
             0, self.dbgSetBpActGrp, 'dbg_previous_breakpoint')
-        self.dbgPrevBpAct.setStatusTip(self.trUtf8('Previous Breakpoint'))
-        self.dbgPrevBpAct.setWhatsThis(self.trUtf8(
+        self.dbgPrevBpAct.setStatusTip(self.tr('Previous Breakpoint'))
+        self.dbgPrevBpAct.setWhatsThis(self.tr(
             """<b>Previous Breakpoint</b>"""
             """<p>Go to previous breakpoint of the current editor.</p>"""
         ))
@@ -567,13 +567,13 @@ class DebugUI(QObject):
         self.actions.append(self.dbgPrevBpAct)
 
         act = E5Action(
-            self.trUtf8('Clear Breakpoints'),
-            self.trUtf8('Clear Breakpoints'),
+            self.tr('Clear Breakpoints'),
+            self.tr('Clear Breakpoints'),
             QKeySequence(
-                self.trUtf8("Ctrl+Shift+C", "Debug|Clear Breakpoints")), 0,
+                self.tr("Ctrl+Shift+C", "Debug|Clear Breakpoints")), 0,
             self.dbgSetBpActGrp, 'dbg_clear_breakpoint')
-        act.setStatusTip(self.trUtf8('Clear Breakpoints'))
-        act.setWhatsThis(self.trUtf8(
+        act.setStatusTip(self.tr('Clear Breakpoints'))
+        act.setWhatsThis(self.tr(
             """<b>Clear Breakpoints</b>"""
             """<p>Clear breakpoints of all editors.</p>"""
         ))
@@ -600,11 +600,11 @@ class DebugUI(QObject):
         
         @return the generated menu
         """
-        dmenu = QMenu(self.trUtf8('&Debug'), self.parent())
+        dmenu = QMenu(self.tr('&Debug'), self.parent())
         dmenu.setTearOffEnabled(True)
-        smenu = QMenu(self.trUtf8('&Start'), self.parent())
+        smenu = QMenu(self.tr('&Start'), self.parent())
         smenu.setTearOffEnabled(True)
-        self.breakpointsMenu = QMenu(self.trUtf8('&Breakpoints'), dmenu)
+        self.breakpointsMenu = QMenu(self.tr('&Breakpoints'), dmenu)
         
         smenu.addAction(self.restartAct)
         smenu.addAction(self.stopAct)
@@ -646,10 +646,10 @@ class DebugUI(QObject):
             (E5ToolBarManager)
         @return the generated toolbars (list of QToolBar)
         """
-        starttb = QToolBar(self.trUtf8("Start"), self.ui)
+        starttb = QToolBar(self.tr("Start"), self.ui)
         starttb.setIconSize(UI.Config.ToolBarIconSize)
         starttb.setObjectName("StartToolbar")
-        starttb.setToolTip(self.trUtf8('Start'))
+        starttb.setToolTip(self.tr('Start'))
         
         starttb.addAction(self.restartAct)
         starttb.addAction(self.stopAct)
@@ -660,10 +660,10 @@ class DebugUI(QObject):
         starttb.addAction(self.debugAct)
         starttb.addAction(self.debugProjectAct)
         
-        debugtb = QToolBar(self.trUtf8("Debug"), self.ui)
+        debugtb = QToolBar(self.tr("Debug"), self.ui)
         debugtb.setIconSize(UI.Config.ToolBarIconSize)
         debugtb.setObjectName("DebugToolbar")
-        debugtb.setToolTip(self.trUtf8('Debug'))
+        debugtb.setToolTip(self.tr('Debug'))
         
         debugtb.addActions(self.debugActGrp.actions())
         debugtb.addSeparator()
@@ -1010,37 +1010,37 @@ class DebugUI(QObject):
             if self.ui.currentProg is None:
                 E5MessageBox.information(
                     self.ui, Program,
-                    self.trUtf8('<p>The program has terminated with an exit'
-                                ' status of {0}.</p>').format(status))
+                    self.tr('<p>The program has terminated with an exit'
+                            ' status of {0}.</p>').format(status))
             else:
                 E5MessageBox.information(
                     self.ui, Program,
-                    self.trUtf8('<p><b>{0}</b> has terminated with an exit'
-                                ' status of {1}.</p>')
+                    self.tr('<p><b>{0}</b> has terminated with an exit'
+                            ' status of {1}.</p>')
                         .format(Utilities.normabspath(self.ui.currentProg),
                                 status))
         else:
             if self.ui.notificationsEnabled():
                 if self.ui.currentProg is None:
-                    msg = self.trUtf8('The program has terminated with an exit'
-                                      ' status of {0}.').format(status)
+                    msg = self.tr('The program has terminated with an exit'
+                                  ' status of {0}.').format(status)
                 else:
-                    msg = self.trUtf8('"{0}" has terminated with an exit'
-                                      ' status of {1}.')\
+                    msg = self.tr('"{0}" has terminated with an exit'
+                                  ' status of {1}.')\
                         .format(os.path.basename(self.ui.currentProg),
                                 status)
                 self.ui.showNotification(
                     UI.PixmapCache.getPixmap("debug48.png"),
-                    self.trUtf8("Program terminated"), msg)
+                    self.tr("Program terminated"), msg)
             else:
                 if self.ui.currentProg is None:
                     self.appendStdout.emit(
-                        self.trUtf8('The program has terminated with an exit'
-                                    ' status of {0}.\n').format(status))
+                        self.tr('The program has terminated with an exit'
+                                ' status of {0}.\n').format(status))
                 else:
                     self.appendStdout.emit(
-                        self.trUtf8('"{0}" has terminated with an exit'
-                                    ' status of {1}.\n')
+                        self.tr('"{0}" has terminated with an exit'
+                                ' status of {1}.\n')
                             .format(Utilities.normabspath(self.ui.currentProg),
                                     status))
 
@@ -1062,7 +1062,7 @@ class DebugUI(QObject):
         if message is None:
             E5MessageBox.critical(
                 self.ui, Program,
-                self.trUtf8(
+                self.tr(
                     'The program being debugged contains an unspecified'
                     ' syntax error.'))
             return
@@ -1080,9 +1080,9 @@ class DebugUI(QObject):
         self.viewmanager.setFileLine(filename, lineNo, True, True)
         E5MessageBox.critical(
             self.ui, Program,
-            self.trUtf8('<p>The file <b>{0}</b> contains the syntax error'
-                        ' <b>{1}</b> at line <b>{2}</b>, character <b>{3}</b>.'
-                        '</p>')
+            self.tr('<p>The file <b>{0}</b> contains the syntax error'
+                    ' <b>{1}</b> at line <b>{2}</b>, character <b>{3}</b>.'
+                    '</p>')
                 .format(filename, message, lineNo, characterNo))
         
     def __clientException(self, exceptionType, exceptionMessage, stackTrace):
@@ -1099,8 +1099,8 @@ class DebugUI(QObject):
         if exceptionType is None:
             E5MessageBox.critical(
                 self.ui, Program,
-                self.trUtf8('An unhandled exception occured.'
-                            ' See the shell window for details.'))
+                self.tr('An unhandled exception occured.'
+                        ' See the shell window for details.'))
             return
         
         if (self.exceptions and
@@ -1139,7 +1139,7 @@ class DebugUI(QObject):
                                 E5MessageBox.Ignore)
                         res = E5MessageBox.critical(
                             self.ui, Program,
-                            self.trUtf8(
+                            self.tr(
                                 '<p>The debugged program raised the exception'
                                 ' <b>{0}</b><br>"<b>{1}</b>"<br>'
                                 'File: <b>{2}</b>, Line: <b>{3}</b></p>'
@@ -1154,7 +1154,7 @@ class DebugUI(QObject):
                     else:
                         res = E5MessageBox.critical(
                             self.ui, Program,
-                            self.trUtf8(
+                            self.tr(
                                 '<p>The debugged program raised the exception'
                                 ' <b>{0}</b><br>"<b>{1}</b>"</p>')
                             .format(
@@ -1191,8 +1191,8 @@ class DebugUI(QObject):
         if unplanned:
             E5MessageBox.information(
                 self.ui, Program,
-                self.trUtf8('The program being debugged has terminated'
-                            ' unexpectedly.'))
+                self.tr('The program being debugged has terminated'
+                        ' unexpectedly.'))
         
     def __getThreadList(self):
         """
@@ -1264,8 +1264,8 @@ class DebugUI(QObject):
         """
         E5MessageBox.critical(
             self.ui,
-            self.trUtf8("Breakpoint Condition Error"),
-            self.trUtf8(
+            self.tr("Breakpoint Condition Error"),
+            self.tr(
                 """<p>The condition of the breakpoint <b>{0}, {1}</b>"""
                 """ contains a syntax error.</p>""")
             .format(filename, lineno))
@@ -1300,9 +1300,9 @@ class DebugUI(QObject):
         """
         E5MessageBox.critical(
             self.ui,
-            self.trUtf8("Watch Expression Error"),
-            self.trUtf8("""<p>The watch expression <b>{0}</b>"""
-                        """ contains a syntax error.</p>""")
+            self.tr("Watch Expression Error"),
+            self.tr("""<p>The watch expression <b>{0}</b>"""
+                    """ contains a syntax error.</p>""")
             .format(cond))
         
         model = self.debugServer.getWatchPointModel()
@@ -1328,11 +1328,11 @@ class DebugUI(QObject):
                 idx.internalPointer() != index.internalPointer()
             if duplicate:
                 if not special:
-                    msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
-                                      """ already exists.</p>""")\
+                    msg = self.tr("""<p>A watch expression '<b>{0}</b>'"""
+                                  """ already exists.</p>""")\
                         .format(Utilities.html_encode(cond))
                 else:
-                    msg = self.trUtf8(
+                    msg = self.tr(
                         """<p>A watch expression '<b>{0}</b>'"""
                         """ for the variable <b>{1}</b> already"""
                         """ exists.</p>""")\
@@ -1340,7 +1340,7 @@ class DebugUI(QObject):
                                 Utilities.html_encode(cond))
                 E5MessageBox.warning(
                     self.ui,
-                    self.trUtf8("Watch expression already exists"),
+                    self.tr("Watch expression already exists"),
                     msg)
                 model.deleteWatchPointByIndex(index)
             else:
@@ -1487,9 +1487,9 @@ class DebugUI(QObject):
         # Get the command line arguments, the working directory and the
         # exception reporting flag.
         if runProject:
-            cap = self.trUtf8("Coverage of Project")
+            cap = self.tr("Coverage of Project")
         else:
-            cap = self.trUtf8("Coverage of Script")
+            cap = self.tr("Coverage of Script")
         dlg = StartDialog(
             cap, self.argvHistory, self.wdHistory,
             self.envHistory, self.exceptions, self.ui, 2,
@@ -1504,8 +1504,8 @@ class DebugUI(QObject):
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
-                        self.trUtf8("Coverage of Project"),
-                        self.trUtf8(
+                        self.tr("Coverage of Project"),
+                        self.tr(
                             "There is no main script defined for the"
                             " current project. Aborting"))
                     return
@@ -1605,9 +1605,9 @@ class DebugUI(QObject):
         # Get the command line arguments, the working directory and the
         # exception reporting flag.
         if runProject:
-            cap = self.trUtf8("Profile of Project")
+            cap = self.tr("Profile of Project")
         else:
-            cap = self.trUtf8("Profile of Script")
+            cap = self.tr("Profile of Script")
         dlg = StartDialog(
             cap, self.argvHistory, self.wdHistory, self.envHistory,
             self.exceptions, self.ui, 3,
@@ -1622,8 +1622,8 @@ class DebugUI(QObject):
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
-                        self.trUtf8("Profile of Project"),
-                        self.trUtf8(
+                        self.tr("Profile of Project"),
+                        self.tr(
                             "There is no main script defined for the"
                             " current project. Aborting"))
                     return
@@ -1723,9 +1723,9 @@ class DebugUI(QObject):
         # Get the command line arguments, the working directory and the
         # exception reporting flag.
         if runProject:
-            cap = self.trUtf8("Run Project")
+            cap = self.tr("Run Project")
         else:
-            cap = self.trUtf8("Run Script")
+            cap = self.tr("Run Script")
         dlg = StartDialog(
             cap, self.argvHistory, self.wdHistory, self.envHistory,
             self.exceptions, self.ui, 1,
@@ -1742,8 +1742,8 @@ class DebugUI(QObject):
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
-                        self.trUtf8("Run Project"),
-                        self.trUtf8(
+                        self.tr("Run Project"),
+                        self.tr(
                             "There is no main script defined for the"
                             " current project. Aborting"))
                     return
@@ -1844,9 +1844,9 @@ class DebugUI(QObject):
         # Get the command line arguments, the working directory and the
         # exception reporting flag.
         if debugProject:
-            cap = self.trUtf8("Debug Project")
+            cap = self.tr("Debug Project")
         else:
-            cap = self.trUtf8("Debug Script")
+            cap = self.tr("Debug Script")
         dlg = StartDialog(
             cap, self.argvHistory, self.wdHistory, self.envHistory,
             self.exceptions, self.ui, 0, tracePython=self.tracePython,
@@ -1863,8 +1863,8 @@ class DebugUI(QObject):
                 if fn is None:
                     E5MessageBox.critical(
                         self.ui,
-                        self.trUtf8("Debug Project"),
-                        self.trUtf8(
+                        self.tr("Debug Project"),
+                        self.tr(
                             "There is no main script defined for the"
                             " current project. No debugging possible."))
                     return
@@ -2154,8 +2154,8 @@ class DebugUI(QObject):
 
         arg, ok = QInputDialog.getItem(
             self.ui,
-            self.trUtf8("Evaluate"),
-            self.trUtf8("Enter the statement to evaluate"),
+            self.tr("Evaluate"),
+            self.tr("Enter the statement to evaluate"),
             self.evalHistory,
             curr, True)
 
@@ -2183,8 +2183,8 @@ class DebugUI(QObject):
 
         stmt, ok = QInputDialog.getItem(
             self.ui,
-            self.trUtf8("Execute"),
-            self.trUtf8("Enter the statement to execute"),
+            self.tr("Execute"),
+            self.tr("Enter the statement to execute"),
             self.execHistory,
             curr, True)
 

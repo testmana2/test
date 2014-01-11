@@ -110,13 +110,13 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 except KeyError:
                     vcsSystemDisplay = "None"
                 self.vcsLabel.setText(
-                    self.trUtf8(
+                    self.tr(
                         "The project is version controlled by <b>{0}</b>.")
                     .format(vcsSystemDisplay))
                 self.vcsInfoButton.show()
             else:
                 self.vcsLabel.setText(
-                    self.trUtf8("The project is not version controlled."))
+                    self.tr("The project is not version controlled."))
                 self.vcsInfoButton.hide()
             self.vcsCheckBox.hide()
         else:
@@ -158,7 +158,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select project directory"),
+            self.tr("Select project directory"),
             self.dirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
@@ -207,11 +207,11 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             if filetype == "SOURCES":
                 patterns.append(pattern)
-        filters = self.trUtf8("Source Files ({0});;All Files (*)")\
+        filters = self.tr("Source Files ({0});;All Files (*)")\
             .format(" ".join(patterns))
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select main script file"),
+            self.tr("Select main script file"),
             dir,
             filters)
         

@@ -115,8 +115,8 @@ class AdBlockTreeWidget(E5TreeWidget):
         if not filter:
             filter = QInputDialog.getText(
                 self,
-                self.trUtf8("Add Custom Rule"),
-                self.trUtf8("Write your rule here:"),
+                self.tr("Add Custom Rule"),
+                self.tr("Write your rule here:"),
                 QLineEdit.Normal)
             if filter == "":
                 return
@@ -164,9 +164,9 @@ class AdBlockTreeWidget(E5TreeWidget):
             return
         
         menu = QMenu()
-        menu.addAction(self.trUtf8("Add Rule"), self.addRule)
+        menu.addAction(self.tr("Add Rule"), self.addRule)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8("Remove Rule"), self.removeRule)
+        act = menu.addAction(self.tr("Remove Rule"), self.removeRule)
         if item.parent() is None:
             act.setDisabled(True)
         
@@ -219,7 +219,7 @@ class AdBlockTreeWidget(E5TreeWidget):
         
         self.__itemChangingBlock = True
         self.__topItem.setText(
-            0, self.trUtf8("{0} (recently updated)").format(
+            0, self.tr("{0} (recently updated)").format(
                 self.__subscription.title()))
         self.__itemChangingBlock = False
     

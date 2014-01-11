@@ -175,4 +175,4 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         else:
             txt = self.findtextCombo.currentText()
             self.statusLabel.setText(
-                self.trUtf8("'{0}' was not found.").format(txt))
+                self.tr("'{0}' was not found.").format(txt))

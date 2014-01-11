@@ -198,8 +198,8 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                 self.__showError(e.args[0])
             except AttributeError:
                 self.__showError(
-                    self.trUtf8("The installed version of PySvn should be "
-                                "1.4.0 or better."))
+                    self.tr("The installed version of PySvn should be "
+                            "1.4.0 or better."))
         finally:
             locker.unlock()
             QApplication.restoreOverrideCursor()
@@ -275,7 +275,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         """
         E5MessageBox.critical(
             self,
-            self.trUtf8("Subversion Error"),
+            self.tr("Subversion Error"),
             msg)
     
     def accept(self):

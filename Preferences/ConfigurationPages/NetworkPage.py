@@ -40,25 +40,25 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("No FTP Proxy"), E5FtpProxyType.NoProxy)
+            self.tr("No FTP Proxy"), E5FtpProxyType.NoProxy)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("No Proxy Authentication required"),
+            self.tr("No Proxy Authentication required"),
             E5FtpProxyType.NonAuthorizing)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("User@Server"), E5FtpProxyType.UserAtServer)
+            self.tr("User@Server"), E5FtpProxyType.UserAtServer)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("SITE"), E5FtpProxyType.Site)
+            self.tr("SITE"), E5FtpProxyType.Site)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("OPEN"), E5FtpProxyType.Open)
+            self.tr("OPEN"), E5FtpProxyType.Open)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("User@Proxyuser@Server"),
+            self.tr("User@Proxyuser@Server"),
             E5FtpProxyType.UserAtProxyuserAtServer)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("Proxyuser@Server"), E5FtpProxyType.ProxyuserAtServer)
+            self.tr("Proxyuser@Server"), E5FtpProxyType.ProxyuserAtServer)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("AUTH and RESP"), E5FtpProxyType.AuthResp)
+            self.tr("AUTH and RESP"), E5FtpProxyType.AuthResp)
         self.ftpProxyTypeCombo.addItem(
-            self.trUtf8("Bluecoat Proxy"), E5FtpProxyType.Bluecoat)
+            self.tr("Bluecoat Proxy"), E5FtpProxyType.Bluecoat)
         
         # set initial values
         self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
@@ -182,7 +182,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select download directory"),
+            self.tr("Select download directory"),
             self.downloadDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

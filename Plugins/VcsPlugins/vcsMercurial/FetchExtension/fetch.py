@@ -57,7 +57,7 @@ class Fetch(HgExtension):
             args.append("-v")
             
             dia = HgDialog(
-                self.trUtf8('Fetching from a remote Mercurial repository'),
+                self.tr('Fetching from a remote Mercurial repository'),
                 self.vcs)
             res = dia.startProcess(args, repodir)
             if res:

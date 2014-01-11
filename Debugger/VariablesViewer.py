@@ -310,23 +310,23 @@ class VariablesViewer(QTreeWidget):
         
         self.scope = scope
         if scope:
-            self.setWindowTitle(self.trUtf8("Global Variables"))
+            self.setWindowTitle(self.tr("Global Variables"))
             self.setHeaderLabels([
-                self.trUtf8("Globals"),
-                self.trUtf8("Value"),
-                self.trUtf8("Type")])
-            self.setWhatsThis(self.trUtf8(
+                self.tr("Globals"),
+                self.tr("Value"),
+                self.tr("Type")])
+            self.setWhatsThis(self.tr(
                 """<b>The Global Variables Viewer Window</b>"""
                 """<p>This window displays the global variables"""
                 """ of the debugged program.</p>"""
             ))
         else:
-            self.setWindowTitle(self.trUtf8("Local Variables"))
+            self.setWindowTitle(self.tr("Local Variables"))
             self.setHeaderLabels([
-                self.trUtf8("Locals"),
-                self.trUtf8("Value"),
-                self.trUtf8("Type")])
-            self.setWhatsThis(self.trUtf8(
+                self.tr("Locals"),
+                self.tr("Value"),
+                self.tr("Type")])
+            self.setWhatsThis(self.tr(
                 """<b>The Local Variables Viewer Window</b>"""
                 """<p>This window displays the local variables"""
                 """ of the debugged program.</p>"""
@@ -356,12 +356,12 @@ class VariablesViewer(QTreeWidget):
         Private method to generate the popup menus.
         """
         self.menu = QMenu()
-        self.menu.addAction(self.trUtf8("Show Details..."), self.__showDetails)
+        self.menu.addAction(self.tr("Show Details..."), self.__showDetails)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.backMenu = QMenu()
-        self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.backMenu.addAction(self.tr("Configure..."), self.__configure)
         
     def __showContextMenu(self, coord):
         """
@@ -570,7 +570,7 @@ class VariablesViewer(QTreeWidget):
         
         if vtype in ['list', 'Array', 'tuple', 'dict', 'Hash']:
             itm = self.__generateItem(parent, dvar,
-                                      self.trUtf8("{0} items").format(value),
+                                      self.tr("{0} items").format(value),
                                       dvtype, True)
         elif vtype in ['unicode', 'str']:
             if self.rx_nonprintable.indexIn(value) != -1:
@@ -597,10 +597,10 @@ class VariablesViewer(QTreeWidget):
         """
         try:
             i = ConfigVarTypeStrings.index(vtype)
-            dvtype = self.trUtf8(ConfigVarTypeDispStrings[i])
+            dvtype = self.tr(ConfigVarTypeDispStrings[i])
         except ValueError:
             if vtype == 'classobj':
-                dvtype = self.trUtf8(ConfigVarTypeDispStrings[
+                dvtype = self.tr(ConfigVarTypeDispStrings[
                     ConfigVarTypeStrings.index('instance')])
             else:
                 dvtype = vtype

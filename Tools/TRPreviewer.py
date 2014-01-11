@@ -57,7 +57,7 @@ class TRPreviewer(E5MainWindow):
         self.statusBar()
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
-        self.setWindowTitle(self.trUtf8("Translations Previewer"))
+        self.setWindowTitle(self.tr("Translations Previewer"))
 
         self.cw = QWidget(self)
         self.cw.setObjectName("qt_central_widget")
@@ -73,14 +73,14 @@ class TRPreviewer(E5MainWindow):
         self.languageLayout.setObjectName("languageLayout")
 
         self.languageLabel = QLabel(
-            self.trUtf8("Select language file"), self.cw)
+            self.tr("Select language file"), self.cw)
         self.languageLabel.setObjectName("languageLabel")
         self.languageLayout.addWidget(self.languageLabel)
 
         self.languageCombo = QComboBox(self.cw)
         self.languageCombo.setObjectName("languageCombo")
         self.languageCombo.setEditable(False)
-        self.languageCombo.setToolTip(self.trUtf8("Select language file"))
+        self.languageCombo.setToolTip(self.tr("Select language file"))
         self.languageCombo.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Preferred)
         self.languageLayout.addWidget(self.languageCombo)
@@ -157,9 +157,9 @@ class TRPreviewer(E5MainWindow):
         """
         self.openUIAct = QAction(
             UI.PixmapCache.getIcon("openUI.png"),
-            self.trUtf8('&Open UI Files...'), self)
-        self.openUIAct.setStatusTip(self.trUtf8('Open UI files for display'))
-        self.openUIAct.setWhatsThis(self.trUtf8(
+            self.tr('&Open UI Files...'), self)
+        self.openUIAct.setStatusTip(self.tr('Open UI files for display'))
+        self.openUIAct.setWhatsThis(self.tr(
             """<b>Open UI Files</b>"""
             """<p>This opens some UI files for display.</p>"""
         ))
@@ -167,10 +167,10 @@ class TRPreviewer(E5MainWindow):
         
         self.openQMAct = QAction(
             UI.PixmapCache.getIcon("openQM.png"),
-            self.trUtf8('Open &Translation Files...'), self)
-        self.openQMAct.setStatusTip(self.trUtf8(
+            self.tr('Open &Translation Files...'), self)
+        self.openQMAct.setStatusTip(self.tr(
             'Open Translation files for display'))
-        self.openQMAct.setWhatsThis(self.trUtf8(
+        self.openQMAct.setWhatsThis(self.tr(
             """<b>Open Translation Files</b>"""
             """<p>This opens some translation files for display.</p>"""
         ))
@@ -178,10 +178,10 @@ class TRPreviewer(E5MainWindow):
         
         self.reloadAct = QAction(
             UI.PixmapCache.getIcon("reload.png"),
-            self.trUtf8('&Reload Translations'), self)
-        self.reloadAct.setStatusTip(self.trUtf8(
+            self.tr('&Reload Translations'), self)
+        self.reloadAct.setStatusTip(self.tr(
             'Reload the loaded translations'))
-        self.reloadAct.setWhatsThis(self.trUtf8(
+        self.reloadAct.setWhatsThis(self.tr(
             """<b>Reload Translations</b>"""
             """<p>This reloads the translations for the loaded"""
             """ languages.</p>"""
@@ -189,11 +189,11 @@ class TRPreviewer(E5MainWindow):
         self.reloadAct.triggered[()].connect(self.translations.reload)
         
         self.exitAct = QAction(
-            UI.PixmapCache.getIcon("exit.png"), self.trUtf8('&Quit'), self)
+            UI.PixmapCache.getIcon("exit.png"), self.tr('&Quit'), self)
         self.exitAct.setShortcut(QKeySequence(
-            self.trUtf8("Ctrl+Q", "File|Quit")))
-        self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
-        self.exitAct.setWhatsThis(self.trUtf8(
+            self.tr("Ctrl+Q", "File|Quit")))
+        self.exitAct.setStatusTip(self.tr('Quit the application'))
+        self.exitAct.setWhatsThis(self.tr(
             """<b>Quit</b>"""
             """<p>Quit the application.</p>"""
         ))
@@ -201,10 +201,10 @@ class TRPreviewer(E5MainWindow):
         
         self.whatsThisAct = QAction(
             UI.PixmapCache.getIcon("whatsThis.png"),
-            self.trUtf8('&What\'s This?'), self)
-        self.whatsThisAct.setShortcut(QKeySequence(self.trUtf8("Shift+F1")))
-        self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
-        self.whatsThisAct.setWhatsThis(self.trUtf8(
+            self.tr('&What\'s This?'), self)
+        self.whatsThisAct.setShortcut(QKeySequence(self.tr("Shift+F1")))
+        self.whatsThisAct.setStatusTip(self.tr('Context sensitive help'))
+        self.whatsThisAct.setWhatsThis(self.tr(
             """<b>Display context sensitive help</b>"""
             """<p>In What's This? mode, the mouse cursor shows an arrow"""
             """ with a question mark, and you can click on the interface"""
@@ -214,36 +214,36 @@ class TRPreviewer(E5MainWindow):
         ))
         self.whatsThisAct.triggered[()].connect(self.__whatsThis)
 
-        self.aboutAct = QAction(self.trUtf8('&About'), self)
-        self.aboutAct.setStatusTip(self.trUtf8(
+        self.aboutAct = QAction(self.tr('&About'), self)
+        self.aboutAct.setStatusTip(self.tr(
             'Display information about this software'))
-        self.aboutAct.setWhatsThis(self.trUtf8(
+        self.aboutAct.setWhatsThis(self.tr(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""
         ))
         self.aboutAct.triggered[()].connect(self.__about)
         
-        self.aboutQtAct = QAction(self.trUtf8('About &Qt'), self)
+        self.aboutQtAct = QAction(self.tr('About &Qt'), self)
         self.aboutQtAct.setStatusTip(
-            self.trUtf8('Display information about the Qt toolkit'))
-        self.aboutQtAct.setWhatsThis(self.trUtf8(
+            self.tr('Display information about the Qt toolkit'))
+        self.aboutQtAct.setWhatsThis(self.tr(
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
         self.aboutQtAct.triggered[()].connect(self.__aboutQt)
         
-        self.tileAct = QAction(self.trUtf8('&Tile'), self)
-        self.tileAct.setStatusTip(self.trUtf8('Tile the windows'))
-        self.tileAct.setWhatsThis(self.trUtf8(
+        self.tileAct = QAction(self.tr('&Tile'), self)
+        self.tileAct.setStatusTip(self.tr('Tile the windows'))
+        self.tileAct.setWhatsThis(self.tr(
             """<b>Tile the windows</b>"""
             """<p>Rearrange and resize the windows so that they are"""
             """ tiled.</p>"""
         ))
         self.tileAct.triggered[()].connect(self.preview.tileSubWindows)
         
-        self.cascadeAct = QAction(self.trUtf8('&Cascade'), self)
-        self.cascadeAct.setStatusTip(self.trUtf8('Cascade the windows'))
-        self.cascadeAct.setWhatsThis(self.trUtf8(
+        self.cascadeAct = QAction(self.tr('&Cascade'), self)
+        self.cascadeAct.setStatusTip(self.tr('Cascade the windows'))
+        self.cascadeAct.setWhatsThis(self.tr(
             """<b>Cascade the windows</b>"""
             """<p>Rearrange and resize the windows so that they are"""
             """ cascaded.</p>"""
@@ -251,19 +251,19 @@ class TRPreviewer(E5MainWindow):
         self.cascadeAct.triggered[()].connect(self.preview.cascadeSubWindows)
         
         self.closeAct = QAction(
-            UI.PixmapCache.getIcon("close.png"), self.trUtf8('&Close'), self)
-        self.closeAct.setShortcut(QKeySequence(self.trUtf8(
+            UI.PixmapCache.getIcon("close.png"), self.tr('&Close'), self)
+        self.closeAct.setShortcut(QKeySequence(self.tr(
             "Ctrl+W", "File|Close")))
-        self.closeAct.setStatusTip(self.trUtf8('Close the current window'))
-        self.closeAct.setWhatsThis(self.trUtf8(
+        self.closeAct.setStatusTip(self.tr('Close the current window'))
+        self.closeAct.setWhatsThis(self.tr(
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
         self.closeAct.triggered[()].connect(self.preview.closeWidget)
         
-        self.closeAllAct = QAction(self.trUtf8('Clos&e All'), self)
-        self.closeAllAct.setStatusTip(self.trUtf8('Close all windows'))
-        self.closeAllAct.setWhatsThis(self.trUtf8(
+        self.closeAllAct = QAction(self.tr('Clos&e All'), self)
+        self.closeAllAct.setStatusTip(self.tr('Close all windows'))
+        self.closeAllAct.setWhatsThis(self.tr(
             """<b>Close All Windows</b>"""
             """<p>Close all windows.</p>"""
         ))
@@ -275,7 +275,7 @@ class TRPreviewer(E5MainWindow):
         """
         mb = self.menuBar()
 
-        menu = mb.addMenu(self.trUtf8('&File'))
+        menu = mb.addMenu(self.tr('&File'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.openUIAct)
         menu.addAction(self.openQMAct)
@@ -286,14 +286,14 @@ class TRPreviewer(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.exitAct)
         
-        self.windowMenu = mb.addMenu(self.trUtf8('&Window'))
+        self.windowMenu = mb.addMenu(self.tr('&Window'))
         self.windowMenu.setTearOffEnabled(True)
         self.windowMenu.aboutToShow.connect(self.__showWindowMenu)
         self.windowMenu.triggered.connect(self.preview.toggleSelectedWidget)
         
         mb.addSeparator()
         
-        menu = mb.addMenu(self.trUtf8('&Help'))
+        menu = mb.addMenu(self.tr('&Help'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.aboutAct)
         menu.addAction(self.aboutQtAct)
@@ -304,7 +304,7 @@ class TRPreviewer(E5MainWindow):
         """
         Private method to create the toolbars.
         """
-        filetb = self.addToolBar(self.trUtf8("File"))
+        filetb = self.addToolBar(self.tr("File"))
         filetb.setIconSize(UI.Config.ToolBarIconSize)
         filetb.addAction(self.openUIAct)
         filetb.addAction(self.openQMAct)
@@ -314,7 +314,7 @@ class TRPreviewer(E5MainWindow):
         filetb.addSeparator()
         filetb.addAction(self.exitAct)
         
-        helptb = self.addToolBar(self.trUtf8("Help"))
+        helptb = self.addToolBar(self.tr("Help"))
         helptb.setIconSize(UI.Config.ToolBarIconSize)
         helptb.addAction(self.whatsThisAct)
     
@@ -350,8 +350,8 @@ class TRPreviewer(E5MainWindow):
         """
         E5MessageBox.about(
             self,
-            self.trUtf8("TR Previewer"),
-            self.trUtf8(
+            self.tr("TR Previewer"),
+            self.tr(
                 """<h3> About TR Previewer </h3>"""
                 """<p>The TR Previewer loads and displays Qt User-Interface"""
                 """ files and translation files and shows dialogs for a"""
@@ -363,7 +363,7 @@ class TRPreviewer(E5MainWindow):
         """
         Private slot to show info about Qt.
         """
-        E5MessageBox.aboutQt(self, self.trUtf8("TR Previewer"))
+        E5MessageBox.aboutQt(self, self.tr("TR Previewer"))
     
     def __openWidget(self):
         """
@@ -371,9 +371,9 @@ class TRPreviewer(E5MainWindow):
         """
         fileNameList = E5FileDialog.getOpenFileNames(
             None,
-            self.trUtf8("Select UI files"),
+            self.tr("Select UI files"),
             "",
-            self.trUtf8("Qt User-Interface Files (*.ui)"))
+            self.tr("Qt User-Interface Files (*.ui)"))
         
         for fileName in fileNameList:
             self.preview.loadWidget(fileName)
@@ -386,9 +386,9 @@ class TRPreviewer(E5MainWindow):
         """
         fileNameList = E5FileDialog.getOpenFileNames(
             None,
-            self.trUtf8("Select translation files"),
+            self.tr("Select translation files"),
             "",
-            self.trUtf8("Qt Translation Files (*.qm)"))
+            self.tr("Qt Translation Files (*.qm)"))
         
         first = True
         for fileName in fileNameList:
@@ -477,8 +477,8 @@ class TranslationsDict(QObject):
             if ntr.name is None:
                 E5MessageBox.warning(
                     self.parent(),
-                    self.trUtf8("Set Translator"),
-                    self.trUtf8(
+                    self.tr("Set Translator"),
+                    self.tr(
                         """<p>The translation filename <b>{0}</b>"""
                         """ is invalid.</p>""").format(fileName))
                 return
@@ -507,8 +507,8 @@ class TranslationsDict(QObject):
             if trans is None:
                 E5MessageBox.warning(
                     self.parent(),
-                    self.trUtf8("Set Translator"),
-                    self.trUtf8(
+                    self.tr("Set Translator"),
+                    self.tr(
                         """<p>The translator <b>{0}</b> is not known.</p>""")
                     .format(name))
                 return
@@ -650,9 +650,9 @@ class TranslationsDict(QObject):
         
         E5MessageBox.warning(
             self.parent(),
-            self.trUtf8("Load Translator"),
-            self.trUtf8("""<p>The translation file <b>{0}</b> could"""
-                        """ not be loaded.</p>""").format(transFileName))
+            self.tr("Load Translator"),
+            self.tr("""<p>The translation file <b>{0}</b> could"""
+                    """ not be loaded.</p>""").format(transFileName))
         return None
 
     def hasTranslations(self):
@@ -724,8 +724,8 @@ class WidgetView(QWidget):
         if not self.__widget:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Load UI File"),
-                self.trUtf8(
+                self.tr("Load UI File"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be loaded.</p>""")
                 .format(self.__uiFileName))
             self.__valid = False
@@ -780,8 +780,8 @@ class WidgetArea(QMdiArea):
             if not name:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Load UI File"),
-                    self.trUtf8(
+                    self.tr("Load UI File"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be loaded.</p>""")
                     .format(uiFileName))
                 return

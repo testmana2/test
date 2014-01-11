@@ -168,8 +168,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if self.nicknamesList.count() == 0:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Edit Identity"),
-                self.trUtf8(
+                self.tr("Edit Identity"),
+                self.tr(
                     """The identity must contain at least one nick name."""))
             block = self.identitiesCombo.blockSignals(True)
             identity = self.__currentIdentity.getName()
@@ -185,8 +185,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if not self.realnameEdit.text():
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Edit Identity"),
-                self.trUtf8("""The identity must have a real name."""))
+                self.tr("Edit Identity"),
+                self.tr("""The identity must have a real name."""))
             block = self.identitiesCombo.blockSignals(True)
             identity = self.__currentIdentity.getName()
             if identity == IrcIdentity.DefaultIdentityName:
@@ -207,8 +207,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         """
         name, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Add Identity"),
-            self.trUtf8("Identity Name:"),
+            self.tr("Add Identity"),
+            self.tr("Identity Name:"),
             QLineEdit.Normal)
         
         if ok:
@@ -216,8 +216,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 if name in self.__identities:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Add Identity"),
-                        self.trUtf8(
+                        self.tr("Add Identity"),
+                        self.tr(
                             """An identity named <b>{0}</b> already exists."""
                             """ You must provide a different name.""").format(
                             name))
@@ -233,8 +233,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Add Identity"),
-                    self.trUtf8("""The identity has to have a name."""))
+                    self.tr("Add Identity"),
+                    self.tr("""The identity has to have a name."""))
                 self.on_addButton_clicked()
     
     @pyqtSlot()
@@ -245,8 +245,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         currentIdentity = self.identitiesCombo.currentText()
         name, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Copy Identity"),
-            self.trUtf8("Identity Name:"),
+            self.tr("Copy Identity"),
+            self.tr("Identity Name:"),
             QLineEdit.Normal,
             currentIdentity)
         
@@ -255,8 +255,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 if name in self.__identities:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Copy Identity"),
-                        self.trUtf8(
+                        self.tr("Copy Identity"),
+                        self.tr(
                             """An identity named <b>{0}</b> already exists."""
                             """ You must provide a different name.""").format(
                             name))
@@ -271,8 +271,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Copy Identity"),
-                    self.trUtf8("""The identity has to have a name."""))
+                    self.tr("Copy Identity"),
+                    self.tr("""The identity has to have a name."""))
                 self.on_copyButton_clicked()
     
     @pyqtSlot()
@@ -283,8 +283,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         currentIdentity = self.identitiesCombo.currentText()
         name, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Rename Identity"),
-            self.trUtf8("Identity Name:"),
+            self.tr("Rename Identity"),
+            self.tr("Identity Name:"),
             QLineEdit.Normal,
             currentIdentity)
         
@@ -293,8 +293,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 if name in self.__identities:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Rename Identity"),
-                        self.trUtf8(
+                        self.tr("Rename Identity"),
+                        self.tr(
                             """An identity named <b>{0}</b> already exists."""
                             """ You must provide a different name.""").format(
                             name))
@@ -308,8 +308,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Copy Identity"),
-                    self.trUtf8("""The identity has to have a name."""))
+                    self.tr("Copy Identity"),
+                    self.tr("""The identity has to have a name."""))
                 self.on_renameButton_clicked()
     
     @pyqtSlot()
@@ -330,17 +330,17 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 break
         
         if inUse:
-            msg = self.trUtf8(
+            msg = self.tr(
                 """This identity is in use. If you remove it, the network"""
                 """ settings using it will fall back to the default"""
                 """ identity. Should it be deleted anyway?""")
         else:
-            msg = self.trUtf8(
+            msg = self.tr(
                 """Do you really want to delete all information for"""
                 """ this identity?""")
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Delete Identity"),
+            self.tr("Delete Identity"),
             msg,
             icon=E5MessageBox.Warning)
         if res:

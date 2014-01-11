@@ -110,7 +110,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     self.statusList.append("  {0}".format(name))
             self.reportedStates = states
             res = True
-            statusStr = self.trUtf8(
+            statusStr = self.tr(
                 "Subversion status checked successfully (using pysvn)")
         except pysvn.ClientError as e:
             res = False

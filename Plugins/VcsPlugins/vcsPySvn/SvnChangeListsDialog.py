@@ -73,7 +73,7 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
         self.cancelled = False
         
         self.filesLabel.setText(
-            self.trUtf8("Files (relative to {0}):").format(path))
+            self.tr("Files (relative to {0}):").format(path))
         
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         QApplication.processEvents()
@@ -107,7 +107,7 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         if len(self.changeListsDict) == 0:
-            self.changeLists.addItem(self.trUtf8("No changelists found"))
+            self.changeLists.addItem(self.tr("No changelists found"))
             self.buttonBox.button(QDialogButtonBox.Close).setFocus(
                 Qt.OtherFocusReason)
         else:

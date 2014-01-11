@@ -90,9 +90,9 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
                         guard = guard[1:]
                     else:
                         icon = None
-                        guard = self.trUtf8("Unguarded")
+                        guard = self.tr("Unguarded")
                     itm = QTreeWidgetItem(patchItm, [guard])
                     if icon:
                         itm.setIcon(0, icon)
         else:
-            QTreeWidgetItem(self.guardsTree, [self.trUtf8("no patches found")])
+            QTreeWidgetItem(self.guardsTree, [self.tr("no patches found")])

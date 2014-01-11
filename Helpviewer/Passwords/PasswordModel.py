@@ -27,9 +27,9 @@ class PasswordModel(QAbstractTableModel):
         manager.changed.connect(self.__passwordsChanged)
         
         self.__headers = [
-            self.trUtf8("Website"),
-            self.trUtf8("Username"),
-            self.trUtf8("Password")
+            self.tr("Website"),
+            self.tr("Username"),
+            self.tr("Password")
         ]
         
         self.__showPasswords = False

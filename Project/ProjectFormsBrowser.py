@@ -66,9 +66,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
         
-        self.setWindowTitle(self.trUtf8('Forms'))
+        self.setWindowTitle(self.tr('Forms'))
 
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>Project Forms Browser</b>"""
             """<p>This allows to easily see all forms contained in the"""
             """ current project. Several actions can be executed via the"""
@@ -87,25 +87,25 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             'qtoolbox4.tmpl', 'qstackedwidget4.tmpl'
         ]
         self.templateTypes4 = [
-            self.trUtf8("Dialog"),
-            self.trUtf8("Widget"),
-            self.trUtf8("Main Window"),
-            self.trUtf8("Dialog with Buttonbox (Bottom)"),
-            self.trUtf8("Dialog with Buttonbox (Right)"),
-            self.trUtf8("Dialog with Buttons (Bottom)"),
-            self.trUtf8("Dialog with Buttons (Bottom-Center)"),
-            self.trUtf8("Dialog with Buttons (Right)"),
+            self.tr("Dialog"),
+            self.tr("Widget"),
+            self.tr("Main Window"),
+            self.tr("Dialog with Buttonbox (Bottom)"),
+            self.tr("Dialog with Buttonbox (Right)"),
+            self.tr("Dialog with Buttons (Bottom)"),
+            self.tr("Dialog with Buttons (Bottom-Center)"),
+            self.tr("Dialog with Buttons (Right)"),
             '',
-            self.trUtf8("QWizard"),
-            self.trUtf8("QWizardPage"),
-            self.trUtf8("QDockWidget"),
-            self.trUtf8("QFrame"),
-            self.trUtf8("QGroupBox"),
-            self.trUtf8("QScrollArea"),
-            self.trUtf8("QMdiArea"),
-            self.trUtf8("QTabWidget"),
-            self.trUtf8("QToolBox"),
-            self.trUtf8("QStackedWidget"),
+            self.tr("QWizard"),
+            self.tr("QWizardPage"),
+            self.tr("QDockWidget"),
+            self.tr("QFrame"),
+            self.tr("QGroupBox"),
+            self.tr("QScrollArea"),
+            self.tr("QMdiArea"),
+            self.tr("QTabWidget"),
+            self.tr("QToolBox"),
+            self.tr("QStackedWidget"),
         ]
         
         self.compileProc = None
@@ -125,39 +125,39 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(
-                self.trUtf8('Compile form'), self.__compileForm)
+                self.tr('Compile form'), self.__compileForm)
             self.menu.addAction(
-                self.trUtf8('Compile all forms'),
+                self.tr('Compile all forms'),
                 self.__compileAllForms)
             self.menu.addAction(
-                self.trUtf8('Generate Dialog Code...'),
+                self.tr('Generate Dialog Code...'),
                 self.__generateDialogCode)
             self.menu.addSeparator()
             self.menu.addAction(
-                self.trUtf8('Open in Qt-Designer'), self.__openFile)
+                self.tr('Open in Qt-Designer'), self.__openFile)
             self.menu.addAction(
-                self.trUtf8('Open in Editor'), self.__openFileInEditor)
+                self.tr('Open in Editor'), self.__openFileInEditor)
             self.menu.addSeparator()
-            self.menu.addAction(self.trUtf8('Preview form'), self.__UIPreview)
+            self.menu.addAction(self.tr('Preview form'), self.__UIPreview)
             self.menu.addAction(
-                self.trUtf8('Preview translations'), self.__TRPreview)
+                self.tr('Preview translations'), self.__TRPreview)
         else:
             if self.hooks["compileForm"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
                         "compileForm",
-                        self.trUtf8('Compile form')), self.__compileForm)
+                        self.tr('Compile form')), self.__compileForm)
             if self.hooks["compileAllForms"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllForms",
-                        self.trUtf8('Compile all forms')),
+                        self.tr('Compile all forms')),
                     self.__compileAllForms)
             if self.hooks["generateDialogCode"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
                         "generateDialogCode",
-                        self.trUtf8('Generate Dialog Code...')),
+                        self.tr('Generate Dialog Code...')),
                     self.__generateDialogCode)
             if self.hooks["compileForm"] is not None or \
                self.hooks["compileAllForms"] is not None or \
@@ -165,64 +165,64 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.menu.addSeparator()
             if self.hooks["open"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("open", self.trUtf8('Open')),
+                    self.hooksMenuEntries.get("open", self.tr('Open')),
                     self.__openFile)
-            self.menu.addAction(self.trUtf8('Open'), self.__openFileInEditor)
+            self.menu.addAction(self.tr('Open'), self.__openFileInEditor)
         self.menu.addSeparator()
-        act = self.menu.addAction(self.trUtf8('Rename file'), self._renameFile)
+        act = self.menu.addAction(self.tr('Rename file'), self._renameFile)
         self.menuActions.append(act)
         act = self.menu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.menuActions.append(act)
-        act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.menu.addAction(self.tr('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.menu.addAction(self.trUtf8('New form...'), self.__newForm)
+            self.menu.addAction(self.tr('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
-                        "newForm", self.trUtf8('New form...')), self.__newForm)
-        self.menu.addAction(self.trUtf8('Add forms...'), self.__addFormFiles)
+                        "newForm", self.tr('New form...')), self.__newForm)
+        self.menu.addAction(self.tr('Add forms...'), self.__addFormFiles)
         self.menu.addAction(
-            self.trUtf8('Add forms directory...'), self.__addFormsDirectory)
+            self.tr('Add forms directory...'), self.__addFormsDirectory)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.menu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.menu.addAction(self.tr('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"] or \
                 self.hooks["compileAllForms"] is not None:
             self.backMenu.addAction(
-                self.trUtf8('Compile all forms'), self.__compileAllForms)
+                self.tr('Compile all forms'), self.__compileAllForms)
             self.backMenu.addSeparator()
-            self.backMenu.addAction(self.trUtf8('New form...'), self.__newForm)
+            self.backMenu.addAction(self.tr('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
                 self.backMenu.addAction(
                     self.hooksMenuEntries.get(
-                        "newForm", self.trUtf8('New form...')), self.__newForm)
+                        "newForm", self.tr('New form...')), self.__newForm)
         self.backMenu.addAction(
-            self.trUtf8('Add forms...'), self.project.addUiFiles)
+            self.tr('Add forms...'), self.project.addUiFiles)
         self.backMenu.addAction(
-            self.trUtf8('Add forms directory...'), self.project.addUiDir)
+            self.tr('Add forms directory...'), self.project.addUiDir)
         self.backMenu.addSeparator()
         self.backMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.backMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.backMenu.addAction(self.tr('Configure...'), self._configure)
         self.backMenu.setEnabled(False)
 
         # create the menu for multiple selected files
@@ -230,115 +230,115 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             act = self.multiMenu.addAction(
-                self.trUtf8('Compile forms'), self.__compileSelectedForms)
+                self.tr('Compile forms'), self.__compileSelectedForms)
             self.multiMenu.addSeparator()
             self.multiMenu.addAction(
-                self.trUtf8('Open in Qt-Designer'), self.__openFile)
+                self.tr('Open in Qt-Designer'), self.__openFile)
             self.multiMenu.addAction(
-                self.trUtf8('Open in Editor'), self.__openFileInEditor)
+                self.tr('Open in Editor'), self.__openFileInEditor)
             self.multiMenu.addSeparator()
             self.multiMenu.addAction(
-                self.trUtf8('Preview translations'), self.__TRPreview)
+                self.tr('Preview translations'), self.__TRPreview)
         else:
             if self.hooks["compileSelectedForms"] is not None:
                 act = self.multiMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileSelectedForms",
-                        self.trUtf8('Compile forms')),
+                        self.tr('Compile forms')),
                     self.__compileSelectedForms)
                 self.multiMenu.addSeparator()
             if self.hooks["open"] is not None:
                 self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("open", self.trUtf8('Open')),
+                    self.hooksMenuEntries.get("open", self.tr('Open')),
                     self.__openFile)
             self.multiMenu.addAction(
-                self.trUtf8('Open'), self.__openFileInEditor)
+                self.tr('Open'), self.__openFileInEditor)
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
-            self.trUtf8('Delete'), self.__deleteFile)
+            self.tr('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.multiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.multiMenu.addAction(self.tr('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(
-                self.trUtf8('Compile all forms'), self.__compileAllForms)
+                self.tr('Compile all forms'), self.__compileAllForms)
             self.dirMenu.addSeparator()
         else:
             if self.hooks["compileAllForms"] is not None:
                 self.dirMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllForms",
-                        self.trUtf8('Compile all forms')),
+                        self.tr('Compile all forms')),
                     self.__compileAllForms)
                 self.dirMenu.addSeparator()
         act = self.dirMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeDir)
+            self.tr('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
         act = self.dirMenu.addAction(
-            self.trUtf8('Delete'), self._deleteDirectory)
+            self.tr('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
-            self.dirMenu.addAction(self.trUtf8('New form...'), self.__newForm)
+            self.dirMenu.addAction(self.tr('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
                 self.dirMenu.addAction(
                     self.hooksMenuEntries.get(
                         "newForm",
-                        self.trUtf8('New form...')), self.__newForm)
+                        self.tr('New form...')), self.__newForm)
         self.dirMenu.addAction(
-            self.trUtf8('Add forms...'), self.__addFormFiles)
+            self.tr('Add forms...'), self.__addFormFiles)
         self.dirMenu.addAction(
-            self.trUtf8('Add forms directory...'), self.__addFormsDirectory)
+            self.tr('Add forms directory...'), self.__addFormsDirectory)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.dirMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMenu.addAction(self.tr('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMultiMenu.addAction(
-                self.trUtf8('Compile all forms'), self.__compileAllForms)
+                self.tr('Compile all forms'), self.__compileAllForms)
             self.dirMultiMenu.addSeparator()
         else:
             if self.hooks["compileAllForms"] is not None:
                 self.dirMultiMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllForms",
-                        self.trUtf8('Compile all forms')),
+                        self.tr('Compile all forms')),
                     self.__compileAllForms)
                 self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Add forms...'), self.project.addUiFiles)
+            self.tr('Add forms...'), self.project.addUiFiles)
         self.dirMultiMenu.addAction(
-            self.trUtf8('Add forms directory...'), self.project.addUiDir)
+            self.tr('Add forms directory...'), self.project.addUiDir)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.dirMultiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Configure...'), self._configure)
+            self.tr('Configure...'), self._configure)
         
         self.menu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -545,8 +545,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         selectedForm, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("New Form"),
-            self.trUtf8("Select a form type:"),
+            self.tr("New Form"),
+            self.tr("Select a form type:"),
             self.templateTypes4,
             0, False)
         if not ok or not selectedForm:
@@ -559,9 +559,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("New Form"),
+            self.tr("New Form"),
             path,
-            self.trUtf8("Qt User-Interface Files (*.ui);;All Files (*)"),
+            self.tr("Qt User-Interface Files (*.ui);;All Files (*)"),
             "",
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -578,8 +578,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if os.path.exists(fname):
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("New Form"),
-                self.trUtf8("The file already exists! Overwrite it?"),
+                self.tr("New Form"),
+                self.tr("The file already exists! Overwrite it?"),
                 icon=E5MessageBox.Warning)
             if not res:
                 # user selected to not overwrite
@@ -590,8 +590,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         except IOError as e:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("New Form"),
-                self.trUtf8(
+                self.tr("New Form"),
+                self.tr(
                     "<p>The new form file <b>{0}</b> could not be created.<br>"
                     "Problem: {1}</p>").format(fname, str(e)))
             return
@@ -617,8 +617,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(
             self.parent(),
-            self.trUtf8("Delete forms"),
-            self.trUtf8(
+            self.tr("Delete forms"),
+            self.tr(
                 "Do you really want to delete these forms from the project?"),
             files)
         
@@ -688,42 +688,42 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 if not self.noDialog and not ui.notificationsEnabled():
                     E5MessageBox.information(
                         self,
-                        self.trUtf8("Form Compilation"),
-                        self.trUtf8("The compilation of the form file"
-                                    " was successful."))
+                        self.tr("Form Compilation"),
+                        self.tr("The compilation of the form file"
+                                " was successful."))
                 else:
                     ui.showNotification(
                         UI.PixmapCache.getPixmap("designer48.png"),
-                        self.trUtf8("Form Compilation"),
-                        self.trUtf8("The compilation of the form file"
-                                    " was successful."))
+                        self.tr("Form Compilation"),
+                        self.tr("The compilation of the form file"
+                                " was successful."))
                 self.project.projectFormCompiled.emit(self.compiledFile)
             except IOError as msg:
                 if not self.noDialog:
                     E5MessageBox.information(
                         self,
-                        self.trUtf8("Form Compilation"),
-                        self.trUtf8(
+                        self.tr("Form Compilation"),
+                        self.tr(
                             "<p>The compilation of the form file failed.</p>"
                             "<p>Reason: {0}</p>").format(str(msg)))
                 else:
                     ui.showNotification(
                         UI.PixmapCache.getPixmap("designer48.png"),
-                        self.trUtf8("Form Compilation"),
-                        self.trUtf8(
+                        self.tr("Form Compilation"),
+                        self.tr(
                             "<p>The compilation of the form file failed.</p>"
                             "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Form Compilation"),
-                    self.trUtf8("The compilation of the form file failed."))
+                    self.tr("Form Compilation"),
+                    self.tr("The compilation of the form file failed."))
             else:
                 ui.showNotification(
                     UI.PixmapCache.getPixmap("designer48.png"),
-                    self.trUtf8("Form Compilation"),
-                    self.trUtf8("The compilation of the form file failed."))
+                    self.tr("Form Compilation"),
+                    self.tr("The compilation of the form file failed."))
         self.compileProc = None
         
     def __compileUI(self, fn, noDialog=False, progress=None):
@@ -800,8 +800,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 progress.cancel()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'Could not start {0}.<br>'
                     'Ensure that it is in the search path.'
                 ).format(self.uicompiler))
@@ -853,9 +853,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         else:
             numForms = len(self.project.pdata["FORMS"])
             progress = E5ProgressDialog(
-                self.trUtf8("Compiling forms..."),
-                self.trUtf8("Abort"), 0, numForms,
-                self.trUtf8("%v/%m Forms"), self)
+                self.tr("Compiling forms..."),
+                self.tr("Abort"), 0, numForms,
+                self.tr("%v/%m Forms"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -890,9 +890,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         else:
             numForms = len(files)
             progress = E5ProgressDialog(
-                self.trUtf8("Compiling forms..."),
-                self.trUtf8("Abort"), 0, numForms,
-                self.trUtf8("%v/%m Forms"), self)
+                self.tr("Compiling forms..."),
+                self.tr("Abort"), 0, numForms,
+                self.tr("%v/%m Forms"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -927,8 +927,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 return
             
             progress = E5ProgressDialog(
-                self.trUtf8("Determining changed forms..."),
-                None, 0, 100, self.trUtf8("%v/%m Forms"))
+                self.tr("Determining changed forms..."),
+                None, 0, 100, self.tr("%v/%m Forms"))
             progress.setMinimumDuration(0)
             i = 0
             
@@ -955,7 +955,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             
             if changedForms:
                 progress.setLabelText(
-                    self.trUtf8("Compiling changed forms..."))
+                    self.tr("Compiling changed forms..."))
                 progress.setMaximum(len(changedForms))
                 i = 0
                 progress.setValue(i)

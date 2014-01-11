@@ -189,7 +189,7 @@ class TabWidget(E5TabWidget):
         
         self.navigationButton = QToolButton(self)
         self.navigationButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
-        self.navigationButton.setToolTip(self.trUtf8("Show a navigation menu"))
+        self.navigationButton.setToolTip(self.tr("Show a navigation menu"))
         self.navigationButton.setPopupMode(QToolButton.InstantPopup)
         self.navigationButton.setMenu(self.__navigationMenu)
         self.navigationButton.setEnabled(False)
@@ -200,7 +200,7 @@ class TabWidget(E5TabWidget):
             self.closeButton = QToolButton(self)
             self.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
             self.closeButton.setToolTip(
-                self.trUtf8("Close the current editor"))
+                self.tr("Close the current editor"))
             self.closeButton.setEnabled(False)
             self.closeButton.clicked[bool].connect(self.__closeButtonClicked)
             self.rightCornerWidgetLayout.addWidget(self.closeButton)
@@ -232,46 +232,46 @@ class TabWidget(E5TabWidget):
         self.__menu = QMenu(self)
         self.leftMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("1leftarrow.png"),
-            self.trUtf8('Move Left'), self.__contextMenuMoveLeft)
+            self.tr('Move Left'), self.__contextMenuMoveLeft)
         self.rightMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("1rightarrow.png"),
-            self.trUtf8('Move Right'), self.__contextMenuMoveRight)
+            self.tr('Move Right'), self.__contextMenuMoveRight)
         self.firstMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("2leftarrow.png"),
-            self.trUtf8('Move First'), self.__contextMenuMoveFirst)
+            self.tr('Move First'), self.__contextMenuMoveFirst)
         self.lastMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("2rightarrow.png"),
-            self.trUtf8('Move Last'), self.__contextMenuMoveLast)
+            self.tr('Move Last'), self.__contextMenuMoveLast)
         self.__menu.addSeparator()
         self.__menu.addAction(
             UI.PixmapCache.getIcon("tabClose.png"),
-            self.trUtf8('Close'), self.__contextMenuClose)
+            self.tr('Close'), self.__contextMenuClose)
         self.closeOthersMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("tabCloseOther.png"),
-            self.trUtf8("Close Others"), self.__contextMenuCloseOthers)
+            self.tr("Close Others"), self.__contextMenuCloseOthers)
         self.__menu.addAction(
-            self.trUtf8('Close All'), self.__contextMenuCloseAll)
+            self.tr('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
         self.saveMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("fileSave.png"),
-            self.trUtf8('Save'), self.__contextMenuSave)
+            self.tr('Save'), self.__contextMenuSave)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("fileSaveAs.png"),
-            self.trUtf8('Save As...'), self.__contextMenuSaveAs)
+            self.tr('Save As...'), self.__contextMenuSaveAs)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("fileSaveAll.png"),
-            self.trUtf8('Save All'), self.__contextMenuSaveAll)
+            self.tr('Save All'), self.__contextMenuSaveAll)
         self.__menu.addSeparator()
         self.openRejectionsMenuAct = self.__menu.addAction(
-            self.trUtf8("Open 'rejection' file"),
+            self.tr("Open 'rejection' file"),
             self.__contextMenuOpenRejections)
         self.__menu.addSeparator()
         self.__menu.addAction(
             UI.PixmapCache.getIcon("print.png"),
-            self.trUtf8('Print'), self.__contextMenuPrintFile)
+            self.tr('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
         self.copyPathAct = self.__menu.addAction(
-            self.trUtf8("Copy Path to Clipboard"),
+            self.tr("Copy Path to Clipboard"),
             self.__contextMenuCopyPathToClipboard)
         
     def __showContextMenu(self, coord, index):
@@ -413,7 +413,7 @@ class TabWidget(E5TabWidget):
             if len(txt) > maxFileNameChars:
                 txt = "...{0}".format(txt[-maxFileNameChars:])
             if editor.isReadOnly():
-                txt = self.trUtf8("{0} (ro)").format(txt)
+                txt = self.tr("{0} (ro)").format(txt)
             
             assembly = editor.parent()
             index = self.indexOf(assembly)
@@ -854,7 +854,7 @@ class Tabview(QSplitter, ViewManager):
         if fn is None:
             if not noName:
                 self.untitledCount += 1
-                noName = self.trUtf8("Untitled {0}").format(self.untitledCount)
+                noName = self.tr("Untitled {0}").format(self.untitledCount)
             self.currentTabWidget.addTab(win, noName)
             editor.setNoName(noName)
         else:
@@ -865,7 +865,7 @@ class Tabview(QSplitter, ViewManager):
             if len(txt) > self.maxFileNameChars:
                 txt = "...{0}".format(txt[-self.maxFileNameChars:])
             if not QFileInfo(fn).isWritable():
-                txt = self.trUtf8("{0} (ro)").format(txt)
+                txt = self.tr("{0} (ro)").format(txt)
             self.currentTabWidget.addTab(win, txt)
             index = self.currentTabWidget.indexOf(win)
             self.currentTabWidget.setTabToolTip(index, fn)
@@ -895,7 +895,7 @@ class Tabview(QSplitter, ViewManager):
         if fn is None:
             if not noName:
                 self.untitledCount += 1
-                noName = self.trUtf8("Untitled {0}").format(self.untitledCount)
+                noName = self.tr("Untitled {0}").format(self.untitledCount)
             tabWidget.insertWidget(index, win, noName)
             editor.setNoName(noName)
         else:
@@ -906,7 +906,7 @@ class Tabview(QSplitter, ViewManager):
             if len(txt) > self.maxFileNameChars:
                 txt = "...{0}".format(txt[-self.maxFileNameChars:])
             if not QFileInfo(fn).isWritable():
-                txt = self.trUtf8("{0} (ro)").format(txt)
+                txt = self.tr("{0} (ro)").format(txt)
             nindex = tabWidget.insertWidget(index, win, txt)
             tabWidget.setTabToolTip(nindex, fn)
         tabWidget.setCurrentWidget(win)
@@ -1233,7 +1233,7 @@ class Tabview(QSplitter, ViewManager):
                         if len(txt) > self.maxFileNameChars:
                             txt = "...{0}".format(txt[-self.maxFileNameChars:])
                         if not QFileInfo(fn).isWritable():
-                            txt = self.trUtf8("{0} (ro)").format(txt)
+                            txt = self.tr("{0} (ro)").format(txt)
                         tabWidget.setTabText(index, txt)
         
     def getTabWidgetById(self, id_):

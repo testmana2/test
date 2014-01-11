@@ -28,8 +28,8 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.__showPasswordsText = self.trUtf8("Show Passwords")
-        self.__hidePasswordsText = self.trUtf8("Hide Passwords")
+        self.__showPasswordsText = self.tr("Show Passwords")
+        self.__hidePasswordsText = self.tr("Hide Passwords")
         self.passwordsButton.setText(self.__showPasswordsText)
         
         self.removeButton.clicked[()].connect(
@@ -86,8 +86,8 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         else:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Saved Passwords"),
-                self.trUtf8("""Do you really want to show passwords?"""))
+                self.tr("Saved Passwords"),
+                self.tr("""Do you really want to show passwords?"""))
             if res:
                 self.__passwordModel.setShowPasswords(True)
                 self.passwordsButton.setText(self.__hidePasswordsText)

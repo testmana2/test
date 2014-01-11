@@ -56,11 +56,11 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.__external = False
         
         self.__backButton = self.buttonBox.addButton(
-            self.trUtf8("< Back"), QDialogButtonBox.ActionRole)
+            self.tr("< Back"), QDialogButtonBox.ActionRole)
         self.__nextButton = self.buttonBox.addButton(
-            self.trUtf8("Next >"), QDialogButtonBox.ActionRole)
+            self.tr("Next >"), QDialogButtonBox.ActionRole)
         self.__finishButton = self.buttonBox.addButton(
-            self.trUtf8("Install"), QDialogButtonBox.ActionRole)
+            self.tr("Install"), QDialogButtonBox.ActionRole)
         
         self.__closeButton = self.buttonBox.button(QDialogButtonBox.Close)
         self.__cancelButton = self.buttonBox.button(QDialogButtonBox.Cancel)
@@ -68,13 +68,13 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         userDir = self.__pluginManager.getPluginDir("user")
         if userDir is not None:
             self.destinationCombo.addItem(
-                self.trUtf8("User plugins directory"),
+                self.tr("User plugins directory"),
                 userDir)
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
             self.destinationCombo.addItem(
-                self.trUtf8("Global plugins directory"),
+                self.tr("Global plugins directory"),
                 globalDir)
         
         self.__installedDirs = []
@@ -137,7 +137,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.__closeButton.hide()
             self.__cancelButton.show()
             
-            msg = self.trUtf8(
+            msg = self.tr(
                 "Plugin ZIP-Archives:\n{0}\n\nDestination:\n{1} ({2})")\
                 .format("\n".join(self.__createArchivesList()),
                         self.destinationCombo.currentText(),
@@ -154,9 +154,9 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         dn = Preferences.getPluginManager("DownloadPath")
         archives = E5FileDialog.getOpenFileNames(
             self,
-            self.trUtf8("Select plugin ZIP-archives"),
+            self.tr("Select plugin ZIP-archives"),
             dn,
-            self.trUtf8("Plugin archive (*.zip)"))
+            self.tr("Plugin archive (*.zip)"))
         
         if archives:
             matchflags = Qt.MatchFixedString
@@ -219,21 +219,21 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         self.summaryEdit.clear()
         for archive in self.__createArchivesList():
             self.summaryEdit.append(
-                self.trUtf8("Installing {0} ...").format(archive))
+                self.tr("Installing {0} ...").format(archive))
             ok, msg, restart = self.__installPlugin(archive)
             res = res and ok
             if ok:
-                self.summaryEdit.append(self.trUtf8("  ok"))
+                self.summaryEdit.append(self.tr("  ok"))
             else:
                 self.summaryEdit.append(msg)
             if restart:
                 self.__restartNeeded = True
         self.summaryEdit.append("\n")
         if res:
-            self.summaryEdit.append(self.trUtf8(
+            self.summaryEdit.append(self.tr(
                 """The plugins were installed successfully."""))
         else:
-            self.summaryEdit.append(self.trUtf8(
+            self.summaryEdit.append(self.tr(
                 """Some plugins could not be installed."""))
         
         return res
@@ -262,7 +262,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         # check, if the archive exists
         if not os.path.exists(archive):
             return False, \
-                self.trUtf8(
+                self.tr(
                     """<p>The archive file <b>{0}</b> does not exist. """
                     """Aborting...</p>""").format(archive), \
                 False
@@ -270,7 +270,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         # check, if the archive is a valid zip file
         if not zipfile.is_zipfile(archive):
             return False, \
-                self.trUtf8(
+                self.tr(
                     """<p>The file <b>{0}</b> is not a valid plugin """
                     """ZIP-archive. Aborting...</p>""").format(archive), \
                 False
@@ -278,7 +278,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         # check, if the destination is writeable
         if not os.access(destination, os.W_OK):
             return False, \
-                self.trUtf8(
+                self.tr(
                     """<p>The destination directory <b>{0}</b> is not """
                     """writeable. Aborting...</p>""").format(destination), \
                 False
@@ -297,7 +297,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if not pluginFound:
             return False, \
-                self.trUtf8(
+                self.tr(
                     """<p>The file <b>{0}</b> is not a valid plugin """
                     """ZIP-archive. Aborting...</p>""").format(archive), \
                 False
@@ -342,7 +342,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if not packageName:
             return False, \
-                self.trUtf8(
+                self.tr(
                     """<p>The plugin module <b>{0}</b> does not contain """
                     """a 'packageName' attribute. Aborting...</p>""")\
                 .format(pluginFileName), \
@@ -350,7 +350,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if pyqtApi < 2:
             return False, \
-                self.trUtf8(
+                self.tr(
                     """<p>The plugin module <b>{0}</b> does not conform"""
                     """ with the PyQt v2 API. Aborting...</p>""")\
                 .format(pluginFileName), \
@@ -361,8 +361,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
            packageName != "None" and \
            os.path.exists(os.path.join(destination, packageName)):
             return False, \
-                self.trUtf8("""<p>The plugin package <b>{0}</b> exists. """
-                            """Aborting...</p>""")\
+                self.tr("""<p>The plugin package <b>{0}</b> exists. """
+                        """Aborting...</p>""")\
                     .format(os.path.join(destination, packageName)), \
                 False
         
@@ -370,8 +370,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
            packageName != "None" and \
            not os.path.exists(os.path.join(destination, packageName)):
             return False, \
-                self.trUtf8("""<p>The plugin module <b>{0}</b> exists. """
-                            """Aborting...</p>""")\
+                self.tr("""<p>The plugin module <b>{0}</b> exists. """
+                        """Aborting...</p>""")\
                     .format(os.path.join(destination, pluginFileName)), \
                 False
         
@@ -437,26 +437,26 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         except os.error as why:
             self.__rollback()
             return False, \
-                self.trUtf8(
+                self.tr(
                     "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except IOError as why:
             self.__rollback()
             return False, \
-                self.trUtf8(
+                self.tr(
                     "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except OSError as why:
             self.__rollback()
             return False, \
-                self.trUtf8(
+                self.tr(
                     "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except:
             print("Unspecific exception installing plugin.", file=sys.stderr)
             self.__rollback()
             return False, \
-                self.trUtf8("Unspecific exception installing plugin."), \
+                self.tr("Unspecific exception installing plugin."), \
                 False
         
         # now compile the plugins

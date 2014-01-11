@@ -39,15 +39,15 @@ class SqlConnectionWidget(QWidget):
         
         self.__connectionTree = QTreeWidget(self)
         self.__connectionTree.setObjectName("connectionTree")
-        self.__connectionTree.setHeaderLabels([self.trUtf8("Database")])
+        self.__connectionTree.setHeaderLabels([self.tr("Database")])
         if qVersion() >= "5.0.0":
             self.__connectionTree.header().setSectionResizeMode(
                 QHeaderView.Stretch)
         else:
             self.__connectionTree.header().setResizeMode(QHeaderView.Stretch)
-        refreshAction = QAction(self.trUtf8("Refresh"), self.__connectionTree)
+        refreshAction = QAction(self.tr("Refresh"), self.__connectionTree)
         self.__schemaAction = QAction(
-            self.trUtf8("Show Schema"), self.__connectionTree)
+            self.tr("Show Schema"), self.__connectionTree)
         
         refreshAction.triggered[()].connect(self.refresh)
         self.__schemaAction.triggered[()].connect(self.showSchema)

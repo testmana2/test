@@ -87,8 +87,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.intercept = False
         self.tagsMode = tags
         if not tags:
-            self.setWindowTitle(self.trUtf8("Mercurial Branches List"))
-            self.tagList.headerItem().setText(2, self.trUtf8("Status"))
+            self.setWindowTitle(self.tr("Mercurial Branches List"))
+            self.tagList.headerItem().setText(2, self.tr("Status"))
         self.activateWindow()
         
         self.tagsList = tagsList
@@ -134,8 +134,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -251,12 +251,12 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             if self.tagsMode:
                 status = ""
             else:
-                status = self.trUtf8("active")
+                status = self.tr("active")
             rev, changeset = li[-1].split(":", 1)
             del li[-1]
         else:
             if self.tagsMode:
-                status = self.trUtf8("yes")
+                status = self.tr("yes")
             else:
                 status = li[-1][1:-1]
             rev, changeset = li[-2].split(":", 1)

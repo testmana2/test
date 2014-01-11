@@ -100,9 +100,9 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         startdir = self.databaseEdit.text()
         dbFile = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Database File"),
+            self.tr("Select Database File"),
             startdir,
-            self.trUtf8("All Files (*)"))
+            self.tr("All Files (*)"))
         
         if dbFile:
             self.databaseEdit.setText(Utilities.toNativeSeparators(dbFile))

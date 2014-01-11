@@ -52,7 +52,7 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select IDL compiler"),
+            self.tr("Select IDL compiler"),
             self.idlEdit.text(),
             "")
         

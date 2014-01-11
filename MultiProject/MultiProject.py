@@ -207,8 +207,8 @@ class MultiProject(QObject):
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(
                 self.ui,
-                self.trUtf8("Read multiproject file"),
-                self.trUtf8(
+                self.tr("Read multiproject file"),
+                self.tr(
                     "<p>The multiproject file <b>{0}</b> could not be"
                     " read.</p>").format(fn))
             return False
@@ -250,8 +250,8 @@ class MultiProject(QObject):
         else:
             E5MessageBox.critical(
                 self.ui,
-                self.trUtf8("Save multiproject file"),
-                self.trUtf8(
+                self.tr("Save multiproject file"),
+                self.tr(
                     "<p>The multiproject file <b>{0}</b> could not be "
                     "written.</p>").format(fn))
             res = False
@@ -417,10 +417,10 @@ class MultiProject(QObject):
         if fn is None:
             fn = E5FileDialog.getOpenFileName(
                 self.parent(),
-                self.trUtf8("Open multiproject"),
+                self.tr("Open multiproject"),
                 Preferences.getMultiProject("Workspace") or
                 Utilities.getHomeDir(),
-                self.trUtf8("Multiproject Files (*.e4m)"))
+                self.tr("Multiproject Files (*.e4m)"))
             
             if fn == "":
                 fn = None
@@ -470,7 +470,7 @@ class MultiProject(QObject):
         
         @return flag indicating success (boolean)
         """
-        defaultFilter = self.trUtf8("Multiproject Files (*.e4m)")
+        defaultFilter = self.tr("Multiproject Files (*.e4m)")
         if self.ppath:
             defaultPath = self.ppath
         else:
@@ -478,9 +478,9 @@ class MultiProject(QObject):
                 Utilities.getHomeDir()
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
-            self.trUtf8("Save multiproject as"),
+            self.tr("Save multiproject as"),
             defaultPath,
-            self.trUtf8("Multiproject Files (*.e4m)"),
+            self.tr("Multiproject Files (*.e4m)"),
             defaultFilter,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -493,9 +493,9 @@ class MultiProject(QObject):
             if QFileInfo(fn).exists():
                 res = E5MessageBox.yesNo(
                     self.parent(),
-                    self.trUtf8("Save File"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fn),
+                    self.tr("Save File"),
+                    self.tr("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fn),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return False
@@ -518,8 +518,8 @@ class MultiProject(QObject):
         if self.isDirty():
             res = E5MessageBox.okToClearData(
                 self.parent(),
-                self.trUtf8("Close Multiproject"),
-                self.trUtf8("The current multiproject has unsaved changes."),
+                self.tr("Close Multiproject"),
+                self.tr("The current multiproject has unsaved changes."),
                 self.saveMultiProject)
             if res:
                 self.setDirty(False)
@@ -571,12 +571,12 @@ class MultiProject(QObject):
         self.actGrp1 = createActionGroup(self)
         
         act = E5Action(
-            self.trUtf8('New multiproject'),
+            self.tr('New multiproject'),
             UI.PixmapCache.getIcon("multiProjectNew.png"),
-            self.trUtf8('&New...'), 0, 0,
+            self.tr('&New...'), 0, 0,
             self.actGrp1, 'multi_project_new')
-        act.setStatusTip(self.trUtf8('Generate a new multiproject'))
-        act.setWhatsThis(self.trUtf8(
+        act.setStatusTip(self.tr('Generate a new multiproject'))
+        act.setWhatsThis(self.tr(
             """<b>New...</b>"""
             """<p>This opens a dialog for entering the info for a"""
             """ new multiproject.</p>"""
@@ -585,12 +585,12 @@ class MultiProject(QObject):
         self.actions.append(act)
 
         act = E5Action(
-            self.trUtf8('Open multiproject'),
+            self.tr('Open multiproject'),
             UI.PixmapCache.getIcon("multiProjectOpen.png"),
-            self.trUtf8('&Open...'), 0, 0,
+            self.tr('&Open...'), 0, 0,
             self.actGrp1, 'multi_project_open')
-        act.setStatusTip(self.trUtf8('Open an existing multiproject'))
-        act.setWhatsThis(self.trUtf8(
+        act.setStatusTip(self.tr('Open an existing multiproject'))
+        act.setWhatsThis(self.tr(
             """<b>Open...</b>"""
             """<p>This opens an existing multiproject.</p>"""
         ))
@@ -598,12 +598,12 @@ class MultiProject(QObject):
         self.actions.append(act)
 
         self.closeAct = E5Action(
-            self.trUtf8('Close multiproject'),
+            self.tr('Close multiproject'),
             UI.PixmapCache.getIcon("multiProjectClose.png"),
-            self.trUtf8('&Close'), 0, 0, self, 'multi_project_close')
-        self.closeAct.setStatusTip(self.trUtf8(
+            self.tr('&Close'), 0, 0, self, 'multi_project_close')
+        self.closeAct.setStatusTip(self.tr(
             'Close the current multiproject'))
-        self.closeAct.setWhatsThis(self.trUtf8(
+        self.closeAct.setWhatsThis(self.tr(
             """<b>Close</b>"""
             """<p>This closes the current multiproject.</p>"""
         ))
@@ -611,11 +611,11 @@ class MultiProject(QObject):
         self.actions.append(self.closeAct)
 
         self.saveAct = E5Action(
-            self.trUtf8('Save multiproject'),
+            self.tr('Save multiproject'),
             UI.PixmapCache.getIcon("multiProjectSave.png"),
-            self.trUtf8('&Save'), 0, 0, self, 'multi_project_save')
-        self.saveAct.setStatusTip(self.trUtf8('Save the current multiproject'))
-        self.saveAct.setWhatsThis(self.trUtf8(
+            self.tr('&Save'), 0, 0, self, 'multi_project_save')
+        self.saveAct.setStatusTip(self.tr('Save the current multiproject'))
+        self.saveAct.setWhatsThis(self.tr(
             """<b>Save</b>"""
             """<p>This saves the current multiproject.</p>"""
         ))
@@ -623,13 +623,13 @@ class MultiProject(QObject):
         self.actions.append(self.saveAct)
 
         self.saveasAct = E5Action(
-            self.trUtf8('Save multiproject as'),
+            self.tr('Save multiproject as'),
             UI.PixmapCache.getIcon("multiProjectSaveAs.png"),
-            self.trUtf8('Save &as...'), 0, 0, self,
+            self.tr('Save &as...'), 0, 0, self,
             'multi_project_save_as')
-        self.saveasAct.setStatusTip(self.trUtf8(
+        self.saveasAct.setStatusTip(self.tr(
             'Save the current multiproject to a new file'))
-        self.saveasAct.setWhatsThis(self.trUtf8(
+        self.saveasAct.setWhatsThis(self.tr(
             """<b>Save as</b>"""
             """<p>This saves the current multiproject to a new file.</p>"""
         ))
@@ -637,13 +637,13 @@ class MultiProject(QObject):
         self.actions.append(self.saveasAct)
 
         self.addProjectAct = E5Action(
-            self.trUtf8('Add project to multiproject'),
+            self.tr('Add project to multiproject'),
             UI.PixmapCache.getIcon("fileProject.png"),
-            self.trUtf8('Add &project...'), 0, 0,
+            self.tr('Add &project...'), 0, 0,
             self, 'multi_project_add_project')
-        self.addProjectAct.setStatusTip(self.trUtf8(
+        self.addProjectAct.setStatusTip(self.tr(
             'Add a project to the current multiproject'))
-        self.addProjectAct.setWhatsThis(self.trUtf8(
+        self.addProjectAct.setWhatsThis(self.tr(
             """<b>Add project...</b>"""
             """<p>This opens a dialog for adding a project"""
             """ to the current multiproject.</p>"""
@@ -652,13 +652,13 @@ class MultiProject(QObject):
         self.actions.append(self.addProjectAct)
 
         self.propsAct = E5Action(
-            self.trUtf8('Multiproject properties'),
+            self.tr('Multiproject properties'),
             UI.PixmapCache.getIcon("multiProjectProps.png"),
-            self.trUtf8('&Properties...'), 0, 0, self,
+            self.tr('&Properties...'), 0, 0, self,
             'multi_project_properties')
-        self.propsAct.setStatusTip(self.trUtf8(
+        self.propsAct.setStatusTip(self.tr(
             'Show the multiproject properties'))
-        self.propsAct.setWhatsThis(self.trUtf8(
+        self.propsAct.setWhatsThis(self.tr(
             """<b>Properties...</b>"""
             """<p>This shows a dialog to edit the multiproject"""
             """ properties.</p>"""
@@ -678,8 +678,8 @@ class MultiProject(QObject):
         
         @return the menu generated (QMenu)
         """
-        menu = QMenu(self.trUtf8('&Multiproject'), self.parent())
-        self.recentMenu = QMenu(self.trUtf8('Open &Recent Multiprojects'),
+        menu = QMenu(self.tr('&Multiproject'), self.parent())
+        self.recentMenu = QMenu(self.tr('Open &Recent Multiprojects'),
                                 menu)
         
         self.__menus = {
@@ -717,10 +717,10 @@ class MultiProject(QObject):
             (E5ToolBarManager)
         @return the toolbar generated (QToolBar)
         """
-        tb = QToolBar(self.trUtf8("Multiproject"), self.ui)
+        tb = QToolBar(self.tr("Multiproject"), self.ui)
         tb.setIconSize(UI.Config.ToolBarIconSize)
         tb.setObjectName("MultiProjectToolbar")
-        tb.setToolTip(self.trUtf8('Multiproject'))
+        tb.setToolTip(self.tr('Multiproject'))
         
         tb.addActions(self.actGrp1.actions())
         tb.addAction(self.closeAct)
@@ -779,7 +779,7 @@ class MultiProject(QObject):
             idx += 1
         
         self.recentMenu.addSeparator()
-        self.recentMenu.addAction(self.trUtf8('&Clear'), self.__clearRecent)
+        self.recentMenu.addAction(self.tr('&Clear'), self.__clearRecent)
     
     def __openRecent(self, act):
         """

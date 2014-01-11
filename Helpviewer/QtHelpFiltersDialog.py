@@ -107,8 +107,8 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         """
         filter, ok = QInputDialog.getText(
             None,
-            self.trUtf8("Add Filter"),
-            self.trUtf8("Filter name:"),
+            self.tr("Add Filter"),
+            self.tr("Filter name:"),
             QLineEdit.Normal)
         if not filter:
             return

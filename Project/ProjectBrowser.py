@@ -63,13 +63,13 @@ class ProjectBrowser(E5TabWidget):
             "Z": "VcsConflict",
         }
         self.vcsStatusText = {
-            " ": self.trUtf8("up to date"),
-            "A": self.trUtf8("files added"),
-            "M": self.trUtf8("local modifications"),
-            "O": self.trUtf8("files removed"),
-            "R": self.trUtf8("files replaced"),
-            "U": self.trUtf8("update required"),
-            "Z": self.trUtf8("conflict"),
+            " ": self.tr("up to date"),
+            "A": self.tr("files added"),
+            "M": self.tr("local modifications"),
+            "O": self.tr("files removed"),
+            "R": self.tr("files replaced"),
+            "U": self.tr("update required"),
+            "Z": self.tr("conflict"),
         }
         self.__vcsStateChanged(" ")
         
@@ -379,6 +379,6 @@ class ProjectBrowser(E5TabWidget):
                 Preferences.getProjectBrowserColour(
                     self.vcsStatusColorNames[state]))
         if state not in self.vcsStatusText:
-            self.vcsStatusIndicator.setToolTip(self.trUtf8("unknown status"))
+            self.vcsStatusIndicator.setToolTip(self.tr("unknown status"))
         else:
             self.vcsStatusIndicator.setToolTip(self.vcsStatusText[state])

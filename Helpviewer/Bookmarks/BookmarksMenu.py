@@ -92,7 +92,7 @@ class BookmarksMenu(E5ModelMenu):
             return
         
         self.addSeparator()
-        act = self.addAction(self.trUtf8("Open all in Tabs"))
+        act = self.addAction(self.tr("Open all in Tabs"))
         act.triggered[()].connect(self.openAll)
     
     def openAll(self):
@@ -137,21 +137,21 @@ class BookmarksMenu(E5ModelMenu):
             v = act.data()
             
             menuAction = menu.addAction(
-                self.trUtf8("&Open"), self.__openBookmark)
+                self.tr("&Open"), self.__openBookmark)
             menuAction.setData(v)
             menuAction = menu.addAction(
-                self.trUtf8("Open in New &Tab\tCtrl+LMB"),
+                self.tr("Open in New &Tab\tCtrl+LMB"),
                 self.__openBookmarkInNewTab)
             menuAction.setData(v)
             menu.addSeparator()
             
             menuAction = menu.addAction(
-                self.trUtf8("&Remove"), self.__removeBookmark)
+                self.tr("&Remove"), self.__removeBookmark)
             menuAction.setData(v)
             menu.addSeparator()
             
             menuAction = menu.addAction(
-                self.trUtf8("&Properties..."), self.__edit)
+                self.tr("&Properties..."), self.__edit)
             menuAction.setData(v)
             
             execAct = menu.exec_(QCursor.pos())
@@ -274,14 +274,14 @@ class BookmarksMenuBarMenu(BookmarksMenu):
             return
         
         self.addSeparator()
-        act = self.addAction(self.trUtf8("Default Home Page"))
+        act = self.addAction(self.tr("Default Home Page"))
         act.setData("eric:home")
         act.triggered[()].connect(self.__defaultBookmarkTriggered)
-        act = self.addAction(self.trUtf8("Speed Dial"))
+        act = self.addAction(self.tr("Speed Dial"))
         act.setData("eric:speeddial")
         act.triggered[()].connect(self.__defaultBookmarkTriggered)
         self.addSeparator()
-        act = self.addAction(self.trUtf8("Open all in Tabs"))
+        act = self.addAction(self.tr("Open all in Tabs"))
         act.triggered[()].connect(self.openAll)
     
     def setInitialActions(self, actions):

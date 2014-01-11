@@ -72,11 +72,11 @@ class FileDialogWizard(QObject):
         Private method to initialize the action.
         """
         self.action = E5Action(
-            self.trUtf8('QFileDialog Wizard'),
-            self.trUtf8('Q&FileDialog Wizard...'), 0, 0, self,
+            self.tr('QFileDialog Wizard'),
+            self.tr('Q&FileDialog Wizard...'), 0, 0, self,
             'wizards_qfiledialog')
-        self.action.setStatusTip(self.trUtf8('QFileDialog Wizard'))
-        self.action.setWhatsThis(self.trUtf8(
+        self.action.setStatusTip(self.tr('QFileDialog Wizard'))
+        self.action.setWhatsThis(self.tr(
             """<b>QFileDialog Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
             """ needed to create a QFileDialog. The generated code is"""
@@ -130,8 +130,8 @@ class FileDialogWizard(QObject):
         if editor is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8('No current editor'),
-                self.trUtf8('Please open or create a file first.'))
+                self.tr('No current editor'),
+                self.tr('Please open or create a file first.'))
         else:
             code, ok = self.__callForm(editor)
             if ok:

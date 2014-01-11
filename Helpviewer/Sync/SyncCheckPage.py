@@ -50,16 +50,16 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         syncMgr.syncFinished.connect(self.__updateLabels)
         
         if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:
-            self.handlerLabel.setText(self.trUtf8("FTP"))
-            self.infoLabel.setText(self.trUtf8("Host:"))
+            self.handlerLabel.setText(self.tr("FTP"))
+            self.infoLabel.setText(self.tr("Host:"))
             self.infoDataLabel.setText(Preferences.getHelp("SyncFtpServer"))
         elif Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeDirectory:
-            self.handlerLabel.setText(self.trUtf8("Shared Directory"))
-            self.infoLabel.setText(self.trUtf8("Directory:"))
+            self.handlerLabel.setText(self.tr("Shared Directory"))
+            self.infoLabel.setText(self.tr("Directory:"))
             self.infoDataLabel.setText(
                 Preferences.getHelp("SyncDirectoryPath"))
         else:
-            self.handlerLabel.setText(self.trUtf8("No Synchronization"))
+            self.handlerLabel.setText(self.tr("No Synchronization"))
             self.hostLabel.setText("")
         
         self.bookmarkMsgLabel.setText("")
@@ -202,5 +202,5 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         @param message error message (string)
         """
         self.syncErrorLabel.show()
-        self.syncErrorLabel.setText(self.trUtf8(
+        self.syncErrorLabel.setText(self.tr(
             '<font color="#FF0000"><b>Error:</b> {0}</font>').format(message))

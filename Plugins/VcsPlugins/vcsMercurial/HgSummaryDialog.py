@@ -38,9 +38,9 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         self.setupUi(self)
         
         self.refreshButton = self.buttonBox.addButton(
-            self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
+            self.tr("Refresh"), QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
-            self.trUtf8("Press to refresh the summary display"))
+            self.tr("Press to refresh the summary display"))
         self.refreshButton.setEnabled(False)
         
         self.process = None
@@ -105,8 +105,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         if not procStarted:
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('hg'))
@@ -318,32 +318,32 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 pindex += 1
                 changeset = "{0}:{1}".format(rev, node)
                 if len(infoDict["parent"]) > 1:
-                    info.append(self.trUtf8(
+                    info.append(self.tr(
                         "<tr><td><b>Parent #{0}</b></td><td>{1}</td></tr>")
                         .format(pindex, changeset))
                 else:
-                    info.append(self.trUtf8(
+                    info.append(self.tr(
                         "<tr><td><b>Parent</b></td><td>{0}</td></tr>")
                         .format(changeset))
                 if tags:
-                    info.append(self.trUtf8(
+                    info.append(self.tr(
                         "<tr><td><b>Tags</b></td><td>{0}</td></tr>")
                         .format('<br/>'.join(tags.split())))
                 if message:
-                    info.append(self.trUtf8(
+                    info.append(self.tr(
                         "<tr><td><b>Commit Message</b></td><td>{0}</td></tr>")
                         .format(message))
                 if remarks:
                     rem = []
                     if "@EMPTY@" in remarks:
-                        rem.append(self.trUtf8("empty repository"))
+                        rem.append(self.tr("empty repository"))
                     if "@NO_REVISION@" in remarks:
-                        rem.append(self.trUtf8("no revision checked out"))
-                    info.append(self.trUtf8(
+                        rem.append(self.tr("no revision checked out"))
+                    info.append(self.tr(
                         "<tr><td><b>Remarks</b></td><td>{0}</td></tr>")
                         .format(", ".join(rem)))
             if "branch" in infoDict:
-                info.append(self.trUtf8(
+                info.append(self.tr(
                     "<tr><td><b>Branch</b></td><td>{0}</td></tr>")
                     .format(infoDict["branch"]))
             if "bookmarks" in infoDict:
@@ -351,105 +351,105 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 for i in range(len(bookmarks)):
                     if bookmarks[i].startswith("*"):
                         bookmarks[i] = "<b>{0}</b>".format(bookmarks[i])
-                info.append(self.trUtf8(
+                info.append(self.tr(
                     "<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>")
                     .format('<br/>'.join(bookmarks)))
             if "commit" in infoDict:
                 cinfo = []
                 for category, count in infoDict["commit"][0].items():
                     if category == "modified":
-                        cinfo.append(self.trUtf8("{0} modified").format(count))
+                        cinfo.append(self.tr("{0} modified").format(count))
                     elif category == "added":
-                        cinfo.append(self.trUtf8("{0} added").format(count))
+                        cinfo.append(self.tr("{0} added").format(count))
                     elif category == "removed":
-                        cinfo.append(self.trUtf8("{0} removed").format(count))
+                        cinfo.append(self.tr("{0} removed").format(count))
                     elif category == "renamed":
-                        cinfo.append(self.trUtf8("{0} renamed").format(count))
+                        cinfo.append(self.tr("{0} renamed").format(count))
                     elif category == "copied":
-                        cinfo.append(self.trUtf8("{0} copied").format(count))
+                        cinfo.append(self.tr("{0} copied").format(count))
                     elif category == "deleted":
-                        cinfo.append(self.trUtf8("{0} deleted").format(count))
+                        cinfo.append(self.tr("{0} deleted").format(count))
                     elif category == "unknown":
-                        cinfo.append(self.trUtf8("{0} unknown").format(count))
+                        cinfo.append(self.tr("{0} unknown").format(count))
                     elif category == "ignored":
-                        cinfo.append(self.trUtf8("{0} ignored").format(count))
+                        cinfo.append(self.tr("{0} ignored").format(count))
                     elif category == "unresolved":
                         cinfo.append(
-                            self.trUtf8("{0} unresolved").format(count))
+                            self.tr("{0} unresolved").format(count))
                     elif category == "subrepos":
-                        cinfo.append(self.trUtf8("{0} subrepos").format(count))
+                        cinfo.append(self.tr("{0} subrepos").format(count))
                 remark = infoDict["commit"][1]
                 if remark == "merge":
-                    cinfo.append(self.trUtf8("Merge needed"))
+                    cinfo.append(self.tr("Merge needed"))
                 elif remark == "new branch":
-                    cinfo.append(self.trUtf8("New Branch"))
+                    cinfo.append(self.tr("New Branch"))
                 elif remark == "head closed":
-                    cinfo.append(self.trUtf8("Head is closed"))
+                    cinfo.append(self.tr("Head is closed"))
                 elif remark == "clean":
-                    cinfo.append(self.trUtf8("No commit required"))
+                    cinfo.append(self.tr("No commit required"))
                 elif remark == "new branch head":
-                    cinfo.append(self.trUtf8("New Branch Head"))
-                info.append(self.trUtf8(
+                    cinfo.append(self.tr("New Branch Head"))
+                info.append(self.tr(
                     "<tr><td><b>Commit Status</b></td><td>{0}</td></tr>")
                     .format("<br/>".join(cinfo)))
             if "update" in infoDict:
                 if infoDict["update"][0] == "@CURRENT@":
-                    uinfo = self.trUtf8("current")
+                    uinfo = self.tr("current")
                 elif infoDict["update"][0] == "@UPDATE@":
-                    uinfo = self.trUtf8(
+                    uinfo = self.tr(
                         "%n new changeset(s)<br/>Update required", "",
                         infoDict["update"][1])
                 elif infoDict["update"][0] == "@MERGE@":
-                    uinfo1 = self.trUtf8(
+                    uinfo1 = self.tr(
                         "%n new changeset(s)", "", infoDict["update"][1])
-                    uinfo2 = self.trUtf8(
+                    uinfo2 = self.tr(
                         "%n branch head(s)", "", infoDict["update"][2])
-                    uinfo = self.trUtf8(
+                    uinfo = self.tr(
                         "{0}<br/>{1}<br/>Merge required",
                         "0 is changesets, 1 is branch heads")\
                         .format(uinfo1, uinfo2)
                 else:
-                    uinfo = self.trUtf8("unknown status")
-                info.append(self.trUtf8(
+                    uinfo = self.tr("unknown status")
+                info.append(self.tr(
                     "<tr><td><b>Update Status</b></td><td>{0}</td></tr>")
                     .format(uinfo))
             if "remote" in infoDict:
                 if infoDict["remote"] == (0, 0, 0, 0):
-                    rinfo = self.trUtf8("synched")
+                    rinfo = self.tr("synched")
                 else:
                     li = []
                     if infoDict["remote"][0]:
-                        li.append(self.trUtf8("1 or more incoming"))
+                        li.append(self.tr("1 or more incoming"))
                     if infoDict["remote"][1]:
-                        li.append(self.trUtf8("{0} outgoing")
+                        li.append(self.tr("{0} outgoing")
                                   .format(infoDict["remote"][1]))
                     if infoDict["remote"][2]:
-                        li.append(self.trUtf8("%n incoming bookmark(s)", "",
+                        li.append(self.tr("%n incoming bookmark(s)", "",
                                   infoDict["remote"][2]))
                     if infoDict["remote"][3]:
-                        li.append(self.trUtf8("%n outgoing bookmark(s)", "",
+                        li.append(self.tr("%n outgoing bookmark(s)", "",
                                   infoDict["remote"][3]))
                     rinfo = "<br/>".join(li)
-                info.append(self.trUtf8(
+                info.append(self.tr(
                     "<tr><td><b>Remote Status</b></td><td>{0}</td></tr>")
                     .format(rinfo))
             if "mq" in infoDict:
                 if infoDict["mq"] == (0, 0):
-                    qinfo = self.trUtf8("empty queue")
+                    qinfo = self.tr("empty queue")
                 else:
                     li = []
                     if infoDict["mq"][0]:
-                        li.append(self.trUtf8("{0} applied")
+                        li.append(self.tr("{0} applied")
                                   .format(infoDict["mq"][0]))
                     if infoDict["mq"][1]:
-                        li.append(self.trUtf8("{0} unapplied")
+                        li.append(self.tr("{0} unapplied")
                                   .format(infoDict["mq"][1]))
                     qinfo = "<br/>".join(li)
-                info.append(self.trUtf8(
+                info.append(self.tr(
                     "<tr><td><b>Queues Status</b></td><td>{0}</td></tr>")
                     .format(qinfo))
             info.append("</table>")
         else:
-            info = [self.trUtf8("<p>No status information available.</p>")]
+            info = [self.tr("<p>No status information available.</p>")]
         
         self.summary.insertHtml("\n".join(info))

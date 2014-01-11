@@ -61,7 +61,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
             if section == 0:
                 header = fm.width("averagebiglonghost.averagedomain.info")
             elif section == 1:
-                header = fm.width(self.trUtf8("Allow For Session"))
+                header = fm.width(self.tr("Allow For Session"))
             buffer = fm.width("mm")
             header += buffer
             self.exceptionsTable.horizontalHeader()\

@@ -46,7 +46,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.vcs = vcs
         
         self.contents.setHtml(
-            self.trUtf8('<b>Processing your request, please wait...</b>'))
+            self.tr('<b>Processing your request, please wait...</b>'))
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -71,13 +71,13 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.rx_changed = QRegExp('Changed .*\\s*')
         
         self.flags = {
-            'A': self.trUtf8('Added'),
-            'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified')
+            'A': self.tr('Added'),
+            'D': self.tr('Deleted'),
+            'M': self.tr('Modified')
         }
         
         self.revisions = []  # stack of remembered revisions
-        self.revString = self.trUtf8('revision')
+        self.revString = self.tr('revision')
         
         self.buf = []        # buffer for stdout
         self.diff = None
@@ -134,8 +134,8 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
             self.inputGroup.setEnabled(False)
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
@@ -182,17 +182,17 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
                     dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
                         url.toString(),
                         query,
-                        self.trUtf8('diff to {0}').format(lv),
+                        self.tr('diff to {0}').format(lv),
                     )
                 except IndexError:
                     pass
                 dstr += '<br />\n'
                 self.contents.insertHtml(dstr)
                 
-                dstr = self.trUtf8('<i>author: {0}</i><br />\n').format(author)
+                dstr = self.tr('<i>author: {0}</i><br />\n').format(author)
                 self.contents.insertHtml(dstr)
                 
-                dstr = self.trUtf8('<i>date: {0}</i><br />\n').format(date)
+                dstr = self.tr('<i>date: {0}</i><br />\n').format(date)
                 self.contents.insertHtml(dstr)
             
             elif self.rx_sep.exactMatch(s) or self.rx_sep2.exactMatch(s):

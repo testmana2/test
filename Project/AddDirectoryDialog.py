@@ -52,31 +52,31 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         # enable all dialog elements
         if filter == 'source':  # it is a source file
             self.filterComboBox.addItem(
-                self.trUtf8("Source Files"), "SOURCES")
+                self.tr("Source Files"), "SOURCES")
         elif filter == 'form':
             self.filterComboBox.addItem(
-                self.trUtf8("Forms Files"), "FORMS")
+                self.tr("Forms Files"), "FORMS")
         elif filter == 'resource':
             self.filterComboBox.addItem(
-                self.trUtf8("Resource Files"), "RESOURCES")
+                self.tr("Resource Files"), "RESOURCES")
         elif filter == 'interface':
             self.filterComboBox.addItem(
-                self.trUtf8("Interface Files"), "INTERFACES")
+                self.tr("Interface Files"), "INTERFACES")
         elif filter == 'others':
             self.filterComboBox.addItem(
-                self.trUtf8("Other Files (*)"), "OTHERS")
+                self.tr("Other Files (*)"), "OTHERS")
             self.on_filterComboBox_highlighted('(*)')
         else:
             self.filterComboBox.addItem(
-                self.trUtf8("Source Files"), "SOURCES")
+                self.tr("Source Files"), "SOURCES")
             self.filterComboBox.addItem(
-                self.trUtf8("Forms Files"), "FORMS")
+                self.tr("Forms Files"), "FORMS")
             self.filterComboBox.addItem(
-                self.trUtf8("Resource Files"), "RESOURCES")
+                self.tr("Resource Files"), "RESOURCES")
             self.filterComboBox.addItem(
-                self.trUtf8("Interface Files"), "INTERFACES")
+                self.tr("Interface Files"), "INTERFACES")
             self.filterComboBox.addItem(
-                self.trUtf8("Other Files (*)"), "OTHERS")
+                self.tr("Other Files (*)"), "OTHERS")
         self.filterComboBox.setCurrentIndex(0)
         
     @pyqtSlot(str)
@@ -110,7 +110,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory"),
+            self.tr("Select directory"),
             startdir)
         
         if directory:

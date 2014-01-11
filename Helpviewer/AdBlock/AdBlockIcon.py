@@ -33,7 +33,7 @@ class AdBlockIcon(E5ClickableLabel):
         
         self.setMaximumHeight(16)
         self.setCursor(Qt.PointingHandCursor)
-        self.setToolTip(self.trUtf8(
+        self.setToolTip(self.tr(
             "AdBlock lets you block unwanted content on web pages."))
         
         self.clicked.connect(self.__showMenu)
@@ -70,12 +70,12 @@ class AdBlockIcon(E5ClickableLabel):
         if manager.isEnabled():
             menu.addAction(
                 UI.PixmapCache.getIcon("adBlockPlusDisabled.png"),
-                self.trUtf8("Disable AdBlock"),
+                self.tr("Disable AdBlock"),
                 self.__enableAdBlock).setData(False)
         else:
             menu.addAction(
                 UI.PixmapCache.getIcon("adBlockPlus.png"),
-                self.trUtf8("Enable AdBlock"),
+                self.tr("Enable AdBlock"),
                 self.__enableAdBlock).setData(True)
         menu.addSeparator()
         if manager.isEnabled() and \
@@ -83,35 +83,35 @@ class AdBlockIcon(E5ClickableLabel):
             if self.__isCurrentHostExcepted():
                 menu.addAction(
                     UI.PixmapCache.getIcon("adBlockPlus.png"),
-                    self.trUtf8("Remove AdBlock Exception"),
+                    self.tr("Remove AdBlock Exception"),
                     self.__setException).setData(False)
             else:
                 menu.addAction(
                     UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
-                    self.trUtf8("Add AdBlock Exception"),
+                    self.tr("Add AdBlock Exception"),
                     self.__setException).setData(True)
         menu.addAction(
             UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
-            self.trUtf8("AdBlock Exceptions..."), manager.showExceptionsDialog)
+            self.tr("AdBlock Exceptions..."), manager.showExceptionsDialog)
         menu.addSeparator()
         menu.addAction(
             UI.PixmapCache.getIcon("adBlockPlus.png"),
-            self.trUtf8("AdBlock Configuration..."), manager.showDialog)
+            self.tr("AdBlock Configuration..."), manager.showDialog)
         menu.addSeparator()
         
         entries = self.__mw.currentBrowser().page().getAdBlockedPageEntries()
         if entries:
-            menu.addAction(self.trUtf8(
+            menu.addAction(self.tr(
                 "Blocked URL (AdBlock Rule) - click to edit rule"))\
                 .setEnabled(False)
             for entry in entries:
                 address = entry.urlString()[-55:]
-                actionText = self.trUtf8("{0} with ({1})").format(
+                actionText = self.tr("{0} with ({1})").format(
                     address, entry.rule.filter()).replace("&", "&&")
                 act = menu.addAction(actionText, manager.showRule)
                 act.setData(entry.rule)
         else:
-            menu.addAction(self.trUtf8("No content blocked")).setEnabled(False)
+            menu.addAction(self.tr("No content blocked")).setEnabled(False)
     
     def menuAction(self):
         """
@@ -120,7 +120,7 @@ class AdBlockIcon(E5ClickableLabel):
         @return reference to the menu action (QAction)
         """
         if not self.__menuAction:
-            self.__menuAction = QAction(self.trUtf8("AdBlock"))
+            self.__menuAction = QAction(self.tr("AdBlock"))
             self.__menuAction.setMenu(QMenu())
             self.__menuAction.menu().aboutToShow.connect(self.__createMenu)
         

@@ -68,7 +68,7 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Shared Directory"),
+            self.tr("Shared Directory"),
             self.directoryEdit.text(),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         

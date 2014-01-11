@@ -23,6 +23,7 @@ import Utilities
 import Preferences
 import UI.PixmapCache
 
+
 class FindFileDialog(QDialog, Ui_FindFileDialog):
     """
     Class implementing a dialog to search for text in files.
@@ -61,19 +62,19 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__replaceMode = replaceMode
         
         self.stopButton = \
-            self.buttonBox.addButton(self.trUtf8("Stop"),
+            self.buttonBox.addButton(self.tr("Stop"),
                                      QDialogButtonBox.ActionRole)
         self.stopButton.setEnabled(False)
         
         self.findButton = \
-            self.buttonBox.addButton(self.trUtf8("Find"),
+            self.buttonBox.addButton(self.tr("Find"),
                                      QDialogButtonBox.ActionRole)
         self.findButton.setEnabled(False)
         self.findButton.setDefault(True)
         
         if self.__replaceMode:
             self.replaceButton.setEnabled(False)
-            self.setWindowTitle(self.trUtf8("Replace in Files"))
+            self.setWindowTitle(self.tr("Replace in Files"))
         else:
             self.replaceLabel.hide()
             self.replacetextCombo.hide()
@@ -372,9 +373,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         except re.error as why:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Invalid search expression"),
-                self.trUtf8("""<p>The search expression is not valid.</p>"""
-                            """<p>Error: {0}</p>""").format(str(why)))
+                self.tr("Invalid search expression"),
+                self.tr("""<p>The search expression is not valid.</p>"""
+                        """<p>Error: {0}</p>""").format(str(why)))
             self.stopButton.setEnabled(False)
             self.findButton.setEnabled(True)
             self.findButton.setDefault(True)
@@ -538,7 +539,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory"),
+            self.tr("Select directory"),
             self.dirCombo.currentText(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -608,8 +609,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 except (UnicodeError, IOError) as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Replace in Files"),
-                        self.trUtf8(
+                        self.tr("Replace in Files"),
+                        self.tr(
                             """<p>Could not read the file <b>{0}</b>."""
                             """ Skipping it.</p><p>Reason: {1}</p>""")
                         .format(fn, str(err))
@@ -623,8 +624,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 if origHash != hash:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Replace in Files"),
-                        self.trUtf8(
+                        self.tr("Replace in Files"),
+                        self.tr(
                             """<p>The current and the original hash of the"""
                             """ file <b>{0}</b> are different. Skipping it."""
                             """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")
@@ -649,8 +650,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Replace in Files"),
-                        self.trUtf8(
+                        self.tr("Replace in Files"),
+                        self.tr(
                             """<p>Could not save the file <b>{0}</b>."""
                             """ Skipping it.</p><p>Reason: {1}</p>""")
                         .format(fn, str(err))
@@ -674,8 +675,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         menu = QMenu(self)
         
-        menu.addAction(self.trUtf8("Open"), self.__openFile)
-        menu.addAction(self.trUtf8("Copy Path to Clipboard"),
+        menu.addAction(self.tr("Open"), self.__openFile)
+        menu.addAction(self.tr("Copy Path to Clipboard"),
                        self.__copyToClipboard)
         
         menu.exec_(QCursor.pos())

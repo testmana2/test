@@ -62,13 +62,13 @@ class VcsProjectHelper(QObject):
         Public method to generate the action objects.
         """
         self.vcsNewAct = E5Action(
-            self.trUtf8('New from repository'),
-            self.trUtf8('&New from repository...'),
+            self.tr('New from repository'),
+            self.tr('&New from repository...'),
             0, 0, self, 'vcs_new')
-        self.vcsNewAct.setStatusTip(self.trUtf8(
+        self.vcsNewAct.setStatusTip(self.tr(
             'Create a new project from the VCS repository'
         ))
-        self.vcsNewAct.setWhatsThis(self.trUtf8(
+        self.vcsNewAct.setWhatsThis(self.tr(
             """<b>New from repository</b>"""
             """<p>This creates a new local project from the VCS"""
             """ repository.</p>"""
@@ -77,13 +77,13 @@ class VcsProjectHelper(QObject):
         self.actions.append(self.vcsNewAct)
         
         self.vcsExportAct = E5Action(
-            self.trUtf8('Export from repository'),
-            self.trUtf8('&Export from repository...'),
+            self.tr('Export from repository'),
+            self.tr('&Export from repository...'),
             0, 0, self, 'vcs_export')
-        self.vcsExportAct.setStatusTip(self.trUtf8(
+        self.vcsExportAct.setStatusTip(self.tr(
             'Export a project from the repository'
         ))
-        self.vcsExportAct.setWhatsThis(self.trUtf8(
+        self.vcsExportAct.setWhatsThis(self.tr(
             """<b>Export from repository</b>"""
             """<p>This exports a project from the repository.</p>"""
         ))
@@ -91,13 +91,13 @@ class VcsProjectHelper(QObject):
         self.actions.append(self.vcsExportAct)
         
         self.vcsAddAct = E5Action(
-            self.trUtf8('Add to repository'),
-            self.trUtf8('&Add to repository...'),
+            self.tr('Add to repository'),
+            self.tr('&Add to repository...'),
             0, 0, self, 'vcs_add')
-        self.vcsAddAct.setStatusTip(self.trUtf8(
+        self.vcsAddAct.setStatusTip(self.tr(
             'Add the local project to the VCS repository'
         ))
-        self.vcsAddAct.setWhatsThis(self.trUtf8(
+        self.vcsAddAct.setWhatsThis(self.tr(
             """<b>Add to repository</b>"""
             """<p>This adds (imports) the local project to the VCS"""
             """ repository.</p>"""
@@ -148,8 +148,8 @@ class VcsProjectHelper(QObject):
             vcsSystemsDisplay.append(vcsSystemsDict[key])
         vcsSelected, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("New Project"),
-            self.trUtf8("Select version control system for the project"),
+            self.tr("New Project"),
+            self.tr("Select version control system for the project"),
             vcsSystemsDisplay,
             0, False)
         if not ok:
@@ -172,8 +172,8 @@ class VcsProjectHelper(QObject):
                 # edit VCS command options
                 vcores = E5MessageBox.yesNo(
                     self.parent(),
-                    self.trUtf8("New Project"),
-                    self.trUtf8(
+                    self.tr("New Project"),
+                    self.tr(
                         """Would you like to edit the VCS command options?"""))
                 if vcores:
                     from .CommandOptionsDialog import VcsCommandOptionsDialog
@@ -188,8 +188,8 @@ class VcsProjectHelper(QObject):
                     except EnvironmentError:
                         E5MessageBox.critical(
                             self.parent(),
-                            self.trUtf8("Create project directory"),
-                            self.trUtf8(
+                            self.tr("Create project directory"),
+                            self.tr(
                                 "<p>The project directory <b>{0}</b> could not"
                                 " be created.</p>").format(projectdir))
                         self.project.pdata["VCS"] = ['None']
@@ -217,8 +217,8 @@ class VcsProjectHelper(QObject):
                             pfilenamelist = d.entryList(filters)
                             pfilename, ok = QInputDialog.getItem(
                                 None,
-                                self.trUtf8("New project from repository"),
-                                self.trUtf8("Select a project file to open."),
+                                self.tr("New project from repository"),
+                                self.tr("Select a project file to open."),
                                 pfilenamelist, 0, False)
                             if ok:
                                 self.project.openProject(
@@ -232,8 +232,8 @@ class VcsProjectHelper(QObject):
                     else:
                         res = E5MessageBox.yesNo(
                             self.parent(),
-                            self.trUtf8("New project from repository"),
-                            self.trUtf8(
+                            self.tr("New project from repository"),
+                            self.tr(
                                 "The project retrieved from the repository"
                                 " does not contain an eric project file"
                                 " (*.e4p). Create it?"),
@@ -264,9 +264,9 @@ class VcsProjectHelper(QObject):
                                 if not export:
                                     res = E5MessageBox.yesNo(
                                         self.parent(),
-                                        self.trUtf8(
+                                        self.tr(
                                             "New project from repository"),
-                                        self.trUtf8(
+                                        self.tr(
                                             "Shall the project file be added"
                                             " to the repository?"),
                                         yesDefault=True)
@@ -276,8 +276,8 @@ class VcsProjectHelper(QObject):
                 else:
                     E5MessageBox.critical(
                         self.parent(),
-                        self.trUtf8("New project from repository"),
-                        self.trUtf8(
+                        self.tr("New project from repository"),
+                        self.tr(
                             """The project could not be retrieved from"""
                             """ the repository."""))
                     self.project.pdata["VCS"] = ['None']
@@ -332,8 +332,8 @@ class VcsProjectHelper(QObject):
             vcsSystemsDisplay.append(vcsSystemsDict[key])
         vcsSelected, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("Import Project"),
-            self.trUtf8("Select version control system for the project"),
+            self.tr("Import Project"),
+            self.tr("Select version control system for the project"),
             vcsSystemsDisplay,
             0, False)
         if not ok:
@@ -352,8 +352,8 @@ class VcsProjectHelper(QObject):
                 # edit VCS command options
                 vcores = E5MessageBox.yesNo(
                     self.parent(),
-                    self.trUtf8("Import Project"),
-                    self.trUtf8(
+                    self.tr("Import Project"),
+                    self.tr(
                         """Would you like to edit the VCS command options?"""))
                 if vcores:
                     from .CommandOptionsDialog import VcsCommandOptionsDialog
@@ -384,8 +384,8 @@ class VcsProjectHelper(QObject):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 self.parent(),
-                self.trUtf8("Update"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Update"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -410,8 +410,8 @@ class VcsProjectHelper(QObject):
         """
         res = E5MessageBox.yesNo(
             self.parent(),
-            self.trUtf8("Remove project from repository"),
-            self.trUtf8(
+            self.tr("Remove project from repository"),
+            self.tr(
                 "Dou you really want to remove this project from"
                 " the repository (and disk)?"))
         if res:
@@ -472,8 +472,8 @@ class VcsProjectHelper(QObject):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 self.parent(),
-                self.trUtf8("Switch"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Switch"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()

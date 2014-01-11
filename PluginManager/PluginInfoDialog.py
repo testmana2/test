@@ -40,11 +40,11 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         self.pluginList.sortByColumn(0, Qt.AscendingOrder)
         
         self.__menu = QMenu(self)
-        self.__menu.addAction(self.trUtf8('Show details'), self.__showDetails)
+        self.__menu.addAction(self.tr('Show details'), self.__showDetails)
         self.__activateAct = self.__menu.addAction(
-            self.trUtf8('Activate'), self.__activatePlugin)
+            self.tr('Activate'), self.__activatePlugin)
         self.__deactivateAct = self.__menu.addAction(
-            self.trUtf8('Deactivate'), self.__deactivatePlugin)
+            self.tr('Deactivate'), self.__deactivatePlugin)
         self.pluginList.setContextMenuPolicy(Qt.CustomContextMenu)
         self.pluginList.customContextMenuRequested.connect(
             self.__showContextMenu)
@@ -70,8 +70,8 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
             info[0],
             info[1],
             info[2],
-            (info[3] and self.trUtf8("Yes") or self.trUtf8("No")),
-            (info[4] and self.trUtf8("Yes") or self.trUtf8("No")),
+            (info[3] and self.tr("Yes") or self.tr("No")),
+            (info[4] and self.tr("Yes") or self.tr("No")),
             info[5]
         ]
         itm = QTreeWidgetItem(self.pluginList, infoList)
@@ -94,8 +94,8 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         itm = self.pluginList.itemAt(coord)
         if itm is not None:
             autoactivate = (itm.text(self.__autoActivateColumn) ==
-                            self.trUtf8("Yes"))
-            if itm.text(self.__activeColumn) == self.trUtf8("Yes"):
+                            self.tr("Yes"))
+            if itm.text(self.__activeColumn) == self.tr("Yes"):
                 self.__activateAct.setEnabled(False)
                 self.__deactivateAct.setEnabled(autoactivate)
             else:

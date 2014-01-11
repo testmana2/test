@@ -70,7 +70,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         if self.protocolCombo.currentText() == "file://":
             directory = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select Repository-Directory"),
+                self.tr("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -85,7 +85,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Project Directory"),
+            self.tr("Select Project Directory"),
             self.vcsProjectDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         

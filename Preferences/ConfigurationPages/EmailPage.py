@@ -133,8 +133,8 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                 QApplication.restoreOverrideCursor()
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Login Test"),
-                    self.trUtf8("""The login test succeeded."""))
+                    self.tr("Login Test"),
+                    self.tr("""The login test succeeded."""))
             except (smtplib.SMTPException, socket.error) as e:
                 QApplication.restoreOverrideCursor()
                 if isinstance(e,  smtplib.SMTPResponseException):
@@ -150,8 +150,8 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                     errorStr = str(e)
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Login Test"),
-                    self.trUtf8(
+                    self.tr("Login Test"),
+                    self.tr(
                         """<p>The login test failed.<br>Reason: {0}</p>""")
                     .format(errorStr))
             server.quit()
@@ -170,8 +170,8 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                 errorStr = str(e)
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Login Test"),
-                self.trUtf8("""<p>The login test failed.<br>Reason: {0}</p>""")
+                self.tr("Login Test"),
+                self.tr("""<p>The login test failed.<br>Reason: {0}</p>""")
                 .format(errorStr))
 
 

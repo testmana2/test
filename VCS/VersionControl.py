@@ -567,8 +567,8 @@ class VersionControl(QObject):
         if not procStarted:
             E5MessageBox.critical(
                 None,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format(program))
@@ -698,7 +698,7 @@ class VersionControl(QObject):
             self.statusMonitorThread = None
             self.__statusMonitorStatus(
                 "off",
-                self.trUtf8("Repository status checking is switched off"))
+                self.tr("Repository status checking is switched off"))
     
     def setStatusMonitorInterval(self, interval, project):
         """

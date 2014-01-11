@@ -69,7 +69,7 @@ class Transplant(HgExtension):
                 args.append("--log")
             args.extend(revs)
             
-            dia = HgDialog(self.trUtf8('Transplant Changesets'), self.vcs)
+            dia = HgDialog(self.tr('Transplant Changesets'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -97,7 +97,7 @@ class Transplant(HgExtension):
         args.append("--verbose")
         
         dia = HgDialog(
-            self.trUtf8('Transplant Changesets (Continue)'), self.vcs)
+            self.tr('Transplant Changesets (Continue)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()

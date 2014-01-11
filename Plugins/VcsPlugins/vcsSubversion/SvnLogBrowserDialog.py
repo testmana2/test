@@ -55,7 +55,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
         self.fieldCombo.setCurrentIndex(
-            self.fieldCombo.findText(self.trUtf8("Message")))
+            self.fieldCombo.findText(self.tr("Message")))
         self.limitSpinBox.setValue(
             self.vcs.getPlugin().getPreferences("LogLimit"))
         self.stopCheckBox.setChecked(
@@ -89,10 +89,10 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         # three blanks followed by A or D or M followed by path
         
         self.flags = {
-            'A': self.trUtf8('Added'),
-            'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified'),
-            'R': self.trUtf8('Replaced'),
+            'A': self.tr('Added'),
+            'D': self.tr('Deleted'),
+            'M': self.tr('Modified'),
+            'R': self.tr('Replaced'),
         }
         
         self.buf = []        # buffer for stdout
@@ -252,8 +252,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
@@ -570,10 +570,10 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             from_ = self.fromDate.date().toString("yyyy-MM-dd")
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
             txt = self.fieldCombo.currentText()
-            if txt == self.trUtf8("Author"):
+            if txt == self.tr("Author"):
                 fieldIndex = 1
                 searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-            elif txt == self.trUtf8("Revision"):
+            elif txt == self.tr("Revision"):
                 fieldIndex = 0
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):

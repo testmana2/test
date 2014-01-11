@@ -292,9 +292,9 @@ class ProjectBaseBrowser(Browser):
             DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(
             self.parent(),
-            self.trUtf8("Delete directories"),
-            self.trUtf8("Do you really want to delete these directories from"
-                        " the project?"),
+            self.tr("Delete directories"),
+            self.tr("Do you really want to delete these directories from"
+                    " the project?"),
             dirs)
         
         if dlg.exec_() == QDialog.Accepted:

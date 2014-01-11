@@ -25,12 +25,12 @@ class CookieModel(QAbstractTableModel):
         super().__init__(parent)
         
         self.__headers = [
-            self.trUtf8("Website"),
-            self.trUtf8("Name"),
-            self.trUtf8("Path"),
-            self.trUtf8("Secure"),
-            self.trUtf8("Expires"),
-            self.trUtf8("Contents"),
+            self.tr("Website"),
+            self.tr("Name"),
+            self.tr("Path"),
+            self.tr("Secure"),
+            self.tr("Expires"),
+            self.tr("Contents"),
         ]
         self.__cookieJar = cookieJar
         self.__cookieJar.cookiesChanged.connect(self.__cookiesChanged)

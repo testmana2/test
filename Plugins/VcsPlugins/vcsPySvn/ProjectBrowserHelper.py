@@ -195,7 +195,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions = []
         self.vcsAddMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -208,140 +208,140 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Update from repository'), self._VCSUpdate)
+            self.tr('Update from repository'), self._VCSUpdate)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'),
+            self.tr('Add to repository'),
             self._VCSAdd)
         self.vcsAddMenuActions.append(act)
         if 1 in self.browser.specialMenuEntries:
             self.vcsMenuAddTree = menu.addAction(
                 UI.PixmapCache.getIcon("vcsAdd.png"),
-                self.trUtf8('Add tree to repository'),
+                self.tr('Add tree to repository'),
                 self._VCSAddTree)
             self.vcsAddMenuActions.append(self.vcsMenuAddTree)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
-            self.trUtf8('Copy'), self.__SVNCopy)
+            self.tr('Copy'), self.__SVNCopy)
         self.vcsMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Move'), self.__SVNMove)
+        act = menu.addAction(self.tr('Move'), self.__SVNMove)
         self.vcsMenuActions.append(act)
         if pysvn.svn_version >= (1, 5, 0) and pysvn.version >= (1, 6, 0):
             menu.addSeparator()
             act = menu.addAction(
-                self.trUtf8("Add to Changelist"),
+                self.tr("Add to Changelist"),
                 self.__SVNAddToChangelist)
             self.vcsMenuActions.append(act)
             act = menu.addAction(
-                self.trUtf8("Remove from Changelist"),
+                self.tr("Remove from Changelist"),
                 self.__SVNRemoveFromChangelist)
             self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log'), self._VCSLog)
+            self.tr('Show log'), self._VCSLog)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log browser'), self.__SVNLogBrowser)
+            self.tr('Show log browser'), self.__SVNLogBrowser)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRepo.png"),
-            self.trUtf8('Show repository info'), self.__SVNInfo)
+            self.tr('Show repository info'), self.__SVNInfo)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side'), self.__SVNSbsDiff)
+            self.tr('Show difference side-by-side'), self.__SVNSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__SVNExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side (extended)'),
+            self.tr('Show difference side-by-side (extended)'),
             self.__SVNSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.tr('Show difference (URLs)'),
             self.__SVNUrlDiff)
         self.vcsMenuActions.append(act)
         self.blameAct = menu.addAction(
-            self.trUtf8('Show annotated file'),
+            self.tr('Show annotated file'),
             self.__SVNBlame)
         self.vcsMenuActions.append(self.blameAct)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.tr('Revert changes'), self._VCSRevert)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsMerge.png"),
-            self.trUtf8('Merge changes'), self._VCSMerge)
+            self.tr('Merge changes'), self._VCSMerge)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflict resolved'), self.__SVNResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLock.png"),
-            self.trUtf8('Lock'), self.__SVNLock)
+            self.tr('Lock'), self.__SVNLock)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUnlock.png"),
-            self.trUtf8('Unlock'), self.__SVNUnlock)
+            self.tr('Unlock'), self.__SVNUnlock)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUnlock.png"),
-            self.trUtf8('Break Lock'), self.__SVNBreakLock)
+            self.tr('Break Lock'), self.__SVNBreakLock)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUnlock.png"),
-            self.trUtf8('Steal Lock'), self.__SVNStealLock)
+            self.tr('Steal Lock'), self.__SVNStealLock)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
+        act = menu.addAction(self.tr('Set Property'), self.__SVNSetProp)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('List Properties'), self.__SVNListProps)
+            self.tr('List Properties'), self.__SVNListProps)
         self.vcsMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
+        act = menu.addAction(self.tr('Delete Property'), self.__SVNDelProp)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Configure..."), self.__SVNConfigure)
+        menu.addAction(self.tr("Configure..."), self.__SVNConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -357,7 +357,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMultiMenuActions = []
         self.vcsAddMultiMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -370,102 +370,102 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Update from repository'), self._VCSUpdate)
+            self.tr('Update from repository'), self._VCSUpdate)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), self._VCSAdd)
+            self.tr('Add to repository'), self._VCSAdd)
         self.vcsAddMultiMenuActions.append(act)
         if 1 in self.browser.specialMenuEntries:
             self.vcsMultiMenuAddTree = menu.addAction(
                 UI.PixmapCache.getIcon("vcsAdd.png"),
-                self.trUtf8('Add tree to repository'), self._VCSAddTree)
+                self.tr('Add tree to repository'), self._VCSAddTree)
             self.vcsAddMultiMenuActions.append(self.vcsMultiMenuAddTree)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
         if pysvn.svn_version >= (1, 5, 0) and pysvn.version >= (1, 6, 0):
             menu.addSeparator()
             act = menu.addAction(
-                self.trUtf8("Add to Changelist"),
+                self.tr("Add to Changelist"),
                 self.__SVNAddToChangelist)
             self.vcsMenuActions.append(act)
             act = menu.addAction(
-                self.trUtf8("Remove from Changelist"),
+                self.tr("Remove from Changelist"),
                 self.__SVNRemoveFromChangelist)
             self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__SVNExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.tr('Show difference (URLs)'),
             self.__SVNUrlDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.tr('Revert changes'), self._VCSRevert)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflict resolved'), self.__SVNResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLock.png"),
-            self.trUtf8('Lock'), self.__SVNLock)
+            self.tr('Lock'), self.__SVNLock)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUnlock.png"),
-            self.trUtf8('Unlock'), self.__SVNUnlock)
+            self.tr('Unlock'), self.__SVNUnlock)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUnlock.png"),
-            self.trUtf8('Break Lock'), self.__SVNBreakLock)
+            self.tr('Break Lock'), self.__SVNBreakLock)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUnlock.png"),
-            self.trUtf8('Steal Lock'), self.__SVNStealLock)
+            self.tr('Steal Lock'), self.__SVNStealLock)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
+        act = menu.addAction(self.tr('Set Property'), self.__SVNSetProp)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('List Properties'), self.__SVNListProps)
+            self.tr('List Properties'), self.__SVNListProps)
         self.vcsMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
+        act = menu.addAction(self.tr('Delete Property'), self.__SVNDelProp)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Configure..."), self.__SVNConfigure)
+        menu.addAction(self.tr("Configure..."), self.__SVNConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -477,7 +477,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
         @param mainMenu reference to the menu to be amended
         """
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -488,16 +488,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act.setFont(font)
         menu.addSeparator()
         
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Configure..."), self.__SVNConfigure)
+        menu.addAction(self.tr("Configure..."), self.__SVNConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -515,7 +515,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions = []
         self.vcsAddDirMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -528,102 +528,102 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Update from repository'), self._VCSUpdate)
+            self.tr('Update from repository'), self._VCSUpdate)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), self._VCSAdd)
+            self.tr('Add to repository'), self._VCSAdd)
         self.vcsAddDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Copy'), self.__SVNCopy)
+        act = menu.addAction(self.tr('Copy'), self.__SVNCopy)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Move'), self.__SVNMove)
+        act = menu.addAction(self.tr('Move'), self.__SVNMove)
         self.vcsDirMenuActions.append(act)
         if pysvn.svn_version >= (1, 5, 0) and pysvn.version >= (1, 6, 0):
             menu.addSeparator()
             act = menu.addAction(
-                self.trUtf8("Add to Changelist"),
+                self.tr("Add to Changelist"),
                 self.__SVNAddToChangelist)
             self.vcsMenuActions.append(act)
             act = menu.addAction(
-                self.trUtf8("Remove from Changelist"),
+                self.tr("Remove from Changelist"),
                 self.__SVNRemoveFromChangelist)
             self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log'), self._VCSLog)
+            self.tr('Show log'), self._VCSLog)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show log browser'), self.__SVNLogBrowser)
+            self.tr('Show log browser'), self.__SVNLogBrowser)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRepo.png"),
-            self.trUtf8('Show repository info'), self.__SVNInfo)
+            self.tr('Show repository info'), self.__SVNInfo)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__SVNExtendedDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.tr('Show difference (URLs)'),
             self.__SVNUrlDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.tr('Revert changes'), self._VCSRevert)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsMerge.png"),
-            self.trUtf8('Merge changes'), self._VCSMerge)
+            self.tr('Merge changes'), self._VCSMerge)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflict resolved'), self.__SVNResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
+        act = menu.addAction(self.tr('Set Property'), self.__SVNSetProp)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('List Properties'), self.__SVNListProps)
+            self.tr('List Properties'), self.__SVNListProps)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
+        act = menu.addAction(self.tr('Delete Property'), self.__SVNDelProp)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Configure..."), self.__SVNConfigure)
+        menu.addAction(self.tr("Configure..."), self.__SVNConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -641,7 +641,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMultiMenuActions = []
         self.vcsAddDirMultiMenuActions = []
         
-        menu = QMenu(self.trUtf8("Version Control"))
+        menu = QMenu(self.tr("Version Control"))
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -654,84 +654,84 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsUpdate.png"),
-            self.trUtf8('Update from repository'), self._VCSUpdate)
+            self.tr('Update from repository'), self._VCSUpdate)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),
+            self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), self._VCSAdd)
+            self.tr('Add to repository'), self._VCSAdd)
         self.vcsAddDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'),
+            self.tr('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMultiMenuActions.append(act)
         if pysvn.svn_version >= (1, 5, 0) and pysvn.version >= (1, 6, 0):
             menu.addSeparator()
             act = menu.addAction(
-                self.trUtf8("Add to Changelist"),
+                self.tr("Add to Changelist"),
                 self.__SVNAddToChangelist)
             self.vcsMenuActions.append(act)
             act = menu.addAction(
-                self.trUtf8("Remove from Changelist"),
+                self.tr("Remove from Changelist"),
                 self.__SVNRemoveFromChangelist)
             self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsStatus.png"),
-            self.trUtf8('Show status'), self._VCSStatus)
+            self.tr('Show status'), self._VCSStatus)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.tr('Show difference'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.tr('Show difference (extended)'),
             self.__SVNExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.tr('Show difference (URLs)'),
             self.__SVNUrlDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.tr('Revert changes'), self._VCSRevert)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsMerge.png"),
-            self.trUtf8('Merge changes'), self._VCSMerge)
+            self.tr('Merge changes'), self._VCSMerge)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflict resolved'), self.__SVNResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
-        act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
+        act = menu.addAction(self.tr('Set Property'), self.__SVNSetProp)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
-            self.trUtf8('List Properties'), self.__SVNListProps)
+            self.tr('List Properties'), self.__SVNListProps)
         self.vcsDirMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Delete Property'), self.__SVNDelProp)
+        act = menu.addAction(self.tr('Delete Property'), self.__SVNDelProp)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
-        menu.addAction(self.trUtf8('Select all local file entries'),
+        menu.addAction(self.tr('Select all local file entries'),
                        self.browser.selectLocalEntries)
-        menu.addAction(self.trUtf8('Select all versioned file entries'),
+        menu.addAction(self.tr('Select all versioned file entries'),
                        self.browser.selectVCSEntries)
-        menu.addAction(self.trUtf8('Select all local directory entries'),
+        menu.addAction(self.tr('Select all local directory entries'),
                        self.browser.selectLocalDirEntries)
-        menu.addAction(self.trUtf8('Select all versioned directory entries'),
+        menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Configure..."), self.__SVNConfigure)
+        menu.addAction(self.tr("Configure..."), self.__SVNConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)

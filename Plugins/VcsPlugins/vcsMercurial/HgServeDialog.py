@@ -41,46 +41,46 @@ class HgServeDialog(E5MainWindow):
         
         self.__styles = ["paper", "coal", "gitweb", "monoblue", "spartan", ]
         
-        self.setWindowTitle(self.trUtf8("Mercurial Server"))
+        self.setWindowTitle(self.tr("Mercurial Server"))
         
         self.__startAct = QAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons",
                              "startServer.png")),
-            self.trUtf8("Start Server"), self)
+            self.tr("Start Server"), self)
         self.__startAct.triggered[()].connect(self.__startServer)
         self.__stopAct = QAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons",
                              "stopServer.png")),
-            self.trUtf8("Stop Server"), self)
+            self.tr("Stop Server"), self)
         self.__stopAct.triggered[()].connect(self.__stopServer)
         self.__browserAct = QAction(
             UI.PixmapCache.getIcon("home.png"),
-            self.trUtf8("Start Browser"), self)
+            self.tr("Start Browser"), self)
         self.__browserAct.triggered[()].connect(self.__startBrowser)
         
         self.__portSpin = QSpinBox(self)
         self.__portSpin.setMinimum(2048)
         self.__portSpin.setMaximum(65535)
-        self.__portSpin.setToolTip(self.trUtf8("Enter the server port"))
+        self.__portSpin.setToolTip(self.tr("Enter the server port"))
         self.__portSpin.setValue(
             self.vcs.getPlugin().getPreferences("ServerPort"))
         
         self.__styleCombo = QComboBox(self)
         self.__styleCombo.addItems(self.__styles)
-        self.__styleCombo.setToolTip(self.trUtf8("Select the style to use"))
+        self.__styleCombo.setToolTip(self.tr("Select the style to use"))
         self.__styleCombo.setCurrentIndex(self.__styleCombo.findText(
             self.vcs.getPlugin().getPreferences("ServerStyle")))
         
-        self.__serverToolbar = QToolBar(self.trUtf8("Server"), self)
+        self.__serverToolbar = QToolBar(self.tr("Server"), self)
         self.__serverToolbar.addAction(self.__startAct)
         self.__serverToolbar.addAction(self.__stopAct)
         self.__serverToolbar.addSeparator()
         self.__serverToolbar.addWidget(self.__portSpin)
         self.__serverToolbar.addWidget(self.__styleCombo)
         
-        self.__browserToolbar = QToolBar(self.trUtf8("Browser"), self)
+        self.__browserToolbar = QToolBar(self.tr("Browser"), self)
         self.__browserToolbar.addAction(self.__browserAct)
         
         self.addToolBar(Qt.TopToolBarArea, self.__serverToolbar)
@@ -137,8 +137,8 @@ class HgServeDialog(E5MainWindow):
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('hg'))

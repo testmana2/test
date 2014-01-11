@@ -92,7 +92,7 @@ class SnapshotRegionGrabber(QWidget):
                           self.__BRHandle, self.__LHandle, self.__THandle,
                           self.__RHandle, self.__BHandle]
         self.__helpTextRect = QRect()
-        self.__helpText = self.trUtf8(
+        self.__helpText = self.tr(
             "Select a region using the mouse. To take the snapshot, press"
             " the Enter key or double click. Press Esc to quit.")
         

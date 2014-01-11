@@ -49,7 +49,7 @@ class UserAgentMenu(QMenu):
         
         # add default action
         self.__defaultUserAgent = QAction(self)
-        self.__defaultUserAgent.setText(self.trUtf8("Default"))
+        self.__defaultUserAgent.setText(self.tr("Default"))
         self.__defaultUserAgent.setCheckable(True)
         self.__defaultUserAgent.triggered[()].connect(
             self.__switchToDefaultUserAgent)
@@ -69,7 +69,7 @@ class UserAgentMenu(QMenu):
         # add other action
         self.addSeparator()
         self.__otherUserAgent = QAction(self)
-        self.__otherUserAgent.setText(self.trUtf8("Other..."))
+        self.__otherUserAgent.setText(self.tr("Other..."))
         self.__otherUserAgent.setCheckable(True)
         self.__otherUserAgent.triggered[()].connect(
             self.__switchToOtherUserAgent)
@@ -94,8 +94,8 @@ class UserAgentMenu(QMenu):
         from Helpviewer.HelpBrowserWV import HelpWebPage
         userAgent, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Custom user agent"),
-            self.trUtf8("User agent:"),
+            self.tr("Custom user agent"),
+            self.tr("User agent:"),
             QLineEdit.Normal,
             HelpWebPage().userAgent(resolveEmpty=True))
         if ok:
@@ -166,7 +166,7 @@ class UserAgentMenu(QMenu):
                 attributes = xml.attributes()
                 title = attributes.value("title")
                 if title == "v_a_r_i_o_u_s":
-                    title = self.trUtf8("Various")
+                    title = self.tr("Various")
                 
                 menu = QMenu(self)
                 menu.setTitle(title)
@@ -179,8 +179,8 @@ class UserAgentMenu(QMenu):
         if xml.hasError():
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Parsing default user agents"),
-                self.trUtf8(
+                self.tr("Parsing default user agents"),
+                self.tr(
                     """<p>Error parsing default user agents.</p><p>{0}</p>""")
                 .format(xml.errorString()))
         

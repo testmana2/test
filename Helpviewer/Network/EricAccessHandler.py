@@ -84,22 +84,22 @@ class EricAccessHandler(SchemeAccessHandler):
             html.replace("@JQUERY@", "qrc:javascript/jquery.js")
             html.replace("@JQUERY-UI@", "qrc:javascript/jquery-ui.js")
             
-            html.replace("@SITE-TITLE@", self.trUtf8("Speed Dial"))
-            html.replace("@URL@", self.trUtf8("URL"))
-            html.replace("@TITLE@", self.trUtf8("Title"))
-            html.replace("@APPLY@", self.trUtf8("Apply"))
-            html.replace("@NEW-PAGE@", self.trUtf8("New Page"))
-            html.replace("@TITLE-EDIT@", self.trUtf8("Edit"))
-            html.replace("@TITLE-REMOVE@", self.trUtf8("Remove"))
-            html.replace("@TITLE-RELOAD@", self.trUtf8("Reload"))
+            html.replace("@SITE-TITLE@", self.tr("Speed Dial"))
+            html.replace("@URL@", self.tr("URL"))
+            html.replace("@TITLE@", self.tr("Title"))
+            html.replace("@APPLY@", self.tr("Apply"))
+            html.replace("@NEW-PAGE@", self.tr("New Page"))
+            html.replace("@TITLE-EDIT@", self.tr("Edit"))
+            html.replace("@TITLE-REMOVE@", self.tr("Remove"))
+            html.replace("@TITLE-RELOAD@", self.tr("Reload"))
             html.replace(
-                "@TITLE-FETCHTITLE@", self.trUtf8("Load title from page"))
+                "@TITLE-FETCHTITLE@", self.tr("Load title from page"))
             html.replace(
-                "@SETTINGS-TITLE@", self.trUtf8("Speed Dial Settings"))
-            html.replace("@ADD-TITLE@", self.trUtf8("Add New Page"))
+                "@SETTINGS-TITLE@", self.tr("Speed Dial Settings"))
+            html.replace("@ADD-TITLE@", self.tr("Add New Page"))
             html.replace(
-                "@TXT_NRROWS@", self.trUtf8("Maximum pages in a row:"))
-            html.replace("@TXT_SDSIZE@", self.trUtf8("Change size of pages:"))
+                "@TXT_NRROWS@", self.tr("Maximum pages in a row:"))
+            html.replace("@TXT_SDSIZE@", self.tr("Change size of pages:"))
             
             self._speedDialPage = html
         

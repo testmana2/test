@@ -31,10 +31,10 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         
         if QSCINTILLA_VERSION() >= 0x020700:
             self.positionComboBox.addItem(
-                self.trUtf8("Below Text"),
+                self.tr("Below Text"),
                 QsciScintilla.CallTipsBelowText)
             self.positionComboBox.addItem(
-                self.trUtf8("Above Text"),
+                self.tr("Above Text"),
                 QsciScintilla.CallTipsAboveText)
         else:
             self.calltipsPositionBox.hide()

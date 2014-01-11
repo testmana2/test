@@ -82,29 +82,29 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             if itm.downloadCanceled():
                 menu.addAction(
                     UI.PixmapCache.getIcon("restart.png"),
-                    self.trUtf8("Retry"), self.__contextMenuRetry)
+                    self.tr("Retry"), self.__contextMenuRetry)
             else:
                 if itm.downloadedSuccessfully():
                     menu.addAction(
                         UI.PixmapCache.getIcon("open.png"),
-                        self.trUtf8("Open"), self.__contextMenuOpen)
+                        self.tr("Open"), self.__contextMenuOpen)
                 elif itm.downloading():
                     menu.addAction(
                         UI.PixmapCache.getIcon("stopLoading.png"),
-                        self.trUtf8("Cancel"), self.__contextMenuCancel)
+                        self.tr("Cancel"), self.__contextMenuCancel)
                     menu.addSeparator()
                 menu.addAction(
-                    self.trUtf8("Open Containing Folder"),
+                    self.tr("Open Containing Folder"),
                     self.__contextMenuOpenFolder)
             menu.addSeparator()
             menu.addAction(
-                self.trUtf8("Go to Download Page"),
+                self.tr("Go to Download Page"),
                 self.__contextMenuGotoPage)
             menu.addAction(
-                self.trUtf8("Copy Download Link"),
+                self.tr("Copy Download Link"),
                 self.__contextMenuCopyLink)
             menu.addSeparator()
-        menu.addAction(self.trUtf8("Select All"), self.__contextMenuSelectAll)
+        menu.addAction(self.tr("Select All"), self.__contextMenuSelectAll)
         if selectedRowsCount > 1 or \
            (selectedRowsCount == 1 and
             not self.__downloads[
@@ -112,7 +112,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
                 .downloading()):
             menu.addSeparator()
             menu.addAction(
-                self.trUtf8("Remove From List"),
+                self.tr("Remove From List"),
                 self.__contextMenuRemoveSelected)
         
         menu.exec_(QCursor.pos())
@@ -147,10 +147,10 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         if self.activeDownloads() > 0:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8(""),
-                self.trUtf8("""There are %n downloads in progress.\n"""
-                            """Do you want to quit anyway?""", "",
-                            self.activeDownloads()),
+                self.tr(""),
+                self.tr("""There are %n downloads in progress.\n"""
+                        """Do you want to quit anyway?""", "",
+                        self.activeDownloads()),
                 icon=E5MessageBox.Warning)
             if not res:
                 self.show()
@@ -378,7 +378,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         Private method to update the count label.
         """
         count = len(self.__downloads)
-        self.countLabel.setText(self.trUtf8("%n Download(s)", "", count))
+        self.countLabel.setText(self.tr("%n Download(s)", "", count))
     
     def __updateActiveItemCount(self):
         """
@@ -387,9 +387,9 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         count = self.activeDownloads()
         if count > 0:
             self.setWindowTitle(
-                self.trUtf8("Downloading %n file(s)", "", count))
+                self.tr("Downloading %n file(s)", "", count))
         else:
-            self.setWindowTitle(self.trUtf8("Downloads"))
+            self.setWindowTitle(self.tr("Downloads"))
     
     def __finished(self):
         """

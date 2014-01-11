@@ -157,8 +157,8 @@ class DebuggerInterfacePython(QObject):
         if interpreter == "":
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>No Python2 interpreter configured.</p>"""))
             return None, False
         
@@ -197,8 +197,8 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 
@@ -244,8 +244,8 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 return process, self.__isNetworked
@@ -257,8 +257,8 @@ class DebuggerInterfacePython(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
 
@@ -299,8 +299,8 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 # set translation function
@@ -346,8 +346,8 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 return process, self.__isNetworked
@@ -359,8 +359,8 @@ class DebuggerInterfacePython(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
 
@@ -798,12 +798,12 @@ class DebuggerInterfacePython(QObject):
         """
         Private method to ask the user which branch of a fork to follow.
         """
-        selections = [self.trUtf8("Parent Process"),
-                      self.trUtf8("Child process")]
+        selections = [self.tr("Parent Process"),
+                      self.tr("Child process")]
         res, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("Client forking"),
-            self.trUtf8("Select the fork branch to follow."),
+            self.tr("Client forking"),
+            self.tr("Select the fork branch to follow."),
             selections,
             0, False)
         if not ok or res == selections[0]:

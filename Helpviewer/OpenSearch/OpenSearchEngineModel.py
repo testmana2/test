@@ -31,8 +31,8 @@ class OpenSearchEngineModel(QAbstractTableModel):
         manager.changed.connect(self.__enginesChanged)
         
         self.__headers = [
-            self.trUtf8("Name"),
-            self.trUtf8("Keywords"),
+            self.tr("Name"),
+            self.tr("Keywords"),
         ]
     
     def removeRows(self, row, count, parent=QModelIndex()):
@@ -130,11 +130,11 @@ class OpenSearchEngineModel(QAbstractTableModel):
                 return icon
                 
             elif role == Qt.ToolTipRole:
-                description = self.trUtf8("<strong>Description:</strong> {0}")\
+                description = self.tr("<strong>Description:</strong> {0}")\
                     .format(engine.description())
                 if engine.providesSuggestions():
                     description += "<br/>"
-                    description += self.trUtf8(
+                    description += self.tr(
                         "<strong>Provides contextual suggestions</strong>")
                 
                 return description
@@ -142,7 +142,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
             if role in [Qt.EditRole, Qt.DisplayRole]:
                 return ",".join(self.__manager.keywordsForEngine(engine))
             elif role == Qt.ToolTipRole:
-                return self.trUtf8(
+                return self.tr(
                     "Comma-separated list of keywords that may"
                     " be entered in the location bar followed by search terms"
                     " to search with this engine")

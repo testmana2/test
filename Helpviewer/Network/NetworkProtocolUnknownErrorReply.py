@@ -27,7 +27,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         super().__init__(parent)
         self.setError(
             QNetworkReply.ProtocolUnknownError,
-            self.trUtf8("Protocol '{0}' not supported.").format(protocol))
+            self.tr("Protocol '{0}' not supported.").format(protocol))
         QTimer.singleShot(0, self.__fireSignals)
     
     def __fireSignals(self):

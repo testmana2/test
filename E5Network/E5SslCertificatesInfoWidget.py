@@ -152,7 +152,7 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         @return prepared text (string)
         """
         if txt is None or txt == "":
-            return self.trUtf8("<not part of the certificate>")
+            return self.tr("<not part of the certificate>")
         
         return Utilities.decodeString(txt)
     
@@ -165,7 +165,7 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         """
         serial = cert.serialNumber()
         if serial == "":
-            return self.trUtf8("<not part of the certificate>")
+            return self.tr("<not part of the certificate>")
         
         if ':' in serial:
             return str(serial, encoding="ascii").upper()

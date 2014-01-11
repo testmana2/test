@@ -54,8 +54,8 @@ class TaskViewer(QTreeWidget):
         self.setSortingEnabled(True)
         
         self.__headerItem = QTreeWidgetItem(
-            ["", "", self.trUtf8("Summary"), self.trUtf8("Filename"),
-             self.trUtf8("Line"), ""])
+            ["", "", self.tr("Summary"), self.tr("Filename"),
+             self.tr("Line"), ""])
         self.__headerItem.setIcon(
             0, UI.PixmapCache.getIcon("taskCompleted.png"))
         self.__headerItem.setIcon(
@@ -78,78 +78,78 @@ class TaskViewer(QTreeWidget):
         self.__projectTasksSaveTimer = AutoSaver(self, self.saveProjectTasks)
         
         self.__projectTasksMenu = QMenu(
-            self.trUtf8("P&roject Tasks"), self)
+            self.tr("P&roject Tasks"), self)
         self.__projectTasksMenu.addAction(
-            self.trUtf8("&Regenerate project tasks"),
+            self.tr("&Regenerate project tasks"),
             self.__regenerateProjectTasks)
         self.__projectTasksMenu.addSeparator()
         self.__projectTasksMenu.addAction(
-            self.trUtf8("&Configure scan options"),
+            self.tr("&Configure scan options"),
             self.__configureProjectTasksScanOptions)
         
         self.__menu = QMenu(self)
-        self.__menu.addAction(self.trUtf8("&New Task..."), self.__newTask)
+        self.__menu.addAction(self.tr("&New Task..."), self.__newTask)
         self.__menu.addSeparator()
         self.projectTasksMenuItem = self.__menu.addMenu(
             self.__projectTasksMenu)
         self.__menu.addSeparator()
         self.gotoItem = self.__menu.addAction(
-            self.trUtf8("&Go To"), self.__goToTask)
+            self.tr("&Go To"), self.__goToTask)
         self.__menu.addSeparator()
         self.copyItem = self.__menu.addAction(
-            self.trUtf8("&Copy"), self.__copyTask)
+            self.tr("&Copy"), self.__copyTask)
         self.pasteItem = self.__menu.addAction(
-            self.trUtf8("&Paste"), self.__pasteTask)
+            self.tr("&Paste"), self.__pasteTask)
         self.deleteItem = self.__menu.addAction(
-            self.trUtf8("&Delete"), self.__deleteTask)
+            self.tr("&Delete"), self.__deleteTask)
         self.__menu.addSeparator()
         self.markCompletedItem = self.__menu.addAction(
-            self.trUtf8("&Mark Completed"), self.__markCompleted)
+            self.tr("&Mark Completed"), self.__markCompleted)
         self.__menu.addAction(
-            self.trUtf8("Delete Completed &Tasks"), self.__deleteCompleted)
+            self.tr("Delete Completed &Tasks"), self.__deleteCompleted)
         self.__menu.addSeparator()
         self.__menu.addAction(
-            self.trUtf8("P&roperties..."), self.__editTaskProperties)
+            self.tr("P&roperties..."), self.__editTaskProperties)
         self.__menu.addSeparator()
         self.__menuFilteredAct = self.__menu.addAction(
-            self.trUtf8("&Filtered display"))
+            self.tr("&Filtered display"))
         self.__menuFilteredAct.setCheckable(True)
         self.__menuFilteredAct.setChecked(False)
         self.__menuFilteredAct.triggered[bool].connect(self.__activateFilter)
         self.__menu.addAction(
-            self.trUtf8("Filter c&onfiguration..."), self.__configureFilter)
+            self.tr("Filter c&onfiguration..."), self.__configureFilter)
         self.__menu.addSeparator()
         self.__menu.addAction(
-            self.trUtf8("Resi&ze columns"), self.__resizeColumns)
+            self.tr("Resi&ze columns"), self.__resizeColumns)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.__backMenu = QMenu(self)
-        self.__backMenu.addAction(self.trUtf8("&New Task..."), self.__newTask)
+        self.__backMenu.addAction(self.tr("&New Task..."), self.__newTask)
         self.__backMenu.addSeparator()
         self.backProjectTasksMenuItem = self.__backMenu.addMenu(
             self.__projectTasksMenu)
         self.__backMenu.addSeparator()
         self.backPasteItem = self.__backMenu.addAction(
-            self.trUtf8("&Paste"), self.__pasteTask)
+            self.tr("&Paste"), self.__pasteTask)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(
-            self.trUtf8("Delete Completed &Tasks"), self.__deleteCompleted)
+            self.tr("Delete Completed &Tasks"), self.__deleteCompleted)
         self.__backMenu.addSeparator()
         self.__backMenuFilteredAct = self.__backMenu.addAction(
-            self.trUtf8("&Filtered display"))
+            self.tr("&Filtered display"))
         self.__backMenuFilteredAct.setCheckable(True)
         self.__backMenuFilteredAct.setChecked(False)
         self.__backMenuFilteredAct.triggered[bool].connect(
             self.__activateFilter)
         self.__backMenu.addAction(
-            self.trUtf8("Filter c&onfiguration..."), self.__configureFilter)
+            self.tr("Filter c&onfiguration..."), self.__configureFilter)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(
-            self.trUtf8("Resi&ze columns"), self.__resizeColumns)
+            self.tr("Resi&ze columns"), self.__resizeColumns)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(
-            self.trUtf8("Configure..."), self.__configure)
+            self.tr("Configure..."), self.__configure)
         
         self.__activating = False
         
@@ -477,8 +477,8 @@ class TaskViewer(QTreeWidget):
         if on and not self.taskFilter.hasActiveFilter():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Activate task filter"),
-                self.trUtf8(
+                self.tr("Activate task filter"),
+                self.tr(
                     """The task filter doesn't have any active filters."""
                     """ Do you want to configure the filter settings?"""),
                 yesDefault=True)
@@ -509,9 +509,9 @@ class TaskViewer(QTreeWidget):
         """
         filter, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Scan Filter Patterns"),
-            self.trUtf8("Enter filename patterns of files"
-                        " to be excluded separated by a comma:"),
+            self.tr("Scan Filter Patterns"),
+            self.tr("Enter filename patterns of files"
+                    " to be excluded separated by a comma:"),
             QLineEdit.Normal,
             self.projectTasksScanFilter)
         if ok:
@@ -543,14 +543,14 @@ class TaskViewer(QTreeWidget):
         
         # now process them
         progress = E5ProgressDialog(
-            self.trUtf8("Extracting project tasks..."),
-            self.trUtf8("Abort"), 0, len(files), self.trUtf8("%v/%m Files"))
+            self.tr("Extracting project tasks..."),
+            self.tr("Abort"), 0, len(files), self.tr("%v/%m Files"))
         progress.setMinimumDuration(0)
         count = 0
         
         for file in files:
             progress.setLabelText(
-                self.trUtf8("Extracting project tasks...\n{0}").format(file))
+                self.tr("Extracting project tasks...\n{0}").format(file))
             progress.setValue(count)
             QApplication.processEvents()
             if progress.wasCanceled():

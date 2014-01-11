@@ -227,34 +227,34 @@ class Listspace(QSplitter, ViewManager):
         self.__menu = QMenu(self)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("tabClose.png"),
-            self.trUtf8('Close'), self.__contextMenuClose)
+            self.tr('Close'), self.__contextMenuClose)
         self.closeOthersMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("tabCloseOther.png"),
-            self.trUtf8("Close Others"),
+            self.tr("Close Others"),
             self.__contextMenuCloseOthers)
         self.__menu.addAction(
-            self.trUtf8('Close All'), self.__contextMenuCloseAll)
+            self.tr('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
         self.saveMenuAct = self.__menu.addAction(
             UI.PixmapCache.getIcon("fileSave.png"),
-            self.trUtf8('Save'), self.__contextMenuSave)
+            self.tr('Save'), self.__contextMenuSave)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("fileSaveAs.png"),
-            self.trUtf8('Save As...'), self.__contextMenuSaveAs)
+            self.tr('Save As...'), self.__contextMenuSaveAs)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("fileSaveAll.png"),
-            self.trUtf8('Save All'), self.__contextMenuSaveAll)
+            self.tr('Save All'), self.__contextMenuSaveAll)
         self.__menu.addSeparator()
         self.openRejectionsMenuAct = self.__menu.addAction(
-            self.trUtf8("Open 'rejection' file"),
+            self.tr("Open 'rejection' file"),
             self.__contextMenuOpenRejections)
         self.__menu.addSeparator()
         self.__menu.addAction(
             UI.PixmapCache.getIcon("print.png"),
-            self.trUtf8('Print'), self.__contextMenuPrintFile)
+            self.tr('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
         self.copyPathAct = self.__menu.addAction(
-            self.trUtf8("Copy Path to Clipboard"),
+            self.tr("Copy Path to Clipboard"),
             self.__contextMenuCopyPathToClipboard)
         
     def __showMenu(self, point):
@@ -384,13 +384,13 @@ class Listspace(QSplitter, ViewManager):
         if fn is None:
             if not noName:
                 self.untitledCount += 1
-                noName = self.trUtf8("Untitled {0}").format(self.untitledCount)
+                noName = self.tr("Untitled {0}").format(self.untitledCount)
             self.viewlist.addItem(noName)
             editor.setNoName(noName)
         else:
             txt = os.path.basename(fn)
             if not QFileInfo(fn).isWritable():
-                txt = self.trUtf8("{0} (ro)").format(txt)
+                txt = self.tr("{0} (ro)").format(txt)
             itm = QListWidgetItem(txt)
             itm.setToolTip(fn)
             self.viewlist.addItem(itm)
@@ -505,7 +505,7 @@ class Listspace(QSplitter, ViewManager):
             index = self.editors.index(editor)
             txt = os.path.basename(newName)
             if not QFileInfo(newName).isWritable():
-                txt = self.trUtf8("{0} (ro)").format(txt)
+                txt = self.tr("{0} (ro)").format(txt)
             itm = self.viewlist.item(index)
             itm.setText(txt)
             itm.setToolTip(newName)
