@@ -320,6 +320,8 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                                     break
                                 except IndexError:
                                     version = self.tr("(unknown)")
+                        else:
+                            version = self.tr("(unknown)")
                     else:
                         version = self.tr("(not executable)")
                 QTreeWidgetItem(itm, [exe, version])
