@@ -61,7 +61,7 @@ class MultiProjectReader(XMLStreamReaderBase):
         """
         while not self.atEnd():
             self.readNext()
-            if self.isEndElement() and self.name() == "Task":
+            if self.isEndElement() and self.name() == "Projects":
                 break
             
             if self.isStartElement():
