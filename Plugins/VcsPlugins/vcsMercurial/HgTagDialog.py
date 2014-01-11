@@ -73,6 +73,8 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
     def on_tagCombo_currentIndexChanged(self, index):
         """
         Private slot setting the local status of the selected entry.
+        
+        @param index index of the selected entrie (integer)
         """
         isLocal = self.tagCombo.itemData(index)
         if isLocal:
