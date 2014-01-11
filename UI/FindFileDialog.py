@@ -102,11 +102,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__section0Size = self.findList.header().sectionSize(0)
         self.findList.setExpandsOnDoubleClick(False)
         if self.__replaceMode:
-            font = self.findList.font()
-            if Utilities.isWindowsPlatform():
-                font.setFamily("Lucida Console")
-            else:
-                font.setFamily("Monospace")
+            font = Preferences.getEditorOtherFonts("MonospacedFont")
             self.findList.setFont(font)
 
         # Qt Designer form files

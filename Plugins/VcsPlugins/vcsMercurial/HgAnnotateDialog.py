@@ -10,15 +10,14 @@ Module implementing a dialog to show the output of the hg annotate command.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QFont, QHeaderView, \
-    QTreeWidgetItem, QLineEdit
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QLineEdit, \
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
 from .Ui_HgAnnotateDialog import Ui_HgAnnotateDialog
 
 import Preferences
-import Utilities
 
 
 class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
@@ -43,11 +42,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         self.annotateList.headerItem().setText(
             self.annotateList.columnCount(), "")
-        font = QFont(self.annotateList.font())
-        if Utilities.isWindowsPlatform():
-            font.setFamily("Lucida Console")
-        else:
-            font.setFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.annotateList.setFont(font)
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")

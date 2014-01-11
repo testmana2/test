@@ -11,14 +11,13 @@ import os
 
 from PyQt4.QtCore import QTimer, QProcess, Qt, pyqtSlot
 from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QDialogButtonBox, \
-    QFont, QTreeWidgetItem
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
 from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 
 import Preferences
-import Utilities
 
 
 class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
@@ -42,11 +41,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.vcs = vcs
         
         self.blameList.headerItem().setText(self.blameList.columnCount(), "")
-        font = QFont(self.blameList.font())
-        if Utilities.isWindowsPlatform():
-            font.setFamily("Lucida Console")
-        else:
-            font.setFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.blameList.setFont(font)
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
