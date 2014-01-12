@@ -5794,11 +5794,11 @@ class UserInterface(E5MainWindow):
                         if period == 2 and lastCheck.day() == now.day():
                             # daily
                             return
-                        elif (period == 3 and
-                              lastCheck.weekNumber() == now.weekNumber()):
+                        elif period == 3 and lastCheck.daysTo(now) < 7:
                             # weekly
                             return
-                        elif period == 4 and lastCheck.month() == now.month():
+                        elif period == 4 and (lastCheck.daysTo(now) <
+                                              lastCheck.daysInMonth()):
                             # monthly
                             return
         
