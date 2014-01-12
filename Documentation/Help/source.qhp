@@ -8461,6 +8461,8 @@
       <keyword name="PluginRepositoryReader.readXML" id="PluginRepositoryReader.readXML" ref="eric5.E5XML.PluginRepositoryReader.html#PluginRepositoryReader.readXML" />
       <keyword name="PluginRepositoryWidget" id="PluginRepositoryWidget" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget" />
       <keyword name="PluginRepositoryWidget (Constructor)" id="PluginRepositoryWidget (Constructor)" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__init__" />
+      <keyword name="PluginRepositoryWidget.__cleanupDownloads" id="PluginRepositoryWidget.__cleanupDownloads" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__cleanupDownloads" />
+      <keyword name="PluginRepositoryWidget.__closeAndInstall" id="PluginRepositoryWidget.__closeAndInstall" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__closeAndInstall" />
       <keyword name="PluginRepositoryWidget.__downloadCancel" id="PluginRepositoryWidget.__downloadCancel" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadCancel" />
       <keyword name="PluginRepositoryWidget.__downloadFile" id="PluginRepositoryWidget.__downloadFile" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadFile" />
       <keyword name="PluginRepositoryWidget.__downloadFileDone" id="PluginRepositoryWidget.__downloadFileDone" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadFileDone" />
@@ -8471,16 +8473,22 @@
       <keyword name="PluginRepositoryWidget.__downloadProgress" id="PluginRepositoryWidget.__downloadProgress" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadProgress" />
       <keyword name="PluginRepositoryWidget.__downloadRepositoryFileDone" id="PluginRepositoryWidget.__downloadRepositoryFileDone" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadRepositoryFileDone" />
       <keyword name="PluginRepositoryWidget.__formatDescription" id="PluginRepositoryWidget.__formatDescription" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__formatDescription" />
-      <keyword name="PluginRepositoryWidget.__isUpToDate" id="PluginRepositoryWidget.__isUpToDate" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__isUpToDate" />
+      <keyword name="PluginRepositoryWidget.__hasHiddenPlugins" id="PluginRepositoryWidget.__hasHiddenPlugins" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__hasHiddenPlugins" />
+      <keyword name="PluginRepositoryWidget.__hidePlugin" id="PluginRepositoryWidget.__hidePlugin" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__hidePlugin" />
+      <keyword name="PluginRepositoryWidget.__hideSelectedPlugins" id="PluginRepositoryWidget.__hideSelectedPlugins" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__hideSelectedPlugins" />
       <keyword name="PluginRepositoryWidget.__populateList" id="PluginRepositoryWidget.__populateList" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__populateList" />
       <keyword name="PluginRepositoryWidget.__resortRepositoryList" id="PluginRepositoryWidget.__resortRepositoryList" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__resortRepositoryList" />
       <keyword name="PluginRepositoryWidget.__selectedItems" id="PluginRepositoryWidget.__selectedItems" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__selectedItems" />
+      <keyword name="PluginRepositoryWidget.__showAllPlugins" id="PluginRepositoryWidget.__showAllPlugins" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__showAllPlugins" />
       <keyword name="PluginRepositoryWidget.__sslErrors" id="PluginRepositoryWidget.__sslErrors" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__sslErrors" />
+      <keyword name="PluginRepositoryWidget.__updateHiddenPluginsList" id="PluginRepositoryWidget.__updateHiddenPluginsList" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__updateHiddenPluginsList" />
       <keyword name="PluginRepositoryWidget.__updateList" id="PluginRepositoryWidget.__updateList" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__updateList" />
+      <keyword name="PluginRepositoryWidget.__updateStatus" id="PluginRepositoryWidget.__updateStatus" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__updateStatus" />
       <keyword name="PluginRepositoryWidget.addEntry" id="PluginRepositoryWidget.addEntry" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.addEntry" />
       <keyword name="PluginRepositoryWidget.getDownloadedPlugins" id="PluginRepositoryWidget.getDownloadedPlugins" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.getDownloadedPlugins" />
       <keyword name="PluginRepositoryWidget.on_buttonBox_clicked" id="PluginRepositoryWidget.on_buttonBox_clicked" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_buttonBox_clicked" />
       <keyword name="PluginRepositoryWidget.on_repositoryList_currentItemChanged" id="PluginRepositoryWidget.on_repositoryList_currentItemChanged" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryList_currentItemChanged" />
+      <keyword name="PluginRepositoryWidget.on_repositoryList_customContextMenuRequested" id="PluginRepositoryWidget.on_repositoryList_customContextMenuRequested" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryList_customContextMenuRequested" />
       <keyword name="PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" id="PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" />
       <keyword name="PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" id="PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" />
       <keyword name="PluginRepositoryWindow" id="PluginRepositoryWindow" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWindow" />

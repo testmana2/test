@@ -1000,7 +1000,11 @@ class PluginManager(QObject):
         for name, module in list(self.__onDemandActiveModules.items()):
             if getattr(module, "pluginType") == "version_control":
                 self.deactivatePlugin(name, True)
-
+    
+    ########################################################################
+    ## Methods creation of the plug-ins download directory
+    ########################################################################
+    
     def __checkPluginsDownloadDirectory(self):
         """
         Private slot to check for the existence of the plugins download
@@ -1050,18 +1054,20 @@ class PluginManager(QObject):
         period = Preferences.getPluginManager("UpdatesCheckInterval")
         if period == 0:
             return
-        elif period in [2, 3, 4]:
+        elif period in [1, 2, 3]:
             lastModified = QFileInfo(self.pluginRepositoryFile).lastModified()
             if lastModified.isValid() and lastModified.date().isValid():
                 lastModifiedDate = lastModified.date()
                 now = QDate.currentDate()
-                if period == 2 and lastModifiedDate.day() == now.day():
+                if period == 1 and lastModifiedDate.day() == now.day():
                     # daily
                     return
-                elif period == 3 and lastModifiedDate.daysTo(now) < 7:
+                elif period == 2 and lastModifiedDate.daysTo(now) < 7:
                     # weekly
                     return
-                elif period == 4 and lastModifiedDate.month() == now.month():
+                elif period == 3 and \
+                    (lastModifiedDate.daysTo(now) <
+                     lastModifiedDate.daysInMonth()):
                     # monthly
                     return
         
@@ -1145,11 +1151,15 @@ class PluginManager(QObject):
         @param filename data for the filename field (string)
         @param status status of the plugin (string [stable, unstable, unknown])
         """
+        # ignore hidden plug-ins
+        pluginName = os.path.splitext(url.rsplit("/", 1)[1])[0]
+        if pluginName in Preferences.getPluginManager("HiddenPlugins"):
+            return
+        
         archive = os.path.join(Preferences.getPluginManager("DownloadPath"),
                                filename)
         
         # Check against installed/loaded plug-ins
-        pluginName = os.path.splitext(url.rsplit("/", 1)[1])[0]
         pluginDetails = self.getPluginDetails(pluginName)
         if pluginDetails is None:
             if not Preferences.getPluginManager("CheckInstalledOnly"):

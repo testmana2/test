@@ -3710,19 +3710,24 @@ eric5.PluginManager.PluginManager.PluginManager.unloadPlugin?4(name)
 eric5.PluginManager.PluginManager.PluginManager?1(parent=None, doLoadPlugins=True, develPlugin=None)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog.getDownloadedPlugins?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog?1(parent=None)
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.AuthorRole?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.DescrRole?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.FilenameRole?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.PluginStatusLocalUpdate?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.PluginStatusNew?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.PluginStatusRemoteUpdate?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.PluginStatusUpToDate?7
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.UrlRole?7
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.addEntry?4(name, short, description, url, author, version, filename, status)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.closeAndInstall?7
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.getDownloadedPlugins?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_buttonBox_clicked?4(button)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_currentItemChanged?4(current, previous)
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_customContextMenuRequested?4(pos)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_itemSelectionChanged?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryUrlEditButton_toggled?4(checked)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget?1(parent=None, external=False)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWindow?1(parent=None)
-eric5.PluginManager.PluginRepositoryDialog.authorRole?7
-eric5.PluginManager.PluginRepositoryDialog.descrRole?7
-eric5.PluginManager.PluginRepositoryDialog.filenameRole?7
-eric5.PluginManager.PluginRepositoryDialog.urlRole?7
 eric5.PluginManager.PluginUninstallDialog.PluginUninstallDialog?1(pluginManager, parent=None)
 eric5.PluginManager.PluginUninstallDialog.PluginUninstallWidget.accepted?7
 eric5.PluginManager.PluginUninstallDialog.PluginUninstallWidget.on_buttonBox_accepted?4()

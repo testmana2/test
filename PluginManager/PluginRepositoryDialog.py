@@ -11,11 +11,12 @@ Module implementing a dialog showing the available plugins.
 import sys
 import os
 import zipfile
+import glob
 
 from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, \
-    QProcess
+    QProcess, QPoint
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
-    QTreeWidgetItem, QDialog, QVBoxLayout
+    QTreeWidgetItem, QDialog, QVBoxLayout, QMenu
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
     QNetworkReply
 
@@ -39,11 +40,6 @@ import UI.PixmapCache
 
 from eric5config import getConfig
 
-descrRole = Qt.UserRole
-urlRole = Qt.UserRole + 1
-filenameRole = Qt.UserRole + 2
-authorRole = Qt.UserRole + 3
-
 
 class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     """
@@ -53,6 +49,16 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         pressed
     """
     closeAndInstall = pyqtSignal()
+    
+    DescrRole = Qt.UserRole
+    UrlRole = Qt.UserRole + 1
+    FilenameRole = Qt.UserRole + 2
+    AuthorRole = Qt.UserRole + 3
+
+    PluginStatusUpToDate = 0
+    PluginStatusNew = 1
+    PluginStatusLocalUpdate = 2
+    PluginStatusRemoteUpdate = 3
     
     def __init__(self, parent=None, external=False):
         """
@@ -89,6 +95,18 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             self.repositoryList.columnCount(), "")
         self.repositoryList.header().setSortIndicator(0, Qt.AscendingOrder)
         
+        self.__pluginContextMenu = QMenu(self)
+        self.__hideAct = self.__pluginContextMenu.addAction(
+            self.tr("Hide"), self.__hidePlugin)
+        self.__hideSelectedAct = self.__pluginContextMenu.addAction(
+            self.tr("Hide Selected"), self.__hideSelectedPlugins)
+        self.__pluginContextMenu.addSeparator()
+        self.__showAllAct = self.__pluginContextMenu.addAction(
+            self.tr("Show All"), self.__showAllPlugins)
+        self.__pluginContextMenu.addSeparator()
+        self.__pluginContextMenu.addAction(
+            self.tr("Cleanup Downloads"), self.__cleanupDownloads)
+        
         self.pluginRepositoryFile = \
             os.path.join(Utilities.getConfigDir(), "PluginRepository")
         
@@ -109,6 +127,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__pluginsDownloaded = []
         self.__isDownloadInstall = False
         self.__allDownloadedOk = False
+        
+        self.__hiddenPlugins = Preferences.getPluginManager("HiddenPlugins")
         
         self.__populateList()
     
@@ -131,7 +151,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         elif button == self.__downloadCancelButton:
             self.__downloadCancel()
         elif button == self.__installButton:
-            self.closeAndInstall.emit()
+            self.__closeAndInstall()
     
     def __formatDescription(self, lines):
         """
@@ -157,6 +177,21 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         # join lines by a blank
         return ' '.join(newlines)
     
+    @pyqtSlot(QPoint)
+    def on_repositoryList_customContextMenuRequested(self, pos):
+        """
+        Private slot to show the context menu.
+        
+        @param pos position to show the menu (QPoint)
+        """
+        self.__hideAct.setEnabled(
+            self.repositoryList.currentItem() is not None and
+            len(self.__selectedItems()) == 1)
+        self.__hideSelectedAct.setEnabled(
+            len(self.__selectedItems()) > 1)
+        self.__showAllAct.setEnabled(bool(self.__hasHiddenPlugins()))
+        self.__pluginContextMenu.popup(self.repositoryList.mapToGlobal(pos))
+    
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_repositoryList_currentItemChanged(self, current, previous):
         """
@@ -168,11 +203,14 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if self.__repositoryMissing or current is None:
             return
         
-        self.urlEdit.setText(current.data(0, urlRole) or "")
+        self.urlEdit.setText(
+            current.data(0, PluginRepositoryWidget.UrlRole) or "")
         self.descriptionEdit.setPlainText(
-            current.data(0, descrRole) and
-            self.__formatDescription(current.data(0, descrRole)) or "")
-        self.authorEdit.setText(current.data(0, authorRole) or "")
+            current.data(0, PluginRepositoryWidget.DescrRole) and
+            self.__formatDescription(
+                current.data(0, PluginRepositoryWidget.DescrRole)) or "")
+        self.authorEdit.setText(
+            current.data(0, PluginRepositoryWidget.AuthorRole) or "")
     
     def __selectedItems(self):
         """
@@ -194,6 +232,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         self.__downloadButton.setEnabled(len(self.__selectedItems()))
         self.__downloadInstallButton.setEnabled(len(self.__selectedItems()))
+        self.__installButton.setEnabled(len(self.__selectedItems()))
     
     def __updateList(self):
         """
@@ -251,10 +290,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         for itm in self.repositoryList.selectedItems():
             if itm not in [self.__stableItem, self.__unstableItem,
                            self.__unknownItem]:
-                url = itm.data(0, urlRole)
+                url = itm.data(0, PluginRepositoryWidget.UrlRole)
                 filename = os.path.join(
                     Preferences.getPluginManager("DownloadPath"),
-                    itm.data(0, filenameRole))
+                    itm.data(0, PluginRepositoryWidget.FilenameRole))
                 self.__pluginsToDownload.append((url, filename))
         self.__downloadPlugin()
     
@@ -461,6 +500,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param filename data for the filename field (string)
         @param status status of the plugin (string [stable, unstable, unknown])
         """
+        pluginName = filename.rsplit("-", 1)[0]
+        if pluginName in self.__hiddenPlugins:
+            return
+        
         if status == "stable":
             if self.__stableItem is None:
                 self.__stableItem = \
@@ -484,34 +527,51 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             parent = self.__unknownItem
         itm = QTreeWidgetItem(parent, [name, version, short])
         
-        itm.setData(0, urlRole, url)
-        itm.setData(0, filenameRole, filename)
-        itm.setData(0, authorRole, author)
-        itm.setData(0, descrRole, description)
+        itm.setData(0, PluginRepositoryWidget.UrlRole, url)
+        itm.setData(0, PluginRepositoryWidget.FilenameRole, filename)
+        itm.setData(0, PluginRepositoryWidget.AuthorRole, author)
+        itm.setData(0, PluginRepositoryWidget.DescrRole, description)
         
-        if self.__isUpToDate(filename, version):
+        updateStatus = self.__updateStatus(filename, version)
+        if updateStatus == PluginRepositoryWidget.PluginStatusUpToDate:
             itm.setIcon(1, UI.PixmapCache.getIcon("empty.png"))
-        else:
+            itm.setToolTip(1, self.tr("up-to-date"))
+        elif updateStatus == PluginRepositoryWidget.PluginStatusNew:
             itm.setIcon(1, UI.PixmapCache.getIcon("download.png"))
+            itm.setToolTip(1, self.tr("new download available"))
+        elif updateStatus == PluginRepositoryWidget.PluginStatusLocalUpdate:
+            itm.setIcon(1, UI.PixmapCache.getIcon("updateLocal.png"))
+            itm.setToolTip(1, self.tr("update installable"))
+        elif updateStatus == PluginRepositoryWidget.PluginStatusRemoteUpdate:
+            itm.setIcon(1, UI.PixmapCache.getIcon("updateRemote.png"))
+            itm.setToolTip(1, self.tr("updated download available"))
     
-    def __isUpToDate(self, filename, version):
+    def __updateStatus(self, filename, version):
         """
-        Private method to check, if the given archive is up-to-date.
+        Private method to check, if the given archive update status.
         
         @param filename data for the filename field (string)
         @param version data for the version field (string)
-        @return flag indicating up-to-date (boolean)
+        @return plug-in update status (integer, one of PluginStatusNew,
+            PluginStatusUpToDate, PluginStatusLocalUpdate,
+            PluginStatusRemoteUpdate)
         """
         archive = os.path.join(Preferences.getPluginManager("DownloadPath"),
                                filename)
-
+        
+        # check, if it is an update (i.e. we already have archives
+        # with the same pattern)
+        archivesPattern = archive.rsplit('-', 1)[0] + "-*.zip"
+        if len(glob.glob(archivesPattern)) == 0:
+            return PluginRepositoryWidget.PluginStatusNew
+        
         # check, if the archive exists
         if not os.path.exists(archive):
-            return False
+            return PluginRepositoryWidget.PluginStatusRemoteUpdate
         
         # check, if the archive is a valid zip file
         if not zipfile.is_zipfile(archive):
-            return False
+            return PluginRepositoryWidget.PluginStatusRemoteUpdate
         
         zip = zipfile.ZipFile(archive, "r")
         try:
@@ -520,7 +580,18 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             aversion = ""
         zip.close()
         
-        return aversion == version
+        if aversion == version:
+            if not self.__external:
+                # Check against installed/loaded plug-ins
+                pluginManager = e5App().getObject("PluginManager")
+                pluginName = filename.rsplit('-', 1)[0]
+                pluginDetails = pluginManager.getPluginDetails(pluginName)
+                if pluginDetails is None or pluginDetails["version"] < version:
+                    return PluginRepositoryWidget.PluginStatusLocalUpdate
+            
+            return PluginRepositoryWidget.PluginStatusUpToDate
+        else:
+            return PluginRepositoryWidget.PluginStatusRemoteUpdate
     
     def __sslErrors(self, reply, errors):
         """
@@ -550,6 +621,104 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param checked state of the push button (boolean)
         """
         self.repositoryUrlEdit.setReadOnly(not checked)
+    
+    def __closeAndInstall(self):
+        """
+        Private method to close the dialog and invoke the install dialog.
+        """
+        if not self.__pluginsDownloaded and self.__selectedItems():
+            for itm in self.__selectedItems():
+                filename = os.path.join(
+                    Preferences.getPluginManager("DownloadPath"),
+                    itm.data(0, PluginRepositoryWidget.FilenameRole))
+                self.__pluginsDownloaded.append(filename)
+        self.closeAndInstall.emit()
+    
+    def __hidePlugin(self):
+        """
+        Private slot to hide the current plug-in.
+        """
+        itm = self.__selectedItems()[0]
+        pluginName = (itm.data(0, PluginRepositoryWidget.FilenameRole)
+            .rsplit("-", 1)[0])
+        self.__updateHiddenPluginsList([pluginName])
+    
+    def __hideSelectedPlugins(self):
+        """
+        Private slot to hide all selected plug-ins.
+        """
+        hideList = []
+        for itm in self.__selectedItems():
+            pluginName = (itm.data(0, PluginRepositoryWidget.FilenameRole)
+                .rsplit("-", 1)[0])
+            hideList.append(pluginName)
+        self.__updateHiddenPluginsList(hideList)
+    
+    def __showAllPlugins(self):
+        """
+        Private slot to show all plug-ins.
+        """
+        self.__hiddenPlugins = []
+        self.__updateHiddenPluginsList([])
+    
+    def __hasHiddenPlugins(self):
+        """
+        Private method to check, if there are any hidden plug-ins.
+        
+        @return flag indicating the presence of hidden plug-ins (boolean)
+        """
+        return bool(self.__hiddenPlugins)
+    
+    def __updateHiddenPluginsList(self, hideList):
+        """
+        Private method to store the list of hidden plug-ins to the settings.
+        
+        @param hideList list of plug-ins to add to the list of hidden ones
+            (list of string)
+        """
+        if hideList:
+            self.__hiddenPlugins.extend(
+                [p for p in hideList if p not in self.__hiddenPlugins])
+        Preferences.setPluginManager("HiddenPlugins", self.__hiddenPlugins)
+        self.__populateList()
+    
+    def __cleanupDownloads(self):
+        """
+        Private slot to cleanup the plug-in downloads area.
+        """
+        downloadPath = Preferences.getPluginManager("DownloadPath")
+        downloads = {}  # plug-in name as key, file name as value
+        
+        # step 1: extract plug-ins and downloaded files
+        for pluginFile in os.listdir(downloadPath):
+            if not os.path.isfile(os.path.join(downloadPath, pluginFile)):
+                continue
+            
+            pluginName = pluginFile.rsplit("-", 1)[0]
+            if pluginName not in downloads:
+                downloads[pluginName] = []
+            downloads[pluginName].append(pluginFile)
+        
+        # step 2: delete old entries
+        for pluginName in downloads:
+            downloads[pluginName].sort()
+        
+            if pluginName in self.__hiddenPlugins and \
+                    not Preferences.getPluginManager("KeepHidden"):
+                removeFiles = downloads[pluginName]
+            else:
+                removeFiles = downloads[pluginName][
+                    :-Preferences.getPluginManager("KeepGenerations")]
+            for removeFile in removeFiles:
+                try:
+                    os.remove(os.path.join(downloadPath, removeFile))
+                except (IOError, OSError) as err:
+                    E5MessageBox.critical(
+                        self,
+                        self.tr("Cleanup of Plugin Downloads"),
+                        self.tr("""<p>The plugin download <b>{0}</b> could"""
+                                """ not be deleted.</p><p>Reason: {1}</p>""")
+                        .format(removeFile, str(err)))
 
 
 class PluginRepositoryDialog(QDialog):

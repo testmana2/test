@@ -960,6 +960,11 @@ class Prefs(object):
         # 2 = weekly
         # 3 = monthly
         "CheckInstalledOnly": True,
+        # list of plug-ins not to shown in the repo dialog
+        "HiddenPlugins": [],
+        # parameters for housekeeping
+        "KeepGenerations": 2,
+        "KeepHidden": False,
     }
     
     # defaults for the printer settings
@@ -2617,8 +2622,11 @@ def getPluginManager(key, prefClass=Prefs):
     if key in ["DownloadPath"]:
         return prefClass.settings.value(
             "PluginManager/" + key, prefClass.pluginManagerDefaults[key])
-    elif key in ["UpdatesCheckInterval"]:
+    elif key in ["UpdatesCheckInterval", "KeepGenerations"]:
         return int(prefClass.settings.value(
+            "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
+    elif key in ["HiddenPlugins"]:
+        return toList(prefClass.settings.value(
             "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
     else:
         return toBool(prefClass.settings.value(

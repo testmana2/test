@@ -5,6 +5,9 @@ Version 5.5.0-xxx:
 - Multi Project
   -- added support for the categorisation of projects and changed the
      multi project file format
+- Plugin Manager
+  -- extended the plugin repository dialog to allow to hide unwanted entries
+     and cleanup the plugin downloads area
 - Version Control System Interfaces
   -- Mercurial
      --- enhanced the tag dialog and extended the log browser to allow

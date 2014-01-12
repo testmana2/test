@@ -33259,32 +33259,32 @@ Destination:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1026"/>
+        <location filename="../PluginManager/PluginManager.py" line="1030"/>
         <source>Plugin Manager Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1026"/>
+        <location filename="../PluginManager/PluginManager.py" line="1030"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1090"/>
+        <location filename="../PluginManager/PluginManager.py" line="1096"/>
         <source>Error downloading file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1090"/>
+        <location filename="../PluginManager/PluginManager.py" line="1096"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1125"/>
+        <location filename="../PluginManager/PluginManager.py" line="1131"/>
         <source>New plugin versions available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginManager.py" line="1125"/>
+        <location filename="../PluginManager/PluginManager.py" line="1131"/>
         <source>&lt;p&gt;There are new plug-ins or plug-in updates available. Use the plug-in repository dialog to get them.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33312,98 +33312,123 @@ Destination:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="97"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="107"/>
         <source>Select plugins download directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="69"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="124"/>
         <source>Load external plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="114"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
         <source>Check for plugin updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="85"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="137"/>
         <source>Select to disable update checking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="88"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="140"/>
         <source>Never</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="95"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="147"/>
         <source>Select to check for updates once a day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="98"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
         <source>Daily</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="105"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="157"/>
         <source>Select to check for updates once a week</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="108"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
         <source>Weekly</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="115"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="167"/>
         <source>Select to check for updates once a month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="118"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="170"/>
         <source>Monthly</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="140"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="192"/>
         <source>Repository URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="147"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="199"/>
         <source>Shows the repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="157"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="209"/>
         <source>Press to edit the plugin repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="212"/>
         <source>Edit URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="128"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="180"/>
         <source>Select to check only already installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="183"/>
         <source>Check only installed plugins for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="62"/>
+        <source>Download Housekeeping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <source>No. of generations to keep:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
+        <source>Enter the number of generations to keep for each plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <source>Select to keep generations of hidden plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="104"/>
+        <source>Keep generations of hidden plugins</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -33415,72 +33440,72 @@ Destination:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="47"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="50"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="52"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="55"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="57"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="60"/>
         <source>Short Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="70"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="73"/>
         <source>Description:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="89"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="92"/>
         <source>Displays the description of the selected plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="99"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="102"/>
         <source>Author:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="109"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="112"/>
         <source>Displays the author of the selected plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="119"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="122"/>
         <source>URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="129"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="132"/>
         <source>Displays the download URL of the selected plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="148"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="151"/>
         <source>Shows the progress of the current download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="167"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="170"/>
         <source>Repository URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="174"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="177"/>
         <source>Shows the repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="184"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="187"/>
         <source>Press to edit the plugin repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="187"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.ui" line="190"/>
         <source>Edit URL</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33488,106 +33513,156 @@ Destination:
 <context>
     <name>PluginRepositoryWidget</name>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="68"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="74"/>
         <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="70"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="76"/>
         <source>Download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="77"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="83"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="80"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="86"/>
         <source>Close &amp;&amp; Install</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="283"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="322"/>
         <source>Download Plugin Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="283"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="322"/>
         <source>The requested plugins were downloaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="334"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="373"/>
         <source>Read plugins repository file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="334"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="373"/>
         <source>&lt;p&gt;The plugins repository file &lt;b&gt;{0}&lt;/b&gt; could not be read. Select Update&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="342"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="381"/>
         <source>No plugin repository file available.
 Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="394"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="433"/>
         <source>Error downloading file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="394"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="433"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="467"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="510"/>
         <source>Stable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="474"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="517"/>
         <source>Unstable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="481"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="524"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="73"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="79"/>
         <source>Download &amp;&amp; Install</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="326"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="365"/>
         <source>Plugins Repository URL Changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="326"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="365"/>
         <source>The URL of the Plugins Repository has changed. Select the &quot;Update&quot; button to get the new repository file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="99"/>
+        <source>Hide</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="101"/>
+        <source>Hide Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="104"/>
+        <source>Show All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="107"/>
+        <source>Cleanup Downloads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="538"/>
+        <source>up-to-date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="541"/>
+        <source>new download available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="544"/>
+        <source>update installable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="547"/>
+        <source>updated download available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="717"/>
+        <source>Cleanup of Plugin Downloads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="717"/>
+        <source>&lt;p&gt;The plugin download &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PluginRepositoryWindow</name>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="804"/>
         <source>Process Generation Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="804"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PluginManager/PluginRepositoryDialog.py" line="635"/>
+        <location filename="../PluginManager/PluginRepositoryDialog.py" line="804"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33661,27 +33736,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1182"/>
+        <location filename="../Preferences/__init__.py" line="1187"/>
         <source>Export Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1210"/>
+        <location filename="../Preferences/__init__.py" line="1215"/>
         <source>Import Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1210"/>
+        <location filename="../Preferences/__init__.py" line="1215"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1309"/>
+        <location filename="../Preferences/__init__.py" line="1314"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1309"/>
+        <location filename="../Preferences/__init__.py" line="1314"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>

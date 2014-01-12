@@ -25,7 +25,7 @@ Module implementing a dialog showing the available plugins.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>authorRole</td></tr><tr><td>descrRole</td></tr><tr><td>filenameRole</td></tr><tr><td>urlRole</td></tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -121,7 +121,7 @@ emitted when the Close & Install button is
 QWidget, Ui_PluginRepositoryDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>AuthorRole</td></tr><tr><td>DescrRole</td></tr><tr><td>FilenameRole</td></tr><tr><td>PluginStatusLocalUpdate</td></tr><tr><td>PluginStatusNew</td></tr><tr><td>PluginStatusRemoteUpdate</td></tr><tr><td>PluginStatusUpToDate</td></tr><tr><td>UrlRole</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -132,6 +132,12 @@ QWidget, Ui_PluginRepositoryDialog
 <tr>
 <td><a href="#PluginRepositoryWidget.__init__">PluginRepositoryWidget</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.__cleanupDownloads">__cleanupDownloads</a></td>
+<td>Private slot to cleanup the plug-in downloads area.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.__closeAndInstall">__closeAndInstall</a></td>
+<td>Private method to close the dialog and invoke the install dialog.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.__downloadCancel">__downloadCancel</a></td>
 <td>Private slot to cancel the current download.</td>
@@ -163,8 +169,14 @@ QWidget, Ui_PluginRepositoryDialog
 <td><a href="#PluginRepositoryWidget.__formatDescription">__formatDescription</a></td>
 <td>Private method to format the description.</td>
 </tr><tr>
-<td><a href="#PluginRepositoryWidget.__isUpToDate">__isUpToDate</a></td>
-<td>Private method to check, if the given archive is up-to-date.</td>
+<td><a href="#PluginRepositoryWidget.__hasHiddenPlugins">__hasHiddenPlugins</a></td>
+<td>Private method to check, if there are any hidden plug-ins.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.__hidePlugin">__hidePlugin</a></td>
+<td>Private slot to hide the current plug-in.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.__hideSelectedPlugins">__hideSelectedPlugins</a></td>
+<td>Private slot to hide all selected plug-ins.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.__populateList">__populateList</a></td>
 <td>Private method to populate the list of available plugins.</td>
@@ -175,11 +187,20 @@ QWidget, Ui_PluginRepositoryDialog
 <td><a href="#PluginRepositoryWidget.__selectedItems">__selectedItems</a></td>
 <td>Private method to get all selected items without the toplevel ones.</td>
 </tr><tr>
+<td><a href="#PluginRepositoryWidget.__showAllPlugins">__showAllPlugins</a></td>
+<td>Private slot to show all plug-ins.</td>
+</tr><tr>
 <td><a href="#PluginRepositoryWidget.__sslErrors">__sslErrors</a></td>
 <td>Private slot to handle SSL errors.</td>
 </tr><tr>
+<td><a href="#PluginRepositoryWidget.__updateHiddenPluginsList">__updateHiddenPluginsList</a></td>
+<td>Private method to store the list of hidden plug-ins to the settings.</td>
+</tr><tr>
 <td><a href="#PluginRepositoryWidget.__updateList">__updateList</a></td>
 <td>Private slot to download a new list and display the contents.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.__updateStatus">__updateStatus</a></td>
+<td>Private method to check, if the given archive update status.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.addEntry">addEntry</a></td>
 <td>Public method to add an entry to the list.</td>
@@ -192,6 +213,9 @@ QWidget, Ui_PluginRepositoryDialog
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.on_repositoryList_currentItemChanged">on_repositoryList_currentItemChanged</a></td>
 <td>Private slot to handle the change of the current item.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.on_repositoryList_customContextMenuRequested">on_repositoryList_customContextMenuRequested</a></td>
+<td>Private slot to show the context menu.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.on_repositoryList_itemSelectionChanged">on_repositoryList_itemSelectionChanged</a></td>
 <td>Private slot to handle a change of the selection.</td>
@@ -218,7 +242,17 @@ parent of this dialog (QWidget)
 flag indicating an instatiation as a main
             window (boolean)
 </dd>
-</dl><a NAME="PluginRepositoryWidget.__downloadCancel" ID="PluginRepositoryWidget.__downloadCancel"></a>
+</dl><a NAME="PluginRepositoryWidget.__cleanupDownloads" ID="PluginRepositoryWidget.__cleanupDownloads"></a>
+<h4>PluginRepositoryWidget.__cleanupDownloads</h4>
+<b>__cleanupDownloads</b>(<i></i>)
+<p>
+        Private slot to cleanup the plug-in downloads area.
+</p><a NAME="PluginRepositoryWidget.__closeAndInstall" ID="PluginRepositoryWidget.__closeAndInstall"></a>
+<h4>PluginRepositoryWidget.__closeAndInstall</h4>
+<b>__closeAndInstall</b>(<i></i>)
+<p>
+        Private method to close the dialog and invoke the install dialog.
+</p><a NAME="PluginRepositoryWidget.__downloadCancel" ID="PluginRepositoryWidget.__downloadCancel"></a>
 <h4>PluginRepositoryWidget.__downloadCancel</h4>
 <b>__downloadCancel</b>(<i></i>)
 <p>
@@ -314,25 +348,27 @@ lines of the description (list of strings)
 <dd>
 formatted description (string)
 </dd>
-</dl><a NAME="PluginRepositoryWidget.__isUpToDate" ID="PluginRepositoryWidget.__isUpToDate"></a>
-<h4>PluginRepositoryWidget.__isUpToDate</h4>
-<b>__isUpToDate</b>(<i>filename, version</i>)
+</dl><a NAME="PluginRepositoryWidget.__hasHiddenPlugins" ID="PluginRepositoryWidget.__hasHiddenPlugins"></a>
+<h4>PluginRepositoryWidget.__hasHiddenPlugins</h4>
+<b>__hasHiddenPlugins</b>(<i></i>)
 <p>
-        Private method to check, if the given archive is up-to-date.
+        Private method to check, if there are any hidden plug-ins.
 </p><dl>
-<dt><i>filename</i></dt>
-<dd>
-data for the filename field (string)
-</dd><dt><i>version</i></dt>
-<dd>
-data for the version field (string)
-</dd>
-</dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating up-to-date (boolean)
+flag indicating the presence of hidden plug-ins (boolean)
 </dd>
-</dl><a NAME="PluginRepositoryWidget.__populateList" ID="PluginRepositoryWidget.__populateList"></a>
+</dl><a NAME="PluginRepositoryWidget.__hidePlugin" ID="PluginRepositoryWidget.__hidePlugin"></a>
+<h4>PluginRepositoryWidget.__hidePlugin</h4>
+<b>__hidePlugin</b>(<i></i>)
+<p>
+        Private slot to hide the current plug-in.
+</p><a NAME="PluginRepositoryWidget.__hideSelectedPlugins" ID="PluginRepositoryWidget.__hideSelectedPlugins"></a>
+<h4>PluginRepositoryWidget.__hideSelectedPlugins</h4>
+<b>__hideSelectedPlugins</b>(<i></i>)
+<p>
+        Private slot to hide all selected plug-ins.
+</p><a NAME="PluginRepositoryWidget.__populateList" ID="PluginRepositoryWidget.__populateList"></a>
 <h4>PluginRepositoryWidget.__populateList</h4>
 <b>__populateList</b>(<i></i>)
 <p>
@@ -352,7 +388,12 @@ flag indicating up-to-date (boolean)
 <dd>
 list of selected items (list)
 </dd>
-</dl><a NAME="PluginRepositoryWidget.__sslErrors" ID="PluginRepositoryWidget.__sslErrors"></a>
+</dl><a NAME="PluginRepositoryWidget.__showAllPlugins" ID="PluginRepositoryWidget.__showAllPlugins"></a>
+<h4>PluginRepositoryWidget.__showAllPlugins</h4>
+<b>__showAllPlugins</b>(<i></i>)
+<p>
+        Private slot to show all plug-ins.
+</p><a NAME="PluginRepositoryWidget.__sslErrors" ID="PluginRepositoryWidget.__sslErrors"></a>
 <h4>PluginRepositoryWidget.__sslErrors</h4>
 <b>__sslErrors</b>(<i>reply, errors</i>)
 <p>
@@ -365,12 +406,43 @@ reference to the reply object (QNetworkReply)
 <dd>
 list of SSL errors (list of QSslError)
 </dd>
+</dl><a NAME="PluginRepositoryWidget.__updateHiddenPluginsList" ID="PluginRepositoryWidget.__updateHiddenPluginsList"></a>
+<h4>PluginRepositoryWidget.__updateHiddenPluginsList</h4>
+<b>__updateHiddenPluginsList</b>(<i>hideList</i>)
+<p>
+        Private method to store the list of hidden plug-ins to the settings.
+</p><dl>
+<dt><i>hideList</i></dt>
+<dd>
+list of plug-ins to add to the list of hidden ones
+            (list of string)
+</dd>
 </dl><a NAME="PluginRepositoryWidget.__updateList" ID="PluginRepositoryWidget.__updateList"></a>
 <h4>PluginRepositoryWidget.__updateList</h4>
 <b>__updateList</b>(<i></i>)
 <p>
         Private slot to download a new list and display the contents.
-</p><a NAME="PluginRepositoryWidget.addEntry" ID="PluginRepositoryWidget.addEntry"></a>
+</p><a NAME="PluginRepositoryWidget.__updateStatus" ID="PluginRepositoryWidget.__updateStatus"></a>
+<h4>PluginRepositoryWidget.__updateStatus</h4>
+<b>__updateStatus</b>(<i>filename, version</i>)
+<p>
+        Private method to check, if the given archive update status.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+data for the filename field (string)
+</dd><dt><i>version</i></dt>
+<dd>
+data for the version field (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+plug-in update status (integer, one of PluginStatusNew,
+            PluginStatusUpToDate, PluginStatusLocalUpdate,
+            PluginStatusRemoteUpdate)
+</dd>
+</dl><a NAME="PluginRepositoryWidget.addEntry" ID="PluginRepositoryWidget.addEntry"></a>
 <h4>PluginRepositoryWidget.addEntry</h4>
 <b>addEntry</b>(<i>name, short, description, url, author, version, filename, status</i>)
 <p>
@@ -433,6 +505,16 @@ reference to the new current item (QTreeWidgetItem)
 </dd><dt><i>previous</i></dt>
 <dd>
 reference to the old current item (QTreeWidgetItem)
+</dd>
+</dl><a NAME="PluginRepositoryWidget.on_repositoryList_customContextMenuRequested" ID="PluginRepositoryWidget.on_repositoryList_customContextMenuRequested"></a>
+<h4>PluginRepositoryWidget.on_repositoryList_customContextMenuRequested</h4>
+<b>on_repositoryList_customContextMenuRequested</b>(<i>pos</i>)
+<p>
+        Private slot to show the context menu.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position to show the menu (QPoint)
 </dd>
 </dl><a NAME="PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" ID="PluginRepositoryWidget.on_repositoryList_itemSelectionChanged"></a>
 <h4>PluginRepositoryWidget.on_repositoryList_itemSelectionChanged</h4>

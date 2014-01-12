@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>528</width>
-    <height>299</height>
+    <height>436</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -55,6 +55,58 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Download Housekeeping</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>No. of generations to keep:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="generationsSpinBox">
+        <property name="toolTip">
+         <string>Enter the number of generations to keep for each plugin</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>9</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>252</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QCheckBox" name="keepHiddenCheckBox">
+        <property name="toolTip">
+         <string>Select to keep generations of hidden plugins</string>
+        </property>
+        <property name="text">
+         <string>Keep generations of hidden plugins</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="TextLabel1_2_2_2_3">
@@ -184,12 +236,16 @@
  <tabstops>
   <tabstop>downloadDirEdit</tabstop>
   <tabstop>downloadDirButton</tabstop>
+  <tabstop>generationsSpinBox</tabstop>
+  <tabstop>keepHiddenCheckBox</tabstop>
   <tabstop>activateExternalPluginsCheckBox</tabstop>
   <tabstop>noCheckRadioButton</tabstop>
   <tabstop>dailyCheckRadioButton</tabstop>
   <tabstop>weeklyCheckRadioButton</tabstop>
   <tabstop>monthlyCheckRadioButton</tabstop>
   <tabstop>downloadedOnlyCheckBox</tabstop>
+  <tabstop>repositoryUrlEdit</tabstop>
+  <tabstop>repositoryUrlEditButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

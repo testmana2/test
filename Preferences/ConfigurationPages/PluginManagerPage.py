@@ -43,6 +43,10 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
             Preferences.getPluginManager("ActivateExternal"))
         self.downloadDirEdit.setText(
             Preferences.getPluginManager("DownloadPath"))
+        self.generationsSpinBox.setValue(
+            Preferences.getPluginManager("KeepGenerations"))
+        self.keepHiddenCheckBox.setChecked(
+            Preferences.getPluginManager("KeepHidden"))
         
         period = Preferences.getPluginManager("UpdatesCheckInterval")
         if period == 0:
@@ -70,6 +74,12 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         Preferences.setPluginManager(
             "DownloadPath",
             self.downloadDirEdit.text())
+        Preferences.setPluginManager(
+            "KeepGenerations",
+            self.generationsSpinBox.value())
+        Preferences.setPluginManager(
+            "KeepHidden",
+            self.keepHiddenCheckBox.isChecked())
         
         if self.noCheckRadioButton.isChecked():
             period = 0
