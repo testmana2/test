@@ -50,7 +50,6 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         """
         if cls._monitor is None:
             cls._monitor = E5NetworkMonitor(networkAccessManager)
-            cls._monitor.setAttribute(Qt.WA_DeleteOnClose, True)
         
         return cls._monitor
     

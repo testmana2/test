@@ -156,7 +156,6 @@ class TabWidget(E5TabWidget):
         @param vm view manager widget (Tabview)
         """
         super().__init__()
-        self.setAttribute(Qt.WA_DeleteOnClose, True)
         
         self.__tabBar = TabBar(self)
         self.setTabBar(self.__tabBar)

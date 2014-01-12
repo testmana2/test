@@ -32,7 +32,6 @@ class StackedWidget(QStackedWidget):
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
-        self.setAttribute(Qt.WA_DeleteOnClose, True)
         
         self.editors = []
         

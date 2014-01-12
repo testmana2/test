@@ -52,7 +52,6 @@ class IconEditorWindow(E5MainWindow):
         """
         super().__init__(parent)
         self.setObjectName("eric5_icon_editor")
-        self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.fromEric = fromEric
         self.initShortcutsOnly = initShortcutsOnly

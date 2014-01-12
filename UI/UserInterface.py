@@ -154,7 +154,6 @@ class UserInterface(E5MainWindow):
             a restart (list of strings)
         """
         super().__init__()
-        self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.__restartArgs = restartArguments[:]
         

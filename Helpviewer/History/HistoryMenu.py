@@ -365,7 +365,6 @@ class HistoryMenu(E5ModelMenu):
         """
         from .HistoryDialog import HistoryDialog
         dlg = HistoryDialog(self)
-        dlg.setAttribute(Qt.WA_DeleteOnClose)
         dlg.newUrl.connect(self.newUrl)
         dlg.openUrl.connect(self.openUrl)
         dlg.show()

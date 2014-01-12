@@ -32,7 +32,6 @@ class E5SslInfoWidget(QMenu):
         self.__url = QUrl(url)
         self.__configuration = QSslConfiguration(configuration)
         
-        self.setAttribute(Qt.WA_DeleteOnClose)
         self.setMinimumWidth(400)
         
         certList = self.__configuration.peerCertificateChain()

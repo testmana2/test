@@ -2131,7 +2131,6 @@ class HelpWindow(E5MainWindow):
         """
         from .Bookmarks.BookmarksDialog import BookmarksDialog
         self.__bookmarksDialog = BookmarksDialog(self)
-        self.__bookmarksDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.__bookmarksDialog.openUrl.connect(self.openUrl)
         self.__bookmarksDialog.newUrl.connect(self.openUrlNewTab)
         self.__bookmarksDialog.show()
@@ -3459,7 +3458,6 @@ class HelpWindow(E5MainWindow):
         """
         from .SiteInfo.SiteInfoDialog import SiteInfoDialog
         self.__siteinfoDialog = SiteInfoDialog(self.currentBrowser(), self)
-        self.__siteinfoDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.__siteinfoDialog.show()
 
     @classmethod

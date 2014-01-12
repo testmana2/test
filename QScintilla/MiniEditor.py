@@ -108,7 +108,6 @@ class MiniEditor(E5MainWindow):
         super().__init__(parent)
         if name is not None:
             self.setObjectName(name)
-        self.setAttribute(Qt.WA_DeleteOnClose)
         self.setWindowIcon(UI.PixmapCache.getIcon("editor.png"))
         
         self.setStyle(Preferences.getUI("Style"),

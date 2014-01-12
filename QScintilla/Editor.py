@@ -142,7 +142,6 @@ class Editor(QsciScintillaCompat):
         @exception IOError raised to indicate an issue accessing the file
         """
         super().__init__()
-##        self.setAttribute(Qt.WA_DeleteOnClose)
         self.setAttribute(Qt.WA_KeyCompression)
         self.setUtf8(True)
         

@@ -53,7 +53,6 @@ class TRPreviewer(E5MainWindow):
                       Preferences.getUI("StyleSheet"))
         
         self.resize(QSize(800, 600).expandedTo(self.minimumSizeHint()))
-        self.setAttribute(Qt.WA_DeleteOnClose)
         self.statusBar()
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
@@ -680,7 +679,6 @@ class WidgetView(QWidget):
         if name:
             self.setObjectName(name)
             self.setWindowTitle(name)
-        self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.__widget = None
         self.__uiFileName = uiFileName

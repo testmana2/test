@@ -48,7 +48,6 @@ class UIPreviewer(E5MainWindow):
                       Preferences.getUI("StyleSheet"))
         
         self.resize(QSize(600, 480).expandedTo(self.minimumSizeHint()))
-        self.setAttribute(Qt.WA_DeleteOnClose)
         self.statusBar()
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
