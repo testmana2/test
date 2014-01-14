@@ -13,6 +13,7 @@ import re
 import fnmatch
 import glob
 import getpass
+import json
 
 
 def __showwarning(message, category, filename, lineno, file=None, line=""):
@@ -1382,30 +1383,36 @@ def py2compile(file, checkFlakes=False):
         output = \
             str(proc.readAllStandardOutput(),
                 Preferences.getSystem("IOEncoding"),
-                'replace').splitlines()
+                'replace')
         
         if output:
-            syntaxerror = output[0] == "ERROR"
-            if syntaxerror:
-                fn = output[1]
-                line = output[2]
-                index = output[3]
-                code = output[4]
-                error = output[5]
-                return (True, fn, line, index, code, error, [])
-            else:
-                index = 6
-                warnings = []
-                while len(output) - index > 3:
-                    if output[index] == "FLAKES_ERROR":
-                        return (True, output[index + 1], output[index + 2], "",
-                                output[index + 3], [])
-                    else:
-                        warnings.append((output[index + 1], output[index + 2],
-                                         output[index + 3]))
-                    index += 4
-                
-                return (False, None, None, None, None, None, warnings)
+            try:
+                infos = json.loads(output)
+                syntaxerror = infos[0][0] == "ERROR"
+                if syntaxerror:
+                    fn = infos[0][1]
+                    line = infos[0][2]
+                    index = infos[0][3]
+                    code = infos[0][4]
+                    error = infos[0][5]
+                    return (True, fn, line, index, code, error, [])
+                else:
+                    warnings = []
+                    infos.pop(0)    # delete the overall status info
+                    for info in infos:
+                        if info[0] == "FLAKES_ERROR":
+                            return (True, info[1], info[2], "", info[3], [])
+                        else:
+                            warnings.append(info[1:])
+                    
+                    return (False, None, None, None, None, None, warnings)
+            except ValueError:
+                return (True, file, "1", "0", "",
+                        QCoreApplication.translate(
+                            "Utilities",
+                            "Invalid data received from Python2 syntax"
+                            " checker."),
+                        [])
         else:
             return (False, "", "", "", "", "", [])
     

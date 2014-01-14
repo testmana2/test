@@ -12,6 +12,7 @@ import sys
 import re
 import traceback
 import warnings
+import json
 
 from Tools import readEncodedFile, normalizeCode, extractLineFlags
 
@@ -100,13 +101,13 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     @param codestring source code to be checked (string)
     @param ignoreStarImportWarnings flag indicating to
         ignore 'star import' warnings (boolean)
-    @return list of strings containing the warnings
+    @return list of lists containing the warnings
         (marker, file name, line number, message)
     """
     from py2flakes.checker import Checker
     from py2flakes.messages import ImportStarUsed
     
-    strings = []
+    flakesWarnings = []
     lines = codestring.splitlines()
     try:
         warnings_ = Checker(codestring, fileName)
@@ -119,26 +120,22 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
             _fn, lineno, message = warning.getMessageData()
             if "__IGNORE_WARNING__" not in \
                     extractLineFlags(lines[lineno - 1].strip()):
-                strings.extend(["FLAKES_WARNING", _fn, lineno, message])
+                flakesWarnings.append(["FLAKES_WARNING", _fn, lineno, message])
     except SyntaxError as err:
         if err.text.strip():
             msg = err.text.strip()
         else:
             msg = err.msg
-        strings.extend(["FLAKES_ERROR", fileName, err.lineno, msg])
+        flakesWarnings.append(["FLAKES_ERROR", fileName, err.lineno, msg])
     
-    return strings
+    return flakesWarnings
 
 if __name__ == "__main__":
+    info = []
     if len(sys.argv) < 2 or \
        len(sys.argv) > 3 or \
        (len(sys.argv) == 3 and sys.argv[1] not in ["-fi", "-fs"]):
-        print "ERROR"
-        print ""
-        print ""
-        print ""
-        print ""
-        print "No file name given."
+        info.append(["ERROR", "", "", "", "", "No file name given."])
     else:
         warnings.simplefilter("error")
         filename = sys.argv[-1]
@@ -154,21 +151,17 @@ if __name__ == "__main__":
                 1, filename, "1", "0", "", "I/O Error: %s" % unicode(msg)
         
         if syntaxerror:
-            print "ERROR"
+            info.append(["ERROR", fname, line, index, code, error])
         else:
-            print "NO_ERROR"
-        print fname
-        print line
-        print index
-        print code
-        print error
+            info.append(["NO_ERROR"])
         
         if not syntaxerror and sys.argv[1] in ["-fi", "-fs"]:
             # do pyflakes check
-            warningLines = flakesCheck(
+            flakesWarnings = flakesCheck(
                 filename, codestring, sys.argv[1] == "-fi")
-            for warningLine in warningLines:
-                print warningLine
+            info.extend(flakesWarnings)
+    
+    print json.dumps(info)
     
     sys.exit(0)
     
