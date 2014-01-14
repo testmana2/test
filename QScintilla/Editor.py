@@ -5020,6 +5020,7 @@ class Editor(QsciScintillaCompat):
                                 msg = err.msg
                             self.toggleSyntaxError(err.lineno, True, msg)
             elif self.isPy2File() and self.fileName is not None:
+                # FIXME: make this work with the current text
                 syntaxError, _fn, errorline, errorindex, _code, _error, \
                     warnings = Utilities.py2compile(
                         self.fileName,
