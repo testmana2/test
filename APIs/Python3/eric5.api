@@ -8376,7 +8376,7 @@ eric5.Utilities.parseEnvironmentString?4(s)
 eric5.Utilities.parseOptionString?4(s)
 eric5.Utilities.parseString?4(s, rx)
 eric5.Utilities.prepareQtMacBundle?4(toolname, version, args)
-eric5.Utilities.py2compile?4(file, checkFlakes=False)
+eric5.Utilities.py2compile?4(fileName, checkFlakes=False, txt="")
 eric5.Utilities.py3flakes.checker.Binding?1(name, source)
 eric5.Utilities.py3flakes.checker.Checker.ASSIGN?4(node)
 eric5.Utilities.py3flakes.checker.Checker.ATTRIBUTES?7

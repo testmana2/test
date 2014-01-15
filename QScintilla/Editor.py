@@ -326,7 +326,7 @@ class Editor(QsciScintillaCompat):
                 bindName = self.__bindName(self.text(0))
                 self.__bindLexer(bindName)
                 self.__bindCompleter(bindName)
-                self.__autoSyntaxCheck()
+                self.__autoSyntaxCheck(useText=False)
                 self.isResourcesFile = self.fileName.endswith(".qrc")
                 
                 self.recolor()
@@ -2967,7 +2967,7 @@ class Editor(QsciScintillaCompat):
             if newName is not None:
                 self.vm.addToRecentList(newName)
             self.editorSaved.emit(self.fileName)
-            self.__autoSyntaxCheck()
+            self.__autoSyntaxCheck(useText=False)
             self.extractTasks()
             self.__resetOnlineChangeTraceInfo()
             return True
@@ -4972,9 +4972,13 @@ class Editor(QsciScintillaCompat):
             not self.autosaveManuallyDisabled and \
             not self.isReadOnly()
         
-    def __autoSyntaxCheck(self):
+    def __autoSyntaxCheck(self, useText=True):
         """
         Private method to perform an automatic syntax check of the file.
+        
+        @param useText flag indicating to use the current editor text, if
+            an external syntax checker is invoked (e.g. for Python 2)
+            (boolean)
         """
         if Preferences.getEditor("AutoCheckSyntax"):
             if Preferences.getEditor("OnlineSyntaxCheck"):
@@ -5025,12 +5029,16 @@ class Editor(QsciScintillaCompat):
                                 msg = err.msg
                             self.toggleSyntaxError(err.lineno, True, msg)
             elif self.isPy2File() and self.fileName is not None:
-                # FIXME: make this work with the current text
+                if useText:
+                    txt = self.text().replace("\r\n", "\n").replace("\r", "\n")
+                else:
+                    txt = ""
                 syntaxError, _fn, errorline, errorindex, _code, _error, \
                     warnings = Utilities.py2compile(
                         self.fileName,
                         checkFlakes=Preferences.getFlakes(
-                            "IncludeInSyntaxCheck"))
+                            "IncludeInSyntaxCheck"),
+                        txt=txt)
                 if syntaxError:
                     self.toggleSyntaxError(
                         int(errorline), int(errorindex), True, _error)
@@ -6176,7 +6184,7 @@ class Editor(QsciScintillaCompat):
         self.__restoreBreakpoints()
         
         self.editorSaved.emit(self.fileName)
-        self.__autoSyntaxCheck()
+        self.__autoSyntaxCheck(useText=False)
         
         self.refreshed.emit()
         

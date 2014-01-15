@@ -1366,16 +1366,19 @@ command-name and args for QProcess (tuple)
 <hr /><hr />
 <a NAME="py2compile" ID="py2compile"></a>
 <h2>py2compile</h2>
-<b>py2compile</b>(<i>file, checkFlakes=False</i>)
+<b>py2compile</b>(<i>fileName, checkFlakes=False, txt=""</i>)
 <p>
     Function to compile one Python 2 source file to Python 2 bytecode.
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>fileName</i></dt>
 <dd>
 source filename (string)
 </dd><dt><i>checkFlakes=</i></dt>
 <dd>
 flag indicating to do a pyflakes check (boolean)
+</dd><dt><i>txt=</i></dt>
+<dd>
+text to be checked (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

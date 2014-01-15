@@ -1223,10 +1223,17 @@ name of the language (group) to get the template
 </dd>
 </dl><a NAME="Editor.__autoSyntaxCheck" ID="Editor.__autoSyntaxCheck"></a>
 <h4>Editor.__autoSyntaxCheck</h4>
-<b>__autoSyntaxCheck</b>(<i></i>)
+<b>__autoSyntaxCheck</b>(<i>useText=True</i>)
 <p>
         Private method to perform an automatic syntax check of the file.
-</p><a NAME="Editor.__autosaveEnable" ID="Editor.__autosaveEnable"></a>
+</p><dl>
+<dt><i>useText</i></dt>
+<dd>
+flag indicating to use the current editor text, if
+            an external syntax checker is invoked (e.g. for Python 2)
+            (boolean)
+</dd>
+</dl><a NAME="Editor.__autosaveEnable" ID="Editor.__autosaveEnable"></a>
 <h4>Editor.__autosaveEnable</h4>
 <b>__autosaveEnable</b>(<i></i>)
 <p>

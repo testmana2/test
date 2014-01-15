@@ -14,6 +14,7 @@ import fnmatch
 import glob
 import getpass
 import json
+import tempfile
 
 
 def __showwarning(message, category, filename, lineno, file=None, line=""):
@@ -1344,12 +1345,13 @@ def compile(file, codestring=""):
     return (False, None, None, None, None, None)
 
 
-def py2compile(file, checkFlakes=False):
+def py2compile(fileName, checkFlakes=False, txt=""):
     """
     Function to compile one Python 2 source file to Python 2 bytecode.
     
-    @param file source filename (string)
+    @param fileName source filename (string)
     @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
+    @keyparam txt text to be checked (string)
     @return A tuple indicating status (True = an error was found), the
         file name, the line number, the index number, the code string,
         the error message and a list of tuples of pyflakes warnings indicating
@@ -1361,10 +1363,29 @@ def py2compile(file, checkFlakes=False):
     interpreter = Preferences.getDebugger("PythonInterpreter")
     if interpreter == "" or not isinpath(interpreter):
         return (False, "", "", "", "", "", [(
-            file, "1",
+            fileName, "1",
             QCoreApplication.translate("Utilities",
                                        "Python2 interpreter not configured.")
         )])
+    
+    # prepare a temporary file if a text to be checked was given
+    if txt:
+        try:
+            encodedText = encode(txt, "")[0]
+        except CodingError as err:
+            return (True, fileName, "1", "0", "",
+                    QCoreApplication.translate(
+                        "Utilities",
+                        "Codingerror: {0}").format(str(err)),
+                    [])
+        
+        tempFile = tempfile.NamedTemporaryFile(mode="wb", delete=False)
+        tempFile.write(encodedText)
+        tempFile.close()
+        checkFileName = tempFile.name
+    else:
+        tempFile = None
+        checkFileName = fileName
     
     syntaxChecker = os.path.join(getConfig('ericDir'),
                                  "UtilitiesPython2", "Py2SyntaxChecker.py")
@@ -1374,11 +1395,13 @@ def py2compile(file, checkFlakes=False):
             args.append("-fi")
         else:
             args.append("-fs")
-    args.append(file)
+    args.append(checkFileName)
     proc = QProcess()
     proc.setProcessChannelMode(QProcess.MergedChannels)
     proc.start(interpreter, args)
     finished = proc.waitForFinished(30000)
+    if tempFile:
+        os.unlink(tempFile.name)
     if finished:
         output = \
             str(proc.readAllStandardOutput(),
@@ -1390,33 +1413,32 @@ def py2compile(file, checkFlakes=False):
                 infos = json.loads(output)
                 syntaxerror = infos[0][0] == "ERROR"
                 if syntaxerror:
-                    fn = infos[0][1]
                     line = infos[0][2]
                     index = infos[0][3]
                     code = infos[0][4]
                     error = infos[0][5]
-                    return (True, fn, line, index, code, error, [])
+                    return (True, fileName, line, index, code, error, [])
                 else:
                     warnings = []
                     infos.pop(0)    # delete the overall status info
                     for info in infos:
                         if info[0] == "FLAKES_ERROR":
-                            return (True, info[1], info[2], "", info[3], [])
+                            return (True, fileName, info[2], "", info[3], [])
                         else:
                             warnings.append(info[1:])
                     
                     return (False, None, None, None, None, None, warnings)
             except ValueError:
-                return (True, file, "1", "0", "",
+                return (True, fileName, "1", "0", "",
                         QCoreApplication.translate(
                             "Utilities",
-                            "Invalid data received from Python2 syntax"
-                            " checker."),
+                            "eric5 error: Invalid data received from Python2"
+                            " syntax checker."),
                         [])
         else:
             return (False, "", "", "", "", "", [])
     
-    return (True, file, "1", "0", "",
+    return (True, fileName, "1", "0", "",
             QCoreApplication.translate(
                 "Utilities", "Python2 interpreter did not finish within 30s."),
             [])
