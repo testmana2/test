@@ -240,6 +240,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                 from Utilities.py3flakes.checker import Checker
                                 from Utilities.py3flakes.messages import \
                                     ImportStarUsed
+                                from Utilities.py3flakes.translations import \
+                                    getTranslatedFlakesMessage
                                 sourceLines = source.splitlines()
                                 warnings = Checker(source, file)
                                 warnings.messages.sort(key=lambda a: a.lineno)
@@ -247,15 +249,17 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                     if ignoreStarImportWarnings and \
                                        isinstance(warning, ImportStarUsed):
                                         continue
-                                    fname, lineno, message = \
+                                    fname, lineno, messageID, messageArgs = \
                                         warning.getMessageData()
                                     if "__IGNORE_WARNING__" not in \
                                         Utilities.extractLineFlags(
                                             sourceLines[lineno - 1].strip()):
                                         self.noResults = False
                                         self.__createResultItem(
-                                            fname, lineno, 0, message, "",
-                                            isWarning=True)
+                                            fname, lineno, 0,
+                                            getTranslatedFlakesMessage(
+                                                messageID, messageArgs),
+                                            "", isWarning=True)
                             except SyntaxError as err:
                                 if err.text.strip():
                                     msg = err.text.strip()

@@ -4992,6 +4992,8 @@ class Editor(QsciScintillaCompat):
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         from Utilities.py3flakes.checker import Checker
                         from Utilities.py3flakes.messages import ImportStarUsed
+                        from Utilities.py3flakes.translations import \
+                            getTranslatedFlakesMessage
                         
                         ignoreStarImportWarnings = \
                             Preferences.getFlakes("IgnoreStarImportWarnings")
@@ -5007,12 +5009,15 @@ class Editor(QsciScintillaCompat):
                                    isinstance(warning, ImportStarUsed):
                                     continue
                                 
-                                _fn, lineno, message = warning.getMessageData()
+                                _fn, lineno, messageID,  messageArgs = \
+                                    warning.getMessageData()
                                 if "__IGNORE_WARNING__" not in \
                                         Utilities.extractLineFlags(
                                             self.text(lineno - 1).strip()):
                                     self.toggleWarning(
-                                        lineno, True, message)
+                                        lineno, True,
+                                        getTranslatedFlakesMessage(
+                                            messageID, messageArgs))
                         except SyntaxError as err:
                             if err.text.strip():
                                 msg = err.text.strip()
@@ -5030,9 +5035,12 @@ class Editor(QsciScintillaCompat):
                     self.toggleSyntaxError(
                         int(errorline), int(errorindex), True, _error)
                 else:
+                    from Utilities.py3flakes.translations import \
+                        getTranslatedFlakesMessage
                     for warning in warnings:
                         self.toggleWarning(
-                            int(warning[1]), True, warning[2])
+                            int(warning[1]), True, getTranslatedFlakesMessage(
+                                warning[2], warning[3]))
         
     def __initOnlineSyntaxCheck(self):
         """

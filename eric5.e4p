@@ -1110,6 +1110,7 @@
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
     <Source>E5Gui/E5ProgressDialog.py</Source>
+    <Source>Utilities/py3flakes/translations.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

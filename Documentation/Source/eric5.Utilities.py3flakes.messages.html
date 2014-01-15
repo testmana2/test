@@ -81,7 +81,7 @@ Module implementing the messages for py3flakes.
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -126,7 +126,7 @@ name of the duplicate argument (string)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -174,7 +174,7 @@ line number of the import (integer)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -219,7 +219,7 @@ name of the module imported using star import (string)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -264,7 +264,7 @@ names of the imported futures (string)
 object
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr><tr><td>message_args</td></tr>
+<tr><td>message</td></tr><tr><td>message_args</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -318,8 +318,8 @@ string representation of the object (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple containing file name, line number and message
-            (string, integer, string)
+tuple containing file name, line number, message ID and
+            message arguments (string, integer, string, list)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -333,7 +333,7 @@ tuple containing file name, line number and message
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -381,7 +381,7 @@ line number of the original definition (integer)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -429,7 +429,7 @@ line number of the original definition (integer)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -474,7 +474,7 @@ undefined exported name (string)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -522,7 +522,7 @@ line number of the variable definition (integer)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -567,7 +567,7 @@ undefined name (string)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -615,7 +615,7 @@ name of the unused import (string)
 Message
 <h3>Class Attributes</h3>
 <table>
-<tr><td>message</td></tr>
+<tr><td>message</td></tr><tr><td>message_id</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>

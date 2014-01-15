@@ -16,6 +16,7 @@ class Message(object):
     """
     Class defining the base for all specific message classes.
     """
+    message_id = 'F00'
     message = ''
     message_args = ()
     
@@ -42,16 +43,17 @@ class Message(object):
         """
         Public method to get the individual message data elements.
         
-        @return tuple containing file name, line number and message
-            (string, integer, string)
+        @return tuple containing file name, line number, message ID and
+            message arguments (string, integer, string, list)
         """
-        return (self.filename, self.lineno, self.message % self.message_args)
+        return (self.filename, self.lineno, self.message_id, self.message_args)
 
 
 class UnusedImport(Message):
     """
     Class defining the "Unused Import" message.
     """
+    message_id = 'F01'
     message = '%r imported but unused'
     
     def __init__(self, filename, lineno, name):
@@ -70,6 +72,7 @@ class RedefinedWhileUnused(Message):
     """
     Class defining the "Redefined While Unused" message.
     """
+    message_id = 'F02'
     message = 'redefinition of unused %r from line %r'
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -89,6 +92,7 @@ class ImportShadowedByLoopVar(Message):
     """
     Class defining the "Import Shadowed By Loop Var" message.
     """
+    message_id = 'F03'
     message = 'import %r from line %r shadowed by loop variable'
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -108,6 +112,7 @@ class ImportStarUsed(Message):
     """
     Class defining the "Import Star Used" message.
     """
+    message_id = 'F04'
     message = "'from %s import *' used; unable to detect undefined names"
     
     def __init__(self, filename, lineno, modname):
@@ -126,6 +131,7 @@ class UndefinedName(Message):
     """
     Class defining the "Undefined Name" message.
     """
+    message_id = 'F05'
     message = 'undefined name %r'
     
     def __init__(self, filename, lineno, name):
@@ -144,6 +150,7 @@ class UndefinedExport(Message):
     """
     Class defining the "Undefined Export" message.
     """
+    message_id = 'F06'
     message = 'undefined name %r in __all__'
     
     def __init__(self, filename, lineno, name):
@@ -162,6 +169,7 @@ class UndefinedLocal(Message):
     """
     Class defining the "Undefined Local Variable" message.
     """
+    message_id = 'F07'
     message = "local variable %r (defined in enclosing scope on line %r)" \
               " referenced before assignment"
     
@@ -182,6 +190,7 @@ class DuplicateArgument(Message):
     """
     Class defining the "Duplicate Argument" message.
     """
+    message_id = 'F08'
     message = 'duplicate argument %r in function definition'
     
     def __init__(self, filename, lineno, name):
@@ -200,6 +209,7 @@ class RedefinedFunction(Message):
     """
     Class defining the "Redefined Function" message.
     """
+    message_id = 'F09'
     message = 'redefinition of function %r from line %r'
     
     def __init__(self, filename, lineno, name, orig_lineno):
@@ -219,6 +229,7 @@ class LateFutureImport(Message):
     """
     Class defining the "Late Future Import" message.
     """
+    message_id = 'F10'
     message = 'future import(s) %r after other statements'
     
     def __init__(self, filename, lineno, names):
@@ -240,6 +251,7 @@ class UnusedVariable(Message):
     Indicates that a variable has been explicitly assigned to but not actually
     used.
     """
+    message_id = 'F11'
     message = 'local variable %r is assigned to but never used'
     
     def __init__(self, filename, lineno, names):

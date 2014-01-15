@@ -8438,31 +8438,45 @@ eric5.Utilities.py3flakes.checker.Scope.importStarred?7
 eric5.Utilities.py3flakes.checker.Scope?1()
 eric5.Utilities.py3flakes.checker._MAGIC_GLOBALS?8
 eric5.Utilities.py3flakes.messages.DuplicateArgument.message?7
+eric5.Utilities.py3flakes.messages.DuplicateArgument.message_id?7
 eric5.Utilities.py3flakes.messages.DuplicateArgument?1(filename, lineno, name)
 eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar.message?7
+eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar.message_id?7
 eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar?1(filename, lineno, name, orig_lineno)
 eric5.Utilities.py3flakes.messages.ImportStarUsed.message?7
+eric5.Utilities.py3flakes.messages.ImportStarUsed.message_id?7
 eric5.Utilities.py3flakes.messages.ImportStarUsed?1(filename, lineno, modname)
 eric5.Utilities.py3flakes.messages.LateFutureImport.message?7
+eric5.Utilities.py3flakes.messages.LateFutureImport.message_id?7
 eric5.Utilities.py3flakes.messages.LateFutureImport?1(filename, lineno, names)
 eric5.Utilities.py3flakes.messages.Message.getMessageData?4()
 eric5.Utilities.py3flakes.messages.Message.message?7
 eric5.Utilities.py3flakes.messages.Message.message_args?7
+eric5.Utilities.py3flakes.messages.Message.message_id?7
 eric5.Utilities.py3flakes.messages.Message?1(filename, lineno)
 eric5.Utilities.py3flakes.messages.RedefinedFunction.message?7
+eric5.Utilities.py3flakes.messages.RedefinedFunction.message_id?7
 eric5.Utilities.py3flakes.messages.RedefinedFunction?1(filename, lineno, name, orig_lineno)
 eric5.Utilities.py3flakes.messages.RedefinedWhileUnused.message?7
+eric5.Utilities.py3flakes.messages.RedefinedWhileUnused.message_id?7
 eric5.Utilities.py3flakes.messages.RedefinedWhileUnused?1(filename, lineno, name, orig_lineno)
 eric5.Utilities.py3flakes.messages.UndefinedExport.message?7
+eric5.Utilities.py3flakes.messages.UndefinedExport.message_id?7
 eric5.Utilities.py3flakes.messages.UndefinedExport?1(filename, lineno, name)
 eric5.Utilities.py3flakes.messages.UndefinedLocal.message?7
+eric5.Utilities.py3flakes.messages.UndefinedLocal.message_id?7
 eric5.Utilities.py3flakes.messages.UndefinedLocal?1(filename, lineno, name, orig_lineno)
 eric5.Utilities.py3flakes.messages.UndefinedName.message?7
+eric5.Utilities.py3flakes.messages.UndefinedName.message_id?7
 eric5.Utilities.py3flakes.messages.UndefinedName?1(filename, lineno, name)
 eric5.Utilities.py3flakes.messages.UnusedImport.message?7
+eric5.Utilities.py3flakes.messages.UnusedImport.message_id?7
 eric5.Utilities.py3flakes.messages.UnusedImport?1(filename, lineno, name)
 eric5.Utilities.py3flakes.messages.UnusedVariable.message?7
+eric5.Utilities.py3flakes.messages.UnusedVariable.message_id?7
 eric5.Utilities.py3flakes.messages.UnusedVariable?1(filename, lineno, name)
+eric5.Utilities.py3flakes.translations._messages?8
+eric5.Utilities.py3flakes.translations.getTranslatedFlakesMessage?4(message_id, message_args)
 eric5.Utilities.readEncodedFile?4(filename)
 eric5.Utilities.readEncodedFileWithHash?4(filename)
 eric5.Utilities.readStringFromStream?4(stream)
@@ -8698,30 +8712,42 @@ eric5.UtilitiesPython2.py2flakes.checker.Scope?1()
 eric5.UtilitiesPython2.py2flakes.checker._MAGIC_GLOBALS?8
 eric5.UtilitiesPython2.py2flakes.checker.iter_child_nodes?4(node, astcls=_ast.AST)
 eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument.message?7
+eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument?1(filename, lineno, name)
 eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar.message?7
+eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar?1(filename, lineno, name, orig_lineno)
 eric5.UtilitiesPython2.py2flakes.messages.ImportStarUsed.message?7
+eric5.UtilitiesPython2.py2flakes.messages.ImportStarUsed.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.ImportStarUsed?1(filename, lineno, modname)
 eric5.UtilitiesPython2.py2flakes.messages.LateFutureImport.message?7
+eric5.UtilitiesPython2.py2flakes.messages.LateFutureImport.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.LateFutureImport?1(filename, lineno, names)
 eric5.UtilitiesPython2.py2flakes.messages.Message.getMessageData?4()
 eric5.UtilitiesPython2.py2flakes.messages.Message.message?7
 eric5.UtilitiesPython2.py2flakes.messages.Message.message_args?7
+eric5.UtilitiesPython2.py2flakes.messages.Message.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.Message?1(filename, lineno)
 eric5.UtilitiesPython2.py2flakes.messages.RedefinedFunction.message?7
+eric5.UtilitiesPython2.py2flakes.messages.RedefinedFunction.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.RedefinedFunction?1(filename, lineno, name, orig_lineno)
 eric5.UtilitiesPython2.py2flakes.messages.RedefinedWhileUnused.message?7
+eric5.UtilitiesPython2.py2flakes.messages.RedefinedWhileUnused.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.RedefinedWhileUnused?1(filename, lineno, name, orig_lineno)
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedExport.message?7
+eric5.UtilitiesPython2.py2flakes.messages.UndefinedExport.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedExport?1(filename, lineno, name)
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedLocal.message?7
+eric5.UtilitiesPython2.py2flakes.messages.UndefinedLocal.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedLocal?1(filename, lineno, name, orig_lineno)
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedName.message?7
+eric5.UtilitiesPython2.py2flakes.messages.UndefinedName.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedName?1(filename, lineno, name)
 eric5.UtilitiesPython2.py2flakes.messages.UnusedImport.message?7
+eric5.UtilitiesPython2.py2flakes.messages.UnusedImport.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.UnusedImport?1(filename, lineno, name)
 eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable.message?7
+eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable.message_id?7
 eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable?1(filename, lineno, names)
 eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog.getOptions?4()
 eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog?1(vcs, parent=None)

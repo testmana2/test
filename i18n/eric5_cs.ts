@@ -9549,107 +9549,107 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5126"/>
+        <location filename="../QScintilla/Editor.py" line="5135"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5126"/>
+        <location filename="../QScintilla/Editor.py" line="5135"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5189"/>
+        <location filename="../QScintilla/Editor.py" line="5198"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5182"/>
+        <location filename="../QScintilla/Editor.py" line="5191"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5189"/>
+        <location filename="../QScintilla/Editor.py" line="5198"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5287"/>
+        <location filename="../QScintilla/Editor.py" line="5296"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5287"/>
+        <location filename="../QScintilla/Editor.py" line="5296"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5430"/>
+        <location filename="../QScintilla/Editor.py" line="5439"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5430"/>
+        <location filename="../QScintilla/Editor.py" line="5439"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5724"/>
+        <location filename="../QScintilla/Editor.py" line="5733"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5724"/>
+        <location filename="../QScintilla/Editor.py" line="5733"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5752"/>
+        <location filename="../QScintilla/Editor.py" line="5761"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5795"/>
+        <location filename="../QScintilla/Editor.py" line="5804"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5775"/>
+        <location filename="../QScintilla/Editor.py" line="5784"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5795"/>
+        <location filename="../QScintilla/Editor.py" line="5804"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5812"/>
+        <location filename="../QScintilla/Editor.py" line="5821"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5828"/>
+        <location filename="../QScintilla/Editor.py" line="5837"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5841"/>
+        <location filename="../QScintilla/Editor.py" line="5850"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5841"/>
+        <location filename="../QScintilla/Editor.py" line="5850"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5867"/>
+        <location filename="../QScintilla/Editor.py" line="5876"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5867"/>
+        <location filename="../QScintilla/Editor.py" line="5876"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
@@ -9659,77 +9659,77 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5999"/>
+        <location filename="../QScintilla/Editor.py" line="6008"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6271"/>
+        <location filename="../QScintilla/Editor.py" line="6280"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6292"/>
+        <location filename="../QScintilla/Editor.py" line="6301"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6294"/>
+        <location filename="../QScintilla/Editor.py" line="6303"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6296"/>
+        <location filename="../QScintilla/Editor.py" line="6305"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6298"/>
+        <location filename="../QScintilla/Editor.py" line="6307"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6301"/>
+        <location filename="../QScintilla/Editor.py" line="6310"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6305"/>
+        <location filename="../QScintilla/Editor.py" line="6314"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6324"/>
+        <location filename="../QScintilla/Editor.py" line="6333"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6340"/>
+        <location filename="../QScintilla/Editor.py" line="6349"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6368"/>
+        <location filename="../QScintilla/Editor.py" line="6377"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6432"/>
+        <location filename="../QScintilla/Editor.py" line="6441"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6432"/>
+        <location filename="../QScintilla/Editor.py" line="6441"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6466"/>
+        <location filename="../QScintilla/Editor.py" line="6475"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6466"/>
+        <location filename="../QScintilla/Editor.py" line="6475"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
@@ -9749,12 +9749,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6452"/>
+        <location filename="../QScintilla/Editor.py" line="6461"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6452"/>
+        <location filename="../QScintilla/Editor.py" line="6461"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
@@ -9829,7 +9829,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6754"/>
+        <location filename="../QScintilla/Editor.py" line="6763"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
@@ -9839,12 +9839,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6757"/>
+        <location filename="../QScintilla/Editor.py" line="6766"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6759"/>
+        <location filename="../QScintilla/Editor.py" line="6768"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
@@ -9889,12 +9889,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5766"/>
+        <location filename="../QScintilla/Editor.py" line="5775"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5775"/>
+        <location filename="../QScintilla/Editor.py" line="5784"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
@@ -9904,27 +9904,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5828"/>
+        <location filename="../QScintilla/Editor.py" line="5837"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5989"/>
+        <location filename="../QScintilla/Editor.py" line="5998"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6138"/>
+        <location filename="../QScintilla/Editor.py" line="6147"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6271"/>
+        <location filename="../QScintilla/Editor.py" line="6280"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6368"/>
+        <location filename="../QScintilla/Editor.py" line="6377"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -9964,22 +9964,22 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5812"/>
+        <location filename="../QScintilla/Editor.py" line="5821"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5663"/>
+        <location filename="../QScintilla/Editor.py" line="5672"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5670"/>
+        <location filename="../QScintilla/Editor.py" line="5679"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Chyby: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5995"/>
+        <location filename="../QScintilla/Editor.py" line="6004"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10024,27 +10024,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7170"/>
+        <location filename="../QScintilla/Editor.py" line="7179"/>
         <source>Sort Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7170"/>
+        <location filename="../QScintilla/Editor.py" line="7179"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5599"/>
+        <location filename="../QScintilla/Editor.py" line="5608"/>
         <source>Warning</source>
         <translation type="unfinished">Varování</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5599"/>
+        <location filename="../QScintilla/Editor.py" line="5608"/>
         <source>No warning messages available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5660"/>
+        <location filename="../QScintilla/Editor.py" line="5669"/>
         <source>Style: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53384,7 +53384,7 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
         <translation>Stisknout pro zobrazení všech souborů, které obsahují problém</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="293"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="297"/>
         <source>No issues found.</source>
         <translation>Žádné problémy nenalezeny.</translation>
     </message>
@@ -64901,57 +64901,120 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="60"/>
         <source>{0!r} imported but unused.</source>
-        <translation>{0!r} importováno ale nepoužito.</translation>
+        <translation type="obsolete">{0!r} importováno ale nepoužito.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="80"/>
         <source>Redefinition of unused {0!r} from line {1!r}.</source>
-        <translation>Předefinování nepoužitých {0!r} z řádky {1!r}.</translation>
+        <translation type="obsolete">Předefinování nepoužitých {0!r} z řádky {1!r}.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="101"/>
         <source>Import {0!r} from line {1!r} shadowed by loop variable.</source>
-        <translation>Import {0!r} z řádky {1!r} zastíněný proměnnou cyklu.</translation>
+        <translation type="obsolete">Import {0!r} z řádky {1!r} zastíněný proměnnou cyklu.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="122"/>
         <source>&apos;from {0} import *&apos; used; unable to detect undefined names.</source>
-        <translation>použit &apos;from {0} import *&apos;; Nelze dohledat nedefinovaná jména.</translation>
+        <translation type="obsolete">použit &apos;from {0} import *&apos;; Nelze dohledat nedefinovaná jména.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="142"/>
         <source>Undefined name {0!r}.</source>
-        <translation>Neznámé jméno {0!r}.</translation>
+        <translation type="obsolete">Neznámé jméno {0!r}.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="160"/>
         <source>Undefined name {0!r} in __all__.</source>
-        <translation>Neznámé jméno {0!r} v __all__.</translation>
+        <translation type="obsolete">Neznámé jméno {0!r} v __all__.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="179"/>
         <source>Local variable {0!r} (defined in enclosing scope on line {1!r}) referenced before assignment.</source>
-        <translation>Je odkazováno na lokální proměnnou {0!r} (definovaná v uzavřeném jmenném prostoru na řádce {1!r}) před tím než byla přiřazena.</translation>
+        <translation type="obsolete">Je odkazováno na lokální proměnnou {0!r} (definovaná v uzavřeném jmenném prostoru na řádce {1!r}) před tím než byla přiřazena.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="201"/>
         <source>Duplicate argument {0!r} in function definition.</source>
-        <translation>Duplicitní argument {0!r} v definici funkce.</translation>
+        <translation type="obsolete">Duplicitní argument {0!r} v definici funkce.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="221"/>
         <source>Redefinition of function {0!r} from line {1!r}.</source>
-        <translation>Znovu definování funkce {0!r} z řádku {1!r}.</translation>
+        <translation type="obsolete">Znovu definování funkce {0!r} z řádku {1!r}.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="242"/>
         <source>Future import(s) {0!r} after other statements.</source>
-        <translation>Future import(y)  {0!r} po ostatních výrazech.</translation>
+        <translation type="obsolete">Future import(y)  {0!r} po ostatních výrazech.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="265"/>
         <source>Local variable {0!r} is assigned to but never used.</source>
-        <translation>Lokální proměnná {0!r} je přiřazena, ale nikde nepoužita.</translation>
+        <translation type="obsolete">Lokální proměnná {0!r} je přiřazena, ale nikde nepoužita.</translation>
+    </message>
+</context>
+<context>
+    <name>pyFlakes</name>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="15"/>
+        <source>{0!r} imported but unused.</source>
+        <translation type="unfinished">{0!r} importováno ale nepoužito.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="18"/>
+        <source>Redefinition of unused {0!r} from line {1!r}.</source>
+        <translation type="unfinished">Předefinování nepoužitých {0!r} z řádky {1!r}.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="21"/>
+        <source>Import {0!r} from line {1!r} shadowed by loop variable.</source>
+        <translation type="unfinished">Import {0!r} z řádky {1!r} zastíněný proměnnou cyklu.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="24"/>
+        <source>&apos;from {0} import *&apos; used; unable to detect undefined names.</source>
+        <translation type="unfinished">použit &apos;from {0} import *&apos;; Nelze dohledat nedefinovaná jména.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="27"/>
+        <source>Undefined name {0!r}.</source>
+        <translation type="unfinished">Neznámé jméno {0!r}.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="30"/>
+        <source>Undefined name {0!r} in __all__.</source>
+        <translation type="unfinished">Neznámé jméno {0!r} v __all__.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="33"/>
+        <source>Local variable {0!r} (defined in enclosing scope on line {1!r}) referenced before assignment.</source>
+        <translation type="unfinished">Je odkazováno na lokální proměnnou {0!r} (definovaná v uzavřeném jmenném prostoru na řádce {1!r}) před tím než byla přiřazena.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="37"/>
+        <source>Duplicate argument {0!r} in function definition.</source>
+        <translation type="unfinished">Duplicitní argument {0!r} v definici funkce.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="40"/>
+        <source>Redefinition of function {0!r} from line {1!r}.</source>
+        <translation type="unfinished">Znovu definování funkce {0!r} z řádku {1!r}.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="43"/>
+        <source>Future import(s) {0!r} after other statements.</source>
+        <translation type="unfinished">Future import(y)  {0!r} po ostatních výrazech.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="46"/>
+        <source>Local variable {0!r} is assigned to but never used.</source>
+        <translation type="unfinished">Lokální proměnná {0!r} je přiřazena, ale nikde nepoužita.</translation>
+    </message>
+    <message>
+        <location filename="../Utilities/py3flakes/translations.py" line="66"/>
+        <source>no message defined for code &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

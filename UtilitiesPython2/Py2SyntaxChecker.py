@@ -117,10 +117,11 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
                isinstance(warning, ImportStarUsed):
                 continue
             
-            _fn, lineno, message = warning.getMessageData()
+            _fn, lineno, messageID, messageArgs = warning.getMessageData()
             if "__IGNORE_WARNING__" not in \
                     extractLineFlags(lines[lineno - 1].strip()):
-                flakesWarnings.append(["FLAKES_WARNING", _fn, lineno, message])
+                flakesWarnings.append([
+                    "FLAKES_WARNING", _fn, lineno, messageID, messageArgs])
     except SyntaxError as err:
         if err.text.strip():
             msg = err.text.strip()

@@ -956,6 +956,7 @@
             <section title="eric5.Utilities.py3flakes" ref="index-eric5.Utilities.py3flakes.html">
               <section title="eric5.Utilities.py3flakes.checker" ref="eric5.Utilities.py3flakes.checker.html" />
               <section title="eric5.Utilities.py3flakes.messages" ref="eric5.Utilities.py3flakes.messages.html" />
+              <section title="eric5.Utilities.py3flakes.translations" ref="eric5.Utilities.py3flakes.translations.html" />
             </section>
             <section title="eric5.Utilities.AutoSaver" ref="eric5.Utilities.AutoSaver.html" />
             <section title="eric5.Utilities.FtpUtilities" ref="eric5.Utilities.FtpUtilities.html" />
@@ -13104,6 +13105,7 @@
       <keyword name="getTasks" id="getTasks" ref="eric5.Preferences.__init__.html#getTasks" />
       <keyword name="getTemplates" id="getTemplates" ref="eric5.Preferences.__init__.html#getTemplates" />
       <keyword name="getTestFileName" id="getTestFileName" ref="eric5.Utilities.__init__.html#getTestFileName" />
+      <keyword name="getTranslatedFlakesMessage" id="getTranslatedFlakesMessage" ref="eric5.Utilities.py3flakes.translations.html#getTranslatedFlakesMessage" />
       <keyword name="getTrayStarter" id="getTrayStarter" ref="eric5.Preferences.__init__.html#getTrayStarter" />
       <keyword name="getTypeFromTypeName" id="getTypeFromTypeName" ref="eric5.Utilities.ModuleParser.html#getTypeFromTypeName" />
       <keyword name="getUI" id="getUI" ref="eric5.Preferences.__init__.html#getUI" />
@@ -13412,6 +13414,7 @@
       <keyword name="trailing_blank_lines" id="trailing_blank_lines" ref="eric5.UtilitiesPython2.pep8.html#trailing_blank_lines" />
       <keyword name="trailing_whitespace" id="trailing_whitespace" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#trailing_whitespace" />
       <keyword name="trailing_whitespace" id="trailing_whitespace" ref="eric5.UtilitiesPython2.pep8.html#trailing_whitespace" />
+      <keyword name="translations (Module)" id="translations (Module)" ref="eric5.Utilities.py3flakes.translations.html" />
       <keyword name="transplant (Module)" id="transplant (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html" />
       <keyword name="uiStartUp" id="uiStartUp" ref="eric5.eric5.html#uiStartUp" />
       <keyword name="uic (Module)" id="uic (Module)" ref="eric5.Utilities.uic.html" />
@@ -14216,6 +14219,7 @@
       <file>eric5.Utilities.crypto.py3PBKDF2.html</file>
       <file>eric5.Utilities.py3flakes.checker.html</file>
       <file>eric5.Utilities.py3flakes.messages.html</file>
+      <file>eric5.Utilities.py3flakes.translations.html</file>
       <file>eric5.Utilities.uic.html</file>
       <file>eric5.UtilitiesPython2.CodeStyleChecker.html</file>
       <file>eric5.UtilitiesPython2.DocStyleCheckerPy2.html</file>
