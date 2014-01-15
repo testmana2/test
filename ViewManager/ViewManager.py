@@ -3762,7 +3762,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Next warning message</b>"""
             """<p>Go to next line of the current editor"""
-            """ having a py3flakes warning.</p>"""
+            """ having a pyflakes warning.</p>"""
         ))
         self.warningsNextAct.triggered[()].connect(self.__nextWarning)
         self.bookmarkActions.append(self.warningsNextAct)
@@ -3780,7 +3780,7 @@ class ViewManager(QObject):
             'ViewManager',
             """<b>Previous warning message</b>"""
             """<p>Go to previous line of the current editor"""
-            """ having a py3flakes warning.</p>"""
+            """ having a pyflakes warning.</p>"""
         ))
         self.warningsPreviousAct.triggered[()].connect(self.__previousWarning)
         self.bookmarkActions.append(self.warningsPreviousAct)
@@ -3795,7 +3795,7 @@ class ViewManager(QObject):
         self.warningsClearAct.setWhatsThis(QApplication.translate(
             'ViewManager',
             """<b>Clear Warning Messages</b>"""
-            """<p>Clear py3flakes warning messages of all editors.</p>"""
+            """<p>Clear pyflakes warning messages of all editors.</p>"""
         ))
         self.warningsClearAct.triggered[()].connect(self.__clearAllWarnings)
         self.bookmarkActions.append(self.warningsClearAct)

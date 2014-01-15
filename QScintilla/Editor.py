@@ -4994,9 +4994,9 @@ class Editor(QsciScintillaCompat):
                         int(errorline), int(errorindex), True, _error)
                 else:
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
-                        from Utilities.py3flakes.checker import Checker
-                        from Utilities.py3flakes.messages import ImportStarUsed
-                        from Utilities.py3flakes.translations import \
+                        from Utilities.pyflakes.checker import Checker
+                        from Utilities.pyflakes.messages import ImportStarUsed
+                        from Utilities.pyflakes.translations import \
                             getTranslatedFlakesMessage
                         
                         ignoreStarImportWarnings = \
@@ -5043,7 +5043,7 @@ class Editor(QsciScintillaCompat):
                     self.toggleSyntaxError(
                         int(errorline), int(errorindex), True, _error)
                 else:
-                    from Utilities.py3flakes.translations import \
+                    from Utilities.pyflakes.translations import \
                         getTranslatedFlakesMessage
                     for warning in warnings:
                         self.toggleWarning(

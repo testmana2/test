@@ -8,7 +8,7 @@
 # work with Python3 and Qt (translatable messages)
 
 """
-Module implementing the messages for py3flakes.
+Module implementing the messages for pyflakes.
 """
 
 

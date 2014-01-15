@@ -702,9 +702,6 @@
     <Source>E5Gui/E5ToolBox.py</Source>
     <Source>E5Gui/E5TreeSortFilterProxyModel.py</Source>
     <Source>E5Gui/E5TreeView.py</Source>
-    <Source>Utilities/py3flakes/__init__.py</Source>
-    <Source>Utilities/py3flakes/checker.py</Source>
-    <Source>Utilities/py3flakes/messages.py</Source>
     <Source>Preferences/ConfigurationPages/EditorKeywordsPage.py</Source>
     <Source>Cooperation/__init__.py</Source>
     <Source>Cooperation/Connection.py</Source>
@@ -1110,7 +1107,10 @@
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
     <Source>E5Gui/E5ProgressDialog.py</Source>
-    <Source>Utilities/py3flakes/translations.py</Source>
+    <Source>Utilities/pyflakes/__init__.py</Source>
+    <Source>Utilities/pyflakes/checker.py</Source>
+    <Source>Utilities/pyflakes/messages.py</Source>
+    <Source>Utilities/pyflakes/translations.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

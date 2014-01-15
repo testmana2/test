@@ -977,8 +977,8 @@ class Prefs(object):
         "IconEditorState": QByteArray(),
     }
     
-    # defaults for py3flakes
-    py3flakesDefaults = {
+    # defaults for pyflakes
+    pyflakesDefaults = {
         "IncludeInSyntaxCheck": True,
         "IgnoreStarImportWarnings": True,
     }
@@ -2706,7 +2706,7 @@ def setIconEditor(key, value, prefClass=Prefs):
 
 def getFlakes(key, prefClass=Prefs):
     """
-    Module function to retrieve the py3flakes related settings.
+    Module function to retrieve the pyflakes related settings.
     
     @param key the key of the value to get
     @param prefClass preferences class used as the storage area
@@ -2714,15 +2714,15 @@ def getFlakes(key, prefClass=Prefs):
     """
     if key in ["IncludeInSyntaxCheck", "IgnoreStarImportWarnings"]:
         return toBool(prefClass.settings.value("Py3Flakes/" + key,
-                      prefClass.py3flakesDefaults[key]))
+                      prefClass.pyflakesDefaults[key]))
     else:
         return prefClass.settings.value(
-            "Py3Flakes/" + key, prefClass.py3flakesDefaults[key])
+            "Py3Flakes/" + key, prefClass.pyflakesDefaults[key])
     
 
 def setFlakes(key, value, prefClass=Prefs):
     """
-    Module function to store the py3flakes related settings.
+    Module function to store the pyflakes related settings.
     
     @param key the key of the setting to be set
     @param value the value to be set

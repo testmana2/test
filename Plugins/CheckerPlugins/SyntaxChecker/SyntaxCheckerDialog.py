@@ -237,10 +237,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         if isPy3:
                             try:
-                                from Utilities.py3flakes.checker import Checker
-                                from Utilities.py3flakes.messages import \
+                                from Utilities.pyflakes.checker import Checker
+                                from Utilities.pyflakes.messages import \
                                     ImportStarUsed
-                                from Utilities.py3flakes.translations import \
+                                from Utilities.pyflakes.translations import \
                                     getTranslatedFlakesMessage
                                 sourceLines = source.splitlines()
                                 warnings = Checker(source, file)
