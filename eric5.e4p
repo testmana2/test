@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-01-04, 21:59:29 -->
+<!-- Saved: 2014-01-14, 23:44:35 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1095,17 +1095,11 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/NamingStyleChecker.py</Source>
     <Source>Plugins/PluginCodeStyleChecker.py</Source>
-    <Source>UtilitiesPython2/CodeStyleChecker.py</Source>
-    <Source>UtilitiesPython2/DocStyleCheckerPy2.py</Source>
-    <Source>UtilitiesPython2/NamingStyleCheckerPy2.py</Source>
     <Source>Helpviewer/Bookmarks/DefaultBookmarks_rc.py</Source>
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/__init__.py</Source>
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
     <Source>E5Gui/E5ProgressDialog.py</Source>
-    <Source>UtilitiesPython2/pep8.py</Source>
-    <Source>UtilitiesPython2/__init__.py</Source>
-    <Source>UtilitiesPython2/Tools.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
     <Source>Utilities/BackgroundClient.py</Source>
     <Source>Utilities/BackgroundService.py</Source>
@@ -1925,7 +1919,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/ThirdParty/*, */coverage/*, */Ui_*.py, */Examples/*, */*_rc.py,*/pep8.py,*/py[23]flakes/checker.py</string>
+              <string>*/ThirdParty/*, */coverage/*, */Ui_*.py, */Examples/*, */*_rc.py,*/pep8.py,*/pyflakes/checker.py</string>
             </value>
             <key>
               <string>ExcludeMessages</string>

@@ -7,14 +7,14 @@
 Module implementing a checker for naming conventions.
 """
 
-from __future__ import unicode_literals
-
 import collections
 import ast
 import re
 import os
+import sys
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
+# Tell 'lupdate' which strings to keep for translation.
+QT_TRANSLATE_NOOP = lambda mod, txt: txt
 
 
 class NamingStyleChecker(object):
@@ -143,13 +143,10 @@ class NamingStyleChecker(object):
         @return translated and formatted message (string)
         """
         if code in cls.Messages:
-            return code + " " + QCoreApplication.translate(
-                "NamingStyleChecker",
-                cls.Messages[code]).format(*args)
+            return '@@'.join(
+                [code + ' ' + cls.Messages[code]] + list(args))
         else:
-            return code + " " + QCoreApplication.translate(
-                "NamingStyleChecker",
-                "no message for this code defined")
+            return code + ' ' + "no message for this code defined"
     
     def __visitTree(self, node):
         """
@@ -249,9 +246,27 @@ class NamingStyleChecker(object):
         @param node AST node to extract arguments names from
         @return list of argument names (list of string)
         """
-        posArgs = [arg.arg for arg in node.args.args]
-        kwOnly = [arg.arg for arg in node.args.kwonlyargs]
-        return posArgs + kwOnly
+        if sys.version_info[0] == 3:
+            posArgs = [arg.arg for arg in node.args.args]
+            kwOnly = [arg.arg for arg in node.args.kwonlyargs]
+            return posArgs + kwOnly
+        else:
+            def unpackArgs(args):
+                """
+                Local helper function to unpack function argument names.
+                
+                @param args list of AST node arguments
+                @return list of argument names (list of string)
+                """
+                ret = []
+                for arg in args:
+                    if isinstance(arg, ast.Tuple):
+                        ret.extend(unpackArgs(arg.elts))
+                    else:
+                        ret.append(arg.id)
+                return ret
+           
+            return unpackArgs(node.args.args)
     
     def __error(self, node, code):
         """

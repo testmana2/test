@@ -7,20 +7,21 @@
 Module implementing a class to fix certain code style issues.
 """
 
-from __future__ import unicode_literals
-
+try:
+    # Python 2
+    from StringIO import StringIO       # __IGNORE_EXCEPTION__
+except ImportError:
+    # Python 3
+    from io import StringIO             # __IGNORE_WARNING__
 import os
 import re
+import sys
 import tokenize
-import io
 
-from PyQt4.QtCore import QObject
+import pep8
 
-from E5Gui import E5MessageBox
-
-from . import pep8
-
-import Utilities
+# Tell 'lupdate' which strings to keep for translation.
+QT_TRANSLATE_NOOP = lambda mod, txt: txt
 
 FixableCodeStyleIssues = [
     "D111", "D112", "D113", "D121", "D131", "D141",
@@ -40,16 +41,15 @@ FixableCodeStyleIssues = [
 ]
 
 
-class CodeStyleFixer(QObject):
+class CodeStyleFixer(object):
     """
     Class implementing a fixer for certain code style issues.
     """
-    def __init__(self, project, filename, sourceLines, fixCodes, noFixCodes,
-                 maxLineLength, inPlace):
+    def __init__(self, filename, sourceLines, fixCodes, noFixCodes,
+                 maxLineLength, inPlace, eol):
         """
         Constructor
         
-        @param project  reference to the project object (Project)
         @param filename name of the file to be fixed (string)
         @param sourceLines list of source lines including eol marker
             (list of string)
@@ -59,10 +59,10 @@ class CodeStyleFixer(QObject):
             separated string (string)
         @param maxLineLength maximum allowed line length (integer)
         @param inPlace flag indicating to modify the file in place (boolean)
+        @param eol end of line character(s) (string)
         """
         super(CodeStyleFixer, self).__init__()
         
-        self.__project = project
         self.__filename = filename
         self.__origName = ""
         self.__source = sourceLines[:]  # save a copy
@@ -73,15 +73,18 @@ class CodeStyleFixer(QObject):
         self.fixed = 0
         
         self.__reindenter = None
-        self.__eol = ""
         self.__indentWord = self.__getIndentWord()
         
-        if not inPlace:
+        if inPlace:
+            # TODO: Do a backup before any changes
+            pass
+        else:
             self.__origName = self.__filename
             self.__filename = os.path.join(
                 os.path.dirname(self.__filename),
                 "fixed_" + os.path.basename(self.__filename))
-        
+        self.__eol = eol
+
         self.__fixes = {
             "D111": self.__fixD111,
             "D112": self.__fixD112,
@@ -176,22 +179,30 @@ class CodeStyleFixer(QObject):
         @param encoding encoding of the source file (string)
         @return flag indicating success (boolean)
         """
+        import codecs
+        
         if not self.__modified:
             # no need to write
             return True
         
         txt = "".join(self.__source)
         try:
-            Utilities.writeEncodedFile(self.__filename, txt, encoding)
-        except (IOError, Utilities.CodingError, UnicodeError) as err:
-            E5MessageBox.critical(
-                self,
-                self.trUtf8("Fix Code Style Issues"),
-                self.trUtf8(
-                    """<p>Could not save the file <b>{0}</b>."""
-                    """ Skipping it.</p><p>Reason: {1}</p>""")
-                .format(self.__filename, str(err))
-            )
+            if sys.version_info[0] == 3:
+                txt = txt.encode(encoding)
+            if encoding == 'utf-8-bom':
+                txt = codecs.BOM_UTF8 + txt
+            
+            with open(self.__filename, "wb") as fp:
+                fp.write(txt)
+        except (IOError, UnicodeError):  # as err:
+#            E5MessageBox.critical(
+#                self,
+#                self.trUtf8("Fix Code Style Issues"),
+#                self.trUtf8(
+#                    """<p>Could not save the file <b>{0}</b>."""
+#                    """ Skipping it.</p><p>Reason: {1}</p>""")
+#                .format(self.__filename, str(err))
+#            )
             return False
         
         return True
@@ -286,24 +297,6 @@ class CodeStyleFixer(QObject):
         self.__lastID += 1
         return self.__lastID
     
-    def __getEol(self):
-        """
-        Private method to get the applicable eol string.
-        
-        @return eol string (string)
-        """
-        if not self.__eol:
-            if self.__origName:
-                fn = self.__origName
-            else:
-                fn = self.__filename
-            
-            if self.__project.isOpen() and self.__project.isProjectFile(fn):
-                self.__eol = self.__project.getEolString()
-            else:
-                self.__eol = Utilities.linesep()
-        return self.__eol
-    
     def __findLogical(self):
         """
         Private method to extract the index of all the starts and ends of
@@ -315,7 +308,7 @@ class CodeStyleFixer(QObject):
         logical_start = []
         logical_end = []
         last_newline = True
-        sio = io.StringIO("".join(self.__source))
+        sio = StringIO("".join(self.__source))
         parens = 0
         for t in tokenize.generate_tokens(sio.readline):
             if t[0] in [tokenize.COMMENT, tokenize.DEDENT,
@@ -374,7 +367,7 @@ class CodeStyleFixer(QObject):
         
         @return string to be used for an indentation (string)
         """
-        sio = io.StringIO("".join(self.__source))
+        sio = StringIO("".join(self.__source))
         indentWord = "    "     # default in case of failure
         try:
             for token in tokenize.generate_tokens(sio.readline):
@@ -405,7 +398,7 @@ class CodeStyleFixer(QObject):
         """
         if self.__multiLineNumbers is None:
             source = "".join(self.__source)
-            sio = io.StringIO(source)
+            sio = StringIO(source)
             self.__multiLineNumbers = set()
             self.__docLineNumbers = set()
             previousTokenType = ''
@@ -511,11 +504,9 @@ class CodeStyleFixer(QObject):
                 break
             line += 1
         
-        return (
-            1,
-            self.trUtf8(
-                "Triple single quotes converted to triple double quotes."),
-            0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer',
+                "Triple single quotes converted to triple double quotes."), 0)
     
     def __fixD112(self, code, line, pos):
         """
@@ -541,11 +532,10 @@ class CodeStyleFixer(QObject):
         newText = self.__getIndent(self.__source[line]) + \
             insertChar + self.__source[line].lstrip()
         self.__source[line] = newText
-        return (
-            1,
-            self.trUtf8('Introductory quotes corrected to be {0}"""')
-                .format(insertChar),
-            0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer',
+                'Introductory quotes corrected to be {0}"""') +
+                '@@{0}'.format(insertChar), 0)
     
     def __fixD121(self, code, line, pos, apply=False):
         """
@@ -572,7 +562,7 @@ class CodeStyleFixer(QObject):
             docstring = self.__source[line].rstrip() + \
                 self.__source[line + 1].strip()
             if docstring.endswith('"""'):
-                docstring += self.__getEol()
+                docstring += self.__eol
             else:
                 docstring += self.__source[line + 2].lstrip()
                 self.__source[line + 2] = ""
@@ -581,7 +571,9 @@ class CodeStyleFixer(QObject):
             self.__source[line + 1] = ""
             return (
                 1,
-                self.trUtf8("Single line docstring put on one line."),
+                QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
+                    "Single line docstring put on one line."),
                 0)
         else:
             id = self.__getID()
@@ -608,18 +600,23 @@ class CodeStyleFixer(QObject):
            self.__source[line].lstrip().startswith(('"""', 'r"""', 'u"""')):
             # it is a one-liner
             newText = self.__source[line].rstrip()[:-3].rstrip() + "." + \
-                self.__source[line].rstrip()[-3:] + self.__getEol()
+                self.__source[line].rstrip()[-3:] + self.__eol
         else:
             if line < len(self.__source) - 1 and \
                 (not self.__source[line + 1].strip() or
                  self.__source[line + 1].lstrip().startswith("@") or
                  (self.__source[line + 1].strip() in ('"""', "'''") and
                   not self.__source[line].lstrip().startswith("@"))):
-                newText = self.__source[line].rstrip() + "." + self.__getEol()
+                newText = self.__source[line].rstrip() + "." + self.__eol
         
         if newText:
             self.__source[line] = newText
-            return (1, self.trUtf8("Period added to summary line."), 0)
+            return (
+                1,
+                QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
+                    "Period added to summary line."),
+                0)
         else:
             return (0, "", 0)
     
@@ -644,7 +641,8 @@ class CodeStyleFixer(QObject):
             self.__source[line - 1] = ""
             return (
                 1,
-                self.trUtf8(
+                QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
                     "Blank line before function/method docstring removed."),
                 0)
         else:
@@ -670,11 +668,10 @@ class CodeStyleFixer(QObject):
         """
         if apply:
             line = line - 1
-            self.__source[line] = self.__getEol() + self.__source[line]
-            return (
-                1,
-                self.trUtf8("Blank line inserted before class docstring."),
-                0)
+            self.__source[line] = self.__eol + self.__source[line]
+            return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer',
+                "Blank line inserted before class docstring."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -698,11 +695,10 @@ class CodeStyleFixer(QObject):
         """
         if apply:
             line = line - 1
-            self.__source[line] += self.__getEol()
-            return (
-                1,
-                self.trUtf8("Blank line inserted after class docstring."),
-                0)
+            self.__source[line] += self.__eol
+            return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer',
+                "Blank line inserted after class docstring."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -730,11 +726,10 @@ class CodeStyleFixer(QObject):
                 # only correct summary lines can be fixed here
                 return (0, "", 0)
             
-            self.__source[line] += self.__getEol()
-            return (
-                1,
-                self.trUtf8("Blank line inserted after docstring summary."),
-                0)
+            self.__source[line] += self.__eol
+            return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer',
+                "Blank line inserted after docstring summary."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -758,12 +753,10 @@ class CodeStyleFixer(QObject):
         """
         if apply:
             line = line - 1
-            self.__source[line] = self.__getEol() + self.__source[line]
-            return (
-                1,
-                self.trUtf8("Blank line inserted after last paragraph"
-                            " of docstring."),
-                0)
+            self.__source[line] = self.__eol + self.__source[line]
+            return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Blank line inserted after last paragraph"
+                " of docstring."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -798,13 +791,15 @@ class CodeStyleFixer(QObject):
             else:
                 # trailing
                 first, second = source[:-3].strip(), source[-3:]
-            newText = indent + first + self.__getEol() + \
-                indent + second + self.__getEol()
+            newText = indent + first + self.__eol + \
+                indent + second + self.__eol
             self.__source[line] = newText
             if code == "D221":
-                msg = self.trUtf8("Leading quotes put on separate line.")
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Leading quotes put on separate line.")
             else:
-                msg = self.trUtf8("Trailing quotes put on separate line.")
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Trailing quotes put on separate line.")
             return (1, msg, 0)
         else:
             id = self.__getID()
@@ -831,9 +826,12 @@ class CodeStyleFixer(QObject):
             line = line - 1
             self.__source[line - 1] = ""
             if code == "D242":
-                msg = self.trUtf8("Blank line before class docstring removed.")
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
+                    "Blank line before class docstring removed.")
             else:
-                msg = self.trUtf8(
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
                     "Blank line before function/method docstring removed.")
             return (1, msg, 0)
         else:
@@ -861,9 +859,12 @@ class CodeStyleFixer(QObject):
             line = line - 1
             self.__source[line + 1] = ""
             if code == "D243":
-                msg = self.trUtf8("Blank line after class docstring removed.")
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
+                    "Blank line after class docstring removed.")
             else:
-                msg = self.trUtf8(
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
                     "Blank line after function/method docstring removed.")
             return (1, msg, 0)
         else:
@@ -890,9 +891,8 @@ class CodeStyleFixer(QObject):
         if apply:
             line = line - 1
             self.__source[line - 1] = ""
-            return (
-                1,
-                self.trUtf8("Blank line after last paragraph removed."),
+            return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Blank line after last paragraph removed."),
                 0)
         else:
             id = self.__getID()
@@ -919,9 +919,11 @@ class CodeStyleFixer(QObject):
         if fixedLine is not None and fixedLine != self.__source[line - 1]:
             self.__source[line - 1] = fixedLine
             if code in ["E101", "W191"]:
-                msg = self.trUtf8("Tab converted to 4 spaces.")
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Tab converted to 4 spaces.")
             else:
-                msg = self.trUtf8(
+                msg = QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer',
                     "Indentation adjusted to be a multiple of four.")
             return (1, msg, 0)
         else:
@@ -950,10 +952,12 @@ class CodeStyleFixer(QObject):
                 changed = self.__fixReindent(line, pos, logical)
                 if changed:
                     if code == "E121":
-                        msg = self.trUtf8(
+                        msg = QT_TRANSLATE_NOOP(
+                            'CodeStyleFixer',
                             "Indentation of continuation line corrected.")
                     elif code == "E124":
-                        msg = self.trUtf8(
+                        msg = QT_TRANSLATE_NOOP(
+                            'CodeStyleFixer',
                             "Indentation of closing bracket corrected.")
                     return (1, msg, 0)
             return (0, "", 0)
@@ -989,11 +993,9 @@ class CodeStyleFixer(QObject):
                     indentation = self.__getIndent(text)
                     self.__source[line] = indentation + \
                         self.__indentWord + text.lstrip()
-                return (
-                    1,
-                    self.trUtf8(
-                        "Missing indentation of continuation line corrected."),
-                    0)
+                return (1, QT_TRANSLATE_NOOP(
+                        'CodeStyleFixer', "Missing indentation of continuation"
+                        " line corrected."), 0)
             return (0, "", 0)
         else:
             id = self.__getID()
@@ -1030,9 +1032,8 @@ class CodeStyleFixer(QObject):
                     self.__source[row] = newText
                     changed = True
                 if changed:
-                    return (1, self.trUtf8(
-                        "Closing bracket aligned to opening bracket."),
-                        0)
+                    return (1, QT_TRANSLATE_NOOP('CodeStyleFixer',
+                            "Closing bracket aligned to opening bracket."), 0)
             return (0, "", 0)
         else:
             id = self.__getID()
@@ -1065,7 +1066,8 @@ class CodeStyleFixer(QObject):
                     text = self.__source[row]
                     self.__source[row] = self.__getIndent(text) + \
                         self.__indentWord + text.lstrip()
-                return (1, self.trUtf8("Indentation level changed."), 0)
+                return (1, QT_TRANSLATE_NOOP(
+                        'CodeStyleFixer', "Indentation level changed."), 0)
             return (0, "", 0)
         else:
             id = self.__getID()
@@ -1104,9 +1106,10 @@ class CodeStyleFixer(QObject):
                     self.__source[row] = newText
                     changed = True
                 if changed:
-                    return (1, self.trUtf8(
-                        "Indentation level of hanging indentation changed."),
-                        0)
+                    return (1, QT_TRANSLATE_NOOP(
+                            'CodeStyleFixer',
+                            "Indentation level of hanging indentation "
+                            "changed."), 0)
             return (0, "", 0)
         else:
             id = self.__getID()
@@ -1160,7 +1163,9 @@ class CodeStyleFixer(QObject):
                     self.__source[row] = newText
                     changed = True
                 if changed:
-                    return (1, self.trUtf8("Visual indentation corrected."), 0)
+                    return (1, QT_TRANSLATE_NOOP(
+                            'CodeStyleFixer', "Visual indentation corrected."),
+                            0)
             return (0, "", 0)
         else:
             id = self.__getID()
@@ -1191,7 +1196,8 @@ class CodeStyleFixer(QObject):
             return (0, "", 0)
         
         self.__source[line] = newText
-        return (1, self.trUtf8("Extraneous whitespace removed."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Extraneous whitespace removed."), 0)
     
     def __fixE221(self, code, line, pos):
         """
@@ -1220,9 +1226,11 @@ class CodeStyleFixer(QObject):
         
         self.__source[line] = newText
         if code in ["E225", "E226", "E227", "E228"]:
-            return (1, self.trUtf8("Missing whitespace added."), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Missing whitespace added."), 0)
         else:
-            return (1, self.trUtf8("Extraneous whitespace removed."), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Extraneous whitespace removed."), 0)
     
     def __fixE231(self, code, line, pos):
         """
@@ -1241,7 +1249,8 @@ class CodeStyleFixer(QObject):
         pos = pos + 1
         self.__source[line] = self.__source[line][:pos] + \
             " " + self.__source[line][pos:]
-        return (1, self.trUtf8("Missing whitespace added."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Missing whitespace added."), 0)
     
     def __fixE251(self, code, line, pos):
         """
@@ -1278,7 +1287,8 @@ class CodeStyleFixer(QObject):
             self.__source[line + 1] = self.__source[line + 1].lstrip()
         else:
             self.__source[line] = newText
-        return (1, self.trUtf8("Extraneous whitespace removed."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Extraneous whitespace removed."), 0)
     
     def __fixE261(self, code, line, pos):
         """
@@ -1299,7 +1309,9 @@ class CodeStyleFixer(QObject):
         right = text[pos:].lstrip(' \t#')
         newText = left + ("  # " + right if right.strip() else right)
         self.__source[line] = newText
-        return (1, self.trUtf8("Whitespace around comment sign corrected."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Whitespace around comment sign corrected."),
+                0)
     
     def __fixE301(self, code, line, pos, apply=False):
         """
@@ -1317,8 +1329,9 @@ class CodeStyleFixer(QObject):
             fix (integer)
         """
         if apply:
-            self.__source.insert(line - 1, self.__getEol())
-            return (1, self.trUtf8("One blank line inserted."), 0)
+            self.__source.insert(line - 1, self.__eol)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "One blank line inserted."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1355,7 +1368,7 @@ class CodeStyleFixer(QObject):
             if delta < 0:
                 # insert blank lines (one or two)
                 while delta < 0:
-                    self.__source.insert(line, self.__getEol())
+                    self.__source.insert(line, self.__eol)
                     delta += 1
                 changed = True
             elif delta > 0:
@@ -1370,11 +1383,14 @@ class CodeStyleFixer(QObject):
             
             if changed:
                 if delta < 0:
-                    msg = self.trUtf8(
-                        "%n blank line(s) inserted.", "", -delta)
+                    msg = QT_TRANSLATE_NOOP(
+                        'CodeStyleFixer', "{0} blank line(s) inserted.") + \
+                        '@@{0}'.format(-delta)
                 elif delta > 0:
-                    msg = self.trUtf8(
-                        "%n superfluous lines removed", "", delta)
+                    msg = QT_TRANSLATE_NOOP(
+                        'CodeStyleFixer',
+                        "{0} superfluous line(s) removed.") + \
+                        '@@{0}'.format(delta)
                 else:
                     msg = ""
                 return (1, msg, 0)
@@ -1407,7 +1423,8 @@ class CodeStyleFixer(QObject):
                     index -= 1
                 else:
                     break
-            return (1, self.trUtf8("Superfluous blank lines removed."), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Superfluous blank lines removed."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1437,9 +1454,9 @@ class CodeStyleFixer(QObject):
                     index -= 1
                 else:
                     break
-            return (1, self.trUtf8(
-                "Superfluous blank lines after function decorator removed."),
-                0)
+            return (1, QT_TRANSLATE_NOOP('CodeStyleFixer',
+                    "Superfluous blank lines after function decorator "
+                    "removed."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1472,10 +1489,12 @@ class CodeStyleFixer(QObject):
             if ';' in text:
                 return (0, "", 0)
             
-            newText = text[:pos].rstrip("\t ,") + self.__getEol() + \
+            newText = text[:pos].rstrip("\t ,") + self.__eol + \
                 self.__getIndent(text) + "import " + text[pos:].lstrip("\t ,")
             self.__source[line] = newText
-            return (1, self.trUtf8("Imports were put on separate lines."), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Imports were put on separate lines."),
+                    0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1512,7 +1531,7 @@ class CodeStyleFixer(QObject):
                 nextText = ""
             shortener = LineShortener(
                 text, prevText, nextText,
-                maxLength=self.__maxLineLength, eol=self.__getEol(),
+                maxLength=self.__maxLineLength, eol=self.__eol,
                 indentWord=self.__indentWord, isDocString=isDocString)
             changed, newText, newNextText = shortener.shorten()
             if changed:
@@ -1522,7 +1541,9 @@ class CodeStyleFixer(QObject):
                     if newNextText == " ":
                         newNextText = ""
                     self.__source[line + 1] = newNextText
-                return (1, self.trUtf8("Long lines have been shortened."), 0)
+                return (1, QT_TRANSLATE_NOOP(
+                        'CodeStyleFixer', "Long lines have been shortened."),
+                        0)
             else:
                 return (0, "", 0)
         else:
@@ -1544,8 +1565,10 @@ class CodeStyleFixer(QObject):
             fix (integer)
         """
         self.__source[line - 1] = \
-            self.__source[line - 1].rstrip("\n\r \t\\") + self.__getEol()
-        return (1, self.trUtf8("Redundant backslash in brackets removed."), 0)
+            self.__source[line - 1].rstrip("\n\r \t\\") + self.__eol
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Redundant backslash in brackets removed."),
+                0)
     
     def __fixE701(self, code, line, pos, apply=False):
         """
@@ -1567,11 +1590,12 @@ class CodeStyleFixer(QObject):
             text = self.__source[line]
             pos = pos + 1
             
-            newText = text[:pos] + self.__getEol() + self.__getIndent(text) + \
+            newText = text[:pos] + self.__eol + self.__getIndent(text) + \
                 self.__indentWord + text[pos:].lstrip("\n\r \t\\") + \
-                self.__getEol()
+                self.__eol
             self.__source[line] = newText
-            return (1, self.trUtf8("Compound statement corrected."), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Compound statement corrected."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1601,12 +1625,13 @@ class CodeStyleFixer(QObject):
                 self.__source[line] = text.rstrip("\n\r \t\\")
                 self.__source[line + 1] = self.__source[line + 1].lstrip()
             elif text.rstrip().endswith(";"):
-                self.__source[line] = text.rstrip("\n\r \t;") + self.__getEol()
+                self.__source[line] = text.rstrip("\n\r \t;") + self.__eol
             else:
-                first = text[:pos].rstrip("\n\r \t;") + self.__getEol()
+                first = text[:pos].rstrip("\n\r \t;") + self.__eol
                 second = text[pos:].lstrip("\n\r \t;")
                 self.__source[line] = first + self.__getIndent(text) + second
-            return (1, self.trUtf8("Compound statement corrected."), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "Compound statement corrected."), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1647,7 +1672,9 @@ class CodeStyleFixer(QObject):
             return (0, "", 0)
         
         self.__source[line] = " ".join([left, center, right])
-        return (1, self.trUtf8("Comparison to None/True/False corrected."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Comparison to None/True/False corrected."),
+                0)
     
     def __fixN804(self, code, line, pos, apply=False):
         """
@@ -1675,7 +1702,7 @@ class CodeStyleFixer(QObject):
             
             if text.rstrip().endswith("("):
                 newText = text + self.__getIndent(text) + \
-                    self.__indentWord + arg + "," + self.__getEol()
+                    self.__indentWord + arg + "," + self.__eol
             else:
                 index = text.find("(") + 1
                 left = text[:index]
@@ -1686,7 +1713,9 @@ class CodeStyleFixer(QObject):
                     center = arg + ", "
                 newText = left + center + right
             self.__source[line] = newText
-            return (1, self.trUtf8("'{0}' argument added.").format(arg), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "'{0}' argument added.") +
+                    '@@{0}'.format(arg), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1746,7 +1775,9 @@ class CodeStyleFixer(QObject):
                 else:
                     self.__source[line] = indent + right
             
-            return (1, self.trUtf8("'{0}' argument removed.").format(arg), 0)
+            return (1, QT_TRANSLATE_NOOP(
+                    'CodeStyleFixer', "'{0}' argument removed.") +
+                    '@@{0}'.format(arg), 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -1767,7 +1798,8 @@ class CodeStyleFixer(QObject):
         """
         self.__source[line - 1] = re.sub(r'[\t ]+(\r?)$', r"\1",
                                          self.__source[line - 1])
-        return (1, self.trUtf8("Whitespace stripped from end of line."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "Whitespace stripped from end of line."), 0)
     
     def __fixW292(self, code, line, pos):
         """
@@ -1782,8 +1814,9 @@ class CodeStyleFixer(QObject):
             a message for the fix (string) and an ID for a deferred
             fix (integer)
         """
-        self.__source[line - 1] += self.__getEol()
-        return (1, self.trUtf8("newline added to end of file."), 0)
+        self.__source[line - 1] += self.__eol
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "newline added to end of file."), 0)
     
     def __fixW391(self, code, line, pos):
         """
@@ -1805,8 +1838,10 @@ class CodeStyleFixer(QObject):
                 index -= 1
             else:
                 break
-        return (1, self.trUtf8(
-            "Superfluous trailing blank lines removed from end of file."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer',
+                "Superfluous trailing blank lines removed from end of file."),
+                0)
     
     def __fixW603(self, code, line, pos):
         """
@@ -1822,7 +1857,8 @@ class CodeStyleFixer(QObject):
             fix (integer)
         """
         self.__source[line - 1] = self.__source[line - 1].replace("<>", "!=")
-        return (1, self.trUtf8("'<>' replaced by '!='."), 0)
+        return (1, QT_TRANSLATE_NOOP(
+                'CodeStyleFixer', "'<>' replaced by '!='."), 0)
 
 
 class Reindenter(object):
@@ -2043,7 +2079,7 @@ class IndentationWrapper(object):
         self.lines = physical_lines
         self.tokens = []
         self.rel_indent = None
-        sio = io.StringIO(''.join(physical_lines))
+        sio = StringIO(''.join(physical_lines))
         for t in tokenize.generate_tokens(sio.readline):
             if not len(self.tokens) and t[0] in self.SKIP_TOKENS:
                 continue
@@ -2338,7 +2374,7 @@ class LineShortener(object):
         indent = self.__getIndent(self.__text)
         source = self.__text[len(indent):]
         assert source.lstrip() == source
-        sio = io.StringIO(source)
+        sio = StringIO(source)
         
         # Check for multi line string.
         try:

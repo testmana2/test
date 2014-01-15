@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>eric5.Utilities.py3flakes.messages</title>
+<title>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.messages</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -19,17 +19,20 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Utilities.py3flakes.messages</h1>
+<h1>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.messages</h1>
 <p>
-Module implementing the messages for py3flakes.
+Provide the class Message and its subclasses.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>QT_TRANSLATE_NOOP</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
 <tr>
+<td><a href="#DoctestSyntaxError">DoctestSyntaxError</a></td>
+<td>Class defining the "Syntax error in doctest" message.</td>
+</tr><tr>
 <td><a href="#DuplicateArgument">DuplicateArgument</a></td>
 <td>Class defining the "Duplicate Argument" message.</td>
 </tr><tr>
@@ -45,8 +48,11 @@ Module implementing the messages for py3flakes.
 <td><a href="#Message">Message</a></td>
 <td>Class defining the base for all specific message classes.</td>
 </tr><tr>
-<td><a href="#RedefinedFunction">RedefinedFunction</a></td>
-<td>Class defining the "Redefined Function" message.</td>
+<td><a href="#Redefined">Redefined</a></td>
+<td>Class defining the "Redefined" message.</td>
+</tr><tr>
+<td><a href="#RedefinedInListComp">RedefinedInListComp</a></td>
+<td>Class defining the list comprehension redefinition.</td>
 </tr><tr>
 <td><a href="#RedefinedWhileUnused">RedefinedWhileUnused</a></td>
 <td>Class defining the "Redefined While Unused" message.</td>
@@ -69,11 +75,53 @@ Module implementing the messages for py3flakes.
 </table>
 <h3>Functions</h3>
 <table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="DoctestSyntaxError" ID="DoctestSyntaxError"></a>
+<h2>DoctestSyntaxError</h2>
+<p>
+    Class defining the "Syntax error in doctest" message.
+</p>
+<h3>Derived from</h3>
+Message
+<h3>Class Attributes</h3>
+<table>
+<tr><td>message</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
 <tr>
-<td><a href="#QT_TRANSLATE_NOOP">QT_TRANSLATE_NOOP</a></td>
-<td>Function to tell 'lupdate' which strings to keep for translation.</td>
+<td><a href="#DoctestSyntaxError.__init__">DoctestSyntaxError</a></td>
+<td>Constructor</td>
 </tr>
 </table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="DoctestSyntaxError.__init__" ID="DoctestSyntaxError.__init__"></a>
+<h4>DoctestSyntaxError (Constructor)</h4>
+<b>DoctestSyntaxError</b>(<i>filename, loc, position=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file (string)
+</dd><dt><i>loc</i></dt>
+<dd>
+location of warning (object)
+</dd><dt><i>position=</i></dt>
+<dd>
+of warning if existent (object)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="DuplicateArgument" ID="DuplicateArgument"></a>
 <h2>DuplicateArgument</h2>
@@ -103,16 +151,16 @@ Message
 </table>
 <a NAME="DuplicateArgument.__init__" ID="DuplicateArgument.__init__"></a>
 <h4>DuplicateArgument (Constructor)</h4>
-<b>DuplicateArgument</b>(<i>filename, lineno, name</i>)
+<b>DuplicateArgument</b>(<i>filename, loc, name</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the duplicate argument (string)
@@ -148,22 +196,22 @@ Message
 </table>
 <a NAME="ImportShadowedByLoopVar.__init__" ID="ImportShadowedByLoopVar.__init__"></a>
 <h4>ImportShadowedByLoopVar (Constructor)</h4>
-<b>ImportShadowedByLoopVar</b>(<i>filename, lineno, name, orig_lineno</i>)
+<b>ImportShadowedByLoopVar</b>(<i>filename, loc, name, orig_loc</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the shadowed import (string)
-</dd><dt><i>orig_lineno</i></dt>
+</dd><dt><i>orig_loc</i></dt>
 <dd>
-line number of the import (integer)
+location of the import (object)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -196,16 +244,16 @@ Message
 </table>
 <a NAME="ImportStarUsed.__init__" ID="ImportStarUsed.__init__"></a>
 <h4>ImportStarUsed (Constructor)</h4>
-<b>ImportStarUsed</b>(<i>filename, lineno, modname</i>)
+<b>ImportStarUsed</b>(<i>filename, loc, modname</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>modname</i></dt>
 <dd>
 name of the module imported using star import (string)
@@ -241,16 +289,16 @@ Message
 </table>
 <a NAME="LateFutureImport.__init__" ID="LateFutureImport.__init__"></a>
 <h4>LateFutureImport (Constructor)</h4>
-<b>LateFutureImport</b>(<i>filename, lineno, names</i>)
+<b>LateFutureImport</b>(<i>filename, loc, names</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>names</i></dt>
 <dd>
 names of the imported futures (string)
@@ -292,16 +340,16 @@ object
 </table>
 <a NAME="Message.__init__" ID="Message.__init__"></a>
 <h4>Message (Constructor)</h4>
-<b>Message</b>(<i>filename, lineno</i>)
+<b>Message</b>(<i>filename, loc</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd>
 </dl><a NAME="Message.__str__" ID="Message.__str__"></a>
 <h4>Message.__str__</h4>
@@ -327,10 +375,10 @@ tuple containing file name, line number and message
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="RedefinedFunction" ID="RedefinedFunction"></a>
-<h2>RedefinedFunction</h2>
+<a NAME="Redefined" ID="Redefined"></a>
+<h2>Redefined</h2>
 <p>
-    Class defining the "Redefined Function" message.
+    Class defining the "Redefined" message.
 </p>
 <h3>Derived from</h3>
 Message
@@ -345,7 +393,7 @@ Message
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#RedefinedFunction.__init__">RedefinedFunction</a></td>
+<td><a href="#Redefined.__init__">Redefined</a></td>
 <td>Constructor</td>
 </tr>
 </table>
@@ -353,24 +401,72 @@ Message
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="RedefinedFunction.__init__" ID="RedefinedFunction.__init__"></a>
-<h4>RedefinedFunction (Constructor)</h4>
-<b>RedefinedFunction</b>(<i>filename, lineno, name, orig_lineno</i>)
+<a NAME="Redefined.__init__" ID="Redefined.__init__"></a>
+<h4>Redefined (Constructor)</h4>
+<b>Redefined</b>(<i>filename, loc, name, orig_loc</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the redefined function (string)
-</dd><dt><i>orig_lineno</i></dt>
+</dd><dt><i>orig_loc</i></dt>
 <dd>
-line number of the original definition (integer)
+location of the original definition (object)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="RedefinedInListComp" ID="RedefinedInListComp"></a>
+<h2>RedefinedInListComp</h2>
+<p>
+    Class defining the list comprehension redefinition.
+</p>
+<h3>Derived from</h3>
+Message
+<h3>Class Attributes</h3>
+<table>
+<tr><td>message</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#RedefinedInListComp.__init__">RedefinedInListComp</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="RedefinedInListComp.__init__" ID="RedefinedInListComp.__init__"></a>
+<h4>RedefinedInListComp (Constructor)</h4>
+<b>RedefinedInListComp</b>(<i>filename, loc, name, orig_loc</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file (string)
+</dd><dt><i>loc</i></dt>
+<dd>
+location of warning (object)
+</dd><dt><i>name</i></dt>
+<dd>
+name of the redefined object (string)
+</dd><dt><i>orig_loc</i></dt>
+<dd>
+location of the original definition (object)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -403,22 +499,22 @@ Message
 </table>
 <a NAME="RedefinedWhileUnused.__init__" ID="RedefinedWhileUnused.__init__"></a>
 <h4>RedefinedWhileUnused (Constructor)</h4>
-<b>RedefinedWhileUnused</b>(<i>filename, lineno, name, orig_lineno</i>)
+<b>RedefinedWhileUnused</b>(<i>filename, loc, name, orig_loc</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the redefined object (string)
-</dd><dt><i>orig_lineno</i></dt>
+</dd><dt><i>orig_loc</i></dt>
 <dd>
-line number of the original definition (integer)
+location of the original definition (object)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -451,16 +547,16 @@ Message
 </table>
 <a NAME="UndefinedExport.__init__" ID="UndefinedExport.__init__"></a>
 <h4>UndefinedExport (Constructor)</h4>
-<b>UndefinedExport</b>(<i>filename, lineno, name</i>)
+<b>UndefinedExport</b>(<i>filename, loc, name</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 undefined exported name (string)
@@ -496,22 +592,22 @@ Message
 </table>
 <a NAME="UndefinedLocal.__init__" ID="UndefinedLocal.__init__"></a>
 <h4>UndefinedLocal (Constructor)</h4>
-<b>UndefinedLocal</b>(<i>filename, lineno, name, orig_lineno</i>)
+<b>UndefinedLocal</b>(<i>filename, loc, name, orig_loc</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the prematurely referenced variable (string)
-</dd><dt><i>orig_lineno</i></dt>
+</dd><dt><i>orig_loc</i></dt>
 <dd>
-line number of the variable definition (integer)
+location of the variable definition (object)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -544,16 +640,16 @@ Message
 </table>
 <a NAME="UndefinedName.__init__" ID="UndefinedName.__init__"></a>
 <h4>UndefinedName (Constructor)</h4>
-<b>UndefinedName</b>(<i>filename, lineno, name</i>)
+<b>UndefinedName</b>(<i>filename, loc, name</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 undefined name (string)
@@ -589,16 +685,16 @@ Message
 </table>
 <a NAME="UnusedImport.__init__" ID="UnusedImport.__init__"></a>
 <h4>UnusedImport (Constructor)</h4>
-<b>UnusedImport</b>(<i>filename, lineno, name</i>)
+<b>UnusedImport</b>(<i>filename, loc, name</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
+location of warning (object)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the unused import (string)
@@ -637,40 +733,19 @@ Message
 </table>
 <a NAME="UnusedVariable.__init__" ID="UnusedVariable.__init__"></a>
 <h4>UnusedVariable (Constructor)</h4>
-<b>UnusedVariable</b>(<i>filename, lineno, name</i>)
+<b>UnusedVariable</b>(<i>filename, loc, names</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
 name of the file (string)
-</dd><dt><i>lineno</i></dt>
+</dd><dt><i>loc</i></dt>
 <dd>
-line number (integer)
-</dd><dt><i>name</i></dt>
+location of warning (object)
+</dd><dt><i>names</i></dt>
 <dd>
-name of the unused variable (string)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="QT_TRANSLATE_NOOP" ID="QT_TRANSLATE_NOOP"></a>
-<h2>QT_TRANSLATE_NOOP</h2>
-<b>QT_TRANSLATE_NOOP</b>(<i>mod, txt</i>)
-<p>
-    Function to tell 'lupdate' which strings to keep for translation.
-</p><dl>
-<dt><i>mod</i></dt>
-<dd>
-module name
-</dd><dt><i>txt</i></dt>
-<dd>
-translatable string
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-the untranslated! string
+names of the unused variable (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

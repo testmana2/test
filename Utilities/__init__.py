@@ -61,9 +61,10 @@ from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 # import these methods into the Utilities namespace
-from Globals import (isWindowsPlatform, isLinuxPlatform,  # __IGNORE_WARNING__
-    isMacPlatform, getConfigDir, setConfigDir, getPythonModulesDirectory,
-    getPyQt4ModulesDirectory, getQtBinariesPath)
+from Globals import (  # __IGNORE_WARNING__
+    isWindowsPlatform, isLinuxPlatform, isMacPlatform, getConfigDir,
+    setConfigDir, getPythonModulesDirectory, getPyQt4ModulesDirectory,
+    getQtBinariesPath)
 
 from E5Gui.E5Application import e5App
 

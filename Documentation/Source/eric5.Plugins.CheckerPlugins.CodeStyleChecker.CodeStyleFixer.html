@@ -25,7 +25,7 @@ Module implementing a class to fix certain code style issues.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>FixableCodeStyleIssues</td></tr>
+<tr><td>FixableCodeStyleIssues</td></tr><tr><td>QT_TRANSLATE_NOOP</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -54,7 +54,7 @@ Module implementing a class to fix certain code style issues.
     Class implementing a fixer for certain code style issues.
 </p>
 <h3>Derived from</h3>
-QObject
+object
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -204,9 +204,6 @@ QObject
 <td><a href="#CodeStyleFixer.__fixWhitespace">__fixWhitespace</a></td>
 <td>Private method to correct whitespace at the given offset.</td>
 </tr><tr>
-<td><a href="#CodeStyleFixer.__getEol">__getEol</a></td>
-<td>Private method to get the applicable eol string.</td>
-</tr><tr>
 <td><a href="#CodeStyleFixer.__getID">__getID</a></td>
 <td>Private method to get the ID for a deferred fix.</td>
 </tr><tr>
@@ -241,14 +238,11 @@ QObject
 </table>
 <a NAME="CodeStyleFixer.__init__" ID="CodeStyleFixer.__init__"></a>
 <h4>CodeStyleFixer (Constructor)</h4>
-<b>CodeStyleFixer</b>(<i>project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace</i>)
+<b>CodeStyleFixer</b>(<i>filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace, eol</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>project</i></dt>
-<dd>
-reference to the project object (Project)
-</dd><dt><i>filename</i></dt>
+<dt><i>filename</i></dt>
 <dd>
 name of the file to be fixed (string)
 </dd><dt><i>sourceLines</i></dt>
@@ -269,6 +263,9 @@ maximum allowed line length (integer)
 </dd><dt><i>inPlace</i></dt>
 <dd>
 flag indicating to modify the file in place (boolean)
+</dd><dt><i>eol</i></dt>
+<dd>
+end of line character(s) (string)
 </dd>
 </dl><a NAME="CodeStyleFixer.__codeMatch" ID="CodeStyleFixer.__codeMatch"></a>
 <h4>CodeStyleFixer.__codeMatch</h4>
@@ -1487,16 +1484,6 @@ replacement string (string)
 <dt>Returns:</dt>
 <dd>
 corrected line
-</dd>
-</dl><a NAME="CodeStyleFixer.__getEol" ID="CodeStyleFixer.__getEol"></a>
-<h4>CodeStyleFixer.__getEol</h4>
-<b>__getEol</b>(<i></i>)
-<p>
-        Private method to get the applicable eol string.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-eol string (string)
 </dd>
 </dl><a NAME="CodeStyleFixer.__getID" ID="CodeStyleFixer.__getID"></a>
 <h4>CodeStyleFixer.__getID</h4>

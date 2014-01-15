@@ -11,7 +11,7 @@ checkers and other python interpreter dependent functions.
 
 from __future__ import unicode_literals
 try:
-    bytes = unicode  #__IGNORE_WARNING__
+    bytes = unicode
 except NameError:
     pass
 

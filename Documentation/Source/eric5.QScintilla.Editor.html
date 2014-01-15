@@ -416,6 +416,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__processRequestSyncCommand">__processRequestSyncCommand</a></td>
 <td>Private slot to process a remote RequestSync command.</td>
 </tr><tr>
+<td><a href="#Editor.__processResult">__processResult</a></td>
+<td>Slot to report the resulting messages.</td>
+</tr><tr>
 <td><a href="#Editor.__processStartEditCommand">__processStartEditCommand</a></td>
 <td>Private slot to process a remote StartEdit command.</td>
 </tr><tr>
@@ -1984,6 +1987,42 @@ list of change flags (list of string)
 <dt><i>argsString</i></dt>
 <dd>
 string containing the command parameters (string)
+</dd>
+</dl><a NAME="Editor.__processResult" ID="Editor.__processResult"></a>
+<h4>Editor.__processResult</h4>
+<b>__processResult</b>(<i>fn, nok, fname, line, index, code, error, warnings</i>)
+<p>
+        Slot to report the resulting messages.
+</p><p>
+        If checkFlakes is True, warnings contains a list of strings containing
+        the warnings (marker, file name, line number, message)
+        The values are only valid, if nok is False.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the checked file (str)
+</dd><dt><i>nok</i></dt>
+<dd>
+flag if an error in the source was found (boolean)
+</dd><dt><i>fname</i></dt>
+<dd>
+filename of the checked file (str)  # TODO: remove dubl.
+</dd><dt><i>line</i></dt>
+<dd>
+number where the error occured (int)
+</dd><dt><i>index</i></dt>
+<dd>
+the column where the error occured (int)
+</dd><dt><i>code</i></dt>
+<dd>
+the part of the code where the error occured (str)
+</dd><dt><i>error</i></dt>
+<dd>
+the name of the error (str)
+</dd><dt><i>warnings</i></dt>
+<dd>
+a list of strings containing the warnings
+            (marker, file name, line number, col, message)
 </dd>
 </dl><a NAME="Editor.__processStartEditCommand" ID="Editor.__processStartEditCommand"></a>
 <h4>Editor.__processStartEditCommand</h4>

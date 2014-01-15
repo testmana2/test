@@ -25,51 +25,10 @@ import Preferences
 import Utilities
 
 from . import pep8
-from .NamingStyleChecker import NamingStyleChecker
-
-# register the name checker
-pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
-
-from .DocStyleChecker import DocStyleChecker
-
-
-class CodeStyleCheckerReport(pep8.BaseReport):
-    """
-    Class implementing a special report to be used with our dialog.
-    """
-    def __init__(self, options):
-        """
-        Constructor
-        
-        @param options options for the report (optparse.Values)
-        """
-        super(CodeStyleCheckerReport, self).__init__(options)
-        
-        self.__repeat = options.repeat
-        self.errors = []
-    
-    def error_args(self, line_number, offset, code, check, *args):
-        """
-        Public method to collect the error messages.
-        
-        @param line_number line number of the issue (integer)
-        @param offset position within line of the issue (integer)
-        @param code message code (string)
-        @param check reference to the checker function (function)
-        @param args arguments for the message (list)
-        @return error code (string)
-        """
-        code = super(CodeStyleCheckerReport, self).error_args(
-            line_number, offset, code, check, *args)
-        if code and (self.counters[code] == 1 or self.__repeat):
-            if code in NamingStyleChecker.Codes:
-                text = NamingStyleChecker.getMessage(code, *args)
-            else:
-                text = pep8.getMessage(code, *args)
-            self.errors.append(
-                (self.filename, line_number, offset, text)
-            )
-        return code
+#from .NamingStyleChecker import NamingStyleChecker
+#
+## register the name checker
+#pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
 
 
 class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
@@ -114,6 +73,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.checkProgress.setVisible(False)
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
+        
+        self.internalServices = e5App().getObject('InternalServices')
+        self.internalServices.styleChecked.connect(self.__processResult)
         
         self.noResults = True
         self.cancelled = False
@@ -202,7 +164,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         @param fixed flag indicating a fixed issue (boolean)
         """
         if fixed:
-            message = itm.data(0, self.messageRole) + text
+            code, message = text.split(None, 1)
             itm.setText(2, message)
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
             
@@ -228,8 +190,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     self.__statistics[key] += statistics[key]
                 else:
                     self.__statistics[key] = statistics[key]
-        if fixer:
-            self.__statistics["_IssuesFixed"] += fixer.fixed
+        self.__statistics["_IssuesFixed"] += fixer
     
     def __updateFixerStatistics(self, fixer):
         """
@@ -237,7 +198,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         @param fixer reference to the code style fixer (CodeStyleFixer)
         """
-        self.__statistics["_IssuesFixed"] += fixer.fixed
+        self.__statistics["_IssuesFixed"] += fixer
     
     def __resetStatistics(self):
         """
@@ -324,46 +285,38 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         QApplication.processEvents()
         
         self.__resetStatistics()
-        self.__clearErrors()
         
         if save:
             self.__fileOrFileList = fn
         
         if isinstance(fn, list):
-            files = fn[:]
+            self.files = fn[:]
         elif os.path.isdir(fn):
-            files = []
+            self.files = []
             extensions = set(Preferences.getPython("PythonExtensions") +
                              Preferences.getPython("Python3Extensions"))
             for ext in extensions:
-                files.extend(Utilities.direntries(
+                self.files.extend(Utilities.direntries(
                     fn, True, '*{0}'.format(ext), 0))
         else:
-            files = [fn]
-        
+            self.files = [fn]
+
         # filter the list depending on the filter string
-        if files:
+        if self.files:
             filterString = self.excludeFilesEdit.text()
             filterList = [f.strip() for f in filterString.split(",")
                           if f.strip()]
             for filter in filterList:
-                files = \
-                    [f for f in files
+                self.files = \
+                    [f for f in self.files
                      if not fnmatch.fnmatch(f, filter.strip())]
+
+        self.__clearErrors()
         
-        py3files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
-        
-        if len(py3files) + len(py2files) > 0:
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
-            self.checkProgressLabel.setVisible(
-                len(py3files) + len(py2files) > 1)
-            self.checkProgress.setVisible(
-                len(py3files) + len(py2files) > 1)
+        if len(self.files) > 0:
+            self.checkProgress.setMaximum(len(self.files))
+            self.checkProgressLabel.setVisible(len(self.files) > 1)
+            self.checkProgress.setVisible(len(self.files) > 1)
             QApplication.processEvents()
             
             # extract the configuration values
@@ -378,157 +331,124 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             docType = self.docTypeComboBox.itemData(
                 self.docTypeComboBox.currentIndex())
             
-            try:
-                # disable updates of the list for speed
-                self.resultList.setUpdatesEnabled(False)
-                self.resultList.setSortingEnabled(False)
-                
-                # now go through all the files
-                progress = 0
-                for file in sorted(py3files + py2files):
-                    self.checkProgress.setValue(progress)
-                    self.checkProgressLabel.setPath(file)
-                    QApplication.processEvents()
-                    
-                    if self.cancelled:
-                        self.__resort()
-                        return
-                    
-                    self.__lastFileItem = None
-                    
-                    try:
-                        source, encoding = Utilities.readEncodedFile(file)
-                        source = source.splitlines(True)
-                    except (UnicodeError, IOError) as msg:
-                        self.noResults = False
-                        self.__createResultItem(
-                            file, 1, 1,
-                            self.trUtf8("Error: {0}").format(str(msg))
-                            .rstrip()[1:-1], False, False)
-                        progress += 1
-                        continue
-                    
-                    stats = {}
-                    flags = Utilities.extractFlags(source)
-                    ext = os.path.splitext(file)[1]
-                    if fixIssues:
-                        from .CodeStyleFixer import CodeStyleFixer
-                        fixer = CodeStyleFixer(
-                            self.__project, file, source, fixCodes, noFixCodes,
-                            maxLineLength, True)  # always fix in place
-                    else:
-                        fixer = None
-                    if ("FileType" in flags and
-                        flags["FileType"] in ["Python", "Python2"]) or \
-                       file in py2files or \
-                       (ext in [".py", ".pyw"] and
-                        Preferences.getProject("DeterminePyFromProject") and
-                        self.__project.isOpen() and
-                        self.__project.isProjectFile(file) and
-                        self.__project.getProjectLanguage() in ["Python",
-                                                                "Python2"]):
-                        from .CodeStyleChecker import CodeStyleCheckerPy2
-                        report = CodeStyleCheckerPy2(
-                            file, [],
-                            repeat=repeatMessages,
-                            select=includeMessages,
-                            ignore=excludeMessages,
-                            max_line_length=maxLineLength,
-                            hang_closing=hangClosing,
-                            docType=docType,
-                        )
-                        errors = report.errors[:]
-                        stats.update(report.counters)
-                    else:
-                        if includeMessages:
-                            select = [s.strip() for s in
-                                      includeMessages.split(',') if s.strip()]
-                        else:
-                            select = []
-                        if excludeMessages:
-                            ignore = [i.strip() for i in
-                                      excludeMessages.split(',') if i.strip()]
-                        else:
-                            ignore = []
-                        
-                        # check coding style
-                        styleGuide = pep8.StyleGuide(
-                            reporter=CodeStyleCheckerReport,
-                            repeat=repeatMessages,
-                            select=select,
-                            ignore=ignore,
-                            max_line_length=maxLineLength,
-                            hang_closing=hangClosing,
-                        )
-                        report = styleGuide.check_files([file])
-                        stats.update(report.counters)
-                        
-                        # check documentation style
-                        docStyleChecker = DocStyleChecker(
-                            source, file, select, ignore, [], repeatMessages,
-                            maxLineLength=maxLineLength, docType=docType)
-                        docStyleChecker.run()
-                        stats.update(docStyleChecker.counters)
-                        
-                        errors = report.errors + docStyleChecker.errors
-                    
-                    deferredFixes = {}
-                    for error in errors:
-                        fname, lineno, position, text = error
-                        if lineno > len(source):
-                            lineno = len(source)
-                        if "__IGNORE_WARNING__" not in \
-                                Utilities.extractLineFlags(
-                                source[lineno - 1].strip()):
-                            self.noResults = False
-                            if fixer:
-                                res, msg, id_ = fixer.fixIssue(lineno,
-                                                               position, text)
-                                if res == 1:
-                                    text += "\n" + \
-                                            self.trUtf8("Fix: {0}").format(msg)
-                                    self.__createResultItem(
-                                        fname, lineno, position, text, True,
-                                        True)
-                                elif res == 0:
-                                    self.__createResultItem(
-                                        fname, lineno, position, text, False,
-                                        True)
-                                else:
-                                    itm = self.__createResultItem(
-                                        fname, lineno, position,
-                                        text, False, False)
-                                    deferredFixes[id_] = itm
-                            else:
-                                self.__createResultItem(
-                                    fname, lineno, position, text, False,
-                                    False)
-                    if fixer:
-                        deferredResults = fixer.finalize()
-                        for id_ in deferredResults:
-                            fixed, msg = deferredResults[id_]
-                            itm = deferredFixes[id_]
-                            if fixed == 1:
-                                text = "\n" + \
-                                    self.trUtf8("Fix: {0}").format(msg)
-                                self.__modifyFixedResultItem(itm, text, True)
-                            else:
-                                self.__modifyFixedResultItem(itm, "", False)
-                        fixer.saveFile(encoding)
-                    self.__updateStatistics(stats, fixer)
-                    progress += 1
-            finally:
-                # reenable updates of the list
-                self.resultList.setSortingEnabled(True)
-                self.resultList.setUpdatesEnabled(True)
-            self.checkProgress.setValue(progress)
+            self.__options = [excludeMessages, includeMessages, repeatMessages,
+                              fixCodes, noFixCodes, fixIssues, maxLineLength,
+                              hangClosing, docType]
+            
+            # now go through all the files
+            self.progress = 0
+            self.files.sort()
+            self.check()
+        
+    def check(self, codestring='', onlyFixes={}):
+        """
+        Start a style check for one file.
+        
+        The results are reported to the __processResult slot.
+        @keyparam codestring optional sourcestring (str)
+        @keyparam onlyFixes dict which violations should be fixed (dict)
+        """
+        if not self.files:
             self.checkProgressLabel.setPath("")
-            QApplication.processEvents()
-            self.__resort()
-        else:
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
-        self.__finish()
+            self.__finish()
+            return
+        
+        self.filename = self.files.pop(0)
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.filename)
+        QApplication.processEvents()
+
+        if self.cancelled:
+            self.__resort()
+            return
+        
+        self.__lastFileItem = None
+        
+        if codestring:
+            self.source = codestring
+        else:
+            try:
+                self.source, encoding = Utilities.readEncodedFile(
+                    self.filename)
+                if encoding.endswith(
+                        ('-selected', '-default', '-guessed', '-ignore')):
+                    encoding = encoding.rsplit('-', 1)[0]
+                
+                self.source = self.source.splitlines(True)
+            except (UnicodeError, IOError) as msg:
+                self.noResults = False
+                self.__createResultItem(
+                    self.filename, 1, 1,
+                    self.trUtf8("Error: {0}").format(str(msg))
+                    .rstrip()[1:-1], False, False)
+                self.progress += 1
+                # Continue with next file
+                self.check()
+                return
+        
+        errors = []
+        self.__itms = []
+        for error, itm in onlyFixes.get(self.filename, []):
+            errors.append(error)
+            self.__itms.append(itm)
+        
+        eol = self.__getEol(self.filename)
+        args = self.__options + [errors, eol, encoding]
+        self.internalServices.styleCheck(
+            self.filename, self.source, args)
+
+    def __processResult(self, fn, codeStyleCheckerStats, fixes, results):
+        """
+        Privat slot called after perfoming a style check on one file.
+        
+        @param fn filename of the just checked file (str)
+        @param codeStyleCheckerStats stats of style and name check (dict)
+        @param fixes number of applied fixes (int)
+        @param results tuple for each found violation of style (tuple of
+            lineno (int), position (int), text (str), fixed (bool),
+            autofixing (bool))
+        """
+        # Check if it's the requested file, otherwise ignore signal
+        if fn != self.filename:
+            return
+        
+        # disable updates of the list for speed
+        self.resultList.setUpdatesEnabled(False)
+        self.resultList.setSortingEnabled(False)
+
+        fixed = None
+        if self.__itms:
+            for itm, (lineno, position, text, fixed, autofixing) in zip(
+                    self.__itms, results):
+                self.__modifyFixedResultItem(itm, text, fixed)
+                self.__updateFixerStatistics(fixes)
+        else:
+            for lineno, position, text, fixed, autofixing in results:
+                self.noResults = False
+                self.__createResultItem(
+                    fn, lineno, position, text, fixed, autofixing)
+
+            self.__updateStatistics(codeStyleCheckerStats, fixes)
+        
+        if fixed:
+            vm = e5App().getObject("ViewManager")
+            editor = vm.getOpenEditor(fn)
+            if editor:
+                editor.refresh()
+        
+        self.progress += 1
+        
+        self.__resort()
+        # reenable updates of the list
+        self.resultList.setSortingEnabled(True)
+        self.resultList.setUpdatesEnabled(True)
+        
+        self.checkProgress.setValue(self.progress)
+        QApplication.processEvents()
+        
+        self.check()
     
     def __finish(self):
         """
@@ -557,6 +477,19 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         self.checkProgress.setVisible(False)
         self.checkProgressLabel.setVisible(False)
+    
+    def __getEol(self, fn):
+        """
+        Private method to get the applicable eol string.
+        
+        @param fn filename where to determine the line ending (str)
+        @return eol string (string)
+        """
+        if self.__project.isOpen() and self.__project.isProjectFile(fn):
+            eol = self.__project.getEolString()
+        else:
+            eol = Utilities.linesep()
+        return eol
     
     @pyqtSlot()
     def on_startButton_clicked(self):
@@ -817,82 +750,39 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     def on_fixButton_clicked(self):
         """
         Private slot to fix selected issues.
-        """
-        from .CodeStyleFixer import CodeStyleFixer
         
-        # build a dictionary of issues to fix
+        Build a dictionary of issues to fix. Update the initialized __options.
+            Then call check with the dict as keyparam to fix selected issues.
+        """
         fixableItems = self.__getSelectedFixableItems()
-        fixesDict = {}      # dictionary of lists of tuples containing
-                            # the issue and the item
+        # dictionary of lists of tuples containing the issue and the item
+        fixesDict = {}
         for itm in fixableItems:
             filename = itm.data(0, self.filenameRole)
             if filename not in fixesDict:
                 fixesDict[filename] = []
             fixesDict[filename].append((
-                (itm.data(0, self.lineRole),
+                (filename, itm.data(0, self.lineRole),
                  itm.data(0, self.positionRole),
                  "{0} {1}".format(itm.data(0, self.codeRole),
                                   itm.data(0, self.messageRole))),
                 itm
             ))
         
-        # extract the configuration values
-        fixCodes = self.fixIssuesEdit.text()
-        noFixCodes = self.noFixIssuesEdit.text()
-        maxLineLength = self.lineLengthSpinBox.value()
+        # update the configuration values (3: fixCodes, 4: noFixCodes,
+        # 5: fixIssues, 6: maxLineLength)
+        self.__options[3] = self.fixIssuesEdit.text()
+        self.__options[4] = self.noFixIssuesEdit.text()
+        self.__options[5] = True
+        self.__options[6] = self.lineLengthSpinBox.value()
         
+        self.files = fixesDict.keys()
         # now go through all the files
-        if fixesDict:
-            self.checkProgress.setMaximum(len(fixesDict))
-            progress = 0
-            for file in fixesDict:
-                self.checkProgress.setValue(progress)
-                QApplication.processEvents()
-                
-                try:
-                    source, encoding = Utilities.readEncodedFile(file)
-                    source = source.splitlines(True)
-                except (UnicodeError, IOError) as msg:
-                    # skip silently because that should not happen
-                    progress += 1
-                    continue
-                
-                deferredFixes = {}
-                fixer = CodeStyleFixer(
-                    self.__project, file, source, fixCodes, noFixCodes,
-                    maxLineLength, True)  # always fix in place
-                errors = fixesDict[file]
-                errors.sort(key=lambda a: a[0][0])
-                for error in errors:
-                    (lineno, position, text), itm = error
-                    if lineno > len(source):
-                        lineno = len(source)
-                    fixed, msg, id_ = fixer.fixIssue(lineno, position, text)
-                    if fixed == 1:
-                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
-                        self.__modifyFixedResultItem(itm, text, True)
-                    elif fixed == 0:
-                        self.__modifyFixedResultItem(itm, "", False)
-                    else:
-                        # remember item for the deferred fix
-                        deferredFixes[id_] = itm
-                deferredResults = fixer.finalize()
-                for id_ in deferredResults:
-                    fixed, msg = deferredResults[id_]
-                    itm = deferredFixes[id_]
-                    if fixed == 1:
-                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
-                        self.__modifyFixedResultItem(itm, text, True)
-                    else:
-                        self.__modifyFixedResultItem(itm, "", False)
-                fixer.saveFile(encoding)
-                
-                self.__updateFixerStatistics(fixer)
-                progress += 1
-            
-            self.checkProgress.setValue(progress)
-            QApplication.processEvents()
-
+        self.progress = 0
+        self.files.sort()
+        self.cancelled = False
+        self.check(onlyFixes=fixesDict)
+    
     def __getSelectedFixableItems(self):
         """
         Private method to extract all selected items for fixable issues.

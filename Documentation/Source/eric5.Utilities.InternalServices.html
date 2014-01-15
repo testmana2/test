@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric5.Utilities.InternalServices</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Utilities.InternalServices</h1>
+<p>
+Module implementing a Qt free version of a background client for the various
+checkers and other python interpreter dependent functions.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#InternalServices">InternalServices</a></td>
+<td>Implement the standard services (syntax with flakes and the style check).</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="InternalServices" ID="InternalServices"></a>
+<h2>InternalServices</h2>
+<p>
+    Implement the standard services (syntax with flakes and the style check).
+</p>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#InternalServices.__init__">InternalServices</a></td>
+<td>Contructor of InternalServices.</td>
+</tr><tr>
+<td><a href="#InternalServices.__translateStyleCheck">__translateStyleCheck</a></td>
+<td>Privat slot called after perfoming a style check on one file.</td>
+</tr><tr>
+<td><a href="#InternalServices.__translateSyntaxCheck">__translateSyntaxCheck</a></td>
+<td>Slot to translate the resulting messages.</td>
+</tr><tr>
+<td><a href="#InternalServices.styleCheck">styleCheck</a></td>
+<td>Method to prepare a style check on one Python source file in another task.</td>
+</tr><tr>
+<td><a href="#InternalServices.syntaxCheck">syntaxCheck</a></td>
+<td>Method to prepare to compile one Python source file to Python bytecode and to perform a pyflakes check in another task.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="InternalServices.__init__" ID="InternalServices.__init__"></a>
+<h4>InternalServices (Constructor)</h4>
+<b>InternalServices</b>(<i>backgroundService</i>)
+<p>
+        Contructor of InternalServices.
+</p><dl>
+<dt><i>backgroundService</i></dt>
+<dd>
+to connect to
+</dd>
+</dl><a NAME="InternalServices.__translateStyleCheck" ID="InternalServices.__translateStyleCheck"></a>
+<h4>InternalServices.__translateStyleCheck</h4>
+<b>__translateStyleCheck</b>(<i>fn, codeStyleCheckerStats, results</i>)
+<p>
+        Privat slot called after perfoming a style check on one file.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the just checked file (str)
+</dd><dt><i>codeStyleCheckerStats</i></dt>
+<dd>
+stats of style and name check (dict)
+</dd><dt><i>results</i></dt>
+<dd>
+tuple for each found violation of style (tuple of
+            lineno (int), position (int), text (str), fixed (bool),
+            autofixing (bool), fixedMsg (str))
+</dd>
+</dl><a NAME="InternalServices.__translateSyntaxCheck" ID="InternalServices.__translateSyntaxCheck"></a>
+<h4>InternalServices.__translateSyntaxCheck</h4>
+<b>__translateSyntaxCheck</b>(<i>fn, nok, fname, line, index, code, error, warnings</i>)
+<p>
+        Slot to translate the resulting messages.
+</p><p>
+        If checkFlakes is True, warnings contains a list of strings containing
+        the warnings (marker, file name, line number, message)
+        The values are only valid, if nok is False.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the checked file (str)
+</dd><dt><i>nok</i></dt>
+<dd>
+flag if an error in the source was found (boolean)
+</dd><dt><i>fname</i></dt>
+<dd>
+filename of the checked file (str)  # TODO: remove dubl.
+</dd><dt><i>line</i></dt>
+<dd>
+number where the error occured (int)
+</dd><dt><i>index</i></dt>
+<dd>
+the column where the error occured (int)
+</dd><dt><i>code</i></dt>
+<dd>
+the part of the code where the error occured (str)
+</dd><dt><i>error</i></dt>
+<dd>
+the name of the error (str)
+</dd><dt><i>warnings</i></dt>
+<dd>
+a list of strings containing the warnings
+            (marker, file name, line number, col, message, list(msg_args))
+</dd>
+</dl><a NAME="InternalServices.styleCheck" ID="InternalServices.styleCheck"></a>
+<h4>InternalServices.styleCheck</h4>
+<b>styleCheck</b>(<i>filename, source, args, pyVer=None, editor=None</i>)
+<p>
+        Method to prepare a style check on one Python source file in another
+        task.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>source</i></dt>
+<dd>
+string containing the code to check (string)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments used by the codeStyleCheck function (list of
+            excludeMessages (str), includeMessages (str), repeatMessages
+            (bool), fixCodes (str), noFixCodes (str), fixIssues (bool),
+            maxLineLength (int), hangClosing (bool), docType (str), errors
+            (list of str), eol (str), encoding (str))
+</dd><dt><i>pyVer=</i></dt>
+<dd>
+version of the interpreter to use or None for
+            autodetect corresponding interpreter (int or None)
+</dd><dt><i>editor=</i></dt>
+<dd>
+if the file is opened already (Editor object)
+</dd>
+</dl><a NAME="InternalServices.syntaxCheck" ID="InternalServices.syntaxCheck"></a>
+<h4>InternalServices.syntaxCheck</h4>
+<b>syntaxCheck</b>(<i>filename, source="", checkFlakes=True, ignoreStarImportWarnings=False, pyVer=None, editor=None</i>)
+<p>
+        Method to prepare to compile one Python source file to Python bytecode
+        and to perform a pyflakes check in another task.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>source=</i></dt>
+<dd>
+string containing the code to check (string)
+</dd><dt><i>checkFlakes=</i></dt>
+<dd>
+flag indicating to do a pyflakes check (boolean)
+</dd><dt><i>ignoreStarImportWarnings=</i></dt>
+<dd>
+flag indicating to
+            ignore 'star import' warnings (boolean)
+</dd><dt><i>pyVer=</i></dt>
+<dd>
+version of the interpreter to use or None for
+            autodetect corresponding interpreter (int or None)
+</dd><dt><i>editor=</i></dt>
+<dd>
+if the file is opened already (Editor object)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

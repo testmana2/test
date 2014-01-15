@@ -48,8 +48,6 @@ W warnings
 900 syntax error
 """
 
-from __future__ import unicode_literals
-
 #
 # This is a modified version to make the original pep8.py better suitable
 # for being called from within the eric5 IDE. The modifications are as
@@ -78,7 +76,8 @@ try:
 except ImportError:
     from ConfigParser import RawConfigParser            # __IGNORE_WARNING__
 
-from PyQt4.QtCore import QCoreApplication, QT_TRANSLATE_NOOP
+# Tell 'lupdate' which strings to keep for translation.
+QT_TRANSLATE_NOOP = lambda mod, txt: txt
 
 DEFAULT_EXCLUDE = '.svn,CVS,.bzr,.hg,.git,__pycache__'
 DEFAULT_IGNORE = 'E123,E226,E24'
@@ -281,11 +280,11 @@ def getMessage(code, *args):
     @return translated and formatted message (string)
     """
     if code in pep8_messages:
-        return code + " " + QCoreApplication.translate("pep8",
-            pep8_messages[code]).format(*args)
+        args = [str(arg) for arg in args]
+        return '@@'.join([code + ' ' + pep8_messages[code]] + args)
     else:
-        return code + " " + QCoreApplication.translate("pep8",
-            "no message for this code defined")
+        return code + ' ' + QT_TRANSLATE_NOOP(
+            "pep8", "no message for this code defined")
 
 ##############################################################################
 # Plugins (check functions) for physical lines
@@ -396,7 +395,7 @@ def maximum_line_length(physical_line, max_line_length):
             # The line could contain multi-byte characters
             try:
                 length = len(line.decode('utf-8'))
-            except (UnicodeDecodeError, UnicodeEncodeError):
+            except UnicodeError:
                 pass
         if length > max_line_length:
             return max_line_length, "E501", length, max_line_length
@@ -781,6 +780,7 @@ def whitespace_around_operator(logical_line):
             yield match.start(2), "E224"
         elif len(after) > 1:
             yield match.start(2), "E222"
+
 
 def missing_whitespace_around_operator(logical_line, tokens):
     r"""
@@ -1439,8 +1439,8 @@ class Checker(object):
             if result is not None:
                 offset, code = result[:2]
                 args = result[2:]
-                self.report_error_args(self.line_number, offset, code, check,
-                    *args)
+                self.report_error_args(
+                    self.line_number, offset, code, check, *args)
 
     def build_tokens_line(self):
         """
@@ -1507,8 +1507,8 @@ class Checker(object):
                         if offset >= token_offset:
                             orig_number = token[2][0]
                             orig_offset = (token[2][1] + offset - token_offset)
-                self.report_error_args(orig_number, orig_offset, code, check,
-                    *args)
+                self.report_error_args(
+                    orig_number, orig_offset, code, check, *args)
         self.previous_logical = self.logical_line
 
     def check_ast(self):

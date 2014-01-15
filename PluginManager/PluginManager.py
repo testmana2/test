@@ -1127,7 +1127,7 @@ class PluginManager(QObject):
                                     " updates available. Use the plug-in"
                                     " repository dialog to get them.</p>"),
                         E5MessageBox.StandardButtons(
-                            E5MessageBox.Ignore | \
+                            E5MessageBox.Ignore |
                             E5MessageBox.Open),
                         E5MessageBox.Open)
                     if res == E5MessageBox.Open:

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>eric5.UtilitiesPython2.Tools</title>
+<title>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -19,13 +19,13 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.UtilitiesPython2.Tools</h1>
+<h1>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck</h1>
 <p>
-Module implementing tool functions.
+Module implementing the syntax check for Python 2/3.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>coding_regexps</td></tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -34,40 +34,19 @@ Module implementing tool functions.
 <h3>Functions</h3>
 <table>
 <tr>
-<td><a href="#decode">decode</a></td>
-<td>Function to decode a text.</td>
-</tr><tr>
 <td><a href="#extractLineFlags">extractLineFlags</a></td>
 <td>Function to extract flags starting and ending with '__' from a line comment.</td>
 </tr><tr>
-<td><a href="#get_coding">get_coding</a></td>
-<td>Function to get the coding of a text.</td>
+<td><a href="#initService">initService</a></td>
+<td>Initialize the service and return the entry point.</td>
 </tr><tr>
 <td><a href="#normalizeCode">normalizeCode</a></td>
 <td>Function to normalize the given code.</td>
 </tr><tr>
-<td><a href="#readEncodedFile">readEncodedFile</a></td>
-<td>Function to read a file and decode its contents into proper text.</td>
+<td><a href="#syntaxAndPyflakesCheck">syntaxAndPyflakesCheck</a></td>
+<td>Function to compile one Python source file to Python bytecode and to perform a pyflakes check.</td>
 </tr>
 </table>
-<hr /><hr />
-<a NAME="decode" ID="decode"></a>
-<h2>decode</h2>
-<b>decode</b>(<i>text</i>)
-<p>
-    Function to decode a text.
-</p><dl>
-<dt><i>text</i></dt>
-<dd>
-text to decode (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-decoded text and encoding
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="extractLineFlags" ID="extractLineFlags"></a>
 <h2>extractLineFlags</h2>
@@ -94,20 +73,15 @@ list containing the extracted flags (list of strings)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="get_coding" ID="get_coding"></a>
-<h2>get_coding</h2>
-<b>get_coding</b>(<i>text</i>)
+<a NAME="initService" ID="initService"></a>
+<h2>initService</h2>
+<b>initService</b>(<i></i>)
 <p>
-    Function to get the coding of a text.
+    Initialize the service and return the entry point.
 </p><dl>
-<dt><i>text</i></dt>
-<dd>
-text to inspect (string)
-</dd>
-</dl><dl>
 <dt>Returns:</dt>
 <dd>
-coding string
+the entry point for the background client (function)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -130,20 +104,36 @@ normalized code (string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="readEncodedFile" ID="readEncodedFile"></a>
-<h2>readEncodedFile</h2>
-<b>readEncodedFile</b>(<i>filename</i>)
+<a NAME="syntaxAndPyflakesCheck" ID="syntaxAndPyflakesCheck"></a>
+<h2>syntaxAndPyflakesCheck</h2>
+<b>syntaxAndPyflakesCheck</b>(<i>filename, codestring="", checkFlakes=True, ignoreStarImportWarnings=False</i>)
 <p>
-    Function to read a file and decode its contents into proper text.
+    Function to compile one Python source file to Python bytecode
+    and to perform a pyflakes check.
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
-name of the file to read (string)
+source filename (string)
+</dd><dt><i>codestring=</i></dt>
+<dd>
+string containing the code to compile (string)
+</dd><dt><i>checkFlakes=</i></dt>
+<dd>
+flag indicating to do a pyflakes check (boolean)
+</dd><dt><i>ignoreStarImportWarnings=</i></dt>
+<dd>
+flag indicating to
+        ignore 'star import' warnings (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of decoded text and encoding (string, string)
+A tuple indicating status (True = an error was found), the
+        file name, the line number, the index number, the code string
+        and the error message (boolean, string, string, string, string,
+        string). If checkFlakes is True, a list of strings containing the
+        warnings (marker, file name, line number, message)
+        The values are only valid, if the status is True.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

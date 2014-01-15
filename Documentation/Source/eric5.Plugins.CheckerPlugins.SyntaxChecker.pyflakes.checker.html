@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.checker</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.checker</h1>
+<p>
+Main module.
+</p><p>
+Implement the central Checker class.
+Also, it models the Bindings and Scopes.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>_MAGIC_GLOBALS</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Argument">Argument</a></td>
+<td>Represents binding a name as an argument.</td>
+</tr><tr>
+<td><a href="#Assignment">Assignment</a></td>
+<td>Represents binding a name with an explicit assignment.</td>
+</tr><tr>
+<td><a href="#Binding">Binding</a></td>
+<td>Represents the binding of a value to a name.</td>
+</tr><tr>
+<td><a href="#Checker">Checker</a></td>
+<td>I check the cleanliness and sanity of Python code.</td>
+</tr><tr>
+<td><a href="#ClassDefinition">ClassDefinition</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#ClassScope">ClassScope</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Definition">Definition</a></td>
+<td>A binding that defines a function or a class.</td>
+</tr><tr>
+<td><a href="#ExportBinding">ExportBinding</a></td>
+<td>A binding created by an C{__all__} assignment.</td>
+</tr><tr>
+<td><a href="#FunctionDefinition">FunctionDefinition</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#FunctionScope">FunctionScope</a></td>
+<td>I represent a name scope for a function.</td>
+</tr><tr>
+<td><a href="#GeneratorScope">GeneratorScope</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Importation">Importation</a></td>
+<td>A binding created by an import statement.</td>
+</tr><tr>
+<td><a href="#ModuleScope">ModuleScope</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Scope">Scope</a></td>
+<td></td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#__init__">__init__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__init___1">__init__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__init___2">__init__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__repr__">__repr__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__repr___1">__repr__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__str__">__str__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#getNodeName">getNodeName</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#getNodeType">getNodeType</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#getNodeType_1">getNodeType</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#iter_child_nodes">iter_child_nodes</a></td>
+<td>Yield all direct child nodes of *node*, that is, all fields that are nodes and all items of fields that are lists of nodes.</td>
+</tr><tr>
+<td><a href="#names">names</a></td>
+<td>Return a list of the names referenced by this binding.</td>
+</tr><tr>
+<td><a href="#unusedAssignments">unusedAssignments</a></td>
+<td>Return a generator for the assignments which have not been used.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="Argument" ID="Argument"></a>
+<h2>Argument</h2>
+<p>
+    Represents binding a name as an argument.
+</p>
+<h3>Derived from</h3>
+Binding
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Assignment" ID="Assignment"></a>
+<h2>Assignment</h2>
+<p>
+    Represents binding a name with an explicit assignment.
+</p><p>
+    The checker will raise warnings for any Assignment that isn't used. Also,
+    the checker does not consider assignments in tuple/list unpacking to be
+    Assignments, rather it treats them as simple Bindings.
+</p>
+<h3>Derived from</h3>
+Binding
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ClassDefinition" ID="ClassDefinition"></a>
+<h2>ClassDefinition</h2>
+
+<h3>Derived from</h3>
+Definition
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ClassScope" ID="ClassScope"></a>
+<h2>ClassScope</h2>
+
+<h3>Derived from</h3>
+Scope
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Definition" ID="Definition"></a>
+<h2>Definition</h2>
+<p>
+    A binding that defines a function or a class.
+</p>
+<h3>Derived from</h3>
+Binding
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ExportBinding" ID="ExportBinding"></a>
+<h2>ExportBinding</h2>
+<p>
+    A binding created by an C{__all__} assignment.  If the names in the list
+    can be determined statically, they will be treated as names for export and
+    additional checking applied to them.
+</p><p>
+    The only C{__all__} assignment that can be recognized is one which takes
+    the value of a literal list containing literal strings.  For example::
+</p><p>
+        __all__ = ["foo", "bar"]
+</p><p>
+    Names which are imported and not otherwise used but appear in the value of
+    C{__all__} will not have an unused import warning reported for them.
+</p>
+<h3>Derived from</h3>
+Binding
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="FunctionDefinition" ID="FunctionDefinition"></a>
+<h2>FunctionDefinition</h2>
+
+<h3>Derived from</h3>
+Definition
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="GeneratorScope" ID="GeneratorScope"></a>
+<h2>GeneratorScope</h2>
+
+<h3>Derived from</h3>
+Scope
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ModuleScope" ID="ModuleScope"></a>
+<h2>ModuleScope</h2>
+
+<h3>Derived from</h3>
+Scope
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Scope" ID="Scope"></a>
+<h2>Scope</h2>
+
+<h3>Derived from</h3>
+dict
+<h3>Class Attributes</h3>
+<table>
+<tr><td>importStarred</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__init__" ID="__init__"></a>
+<h2>__init__</h2>
+<b>__init__</b>(<i>self, name, source</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__init___1" ID="__init___1"></a>
+<h2>__init__</h2>
+<b>__init__</b>(<i>self, name, source</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__init___2" ID="__init___2"></a>
+<h2>__init__</h2>
+<b>__init__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__repr__" ID="__repr__"></a>
+<h2>__repr__</h2>
+<b>__repr__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__repr___1" ID="__repr___1"></a>
+<h2>__repr__</h2>
+<b>__repr__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__str__" ID="__str__"></a>
+<h2>__str__</h2>
+<b>__str__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getNodeName" ID="getNodeName"></a>
+<h2>getNodeName</h2>
+<b>getNodeName</b>(<i>node</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getNodeType" ID="getNodeType"></a>
+<h2>getNodeType</h2>
+<b>getNodeType</b>(<i>node_class</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getNodeType_1" ID="getNodeType_1"></a>
+<h2>getNodeType</h2>
+<b>getNodeType</b>(<i>node_class</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="iter_child_nodes" ID="iter_child_nodes"></a>
+<h2>iter_child_nodes</h2>
+<b>iter_child_nodes</b>(<i>node</i>)
+<p>
+        Yield all direct child nodes of *node*, that is, all fields that
+        are nodes and all items of fields that are lists of nodes.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="names" ID="names"></a>
+<h2>names</h2>
+<b>names</b>(<i>self</i>)
+<p>
+        Return a list of the names referenced by this binding.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="unusedAssignments" ID="unusedAssignments"></a>
+<h2>unusedAssignments</h2>
+<b>unusedAssignments</b>(<i>self</i>)
+<p>
+        Return a generator for the assignments which have not been used.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

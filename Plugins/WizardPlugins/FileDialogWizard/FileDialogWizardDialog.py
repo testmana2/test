@@ -104,7 +104,8 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         self.__pyqtVariant = 5 if txt == "PyQt5" else 4
         
-        self.__toggleInitialFilterAndResult(self.__typeButtonsGroup.checkedId())
+        self.__toggleInitialFilterAndResult(
+            self.__typeButtonsGroup.checkedId())
     
     def on_buttonBox_clicked(self, button):
         """
@@ -280,9 +281,9 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if (self.__pyqtVariant == 4 and
                 self.__typeButtonsGroup.checkedButton() in [
                     self.rfOpenFile, self.rfOpenFiles, self.rfSaveFile]) or \
-                (self.__pyqtVariant == 5 and
-                self.__typeButtonsGroup.checkedButton() in [
-                    self.rOpenFile, self.rOpenFiles, self.rSaveFile]):
+                    (self.__pyqtVariant == 5 and
+                        self.__typeButtonsGroup.checkedButton() in [
+                            self.rOpenFile, self.rOpenFiles, self.rSaveFile]):
                 filterVariable = ", selectedFilter"
             else:
                 filterVariable = ""

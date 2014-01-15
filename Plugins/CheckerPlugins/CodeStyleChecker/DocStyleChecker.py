@@ -7,8 +7,6 @@
 Module implementing a checker for documentation string conventions.
 """
 
-from __future__ import unicode_literals
-
 #
 # The routines of the checker class are modeled after the ones found in
 # pep257.py (version 0.2.4).
@@ -24,9 +22,8 @@ import tokenize
 import ast
 import sys
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
-
-PyCF_ONLY_AST = 1024
+# Tell 'lupdate' which strings to keep for translation.
+QT_TRANSLATE_NOOP = lambda mod, txt: txt
 
 
 class DocStyleContext(object):
@@ -397,11 +394,7 @@ class DocStyleChecker(object):
             return
         
         if code and (self.counters[code] == 1 or self.__repeat):
-            if code in DocStyleChecker.Codes:
-                text = self.getMessage(code, *args)
-            else:
-                text = code + " " + QCoreApplication.translate(
-                    "DocStyleChecker", "no message for this code defined")
+            text = self.getMessage(code, *args)
             # record the issue with one based line number
             self.errors.append((self.__filename, lineNumber + 1, offset, text))
     
@@ -429,12 +422,11 @@ class DocStyleChecker(object):
         @param args arguments for a formatted message (list)
         @return translated and formatted message (string)
         """
-        if code in DocStyleChecker.Messages:
-            return code + " " + QCoreApplication.translate(
-                "DocStyleChecker",
-                DocStyleChecker.Messages[code]).format(*args)
+        if code in cls.Messages:
+            return '@@'.join(
+                [code + ' ' + cls.Messages[code]] + list(args))
         else:
-            return code + " " + QCoreApplication.translate(
+            return code + ' ' + QT_TRANSLATE_NOOP(
                 "DocStyleChecker", "no message for this code defined")
     
     def __resetReadline(self):
@@ -468,7 +460,7 @@ class DocStyleChecker(object):
             return
         
         try:
-            compile(''.join(self.__source), '', 'exec', PyCF_ONLY_AST)
+            compile(''.join(self.__source), '', 'exec', ast.PyCF_ONLY_AST)
         except (SyntaxError, TypeError):
             self.__reportInvalidSyntax()
             return

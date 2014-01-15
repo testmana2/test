@@ -25,7 +25,7 @@ Module implementing a checker for naming conventions.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>QT_TRANSLATE_NOOP</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -107,6 +107,9 @@ object
 </tr><tr>
 <td><a href="#NamingStyleChecker.run">run</a></td>
 <td>Public method run by the pep8.py checker.</td>
+</tr><tr>
+<td><a href="#NamingStyleChecker.unpackArgs">unpackArgs</a></td>
+<td>Local helper function to unpack function argument names.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -414,6 +417,21 @@ tuple giving line number, offset within line, code and
 <dd>
 tuple giving line number, offset within line, code and
             checker function
+</dd>
+</dl><a NAME="NamingStyleChecker.unpackArgs" ID="NamingStyleChecker.unpackArgs"></a>
+<h4>NamingStyleChecker.unpackArgs</h4>
+<b>unpackArgs</b>(<i></i>)
+<p>
+                Local helper function to unpack function argument names.
+</p><dl>
+<dt><i>args</i></dt>
+<dd>
+list of AST node arguments
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of argument names (list of string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

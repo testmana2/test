@@ -30,6 +30,7 @@ AssociationItem E5ArrowItem
 Attribute ClbrBaseClasses.Attribute VisibilityMixin
 AuthenticationDialog QDialog Ui_AuthenticationDialog
 AutoSaver QObject
+BackgroundService QTcpServer
 BinaryModel QAbstractTableModel
 BookmarkActionSelectionDialog QDialog Ui_BookmarkActionSelectionDialog
 BookmarkInfoDialog QDialog Ui_BookmarkInfoDialog
@@ -78,8 +79,6 @@ CodeStyleCheckerDialog QDialog Ui_CodeStyleCheckerDialog
 CodeStyleCheckerPlugin QObject
 CodeStyleCheckerReport pep8.BaseReport
 CodeStyleCodeSelectionDialog QDialog Ui_CodeStyleCodeSelectionDialog
-CodeStyleFixer QObject
-CodeStyleReport pep8.BaseReport
 CodeStyleStatisticsDialog QDialog Ui_CodeStyleStatisticsDialog
 Coding ClbrBase
 CodingError Exception
@@ -134,6 +133,7 @@ DiffDialog QWidget Ui_DiffDialog
 DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
+DoctestSyntaxError Message
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
 DownloadManager QDialog Ui_DownloadManager
@@ -261,8 +261,9 @@ FtpDirLineParserError Exception
 FtpReply QNetworkReply
 FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin
-FunctionDefinition Binding
+FunctionDefinition Definition
 FunctionScope Scope
+GeneratorScope Scope
 GotoDialog QDialog Ui_GotoDialog
 Gpg HgExtension
 GpgProjectHelper HgExtensionProjectHelper
@@ -380,6 +381,7 @@ InputDialogWizardDialog QDialog Ui_InputDialogWizardDialog
 InsertBookmarksCommand RemoveBookmarksCommand
 Interface ClbrBaseClasses.Class VisibilityMixin
 InterfacePage ConfigurationPageBase Ui_InterfacePage
+InternalServices QObject
 InvalidPlistException Exception
 IrcChannelEditDialog QDialog Ui_IrcChannelEditDialog
 IrcChannelWidget QWidget Ui_IrcChannelWidget
@@ -575,7 +577,6 @@ Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
 RecursionError OverflowError ValueError
 Redefined Message
-RedefinedFunction Message
 RedefinedInListComp Message
 RedefinedWhileUnused Message
 Redirector QObject
@@ -713,7 +714,6 @@ UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
 Uid int
-UnBinding Binding
 UndefinedExport Message
 UndefinedLocal Message
 UndefinedName Message

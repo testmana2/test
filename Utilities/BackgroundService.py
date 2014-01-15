@@ -40,7 +40,7 @@ class BackgroundService(QTcpServer):
         """
         self.processes = [None, None]
         self.connections = [None, None]
-        self.isWorking = False
+        self.isWorking = None
         self.__queue = []
         self.services = {}
 
@@ -111,9 +111,9 @@ class BackgroundService(QTcpServer):
         Private method to take the next service request and send it to the
         client.
         """
-        if self.__queue and self.isWorking is False:
-            self.isWorking = True
+        if self.__queue and self.isWorking is None:
             fx, fn, pyVer, data = self.__queue.pop(0)
+            self.isWorking = pyVer
             self.__send(fx, fn, pyVer, data)
     
     def __send(self, fx, fn, pyVer, data):
@@ -135,7 +135,7 @@ class BackgroundService(QTcpServer):
                     fx, fn, pyVer, self.trUtf8(
                         'Python{0} interpreter not configured.').format(pyVer))
             # Reset flag and continue processing queue
-            self.isWorking = False
+            self.isWorking = None
             self.__processQueue()
         else:
             header = struct.pack(
@@ -186,7 +186,7 @@ class BackgroundService(QTcpServer):
             if callback:
                 callback[2](fn, *data)
         
-        self.isWorking = False
+        self.isWorking = None
         self.__processQueue()
 
     def enqueueRequest(self, fx, fn, pyVer, data):
@@ -245,6 +245,11 @@ class BackgroundService(QTcpServer):
         if not connection.waitForReadyRead(1000):
             return
         ch = 0 if connection.read(1) == b'2' else 1
+        # Avoid hanging of eric on shutdown
+        if self.connections[ch]:
+            self.connections[ch].close()
+        if self.isWorking == ch + 2:
+            self.isWorking = None
         self.connections[ch] = connection
         connection.readyRead.connect(
             lambda x=ch: self.__receive(x))
