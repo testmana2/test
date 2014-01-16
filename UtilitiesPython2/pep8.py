@@ -68,6 +68,7 @@ import time
 import inspect
 import keyword
 import tokenize
+import ast
 from optparse import OptionParser
 from fnmatch import fnmatch
 try:
@@ -91,7 +92,6 @@ REPORT_FORMAT = {
     'pylint': '%(path)s:%(row)d: [%(code)s] %(text)s',
 }
 
-PyCF_ONLY_AST = 1024
 SINGLETONS = frozenset(['False', 'None', 'True'])
 KEYWORDS = frozenset(keyword.kwlist + ['print']) - SINGLETONS
 UNARY_OPERATORS = frozenset(['>>', '**', '*', '+', '-'])
@@ -1351,7 +1351,7 @@ class Checker(object):
 
     def check_ast(self):
         try:
-            tree = compile(''.join(self.lines), '', 'exec', PyCF_ONLY_AST)
+            tree = compile(''.join(self.lines), '', 'exec', ast.PyCF_ONLY_AST)
         except (SyntaxError, TypeError):
             return self.report_invalid_syntax()
         for name, cls, _ in self._ast_checks:

@@ -24,8 +24,6 @@ import sys
 
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
-PyCF_ONLY_AST = 1024
-
 
 class DocStyleContext(object):
     """
@@ -470,7 +468,7 @@ class DocStyleChecker(object):
             return
         
         try:
-            compile(''.join(self.__source), '', 'exec', PyCF_ONLY_AST)
+            compile(''.join(self.__source), '', 'exec', ast.PyCF_ONLY_AST)
         except (SyntaxError, TypeError):
             self.__reportInvalidSyntax()
             return
