@@ -4,7 +4,7 @@
 #
 
 """
-Package containg the pyflakes Python3 port adapted for Qt.
+Package containing pyflakes adapted to eric5.
 """
 
-__version__ = '0.5.0'
+__version__ = '0.7.3'

@@ -63060,7 +63060,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3762"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Další varování&lt;/b&gt;&lt;p&gt;Jít na další řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Další varování&lt;/b&gt;&lt;p&gt;Jít na další řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3778"/>
@@ -63075,7 +63075,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3780"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Předchozí varování&lt;/b&gt;&lt;p&gt;Jít na předchozí řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Předchozí varování&lt;/b&gt;&lt;p&gt;Jít na předchozí řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3794"/>
@@ -63090,7 +63090,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3796"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Vyčistit varovná hlášení&lt;/b&gt;&lt;p&gt;Vyčistí všechna py3flakes varovná hlášení ze všech editorů.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Vyčistit varovná hlášení&lt;/b&gt;&lt;p&gt;Vyčistí všechna py3flakes varovná hlášení ze všech editorů.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="940"/>
@@ -63848,6 +63848,21 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3358"/>
         <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document in a new split. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3762"/>
+        <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a pyflakes warning.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3780"/>
+        <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a pyflakes warning.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3796"/>
+        <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear pyflakes warning messages of all editors.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -64962,63 +64977,78 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>pyFlakes</name>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="15"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="15"/>
         <source>{0!r} imported but unused.</source>
         <translation type="unfinished">{0!r} importováno ale nepoužito.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="18"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="18"/>
         <source>Redefinition of unused {0!r} from line {1!r}.</source>
         <translation type="unfinished">Předefinování nepoužitých {0!r} z řádky {1!r}.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="21"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="21"/>
         <source>Import {0!r} from line {1!r} shadowed by loop variable.</source>
         <translation type="unfinished">Import {0!r} z řádky {1!r} zastíněný proměnnou cyklu.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="24"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="24"/>
         <source>&apos;from {0} import *&apos; used; unable to detect undefined names.</source>
         <translation type="unfinished">použit &apos;from {0} import *&apos;; Nelze dohledat nedefinovaná jména.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="27"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="27"/>
         <source>Undefined name {0!r}.</source>
         <translation type="unfinished">Neznámé jméno {0!r}.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="30"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="30"/>
         <source>Undefined name {0!r} in __all__.</source>
         <translation type="unfinished">Neznámé jméno {0!r} v __all__.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="33"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="33"/>
         <source>Local variable {0!r} (defined in enclosing scope on line {1!r}) referenced before assignment.</source>
         <translation type="unfinished">Je odkazováno na lokální proměnnou {0!r} (definovaná v uzavřeném jmenném prostoru na řádce {1!r}) před tím než byla přiřazena.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="37"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="37"/>
         <source>Duplicate argument {0!r} in function definition.</source>
         <translation type="unfinished">Duplicitní argument {0!r} v definici funkce.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/translations.py" line="40"/>
         <source>Redefinition of function {0!r} from line {1!r}.</source>
-        <translation type="unfinished">Znovu definování funkce {0!r} z řádku {1!r}.</translation>
+        <translation type="obsolete">Znovu definování funkce {0!r} z řádku {1!r}.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="43"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="43"/>
         <source>Future import(s) {0!r} after other statements.</source>
         <translation type="unfinished">Future import(y)  {0!r} po ostatních výrazech.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="46"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="46"/>
         <source>Local variable {0!r} is assigned to but never used.</source>
         <translation type="unfinished">Lokální proměnná {0!r} je přiřazena, ale nikde nepoužita.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="66"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="71"/>
         <source>no message defined for code &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Utilities/pyflakes/translations.py" line="40"/>
+        <source>Redefinition of {0!r} from line {1!r}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Utilities/pyflakes/translations.py" line="49"/>
+        <source>List comprehension redefines {0!r} from line {1!r}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Utilities/pyflakes/translations.py" line="52"/>
+        <source>Syntax error detected in doctest.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

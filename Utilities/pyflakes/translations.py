@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- cod)ing: utf-8 -*-
 
 # Copyright (c) 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
@@ -39,14 +39,19 @@ _messages = {
         'Duplicate argument {0!r} in function definition.'),
     'F09': QCoreApplication.translate(
         'pyFlakes',
-        'Redefinition of function {0!r} from line {1!r}.'),
+        'Redefinition of {0!r} from line {1!r}.'),
     'F10': QCoreApplication.translate(
         'pyFlakes',
         'Future import(s) {0!r} after other statements.'),
     'F11': QCoreApplication.translate(
         'pyFlakes',
         'Local variable {0!r} is assigned to but never used.'),
-
+    'F12': QCoreApplication.translate(
+        'pyFlakes',
+        'List comprehension redefines {0!r} from line {1!r}.'),
+    'F13': QCoreApplication.translate(
+        'pyFlakes',
+        'Syntax error detected in doctest.'),
 }
 
 

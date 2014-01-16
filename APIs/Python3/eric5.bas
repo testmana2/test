@@ -64,6 +64,7 @@ ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
 Class ClbrBaseClasses.Class VisibilityMixin
+ClassDefinition Definition
 ClassItem UMLItem
 ClassModel UMLModel
 ClassScope Scope
@@ -127,11 +128,13 @@ DebuggerPropertiesWriter XMLStreamWriterBase
 DebuggerPython3Page ConfigurationPageBase Ui_DebuggerPython3Page
 DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
+Definition Binding
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
 DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
+DoctestSyntaxError Message
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
 DownloadManager QDialog Ui_DownloadManager
@@ -260,6 +263,7 @@ FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin
 FunctionDefinition Binding
 FunctionScope Scope
+GeneratorScope Scope
 GotoDialog QDialog Ui_GotoDialog
 Gpg HgExtension
 GpgProjectHelper HgExtensionProjectHelper
@@ -571,7 +575,9 @@ RbModule Class
 Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
 RecursionError OverflowError ValueError
+Redefined Message
 RedefinedFunction Message
+RedefinedInListComp Message
 RedefinedWhileUnused Message
 Redirector QObject
 RemoveBookmarksCommand QUndoCommand

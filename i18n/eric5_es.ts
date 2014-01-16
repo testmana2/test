@@ -60081,7 +60081,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3762"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Siguiente mensaje de advertencia&lt;/b&gt;&lt;p&gt;Ir a la siguiente línea en el editor actual que contiene una advertencia de py3flakes.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Siguiente mensaje de advertencia&lt;/b&gt;&lt;p&gt;Ir a la siguiente línea en el editor actual que contiene una advertencia de py3flakes.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3778"/>
@@ -60096,7 +60096,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3780"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mensaje de advertencia anterior&lt;/b&gt;&lt;p&gt;Ir a la línea anterior en el editor actual que contiene una advertencia de py3flakes.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mensaje de advertencia anterior&lt;/b&gt;&lt;p&gt;Ir a la línea anterior en el editor actual que contiene una advertencia de py3flakes.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3794"/>
@@ -60111,7 +60111,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3796"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Limpiar Mensajes de Advertencia&lt;/b&gt;&lt;p&gt;Limpiar mensajes de advertencia de py3flakes en todos los editores.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Limpiar Mensajes de Advertencia&lt;/b&gt;&lt;p&gt;Limpiar mensajes de advertencia de py3flakes en todos los editores.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="940"/>
@@ -60870,6 +60870,21 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="../ViewManager/ViewManager.py" line="3358"/>
         <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document in a new split. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nueva Vista de Documento&lt;/b&gt;&lt;p&gt;Abre una nueva vista del documento actual en una nueva división. Ambas vistas muestran el mismo documento. Sin embargo, los cursores pueden estar ubicados de manera independiente.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3762"/>
+        <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a pyflakes warning.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3780"/>
+        <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a pyflakes warning.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="3796"/>
+        <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear pyflakes warning messages of all editors.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -61833,63 +61848,78 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>pyFlakes</name>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="15"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="15"/>
         <source>{0!r} imported but unused.</source>
         <translation type="unfinished">{0!r} se ha importado pero no se ha utilizado.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="18"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="18"/>
         <source>Redefinition of unused {0!r} from line {1!r}.</source>
         <translation type="unfinished">Redefinición de {0!r} no utilizado desde la línea {1!r}.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="21"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="21"/>
         <source>Import {0!r} from line {1!r} shadowed by loop variable.</source>
         <translation type="unfinished">Import {0!r} en la línea {1!r} oculto por variable en un bucle.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="24"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="24"/>
         <source>&apos;from {0} import *&apos; used; unable to detect undefined names.</source>
         <translation type="unfinished">Se ha utilizado &apos;from {0} import *&apos;; no se pueden detectar nombres sin definir.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="27"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="27"/>
         <source>Undefined name {0!r}.</source>
         <translation type="unfinished">Nombre sin definir {0!r}.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="30"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="30"/>
         <source>Undefined name {0!r} in __all__.</source>
         <translation type="unfinished">Nombre sin definir {0!r} en __all__.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="33"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="33"/>
         <source>Local variable {0!r} (defined in enclosing scope on line {1!r}) referenced before assignment.</source>
         <translation type="unfinished">Variable local {0!r} (definida en ámbito en la línea {1!r}) referenciada antes de asignación.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="37"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="37"/>
         <source>Duplicate argument {0!r} in function definition.</source>
         <translation type="unfinished">Argumento duplicado {0!r} en definición de función.</translation>
     </message>
     <message>
         <location filename="../Utilities/py3flakes/translations.py" line="40"/>
         <source>Redefinition of function {0!r} from line {1!r}.</source>
-        <translation type="unfinished">Redefinicion de función {0!r} a partir de la línea {1!r}.</translation>
+        <translation type="obsolete">Redefinicion de función {0!r} a partir de la línea {1!r}.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="43"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="43"/>
         <source>Future import(s) {0!r} after other statements.</source>
         <translation type="unfinished">Future import(s) {0!r} despues de otras sentencias.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="46"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="46"/>
         <source>Local variable {0!r} is assigned to but never used.</source>
         <translation type="unfinished">La variable local {0!r} is asignada pero nunca es utilizada.</translation>
     </message>
     <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="66"/>
+        <location filename="../Utilities/pyflakes/translations.py" line="71"/>
         <source>no message defined for code &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Utilities/pyflakes/translations.py" line="40"/>
+        <source>Redefinition of {0!r} from line {1!r}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Utilities/pyflakes/translations.py" line="49"/>
+        <source>List comprehension redefines {0!r} from line {1!r}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Utilities/pyflakes/translations.py" line="52"/>
+        <source>Syntax error detected in doctest.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
