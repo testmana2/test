@@ -7,8 +7,6 @@
 """
 Module implementing the syntax check for Python 2/3.
 """
-from __future__ import unicode_literals
-
 import re
 import sys
 import traceback

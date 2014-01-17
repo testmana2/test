@@ -25,10 +25,6 @@ import Preferences
 import Utilities
 
 from . import pep8
-#from .NamingStyleChecker import NamingStyleChecker
-#
-## register the name checker
-#pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
 
 
 class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
@@ -776,7 +772,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.__options[5] = True
         self.__options[6] = self.lineLengthSpinBox.value()
         
-        self.files = fixesDict.keys()
+        self.files = list(fixesDict.keys())
         # now go through all the files
         self.progress = 0
         self.files.sort()

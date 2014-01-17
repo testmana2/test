@@ -18,7 +18,12 @@ import re
 import sys
 import tokenize
 
-import pep8
+# CodeStyleCheckerDialog tries to import FixableCodeStyleIssues what fail under
+# Python3. So ignore it.
+try:
+    import pep8
+except ImportError:
+    pass
 
 # Tell 'lupdate' which strings to keep for translation.
 QT_TRANSLATE_NOOP = lambda mod, txt: txt
