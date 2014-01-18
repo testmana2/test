@@ -12,7 +12,7 @@ import re
 import sys
 import json
 
-from PyQt4.QtCore import QFileInfo, pyqtSlot, qVersion, QProcess, QByteArray
+from PyQt4.QtCore import QFileInfo, pyqtSlot, QProcess, QByteArray
 from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, \
     QClipboard, QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
@@ -97,7 +97,7 @@ class QRegularExpressionWizardWidget(QWidget,
             self.trUtf8("Load"), QDialogButtonBox.ActionRole)
         self.loadButton.setToolTip(
             self.trUtf8("Load a regular expression from a file"))
-        if qVersion() >= "5.0.0" and self.__pyqt5Available:
+        if self.__pyqt5Available:
             self.validateButton = self.buttonBox.addButton(
                 self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
             self.validateButton.setToolTip(
@@ -474,8 +474,8 @@ class QRegularExpressionWizardWidget(QWidget,
         """
         Private slot to validate the entered QRegularExpression.
         """
-        if qVersion() < "5.0.0" or not self.__pyqt5Available:
-            # only available for Qt5
+        if not self.__pyqt5Available:
+            # only available for PyQt5
             return
         
         regexp = self.regexpTextEdit.toPlainText()
@@ -547,8 +547,8 @@ class QRegularExpressionWizardWidget(QWidget,
         
         @param startpos starting position for the QRegularExpression matching
         """
-        if qVersion() < "5.0.0" or not self.__pyqt5Available:
-            # only available for Qt5
+        if not self.__pyqt5Available:
+            # only available for PyQt5
             return
         
         regexp = self.regexpTextEdit.toPlainText()
