@@ -268,11 +268,18 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                 self.__createResultItem(
                                     err.filename, err.lineno, 0, msg, "")
                         else:
+                            from Utilities.pyflakes.translations import \
+                                getTranslatedFlakesMessage
                             for warning in warnings:
                                 self.noResults = False
+                                if len(warning[2]) == 3:
+                                    msg = getTranslatedFlakesMessage(
+                                        warning[2], warning[3])
+                                else:
+                                    msg = warning[2]
                                 self.__createResultItem(
                                     warning[0], int(warning[1]), 0,
-                                    warning[2], "", isWarning=True)
+                                    msg, "", isWarning=True)
                 progress += 1
             self.checkProgress.setValue(progress)
             self.checkProgressLabel.setPath("")

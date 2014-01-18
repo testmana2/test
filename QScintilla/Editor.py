@@ -5046,9 +5046,12 @@ class Editor(QsciScintillaCompat):
                     from Utilities.pyflakes.translations import \
                         getTranslatedFlakesMessage
                     for warning in warnings:
-                        self.toggleWarning(
-                            int(warning[1]), True, getTranslatedFlakesMessage(
-                                warning[2], warning[3]))
+                        if len(warning[2]) == 3:
+                            msg = getTranslatedFlakesMessage(warning[2],
+                                                             warning[3])
+                        else:
+                            msg = warning[2]
+                        self.toggleWarning(int(warning[1]), True, msg)
         
     def __initOnlineSyntaxCheck(self):
         """
