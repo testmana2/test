@@ -56,7 +56,7 @@ from . import messages
 if PY2:
     def getNodeType(node_class):
         # workaround str.upper() which is locale-dependent
-        return str(unicode(node_class.__name__).upper())
+        return str(unicode(node_class.__name__).upper())  # __IGNORE_WARNING__
 else:
     def getNodeType(node_class):
         return node_class.__name__.upper()
