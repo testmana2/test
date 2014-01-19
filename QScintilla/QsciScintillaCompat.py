@@ -1195,9 +1195,8 @@ class QsciScintillaCompat(QsciScintilla):
         """
         return QsciScintillaBase.event(self, evt)
     
-    # TODO: adjust this once we have a working QScintilla version
     if "inputMethodEvent" in QsciScintillaBase.__dict__ and \
-            QSCINTILLA_VERSION() < 0x020900:
+            QSCINTILLA_VERSION() < 0x020801:
         def inputMethodEvent(self, evt):
             """
             Protected method to cope with a glitch in some Qscintilla versions
