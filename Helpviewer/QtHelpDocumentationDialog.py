@@ -96,7 +96,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         Private slot to remove a document from the help database.
         """
-        res = E5MessageBox.question(
+        res = E5MessageBox.yesNo(
             self,
             self.tr("Remove Documentation"),
             self.tr(

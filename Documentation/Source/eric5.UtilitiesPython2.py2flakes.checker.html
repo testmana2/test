@@ -40,8 +40,14 @@ a { color: #BA6D36; }
 <td><a href="#Checker">Checker</a></td>
 <td>Class to check the cleanliness and sanity of Python code.</td>
 </tr><tr>
+<td><a href="#ClassDefinition">ClassDefinition</a></td>
+<td>Represents a class definition.</td>
+</tr><tr>
 <td><a href="#ClassScope">ClassScope</a></td>
 <td>Class representing a name scope for a class.</td>
+</tr><tr>
+<td><a href="#Definition">Definition</a></td>
+<td>A binding that defines a function or a class.</td>
 </tr><tr>
 <td><a href="#ExportBinding">ExportBinding</a></td>
 <td>A binding created by an __all__ assignment.</td>
@@ -52,6 +58,9 @@ a { color: #BA6D36; }
 <td><a href="#FunctionScope">FunctionScope</a></td>
 <td>Class representing a name scope for a function.</td>
 </tr><tr>
+<td><a href="#GeneratorScope">GeneratorScope</a></td>
+<td>Class representing a name scope for a generator function.</td>
+</tr><tr>
 <td><a href="#Importation">Importation</a></td>
 <td>A binding created by an import statement.</td>
 </tr><tr>
@@ -60,16 +69,46 @@ a { color: #BA6D36; }
 </tr><tr>
 <td><a href="#Scope">Scope</a></td>
 <td>Class defining the scope base class.</td>
-</tr><tr>
-<td><a href="#UnBinding">UnBinding</a></td>
-<td>Created by the 'del' operator.</td>
 </tr>
 </table>
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#__init__">__init__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__init___1">__init__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__init___2">__init__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__repr__">__repr__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__repr___1">__repr__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#__str__">__str__</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#getNodeName">getNodeName</a></td>
+<td>Module function for getting the name of a node.</td>
+</tr><tr>
+<td><a href="#getNodeType">getNodeType</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#getNodeType_1">getNodeType</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#iter_child_nodes">iter_child_nodes</a></td>
 <td>Yield all direct child nodes of *node*, that is, all fields that are nodes and all items of fields that are lists of nodes.</td>
+</tr><tr>
+<td><a href="#names">names</a></td>
+<td>Return a list of the names referenced by this binding.</td>
+</tr><tr>
+<td><a href="#unusedAssignments">unusedAssignments</a></td>
+<td>Return a generator for the assignments which have not been used.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -135,7 +174,7 @@ Binding
     Represents the binding of a value to a name.
 </p><p>
     The checker uses this to keep track of which names have been bound and
-    which names have not. See L{Assignment} for a special type of binding that
+    which names have not. See Assignment for a special type of binding that
     is checked with stricter rules.
 </p>
 <h3>Derived from</h3>
@@ -150,30 +189,12 @@ object
 </table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#Binding.__init__">Binding</a></td>
-<td></td>
-</tr><tr>
-<td><a href="#Binding.__repr__">__repr__</a></td>
-<td></td>
-</tr><tr>
-<td><a href="#Binding.__str__">__str__</a></td>
-<td></td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="Binding.__init__" ID="Binding.__init__"></a>
-<h4>Binding (Constructor)</h4>
-<b>Binding</b>(<i>name, source</i>)
-<a NAME="Binding.__repr__" ID="Binding.__repr__"></a>
-<h4>Binding.__repr__</h4>
-<b>__repr__</b>(<i></i>)
-<a NAME="Binding.__str__" ID="Binding.__str__"></a>
-<h4>Binding.__str__</h4>
-<b>__str__</b>(<i></i>)
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -186,7 +207,7 @@ object
 object
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AND</td></tr><tr><td>BITOR</td></tr><tr><td>BOOLOP</td></tr><tr><td>CALL</td></tr><tr><td>COMPREHENSION</td></tr><tr><td>CONTINUE</td></tr><tr><td>EQ</td></tr><tr><td>GENERATOREXP</td></tr><tr><td>LOAD</td></tr><tr><td>NUM</td></tr><tr><td>RETURN</td></tr><tr><td>SLICE</td></tr><tr><td>nodeDepth</td></tr><tr><td>scope</td></tr><tr><td>traceTree</td></tr>
+<tr><td>AND</td></tr><tr><td>BOOLOP</td></tr><tr><td>COMPREHENSION</td></tr><tr><td>CONTINUE</td></tr><tr><td>LOAD</td></tr><tr><td>NONLOCAL</td></tr><tr><td>NUM</td></tr><tr><td>RETURN</td></tr><tr><td>SETCOMP</td></tr><tr><td>SLICE</td></tr><tr><td>TRYEXCEPT</td></tr><tr><td>_customBuiltIns</td></tr><tr><td>_getDoctestExamples</td></tr><tr><td>builtIns</td></tr><tr><td>nodeDepth</td></tr><tr><td>offset</td></tr><tr><td>traceTree</td></tr><tr><td>withDoctest</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -210,10 +231,16 @@ object
 <td><a href="#Checker.DICTCOMP">DICTCOMP</a></td>
 <td></td>
 </tr><tr>
+<td><a href="#Checker.EXCEPTHANDLER">EXCEPTHANDLER</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Checker.FOR">FOR</a></td>
 <td>Process bindings for loop variables.</td>
 </tr><tr>
 <td><a href="#Checker.FUNCTIONDEF">FUNCTIONDEF</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.GENERATOREXP">GENERATOREXP</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.GLOBAL">GLOBAL</a></td>
@@ -232,10 +259,10 @@ object
 <td></td>
 </tr><tr>
 <td><a href="#Checker.NAME">NAME</a></td>
-<td>Locate the name in locals / function / globals scopes.</td>
+<td>Handle occurrence of Name (which can be a load/store/delete access.)</td>
 </tr><tr>
-<td><a href="#Checker._runDeferred">_runDeferred</a></td>
-<td>Run the callables in deferred using their associated scope stack.</td>
+<td><a href="#Checker.TRY">TRY</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#Checker.addArgs">addArgs</a></td>
 <td></td>
@@ -243,11 +270,11 @@ object
 <td><a href="#Checker.addBinding">addBinding</a></td>
 <td>Called when a binding is altered.</td>
 </tr><tr>
+<td><a href="#Checker.checkDeadScopes">checkDeadScopes</a></td>
+<td>Look at scopes which have been fully examined and report names in them which were imported but unused.</td>
+</tr><tr>
 <td><a href="#Checker.checkUnusedAssignments">checkUnusedAssignments</a></td>
 <td>Check to see if any assignments have not been used.</td>
-</tr><tr>
-<td><a href="#Checker.check_dead_scopes">check_dead_scopes</a></td>
-<td>Look at scopes which have been fully examined and report names in them which were imported but unused.</td>
 </tr><tr>
 <td><a href="#Checker.collectLoopVars">collectLoopVars</a></td>
 <td></td>
@@ -258,10 +285,40 @@ object
 <td><a href="#Checker.deferFunction">deferFunction</a></td>
 <td>Schedule a function handler to be called just before completion.</td>
 </tr><tr>
+<td><a href="#Checker.descendantOf">descendantOf</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.differentForks">differentForks</a></td>
+<td>True, if lnode and rnode are located on different forks of IF/TRY</td>
+</tr><tr>
+<td><a href="#Checker.getCommonAncestor">getCommonAncestor</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.getDocstring">getDocstring</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.getNodeHandler">getNodeHandler</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Checker.handleChildren">handleChildren</a></td>
 <td></td>
 </tr><tr>
+<td><a href="#Checker.handleDoctests">handleDoctests</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Checker.handleNode">handleNode</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.handleNodeDelete">handleNodeDelete</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.handleNodeLoad">handleNodeLoad</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.handleNodeStore">handleNodeStore</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.hasParent">hasParent</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.ignore">ignore</a></td>
@@ -269,6 +326,9 @@ object
 </tr><tr>
 <td><a href="#Checker.isDocstring">isDocstring</a></td>
 <td>Determine if the given node is a docstring, as long as it is at the correct place in the node tree.</td>
+</tr><tr>
+<td><a href="#Checker.onFork">onFork</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#Checker.popScope">popScope</a></td>
 <td></td>
@@ -279,8 +339,14 @@ object
 <td><a href="#Checker.pushFunctionScope">pushFunctionScope</a></td>
 <td></td>
 </tr><tr>
+<td><a href="#Checker.pushScope">pushScope</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Checker.report">report</a></td>
 <td></td>
+</tr><tr>
+<td><a href="#Checker.runDeferred">runDeferred</a></td>
+<td>Run the callables in deferred using their associated scope stack.</td>
 </tr><tr>
 <td><a href="#Checker.runFunction">runFunction</a></td>
 <td></td>
@@ -295,16 +361,19 @@ object
 </table>
 <a NAME="Checker.__init__" ID="Checker.__init__"></a>
 <h4>Checker (Constructor)</h4>
-<b>Checker</b>(<i>module, filename='(none)'</i>)
+<b>Checker</b>(<i>tree, filename='(none)', builtins=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>module</i></dt>
+<dt><i>tree</i></dt>
 <dd>
 parsed module tree or module source code
 </dd><dt><i>filename</i></dt>
 <dd>
 name of the module file (string)
+</dd><dt><i>builtins</i></dt>
+<dd>
+set of names to be treated as builtins (set of string)
 </dd>
 </dl><a NAME="Checker.ASSIGN" ID="Checker.ASSIGN"></a>
 <h4>Checker.ASSIGN</h4>
@@ -322,6 +391,9 @@ name of the module file (string)
 </p><a NAME="Checker.DICTCOMP" ID="Checker.DICTCOMP"></a>
 <h4>Checker.DICTCOMP</h4>
 <b>DICTCOMP</b>(<i>node</i>)
+<a NAME="Checker.EXCEPTHANDLER" ID="Checker.EXCEPTHANDLER"></a>
+<h4>Checker.EXCEPTHANDLER</h4>
+<b>EXCEPTHANDLER</b>(<i>node</i>)
 <a NAME="Checker.FOR" ID="Checker.FOR"></a>
 <h4>Checker.FOR</h4>
 <b>FOR</b>(<i>node</i>)
@@ -330,6 +402,9 @@ name of the module file (string)
 </p><a NAME="Checker.FUNCTIONDEF" ID="Checker.FUNCTIONDEF"></a>
 <h4>Checker.FUNCTIONDEF</h4>
 <b>FUNCTIONDEF</b>(<i>node</i>)
+<a NAME="Checker.GENERATOREXP" ID="Checker.GENERATOREXP"></a>
+<h4>Checker.GENERATOREXP</h4>
+<b>GENERATOREXP</b>(<i>node</i>)
 <a NAME="Checker.GLOBAL" ID="Checker.GLOBAL"></a>
 <h4>Checker.GLOBAL</h4>
 <b>GLOBAL</b>(<i>node</i>)
@@ -351,45 +426,35 @@ name of the module file (string)
 <h4>Checker.NAME</h4>
 <b>NAME</b>(<i>node</i>)
 <p>
-        Locate the name in locals / function / globals scopes.
-</p><a NAME="Checker._runDeferred" ID="Checker._runDeferred"></a>
-<h4>Checker._runDeferred</h4>
-<b>_runDeferred</b>(<i>deferred</i>)
-<p>
-        Run the callables in deferred using their associated scope stack.
-</p><a NAME="Checker.addArgs" ID="Checker.addArgs"></a>
+        Handle occurrence of Name (which can be a load/store/delete access.)
+</p><a NAME="Checker.TRY" ID="Checker.TRY"></a>
+<h4>Checker.TRY</h4>
+<b>TRY</b>(<i>node</i>)
+<a NAME="Checker.addArgs" ID="Checker.addArgs"></a>
 <h4>Checker.addArgs</h4>
 <b>addArgs</b>(<i></i>)
 <a NAME="Checker.addBinding" ID="Checker.addBinding"></a>
 <h4>Checker.addBinding</h4>
-<b>addBinding</b>(<i>lineno, value, reportRedef=True</i>)
+<b>addBinding</b>(<i>node, value, reportRedef=True</i>)
 <p>
         Called when a binding is altered.
-</p><dl>
-<dt><i>lineno</i></dt>
-<dd>
-line of the statement responsible for the change
-            (integer)
-</dd><dt><i>value</i></dt>
-<dd>
-the optional new value, a Binding instance, associated
-            with the binding; if None, the binding is deleted if it exists
-</dd><dt><i>reportRedef</i></dt>
-<dd>
-flag indicating if rebinding while unused will be
-            reported (boolean)
-</dd>
-</dl><a NAME="Checker.checkUnusedAssignments" ID="Checker.checkUnusedAssignments"></a>
+</p><p>
+        - `node` is the statement responsible for the change
+        - `value` is the optional new value, a Binding instance, associated
+          with the binding; if None, the binding is deleted if it exists.
+        - if `reportRedef` is True (default), rebinding while unused will be
+          reported.
+</p><a NAME="Checker.checkDeadScopes" ID="Checker.checkDeadScopes"></a>
+<h4>Checker.checkDeadScopes</h4>
+<b>checkDeadScopes</b>(<i></i>)
+<p>
+        Look at scopes which have been fully examined and report names in them
+        which were imported but unused.
+</p><a NAME="Checker.checkUnusedAssignments" ID="Checker.checkUnusedAssignments"></a>
 <h4>Checker.checkUnusedAssignments</h4>
 <b>checkUnusedAssignments</b>(<i></i>)
 <p>
                 Check to see if any assignments have not been used.
-</p><a NAME="Checker.check_dead_scopes" ID="Checker.check_dead_scopes"></a>
-<h4>Checker.check_dead_scopes</h4>
-<b>check_dead_scopes</b>(<i></i>)
-<p>
-        Look at scopes which have been fully examined and report names in them
-        which were imported but unused.
 </p><a NAME="Checker.collectLoopVars" ID="Checker.collectLoopVars"></a>
 <h4>Checker.collectLoopVars</h4>
 <b>collectLoopVars</b>(<i></i>)
@@ -409,12 +474,44 @@ flag indicating if rebinding while unused will be
         because code later in the file might modify the global scope. When
         `callable` is called, the scope at the time this is called will be
         restored, however it will contain any new bindings added to it.
-</p><a NAME="Checker.handleChildren" ID="Checker.handleChildren"></a>
+</p><a NAME="Checker.descendantOf" ID="Checker.descendantOf"></a>
+<h4>Checker.descendantOf</h4>
+<b>descendantOf</b>(<i>node, ancestors, stop=None</i>)
+<a NAME="Checker.differentForks" ID="Checker.differentForks"></a>
+<h4>Checker.differentForks</h4>
+<b>differentForks</b>(<i>lnode, rnode</i>)
+<p>
+True, if lnode and rnode are located on different forks of IF/TRY
+</p><a NAME="Checker.getCommonAncestor" ID="Checker.getCommonAncestor"></a>
+<h4>Checker.getCommonAncestor</h4>
+<b>getCommonAncestor</b>(<i>lnode, rnode, stop=None</i>)
+<a NAME="Checker.getDocstring" ID="Checker.getDocstring"></a>
+<h4>Checker.getDocstring</h4>
+<b>getDocstring</b>(<i>node</i>)
+<a NAME="Checker.getNodeHandler" ID="Checker.getNodeHandler"></a>
+<h4>Checker.getNodeHandler</h4>
+<b>getNodeHandler</b>(<i>node_class</i>)
+<a NAME="Checker.handleChildren" ID="Checker.handleChildren"></a>
 <h4>Checker.handleChildren</h4>
 <b>handleChildren</b>(<i>tree</i>)
+<a NAME="Checker.handleDoctests" ID="Checker.handleDoctests"></a>
+<h4>Checker.handleDoctests</h4>
+<b>handleDoctests</b>(<i>node</i>)
 <a NAME="Checker.handleNode" ID="Checker.handleNode"></a>
 <h4>Checker.handleNode</h4>
 <b>handleNode</b>(<i>node, parent</i>)
+<a NAME="Checker.handleNodeDelete" ID="Checker.handleNodeDelete"></a>
+<h4>Checker.handleNodeDelete</h4>
+<b>handleNodeDelete</b>(<i>node</i>)
+<a NAME="Checker.handleNodeLoad" ID="Checker.handleNodeLoad"></a>
+<h4>Checker.handleNodeLoad</h4>
+<b>handleNodeLoad</b>(<i>node</i>)
+<a NAME="Checker.handleNodeStore" ID="Checker.handleNodeStore"></a>
+<h4>Checker.handleNodeStore</h4>
+<b>handleNodeStore</b>(<i>node</i>)
+<a NAME="Checker.hasParent" ID="Checker.hasParent"></a>
+<h4>Checker.hasParent</h4>
+<b>hasParent</b>(<i>node, kind</i>)
 <a NAME="Checker.ignore" ID="Checker.ignore"></a>
 <h4>Checker.ignore</h4>
 <b>ignore</b>(<i>node</i>)
@@ -424,7 +521,10 @@ flag indicating if rebinding while unused will be
 <p>
         Determine if the given node is a docstring, as long as it is at the
         correct place in the node tree.
-</p><a NAME="Checker.popScope" ID="Checker.popScope"></a>
+</p><a NAME="Checker.onFork" ID="Checker.onFork"></a>
+<h4>Checker.onFork</h4>
+<b>onFork</b>(<i>parent, lnode, rnode, items</i>)
+<a NAME="Checker.popScope" ID="Checker.popScope"></a>
 <h4>Checker.popScope</h4>
 <b>popScope</b>(<i></i>)
 <a NAME="Checker.pushClassScope" ID="Checker.pushClassScope"></a>
@@ -433,15 +533,49 @@ flag indicating if rebinding while unused will be
 <a NAME="Checker.pushFunctionScope" ID="Checker.pushFunctionScope"></a>
 <h4>Checker.pushFunctionScope</h4>
 <b>pushFunctionScope</b>(<i></i>)
+<a NAME="Checker.pushScope" ID="Checker.pushScope"></a>
+<h4>Checker.pushScope</h4>
+<b>pushScope</b>(<i>scopeClass=FunctionScope</i>)
 <a NAME="Checker.report" ID="Checker.report"></a>
 <h4>Checker.report</h4>
 <b>report</b>(<i>messageClass, *args, **kwargs</i>)
-<a NAME="Checker.runFunction" ID="Checker.runFunction"></a>
+<a NAME="Checker.runDeferred" ID="Checker.runDeferred"></a>
+<h4>Checker.runDeferred</h4>
+<b>runDeferred</b>(<i>deferred</i>)
+<p>
+        Run the callables in deferred using their associated scope stack.
+</p><a NAME="Checker.runFunction" ID="Checker.runFunction"></a>
 <h4>Checker.runFunction</h4>
 <b>runFunction</b>(<i></i>)
 <a NAME="Checker.scope" ID="Checker.scope"></a>
 <h4>Checker.scope</h4>
 <b>scope</b>(<i></i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ClassDefinition" ID="ClassDefinition"></a>
+<h2>ClassDefinition</h2>
+<p>
+    Represents a class definition.
+</p>
+<h3>Derived from</h3>
+Definition
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -452,6 +586,32 @@ flag indicating if rebinding while unused will be
 </p>
 <h3>Derived from</h3>
 Scope
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Definition" ID="Definition"></a>
+<h2>Definition</h2>
+<p>
+    A binding that defines a function or a class.
+</p>
+<h3>Derived from</h3>
+Binding
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -498,21 +658,13 @@ Binding
 </table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#ExportBinding.names">names</a></td>
-<td>Return a list of the names referenced by this binding.</td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="ExportBinding.names" ID="ExportBinding.names"></a>
-<h4>ExportBinding.names</h4>
-<b>names</b>(<i></i>)
-<p>
-        Return a list of the names referenced by this binding.
-</p>
+
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="FunctionDefinition" ID="FunctionDefinition"></a>
@@ -521,7 +673,7 @@ Binding
     Represents a function definition.
 </p>
 <h3>Derived from</h3>
-Binding
+Definition
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -550,6 +702,32 @@ Binding
 Scope
 <h3>Class Attributes</h3>
 <table>
+<tr><td>alwaysUsed</td></tr><tr><td>usesLocals</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="GeneratorScope" ID="GeneratorScope"></a>
+<h2>GeneratorScope</h2>
+<p>
+    Class representing a name scope for a generator function.
+</p>
+<h3>Derived from</h3>
+Scope
+<h3>Class Attributes</h3>
+<table>
 <tr><td>None</td></tr>
 </table>
 <h3>Class Methods</h3>
@@ -558,18 +736,12 @@ Scope
 </table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#FunctionScope.__init__">FunctionScope</a></td>
-<td></td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="FunctionScope.__init__" ID="FunctionScope.__init__"></a>
-<h4>FunctionScope (Constructor)</h4>
-<b>FunctionScope</b>(<i></i>)
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -590,18 +762,12 @@ Binding
 </table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#Importation.__init__">Importation</a></td>
-<td></td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="Importation.__init__" ID="Importation.__init__"></a>
-<h4>Importation (Constructor)</h4>
-<b>Importation</b>(<i>name, source</i>)
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -648,59 +814,93 @@ dict
 </table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#Scope.__init__">Scope</a></td>
-<td></td>
-</tr><tr>
-<td><a href="#Scope.__repr__">__repr__</a></td>
-<td></td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="Scope.__init__" ID="Scope.__init__"></a>
-<h4>Scope (Constructor)</h4>
-<b>Scope</b>(<i></i>)
-<a NAME="Scope.__repr__" ID="Scope.__repr__"></a>
-<h4>Scope.__repr__</h4>
-<b>__repr__</b>(<i></i>)
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="UnBinding" ID="UnBinding"></a>
-<h2>UnBinding</h2>
+<a NAME="__init__" ID="__init__"></a>
+<h2>__init__</h2>
+<b>__init__</b>(<i>self, name, source</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__init___1" ID="__init___1"></a>
+<h2>__init__</h2>
+<b>__init__</b>(<i>self, name, source</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__init___2" ID="__init___2"></a>
+<h2>__init__</h2>
+<b>__init__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__repr__" ID="__repr__"></a>
+<h2>__repr__</h2>
+<b>__repr__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__repr___1" ID="__repr___1"></a>
+<h2>__repr__</h2>
+<b>__repr__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__str__" ID="__str__"></a>
+<h2>__str__</h2>
+<b>__str__</b>(<i>self</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getNodeName" ID="getNodeName"></a>
+<h2>getNodeName</h2>
+<b>getNodeName</b>(<i>node</i>)
 <p>
-    Created by the 'del' operator.
+    Module function for getting the name of a node.
 </p>
-<h3>Derived from</h3>
-Binding
-<h3>Class Attributes</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Class Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Static Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getNodeType" ID="getNodeType"></a>
+<h2>getNodeType</h2>
+<b>getNodeType</b>(<i>node_class</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getNodeType_1" ID="getNodeType_1"></a>
+<h2>getNodeType</h2>
+<b>getNodeType</b>(<i>node_class</i>)
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="iter_child_nodes" ID="iter_child_nodes"></a>
 <h2>iter_child_nodes</h2>
-<b>iter_child_nodes</b>(<i>node, astcls=_ast.AST</i>)
+<b>iter_child_nodes</b>(<i>node</i>)
 <p>
-        Yield all direct child nodes of *node*, that is, all fields that are
-        nodes and all items of fields that are lists of nodes.
+        Yield all direct child nodes of *node*, that is, all fields that
+        are nodes and all items of fields that are lists of nodes.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="names" ID="names"></a>
+<h2>names</h2>
+<b>names</b>(<i>self</i>)
+<p>
+        Return a list of the names referenced by this binding.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="unusedAssignments" ID="unusedAssignments"></a>
+<h2>unusedAssignments</h2>
+<b>unusedAssignments</b>(<i>self</i>)
+<p>
+        Return a generator for the assignments which have not been used.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

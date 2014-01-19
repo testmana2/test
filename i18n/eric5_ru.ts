@@ -7236,197 +7236,197 @@ Not connected
 <context>
     <name>DocStyleChecker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="127"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="125"/>
         <source>module is missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="129"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="127"/>
         <source>public function/method is missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="132"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="130"/>
         <source>private function/method may be missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="135"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="133"/>
         <source>public class is missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="137"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="135"/>
         <source>private class may be missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="139"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="137"/>
         <source>docstring not surrounded by &quot;&quot;&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="141"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="139"/>
         <source>docstring containing \ not surrounded by r&quot;&quot;&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="144"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="142"/>
         <source>docstring containing unicode character not surrounded by u&quot;&quot;&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="147"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="145"/>
         <source>one-liner docstring on multiple lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="149"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="147"/>
         <source>docstring has wrong indentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="192"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="190"/>
         <source>docstring summary does not end with a period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="155"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="153"/>
         <source>docstring summary is not in imperative mood (Does instead of Do)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="159"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="157"/>
         <source>docstring summary looks like a function&apos;s/method&apos;s signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="162"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="160"/>
         <source>docstring does not mention the return value type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="165"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="163"/>
         <source>function/method docstring is separated by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="168"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="166"/>
         <source>class docstring is not preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="171"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="169"/>
         <source>class docstring is not followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="224"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="222"/>
         <source>docstring summary is not followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="177"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="175"/>
         <source>last paragraph of docstring is not followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="181"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="179"/>
         <source>private function/method is missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="184"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="182"/>
         <source>private class is missing a docstring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="186"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="184"/>
         <source>leading quotes of docstring not on separate line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="189"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="187"/>
         <source>trailing quotes of docstring not on separate line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="194"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="192"/>
         <source>docstring does not contain a @return line but function/method returns something</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="198"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="196"/>
         <source>docstring contains a @return line but function/method doesn&apos;t return anything</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="202"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="200"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="205"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="203"/>
         <source>docstring contains too many @param/@keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="208"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="206"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="211"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="209"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="214"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="212"/>
         <source>class docstring is preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="216"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="214"/>
         <source>class docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="218"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="216"/>
         <source>function/method docstring is preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="221"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="219"/>
         <source>function/method docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="227"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="225"/>
         <source>last paragraph of docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="230"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="228"/>
         <source>docstring does not contain a @exception line but function/method raises an exception</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="234"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="232"/>
         <source>docstring contains a @exception line but function/method doesn&apos;t raise an exception</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="440"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="438"/>
         <source>no message for this code defined</source>
         <translation type="unfinished">сообщение об ошибке не определено</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="239"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="237"/>
         <source>{0}: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="151"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="149"/>
         <source>docstring does not contain a summary</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9379,7 +9379,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6017"/>
+        <location filename="../QScintilla/Editor.py" line="6020"/>
         <source>File changed</source>
         <translation>Файл изменён</translation>
     </message>
@@ -9459,77 +9459,77 @@ whole selection.&lt;/li&gt;
         <translation>Запретить точку останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5144"/>
+        <location filename="../QScintilla/Editor.py" line="5147"/>
         <source>Code Coverage</source>
         <translation>Охват кода</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5144"/>
+        <location filename="../QScintilla/Editor.py" line="5147"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5742"/>
+        <location filename="../QScintilla/Editor.py" line="5745"/>
         <source>Macro Name</source>
         <translation>Имя макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5742"/>
+        <location filename="../QScintilla/Editor.py" line="5745"/>
         <source>Select a macro name:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5813"/>
+        <location filename="../QScintilla/Editor.py" line="5816"/>
         <source>Macro files (*.macro)</source>
         <translation>Макросы (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5770"/>
+        <location filename="../QScintilla/Editor.py" line="5773"/>
         <source>Load macro file</source>
         <translation>Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5793"/>
+        <location filename="../QScintilla/Editor.py" line="5796"/>
         <source>Error loading macro</source>
         <translation>Ошибка при загрузке макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5813"/>
+        <location filename="../QScintilla/Editor.py" line="5816"/>
         <source>Save macro file</source>
         <translation>Сохранить файл с макросами</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5830"/>
+        <location filename="../QScintilla/Editor.py" line="5833"/>
         <source>Save macro</source>
         <translation>Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5846"/>
+        <location filename="../QScintilla/Editor.py" line="5849"/>
         <source>Error saving macro</source>
         <translation>Ошибка при сохранении макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5859"/>
+        <location filename="../QScintilla/Editor.py" line="5862"/>
         <source>Start Macro Recording</source>
         <translation>Начало записи макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5885"/>
+        <location filename="../QScintilla/Editor.py" line="5888"/>
         <source>Macro Recording</source>
         <translation>Запись макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5885"/>
+        <location filename="../QScintilla/Editor.py" line="5888"/>
         <source>Enter name of the macro:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5305"/>
+        <location filename="../QScintilla/Editor.py" line="5308"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5305"/>
+        <location filename="../QScintilla/Editor.py" line="5308"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
@@ -9579,7 +9579,7 @@ whole selection.&lt;/li&gt;
         <translation>Автосохранение разрешено</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6289"/>
+        <location filename="../QScintilla/Editor.py" line="6292"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
@@ -9589,12 +9589,12 @@ whole selection.&lt;/li&gt;
         <translation>Показать сообщение о синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5448"/>
+        <location filename="../QScintilla/Editor.py" line="5451"/>
         <source>Syntax Error</source>
         <translation>Синтаксическая ошибка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5448"/>
+        <location filename="../QScintilla/Editor.py" line="5451"/>
         <source>No syntax error message available.</source>
         <translation>Нет сообщения о синтаксической ошибке.</translation>
     </message>
@@ -9624,17 +9624,17 @@ whole selection.&lt;/li&gt;
         <translation>Предыдущая невыполняемая строка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5207"/>
+        <location filename="../QScintilla/Editor.py" line="5210"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5200"/>
+        <location filename="../QScintilla/Editor.py" line="5203"/>
         <source>All lines have been covered.</source>
         <translation>Все строки выполняются.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5207"/>
+        <location filename="../QScintilla/Editor.py" line="5210"/>
         <source>There is no coverage file available.</source>
         <translation>Нет файла с информацией по охвату.</translation>
     </message>
@@ -9644,22 +9644,22 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5784"/>
+        <location filename="../QScintilla/Editor.py" line="5787"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5793"/>
+        <location filename="../QScintilla/Editor.py" line="5796"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; повреждён&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5846"/>
+        <location filename="../QScintilla/Editor.py" line="5849"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6289"/>
+        <location filename="../QScintilla/Editor.py" line="6292"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -9704,82 +9704,82 @@ whole selection.&lt;/li&gt;
         <translation>Нет языка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6156"/>
+        <location filename="../QScintilla/Editor.py" line="6159"/>
         <source>{0} (ro)</source>
         <translation>{0} (только чтение)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6310"/>
+        <location filename="../QScintilla/Editor.py" line="6313"/>
         <source>Resources</source>
         <translation>Ресурсы</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6312"/>
+        <location filename="../QScintilla/Editor.py" line="6315"/>
         <source>Add file...</source>
         <translation>Добавить файл...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6314"/>
+        <location filename="../QScintilla/Editor.py" line="6317"/>
         <source>Add files...</source>
         <translation>Добавить файлы...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6316"/>
+        <location filename="../QScintilla/Editor.py" line="6319"/>
         <source>Add aliased file...</source>
         <translation>Добавить файл под другим именем...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6319"/>
+        <location filename="../QScintilla/Editor.py" line="6322"/>
         <source>Add localized resource...</source>
         <translation>Добавить локализованный ресурс...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6342"/>
+        <location filename="../QScintilla/Editor.py" line="6345"/>
         <source>Add file resource</source>
         <translation>Добавить файл ресурсов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6358"/>
+        <location filename="../QScintilla/Editor.py" line="6361"/>
         <source>Add file resources</source>
         <translation>Добавить файлы ресурсов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6386"/>
+        <location filename="../QScintilla/Editor.py" line="6389"/>
         <source>Add aliased file resource</source>
         <translation>Добавить файл ресурсов под другим именем</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6386"/>
+        <location filename="../QScintilla/Editor.py" line="6389"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Другое имя для файла &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6450"/>
+        <location filename="../QScintilla/Editor.py" line="6453"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6450"/>
+        <location filename="../QScintilla/Editor.py" line="6453"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6484"/>
+        <location filename="../QScintilla/Editor.py" line="6487"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6484"/>
+        <location filename="../QScintilla/Editor.py" line="6487"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6323"/>
+        <location filename="../QScintilla/Editor.py" line="6326"/>
         <source>Add resource frame</source>
         <translation>Добавить фрагмент ресурсов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5859"/>
+        <location filename="../QScintilla/Editor.py" line="5862"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Запись макроса уже идёт. Начать новую запись?</translation>
     </message>
@@ -9834,12 +9834,12 @@ whole selection.&lt;/li&gt;
         <translation>Не задан формат экспорта. Отмена...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6470"/>
+        <location filename="../QScintilla/Editor.py" line="6473"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6470"/>
+        <location filename="../QScintilla/Editor.py" line="6473"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>
@@ -9919,7 +9919,7 @@ whole selection.&lt;/li&gt;
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6772"/>
+        <location filename="../QScintilla/Editor.py" line="6775"/>
         <source>Check spelling...</source>
         <translation>Проверка орфографии...</translation>
     </message>
@@ -9929,12 +9929,12 @@ whole selection.&lt;/li&gt;
         <translation>Проверка орфографии подсвеченного участка...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6775"/>
+        <location filename="../QScintilla/Editor.py" line="6778"/>
         <source>Add to dictionary</source>
         <translation>Добавить в слварь</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6777"/>
+        <location filename="../QScintilla/Editor.py" line="6780"/>
         <source>Ignore All</source>
         <translation>Игнорировать всё</translation>
     </message>
@@ -9954,7 +9954,7 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;Невозможно сохранить файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6007"/>
+        <location filename="../QScintilla/Editor.py" line="6010"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt;</translation>
     </message>
@@ -9994,22 +9994,22 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5830"/>
+        <location filename="../QScintilla/Editor.py" line="5833"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Макро &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5681"/>
+        <location filename="../QScintilla/Editor.py" line="5684"/>
         <source>Warning: {0}</source>
         <translation>Предупреждение: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5688"/>
+        <location filename="../QScintilla/Editor.py" line="5691"/>
         <source>Error: {0}</source>
         <translation>Ошибка: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6013"/>
+        <location filename="../QScintilla/Editor.py" line="6016"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
@@ -10054,27 +10054,27 @@ whole selection.&lt;/li&gt;
         <translation>Предыдущее изменение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7188"/>
+        <location filename="../QScintilla/Editor.py" line="7191"/>
         <source>Sort Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7188"/>
+        <location filename="../QScintilla/Editor.py" line="7191"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5617"/>
+        <location filename="../QScintilla/Editor.py" line="5620"/>
         <source>Warning</source>
         <translation type="unfinished">Предупреждение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5617"/>
+        <location filename="../QScintilla/Editor.py" line="5620"/>
         <source>No warning messages available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5678"/>
+        <location filename="../QScintilla/Editor.py" line="5681"/>
         <source>Style: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43737,12 +43737,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation>Зарегистрированные документы</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="42"/>
+        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="48"/>
         <source>Add...</source>
         <translation>Добавить...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="52"/>
+        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="58"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
@@ -43772,12 +43772,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation>Удалить документацию</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="39"/>
+        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="45"/>
         <source>Press to select QtHelp documents to add to the database</source>
         <translation>Добавить QtHelp документы в базу данных</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="49"/>
+        <location filename="../Helpviewer/QtHelpDocumentationDialog.ui" line="55"/>
         <source>Press to remove the selected documents from the database</source>
         <translation>Удалить подсвеченные документы из базы данных</translation>
     </message>
@@ -43810,12 +43810,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation>Атрибуты:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="46"/>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="68"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="54"/>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="76"/>
         <source>Press to add a new filter</source>
         <translation>Добавить новый фильтр</translation>
     </message>
@@ -43827,7 +43827,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="64"/>
         <source>Press to remove the selected filter</source>
-        <translation>Удалить подсвеченный фильтр</translation>
+        <translation type="obsolete">Удалить подсвеченный фильтр</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="63"/>
@@ -43835,33 +43835,58 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="obsolete">Удалить</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="108"/>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="128"/>
         <source>Add Filter</source>
         <translation>Добавить фильтр</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="108"/>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="128"/>
         <source>Filter name:</source>
         <translation>Название фильтра:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="57"/>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="79"/>
         <source>Add Filter ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="67"/>
-        <source>Remove Filter</source>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="86"/>
+        <source>Press to remove the selected filters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="74"/>
-        <source>Press to remove the selected attribute</source>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="148"/>
+        <source>Remove Filters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="77"/>
-        <source>Remove Attribute</source>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="96"/>
+        <source>Press to remove the selected attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="176"/>
+        <source>Remove Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="106"/>
+        <source>Press to select all unused attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="109"/>
+        <source>Select Unused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="148"/>
+        <source>Do you really want to remove the selected filters from the database?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="176"/>
+        <source>Do you really want to remove the selected attributes from the database?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -53972,7 +53997,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="297"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="304"/>
         <source>No issues found.</source>
         <translation>Синтаксисические ошибки не найдены.</translation>
     </message>

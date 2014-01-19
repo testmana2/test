@@ -69,17 +69,26 @@ QDialog, Ui_QtHelpFiltersDialog
 <td><a href="#QtHelpFiltersDialog.on_attributesList_itemChanged">on_attributesList_itemChanged</a></td>
 <td>Private slot to handle a change of an attribute.</td>
 </tr><tr>
+<td><a href="#QtHelpFiltersDialog.on_attributesList_itemSelectionChanged">on_attributesList_itemSelectionChanged</a></td>
+<td>Private slot handling the selection of attributes.</td>
+</tr><tr>
 <td><a href="#QtHelpFiltersDialog.on_buttonBox_accepted">on_buttonBox_accepted</a></td>
 <td>Private slot to update the database, if the dialog is accepted.</td>
 </tr><tr>
 <td><a href="#QtHelpFiltersDialog.on_filtersList_currentItemChanged">on_filtersList_currentItemChanged</a></td>
 <td>Private slot to update the attributes depending on the current filter.</td>
 </tr><tr>
+<td><a href="#QtHelpFiltersDialog.on_filtersList_itemSelectionChanged">on_filtersList_itemSelectionChanged</a></td>
+<td>Private slot handling a change of selected filters.</td>
+</tr><tr>
 <td><a href="#QtHelpFiltersDialog.on_removeAttributeButton_clicked">on_removeAttributeButton_clicked</a></td>
-<td>Private slot to remove a filter attribute.</td>
+<td>Private slot to remove the selected filter attributes.</td>
 </tr><tr>
 <td><a href="#QtHelpFiltersDialog.on_removeButton_clicked">on_removeButton_clicked</a></td>
-<td>Private slot to remove a filter.</td>
+<td>Private slot to remove the selected filters.</td>
+</tr><tr>
+<td><a href="#QtHelpFiltersDialog.on_unusedAttributesButton_clicked">on_unusedAttributesButton_clicked</a></td>
+<td>Private slot to select all unused attributes.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -122,7 +131,12 @@ reference to the changed item (QTreeWidgetItem)
 <dd>
 column containing the change (integer)
 </dd>
-</dl><a NAME="QtHelpFiltersDialog.on_buttonBox_accepted" ID="QtHelpFiltersDialog.on_buttonBox_accepted"></a>
+</dl><a NAME="QtHelpFiltersDialog.on_attributesList_itemSelectionChanged" ID="QtHelpFiltersDialog.on_attributesList_itemSelectionChanged"></a>
+<h4>QtHelpFiltersDialog.on_attributesList_itemSelectionChanged</h4>
+<b>on_attributesList_itemSelectionChanged</b>(<i></i>)
+<p>
+        Private slot handling the selection of attributes.
+</p><a NAME="QtHelpFiltersDialog.on_buttonBox_accepted" ID="QtHelpFiltersDialog.on_buttonBox_accepted"></a>
 <h4>QtHelpFiltersDialog.on_buttonBox_accepted</h4>
 <b>on_buttonBox_accepted</b>(<i></i>)
 <p>
@@ -141,16 +155,26 @@ reference to the current item (QListWidgetitem)
 reference to the previous current item
             (QListWidgetItem)
 </dd>
-</dl><a NAME="QtHelpFiltersDialog.on_removeAttributeButton_clicked" ID="QtHelpFiltersDialog.on_removeAttributeButton_clicked"></a>
+</dl><a NAME="QtHelpFiltersDialog.on_filtersList_itemSelectionChanged" ID="QtHelpFiltersDialog.on_filtersList_itemSelectionChanged"></a>
+<h4>QtHelpFiltersDialog.on_filtersList_itemSelectionChanged</h4>
+<b>on_filtersList_itemSelectionChanged</b>(<i></i>)
+<p>
+        Private slot handling a change of selected filters.
+</p><a NAME="QtHelpFiltersDialog.on_removeAttributeButton_clicked" ID="QtHelpFiltersDialog.on_removeAttributeButton_clicked"></a>
 <h4>QtHelpFiltersDialog.on_removeAttributeButton_clicked</h4>
 <b>on_removeAttributeButton_clicked</b>(<i></i>)
 <p>
-        Private slot to remove a filter attribute.
+        Private slot to remove the selected filter attributes.
 </p><a NAME="QtHelpFiltersDialog.on_removeButton_clicked" ID="QtHelpFiltersDialog.on_removeButton_clicked"></a>
 <h4>QtHelpFiltersDialog.on_removeButton_clicked</h4>
 <b>on_removeButton_clicked</b>(<i></i>)
 <p>
-        Private slot to remove a filter.
+        Private slot to remove the selected filters.
+</p><a NAME="QtHelpFiltersDialog.on_unusedAttributesButton_clicked" ID="QtHelpFiltersDialog.on_unusedAttributesButton_clicked"></a>
+<h4>QtHelpFiltersDialog.on_unusedAttributesButton_clicked</h4>
+<b>on_unusedAttributesButton_clicked</b>(<i></i>)
+<p>
+        Private slot to select all unused attributes.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

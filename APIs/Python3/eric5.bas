@@ -261,7 +261,7 @@ FtpDirLineParserError Exception
 FtpReply QNetworkReply
 FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin
-FunctionDefinition Binding
+FunctionDefinition Definition
 FunctionScope Scope
 GeneratorScope Scope
 GotoDialog QDialog Ui_GotoDialog
@@ -576,7 +576,6 @@ Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
 RecursionError OverflowError ValueError
 Redefined Message
-RedefinedFunction Message
 RedefinedInListComp Message
 RedefinedWhileUnused Message
 Redirector QObject
@@ -714,7 +713,6 @@ UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
 Uid int
-UnBinding Binding
 UndefinedExport Message
 UndefinedLocal Message
 UndefinedName Message
