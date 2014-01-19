@@ -269,11 +269,11 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 if value.endswith("(current)"):
                     value = ("@CURRENT@", 0, 0)
                 elif value.endswith("(update)"):
-                    value = ("@UPDATE@", value.split(" ", 1)[0], 0)
+                    value = ("@UPDATE@", int(value.split(" ", 1)[0]), 0)
                 elif value.endswith("(merge)"):
                     parts = value.split(", ")
-                    value = ("@MERGE@", parts[0].split(" ", 1)[0],
-                             parts[1].split(" ", 1)[0])
+                    value = ("@MERGE@", int(parts[0].split(" ", 1)[0]),
+                             int(parts[1].split(" ", 1)[0]))
                 else:
                     value = ("@UNKNOWN@", 0, 0)
             elif name == "remote":
