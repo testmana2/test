@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -448,11 +447,6 @@
 &lt;p&gt;Seleccione el directorio de destino en el cuadro de diálogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="94"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="35"/>
         <source>&amp;Target Directory:</source>
         <translation>Direc&amp;torio de Destino:</translation>
@@ -564,11 +558,6 @@ Para seleccionarlo a través de un cuadro diálogo, presione el botón de la der
 &lt;p&gt;Select the source files via a files selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Archivos de origen&lt;/b&gt;
 &lt;p&gt;Seleccione los archivos de origen utilizando un fichero de selección de archivos.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/AddFileDialog.ui" line="65"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.ui" line="29"/>
@@ -1111,11 +1100,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Seleccione el archivo de proyecto utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="62"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="77"/>
         <source>Enter a short description for the project</source>
         <translation>Introduzca una descripción corta para el proyecto</translation>
@@ -1563,11 +1547,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
 &lt;p&gt;Seleccionar el archivo a añadir a marcadores utilizando un diálogo de selección de archivos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="91"/>
         <source>Move down</source>
         <translation>Mover hacia abajo</translation>
@@ -1946,8 +1925,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2188,8 +2167,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -2655,11 +2634,6 @@ Línea: {1}</translation>
         <location filename="../Cooperation/ChatWidget.ui" line="127"/>
         <source>Press to toggle the shared status of the current editor</source>
         <translation>Pulsar para conmutar el estado de compartición del editor actual</translation>
-    </message>
-    <message>
-        <location filename="../Cooperation/ChatWidget.ui" line="166"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.ui" line="140"/>
@@ -3198,11 +3172,6 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="214"/>
         <source>Press to select the message codes from a list</source>
         <translation>Pulsar para seleccionar los códigos de mensaje de una lista</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="217"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="158"/>
@@ -4038,11 +4007,6 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <location filename="../UI/CompareDialog.ui" line="82"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Presione para seleccionar el archivo utilizando un diálogo de selección de archivo</translation>
-    </message>
-    <message>
-        <location filename="../UI/CompareDialog.ui" line="79"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.ui" line="65"/>
@@ -4910,11 +4874,6 @@ para visualizar la página de configuración.</translation>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="57"/>
         <source>Press to select the IDL compiler via a file selection dialog.</source>
         <translation>Presione para seleccionar el compilador IDL utilizando un diálogo de selección de archivos.</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="45"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="43"/>
@@ -6296,11 +6255,6 @@ Not connected
         <translation>Pulse para seleccionar el Cliente de Depuración utilizando un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="65"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="46"/>
         <source>Interpreter for Debug Client</source>
         <translation>Intérprete para el cliente de Depuración</translation>
@@ -6503,11 +6457,6 @@ Not connected
         <translation>Pulse para seleccionar el intérprete de Python3 a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="97"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="70"/>
         <source>Debug Client Type</source>
         <translation>Tipo de Cliente de Depuración</translation>
@@ -6631,11 +6580,6 @@ Not connected
         <translation>Pulse para seleccionar el intérprete de Python a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="87"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="60"/>
         <source>Debug Client Type</source>
         <translation>Tipo de Cliente de Depuración</translation>
@@ -6754,11 +6698,6 @@ Not connected
         <translation>Pulse para seleccionar el intérprete de Ruby a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="53"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
@@ -6803,11 +6742,6 @@ Not connected
         <location filename="../UI/DiffDialog.ui" line="67"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Pulse para seleccionar el archivo utilizando un diálogo de selección de archivos</translation>
-    </message>
-    <message>
-        <location filename="../UI/DiffDialog.ui" line="73"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.ui" line="50"/>
@@ -8693,11 +8627,6 @@ selección completa.&lt;/li&gt;
         <translation>Pulse para abrir un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="145"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Debugger/EditBreakpointDialog.ui" line="143"/>
         <source>Linenumber:</source>
         <translation>Número de línea:</translation>
@@ -9735,11 +9664,6 @@ selección completa.&lt;/li&gt;
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="173"/>
         <source>Press to select an API file via a selection dialog</source>
         <translation>Pulse para seleccionar un archivo API utilizando un cuadro de diálogo</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="125"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="96"/>
@@ -11693,11 +11617,6 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar archivo con listado de palabras personal a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="262"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="244"/>
         <source>Personal exclude list file:</source>
         <translation>Archivo con listado de exclusión personal:</translation>
@@ -13119,11 +13038,6 @@ selección completa.&lt;/li&gt;
         <translation>Pulse para abrir un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="221"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="35"/>
         <source>Output File:</source>
         <translation>Archivo de salida:</translation>
@@ -13356,11 +13270,6 @@ selección completa.&lt;/li&gt;
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="400"/>
         <source>Press to open a directory selection dialog</source>
         <translation>Pulse para abrir un diálogo de selección de directorio</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="411"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="63"/>
@@ -14738,11 +14647,6 @@ selección completa.&lt;/li&gt;
         <translation>Seleccione el directorio en el cuadro de diálogo</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="297"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../UI/FindFileDialog.ui" line="96"/>
         <source>Select to match case sensitive</source>
         <translation>Seleccione para diferenciar may/min</translation>
@@ -14964,11 +14868,6 @@ selección completa.&lt;/li&gt;
         <location filename="../UI/FindFileNameDialog.ui" line="86"/>
         <source>Press to select the directory, the file should be searched in</source>
         <translation>Presione para seleccionar el directorio en que se debería buscar el archivo</translation>
-    </message>
-    <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="88"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.ui" line="97"/>
@@ -15612,11 +15511,6 @@ Razón: {0}</translation>
         <translation>Seleccione el archivo de hoja de estilos de usuario utilizando un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="185"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="135"/>
         <source>Select Style Sheet</source>
         <translation>Seleccionar Hoja de Estilos</translation>
@@ -15661,7 +15555,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -16139,11 +16033,6 @@ Razón: {0}</translation>
         <translation>&lt;b&gt;Configurar la documentación de ayuda&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="262"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="103"/>
         <source>Qt4 Documentation</source>
         <translation>Documentación de Qt4</translation>
@@ -16378,11 +16267,6 @@ Razón: {0}</translation>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="67"/>
         <source>Select the style sheet file via a file selection dialog</source>
         <translation>Seleccione el archivo de hoja de estilos utilizando un diálogo de selección de archivo</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="70"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="60"/>
@@ -16662,11 +16546,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="58"/>
         <source>Press to select the custom viewer via a file selection dialog</source>
         <translation>Presione para seleccionar el visor personalizado a través de un diálogo de selección de archivo</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="61"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="67"/>
@@ -19141,11 +19020,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Resolviendo archivos/directorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="925"/>
-        <source>Taging in the Mercurial repository</source>
-        <translation type="obsolete">Haciendo tag en el repositorio Mercurial</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="997"/>
         <source>Reverting changes</source>
         <translation>Revirtiendo cambios</translation>
@@ -19568,11 +19442,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="85"/>
         <source>Press to select the archive file name via a file selection dialog</source>
         <translation>Pulsar para seleccionar el nombre de fichero del archivo a través de un diálogo de selección de archivos</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="40"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
@@ -20464,11 +20333,6 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de destino&lt;/b&gt;
 &lt;p&gt;Seleccione el nombre de destino para la operación a través de un diálogo de selección.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
@@ -21570,11 +21434,6 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>Cambiar Fase</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="348"/>
-        <source>Press to copy the selected changesets to the current branch</source>
-        <translation type="obsolete">Pulsar para copiar los changesets seleccionados a la branch actual</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1424"/>
         <source>Copy Changesets</source>
         <translation>Copiar Changesets</translation>
@@ -22036,11 +21895,6 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="47"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="116"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
@@ -25231,40 +25085,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Acción de Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="72"/>
-        <source>Select to create a regular tag</source>
-        <translation type="obsolete">Seleccionar para crear una tag normal</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="75"/>
-        <source>&lt;b&gt;Create Regular Tag&lt;/b&gt;
-&lt;p&gt;Select this entry in order to create a regular tag.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Crear Tag Normal&lt;/b&gt;
-￼&lt;p&gt;Seleccione esta entrada para crear una tag normal.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="79"/>
-        <source>Create Regular Tag</source>
-        <translation type="obsolete">Crear Tag Normal</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="89"/>
-        <source>Select to create a local tag</source>
-        <translation type="obsolete">Seleccionar para crear una tag local</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="92"/>
-        <source>&lt;b&gt;Create Local Tag&lt;/b&gt;
-&lt;p&gt;Select this entry in order to create a local tag.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Crear Tag Local&lt;/b&gt;
-￼&lt;p&gt;Seleccione esta entrada para crear una tag local.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="96"/>
-        <source>Create Local Tag</source>
-        <translation type="obsolete">Crear Tag Local</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="93"/>
         <source>Select to delete a tag</source>
         <translation>Seleccionar para borrar una tag</translation>
@@ -26838,11 +26658,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Pulse para seleccionar un directorio de iconos utilizando un diálogo de selección</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="81"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="91"/>
         <source>Show</source>
         <translation>Mostrar</translation>
@@ -27182,11 +26997,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
         <source>Select the style sheet file via a file selection dialog</source>
         <translation>Seleccione el archivo de hoja de estilos utilizando un diálogo de selección de archivo</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="249"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="255"/>
@@ -31520,11 +31330,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Abrir Multiproyecto</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="480"/>
-        <source>Multiproject Files (*.e4m)</source>
-        <translation type="obsolete">Archivos de multiproyecto (*.e4m)</translation>
-    </message>
-    <message>
         <location filename="../MultiProject/MultiProject.py" line="657"/>
         <source>Save multiproject as</source>
         <translation>Guardar multiproyecto como</translation>
@@ -31887,11 +31692,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccione el directorio de descarga utilizando un diálogo de selección de directorios</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="62"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="120"/>
         <source>Select to use a web proxy</source>
         <translation>Seleccione para usar un proxy web</translation>
@@ -32173,11 +31973,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccione la ruta del archivo con el codigo fuente utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="44"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="42"/>
         <source>&amp;Filename:</source>
         <translation>&amp;Nombre de archivo:</translation>
@@ -32358,11 +32153,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../UI/NumbersWidget.ui" line="52"/>
         <source>Press to import the selected binary number</source>
         <translation>Pulse para importar el número binario seleccionado</translation>
-    </message>
-    <message>
-        <location filename="../UI/NumbersWidget.ui" line="183"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../UI/NumbersWidget.ui" line="59"/>
@@ -33685,11 +33475,6 @@ Destination:
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
         <translation>Seleccione el directorio de descarga de plugins utilizando un diálogo de selección de directorios</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="56"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="107"/>
@@ -37178,11 +36963,6 @@ Seleccione Actualizar.</translation>
         <translation>&lt;b&gt;Script Principal&lt;/b&gt;￼&lt;p&gt;Seleccione el script principal del proyecto a través de un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="200"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Project/PropertiesDialog.ui" line="46"/>
         <source>Enter the project name</source>
         <translation>Introduzca el nombre del proyecto</translation>
@@ -37948,11 +37728,6 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
         <translation>&lt;b&gt;Comentario: (?#)&lt;/b&gt;￼&lt;p&gt;Insertar comentario dentro de la regexp. El motor de regex ignora todo lo que hay a continuación de (?# hasta encontrar el primer paréntesis de cierre
 El siguiente ejemplo puede ilustra una regexp que coincide con una fecha valida: &lt;/p&gt;￼&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="416"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="118"/>
@@ -39648,11 +39423,6 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>&lt;b&gt;Deshacer última edición&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="477"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="86"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Rehacer última edición&lt;/b&gt;</translation>
@@ -40960,11 +40730,6 @@ El siguiente ejemplo puede ilustra una regexp que coincide con una fecha valida:
 ￼&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="381"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="66"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Único carácter de un rango (por ej. [abcd])&lt;/b&gt;&lt;p&gt;Seleccionar un único caracter de un rango de caracteres a traves de un diálogo específico.&lt;/p&gt;</translation>
@@ -41685,11 +41450,6 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>Pulse para añadir un nuevo filtro</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="64"/>
-        <source>Press to remove the selected filter</source>
-        <translation type="obsolete">Pulse para eliminar el filtro seleccionado</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="128"/>
         <source>Add Filter</source>
         <translation>Añadir Filtro</translation>
@@ -41703,21 +41463,6 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="79"/>
         <source>Add Filter ...</source>
         <translation>Añadir Filtro ...</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="67"/>
-        <source>Remove Filter</source>
-        <translation type="obsolete">Eliminar Filtro</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="74"/>
-        <source>Press to remove the selected attribute</source>
-        <translation type="obsolete">Pulse para eliminar el atributo seleccionado</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="77"/>
-        <source>Remove Attribute</source>
-        <translation type="obsolete">Eliminar Atributo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="86"/>
@@ -41766,11 +41511,6 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Qt&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar Qt&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="46"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="77"/>
@@ -44412,11 +44152,6 @@ Not connected</source>
         <translation>Seleccionar archivo con listado de palabras del proyecto a través de un diálogo de selección de archivo</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="86"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Project/SpellingPropertiesDialog.ui" line="57"/>
         <source>Project E&amp;xclude List:</source>
         <translation>Lista de E&amp;xclusión del Proyecto:</translation>
@@ -44707,11 +44442,6 @@ Not connected</source>
         <translation>Pulse para seleccionar un archivo de base de datos</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="78"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
         <source>&amp;Username:</source>
         <translation>Nombre de &amp;Usuario:</translation>
@@ -44820,11 +44550,6 @@ Not connected</source>
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="114"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="81"/>
@@ -44983,11 +44708,6 @@ Not connected</source>
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="114"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="65"/>
@@ -45199,11 +44919,6 @@ Not connected</source>
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="114"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directorio de &amp;Trabajo:</translation>
@@ -45342,11 +45057,6 @@ Not connected</source>
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="114"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="81"/>
@@ -46287,11 +45997,6 @@ Not connected</source>
 &lt;p&gt;Introduzca el directorio de trabajo para el comando Subversion a través de un cuadro diálogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="71"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
         <source>Enter the working directory for the Subversion command</source>
         <translation>Introducir el directorio de trabajo para el comando Subversion</translation>
@@ -46422,11 +46127,6 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de destino&lt;/b&gt;&lt;p&gt;Seleccione el nombre de destino para la operación a través de un diálogo de selección.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="32"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="25"/>
@@ -47354,11 +47054,6 @@ en la copia de trabajo.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Tag en VCS&lt;/b&gt;￼&lt;p&gt;Introduzca el nombre de tag a partir de la cual se debería generar el nuevo proyecto. Dejar en blanco para recuperar los datos más recientes del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="119"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleccionar el protocolo para acceder al repositorio</translation>
@@ -47487,11 +47182,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="56"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleccionar el protocolo para acceder al repositorio</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="66"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="105"/>
@@ -48435,11 +48125,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="93"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Pulse para seleccionar el archivo utilizando un diálogo de selección de archivos</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="85"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="83"/>
@@ -50896,11 +50581,6 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
         <translation>Seleccionar el directorio compartido vía un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="49"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="70"/>
         <source>Shared Directory</source>
         <translation>Directorio Compartido</translation>
@@ -52833,11 +52513,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
 &lt;p&gt;Seleccione el icono a través de un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="271"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="136"/>
         <source>Enter the filename of the executable</source>
         <translation>Introducir el nombre de archivo del ejecutable</translation>
@@ -53239,11 +52914,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Select the directory for the binary translations via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ruta de Binarios de Traducciones&lt;/b&gt;￼&lt;p&gt;Seleccione el directorio para los binarios de las traducciones a traves de un diálogo de selección de directorio.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="25"/>
@@ -54296,11 +53966,6 @@ adecuados.&lt;/p&gt;</translation>
         <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
         <source>Open a file selection dialog</source>
         <translation>Abrir un diálogo de selección de archivo</translation>
-    </message>
-    <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="84"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="../PyUnit/UnittestDialog.ui" line="81"/>
@@ -60121,11 +59786,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Siguie&amp;nte mensaje de advertencia</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3762"/>
-        <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Siguiente mensaje de advertencia&lt;/b&gt;&lt;p&gt;Ir a la siguiente línea en el editor actual que contiene una advertencia de py3flakes.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="3778"/>
         <source>Previous warning message</source>
         <translation>Mensaje de advertencia anterior</translation>
@@ -60136,11 +59796,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&amp;Mensaje de advertencia anterior</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3780"/>
-        <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mensaje de advertencia anterior&lt;/b&gt;&lt;p&gt;Ir a la línea anterior en el editor actual que contiene una advertencia de py3flakes.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="3794"/>
         <source>Clear Warning Messages</source>
         <translation>Limpiar Mensajes de Advertencia</translation>
@@ -60149,11 +59804,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="../ViewManager/ViewManager.py" line="3789"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>&amp;Limpiar Mensajes de Advertencia</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="3796"/>
-        <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Limpiar Mensajes de Advertencia&lt;/b&gt;&lt;p&gt;Limpiar mensajes de advertencia de py3flakes en todos los editores.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="940"/>
@@ -61830,64 +61480,6 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
     </message>
 </context>
 <context>
-    <name>py3Flakes</name>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="60"/>
-        <source>{0!r} imported but unused.</source>
-        <translation type="obsolete">{0!r} se ha importado pero no se ha utilizado.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="80"/>
-        <source>Redefinition of unused {0!r} from line {1!r}.</source>
-        <translation type="obsolete">Redefinición de {0!r} no utilizado desde la línea {1!r}.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="101"/>
-        <source>Import {0!r} from line {1!r} shadowed by loop variable.</source>
-        <translation type="obsolete">Import {0!r} en la línea {1!r} oculto por variable en un bucle.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="122"/>
-        <source>&apos;from {0} import *&apos; used; unable to detect undefined names.</source>
-        <translation type="obsolete">Se ha utilizado &apos;from {0} import *&apos;; no se pueden detectar nombres sin definir.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="142"/>
-        <source>Undefined name {0!r}.</source>
-        <translation type="obsolete">Nombre sin definir {0!r}.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="160"/>
-        <source>Undefined name {0!r} in __all__.</source>
-        <translation type="obsolete">Nombre sin definir {0!r} en __all__.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="179"/>
-        <source>Local variable {0!r} (defined in enclosing scope on line {1!r}) referenced before assignment.</source>
-        <translation type="obsolete">Variable local {0!r} (definida en ámbito en la línea {1!r}) referenciada antes de asignación.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="201"/>
-        <source>Duplicate argument {0!r} in function definition.</source>
-        <translation type="obsolete">Argumento duplicado {0!r} en definición de función.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="221"/>
-        <source>Redefinition of function {0!r} from line {1!r}.</source>
-        <translation type="obsolete">Redefinicion de función {0!r} a partir de la línea {1!r}.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="242"/>
-        <source>Future import(s) {0!r} after other statements.</source>
-        <translation type="obsolete">Future import(s) {0!r} despues de otras sentencias.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="265"/>
-        <source>Local variable {0!r} is assigned to but never used.</source>
-        <translation type="obsolete">La variable local {0!r} is asignada pero nunca es utilizada.</translation>
-    </message>
-</context>
-<context>
     <name>pyFlakes</name>
     <message>
         <location filename="../Utilities/pyflakes/translations.py" line="15"/>
@@ -61928,11 +61520,6 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
         <location filename="../Utilities/pyflakes/translations.py" line="37"/>
         <source>Duplicate argument {0!r} in function definition.</source>
         <translation>Argumento duplicado {0!r} en definición de función.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="40"/>
-        <source>Redefinition of function {0!r} from line {1!r}.</source>
-        <translation type="obsolete">Redefinicion de función {0!r} a partir de la línea {1!r}.</translation>
     </message>
     <message>
         <location filename="../Utilities/pyflakes/translations.py" line="43"/>
