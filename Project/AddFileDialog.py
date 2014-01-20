@@ -45,7 +45,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         self.sourceFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
-        self.sourceFileCompleter = E5FileCompleter(self.sourceFileCompleter)
+        self.sourceFileCompleter = E5FileCompleter(self.sourceFileEdit)
         
         self.targetDirEdit.setText(pro.ppath)
         self.filter = filter
