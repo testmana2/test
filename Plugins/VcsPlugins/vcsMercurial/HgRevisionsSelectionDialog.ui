@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>371</width>
-    <height>465</height>
+    <height>565</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,9 +46,6 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignRight</set>
-        </property>
-        <property name="minimum">
-         <number>1</number>
         </property>
         <property name="maximum">
          <number>999999999</number>
@@ -219,9 +216,6 @@
         <property name="alignment">
          <set>Qt::AlignRight</set>
         </property>
-        <property name="minimum">
-         <number>1</number>
-        </property>
         <property name="maximum">
          <number>999999999</number>
         </property>
@@ -372,10 +366,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>rev1GroupBox</zorder>
-  <zorder>rev2GroupBox</zorder>
-  <zorder>buttonBox</zorder>
-  <zorder>prev2Button</zorder>
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
