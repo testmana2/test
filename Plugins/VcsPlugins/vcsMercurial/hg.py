@@ -2199,6 +2199,8 @@ class Hg(VersionControl):
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if not os.path.exists(cfgFile):
             try:
+                # TODO: open a dialog to enter the basic data
+                # default and default-push
                 cfg = open(cfgFile, "w")
                 cfg.close()
                 self.__monitorRepoIniFile(repodir)
