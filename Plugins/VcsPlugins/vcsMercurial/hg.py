@@ -2171,6 +2171,7 @@ class Hg(VersionControl):
         cfgFile = getConfigPath()
         if not os.path.exists(cfgFile):
             try:
+                # TODO: open a dialog to ask for the basic data
                 f = open(cfgFile, "w")
                 f.write("[ui]\nusername = Firstname Lastname"
                         " <email_address>\n")
