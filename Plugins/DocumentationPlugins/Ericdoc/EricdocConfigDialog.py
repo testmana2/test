@@ -293,10 +293,13 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select the directory the documentations is written to.
         """
+        startDir = Utilities.fromNativeSeparators(self.outputDirEdit.text())
+        if not startDir:
+            startDir = Utilities.fromNativeSeparators(self.ppath)
         directory = E5FileDialog.getExistingDirectory(
             self,
             self.tr("Select output directory"),
-            self.outputDirEdit.text(),
+            startDir,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
@@ -315,7 +318,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select a directory to be ignored.
         """
-        startDir = self.ignoreDirEdit.text()
+        startDir = Utilities.fromNativeSeparators(self.ignoreDirEdit.text())
         if not startDir:
             startDir = self.ppath
         directory = E5FileDialog.getExistingDirectory(

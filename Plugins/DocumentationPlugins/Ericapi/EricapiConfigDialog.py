@@ -184,10 +184,13 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It displays a file selection dialog to
         select the file the api is written to.
         """
+        startFile = Utilities.fromNativeSeparators(self.outputFileEdit.text())
+        if not startFile:
+            startFile = self.project.getProjectName() + ".api"
         filename = E5FileDialog.getSaveFileName(
             self,
             self.tr("Select output file"),
-            self.outputFileEdit.text(),
+            startFile,
             self.tr("API files (*.api);;All files (*)"))
             
         if filename:
@@ -212,7 +215,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It displays a directory selection dialog to
         select a directory to be ignored.
         """
-        startDir = self.ignoreDirEdit.text()
+        startDir = Utilities.fromNativeSeparators(self.ignoreDirEdit.text())
         if not startDir:
             startDir = self.ppath
         directory = E5FileDialog.getExistingDirectory(
