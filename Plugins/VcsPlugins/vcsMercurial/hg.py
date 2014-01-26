@@ -2170,11 +2170,23 @@ class Hg(VersionControl):
         from .HgUtilities import getConfigPath
         cfgFile = getConfigPath()
         if not os.path.exists(cfgFile):
+            # open dialog to enter the initial data
+            from .HgUserConfigDataDialog import HgUserConfigDataDialog
+            dlg = HgUserConfigDataDialog(version=self.version)
+            if dlg.exec_() == QDialog.Accepted:
+                firstName, lastName, email, extensions = dlg.getData()
+            else:
+                firstName, lastName, email, extensions = (
+                    "Firstname", "Lastname", "email_address", [])
             try:
-                # TODO: open a dialog to ask for the basic data
                 f = open(cfgFile, "w")
-                f.write("[ui]\nusername = Firstname Lastname"
-                        " <email_address>\n")
+                f.write("[ui]\n")
+                f.write("username = {0} {1} <{2}>\n".format(
+                    firstName, lastName, email))
+                if extensions:
+                    f.write("\n[extensions]\n")
+                    f.write(" =\n".join(extensions))
+                    f.write(" =\n")     # complete the last line
                 f.close()
             except (IOError, OSError):
                 # ignore these
@@ -2199,10 +2211,24 @@ class Hg(VersionControl):
         
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if not os.path.exists(cfgFile):
+            # open dialog to enter the initial data
+            from .HgRepoConfigDataDialog import HgRepoConfigDataDialog
+            dlg = HgRepoConfigDataDialog()
+            if dlg.exec_() == QDialog.Accepted:
+                createContents = True
+                defaultUrl, defaultPushUrl = dlg.getData()
+            else:
+                createContents = False
             try:
-                # TODO: open a dialog to enter the basic data
-                # default and default-push
                 cfg = open(cfgFile, "w")
+                if createContents:
+                    # write the data entered
+                    cfg.write("[paths]\n")
+                    if defaultUrl:
+                        cfg.write("default = {0}\n".format(defaultUrl))
+                    if defaultPushUrl:
+                        cfg.write("default-push = {0}\n".format(
+                            defaultPushUrl))
                 cfg.close()
                 self.__monitorRepoIniFile(repodir)
             except IOError:

@@ -13606,12 +13606,12 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EricapiConfigDialog</name>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="190"/>
         <source>Select output file</source>
         <translation>Выберите целевой файл</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="218"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="221"/>
         <source>Select directory to exclude</source>
         <translation>Выберите исключаемый каталог</translation>
     </message>
@@ -13706,7 +13706,7 @@ whole selection.&lt;/li&gt;
         <translation>Список игнорируемых базовых имён каталогов</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="190"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>Файлы API (*.api);;Все файлы (*)</translation>
     </message>
@@ -13857,22 +13857,22 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EricdocConfigDialog</name>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="296"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="299"/>
         <source>Select output directory</source>
         <translation>Выберите целевой каталог</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="321"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="324"/>
         <source>Select directory to exclude</source>
         <translation>Выберите исключаемый каталог</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="364"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Стили CSS (*.css);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="364"/>
         <source>Select CSS style sheet</source>
         <translation>Выберите стиль CSS</translation>
     </message>
@@ -14172,7 +14172,7 @@ whole selection.&lt;/li&gt;
         <translation>Введите краткий заголовок для точки входа</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="510"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="513"/>
         <source>Select output directory for QtHelp files</source>
         <translation>Введите имя каталога назначения для файлов Qt Помощи</translation>
     </message>
@@ -19935,27 +19935,27 @@ You have %n tab(s) open.</source>
         <translation>Создание ветвив репозитории</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2276"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Проверка целостности репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2273"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2302"/>
         <source>Showing the combined configuration settings</source>
         <translation>Показ комбинированных настроек</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2298"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2327"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Алиасы для удалённых репозиториев</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2323"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2352"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Восстановление после прерванной транзакции</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2581"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2610"/>
         <source>Shall the working directory be updated?</source>
         <translation>Обновить рабочий каталог?</translation>
     </message>
@@ -19965,87 +19965,87 @@ You have %n tab(s) open.</source>
         <translation>Текущая ветвь</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2482"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2511"/>
         <source>Create changegroup</source>
         <translation>Создать группу изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2594"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2623"/>
         <source>Apply changegroups</source>
         <translation>Применить группу изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2612"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2641"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Неправильная подкоманда ({0}) для Bisect.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2650"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2679"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2538"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2567"/>
         <source>Preview changegroup</source>
         <translation>Предпросмотр группы изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2348"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2377"/>
         <source>Identifying project directory</source>
         <translation>Каталог проекта</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2384"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2413"/>
         <source>Create .hgignore file</source>
         <translation>Создать файл .hgignore</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2384"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2413"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже существует. Перезаписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2684"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2713"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Удаление файлов только из репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2438"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2467"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Mercurial файлы изменений (*.hg)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2573"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2602"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial файлы изменений (*.hg);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2550"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2579"/>
         <source>Identifying changegroup file</source>
         <translation>Файлы изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2745"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2774"/>
         <source>Backing out changeset</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2724"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2753"/>
         <source>No revision given. Aborting...</source>
         <translation>Не задана ревизия. Отмена...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2455"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2484"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл группы изменений&lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2772"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2801"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2765"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2794"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20055,72 +20055,72 @@ You have %n tab(s) open.</source>
         <translation>Фиксировать изменения в репозиторий</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3359"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3388"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3219"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3248"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3359"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3388"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2841"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2870"/>
         <source>Import Patch</source>
         <translation type="unfinished">Импортировать патч</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2889"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2918"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2937"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2966"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2991"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3020"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3018"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3047"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3165"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3169"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3198"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3146"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3188"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3217"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3188"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3217"/>
         <source>Remove Sub-repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3157"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3186"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20150,7 +20150,7 @@ You have %n tab(s) open.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3054"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3083"/>
         <source>Create Unversioned Archive</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20472,102 +20472,102 @@ You have %n tab(s) open.</source>
         <translation>Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="107"/>
         <source>Enter a tag name</source>
         <translation>Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="120"/>
         <source>Branch:</source>
         <translation>Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="136"/>
         <source>Enter a branch name</source>
         <translation>Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="175"/>
         <source>Select to not specify a specific revision</source>
         <translation>Не задавать конкретную ревизию</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
         <source>No revision selected</source>
         <translation>Ревизия не выбрана</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="194"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="191"/>
         <source>Commit data</source>
         <translation>Фиксировать  данные</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="200"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="197"/>
         <source>Commit message:</source>
         <translation>Описание изменений:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="207"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="204"/>
         <source>Enter the commit message or leave empty to use the default one</source>
         <translation>Введите описание изменений, иначе будет использовано описание по умолчанию</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="219"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="216"/>
         <source>Commit Date:</source>
         <translation>Дата подачи:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="226"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="223"/>
         <source>Enter optional date for the commit</source>
         <translation>Введите дату подачи</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="236"/>
         <source>Commit User:</source>
         <translation>Автор подачи:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="246"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="243"/>
         <source>Enter optional user for the commit</source>
         <translation>Введите автора подачи</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="258"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="255"/>
         <source>Select to merge with parent of the project directory</source>
         <translation>Слить с предком проекта</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="261"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="258"/>
         <source>Merge with current parent</source>
         <translation>Слить с текущим предком</translation>
     </message>
@@ -20577,17 +20577,17 @@ You have %n tab(s) open.</source>
         <translation>Отмена изменений &lt;{0}&gt;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
         <source>Bookmark:</source>
         <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished">Введите имя закладки</translation>
     </message>
@@ -20635,72 +20635,72 @@ You have %n tab(s) open.</source>
         <translation>Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="99"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="105"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="102"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="112"/>
         <source>Enter a changeset id</source>
         <translation>Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="122"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="119"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="125"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="122"/>
         <source>Tag:</source>
         <translation>Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="141"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="138"/>
         <source>Enter a tag name</source>
         <translation>Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="151"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="148"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="154"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="151"/>
         <source>Branch:</source>
         <translation>Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="170"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="167"/>
         <source>Enter a branch name</source>
         <translation>Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="180"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="177"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="183"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="180"/>
         <source>Bookmark:</source>
         <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="199"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="196"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="206"/>
         <source>Select tip revision of repository</source>
         <translation>Головная ревизия репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="212"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
@@ -21634,122 +21634,122 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished">Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation type="unfinished">Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="71"/>
         <source>Id:</source>
         <translation type="unfinished">Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation type="unfinished">Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation type="unfinished">Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation type="unfinished">Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="107"/>
         <source>Enter a tag name</source>
         <translation type="unfinished">Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
         <translation type="unfinished">Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="120"/>
         <source>Branch:</source>
         <translation type="unfinished">Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="136"/>
         <source>Enter a branch name</source>
         <translation type="unfinished">Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
         <source>Bookmark:</source>
         <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="175"/>
         <source>Select tip revision of repository</source>
         <translation type="unfinished">Головная ревизия репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
         <source>TIP</source>
         <translation type="unfinished">TIP</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="194"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="191"/>
         <source>Commit Message</source>
         <translation type="unfinished">Commit сообщение</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="200"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="197"/>
         <source>Select to not commit the signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="203"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="200"/>
         <source>Do Not Commit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="210"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="207"/>
         <source>Enter a commit message (leave empty to use default)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="225"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="222"/>
         <source>Key-ID:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="232"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="229"/>
         <source>Enter the ID of the key to be used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="236"/>
         <source>Select to make the signature local</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="242"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="239"/>
         <source>Local Signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="249"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="246"/>
         <source>Select to sign even if the signature file is modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="252"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="249"/>
         <source>Force Signature</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22619,82 +22619,82 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="101"/>
         <source>Enter a tag name</source>
         <translation>Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="166"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="163"/>
         <source>Select to not specify a specific revision</source>
         <translation>Не задавать конкретную ревизию</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="169"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="166"/>
         <source>No revision selected</source>
         <translation>Ревизия не выбрана</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="182"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="179"/>
         <source>Select to force the merge operation</source>
         <translation>Выполнить операцию слияния принудительно</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="185"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="182"/>
         <source>Enforce merge</source>
         <translation>Слить принудительно</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="111"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="114"/>
         <source>Branch:</source>
         <translation>Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="127"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="124"/>
         <source>Enter a branch name</source>
         <translation>Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="134"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="140"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
         <source>Bookmark:</source>
         <translation>Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="156"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="153"/>
         <source>Enter a bookmark name</source>
         <translation>Введите имя закладки</translation>
     </message>
@@ -24998,132 +24998,132 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="236"/>
         <source>Select to specify a revision by number</source>
         <translation type="unfinished">Задать ревизию порядковым номером</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="242"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="239"/>
         <source>Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="252"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="249"/>
         <source>Enter a revision number</source>
         <translation type="unfinished">Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="281"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="275"/>
         <source>Select to specify a revision by changeset id</source>
         <translation type="unfinished">Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="284"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="278"/>
         <source>Id:</source>
         <translation type="unfinished">Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="294"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="288"/>
         <source>Enter a changeset id</source>
         <translation type="unfinished">Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="301"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="295"/>
         <source>Select to specify a revision by a tag</source>
         <translation type="unfinished">Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="304"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="298"/>
         <source>Tag:</source>
         <translation type="unfinished">Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="314"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="308"/>
         <source>Enter a tag name</source>
         <translation type="unfinished">Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="324"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="318"/>
         <source>Select to specify a revision by a branch</source>
         <translation type="unfinished">Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="327"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="321"/>
         <source>Branch:</source>
         <translation type="unfinished">Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="337"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="331"/>
         <source>Enter a branch name</source>
         <translation type="unfinished">Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="347"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="341"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="350"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="344"/>
         <source>Bookmark:</source>
         <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="366"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="360"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="233"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="230"/>
         <source>&amp;Destination Revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="376"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="370"/>
         <source>Select tip revision of repository</source>
         <translation type="unfinished">Головная ревизия репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="379"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="373"/>
         <source>TIP</source>
         <translation type="unfinished">TIP</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="392"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="386"/>
         <source>Select to collapse the rebased changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="395"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="389"/>
         <source>Collapse Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="402"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="396"/>
         <source>Select to keep the original changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="405"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="399"/>
         <source>Keep Original Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="412"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="406"/>
         <source>Select to keep the original branch names</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="415"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="409"/>
         <source>Keep Original Branch Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="422"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="416"/>
         <source>Select to detach the source from its original branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="425"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="419"/>
         <source>Detach Source</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25157,6 +25157,74 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>HgRepoConfigDataDialog</name>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="14"/>
+        <source>Mercurial Repository Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="23"/>
+        <source>Default</source>
+        <translation type="unfinished">По умолчанию</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="93"/>
+        <source>Upstream URL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="36"/>
+        <source>Enter the URL of the upstream repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="107"/>
+        <source>Username:</source>
+        <translation type="unfinished">Имя пользователя:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="50"/>
+        <source>Enter user name to acces the upstream repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="121"/>
+        <source>Password:</source>
+        <translation type="unfinished">Пароль:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="64"/>
+        <source>Enter the passowrd to acces the upstream repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="138"/>
+        <source>Press to show the password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="87"/>
+        <source>Default Push</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="100"/>
+        <source>Enter the URL of the upstream (push) repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="114"/>
+        <source>Enter user name to acces the upstream (push) repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="128"/>
+        <source>Enter the passowrd to acces the upstream (push) repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>HgRevisionSelectionDialog</name>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="29"/>
@@ -25174,42 +25242,42 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="107"/>
         <source>Enter a tag name</source>
         <translation>Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="175"/>
         <source>Select tip revision of repository</source>
         <translation>Головная ревизия репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="178"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
@@ -25224,17 +25292,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Версия (ревизия)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="120"/>
         <source>Branch:</source>
         <translation>Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="136"/>
         <source>Enter a branch name</source>
         <translation>Введите имя ветви</translation>
     </message>
@@ -25249,17 +25317,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Не задавать конкретную ревизию</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
         <source>Bookmark:</source>
         <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished">Введите имя закладки</translation>
     </message>
@@ -25277,102 +25345,102 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Ревизия &amp;1</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="204"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="201"/>
         <source>Select to specify a revision by number</source>
         <translation>Задать ревизию порядковым номером</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="207"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="204"/>
         <source>Number</source>
         <translation>Номер</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="217"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="214"/>
         <source>Enter a revision number</source>
         <translation>Задайте номер ревизии</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="246"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="240"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="249"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="243"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="259"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="253"/>
         <source>Enter a changeset id</source>
         <translation>Задайте идентификатор изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="266"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="260"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Задать ревизию с помощью метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="269"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="263"/>
         <source>Tag:</source>
         <translation>Метка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="279"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="273"/>
         <source>Enter a tag name</source>
         <translation>Введите имя метки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="289"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="283"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="292"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="286"/>
         <source>Branch:</source>
         <translation>Ветвь:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="302"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="296"/>
         <source>Enter a branch name</source>
         <translation>Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="341"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="335"/>
         <source>Select tip revision of repository</source>
         <translation>Головная ревизия репозитория</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="344"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="338"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="354"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="348"/>
         <source>Select revision before last commit</source>
         <translation>Выбрать ревизию перед последней подачей</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="357"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="351"/>
         <source>PREV</source>
         <translation>PREV</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="198"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="195"/>
         <source>Revision &amp;2</source>
         <translation>Ревизия &amp;2</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="312"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="306"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="315"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="309"/>
         <source>Bookmark:</source>
         <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="331"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="325"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished">Введите имя закладки</translation>
     </message>
@@ -26283,6 +26351,124 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="132"/>
         <source>Local Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HgUserConfigDataDialog</name>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="14"/>
+        <source>Mercurial User Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="23"/>
+        <source>User Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="29"/>
+        <source>First Name:</source>
+        <translation type="unfinished">Название фильтра:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="36"/>
+        <source>Enter the first name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="43"/>
+        <source>Last Name:</source>
+        <translation type="unfinished">Фамилия:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="50"/>
+        <source>Enter the last name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="57"/>
+        <source>Email:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="64"/>
+        <source>Enter the email address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="74"/>
+        <source>Extensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="80"/>
+        <source>Select to activate the bookmarks extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="83"/>
+        <source>Bookmarks</source>
+        <translation type="unfinished">Закладки</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="90"/>
+        <source>Select to activate the fetch extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="93"/>
+        <source>Fetch</source>
+        <translation type="unfinished">Запрос</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="100"/>
+        <source>Select to activate the GPG extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="103"/>
+        <source>GPG</source>
+        <translation type="unfinished">GPG</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="110"/>
+        <source>Select to activate the Purge extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="113"/>
+        <source>Purge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="120"/>
+        <source>Select to activate the queues extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="123"/>
+        <source>Queues</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="130"/>
+        <source>Select to activate the rebas extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="133"/>
+        <source>Rebase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="140"/>
+        <source>Select to activate the transplant extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="143"/>
+        <source>Transplant</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -31770,29 +31956,14 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>MercurialUserDataDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="14"/>
-        <source>Mercurial User Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="23"/>
         <source>&amp;Username:</source>
-        <translation type="unfinished">&amp;Имя пользователя:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="33"/>
-        <source>Enter the name of the user (first name and last name)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">&amp;Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="40"/>
         <source>&amp;Email:</source>
-        <translation type="unfinished">&amp;Email:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="50"/>
-        <source>Enter the email address</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">&amp;Email:</translation>
     </message>
 </context>
 <context>

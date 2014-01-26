@@ -493,7 +493,6 @@
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html" />
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html" />
@@ -561,6 +560,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html" />
@@ -569,6 +569,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html" />
@@ -6412,6 +6413,12 @@
       <keyword name="HgRemoveSubrepositoriesDialog.getData" id="HgRemoveSubrepositoriesDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.getData" />
       <keyword name="HgRemoveSubrepositoriesDialog.on_removeButton_clicked" id="HgRemoveSubrepositoriesDialog.on_removeButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.on_removeButton_clicked" />
       <keyword name="HgRemoveSubrepositoriesDialog.on_subrepositories_itemSelectionChanged" id="HgRemoveSubrepositoriesDialog.on_subrepositories_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.on_subrepositories_itemSelectionChanged" />
+      <keyword name="HgRepoConfigDataDialog" id="HgRepoConfigDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog" />
+      <keyword name="HgRepoConfigDataDialog (Constructor)" id="HgRepoConfigDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.__init__" />
+      <keyword name="HgRepoConfigDataDialog (Module)" id="HgRepoConfigDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html" />
+      <keyword name="HgRepoConfigDataDialog.getData" id="HgRepoConfigDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.getData" />
+      <keyword name="HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" id="HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" />
+      <keyword name="HgRepoConfigDataDialog.on_defaultShowPasswordButton_clicked" id="HgRepoConfigDataDialog.on_defaultShowPasswordButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.on_defaultShowPasswordButton_clicked" />
       <keyword name="HgRevisionSelectionDialog" id="HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog" />
       <keyword name="HgRevisionSelectionDialog (Constructor)" id="HgRevisionSelectionDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog.__init__" />
       <keyword name="HgRevisionSelectionDialog (Module)" id="HgRevisionSelectionDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
@@ -6550,6 +6557,10 @@
       <keyword name="HgTagDialog.getParameters" id="HgTagDialog.getParameters" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.getParameters" />
       <keyword name="HgTagDialog.on_tagCombo_currentIndexChanged" id="HgTagDialog.on_tagCombo_currentIndexChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.on_tagCombo_currentIndexChanged" />
       <keyword name="HgTagDialog.on_tagCombo_editTextChanged" id="HgTagDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.on_tagCombo_editTextChanged" />
+      <keyword name="HgUserConfigDataDialog" id="HgUserConfigDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html#HgUserConfigDataDialog" />
+      <keyword name="HgUserConfigDataDialog (Constructor)" id="HgUserConfigDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html#HgUserConfigDataDialog.__init__" />
+      <keyword name="HgUserConfigDataDialog (Module)" id="HgUserConfigDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html" />
+      <keyword name="HgUserConfigDataDialog.getData" id="HgUserConfigDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html#HgUserConfigDataDialog.getData" />
       <keyword name="HgUtilities (Module)" id="HgUtilities (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html" />
       <keyword name="HighlightingStylesReader" id="HighlightingStylesReader" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader" />
       <keyword name="HighlightingStylesReader (Constructor)" id="HighlightingStylesReader (Constructor)" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader.__init__" />
@@ -7616,10 +7627,6 @@
       <keyword name="MercurialPage (Module)" id="MercurialPage (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
       <keyword name="MercurialPage.on_configButton_clicked" id="MercurialPage.on_configButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.on_configButton_clicked" />
       <keyword name="MercurialPage.save" id="MercurialPage.save" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.save" />
-      <keyword name="MercurialUserDataDialog" id="MercurialUserDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog" />
-      <keyword name="MercurialUserDataDialog (Constructor)" id="MercurialUserDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog.__init__" />
-      <keyword name="MercurialUserDataDialog (Module)" id="MercurialUserDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html" />
-      <keyword name="MercurialUserDataDialog.getData" id="MercurialUserDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog.getData" />
       <keyword name="Message" id="Message" ref="eric5.Utilities.pyflakes.messages.html#Message" />
       <keyword name="Message" id="Message" ref="eric5.UtilitiesPython2.py2flakes.messages.html#Message" />
       <keyword name="Message (Constructor)" id="Message (Constructor)" ref="eric5.Utilities.pyflakes.messages.html#Message.__init__" />
@@ -13905,7 +13912,6 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.Config.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html</file>
@@ -13938,6 +13944,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html</file>
@@ -13946,6 +13953,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html</file>

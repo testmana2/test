@@ -76,21 +76,22 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         from QScintilla.MiniEditor import MiniEditor
         cfgFile = self.__plugin.getConfigPath()
         if not os.path.exists(cfgFile):
-            username = ""
-            from .MercurialUserDataDialog import MercurialUserDataDialog
-            dlg = MercurialUserDataDialog()
+            from ..HgUserConfigDataDialog import HgUserConfigDataDialog
+            dlg = HgUserConfigDataDialog()
             if dlg.exec_() == QDialog.Accepted:
-                name, email = dlg.getData()
-                if name and email:
-                    username = "{0} <{1}>".format(name, email)
-                elif name:
-                    username = name
-                elif email:
-                    username = email
+                firstName, lastName, email, extensions = dlg.getData()
+            else:
+                firstName, lastName, email, extensions = (
+                    "Firstname", "Lastname", "email_address", [])
             try:
                 f = open(cfgFile, "w")
-                f.write(os.linesep.join(["[ui]",
-                        "username = {0}".format(username), ""]))
+                f.write("[ui]\n")
+                f.write("username = {0} {1} <{2}>\n".format(
+                    firstName, lastName, email))
+                if extensions:
+                    f.write("\n[extensions]\n")
+                    f.write(" =\n".join(extensions))
+                    f.write(" =\n")     # complete the last line
                 f.close()
             except (IOError, OSError):
                 # ignore these

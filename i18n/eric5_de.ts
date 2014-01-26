@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1939,8 +1938,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2176,8 +2175,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -13017,12 +13016,12 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>EricapiConfigDialog</name>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="190"/>
         <source>Select output file</source>
         <translation>Wähle eine Ausgabedatei</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="218"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="221"/>
         <source>Select directory to exclude</source>
         <translation>Wähle ein zu ignorierendes Verzeichnis</translation>
     </message>
@@ -13112,7 +13111,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Liste von zu ignorierenden Verzeichnisnamen</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="187"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="190"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>API-Dateien (*.api);;Alle Dateien (*)</translation>
     </message>
@@ -13244,22 +13243,22 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>EricdocConfigDialog</name>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="296"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="299"/>
         <source>Select output directory</source>
         <translation>Wähle ein Ausgabeverzeichnis</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="321"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="324"/>
         <source>Select directory to exclude</source>
         <translation>Wähle ein zu ignorierendes Verzeichnis</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="364"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Style Sheet (*.css);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="361"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="364"/>
         <source>Select CSS style sheet</source>
         <translation>Wähle ein CSS Style Sheet</translation>
     </message>
@@ -13554,7 +13553,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Gib einen Kurztitel für den obersten Eintrag ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="510"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="513"/>
         <source>Select output directory for QtHelp files</source>
         <translation>Wähle das Verzeichnis für die QtHelp-Dateien</translation>
     </message>
@@ -15846,8 +15845,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1156"/>
@@ -19046,27 +19045,27 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Erzeuge Zweig im Mercurial-Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2276"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Verifiziere die Integrität des Mercurial-Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2273"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2302"/>
         <source>Showing the combined configuration settings</source>
         <translation>Zeige die kombinierten Einstellungen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2298"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2327"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Zeige Namen für entfernte Repositorys</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2323"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2352"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Setze abgebrochene Transaktion zurück</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2581"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2610"/>
         <source>Shall the working directory be updated?</source>
         <translation>Soll das Arbeitsverzeichnis aktualisiert werden?</translation>
     </message>
@@ -19076,87 +19075,87 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Zeige aktuellen Zweig</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2482"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2511"/>
         <source>Create changegroup</source>
         <translation>Änderungsgruppe erzeugen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2594"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2623"/>
         <source>Apply changegroups</source>
         <translation>Änderungsgruppen anwenden</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2612"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2641"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Ungültiger Bisect Unterbefehl ({0}).</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2650"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2679"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial-Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2538"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2567"/>
         <source>Preview changegroup</source>
         <translation>Änderungsgruppe ansehen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2348"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2377"/>
         <source>Identifying project directory</source>
         <translation>Projektverzeichnis identifizieren</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2384"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2413"/>
         <source>Create .hgignore file</source>
         <translation>.hgignore-Datei erstellen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2384"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2413"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2684"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2713"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Lösche Dateien nur aus dem Mercurial-Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2438"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2467"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Mercurial-Änderungsgruppendateien (*.hg)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2573"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2602"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial-Änderungsgruppendateien (*.hg);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2550"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2579"/>
         <source>Identifying changegroup file</source>
         <translation>Identifiziere Änderungsgruppendatei</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2745"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2774"/>
         <source>Backing out changeset</source>
         <translation>Änderungssatz umkehren</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2724"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2753"/>
         <source>No revision given. Aborting...</source>
         <translation>Keine Revision angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2455"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2484"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Mercurial-Änderungsgruppendatei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2772"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2801"/>
         <source>Rollback last transaction</source>
         <translation>Letzte Transaktion zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2765"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2794"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation>Wollen Sie die letzte Transaktion wirklich zurücksetzen?</translation>
     </message>
@@ -19166,72 +19165,72 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Pflege Änderungen in das Mercurial-Repository ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3359"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3388"/>
         <source>Mercurial Command Server</source>
         <translation>Mercurial-Befehlsserver</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3219"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3248"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial-Befehlsserver konnte nicht wiedergestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3359"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3388"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial-Befehlsserver konnte nicht gestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2841"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2870"/>
         <source>Import Patch</source>
         <translation>Patch importieren</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2889"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2918"/>
         <source>Export Patches</source>
         <translation>Patches exportieren</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2937"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2966"/>
         <source>Change Phase</source>
         <translation>Phase ändern</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2991"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3020"/>
         <source>Copy Changesets</source>
         <translation>Änderungssätze kopieren</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3018"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3047"/>
         <source>Copy Changesets (Continue)</source>
         <translation>Änderungssätze kopieren (Fortsetzung)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3165"/>
         <source>Add Sub-repository</source>
         <translation>Unterrepository hinzufügen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3169"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3198"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub konnte nicht gelesen werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3146"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub enthält bereits einen Eintrag &lt;b&gt;{0}&lt;/b&gt;. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3188"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3217"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub konnte nicht gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3188"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3217"/>
         <source>Remove Sub-repositories</source>
         <translation>Unterrepositorys löschen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3157"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3186"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub existiert nicht. Abbruch...&lt;/p&gt;</translation>
     </message>
@@ -19261,7 +19260,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Wollen Sie wirklich alle Änderungen des Projektes rückgängig machen?</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3054"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3083"/>
         <source>Create Unversioned Archive</source>
         <translation>Erzeuge nicht versioniertes Archiv</translation>
     </message>
@@ -19578,102 +19577,102 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="107"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="120"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="136"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="175"/>
         <source>Select to not specify a specific revision</source>
         <translation>Auswählen, um keine spezifische Revision zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
         <source>No revision selected</source>
         <translation>Keine Revision ausgewählt</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="194"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="191"/>
         <source>Commit data</source>
         <translation>Änderungsdaten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="200"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="197"/>
         <source>Commit message:</source>
         <translation>Änderungsbeschreibung:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="207"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="204"/>
         <source>Enter the commit message or leave empty to use the default one</source>
         <translation>Gib die Änderungsbeschreibung ein oder lasse es leer, um den Standardtext zu verwenden</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="219"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="216"/>
         <source>Commit Date:</source>
         <translation>Datum für Änderung:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="226"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="223"/>
         <source>Enter optional date for the commit</source>
         <translation>Gib das optionale Datum der Änderung ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="236"/>
         <source>Commit User:</source>
         <translation>Nutzer für Änderung:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="246"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="243"/>
         <source>Enter optional user for the commit</source>
         <translation>Gib den optionalen Nutzer der Änderung ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="258"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="255"/>
         <source>Select to merge with parent of the project directory</source>
         <translation>Auswählen, um mit dem Vorgänger des Projektverzeichnisses zusammenzuführen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="261"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="258"/>
         <source>Merge with current parent</source>
         <translation>Mit aktuellem Vorgänger zusammenführen</translation>
     </message>
@@ -19683,17 +19682,17 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Änderungssatz &lt;{0}&gt; umgekehrt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
@@ -19741,72 +19740,72 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="99"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="105"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="102"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="112"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="122"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="119"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="125"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="122"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="141"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="138"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="151"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="148"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="154"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="151"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="170"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="167"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="180"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="177"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="183"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="180"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="199"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="196"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="206"/>
         <source>Select tip revision of repository</source>
         <translation>Wähle neueste Revision des Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="212"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
@@ -20721,122 +20720,122 @@ verwendet wird. Gültige Muster sind:&lt;/p&gt;
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="107"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="120"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="136"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="175"/>
         <source>Select tip revision of repository</source>
         <translation>Wähle neueste Revision des Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="194"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="191"/>
         <source>Commit Message</source>
         <translation>Änderungsbeschreibung</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="200"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="197"/>
         <source>Select to not commit the signature</source>
         <translation>Auswählen, um die Signatur nicht einzupflegen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="203"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="200"/>
         <source>Do Not Commit</source>
         <translation>Nicht einpflegen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="210"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="207"/>
         <source>Enter a commit message (leave empty to use default)</source>
         <translation>Gib eine Änderungsmitteilung ein (leer lassen, um einen Standardtext zu verwenden)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="225"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="222"/>
         <source>Key-ID:</source>
         <translation>Schlüüsel-ID:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="232"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="229"/>
         <source>Enter the ID of the key to be used</source>
         <translation>Gib die ID des zu verwendenden Schlüssels ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="236"/>
         <source>Select to make the signature local</source>
         <translation>Auswählen. um eine lokale Signatur zu leisten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="242"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="239"/>
         <source>Local Signature</source>
         <translation>Lokale Signatur</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="249"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="246"/>
         <source>Select to sign even if the signature file is modified</source>
         <translation>Auswählen, um auch bei geänderter Signaturdatei eine Signatur zu leisten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="252"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="249"/>
         <source>Force Signature</source>
         <translation>Signatur erzwingen</translation>
     </message>
@@ -21701,82 +21700,82 @@ verwendet wird. Gültige Muster sind:&lt;/p&gt;
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="101"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="111"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="114"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="127"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="124"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="166"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="163"/>
         <source>Select to not specify a specific revision</source>
         <translation>Auswählen, um keine spezifische Revision zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="169"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="166"/>
         <source>No revision selected</source>
         <translation>Keine Revision ausgewählt</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="182"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="179"/>
         <source>Select to force the merge operation</source>
         <translation>Auswählen, um die Vereinigungsoperation zu erzwingen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="185"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="182"/>
         <source>Enforce merge</source>
         <translation>Vereinigung erzwingen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="134"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="140"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="156"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="153"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
@@ -23913,132 +23912,132 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>&amp;Revision</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="236"/>
         <source>Select to specify a revision by number</source>
         <translation>Auswählen, um eine Revision per Nummer zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="242"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="239"/>
         <source>Number</source>
         <translation>Nummer</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="252"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="249"/>
         <source>Enter a revision number</source>
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="281"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="275"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="284"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="278"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="294"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="288"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="301"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="295"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="304"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="298"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="314"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="308"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="324"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="318"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="327"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="321"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="337"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="331"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="347"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="341"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="350"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="344"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="366"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="360"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="233"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="230"/>
         <source>&amp;Destination Revision</source>
         <translation>&amp;Zielrevision</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="376"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="370"/>
         <source>Select tip revision of repository</source>
         <translation>Wähle neueste Revision des Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="379"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="373"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="392"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="386"/>
         <source>Select to collapse the rebased changesets</source>
         <translation>Auswählen, um die umgruppierten Änderungssätze zusammenzufassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="395"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="389"/>
         <source>Collapse Changesets</source>
         <translation>Änderungssätze zusammenfassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="402"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="396"/>
         <source>Select to keep the original changesets</source>
         <translation>Auswählen, um die originalen Änderungssätze zu behalten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="405"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="399"/>
         <source>Keep Original Changesets</source>
         <translation>Originale Änderungssätze behalten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="412"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="406"/>
         <source>Select to keep the original branch names</source>
         <translation>Auswählen, um die originalen Zweignamen zu behalten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="415"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="409"/>
         <source>Keep Original Branch Name</source>
         <translation>Originale Zweignamen behalten</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="422"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="416"/>
         <source>Select to detach the source from its original branch</source>
         <translation>Auswählen, um die Quelle vom originalen Zweig zu trennen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="425"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="419"/>
         <source>Detach Source</source>
         <translation>Quelle trennen</translation>
     </message>
@@ -24072,6 +24071,74 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>HgRepoConfigDataDialog</name>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="14"/>
+        <source>Mercurial Repository Configuration</source>
+        <translation>Mercurial Repository Konfiguration</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="23"/>
+        <source>Default</source>
+        <translation>Default</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="93"/>
+        <source>Upstream URL:</source>
+        <translation>Übergeordnete URL:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="36"/>
+        <source>Enter the URL of the upstream repository</source>
+        <translation>Gib die URL des übergeordneten Repository ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="107"/>
+        <source>Username:</source>
+        <translation>Nutzername:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="50"/>
+        <source>Enter user name to acces the upstream repository</source>
+        <translation>Gib den Nutzernamen zum Zugriff auf das übergeordnete Repository ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="121"/>
+        <source>Password:</source>
+        <translation>Kennwort:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="138"/>
+        <source>Press to show the password</source>
+        <translation>Drücken, um das Kennwort anzuzeigen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="87"/>
+        <source>Default Push</source>
+        <translation>Default Push</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="100"/>
+        <source>Enter the URL of the upstream (push) repository</source>
+        <translation>Gib die Push-URL des übergeordneten Repository ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="114"/>
+        <source>Enter user name to acces the upstream (push) repository</source>
+        <translation>Gib den Nutzernamen zum Push-Zugriff auf das übergeordnete Repository ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="64"/>
+        <source>Enter the password to acces the upstream repository</source>
+        <translation>Gib das Kennwort zum Zugriff auf das übergeordnete Repository ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="128"/>
+        <source>Enter the password to acces the upstream (push) repository</source>
+        <translation>Gib das Kennwort zum Push-Zugriff auf das übergeordnete Repository ein</translation>
+    </message>
+</context>
+<context>
     <name>HgRevisionSelectionDialog</name>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="14"/>
@@ -24099,57 +24166,57 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="71"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="94"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="91"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="107"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="120"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="136"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="175"/>
         <source>Select tip revision of repository</source>
         <translation>Wähle neueste Revision des Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="178"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
@@ -24164,17 +24231,17 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Auswählen, um keine spezifische Revision zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
@@ -24192,102 +24259,102 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Revision &amp;1</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="204"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="201"/>
         <source>Select to specify a revision by number</source>
         <translation>Auswählen, um eine Revision per Nummer zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="207"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="204"/>
         <source>Number</source>
         <translation>Nummer</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="217"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="214"/>
         <source>Enter a revision number</source>
         <translation>Gib eine Revisionsnummer ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="246"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="240"/>
         <source>Select to specify a revision by changeset id</source>
         <translation>Auswählen, um eine Revision mit ihrer Änderungssatz-ID anzugeben</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="249"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="243"/>
         <source>Id:</source>
         <translation>Id:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="259"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="253"/>
         <source>Enter a changeset id</source>
         <translation>Gib die Änderungssatz ID ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="266"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="260"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Auswählen, um eine Revision per Marke zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="269"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="263"/>
         <source>Tag:</source>
         <translation>Marke:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="279"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="273"/>
         <source>Enter a tag name</source>
         <translation>Gib den Namen der Marke ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="289"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="283"/>
         <source>Select to specify a revision by a branch</source>
         <translation>Auswählen, um eine Revision per Zweig zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="292"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="286"/>
         <source>Branch:</source>
         <translation>Zweig:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="302"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="296"/>
         <source>Enter a branch name</source>
         <translation>Gib einen Zweignamen ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="341"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="335"/>
         <source>Select tip revision of repository</source>
         <translation>Wähle neueste Revision des Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="344"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="338"/>
         <source>TIP</source>
         <translation>TIP</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="354"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="348"/>
         <source>Select revision before last commit</source>
         <translation>Wähle Revision for letztem Commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="357"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="351"/>
         <source>PREV</source>
         <translation>PREV</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="198"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="195"/>
         <source>Revision &amp;2</source>
         <translation>Revision &amp;2</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="312"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="306"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation>Auswählen, um eine Revision per Lesezeichen zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="315"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="309"/>
         <source>Bookmark:</source>
         <translation>Lesezeichen:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="331"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="325"/>
         <source>Enter a bookmark name</source>
         <translation>Gib einen Lesezeichennamen ein</translation>
     </message>
@@ -25156,6 +25223,124 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="132"/>
         <source>Local Tag</source>
         <translation>Lokale Marke</translation>
+    </message>
+</context>
+<context>
+    <name>HgUserConfigDataDialog</name>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="14"/>
+        <source>Mercurial User Data</source>
+        <translation>Mercurial Nutzerdaten</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="23"/>
+        <source>User Data</source>
+        <translation>Nutzer Daten</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="29"/>
+        <source>First Name:</source>
+        <translation>Vorname:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="36"/>
+        <source>Enter the first name</source>
+        <translation>Gib den Vornamen ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="43"/>
+        <source>Last Name:</source>
+        <translation>Nachname:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="50"/>
+        <source>Enter the last name</source>
+        <translation>Gib den Nachnamen ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="57"/>
+        <source>Email:</source>
+        <translation>E-Mail:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="64"/>
+        <source>Enter the email address</source>
+        <translation>Gib die Email Adresse ein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="74"/>
+        <source>Extensions</source>
+        <translation>Erweiterungen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="80"/>
+        <source>Select to activate the bookmarks extension</source>
+        <translation>Auswählen, um die Lesezeichen Erweiterung zu aktivieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="83"/>
+        <source>Bookmarks</source>
+        <translation>Lesezeichen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="90"/>
+        <source>Select to activate the fetch extension</source>
+        <translation>Auswählen, um die Fetch Erweiterung zu aktivieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="93"/>
+        <source>Fetch</source>
+        <translation>Fetch</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="100"/>
+        <source>Select to activate the GPG extension</source>
+        <translation>Auswählen, um die GPG Erweiterung zu aktivieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="103"/>
+        <source>GPG</source>
+        <translation>GPG</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="110"/>
+        <source>Select to activate the Purge extension</source>
+        <translation>Auswählen, um die Purge Erweiterung zu aktivieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="113"/>
+        <source>Purge</source>
+        <translation>Purge</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="120"/>
+        <source>Select to activate the queues extension</source>
+        <translation>Auswählen, um die Patchschlangen Erweiterung zu aktivieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="123"/>
+        <source>Queues</source>
+        <translation>Patchschlangen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="133"/>
+        <source>Rebase</source>
+        <translation>Umgruppieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="140"/>
+        <source>Select to activate the transplant extension</source>
+        <translation>Auswählen, um die Transplantation Erweiterung zu aktivieren</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="143"/>
+        <source>Transplant</source>
+        <translation>Transplantation</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="130"/>
+        <source>Select to activate the rebase extension</source>
+        <translation>Auswählen, um die Umgruppieren Erweiterung zu aktivieren</translation>
     </message>
 </context>
 <context>
@@ -30320,34 +30505,6 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="185"/>
         <source>Create Backup Files</source>
         <translation>Sicherungsdateien erzeugen</translation>
-    </message>
-</context>
-<context>
-    <name>MercurialUserDataDialog</name>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="14"/>
-        <source>Mercurial User Data</source>
-        <translation>Mercurial Nutzerdaten</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="23"/>
-        <source>&amp;Username:</source>
-        <translation>&amp;Benutzername:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="33"/>
-        <source>Enter the name of the user (first name and last name)</source>
-        <translation>Gib den Nutzernamen (Vorname und Nachname) ein</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="40"/>
-        <source>&amp;Email:</source>
-        <translation>&amp;Email:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="50"/>
-        <source>Enter the email address</source>
-        <translation>Gib die Email Adresse ein</translation>
     </message>
 </context>
 <context>
@@ -41487,11 +41644,6 @@ Schreibt man „(?&amp;lt;!u)q“, so bedeutet dies: „Finde das Zeichen ‚q�
         <translation>Drücken, um einen neuen Filter hinzuzufügen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="64"/>
-        <source>Press to remove the selected filter</source>
-        <translation type="obsolete">Drücken, um den ausgewählten Filter zu löschen</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/QtHelpFiltersDialog.py" line="128"/>
         <source>Add Filter</source>
         <translation>Filter hinzufügen</translation>
@@ -41505,21 +41657,6 @@ Schreibt man „(?&amp;lt;!u)q“, so bedeutet dies: „Finde das Zeichen ‚q�
         <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="79"/>
         <source>Add Filter ...</source>
         <translation>Filter hinzufügen ...</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="67"/>
-        <source>Remove Filter</source>
-        <translation type="obsolete">Filter entfernen</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="74"/>
-        <source>Press to remove the selected attribute</source>
-        <translation type="obsolete">Drücken, um das ausgewählte Attribut zu entfernen</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="77"/>
-        <source>Remove Attribute</source>
-        <translation type="obsolete">Attribut entfernen</translation>
     </message>
     <message>
         <location filename="../Helpviewer/QtHelpFiltersDialog.ui" line="86"/>
@@ -56570,11 +56707,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Python 2-Interpreter wurde nicht innerhalb von 30s beendet.</translation>
     </message>
     <message>
-        <location filename="../Utilities/__init__.py" line="1423"/>
-        <source>Invalid data received from Python2 syntax checker.</source>
-        <translation type="obsolete">Ungültige Daten vom Python2 Syntaxprüfer erhalten.</translation>
-    </message>
-    <message>
         <location filename="../Utilities/__init__.py" line="1389"/>
         <source>Codingerror: {0}</source>
         <translation>Kodierungsfehler: {0}</translation>
@@ -59863,11 +59995,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Nächste Warnung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3762"/>
-        <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Nächste Warnung&lt;/b&gt;&lt;p&gt;Gehe zur nächsten Zeile des aktuellen Editors, die eine py3flakes Warning besitzt.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="3778"/>
         <source>Previous warning message</source>
         <translation>Vorherige Warnung</translation>
@@ -59878,11 +60005,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Vorherige Warnung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3780"/>
-        <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Vorherige Warnung&lt;/b&gt;&lt;p&gt;Gehe zur vorherigen Zeile des aktuellen Editors, die eine py3flakes Warning besitzt.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="3794"/>
         <source>Clear Warning Messages</source>
         <translation>Warnungen löschen</translation>
@@ -59891,11 +60013,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <location filename="../ViewManager/ViewManager.py" line="3789"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>&amp;Warnungen löschen</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="3796"/>
-        <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Warnungen löschen&lt;/b&gt;&lt;p&gt;Löscht die py3flakes Warnungen aller Editoren.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="940"/>
@@ -61607,11 +61724,6 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="../Utilities/pyflakes/translations.py" line="37"/>
         <source>Duplicate argument {0!r} in function definition.</source>
         <translation>Doppeltes Argument {0!r} in Funktionsdefinition.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/translations.py" line="40"/>
-        <source>Redefinition of function {0!r} from line {1!r}.</source>
-        <translation type="obsolete">Redefinition der Funktion {0!r} aus Zeile {1!r}.</translation>
     </message>
     <message>
         <location filename="../Utilities/pyflakes/translations.py" line="43"/>

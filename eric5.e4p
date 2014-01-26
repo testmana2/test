@@ -1086,7 +1086,6 @@
     <Source>ThirdParty/Jasy/jasy/js/tokenize/Tokenizer.py</Source>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/__init__.py</Source>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/Lang.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/__init__.py</Source>
@@ -1111,6 +1110,8 @@
     <Source>Utilities/pyflakes/checker.py</Source>
     <Source>Utilities/pyflakes/messages.py</Source>
     <Source>Utilities/pyflakes/translations.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1425,12 +1426,13 @@
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui</Form>
-    <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

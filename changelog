@@ -14,6 +14,8 @@ Version 5.5.0-xxx:
   -- Mercurial
      --- enhanced the tag dialog and extended the log browser to allow
          tagging of a specific revision
+     --- added dialogs to enter the contents for initial .hgrc/mercurial.ini
+         and .hg/hgrc files
 
 Version 5.4.0:
 - bug fixes
