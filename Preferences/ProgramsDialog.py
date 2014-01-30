@@ -146,12 +146,12 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             self.tr("Translation Extractor (Python, PyQt5)"),
             Utilities.isWindowsPlatform() and "pylupdate5.exe" or "pylupdate5",
             '-version', 'pylupdate', -1)
-        # 2e. Forms Compiler PyQt4
+        # 2e. Forms Compiler PyQt5
         self.__createProgramEntry(
             self.tr("Forms Compiler (Python, PyQt5)"),
             Utilities.isWindowsPlatform() and "pyuic5.bat" or "pyuic5",
             '--version', 'Python User', 4)
-        # 2f. Resource Compiler PyQt4
+        # 2f. Resource Compiler PyQt5
         self.__createProgramEntry(
             self.tr("Resource Compiler (Python, PyQt5)"),
             Utilities.isWindowsPlatform() and "pyrcc5.exe" or "pyrcc5",
