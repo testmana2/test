@@ -1179,7 +1179,12 @@ class QsciScintillaCompat(QsciScintilla):
         @param event event object (QFocusEvent)
         """
         if self.isListActive():
-            self.cancelList()
+            if event.reason() == Qt.ActiveWindowFocusReason:
+                aw = QApplication.activeWindow()
+                if aw is None or aw.parent() is not self:
+                    self.cancelList()
+            else:
+                self.cancelList()
         
         super().focusOutEvent(event)
     
