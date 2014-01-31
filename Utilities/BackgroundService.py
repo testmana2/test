@@ -32,14 +32,14 @@ class BackgroundService(QTcpServer):
     """
     Class implementing the main part of the background service.
     """
-    serviceNotAvailable = pyqtSignal(str, str, int, str)
+    serviceNotAvailable = pyqtSignal(str, str, str, str)
     
     def __init__(self):
         """
         Constructor of the BackgroundService class.
         """
-        self.processes = [None, None]
-        self.connections = [None, None]
+        self.processes = []
+        self.connections = {}
         self.isWorking = None
         self.__queue = []
         self.services = {}
@@ -58,19 +58,20 @@ class BackgroundService(QTcpServer):
         ## NOTE: Need the port if started external in debugger:
         print('BackgroundService listening on: %i' % port)
         if sys.platform == 'win32':
-            pyCompare = Utilities.samefilepath
+            interpreterCompare = Utilities.samefilepath
         else:
-            pyCompare = Utilities.samepath
+            interpreterCompare = Utilities.samepath
         
-        for pyIdx, pyName in enumerate(['Python', 'Python3']):
+        for pyName in ['Python', 'Python3']:
             interpreter = Preferences.getDebugger(
                 pyName + "Interpreter")
             
-            if pyCompare(interpreter, sys.executable):
+            if interpreterCompare(interpreter, sys.executable):
                 process = self.__startInternalClient(port)
             else:
                 process = self.__startExternalClient(interpreter, port)
-            self.processes[pyIdx] = process
+            if process:
+                self.processes.append(process)
 
     def __startExternalClient(self, interpreter, port):
         """
@@ -78,7 +79,7 @@ class BackgroundService(QTcpServer):
         
         @param interpreter path and name of the executable to start (string)
         @param port socket port to which the interpreter should connect (int)
-        @return the process object (QProcess) or None
+        @return the process object (QProcess or None)
         """
         if interpreter == "" or not Utilities.isinpath(interpreter):
             return None
@@ -112,44 +113,44 @@ class BackgroundService(QTcpServer):
         client.
         """
         if self.__queue and self.isWorking is None:
-            fx, fn, pyVer, data = self.__queue.pop(0)
-            self.isWorking = pyVer
-            self.__send(fx, fn, pyVer, data)
+            fx, lang, fn, data = self.__queue.pop(0)
+            self.isWorking = lang
+            self.__send(fx, lang, fn, data)
     
-    def __send(self, fx, fn, pyVer, data):
+    def __send(self, fx, lang, fn, data):
         """
         Private method to send a job request to one of the clients.
         
         @param fx remote function name to execute (str)
+        @param lang language to connect to (str)
         @param fn filename for identification (str)
-        @param pyVer version for the required interpreter (int)
         @param data function argument(s) (any basic datatype)
         """
-        packedData = json.dumps([fx, fn, data])
-        if sys.version_info[0] == 3:
-            packedData = bytes(packedData, 'utf-8')
-        connection = self.connections[pyVer - 2]
+        connection = self.connections.get(lang)
         if connection is None:
             if fx != 'INIT':
                 self.serviceNotAvailable.emit(
-                    fx, fn, pyVer, self.trUtf8(
-                        'Python{0} interpreter not configured.').format(pyVer))
+                    fx, lang, fn, self.trUtf8(
+                        '{0} not configured.').format(lang))
             # Reset flag and continue processing queue
             self.isWorking = None
             self.__processQueue()
         else:
+            packedData = json.dumps([fx, fn, data])
+            if sys.version_info[0] == 3:
+                packedData = bytes(packedData, 'utf-8')
             header = struct.pack(
                 b'!II', len(packedData), adler32(packedData) & 0xffffffff)
             connection.write(header)
             connection.write(packedData)
 
-    def __receive(self, channel):
+    def __receive(self, lang):
         """
         Private method to receive the response from the clients.
         
-        @param channel of the incomming connection (int: 0 or 1)
+        @param lang language of the incomming connection (str)
         """
-        connection = self.connections[channel]
+        connection = self.connections[lang]
         header = connection.read(8)
         length, datahash = struct.unpack(b'!II', header)
         
@@ -163,49 +164,45 @@ class BackgroundService(QTcpServer):
             packedData = packedData.decode('utf-8')
         # "check" if is's a tuple of 3 values
         fx, fn, data = json.loads(packedData)
-        self.__postResult(fx, fn, data)
         
-    def __postResult(self, fx, fn, data):
-        """
-        Private method to emit the correspondig signal for the returned
-        function.
-        
-        @param fx remote function name to execute (str)
-        @param fn filename for identification (str)
-        @param data function argument(s) (any basic datatype)
-        """
         if fx == 'INIT':
             pass
-        elif fx == 'exception':
+        elif fx == 'EXCEPTION':
             # Call sys.excepthook(type, value, traceback) to emulate the
             # exception which was caught on the client
             #sys.excepthook(*data)
             print(data)
+        elif data == 'Unknown service.':
+            callback = self.services.get((fx, lang))
+            if callback:
+                callback[3](fx, lang, fn, data)
         else:
-            callback = self.services.get(fx)
+            callback = self.services.get((fx, lang))
             if callback:
                 callback[2](fn, *data)
         
         self.isWorking = None
         self.__processQueue()
 
-    def enqueueRequest(self, fx, fn, pyVer, data):
+    def enqueueRequest(self, fx, lang, fn, data):
         """
         Implement a queued processing of incomming events.
         
-        Dublicate file checks update an older request to avoid overrun or
-        starving of the check.
+        Dublicate service requests updates an older request to avoid overrun or
+        starving of the services.
         @param fx function name of the service (str)
+        @param lang language to connect to (str)
         @param fn filename for identification (str)
-        @param pyVer version for the required interpreter (int)
-        @param data function argument(s) (any basic datatype)
+        @param data function argument(s) (any basic datatype(s))
         """
-        args = [fx, fn, pyVer, data]
+        args = [fx, lang, fn, data]
         if fx == 'INIT':
             self.__queue.insert(0, args)
         else:
             for pendingArg in self.__queue:
+                # Check if it's the same service request (fx, lang, fn equal)
                 if pendingArg[:3] == args[:3]:
+                    # Update the data
                     pendingArg[3] = args[3]
                     break
             else:
@@ -213,29 +210,34 @@ class BackgroundService(QTcpServer):
         self.__processQueue()
     
     def serviceConnect(
-            self, fx, modulepath, module, callback, onErrorCallback=None):
+            self, fx, lang, modulepath, module, callback,
+            onErrorCallback=None):
         """
         Announce a new service to the background service/ client.
         
         @param fx function name of the service (str)
+        @param lang language of the new service (str)
         @param modulepath full path to the module (str)
         @param module name to import (str)
         @param callback function on service response (function)
         @param onErrorCallback function if client isn't available (function)
         """
-        self.services[fx] = modulepath, module, callback, onErrorCallback
-        self.enqueueRequest('INIT', fx, 0, [modulepath, module])
-        self.enqueueRequest('INIT', fx, 1, [modulepath, module])
+        self.services[(fx, lang)] = \
+            modulepath, module, callback, onErrorCallback
+        self.enqueueRequest('INIT', lang, fx, [modulepath, module])
         if onErrorCallback:
             self.serviceNotAvailable.connect(onErrorCallback)
     
-    def serviceDisconnect(self, fx):
+    def serviceDisconnect(self, fx, lang):
         """
         Remove the service from the service list.
         
-        @param fx function name of the service
+        @param fx function name of the service (function)
+        @param lang language of the service (str)
         """
-        self.services.pop(fx, None)
+        serviceArgs = self.services.pop((fx, lang), None)
+        if serviceArgs and serviceArgs[3]:
+            self.serviceNotAvailable.disconnect(serviceArgs[3])
 
     def on_newConnection(self):
         """
@@ -244,24 +246,28 @@ class BackgroundService(QTcpServer):
         connection = self.nextPendingConnection()
         if not connection.waitForReadyRead(1000):
             return
-        ch = 0 if connection.read(1) == b'2' else 1
+        lang = connection.read(64)
+        if sys.version_info[0] == 3:
+            lang = lang.decode('utf-8')
         # Avoid hanging of eric on shutdown
-        if self.connections[ch]:
-            self.connections[ch].close()
-        if self.isWorking == ch + 2:
+        if self.connections.get(lang):
+            self.connections[lang].close()
+        if self.isWorking == lang:
             self.isWorking = None
-        self.connections[ch] = connection
+        self.connections[lang] = connection
         connection.readyRead.connect(
-            lambda x=ch: self.__receive(x))
+            lambda x=lang: self.__receive(x))
         
-        for fx, args in self.services.items():
-            self.enqueueRequest('INIT', fx, ch, args[:2])
+        for (fx, lng), args in self.services.items():
+            if lng == lang:
+                # Register service with modulepath and module
+                self.enqueueRequest('INIT', lng, fx, args[:2])
 
     def shutdown(self):
         """
         Cleanup the connections and processes when Eric is shuting down.
         """
-        for connection in self.connections:
+        for connection in self.connections.values():
             if connection:
                 connection.close()
         

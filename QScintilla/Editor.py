@@ -312,8 +312,8 @@ class Editor(QsciScintillaCompat):
         self.__setTextDisplay()
         
         # initialize the online syntax check timer
-        self.internalServices = e5App().getObject('InternalServices')
-        self.internalServices.syntaxChecked.connect(self.__processResult)
+        self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
+        self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
         self.__initOnlineSyntaxCheck()
         
         self.isResourcesFile = False
@@ -4962,23 +4962,18 @@ class Editor(QsciScintillaCompat):
         """
         Private method to perform an automatic syntax check of the file.
         """
-        if (self.isPy2File() or self.isPy3File()) is False:
+        if self.filetype not in self.syntaxCheckService.getLanguages():
             return
         
         if Preferences.getEditor("AutoCheckSyntax"):
             if Preferences.getEditor("OnlineSyntaxCheck"):
                 self.__onlineSyntaxCheckTimer.stop()
             
-            checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
-            ignoreStarImportWarnings = Preferences.getFlakes(
-                "IgnoreStarImportWarnings")
-                
-            self.internalServices.syntaxCheck(
-                self.fileName or "(Unnamed)", self.text(), checkFlakes,
-                ignoreStarImportWarnings, editor=self)
+            self.syntaxCheckService.syntaxCheck(
+                self.filetype, self.fileName or "(Unnamed)", self.text())
 
     def __processResult(
-            self, fn, nok, fname, line, index, code, error, warnings):
+            self, fn, nok, line, index, code, error, warnings):
         """
         Slot to report the resulting messages.
         
@@ -4988,7 +4983,6 @@ class Editor(QsciScintillaCompat):
         
         @param fn filename of the checked file (str)
         @param nok flag if an error in the source was found (boolean)
-        @param fname filename of the checked file (str)  # TODO: remove dubl.
         @param line number where the error occured (int)
         @param index the column where the error occured (int)
         @param code the part of the code where the error occured (str)
@@ -5885,7 +5879,7 @@ class Editor(QsciScintillaCompat):
         self.breakpointModel.rowsInserted.disconnect(
             self.__addBreakPoints)
         
-        self.internalServices.syntaxChecked.disconnect(self.__processResult)
+        self.syntaxCheckService.syntaxChecked.disconnect(self.__processResult)
         
         if self.spell:
             self.spell.stopIncrementalCheck()

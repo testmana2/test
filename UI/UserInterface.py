@@ -205,9 +205,6 @@ class UserInterface(E5MainWindow):
         # Create the background service object
         from Utilities.BackgroundService import BackgroundService
         self.backgroundService = BackgroundService()
-        # And initialize the standard services
-        from Utilities.InternalServices import InternalServices
-        self.internalServices = InternalServices(self.backgroundService)
         
         # Generate an empty project object and multi project object
         from Project.Project import Project
@@ -458,7 +455,6 @@ class UserInterface(E5MainWindow):
         e5App().registerObject("DebugUI", self.debuggerUI)
         e5App().registerObject("DebugServer", debugServer)
         e5App().registerObject("BackgroundService", self.backgroundService)
-        e5App().registerObject("InternalServices", self.internalServices)
         e5App().registerObject("ViewManager", self.viewmanager)
         e5App().registerObject("Project", self.project)
         e5App().registerObject("ProjectBrowser", self.projectBrowser)

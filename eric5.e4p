@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-01-14, 23:44:35 -->
+<!-- Saved: 2014-01-30, 22:41:13 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1106,7 +1106,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/checker.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/__init__.py</Source>
-    <Source>Utilities/InternalServices.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

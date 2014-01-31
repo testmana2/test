@@ -21,7 +21,6 @@ from E5Gui.E5Application import e5App
 from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
 import Utilities
-import Preferences
 import UI.PixmapCache
 
 
@@ -66,8 +65,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
         
-        self.internalServices = e5App().getObject('InternalServices')
-        self.internalServices.syntaxChecked.connect(self.__processResult)
+        self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
+        self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
         
     def __resort(self):
         """
@@ -154,9 +153,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.files = fn
         elif os.path.isdir(fn):
             self.files = []
-            extensions = set(Preferences.getPython("PythonExtensions") +
-                             Preferences.getPython("Python3Extensions"))
-            for ext in extensions:
+            for ext in self.syntaxCheckService.getExtensions():
                 self.files.extend(
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
@@ -177,10 +174,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.checkProgressLabel.setVisible(len(self.files) > 1)
             QApplication.processEvents()
 
-            self.checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
-            self.ignoreStarImportWarnings = Preferences.getFlakes(
-                "IgnoreStarImportWarnings")
-            
             # now go through all the files
             self.progress = 0
             self.check(codestring)
@@ -220,12 +213,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 self.check()
                 return
         
-        self.internalServices.syntaxCheck(
-            self.filename, self.source, self.checkFlakes,
-            self.ignoreStarImportWarnings)
+        self.syntaxCheckService.syntaxCheck(None, self.filename, self.source)
 
     def __processResult(
-            self, fn, nok, fname, line, index, code, error, warnings):
+            self, fn, nok, line, index, code, error, warnings):
         """
         Slot to display the reported messages.
         
@@ -235,7 +226,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         @param fn filename of the checked file (str)
         @param nok flag if an error in the source was found (boolean)
-        @param fname filename of the checked file (str)  # TODO: remove dubl.
         @param line number where the error occured (int)
         @param index the column where the error occured (int)
         @param code the part of the code where the error occured (str)
@@ -250,7 +240,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if nok:
             self.noResults = False
             self.__createResultItem(
-                fname, line, index, error, code.strip(), False)
+                fn, line, index, error, code.strip(), False)
         else:
             source = self.source.splitlines()
             for marker, _fn, lineno, col, msg in warnings:

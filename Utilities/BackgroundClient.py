@@ -36,7 +36,7 @@ class BackgroundClient(object):
         self.services = {}
         
         self.connection = socket.create_connection((host, port))
-        ver = b'2' if sys.version_info[0] == 2 else b'3'
+        ver = b'Python2' if sys.version_info[0] == 2 else b'Python3'
         self.connection.sendall(ver)
         self.connection.settimeout(0.25)
 
@@ -124,7 +124,7 @@ class BackgroundClient(object):
         """
         # TODO: Wrap arguments so they can be serialized by JSON
         self.__send(
-            'exception', '?', [str(exctype), str(excval), str(exctb)])
+            'EXCEPTION', '?', [str(exctype), str(excval), str(exctb)])
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
