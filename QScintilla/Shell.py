@@ -1293,7 +1293,10 @@ class Shell(QsciScintillaCompat):
             
             self.dbs.remoteStatement(cmd)
             while self.inCommandExecution:
-                QApplication.processEvents()
+                try:
+                    QApplication.processEvents()
+                except KeyboardInterrupt:
+                    pass
         else:
             if not self.echoInput:
                 cmd = self.buff
