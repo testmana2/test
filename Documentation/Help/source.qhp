@@ -5580,6 +5580,7 @@
       <keyword name="HelpWindow.__closeNetworkMonitor" id="HelpWindow.__closeNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeNetworkMonitor" />
       <keyword name="HelpWindow.__copy" id="HelpWindow.__copy" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__copy" />
       <keyword name="HelpWindow.__currentChanged" id="HelpWindow.__currentChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__currentChanged" />
+      <keyword name="HelpWindow.__del__" id="HelpWindow.__del__" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__del__" />
       <keyword name="HelpWindow.__docsInstalled" id="HelpWindow.__docsInstalled" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__docsInstalled" />
       <keyword name="HelpWindow.__feedsManagerClosed" id="HelpWindow.__feedsManagerClosed" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__feedsManagerClosed" />
       <keyword name="HelpWindow.__filterQtHelpDocumentation" id="HelpWindow.__filterQtHelpDocumentation" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__filterQtHelpDocumentation" />
@@ -9407,6 +9408,7 @@
       <keyword name="QsciScintillaCompat" id="QsciScintillaCompat" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat" />
       <keyword name="QsciScintillaCompat (Constructor)" id="QsciScintillaCompat (Constructor)" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__init__" />
       <keyword name="QsciScintillaCompat (Module)" id="QsciScintillaCompat (Module)" ref="eric5.QScintilla.QsciScintillaCompat.html" />
+      <keyword name="QsciScintillaCompat.__completionListSelected" id="QsciScintillaCompat.__completionListSelected" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__completionListSelected" />
       <keyword name="QsciScintillaCompat.__doSearchTarget" id="QsciScintillaCompat.__doSearchTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__doSearchTarget" />
       <keyword name="QsciScintillaCompat.__setFoldMarker" id="QsciScintillaCompat.__setFoldMarker" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__setFoldMarker" />
       <keyword name="QsciScintillaCompat._encodeString" id="QsciScintillaCompat._encodeString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat._encodeString" />
