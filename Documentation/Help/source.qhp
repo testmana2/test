@@ -5552,6 +5552,7 @@
       <keyword name="HelpWindow.__closeNetworkMonitor" id="HelpWindow.__closeNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeNetworkMonitor" />
       <keyword name="HelpWindow.__copy" id="HelpWindow.__copy" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__copy" />
       <keyword name="HelpWindow.__currentChanged" id="HelpWindow.__currentChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__currentChanged" />
+      <keyword name="HelpWindow.__del__" id="HelpWindow.__del__" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__del__" />
       <keyword name="HelpWindow.__docsInstalled" id="HelpWindow.__docsInstalled" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__docsInstalled" />
       <keyword name="HelpWindow.__feedsManagerClosed" id="HelpWindow.__feedsManagerClosed" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__feedsManagerClosed" />
       <keyword name="HelpWindow.__filterQtHelpDocumentation" id="HelpWindow.__filterQtHelpDocumentation" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__filterQtHelpDocumentation" />
