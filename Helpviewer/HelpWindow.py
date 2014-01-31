@@ -280,7 +280,17 @@ class HelpWindow(E5MainWindow):
                     QTimer.singleShot(0, self.__searchForWord)
             
             QTimer.singleShot(0, syncMgr.loadSettings)
-
+    
+    def __del__(self):
+        """
+        Special method called during object destruction.
+        
+        Note: This empty variant seems to get rid of the Qt message
+        'Warning: QBasicTimer::start: QBasicTimer can only be used with
+        threads started with QThread'
+        """
+        pass
+    
     def __setIconDatabasePath(self, enable=True):
         """
         Private method to set the favicons path.
