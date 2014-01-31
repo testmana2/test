@@ -73,6 +73,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.__init__">QsciScintillaCompat</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.__completionListSelected">__completionListSelected</a></td>
+<td>Private slot to handle the selection from the completion list.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.__doSearchTarget">__doSearchTarget</a></td>
 <td>Private method to perform the search in target.</td>
 </tr><tr>
@@ -378,6 +381,24 @@ QsciScintilla
 <dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
+</dd>
+</dl><a NAME="QsciScintillaCompat.__completionListSelected" ID="QsciScintillaCompat.__completionListSelected"></a>
+<h4>QsciScintillaCompat.__completionListSelected</h4>
+<b>__completionListSelected</b>(<i>id, txt</i>)
+<p>
+        Private slot to handle the selection from the completion list.
+</p><p>
+        Note: This works around an issue of some window managers taking
+        focus away from the application when clicked inside a completion
+        list but not giving it back when an item is selected via a
+        double-click.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+the ID of the user list (integer)
+</dd><dt><i>txt</i></dt>
+<dd>
+the selected text (string)
 </dd>
 </dl><a NAME="QsciScintillaCompat.__doSearchTarget" ID="QsciScintillaCompat.__doSearchTarget"></a>
 <h4>QsciScintillaCompat.__doSearchTarget</h4>

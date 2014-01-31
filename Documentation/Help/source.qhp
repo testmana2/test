@@ -9363,6 +9363,7 @@
       <keyword name="QsciScintillaCompat" id="QsciScintillaCompat" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat" />
       <keyword name="QsciScintillaCompat (Constructor)" id="QsciScintillaCompat (Constructor)" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__init__" />
       <keyword name="QsciScintillaCompat (Module)" id="QsciScintillaCompat (Module)" ref="eric5.QScintilla.QsciScintillaCompat.html" />
+      <keyword name="QsciScintillaCompat.__completionListSelected" id="QsciScintillaCompat.__completionListSelected" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__completionListSelected" />
       <keyword name="QsciScintillaCompat.__doSearchTarget" id="QsciScintillaCompat.__doSearchTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__doSearchTarget" />
       <keyword name="QsciScintillaCompat.__setFoldMarker" id="QsciScintillaCompat.__setFoldMarker" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__setFoldMarker" />
       <keyword name="QsciScintillaCompat._encodeString" id="QsciScintillaCompat._encodeString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat._encodeString" />

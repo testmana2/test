@@ -67,6 +67,8 @@ class QsciScintillaCompat(QsciScintilla):
         self.__targetSearchStart = 0
         self.__targetSearchEnd = -1
         self.__targetSearchActive = False
+        
+        self.userListActivated.connect(self.__completionListSelected)
     
     def setLexer(self, lex=None):
         """
@@ -1179,7 +1181,12 @@ class QsciScintillaCompat(QsciScintilla):
         @param event event object (QFocusEvent)
         """
         if self.isListActive():
-            self.cancelList()
+            if event.reason() == Qt.ActiveWindowFocusReason:
+                aw = QApplication.activeWindow()
+                if aw is None or aw.parent() is not self:
+                    self.cancelList()
+            else:
+                self.cancelList()
         
         super().focusOutEvent(event)
     
@@ -1259,6 +1266,24 @@ class QsciScintillaCompat(QsciScintilla):
                            ord(self.UserSeparator))
         self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id,
                            self._encodeString(self.UserSeparator.join(lst)))
+    
+    ###########################################################################
+    ## work-arounds for buggy behavior
+    ###########################################################################
+    
+    def __completionListSelected(self, id, txt):
+        """
+        Private slot to handle the selection from the completion list.
+        
+        Note: This works around an issue of some window managers taking
+        focus away from the application when clicked inside a completion
+        list but not giving it back when an item is selected via a
+        double-click.
+        
+        @param id the ID of the user list (integer)
+        @param txt the selected text (string)
+        """
+        self.activateWindow()
     
     ###########################################################################
     ## utility methods
