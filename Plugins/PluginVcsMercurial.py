@@ -166,6 +166,7 @@ class VcsMercurialPlugin(QObject):
             "ServerStyle": "",
             "CleanupPatterns": "*.orig *.rej *~",
             "CreateBackup": False,
+            "InternalMerge": False,
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper

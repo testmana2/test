@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>406</width>
-    <height>582</height>
+    <width>408</width>
+    <height>657</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -171,6 +171,29 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="title">
+      <string>Merge</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QCheckBox" name="internalMergeCheckBox">
+        <property name="toolTip">
+         <string>Select to enforce usage of the Mercural internal merge tool</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Internal Merge Tool&lt;/b&gt;
+&lt;p&gt;Select to enforce usage of the Mercural internal merge tool,which leaves conflict markers in the file in case of conflicting changes.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Use internal merge with conflict markers</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_6">
      <property name="title">
       <string>Revert</string>
@@ -243,6 +266,7 @@
   <tabstop>logBrowserCheckBox</tabstop>
   <tabstop>pullUpdateCheckBox</tabstop>
   <tabstop>preferUnbundleCheckBox</tabstop>
+  <tabstop>internalMergeCheckBox</tabstop>
   <tabstop>backupCheckBox</tabstop>
   <tabstop>cleanupPatternEdit</tabstop>
   <tabstop>configButton</tabstop>

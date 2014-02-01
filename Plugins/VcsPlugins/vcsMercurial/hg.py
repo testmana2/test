@@ -1039,6 +1039,9 @@ class Hg(VersionControl):
         self.addArguments(args, opts)
         if force:
             args.append("--force")
+        if self.getPlugin().getPreferences("InternalMerge"):
+            args.append("--tool")
+            args.append("internal:merge")
         if rev:
             args.append("--rev")
             args.append(rev)

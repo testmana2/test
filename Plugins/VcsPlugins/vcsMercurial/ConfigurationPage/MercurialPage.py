@@ -48,6 +48,8 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
             self.__plugin.getPreferences("CleanupPatterns"))
         self.backupCheckBox.setChecked(
             self.__plugin.getPreferences("CreateBackup"))
+        self.internalMergeCheckBox.setChecked(
+            self.__plugin.getPreferences("InternalMerge"))
     
     def save(self):
         """
@@ -67,6 +69,8 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
             "CleanupPatterns", self.cleanupPatternEdit.text())
         self.__plugin.setPreferences(
             "CreateBackup", self.backupCheckBox.isChecked())
+        self.__plugin.setPreferences(
+            "InternalMerge", self.internalMergeCheckBox.isChecked())
     
     @pyqtSlot()
     def on_configButton_clicked(self):
