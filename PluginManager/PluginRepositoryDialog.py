@@ -640,7 +640,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         itm = self.__selectedItems()[0]
         pluginName = (itm.data(0, PluginRepositoryWidget.FilenameRole)
-            .rsplit("-", 1)[0])
+                      .rsplit("-", 1)[0])
         self.__updateHiddenPluginsList([pluginName])
     
     def __hideSelectedPlugins(self):
@@ -650,7 +650,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         hideList = []
         for itm in self.__selectedItems():
             pluginName = (itm.data(0, PluginRepositoryWidget.FilenameRole)
-                .rsplit("-", 1)[0])
+                          .rsplit("-", 1)[0])
             hideList.append(pluginName)
         self.__updateHiddenPluginsList(hideList)
     

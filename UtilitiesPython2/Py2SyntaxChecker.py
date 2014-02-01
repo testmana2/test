@@ -104,8 +104,8 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     @return list of lists containing the warnings
         (marker, file name, line number, message)
     """
-    from py2flakes.checker import Checker
-    from py2flakes.messages import ImportStarUsed
+    from pyflakes.checker import Checker
+    from pyflakes.messages import ImportStarUsed
     
     flakesWarnings = []
     lines = codestring.splitlines()

@@ -39,6 +39,8 @@ class HgRepoConfigDataDialog(QDialog, Ui_HgRepoConfigDataDialog):
         """
         Private slot to switch the default password visibility
         of the default password.
+        
+        @param checked state of the push button (boolean)
         """
         if checked:
             self.defaultPasswordEdit.setEchoMode(QLineEdit.Normal)
@@ -50,6 +52,8 @@ class HgRepoConfigDataDialog(QDialog, Ui_HgRepoConfigDataDialog):
         """
         Private slot to switch the default password visibility
         of the default push password.
+        
+        @param checked state of the push button (boolean)
         """
         if checked:
             self.defaultPushPasswordEdit.setEchoMode(QLineEdit.Normal)

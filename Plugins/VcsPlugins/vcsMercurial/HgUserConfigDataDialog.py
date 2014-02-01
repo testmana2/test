@@ -17,6 +17,7 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
         """
         Constructor
         
+        @param version Mercurial version info (tuple of two integers)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
