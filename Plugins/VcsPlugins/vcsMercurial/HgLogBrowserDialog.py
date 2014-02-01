@@ -601,7 +601,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
         itm.setData(0, self.__edgesRole, edges)
-        itm.setData(0, self.__parentsRole, parents)
+        if parents == [-1]:
+            itm.setData(0, self.__parentsRole, [])
+        else:
+            itm.setData(0, self.__parentsRole, parents)
         
         if self.logTree.topLevelItemCount() > 1:
             topedges = \
@@ -660,6 +663,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.errors.clear()
         self.intercept = False
         
+        preargs = []
         args = []
         args.append(self.commandMode)
         self.vcs.addArguments(args, self.vcs.options['global'])
@@ -701,7 +705,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
                     project.getProjectManagementDir(), "hg-bundle.hg")
-                args.append('--bundle')
+                if os.path.exists(self.vcs.bundleFile):
+                    os.remove(self.vcs.bundleFile)
+                preargs = args[:]
+                preargs.append("--quiet")
+                preargs.append('--bundle')
+                preargs.append(self.vcs.bundleFile)
                 args.append(self.vcs.bundleFile)
         if not self.projectMode:
             args.append(self.filename)
@@ -710,11 +719,18 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
             
-            out, err = self.__hgClient.runcommand(args)
-            self.buf = out.splitlines(True)
+            if preargs:
+                out, err = self.__hgClient.runcommand(preargs)
+            else:
+                err = ""
             if err:
                 self.__showError(err)
-            self.__processBuffer()
+            else:
+                out, err = self.__hgClient.runcommand(args)
+                self.buf = out.splitlines(True)
+                if err:
+                    self.__showError(err)
+                self.__processBuffer()
             self.__finish()
         else:
             self.process.kill()
@@ -723,6 +739,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             
             self.inputGroup.setEnabled(True)
             self.inputGroup.show()
+            
+            if preargs:
+                process = QProcess()
+                process.setWorkingDirectory(self.repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted(5000)
+                if procStarted:
+                    process.waitForFinished(30000)
             
             self.process.start('hg', args)
             procStarted = self.process.waitForStarted(5000)

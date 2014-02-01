@@ -124,6 +124,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.activateWindow()
         self.raise_()
         
+        preargs = []
         args = []
         args.append(self.mode)
         self.vcs.addArguments(args, self.vcs.options['global'])
@@ -154,7 +155,12 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
                     project.getProjectManagementDir(), "hg-bundle.hg")
-                args.append('--bundle')
+                if os.path.exists(self.vcs.bundleFile):
+                    os.remove(self.vcs.bundleFile)
+                preargs = args[:]
+                preargs.append("--quiet")
+                preargs.append('--bundle')
+                preargs.append(self.vcs.bundleFile)
                 args.append(self.vcs.bundleFile)
         if revisions:
             for rev in revisions:
@@ -167,21 +173,34 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
             
-            out, err = self.__hgClient.runcommand(args)
-            
+            if preargs:
+                out, err = self.__hgClient.runcommand(preargs)
+            else:
+                err = ""
             if err:
                 self.__showError(err)
-            if out and self.isVisible():
-                for line in out.splitlines(True):
-                    self.__processOutputLine(line)
-                    if self.__hgClient.wasCanceled():
-                        break
-            
+            else:
+                out, err = self.__hgClient.runcommand(args)
+                if err:
+                    self.__showError(err)
+                if out and self.isVisible():
+                    for line in out.splitlines(True):
+                        self.__processOutputLine(line)
+                        if self.__hgClient.wasCanceled():
+                            break
             self.__finish()
         else:
             self.process.kill()
             
             self.process.setWorkingDirectory(self.repodir)
+            
+            if preargs:
+                process = QProcess()
+                process.setWorkingDirectory(self.repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted(5000)
+                if procStarted:
+                    process.waitForFinished(30000)
             
             self.process.start('hg', args)
             procStarted = self.process.waitForStarted(5000)
