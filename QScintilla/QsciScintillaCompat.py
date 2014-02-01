@@ -1188,6 +1188,14 @@ class QsciScintillaCompat(QsciScintilla):
             else:
                 self.cancelList()
         
+        if self.isCallTipActive():
+            if event.reason() == Qt.ActiveWindowFocusReason:
+                aw = QApplication.activeWindow()
+                if aw is None or aw.parent() is not self:
+                    self.SendScintilla(QsciScintilla.SCI_CALLTIPCANCEL)
+            else:
+                self.SendScintilla(QsciScintilla.SCI_CALLTIPCANCEL)
+        
         super().focusOutEvent(event)
     
     def event(self, evt):
