@@ -6123,6 +6123,7 @@
       <keyword name="HgLogBrowserDialog.__updateGraftAction" id="HgLogBrowserDialog.__updateGraftAction" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateGraftAction" />
       <keyword name="HgLogBrowserDialog.__updateGui" id="HgLogBrowserDialog.__updateGui" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateGui" />
       <keyword name="HgLogBrowserDialog.__updatePhaseAction" id="HgLogBrowserDialog.__updatePhaseAction" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updatePhaseAction" />
+      <keyword name="HgLogBrowserDialog.__updateTagAction" id="HgLogBrowserDialog.__updateTagAction" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateTagAction" />
       <keyword name="HgLogBrowserDialog.closeEvent" id="HgLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.closeEvent" />
       <keyword name="HgLogBrowserDialog.col2x" id="HgLogBrowserDialog.col2x" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.col2x" />
       <keyword name="HgLogBrowserDialog.keyPressEvent" id="HgLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.keyPressEvent" />
