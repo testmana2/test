@@ -52,18 +52,18 @@ class Hg(VersionControl):
         """
         VersionControl.__init__(self, parent, name)
         self.defaultOptions = {
-            'global':   [''],
-            'commit':   [''],
+            'global': [''],
+            'commit': [''],
             'checkout': [''],
-            'update':   [''],
-            'add':      [''],
-            'remove':   [''],
-            'diff':     [''],
-            'log':      [''],
-            'history':  [''],
-            'status':   [''],
-            'tag':      [''],
-            'export':   ['']
+            'update': [''],
+            'add': [''],
+            'remove': [''],
+            'diff': [''],
+            'log': [''],
+            'history': [''],
+            'status': [''],
+            'tag': [''],
+            'export': ['']
         }
         
         self.__plugin = plugin
@@ -1911,7 +1911,8 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
             res = dia.hasAddOrDelete()
-        if command == "unbundle":
+        if self.bundleFile and \
+           os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
             self.bundleFile = None
         self.checkVCSStatus()
