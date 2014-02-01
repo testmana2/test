@@ -158,7 +158,7 @@ class VcsMercurialPlugin(QObject):
         self.__mercurialDefaults = {
             "StopLogOnCopy": True,  # used in log browser
             "UseLogBrowser": True,
-            "LogLimit": 100,
+            "LogLimit": 20,
             "CommitMessages": 20,
             "PullUpdate": False,
             "PreferUnbundle": False,
