@@ -965,6 +965,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__updateDiffButtons()
         self.__updatePhaseAction()
         self.__updateGraftAction()
+        self.__updateTagAction()
     
     def __readStdout(self):
         """
@@ -1066,7 +1067,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def __updatePhaseAction(self):
         """
-        Private slot to update the status of the phase button.
+        Private slot to update the status of the phase action.
         """
         if self.initialCommandMode == "log":
             # step 1: count entries with changeable phases
@@ -1094,7 +1095,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def __updateGraftAction(self):
         """
-        Private slot to update the status of the graft button.
+        Private slot to update the status of the graft action.
         """
         if self.__graftAct is not None:
             if self.initialCommandMode == "log":
@@ -1110,6 +1111,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.__graftAct.setEnabled(otherBranches > 0)
             else:
                 self.__graftAct.setEnabled(False)
+    
+    def __updateTagAction(self):
+        """
+        Private slot to update the status of the graft action.
+        """
+        if self.initialCommandMode == "log":
+            self.__tagAct.setEnabled(len(self.logTree.selectedItems()) == 1)
+        else:
+            self.__tagAct.setEnabled(False)
     
     def __updateGui(self, itm):
         """
@@ -1145,6 +1155,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__updateDiffButtons()
         self.__updatePhaseAction()
         self.__updateGraftAction()
+        self.__updateTagAction()
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -1153,13 +1164,11 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if len(self.logTree.selectedItems()) == 1:
             self.__updateGui(self.logTree.selectedItems()[0])
-            self.__tagAct.setEnabled(True)
-        else:
-            self.__tagAct.setEnabled(False)
         
         self.__updateDiffButtons()
         self.__updatePhaseAction()
         self.__updateGraftAction()
+        self.__updateTagAction()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
