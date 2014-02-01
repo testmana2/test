@@ -725,7 +725,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 err = ""
             if err:
                 self.__showError(err)
-            else:
+            elif os.path.exists(self.vcs.bundleFile):
                 out, err = self.__hgClient.runcommand(args)
                 self.buf = out.splitlines(True)
                 if err:
@@ -748,18 +748,21 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if procStarted:
                     process.waitForFinished(30000)
             
-            self.process.start('hg', args)
-            procStarted = self.process.waitForStarted(5000)
-            if not procStarted:
-                self.inputGroup.setEnabled(False)
-                self.inputGroup.hide()
-                E5MessageBox.critical(
-                    self,
-                    self.tr('Process Generation Error'),
-                    self.tr(
-                        'The process {0} could not be started. '
-                        'Ensure, that it is in the search path.'
-                    ).format('hg'))
+            if os.path.exists(self.vcs.bundleFile):
+                self.process.start('hg', args)
+                procStarted = self.process.waitForStarted(5000)
+                if not procStarted:
+                    self.inputGroup.setEnabled(False)
+                    self.inputGroup.hide()
+                    E5MessageBox.critical(
+                        self,
+                        self.tr('Process Generation Error'),
+                        self.tr(
+                            'The process {0} could not be started. '
+                            'Ensure, that it is in the search path.'
+                        ).format('hg'))
+            else:
+                self.__finish()
     
     def start(self, fn):
         """
