@@ -179,7 +179,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 err = ""
             if err:
                 self.__showError(err)
-            elif os.path.exists(self.vcs.bundleFile):
+            elif self.mode != "incoming" or \
+                    os.path.exists(self.vcs.bundleFile):
                 out, err = self.__hgClient.runcommand(args)
                 if err:
                     self.__showError(err)

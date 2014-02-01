@@ -706,7 +706,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 err = ""
             if err:
                 self.__showError(err)
-            elif os.path.exists(self.vcs.bundleFile):
+            elif self.commandMode != "incoming" or \
+                    os.path.exists(self.vcs.bundleFile):
                 out, err = self.__hgClient.runcommand(args)
                 self.buf = out.splitlines(True)
                 if err:
