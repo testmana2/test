@@ -151,7 +151,7 @@ class VcsPySvnPlugin(QObject):
         
         self.__subversionDefaults = {
             "StopLogOnCopy": 1,
-            "LogLimit": 100,
+            "LogLimit": 20,
             "CommitMessages": 20,
         }
         

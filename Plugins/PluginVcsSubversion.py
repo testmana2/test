@@ -158,7 +158,7 @@ class VcsSubversionPlugin(QObject):
         
         self.__subversionDefaults = {
             "StopLogOnCopy": True,
-            "LogLimit": 100,
+            "LogLimit": 20,
             "CommitMessages": 20,
         }
         
