@@ -569,7 +569,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         rev, node = revision.split(":")
         if rev in self.__closedBranchesRevs:
-            closedStr = "--"
+            closedStr = " \u2612"
         else:
             closedStr = ""
         msgtxt = msg[0]
