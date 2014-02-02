@@ -46,13 +46,13 @@ class PluginManager(QObject):
     @signal shutdown() emitted at shutdown of the IDE
     @signal pluginAboutToBeActivated(modulName, pluginObject) emitted just
         before a plugin is activated
-    @signal pluginActivated(modulName, pluginObject) emitted just after
+    @signal pluginActivated(moduleName, pluginObject) emitted just after
         a plugin was activated
     @signal allPlugginsActivated() emitted at startup after all plugins have
         been activated
-    @signal pluginAboutToBeDeactivated(modulName, pluginObject) emitted just
+    @signal pluginAboutToBeDeactivated(moduleName, pluginObject) emitted just
         before a plugin is deactivated
-    @signal pluginDeactivated(modulName, pluginObject) emitted just after
+    @signal pluginDeactivated(moduleName, pluginObject) emitted just after
         a plugin was deactivated
     """
     shutdown = pyqtSignal()
