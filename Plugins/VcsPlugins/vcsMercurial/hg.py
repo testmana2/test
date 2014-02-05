@@ -373,8 +373,8 @@ class Hg(VersionControl):
         """
         status = self.vcsCheckout(vcsDataDict, projectDir)
         shutil.rmtree(os.path.join(projectDir, self.adminDir), True)
-        if os.path.exists(os.path.join(projectDir, '.hgignore')):
-            os.remove(os.path.join(projectDir, '.hgignore'))
+        if os.path.exists(os.path.join(projectDir, Hg.IgnoreFileName)):
+            os.remove(os.path.join(projectDir, Hg.IgnoreFileName))
         return status
     
     def vcsCommit(self, name, message, noDialog=False, closeBranch=False,
