@@ -6165,6 +6165,11 @@ class Editor(QsciScintillaCompat):
             self.markerDeleteHandle(handle)
         self.breaks = {}
         
+        if not os.path.exists(self.fileName):
+            # close the file, if it was deleted in the background
+            self.close()
+            return
+        
         # reread the file
         try:
             self.readFile(self.fileName)
