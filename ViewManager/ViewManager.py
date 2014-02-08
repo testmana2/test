@@ -4543,7 +4543,8 @@ class ViewManager(QObject):
         filenames = []
         for editor in self.editors:
             fn = editor.getFileName()
-            if fn is not None and fn not in filenames:
+            if fn is not None and fn not in filenames and os.path.exists(fn):
+                # only return names of existing files
                 filenames.append(fn)
         
         return filenames
