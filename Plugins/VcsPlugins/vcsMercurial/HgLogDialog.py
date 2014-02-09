@@ -180,7 +180,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             if err:
                 self.__showError(err)
             elif self.mode != "incoming" or \
-                    os.path.exists(self.vcs.bundleFile):
+                (self.vcs.bundleFile and 
+                 os.path.exists(self.vcs.bundleFile)):
                 out, err = self.__hgClient.runcommand(args)
                 if err:
                     self.__showError(err)
@@ -203,7 +204,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 if procStarted:
                     process.waitForFinished(30000)
             
-            if os.path.exists(self.vcs.bundleFile):
+            if self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
                 self.process.start('hg', args)
                 procStarted = self.process.waitForStarted(5000)
                 if not procStarted:
