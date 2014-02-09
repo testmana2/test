@@ -727,7 +727,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.__showError(err)
             elif self.commandMode != "incoming" or \
                 (self.vcs.bundleFile and
-                 os.path.exists(self.vcs.bundleFile)):
+                 os.path.exists(self.vcs.bundleFile)) or \
+                    self.bundle:
                 out, err = self.__hgClient.runcommand(args)
                 self.buf = out.splitlines(True)
                 if err:
@@ -750,7 +751,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if procStarted:
                     process.waitForFinished(30000)
             
-            if self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
+            if self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile) or \
+                    self.bundle:
                 self.process.start('hg', args)
                 procStarted = self.process.waitForStarted(5000)
                 if not procStarted:
