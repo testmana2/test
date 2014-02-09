@@ -211,7 +211,7 @@ class VcsMercurialPlugin(QObject):
         @return the requested setting
         """
         if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate",
-                   "PreferUnbundle", "CreateBackup"]:
+                   "PreferUnbundle", "CreateBackup", "InternalMerge"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages", "ServerPort"]:
