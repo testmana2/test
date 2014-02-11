@@ -10,7 +10,7 @@ Module implementing a tabbed viewmanager class.
 import os
 
 from PyQt4.QtCore import QPoint, QFileInfo, pyqtSignal, QEvent, QByteArray, \
-    QMimeData, Qt
+    QMimeData, Qt, QSize
 from PyQt4.QtGui import QWidget, QColor, QHBoxLayout, QDrag, QPixmap, \
     QSplitter, QTabBar, QApplication, QToolButton, QMenu, QLabel
 
@@ -159,6 +159,9 @@ class TabWidget(E5TabWidget):
         
         self.__tabBar = TabBar(self)
         self.setTabBar(self.__tabBar)
+        iconSize = self.__tabBar.iconSize()
+        self.__tabBar.setIconSize(
+            QSize(2 * iconSize.width(), iconSize.height()))
         
         self.setUsesScrollButtons(True)
         self.setElideMode(Qt.ElideNone)
@@ -997,14 +1000,16 @@ class Tabview(QSplitter, ViewManager):
             if tw.hasEditor(editor):
                 break
         index = tw.indexOf(editor)
+        keys = []
         if m:
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("fileModified.png"))
-        elif editor.hasSyntaxErrors():
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("syntaxError.png"))
+            keys.append("fileModified.png")
+        if editor.hasSyntaxErrors():
+            keys.append("syntaxError22.png")
         elif editor.hasWarnings():
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("warning.png"))
-        else:
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("empty.png"))
+            keys.append("warning22.png")
+        if not keys:
+            keys.append("empty.png")
+        tw.setTabIcon(index, UI.PixmapCache.getCombinedIcon(keys))
         self._checkActions(editor)
         
     def _syntaxErrorToggled(self, editor):
@@ -1017,14 +1022,16 @@ class Tabview(QSplitter, ViewManager):
             if tw.hasEditor(editor):
                 break
         index = tw.indexOf(editor)
+        keys = []
+        if editor.isModified():
+            keys.append("fileModified.png")
         if editor.hasSyntaxErrors():
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("syntaxError.png"))
+            keys.append("syntaxError22.png")
         elif editor.hasWarnings():
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("warning.png"))
-        elif editor.isModified():
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("fileModified.png"))
-        else:
-            tw.setTabIcon(index, UI.PixmapCache.getIcon("empty.png"))
+            keys.append("warning22.png")
+        if not keys:
+            keys.append("empty.png")
+        tw.setTabIcon(index, UI.PixmapCache.getCombinedIcon(keys))
         
         ViewManager._syntaxErrorToggled(self, editor)
         

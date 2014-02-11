@@ -40,6 +40,9 @@ Module implementing a pixmap cache for icons.
 <td><a href="#addSearchPath">addSearchPath</a></td>
 <td>Module function to add a path to the search path.</td>
 </tr><tr>
+<td><a href="#getCombinedIcon">getCombinedIcon</a></td>
+<td>Module function to retrieve a symbolic link icon.</td>
+</tr><tr>
 <td><a href="#getIcon">getIcon</a></td>
 <td>Module function to retrieve an icon.</td>
 </tr><tr>
@@ -128,6 +131,27 @@ path to add (string)
 </dd><dt><i>cache</i></dt>
 <dd>
 reference to the pixmap cache object (PixmapCache)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getCombinedIcon" ID="getCombinedIcon"></a>
+<h2>getCombinedIcon</h2>
+<b>getCombinedIcon</b>(<i>keys, cache=pixCache</i>)
+<p>
+    Module function to retrieve a symbolic link icon.
+</p><dl>
+<dt><i>keys</i></dt>
+<dd>
+list of names of icons (string)
+</dd><dt><i>cache</i></dt>
+<dd>
+reference to the pixmap cache object (PixmapCache)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the requested icon (QIcon)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

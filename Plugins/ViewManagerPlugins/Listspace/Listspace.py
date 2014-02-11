@@ -520,18 +520,17 @@ class Listspace(QSplitter, ViewManager):
         """
         currentRow = self.viewlist.currentRow()
         index = self.editors.index(editor)
+        keys = []
         if m:
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("fileModified.png"))
-        elif editor.hasSyntaxErrors():
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("syntaxError.png"))
+            keys.append("fileModified.png")
+        if editor.hasSyntaxErrors():
+            keys.append("syntaxError22.png")
         elif editor.hasWarnings():
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("warning.png"))
-        else:
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("empty.png"))
+            keys.append("warning22.png")
+        if not keys:
+            keys.append("empty.png")
+        self.viewlist.item(index).setIcon(
+            UI.PixmapCache.getCombinedIcon(keys))
         self.viewlist.setCurrentRow(currentRow)
         self._checkActions(editor)
         
@@ -543,18 +542,17 @@ class Listspace(QSplitter, ViewManager):
         """
         currentRow = self.viewlist.currentRow()
         index = self.editors.index(editor)
+        keys = []
+        if editor.isModified():
+            keys.append("fileModified.png")
         if editor.hasSyntaxErrors():
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("syntaxError.png"))
+            keys.append("syntaxError22.png")
         elif editor.hasWarnings():
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("warning.png"))
-        elif editor.isModified():
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("fileModified.png"))
-        else:
-            self.viewlist.item(index).setIcon(
-                UI.PixmapCache.getIcon("empty.png"))
+            keys.append("warning22.png")
+        if not keys:
+            keys.append("empty.png")
+        self.viewlist.item(index).setIcon(
+            UI.PixmapCache.getCombinedIcon(keys))
         self.viewlist.setCurrentRow(currentRow)
         
         ViewManager._syntaxErrorToggled(self, editor)

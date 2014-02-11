@@ -13056,6 +13056,7 @@
       <keyword name="generateQtToolName" id="generateQtToolName" ref="eric5.Utilities.__init__.html#generateQtToolName" />
       <keyword name="generateVersionInfo" id="generateVersionInfo" ref="eric5.Utilities.__init__.html#generateVersionInfo" />
       <keyword name="getChannelModesDict" id="getChannelModesDict" ref="eric5.Network.IRC.IrcUtilities.html#getChannelModesDict" />
+      <keyword name="getCombinedIcon" id="getCombinedIcon" ref="eric5.UI.PixmapCache.html#getCombinedIcon" />
       <keyword name="getCompleter" id="getCompleter" ref="eric5.QScintilla.TypingCompleters.__init__.html#getCompleter" />
       <keyword name="getConfig" id="getConfig" ref="eric5.eric5config.html#getConfig" />
       <keyword name="getConfigData" id="getConfigData" ref="eric5.Plugins.PluginVcsMercurial.html#getConfigData" />
