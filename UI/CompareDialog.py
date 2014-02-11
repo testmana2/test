@@ -143,8 +143,6 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         # connect some of our widgets explicitly
         self.file1Edit.textChanged.connect(self.__fileChanged)
         self.file2Edit.textChanged.connect(self.__fileChanged)
-        self.synchronizeCheckBox.toggled[bool].connect(
-            self.on_synchronizeCheckBox_toggled)
         self.vsb1.valueChanged.connect(self.__scrollBarMoved)
         self.vsb1.valueChanged.connect(self.vsb2.setValue)
         self.vsb2.valueChanged.connect(self.vsb1.setValue)
