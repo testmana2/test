@@ -38,6 +38,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         super().__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
+        self.setWindowFlags(self.windowFlags() | Qt.WindowMinMaxButtonsHint)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
