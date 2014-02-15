@@ -1743,7 +1743,8 @@ class Hg(VersionControl):
         else:
             output, error = self.__client.runcommand(args)
         
-        return output, error
+        # return file contents with 'universal newlines'
+        return output.replace('\r\n', '\n').replace('\r', '\n'), error
     
     def hgSbsDiff(self, name, extended=False, revisions=None):
         """
