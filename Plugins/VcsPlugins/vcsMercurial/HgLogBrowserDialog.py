@@ -55,6 +55,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(self.windowFlags() | Qt.WindowMinMaxButtonsHint)
         
         if mode == "log":
             self.setWindowTitle(self.tr("Mercurial Log"))
