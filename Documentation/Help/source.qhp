@@ -1668,6 +1668,7 @@
       <keyword name="BookmarksModel.supportedDropActions" id="BookmarksModel.supportedDropActions" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html#BookmarksModel.supportedDropActions" />
       <keyword name="BookmarksProjectHelper" id="BookmarksProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper" />
       <keyword name="BookmarksProjectHelper (Constructor)" id="BookmarksProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__init__" />
+      <keyword name="BookmarksProjectHelper.__aboutToShowMenu" id="BookmarksProjectHelper.__aboutToShowMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__aboutToShowMenu" />
       <keyword name="BookmarksProjectHelper.__hgBookmarkDefine" id="BookmarksProjectHelper.__hgBookmarkDefine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkDefine" />
       <keyword name="BookmarksProjectHelper.__hgBookmarkDelete" id="BookmarksProjectHelper.__hgBookmarkDelete" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkDelete" />
       <keyword name="BookmarksProjectHelper.__hgBookmarkIncoming" id="BookmarksProjectHelper.__hgBookmarkIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkIncoming" />
@@ -4934,6 +4935,7 @@
       <keyword name="FetchExtension (Package)" id="FetchExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html" />
       <keyword name="FetchProjectHelper" id="FetchProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper" />
       <keyword name="FetchProjectHelper (Constructor)" id="FetchProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__init__" />
+      <keyword name="FetchProjectHelper.__aboutToShowMenu" id="FetchProjectHelper.__aboutToShowMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__aboutToShowMenu" />
       <keyword name="FetchProjectHelper.__hgFetch" id="FetchProjectHelper.__hgFetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__hgFetch" />
       <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
       <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
@@ -5717,6 +5719,7 @@
       <keyword name="Helpviewer (Package)" id="Helpviewer (Package)" ref="index-eric5.Helpviewer.html" />
       <keyword name="Hg" id="Hg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
       <keyword name="Hg (Constructor)" id="Hg (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__init__" />
+      <keyword name="Hg.__checkDefaults" id="Hg.__checkDefaults" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__checkDefaults" />
       <keyword name="Hg.__getExtensionsInfo" id="Hg.__getExtensionsInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__getExtensionsInfo" />
       <keyword name="Hg.__hgGetFileForRevision" id="Hg.__hgGetFileForRevision" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__hgGetFileForRevision" />
       <keyword name="Hg.__hgURL" id="Hg.__hgURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__hgURL" />
@@ -5724,6 +5727,8 @@
       <keyword name="Hg.__monitorRepoIniFile" id="Hg.__monitorRepoIniFile" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__monitorRepoIniFile" />
       <keyword name="Hg.__vcsCommit_Step2" id="Hg.__vcsCommit_Step2" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__vcsCommit_Step2" />
       <keyword name="Hg._createStatusMonitorThread" id="Hg._createStatusMonitorThread" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg._createStatusMonitorThread" />
+      <keyword name="Hg.canPull" id="Hg.canPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.canPull" />
+      <keyword name="Hg.canPush" id="Hg.canPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.canPush" />
       <keyword name="Hg.clearStatusCache" id="Hg.clearStatusCache" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.clearStatusCache" />
       <keyword name="Hg.getClient" id="Hg.getClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getClient" />
       <keyword name="Hg.getExtensionObject" id="Hg.getExtensionObject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getExtensionObject" />
@@ -6284,6 +6289,7 @@
       <keyword name="HgProjectHelper.initActions" id="HgProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initActions" />
       <keyword name="HgProjectHelper.initMenu" id="HgProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initMenu" />
       <keyword name="HgProjectHelper.setObjects" id="HgProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.setObjects" />
+      <keyword name="HgProjectHelper.showMenu" id="HgProjectHelper.showMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.showMenu" />
       <keyword name="HgProjectHelper.shutdown" id="HgProjectHelper.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.shutdown" />
       <keyword name="HgPurgeListDialog" id="HgPurgeListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html#HgPurgeListDialog" />
       <keyword name="HgPurgeListDialog (Constructor)" id="HgPurgeListDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html#HgPurgeListDialog.__init__" />

@@ -121,6 +121,11 @@ class Hg(VersionControl):
         
         self.__client = None
         
+        self.__repoDir = ""
+        self.__repoIniFile = ""
+        self.__defaultConfigured = False
+        self.__defaultPushConfigured = False
+        
         # instantiate the extensions
         from .BookmarksExtension.bookmarks import Bookmarks
         from .QueuesExtension.queues import Queues
@@ -3216,8 +3221,59 @@ class Hg(VersionControl):
                     shutil.rmtree(subrepoAbsPath, True)
     
     ###########################################################################
-    ## Methods to handle extensions are below.
+    ## Methods to handle configuration dependent stuff are below.
     ###########################################################################
+    
+    def __checkDefaults(self):
+        """
+        Private method to check, if the default and default-push URLs
+        have been configured.
+        """
+        args = []
+        args.append('showconfig')
+        args.append('paths')
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            self.__repoDir and process.setWorkingDirectory(self.__repoDir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(
+                        process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            self.__defaultConfigured = False
+            self.__defaultPushConfigured = False
+            for line in output.splitlines():
+                if line.startswith("paths.default=") and \
+                        not line.strip().endswith("="):
+                    self.__defaultConfigured = True
+                if line.startswith("paths.default-push=") and \
+                        not line.strip().endswith("="):
+                    self.__defaultPushConfigured = True
+    
+    def canPull(self):
+        """
+        Public method to check, if pull is possible.
+        
+        @return flag indicating pull capability (boolean)
+        """
+        return self.__defaultConfigured
+    
+    def canPush(self):
+        """
+        Public method to check, if push is possible.
+        
+        @return flag indicating push capability (boolean)
+        """
+        return self.__defaultPushConfigured or self.__defaultConfigured
     
     def __iniFileChanged(self, path):
         """
@@ -3237,6 +3293,9 @@ class Hg(VersionControl):
                         """<p>The Mercurial Command Server could not be"""
                         """ restarted.</p><p>Reason: {0}</p>""").format(err))
                 self.__client = None
+        
+        if self.__repoIniFile and path == self.__repoIniFile:
+            self.__checkDefaults()
     
     def __monitorRepoIniFile(self, name):
         """
@@ -3257,6 +3316,12 @@ class Hg(VersionControl):
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if os.path.exists(cfgFile):
             self.__iniWatcher.addPath(cfgFile)
+            self.__repoIniFile = cfgFile
+            self.__checkDefaults()
+    
+    ###########################################################################
+    ## Methods to handle extensions are below.
+    ###########################################################################
     
     def __getExtensionsInfo(self):
         """
@@ -3272,6 +3337,7 @@ class Hg(VersionControl):
         output = ""
         if self.__client is None:
             process = QProcess()
+            self.__repoDir and process.setWorkingDirectory(self.__repoDir)
             process.start('hg', args)
             procStarted = process.waitForStarted(5000)
             if procStarted:
@@ -3349,31 +3415,35 @@ class Hg(VersionControl):
         @param project reference to the project object
         @return the project helper object
         """
+        # find the root of the repo
+        repodir = project.getProjectPath()
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if not repodir or os.path.splitdrive(repodir)[1] == os.sep:
+                repodir = ""
+                break
+        if repodir:
+            self.__repoDir = repodir
+        
         self.__projectHelper = self.__plugin.getProjectHelper()
         self.__projectHelper.setObjects(self, project)
         self.__monitorRepoIniFile(project.getProjectPath())
         
-        if not Utilities.isMacPlatform() and self.version >= (1, 9):
-            # find the root of the repo
-            repodir = project.getProjectPath()
-            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
-                repodir = os.path.dirname(repodir)
-                if not repodir or os.path.splitdrive(repodir)[1] == os.sep:
-                    repodir = ""
-                    break
-            if repodir:
-                from .HgClient import HgClient
-                client = HgClient(repodir, "utf-8", self)
-                ok, err = client.startServer()
-                if ok:
-                    self.__client = client
-                else:
-                    E5MessageBox.warning(
-                        None,
-                        self.tr("Mercurial Command Server"),
-                        self.tr(
-                            """<p>The Mercurial Command Server could not be"""
-                            """ started.</p><p>Reason: {0}</p>""").format(err))
+        if not Utilities.isMacPlatform() and \
+            self.version >= (1, 9) and \
+                repodir:
+            from .HgClient import HgClient
+            client = HgClient(repodir, "utf-8", self)
+            ok, err = client.startServer()
+            if ok:
+                self.__client = client
+            else:
+                E5MessageBox.warning(
+                    None,
+                    self.tr("Mercurial Command Server"),
+                    self.tr(
+                        """<p>The Mercurial Command Server could not be"""
+                        """ started.</p><p>Reason: {0}</p>""").format(err))
         
         return self.__projectHelper
 

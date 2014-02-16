@@ -63,7 +63,15 @@ class FetchProjectHelper(HgExtensionProjectHelper):
         
         menu.addAction(self.hgFetchAct)
         
+        menu.aboutToShow.connect(self.__aboutToShowMenu)
+        
         return menu
+    
+    def __aboutToShowMenu(self):
+        """
+        Private slot to handle the aboutToShow signal of the background menu.
+        """
+        self.hgFetchAct.setEnabled(self.vcs.canPull())
     
     def menuTitle(self):
         """

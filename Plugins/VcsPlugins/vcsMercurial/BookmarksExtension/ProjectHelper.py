@@ -196,7 +196,19 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         menu.addAction(self.hgBookmarkOutgoingAct)
         menu.addAction(self.hgBookmarkPushAct)
         
+        menu.aboutToShow.connect(self.__aboutToShowMenu)
+        
         return menu
+    
+    def __aboutToShowMenu(self):
+        """
+        Private slot to handle the aboutToShow signal of the background menu.
+        """
+        self.hgBookmarkPullAct.setEnabled(self.vcs.canPull())
+        self.hgBookmarkIncomingAct.setEnabled(self.vcs.canPull())
+        
+        self.hgBookmarkPushAct.setEnabled(self.vcs.canPush())
+        self.hgBookmarkOutgoingAct.setEnabled(self.vcs.canPush())
     
     def menuTitle(self):
         """

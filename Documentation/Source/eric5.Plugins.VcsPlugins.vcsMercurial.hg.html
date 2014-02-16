@@ -70,6 +70,9 @@ VersionControl
 <td><a href="#Hg.__init__">Hg</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#Hg.__checkDefaults">__checkDefaults</a></td>
+<td>Private method to check, if the default and default-push URLs have been configured.</td>
+</tr><tr>
 <td><a href="#Hg.__getExtensionsInfo">__getExtensionsInfo</a></td>
 <td>Private method to get the active extensions from Mercurial.</td>
 </tr><tr>
@@ -90,6 +93,12 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg._createStatusMonitorThread">_createStatusMonitorThread</a></td>
 <td>Protected method to create an instance of the VCS status monitor thread.</td>
+</tr><tr>
+<td><a href="#Hg.canPull">canPull</a></td>
+<td>Public method to check, if pull is possible.</td>
+</tr><tr>
+<td><a href="#Hg.canPush">canPush</a></td>
+<td>Public method to check, if push is possible.</td>
 </tr><tr>
 <td><a href="#Hg.clearStatusCache">clearStatusCache</a></td>
 <td>Public method to clear the status cache.</td>
@@ -358,7 +367,13 @@ parent widget (QWidget)
 <dd>
 name of this object (string)
 </dd>
-</dl><a NAME="Hg.__getExtensionsInfo" ID="Hg.__getExtensionsInfo"></a>
+</dl><a NAME="Hg.__checkDefaults" ID="Hg.__checkDefaults"></a>
+<h4>Hg.__checkDefaults</h4>
+<b>__checkDefaults</b>(<i></i>)
+<p>
+        Private method to check, if the default and default-push URLs
+        have been configured.
+</p><a NAME="Hg.__getExtensionsInfo" ID="Hg.__getExtensionsInfo"></a>
 <h4>Hg.__getExtensionsInfo</h4>
 <b>__getExtensionsInfo</b>(<i></i>)
 <p>
@@ -442,6 +457,26 @@ reference to the project object (Project)
 <dt>Returns:</dt>
 <dd>
 reference to the monitor thread (QThread)
+</dd>
+</dl><a NAME="Hg.canPull" ID="Hg.canPull"></a>
+<h4>Hg.canPull</h4>
+<b>canPull</b>(<i></i>)
+<p>
+        Public method to check, if pull is possible.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating pull capability (boolean)
+</dd>
+</dl><a NAME="Hg.canPush" ID="Hg.canPush"></a>
+<h4>Hg.canPush</h4>
+<b>canPush</b>(<i></i>)
+<p>
+        Public method to check, if push is possible.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating push capability (boolean)
 </dd>
 </dl><a NAME="Hg.clearStatusCache" ID="Hg.clearStatusCache"></a>
 <h4>Hg.clearStatusCache</h4>

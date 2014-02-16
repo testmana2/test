@@ -16,8 +16,10 @@ Version 5.5.0-xxx:
          tagging of a specific revision
      --- added dialogs to enter the contents for initial .hgrc/mercurial.ini
          and .hg/hgrc files
-     --- added a configuration option to enforce the useage of the internal
+     --- added a configuration option to enforce the usage of the internal
          merge tool
+     --- made availablity of push/pull related actions dependent on configured
+         remote repository (default/default-push in .hg/hgrc)
 
 Version 5.4.0:
 - bug fixes

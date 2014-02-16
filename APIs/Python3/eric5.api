@@ -4713,6 +4713,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.getProject?4
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.initActions?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.initMenu?4(menu)
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.setObjects?4(vcsObject, projectObject)
+eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.showMenu?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.shutdown?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper?1(vcsObject, projectObject, parent=None, name=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.HgPurgeListDialog?1(entries, parent=None)
@@ -4866,6 +4867,8 @@ eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.Transplant?
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.IgnoreFileName?7
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg._createStatusMonitorThread?5(interval, project)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.activeExtensionsChanged?7
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.canPull?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.canPush?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.clearStatusCache?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.committed?7
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.getClient?4()

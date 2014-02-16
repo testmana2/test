@@ -1171,6 +1171,20 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgEditUserConfigAct)
         menu.addAction(self.hgConfigAct)
     
+    def showMenu(self):
+        """
+        Public slot called before the vcs menu is shown.
+        """
+        super().showMenu()
+        
+        self.hgPullAct.setEnabled(self.vcs.canPull())
+        self.hgIncomingAct.setEnabled(self.vcs.canPull())
+        
+        self.hgPushAct.setEnabled(self.vcs.canPush())
+        self.hgPushBranchAct.setEnabled(self.vcs.canPush())
+        self.hgPushForcedAct.setEnabled(self.vcs.canPush())
+        self.hgOutgoingAct.setEnabled(self.vcs.canPush())
+    
     def shutdown(self):
         """
         Public method to perform shutdown actions.
