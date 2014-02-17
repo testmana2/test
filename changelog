@@ -20,6 +20,8 @@ Version 5.5.0-xxx:
          merge tool
      --- made availablity of push/pull related actions dependent on configured
          remote repository (default/default-push in .hg/hgrc)
+     --- extended the log browser by an action to switch to the selected
+         revision
 
 Version 5.4.0:
 - bug fixes

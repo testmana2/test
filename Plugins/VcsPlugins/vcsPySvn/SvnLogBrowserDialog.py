@@ -12,7 +12,7 @@ import os
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, QDate, QRegExp, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, \
+from PyQt4.QtGui import QCursor, QHeaderView, QWidget, QApplication, \
     QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
@@ -23,7 +23,7 @@ from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
 
-class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
+class SvnLogBrowserDialog(QWidget, SvnDialogMixin, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
@@ -38,7 +38,6 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         super().__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
-        self.setWindowFlags(self.windowFlags() | Qt.WindowMinMaxButtonsHint)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

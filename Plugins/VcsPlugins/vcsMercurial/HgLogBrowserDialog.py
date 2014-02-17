@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
     QSize, QPoint
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QHeaderView, \
     QTreeWidgetItem, QApplication, QCursor, QLineEdit, QColor, \
     QPixmap, QPainter, QPen, QBrush, QIcon, QMenu
 
@@ -29,7 +29,7 @@ COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
 COLORS = [str(QColor(x).name()) for x in COLORNAMES]
 
 
-class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
+class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
@@ -55,7 +55,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        self.setWindowFlags(self.windowFlags() | Qt.WindowMinMaxButtonsHint)
         
         if mode == "log":
             self.setWindowTitle(self.tr("Mercurial Log"))
@@ -145,6 +144,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 "Copy the selected changesets to the current branch"))
         else:
             self.__graftAct = None
+        
         if self.vcs.version >= (2, 1):
             self.__phaseAct = self.__actionsMenu.addAction(
                 self.tr("Change Phase"), self.__phaseActTriggered)
@@ -156,9 +156,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 """ the same current phase.</p>"""))
         else:
             self.__phaseAct = None
+        
         self.__tagAct = self.__actionsMenu.addAction(
             self.tr("Tag"), self.__tagActTriggered)
         self.__tagAct.setToolTip(self.tr("Tag the selected revision"))
+        
+        self.__switchAct = self.__actionsMenu.addAction(
+            self.tr("Switch"), self.__switchActTriggered)
+        self.__switchAct.setToolTip(self.tr(
+            "Switch the working directory to the selected revision"))
+        
         self.actionsButton.setIcon(
             UI.PixmapCache.getIcon("actionsToolButton.png"))
         self.actionsButton.setMenu(self.__actionsMenu)
@@ -971,9 +978,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__filterLogs()
         
         self.__updateDiffButtons()
-        self.__updatePhaseAction()
-        self.__updateGraftAction()
-        self.__updateTagAction()
+        self.__updateToolMenuActions()
     
     def __readStdout(self):
         """
@@ -1073,40 +1078,35 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             
             self.diffRevisionsButton.setEnabled(False)
     
-    def __updatePhaseAction(self):
+    def __updateToolMenuActions(self):
         """
-        Private slot to update the status of the phase action.
+        Private slot to update the status of the tool menu actions and
+        the tool menu button.
         """
-        if self.initialCommandMode == "log":
-            # step 1: count entries with changeable phases
-            secret = 0
-            draft = 0
-            public = 0
-            for itm in self.logTree.selectedItems():
-                phase = itm.text(self.PhaseColumn)
-                if phase == "draft":
-                    draft += 1
-                elif phase == "secret":
-                    secret += 1
+        if self.initialCommandMode == "log" and self.projectMode:
+            if self.__phaseAct is not None:
+                # step 1: count entries with changeable phases
+                secret = 0
+                draft = 0
+                public = 0
+                for itm in self.logTree.selectedItems():
+                    phase = itm.text(self.PhaseColumn)
+                    if phase == "draft":
+                        draft += 1
+                    elif phase == "secret":
+                        secret += 1
+                    else:
+                        public += 1
+                
+                # step 2: set the status of the phase button
+                if public == 0 and \
+                   ((secret > 0 and draft == 0) or
+                        (secret == 0 and draft > 0)):
+                    self.__phaseAct.setEnabled(True)
                 else:
-                    public += 1
+                    self.__phaseAct.setEnabled(False)
             
-            # step 2: set the status of the phase button
-            if public == 0 and \
-               ((secret > 0 and draft == 0) or
-                    (secret == 0 and draft > 0)):
-                self.__phaseAct.setEnabled(True)
-            else:
-                self.__phaseAct.setEnabled(False)
-        else:
-            self.__phaseAct.setEnabled(False)
-    
-    def __updateGraftAction(self):
-        """
-        Private slot to update the status of the graft action.
-        """
-        if self.__graftAct is not None:
-            if self.initialCommandMode == "log":
+            if self.__graftAct is not None:
                 # step 1: count selected entries not belonging to the
                 #         current branch
                 otherBranches = 0
@@ -1117,21 +1117,17 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 
                 # step 2: set the status of the graft action
                 self.__graftAct.setEnabled(otherBranches > 0)
-            else:
-                self.__graftAct.setEnabled(False)
-    
-    def __updateTagAction(self):
-        """
-        Private slot to update the status of the graft action.
-        """
-        if self.initialCommandMode == "log":
+            
             self.__tagAct.setEnabled(len(self.logTree.selectedItems()) == 1)
+            self.__switchAct.setEnabled(len(self.logTree.selectedItems()) == 1)
+            
+            self.actionsButton.setEnabled(True)
         else:
-            self.__tagAct.setEnabled(False)
+            self.actionsButton.setEnabled(False)
     
     def __updateGui(self, itm):
         """
-        Private slot to update GUI elements except the diff and phase buttons.
+        Private slot to update GUI elements except tool menu actions.
         
         @param itm reference to the item the update should be based on
             (QTreeWidgetItem)
@@ -1161,9 +1157,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         self.__updateGui(current)
         self.__updateDiffButtons()
-        self.__updatePhaseAction()
-        self.__updateGraftAction()
-        self.__updateTagAction()
+        self.__updateToolMenuActions()
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -1174,9 +1168,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__updateGui(self.logTree.selectedItems()[0])
         
         self.__updateDiffButtons()
-        self.__updatePhaseAction()
-        self.__updateGraftAction()
-        self.__updateTagAction()
+        self.__updateToolMenuActions()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -1461,18 +1453,43 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     yesDefault=True)
                 if res:
                     e5App().getObject("Project").reopenProject()
-            else:
-                self.on_refreshButton_clicked()
+                    return
+            
+            self.on_refreshButton_clicked()
     
     @pyqtSlot()
     def __tagActTriggered(self):
         """
         Private slot to tag the selected revision.
         """
-        if len(self.logTree.selectedItems()):
+        if len(self.logTree.selectedItems()) == 1:
             itm = self.logTree.selectedItems()[0]
             rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
             tag = itm.text(self.TagsColumn).strip().split(", ", 1)[0]
             res = self.vcs.vcsTag(self.repodir, revision=rev, tagName=tag)
             if res:
+                self.on_refreshButton_clicked()
+    
+    @pyqtSlot()
+    def __switchActTriggered(self):
+        """
+        Private slot to switch the working directory to the
+        selected revision.
+        """
+        if len(self.logTree.selectedItems()) == 1:
+            itm = self.logTree.selectedItems()[0]
+            rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+            if rev:
+                shouldReopen = self.vcs.vcsUpdate(self.repodir, revision=rev)
+                if shouldReopen:
+                    res = E5MessageBox.yesNo(
+                        None,
+                        self.tr("Switch"),
+                        self.tr(
+                            """The project should be reread. Do this now?"""),
+                        yesDefault=True)
+                    if res:
+                        e5App().getObject("Project").reopenProject()
+                        return
+                
                 self.on_refreshButton_clicked()

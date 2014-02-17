@@ -10,7 +10,7 @@ Module implementing a dialog to browse the log history.
 import os
 
 from PyQt4.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, \
+from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QWidget, \
     QApplication, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
@@ -20,7 +20,7 @@ from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 import Preferences
 
 
-class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
+class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
@@ -34,7 +34,6 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        self.setWindowFlags(self.windowFlags() | Qt.WindowMinMaxButtonsHint)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
