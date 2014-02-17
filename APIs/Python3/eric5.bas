@@ -319,7 +319,7 @@ HgGpgSignDialog QDialog Ui_HgGpgSignDialog
 HgGpgSignaturesDialog QDialog Ui_HgGpgSignaturesDialog
 HgGraftDialog QDialog Ui_HgGraftDialog
 HgImportDialog QDialog Ui_HgImportDialog
-HgLogBrowserDialog QDialog Ui_HgLogBrowserDialog
+HgLogBrowserDialog QWidget Ui_HgLogBrowserDialog
 HgLogDialog QWidget Ui_HgLogDialog
 HgMergeDialog QDialog Ui_HgMergeDialog
 HgMultiRevisionSelectionDialog QDialog Ui_HgMultiRevisionSelectionDialog
@@ -639,7 +639,7 @@ SvnCopyDialog QDialog Ui_SvnCopyDialog
 SvnDialog QDialog Ui_SvnDialog
 SvnDiffDialog QWidget Ui_SvnDiffDialog
 SvnInfoDialog QDialog SvnDialogMixin Ui_VcsRepositoryInfoDialog
-SvnLogBrowserDialog QDialog Ui_SvnLogBrowserDialog
+SvnLogBrowserDialog QWidget Ui_SvnLogBrowserDialog
 SvnLogDialog QWidget Ui_SvnLogDialog
 SvnLoginDialog QDialog Ui_SvnLoginDialog
 SvnMergeDialog QDialog Ui_SvnMergeDialog

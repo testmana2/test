@@ -45,7 +45,7 @@ Module implementing a dialog to browse the log history.
     Class implementing a dialog to browse the log history.
 </p>
 <h3>Derived from</h3>
-QDialog, Ui_HgLogBrowserDialog
+QWidget, Ui_HgLogBrowserDialog
 <h3>Class Attributes</h3>
 <table>
 <tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>MessageColumn</td></tr><tr><td>PhaseColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
@@ -132,23 +132,20 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__showError">__showError</a></td>
 <td>Private slot to show some error.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__switchActTriggered">__switchActTriggered</a></td>
+<td>Private slot to switch the working directory to the selected revision.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__tagActTriggered">__tagActTriggered</a></td>
 <td>Private slot to tag the selected revision.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__updateDiffButtons">__updateDiffButtons</a></td>
 <td>Private slot to update the enabled status of the diff buttons.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.__updateGraftAction">__updateGraftAction</a></td>
-<td>Private slot to update the status of the graft action.</td>
-</tr><tr>
 <td><a href="#HgLogBrowserDialog.__updateGui">__updateGui</a></td>
-<td>Private slot to update GUI elements except the diff and phase buttons.</td>
+<td>Private slot to update GUI elements except tool menu actions.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.__updatePhaseAction">__updatePhaseAction</a></td>
-<td>Private slot to update the status of the phase action.</td>
-</tr><tr>
-<td><a href="#HgLogBrowserDialog.__updateTagAction">__updateTagAction</a></td>
-<td>Private slot to update the status of the graft action.</td>
+<td><a href="#HgLogBrowserDialog.__updateToolMenuActions">__updateToolMenuActions</a></td>
+<td>Private slot to update the status of the tool menu actions and the tool menu button.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
@@ -526,7 +523,13 @@ exit status of the process (QProcess.ExitStatus)
 <dd>
 error to be shown (string)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.__tagActTriggered" ID="HgLogBrowserDialog.__tagActTriggered"></a>
+</dl><a NAME="HgLogBrowserDialog.__switchActTriggered" ID="HgLogBrowserDialog.__switchActTriggered"></a>
+<h4>HgLogBrowserDialog.__switchActTriggered</h4>
+<b>__switchActTriggered</b>(<i></i>)
+<p>
+        Private slot to switch the working directory to the
+        selected revision.
+</p><a NAME="HgLogBrowserDialog.__tagActTriggered" ID="HgLogBrowserDialog.__tagActTriggered"></a>
 <h4>HgLogBrowserDialog.__tagActTriggered</h4>
 <b>__tagActTriggered</b>(<i></i>)
 <p>
@@ -536,32 +539,23 @@ error to be shown (string)
 <b>__updateDiffButtons</b>(<i></i>)
 <p>
         Private slot to update the enabled status of the diff buttons.
-</p><a NAME="HgLogBrowserDialog.__updateGraftAction" ID="HgLogBrowserDialog.__updateGraftAction"></a>
-<h4>HgLogBrowserDialog.__updateGraftAction</h4>
-<b>__updateGraftAction</b>(<i></i>)
-<p>
-        Private slot to update the status of the graft action.
 </p><a NAME="HgLogBrowserDialog.__updateGui" ID="HgLogBrowserDialog.__updateGui"></a>
 <h4>HgLogBrowserDialog.__updateGui</h4>
 <b>__updateGui</b>(<i>itm</i>)
 <p>
-        Private slot to update GUI elements except the diff and phase buttons.
+        Private slot to update GUI elements except tool menu actions.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
 reference to the item the update should be based on
             (QTreeWidgetItem)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.__updatePhaseAction" ID="HgLogBrowserDialog.__updatePhaseAction"></a>
-<h4>HgLogBrowserDialog.__updatePhaseAction</h4>
-<b>__updatePhaseAction</b>(<i></i>)
+</dl><a NAME="HgLogBrowserDialog.__updateToolMenuActions" ID="HgLogBrowserDialog.__updateToolMenuActions"></a>
+<h4>HgLogBrowserDialog.__updateToolMenuActions</h4>
+<b>__updateToolMenuActions</b>(<i></i>)
 <p>
-        Private slot to update the status of the phase action.
-</p><a NAME="HgLogBrowserDialog.__updateTagAction" ID="HgLogBrowserDialog.__updateTagAction"></a>
-<h4>HgLogBrowserDialog.__updateTagAction</h4>
-<b>__updateTagAction</b>(<i></i>)
-<p>
-        Private slot to update the status of the graft action.
+        Private slot to update the status of the tool menu actions and
+        the tool menu button.
 </p><a NAME="HgLogBrowserDialog.closeEvent" ID="HgLogBrowserDialog.closeEvent"></a>
 <h4>HgLogBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
