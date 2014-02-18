@@ -90,6 +90,8 @@ class Hg(VersionControl):
         
         self.log = None
         self.logBrowser = None
+        self.logBrowserIncoming = None
+        self.logBrowserOutgoing = None
         self.diff = None
         self.sbsDiff = None
         self.status = None
@@ -160,6 +162,10 @@ class Hg(VersionControl):
             self.log.close()
         if self.logBrowser is not None:
             self.logBrowser.close()
+        if self.logBrowserIncoming is not None:
+            self.logBrowserIncoming.close()
+        if self.logBrowserOutgoing is not None:
+            self.logBrowserOutgoing.close()
         if self.diff is not None:
             self.diff.close()
         if self.sbsDiff is not None:
@@ -1870,10 +1876,11 @@ class Hg(VersionControl):
         @keyparam isFile flag indicating log for a file is to be shown
             (boolean)
         """
-        from .HgLogBrowserDialog import HgLogBrowserDialog
-        self.logBrowser = HgLogBrowserDialog(self, isFile=isFile)
+        if self.logBrowser is None:
+            from .HgLogBrowserDialog import HgLogBrowserDialog
+            self.logBrowser = HgLogBrowserDialog(self)
         self.logBrowser.show()
-        self.logBrowser.start(path)
+        self.logBrowser.start(path, isFile=isFile)
     
     def hgIncoming(self, name):
         """
@@ -1883,10 +1890,11 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         if self.getPlugin().getPreferences("UseLogBrowser"):
-            from .HgLogBrowserDialog import HgLogBrowserDialog
-            self.logBrowser = HgLogBrowserDialog(self, mode="incoming")
-            self.logBrowser.show()
-            self.logBrowser.start(name)
+            if self.logBrowserIncoming is None:
+                from .HgLogBrowserDialog import HgLogBrowserDialog
+                self.logBrowserIncoming = HgLogBrowserDialog(self, mode="incoming")
+            self.logBrowserIncoming.show()
+            self.logBrowserIncoming.start(name)
         else:
             from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self, mode="incoming")
@@ -1901,10 +1909,11 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         if self.getPlugin().getPreferences("UseLogBrowser"):
-            from .HgLogBrowserDialog import HgLogBrowserDialog
-            self.logBrowser = HgLogBrowserDialog(self, mode="outgoing")
-            self.logBrowser.show()
-            self.logBrowser.start(name)
+            if self.logBrowserOutgoing is None:
+                from .HgLogBrowserDialog import HgLogBrowserDialog
+                self.logBrowserOutgoing = HgLogBrowserDialog(self, mode="outgoing")
+            self.logBrowserOutgoing.show()
+            self.logBrowserOutgoing.start(name)
         else:
             from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self, mode="outgoing")
@@ -2529,11 +2538,12 @@ class Hg(VersionControl):
             self.__lastChangeGroupPath = os.path.dirname(file)
             
             if self.getPlugin().getPreferences("UseLogBrowser"):
-                from .HgLogBrowserDialog import HgLogBrowserDialog
-                self.logBrowser = \
-                    HgLogBrowserDialog(self, mode="incoming", bundle=file)
-                self.logBrowser.show()
-                self.logBrowser.start(name)
+                if self.logBrowserIncoming is None:
+                    from .HgLogBrowserDialog import HgLogBrowserDialog
+                    self.logBrowserIncoming = \
+                        HgLogBrowserDialog(self, mode="incoming")
+                self.logBrowserIncoming.show()
+                self.logBrowserIncoming.start(name, bundle=file)
             else:
                 from .HgLogDialog import HgLogDialog
                 self.log = HgLogDialog(self, mode="incoming", bundle=file)

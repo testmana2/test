@@ -42,19 +42,18 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     MessageColumn = 6
     TagsColumn = 7
     
-    def __init__(self, vcs, mode="log", bundle=None, isFile=False,
-                 parent=None):
+    def __init__(self, vcs, mode="log", parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
-        @param bundle name of a bundle file (string)
-        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.__position = QPoint()
         
         if mode == "log":
             self.setWindowTitle(self.tr("Mercurial Log"))
@@ -75,16 +74,13 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.tr("Press to refresh the list of changesets"))
         self.refreshButton.setEnabled(False)
         
-        self.sbsCheckBox.setEnabled(isFile)
-        self.sbsCheckBox.setVisible(isFile)
-        
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
             self.commandMode = mode
             self.initialCommandMode = mode
         else:
             self.commandMode = "log"
-        self.bundle = bundle
+        self.bundle = ""
         self.__hgClient = vcs.getClient()
         
         self.__initData()
@@ -210,7 +206,42 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 QTimer.singleShot(2000, self.process.kill)
                 self.process.waitForFinished(3000)
         
+        self.__position = self.pos()
+        
         e.accept()
+    
+    def show(self):
+        """
+        Public slot to show the dialog.
+        """
+        if not self.__position.isNull():
+            self.move(self.__position)
+        self.__resetUI()
+        
+        super().show()
+    
+    def __resetUI(self):
+        """
+        Private method to reset the user interface.
+        """
+        self.branchCombo.clear()
+        self.fromDate.setDate(QDate.currentDate())
+        self.toDate.setDate(QDate.currentDate())
+        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
+            self.tr("Message")))
+        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
+            "LogLimit"))
+        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
+            "StopLogOnCopy"))
+        
+        if self.initialCommandMode in ("incoming", "outgoing"):
+            self.nextButton.setEnabled(False)
+            self.limitSpinBox.setEnabled(False)
+        
+        self.logTree.clear()
+        
+        self.commandMode = self.initialCommandMode
+
     
     def __resizeColumnsLog(self):
         """
@@ -776,14 +807,24 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             else:
                 self.__finish()
     
-    def start(self, fn):
+    def start(self, fn, bundle=None, isFile=False):
         """
         Public slot to start the hg log command.
         
         @param fn filename to show the log for (string)
+        @keyparam bundle name of a bundle file (string)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
         """
+        self.bundle = bundle
+        
+        self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
+        
         self.errorGroup.hide()
         QApplication.processEvents()
+        
+        self.__initData()
         
         self.filename = fn
         self.dname, self.fname = self.vcs.splitPath(fn)

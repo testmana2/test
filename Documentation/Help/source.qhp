@@ -6119,6 +6119,7 @@
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
       <keyword name="HgLogBrowserDialog.__readStderr" id="HgLogBrowserDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__readStderr" />
       <keyword name="HgLogBrowserDialog.__readStdout" id="HgLogBrowserDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__readStdout" />
+      <keyword name="HgLogBrowserDialog.__resetUI" id="HgLogBrowserDialog.__resetUI" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resetUI" />
       <keyword name="HgLogBrowserDialog.__resizeColumnsFiles" id="HgLogBrowserDialog.__resizeColumnsFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resizeColumnsFiles" />
       <keyword name="HgLogBrowserDialog.__resizeColumnsLog" id="HgLogBrowserDialog.__resizeColumnsLog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resizeColumnsLog" />
       <keyword name="HgLogBrowserDialog.__resortFiles" id="HgLogBrowserDialog.__resortFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resortFiles" />
@@ -6148,6 +6149,7 @@
       <keyword name="HgLogBrowserDialog.on_sendButton_clicked" id="HgLogBrowserDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_sendButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_stopCheckBox_clicked" id="HgLogBrowserDialog.on_stopCheckBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_stopCheckBox_clicked" />
       <keyword name="HgLogBrowserDialog.on_toDate_dateChanged" id="HgLogBrowserDialog.on_toDate_dateChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_toDate_dateChanged" />
+      <keyword name="HgLogBrowserDialog.show" id="HgLogBrowserDialog.show" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.show" />
       <keyword name="HgLogBrowserDialog.start" id="HgLogBrowserDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.start" />
       <keyword name="HgLogDialog" id="HgLogDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog" />
       <keyword name="HgLogDialog (Constructor)" id="HgLogDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.__init__" />

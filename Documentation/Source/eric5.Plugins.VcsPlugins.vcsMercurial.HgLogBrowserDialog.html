@@ -120,6 +120,9 @@ QWidget, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStandardOutput signal.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__resetUI">__resetUI</a></td>
+<td>Private method to reset the user interface.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__resizeColumnsFiles">__resizeColumnsFiles</a></td>
 <td>Private method to resize the changed files tree columns.</td>
 </tr><tr>
@@ -207,6 +210,9 @@ QWidget, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_toDate_dateChanged">on_toDate_dateChanged</a></td>
 <td>Private slot called, when the from date changes.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.show">show</a></td>
+<td>Public slot to show the dialog.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.start">start</a></td>
 <td>Public slot to start the hg log command.</td>
 </tr>
@@ -217,7 +223,7 @@ QWidget, Ui_HgLogBrowserDialog
 </table>
 <a NAME="HgLogBrowserDialog.__init__" ID="HgLogBrowserDialog.__init__"></a>
 <h4>HgLogBrowserDialog (Constructor)</h4>
-<b>HgLogBrowserDialog</b>(<i>vcs, mode="log", bundle=None, isFile=False, parent=None</i>)
+<b>HgLogBrowserDialog</b>(<i>vcs, mode="log", parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -227,12 +233,6 @@ reference to the vcs object
 </dd><dt><i>mode</i></dt>
 <dd>
 mode of the dialog (string; one of log, incoming, outgoing)
-</dd><dt><i>bundle</i></dt>
-<dd>
-name of a bundle file (string)
-</dd><dt><i>isFile</i></dt>
-<dd>
-flag indicating log for a file is to be shown (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -498,6 +498,11 @@ exit status of the process (QProcess.ExitStatus)
         Private slot to handle the readyReadStandardOutput signal.
 </p><p>
         It reads the output of the process and inserts it into a buffer.
+</p><a NAME="HgLogBrowserDialog.__resetUI" ID="HgLogBrowserDialog.__resetUI"></a>
+<h4>HgLogBrowserDialog.__resetUI</h4>
+<b>__resetUI</b>(<i></i>)
+<p>
+        Private method to reset the user interface.
 </p><a NAME="HgLogBrowserDialog.__resizeColumnsFiles" ID="HgLogBrowserDialog.__resizeColumnsFiles"></a>
 <h4>HgLogBrowserDialog.__resizeColumnsFiles</h4>
 <b>__resizeColumnsFiles</b>(<i></i>)
@@ -722,15 +727,27 @@ flag indicating the state of the check box (boolean)
 <dd>
 new date (QDate)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.start" ID="HgLogBrowserDialog.start"></a>
+</dl><a NAME="HgLogBrowserDialog.show" ID="HgLogBrowserDialog.show"></a>
+<h4>HgLogBrowserDialog.show</h4>
+<b>show</b>(<i></i>)
+<p>
+        Public slot to show the dialog.
+</p><a NAME="HgLogBrowserDialog.start" ID="HgLogBrowserDialog.start"></a>
 <h4>HgLogBrowserDialog.start</h4>
-<b>start</b>(<i>fn</i>)
+<b>start</b>(<i>fn, bundle=None, isFile=False</i>)
 <p>
         Public slot to start the hg log command.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to show the log for (string)
+</dd><dt><i>bundle=</i></dt>
+<dd>
+name of a bundle file (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown
+            (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
