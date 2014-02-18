@@ -436,10 +436,15 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 value = line
             if key == "change":
                 self.endInitialText = True
-            if key in ("change", "branches", "tags", "parents", "user",
-                       "date", "file_copies", "file_adds", "files_mods",
-                       "file_dels", "bookmarks", "phase"):
+            if key in ("change", "tags", "parents", "user", "date",
+                       "file_copies", "file_adds", "files_mods", "file_dels",
+                       "bookmarks", "phase"):
                 self.lastLogEntry[key] = value.strip()
+            elif key == "branches":
+                if value.strip():
+                    self.lastLogEntry[key] = value.strip()
+                else:
+                    self.lastLogEntry[key] = "default"
             elif key == "description":
                 self.lastLogEntry[key] = [value.strip()]
             else:
