@@ -10651,10 +10651,14 @@
       <keyword name="SvnLogBrowserDialog.__generateLogItem" id="SvnLogBrowserDialog.__generateLogItem" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__generateLogItem" />
       <keyword name="SvnLogBrowserDialog.__getLogEntries" id="SvnLogBrowserDialog.__getLogEntries" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__getLogEntries" />
       <keyword name="SvnLogBrowserDialog.__getLogEntries" id="SvnLogBrowserDialog.__getLogEntries" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__getLogEntries" />
+      <keyword name="SvnLogBrowserDialog.__initData" id="SvnLogBrowserDialog.__initData" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__initData" />
+      <keyword name="SvnLogBrowserDialog.__initData" id="SvnLogBrowserDialog.__initData" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__initData" />
       <keyword name="SvnLogBrowserDialog.__procFinished" id="SvnLogBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__procFinished" />
       <keyword name="SvnLogBrowserDialog.__processBuffer" id="SvnLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__processBuffer" />
       <keyword name="SvnLogBrowserDialog.__readStderr" id="SvnLogBrowserDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__readStderr" />
       <keyword name="SvnLogBrowserDialog.__readStdout" id="SvnLogBrowserDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__readStdout" />
+      <keyword name="SvnLogBrowserDialog.__resetUI" id="SvnLogBrowserDialog.__resetUI" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__resetUI" />
+      <keyword name="SvnLogBrowserDialog.__resetUI" id="SvnLogBrowserDialog.__resetUI" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__resetUI" />
       <keyword name="SvnLogBrowserDialog.__resizeColumnsFiles" id="SvnLogBrowserDialog.__resizeColumnsFiles" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__resizeColumnsFiles" />
       <keyword name="SvnLogBrowserDialog.__resizeColumnsFiles" id="SvnLogBrowserDialog.__resizeColumnsFiles" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__resizeColumnsFiles" />
       <keyword name="SvnLogBrowserDialog.__resizeColumnsLog" id="SvnLogBrowserDialog.__resizeColumnsLog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__resizeColumnsLog" />
@@ -10665,6 +10669,7 @@
       <keyword name="SvnLogBrowserDialog.__resortLog" id="SvnLogBrowserDialog.__resortLog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__resortLog" />
       <keyword name="SvnLogBrowserDialog.__showError" id="SvnLogBrowserDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.__showError" />
       <keyword name="SvnLogBrowserDialog._reset" id="SvnLogBrowserDialog._reset" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog._reset" />
+      <keyword name="SvnLogBrowserDialog.closeEvent" id="SvnLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.closeEvent" />
       <keyword name="SvnLogBrowserDialog.closeEvent" id="SvnLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.closeEvent" />
       <keyword name="SvnLogBrowserDialog.keyPressEvent" id="SvnLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.keyPressEvent" />
       <keyword name="SvnLogBrowserDialog.on_buttonBox_clicked" id="SvnLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_buttonBox_clicked" />
@@ -10692,6 +10697,8 @@
       <keyword name="SvnLogBrowserDialog.on_stopCheckBox_clicked" id="SvnLogBrowserDialog.on_stopCheckBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_stopCheckBox_clicked" />
       <keyword name="SvnLogBrowserDialog.on_toDate_dateChanged" id="SvnLogBrowserDialog.on_toDate_dateChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_toDate_dateChanged" />
       <keyword name="SvnLogBrowserDialog.on_toDate_dateChanged" id="SvnLogBrowserDialog.on_toDate_dateChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_toDate_dateChanged" />
+      <keyword name="SvnLogBrowserDialog.show" id="SvnLogBrowserDialog.show" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.show" />
+      <keyword name="SvnLogBrowserDialog.show" id="SvnLogBrowserDialog.show" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.show" />
       <keyword name="SvnLogBrowserDialog.start" id="SvnLogBrowserDialog.start" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.start" />
       <keyword name="SvnLogBrowserDialog.start" id="SvnLogBrowserDialog.start" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.start" />
       <keyword name="SvnLogDialog" id="SvnLogDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogDialog.html#SvnLogDialog" />

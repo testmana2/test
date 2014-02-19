@@ -78,6 +78,9 @@ QWidget, Ui_SvnLogBrowserDialog
 <td><a href="#SvnLogBrowserDialog.__getLogEntries">__getLogEntries</a></td>
 <td>Private method to retrieve log entries from the repository.</td>
 </tr><tr>
+<td><a href="#SvnLogBrowserDialog.__initData">__initData</a></td>
+<td>Private method to (re-)initialize some data.</td>
+</tr><tr>
 <td><a href="#SvnLogBrowserDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -89,6 +92,9 @@ QWidget, Ui_SvnLogBrowserDialog
 </tr><tr>
 <td><a href="#SvnLogBrowserDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStandardOutput signal.</td>
+</tr><tr>
+<td><a href="#SvnLogBrowserDialog.__resetUI">__resetUI</a></td>
+<td>Private method to reset the user interface.</td>
 </tr><tr>
 <td><a href="#SvnLogBrowserDialog.__resizeColumnsFiles">__resizeColumnsFiles</a></td>
 <td>Private method to resize the changed files tree columns.</td>
@@ -150,6 +156,9 @@ QWidget, Ui_SvnLogBrowserDialog
 <td><a href="#SvnLogBrowserDialog.on_toDate_dateChanged">on_toDate_dateChanged</a></td>
 <td>Private slot called, when the from date changes.</td>
 </tr><tr>
+<td><a href="#SvnLogBrowserDialog.show">show</a></td>
+<td>Public slot to show the dialog.</td>
+</tr><tr>
 <td><a href="#SvnLogBrowserDialog.start">start</a></td>
 <td>Public slot to start the svn log command.</td>
 </tr>
@@ -160,16 +169,13 @@ QWidget, Ui_SvnLogBrowserDialog
 </table>
 <a NAME="SvnLogBrowserDialog.__init__" ID="SvnLogBrowserDialog.__init__"></a>
 <h4>SvnLogBrowserDialog (Constructor)</h4>
-<b>SvnLogBrowserDialog</b>(<i>vcs, isFile=False, parent=None</i>)
+<b>SvnLogBrowserDialog</b>(<i>vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
 reference to the vcs object
-</dd><dt><i>isFile</i></dt>
-<dd>
-flag indicating log for a file is to be shown (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -260,7 +266,12 @@ reference to the generated item (QTreeWidgetItem)
 <dd>
 revision number to start from (integer, string)
 </dd>
-</dl><a NAME="SvnLogBrowserDialog.__procFinished" ID="SvnLogBrowserDialog.__procFinished"></a>
+</dl><a NAME="SvnLogBrowserDialog.__initData" ID="SvnLogBrowserDialog.__initData"></a>
+<h4>SvnLogBrowserDialog.__initData</h4>
+<b>__initData</b>(<i></i>)
+<p>
+        Private method to (re-)initialize some data.
+</p><a NAME="SvnLogBrowserDialog.__procFinished" ID="SvnLogBrowserDialog.__procFinished"></a>
 <h4>SvnLogBrowserDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
 <p>
@@ -293,6 +304,11 @@ exit status of the process (QProcess.ExitStatus)
         Private slot to handle the readyReadStandardOutput signal.
 </p><p>
         It reads the output of the process and inserts it into a buffer.
+</p><a NAME="SvnLogBrowserDialog.__resetUI" ID="SvnLogBrowserDialog.__resetUI"></a>
+<h4>SvnLogBrowserDialog.__resetUI</h4>
+<b>__resetUI</b>(<i></i>)
+<p>
+        Private method to reset the user interface.
 </p><a NAME="SvnLogBrowserDialog.__resizeColumnsFiles" ID="SvnLogBrowserDialog.__resizeColumnsFiles"></a>
 <h4>SvnLogBrowserDialog.__resizeColumnsFiles</h4>
 <b>__resizeColumnsFiles</b>(<i></i>)
@@ -446,15 +462,23 @@ flag indicating the checked state (boolean)
 <dd>
 new date (QDate)
 </dd>
-</dl><a NAME="SvnLogBrowserDialog.start" ID="SvnLogBrowserDialog.start"></a>
+</dl><a NAME="SvnLogBrowserDialog.show" ID="SvnLogBrowserDialog.show"></a>
+<h4>SvnLogBrowserDialog.show</h4>
+<b>show</b>(<i></i>)
+<p>
+        Public slot to show the dialog.
+</p><a NAME="SvnLogBrowserDialog.start" ID="SvnLogBrowserDialog.start"></a>
 <h4>SvnLogBrowserDialog.start</h4>
-<b>start</b>(<i>fn</i>)
+<b>start</b>(<i>fn, isFile=False</i>)
 <p>
         Public slot to start the svn log command.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to show the log for (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

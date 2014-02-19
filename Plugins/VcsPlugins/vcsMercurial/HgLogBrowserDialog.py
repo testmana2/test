@@ -80,8 +80,12 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.initialCommandMode = mode
         else:
             self.commandMode = "log"
-        self.bundle = ""
+            self.initialCommandMode = "log"
         self.__hgClient = vcs.getClient()
+        
+        self.__bundle = ""
+        self.__filename = ""
+        self.__isFile = False
         
         self.__initData()
         
@@ -89,18 +93,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         self.fromDate.setDisplayFormat("yyyy-MM-dd")
         self.toDate.setDisplayFormat("yyyy-MM-dd")
-        self.fromDate.setDate(QDate.currentDate())
-        self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
-            self.tr("Message")))
-        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
-            "LogLimit"))
-        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
-            "StopLogOnCopy"))
-        
-        if mode in ("incoming", "outgoing"):
-            self.nextButton.setEnabled(False)
-            self.limitSpinBox.setEnabled(False)
+        self.__resetUI()
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
@@ -237,11 +230,13 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         if self.initialCommandMode in ("incoming", "outgoing"):
             self.nextButton.setEnabled(False)
             self.limitSpinBox.setEnabled(False)
+        else:
+            self.nextButton.setEnabled(True)
+            self.limitSpinBox.setEnabled(True)
         
         self.logTree.clear()
         
         self.commandMode = self.initialCommandMode
-
     
     def __resizeColumnsLog(self):
         """
@@ -445,9 +440,9 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             args = []
             args.append("parents")
             if self.commandMode == "incoming":
-                if self.bundle:
+                if self.__bundle:
                     args.append("--repository")
-                    args.append(self.bundle)
+                    args.append(self.__bundle)
                 elif self.vcs.bundleFile and \
                         os.path.exists(self.vcs.bundleFile):
                     args.append("--repository")
@@ -457,7 +452,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             args.append("-r")
             args.append(rev)
             if not self.projectMode:
-                args.append(self.filename)
+                args.append(self.__filename)
             
             output = ""
             if self.__hgClient:
@@ -738,8 +733,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                                      "styles",
                                      "logBrowser.style"))
         if self.commandMode == "incoming":
-            if self.bundle:
-                args.append(self.bundle)
+            if self.__bundle:
+                args.append(self.__bundle)
             elif not self.vcs.hasSubrepositories():
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
@@ -752,7 +747,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 preargs.append(self.vcs.bundleFile)
                 args.append(self.vcs.bundleFile)
         if not self.projectMode:
-            args.append(self.filename)
+            args.append(self.__filename)
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -767,7 +762,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             elif self.commandMode != "incoming" or \
                 (self.vcs.bundleFile and
                  os.path.exists(self.vcs.bundleFile)) or \
-                    self.bundle:
+                    self.__bundle:
                 out, err = self.__hgClient.runcommand(args)
                 self.buf = out.splitlines(True)
                 if err:
@@ -791,7 +786,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                     process.waitForFinished(30000)
             
             if self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile) or \
-                    self.bundle:
+                    self.__bundle:
                 self.process.start('hg', args)
                 procStarted = self.process.waitForStarted(5000)
                 if not procStarted:
@@ -816,7 +811,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         @keyparam isFile flag indicating log for a file is to be shown
             (boolean)
         """
-        self.bundle = bundle
+        self.__bundle = bundle
+        self.__isFile = isFile
         
         self.sbsCheckBox.setEnabled(isFile)
         self.sbsCheckBox.setVisible(isFile)
@@ -826,7 +822,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         self.__initData()
         
-        self.filename = fn
+        self.__filename = fn
         self.dname, self.fname = self.vcs.splitPath(fn)
         
         # find the root of the repo
@@ -1066,14 +1062,15 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         @param rev2 second revision number (integer)
         """
         if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
-            self.vcs.hgSbsDiff(self.filename, revisions=(str(rev1), str(rev2)))
+            self.vcs.hgSbsDiff(self.__filename,
+                               revisions=(str(rev1), str(rev2)))
         else:
             if self.diff is None:
                 from .HgDiffDialog import HgDiffDialog
                 self.diff = HgDiffDialog(self.vcs)
             self.diff.show()
             self.diff.raise_()
-            self.diff.start(self.filename, [rev1, rev2], self.bundle)
+            self.diff.start(self.__filename, [rev1, rev2], self.__bundle)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -1387,10 +1384,15 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.inputGroup.show()
         self.refreshButton.setEnabled(False)
         
-        self.__initData()
+        if self.initialCommandMode in ("incoming", "outgoing"):
+            self.nextButton.setEnabled(False)
+            self.limitSpinBox.setEnabled(False)
+        else:
+            self.nextButton.setEnabled(True)
+            self.limitSpinBox.setEnabled(True)
         
         self.commandMode = self.initialCommandMode
-        self.start(self.filename)
+        self.start(self.__filename, isFile=self.__isFile)
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

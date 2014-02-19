@@ -2209,11 +2209,12 @@ class Subversion(VersionControl):
         @param path file/directory name to show the log of (string)
         @param isFile flag indicating log for a file is to be shown (boolean)
         """
-        from .SvnLogBrowserDialog import SvnLogBrowserDialog
-        self.logBrowser = SvnLogBrowserDialog(self, isFile=isFile)
+        if self.logBrowser is None:
+            from .SvnLogBrowserDialog import SvnLogBrowserDialog
+            self.logBrowser = SvnLogBrowserDialog(self)
         self.logBrowser.show()
         QApplication.processEvents()
-        self.logBrowser.start(path)
+        self.logBrowser.start(path, isFile=isFile)
         
     def svnLock(self, name, stealIt=False, parent=None):
         """

@@ -9,7 +9,8 @@ Module implementing a dialog to browse the log history.
 
 import os
 
-from PyQt4.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot
+from PyQt4.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot, \
+    QPoint
 from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QWidget, \
     QApplication, QDialogButtonBox, QTreeWidgetItem
 
@@ -24,16 +25,17 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
-    def __init__(self, vcs, isFile=False, parent=None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
-        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.__position = QPoint()
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -41,25 +43,13 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
         self.filesTree.headerItem().setText(self.filesTree.columnCount(), "")
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
-        self.sbsCheckBox.setEnabled(isFile)
-        self.sbsCheckBox.setVisible(isFile)
-        
         self.vcs = vcs
         
-        self.__maxDate = QDate()
-        self.__minDate = QDate()
-        self.__filterLogsEnabled = True
+        self.__initData()
         
         self.fromDate.setDisplayFormat("yyyy-MM-dd")
         self.toDate.setDisplayFormat("yyyy-MM-dd")
-        self.fromDate.setDate(QDate.currentDate())
-        self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(
-            self.fieldCombo.findText(self.tr("Message")))
-        self.limitSpinBox.setValue(
-            self.vcs.getPlugin().getPreferences("LogLimit"))
-        self.stopCheckBox.setChecked(
-            self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
+        self.__resetUI()
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
@@ -94,6 +84,14 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
             'M': self.tr('Modified'),
             'R': self.tr('Replaced'),
         }
+    
+    def __initData(self):
+        """
+        Private method to (re-)initialize some data.
+        """
+        self.__maxDate = QDate()
+        self.__minDate = QDate()
+        self.__filterLogsEnabled = True
         
         self.buf = []        # buffer for stdout
         self.diff = None
@@ -112,8 +110,38 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
             QTimer.singleShot(2000, self.process.kill)
             self.process.waitForFinished(3000)
         
+        self.__position = self.pos()
+        
         e.accept()
         
+    def show(self):
+        """
+        Public slot to show the dialog.
+        """
+        if not self.__position.isNull():
+            self.move(self.__position)
+        self.__resetUI()
+        
+        super().show()
+    
+    def __resetUI(self):
+        """
+        Private method to reset the user interface.
+        """
+        self.fromDate.setDate(QDate.currentDate())
+        self.toDate.setDate(QDate.currentDate())
+        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
+            self.tr("Message")))
+        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
+            "LogLimit"))
+        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
+            "StopLogOnCopy"))
+        
+        self.logTree.clear()
+        
+        self.nextButton.setEnabled(True)
+        self.limitSpinBox.setEnabled(True)
+
     def __resizeColumnsLog(self):
         """
         Private method to resize the log tree columns.
@@ -258,14 +286,20 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
     
-    def start(self, fn):
+    def start(self, fn, isFile=False):
         """
         Public slot to start the svn log command.
         
         @param fn filename to show the log for (string)
+        @keyparam isFile flag indicating log for a file is to be shown (boolean)
         """
+        self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
+        
         self.errorGroup.hide()
         QApplication.processEvents()
+        
+        self.__initData()
         
         self.filename = fn
         self.dname, self.fname = self.vcs.splitPath(fn)
@@ -457,18 +491,20 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
         @param current reference to the new current item (QTreeWidgetItem)
         @param previous reference to the old current item (QTreeWidgetItem)
         """
-        self.messageEdit.clear()
-        for line in current.data(0, self.__messageRole):
-            self.messageEdit.append(line.strip())
-        
-        self.filesTree.clear()
-        changes = current.data(0, self.__changesRole)
-        if len(changes) > 0:
-            for change in changes:
-                self.__generateFileItem(
-                    change["action"], change["path"], change["copyfrom_path"],
-                    change["copyfrom_revision"])
-            self.__resizeColumnsFiles()
+        if current is not None:
+            self.messageEdit.clear()
+            for line in current.data(0, self.__messageRole):
+                self.messageEdit.append(line.strip())
+            
+            self.filesTree.clear()
+            changes = current.data(0, self.__changesRole)
+            if len(changes) > 0:
+                for change in changes:
+                    self.__generateFileItem(
+                        change["action"], change["path"],
+                        change["copyfrom_path"],
+                        change["copyfrom_revision"])
+                self.__resizeColumnsFiles()
             self.__resortFiles()
         
         self.diffPreviousButton.setEnabled(
