@@ -1325,6 +1325,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__initData()
         
+        if self.initialCommandMode in ("incoming", "outgoing"):
+            self.nextButton.setEnabled(False)
+            self.limitSpinBox.setEnabled(False)
+        else:
+            self.nextButton.setEnabled(True)
+            self.limitSpinBox.setEnabled(True)
+        
         self.commandMode = self.initialCommandMode
         self.start(self.filename)
     
