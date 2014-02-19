@@ -135,6 +135,16 @@
        </widget>
       </item>
       <item row="3" column="0">
+       <widget class="QCheckBox" name="shelveCheckBox">
+        <property name="toolTip">
+         <string>Select to activate the shelve extension</string>
+        </property>
+        <property name="text">
+         <string>Shelve</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
        <widget class="QCheckBox" name="transplantCheckBox">
         <property name="toolTip">
          <string>Select to activate the transplant extension</string>
@@ -176,6 +186,7 @@
   <tabstop>purgeCheckBox</tabstop>
   <tabstop>queuesCheckBox</tabstop>
   <tabstop>rebaseCheckBox</tabstop>
+  <tabstop>shelveCheckBox</tabstop>
   <tabstop>transplantCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>

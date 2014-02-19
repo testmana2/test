@@ -52,6 +52,8 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
             extensions.append("mq")
         if self.rebaseCheckBox.isChecked():
             extensions.append("rebase")
+        if self.shelveCheckBox.isChecked():
+            extensions.append("shelve")
         if self.transplantCheckBox.isChecked():
             extensions.append("transplant")
         
