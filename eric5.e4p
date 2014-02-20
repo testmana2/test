@@ -1112,6 +1112,9 @@
     <Source>UtilitiesPython2/pyflakes/__init__.py</Source>
     <Source>UtilitiesPython2/pyflakes/checker.py</Source>
     <Source>UtilitiesPython2/pyflakes/messages.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

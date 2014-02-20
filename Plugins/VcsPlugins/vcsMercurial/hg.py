@@ -136,6 +136,7 @@ class Hg(VersionControl):
         from .GpgExtension.gpg import Gpg
         from .TransplantExtension.transplant import Transplant
         from .RebaseExtension.rebase import Rebase
+        from .ShelveExtension.shelve import Shelve
         self.__extensions = {
             "bookmarks": Bookmarks(self),
             "mq": Queues(self),
@@ -144,6 +145,7 @@ class Hg(VersionControl):
             "gpg": Gpg(self),
             "transplant": Transplant(self),
             "rebase": Rebase(self),
+            "shelve": Shelve(self),
         }
     
     def getPlugin(self):
@@ -1892,7 +1894,8 @@ class Hg(VersionControl):
         if self.getPlugin().getPreferences("UseLogBrowser"):
             if self.logBrowserIncoming is None:
                 from .HgLogBrowserDialog import HgLogBrowserDialog
-                self.logBrowserIncoming = HgLogBrowserDialog(self, mode="incoming")
+                self.logBrowserIncoming = HgLogBrowserDialog(
+                    self, mode="incoming")
             self.logBrowserIncoming.show()
             self.logBrowserIncoming.start(name)
         else:
@@ -1911,7 +1914,8 @@ class Hg(VersionControl):
         if self.getPlugin().getPreferences("UseLogBrowser"):
             if self.logBrowserOutgoing is None:
                 from .HgLogBrowserDialog import HgLogBrowserDialog
-                self.logBrowserOutgoing = HgLogBrowserDialog(self, mode="outgoing")
+                self.logBrowserOutgoing = HgLogBrowserDialog(
+                    self, mode="outgoing")
             self.logBrowserOutgoing.show()
             self.logBrowserOutgoing.start(name)
         else:
@@ -3382,9 +3386,14 @@ class Hg(VersionControl):
         extensionName = extensionName.strip()
         isActive = extensionName in self.__activeExtensions
         if isActive and \
-                extensionName == "transplant" and \
+            extensionName == "transplant" and \
                 self.version >= (2, 3):
             # transplant extension is deprecated as of Mercurial 2.3.0
+            isActive = False
+        if isActive and \
+            extensionName == "shelve" and \
+                self.version < (2, 8):
+            # shelve extension was added as of Mercurial 2.8.0
             isActive = False
         
         return isActive
