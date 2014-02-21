@@ -1115,6 +1115,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/__init__.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1436,6 +1437,7 @@
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
