@@ -38,6 +38,7 @@ class NetworkReply(QNetworkReply):
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "OK")
         QTimer.singleShot(0, lambda: self.metaDataChanged.emit())
         QTimer.singleShot(0, lambda: self.readyRead.emit())
+        QTimer.singleShot(0, lambda: self.finished.emit())
     
     def abort(self):
         """
@@ -52,8 +53,6 @@ class NetworkReply(QNetworkReply):
         
         @return bytes available (integer)
         """
-        if self.__data.length() == 0:
-            QTimer.singleShot(0, lambda: self.finished.emit())
         return self.__data.length() + QNetworkReply.bytesAvailable(self)
     
     def readData(self, maxlen):
@@ -66,6 +65,12 @@ class NetworkReply(QNetworkReply):
         len_ = min(maxlen, self.__data.length())
         buffer = bytes(self.__data[:len_])
         self.__data.remove(0, len_)
-        if self.__data.length() == 0:
-            QTimer.singleShot(0, lambda: self.finished.emit())
         return buffer
+    
+    def isFinished(self):
+        """
+        Public method to check, if the reply has finished.
+        
+        @return flag indicating the finished state (boolean)
+        """
+        return True
