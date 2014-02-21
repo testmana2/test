@@ -26,7 +26,8 @@ class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.dateTimeEdit.setDateTime(QDateTime.currentDateTime())
+        self.__initialDateTime = QDateTime.currentDateTime()
+        self.dateTimeEdit.setDateTime(self.__initialDateTime)
     
     def getData(self):
         """
@@ -36,9 +37,13 @@ class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
             message (string) and a flag indicating to add/remove
             new/missing files (boolean)
         """
+        if self.dateTimeEdit.dateTime() != self.__initialDateTime:
+            dateTime = self.dateTimeEdit.dateTime()
+        else:
+            dateTime = QDateTime()
         return (
             self.nameEdit.text(),
-            self.dateTimeEdit.dateTime(),
+            dateTime,
             self.messageEdit.toPlainText(),
             self.addRemoveCheckBox.isChecked(),
         )

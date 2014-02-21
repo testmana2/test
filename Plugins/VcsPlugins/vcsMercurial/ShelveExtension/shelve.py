@@ -9,7 +9,7 @@ Module implementing the shelve extension interface.
 
 import os
 
-from PyQt4.QtCore import QDateTime
+##from PyQt4.QtCore import QDateTime
 from PyQt4.QtGui import QDialog
 
 from ..HgExtension import HgExtension
@@ -69,7 +69,7 @@ class Shelve(HgExtension):
                 args.append(message)
             if addRemove:
                 args.append("--addRemove")
-            if dateTime != QDateTime.currentDateTime():
+            if dateTime.isValid():
                 args.append("--date")
                 args.append(dateTime.toString("yyyy-MM-dd hh:mm:ss"))
             args.append("-v")
