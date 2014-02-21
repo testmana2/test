@@ -345,6 +345,7 @@ HgRepoConfigDataDialog QDialog Ui_HgRepoConfigDataDialog
 HgRevisionSelectionDialog QDialog Ui_HgRevisionSelectionDialog
 HgRevisionsSelectionDialog QDialog Ui_HgRevisionsSelectionDialog
 HgServeDialog E5MainWindow
+HgShelveDataDialog QDialog Ui_HgShelveDataDialog
 HgStatusDialog QWidget Ui_HgStatusDialog
 HgStatusMonitorThread VcsStatusMonitorThread
 HgSummaryDialog QDialog Ui_HgSummaryDialog
@@ -596,6 +597,8 @@ Shell QsciScintillaCompat
 ShellAssembly QWidget
 ShellHistoryDialog QDialog Ui_ShellHistoryDialog
 ShellPage ConfigurationPageBase Ui_ShellPage
+Shelve HgExtension
+ShelveProjectHelper HgExtensionProjectHelper
 ShortcutDialog QDialog Ui_ShortcutDialog
 ShortcutsDialog QDialog Ui_ShortcutsDialog
 ShortcutsReader XMLStreamReaderBase

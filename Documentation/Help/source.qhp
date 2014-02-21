@@ -529,6 +529,11 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html" />
@@ -6474,6 +6479,10 @@
       <keyword name="HgServeDialog.__startServer" id="HgServeDialog.__startServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__startServer" />
       <keyword name="HgServeDialog.__stopServer" id="HgServeDialog.__stopServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__stopServer" />
       <keyword name="HgServeDialog.closeEvent" id="HgServeDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.closeEvent" />
+      <keyword name="HgShelveDataDialog" id="HgShelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html#HgShelveDataDialog" />
+      <keyword name="HgShelveDataDialog (Constructor)" id="HgShelveDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html#HgShelveDataDialog.__init__" />
+      <keyword name="HgShelveDataDialog (Module)" id="HgShelveDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html" />
+      <keyword name="HgShelveDataDialog.getData" id="HgShelveDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html#HgShelveDataDialog.getData" />
       <keyword name="HgStatusDialog" id="HgStatusDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog" />
       <keyword name="HgStatusDialog (Constructor)" id="HgStatusDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__init__" />
       <keyword name="HgStatusDialog (Module)" id="HgStatusDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html" />
@@ -7978,6 +7987,7 @@
       <keyword name="NetworkReply (Module)" id="NetworkReply (Module)" ref="eric5.Helpviewer.Network.NetworkReply.html" />
       <keyword name="NetworkReply.abort" id="NetworkReply.abort" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.abort" />
       <keyword name="NetworkReply.bytesAvailable" id="NetworkReply.bytesAvailable" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.bytesAvailable" />
+      <keyword name="NetworkReply.isFinished" id="NetworkReply.isFinished" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.isFinished" />
       <keyword name="NetworkReply.readData" id="NetworkReply.readData" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.readData" />
       <keyword name="NewDialogClassDialog" id="NewDialogClassDialog" ref="eric5.Project.NewDialogClassDialog.html#NewDialogClassDialog" />
       <keyword name="NewDialogClassDialog (Constructor)" id="NewDialogClassDialog (Constructor)" ref="eric5.Project.NewDialogClassDialog.html#NewDialogClassDialog.__init__" />
@@ -8964,6 +8974,7 @@
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html" />
@@ -9920,6 +9931,17 @@
       <keyword name="ShellPage.on_monospacedFontButton_clicked" id="ShellPage.on_monospacedFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.on_monospacedFontButton_clicked" />
       <keyword name="ShellPage.polishPage" id="ShellPage.polishPage" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.polishPage" />
       <keyword name="ShellPage.save" id="ShellPage.save" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.save" />
+      <keyword name="Shelve" id="Shelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve" />
+      <keyword name="Shelve (Constructor)" id="Shelve (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.__init__" />
+      <keyword name="Shelve.hgShelve" id="Shelve.hgShelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgShelve" />
+      <keyword name="Shelve.shutdown" id="Shelve.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.shutdown" />
+      <keyword name="ShelveExtension (Package)" id="ShelveExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.html" />
+      <keyword name="ShelveProjectHelper" id="ShelveProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper" />
+      <keyword name="ShelveProjectHelper (Constructor)" id="ShelveProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__init__" />
+      <keyword name="ShelveProjectHelper.__hgShelve" id="ShelveProjectHelper.__hgShelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgShelve" />
+      <keyword name="ShelveProjectHelper.initActions" id="ShelveProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.initActions" />
+      <keyword name="ShelveProjectHelper.initMenu" id="ShelveProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.initMenu" />
+      <keyword name="ShelveProjectHelper.menuTitle" id="ShelveProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.menuTitle" />
       <keyword name="ShortcutDialog" id="ShortcutDialog" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog" />
       <keyword name="ShortcutDialog (Constructor)" id="ShortcutDialog (Constructor)" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.__init__" />
       <keyword name="ShortcutDialog (Module)" id="ShortcutDialog (Module)" ref="eric5.Preferences.ShortcutDialog.html" />
@@ -13451,6 +13473,7 @@
       <keyword name="setVCS" id="setVCS" ref="eric5.Preferences.__init__.html#setVCS" />
       <keyword name="setVarFilters" id="setVarFilters" ref="eric5.Preferences.__init__.html#setVarFilters" />
       <keyword name="setViewManager" id="setViewManager" ref="eric5.Preferences.__init__.html#setViewManager" />
+      <keyword name="shelve (Module)" id="shelve (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html" />
       <keyword name="shouldResetLayout" id="shouldResetLayout" ref="eric5.Preferences.__init__.html#shouldResetLayout" />
       <keyword name="shutilCopy" id="shutilCopy" ref="eric5.install.html#shutilCopy" />
       <keyword name="simpleAppStartup" id="simpleAppStartup" ref="eric5.Toolbox.Startup.html#simpleAppStartup" />
@@ -13993,6 +14016,9 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html</file>
@@ -14404,6 +14430,7 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsPySvn.ConfigurationPage.html</file>
