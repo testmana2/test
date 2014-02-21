@@ -7933,6 +7933,7 @@
       <keyword name="NetworkReply (Module)" id="NetworkReply (Module)" ref="eric5.Helpviewer.Network.NetworkReply.html" />
       <keyword name="NetworkReply.abort" id="NetworkReply.abort" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.abort" />
       <keyword name="NetworkReply.bytesAvailable" id="NetworkReply.bytesAvailable" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.bytesAvailable" />
+      <keyword name="NetworkReply.isFinished" id="NetworkReply.isFinished" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.isFinished" />
       <keyword name="NetworkReply.readData" id="NetworkReply.readData" ref="eric5.Helpviewer.Network.NetworkReply.html#NetworkReply.readData" />
       <keyword name="NewDialogClassDialog" id="NewDialogClassDialog" ref="eric5.Project.NewDialogClassDialog.html#NewDialogClassDialog" />
       <keyword name="NewDialogClassDialog (Constructor)" id="NewDialogClassDialog (Constructor)" ref="eric5.Project.NewDialogClassDialog.html#NewDialogClassDialog.__init__" />

@@ -2851,6 +2851,7 @@ eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.NetworkProtocolUnknown
 eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.NetworkProtocolUnknownErrorReply?1(protocol, parent=None)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.abort?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
+eric5.Helpviewer.Network.NetworkReply.NetworkReply.isFinished?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent=None)
 eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog.accept?4()
