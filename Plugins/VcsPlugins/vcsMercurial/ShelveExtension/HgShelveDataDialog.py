@@ -28,6 +28,8 @@ class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
         
         self.__initialDateTime = QDateTime.currentDateTime()
         self.dateTimeEdit.setDateTime(self.__initialDateTime)
+        
+        self.resize(self.width(), self.minimumSizeHint().height())
     
     def getData(self):
         """
@@ -44,6 +46,6 @@ class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
         return (
             self.nameEdit.text(),
             dateTime,
-            self.messageEdit.toPlainText(),
+            self.messageEdit.text(),
             self.addRemoveCheckBox.isChecked(),
         )

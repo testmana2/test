@@ -1116,6 +1116,9 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1438,6 +1441,9 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

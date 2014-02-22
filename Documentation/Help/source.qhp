@@ -530,7 +530,10 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html" />
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html" />
                 </section>
@@ -6479,10 +6482,42 @@
       <keyword name="HgServeDialog.__startServer" id="HgServeDialog.__startServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__startServer" />
       <keyword name="HgServeDialog.__stopServer" id="HgServeDialog.__stopServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__stopServer" />
       <keyword name="HgServeDialog.closeEvent" id="HgServeDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.closeEvent" />
+      <keyword name="HgShelveBrowserDialog" id="HgShelveBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog" />
+      <keyword name="HgShelveBrowserDialog (Constructor)" id="HgShelveBrowserDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__init__" />
+      <keyword name="HgShelveBrowserDialog (Module)" id="HgShelveBrowserDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html" />
+      <keyword name="HgShelveBrowserDialog.__cleanupShelves" id="HgShelveBrowserDialog.__cleanupShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__cleanupShelves" />
+      <keyword name="HgShelveBrowserDialog.__deleteShelves" id="HgShelveBrowserDialog.__deleteShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__deleteShelves" />
+      <keyword name="HgShelveBrowserDialog.__finish" id="HgShelveBrowserDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__finish" />
+      <keyword name="HgShelveBrowserDialog.__generateShelveEntry" id="HgShelveBrowserDialog.__generateShelveEntry" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__generateShelveEntry" />
+      <keyword name="HgShelveBrowserDialog.__getShelveEntries" id="HgShelveBrowserDialog.__getShelveEntries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__getShelveEntries" />
+      <keyword name="HgShelveBrowserDialog.__procFinished" id="HgShelveBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__procFinished" />
+      <keyword name="HgShelveBrowserDialog.__processBuffer" id="HgShelveBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__processBuffer" />
+      <keyword name="HgShelveBrowserDialog.__readStderr" id="HgShelveBrowserDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__readStderr" />
+      <keyword name="HgShelveBrowserDialog.__readStdout" id="HgShelveBrowserDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__readStdout" />
+      <keyword name="HgShelveBrowserDialog.__resetUI" id="HgShelveBrowserDialog.__resetUI" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__resetUI" />
+      <keyword name="HgShelveBrowserDialog.__resizeColumnsShelves" id="HgShelveBrowserDialog.__resizeColumnsShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__resizeColumnsShelves" />
+      <keyword name="HgShelveBrowserDialog.__showError" id="HgShelveBrowserDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__showError" />
+      <keyword name="HgShelveBrowserDialog.__unshelve" id="HgShelveBrowserDialog.__unshelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.__unshelve" />
+      <keyword name="HgShelveBrowserDialog.closeEvent" id="HgShelveBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.closeEvent" />
+      <keyword name="HgShelveBrowserDialog.keyPressEvent" id="HgShelveBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.keyPressEvent" />
+      <keyword name="HgShelveBrowserDialog.on_buttonBox_clicked" id="HgShelveBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_buttonBox_clicked" />
+      <keyword name="HgShelveBrowserDialog.on_input_returnPressed" id="HgShelveBrowserDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_input_returnPressed" />
+      <keyword name="HgShelveBrowserDialog.on_passwordCheckBox_toggled" id="HgShelveBrowserDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgShelveBrowserDialog.on_refreshButton_clicked" id="HgShelveBrowserDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_refreshButton_clicked" />
+      <keyword name="HgShelveBrowserDialog.on_sendButton_clicked" id="HgShelveBrowserDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_sendButton_clicked" />
+      <keyword name="HgShelveBrowserDialog.on_shelveList_currentItemChanged" id="HgShelveBrowserDialog.on_shelveList_currentItemChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_shelveList_currentItemChanged" />
+      <keyword name="HgShelveBrowserDialog.on_shelveList_customContextMenuRequested" id="HgShelveBrowserDialog.on_shelveList_customContextMenuRequested" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.on_shelveList_customContextMenuRequested" />
+      <keyword name="HgShelveBrowserDialog.show" id="HgShelveBrowserDialog.show" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.show" />
+      <keyword name="HgShelveBrowserDialog.start" id="HgShelveBrowserDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html#HgShelveBrowserDialog.start" />
       <keyword name="HgShelveDataDialog" id="HgShelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html#HgShelveDataDialog" />
       <keyword name="HgShelveDataDialog (Constructor)" id="HgShelveDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html#HgShelveDataDialog.__init__" />
       <keyword name="HgShelveDataDialog (Module)" id="HgShelveDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html" />
       <keyword name="HgShelveDataDialog.getData" id="HgShelveDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html#HgShelveDataDialog.getData" />
+      <keyword name="HgShelvesSelectionDialog" id="HgShelvesSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html#HgShelvesSelectionDialog" />
+      <keyword name="HgShelvesSelectionDialog (Constructor)" id="HgShelvesSelectionDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html#HgShelvesSelectionDialog.__init__" />
+      <keyword name="HgShelvesSelectionDialog (Module)" id="HgShelvesSelectionDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html" />
+      <keyword name="HgShelvesSelectionDialog.getSelectedShelves" id="HgShelvesSelectionDialog.getSelectedShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html#HgShelvesSelectionDialog.getSelectedShelves" />
+      <keyword name="HgShelvesSelectionDialog.on_shelvesList_itemSelectionChanged" id="HgShelvesSelectionDialog.on_shelvesList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html#HgShelvesSelectionDialog.on_shelvesList_itemSelectionChanged" />
       <keyword name="HgStatusDialog" id="HgStatusDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog" />
       <keyword name="HgStatusDialog (Constructor)" id="HgStatusDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__init__" />
       <keyword name="HgStatusDialog (Module)" id="HgStatusDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html" />
@@ -6575,6 +6610,10 @@
       <keyword name="HgTagDialog.getParameters" id="HgTagDialog.getParameters" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.getParameters" />
       <keyword name="HgTagDialog.on_tagCombo_currentIndexChanged" id="HgTagDialog.on_tagCombo_currentIndexChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.on_tagCombo_currentIndexChanged" />
       <keyword name="HgTagDialog.on_tagCombo_editTextChanged" id="HgTagDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.on_tagCombo_editTextChanged" />
+      <keyword name="HgUnshelveDataDialog" id="HgUnshelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html#HgUnshelveDataDialog" />
+      <keyword name="HgUnshelveDataDialog (Constructor)" id="HgUnshelveDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html#HgUnshelveDataDialog.__init__" />
+      <keyword name="HgUnshelveDataDialog (Module)" id="HgUnshelveDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html" />
+      <keyword name="HgUnshelveDataDialog.getData" id="HgUnshelveDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html#HgUnshelveDataDialog.getData" />
       <keyword name="HgUserConfigDataDialog" id="HgUserConfigDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html#HgUserConfigDataDialog" />
       <keyword name="HgUserConfigDataDialog (Constructor)" id="HgUserConfigDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html#HgUserConfigDataDialog.__init__" />
       <keyword name="HgUserConfigDataDialog (Module)" id="HgUserConfigDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html" />
@@ -9933,12 +9972,26 @@
       <keyword name="ShellPage.save" id="ShellPage.save" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.save" />
       <keyword name="Shelve" id="Shelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve" />
       <keyword name="Shelve (Constructor)" id="Shelve (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.__init__" />
+      <keyword name="Shelve.__hgGetShelveNamesList" id="Shelve.__hgGetShelveNamesList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.__hgGetShelveNamesList" />
+      <keyword name="Shelve.hgCleanupShelves" id="Shelve.hgCleanupShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgCleanupShelves" />
+      <keyword name="Shelve.hgDeleteShelves" id="Shelve.hgDeleteShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgDeleteShelves" />
       <keyword name="Shelve.hgShelve" id="Shelve.hgShelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgShelve" />
+      <keyword name="Shelve.hgShelveBrowser" id="Shelve.hgShelveBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgShelveBrowser" />
+      <keyword name="Shelve.hgUnshelve" id="Shelve.hgUnshelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgUnshelve" />
+      <keyword name="Shelve.hgUnshelveAbort" id="Shelve.hgUnshelveAbort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgUnshelveAbort" />
+      <keyword name="Shelve.hgUnshelveContinue" id="Shelve.hgUnshelveContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgUnshelveContinue" />
       <keyword name="Shelve.shutdown" id="Shelve.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.shutdown" />
       <keyword name="ShelveExtension (Package)" id="ShelveExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.html" />
       <keyword name="ShelveProjectHelper" id="ShelveProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper" />
       <keyword name="ShelveProjectHelper (Constructor)" id="ShelveProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__init__" />
+      <keyword name="ShelveProjectHelper.__hgCleanupShelves" id="ShelveProjectHelper.__hgCleanupShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgCleanupShelves" />
+      <keyword name="ShelveProjectHelper.__hgDeleteShelves" id="ShelveProjectHelper.__hgDeleteShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgDeleteShelves" />
       <keyword name="ShelveProjectHelper.__hgShelve" id="ShelveProjectHelper.__hgShelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgShelve" />
+      <keyword name="ShelveProjectHelper.__hgShelveBrowser" id="ShelveProjectHelper.__hgShelveBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgShelveBrowser" />
+      <keyword name="ShelveProjectHelper.__hgUnshelve" id="ShelveProjectHelper.__hgUnshelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgUnshelve" />
+      <keyword name="ShelveProjectHelper.__hgUnshelveAbort" id="ShelveProjectHelper.__hgUnshelveAbort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgUnshelveAbort" />
+      <keyword name="ShelveProjectHelper.__hgUnshelveContinue" id="ShelveProjectHelper.__hgUnshelveContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgUnshelveContinue" />
+      <keyword name="ShelveProjectHelper.__reopenProject" id="ShelveProjectHelper.__reopenProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__reopenProject" />
       <keyword name="ShelveProjectHelper.initActions" id="ShelveProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.initActions" />
       <keyword name="ShelveProjectHelper.initMenu" id="ShelveProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.initMenu" />
       <keyword name="ShelveProjectHelper.menuTitle" id="ShelveProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.menuTitle" />
@@ -14016,7 +14069,10 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveBrowserDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html</file>
