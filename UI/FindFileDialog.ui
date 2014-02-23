@@ -466,12 +466,28 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>302</x>
-     <y>125</y>
+     <x>577</x>
+     <y>151</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
-     <y>158</y>
+     <x>545</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dirButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dirSelectButton</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>175</y>
     </hint>
    </hints>
   </connection>
