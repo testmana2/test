@@ -570,20 +570,6 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsCommandAct.triggered[()].connect(self._vcsCommand)
         self.actions.append(self.vcsCommandAct)
         
-        self.vcsPropsAct = E5Action(
-            self.trUtf8('Command options'),
-            self.trUtf8('Command &options...'), 0, 0, self,
-            'mercurial_options')
-        self.vcsPropsAct.setStatusTip(self.trUtf8(
-            'Show the Mercurial command options'))
-        self.vcsPropsAct.setWhatsThis(self.trUtf8(
-            """<b>Command options...</b>"""
-            """<p>This shows a dialog to edit the Mercurial command"""
-            """ options.</p>"""
-        ))
-        self.vcsPropsAct.triggered[()].connect(self._vcsCommandOptions)
-        self.actions.append(self.vcsPropsAct)
-        
         self.hgConfigAct = E5Action(
             self.trUtf8('Configure'),
             self.trUtf8('Configure...'),
@@ -1165,8 +1151,6 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addMenu(adminMenu)
         menu.addMenu(specialsMenu)
-        menu.addSeparator()
-        menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
         menu.addAction(self.hgEditUserConfigAct)
         menu.addAction(self.hgConfigAct)

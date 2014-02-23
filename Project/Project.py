@@ -2157,12 +2157,15 @@ class Project(QObject):
                         self.setDirty(True)
                         if self.vcs is not None:
                             # edit VCS command options
-                            vcores = E5MessageBox.yesNo(
-                                self.ui,
-                                self.trUtf8("New Project"),
-                                self.trUtf8(
-                                    """Would you like to edit the VCS"""
-                                    """ command options?"""))
+                            if self.vcs.vcsSupportCommandOptions():
+                                vcores = E5MessageBox.yesNo(
+                                    self.ui,
+                                    self.tr("New Project"),
+                                    self.tr(
+                                        """Would you like to edit the VCS"""
+                                        """ command options?"""))
+                            else:
+                                vcores = False
                             if vcores:
                                 from VCS.CommandOptionsDialog import \
                                     VcsCommandOptionsDialog
@@ -2222,12 +2225,15 @@ class Project(QObject):
                 self.setDirty(True)
                 if self.vcs is not None:
                     # edit VCS command options
-                    vcores = E5MessageBox.yesNo(
-                        self.ui,
-                        self.trUtf8("New Project"),
-                        self.trUtf8(
-                            """Would you like to edit the VCS command"""
-                            """ options?"""))
+                    if self.vcs.vcsSupportCommandOptions():
+                        vcores = E5MessageBox.yesNo(
+                            self.ui,
+                            self.tr("New Project"),
+                            self.tr(
+                                """Would you like to edit the VCS command"""
+                                """ options?"""))
+                    else:
+                        vcores = False
                     if vcores:
                         from VCS.CommandOptionsDialog import \
                             VcsCommandOptionsDialog
@@ -4165,11 +4171,12 @@ class Project(QObject):
         
         if vcs and forProject:
             # set the vcs options
-            try:
-                vcsopt = copy.deepcopy(self.pdata["VCSOPTIONS"][0])
-                vcs.vcsSetOptions(vcsopt)
-            except LookupError:
-                pass
+            if vcs.vcsSupportCommandOptions():
+                try:
+                    vcsopt = copy.deepcopy(self.pdata["VCSOPTIONS"][0])
+                    vcs.vcsSetOptions(vcsopt)
+                except LookupError:
+                    pass
             # set vcs specific data
             try:
                 vcsother = copy.deepcopy(self.pdata["VCSOTHERDATA"][0])

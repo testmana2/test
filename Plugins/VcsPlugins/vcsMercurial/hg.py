@@ -1419,7 +1419,16 @@ class Hg(VersionControl):
             """{2}"""
             """</table></p>\n"""
         ).format(self.versionStr, url, infoStr)
-
+    
+    def vcsSupportCommandOptions(self):
+        """
+        Public method to signal the support of user settable command options.
+        
+        @return flag indicating the support  of user settable command options
+            (boolean)
+        """
+        return False
+    
     ###########################################################################
     ## Private Mercurial specific methods are below.
     ###########################################################################

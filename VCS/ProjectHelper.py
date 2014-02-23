@@ -170,11 +170,15 @@ class VcsProjectHelper(QObject):
                 self.project.pdata["VCS"] = [vcsSystem]
                 self.project.vcs = self.project.initVCS(vcsSystem)
                 # edit VCS command options
-                vcores = E5MessageBox.yesNo(
-                    self.parent(),
-                    self.trUtf8("New Project"),
-                    self.trUtf8(
-                        """Would you like to edit the VCS command options?"""))
+                if self.project.vcs.vcsSupportCommandOptions():
+                    vcores = E5MessageBox.yesNo(
+                        self.parent(),
+                        self.tr("New Project"),
+                        self.tr(
+                            """Would you like to edit the VCS command"""
+                            """ options?"""))
+                else:
+                    vcores = False
                 if vcores:
                     from .CommandOptionsDialog import VcsCommandOptionsDialog
                     codlg = VcsCommandOptionsDialog(self.project.vcs)
@@ -350,11 +354,15 @@ class VcsProjectHelper(QObject):
             if vcsdlg.exec_() == QDialog.Accepted:
                 vcsDataDict = vcsdlg.getData()
                 # edit VCS command options
-                vcores = E5MessageBox.yesNo(
-                    self.parent(),
-                    self.trUtf8("Import Project"),
-                    self.trUtf8(
-                        """Would you like to edit the VCS command options?"""))
+                if self.project.vcs.vcsSupportCommandOptions():
+                    vcores = E5MessageBox.yesNo(
+                        self.parent(),
+                        self.tr("Import Project"),
+                        self.tr(
+                            """Would you like to edit the VCS command"""
+                            """ options?"""))
+                else:
+                    vcores = False
                 if vcores:
                     from .CommandOptionsDialog import VcsCommandOptionsDialog
                     codlg = VcsCommandOptionsDialog(self.project.vcs)
@@ -427,11 +435,12 @@ class VcsProjectHelper(QObject):
         """
         Protected slot to edit the VCS command options.
         """
-        from .CommandOptionsDialog import VcsCommandOptionsDialog
-        codlg = VcsCommandOptionsDialog(self.vcs)
-        if codlg.exec_() == QDialog.Accepted:
-            self.vcs.vcsSetOptions(codlg.getOptions())
-            self.project.setDirty(True)
+        if self.vcs.vcsSupportCommandOptions():
+            from .CommandOptionsDialog import VcsCommandOptionsDialog
+            codlg = VcsCommandOptionsDialog(self.vcs)
+            if codlg.exec_() == QDialog.Accepted:
+                self.vcs.vcsSetOptions(codlg.getOptions())
+                self.project.setDirty(True)
         
     def _vcsLog(self):
         """

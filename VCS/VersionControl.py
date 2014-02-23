@@ -465,6 +465,15 @@ class VersionControl(QObject):
         """
         pass
         
+    def vcsSupportCommandOptions(self):
+        """
+        Public method to signal the support of user settable command options.
+        
+        @return flag indicating the support  of user settable command options
+            (boolean)
+        """
+        return True
+    
     def vcsDefaultOptions(self):
         """
         Public method used to retrieve the default options for the vcs.
@@ -484,11 +493,12 @@ class VersionControl(QObject):
         @param options a dictionary of option strings with keys as
                 defined by the default options
         """
-        for key in options:
-            try:
-                self.options[key] = options[key]
-            except KeyError:
-                pass
+        if self.vcsSupportCommandOptions():
+            for key in options:
+                try:
+                    self.options[key] = options[key]
+                except KeyError:
+                    pass
         
     def vcsGetOptions(self):
         """
@@ -497,7 +507,10 @@ class VersionControl(QObject):
         @return a dictionary of option strings that can be passed to
             vcsSetOptions.
         """
-        return self.options
+        if self.vcsSupportCommandOptions():
+            return self.options
+        else:
+            return self.defaultOptions
         
     def vcsSetOtherData(self, data):
         """
