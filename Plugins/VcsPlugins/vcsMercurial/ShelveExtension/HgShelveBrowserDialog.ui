@@ -159,7 +159,7 @@
       <item>
        <widget class="QTextEdit" name="errors">
         <property name="whatsThis">
-         <string>&lt;b&gt;Mercurial log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg log command.&lt;/p&gt;</string>
+         <string>&lt;b&gt;Mercurial shelve errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg shelve command.&lt;/p&gt;</string>
         </property>
         <property name="readOnly">
          <bool>true</bool>
