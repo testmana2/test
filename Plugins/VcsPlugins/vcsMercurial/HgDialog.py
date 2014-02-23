@@ -45,6 +45,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.username = ''
         self.password = ''
         self.__hgClient = hg.getClient()
+        self.vcs = hg
         
         self.outputGroup.setTitle(text)
         
@@ -198,7 +199,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         """
         if self.proc is not None:
             s = str(self.proc.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
+                    self.vcs.getEncoding(),
                     'replace')
             self.__showOutput(s)
     
@@ -229,7 +230,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         """
         if self.proc is not None:
             s = str(self.proc.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
+                    self.vcs.getEncoding(),
                     'replace')
             self.__showError(s)
     

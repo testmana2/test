@@ -22,6 +22,7 @@ Version 5.5.0-xxx:
          remote repository (default/default-push in .hg/hgrc)
      --- extended the log browser by an action to switch to the selected
          revision
+     --- added support for the shelve extension (as of Mercurial 2.8)
 
 Version 5.4.0:
 - bug fixes

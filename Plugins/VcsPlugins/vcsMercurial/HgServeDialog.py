@@ -114,8 +114,7 @@ class HgServeDialog(E5MainWindow):
         port = self.__portSpin.value()
         style = self.__styleCombo.currentText()
         
-        args = []
-        args.append("serve")
+        args = self.vcs.initCommand("serve")
         args.append("-v")
         args.append("--port")
         args.append(str(port))
@@ -193,8 +192,7 @@ class HgServeDialog(E5MainWindow):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__appendText(s, False)
     
     def __readStderr(self):
@@ -205,8 +203,7 @@ class HgServeDialog(E5MainWindow):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__appendText(s, True)
     
     def __appendText(self, txt, error=False):

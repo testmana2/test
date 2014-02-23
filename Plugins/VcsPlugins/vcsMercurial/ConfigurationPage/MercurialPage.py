@@ -16,6 +16,8 @@ from Preferences.ConfigurationPages.ConfigurationPageBase import \
     ConfigurationPageBase
 from .Ui_MercurialPage import Ui_MercurialPage
 
+from Utilities import supportedCodecs
+
 
 class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
     """
@@ -33,21 +35,40 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         
         self.__plugin = plugin
         
+        self.encodingComboBox.addItems(sorted(supportedCodecs))
+        self.encodingModeComboBox.addItems(["strict", "ignore", "replace"])
+        
         # set initial values
+        # global options
+        index = self.encodingComboBox.findText(
+            self.__plugin.getPreferences("Encoding"))
+        self.encodingComboBox.setCurrentIndex(index)
+        index = self.encodingModeComboBox.findText(
+            self.__plugin.getPreferences("EncodingMode"))
+        self.encodingModeComboBox.setCurrentIndex(index)
+        self.hiddenChangesetsCheckBox.setChecked(
+            self.__plugin.getPreferences("ConsiderHidden"))
+        # log
         self.logSpinBox.setValue(
             self.__plugin.getPreferences("LogLimit"))
+        # commit
         self.commitSpinBox.setValue(
             self.__plugin.getPreferences("CommitMessages"))
+        # incoming/outgoing
         self.logBrowserCheckBox.setChecked(
             self.__plugin.getPreferences("UseLogBrowser"))
+        # pull
         self.pullUpdateCheckBox.setChecked(
             self.__plugin.getPreferences("PullUpdate"))
         self.preferUnbundleCheckBox.setChecked(
             self.__plugin.getPreferences("PreferUnbundle"))
+        # cleanup
         self.cleanupPatternEdit.setText(
             self.__plugin.getPreferences("CleanupPatterns"))
+        # revert
         self.backupCheckBox.setChecked(
             self.__plugin.getPreferences("CreateBackup"))
+        # merge
         self.internalMergeCheckBox.setChecked(
             self.__plugin.getPreferences("InternalMerge"))
     
@@ -55,20 +76,34 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         """
         Public slot to save the Mercurial configuration.
         """
+        # global options
+        self.__plugin.setPreferences(
+            "Encoding", self.encodingComboBox.currentText())
+        self.__plugin.setPreferences(
+            "EncodingMode", self.encodingModeComboBox.currentText())
+        self.__plugin.setPreferences(
+            "ConsiderHidden", self.hiddenChangesetsCheckBox.isChecked())
+        # log
         self.__plugin.setPreferences(
             "LogLimit", self.logSpinBox.value())
+        # commit
         self.__plugin.setPreferences(
             "CommitMessages", self.commitSpinBox.value())
+        # incoming/outgoing
         self.__plugin.setPreferences(
             "UseLogBrowser", self.logBrowserCheckBox.isChecked())
+        # pull
         self.__plugin.setPreferences(
             "PullUpdate", self.pullUpdateCheckBox.isChecked())
         self.__plugin.setPreferences(
             "PreferUnbundle", self.preferUnbundleCheckBox.isChecked())
+        # cleanup
         self.__plugin.setPreferences(
             "CleanupPatterns", self.cleanupPatternEdit.text())
+        # revert
         self.__plugin.setPreferences(
             "CreateBackup", self.backupCheckBox.isChecked())
+        # merge
         self.__plugin.setPreferences(
             "InternalMerge", self.internalMergeCheckBox.isChecked())
     

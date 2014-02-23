@@ -112,8 +112,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         else:
             self.__mode = "qseries"
         
-        args = []
-        args.append('qseries')
+        args = self.vcs.initCommand("qseries")
         args.append('--summary')
         args.append('--verbose')
         if missing:
@@ -164,8 +163,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         """
         self.__mode = "qtop"
         
-        args = []
-        args.append('qtop')
+        args = self.vcs.initCommand("qtop")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -338,8 +336,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -376,8 +373,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

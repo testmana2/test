@@ -16,8 +16,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgQueuesHeaderDialog import Ui_HgQueuesHeaderDialog
 
-import Preferences
-
 
 class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
     """
@@ -83,8 +81,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('qheader')
+        args = self.vcs.initCommand("qheader")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -163,8 +160,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showOutput(s)
     
     def __showOutput(self, out):
@@ -184,8 +180,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

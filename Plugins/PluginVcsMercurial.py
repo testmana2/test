@@ -167,6 +167,9 @@ class VcsMercurialPlugin(QObject):
             "CleanupPatterns": "*.orig *.rej *~",
             "CreateBackup": False,
             "InternalMerge": False,
+            "Encoding": "utf-8",
+            "EncodingMode": "strict",
+            "ConsiderHidden": False,
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
@@ -211,7 +214,8 @@ class VcsMercurialPlugin(QObject):
         @return the requested setting
         """
         if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate",
-                   "PreferUnbundle", "CreateBackup", "InternalMerge"]:
+                   "PreferUnbundle", "CreateBackup", "InternalMerge",
+                   "ConsiderHidden"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages", "ServerPort"]:
@@ -232,6 +236,25 @@ class VcsMercurialPlugin(QObject):
         @param value the value to be set
         """
         Preferences.Prefs.settings.setValue("Mercurial/" + key, value)
+
+    def getGlobalOptions(self):
+        """
+        Public method to build a list of global options.
+        
+        @return list of global options (list of string)
+        """
+        args = []
+        if self.getPreferences("Encoding") != \
+                self.__mercurialDefaults["Encoding"]:
+            args.append("--encoding")
+            args.append(self.getPreferences("Encoding"))
+        if self.getPreferences("EncodingMode") != \
+                self.__mercurialDefaults["EncodingMode"]:
+            args.append("--encodingmode")
+            args.append(self.getPreferences("EncodingMode"))
+        if self.getPreferences("ConsiderHidden"):
+            args.append("--hidden")
+        return args
     
     def getConfigPath(self):
         """

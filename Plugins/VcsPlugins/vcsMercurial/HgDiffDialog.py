@@ -110,14 +110,11 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         self.filesCombo.clear()
         
-        args = []
         if qdiff:
-            args.append('qdiff')
+            args = self.vcs.initCommand("qdiff")
             self.setWindowTitle(self.tr("Patch Contents"))
         else:
-            args.append('diff')
-            self.vcs.addArguments(args, self.vcs.options['global'])
-            self.vcs.addArguments(args, self.vcs.options['diff'])
+            args = self.vcs.initCommand("diff")
             
             if self.vcs.hasSubrepositories():
                 args.append("--subrepos")
@@ -312,8 +309,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(),
-                       Preferences.getSystem("IOEncoding"),
+            line = str(self.process.readLine(), self.vcs.getEncoding(),
                        'replace')
             self.__processOutputLine(line)
     
@@ -326,8 +322,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

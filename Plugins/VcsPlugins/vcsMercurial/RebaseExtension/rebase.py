@@ -56,8 +56,7 @@ class Rebase(HgExtension):
             (indicator, sourceRev, destRev, collapse, keep, keepBranches,
              detach) = dlg.getData()
             
-            args = []
-            args.append("rebase")
+            args = self.vcs.initCommand("rebase")
             if indicator == "S":
                 args.append("--source")
                 args.append(sourceRev)
@@ -99,8 +98,7 @@ class Rebase(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
-        args.append("rebase")
+        args = self.vcs.initCommand("rebase")
         args.append("--continue")
         args.append("--verbose")
         
@@ -126,8 +124,7 @@ class Rebase(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
-        args.append("rebase")
+        args = self.vcs.initCommand("rebase")
         args.append("--abort")
         args.append("--verbose")
         

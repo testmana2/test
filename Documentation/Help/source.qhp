@@ -5739,6 +5739,7 @@
       <keyword name="Hg.canPush" id="Hg.canPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.canPush" />
       <keyword name="Hg.clearStatusCache" id="Hg.clearStatusCache" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.clearStatusCache" />
       <keyword name="Hg.getClient" id="Hg.getClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getClient" />
+      <keyword name="Hg.getEncoding" id="Hg.getEncoding" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getEncoding" />
       <keyword name="Hg.getExtensionObject" id="Hg.getExtensionObject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getExtensionObject" />
       <keyword name="Hg.getHgSubPath" id="Hg.getHgSubPath" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getHgSubPath" />
       <keyword name="Hg.getPlugin" id="Hg.getPlugin" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getPlugin" />
@@ -5787,6 +5788,7 @@
       <keyword name="Hg.hgSummary" id="Hg.hgSummary" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgSummary" />
       <keyword name="Hg.hgUnbundle" id="Hg.hgUnbundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgUnbundle" />
       <keyword name="Hg.hgVerify" id="Hg.hgVerify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgVerify" />
+      <keyword name="Hg.initCommand" id="Hg.initCommand" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.initCommand" />
       <keyword name="Hg.isExtensionActive" id="Hg.isExtensionActive" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.isExtensionActive" />
       <keyword name="Hg.vcsAdd" id="Hg.vcsAdd" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsAdd" />
       <keyword name="Hg.vcsAddBinary" id="Hg.vcsAddBinary" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsAddBinary" />
@@ -5816,6 +5818,7 @@
       <keyword name="Hg.vcsRepositoryInfos" id="Hg.vcsRepositoryInfos" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsRepositoryInfos" />
       <keyword name="Hg.vcsShutdown" id="Hg.vcsShutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsShutdown" />
       <keyword name="Hg.vcsStatus" id="Hg.vcsStatus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsStatus" />
+      <keyword name="Hg.vcsSupportCommandOptions" id="Hg.vcsSupportCommandOptions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSupportCommandOptions" />
       <keyword name="Hg.vcsSwitch" id="Hg.vcsSwitch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSwitch" />
       <keyword name="Hg.vcsTag" id="Hg.vcsTag" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsTag" />
       <keyword name="Hg.vcsUpdate" id="Hg.vcsUpdate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsUpdate" />
@@ -12261,6 +12264,7 @@
       <keyword name="VcsMercurialPlugin.activate" id="VcsMercurialPlugin.activate" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.activate" />
       <keyword name="VcsMercurialPlugin.deactivate" id="VcsMercurialPlugin.deactivate" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.deactivate" />
       <keyword name="VcsMercurialPlugin.getConfigPath" id="VcsMercurialPlugin.getConfigPath" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getConfigPath" />
+      <keyword name="VcsMercurialPlugin.getGlobalOptions" id="VcsMercurialPlugin.getGlobalOptions" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getGlobalOptions" />
       <keyword name="VcsMercurialPlugin.getPreferences" id="VcsMercurialPlugin.getPreferences" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getPreferences" />
       <keyword name="VcsMercurialPlugin.getProjectHelper" id="VcsMercurialPlugin.getProjectHelper" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getProjectHelper" />
       <keyword name="VcsMercurialPlugin.prepareUninstall" id="VcsMercurialPlugin.prepareUninstall" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.prepareUninstall" />
@@ -12403,6 +12407,7 @@
       <keyword name="VersionControl.vcsSetOtherData" id="VersionControl.vcsSetOtherData" ref="eric5.VCS.VersionControl.html#VersionControl.vcsSetOtherData" />
       <keyword name="VersionControl.vcsShutdown" id="VersionControl.vcsShutdown" ref="eric5.VCS.VersionControl.html#VersionControl.vcsShutdown" />
       <keyword name="VersionControl.vcsStatus" id="VersionControl.vcsStatus" ref="eric5.VCS.VersionControl.html#VersionControl.vcsStatus" />
+      <keyword name="VersionControl.vcsSupportCommandOptions" id="VersionControl.vcsSupportCommandOptions" ref="eric5.VCS.VersionControl.html#VersionControl.vcsSupportCommandOptions" />
       <keyword name="VersionControl.vcsSwitch" id="VersionControl.vcsSwitch" ref="eric5.VCS.VersionControl.html#VersionControl.vcsSwitch" />
       <keyword name="VersionControl.vcsTag" id="VersionControl.vcsTag" ref="eric5.VCS.VersionControl.html#VersionControl.vcsTag" />
       <keyword name="VersionControl.vcsUpdate" id="VersionControl.vcsUpdate" ref="eric5.VCS.VersionControl.html#VersionControl.vcsUpdate" />

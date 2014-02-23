@@ -25,7 +25,6 @@ from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from .HgDialog import HgDialog
 
-import Preferences
 import Utilities
 
 
@@ -156,6 +155,14 @@ class Hg(VersionControl):
         """
         return self.__plugin
     
+    def getEncoding(self):
+        """
+        Public method to get the encoding to be used by Mercurial.
+        
+        @return encoding (string)
+        """
+        return self.__plugin.getPreferences("Encoding")
+    
     def vcsShutdown(self):
         """
         Public method used to shutdown the Mercurial interface.
@@ -204,6 +211,17 @@ class Hg(VersionControl):
         """
         return self.__client
     
+    def initCommand(self, command):
+        """
+        Public method to initialize a command arguments list.
+        
+        @param command command name (string)
+        @return list of command options (list of string)
+        """
+        args = [command]
+        self.addArguments(args, self.__plugin.getGlobalOptions())
+        return args
+    
     def vcsExists(self):
         """
         Public method used to test for the presence of the hg executable.
@@ -213,16 +231,16 @@ class Hg(VersionControl):
         """
         self.versionStr = ''
         errMsg = ""
-        ioEncoding = Preferences.getSystem("IOEncoding")
         
+        args = self.initCommand("version")
         process = QProcess()
-        process.start('hg', ['version'])
+        process.start('hg', args)
         procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                output = str(process.readAllStandardOutput(),
+                             self.getEncoding(), 'replace')
                 self.versionStr = output.splitlines()[0].split()[-1][0:-1]
                 v = list(re.match(r'.*?(\d+)\.(\d+)\.?(\d+)?(\+[0-9a-f-]+)?',
                                   self.versionStr).groups())
@@ -299,8 +317,7 @@ class Hg(VersionControl):
         if not msg:
             msg = '***'
         
-        args = []
-        args.append('init')
+        args = self.initCommand("init")
         args.append(projectDir)
         # init is not possible with the command server
         dia = HgDialog(self.tr('Creating Mercurial repository'), self)
@@ -315,8 +332,7 @@ class Hg(VersionControl):
                 status = self.hgCreateIgnoreFile(projectDir)
             
             if status:
-                args = []
-                args.append('commit')
+                args = self.vcs.initCommand("commit")
                 args.append('--addremove')
                 args.append('--message')
                 args.append(msg)
@@ -351,10 +367,7 @@ class Hg(VersionControl):
         elif vcsUrl[1] in ['|', ':']:
             vcsUrl = 'file:///{0}'.format(vcsUrl)
         
-        args = []
-        args.append('clone')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['checkout'])
+        args = self.initCommand("clone")
         if rev:
             args.append("--rev")
             args.append(rev)
@@ -487,10 +500,7 @@ class Hg(VersionControl):
         if not msg and not amend:
             msg = '***'
         
-        args = []
-        args.append('commit')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['commit'])
+        args = self.initCommand("commit")
         args.append("-v")
         if mq:
             args.append("--mq")
@@ -558,10 +568,7 @@ class Hg(VersionControl):
         @return flag indicating, that the update contained an add
             or delete (boolean)
         """
-        args = []
-        args.append('update')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['update'])
+        args = self.initCommand("update")
         if "-v" not in args and "--verbose" not in args:
             args.append("-v")
         if revision is not None:
@@ -605,10 +612,7 @@ class Hg(VersionControl):
         @param isDir flag indicating name is a directory (boolean)
         @param noDialog flag indicating quiet operations
         """
-        args = []
-        args.append('add')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['add'])
+        args = self.initCommand("add")
         args.append("-v")
         
         if isinstance(name, list):
@@ -682,10 +686,7 @@ class Hg(VersionControl):
         @param noDialog flag indicating quiet operations
         @return flag indicating successfull operation (boolean)
         """
-        args = []
-        args.append('remove')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['remove'])
+        args = self.initCommand("remove")
         args.append("-v")
         if noDialog and '--force' not in args:
             args.append('--force')
@@ -735,10 +736,8 @@ class Hg(VersionControl):
         @return flag indicating successfull operation (boolean)
         """
         isDir = os.path.isdir(name)
-        opts = self.options['global'][:]
-        force = '--force' in opts
-        if force:
-            opts.remove('--force')
+        # TODO: get rid of this
+        force = False
         
         res = False
         if noDialog:
@@ -754,9 +753,7 @@ class Hg(VersionControl):
                 target, force = dlg.getData()
         
         if accepted:
-            args = []
-            args.append('rename')
-            self.addArguments(args, opts)
+            args = self.initCommand("rename")
             args.append("-v")
             if force:
                 args.append('--force')
@@ -921,8 +918,7 @@ class Hg(VersionControl):
         else:
             return False
         
-        args = []
-        args.append('tag')
+        args = self.initCommand("tag")
         msgPart = ""
         if tagOp in [HgTagDialog.CreateLocalTag, HgTagDialog.DeleteLocalTag]:
             args.append('--local')
@@ -959,9 +955,7 @@ class Hg(VersionControl):
         @return flag indicating, that the update contained an add
             or delete (boolean)
         """
-        args = []
-        args.append('revert')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("revert")
         if not self.getPlugin().getPreferences("CreateBackup"):
             args.append("--no-backup")
         args.append("-v")
@@ -1027,10 +1021,8 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        opts = self.options['global'][:]
-        force = '--force' in opts
-        if force:
-            del opts[opts.index('--force')]
+        # TODO: get rid of this
+        force = False
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
@@ -1047,9 +1039,7 @@ class Hg(VersionControl):
         else:
             return
         
-        args = []
-        args.append('merge')
-        self.addArguments(args, opts)
+        args = self.initCommand("merge")
         if force:
             args.append("--force")
         if self.getPlugin().getPreferences("InternalMerge"):
@@ -1124,8 +1114,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return 0
         
-        args = []
-        args.append('status')
+        args = self.initCommand("status")
         args.append('--all')
         args.append('--noninteractive')
         
@@ -1138,10 +1127,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1194,8 +1181,7 @@ class Hg(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return names
         
-            args = []
-            args.append('status')
+            args = self.initCommand("status")
             args.append('--all')
             args.append('--noninteractive')
             
@@ -1208,10 +1194,8 @@ class Hg(VersionControl):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = str(
-                            process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.getEncoding(), 'replace')
             else:
                 output, error = self.__client.runcommand(args)
             
@@ -1355,8 +1339,7 @@ class Hg(VersionControl):
         @param ppath local path to get the repository infos (string)
         @return string with ready formated info for display (string)
         """
-        args = []
-        args.append('parents')
+        args = self.initCommand("parents")
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
                     '{date|isodate}@@@{branches}@@@{bookmarks}\n')
@@ -1370,9 +1353,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1418,8 +1400,7 @@ class Hg(VersionControl):
             infoStr = ""
         
         url = ""
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append('paths.default')
         
         output = ""
@@ -1430,9 +1411,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1451,7 +1431,16 @@ class Hg(VersionControl):
             """{2}"""
             """</table></p>\n"""
         ).format(self.versionStr, url, infoStr)
-
+    
+    def vcsSupportCommandOptions(self):
+        """
+        Public method to signal the support of user settable command options.
+        
+        @return flag indicating the support  of user settable command options
+            (boolean)
+        """
+        return False
+    
     ###########################################################################
     ## Private Mercurial specific methods are below.
     ###########################################################################
@@ -1514,9 +1503,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             target, force = dlg.getData()
             
-            args = []
-            args.append('copy')
-            self.addArguments(args, self.options['global'])
+            args = self.initCommand("copy")
             args.append("-v")
             args.append(name)
             args.append(target)
@@ -1553,8 +1540,7 @@ class Hg(VersionControl):
             tag name and flag indicating a local tag (list of tuple of string
             and boolean), if withType is True
         """
-        args = []
-        args.append('tags')
+        args = self.initCommand("tags")
         args.append('--verbose')
         
         output = ""
@@ -1566,10 +1552,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1605,8 +1589,7 @@ class Hg(VersionControl):
         @param repodir directory name of the repository (string)
         @return list of branches (list of string)
         """
-        args = []
-        args.append('branches')
+        args = self.initCommand("branches")
         args.append('--closed')
         
         output = ""
@@ -1618,10 +1601,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1745,8 +1726,7 @@ class Hg(VersionControl):
         @keyparam rev revision to retrieve (string)
         @return contents of the file (string) and an error message (string)
         """
-        args = []
-        args.append("cat")
+        args = self.initCommand("cat")
         if rev:
             args.append("--rev")
             args.append(rev)
@@ -1771,13 +1751,11 @@ class Hg(VersionControl):
                 finished = process.waitForFinished(30000)
                 if finished:
                     if process.exitCode() == 0:
-                        output = str(
-                            process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"), 'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.getEncoding(), 'replace')
                     else:
-                        error = str(
-                            process.readAllStandardError(),
-                            Preferences.getSystem("IOEncoding"), 'replace')
+                        error = str(process.readAllStandardError(),
+                                    self.getEncoding(), 'replace')
                 else:
                     error = self.tr(
                         "The hg process did not finish within 30s.")
@@ -1941,9 +1919,7 @@ class Hg(VersionControl):
             command = "pull"
             title = self.tr('Pulling from a remote Mercurial repository')
         
-        args = []
-        args.append(command)
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand(command)
         args.append('-v')
         if self.getPlugin().getPreferences("PullUpdate"):
             args.append('--update')
@@ -1977,9 +1953,7 @@ class Hg(VersionControl):
         @keyparam force flag indicating a forced push (boolean)
         @keyparam newBranch flag indicating to push a new branch (boolean)
         """
-        args = []
-        args.append('push')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("push")
         args.append('-v')
         if force:
             args.append('-f')
@@ -2014,8 +1988,7 @@ class Hg(VersionControl):
         
         info = []
         
-        args = []
-        args.append(mode)
+        args = self.initCommand(mode)
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
                     '{date|isodate}@@@{branches}@@@{parents}@@@{bookmarks}\n')
@@ -2036,9 +2009,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -2105,9 +2077,7 @@ class Hg(VersionControl):
         
         @param name file/directory name to be resolved (string)
         """
-        args = []
-        args.append('resolve')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("resolve")
         args.append("--mark")
         
         if isinstance(name, list):
@@ -2152,8 +2122,7 @@ class Hg(VersionControl):
             sorted(self.hgGetBranchesList(repodir)),
             0, True)
         if ok and name:
-            args = []
-            args.append('branch')
+            args = self.initCommand("branch")
             args.append(name.strip().replace(" ", "_"))
             
             dia = HgDialog(
@@ -2178,8 +2147,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("branch")
+        args = self.initCommand("branch")
         
         dia = HgDialog(self.tr('Showing current branch'), self)
         res = dia.startProcess(args, repodir, False)
@@ -2274,8 +2242,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('verify')
+        args = self.initCommand("verify")
         
         dia = HgDialog(
             self.tr('Verifying the integrity of the Mercurial repository'),
@@ -2299,8 +2266,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append("--untrusted")
         
         dia = HgDialog(
@@ -2325,8 +2291,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('paths')
+        args = self.initCommand("paths")
         
         dia = HgDialog(
             self.tr('Showing aliases for remote repositories'),
@@ -2350,8 +2315,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('recover')
+        args = self.initCommand("recover")
         
         dia = HgDialog(
             self.tr('Recovering from interrupted transaction'),
@@ -2375,8 +2339,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('identify')
+        args = self.initCommand("identify")
         
         dia = HgDialog(self.tr('Identifying project directory'), self)
         res = dia.startProcess(args, repodir, False)
@@ -2497,8 +2460,7 @@ class Hg(VersionControl):
             fname = Utilities.toNativeSeparators(fname)
             self.__lastChangeGroupPath = os.path.dirname(fname)
             
-            args = []
-            args.append('bundle')
+            args = self.initCommand("bundle")
             if all:
                 args.append("--all")
             for rev in revs:
@@ -2577,8 +2539,7 @@ class Hg(VersionControl):
         if file:
             self.__lastChangeGroupPath = os.path.dirname(file)
             
-            args = []
-            args.append('identify')
+            args = self.initCommand("identify")
             args.append(file)
             
             dia = HgDialog(self.tr('Identifying changegroup file'), self)
@@ -2618,8 +2579,7 @@ class Hg(VersionControl):
                 self.tr("""Shall the working directory be updated?"""),
                 yesDefault=True)
             
-            args = []
-            args.append('unbundle')
+            args = self.initCommand("unbundle")
             if update:
                 args.append("--update")
                 args.append("--verbose")
@@ -2674,8 +2634,7 @@ class Hg(VersionControl):
             else:
                 return
         
-        args = []
-        args.append("bisect")
+        args = self.initCommand("bisect")
         args.append("--{0}".format(subcommand))
         if rev:
             args.append(rev)
@@ -2695,9 +2654,7 @@ class Hg(VersionControl):
         @param name file/directory name to be removed (string or list of
             strings))
         """
-        args = []
-        args.append('forget')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("forget")
         args.append('-v')
         
         if isinstance(name, list):
@@ -2760,8 +2717,7 @@ class Hg(VersionControl):
                     self.tr("""No revision given. Aborting..."""))
                 return
             
-            args = []
-            args.append('backout')
+            args = self.initCommand("backout")
             args.append('-v')
             if merge:
                 args.append('--merge')
@@ -2849,8 +2805,7 @@ class Hg(VersionControl):
             patchFile, noCommit, message, date, user, stripCount, force = \
                 dlg.getParameters()
             
-            args = []
-            args.append("import")
+            args = self.initCommand("import")
             args.append("--verbose")
             if noCommit:
                 args.append("--no-commit")
@@ -2903,8 +2858,7 @@ class Hg(VersionControl):
             filePattern, revisions, switchParent, allText, noDates, git = \
                 dlg.getParameters()
             
-            args = []
-            args.append("export")
+            args = self.initCommand("export")
             args.append("--output")
             args.append(filePattern)
             args.append("--verbose")
@@ -2952,8 +2906,7 @@ class Hg(VersionControl):
         if data:
             revs, phase, force = data
             
-            args = []
-            args.append("phase")
+            args = self.initCommand("phase")
             if phase == "p":
                 args.append("--public")
             elif phase == "d":
@@ -3000,8 +2953,7 @@ class Hg(VersionControl):
             revs, (userData, currentUser, userName), \
                 (dateData, currentDate, dateStr), log, dryrun = dlg.getData()
             
-            args = []
-            args.append("graft")
+            args = self.initCommand("graft")
             args.append("--verbose")
             if userData:
                 if currentUser:
@@ -3043,8 +2995,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("graft")
+        args = self.initCommand("graft")
         args.append("--continue")
         args.append("--verbose")
         
@@ -3072,8 +3023,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             archive, type_, prefix, subrepos = dlg.getData()
             
-            args = []
-            args.append("archive")
+            args = self.initCommand("archive")
             if type_:
                 args.append("--type")
                 args.append(type_)
@@ -3243,8 +3193,7 @@ class Hg(VersionControl):
         Private method to check, if the default and default-push URLs
         have been configured.
         """
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append('paths')
         
         output = ""
@@ -3256,9 +3205,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -3344,8 +3292,7 @@ class Hg(VersionControl):
         activeExtensions = sorted(self.__activeExtensions)
         self.__activeExtensions = []
         
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append('extensions')
         
         output = ""
@@ -3357,9 +3304,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         

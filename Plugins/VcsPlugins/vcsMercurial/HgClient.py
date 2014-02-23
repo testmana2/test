@@ -16,8 +16,6 @@ from PyQt4.QtGui import QDialog
 
 from .HgUtilities import prepareProcess
 
-import Preferences
-
 
 class HgClient(QObject):
     """
@@ -43,14 +41,13 @@ class HgClient(QObject):
         self.__server = None
         self.__started = False
         self.__version = None
-        self.__encoding = Preferences.getSystem("IOEncoding")
+        self.__encoding = parent.getEncoding()
         self.__cancel = False
         self.__commandRunning = False
         self.__repoPath = repoPath
         
         # generate command line and environment
-        self.__serverArgs = []
-        self.__serverArgs.append("serve")
+        self.__serverArgs = parent.initCommand("serve")  # parent is hg
         self.__serverArgs.append("--cmdserver")
         self.__serverArgs.append("pipe")
         self.__serverArgs.append("--config")
@@ -61,6 +58,10 @@ class HgClient(QObject):
         
         if encoding:
             self.__encoding = encoding
+            if "--encoding" in self.__serverArgs:
+                # use the defined encoding via the environment
+                index = self.__serverArgs.index("--encoding")
+                del self.__serverArgs[index:index + 2]
     
     def startServer(self):
         """

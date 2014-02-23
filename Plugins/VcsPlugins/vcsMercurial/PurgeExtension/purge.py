@@ -15,8 +15,6 @@ from PyQt4.QtGui import QDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-import Preferences
-
 
 class Purge(HgExtension):
     """
@@ -50,8 +48,7 @@ class Purge(HgExtension):
         """
         purgeEntries = []
         
-        args = []
-        args.append("purge")
+        args = self.vcs.initCommand("purge")
         args.append("--print")
         if all:
             args.append("--all")
@@ -62,7 +59,6 @@ class Purge(HgExtension):
             if out:
                 purgeEntries = out.strip().split()
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -72,7 +68,7 @@ class Purge(HgExtension):
                 if finished and process.exitCode() == 0:
                     purgeEntries = str(
                         process.readAllStandardOutput(),
-                        ioEncoding, 'replace').strip().split()
+                        self.vcs.getEncoding(), 'replace').strip().split()
         
         return purgeEntries
     
@@ -105,8 +101,7 @@ class Purge(HgExtension):
             DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(None, title, message, entries)
         if dlg.exec_() == QDialog.Accepted:
-            args = []
-            args.append("purge")
+            args = self.vcs.initCommand("purge")
             if all:
                 args.append("--all")
             args.append("-v")

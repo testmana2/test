@@ -20,7 +20,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 
-import Preferences
 import UI.PixmapCache
 
 COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
@@ -437,8 +436,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         parents = [-1]
         
         if int(rev) > 0:
-            args = []
-            args.append("parents")
+            args = self.vcs.initCommand("parents")
             if self.commandMode == "incoming":
                 if self.__bundle:
                     args.append("--repository")
@@ -465,10 +463,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = \
-                            str(process.readAllStandardOutput(),
-                                Preferences.getSystem("IOEncoding"),
-                                'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.vcs.getEncoding(), 'replace')
                     else:
                         if not finished:
                             errMsg = self.tr(
@@ -493,8 +489,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         """
         errMsg = ""
         
-        args = []
-        args.append("identify")
+        args = self.vcs.initCommand("identify")
         args.append("-nb")
         
         output = ""
@@ -508,10 +503,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
                 else:
                     if not finished:
                         errMsg = self.tr(
@@ -540,8 +533,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.__closedBranchesRevs = []
         errMsg = ""
         
-        args = []
-        args.append("branches")
+        args = self.vcs.initCommand("branches")
         args.append("--closed")
         
         output = ""
@@ -555,10 +547,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
                 else:
                     if not finished:
                         errMsg = self.tr(
@@ -698,10 +688,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.intercept = False
         
         preargs = []
-        args = []
-        args.append(self.commandMode)
-        self.vcs.addArguments(args, self.vcs.options['global'])
-        self.vcs.addArguments(args, self.vcs.options['log'])
+        args = self.vcs.initCommand(self.commandMode)
         args.append('--verbose')
         if self.commandMode not in ("incoming", "outgoing"):
             args.append('--limit')
@@ -1026,8 +1013,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(),
-                       Preferences.getSystem("IOEncoding"),
+            line = str(self.process.readLine(), self.vcs.getEncoding(),
                        'replace')
             self.buf.append(line)
     
@@ -1040,8 +1026,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

@@ -218,9 +218,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         else:
             self.setWindowTitle(self.tr('Mercurial Status'))
         
-        args = []
-        args.append('status')
-        self.vcs.addArguments(args, self.vcs.options['global'])
+        args = self.vcs.initCommand("status")
         if self.__mq:
             args.append('--mq')
             if isinstance(fn, list):
@@ -228,8 +226,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             else:
                 self.dname, fname = self.vcs.splitPath(fn)
         else:
-            self.vcs.addArguments(args, self.vcs.options['status'])
-            
             if self.vcs.hasSubrepositories():
                 args.append("--subrepos")
             
@@ -359,10 +355,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                line = str(
-                    self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                line = str(self.process.readLine(), self.vcs.getEncoding(),
+                           'replace')
                 self.__processOutputLine(line)
     
     def __processOutputLine(self, line):
@@ -384,8 +378,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

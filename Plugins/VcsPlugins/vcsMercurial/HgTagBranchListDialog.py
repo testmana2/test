@@ -17,8 +17,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgTagBranchListDialog import Ui_HgTagBranchListDialog
 
-import Preferences
-
 
 class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
     """
@@ -102,12 +100,11 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
         if self.tagsMode:
-            args.append('tags')
+            args = self.vcs.initCommand("tags")
             args.append('--verbose')
         else:
-            args.append('branches')
+            args = self.vcs.initCommand("branches")
             args.append('--closed')
         
         if self.__hgClient:
@@ -234,8 +231,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -278,8 +274,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

@@ -15,8 +15,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgShelveBrowserDialog import Ui_HgShelveBrowserDialog
 
-import Preferences
-
 
 class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
     """
@@ -150,8 +148,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
         self.errors.clear()
         self.intercept = False
         
-        args = []
-        args.append("shelve")
+        args = self.vcs.initCommand("shelve")
         args.append("--list")
         args.append("--stat")
         
@@ -298,8 +295,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(),
-                       Preferences.getSystem("IOEncoding"),
+            line = str(self.process.readLine(), self.vcs.getEncoding(),
                        'replace')
             self.buf.append(line)
     
@@ -312,8 +308,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

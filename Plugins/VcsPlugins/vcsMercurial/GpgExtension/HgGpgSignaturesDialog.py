@@ -18,8 +18,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgGpgSignaturesDialog import Ui_HgGpgSignaturesDialog
 
-import Preferences
-
 
 class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
     """
@@ -88,8 +86,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('sigs')
+        args = self.vcs.initCommand("sigs")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -227,8 +224,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -255,8 +251,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

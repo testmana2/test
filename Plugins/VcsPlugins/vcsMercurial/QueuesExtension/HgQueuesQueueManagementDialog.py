@@ -13,8 +13,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, \
 
 from .Ui_HgQueuesQueueManagementDialog import Ui_HgQueuesQueueManagementDialog
 
-import Preferences
-
 
 class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
     """
@@ -51,6 +49,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         self.__repodir = repodir
         self.__suppressActive = suppressActive
         self.__hgClient = vcs.getClient()
+        self.vcs = vcs
         
         self.inputFrame.setHidden(
             mode != HgQueuesQueueManagementDialog.NAME_INPUT)
@@ -93,15 +92,13 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         queuesList = []
         activeQueue = ""
         
-        args = []
-        args.append("qqueue")
+        args = self.vcs.initCommand("qqueue")
         args.append("--list")
         
         output = ""
         if self.__hgClient:
             output = self.__hgClient.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(self.__repodir)
             process.start('hg', args)
@@ -109,8 +106,8 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         for queue in output.splitlines():
             queue = queue.strip()

@@ -80,8 +80,7 @@ class Gpg(HgExtension):
         if rev is not None:
             if rev == "":
                 rev = "tip"
-            args = []
-            args.append("sigcheck")
+            args = self.vcs.initCommand("sigcheck")
             args.append(rev)
             
             dia = HgDialog(self.tr('Verify Signatures'), self.vcs)
@@ -115,8 +114,7 @@ class Gpg(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             revision, noCommit, message, keyId, local, force = dlg.getData()
             
-            args = []
-            args.append("sign")
+            args = self.vcs.initCommand("sign")
             if noCommit:
                 args.append("--no-commit")
             if message:

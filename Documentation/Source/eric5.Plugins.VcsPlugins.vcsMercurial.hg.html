@@ -106,6 +106,9 @@ VersionControl
 <td><a href="#Hg.getClient">getClient</a></td>
 <td>Public method to get a reference to the command server interface.</td>
 </tr><tr>
+<td><a href="#Hg.getEncoding">getEncoding</a></td>
+<td>Public method to get the encoding to be used by Mercurial.</td>
+</tr><tr>
 <td><a href="#Hg.getExtensionObject">getExtensionObject</a></td>
 <td>Public method to get a reference to an extension object.</td>
 </tr><tr>
@@ -250,6 +253,9 @@ VersionControl
 <td><a href="#Hg.hgVerify">hgVerify</a></td>
 <td>Public method to verify the integrity of the repository.</td>
 </tr><tr>
+<td><a href="#Hg.initCommand">initCommand</a></td>
+<td>Public method to initialize a command arguments list.</td>
+</tr><tr>
 <td><a href="#Hg.isExtensionActive">isExtensionActive</a></td>
 <td>Public method to check, if an extension is active.</td>
 </tr><tr>
@@ -336,6 +342,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.vcsStatus">vcsStatus</a></td>
 <td>Public method used to view the status of files/directories in the Mercurial repository.</td>
+</tr><tr>
+<td><a href="#Hg.vcsSupportCommandOptions">vcsSupportCommandOptions</a></td>
+<td>Public method to signal the support of user settable command options.</td>
 </tr><tr>
 <td><a href="#Hg.vcsSwitch">vcsSwitch</a></td>
 <td>Public method used to switch a working directory to a different revision.</td>
@@ -492,6 +501,16 @@ flag indicating push capability (boolean)
 <dt>Returns:</dt>
 <dd>
 reference to the client (HgClient)
+</dd>
+</dl><a NAME="Hg.getEncoding" ID="Hg.getEncoding"></a>
+<h4>Hg.getEncoding</h4>
+<b>getEncoding</b>(<i></i>)
+<p>
+        Public method to get the encoding to be used by Mercurial.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+encoding (string)
 </dd>
 </dl><a NAME="Hg.getExtensionObject" ID="Hg.getExtensionObject"></a>
 <h4>Hg.getExtensionObject</h4>
@@ -1103,6 +1122,21 @@ flag indicating, that the update contained an add
 <dd>
 file/directory name (string)
 </dd>
+</dl><a NAME="Hg.initCommand" ID="Hg.initCommand"></a>
+<h4>Hg.initCommand</h4>
+<b>initCommand</b>(<i>command</i>)
+<p>
+        Public method to initialize a command arguments list.
+</p><dl>
+<dt><i>command</i></dt>
+<dd>
+command name (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of command options (list of string)
+</dd>
 </dl><a NAME="Hg.isExtensionActive" ID="Hg.isExtensionActive"></a>
 <h4>Hg.isExtensionActive</h4>
 <b>isExtensionActive</b>(<i>extensionName</i>)
@@ -1575,6 +1609,17 @@ string with ready formated info for display (string)
 <dd>
 file/directory name(s) to show the status of
             (string or list of strings)
+</dd>
+</dl><a NAME="Hg.vcsSupportCommandOptions" ID="Hg.vcsSupportCommandOptions"></a>
+<h4>Hg.vcsSupportCommandOptions</h4>
+<b>vcsSupportCommandOptions</b>(<i></i>)
+<p>
+        Public method to signal the support of user settable command options.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the support  of user settable command options
+            (boolean)
 </dd>
 </dl><a NAME="Hg.vcsSwitch" ID="Hg.vcsSwitch"></a>
 <h4>Hg.vcsSwitch</h4>

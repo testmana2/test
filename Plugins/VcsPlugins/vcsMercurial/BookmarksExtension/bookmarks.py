@@ -15,8 +15,6 @@ from PyQt4.QtGui import QDialog, QInputDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-import Preferences
-
 
 class Bookmarks(HgExtension):
     """
@@ -63,15 +61,13 @@ class Bookmarks(HgExtension):
         @param repodir directory name of the repository (string)
         @return list of bookmarks (list of string)
         """
-        args = []
-        args.append('bookmarks')
+        args = self.vcs.initCommand("bookmarks")
         
         client = self.vcs.getClient()
         output = ""
         if client:
             output = client.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -79,9 +75,8 @@ class Bookmarks(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding,
-                        'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         self.bookmarksList = []
         for line in output.splitlines():
@@ -117,8 +112,7 @@ class Bookmarks(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             rev, bookmark = dlg.getData()
             
-            args = []
-            args.append("bookmarks")
+            args = self.vcs.initCommand("bookmarks")
             if rev:
                 args.append("--rev")
                 args.append(rev)
@@ -149,8 +143,7 @@ class Bookmarks(HgExtension):
             [""] + sorted(self.hgGetBookmarksList(repodir)),
             0, True)
         if ok and bookmark:
-            args = []
-            args.append("bookmarks")
+            args = self.vcs.initCommand("bookmarks")
             args.append("--delete")
             args.append(bookmark)
             
@@ -177,8 +170,7 @@ class Bookmarks(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             newName, oldName = dlg.getData()
             
-            args = []
-            args.append("bookmarks")
+            args = self.vcs.initCommand("bookmarks")
             args.append("--rename")
             args.append(oldName)
             args.append(newName)
@@ -209,8 +201,7 @@ class Bookmarks(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             rev, bookmark = dlg.getData()
             
-            args = []
-            args.append("bookmarks")
+            args = self.vcs.initCommand("bookmarks")
             args.append("--force")
             if rev:
                 args.append("--rev")
@@ -256,11 +247,10 @@ class Bookmarks(HgExtension):
         """
         bookmarksList = []
         
-        args = []
         if incoming:
-            args.append('incoming')
+            args = self.vcs.initCommand("incoming")
         else:
-            args.append('outgoing')
+            args = self.vcs.initCommand("outgoing")
         args.append('--bookmarks')
         
         client = self.vcs.getClient()
@@ -268,7 +258,6 @@ class Bookmarks(HgExtension):
         if client:
             output = client.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -276,9 +265,8 @@ class Bookmarks(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding,
-                        'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         for line in output.splitlines():
             if line.startswith(" "):
@@ -311,8 +299,7 @@ class Bookmarks(HgExtension):
             [""] + sorted(bookmarks),
             0, True)
         if ok and bookmark:
-            args = []
-            args.append('pull')
+            args = self.vcs.initCommand("pull")
             args.append('--bookmark')
             args.append(bookmark)
             
@@ -345,8 +332,7 @@ class Bookmarks(HgExtension):
             [""] + sorted(bookmarks),
             0, True)
         if ok and bookmark:
-            args = []
-            args.append('push')
+            args = self.vcs.initCommand("push")
             args.append('--bookmark')
             args.append(bookmark)
             

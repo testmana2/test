@@ -17,8 +17,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgBookmarksListDialog import Ui_HgBookmarksListDialog
 
-import Preferences
-
 
 class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
     """
@@ -94,8 +92,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('bookmarks')
+        args = self.vcs.initCommand("bookmarks")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -226,8 +223,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -261,8 +257,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

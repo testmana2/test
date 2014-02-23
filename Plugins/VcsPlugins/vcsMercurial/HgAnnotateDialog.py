@@ -45,8 +45,6 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.annotateList.setFont(font)
         
-        self.__ioEncoding = Preferences.getSystem("IOEncoding")
-        
         if self.__hgClient:
             self.process = None
         else:
@@ -96,8 +94,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('annotate')
+        args = self.vcs.initCommand("annotate")
         args.append('--follow')
         args.append('--user')
         args.append('--date')
@@ -220,8 +217,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), self.__ioEncoding, 'replace')\
-                .strip()
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
+                    'replace').strip()
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):
@@ -247,8 +244,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

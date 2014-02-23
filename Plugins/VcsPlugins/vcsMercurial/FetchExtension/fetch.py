@@ -47,8 +47,7 @@ class Fetch(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             message, switchParent = dlg.getData()
             
-            args = []
-            args.append("fetch")
+            args = self.vcs.initCommand("fetch")
             if message != "":
                 args.append("--message")
                 args.append(message)

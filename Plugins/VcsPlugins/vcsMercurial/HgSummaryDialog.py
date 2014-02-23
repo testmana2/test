@@ -19,8 +19,6 @@ from .HgUtilities import prepareProcess
 
 from .Ui_HgSummaryDialog import Ui_HgSummaryDialog
 
-import Preferences
-
 
 class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
     """
@@ -72,9 +70,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         self.__path = path
         self.__mq = mq
         
-        args = []
-        args.append('summary')
-        self.vcs.addArguments(args, self.vcs.options['global'])
+        args = self.vcs.initCommand("summary")
         args.append("--remote")
         if self.__mq:
             args.append("--mq")
@@ -90,8 +86,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.process.kill()
         else:
             self.process = QProcess()
-            prepareProcess(self.process, Preferences.getSystem("IOEncoding"),
-                           "C")
+            prepareProcess(self.process, language="C")
             self.process.finished.connect(self.__procFinished)
             self.process.readyReadStandardOutput.connect(self.__readStdout)
             self.process.readyReadStandardError.connect(self.__readStderr)
@@ -157,10 +152,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                line = str(
-                    self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                line = str(self.process.readLine(), self.vcs.getEncoding(),
+                           'replace')
                 self.__buffer.append(line)
     
     def __readStderr(self):
@@ -172,8 +165,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

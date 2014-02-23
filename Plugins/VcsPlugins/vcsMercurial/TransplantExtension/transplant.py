@@ -48,8 +48,7 @@ class Transplant(HgExtension):
             revs, sourceRepo, branch, all, pruneRevs, mergeRevs, log = \
                 dlg.getData()
             
-            args = []
-            args.append("transplant")
+            args = self.vcs.initCommand("transplant")
             args.append("--verbose")
             if sourceRepo:
                 args.append("--source")
@@ -91,8 +90,7 @@ class Transplant(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("transplant")
+        args = self.vcs.initCommand("transplant")
         args.append("--continue")
         args.append("--verbose")
         

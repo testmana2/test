@@ -17,8 +17,6 @@ from E5Gui import E5MessageBox
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-import Preferences
-
 
 class Shelve(HgExtension):
     """
@@ -50,8 +48,7 @@ class Shelve(HgExtension):
         @param repodir directory name of the repository (string)
         @return list of shelved changes (list of string)
         """
-        args = []
-        args.append('shelve')
+        args = self.vcs.initCommand("shelve")
         args.append('--list')
         args.append('--quiet')
         
@@ -60,7 +57,6 @@ class Shelve(HgExtension):
         if client:
             output = client.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -68,9 +64,8 @@ class Shelve(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding,
-                        'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         shelveNamesList = []
         for line in output.splitlines():
@@ -104,8 +99,7 @@ class Shelve(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             shelveName, dateTime, message, addRemove = dlg.getData()
             
-            args = []
-            args.append("shelve")
+            args = self.vcs.initCommand("shelve")
             if shelveName:
                 args.append("--name")
                 args.append(shelveName)
@@ -168,8 +162,7 @@ class Shelve(HgExtension):
             shelveName, keep = dlg.getData()
             self.__unshelveKeep = keep  # store for potential continue
             
-            args = []
-            args.append("unshelve")
+            args = self.vcs.initCommand("unshelve")
             if keep:
                 args.append("--keep")
             if shelveName:
@@ -197,8 +190,7 @@ class Shelve(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
-        args.append("unshelve")
+        args = self.vcs.initCommand("unshelve")
         args.append("--abort")
         
         dia = HgDialog(self.tr('Abort restore operation'), self.vcs)
@@ -223,8 +215,7 @@ class Shelve(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
-        args.append("unshelve")
+        args = self.vcs.initCommand("unshelve")
         if self.__unshelveKeep:
             args.append("--keep")
         args.append("--continue")
@@ -269,8 +260,7 @@ class Shelve(HgExtension):
             self.tr("Do you really want to delete these shelves?"),
             shelveNames)
         if dlg.exec_() == QDialog.Accepted:
-            args = []
-            args.append("shelve")
+            args = self.vcs.initCommand("shelve")
             args.append("--delete")
             args.extend(shelveNames)
             
@@ -297,8 +287,7 @@ class Shelve(HgExtension):
             self.tr("Delete all shelves"),
             self.tr("""Do you really want to delete all shelved changes?"""))
         if res:
-            args = []
-            args.append("shelve")
+            args = self.vcs.initCommand("shelve")
             args.append("--cleanup")
             
             dia = HgDialog(self.tr('Delete all shelves'), self.vcs)

@@ -19,7 +19,6 @@ from E5Gui import E5MessageBox
 from .Ui_HgLogDialog import Ui_HgLogDialog
 
 import Utilities
-import Preferences
 
 
 class HgLogDialog(QWidget, Ui_HgLogDialog):
@@ -125,10 +124,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.raise_()
         
         preargs = []
-        args = []
-        args.append(self.mode)
-        self.vcs.addArguments(args, self.vcs.options['global'])
-        self.vcs.addArguments(args, self.vcs.options['log'])
+        args = self.vcs.initCommand(self.mode)
         if noEntries and self.mode == "log":
             args.append('--limit')
             args.append(str(noEntries))
@@ -234,8 +230,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         parents = []
         
         if int(rev) > 0:
-            args = []
-            args.append("parents")
+            args = self.vcs.initCommand("parents")
             if self.mode == "incoming":
                 if self.bundle:
                     args.append("--repository")
@@ -262,10 +257,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = \
-                            str(process.readAllStandardOutput(),
-                                Preferences.getSystem("IOEncoding"),
-                                'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.vcs.getEncoding(), 'replace')
                     else:
                         if not finished:
                             errMsg = self.tr(
@@ -413,9 +406,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+            s = str(self.process.readLine(), self.vcs.getEncoding(), 'replace')
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):
@@ -462,8 +453,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):
