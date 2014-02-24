@@ -21017,7 +21017,7 @@ Zoom avant</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3274"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3272"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23926,22 +23926,22 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
 <context>
     <name>HgProjectBrowserHelper</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="498"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="573"/>
         <source>Version Control</source>
         <translation type="unfinished">Contrôle de version</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="510"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="585"/>
         <source>Commit changes to repository...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="516"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="594"/>
         <source>Add to repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="520"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="598"/>
         <source>Remove from repository (and disk)</source>
         <translation type="unfinished">Supprimer du référentiel (et du disque)</translation>
     </message>
@@ -23956,7 +23956,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="obsolete">Déplacer dans le référentiel</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="440"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="515"/>
         <source>Show log</source>
         <translation type="unfinished">Afficher le log</translation>
     </message>
@@ -23966,32 +23966,32 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="obsolete">Afficher un log limité</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="444"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="519"/>
         <source>Show log browser</source>
         <translation type="unfinished">Afficher le navigateur de logs</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="526"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="604"/>
         <source>Show status</source>
         <translation type="unfinished">Afficher l&apos;état (status)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="531"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="609"/>
         <source>Show difference</source>
         <translation type="unfinished">Afficher les différences</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="535"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="613"/>
         <source>Show difference (extended)</source>
         <translation type="unfinished">Afficher les différences (étendu)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="256"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="325"/>
         <source>Show annotated file</source>
         <translation type="unfinished">Afficher les fichiers annotés</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="541"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="619"/>
         <source>Revert changes</source>
         <translation type="unfinished">Revenir avant les modifications</translation>
     </message>
@@ -24001,58 +24001,63 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="obsolete">Résoudre les conflits</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="549"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="627"/>
         <source>Select all local file entries</source>
         <translation type="unfinished">Sélectionner tous les fichiers locaux</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="551"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="629"/>
         <source>Select all versioned file entries</source>
         <translation type="unfinished">Sélectionner tous les fichiers ayant une version</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="553"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="631"/>
         <source>Select all local directory entries</source>
         <translation type="unfinished">Sélectionner tous les répertoires locaux</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="555"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="633"/>
         <source>Select all versioned directory entries</source>
         <translation type="unfinished">Sélectionner tous les répertoires ayant une version</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="703"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="781"/>
         <source>Remove from repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="703"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="781"/>
         <source>Do you really want to remove these files from the repository?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="545"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="623"/>
         <source>Conflict resolved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="435"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="510"/>
         <source>Copy</source>
         <translation type="unfinished">Copier</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="437"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="512"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="242"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="311"/>
         <source>Show difference side-by-side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="251"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="320"/>
         <source>Show difference side-by-side (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="225"/>
+        <source>Extensions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -48307,6 +48312,24 @@ Il s&apos;activent lorsqu&apos;on tape la parenthèse ouvrante d&apos;une foncti
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="286"/>
         <source>Do you really want to delete all shelved changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShelveProjectBrowserHelper</name>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="60"/>
+        <source>Shelve changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="105"/>
+        <source>Shelve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="84"/>
+        <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

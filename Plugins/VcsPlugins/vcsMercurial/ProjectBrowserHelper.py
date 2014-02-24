@@ -38,6 +38,39 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         VcsProjectBrowserHelper.__init__(self, vcsObject, browserObject,
                                          projectObject, isTranslationsBrowser,
                                          parent, name)
+        
+        # instantiate the extensions
+        from .ShelveExtension.ProjectBrowserHelper import \
+            ShelveProjectBrowserHelper
+        self.__extensions = {
+            "shelve": ShelveProjectBrowserHelper(vcsObject, browserObject,
+                                                 projectObject),
+        }
+        
+        self.__extensionMenuTitles = {}
+        for extension in self.__extensions:
+            self.__extensionMenuTitles[
+                self.__extensions[extension].menuTitle()] = extension
+        self.__extensionMenus = {}
+        for extension in self.__extensions:
+            self.__extensionMenus[extension] = \
+                self.__extensions[extension].initMenus()
+    
+    def __showExtensionMenu(self, key):
+        """
+        Private slot showing the extensions menu.
+        
+        @param key menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+        """
+        for extensionName in self.__extensionMenus:
+            if key in self.__extensionMenus[extensionName]:
+                self.__extensionMenus[extensionName][key].setEnabled(
+                    self.vcs.isExtensionActive(extensionName))
+                if (not self.__extensionMenus[extensionName][key].isEnabled()
+                    and self.__extensionMenus[extensionName][key]
+                        .isTearOffMenuVisible()):
+                    self.__extensionMenus[extensionName][key].hideTearOffMenu()
     
     def showContextMenu(self, menu, standardItems):
         """
@@ -59,6 +92,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             if not hasattr(self.browser.currentItem(), 'fileName'):
                 self.annotateAct.setEnabled(False)
+            self.__showExtensionMenu("mainMenu")
         else:
             for act in self.vcsMenuActions:
                 act.setEnabled(False)
@@ -97,6 +131,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
+            self.__showExtensionMenu("multiMenu")
         else:
             for act in self.vcsMultiMenuActions:
                 act.setEnabled(False)
@@ -123,6 +158,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
+            self.__showExtensionMenu("dirMenu")
         else:
             for act in self.vcsDirMenuActions:
                 act.setEnabled(False)
@@ -161,6 +197,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
+            self.__showExtensionMenu("dirMultiMenu")
         else:
             for act in self.vcsDirMultiMenuActions:
                 act.setEnabled(False)
@@ -168,11 +205,40 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(True)
             for act in standardItems:
                 act.setEnabled(True)
-
+    
     ###########################################################################
-    # Protected menu generation methods below
+    ## Private menu generation methods below
     ###########################################################################
-
+    
+    def __addExtensionsMenu(self, menu, key):
+        """
+        Private method to add an extension menu entry.
+        
+        @param menu menu to add it to (QMenu)
+        @param key menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+        @return reference to the menu action (QAction)
+        """
+        act = None
+        if key in ['mainMenu', 'multiMenu', 'backMenu', 'dirMenu',
+                'dirMultiMenu']:
+            extensionsMenu = QMenu(self.tr("Extensions"), menu)
+            extensionsMenu.setTearOffEnabled(True)
+            for extensionMenuTitle in sorted(self.__extensionMenuTitles):
+                extensionName = self.__extensionMenuTitles[extensionMenuTitle]
+                if key in self.__extensionMenus[extensionName]:
+                    extensionsMenu.addMenu(
+                        self.__extensionMenus[extensionName][key])
+            if not extensionsMenu.isEmpty():
+                if not menu.isEmpty():
+                    menu.addSeparator()
+                act = menu.addMenu(extensionsMenu)
+        return act
+    
+    ###########################################################################
+    ## Protected menu generation methods below
+    ###########################################################################
+    
     def _addVCSMenu(self, mainMenu):
         """
         Protected method used to add the VCS menu to all project browsers.
@@ -199,6 +265,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMenuActions.append(act)
+        act = self.__addExtensionsMenu(menu, 'mainMenu')
+        if act:
+            self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -307,6 +376,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMultiMenuActions.append(act)
+        act = self.__addExtensionsMenu(menu, 'multiMenu')
+        if act:
+            self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -421,6 +493,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMenuActions.append(act)
+        act = self.__addExtensionsMenu(menu, 'dirMenu')
+        if act:
+            self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -512,6 +587,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMultiMenuActions.append(act)
+        act = self.__addExtensionsMenu(menu, 'dirMultiMenu')
+        if act:
+            self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -561,7 +639,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.menuDirMulti = menu
     
     ###########################################################################
-    # Menu handling methods below
+    ## Menu handling methods below
     ###########################################################################
     
     def __HgRevert(self):

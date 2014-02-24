@@ -313,6 +313,7 @@ HgDialog QDialog Ui_HgDialog
 HgDiffDialog QWidget Ui_HgDiffDialog
 HgExportDialog QDialog Ui_HgExportDialog
 HgExtension QObject
+HgExtensionProjectBrowserHelper QObject
 HgExtensionProjectHelper QObject
 HgFetchDialog QDialog Ui_HgFetchDialog
 HgGpgSignDialog QDialog Ui_HgGpgSignDialog
@@ -601,6 +602,7 @@ ShellAssembly QWidget
 ShellHistoryDialog QDialog Ui_ShellHistoryDialog
 ShellPage ConfigurationPageBase Ui_ShellPage
 Shelve HgExtension
+ShelveProjectBrowserHelper HgExtensionProjectBrowserHelper
 ShelveProjectHelper HgExtensionProjectHelper
 ShortcutDialog QDialog Ui_ShortcutDialog
 ShortcutsDialog QDialog Ui_ShortcutsDialog

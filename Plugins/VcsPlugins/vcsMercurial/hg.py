@@ -3243,8 +3243,6 @@ class Hg(VersionControl):
         
         @param path name of the changed file (string)
         """
-        self.__getExtensionsInfo()
-        
         if self.__client:
             ok, err = self.__client.restartServer()
             if not ok:
@@ -3255,6 +3253,8 @@ class Hg(VersionControl):
                         """<p>The Mercurial Command Server could not be"""
                         """ restarted.</p><p>Reason: {0}</p>""").format(err))
                 self.__client = None
+        
+        self.__getExtensionsInfo()
         
         if self.__repoIniFile and path == self.__repoIniFile:
             self.__checkDefaults()

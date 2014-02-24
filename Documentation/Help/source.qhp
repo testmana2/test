@@ -534,6 +534,7 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html" />
                 </section>
@@ -557,6 +558,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html" />
@@ -6041,6 +6043,11 @@
       <keyword name="HgExtension (Constructor)" id="HgExtension (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension.__init__" />
       <keyword name="HgExtension (Module)" id="HgExtension (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
       <keyword name="HgExtension.shutdown" id="HgExtension.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension.shutdown" />
+      <keyword name="HgExtensionProjectBrowserHelper" id="HgExtensionProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper" />
+      <keyword name="HgExtensionProjectBrowserHelper (Constructor)" id="HgExtensionProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.__init__" />
+      <keyword name="HgExtensionProjectBrowserHelper (Module)" id="HgExtensionProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html" />
+      <keyword name="HgExtensionProjectBrowserHelper.initMenus" id="HgExtensionProjectBrowserHelper.initMenus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.initMenus" />
+      <keyword name="HgExtensionProjectBrowserHelper.menuTitle" id="HgExtensionProjectBrowserHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.menuTitle" />
       <keyword name="HgExtensionProjectHelper" id="HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper" />
       <keyword name="HgExtensionProjectHelper (Constructor)" id="HgExtensionProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.__init__" />
       <keyword name="HgExtensionProjectHelper (Module)" id="HgExtensionProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
@@ -6237,6 +6244,8 @@
       <keyword name="HgProjectBrowserHelper.__HgRevert" id="HgProjectBrowserHelper.__HgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgRevert" />
       <keyword name="HgProjectBrowserHelper.__HgSbsDiff" id="HgProjectBrowserHelper.__HgSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgSbsDiff" />
       <keyword name="HgProjectBrowserHelper.__HgSbsExtendedDiff" id="HgProjectBrowserHelper.__HgSbsExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgSbsExtendedDiff" />
+      <keyword name="HgProjectBrowserHelper.__addExtensionsMenu" id="HgProjectBrowserHelper.__addExtensionsMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__addExtensionsMenu" />
+      <keyword name="HgProjectBrowserHelper.__showExtensionMenu" id="HgProjectBrowserHelper.__showExtensionMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__showExtensionMenu" />
       <keyword name="HgProjectBrowserHelper._addVCSMenu" id="HgProjectBrowserHelper._addVCSMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenu" />
       <keyword name="HgProjectBrowserHelper._addVCSMenuBack" id="HgProjectBrowserHelper._addVCSMenuBack" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenuBack" />
       <keyword name="HgProjectBrowserHelper._addVCSMenuDir" id="HgProjectBrowserHelper._addVCSMenuDir" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenuDir" />
@@ -8923,6 +8932,7 @@
       <keyword name="ProjectBrowserFileItem (Constructor)" id="ProjectBrowserFileItem (Constructor)" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserFileItem.__init__" />
       <keyword name="ProjectBrowserFlags (Module)" id="ProjectBrowserFlags (Module)" ref="eric5.Project.ProjectBrowserFlags.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html" />
+      <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.VCS.ProjectBrowserHelper.html" />
@@ -9985,6 +9995,12 @@
       <keyword name="Shelve.hgUnshelveContinue" id="Shelve.hgUnshelveContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.hgUnshelveContinue" />
       <keyword name="Shelve.shutdown" id="Shelve.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html#Shelve.shutdown" />
       <keyword name="ShelveExtension (Package)" id="ShelveExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.html" />
+      <keyword name="ShelveProjectBrowserHelper" id="ShelveProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper" />
+      <keyword name="ShelveProjectBrowserHelper (Constructor)" id="ShelveProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.__init__" />
+      <keyword name="ShelveProjectBrowserHelper.__hgShelve" id="ShelveProjectBrowserHelper.__hgShelve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.__hgShelve" />
+      <keyword name="ShelveProjectBrowserHelper.__reopenProject" id="ShelveProjectBrowserHelper.__reopenProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.__reopenProject" />
+      <keyword name="ShelveProjectBrowserHelper.initMenus" id="ShelveProjectBrowserHelper.initMenus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.initMenus" />
+      <keyword name="ShelveProjectBrowserHelper.menuTitle" id="ShelveProjectBrowserHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.menuTitle" />
       <keyword name="ShelveProjectHelper" id="ShelveProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper" />
       <keyword name="ShelveProjectHelper (Constructor)" id="ShelveProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__init__" />
       <keyword name="ShelveProjectHelper.__hgCleanupShelves" id="ShelveProjectHelper.__hgCleanupShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgCleanupShelves" />
@@ -14032,6 +14048,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html</file>
@@ -14078,6 +14095,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelveDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgShelvesSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.HgUnshelveDataDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.shelve.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html</file>

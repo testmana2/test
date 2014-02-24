@@ -1119,6 +1119,8 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgExtensionProjectBrowserHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1599,73 +1601,97 @@
           <string>add</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>checkout</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>commit</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>diff</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>export</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>global</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>history</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>log</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>remove</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>status</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>tag</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>update</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
       </dict>
     </VcsOptions>
