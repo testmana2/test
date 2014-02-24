@@ -736,8 +736,6 @@ class Hg(VersionControl):
         @return flag indicating successfull operation (boolean)
         """
         isDir = os.path.isdir(name)
-        # TODO: get rid of this
-        force = False
         
         res = False
         if noDialog:
@@ -747,7 +745,7 @@ class Hg(VersionControl):
             accepted = True
         else:
             from .HgCopyDialog import HgCopyDialog
-            dlg = HgCopyDialog(name, None, True, force)
+            dlg = HgCopyDialog(name, None, True)
             accepted = dlg.exec_() == QDialog.Accepted
             if accepted:
                 target, force = dlg.getData()
@@ -1021,9 +1019,6 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        # TODO: get rid of this
-        force = False
-        
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
                 self.getExtensionObject("bookmarks")\
@@ -1031,7 +1026,7 @@ class Hg(VersionControl):
         else:
             bookmarksList = None
         from .HgMergeDialog import HgMergeDialog
-        dlg = HgMergeDialog(force, self.hgGetTagsList(repodir),
+        dlg = HgMergeDialog(self.hgGetTagsList(repodir),
                             self.hgGetBranchesList(repodir),
                             bookmarksList)
         if dlg.exec_() == QDialog.Accepted:

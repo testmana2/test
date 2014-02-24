@@ -17,12 +17,11 @@ class HgMergeDialog(QDialog, Ui_HgMergeDialog):
     """
     Class implementing a dialog to enter the data for a merge operation.
     """
-    def __init__(self, force, tagsList, branchesList, bookmarksList=None,
+    def __init__(self, tagsList, branchesList, bookmarksList=None,
                  parent=None):
         """
         Constructor
         
-        @param force flag indicating a forced merge (boolean)
         @param tagsList list of tags (list of strings)
         @param branchesList list of branches (list of strings)
         @param bookmarksList list of bookmarks (list of strings)
@@ -33,7 +32,6 @@ class HgMergeDialog(QDialog, Ui_HgMergeDialog):
        
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
-        self.forceCheckBox.setChecked(force)
         self.tagCombo.addItems(sorted(tagsList))
         self.branchCombo.addItems(["default"] + sorted(branchesList))
         if bookmarksList is not None:

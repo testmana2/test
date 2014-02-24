@@ -258,9 +258,14 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
             elif '|' in line:
                 # file stats: foo.py |  3 ++-
                 file, changes = line.strip().split("|", 1)
-                total, addDelete = changes.strip().split(None, 1)
-                additions = str(addDelete.count("+"))
-                deletions = str(addDelete.count("-"))
+                if changes.strip().endswith(("+", "-")):
+                    total, addDelete = changes.strip().split(None, 1)
+                    additions = str(addDelete.count("+"))
+                    deletions = str(addDelete.count("-"))
+                else:
+                    total = changes.strip()
+                    additions = '0'
+                    deletions = '0'
                 itemData["files"].append((file, total, additions, deletions))
                 lastWasFileStats = True
             elif lastWasFileStats:

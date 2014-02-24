@@ -26,14 +26,13 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
     Class implementing a dialog to enter the data for a copy or rename
     operation.
     """
-    def __init__(self, source, parent=None, move=False, force=False):
+    def __init__(self, source, parent=None, move=False):
         """
         Constructor
         
         @param source name of the source file/directory (string)
         @param parent parent widget (QWidget)
         @param move flag indicating a move operation (boolean)
-        @param force flag indicating a forced operation (boolean)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -50,7 +49,6 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
             self.setWindowTitle(self.tr('Mercurial Move'))
         else:
             self.forceCheckBox.setEnabled(False)
-        self.forceCheckBox.setChecked(force)
         
         self.sourceEdit.setText(source)
         
