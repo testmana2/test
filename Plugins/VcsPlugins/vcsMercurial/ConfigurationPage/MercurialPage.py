@@ -118,10 +118,11 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
             from ..HgUserConfigDataDialog import HgUserConfigDataDialog
             dlg = HgUserConfigDataDialog()
             if dlg.exec_() == QDialog.Accepted:
-                firstName, lastName, email, extensions = dlg.getData()
+                firstName, lastName, email, extensions, extensionsData = \
+                    dlg.getData()
             else:
-                firstName, lastName, email, extensions = (
-                    "Firstname", "Lastname", "email_address", [])
+                firstName, lastName, email, extensions, extensionsData = (
+                    "Firstname", "Lastname", "email_address", [], {})
             try:
                 f = open(cfgFile, "w")
                 f.write("[ui]\n")
@@ -131,6 +132,15 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
                     f.write("\n[extensions]\n")
                     f.write(" =\n".join(extensions))
                     f.write(" =\n")     # complete the last line
+                if "largefiles" in extensionsData:
+                    dataDict = extensionsData["largefiles"]
+                    f.write("\n[largefiles]\n")
+                    if "minsize" in dataDict:
+                        f.write("minsize = {0}\n".format(dataDict["minsize"]))
+                    if "patterns" in dataDict:
+                        f.write("patterns =\n")
+                        f.write("  {0}\n".format(
+                            "\n  ".join(dataDict["patterns"])))
                 f.close()
             except (IOError, OSError):
                 # ignore these

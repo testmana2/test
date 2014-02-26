@@ -34,11 +34,13 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
         """
         Public method to retrieve the entered data.
         
-        @return tuple with user's first name, last name, email address and
-            list of activated extensions (tuple of three strings and a list
-            of strings)
+        @return tuple with user's first name, last name, email address,
+            list of activated extensions and dictionary with extension data
+            (tuple of three strings, a list of strings and a dictionary with
+             extension name as key)
         """
         extensions = []
+        extensionsData = {}
         
         if self.bookmarksCheckBox.isChecked():
             extensions.append("bookmarks")
@@ -56,10 +58,22 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
             extensions.append("shelve")
         if self.transplantCheckBox.isChecked():
             extensions.append("transplant")
+        if self.largefilesCheckBox.isChecked():
+            extensions.append("largefiles")
+            largefilesDataDict = {}
+            lfFileSize = self.lfFileSizeSpinBox.value()
+            if lfFileSize != 10:        # default value is 10 MB
+                largefilesDataDict["minsize"] = lfFileSize
+            lfFilePatterns = self.lfFilePatternsEdit.text()
+            if lfFilePatterns:
+                largefilesDataDict["patterns"] = lfFilePatterns.split()
+            if largefilesDataDict:
+                extensionsData["largefiles"] = largefilesDataDict
         
         return (
             self.firstNameEdit.text(),
             self.lastNameEdit.text(),
             self.emailEdit.text(),
             extensions,
+            extensionsData,
         )
