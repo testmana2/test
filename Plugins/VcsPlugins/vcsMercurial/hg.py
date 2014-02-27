@@ -136,6 +136,7 @@ class Hg(VersionControl):
         from .TransplantExtension.transplant import Transplant
         from .RebaseExtension.rebase import Rebase
         from .ShelveExtension.shelve import Shelve
+        from .LargefilesExtension.largefiles import Largefiles
         self.__extensions = {
             "bookmarks": Bookmarks(self),
             "mq": Queues(self),
@@ -145,6 +146,7 @@ class Hg(VersionControl):
             "transplant": Transplant(self),
             "rebase": Rebase(self),
             "shelve": Shelve(self),
+            "largefiles": Largefiles(self)
         }
     
     def getPlugin(self):
@@ -3345,6 +3347,11 @@ class Hg(VersionControl):
             extensionName == "shelve" and \
                 self.version < (2, 8):
             # shelve extension was added as of Mercurial 2.8.0
+            isActive = False
+        if isActive and \
+            extensionName == "largefiles" and \
+                self.version < (2, 0):
+            # largefiles extension was added as of Mercurial 2.0.0
             isActive = False
         
         return isActive

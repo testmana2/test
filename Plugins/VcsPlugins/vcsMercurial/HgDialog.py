@@ -27,12 +27,14 @@ class HgDialog(QDialog, Ui_HgDialog):
     shows the output of the process. The dialog is modal,
     which causes a synchronized execution of the process.
     """
-    def __init__(self, text, hg=None, parent=None):
+    def __init__(self, text, hg=None, useClient=True, parent=None):
         """
         Constructor
         
         @param text text to be shown by the label (string)
         @param hg reference to the Mercurial interface object (Hg)
+        @param useClient flag indicating to use the command server client
+            if possible (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -44,7 +46,10 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.proc = None
         self.username = ''
         self.password = ''
-        self.__hgClient = hg.getClient()
+        if useClient:
+            self.__hgClient = hg.getClient()
+        else:
+            self.__hgClient = None
         self.vcs = hg
         
         self.outputGroup.setTitle(text)

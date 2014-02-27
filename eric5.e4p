@@ -1121,6 +1121,10 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgExtensionProjectBrowserHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1446,6 +1450,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

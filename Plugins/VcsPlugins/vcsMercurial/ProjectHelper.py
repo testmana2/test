@@ -46,6 +46,7 @@ class HgProjectHelper(VcsProjectHelper):
         from .TransplantExtension.ProjectHelper import TransplantProjectHelper
         from .RebaseExtension.ProjectHelper import RebaseProjectHelper
         from .ShelveExtension.ProjectHelper import ShelveProjectHelper
+        from .LargefilesExtension.ProjectHelper import LargefilesProjectHelper
         self.__extensions = {
             "bookmarks": BookmarksProjectHelper(),
             "mq": QueuesProjectHelper(),
@@ -55,6 +56,7 @@ class HgProjectHelper(VcsProjectHelper):
             "transplant": TransplantProjectHelper(),
             "rebase": RebaseProjectHelper(),
             "shelve": ShelveProjectHelper(),
+            "largefiles": LargefilesProjectHelper(),
         }
         
         self.__extensionMenuTitles = {}
