@@ -17,7 +17,7 @@ from ..HgExtensionProjectHelper import HgExtensionProjectHelper
 
 class ShelveProjectHelper(HgExtensionProjectHelper):
     """
-    Class implementing the queues extension project helper.
+    Class implementing the shelve extension project helper.
     """
     def __init__(self):
         """
