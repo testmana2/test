@@ -2192,11 +2192,15 @@ class Hg(VersionControl):
         self.userEditor = MiniEditor(cfgFile, "Properties")
         self.userEditor.show()
     
-    def hgEditConfig(self, name):
+    def hgEditConfig(self, name, withLargefiles=True, largefilesData=None):
         """
         Public method used to edit the repository configuration file.
         
         @param name file/directory name (string)
+        @param withLargefiles flag indicating to configure the largefiles
+            section (boolean)
+        @param largefilesData dictionary with data for the largefiles
+            section of the data dialog (dict)
         """
         dname, fname = self.splitPath(name)
         
@@ -2210,11 +2214,16 @@ class Hg(VersionControl):
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if not os.path.exists(cfgFile):
             # open dialog to enter the initial data
+            withLargefiles = (self.isExtensionActive("largefiles") and 
+                              withLargefiles)
             from .HgRepoConfigDataDialog import HgRepoConfigDataDialog
-            dlg = HgRepoConfigDataDialog()
+            dlg = HgRepoConfigDataDialog(withLargefiles=withLargefiles,
+                                         largefilesData=largefilesData)
             if dlg.exec_() == QDialog.Accepted:
                 createContents = True
                 defaultUrl, defaultPushUrl = dlg.getData()
+                if withLargefiles:
+                    lfMinSize, lfPattern = dlg.getLargefilesData()
             else:
                 createContents = False
             try:
@@ -2227,6 +2236,15 @@ class Hg(VersionControl):
                     if defaultPushUrl:
                         cfg.write("default-push = {0}\n".format(
                             defaultPushUrl))
+                    if withLargefiles and \
+                            (lfMinSize, lfPattern) != (None, None):
+                        cfg.write("\n[largefiles]\n")
+                        if lfMinSize is not None:
+                            cfg.write("minsize = {0}\n".format(lfMinSize))
+                        if lfPattern is not None:
+                            cfg.write("patterns =\n")
+                            cfg.write("  {0}\n".format(
+                                "\n  ".join(lfPattern)))
                 cfg.close()
                 self.__monitorRepoIniFile(repodir)
             except IOError:

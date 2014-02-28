@@ -8,17 +8,13 @@ Module implementing the largefiles extension interface.
 """
 
 import os
-import shutil
 
 from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
 
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
-
-from . import getDefaults
 
 
 class Largefiles(HgExtension):
@@ -81,8 +77,7 @@ class Largefiles(HgExtension):
             # step 2: create working directory contents
             if res:
                 args = self.vcs.initCommand("update")
-                if "-v" not in args and "--verbose" not in args:
-                    args.append("-v")
+                args.append("--verbose")
                 dia = HgDialog(self.tr('Convert Project - Extracting'),
                                self.vcs, useClient=False)
                 res = dia.startProcess(args, newName)
@@ -93,17 +88,8 @@ class Largefiles(HgExtension):
             # step 3: close current project and open new one
             if res:
                 e5App().getObject("Project").openProject(newProjectFile)
-                
-                # step 3.1: copy old hgrc file
-                hgrc = os.path.join(repodir, self.vcs.adminDir, "hgrc")
-                if os.path.exists(hgrc):
-                    ok = E5MessageBox.yesNo(
-                        None,
-                        self.tr("Convert Project"),
-                        self.tr("""Shall the Mercurial repository"""
-                                """ configuration file be copied over?"""))
-                    if ok:
-                        shutil.copy(
-                            hgrc,
-                            os.path.join(newName, self.vcs.adminDir, "hgrc"))
-                # TODO: write patterns to hgrc
+                if direction == 'largefiles':
+                    self.vcs.hgEditConfig(newName, largefilesData={
+                        "minsize": minSize, "pattern": patterns})
+                else:
+                    self.vcs.hgEditConfig(newName, withLargefiles=False)

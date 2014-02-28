@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>650</width>
-    <height>323</height>
+    <width>500</width>
+    <height>352</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -146,6 +146,68 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="largefilesGroup">
+     <property name="title">
+      <string>Large Files</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Minimum file size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="lfFileSizeSpinBox">
+        <property name="toolTip">
+         <string>Enter the minimum file size in MB for files to be treated as Large Files</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="suffix">
+         <string> MB</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>215</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Patterns:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QLineEdit" name="lfFilePatternsEdit">
+        <property name="toolTip">
+         <string>Enter file patterns (space separated) for files to be treated as Large Files</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -173,6 +235,8 @@
   <tabstop>defaultPushUserEdit</tabstop>
   <tabstop>defaultPushPasswordEdit</tabstop>
   <tabstop>defaultPushShowPasswordButton</tabstop>
+  <tabstop>lfFileSizeSpinBox</tabstop>
+  <tabstop>lfFilePatternsEdit</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
