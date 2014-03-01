@@ -1125,6 +1125,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

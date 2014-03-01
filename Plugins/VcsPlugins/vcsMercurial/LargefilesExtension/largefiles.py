@@ -93,3 +93,41 @@ class Largefiles(HgExtension):
                         "minsize": minSize, "pattern": patterns})
                 else:
                     self.vcs.hgEditConfig(newName, withLargefiles=False)
+    
+    def hgAdd(self, names, mode):
+        """
+        Public method used to add a file to the Mercurial repository.
+        
+        @param name file name(s) to be added (string or list of string)
+        @param mode add mode (string one of 'normal' or 'large')
+        """
+        args = self.vcs.initCommand("add")
+        args.append("-v")
+        if mode == "large":
+            args.append("--large")
+        else:
+            args.append("--normal")
+        
+        if isinstance(names, list):
+            dname = self.vcs.splitPathList(names)[0]
+        else:
+            dname = self.vcs.splitPath(names)[0]
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        if isinstance(names, list):
+            self.vcs.addArguments(args, names)
+        else:
+            args.append(names)
+        
+        dia = HgDialog(
+            self.tr('Adding files to the Mercurial repository'),
+            self.vcs)
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
