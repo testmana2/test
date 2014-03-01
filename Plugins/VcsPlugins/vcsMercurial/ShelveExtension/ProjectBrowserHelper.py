@@ -32,8 +32,6 @@ class ShelveProjectBrowserHelper(HgExtensionProjectBrowserHelper):
         """
         Public method to generate the extension menus.
         
-        Note: Derived class must implement this method.
-        
         @return dictionary of populated menu (dict of QMenu). The dict
             must have the keys 'mainMenu', 'multiMenu', 'backMenu', 'dirMenu'
             and 'dirMultiMenu'. 
@@ -66,11 +64,22 @@ class ShelveProjectBrowserHelper(HgExtensionProjectBrowserHelper):
         """
         Public method to get the menu title.
         
-        Note: Derived class must implement this method.
-        
         @return title of the menu (string)
         """
         return self.tr("Shelve")
+    
+    def showExtensionMenu(self, key, controlled):
+        """
+        Public method to prepare the extension menu for display.
+        
+        @param key menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+        @param controlled flag indicating to prepare the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
+        """
+        if key in self.__menus:
+            self.__menus[key].setEnabled(controlled)
     
     def __reopenProject(self, shouldReopen, title):
         """

@@ -58,3 +58,29 @@ class HgExtensionProjectBrowserHelper(QObject):
             reimplemented
         """
         raise NotImplementedError
+    
+    def showExtensionMenu(self, key, controlled):
+        """
+        Public method to prepare the extension menu for display.
+        
+        Note: Derived class must implement this method to adjust the
+        enabled states of its menus.
+        
+        @param key menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+        @param controlled flag indicating to prepare the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
+        @exception NotImplementedError raised if the class has not been
+            reimplemented
+        """
+        raise NotImplementedError
+
+    def _updateVCSStatus(self, name):
+        """
+        Protected method to update the VCS status of an item.
+        
+        @param name filename or directoryname of the item to be updated
+            (string)
+        """
+        self.project.getModel().updateVCSStatus(name)

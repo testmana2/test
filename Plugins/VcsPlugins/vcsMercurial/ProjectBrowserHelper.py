@@ -42,9 +42,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         # instantiate the extensions
         from .ShelveExtension.ProjectBrowserHelper import \
             ShelveProjectBrowserHelper
+        from .LargefilesExtension.ProjectBrowserHelper import \
+            LargefilesProjectBrowserHelper
         self.__extensions = {
-            "shelve": ShelveProjectBrowserHelper(vcsObject, browserObject,
-                                                 projectObject),
+            "shelve": ShelveProjectBrowserHelper(
+                vcsObject, browserObject, projectObject),
+            "largefiles": LargefilesProjectBrowserHelper(
+                vcsObject, browserObject, projectObject),
         }
         
         self.__extensionMenuTitles = {}
@@ -56,17 +60,24 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.__extensionMenus[extension] = \
                 self.__extensions[extension].initMenus()
     
-    def __showExtensionMenu(self, key):
+    def __showExtensionMenu(self, key, controlled):
         """
         Private slot showing the extensions menu.
         
         @param key menu key (string, one of 'mainMenu', 'multiMenu',
             'backMenu', 'dirMenu' or 'dirMultiMenu')
+        @param controlled flag indicating to show the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
         """
         for extensionName in self.__extensionMenus:
             if key in self.__extensionMenus[extensionName]:
                 self.__extensionMenus[extensionName][key].setEnabled(
                     self.vcs.isExtensionActive(extensionName))
+                if self.__extensionMenus[extensionName][key].isEnabled():
+                    # adjust individual extension menu entries
+                    self.__extensions[extensionName].showExtensionMenu(
+                        key, controlled)
                 if (not self.__extensionMenus[extensionName][key].isEnabled()
                     and self.__extensionMenus[extensionName][key]
                         .isTearOffMenuVisible()):
@@ -84,6 +95,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             activation/deactivation depending on the overall VCS status
         """
         if self.browser.currentItem().data(1) == self.vcs.vcsName():
+            controlled = True
             for act in self.vcsMenuActions:
                 act.setEnabled(True)
             for act in self.vcsAddMenuActions:
@@ -92,14 +104,15 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             if not hasattr(self.browser.currentItem(), 'fileName'):
                 self.annotateAct.setEnabled(False)
-            self.__showExtensionMenu("mainMenu")
         else:
+            controlled = False
             for act in self.vcsMenuActions:
                 act.setEnabled(False)
             for act in self.vcsAddMenuActions:
                 act.setEnabled(True)
             for act in standardItems:
                 act.setEnabled(True)
+        self.__showExtensionMenu("mainMenu", controlled)
     
     def showContextMenuMulti(self, menu, standardItems):
         """
@@ -121,6 +134,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 vcsItems += 1
         
         if vcsItems > 0:
+            controlled = True
             if vcsItems != len(items):
                 for act in self.vcsMultiMenuActions:
                     act.setEnabled(False)
@@ -131,14 +145,15 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
-            self.__showExtensionMenu("multiMenu")
         else:
+            controlled = False
             for act in self.vcsMultiMenuActions:
                 act.setEnabled(False)
             for act in self.vcsAddMultiMenuActions:
                 act.setEnabled(True)
             for act in standardItems:
                 act.setEnabled(True)
+        self.__showExtensionMenu("multiMenu", controlled)
     
     def showContextMenuDir(self, menu, standardItems):
         """
@@ -152,20 +167,22 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             activation/deactivation depending on the overall VCS status
         """
         if self.browser.currentItem().data(1) == self.vcs.vcsName():
+            controlled = True
             for act in self.vcsDirMenuActions:
                 act.setEnabled(True)
             for act in self.vcsAddDirMenuActions:
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
-            self.__showExtensionMenu("dirMenu")
         else:
+            controlled = False
             for act in self.vcsDirMenuActions:
                 act.setEnabled(False)
             for act in self.vcsAddDirMenuActions:
                 act.setEnabled(True)
             for act in standardItems:
                 act.setEnabled(True)
+        self.__showExtensionMenu("dirMenu", controlled)
     
     def showContextMenuDirMulti(self, menu, standardItems):
         """
@@ -187,6 +204,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 vcsItems += 1
         
         if vcsItems > 0:
+            controlled = True
             if vcsItems != len(items):
                 for act in self.vcsDirMultiMenuActions:
                     act.setEnabled(False)
@@ -197,14 +215,15 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
-            self.__showExtensionMenu("dirMultiMenu")
         else:
+            controlled = False
             for act in self.vcsDirMultiMenuActions:
                 act.setEnabled(False)
             for act in self.vcsAddDirMultiMenuActions:
                 act.setEnabled(True)
             for act in standardItems:
                 act.setEnabled(True)
+        self.__showExtensionMenu("dirMultiMenu", controlled)
     
     ###########################################################################
     ## Private menu generation methods below
@@ -265,9 +284,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMenuActions.append(act)
-        act = self.__addExtensionsMenu(menu, 'mainMenu')
-        if act:
-            self.vcsMenuActions.append(act)
+        self.__addExtensionsMenu(menu, 'mainMenu')
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -376,9 +393,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMultiMenuActions.append(act)
-        act = self.__addExtensionsMenu(menu, 'multiMenu')
-        if act:
-            self.vcsMultiMenuActions.append(act)
+        self.__addExtensionsMenu(menu, 'multiMenu')
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -493,9 +508,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMenuActions.append(act)
-        act = self.__addExtensionsMenu(menu, 'dirMenu')
-        if act:
-            self.vcsDirMenuActions.append(act)
+        self.__addExtensionsMenu(menu, 'dirMenu')
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
@@ -587,9 +600,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMultiMenuActions.append(act)
-        act = self.__addExtensionsMenu(menu, 'dirMultiMenu')
-        if act:
-            self.vcsDirMultiMenuActions.append(act)
+        self.__addExtensionsMenu(menu, 'dirMultiMenu')
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsAdd.png"),
