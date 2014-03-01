@@ -222,6 +222,8 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         self.hgQueueStatusAct.triggered[()].connect(self.__hgQueueStatus)
         self.actions.append(self.hgQueueStatusAct)
         
+        # TODO: add support for hg summary --mq
+        
         self.__initPushPopActions()
         self.__initPushPopForceActions()
         self.__initGuardsActions()
