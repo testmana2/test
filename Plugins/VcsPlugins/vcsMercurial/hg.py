@@ -373,6 +373,8 @@ class Hg(VersionControl):
         if rev:
             args.append("--rev")
             args.append(rev)
+        if vcsDataDict["largefiles"]:
+            args.append("--all-largefiles")
         args.append(self.__hgURL(vcsUrl))
         args.append(projectDir)
         
@@ -878,18 +880,20 @@ class Hg(VersionControl):
         self.status.show()
         self.status.start(name)
     
-    def hgSummary(self, mq=False):
+    def hgSummary(self, mq=False, largefiles=False):
         """
         Public method used to show some summary information of the
         working directory state.
         
         @param mq flag indicating to show the queue status as well (boolean)
+        @param mq flag indicating to show the largefiles status as well
+            (boolean)
         """
         from .HgSummaryDialog import HgSummaryDialog
         self.summary = HgSummaryDialog(self)
         self.summary.show()
         self.summary.start(self.__projectHelper.getProject().getProjectPath(),
-                           mq=mq)
+                           mq=mq, largefiles=largefiles)
     
     def vcsTag(self, name, revision=None, tagName=None):
         """

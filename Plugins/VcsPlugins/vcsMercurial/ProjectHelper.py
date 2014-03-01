@@ -1007,7 +1007,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         self.subMenus = []
         
-        adminMenu = QMenu(self.tr("Repository Administration"), menu)
+        adminMenu = QMenu(self.tr("Administration"), menu)
         adminMenu.setTearOffEnabled(True)
         adminMenu.addAction(self.hgHeadsAct)
         adminMenu.addAction(self.hgParentsAct)
@@ -1186,6 +1186,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         # close torn off extension menus
         for extensionName in self.extensionMenus:
+            self.__extensions[extensionName].shutdown()
             menu = self.extensionMenus[extensionName].menu()
             if menu.isTearOffMenuVisible():
                 menu.hideTearOffMenu()

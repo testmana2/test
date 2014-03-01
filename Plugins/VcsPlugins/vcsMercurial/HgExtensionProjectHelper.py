@@ -81,3 +81,11 @@ class HgExtensionProjectHelper(QObject):
             reimplemented
         """
         raise NotImplementedError
+    
+    def shutdown(self):
+        """
+        Public method to perform shutdown actions.
+        
+        Note: Derived class may implement this method if needed.
+        """
+        pass

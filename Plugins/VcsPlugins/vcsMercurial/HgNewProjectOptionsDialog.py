@@ -61,6 +61,10 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             Utilities.toNativeSeparators(
                 Preferences.getMultiProject("Workspace") or
                 Utilities.getHomeDir()))
+        
+        self.largeCheckBox.setEnabled(self.vcs.isExtensionActive("largefiles"))
+        
+        self.resize(self.width(), self.minimumSizeHint().height())
     
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
@@ -135,5 +139,6 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         vcsdatadict = {
             "url": '{0}{1}'.format(scheme, url),
             "revision": self.vcsRevisionEdit.text(),
+            "largefiles": self.largeCheckBox.isChecked(),
         }
         return (self.vcsProjectDirEdit.text(), vcsdatadict)

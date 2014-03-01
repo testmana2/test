@@ -131,3 +131,69 @@ class Largefiles(HgExtension):
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
+    
+    def hgLfPull(self, projectDir, revisions=None):
+        """
+        Public method to pull missing large files into the local repository.
+        
+        @param projectDir directory name of the project (string)
+        @param revisions list of revisions to pull (list of string)
+        """
+        # find the root of the repo
+        repodir = projectDir
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        revs = []
+        if revisions:
+            revs = revisions
+        else:
+            from .LfRevisionsInputDialog import LfRevisionsInputDialog
+            dlg = LfRevisionsInputDialog()
+            if dlg.exec_() == QDialog.Accepted:
+                revs = dlg.getRevisions()
+        
+        if revs:
+            args = self.vcs.initCommand("lfpull")
+            args.append("-v")
+            for rev in revs:
+                args.append("--rev")
+                args.append(rev)
+            
+            dia = HgDialog(self.tr("Pulling large files"), self.vcs)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgLfVerify(self, projectDir, mode):
+        """
+        Public method to verify large files integrity.
+        
+        @param projectDir directory name of the project (string)
+        @param mode verify mode (string; one of 'large', 'lfa' or 'lfc')
+        """
+        # find the root of the repo
+        repodir = projectDir
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        args = self.vcs.initCommand("verify")
+        if mode == "large":
+            args.append("--large")
+        elif mode == "lfa":
+            args.append("--lfa")
+        elif mode == "lfc":
+            args.append("--lfc")
+        else:
+            return
+        
+        dia = HgDialog(
+            self.tr('Verifying the integrity of large files'),
+            self.vcs)
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()

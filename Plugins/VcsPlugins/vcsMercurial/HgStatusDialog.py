@@ -72,6 +72,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.restoreButton.setVisible(False)
         
         self.menuactions = []
+        self.lfActions = []
         self.menu = QMenu()
         if not mq:
             self.menuactions.append(self.menu.addAction(
@@ -84,6 +85,13 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
                 self.tr("Add to repository"), self.__add))
+            if self.vcs.version >= (2, 0):
+                self.lfActions.append(self.menu.addAction(
+                    self.tr("Add as Large File"),
+                    lambda: self.__lfAdd("large")))
+                self.lfActions.append(self.menu.addAction(
+                    self.tr("Add as Normal File"),
+                    lambda: self.__lfAdd("normal")))
             self.menuactions.append(self.menu.addAction(
                 self.tr("Show differences"), self.__diff))
             self.menuactions.append(self.menu.addAction(
@@ -99,10 +107,21 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.tr("Adjust column sizes"), self.__resizeColumns))
             for act in self.menuactions:
                 act.setEnabled(False)
+            for act in self.lfActions:
+                act.setEnabled(False)
             
             self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
             self.statusList.customContextMenuRequested.connect(
                 self.__showContextMenu)
+        
+        if not mq and self.vcs.version >= (2, 0):
+            self.__addButtonMenu = QMenu()
+            self.__addButtonMenu.addAction(self.tr("Add"), self.__add)
+            self.__addButtonMenu.addAction(self.tr("Add as Large File"),
+                                           lambda: self.__lfAdd("large"))
+            self.__addButtonMenu.addAction(self.tr("Add as Normal File"),
+                                           lambda: self.__lfAdd("normal"))
+            self.addButton.setMenu(self.__addButtonMenu)
         
         self.modifiedIndicators = [
             self.tr('added'),
@@ -199,6 +218,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.args = fn
         
         for act in self.menuactions:
+            act.setEnabled(False)
+        for act in self.lfActions:
             act.setEnabled(False)
         
         self.addButton.setEnabled(False)
@@ -573,6 +594,11 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         @param coord the position of the mouse pointer (QPoint)
         """
+        # TODO: set status of menu entries according to their conditions
+        if self.vcs.isExtensionActive("largefiles"):
+            enable = len(self.__getUnversionedItems()) > 0
+            for act in self.lfActions:
+                act.setEnabled(enable)
         self.menu.popup(self.mapToGlobal(coord))
     
     def __commit(self):
@@ -633,6 +659,31 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             return
         
         self.vcs.vcsAdd(names)
+        self.on_refreshButton_clicked()
+        
+        project = e5App().getObject("Project")
+        for name in names:
+            project.getModel().updateVCSStatus(name)
+        self.vcs.checkVCSStatus()
+    
+    def __lfAdd(self, mode):
+        """
+        Private slot to add a file to the repository.
+        
+        @param mode add mode (string one of 'normal' or 'large')
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getUnversionedItems()]
+        if not names:
+            E5MessageBox.information(
+                self,
+                self.tr("Add"),
+                self.tr("""There are no unversioned entries"""
+                        """ available/selected."""))
+            return
+        
+        self.vcs.getExtensionObject("largefiles").hgAdd(
+            names, mode)
         self.on_refreshButton_clicked()
         
         project = e5App().getObject("Project")

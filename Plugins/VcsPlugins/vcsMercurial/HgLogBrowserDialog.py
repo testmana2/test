@@ -154,6 +154,14 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.__switchAct.setToolTip(self.tr(
             "Switch the working directory to the selected revision"))
         
+        if self.vcs.version >= (2, 0):
+            self.__lfPullAct = self.__actionsMenu.addAction(
+                self.tr("Pull Large Files"), self.__lfPullActTriggered)
+            self.__lfPullAct.setToolTip(self.tr(
+                "Pull large files for selected revisions"))
+        else:
+            self.__lfPullAct = None
+        
         self.actionsButton.setIcon(
             UI.PixmapCache.getIcon("actionsToolButton.png"))
         self.actionsButton.setMenu(self.__actionsMenu)
@@ -1144,6 +1152,13 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.__tagAct.setEnabled(len(self.logTree.selectedItems()) == 1)
             self.__switchAct.setEnabled(len(self.logTree.selectedItems()) == 1)
             
+            if self.__lfPullAct is not None:
+                if self.vcs.isExtensionActive("largefiles"):
+                    self.__lfPullAct.setEnabled(bool(
+                        self.logTree.selectedItems()))
+                else:
+                    self.__lfPullAct.setEnabled(False)
+            
             self.actionsButton.setEnabled(True)
         else:
             self.actionsButton.setEnabled(False)
@@ -1521,3 +1536,17 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                         return
                 
                 self.on_refreshButton_clicked()
+    
+    def __lfPullActTriggered(self):
+        """
+        Private slot to pull large files of selected revisions.
+        """
+        revs = []
+        for itm in self.logTree.selectedItems():
+            rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+            if rev:
+                revs.append(rev)
+        
+        if revs:
+            self.vcs.getExtensionObject("largefiles").hgLfPull(
+                self.repodir, revisions=revs)

@@ -59,21 +59,26 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         
         e.accept()
     
-    def start(self, path, mq=False):
+    def start(self, path, mq=False, largefiles=False):
         """
         Public slot to start the hg summary command.
         
         @param path path name of the working directory (string)
         @param mq flag indicating to show the queue status as well (boolean)
+        @param mq flag indicating to show the largefiles status as well
+            (boolean)
         """
         self.errorGroup.hide()
         self.__path = path
         self.__mq = mq
+        self.__largefiles = largefiles
         
         args = self.vcs.initCommand("summary")
         args.append("--remote")
         if self.__mq:
             args.append("--mq")
+        if self.__largefiles:
+            args.append("--large")
         
         # find the root of the repo
         repodir = self.__path
@@ -206,6 +211,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         # step 1: parse the output
         while output:
             line = output.pop(0)
+            if ':' not in line:
+                continue
             name, value = line.split(": ", 1)
             value = value.strip()
             
@@ -296,6 +303,11 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                         elif category == "unapplied":
                             unapplied = int(count)
                     value = (applied, unapplied)
+            elif name == "largefiles":
+                if not value[0].isdigit():
+                    value = 0
+                else:
+                    value = int(value.split(None, 1)[0])
             else:
                 # ignore unknown entries
                 continue
@@ -440,6 +452,15 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 info.append(self.tr(
                     "<tr><td><b>Queues Status</b></td><td>{0}</td></tr>")
                     .format(qinfo))
+            if "largefiles" in infoDict:
+                if infoDict["largefiles"] == 0:
+                    lfInfo = self.tr("No files to upload")
+                else:
+                    lfInfo = self.tr("%n file(s) to upload", "",
+                                     infoDict["largefiles"])
+                info.append(self.tr(
+                    "<tr><td><b>Large Files</b></td><td>{0}</td></tr>")
+                    .format(lfInfo))
             info.append("</table>")
         else:
             info = [self.tr("<p>No status information available.</p>")]
