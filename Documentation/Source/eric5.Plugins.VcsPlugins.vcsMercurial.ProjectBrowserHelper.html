@@ -235,7 +235,7 @@ reference to the menu action (QAction)
 </dd>
 </dl><a NAME="HgProjectBrowserHelper.__showExtensionMenu" ID="HgProjectBrowserHelper.__showExtensionMenu"></a>
 <h4>HgProjectBrowserHelper.__showExtensionMenu</h4>
-<b>__showExtensionMenu</b>(<i>key</i>)
+<b>__showExtensionMenu</b>(<i>key, controlled</i>)
 <p>
         Private slot showing the extensions menu.
 </p><dl>
@@ -243,6 +243,11 @@ reference to the menu action (QAction)
 <dd>
 menu key (string, one of 'mainMenu', 'multiMenu',
             'backMenu', 'dirMenu' or 'dirMultiMenu')
+</dd><dt><i>controlled</i></dt>
+<dd>
+flag indicating to show the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
 </dd>
 </dl><a NAME="HgProjectBrowserHelper._addVCSMenu" ID="HgProjectBrowserHelper._addVCSMenu"></a>
 <h4>HgProjectBrowserHelper._addVCSMenu</h4>

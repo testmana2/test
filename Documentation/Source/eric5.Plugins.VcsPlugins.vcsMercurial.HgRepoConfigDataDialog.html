@@ -65,6 +65,9 @@ QDialog, Ui_HgRepoConfigDataDialog
 <td><a href="#HgRepoConfigDataDialog.getData">getData</a></td>
 <td>Public method to get the data entered into the dialog.</td>
 </tr><tr>
+<td><a href="#HgRepoConfigDataDialog.getLargefilesData">getLargefilesData</a></td>
+<td>Public method to get the data for the largefiles extension.</td>
+</tr><tr>
 <td><a href="#HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked">on_defaultPushShowPasswordButton_clicked</a></td>
 <td>Private slot to switch the default password visibility of the default push password.</td>
 </tr><tr>
@@ -78,11 +81,19 @@ QDialog, Ui_HgRepoConfigDataDialog
 </table>
 <a NAME="HgRepoConfigDataDialog.__init__" ID="HgRepoConfigDataDialog.__init__"></a>
 <h4>HgRepoConfigDataDialog (Constructor)</h4>
-<b>HgRepoConfigDataDialog</b>(<i>parent=None</i>)
+<b>HgRepoConfigDataDialog</b>(<i>withLargefiles=False, largefilesData=None, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>withLargefiles</i></dt>
+<dd>
+flag indicating to configure the largefiles
+            section (boolean)
+</dd><dt><i>largefilesData</i></dt>
+<dd>
+dictionary with data for the largefiles
+            section (dict)
+</dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
 </dd>
@@ -96,6 +107,17 @@ reference to the parent widget (QWidget)
 <dd>
 tuple giving the default and default push URLs (tuple of
             two strings)
+</dd>
+</dl><a NAME="HgRepoConfigDataDialog.getLargefilesData" ID="HgRepoConfigDataDialog.getLargefilesData"></a>
+<h4>HgRepoConfigDataDialog.getLargefilesData</h4>
+<b>getLargefilesData</b>(<i></i>)
+<p>
+        Public method to get the data for the largefiles extension.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with the minimum file size (integer) and file patterns
+            (list of string). None as value denote to use the default value.
 </dd>
 </dl><a NAME="HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" ID="HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked"></a>
 <h4>HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked</h4>

@@ -505,6 +505,14 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.__init__" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.__init__.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html" />
@@ -6046,8 +6054,10 @@
       <keyword name="HgExtensionProjectBrowserHelper" id="HgExtensionProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper" />
       <keyword name="HgExtensionProjectBrowserHelper (Constructor)" id="HgExtensionProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.__init__" />
       <keyword name="HgExtensionProjectBrowserHelper (Module)" id="HgExtensionProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html" />
+      <keyword name="HgExtensionProjectBrowserHelper._updateVCSStatus" id="HgExtensionProjectBrowserHelper._updateVCSStatus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper._updateVCSStatus" />
       <keyword name="HgExtensionProjectBrowserHelper.initMenus" id="HgExtensionProjectBrowserHelper.initMenus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.initMenus" />
       <keyword name="HgExtensionProjectBrowserHelper.menuTitle" id="HgExtensionProjectBrowserHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.menuTitle" />
+      <keyword name="HgExtensionProjectBrowserHelper.showExtensionMenu" id="HgExtensionProjectBrowserHelper.showExtensionMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html#HgExtensionProjectBrowserHelper.showExtensionMenu" />
       <keyword name="HgExtensionProjectHelper" id="HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper" />
       <keyword name="HgExtensionProjectHelper (Constructor)" id="HgExtensionProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.__init__" />
       <keyword name="HgExtensionProjectHelper (Module)" id="HgExtensionProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
@@ -6056,6 +6066,7 @@
       <keyword name="HgExtensionProjectHelper.initMenu" id="HgExtensionProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.initMenu" />
       <keyword name="HgExtensionProjectHelper.menuTitle" id="HgExtensionProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.menuTitle" />
       <keyword name="HgExtensionProjectHelper.setObjects" id="HgExtensionProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.setObjects" />
+      <keyword name="HgExtensionProjectHelper.shutdown" id="HgExtensionProjectHelper.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.shutdown" />
       <keyword name="HgFetchDialog" id="HgFetchDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog" />
       <keyword name="HgFetchDialog (Constructor)" id="HgFetchDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog.__init__" />
       <keyword name="HgFetchDialog (Module)" id="HgFetchDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html" />
@@ -6132,6 +6143,7 @@
       <keyword name="HgLogBrowserDialog.__graftActTriggered" id="HgLogBrowserDialog.__graftActTriggered" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__graftActTriggered" />
       <keyword name="HgLogBrowserDialog.__identifyProject" id="HgLogBrowserDialog.__identifyProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__identifyProject" />
       <keyword name="HgLogBrowserDialog.__initData" id="HgLogBrowserDialog.__initData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__initData" />
+      <keyword name="HgLogBrowserDialog.__lfPullActTriggered" id="HgLogBrowserDialog.__lfPullActTriggered" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__lfPullActTriggered" />
       <keyword name="HgLogBrowserDialog.__phaseActTriggered" id="HgLogBrowserDialog.__phaseActTriggered" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__phaseActTriggered" />
       <keyword name="HgLogBrowserDialog.__procFinished" id="HgLogBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__procFinished" />
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
@@ -6446,6 +6458,7 @@
       <keyword name="HgRepoConfigDataDialog (Constructor)" id="HgRepoConfigDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.__init__" />
       <keyword name="HgRepoConfigDataDialog (Module)" id="HgRepoConfigDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html" />
       <keyword name="HgRepoConfigDataDialog.getData" id="HgRepoConfigDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.getData" />
+      <keyword name="HgRepoConfigDataDialog.getLargefilesData" id="HgRepoConfigDataDialog.getLargefilesData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.getLargefilesData" />
       <keyword name="HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" id="HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.on_defaultPushShowPasswordButton_clicked" />
       <keyword name="HgRepoConfigDataDialog.on_defaultShowPasswordButton_clicked" id="HgRepoConfigDataDialog.on_defaultShowPasswordButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRepoConfigDataDialog.html#HgRepoConfigDataDialog.on_defaultShowPasswordButton_clicked" />
       <keyword name="HgRevisionSelectionDialog" id="HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog" />
@@ -6547,6 +6560,7 @@
       <keyword name="HgStatusDialog.__getMissingItems" id="HgStatusDialog.__getMissingItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getMissingItems" />
       <keyword name="HgStatusDialog.__getModifiedItems" id="HgStatusDialog.__getModifiedItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getModifiedItems" />
       <keyword name="HgStatusDialog.__getUnversionedItems" id="HgStatusDialog.__getUnversionedItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getUnversionedItems" />
+      <keyword name="HgStatusDialog.__lfAdd" id="HgStatusDialog.__lfAdd" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__lfAdd" />
       <keyword name="HgStatusDialog.__procFinished" id="HgStatusDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__procFinished" />
       <keyword name="HgStatusDialog.__processOutputLine" id="HgStatusDialog.__processOutputLine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__processOutputLine" />
       <keyword name="HgStatusDialog.__readStderr" id="HgStatusDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__readStderr" />
@@ -7323,6 +7337,29 @@
       <keyword name="JavaScriptExternalObject (Constructor)" id="JavaScriptExternalObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.__init__" />
       <keyword name="JavaScriptExternalObject.AddSearchProvider" id="JavaScriptExternalObject.AddSearchProvider" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.AddSearchProvider" />
       <keyword name="JavaScriptResources (Module)" id="JavaScriptResources (Module)" ref="eric5.Helpviewer.JavaScriptResources.html" />
+      <keyword name="Largefiles" id="Largefiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles" />
+      <keyword name="Largefiles (Constructor)" id="Largefiles (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.__init__" />
+      <keyword name="Largefiles.hgAdd" id="Largefiles.hgAdd" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.hgAdd" />
+      <keyword name="Largefiles.hgLfPull" id="Largefiles.hgLfPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.hgLfPull" />
+      <keyword name="Largefiles.hgLfVerify" id="Largefiles.hgLfVerify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.hgLfVerify" />
+      <keyword name="Largefiles.hgLfconvert" id="Largefiles.hgLfconvert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.hgLfconvert" />
+      <keyword name="LargefilesExtension (Package)" id="LargefilesExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.html" />
+      <keyword name="LargefilesProjectBrowserHelper" id="LargefilesProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html#LargefilesProjectBrowserHelper" />
+      <keyword name="LargefilesProjectBrowserHelper (Constructor)" id="LargefilesProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html#LargefilesProjectBrowserHelper.__init__" />
+      <keyword name="LargefilesProjectBrowserHelper.__hgAddLargefiles" id="LargefilesProjectBrowserHelper.__hgAddLargefiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html#LargefilesProjectBrowserHelper.__hgAddLargefiles" />
+      <keyword name="LargefilesProjectBrowserHelper.initMenus" id="LargefilesProjectBrowserHelper.initMenus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html#LargefilesProjectBrowserHelper.initMenus" />
+      <keyword name="LargefilesProjectBrowserHelper.menuTitle" id="LargefilesProjectBrowserHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html#LargefilesProjectBrowserHelper.menuTitle" />
+      <keyword name="LargefilesProjectBrowserHelper.showExtensionMenu" id="LargefilesProjectBrowserHelper.showExtensionMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html#LargefilesProjectBrowserHelper.showExtensionMenu" />
+      <keyword name="LargefilesProjectHelper" id="LargefilesProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper" />
+      <keyword name="LargefilesProjectHelper (Constructor)" id="LargefilesProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.__init__" />
+      <keyword name="LargefilesProjectHelper.__hgLfPull" id="LargefilesProjectHelper.__hgLfPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.__hgLfPull" />
+      <keyword name="LargefilesProjectHelper.__hgLfSummary" id="LargefilesProjectHelper.__hgLfSummary" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.__hgLfSummary" />
+      <keyword name="LargefilesProjectHelper.__hgLfVerify" id="LargefilesProjectHelper.__hgLfVerify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.__hgLfVerify" />
+      <keyword name="LargefilesProjectHelper.__hgLfconvert" id="LargefilesProjectHelper.__hgLfconvert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.__hgLfconvert" />
+      <keyword name="LargefilesProjectHelper.initActions" id="LargefilesProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.initActions" />
+      <keyword name="LargefilesProjectHelper.initMenu" id="LargefilesProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.initMenu" />
+      <keyword name="LargefilesProjectHelper.menuTitle" id="LargefilesProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.menuTitle" />
+      <keyword name="LargefilesProjectHelper.shutdown" id="LargefilesProjectHelper.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html#LargefilesProjectHelper.shutdown" />
       <keyword name="LateFutureImport" id="LateFutureImport" ref="eric5.Utilities.pyflakes.messages.html#LateFutureImport" />
       <keyword name="LateFutureImport" id="LateFutureImport" ref="eric5.UtilitiesPython2.pyflakes.messages.html#LateFutureImport" />
       <keyword name="LateFutureImport (Constructor)" id="LateFutureImport (Constructor)" ref="eric5.Utilities.pyflakes.messages.html#LateFutureImport.__init__" />
@@ -7604,6 +7641,17 @@
       <keyword name="LexerYAML.isCommentStyle" id="LexerYAML.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerYAML.html#LexerYAML.isCommentStyle" />
       <keyword name="LexerYAML.isStringStyle" id="LexerYAML.isStringStyle" ref="eric5.QScintilla.Lexers.LexerYAML.html#LexerYAML.isStringStyle" />
       <keyword name="Lexers (Package)" id="Lexers (Package)" ref="index-eric5.QScintilla.Lexers.html" />
+      <keyword name="LfConvertDataDialog" id="LfConvertDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog" />
+      <keyword name="LfConvertDataDialog (Constructor)" id="LfConvertDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.__init__" />
+      <keyword name="LfConvertDataDialog (Module)" id="LfConvertDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html" />
+      <keyword name="LfConvertDataDialog.getData" id="LfConvertDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.getData" />
+      <keyword name="LfConvertDataDialog.on_newProjectButton_clicked" id="LfConvertDataDialog.on_newProjectButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.on_newProjectButton_clicked" />
+      <keyword name="LfConvertDataDialog.on_newProjectEdit_textChanged" id="LfConvertDataDialog.on_newProjectEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.on_newProjectEdit_textChanged" />
+      <keyword name="LfRevisionsInputDialog" id="LfRevisionsInputDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html#LfRevisionsInputDialog" />
+      <keyword name="LfRevisionsInputDialog (Constructor)" id="LfRevisionsInputDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html#LfRevisionsInputDialog.__init__" />
+      <keyword name="LfRevisionsInputDialog (Module)" id="LfRevisionsInputDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html" />
+      <keyword name="LfRevisionsInputDialog.getRevisions" id="LfRevisionsInputDialog.getRevisions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html#LfRevisionsInputDialog.getRevisions" />
+      <keyword name="LfRevisionsInputDialog.on_revisionsEdit_textChanged" id="LfRevisionsInputDialog.on_revisionsEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html#LfRevisionsInputDialog.on_revisionsEdit_textChanged" />
       <keyword name="LineShortener" id="LineShortener" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#LineShortener" />
       <keyword name="LineShortener (Constructor)" id="LineShortener (Constructor)" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#LineShortener.__init__" />
       <keyword name="LineShortener.__breakMultiline" id="LineShortener.__breakMultiline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#LineShortener.__breakMultiline" />
@@ -8931,6 +8979,7 @@
       <keyword name="ProjectBrowserFileItem" id="ProjectBrowserFileItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserFileItem" />
       <keyword name="ProjectBrowserFileItem (Constructor)" id="ProjectBrowserFileItem (Constructor)" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserFileItem.__init__" />
       <keyword name="ProjectBrowserFlags (Module)" id="ProjectBrowserFlags (Module)" ref="eric5.Project.ProjectBrowserFlags.html" />
+      <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html" />
       <keyword name="ProjectBrowserHelper (Module)" id="ProjectBrowserHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html" />
@@ -9022,6 +9071,7 @@
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html" />
@@ -10001,6 +10051,7 @@
       <keyword name="ShelveProjectBrowserHelper.__reopenProject" id="ShelveProjectBrowserHelper.__reopenProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.__reopenProject" />
       <keyword name="ShelveProjectBrowserHelper.initMenus" id="ShelveProjectBrowserHelper.initMenus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.initMenus" />
       <keyword name="ShelveProjectBrowserHelper.menuTitle" id="ShelveProjectBrowserHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.menuTitle" />
+      <keyword name="ShelveProjectBrowserHelper.showExtensionMenu" id="ShelveProjectBrowserHelper.showExtensionMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectBrowserHelper.html#ShelveProjectBrowserHelper.showExtensionMenu" />
       <keyword name="ShelveProjectHelper" id="ShelveProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper" />
       <keyword name="ShelveProjectHelper (Constructor)" id="ShelveProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__init__" />
       <keyword name="ShelveProjectHelper.__hgCleanupShelves" id="ShelveProjectHelper.__hgCleanupShelves" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ShelveExtension.ProjectHelper.html#ShelveProjectHelper.__hgCleanupShelves" />
@@ -13181,6 +13232,7 @@
       <keyword name="getCorba" id="getCorba" ref="eric5.Preferences.__init__.html#getCorba" />
       <keyword name="getDebugger" id="getDebugger" ref="eric5.Preferences.__init__.html#getDebugger" />
       <keyword name="getDefaultLexerAssociations" id="getDefaultLexerAssociations" ref="eric5.QScintilla.Lexers.__init__.html#getDefaultLexerAssociations" />
+      <keyword name="getDefaults" id="getDefaults" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.__init__.html#getDefaults" />
       <keyword name="getDirs" id="getDirs" ref="eric5.Utilities.__init__.html#getDirs" />
       <keyword name="getEditor" id="getEditor" ref="eric5.Preferences.__init__.html#getEditor" />
       <keyword name="getEditorAPI" id="getEditorAPI" ref="eric5.Preferences.__init__.html#getEditorAPI" />
@@ -13345,6 +13397,7 @@
       <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.pyflakes.checker.html#iter_child_nodes" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
       <keyword name="jsclbr (Module)" id="jsclbr (Module)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html" />
+      <keyword name="largefiles (Module)" id="largefiles (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />
       <keyword name="loadTranslatorForLocale" id="loadTranslatorForLocale" ref="eric5.Toolbox.Startup.html#loadTranslatorForLocale" />
       <keyword name="loadTranslators" id="loadTranslators" ref="eric5.Toolbox.Startup.html#loadTranslators" />
@@ -14071,6 +14124,12 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectBrowserHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.__init__.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html</file>
@@ -14506,6 +14565,7 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.html</file>

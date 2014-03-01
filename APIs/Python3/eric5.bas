@@ -403,6 +403,9 @@ IrcUserItem QListWidgetItem
 IrcWidget QWidget Ui_IrcWidget
 JavaScriptEricObject QObject
 JavaScriptExternalObject QObject
+Largefiles HgExtension
+LargefilesProjectBrowserHelper HgExtensionProjectBrowserHelper
+LargefilesProjectHelper HgExtensionProjectHelper
 LateFutureImport Message
 LexerAssociationDialog QDialog Ui_LexerAssociationDialog
 LexerBash Lexer QsciLexerBash
@@ -438,6 +441,8 @@ LexerTeX Lexer QsciLexerTeX
 LexerVHDL Lexer QsciLexerVHDL
 LexerXML Lexer QsciLexerXML
 LexerYAML Lexer QsciLexerYAML
+LfConvertDataDialog QDialog Ui_LfConvertDataDialog
+LfRevisionsInputDialog QDialog Ui_LfRevisionsInputDialog
 Listspace QSplitter ViewManager
 LogViewer QWidget
 LogViewerEdit QTextEdit

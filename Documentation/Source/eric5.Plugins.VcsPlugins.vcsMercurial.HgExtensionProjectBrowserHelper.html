@@ -65,11 +65,17 @@ QObject
 <td><a href="#HgExtensionProjectBrowserHelper.__init__">HgExtensionProjectBrowserHelper</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgExtensionProjectBrowserHelper._updateVCSStatus">_updateVCSStatus</a></td>
+<td>Protected method to update the VCS status of an item.</td>
+</tr><tr>
 <td><a href="#HgExtensionProjectBrowserHelper.initMenus">initMenus</a></td>
 <td>Public method to generate the extension menus.</td>
 </tr><tr>
 <td><a href="#HgExtensionProjectBrowserHelper.menuTitle">menuTitle</a></td>
 <td>Public method to get the menu title.</td>
+</tr><tr>
+<td><a href="#HgExtensionProjectBrowserHelper.showExtensionMenu">showExtensionMenu</a></td>
+<td>Public method to prepare the extension menu for display.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -91,6 +97,17 @@ reference to the project browser object
 </dd><dt><i>projectObject</i></dt>
 <dd>
 reference to the project object
+</dd>
+</dl><a NAME="HgExtensionProjectBrowserHelper._updateVCSStatus" ID="HgExtensionProjectBrowserHelper._updateVCSStatus"></a>
+<h4>HgExtensionProjectBrowserHelper._updateVCSStatus</h4>
+<b>_updateVCSStatus</b>(<i>name</i>)
+<p>
+        Protected method to update the VCS status of an item.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+filename or directoryname of the item to be updated
+            (string)
 </dd>
 </dl><a NAME="HgExtensionProjectBrowserHelper.initMenus" ID="HgExtensionProjectBrowserHelper.initMenus"></a>
 <h4>HgExtensionProjectBrowserHelper.initMenus</h4>
@@ -123,6 +140,31 @@ raised if the class has not been
 <dt>Returns:</dt>
 <dd>
 title of the menu (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised if the class has not been
+            reimplemented
+</dd>
+</dl><a NAME="HgExtensionProjectBrowserHelper.showExtensionMenu" ID="HgExtensionProjectBrowserHelper.showExtensionMenu"></a>
+<h4>HgExtensionProjectBrowserHelper.showExtensionMenu</h4>
+<b>showExtensionMenu</b>(<i>key, controlled</i>)
+<p>
+        Public method to prepare the extension menu for display.
+</p><p>
+        Note: Derived class must implement this method to adjust the
+        enabled states of its menus.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+</dd><dt><i>controlled</i></dt>
+<dd>
+flag indicating to prepare the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Raises <b>NotImplementedError</b>:</dt>

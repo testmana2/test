@@ -666,13 +666,21 @@ flag indicating success
 </dd>
 </dl><a NAME="Hg.hgEditConfig" ID="Hg.hgEditConfig"></a>
 <h4>Hg.hgEditConfig</h4>
-<b>hgEditConfig</b>(<i>name</i>)
+<b>hgEditConfig</b>(<i>name, withLargefiles=True, largefilesData=None</i>)
 <p>
         Public method used to edit the repository configuration file.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd><dt><i>withLargefiles</i></dt>
+<dd>
+flag indicating to configure the largefiles
+            section (boolean)
+</dd><dt><i>largefilesData</i></dt>
+<dd>
+dictionary with data for the largefiles
+            section of the data dialog (dict)
 </dd>
 </dl><a NAME="Hg.hgEditUserConfig" ID="Hg.hgEditUserConfig"></a>
 <h4>Hg.hgEditUserConfig</h4>
@@ -1087,7 +1095,7 @@ file/directory name (string)
 </dd>
 </dl><a NAME="Hg.hgSummary" ID="Hg.hgSummary"></a>
 <h4>Hg.hgSummary</h4>
-<b>hgSummary</b>(<i>mq=False</i>)
+<b>hgSummary</b>(<i>mq=False, largefiles=False</i>)
 <p>
         Public method used to show some summary information of the
         working directory state.
@@ -1095,6 +1103,10 @@ file/directory name (string)
 <dt><i>mq</i></dt>
 <dd>
 flag indicating to show the queue status as well (boolean)
+</dd><dt><i>mq</i></dt>
+<dd>
+flag indicating to show the largefiles status as well
+            (boolean)
 </dd>
 </dl><a NAME="Hg.hgUnbundle" ID="Hg.hgUnbundle"></a>
 <h4>Hg.hgUnbundle</h4>

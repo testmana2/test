@@ -104,6 +104,9 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__getUnversionedItems">__getUnversionedItems</a></td>
 <td>Private method to retrieve all entries, that have an unversioned status.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__lfAdd">__lfAdd</a></td>
+<td>Private slot to add a file to the repository.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -322,6 +325,16 @@ list of all items with a modified status
 <dt>Returns:</dt>
 <dd>
 list of all items with an unversioned status
+</dd>
+</dl><a NAME="HgStatusDialog.__lfAdd" ID="HgStatusDialog.__lfAdd"></a>
+<h4>HgStatusDialog.__lfAdd</h4>
+<b>__lfAdd</b>(<i>mode</i>)
+<p>
+        Private slot to add a file to the repository.
+</p><dl>
+<dt><i>mode</i></dt>
+<dd>
+add mode (string one of 'normal' or 'large')
 </dd>
 </dl><a NAME="HgStatusDialog.__procFinished" ID="HgStatusDialog.__procFinished"></a>
 <h4>HgStatusDialog.__procFinished</h4>

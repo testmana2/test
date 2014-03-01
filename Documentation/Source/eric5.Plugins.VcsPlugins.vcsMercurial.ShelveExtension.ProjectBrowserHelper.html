@@ -71,6 +71,9 @@ HgExtensionProjectBrowserHelper
 </tr><tr>
 <td><a href="#ShelveProjectBrowserHelper.menuTitle">menuTitle</a></td>
 <td>Public method to get the menu title.</td>
+</tr><tr>
+<td><a href="#ShelveProjectBrowserHelper.showExtensionMenu">showExtensionMenu</a></td>
+<td>Public method to prepare the extension menu for display.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -117,8 +120,6 @@ title of the message box (string)
 <b>initMenus</b>(<i></i>)
 <p>
         Public method to generate the extension menus.
-</p><p>
-        Note: Derived class must implement this method.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -131,12 +132,26 @@ dictionary of populated menu (dict of QMenu). The dict
 <b>menuTitle</b>(<i></i>)
 <p>
         Public method to get the menu title.
-</p><p>
-        Note: Derived class must implement this method.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
 title of the menu (string)
+</dd>
+</dl><a NAME="ShelveProjectBrowserHelper.showExtensionMenu" ID="ShelveProjectBrowserHelper.showExtensionMenu"></a>
+<h4>ShelveProjectBrowserHelper.showExtensionMenu</h4>
+<b>showExtensionMenu</b>(<i>key, controlled</i>)
+<p>
+        Public method to prepare the extension menu for display.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+</dd><dt><i>controlled</i></dt>
+<dd>
+flag indicating to prepare the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
