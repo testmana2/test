@@ -8,6 +8,7 @@ Module implementing a dialog to browse the log history.
 """
 
 import os
+import re
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
     QSize, QPoint
@@ -40,6 +41,10 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     DateColumn = 5
     MessageColumn = 6
     TagsColumn = 7
+    
+    LargefilesCacheL = ".hglf/"
+    LargefilesCacheW = ".hglf\\"
+    PathSeparatorRe = re.compile(r"/|\\")
     
     def __init__(self, vcs, mode="log", parent=None):
         """
@@ -869,6 +874,19 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.inputGroup.hide()
         self.refreshButton.setEnabled(True)
     
+    def __modifyForLargeFiles(self, filename):
+        """
+        Private method to convert the displayed file name for a large file.
+        
+        @param filename file name to be processed (string)
+        @return processed file name (string)
+        """
+        if filename.startswith((self.LargefilesCacheL, self.LargefilesCacheW)):
+            return self.tr("{0} (large file)").format(
+                self.PathSeparatorRe.split(filename, 1)[1])
+        else:
+            return filename
+    
     def __processBuffer(self):
         """
         Private method to process the buffered output of the hg log command.
@@ -904,13 +922,14 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                             if f in fileCopies:
                                 changedPaths.append({
                                     "action": "A",
-                                    "path": f,
-                                    "copyfrom": fileCopies[f],
+                                    "path": self.__modifyForLargeFiles(f),
+                                    "copyfrom": self.__modifyForLargeFiles(
+                                        fileCopies[f]),
                                 })
                             else:
                                 changedPaths.append({
                                     "action": "A",
-                                    "path": f,
+                                    "path": self.__modifyForLargeFiles(f),
                                     "copyfrom": "",
                                 })
                 elif key == "files_mods":
@@ -918,7 +937,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                         for f in value.strip().split(", "):
                             changedPaths.append({
                                 "action": "M",
-                                "path": f,
+                                "path": self.__modifyForLargeFiles(f),
                                 "copyfrom": "",
                             })
                 elif key == "file_dels":
@@ -926,7 +945,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                         for f in value.strip().split(", "):
                             changedPaths.append({
                                 "action": "D",
-                                "path": f,
+                                "path": self.__modifyForLargeFiles(f),
                                 "copyfrom": "",
                             })
                 elif key == "file_copies":
