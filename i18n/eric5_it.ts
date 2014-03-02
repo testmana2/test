@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it_IT" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="it_IT">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -10,7 +11,7 @@
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.ui" line="56"/>
         <source>&amp;About</source>
-        <translation>Inform&amp;azioni</translation>
+        <translation>Inform&amp;Azioni</translation>
     </message>
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.ui" line="73"/>
@@ -273,7 +274,7 @@
     <message>
         <location filename="../Helpviewer/AdBlock/AdBlockIcon.py" line="109"/>
         <source>{0} with ({1})</source>
-        <translation type="unfinished">{0} con ({1})</translation>
+        <translation>{0} con ({1})</translation>
     </message>
     <message>
         <location filename="../Helpviewer/AdBlock/AdBlockIcon.py" line="114"/>
@@ -303,7 +304,7 @@
     <message>
         <location filename="../Helpviewer/AdBlock/AdBlockIcon.py" line="97"/>
         <source>AdBlock Configuration...</source>
-        <translation type="unfinished">Configurazione AdBlock...</translation>
+        <translation>Configurazione AdBlock...</translation>
     </message>
 </context>
 <context>
@@ -476,7 +477,7 @@
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="14"/>
         <source>Add Directory</source>
-        <translation type="unfinished">Aggiungi Directory</translation>
+        <translation>Aggiungi Cartella</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="17"/>
@@ -505,12 +506,12 @@
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="35"/>
         <source>&amp;Target Directory:</source>
-        <translation>Direc&amp;tory di Destinazione:</translation>
+        <translation>CarT&amp;ella di Destinazione:</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
         <source>Enter the name of the directory to add</source>
-        <translation type="unfinished">Inserisci  il nome della directory da aggiungere</translation>
+        <translation>Inserisci  il nome della cartella da aggiungere</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="48"/>
@@ -556,7 +557,7 @@ con un dialogo premendo il pulsante a destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="80"/>
         <source>&amp;Source Directory:</source>
-        <translation>Directory &amp;Sorgente:</translation>
+        <translation>Cartella &amp;Sorgente:</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
@@ -1194,22 +1195,22 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
         <source>Select to make this project the main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per rendere questo il progetto primario</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
         <source>Is &amp;main project</source>
-        <translation type="unfinished"></translation>
+        <translation>E&apos; il progetto pri&amp;mario</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
         <source>&amp;Category:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Categoria:</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
         <source>Select a project category</source>
-        <translation type="unfinished"></translation>
+        <translation>Selezionare una categoria per il progetto</translation>
     </message>
 </context>
 <context>
@@ -1235,37 +1236,37 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="43"/>
         <source>Application Diagram {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrammi dell&apos;applicazione {0}</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="64"/>
         <source>Parsing modules...</source>
-        <translation type="unfinished">Analisi moduli...</translation>
+        <translation>Analisi moduli...</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="192"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
-        <translation type="unfinished">&lt;&lt;Applicazione&gt;&gt;</translation>
+        <translation>&lt;&lt;Applicazione&gt;&gt;</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="194"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
-        <translation type="unfinished">&lt;&lt;Altri&gt;&gt;</translation>
+        <translation>&lt;&lt;Altri&gt;&gt;</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="279"/>
         <source>Load Diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Carico Diagramma</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="279"/>
         <source>&lt;p&gt;The diagram belongs to the project &lt;b&gt;{0}&lt;/b&gt;. Shall this project be opened?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Il Diagramma appartiene al progetto &lt;b&gt;{0}&lt;/b&gt;. Si deve aprire il progetto?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="64"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>Moduli %v/%m</translation>
     </message>
 </context>
 <context>
@@ -1484,27 +1485,27 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui" line="27"/>
         <source>&lt;b&gt;Add/Edit Bookmark&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Aggiungi/Modifica Segnalibro&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="49"/>
         <source>Add Bookmark</source>
-        <translation type="unfinished">Aggiungi segnalibro</translation>
+        <translation>Aggiungi segnalibro</translation>
     </message>
     <message>
         <location filename="../Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="52"/>
         <source>Edit Bookmark</source>
-        <translation type="unfinished">Modifica segnalibro</translation>
+        <translation>Modifica segnalibro</translation>
     </message>
     <message>
         <location filename="../Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="56"/>
         <source>Remove from Speed Dial</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi dalla Selezione Rapida</translation>
     </message>
     <message>
         <location filename="../Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="60"/>
         <source>Add to Speed Dial</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi alla Selezione Rapida</translation>
     </message>
 </context>
 <context>
@@ -1540,37 +1541,37 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="26"/>
         <source>Bookmark Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà del segnalibro</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished">Nome:</translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="42"/>
         <source>Enter the name</source>
-        <translation type="unfinished">Inserisci il nome</translation>
+        <translation>Inserisci il nome</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="49"/>
         <source>Address:</source>
-        <translation type="unfinished">Indirizzo:</translation>
+        <translation>Indirizzo:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="56"/>
         <source>Enter the address</source>
-        <translation type="unfinished">Inserisci l&apos;indirizzo</translation>
+        <translation>Inserisci l&apos;indirizzo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="63"/>
         <source>Description:</source>
-        <translation type="unfinished">Descrizione:</translation>
+        <translation>Descrizione:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="73"/>
         <source>Enter a description</source>
-        <translation type="unfinished">Inserisci una descrizione</translation>
+        <translation>Inserisci una descrizione</translation>
     </message>
 </context>
 <context>
@@ -1725,62 +1726,62 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="122"/>
         <source>Mercurial Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Segnalibro Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="140"/>
         <source>Delete Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="140"/>
         <source>Select the bookmark to be deleted:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il segnalibro da cancellare:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="151"/>
         <source>Delete Mercurial Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella Segnalibro Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="179"/>
         <source>Rename Mercurial Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina Segnalibro Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="212"/>
         <source>Move Mercurial Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta Segnalibro Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="297"/>
         <source>Pull Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Estrai Segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="297"/>
         <source>Select the bookmark to be pulled:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il segnalibro da estrarre:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="308"/>
         <source>Pulling bookmark from a remote Mercurial repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Etrae segnalibro da un repository Mercurial remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="330"/>
         <source>Push Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisce Segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="330"/>
         <source>Select the bookmark to be push:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il segnalibro da inserire:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="341"/>
         <source>Pushing bookmark to a remote Mercurial repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisce segnalibro in un repository Mercurial remoto</translation>
     </message>
 </context>
 <context>
@@ -1848,7 +1849,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksDialog.py" line="156"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Proprietà...</translation>
+        <translation>&amp;Proprietà...</translation>
     </message>
 </context>
 <context>
@@ -1856,17 +1857,17 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="20"/>
         <source>Import Bookmarks</source>
-        <translation type="unfinished">Importa Segnalibri</translation>
+        <translation>Importa Segnalibri</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="48"/>
         <source>Choose source from which you want to import bookmarks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Segli la fonte dalla quale importare i segnalibri:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="55"/>
         <source>Choose the source to import from</source>
-        <translation type="unfinished"></translation>
+        <translation>Segli la fonte dalla quale importare</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
@@ -1876,42 +1877,42 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="196"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancella</translation>
+        <translation>Cancella</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="92"/>
         <source>Choose Directory ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli cartella...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="102"/>
         <source>Choose File ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli file...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="127"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Importa da {0}&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="134"/>
         <source>Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminato</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="149"/>
         <source>Error importing bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nell&apos;importare i segnalibri</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="145"/>
         <source>Shows the name of the bookmarks file or directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra il nome del file o della cartella dei segnalibri</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="189"/>
         <source>Next &gt;</source>
-        <translation type="unfinished">Successivo&gt;</translation>
+        <translation>Successivo&gt;</translation>
     </message>
 </context>
 <context>
@@ -2051,13 +2052,14 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksManager.py" line="366"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml);;HTML Bookmarks (*.html)</source>
-        <translation type="unfinished"></translation>
+        <translation>Segnalibri XBEL (*.xbel);;Segnalibri XBEL (*.xml);;Segnalibri HTML (*.html)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksManager.py" line="137"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
  {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel caricamento dei segnalibri sulla riga {0}, colonna {1}:
+ {2}</translation>
     </message>
 </context>
 <context>
@@ -2074,8 +2076,8 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Apri in una nuova linguetta &amp;Tab<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Apri in una nuova linguetta &amp;Tab	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2085,7 +2087,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="153"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Proprietà...</translation>
+        <translation>&amp;Proprietà...</translation>
     </message>
 </context>
 <context>
@@ -2124,167 +2126,167 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="33"/>
         <source>List bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista i segnalibri</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="33"/>
         <source>List bookmarks...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista i segnalibri...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="38"/>
         <source>List bookmarks of the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista i segnalibri del progetto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="41"/>
         <source>&lt;b&gt;List bookmarks&lt;/b&gt;&lt;p&gt;This lists the bookmarks of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista i segnalibri&lt;/b&gt;&lt;p&gt;Lista i segnalibri del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="48"/>
         <source>Define bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Definisci un segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="48"/>
         <source>Define bookmark...</source>
-        <translation type="unfinished"></translation>
+        <translation>Definisci un segnalibro...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="53"/>
         <source>Define a bookmark for the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Definisci un segnalibro per il progetto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="56"/>
         <source>&lt;b&gt;Define bookmark&lt;/b&gt;&lt;p&gt;This defines a bookmark for the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Definisci un segnalibro&lt;/b&gt;&lt;p&gt;Definisci un segnalibro per il progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="63"/>
         <source>Delete bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="63"/>
         <source>Delete bookmark...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella segnalibro...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="68"/>
         <source>Delete a bookmark of the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella un segnalibro del progetto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="71"/>
         <source>&lt;b&gt;Delete bookmark&lt;/b&gt;&lt;p&gt;This deletes a bookmark of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cancella segnalibro&lt;/b&gt;&lt;p&gt;Cancella un segnalibro del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="78"/>
         <source>Rename bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="78"/>
         <source>Rename bookmark...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina segnalibro...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="83"/>
         <source>Rename a bookmark of the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina un segnalibro del progetto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="86"/>
         <source>&lt;b&gt;Rename bookmark&lt;/b&gt;&lt;p&gt;This renames a bookmark of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Rinomina segnalibro&lt;/b&gt;&lt;p&gt;Rinomina un segnalibro del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="93"/>
         <source>Move bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="93"/>
         <source>Move bookmark...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta segnalibro...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="98"/>
         <source>Move a bookmark of the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta un segnalibro del progetto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="101"/>
         <source>&lt;b&gt;Move bookmark&lt;/b&gt;&lt;p&gt;This moves a bookmark of the project to another changeset.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Sposta segnalibro&lt;/b&gt;&lt;p&gt;Sposta un segnalibro del progetto ad un altro insieme di modifiche.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="109"/>
         <source>Show incoming bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra i segnalibri entranti</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="114"/>
         <source>Show a list of incoming bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra una lista dei segnalibri entranti</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="117"/>
         <source>&lt;b&gt;Show incoming bookmarks&lt;/b&gt;&lt;p&gt;This shows a list of new bookmarks available at the remote repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostra segnalibri entranti&lt;/b&gt;&lt;p&gt;Mostra una lista di nuovi segnalibri disponibili nel repository remoto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="126"/>
         <source>Pull bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Estrae segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="131"/>
         <source>Pull a bookmark from a remote repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Estrae un segnalibro da un repository remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="134"/>
         <source>&lt;b&gt;Pull bookmark&lt;/b&gt;&lt;p&gt;This pulls a bookmark from a remote repository into the local repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Estrae segnalibri&lt;/b&gt;&lt;p&gt;Estrae un segnalibro da un repository remoto a quello locale.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="142"/>
         <source>Show outgoing bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra segnalibri uscenti</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="147"/>
         <source>Show a list of outgoing bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra una lista di segnalibri uscenti</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="150"/>
         <source>&lt;b&gt;Show outgoing bookmarks&lt;/b&gt;&lt;p&gt;This shows a list of new bookmarks available at the local repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostra segnalibri in uscita&lt;/b&gt;&lt;p&gt;Mostra una lista di nuovi segnalibri disponibili nel repository locale.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="159"/>
         <source>Push bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="164"/>
         <source>Push a bookmark to a remote repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisce segnalibro in repository remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="167"/>
         <source>&lt;b&gt;Push bookmark&lt;/b&gt;&lt;p&gt;This pushes a bookmark from the local repository to a remote repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Inserimento segnalibro&lt;/b&gt;&lt;p&gt;Inserisce un segnalibro dal repository locale a quello remoto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="219"/>
         <source>Bookmarks</source>
-        <translation type="unfinished">Segnalibri</translation>
+        <translation>Segnalibri</translation>
     </message>
 </context>
 <context>
@@ -2316,13 +2318,13 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Apri in una nuova linguetta &amp;Tab<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Apri in una nuova linguetta &amp;Tab	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Proprietà...</translation>
+        <translation>&amp;Proprietà...</translation>
     </message>
 </context>
 <context>
@@ -2506,17 +2508,17 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../UI/Browser.py" line="258"/>
         <source>Goto</source>
-        <translation type="unfinished">Vai a</translation>
+        <translation>Vai a</translation>
     </message>
     <message>
         <location filename="../UI/Browser.py" line="362"/>
         <source>Line {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea {0}</translation>
     </message>
     <message>
         <location filename="../UI/Browser.py" line="90"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierarchy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierarchies.&lt;/p&gt;&lt;p&gt;The first hierarchy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierarchy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierarchy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierarchies allow you navigate your system as a whole. On a UNIX system there will be a hierarchy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierarchy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierarchies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;La finestra di navigazione&lt;/b&gt;Questa ti permette di navigare facilmente nella struttura delle directory e dei file sul tuo sistema, identificare i programmi Python e aprirli nella finestra di Visualizzazione dei Sorgenti. La finestra mostra diverse strutture separate.&lt;/p&gt;&lt;p&gt;La prima struttura è mostrata solo se hai aperto un programma da debuggare e la sua radice è la cartella che contiene il programma. Normalmente tutti i file che compongono un&apos;applicazione Python sono contenuti nella stessa cartella, così questa vista permette un accesso veloce a molto di quello che ti serve.&lt;/p&gt;&lt;p&gt;La vista successiva è usata per navigare facilmente nelle cartelle specificate nella variabile Python &lt;tt&gt;sys.path&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;La vista rimanente permette di navigare in tutto il sistema. Su un sistema UNIX c&apos;è una struttura con &lt;tt&gt;/&lt;/tt&gt; come radice e un&apos;altra con la home dell&apos;utente. Su un sistema Windows c&apos;è una struttura per ogni disco del sistema.&lt;/p&gt;&lt;p&gt;I programmi Python (es. quelli con l&apos;estensione &lt;tt&gt;.py&lt;/tt&gt;) sono identificati nella vista con l&apos;icona di Python. Il pulsante destro del mouse fa apparire un menù che consente di aprire il file nel Visualizzatore dei Sorgenti, aprire il file per il debug o usarlo per uno unittest.&lt;/p&gt;&lt;p&gt;Il menù contestuale di una classe, funzione o metodo consente di aprire il file che la definisce e di posizionarsi sulla riga corretta.&lt;/p&gt;&lt;p&gt;I file di Qt-Designer (es. quelli con estensione &lt;tt&gt;.ui&lt;/tt&gt;) sono mostrati con l&apos;icona del Designer. Il menù contestuale  di questi file consente di avviare Qt-Designer per quel file.&lt;/p&gt;&lt;p&gt;I file di Qt-Linguist (es. quelli con estensione &lt;tt&gt;.ts&lt;/tt&gt;) sono mostrati con l&apos;icona di Linguist. Il menù contestuale di questi file consente di avviare Qt-Linguist per quel file.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2549,7 +2551,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../UI/BrowserModel.py" line="636"/>
         <source>Class Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributi della Classe</translation>
     </message>
 </context>
 <context>
@@ -2557,60 +2559,63 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="48"/>
         <source>Show source</source>
-        <translation type="unfinished">Mostra sorgente</translation>
+        <translation>Mostra sorgente</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="50"/>
         <source>Clear</source>
-        <translation type="unfinished">Pulisci</translation>
+        <translation>Pulisci</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="52"/>
         <source>Save</source>
-        <translation type="unfinished">Salva</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="59"/>
         <source>File: {0}
 Line: {1}
 {2}{3}</source>
-        <translation type="unfinished"></translation>
+        <translation>File: {0}
+Riga: {1}
+{2}{3}</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="61"/>
         <source>File: {0}
 Line: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>File: {0}
+riga: {1}</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="170"/>
         <source>Save Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva le informazioni della pila di chiamate</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="156"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">File Testo(*.txt);;Tutti i file (*)</translation>
+        <translation>File Testo(*.txt);;Tutti i file (*)</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="170"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="189"/>
         <source>Error saving Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore salvando le informazioni della pila di chiamate</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="189"/>
         <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Le informazioni della pila di chiamate non possono essere scritte su &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="45"/>
         <source>Call Stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Pila di chiamate</translation>
     </message>
 </context>
 <context>
@@ -2618,67 +2623,67 @@ Line: {1}</source>
     <message>
         <location filename="../Debugger/CallTraceViewer.ui" line="14"/>
         <source>Call Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Tracciamento chiamata</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.ui" line="22"/>
         <source>Press to start tracing calls and returns</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per iniziare il tracciamento delle chiamate e rientri</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.ui" line="32"/>
         <source>Press to stop tracing calls and returns</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per terminare il tracciamento delle chiamate e rientri</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.ui" line="55"/>
         <source>Press to resize the columns to their contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per ridimensionare le colonne ai loro contenuti</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.ui" line="65"/>
         <source>Press to clear the call trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per pulire il tracciamento chiamate</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.ui" line="75"/>
         <source>Press to save the call trace as a text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per salvare il tracciamento chiamate su un file di testo</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="52"/>
         <source>From</source>
-        <translation type="unfinished">Da</translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="52"/>
         <source>To</source>
-        <translation type="unfinished">A</translation>
+        <translation>A</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="135"/>
         <source>Save Call Trace Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva le informazioni del tracciamento chiamate</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="121"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">File Testo(*.txt);;Tutti i file (*)</translation>
+        <translation>File Testo(*.txt);;Tutti i file (*)</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="135"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="160"/>
         <source>Error saving Call Trace Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore salvando le informazioni del tracciamento chiamate</translation>
     </message>
     <message>
         <location filename="../Debugger/CallTraceViewer.py" line="160"/>
         <source>&lt;p&gt;The call trace info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Le informazioni del tracciamento chiamate non possono essere scritte su &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2933,32 +2938,32 @@ Line: {1}</source>
     <message>
         <location filename="../Cooperation/ChatWidget.py" line="185"/>
         <source>New User</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuovo Utente</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.py" line="185"/>
         <source>{0} has joined.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} è entrato.</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.py" line="216"/>
         <source>User Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Utente uscito</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.py" line="216"/>
         <source>{0} has left.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} è uscito.</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.py" line="239"/>
         <source>Message from &lt;{0}&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Messaggio da &lt;{0}&gt;</translation>
     </message>
     <message>
         <location filename="../Cooperation/ChatWidget.ui" line="207"/>
         <source>Enter the host and port to connect to in the form &quot;host@port&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci l&apos;host e la porta per la connessione nella forma &quot;host@porta&quot;</translation>
     </message>
 </context>
 <context>
@@ -2966,43 +2971,44 @@ Line: {1}</source>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="42"/>
         <source>Google Chrome stores its bookmarks in the &lt;b&gt;Bookmarks&lt;/b&gt; text file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Google Chrome registra i suoi segnalibri nel file di testo &lt;b&gt;Bookmarks&lt;/b&gt;. Questo file si trova normalmente in</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="63"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per cortesia scegli il file per iniziare ad importare i segnalibri.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="63"/>
         <source>Chromium stores its bookmarks in the &lt;b&gt;Bookmarks&lt;/b&gt; text file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Chromium registra i suoi segnalibri nel file di testo &lt;b&gt;Bookmarks&lt;/b&gt;. Questo file si trova normalmente in</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="112"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file {0} non esiste.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="129"/>
         <source>File &apos;{0}&apos; cannot be read.
 Reason: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file {0} non può essere letto.
+Motivo: {1}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="140"/>
         <source>Google Chrome Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importazione da Google Chrome</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="142"/>
         <source>Chromium Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importazione da Chromium</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="144"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importato {0}</translation>
+        <translation>Importato {0}</translation>
     </message>
 </context>
 <context>
@@ -3010,62 +3016,62 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.ui" line="43"/>
         <source>Press to activate the content; context menu for more options</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per attivare il contenuto; menu contestuale per ulteriori opzioni</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="97"/>
         <source>Load</source>
-        <translation type="unfinished">Carica</translation>
+        <translation>Carica</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="90"/>
         <source>Object blocked by ClickToFlash</source>
-        <translation type="unfinished"></translation>
+        <translation>Oggetto bloccato da ClickToFlash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="94"/>
         <source>Show information about object</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra informazioni sull&apos;oggetto</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="98"/>
         <source>Delete object</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella oggetto</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="101"/>
         <source>Add &apos;{0}&apos; to Whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi &apos;{0}&apos; alla lista privilegiata</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="104"/>
         <source>Remove &apos;{0}&apos; from Whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi &apos;{0}&apos; dalla lista privilegiata</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="111"/>
         <source>Configure Whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Configura la lista privilegiata</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="259"/>
         <source>Flash Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Evidenza sull&apos;oggetto</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="262"/>
         <source>&lt;b&gt;Attribute Name&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nome Attributo&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="262"/>
         <source>&lt;b&gt;Value&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Valore&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="277"/>
         <source>No information available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna informazioni disponibile.</translation>
     </message>
 </context>
 <context>
@@ -3073,7 +3079,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.py" line="53"/>
         <source>ClickToFlash Whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista privilegiata ClickToFlash</translation>
     </message>
     <message>
         <location filename="Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="79"/>
@@ -3083,42 +3089,42 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="103"/>
         <source>Press to add site to the whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per aggiungere un sito alla lista privilegiata</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="106"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Aggiungi...</translation>
+        <translation>&amp;Aggiungi...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="123"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Premi per rimuovere gli elementi selezionati</translation>
+        <translation>Premi per rimuovere gli elementi selezionati</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="126"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished">&amp;Rimuovi</translation>
+        <translation>&amp;Rimuovi</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="136"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished">Premi per rimuovere tutti gli elementi</translation>
+        <translation>Premi per rimuovere tutti gli elementi</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="139"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimozione global&amp;e</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.py" line="53"/>
         <source>Enter host name to add to whitelist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il nome dell&apos;host da aggiungere alla lista privilegiata:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="79"/>
         <source>Enter search term for hosts</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci termine di ricerca per gli host</translation>
     </message>
 </context>
 <context>
@@ -3275,89 +3281,91 @@ Reason: {1}</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="14"/>
         <source>Code Style Check Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Risultati controllo stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="17"/>
         <source>&lt;b&gt;Code Style Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the code style check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Risultati  controllo sullo stile di codifica&lt;/b&gt;
+&lt;p&gt;Questo dialogo mostra i risultati del controllo sullo stile di codifica. Il doppio click sulla voce
+aprirà una finestra per editare e posizionerà il cursore alla rispettiva riga e colonna.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="46"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Escludi file:</translation>
+        <translation>Escludi file:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="53"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Inserisci un pattern per il nome file di file da escludere separati da una virgola</translation>
+        <translation>Inserisci una stringa per il nome file dei file da escludere separati da una virgola</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="72"/>
         <source>Press to start the code style check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per iniziare l&apos;esecuzione del controllo dello stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="75"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Inizio</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="82"/>
         <source>Press to fix the selected issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per correggere le problemi selezionati</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="85"/>
         <source>Fix Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Correggi selezionato</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="105"/>
         <source>Press to load the default values</source>
-        <translation type="unfinished">Premi per caricare i valori di default</translation>
+        <translation>Premi per caricare i valori di default</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="108"/>
         <source>Load Defaults</source>
-        <translation type="unfinished">Carica default</translation>
+        <translation>Carica predefiniti</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="115"/>
         <source>Press to store the current values as defaults</source>
-        <translation type="unfinished">Premi per salvare i valori corrente come default</translation>
+        <translation>Premi per salvare i valori corrente come predefiniti</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="118"/>
         <source>Store Defaults</source>
-        <translation type="unfinished">Salva default</translation>
+        <translation>Salva predefiniti</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="125"/>
         <source>Press to reset the default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per resettare i valori predefiniti</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetta predefiniti</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="137"/>
         <source>Exclude Messages:</source>
-        <translation type="unfinished">Escludi messaggi:</translation>
+        <translation>Escludi Messaggi:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="144"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
-        <translation type="unfinished">Inserici il codice del messaggio o le categorie da escludere separate da una virgola</translation>
+        <translation>Inserici il codice del messaggio o le categorie da escludere separate da una virgola</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="214"/>
         <source>Press to select the message codes from a list</source>
-        <translation type="unfinished">Premi per selezionare il codice messaggi da una lista</translation>
+        <translation>Premi per selezionare il codice messaggi da una lista</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="217"/>
@@ -3367,82 +3375,82 @@ entry will open an editor window and position the cursor at the respective line 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="158"/>
         <source>Included Messages:</source>
-        <translation type="unfinished">Includi Messaggi:</translation>
+        <translation>Includi Messaggi:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="165"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation type="unfinished">Inserisci i codici messaggio o le categorie da includere separati da una virgola</translation>
+        <translation>Inserisci i codici messaggio o le categorie da includere separati da una virgola</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="179"/>
         <source>Fix Issues:</source>
-        <translation type="unfinished">Problemi risolti:</translation>
+        <translation>Problemi risolti:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="186"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
-        <translation type="unfinished">Inserisci i codici messaggio dei problemi da correggere automaticamente (lascia vuote per correggerli tutti)</translation>
+        <translation>Inserisci i codici messaggio dei problemi da correggere in automatico (lascia vuoto per correggerli tutti)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="200"/>
         <source>Don&apos;t Fix Issues:</source>
-        <translation type="unfinished"></translation>
+        <translation>Problemi non risolti:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="207"/>
         <source>Enter message codes of issues not to be fixed automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci i codici messaggio dei problemi da non correggere in automatico</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="221"/>
         <source>Max. Line Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Max. lunghezza riga:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="230"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci la lunghezza massima di riga consentita (PEP-8: 79 caratteri)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="264"/>
         <source>Docstring Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo stringa doc.:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="273"/>
         <source>Select the rule set for docstrings</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona l&apos;insieme di regole per la stringa doc</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="297"/>
         <source>Select to allow hanging closing brackets</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per permettere l&apos;apposizione delle parentesi di chiusura</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
         <source>Allow hanging closing brackets</source>
-        <translation type="unfinished"></translation>
+        <translation>permette l&apos;apposizione delle parentesi di chiusura</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="324"/>
         <source>Select to repeat each message type</source>
-        <translation type="unfinished">Seleziona per ripetere ogni tipo di messaggio</translation>
+        <translation>Seleziona per ripetere ogni tipo di messaggio</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="327"/>
         <source>Repeat messages</source>
-        <translation type="unfinished">Ripetti messaggio</translation>
+        <translation>Ripeti messaggio</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="337"/>
         <source>Select to fix some issues</source>
-        <translation type="unfinished">Seleziona per correggere alcuni problemi</translation>
+        <translation>Seleziona per correggere alcuni problemi</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="340"/>
         <source>Fix issues automatically</source>
-        <translation type="unfinished">Correggi automanticamente i problemi</translation>
+        <translation>Correggi automanticamente i problemi</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="383"/>
@@ -3450,77 +3458,79 @@ entry will open an editor window and position the cursor at the respective line 
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
 the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista risultati&lt;/b&gt;
+&lt;p&gt;Questa lista mostra i risultati del controllo sullo stile di codifica. Il doppio click sulla voce
+aprirà una finestra per le modifiche posizionando il cursore alla rispettiva riga e colonna.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="399"/>
         <source>File/Line</source>
-        <translation type="unfinished">File/Linea</translation>
+        <translation>File/Linea</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="404"/>
         <source>Code</source>
-        <translation type="unfinished">Codice</translation>
+        <translation>Codice</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="409"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="101"/>
         <source>PEP-257</source>
-        <translation type="unfinished"></translation>
+        <translation>PEP-257</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="102"/>
         <source>Eric</source>
-        <translation type="unfinished"></translation>
+        <translation>Eric</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="104"/>
         <source>Statistics...</source>
-        <translation type="unfinished">Statistiche...</translation>
+        <translation>Statistiche...</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="106"/>
         <source>Press to show some statistics for the last run</source>
-        <translation type="unfinished">Premi per mostrare delle statistiche dell&apos;ultima esecuzione</translation>
+        <translation>Premi per mostrare alcune statistiche dell&apos;ultima esecuzione</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="109"/>
         <source>Show</source>
-        <translation type="unfinished">Mostra</translation>
+        <translation>Mostra</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="111"/>
         <source>Press to show all files containing an issue</source>
-        <translation type="unfinished">Premi per mostrare tutti i file che contengono errori di sintassi</translation>
+        <translation>Premi per mostrare tutti i file che contengono problematiche</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="412"/>
         <source>Error: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore: {0}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="894"/>
         <source>Fix: {0}</source>
-        <translation type="unfinished">Corregge:{0}</translation>
+        <translation>Corregge:{0}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="555"/>
         <source>No issues found.</source>
-        <translation type="unfinished">Nessun problema trovato.</translation>
+        <translation>Nessun problema trovato.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="430"/>
         <source>Shows the progress of the code style check</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra l&apos;avanzamento del controllo dello stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="439"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>File %v/%m</translation>
     </message>
 </context>
 <context>
@@ -3528,22 +3538,22 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="176"/>
         <source>Check Code Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo dello stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="176"/>
         <source>&amp;Code Style...</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile &amp;Codifica...</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="84"/>
         <source>Check code style.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="180"/>
         <source>&lt;b&gt;Check Code Style...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the code style conventions given in various PEPs.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Controlla lo stile di codifica...&lt;/b&gt;&lt;p&gt;Controlla che i file Python siano aderenti alle varie convenzioni PEP.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -3564,27 +3574,27 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="14"/>
         <source>Code Style Message Codes</source>
-        <translation type="unfinished"></translation>
+        <translation>Codici messaggio sullo stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="23"/>
         <source>Select the message codes from the list:</source>
-        <translation type="unfinished">Seleziona il codice del messaggio dalla lista:</translation>
+        <translation>Seleziona il codice del messaggio dalla lista:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="30"/>
         <source>Select the message codes from this table</source>
-        <translation type="unfinished">Seleziona il codice del messaggio dalla tabella</translation>
+        <translation>Seleziona il codice del messaggio dalla tabella</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="55"/>
         <source>Code</source>
-        <translation type="unfinished">Codice</translation>
+        <translation>Codice</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="60"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
 </context>
 <context>
@@ -3592,233 +3602,233 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="187"/>
         <source>Fix Code Style Issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Correggi problema di stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="187"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Non posso salvare il file&lt;b&gt;{0}&lt;/b&gt;. Lo salto.&lt;/p&gt;&lt;p&gt;Motivo:{1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Non posso salvare il file&lt;b&gt;{0}&lt;/b&gt;. Lo salto.&lt;/p&gt;&lt;p&gt;Motivo:{1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="515"/>
         <source>Triple single quotes converted to triple double quotes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Triple virgolette singole convertite in triple virgolette doppie.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="545"/>
         <source>Introductory quotes corrected to be {0}&quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Virgolette introduttive corrette in {0}&quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="585"/>
         <source>Single line docstring put on one line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Singole righe documentazione raggruppate su una sola.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="626"/>
         <source>Period added to summary line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiunto punto alla riga sommario.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="842"/>
         <source>Blank line before function/method docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Riga vuota prima della stringa di documentazione funzione/metodo rimossa.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="679"/>
         <source>Blank line inserted before class docstring.</source>
-        <translation type="unfinished"></translation>
+        <translation>Riga vuota inserita prima della stringa di documentazione della classe.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="707"/>
         <source>Blank line inserted after class docstring.</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea vuota inserita dopo la stringa di documentazione della classe.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="739"/>
         <source>Blank line inserted after docstring summary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea vuota inserita dopo la stringa di documentazione del sommario.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="767"/>
         <source>Blank line inserted after last paragraph of docstring.</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea vuota inserita dopo l&apos;ultimo paragrafo della stringa di documentazione.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="810"/>
         <source>Leading quotes put on separate line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le virgolette di testa messe su una riga separata.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="812"/>
         <source>Trailing quotes put on separate line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le virgolette di coda messe su una riga separata.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="840"/>
         <source>Blank line before class docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimossa riga vuota prima della stringa di documentazione.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="871"/>
         <source>Blank line after class docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimossa riga vuota dopo della stringa di documentazione.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="873"/>
         <source>Blank line after function/method docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Riga vuota dopo la stringa di documentazione funzione/metodo rimossa.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="901"/>
         <source>Blank line after last paragraph removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimossa riga vuota dopo l&apos;ultimo paragrafo.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="930"/>
         <source>Tab converted to 4 spaces.</source>
-        <translation type="unfinished">Converti Tab a 4 spazi.</translation>
+        <translation>Convertita Tabulazione in 4 spazi.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="932"/>
         <source>Indentation adjusted to be a multiple of four.</source>
-        <translation type="unfinished"></translation>
+        <translation>Identazione portata ad un multiplo di quattro.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="961"/>
         <source>Indentation of continuation line corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Identazione di continuazione riga corretta.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="964"/>
         <source>Indentation of closing bracket corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Identazione di parentesi chiusa corretta.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1000"/>
         <source>Missing indentation of continuation line corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Corretta la mancanza di indentazione della continuazione riga.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1041"/>
         <source>Closing bracket aligned to opening bracket.</source>
-        <translation type="unfinished"></translation>
+        <translation>Parentesi chiusa allineata con quella d&apos;apertura.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1076"/>
         <source>Indentation level changed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Livello di indentazione modificato.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1115"/>
         <source>Indentation level of hanging indentation changed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificato il livello di indentazione dell&apos;indentazione pendente.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1171"/>
         <source>Visual indentation corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1289"/>
         <source>Extraneous whitespace removed.</source>
-        <translation type="unfinished">Spazio non pertinente eliminato.</translation>
+        <translation>Spazio non pertinente eliminato.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1252"/>
         <source>Missing whitespace added.</source>
-        <translation type="unfinished">Spazi mancanti aggiunti.</translation>
+        <translation>Spazi mancanti aggiunti.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1310"/>
         <source>Whitespace around comment sign corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Corretto spazio vicino al segno di commento.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1329"/>
         <source>One blank line inserted.</source>
-        <translation type="unfinished">Una linea vuota inserita.</translation>
+        <translation>Inserita una riga vuota.</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1381"/>
         <source>%n blank line(s) inserted.</source>
-        <translation type="unfinished">
-            <numerusform>%n linea vuota inserita.</numerusform>
-            <numerusform>%n linee vuote inserita.</numerusform>
+        <translation>
+            <numerusform>%n riga vuota inserita.</numerusform>
+            <numerusform>%n righe vuote inserite.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1384"/>
         <source>%n superfluous lines removed</source>
-        <translation type="unfinished">
-            <numerusform>%n linea superflua eliminata</numerusform>
-            <numerusform>%n linee superflue eliminate</numerusform>
+        <translation>
+            <numerusform>%n riga superflua eliminata</numerusform>
+            <numerusform>%n righe superflue eliminate</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1419"/>
         <source>Superfluous blank lines removed.</source>
-        <translation type="unfinished">Linee bianche superflue eliminate.</translation>
+        <translation>Righe vuote superflue eliminate.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1449"/>
         <source>Superfluous blank lines after function decorator removed.</source>
-        <translation type="unfinished">Linee bianche superflue eliminate dopo a dichiarazione della funzione.</translation>
+        <translation>Righe vuote superflue eliminate dopo a dichiarazione della funzione.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1487"/>
         <source>Imports were put on separate lines.</source>
-        <translation type="unfinished"></translation>
+        <translation>Import messi su righe separate.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1537"/>
         <source>Long lines have been shortened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Accorciate righe lughe.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1560"/>
         <source>Redundant backslash in brackets removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimossi barre rovesciate ridondanti.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1621"/>
         <source>Compound statement corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Corretta istruzione composta.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1662"/>
         <source>Comparison to None/True/False corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Corretta comparazione con None/True/False.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1701"/>
         <source>&apos;{0}&apos; argument added.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;{0}&apos; argumento aggiunto.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1762"/>
         <source>&apos;{0}&apos; argument removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;{0}&apos; argumento rimosso.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1783"/>
         <source>Whitespace stripped from end of line.</source>
-        <translation type="unfinished">Elimina gli spazi alla fine della linea.</translation>
+        <translation>Eliminati gli spazi alla fine della linea.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1799"/>
         <source>newline added to end of file.</source>
-        <translation type="unfinished">aggiungi a capo alla fine del file.</translation>
+        <translation>Aggiunta una nuova riga alla fine del file.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1821"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
-        <translation type="unfinished">Linee bianche superflue eliminate dalla fine del file.</translation>
+        <translation>Rghe vuote superflue eliminate dalla fine del file.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="1838"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
-        <translation type="unfinished">&apos;&lt;&gt;&apos; sostituito da &apos;!=&apos;.</translation>
+        <translation>&apos;&lt;&gt;&apos; sostituito da &apos;!=&apos;.</translation>
     </message>
 </context>
 <context>
@@ -3826,27 +3836,27 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="14"/>
         <source>Code Style Checker Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistiche controllo stile di codifica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="30"/>
         <source>Count</source>
-        <translation type="unfinished">Conta</translation>
+        <translation>Contatore</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="35"/>
         <source>Code</source>
-        <translation type="unfinished">Codice</translation>
+        <translation>Codice</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="40"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="67"/>
         <source>%n issue(s) found</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n problema trovato</numerusform>
             <numerusform>%n problemi trovati</numerusform>
         </translation>
@@ -3854,7 +3864,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="69"/>
         <source>%n issue(s) fixed</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n problema corretto</numerusform>
             <numerusform>%n problemi corretti</numerusform>
         </translation>
@@ -3862,7 +3872,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="71"/>
         <source>%n file(s) checked</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n file controllato</numerusform>
             <numerusform>%n file controllati</numerusform>
         </translation>
@@ -3870,7 +3880,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="73"/>
         <source>%n file(s) with issues found</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n file con problemi trovato</numerusform>
             <numerusform>%n file con problemi trovati</numerusform>
         </translation>
@@ -4142,7 +4152,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="77"/>
         <source>Enter the dialog title</source>
-        <translation>Inserisci il titolo del dialogo</translation>
+        <translation>Inserisci il titolo della finestra di dialogo</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.py" line="67"/>
@@ -4152,57 +4162,57 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="55"/>
         <source>Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Risultato</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="61"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished">inserisci il nome della variabile risultato</translation>
+        <translation>Inserisci il nome della variabile risultato</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="292"/>
         <source>Colour Variable</source>
-        <translation type="unfinished"></translation>
+        <translation>Variabile Colore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="87"/>
         <source>Parent</source>
-        <translation type="unfinished">Genitore</translation>
+        <translation>Genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="93"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+        <translation>Seleziona &quot;self&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="96"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="106"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+        <translation>Seleziona &quot;None&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="109"/>
         <source>None</source>
-        <translation type="unfinished">Nessuno</translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="118"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+        <translation>Seleziona per inserire un genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="121"/>
         <source>Expression:</source>
-        <translation type="unfinished">Espressione:</translation>
+        <translation>Espressione:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="131"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Inserisci il genitore</translation>
+        <translation>Inserisci il genitore</translation>
     </message>
 </context>
 <context>
@@ -4590,37 +4600,37 @@ da mostrare nella pagina di configurazione.</translation>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="344"/>
         <source>VirusTotal Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfaccia VirusTotal</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="330"/>
         <source>Security</source>
-        <translation type="unfinished">Sicurezza</translation>
+        <translation>Sicurezza</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="347"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Web Browser di eric5</translation>
+        <translation>Navigatore web di eric5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="420"/>
         <source>Enter filter text...</source>
-        <translation type="unfinished"></translation>
+        <translation>Insirisci il testo del filtro...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="146"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Notificazioni</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="140"/>
         <source>IRC</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="236"/>
         <source>Code Checkers</source>
-        <translation type="unfinished"></translation>
+        <translation>Correttori di codice</translation>
     </message>
 </context>
 <context>
@@ -5245,22 +5255,22 @@ da mostrare nella pagina di configurazione.</translation>
     <message>
         <location filename="../Utilities/crypto/__init__.py" line="94"/>
         <source>Master Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Password principale</translation>
     </message>
     <message>
         <location filename="../Utilities/crypto/__init__.py" line="66"/>
         <source>Enter the master password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita la Password principale:</translation>
     </message>
     <message>
         <location filename="../Utilities/crypto/__init__.py" line="79"/>
         <source>The given password is incorrect.</source>
-        <translation type="unfinished"></translation>
+        <translation>La password inserita è errata.</translation>
     </message>
     <message>
         <location filename="../Utilities/crypto/__init__.py" line="87"/>
         <source>There is no master password registered.</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è registrata alcuna password principale.</translation>
     </message>
 </context>
 <context>
@@ -5510,7 +5520,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="361"/>
         <source>Sin&amp;gle Step</source>
-        <translation>Step Sin&gt;&amp;golo</translation>
+        <translation>Step Sin&amp;golo</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="366"/>
@@ -5540,7 +5550,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="385"/>
         <source>&lt;b&gt;Step Over&lt;/b&gt;&lt;p&gt;Execute a single Python statement staying in the same frame. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the statement has completed.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Step Over&lt;/b&gt;&lt;p&gt;Esegui una singola istruzione Python restando nella stessa struttura. Se l&apos;istruzione e&apos; un &lt;tt&gt;import&lt;/tt&gt;, un costruttore di classe, o un metodo o una chiamata di funzione allora il controllo tornerà al debugger dopo che l&apos;istruzione è completata.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Singolo passor&lt;/b&gt;&lt;p&gt;Esegui una singola istruzione Python restando nella stessa struttura. Se l&apos;istruzione e&apos; un &lt;tt&gt;import&lt;/tt&gt;, un costruttore di classe, o un metodo o una chiamata di funzione allora il controllo tornerà al debugger dopo che l&apos;istruzione è completata.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="396"/>
@@ -5555,12 +5565,12 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="401"/>
         <source>Execute Python statements until leaving the current frame</source>
-        <translation>Esegui istruzioni Python fino a quando esci dalla struttura corrente</translation>
+        <translation>Esegue istruzioni Python fino a quando esce dal blocco corrente</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="404"/>
         <source>&lt;b&gt;Step Out&lt;/b&gt;&lt;p&gt;Execute Python statements until leaving the current frame. If the statements are inside an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the current frame has been left.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Step Out&lt;/b&gt;&lt;p&gt;Esegui istruzioni Python fino a quando esci dalla struttura corrente. Se l&apos;istruzione e&apos; un &lt;tt&gt;import&lt;/tt&gt;, un costruttore di classe, o un metodo o una chiamata di funzione allora il controllo tornerà al debugger dopo l&apos;uscita dalla struttura corrente.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Step Out&lt;/b&gt;&lt;p&gt;Esegue istruzioni Python fino a quando esce dal blocco corrente. Se l&apos;istruzione e&apos; un &lt;tt&gt;import&lt;/tt&gt;, un costruttore di classe, o un metodo o una chiamata di funzione allora il controllo tornerà al debugger dopo l&apos;uscita dal blocco corrente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="415"/>
@@ -5605,17 +5615,17 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="444"/>
         <source>E&amp;xecute...</source>
-        <translation>E&amp;segui...</translation>
+        <translation>E&amp;xegui...</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="448"/>
         <source>Execute a one line statement in the current context</source>
-        <translation>Esegui  un&apos;istruzione di una riga nel contesto corrente</translation>
+        <translation>Esegui un&apos;istruzione di una riga nel blocco corrente</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="450"/>
         <source>&lt;b&gt;Execute&lt;/b&gt;&lt;p&gt;Execute a one line statement in the current context of the debugged program.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Esegui&lt;/b&gt;&lt;p&gt;Esegui un&apos;istruzione di una riga nel contesto corrente del programma in debug.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Esegui&lt;/b&gt;&lt;p&gt;Esegui un&apos;istruzione di una riga nel blocco corrente del programma in debug.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="474"/>
@@ -5957,32 +5967,32 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="1035"/>
         <source>Program terminated</source>
-        <translation type="unfinished">Programma terminato</translation>
+        <translation>Programma terminato</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="1028"/>
         <source>The program has terminated with an exit status of {0}.</source>
-        <translation type="unfinished">Il programma è terminato con un &apos;exit status&apos; di {0}.</translation>
+        <translation>Il programma è terminato con un &apos;exit status&apos; di {0}.</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="1031"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
-        <translation type="unfinished">&quot;{0}&quot; è terminato con un &apos;exit status&quot; di {1}.</translation>
+        <translation>&quot;{0}&quot; è terminato con un &apos;exit status&quot; di {1}.</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="298"/>
         <source>Restart</source>
-        <translation type="unfinished">Riavvio</translation>
+        <translation>Riavvio</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="304"/>
         <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Riavvia&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e imposta la linea corrente per essere la prima istruzione eseguibile di Python dell&apos;ultimo script in debug. Se il file ha modifiche non salvate è possibile salvarle prima.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="320"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ferma&lt;/b&gt;&lt;p&gt;Questo ferma lo script in esecuzione nel backend del debugger.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6414,17 +6424,17 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="561"/>
         <source>Local Variables Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista delle variabili locali</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="567"/>
         <source>Automatically view source code when user changes the callstack frame in the callstack viewer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista automatica del codice sorgente quando l&apos;utente modifica il blocco della pila di chiamate nella vista della pila di chiamate.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="570"/>
         <source>Automatically view source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista codice sorgente in automatico</translation>
     </message>
 </context>
 <context>
@@ -6541,7 +6551,7 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="29"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
-        <translation>Inserisci il path del Client Debug da usare. Lascia vuoto per usare il default.</translation>
+        <translation>Inserisci il percorso del Client Debug da usare. Lascia vuoto per usare il default.</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="36"/>
@@ -6561,7 +6571,7 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="52"/>
         <source>Enter the path of the interpreter to be used by the debug client.</source>
-        <translation>Inserisci il path dell&apos;interprete da usare dal client di debug.</translation>
+        <translation>Inserisci il path dell&apos;interprete da usare dal Client Debug.</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="59"/>
@@ -6571,12 +6581,12 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="69"/>
         <source>Environment for Debug Client</source>
-        <translation>Ambiente per il Client di debug</translation>
+        <translation>Ambiente per il Client Debug</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
         <source>Select, if the environment of the debug client should be replaced</source>
-        <translation>Seleziona, se l&apos;ambiente per il client di debug deve essere sostituito</translation>
+        <translation>Seleziona, se l&apos;ambiente per il client Debug deve essere sostituito</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="78"/>
@@ -6593,7 +6603,7 @@ Not connected
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the debugger. The individual settings must be separate by whitespace and be given in the form &apos;var=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Ambiente&lt;/b&gt;&lt;p&gt;Inserisci le variabili d&apos;ambiente da impostare per il debugger. Le singole variabili devono essere separate da uno spazion e devono essere nella forma &apos;var=valorer&apos;.&lt;/p&gt;&lt;p&gt;Esempio: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Ambiente&lt;/b&gt;&lt;p&gt;Inserisci le variabili d&apos;ambiente da impostare per il debugger. Le singole variabili devono essere separate da uno spazio e devono essere nella forma &apos;var=valore&apos;.&lt;/p&gt;&lt;p&gt;Esempio: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="97"/>
@@ -6618,12 +6628,12 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="122"/>
         <source>Perform Path Translation</source>
-        <translation>Esegui traduzione del path</translation>
+        <translation>Esegui traduzione del percorso</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="131"/>
         <source>Local Path:</source>
-        <translation>Path Locale:</translation>
+        <translation>Percorso Locale:</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="138"/>
@@ -6638,7 +6648,7 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="152"/>
         <source>Remote Path:</source>
-        <translation>Path remoto:</translation>
+        <translation>Percorso remoto:</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="162"/>
@@ -6708,17 +6718,17 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="244"/>
         <source>Select to not set the debug client encoding</source>
-        <translation>Seleziona per non impostare l&apos;encoding del client di debug</translation>
+        <translation>Seleziona per non impostare l&apos;encoding del client Debug</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="247"/>
         <source>Don&apos;t set the encoding of the debug client</source>
-        <translation>Non impostare l&apos;encoding del client di debug</translation>
+        <translation>Non impostare l&apos;encoding del client Debug</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation>Seleziona per ridirezionare lo stdin, stdout e stderr del programma debuggato all&apos;IDE di eric5</translation>
+        <translation>Seleziona per ridirezionare lo stdin, stdout e stderr del programma in debug all&apos;IDE di eric5</translation>
     </message>
 </context>
 <context>
@@ -6974,7 +6984,7 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="43"/>
         <source>Enter the path of the Python interpreter to be used by the debug client.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il percorso dell&apos;intreprete Python che il client di debug deve usare.</translation>
     </message>
 </context>
 <context>
@@ -7162,24 +7172,27 @@ Not connected
         <location filename="../Helpviewer/Sync/DirectorySyncHandler.py" line="72"/>
         <source>Error creating the shared directory.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel crare la cartella condivisa.
+{0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/DirectorySyncHandler.py" line="97"/>
         <source>Cannot read remote file.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile leggere il file remoto.
+{0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/DirectorySyncHandler.py" line="132"/>
         <source>Cannot write remote file.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile scrivere il file remoto.
+{0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/DirectorySyncHandler.py" line="217"/>
         <source>Synchronization finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincronizzazione terminata</translation>
     </message>
 </context>
 <context>
@@ -7187,197 +7200,197 @@ Not connected
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="125"/>
         <source>module is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulo mancante di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="127"/>
         <source>public function/method is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Funzione/metodo pubblico mancante di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="130"/>
         <source>private function/method may be missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Funzione/metodo pubblico con possibile mancanza di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="133"/>
         <source>public class is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Classe pubblica mancante di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="135"/>
         <source>private class may be missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Classe privata con possibile mancanza di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="137"/>
         <source>docstring not surrounded by &quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring non inserita fra &quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="139"/>
         <source>docstring containing \ not surrounded by r&quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring contenente \ non inserita fra r&quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="142"/>
         <source>docstring containing unicode character not surrounded by u&quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring contenente carattere unicode non inserito fra u&quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="145"/>
         <source>one-liner docstring on multiple lines</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring in linea su righe multiple</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="147"/>
         <source>docstring has wrong indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring ha un&apos;indentazione errata</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="190"/>
         <source>docstring summary does not end with a period</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring sommario non si conclude con un punto</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="153"/>
         <source>docstring summary is not in imperative mood (Does instead of Do)</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring sommario non è in modo imperativo (farebbe invece di fa)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="157"/>
         <source>docstring summary looks like a function&apos;s/method&apos;s signature</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring sommario sembra una firma di funzione/metodo</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="160"/>
         <source>docstring does not mention the return value type</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring non indica il tipo di valore di ritorno</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="163"/>
         <source>function/method docstring is separated by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring funzione/metodo è separato da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="166"/>
         <source>class docstring is not preceded by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring della classe non è preceduta da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="169"/>
         <source>class docstring is not followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring della classe non è seguita da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="222"/>
         <source>docstring summary is not followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring sommario non è seguito da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="175"/>
         <source>last paragraph of docstring is not followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;ultimo paragrafo della docstring non è seguito da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="179"/>
         <source>private function/method is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Funzione/metodo privato mancante di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="182"/>
         <source>private class is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>Classe privata mancante di docstring</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="184"/>
         <source>leading quotes of docstring not on separate line</source>
-        <translation type="unfinished"></translation>
+        <translation>Virgolette iniziali della docstring non sono su riga separata</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="187"/>
         <source>trailing quotes of docstring not on separate line</source>
-        <translation type="unfinished"></translation>
+        <translation>Virgolette finali della docstring non sono su riga separata</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="192"/>
         <source>docstring does not contain a @return line but function/method returns something</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring non contiene una riga @return ma la funzione/metodo ritorna dei valori</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="196"/>
         <source>docstring contains a @return line but function/method doesn&apos;t return anything</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring contiene una riga @return ma la funzione/metodo non ritorna dei valori</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="200"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring non contiene sufficienti righe @param/@keyparam</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="203"/>
         <source>docstring contains too many @param/@keyparam lines</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring contiene troppe righe @param/@keyparam</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="206"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Argomenti con una sola parola-chiave devono essere documentati con righe @keyparam</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="209"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
-        <translation type="unfinished"></translation>
+        <translation>La sequenza di righe @param/@keyparam non si raccorda con le definizioni funzione/metodo</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="212"/>
         <source>class docstring is preceded by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring della classe è preceduta da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="214"/>
         <source>class docstring is followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring della classe è seguita da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="216"/>
         <source>function/method docstring is preceded by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring funzione/metodo è preceduto da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="219"/>
         <source>function/method docstring is followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring funzione/metodo è seguito da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="225"/>
         <source>last paragraph of docstring is followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;ultimo paragrafo della docstring è seguito da una riga vuota</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="228"/>
         <source>docstring does not contain a @exception line but function/method raises an exception</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring non contiene una riga @exception ma la funzione/metodo causa un&apos;eccezione</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="232"/>
         <source>docstring contains a @exception line but function/method doesn&apos;t raise an exception</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring contiene una riga @return ma la funzione/metodo non causa un&apos;eccezione</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="438"/>
         <source>no message for this code defined</source>
-        <translation type="unfinished">nessun messaggio definito per questo codice </translation>
+        <translation>nessun messaggio definito per questo codice </translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="237"/>
         <source>{0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0}: {1}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="149"/>
         <source>docstring does not contain a summary</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring non contiene un sommario</translation>
     </message>
 </context>
 <context>
@@ -7385,57 +7398,57 @@ Not connected
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="14"/>
         <source>What to do?</source>
-        <translation type="unfinished"></translation>
+        <translation>Cosa fare?</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="23"/>
         <source>You are about to download this file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai per scaricare questo file:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="49"/>
         <source>Type:</source>
-        <translation type="unfinished">Tipo:</translation>
+        <translation>Tipo:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="69"/>
         <source>From:</source>
-        <translation type="unfinished">Da:</translation>
+        <translation>Da:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="100"/>
         <source>Select to open the downloaded file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per aprire il file scaricato</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="103"/>
         <source>&amp;Open File</source>
-        <translation type="unfinished">&amp;Apri File</translation>
+        <translation>&amp;Aprire il File</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="110"/>
         <source>Select to scan the file with VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per controllare il file con VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="113"/>
         <source>Scan with &amp;VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllare con &amp;VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="133"/>
         <source>Select to save the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per salvare il file</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="136"/>
         <source>&amp;Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salvare il file</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="146"/>
         <source>&lt;b&gt;What do you want to do?&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cosa vuoi fare?&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -7561,25 +7574,28 @@ Not connected
     <message>
         <location filename="../Helpviewer/Download/DownloadItem.py" line="201"/>
         <source>VirusTotal scan scheduled: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Scansione VirusTotal schedulata: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadItem.ui" line="88"/>
         <source>Press to pause the download</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per mettere in pausa il download</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadItem.py" line="560"/>
         <source>{0} of {1} ({2}/sec)
 {3}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} di {1} ({2}/sec)
+{3}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadItem.py" line="569"/>
         <source>{0} downloaded
 SHA1: {1}
 MD5: {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} scaricato
+SHA1: {1}
+MD5: {2}</translation>
     </message>
 </context>
 <context>
@@ -7716,47 +7732,47 @@ Vuoi uscire comunque ?</numerusform>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="98"/>
         <source>Debug Message:</source>
-        <translation type="unfinished"></translation>
+        <translation>Messaggio del debug:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="101"/>
         <source>Warning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Attenzione:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="104"/>
         <source>Critical:</source>
-        <translation type="unfinished"></translation>
+        <translation>Critico:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="107"/>
         <source>Fatal Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore fatale:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="135"/>
         <source>Warning</source>
-        <translation type="unfinished">Attenzione</translation>
+        <translation>Attenzione</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="138"/>
         <source>Critical</source>
-        <translation type="unfinished">Critico</translation>
+        <translation>Critico</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="141"/>
         <source>Fatal Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore fatale</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="132"/>
         <source>Debug Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Messaggio del debug</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="172"/>
         <source>No message handler installed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestore dei messaggi non installato.</translation>
     </message>
 </context>
 <context>
@@ -7764,47 +7780,47 @@ Vuoi uscire comunque ?</numerusform>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="50"/>
         <source>Error Messages Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro dei messaggi di errore</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="40"/>
         <source>Enter search term for message</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci termine di ricerca per il messaggio</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="77"/>
         <source>Press to add filter to the list</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per aggiungere un filtro alla lista</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="80"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Aggiungi...</translation>
+        <translation>&amp;Aggiungi...</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="97"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Premi per rimuovere gli elementi selezionati</translation>
+        <translation>Premi per rimuovere gli elementi selezionati</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="100"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished">&amp;Rimuovi</translation>
+        <translation>&amp;Rimuovi</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="110"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished">Premi per rimuovere tutti gli elementi</translation>
+        <translation>Premi per rimuovere tutti gli elementi</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuov&amp;e tutto</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="50"/>
         <source>Enter message filter to add to the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita un filtro dei messaggi da aggiungere alla lista:</translation>
     </message>
 </context>
 <context>
@@ -8400,152 +8416,152 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="14"/>
         <source>SSL Certificate Manager</source>
-        <translation type="unfinished">Gestore Certificati SSL</translation>
+        <translation>Gestore Certificati SSL</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="27"/>
         <source>&amp;Servers</source>
-        <translation type="unfinished">&amp;Servers</translation>
+        <translation>&amp;Servers</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation type="unfinished">Hai salvato certificati che identificano questi server:</translation>
+        <translation>Hai salvato certificati che identificano questi server:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
-        <translation type="unfinished">Nome certificato</translation>
+        <translation>Nome certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="46"/>
         <source>Server</source>
-        <translation type="unfinished">Server</translation>
+        <translation>Server</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
-        <translation type="unfinished">Data scadenza</translation>
+        <translation>Data scadenza</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
-        <translation type="unfinished">Premi per vedere il certificato selezionato</translation>
+        <translation>Premi per vedere il certificato selezionato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
-        <translation type="unfinished">&amp;Guarda...</translation>
+        <translation>&amp;Vista...</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="168"/>
         <source>Press to import a certificate</source>
-        <translation type="unfinished">Premi per imporatare un certificato</translation>
+        <translation>Premi per imporatare un certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="171"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished">&amp;Importa...</translation>
+        <translation>&amp;Importa...</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="181"/>
         <source>Press to export the selected certificate</source>
-        <translation type="unfinished">Premi per esportare un certificato</translation>
+        <translation>Premi per esportare un certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="184"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished">&amp;Esporta...</translation>
+        <translation>&amp;Esporta...</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
-        <translation type="unfinished">Premi per cancellare il certificato selezionato</translation>
+        <translation>Premi per cancellare il certificato selezionato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
-        <translation type="unfinished">&amp;Cancella...</translation>
+        <translation>&amp;Cancella...</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
-        <translation type="unfinished">Certificati e &amp;Autorità</translation>
+        <translation>&amp;Autorità del certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation type="unfinished">Hai salvato certificati che identificano queste autorità di certificazione:</translation>
+        <translation>Hai salvato certificati che identificano queste autorità di certificazione:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="308"/>
         <source>(Unknown)</source>
-        <translation type="unfinished">(Sconosciuto)</translation>
+        <translation>(Sconosciuto)</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="310"/>
         <source>(Unknown common name)</source>
-        <translation type="unfinished">(Nome comune sconosciuto)</translation>
+        <translation>(Nome comune sconosciuto)</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="151"/>
         <source>Delete Server Certificate</source>
-        <translation type="unfinished">Cancella certificato del server</translation>
+        <translation>Cancella certificato del server</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="151"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Deve essere cancellato il certificato del server?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato del server viene cancellato, i controlli di sicurezza normali verranno reimpostati e il server dovrà presenteare un certificato valido.&lt;p&gt;</translation>
+        <translation>&lt;p&gt;Deve essere cancellato il certificato del server?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato del server viene cancellato, i controlli di sicurezza normali verranno reimpostati e il server dovrà presenteare un certificato valido.&lt;p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="497"/>
         <source>Import Certificate</source>
-        <translation type="unfinished">Importa certificato</translation>
+        <translation>Importa certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="409"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il certificato &lt;b&gt;{0}&lt;/b&gt; esiste già.Lo salto.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il certificato &lt;b&gt;{0}&lt;/b&gt; esiste già.Lo salto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="360"/>
         <source>Delete CA Certificate</source>
-        <translation type="unfinished">Cancella certificato CA</translation>
+        <translation>Cancella certificato CA</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="360"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Deve essere cancellato il certificato CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato CA viene cancellato,il browser non validerò nessun certificato emesso da questa CA.&lt;p&gt;</translation>
+        <translation>&lt;p&gt;Deve essere cancellato il certificato CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato CA viene cancellato,il navigatore non validerà nessun certificato emesso da questa CA.&lt;p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="507"/>
         <source>Export Certificate</source>
-        <translation type="unfinished">Esporta certificato</translation>
+        <translation>Esporta certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="448"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation type="unfinished">File Certificato (PEM) (*.pem);;File Certificato (DER) (*.der)</translation>
+        <translation>File Certificato (PEM) (*.pem);;File Certificato (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="464"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="475"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il certificato non può essere scritto sul file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il certificato non può essere scritto sul file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="497"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation type="unfinished">Files Certificato (*.pem *.crt *.der *.cer *.ca);;Tutti i file (*)</translation>
+        <translation>Files Certificato (*.pem *.crt *.der *.cer *.ca);;Tutti i file (*)</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="507"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il certificato non può essere letto dal file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il certificato non può essere letto dal file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -8561,87 +8577,87 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="23"/>
         <source>&lt;h2&gt;Certificate Information&lt;/h2&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Informazioni del certificato&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="32"/>
         <source>Certificate Chain:</source>
-        <translation type="unfinished"></translation>
+        <translation>Concatenamento del certificato:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="51"/>
         <source>This certificated has been blacklisted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo certificato è stato inserito nella lista nera.</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="61"/>
         <source>&lt;b&gt;Issued for:&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Emesso per:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="168"/>
         <source>Common Name (CN):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome Usuale (CN):</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="188"/>
         <source>Organization (O):</source>
-        <translation type="unfinished"></translation>
+        <translation>Organizzazione (O):</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="208"/>
         <source>Organizational Unit (OU):</source>
-        <translation type="unfinished"></translation>
+        <translation>Unità Organizzativa (OU):</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="128"/>
         <source>Serialnumber:</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero seriale:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="161"/>
         <source>&lt;b&gt;Issued by:&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Emesso da:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="241"/>
         <source>&lt;b&gt;Validity:&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Validità:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="248"/>
         <source>Issued on:</source>
-        <translation type="unfinished"></translation>
+        <translation>Emesso il:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="268"/>
         <source>Expires on:</source>
-        <translation type="unfinished"></translation>
+        <translation>Scade il:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="288"/>
         <source>This certificate is not valid yet or has expired.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo certificato non è ancora valido o è scaduto.</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="308"/>
         <source>&lt;b&gt;Fingerprints:&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;firme digitali:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="315"/>
         <source>SHA1-Fingerprint:</source>
-        <translation type="unfinished"></translation>
+        <translation>Firma digitale SHA1:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.ui" line="335"/>
         <source>MD5-Fingerprint:</source>
-        <translation type="unfinished"></translation>
+        <translation>Firma digitale MD5:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesInfoWidget.py" line="168"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation type="unfinished">&lt;non parte del certificato&gt;</translation>
+        <translation>&lt;non parte del certificato&gt;</translation>
     </message>
 </context>
 <context>
@@ -8649,42 +8665,42 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="131"/>
         <source>SSL Errors</source>
-        <translation type="unfinished">Errori SSL</translation>
+        <translation>Errori SSL</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="131"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Errori SSL per &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Vuoi ignorarli ?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Errori SSL per &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Vuoi ignorarli ?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="146"/>
         <source>Certificates</source>
-        <translation type="unfinished">Certificati</translation>
+        <translation>Certificati</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="146"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Certificati:&lt;br/&gt;{0}&lt;br/&gt;Vuoi accettare tutti questi certificati?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Certificati:&lt;br/&gt;{0}&lt;br/&gt;Vuoi accettare tutti questi certificati?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="206"/>
         <source>Name: {0}</source>
-        <translation type="unfinished">Nome: {0}</translation>
+        <translation>Nome: {0}</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="210"/>
         <source>&lt;br/&gt;Organization: {0}</source>
-        <translation type="unfinished">&lt;br/&gt;Organizzazione: {0}</translation>
+        <translation>&lt;br/&gt;Organizzazione: {0}</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="214"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
-        <translation type="unfinished">&lt;br/&gt;Emettitore: {0}</translation>
+        <translation>&lt;br/&gt;Emettitore: {0}</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="218"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
-        <translation type="unfinished">&lt;br/&gt;Non valido prima: {0}&lt;br/&gt;Valido Fino: {1}</translation>
+        <translation>&lt;br/&gt;Non valido prima: {0}&lt;br/&gt;Valido Fino: {1}</translation>
     </message>
 </context>
 <context>
@@ -8765,61 +8781,65 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="55"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identità</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="65"/>
         <source>Warning: this site is NOT carrying a certificate.</source>
-        <translation type="unfinished"></translation>
+        <translation>Attenzione: questo sito non è portatore di certificato.</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="79"/>
         <source>The certificate for this site is valid and has been verified by:
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Il certificato per questo sito è valido ed è stato verificato da:
+{0}</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="95"/>
         <source>Certificate Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni del certificato</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="110"/>
         <source>Encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>Criptazione</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="121"/>
         <source>Your connection to &quot;{0}&quot; is NOT encrypted.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>La vostra connessione a &quot;{0}&quot; non è criptata.
+</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="130"/>
         <source>Your connection to &quot;{0}&quot; is encrypted.</source>
-        <translation type="unfinished"></translation>
+        <translation>La vostra connessione a &quot;{0}&quot; è criptata.</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="149"/>
         <source>unknown</source>
-        <translation type="unfinished">sconosciuto</translation>
+        <translation>Sconosciuto</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="156"/>
         <source>It uses protocol: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa il protocollo: {0}</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="163"/>
         <source>It is encrypted using {0} at {1} bits, with {2} for message authentication and {3} as key exchange mechanism.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>E&apos; criptato usando {0} a {1} bits, con {2} per l&apos;autenticazione messaggio e {3} come chiave del meccanismo di scambio.
+
+</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslInfoWidget.py" line="86"/>
         <source>The certificate for this site is NOT valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il certificato per questo sito NON è valido.</translation>
     </message>
 </context>
 <context>
@@ -8960,22 +8980,22 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../E5Gui/E5ZoomWidget.ui" line="75"/>
         <source>Zoom out</source>
-        <translation type="unfinished">Riduci</translation>
+        <translation>Riduci</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ZoomWidget.ui" line="103"/>
         <source>Drag to zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Trascina sullo zoom</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ZoomWidget.ui" line="140"/>
         <source>Zoom in</source>
-        <translation type="unfinished">Ingrandisci</translation>
+        <translation>Ingrandisci</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ZoomWidget.ui" line="165"/>
         <source>Zoom reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Restta lo zoom</translation>
     </message>
 </context>
 <context>
@@ -9939,82 +9959,82 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="4344"/>
         <source>Activating Auto-Completion Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Fornitore Autocompletamento in attivazione</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="4344"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il fornitore di autocompletamento non può essere connesso perchè è gia attivo un altro. Per cortesia controlla la configurazione.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="4534"/>
         <source>Activating Calltip Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Fornitore CallTip in attivazione</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="4534"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il fornitore di autocompletamento non può essere connesso perchè è gia attivo un altro. Per cortesia controlla la configurazione.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="746"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri file &apos;rifiuto&apos;</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="855"/>
         <source>Load Diagram...</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica Diagramma...</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="1152"/>
         <source>Next change</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica successiva</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="1155"/>
         <source>Previous change</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica precedente</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="7196"/>
         <source>Sort Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Righe ordinate</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="7196"/>
         <source>The selection contains illegal data for a numerical sort.</source>
-        <translation type="unfinished"></translation>
+        <translation>La selezione contiene dati non validi per un ordinamento numerico.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5620"/>
         <source>Warning</source>
-        <translation type="unfinished">Attenzione</translation>
+        <translation>Attenzione</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5620"/>
         <source>No warning messages available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun messaggio di attenzione disponibile.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5681"/>
         <source>Style: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile: {0}</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="725"/>
         <source>New Document View</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova vista Documento</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="728"/>
         <source>New Document View (with new split)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova vista Documento (con nuova divisione)</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="809"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Strumenti</translation>
     </message>
 </context>
 <context>
@@ -10291,7 +10311,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="40"/>
         <source>Calltips Enabled</source>
-        <translation>Calltips abilitati</translation>
+        <translation>Calltip abilitati</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="56"/>
@@ -10342,7 +10362,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="179"/>
         <source>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by a plug-in (see calltips sub-page of the plug-in) and the plugin-in doesn&apos;t deliver any calltips.</source>
-        <translation>I calltips forniti da QScintilla sono mostrati, se questa opzione è abilitata e i calltips dovrebbero essere forniti da un plug-in (vedi la pagina dei plug-in) e il plug-in non fornisce nessun calltips.</translation>
+        <translation>I calltips forniti da QScintilla sono mostrati, se questa opzione è abilitata e i calltip saranno forniti da un plug-in (vedi la pagina calltip dei plug-in) e il plug-in non fornisce nessun calltip.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="182"/>
@@ -10352,27 +10372,27 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="62"/>
         <source>Visible Calltips</source>
-        <translation type="unfinished"></translation>
+        <translation>Calltip visibili</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="103"/>
         <source>Calltips Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Posizione Calltip</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="109"/>
         <source>Select the position for the calltips</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona la posizione per il Calltip</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.py" line="33"/>
         <source>Below Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo sottostante</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.py" line="36"/>
         <source>Above Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo superiore</translation>
     </message>
 </context>
 <context>
@@ -10848,42 +10868,42 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="58"/>
         <source>Reread automatically when changed externally</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto rilettura in caso di modifiche esterne</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="445"/>
         <source>File Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteprima del file</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="451"/>
         <source>Extensions of HTML files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensioni dei file HTML:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="458"/>
         <source>Enter the filename extensions of HTML files that may be previewed (separated by a space)</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita le estensioni dei nomi file HTML che verranno visti in anteprima (separati da uno spazio)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="465"/>
         <source>Extensions of Markdown files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensioni dei file Markdown:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="472"/>
         <source>Enter the filename extensions of Markdown files that may be previewed (separated by a space)</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita le estensioni dei nomi file Markdown che verranno visti in anteprima (separati da uno spazio)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="479"/>
         <source>Extensions of ReST files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensioni dei file ReSTL:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="486"/>
         <source>Enter the filename extensions of ReStructuredText files that may be previewed (separated by a space)</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita le estensioni dei nomi file ReStructuredTest che verranno visti in anteprima (separati da uno spazio)</translation>
     </message>
 </context>
 <context>
@@ -10946,7 +10966,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="168"/>
         <source>Auto indentation</source>
-        <translation>Identazione automatica</translation>
+        <translation>Indentazione automatica</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="155"/>
@@ -11001,32 +11021,32 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="222"/>
         <source>Virtual Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio Virtuale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="228"/>
         <source>Virtual space is the space after the last character of a line. It is not allocated unless some text is entered or copied into it. Usage of virtual space can be configured with these selections.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo spazio Virtuale è lo spazio dopo l&apos;ultimo carattere della riga. Non viene allocato fintantochè del testo non viene inserito o copiato in esso. L&apos;uso dello Spazio Virtuale può venir configurato da questa selezione.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="238"/>
         <source>Select to enable a rectangular selection to extend into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare una selezione rettangolare ad estendersi nello Spazio Virtuale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="241"/>
         <source>Selection may access virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare lo Spazio Virtuale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="248"/>
         <source>Select to allow the cursor to be moved into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per permette al cursore di muoversi nello Spazio Virtuale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="251"/>
         <source>Cursor can move into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Il cursore può muoversi nello Spazio Virtuale</translation>
     </message>
 </context>
 <context>
@@ -11353,7 +11373,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure lexer properties&lt;/b&gt;</source>
-        <translation>Configura le proprietà dell&apos;analizzatore lessicale&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Configura le proprietà dell&apos;analizzatore lessicale&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="37"/>
@@ -11708,202 +11728,202 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="151"/>
         <source>Select to style preprocessor lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per lo stile del preprocessore</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="154"/>
         <source>Style preprocessor lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile righe del preprocessore</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="347"/>
         <source>Select to enable support for Django templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Selziona per utilizzare il supporto dei modelli Django</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="350"/>
         <source>Enable Django templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita modelli Django</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="357"/>
         <source>Select to enable support for Mako templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Selziona per utilizzare il supporto dei modelli Mako</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="360"/>
         <source>Enable Mako templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita modelli Mako</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="578"/>
         <source>Properties Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà dell&apos;analizzatore lessicale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="584"/>
         <source>Select to allow initial spaces in a line</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per permettere gli spazi iniziali nella riga</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="587"/>
         <source>Allow initial spaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Permetti spazi iniziali</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="623"/>
         <source>Select whether folding of triple quoted strings shall be possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona se deve essere possibile la chiusura stringa tra virgolette triple</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="626"/>
         <source>Fold triple quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Racchiudi stringhe tra virgolette triple</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="663"/>
         <source>Select to allow strings to span newline characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per permettere alle stringhe di unire i caratteri a capo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="666"/>
         <source>Strings may span newline characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Le stringhe possono congiungere i caratteri a capo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="706"/>
         <source>Ruby Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà dell&apos;analizzatore lessicale Ruby</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
         <source>Select whether only BEGIN blocks can be folded</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona se i soli blocchi BEGIN possono essere congiunti</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
         <source>Only BEGIN blocks can be folded</source>
-        <translation type="unfinished"></translation>
+        <translation>Solo i blocchi BEGIN possono venir congiunti</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="771"/>
         <source>Select if words may contain dots</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona se le voci possono contenere punti</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="774"/>
         <source>Words may contain dots</source>
-        <translation type="unfinished"></translation>
+        <translation>Le vosi possono contenere punti</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="781"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per consentire &apos;#&apos; come carattere di commento</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="784"/>
         <source>Allow &apos;#&apos; as comment character</source>
-        <translation type="unfinished"></translation>
+        <translation>Consenti &apos;#&apos; come carattere di commento</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="791"/>
         <source>Select to enable quoted identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare identificatore tra virgolette</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="794"/>
         <source>Enable quoted identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita identificatori tra virgolette</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="804"/>
         <source>TCL Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà dell&apos;analizzatore lessicale TCL</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="823"/>
         <source>TeX Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà dell&apos;analizzatore lessicale TeX</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="839"/>
         <source>Select to treat comments as TeX source</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per gestire i commenti come sorgenti TeX</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="842"/>
         <source>Treat comments as TeX source</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestisci i commenti come sorgenti TeX</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="849"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per gestire \if&lt;unknown&gt; come un comando</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="852"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestisci \if&lt;unknown&gt; come un comando</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="164"/>
         <source>Highlight triple quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Evidenzia stringhe tra virgolette triple</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="646"/>
         <source>Highlight sub-identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Evidenzia sotto-identificatori</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="161"/>
         <source>Select to highlight triple quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per evidenziare stringhe tra virgolette triple</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="643"/>
         <source>Select to highlight sub-identifiers defined in keyword set 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per evidenziare i sotto-identificatori definiti nell&apos;insieme 2 di parole-chiave</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="171"/>
         <source>Select to highlight hash quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per evidenziare stringhe con segno hash</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="174"/>
         <source>Highlight hash quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Evidenzia stringhe con segno hash</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="219"/>
         <source>Select to activate HSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per attivare il supporto HSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="222"/>
         <source>HSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto HSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="229"/>
         <source>Select to activate Less CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per attivare il supporto Less CSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="232"/>
         <source>Less CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto Less CSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="239"/>
         <source>Select to activate Sassy CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per attivare il supporto Sassy CSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="242"/>
         <source>Sassy CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto Sassy CSS</translation>
     </message>
 </context>
 <context>
@@ -12672,7 +12692,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="378"/>
         <source>Foldmarkers foreground:</source>
-        <translation>Foldmarkers foreground:</translation>
+        <translation>Foldmarkers in primo piano:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="391"/>
@@ -12682,7 +12702,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
         <source>Foldmarkers background:</source>
-        <translation>Foldmarkers background:</translation>
+        <translation>Foldmarkers in secondo piano:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="414"/>
@@ -12692,7 +12712,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Fonts and colors of the syntax highlighters have to be configured on the syntax highlighter styles page.</source>
-        <translation>&lt;b&gt;Nota:&lt;/b&gt;Font e colori dell&apos;evidenziatore di sintassi devono essere configurati sulla sua pagina.</translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; Font e colori dell&apos;evidenziatore di sintassi devono essere configurati sulla propria pagina.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1158"/>
@@ -12752,37 +12772,37 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1433"/>
         <source>Whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1451"/>
         <source>Whitespace size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lunghezza spazio:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1458"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona la grandezza dei punti usati per rappresentare la visualizzazione degli spazi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1491"/>
         <source>Whitespace foreground:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio in primo piano:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1504"/>
         <source>Select the foreground colour for visible whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il colore in primo piano per visualizzare gli spazi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1514"/>
         <source>Whitespace background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio in secondo piano:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1527"/>
         <source>Select the background colour for visible whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il colore in secondo piano per visualizzare gli spazi</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
@@ -12792,162 +12812,162 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
         <source>Select to set the colour of the edit area different to the default style</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per settare il colore dell&apos;area di edit diversa dallo stile in difetto</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Override edit area colours</source>
-        <translation type="unfinished"></translation>
+        <translation>Byapssare i colori dell&apos;area di modifica</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
         <source>Edit area foreground:</source>
-        <translation type="unfinished"></translation>
+        <translation>Area di modifica in primo piano:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Select the foreground colour for the edit area.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il colore in primo piano per l&apos;area di modifica.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="95"/>
         <source>Edit area background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Area di modifica in secondo piano:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="111"/>
         <source>Select the background colour for the edit area.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il colore in secondo piano per l&apos;area di modifica.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
         <source>Colours</source>
-        <translation type="unfinished">Colori</translation>
+        <translation>Colori</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1312"/>
         <source>Change Tracing</source>
-        <translation type="unfinished"></translation>
+        <translation>Tracciamento modifiche</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1318"/>
         <source>Select to mark changed lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per evidenziare le righe modificate</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1321"/>
         <source>Mark changed lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna righe modificate</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1330"/>
         <source>Timeout for marking changed lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo oltre il quale segnare le righe modificate:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1337"/>
         <source>Enter the time in milliseconds after which changed lines will be marked</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il tempo in millisecondi trascorso il quale le righe modificate verranno evidenziate</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1349"/>
         <source> ms</source>
-        <translation type="unfinished">ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1382"/>
         <source>Unsaved changes colour:</source>
-        <translation type="unfinished"></translation>
+        <translation>Colore modifiche non salvate:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1395"/>
         <source>Select the colour for the change marker for unsaved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il colore per marcare le modifiche non salvate.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1405"/>
         <source>Saved changes colour:</source>
-        <translation type="unfinished"></translation>
+        <translation>Colore delle modifiche salvate:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1418"/>
         <source>Select the colour for the change marker for saved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il colore per marcare le modifiche salvate.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="911"/>
         <source>Select the wrap mode for long lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il modo di a capo automatico per le righe lunghe</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="931"/>
         <source>Indication:</source>
-        <translation type="unfinished"></translation>
+        <translation>Indicazione:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="938"/>
         <source>Select, how wrapped lines are indicated</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona come evidenziare le righe a capo automatico</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="52"/>
         <source>Word Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite della parola</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="54"/>
         <source>Character Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>limite del carattere</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="56"/>
         <source>No Indicator</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun Indocatore</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="58"/>
         <source>Indicator by Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Indicatore accanto al Testo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="60"/>
         <source>Indicator by Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Indicatore accanto al Margine</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="63"/>
         <source>Indicator in Line Number Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Indicatore nel Margine del numero di riga</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1203"/>
         <source>Warning: There might be an issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Attenzione: Ci potrebbe essere un problema.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1248"/>
         <source>Error: There is an issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore: c&apos;è un&apos;anomalia.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1264"/>
         <source>Style</source>
-        <translation type="unfinished">Stile</translation>
+        <translation>Stile</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1293"/>
         <source>Style: There is a style issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile: c&apos;è un problema di stile.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
         <source>Select, whether the caretline should be highlighted even if the editor doesn&apos;t have the focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona nel caso che la linea di omissione debba essere evidenziata anche se l&apos;editor non ha il focus</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="595"/>
         <source>Caretline always visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea di omissione sempre visibile</translation>
     </message>
 </context>
 <context>
@@ -12955,82 +12975,82 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="55"/>
         <source>Select to enable the online syntax checker</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare il controllo in linea della sintassi </translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="58"/>
         <source>&lt;b&gt;Online Syntax Check&lt;/b&gt;&lt;p&gt;Select this to enable syntax checks while typing. The check is performed, if typing is interrupted for the configured timeout period.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Controllo sintassi continuo&lt;/b&gt;&lt;p&gt;Seleziona per abilitare i controlli di sintassi mentre si digita. Il controllo viene eseguito quando la digitazione è sospesa per il periodo predeterminato.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="61"/>
         <source>Online Syntax Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo di sintassi continuo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="70"/>
         <source>Timeout Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervallo di sospensione:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="77"/>
         <source>Enter the timeout for the online syntax checker</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il periodo di sospensione per il controllo di sintassi continuo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="80"/>
         <source>&lt;b&gt;Timeout Interval&lt;/b&gt;&lt;p&gt;Enter the timeout interval for the online syntax check. The check is performed, if typing is interrupted for the configured timeout period.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Intervallo di sospensione&lt;/b&gt;&lt;p&gt;Digita l&apos;intervallo di sospensione per il controllo di sintassi continuo. Il controllo viene eseguito quando la digitazione è sospesa per il periodo predeterminato.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="46"/>
         <source>Automatic Syntax Check</source>
-        <translation type="unfinished">Controllo sintassi automatico</translation>
+        <translation>Controllo sintassi automatico</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="40"/>
         <source>Select, whether source files should be checked automatically for syntax errors</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona se i programmi sorgenti debbano essere controllati automaticamente per gli errori di sintassi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="43"/>
         <source>&lt;b&gt;Automatic Syntax Check&lt;/b&gt;&lt;p&gt;Select to enable the automatic syntax checker. The syntax is checked, when a file is loaded or saved or the programming language of the editor is selected.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Controllo sintassi automatico&lt;/b&gt;&lt;p&gt;Seleziona per abilitare il controlll di sintassi automatico. La sintassi viene controllata quando il file è caricato o salvato o viene scelto il linguaggio di programmaziome per l&apos;editor.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="89"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="20"/>
         <source>&lt;b&gt;Configure Code Checker settings&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configura i parametri per il controllo di sintassi&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="115"/>
         <source>PyFlakes</source>
-        <translation type="unfinished">PyFlakes</translation>
+        <translation>PyFlakes</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="121"/>
         <source>Select to include a PyFlakes check after the syntax check</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per includere un controllo con PyFlakes dopo il controllo di sintassi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="124"/>
         <source>Include PyFlakes Checks after syntax check</source>
-        <translation type="unfinished"></translation>
+        <translation>Includi il controllo con PyFlakes dopo il controllo di sintassi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="131"/>
         <source>Select to suppress star import warnings</source>
-        <translation type="unfinished">Selezione per eliminare i controlli su import asterisco</translation>
+        <translation>Selezione per eliminare i controlli su import asterisco</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="134"/>
         <source>Suppress star import warnings</source>
-        <translation type="unfinished">Elimina i controlli su import asterisco</translation>
+        <translation>Elimina i controlli su import asterisco</translation>
     </message>
 </context>
 <context>
@@ -13344,7 +13364,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="163"/>
         <source>Enter your mail server username</source>
-        <translation>Inserisci il tuo utente sul mail server</translation>
+        <translation>Inserisci il nome utente utilizzato sul server di posta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
@@ -13354,7 +13374,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="46"/>
         <source>Enter the address of your mail server</source>
-        <translation>Inserisci l&apos;indirizzo del tuo mail server</translation>
+        <translation>Inserisci l&apos;indirizzo del tuo server di posta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="92"/>
@@ -13374,12 +13394,12 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="138"/>
         <source>Select to authenticatate against the mail server</source>
-        <translation>Seleziona per autenticarti sul mail server</translation>
+        <translation>Seleziona per autenticarti sul serverdi posta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
         <source>Mail server needs authentication</source>
-        <translation>Il mail server richiede l&apos;autenticazione</translation>
+        <translation>Il server di posta richiede l&apos;autenticazione</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="153"/>
@@ -13409,42 +13429,42 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="60"/>
         <source>Enter the port of the mail server</source>
-        <translation>Inserisci la porta del mail server</translation>
+        <translation>Inserisci la porta del server di posta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="39"/>
         <source>Outgoing mail server (SMTP):</source>
-        <translation>Mail server in uscita (SMTP):</translation>
+        <translation>Server di posta in uscita (SMTP):</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="53"/>
         <source>Outgoing mail server port:</source>
-        <translation>Porta mail server in uscita:</translation>
+        <translation>Porta server di posta in uscita:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="193"/>
         <source>Press to test the login data</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per testare i dati di accesso</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.ui" line="196"/>
         <source>Test Login</source>
-        <translation type="unfinished"></translation>
+        <translation>Testa l&apos;accesso</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.py" line="172"/>
         <source>Login Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo accesso</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.py" line="135"/>
         <source>The login test succeeded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il controllo d&apos;accesso è corretto.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EmailPage.py" line="172"/>
         <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Il controllo accesso è fallito.&lt;br&gt;Motivo: {0}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -13452,67 +13472,67 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="87"/>
         <source>Speed Dial</source>
-        <translation type="unfinished">Velocità di commutazione</translation>
+        <translation>Selezione rapida</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="88"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="89"/>
         <source>Title</source>
-        <translation type="unfinished">Titolo</translation>
+        <translation>Titolo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="90"/>
         <source>Apply</source>
-        <translation type="unfinished">Applica</translation>
+        <translation>Applica</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="91"/>
         <source>New Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova Pagina</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="92"/>
         <source>Edit</source>
-        <translation type="unfinished">Modifica</translation>
+        <translation>Modifica</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="93"/>
         <source>Remove</source>
-        <translation type="unfinished">Rimuovi</translation>
+        <translation>Rimuovi</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="94"/>
         <source>Reload</source>
-        <translation type="unfinished">Ricarica</translation>
+        <translation>Ricarica</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="95"/>
         <source>Load title from page</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica il titolo dalla pagine</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="97"/>
         <source>Speed Dial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Parametri Selezione Rapida</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="99"/>
         <source>Add New Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi una nuova pagina</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="100"/>
         <source>Maximum pages in a row:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagine al massimo in una riga:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="102"/>
         <source>Change size of pages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica lunghezza delle pagine:</translation>
     </message>
 </context>
 <context>
@@ -13729,22 +13749,22 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="96"/>
         <source>Generate API file (eric5_api)</source>
-        <translation type="unfinished"></translation>
+        <translation>Genera file API (eric5_api)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="96"/>
         <source>Generate &amp;API file (eric5_api)</source>
-        <translation type="unfinished"></translation>
+        <translation>Genera file &amp;API (eric5_api)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="100"/>
         <source>Generate an API file using eric5_api</source>
-        <translation type="unfinished"></translation>
+        <translation>Genera un file API usando eric5_api</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="102"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Genera file API&lt;/b&gt;&lt;p&gt;Genera un file API usando eric5_api.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -14156,27 +14176,27 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5_doc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Genera documentazione (eric5_doc)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5_doc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Genera &amp;documentazione (eric5_doc)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="135"/>
         <source>Generate API documentation using eric5_doc</source>
-        <translation type="unfinished"></translation>
+        <translation>Genera la documentazione delle API usando eric5_doc</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="137"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Genera documentazione&lt;/b&gt;&lt;p&gt;Genera la documentazione delle API usando eric5_doc.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="87"/>
         <source>Qt Help Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Strumenti di aiuto QT </translation>
     </message>
 </context>
 <context>
@@ -14184,57 +14204,57 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="14"/>
         <source>Error Log Found</source>
-        <translation type="unfinished"></translation>
+        <translation>Trovato file di segnalazione di errori</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="34"/>
         <source>&lt;b&gt;An error log file was found. What should be done with it?&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;E&apos; stato trovato un file di segnalazione di errori. Cosa si deve fare con esso?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="52"/>
         <source>Press to send an email</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per spedire una email</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="55"/>
         <source>Send Bug Email</source>
-        <translation type="unfinished">Manda una segnalazione di bug via EMail</translation>
+        <translation>Manda una segnalazione di bug via EMail</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="65"/>
         <source>Press to ignore the error and delete the log file</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per ignorare l&apos;errore e cancellare il file di segnalazione</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="68"/>
         <source>Ignore and Delete</source>
-        <translation type="unfinished">Ignora e cancella</translation>
+        <translation>Ignora e cancella</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="75"/>
         <source>Press to ignore the error but keep the log file</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per ignorare l&apos;errore ma mantenere il file di segnalazione</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.ui" line="78"/>
         <source>Ignore but Keep</source>
-        <translation type="unfinished">Ignora ma tieni</translation>
+        <translation>Ignora ma tieni</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="41"/>
         <source>Delete</source>
-        <translation type="unfinished">Cancella</translation>
+        <translation>Cancella</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="42"/>
         <source>Close</source>
-        <translation type="unfinished">Chiudi</translation>
+        <translation>Chiudi</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="43"/>
         <source>Error Log</source>
-        <translation type="unfinished">Log Errori</translation>
+        <translation>Segnalazione Errori</translation>
     </message>
 </context>
 <context>
@@ -14486,32 +14506,32 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="14"/>
         <source>Edit Feed Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica dati Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="25"/>
         <source>Fill title and URL of a feed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserimento titolo e URL di un Feed:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="32"/>
         <source>Feed title:</source>
-        <translation type="unfinished"></translation>
+        <translation>Titolo Feed:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="39"/>
         <source>Enter the title of the feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il titolo del Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="46"/>
         <source>Feed URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL del Feed:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="53"/>
         <source>Enter the URL of the feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita l&apos;URL del Feed</translation>
     </message>
 </context>
 <context>
@@ -14519,32 +14539,32 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Helpviewer/Feeds/FeedsDialog.ui" line="14"/>
         <source>Add Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsDialog.ui" line="38"/>
         <source>Add Feeds from this site</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi Feed da questo sito</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsDialog.py" line="44"/>
         <source>Add</source>
-        <translation type="unfinished">Aggiungi</translation>
+        <translation>Aggiungi</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsDialog.py" line="91"/>
         <source>Add RSS Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi Feed RSS</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsDialog.py" line="86"/>
         <source>The feed was added successfully.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il Feed è stato aggiunto correttamente.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsDialog.py" line="91"/>
         <source>The feed was already added before.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il Feed era già stato aggiunto in precedenza.</translation>
     </message>
 </context>
 <context>
@@ -14552,102 +14572,102 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="14"/>
         <source>Feeds Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestore Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="36"/>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>Novità</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="46"/>
         <source>Press to reload all feeds</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per ricaricare tutto i Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="49"/>
         <source>Reload &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica &amp;Tutti</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="59"/>
         <source>Press to reload the selected feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per ricaricare i feed selezionati</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="62"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished">&amp;Ricarica</translation>
+        <translation>&amp;Ricarica</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="72"/>
         <source>Press to edit the selected feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per modificare i Feed selezionati</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="75"/>
         <source>&amp;Edit Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Modifica flusso</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="85"/>
         <source>Press to delete the selected feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per cancellare i Feed selezionati</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.ui" line="88"/>
         <source>&amp;Delete Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancella Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="175"/>
         <source>Duplicate Feed URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplica Feed URL</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="175"/>
         <source>A feed with the URL {0} exists already. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Un Feed con URL &lt;b&gt;{0}&lt;/b&gt; esiste già. Interrotto...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="197"/>
         <source>Delete Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="197"/>
         <source>&lt;p&gt;Do you really want to delete the feed &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Vuoi veramente cancellare il Feed &lt;b&gt;&quot;{0}&quot;&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="310"/>
         <source>Error fetching feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel riportare il Feed</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="341"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">&amp;Apri</translation>
+        <translation>&amp;Apri</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="343"/>
         <source>Open in New &amp;Tab</source>
-        <translation type="unfinished">Apri in una nuova linguet&amp;ta</translation>
+        <translation>Apri in in una nuova &amp;Scheda</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="346"/>
         <source>&amp;Copy URL to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia &amp;URL nella Clipboard</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="353"/>
         <source>&amp;Show error data</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Visualizza errore</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Feeds/FeedsManager.py" line="432"/>
         <source>Error loading feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel caricare il Feed</translation>
     </message>
 </context>
 <context>
@@ -14660,7 +14680,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/fetch.py" line="58"/>
         <source>Fetching from a remote Mercurial repository</source>
-        <translation>Recupero da un archivioMercurial remoto</translation>
+        <translation>Recupero da un repository Mercurial remoto</translation>
     </message>
 </context>
 <context>
@@ -14668,27 +14688,27 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="34"/>
         <source>Fetch changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Recupero modifiche</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="39"/>
         <source>Fetch changes from a remote repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Recupero modifiche da un repository remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="42"/>
         <source>&lt;b&gt;Fetch changes&lt;/b&gt;&lt;p&gt;This pulls changes from a remote repository into the local repository. If the pulled changes add a new branch head, the head is automatically merged, and the result of the merge is committed. Otherwise, the working directory is updated to include the new changes.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Recupero modifiche&lt;/b&gt;&lt;p&gt;Recupra le modifiche da un repository remoto in quello locale. Se le modifiche recuperate aggiungono un nuovo ramo, il ramo è automaticamente inserito, e l&apos;inserimento viene consolidato. Altrimenti la cartella di lavoro viene aggiornata per includere i nuovi cambiamenti.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="91"/>
         <source>Fetch</source>
-        <translation type="unfinished"></translation>
+        <translation>Recupero</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="91"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">Il progetto deve essere riletto. Farlo ora ?</translation>
+        <translation>Il progetto deve essere riletto. Farlo ora ?</translation>
     </message>
 </context>
 <context>
@@ -14899,7 +14919,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="25"/>
         <source>PyQt Variant:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variante PyQt:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
@@ -14909,77 +14929,77 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="173"/>
         <source>Enter the title text</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il testo del titolo</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="195"/>
         <source>Parent</source>
-        <translation type="unfinished">Genitore</translation>
+        <translation>Genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="201"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+        <translation>Seleziona &quot;self&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="204"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="214"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+        <translation>Seleziona &quot;None&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="217"/>
         <source>None</source>
-        <translation type="unfinished">Nessuno</translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="226"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+        <translation>Seleziona per inserire un genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="229"/>
         <source>Expression:</source>
-        <translation type="unfinished">Espressione:</translation>
+        <translation>Espressione:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="239"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Inserisci il genitore</translation>
+        <translation>Inserisci il genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="305"/>
         <source>Initial Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro iniziale</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="312"/>
         <source>Enter the initial filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il filtro iniziale</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
         <source>Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Risultati</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="141"/>
         <source>Name Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome Variabile:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="151"/>
         <source>Filter Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro Variabile:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="166"/>
         <source>Title:</source>
-        <translation type="unfinished">Titolo:</translation>
+        <translation>Titolo:</translation>
     </message>
 </context>
 <context>
@@ -14987,25 +15007,25 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Helpviewer/Network/FileReply.py" line="210"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Cambia alla directory superiore&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Cambia alla directory superiore&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/FileReply.py" line="224"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
-        <translation type="unfinished">    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Nome&lt;/th&gt;&lt;th&gt;Dimensione&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Ultima modifica&lt;/th&gt;&lt;/tr&gt;
+        <translation>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Nome&lt;/th&gt;&lt;th&gt;Dimensione&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Ultima modifica&lt;/th&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/FileReply.py" line="250"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
-        <translation type="unfinished">{0} {1}</translation>
+        <translation>{0} {1}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/FileReply.py" line="275"/>
         <source>Listing of {0}</source>
-        <translation type="unfinished">Elenco di {0}</translation>
+        <translation>Elenco di {0}</translation>
     </message>
 </context>
 <context>
@@ -15482,33 +15502,34 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="41"/>
         <source>Mozilla Firefox stores its bookmarks in the &lt;b&gt;places.sqlite&lt;/b&gt; SQLite database. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Mozilla Firefox registra i suoi segnalibri nel file di basedati SQLite &lt;b&gt;places.sqlite&lt;/b&gt;. Questo file si trova normalmente in</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="41"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per cortesia scegli il file da cui iniziare ad importare i segnalibri.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="92"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file {0} non esiste.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="170"/>
         <source>Unable to open database.
 Reason: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Non posso aprire la base dati.
+Motivo: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="176"/>
         <source>Mozilla Firefox Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importazione Mozilla Firefox</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="178"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importato {0}</translation>
+        <translation>Importato {0}</translation>
     </message>
 </context>
 <context>
@@ -15574,67 +15595,67 @@ Reason: {0}</source>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="23"/>
         <source>Result:</source>
-        <translation type="unfinished">Risultato:</translation>
+        <translation>Risultato:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="30"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished">inserisci il nome della variabile risultato</translation>
+        <translation>inserisci il nome della variabile risultato</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="153"/>
         <source>Font Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variabile del Font:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="37"/>
         <source>Title:</source>
-        <translation type="unfinished">Titolo:</translation>
+        <translation>Titolo:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="44"/>
         <source>Enter the title for the message box</source>
-        <translation type="unfinished">Inserisci il titolo del message box</translation>
+        <translation>Inserisci il titolo della casella dei messaggi</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="51"/>
         <source>Parent</source>
-        <translation type="unfinished">Genitore</translation>
+        <translation>Genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="57"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+        <translation>Seleziona &quot;self&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="60"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="70"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+        <translation>Seleziona &quot;None&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="73"/>
         <source>None</source>
-        <translation type="unfinished">Nessuno</translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="82"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+        <translation>Seleziona per inserire un genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="85"/>
         <source>Expression:</source>
-        <translation type="unfinished">Espressione:</translation>
+        <translation>Espressione:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="95"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Inserisci il genitore</translation>
+        <translation>Inserisci il genitore</translation>
     </message>
 </context>
 <context>
@@ -15676,12 +15697,13 @@ Reason: {0}</source>
         <location filename="../Helpviewer/Network/FtpReply.py" line="270"/>
         <source>The proxy type seems to be wrong. If it is not in the list of supported proxy types please report it with the instructions given by the proxy.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Il tipo Proxy sembra sia errato. Se non si trova nella lista dei tipi di Proxy supportati, per cortesia riportarlo con le istruzioni date dal Proxy stesso.
+{0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/FtpReply.py" line="284"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Connetti al proxy &apos;{0}&apos; usando:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Connetti al proxy &apos;{0}&apos; usando:&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -15737,7 +15759,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/gpg.py" line="86"/>
         <source>Verify Signatures</source>
-        <translation>Firma Verify</translation>
+        <translation>Verifica firma</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/gpg.py" line="133"/>
@@ -15750,57 +15772,57 @@ Reason: {0}</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="33"/>
         <source>List Signed Changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista modifiche firmate</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="33"/>
         <source>List Signed Changesets...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista modifiche firmate...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="38"/>
         <source>List signed changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista modifiche firmate</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="41"/>
         <source>&lt;b&gt;List Signed Changesets&lt;/b&gt;&lt;p&gt;This opens a dialog listing all signed changesets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista modifiche firma digitale&lt;/b&gt;&lt;p&gt;Apre un dialogo che lista tutte le modifiche della firma digitale&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="48"/>
         <source>Verify Signatures</source>
-        <translation type="unfinished">Firma Verify</translation>
+        <translation>Verifica firma digitale</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="53"/>
         <source>Verify all signatures there may be for a particular revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Verifica tutte le firme in essere per una particolare revisione</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="56"/>
         <source>&lt;b&gt;Verify Signatures&lt;/b&gt;&lt;p&gt;This verifies all signatures there may be for a particular revision.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Verifica firme&lt;/b&gt;&lt;p&gt;Verifica tutte le firme in essere per una particolare revisione&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="64"/>
         <source>Sign Revision</source>
-        <translation type="unfinished">Revisione Firma</translation>
+        <translation>Revisione Firma</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="69"/>
         <source>Add a signature for a selected revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Affiungi una firma per la revisione selezionata</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="72"/>
         <source>&lt;b&gt;Sign Revision&lt;/b&gt;&lt;p&gt;This adds a signature for a selected revision.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Revisione firma&lt;/b&gt;&lt;p&gt;Aggiunge una firma per una revisione selezionata.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="102"/>
         <source>GPG</source>
-        <translation type="unfinished"></translation>
+        <translation>GPG</translation>
     </message>
 </context>
 <context>
@@ -15826,57 +15848,57 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py" line="103"/>
         <source>GreaseMonkey Script Installation</source>
-        <translation type="unfinished"></translation>
+        <translation>Installazione script GreaseMonkey</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui" line="51"/>
         <source>&lt;h2&gt;GreaseMonkey Script Installation&lt;/h2&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Installazione script GreaseMonkey&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui" line="73"/>
         <source>You are about to install this userscript into GreaseMonkey:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai per installare questo script utente in GreaseMonkey:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui" line="86"/>
         <source>&lt;b&gt;You should only install scripts from sources you trust!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Dovresti installare scripts da siti di cui si è sicuri!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui" line="96"/>
         <source>Are you sure you want to install it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sei sicuro di volerlo installare?</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui" line="114"/>
         <source>Press to open an editor with the script&apos;s source</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi il tasto per aprire un editor con il sorgente dello script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui" line="117"/>
         <source>Show source code of script</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza il codice sorgente dello script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py" line="54"/>
         <source>&lt;p&gt;runs at:&lt;br/&gt;&lt;i&gt;{0}&lt;/i&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Esegue a:&lt;br/&gt;&lt;i&gt;{0}&lt;/i&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py" line="58"/>
         <source>&lt;p&gt;does not run at:&lt;br/&gt;&lt;i&gt;{0}&lt;/i&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Non esegue a:&lt;br/&gt;&lt;i&gt;{0}&lt;/i&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py" line="88"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; installed successfully.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; installato correttamente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py" line="93"/>
         <source>&lt;p&gt;Cannot install script.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Non posso installare lo script&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15884,42 +15906,42 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="14"/>
         <source>GreaseMonkey Scripts Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurazione degli script GreaseMonkey</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="51"/>
         <source>&lt;h2&gt;GreaseMonkey Scripts&lt;/h2&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Script GreaseMonkey&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="123"/>
         <source>Press to open the scripts directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi il tasto per aprire la cartella degli script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="126"/>
         <source>Open Scripts Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri la cartella degli script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="146"/>
         <source>Remove Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella Script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="146"/>
         <source>&lt;p&gt;Are you sure you want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Vuoi veramente rimuovere &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="73"/>
         <source>Double clicking script will show additional information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Doppio click sullo scirpt visualizza informazioni aggiuntive.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="99"/>
         <source>&lt;p&gt;Get more scripts from &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Aggiungi altri script da &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15927,57 +15949,57 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="48"/>
         <source>&lt;h2&gt;GreaseMonkey Script Details&lt;/h2&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Dettagli degli script GreaseMonkey&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="72"/>
         <source>Name:</source>
-        <translation type="unfinished">Nome:</translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="89"/>
         <source>Version:</source>
-        <translation type="unfinished">Versione:</translation>
+        <translation>Versione:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="106"/>
         <source>URL:</source>
-        <translation type="unfinished">URL:</translation>
+        <translation>URL:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="123"/>
         <source>Start at:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inizia a:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="140"/>
         <source>Description:</source>
-        <translation type="unfinished">Descrizione:</translation>
+        <translation>Descrizione:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="153"/>
         <source>Runs at:</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegue a:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="166"/>
         <source>Does not run at:</source>
-        <translation type="unfinished"></translation>
+        <translation>Non esegue a:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="183"/>
         <source>Press to open an editor with the script&apos;s source</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi il tasto per aprire un editor con il sorgente dello script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="186"/>
         <source>Show source code of script</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza il codice sorgente dello script</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.py" line="41"/>
         <source>Script Details of {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Dettagli dello script {0}</translation>
     </message>
 </context>
 <context>
@@ -16108,30 +16130,30 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="192"/>
         <source>Tabs</source>
-        <translation type="unfinished">Schede</translation>
+        <translation>Schede</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="198"/>
         <source>Show only one close button instead of one for each tab</source>
-        <translation type="unfinished">Mostra solo un pulsante di chiusura invece di uno per ogni linguetta</translation>
+        <translation>Mostra solo un pulsante di chiusura invece di uno per ogni linguetta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>Warn, if multiple tabs are about to be closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Attenzione, se schede multiple stanno per essere chiuse</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="205"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per emettere un&apos;attenzione, se schede multiple stanno per essere chiuse</translation>
     </message>
 </context>
 <context>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Apri link in una Nuova Scheda<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Apri link in una Nuova Scheda	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="655"/>
@@ -16316,157 +16338,157 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1105"/>
         <source>Scan Link with VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Scansiona il collegamento con VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1138"/>
         <source>Scan Image with VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Scansiona l&apos;immagine con VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2408"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Web Browser di eric5</translation>
+        <translation>Navigatore Web di eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1099"/>
         <source>Send Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Invia il collegamento</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1127"/>
         <source>Send Image Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Invia il collegamento dell&apos;immagine</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1223"/>
         <source>This Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa cornice</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1226"/>
         <source>Show &amp;only this frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza s&amp;olo questa cornice</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1229"/>
         <source>Show in new &amp;tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza in una nuova &amp;Scheda</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1234"/>
         <source>&amp;Print</source>
-        <translation type="unfinished">Stam&amp;pa</translation>
+        <translation>Stam&amp;pa</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1237"/>
         <source>Print Preview</source>
-        <translation type="unfinished">Anteprima Stampa</translation>
+        <translation>Anteprima Stampa</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1240"/>
         <source>Print as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Stampa come PDF</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1244"/>
         <source>Zoom &amp;in</source>
-        <translation type="unfinished">Ingrand&amp;isci</translation>
+        <translation>&amp;Ingrandisci</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1247"/>
         <source>Zoom &amp;reset</source>
-        <translation type="unfinished">&amp;Reset zoom</translation>
+        <translation>&amp;Resetta zoom</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1250"/>
         <source>Zoom &amp;out</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimpicci&amp;olisci</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1254"/>
         <source>Show frame so&amp;urce</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza cornice sorge&amp;nte</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1264"/>
         <source>Send Page Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Invia collegamento pagina</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1282"/>
         <source>Send Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Invia testo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1314"/>
         <source>Google Translate</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduttore Google</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1321"/>
         <source>Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizionario</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1329"/>
         <source>Go to web address</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai all&apos;indirizzo di rete</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2376"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1268"/>
         <source>User Agent</source>
-        <translation type="unfinished">User Agent</translation>
+        <translation>User Agent</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1984"/>
         <source>Try Again</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritenta</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1156"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Riproduci</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1160"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1164"/>
         <source>Unmute</source>
-        <translation type="unfinished"></translation>
+        <translation>Parlante</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1168"/>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Muto</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1172"/>
         <source>Copy Media Address to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia l&apos;indirizzo del Media nella Clipboard</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1176"/>
         <source>Send Media Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Invia indirizzo del Media</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1180"/>
         <source>Save Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva Media</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2408"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16494,7 +16516,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="94"/>
         <source>&amp;Search History</source>
-        <translation>Cronologia &amp;Richerche</translation>
+        <translation>Cronologia &amp;Ricerche</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="143"/>
@@ -16544,7 +16566,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="172"/>
         <source>Web &amp;Databases</source>
-        <translation>Web &amp;Databases</translation>
+        <translation>Base &amp;Dati Web</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="104"/>
@@ -16559,47 +16581,47 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="57"/>
         <source>Select the history period to be deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il periodo della cronologia da cancellare</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="61"/>
         <source>Last Hour</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima ora</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="66"/>
         <source>Last Day</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultimo giorno</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="71"/>
         <source>Last Week</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima settimana</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="76"/>
         <source>Last 4 Weeks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultime 4 settimane</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="81"/>
         <source>Whole Period</source>
-        <translation type="unfinished"></translation>
+        <translation>Intero periodo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="186"/>
         <source>Select to clear cookies set by the Adobe Flash Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per cancellare i cookies inseriti da Adobe Flash Player</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="107"/>
         <source>Download &amp;History</source>
-        <translation type="unfinished"></translation>
+        <translation>Scarica cronolo&amp;gia</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpClearPrivateDataDialog.ui" line="189"/>
         <source>Cookies from Adobe &amp;Flash Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookies da Adobe &amp;Flash Player</translation>
     </message>
 </context>
 <context>
@@ -16836,32 +16858,32 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="17"/>
         <source>&lt;b&gt;Configure User Interface&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Configura l&apos;interfaccia utente&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Configura l&apos;interfaccia utente&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="39"/>
         <source>Style:</source>
-        <translation type="unfinished">Stile:</translation>
+        <translation>Stile:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="46"/>
         <source>Select the interface style</source>
-        <translation type="unfinished">Seleziona lo stile dell&apos;interfaccia</translation>
+        <translation>Seleziona lo stile dell&apos;interfaccia</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="53"/>
         <source>Style Sheet:</source>
-        <translation type="unfinished">Fogli di stile:</translation>
+        <translation>Fogli di stile:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="60"/>
         <source>Enter the name of the style sheet file</source>
-        <translation type="unfinished">Inserisci il nome del foglio di stile</translation>
+        <translation>Inserisci il nome del foglio di stile</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="67"/>
         <source>Select the style sheet file via a file selection dialog</source>
-        <translation type="unfinished">Seleziona il file di stile con un dialogo di selezione</translation>
+        <translation>Seleziona il file di stile con una finestra di dialogo file</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="70"/>
@@ -16871,17 +16893,17 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="60"/>
         <source>System</source>
-        <translation type="unfinished">Sistema</translation>
+        <translation>Sistema</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="73"/>
         <source>Select style sheet file</source>
-        <translation type="unfinished">Seleziona il foglio di stile</translation>
+        <translation>Seleziona il foglio di stile</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="73"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
-        <translation type="unfinished">Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;Tutti i file (*)</translation>
+        <translation>foglii di stile Qt  (*.qss);;fogli di stile a cascata (*.css);;Tutti i file (*)</translation>
     </message>
 </context>
 <context>
@@ -17066,37 +17088,37 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="639"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Web Browser di eric5</translation>
+        <translation>Navigatore web di eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="108"/>
         <source>Show a navigation menu for closed tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra un menù di navigazione per le schede chiuse</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="192"/>
         <source>Reload All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica tutto</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="199"/>
         <source>Restore Closed Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica scheda chiusa</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="975"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica tutte le schede chiuse</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="977"/>
         <source>Clear List</source>
-        <translation type="unfinished">Pulisci lista</translation>
+        <translation>Pulisci lista</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="586"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17135,7 +17157,7 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="37"/>
         <source>Help Viewer</source>
-        <translation>Visualizzatore Help</translation>
+        <translation>Visualizzatore dell&apos;Aiuto</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="48"/>
@@ -17160,7 +17182,7 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
         <source>Custom</source>
-        <translation>Custom</translation>
+        <translation>Personalizzato</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="77"/>
@@ -17215,17 +17237,17 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
         <source>Eric Web Browser</source>
-        <translation>Web Browser di Eric</translation>
+        <translation>Navigatore Web di Eric</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="100"/>
         <source>Select to use the configured web browser of the system</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per usare il navigatore del sistema</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
         <source>System Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigatore Web di sistema</translation>
     </message>
 </context>
 <context>
@@ -17233,62 +17255,62 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="20"/>
         <source>&lt;b&gt;Configure VirusTotal Interface&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configura interfaccia VirusTotal&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="40"/>
         <source>Select to enable the VirusTotal interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare l&apos;interfaccia VirusTotal</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="43"/>
         <source>Enable VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita VirusTotal</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="50"/>
         <source>Service Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Servizio Chiavi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="56"/>
         <source>Enter your personal VirusTotal service key (s. &lt;a href=&quot;http://virustotal.com&quot;&gt;VirusTotal &amp;copy;&lt;/a&gt; for details):</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il tuo servizio chiavi personali VirusTotal (s. &lt;a href=&quot;http://virustotal.com&quot;&gt;VirusTotal &amp;copy;&lt;/a&gt; per dettagli):</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="107"/>
         <source>Test Service Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Testa il Servizio Chiavi</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="132"/>
         <source>Select to use secure (https) connections</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per usare connessioni (https) sicure</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="135"/>
         <source>Use secure (https) connections</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa connessioni (https) sicure</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="76"/>
         <source>Checking validity of the service key...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlla la validità del Servizio Chiavi...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="94"/>
         <source>The service key is valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il Servizio Chiavi è valido.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="98"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;The service key is not valid.&lt;/font&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;font color=&quot;#FF0000&quot;&gt;Il Servizio Chiavi non è valido.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="102"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Errore:&lt;/b&gt; {0}&lt;/font&gt;</translation>
     </message>
 </context>
 <context>
@@ -17551,7 +17573,7 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="376"/>
         <source>Security</source>
-        <translation type="unfinished">Sicurezza</translation>
+        <translation>Sicurezza</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="271"/>
@@ -17621,155 +17643,156 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
         <source>Select to enable support for access keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare il support per le chiavi di accesso</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="679"/>
         <source>Enable access keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita chiavi di accesso</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="584"/>
         <source>Web Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricerca Web</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
         <source>Language:</source>
-        <translation type="unfinished">Linguaggio:</translation>
+        <translation>Linguaggio:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
         <source>Select the language to be used for web searches</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il linguaggio utile per ricerche web</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="326"/>
         <source>Select to enabled the &quot;Do Not Track&quot; feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare la possibilità &quot;Do Not Track&quot;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="329"/>
         <source>Tell web sites I do not want to be tracked</source>
-        <translation type="unfinished"></translation>
+        <translation>Indica i siti web da non tracciare</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="79"/>
         <source>Select to enable the browser&apos;s workaround for broken sites</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare la soluzione del navigatore per i siti interrotti</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="82"/>
         <source>Enable workaround for broken sites</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita soluzione per siti interrorri</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
         <source>Select to enable XSS auditing</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare certificazione XSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="389"/>
         <source>Enable XSS Auditing</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita certificazione XSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigazione</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
         <source>Select to enable the spatial navigation feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per abilitare la caratteristica della navigazione spaziale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="651"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Abilita navigazione spaziale&lt;/b&gt;&lt;p&gt;Abilia o disabilita la  Navigazione Spaziale, che consiste nella possibilità di navigare tra gli elementi con caratteristiche di fuoco, come hyperlink o moduli, utilizzando le tasti freccia di spostamento su,giù, destra e sinistra. Per esempio premendo la freccia destra, le ricerche determineranno se ci sia un elemento che possa essere raggiunto verso destra e quale elemento probabilmente lo sia.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
         <source>Enable Spatial Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita la Navigazione Spaziale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
         <source>Select to include links in focus chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per includere i collegamenti nel concatenamento dei focus</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="665"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Includi i collegamenti nel concatenamento del focus&lt;/b&gt;
+&lt;p&gt;Seleziona nel caso che si voglia includere gli hyperlink nel concatenamento del focus tastiera.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
         <source>Include Links in Focus Chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Includi i collegamenti nel concatenamento dei focus</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="385"/>
         <source>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
 &lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector&apos;s JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Abilita certificazione XSS&lt;/b&gt;&lt;p&gt;Seleziona nel caso che richieste di carico debbano essere monitorate per tentativi di iniezione di codice. Codici sospetti saranno bloccati. Ciò sarà riportato nella console Javascript di Web Inspector. L&apos;abilitazione di questa possibilità può avere un impatto sulle prestazioni.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="294"/>
         <source>Select to activate the Flash blocker</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per attivare il bloccatore Flash</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="297"/>
         <source>Use ClickToFlash on Flash plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa ClickToFlash nei plug-in Flash</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="338"/>
         <source>Select to send referer headers to the server</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per inviare testate di riferimento ai server</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="341"/>
         <source>Send Referer header to servers</source>
-        <translation type="unfinished"></translation>
+        <translation>Invia testate di riferimento ai server</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="108"/>
         <source>Show Home Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza Home Page</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="113"/>
         <source>Show Speed Dial</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza Selezione Rapida</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="118"/>
         <source>Show Empty Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza pagina vuota</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
         <source>Press to edit the list of whitelisted hosts</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi il tasto per modificare la lista degli host privilegiati</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
         <source>Edit Referer Whitelist ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica lista privilegiata di riferimento...</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
         <source>Press to edit the list of hosts exempted from caching</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi il tasto per modificare la lista degli host da non memorizzare nella cache</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
         <source>Edit Exempted Hosts ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica host esentati...</translation>
     </message>
 </context>
 <context>
@@ -17827,32 +17850,32 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="382"/>
         <source>Try Again</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritenta</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="318"/>
         <source>Content blocked by AdBlock Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Contenuto bloccato da AdBlock Plus</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>Blocked by rule: &lt;i&gt;{0}&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloccato dalla regola: &lt;i&gt;{0}&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="287"/>
         <source>Select files to upload...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona i file da caricare...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="547"/>
         <source>SSL Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni SSL</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="547"/>
         <source>This site does not contain SSL information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo sito non contiene informazioni SSL.</translation>
     </message>
 </context>
 <context>
@@ -20202,7 +20225,7 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
         <source>Type:</source>
-        <translation type="unfinished">Tipo:</translation>
+        <translation>Tipo:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="44"/>
@@ -20405,7 +20428,7 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="216"/>
         <source>Commit Date:</source>
-        <translation>Data della commit:</translation>
+        <translation>Data del commit:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="223"/>
@@ -20415,7 +20438,7 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="236"/>
         <source>Commit User:</source>
-        <translation>Utente della commit:</translation>
+        <translation>Utente del commit:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="243"/>
@@ -20440,17 +20463,17 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per specificare una revisione tramite segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation>Segnalibro:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita un nome per il segnalibro</translation>
     </message>
 </context>
 <context>
@@ -21449,7 +21472,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="23"/>
         <source>Commit Message</source>
-        <translation type="unfinished">Messaggio di commit</translation>
+        <translation>Messaggio di commit</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="29"/>
@@ -21459,12 +21482,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="39"/>
         <source>Recent commit messages</source>
-        <translation type="unfinished">Messagi di commit recenti</translation>
+        <translation>Messagi di commit recenti</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="46"/>
         <source>Select a recent commit message to use</source>
-        <translation type="unfinished">Seleziona un messaggio di commit recete da usare</translation>
+        <translation>Seleziona un messaggio di commit recete da usare</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="56"/>
@@ -21635,7 +21658,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="312"/>
         <source>Revision</source>
-        <translation type="unfinished">Revisione</translation>
+        <translation>Revisione</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="60"/>
@@ -21645,7 +21668,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="68"/>
         <source>Enter the regular expression to filter on</source>
-        <translation type="unfinished">Inserisci l&apos;espressione regolare su cui filtrare</translation>
+        <translation>Inserisci l&apos;espressione regolare su cui filtrare</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="106"/>
@@ -21660,7 +21683,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="137"/>
         <source>Errors</source>
-        <translation type="unfinished">Errori</translation>
+        <translation>Errori</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="143"/>
@@ -21670,52 +21693,52 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="159"/>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation>Input</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="181"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished">Premi per spedire l&apos;input al processo hg</translation>
+        <translation>Premi per spedire l&apos;input al processo hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="184"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Spedisci</translation>
+        <translation>&amp;Spedisci</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="187"/>
         <source>Alt+S</source>
-        <translation type="unfinished">Alt+S</translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="194"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished">Inserisci i dati da inviare al processo hg</translation>
+        <translation>Inserisci i dati da inviare al processo hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="201"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Seleziona per impostare il campo di input in modalità password</translation>
+        <translation>Seleziona per impostare il campo di input in modalità password</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="204"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">Modo &amp;Password</translation>
+        <translation>Modo &amp;Password</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="207"/>
         <source>Alt+P</source>
-        <translation type="unfinished">Alt+P</translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="113"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Errore Generazione Processo</translation>
+        <translation>Errore Generazione Processo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="113"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
+        <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="148"/>
@@ -22950,32 +22973,32 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="623"/>
         <source>Conflict resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflitto risolto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="510"/>
         <source>Copy</source>
-        <translation type="unfinished">Copia</translation>
+        <translation>Copia</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="512"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="311"/>
         <source>Show difference side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra differenze fianco a fianco</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="320"/>
         <source>Show difference side-by-side (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra differenze fianco a fianco (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="225"/>
         <source>Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensioni</translation>
     </message>
 </context>
 <context>
@@ -24453,22 +24476,22 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.ui" line="14"/>
         <source>Commit Message</source>
-        <translation type="unfinished">Messaggio di commit</translation>
+        <translation>Messaggio di commit</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="104"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Errore Generazione Processo</translation>
+        <translation>Errore Generazione Processo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="104"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
+        <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel percorso.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="192"/>
         <source>Error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Errore: </translation>
     </message>
 </context>
 <context>
@@ -24476,22 +24499,22 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.ui" line="14"/>
         <source>List All Guards</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista tutte le guardie</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.ui" line="23"/>
         <source>Show all guards of all patches</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra tulle le guardie di tutte le modifiche</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py" line="91"/>
         <source>Unguarded</source>
-        <translation type="unfinished"></translation>
+        <translation>Non gurdiato</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py" line="96"/>
         <source>no patches found</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifiche non trovate</translation>
     </message>
 </context>
 <context>
@@ -24516,72 +24539,72 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="58"/>
         <source>Name</source>
-        <translation type="unfinished">Nome</translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="63"/>
         <source>Status</source>
-        <translation type="unfinished">Stato</translation>
+        <translation>Stato</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="68"/>
         <source>Summary</source>
-        <translation type="unfinished">Sommario</translation>
+        <translation>Sommario</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="82"/>
         <source>Errors</source>
-        <translation type="unfinished">Errori</translation>
+        <translation>Errori</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="101"/>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation>Input</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="123"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished">Premi per spedire l&apos;input al processo hg</translation>
+        <translation>Premi per spedire l&apos;input al processo hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="126"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Spedisci</translation>
+        <translation>&amp;Spedisci</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="129"/>
         <source>Alt+S</source>
-        <translation type="unfinished">Alt+S</translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="136"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished">Inserisci i dati da inviare al processo hg</translation>
+        <translation>Inserisci i dati da inviare al processo hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="143"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Seleziona per impostare il campo di input in modalità password</translation>
+        <translation>Seleziona per impostare il campo di input in modalità password</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="146"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">Modo &amp;Password</translation>
+        <translation>Modo &amp;Password</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="149"/>
         <source>Alt+P</source>
-        <translation type="unfinished">Alt+P</translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="191"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Errore Generazione Processo</translation>
+        <translation>Errore Generazione Processo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="191"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
+        <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="226"/>
@@ -24601,12 +24624,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="55"/>
         <source>missing</source>
-        <translation type="unfinished">mancante</translation>
+        <translation>mancante</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="300"/>
         <source>unknown</source>
-        <translation type="unfinished">sconosciuto</translation>
+        <translation>sconosciuto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="53"/>
@@ -25004,27 +25027,27 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="14"/>
         <source>Remove Sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi sotto-archivi</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="36"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Premi per rimuovere gli elementi selezionati</translation>
+        <translation>Premi per rimuovere gli elementi selezionati</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="39"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished">&amp;Rimuovi</translation>
+        <translation>&amp;Rimuovi</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="46"/>
         <source>Select to delete the removed entries from disc</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per cancellare le voci rimosse dal disco</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="49"/>
         <source>Delete removed entries from disc</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella le voci rimosse dal disco</translation>
     </message>
 </context>
 <context>
@@ -25190,17 +25213,17 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per specificare una revisione tramite segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation>Segnalibro:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita un nome per il segnalibro</translation>
     </message>
 </context>
 <context>
@@ -25303,17 +25326,17 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="306"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per specificare una revisione tramite segnalibro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="309"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation>Segnalibro:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="325"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita un nome per il segnalibro</translation>
     </message>
 </context>
 <context>
@@ -25379,7 +25402,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="45"/>
         <source>Name</source>
-        <translation type="unfinished">Nome</translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="50"/>
@@ -25389,7 +25412,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="55"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="69"/>
@@ -25419,7 +25442,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="156"/>
         <source>Errors</source>
-        <translation type="unfinished">Errori</translation>
+        <translation>Errori</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="162"/>
@@ -25429,42 +25452,42 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="178"/>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation>Input</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="200"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished">Premi per spedire l&apos;input al processo hg</translation>
+        <translation>Premi per spedire l&apos;input al processo hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="203"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Spedisci</translation>
+        <translation>&amp;Spedisci</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="206"/>
         <source>Alt+S</source>
-        <translation type="unfinished">Alt+S</translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="213"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished">Inserisci i dati da inviare al processo hg</translation>
+        <translation>Inserisci i dati da inviare al processo hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="220"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Seleziona per impostare il campo di input in modalità password</translation>
+        <translation>Seleziona per impostare il campo di input in modalità password</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="223"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">Modo &amp;Password</translation>
+        <translation>Modo &amp;Password</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="226"/>
         <source>Alt+P</source>
-        <translation type="unfinished">Alt+P</translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="47"/>
@@ -25494,18 +25517,17 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="178"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Errore Generazione Processo</translation>
+        <translation>Errore Generazione Processo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="178"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
+        <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel percorso di ricerca.</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="361"/>
         <source>%n file(s) changed</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -25514,14 +25536,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <source>%n line(s) inserted</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="365"/>
         <source>%n line(s) deleted</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -25536,7 +25556,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="23"/>
         <source>Name:</source>
-        <translation type="unfinished">Nome:</translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="30"/>
@@ -25579,7 +25599,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.ui" line="14"/>
         <source>Mercurial Shelve Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selezione dei Mercurial Shelve</translation>
     </message>
 </context>
 <context>
@@ -25794,7 +25814,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="120"/>
         <source>&amp;Add</source>
-        <translation type="unfinished">&amp;Aggiungi</translation>
+        <translation>&amp;Aggiungi</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="127"/>
@@ -25925,7 +25945,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui" line="42"/>
         <source>Errors</source>
-        <translation type="unfinished">Errori</translation>
+        <translation>Errori</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="38"/>
@@ -25940,12 +25960,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="101"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Errore Generazione Processo</translation>
+        <translation>Errore Generazione Processo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="101"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
+        <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="320"/>
@@ -25955,7 +25975,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="324"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation type="unfinished">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="328"/>
@@ -26137,7 +26157,6 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <source>%n new changeset(s)&lt;br/&gt;Update required</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -26145,14 +26164,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <source>%n new changeset(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="400"/>
         <source>%n branch head(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -26167,14 +26184,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <source>%n incoming bookmark(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="425"/>
         <source>%n outgoing bookmark(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -26690,22 +26705,22 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/History/HistoryMenu.py" line="335"/>
         <source>Most Visited</source>
-        <translation type="unfinished"></translation>
+        <translation>Più visitati</translation>
     </message>
     <message>
         <location filename="../Helpviewer/History/HistoryMenu.py" line="277"/>
         <source>Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Schede chiuse</translation>
     </message>
     <message>
         <location filename="../Helpviewer/History/HistoryMenu.py" line="399"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica tutte le schede chiuse</translation>
     </message>
     <message>
         <location filename="../Helpviewer/History/HistoryMenu.py" line="402"/>
         <source>Clear List</source>
-        <translation type="unfinished">Pulisci lista</translation>
+        <translation>Pulisci lista</translation>
     </message>
 </context>
 <context>
@@ -28209,27 +28224,27 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="65"/>
         <source>Imports Diagramm {0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa diagramma {0}: {1}</translation>
     </message>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="68"/>
         <source>Imports Diagramm: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa diagramma: {0}</translation>
     </message>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="90"/>
         <source>Parsing modules...</source>
-        <translation type="unfinished">Analisi moduli...</translation>
+        <translation>Analisi moduli...</translation>
     </message>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="123"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a Python package.</source>
-        <translation type="unfinished">La direcotry &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non è un pacchetto Python.</translation>
+        <translation>La cartella &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non è un pacchetto Python.</translation>
     </message>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="90"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>Moduli %v/%m</translation>
     </message>
 </context>
 <context>
@@ -28385,57 +28400,57 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="77"/>
         <source>Title</source>
-        <translation type="unfinished">Titolo</translation>
+        <translation>Titolo</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="63"/>
         <source>Result:</source>
-        <translation type="unfinished">Risultato:</translation>
+        <translation>Risultato:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="70"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished">inserisci il nome della variabile risultato</translation>
+        <translation>Inserisci il nome della variabile risultato</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="97"/>
         <source>Parent</source>
-        <translation type="unfinished">Genitore</translation>
+        <translation>Genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="103"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;self&quot; come genitore</translation>
+        <translation>Seleziona &quot;self&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="106"/>
         <source>self</source>
-        <translation type="unfinished">self</translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="116"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Seleziona &quot;None&quot; come genitore</translation>
+        <translation>Seleziona &quot;None&quot; come genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="119"/>
         <source>None</source>
-        <translation type="unfinished">Nessuno</translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="128"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Seleziona per inserire un genitore</translation>
+        <translation>Seleziona per inserire un genitore</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="131"/>
         <source>Expression:</source>
-        <translation type="unfinished">Espressione:</translation>
+        <translation>Espressione:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="141"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Inserisci il genitore</translation>
+        <translation>Inserisci il genitore</translation>
     </message>
 </context>
 <context>
@@ -28799,12 +28814,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritardo:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="396"/>
         <source> ms</source>
-        <translation type="unfinished">ms</translation>
+        <translation> ms</translation>
     </message>
 </context>
 <context>
@@ -28817,7 +28832,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Network/IRC/IrcChannelEditDialog.ui" line="23"/>
         <source>Name:</source>
-        <translation type="unfinished">Nome:</translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelEditDialog.ui" line="30"/>
@@ -28982,7 +28997,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <source>limited to %n user(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -29059,7 +29073,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="../Network/IRC/IrcChannelWidget.py" line="890"/>
         <source>{0} sets the channel limit to %n nick(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -29151,7 +29164,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1006"/>
         <source>Help</source>
-        <translation type="unfinished">Aiuto</translation>
+        <translation>Aiuto</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1140"/>
@@ -29171,7 +29184,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1223"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1242"/>
@@ -29191,27 +29204,27 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1256"/>
         <source>Copy</source>
-        <translation type="unfinished">Copia</translation>
+        <translation>Copia</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1261"/>
         <source>Cut all</source>
-        <translation type="unfinished">Taglia tutto</translation>
+        <translation>Taglia tutto</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1265"/>
         <source>Copy all</source>
-        <translation type="unfinished">Copia tutto</translation>
+        <translation>Copia tutto</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1270"/>
         <source>Clear</source>
-        <translation type="unfinished">Pulisci</translation>
+        <translation>Pulisci</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1275"/>
         <source>Save</source>
-        <translation type="unfinished">Salva</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1279"/>
@@ -29308,14 +29321,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <source>%n day(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1627"/>
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -29324,14 +29335,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <source>%n minute(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1640"/>
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -29357,7 +29366,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1649"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -29452,37 +29460,37 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="14"/>
         <source>IRC Identities</source>
-        <translation type="unfinished"></translation>
+        <translation>Identità IRC</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="25"/>
         <source>Identity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Identita:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="38"/>
         <source>Select the identity to work on</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona l&apos;azione su cui lavorare</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="45"/>
         <source>Press to add a new identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per aggiungere una nuova identità</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="52"/>
         <source>Press to copy the selected identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per copiare l&apos;identità selezionata</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="59"/>
         <source>Press to rename the selected identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per rinominare l&apos;identità selezionata</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="66"/>
         <source>Press to delete the selected identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per cancellare l&apos;identità selezionata</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="79"/>
@@ -29492,102 +29500,102 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="85"/>
         <source>Real Name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome vero:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="92"/>
         <source>Enter the real name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Digita il nome reale</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="99"/>
         <source>Nick Names</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Soprannomi</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="105"/>
         <source>Enter a nick name to add</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Digita un soprannome da aggiungere</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="119"/>
         <source>Press to add the entered nick name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">premi per aggiungere il soprannome digitato</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="126"/>
         <source>Press to delete the selected nick name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Premi per cancellare il soprannome selezionato</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="136"/>
         <source>Press to move the selected nick name up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Premi per muovere su il soprannome selezionato</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="143"/>
         <source>Press to move the selected nick name down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Premi per muovere giù il soprannome selezionato</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="166"/>
         <source>Auto Identify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto identificazione</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="172"/>
         <source>Service:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Servizio:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="179"/>
         <source>Enter the name of the service to identify against</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Digita il nome del servizio per la contro identificazione</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="182"/>
         <source>Service name can be &lt;b&gt;&lt;i&gt;nickserv&lt;/i&gt;&lt;/b&gt; or a network-dependent name such as &lt;b&gt;&lt;i&gt;nickserv@services.dal.net&lt;/i&gt;&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Il nome del Servizio può essere &lt;b&gt;&lt;i&gt;nickserv&lt;/i&gt;&lt;/b&gt; o un nome dipendente dalla rete come &lt;b&gt;&lt;i&gt;nickserv@services.dal.net&lt;/i&gt;&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="189"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Password:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="196"/>
         <source>Enter the password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inserisci password</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="210"/>
         <source>Away</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Esci</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="222"/>
         <source>Mark the current position in chat windows when going away</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Segna la posizione attuale nella finestra di chat quando si esce</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="229"/>
         <source>Away Message:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Messaggio d&apos;uscita:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="236"/>
         <source>Enter the message to be sent when going away</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inserisci i testo da inviare quando si esce</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="257"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avanzato</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="263"/>
         <source>Ident:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Identifica:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="270"/>
@@ -30755,17 +30763,17 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="92"/>
         <source>Welcome to eric5 Web Browser!</source>
-        <translation type="unfinished"></translation>
+        <translation>Benvenuto nel navigatore Web di Eric!</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="94"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Web Browser di eric5</translation>
+        <translation>Navigatore web di eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="96"/>
         <source>About eric5</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni su Eric5</translation>
     </message>
 </context>
 <context>
@@ -31579,32 +31587,32 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="144"/>
         <source>Matlab</source>
-        <translation type="unfinished"></translation>
+        <translation>Matlab</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="144"/>
         <source>Octave</source>
-        <translation type="unfinished"></translation>
+        <translation>Octave</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
         <source>Matlab Files (*.m *.m.matlab)</source>
-        <translation type="unfinished"></translation>
+        <translation>File Matlab (*.m *.m.matlab)</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
         <source>Octave Files (*.m *.m.octave)</source>
-        <translation type="unfinished"></translation>
+        <translation>File Octave (*.m *.m.octave)</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="636"/>
         <source>Matlab Files (*.m)</source>
-        <translation type="unfinished"></translation>
+        <translation>File Matlab (*.m)</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="636"/>
         <source>Octave Files (*.m.octave)</source>
-        <translation type="unfinished"></translation>
+        <translation>File Octave (*.m.octave)</translation>
     </message>
 </context>
 <context>
@@ -31652,17 +31660,17 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="247"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri file &apos;scarto&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="255"/>
         <source>Copy Path to Clipboard</source>
-        <translation type="unfinished">Copia il path nella Clipboard</translation>
+        <translation>Copia il percorso nella Clipboard</translation>
     </message>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="230"/>
         <source>Close Others</source>
-        <translation type="unfinished">Chiudi altri</translation>
+        <translation>Chiudi altri</translation>
     </message>
 </context>
 <context>
@@ -31693,27 +31701,27 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/LogView.py" line="105"/>
         <source>Clear</source>
-        <translation type="unfinished">Pulisci</translation>
+        <translation>Pulisci</translation>
     </message>
     <message>
         <location filename="../UI/LogView.py" line="106"/>
         <source>Copy</source>
-        <translation type="unfinished">Copia</translation>
+        <translation>Copia</translation>
     </message>
     <message>
         <location filename="../UI/LogView.py" line="108"/>
         <source>Find</source>
-        <translation type="unfinished">Trova</translation>
+        <translation>Trova</translation>
     </message>
     <message>
         <location filename="../UI/LogView.py" line="110"/>
         <source>Select All</source>
-        <translation type="unfinished">Seleziona tutti</translation>
+        <translation>Seleziona tutti</translation>
     </message>
     <message>
         <location filename="../UI/LogView.py" line="112"/>
         <source>Configure...</source>
-        <translation type="unfinished">Configura...</translation>
+        <translation>Configura...</translation>
     </message>
 </context>
 <context>
@@ -31721,72 +31729,72 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="14"/>
         <source>Master Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Password principale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="23"/>
         <source>&lt;p&gt;Enter your master password below. This password will be used to encrypt sensitive data. You will be asked once per session for this password when the data needs to be accessed for the first time.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Note: If you forget the master password, the encrypted data cannot be recovered!&lt;/b&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Digita più sotto la tua password principale. Questa password sarà usata per criptare dati sensibili. Ti verrà chiesta una volta per sessione quando sarà necessario accedere ai dati per la prima volta.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Nota: se dimentichi la password principale, i dati criptati non potrano essere recuperati!&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="48"/>
         <source>Current Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Password attuale:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="55"/>
         <source>Enter the current password</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita la Password attuale</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="65"/>
         <source>New Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova Password:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="72"/>
         <source>Enter the new password</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita la nuova Password</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="82"/>
         <source>New Password (again):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova Password (di nuovo):</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="89"/>
         <source>Repeat the new password</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripeti la nuova Password</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="101"/>
         <source>Shows an indication for the password strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra un indice di sicurezza della password</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="34"/>
         <source>(not defined yet)</source>
-        <translation type="unfinished"></translation>
+        <translation>(non ancora definita)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="51"/>
         <source>Wrong password entered.</source>
-        <translation type="unfinished"></translation>
+        <translation>La Password digitata è sbagliata.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="55"/>
         <source>New password must not be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>La nuova Password non può essere vuota.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="60"/>
         <source>Repeated password is wrong.</source>
-        <translation type="unfinished"></translation>
+        <translation>La Password ridigitata è sbagliata.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="66"/>
         <source>Old and new password must not be the same.</source>
-        <translation type="unfinished"></translation>
+        <translation>La password precedente e la nuova non possono essere uguali.</translation>
     </message>
 </context>
 <context>
@@ -32403,17 +32411,17 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="131"/>
         <source>Enter the title for the QMessageBox</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il titolo per la QMessageBox</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Result:</source>
-        <translation type="unfinished">Risultato:</translation>
+        <translation>Risultato:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished">inserisci il nome della variabile risultato</translation>
+        <translation>Inserisci il nome della variabile risultato</translation>
     </message>
 </context>
 <context>
@@ -33241,12 +33249,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../MultiProject/MultiProject.py" line="447"/>
         <source>Multiproject Files (*.e5m *.e4m)</source>
-        <translation type="unfinished"></translation>
+        <translation>File multiprogetto (*.e5m *.e4m)</translation>
     </message>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="511"/>
         <source>Multiproject Files (*.e5m)</source>
-        <translation type="unfinished">File multiprogetto (*.e4m) {5m?}</translation>
+        <translation>File multiprogetto (*.e5m) </translation>
     </message>
 </context>
 <context>
@@ -33274,12 +33282,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Add Project...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi progetto...</translation>
     </message>
     <message>
         <location filename="../MultiProject/MultiProjectBrowser.py" line="206"/>
         <source>Not categorized</source>
-        <translation type="unfinished"></translation>
+        <translation>Non categorizzato</translation>
     </message>
 </context>
 <context>
@@ -33302,7 +33310,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
         <source>Open master project automatically</source>
-        <translation>Apri progetto principale automaticamente</translation>
+        <translation>Apri progetto principale in automatico</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="83"/>
@@ -33317,7 +33325,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
         <source>Include timestamp in multiproject related XML files</source>
-        <translation>Include timestamp nei file XML relativi al multiprogetto</translation>
+        <translation>Include data nei file XML relativi al multiprogetto</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="102"/>
@@ -33337,28 +33345,29 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="37"/>
         <source>Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio di lavoro</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="43"/>
         <source>Enter the name of the workspace directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il nome della cartella di lavoro</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="46"/>
         <source>&lt;b&gt;Workspace Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the workspace. This directory is used as the default for opening or saving new files or projects.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cartella progetto&lt;/b&gt;
+&lt;p&gt;Inserisci la cartella di lavoro. Questa cartella è usata in mancanza di altro per aprire o salvare nuovi file o progetti.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="54"/>
         <source>Select the workspace directory via a directory selection button</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona la cartella di lavoro tramite il bottone di selezione cartella</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="73"/>
         <source>Select Workspace Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona cartella di lavoro</translation>
     </message>
 </context>
 <context>
@@ -34223,22 +34232,22 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="201"/>
         <source>Select to allow local content to access remote URLs</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per consentire all&apos;area locale di accedere agli URL remoti</translation>
     </message>
     <message>
         <location filename="../Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="204"/>
         <source>Local Content can access Remote URLs</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;area locale può accedere agli URL remoti</translation>
     </message>
     <message>
         <location filename="../Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="220"/>
         <source>Select to allow local content to access local files</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per consentire all&apos;area locale di accedere ai file locali </translation>
     </message>
     <message>
         <location filename="../Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="223"/>
         <source>Local Content can access Local Files</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;area locale può accedere ai File Locali</translation>
     </message>
 </context>
 <context>
@@ -35604,7 +35613,7 @@ alla riga e colonna corretta.&lt;/p&gt;</translation>
     <message>
         <location filename="../PluginManager/PluginInstallDialog.ui" line="150"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Flussi %v/%m</translation>
     </message>
 </context>
 <context>
@@ -35768,22 +35777,22 @@ Destinazione:
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1096"/>
         <source>Error downloading file</source>
-        <translation type="unfinished">Errone nello scaricamento del file</translation>
+        <translation>Errone nello scaricamento del file</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1096"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Non posso scaricare il file richiesto da {0}&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Non posso scaricare il file richiesto da {0}&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1131"/>
         <source>New plugin versions available</source>
-        <translation type="unfinished"></translation>
+        <translation>E&apos; disponibile una nuova versione del plug-in</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="1131"/>
         <source>&lt;p&gt;There are new plug-ins or plug-in updates available. Use the plug-in repository dialog to get them.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;Sono disponibili nuovi plug-in o aggiornamenti di plug-in. Usa la finestra di dialogo del repository di plug-in per ottenerli.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -36009,22 +36018,22 @@ Destinazione:
     <message>
         <location filename="../PluginManager/PluginRepositoryDialog.ui" line="170"/>
         <source>Repository URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL del repository:</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginRepositoryDialog.ui" line="177"/>
         <source>Shows the repository URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra l&apos;URL del repository</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginRepositoryDialog.ui" line="187"/>
         <source>Press to edit the plugin repository URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per modificare l&apos;URL del repository dei plug-in</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginRepositoryDialog.ui" line="190"/>
         <source>Edit URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica URL</translation>
     </message>
 </context>
 <context>
@@ -39849,7 +39858,6 @@ premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <location filename="../DataViews/PyCoverageDialog.py" line="241"/>
         <source>%n file(s) could not be parsed. Coverage info for these is not available.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -44574,7 +44582,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="922"/>
         <source>Initializing new queue repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Inizializza una nuova coda del repository</translation>
     </message>
 </context>
 <context>
@@ -45197,7 +45205,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="34"/>
         <source>Init Queue Repository</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inizializza la coda del Repository</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="38"/>
@@ -46882,9 +46890,9 @@ Non connesso</translation>
     <message numerus="yes">
         <location filename="../Snapshot/SnapshotTimer.py" line="100"/>
         <source>Snapshot will be taken in %n seconds</source>
-        <translation type="unfinished">
-            <numerusform>Il blocco verà fissato in %n secondi</numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>L&apos;istantanea verrà fissata in %n secondo</numerusform>
+            <numerusform>L&apos;istantanea verrà fissata in %n secondi</numerusform>
         </translation>
     </message>
 </context>
@@ -48614,12 +48622,12 @@ Non connesso</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1044"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
-        <translation>L&apos;URL del repository del progetto non può essere recuperato dalla copia di lavoro. L&apos;operazione di tag verrà interrotta</translation>
+        <translation>L&apos;URL del repository del progetto non può essere recuperato dalla copia di lavoro. L&apos;operazione di etichettatura verrà interrotta</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1071"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
-        <translation>L&apos;URL del repository del progetto a un formato non valido. L&apos;operazione di tag verrà interrotta</translation>
+        <translation>L&apos;URL del repository del progetto a un formato non valido. L&apos;operazione di etichettatura verrà interrotta</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1187"/>
@@ -48659,7 +48667,7 @@ Non connesso</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="559"/>
         <source>Commiting changes to Subversion repository</source>
-        <translation>Commit delle modifiche nel repository Subversion</translation>
+        <translation>Convalida delle modifiche nel repository Subversion</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="617"/>
@@ -48709,7 +48717,7 @@ Non connesso</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="226"/>
         <source>The project could not be checked out of the repository.&lt;br /&gt;Restoring the original contents.</source>
-        <translation>Il progetto non può essere checked out dal repository.&lt;br /&gt;Ripristisno dei contenuti originali.</translation>
+        <translation>Il progetto non può essere checked out dal repository.&lt;br /&gt;Ripristino dei contenuti originali.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="976"/>
@@ -48919,7 +48927,7 @@ Non connesso</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2375"/>
         <source>Repository Browser</source>
-        <translation>Browser Repository</translation>
+        <translation>Visualizzatore del Repository</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2375"/>
@@ -49880,7 +49888,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnInfoDialog.py" line="78"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Repository root URL:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Repository root URL:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL della radice del Repository:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnInfoDialog.py" line="82"/>
@@ -50429,7 +50437,7 @@ per prendere l&apos;URL target dalla copia di lavoro.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="70"/>
         <source>Select Repository-Directory</source>
-        <translation>Seleziona la directory del Repository</translation>
+        <translation>Seleziona la cartella del Repository</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="98"/>
@@ -50544,12 +50552,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="129"/>
         <source>Pat&amp;h:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita ilpercorso dell&apos;URL del modulo nel repository (senza la parte del protocollo)</translation>
     </message>
 </context>
 <context>
@@ -50557,7 +50565,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="66"/>
         <source>Select Repository-Directory</source>
-        <translation>Seleziona la directory del Repository</translation>
+        <translation>Seleziona la cartella del Repository</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="14"/>
@@ -50648,12 +50656,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="99"/>
         <source>Pat&amp;h:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il percorso dell&apos;URL del modulo nel repository (senza la parte del protocollo)</translation>
     </message>
 </context>
 <context>
@@ -50666,7 +50674,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="659"/>
         <source>Commit changes to repository...</source>
-        <translation>Committa le modifica nel repository...</translation>
+        <translation>Consolida le modifica nel repository...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="665"/>
@@ -65255,7 +65263,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
     <message>
         <location filename="../Preferences/ViewProfileSidebarsDialog.ui" line="85"/>
         <source>Right Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra laterale destra</translation>
     </message>
 </context>
 <context>
@@ -65303,12 +65311,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
     <message>
         <location filename="../Preferences/ViewProfileToolboxesDialog.ui" line="78"/>
         <source>Left Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra degli strumenti sinistra</translation>
     </message>
     <message>
         <location filename="../Preferences/ViewProfileToolboxesDialog.ui" line="85"/>
         <source>Right Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra degli strumenti destra</translation>
     </message>
 </context>
 <context>
@@ -65873,7 +65881,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2065"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Segnalibri&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1434"/>
@@ -65884,7 +65892,13 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 {2}&lt;/table&gt;&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&gt;Informazioni del Repository&lt;/h3&gt;
+&lt;p&gt;&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
+{2}&lt;/table&gt;&lt;/p&gt;
+</translation>
     </message>
 </context>
 <context>
