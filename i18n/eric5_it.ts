@@ -39548,7 +39548,7 @@ Selezionare Aggiorna.</translation>
         <translation>Scrivi un file progetto temporaneo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
         <source>Translation file generation</source>
         <translation>Generazione file traduzioni</translation>
     </message>
@@ -39560,25 +39560,25 @@ Selezionare Aggiorna.</translation>
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
-        <translation>La generazione dei file di traduzione (*.ts) è fallita.</translation>
+        <translation type="obsolete">La generazione dei file di traduzione (*.ts) è fallita.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>Translation file release</source>
         <translation>Rilascia file traduzione</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1128"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1133"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Il rilascio dei file traduzione (*.qm) è avvenuta con successo.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La generazione dei file di traduzione (*.qm) è fallita.</translation>
     </message>
@@ -39673,12 +39673,12 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;Il file temporaneo &lt;b&gt;{0}&lt;/b&gt; del progetto non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1064"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Non posso avviare {0}.&lt;br&gt;Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare lrelease.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -39686,6 +39686,16 @@ Selezionare Aggiorna.</translation>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="353"/>
         <source>Open</source>
         <translation>Apri</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="952"/>
+        <source> The process has crashed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
+        <source>The generation of the translation files (*.ts) has failed.{0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

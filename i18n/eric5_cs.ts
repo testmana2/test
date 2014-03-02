@@ -39576,7 +39576,7 @@ Vyberte Obnovit.</translation>
         <translation>Nebyly vybrány žádné soubory s překlady (*.ts).</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
         <source>Translation file generation</source>
         <translation>Generování souboru s překladem</translation>
     </message>
@@ -39588,25 +39588,25 @@ Vyberte Obnovit.</translation>
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
-        <translation>Generování souboru s překladem (*.ts) selhalo.</translation>
+        <translation type="obsolete">Generování souboru s překladem (*.ts) selhalo.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>Translation file release</source>
         <translation>Zveřejnění souboru s překladem</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1128"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1133"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) selhalo.</translation>
     </message>
@@ -39631,12 +39631,12 @@ Vyberte Obnovit.</translation>
         <translation>&lt;p&gt;Do dočasného souboru projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1064"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit zveřejnění.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -39644,6 +39644,16 @@ Vyberte Obnovit.</translation>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="353"/>
         <source>Open</source>
         <translation type="unfinished">Otevřít</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="952"/>
+        <source> The process has crashed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
+        <source>The generation of the translation files (*.ts) has failed.{0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

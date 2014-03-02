@@ -41245,7 +41245,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>Ecrire un fichier projet temporaire</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
         <source>Translation file generation</source>
         <translation>Génération d&apos;un fichier de traduction</translation>
     </message>
@@ -41257,25 +41257,25 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
-        <translation>La génération des fichiers de traduction (*.ts) a échoué.</translation>
+        <translation type="obsolete">La génération des fichiers de traduction (*.ts) a échoué.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>Translation file release</source>
         <translation>Validation du fichier de traduction</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1128"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1133"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>La validation des fichiers de traduction (*.qm) a réussi.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La validation des fichiers de traduction (*.qm) a échoué.</translation>
     </message>
@@ -41385,12 +41385,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1064"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41398,6 +41398,16 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <location filename="../Project/ProjectTranslationsBrowser.py" line="353"/>
         <source>Open</source>
         <translation type="unfinished">Ouvrir</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="952"/>
+        <source> The process has crashed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
+        <source>The generation of the translation files (*.ts) has failed.{0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -37691,7 +37691,7 @@ Seleccione Actualizar.</translation>
         <translation>No se han seleccionado archivos de traducción (*.ts).</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
         <source>Translation file generation</source>
         <translation>Generación de archivo de traducción</translation>
     </message>
@@ -37703,25 +37703,25 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
-        <translation>La generación de archivos de traducción (*.ts) ha fallado.</translation>
+        <translation type="obsolete">La generación de archivos de traducción (*.ts) ha fallado.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>Translation file release</source>
         <translation>Crear versión release del archivo de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1128"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1133"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>La versión release de los archivos de traducción (*.qm) ha sido satisfactoria.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La versión release de los archivos de traducción (*.qm) ha fallado.</translation>
     </message>
@@ -37746,12 +37746,12 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo temporal de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1064"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar lrelease.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -37759,6 +37759,16 @@ Seleccione Actualizar.</translation>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="353"/>
         <source>Open</source>
         <translation>Abrir</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="952"/>
+        <source> The process has crashed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
+        <source>The generation of the translation files (*.ts) has failed.{0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

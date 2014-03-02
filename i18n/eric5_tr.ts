@@ -39369,7 +39369,7 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
         <source>Translation file generation</source>
         <translation>Çeviri dosyası üreteci</translation>
     </message>
@@ -39381,35 +39381,35 @@ Select Update.</source>
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="951"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
-        <translation>Çeviri dosyalarının (*.ts) üretimi başarısız oldu.</translation>
+        <translation type="obsolete">Çeviri dosyalarının (*.ts) üretimi başarısız oldu.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1064"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>Translation file release</source>
         <translation>Yayımlanmış çeviri dosyası</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1128"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1133"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Çeviri dosyaları (*.qm) tam olarak yayımlandı.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1150"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>Çeviri dosyalarının (*qm) yayımı başarısız oldu.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1231"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1236"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39417,6 +39417,16 @@ Select Update.</source>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="353"/>
         <source>Open</source>
         <translation type="unfinished">Aç</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="952"/>
+        <source> The process has crashed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
+        <source>The generation of the translation files (*.ts) has failed.{0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

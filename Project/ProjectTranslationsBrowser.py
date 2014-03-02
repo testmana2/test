@@ -948,12 +948,16 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         "The generation of the translation files (*.ts)"
                         " was successful."))
         else:
+            if exitStatus == QProcess.CrashExit:
+                info = self.tr(" The process has crashed.")
+            else:
+                info = ""
             E5MessageBox.critical(
                 self,
                 self.tr("Translation file generation"),
                 self.tr(
                     "The generation of the translation files (*.ts) has"
-                    " failed."))
+                    " failed.{0}").format(info))
         
         proc = self.sender()
         for index in range(len(self.__pylupdateProcesses)):
