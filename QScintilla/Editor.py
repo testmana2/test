@@ -2109,6 +2109,22 @@ class Editor(QsciScintillaCompat):
         line, _ = self.getCursorPosition()
         return self.markersAtLine(line) & self.breakpointMask != 0
         
+    def getBreakpointLines(self):
+        """
+        Public method to get the lines containing a breakpoint.
+        
+        @return list of lines containing a breakpoint (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, self.breakpointMask)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
+        
     def hasBreakpoints(self):
         """
         Public method to check for the presence of breakpoints.
@@ -2277,6 +2293,22 @@ class Editor(QsciScintillaCompat):
         bmlist.sort()
         return bmlist
         
+    def getBookmarkLines(self):
+        """
+        Public method to get the lines containing a bookmark.
+        
+        @return list of lines containing a bookmark (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, 1 << self.bookmark)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
+        
     def hasBookmarks(self):
         """
         Public method to check for the presence of bookmarks.
@@ -2408,7 +2440,23 @@ class Editor(QsciScintillaCompat):
     ###########################################################################
     ## Task handling methods below
     ###########################################################################
-
+    
+    def getTaskLines(self):
+        """
+        Public method to get the lines containing a task.
+        
+        @return list of lines containing a task (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, 1 << self.taskmarker)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
+        
     def hasTaskMarkers(self):
         """
         Public method to determine, if this editor contains any task markers.
@@ -2607,6 +2655,22 @@ class Editor(QsciScintillaCompat):
         self.markerDeleteAll(self.__changeMarkerSaved)
         self.__hasChangeMarkers = False
         self.changeMarkersUpdated.emit(self)
+        
+    def getChangeLines(self):
+        """
+        Public method to get the lines containing a change.
+        
+        @return list of lines containing a change (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, self.changeMarkersMask)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
         
     def hasChangeMarkers(self):
         """
@@ -5205,6 +5269,22 @@ class Editor(QsciScintillaCompat):
         self.coverageMarkersShown.emit(False)
         self.showingNotcoveredMarkers = False
         
+    def getCoverageLines(self):
+        """
+        Public method to get the lines containing a coverage marker.
+        
+        @return list of lines containing a coverage marker (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, 1 << self.notcovered)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
+        
     def hasCoverageMarkers(self):
         """
         Public method to test, if there are coverage markers.
@@ -5379,6 +5459,22 @@ class Editor(QsciScintillaCompat):
         selist.sort()
         return selist
         
+    def getSyntaxErrorLines(self):
+        """
+        Public method to get the lines containing a syntax error.
+        
+        @return list of lines containing a syntax error (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, 1 << self.syntaxerror)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
+        
     def hasSyntaxErrors(self):
         """
         Public method to check for the presence of syntax errors.
@@ -5490,6 +5586,22 @@ class Editor(QsciScintillaCompat):
         fwlist.sort()
         return fwlist
     
+    def getWarningLines(self):
+        """
+        Public method to get the lines containing a warning.
+        
+        @return list of lines containing a warning (list of integer)
+        """
+        lines = []
+        line = -1
+        while True:
+            line = self.markerFindNext(line + 1, 1 << self.warning)
+            if line < 0:
+                break
+            else:
+                lines.append(line)
+        return lines
+        
     def hasWarnings(self):
         """
         Public method to check for the presence of warnings.

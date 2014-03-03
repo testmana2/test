@@ -4472,8 +4472,12 @@
       <keyword name="Editor.focusInEvent" id="Editor.focusInEvent" ref="eric5.QScintilla.Editor.html#Editor.focusInEvent" />
       <keyword name="Editor.focusOutEvent" id="Editor.focusOutEvent" ref="eric5.QScintilla.Editor.html#Editor.focusOutEvent" />
       <keyword name="Editor.gestureEvent" id="Editor.gestureEvent" ref="eric5.QScintilla.Editor.html#Editor.gestureEvent" />
+      <keyword name="Editor.getBookmarkLines" id="Editor.getBookmarkLines" ref="eric5.QScintilla.Editor.html#Editor.getBookmarkLines" />
       <keyword name="Editor.getBookmarks" id="Editor.getBookmarks" ref="eric5.QScintilla.Editor.html#Editor.getBookmarks" />
+      <keyword name="Editor.getBreakpointLines" id="Editor.getBreakpointLines" ref="eric5.QScintilla.Editor.html#Editor.getBreakpointLines" />
+      <keyword name="Editor.getChangeLines" id="Editor.getChangeLines" ref="eric5.QScintilla.Editor.html#Editor.getChangeLines" />
       <keyword name="Editor.getCompleter" id="Editor.getCompleter" ref="eric5.QScintilla.Editor.html#Editor.getCompleter" />
+      <keyword name="Editor.getCoverageLines" id="Editor.getCoverageLines" ref="eric5.QScintilla.Editor.html#Editor.getCoverageLines" />
       <keyword name="Editor.getCurrentWord" id="Editor.getCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.getCurrentWord" />
       <keyword name="Editor.getCurrentWordBoundaries" id="Editor.getCurrentWordBoundaries" ref="eric5.QScintilla.Editor.html#Editor.getCurrentWordBoundaries" />
       <keyword name="Editor.getEncoding" id="Editor.getEncoding" ref="eric5.QScintilla.Editor.html#Editor.getEncoding" />
@@ -4487,7 +4491,10 @@
       <keyword name="Editor.getNoName" id="Editor.getNoName" ref="eric5.QScintilla.Editor.html#Editor.getNoName" />
       <keyword name="Editor.getSearchText" id="Editor.getSearchText" ref="eric5.QScintilla.Editor.html#Editor.getSearchText" />
       <keyword name="Editor.getSharingStatus" id="Editor.getSharingStatus" ref="eric5.QScintilla.Editor.html#Editor.getSharingStatus" />
+      <keyword name="Editor.getSyntaxErrorLines" id="Editor.getSyntaxErrorLines" ref="eric5.QScintilla.Editor.html#Editor.getSyntaxErrorLines" />
       <keyword name="Editor.getSyntaxErrors" id="Editor.getSyntaxErrors" ref="eric5.QScintilla.Editor.html#Editor.getSyntaxErrors" />
+      <keyword name="Editor.getTaskLines" id="Editor.getTaskLines" ref="eric5.QScintilla.Editor.html#Editor.getTaskLines" />
+      <keyword name="Editor.getWarningLines" id="Editor.getWarningLines" ref="eric5.QScintilla.Editor.html#Editor.getWarningLines" />
       <keyword name="Editor.getWarnings" id="Editor.getWarnings" ref="eric5.QScintilla.Editor.html#Editor.getWarnings" />
       <keyword name="Editor.getWord" id="Editor.getWord" ref="eric5.QScintilla.Editor.html#Editor.getWord" />
       <keyword name="Editor.getWordBoundaries" id="Editor.getWordBoundaries" ref="eric5.QScintilla.Editor.html#Editor.getWordBoundaries" />
