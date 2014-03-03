@@ -266,6 +266,50 @@ class ViewManager(QObject):
         self.sbZoom = sbZoom
         self.sbZoom.valueChanged.connect(self.__zoom)
         self.__setSbFile(zoom=0)
+        
+        self.sbLang.clicked.connect(self.__showLanguagesMenu)
+        self.sbEol.clicked.connect(self.__showEolMenu)
+        self.sbEnc.clicked.connect(self.__showEncodingsMenu)
+    
+    ##################################################################
+    ## Below are menu handling methods for status bar labels
+    ##################################################################
+    
+    def __showLanguagesMenu(self, pos):
+        """
+        Private slot to show the Languages menu of the current editor.
+        
+        @param pos position the menu should be shown at (QPoint)
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            menu = aw.getMenu("Languages")
+            if menu is not None:
+                menu.exec_(pos)
+    
+    def __showEolMenu(self, pos):
+        """
+        Private slot to show the EOL menu of the current editor.
+        
+        @param pos position the menu should be shown at (QPoint)
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            menu = aw.getMenu("Eol")
+            if menu is not None:
+                menu.exec_(pos)
+    
+    def __showEncodingsMenu(self, pos):
+        """
+        Private slot to show the Encodings menu of the current editor.
+        
+        @param pos position the menu should be shown at (QPoint)
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            menu = aw.getMenu("Encodings")
+            if menu is not None:
+                menu.exec_(pos)
     
     ###########################################################################
     ## methods below need to be implemented by a subclass
