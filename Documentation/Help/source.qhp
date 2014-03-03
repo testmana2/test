@@ -6144,6 +6144,7 @@
       <keyword name="HgLogBrowserDialog.__identifyProject" id="HgLogBrowserDialog.__identifyProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__identifyProject" />
       <keyword name="HgLogBrowserDialog.__initData" id="HgLogBrowserDialog.__initData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__initData" />
       <keyword name="HgLogBrowserDialog.__lfPullActTriggered" id="HgLogBrowserDialog.__lfPullActTriggered" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__lfPullActTriggered" />
+      <keyword name="HgLogBrowserDialog.__modifyForLargeFiles" id="HgLogBrowserDialog.__modifyForLargeFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__modifyForLargeFiles" />
       <keyword name="HgLogBrowserDialog.__phaseActTriggered" id="HgLogBrowserDialog.__phaseActTriggered" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__phaseActTriggered" />
       <keyword name="HgLogBrowserDialog.__procFinished" id="HgLogBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__procFinished" />
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
@@ -12603,7 +12604,10 @@
       <keyword name="ViewManager.__showBookmarkedMenu" id="ViewManager.__showBookmarkedMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarkedMenu" />
       <keyword name="ViewManager.__showBookmarksMenu" id="ViewManager.__showBookmarksMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarksMenu" />
       <keyword name="ViewManager.__showEditSpellingMenu" id="ViewManager.__showEditSpellingMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEditSpellingMenu" />
+      <keyword name="ViewManager.__showEncodingsMenu" id="ViewManager.__showEncodingsMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEncodingsMenu" />
+      <keyword name="ViewManager.__showEolMenu" id="ViewManager.__showEolMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEolMenu" />
       <keyword name="ViewManager.__showFileMenu" id="ViewManager.__showFileMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showFileMenu" />
+      <keyword name="ViewManager.__showLanguagesMenu" id="ViewManager.__showLanguagesMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showLanguagesMenu" />
       <keyword name="ViewManager.__showRecentMenu" id="ViewManager.__showRecentMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showRecentMenu" />
       <keyword name="ViewManager.__spellCheck" id="ViewManager.__spellCheck" ref="eric5.ViewManager.ViewManager.html#ViewManager.__spellCheck" />
       <keyword name="ViewManager.__splitOrientation" id="ViewManager.__splitOrientation" ref="eric5.ViewManager.ViewManager.html#ViewManager.__splitOrientation" />

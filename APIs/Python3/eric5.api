@@ -4555,7 +4555,10 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.Auth
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.BranchColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.DateColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.IconColumn?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.LargefilesCacheL?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.LargefilesCacheW?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.MessageColumn?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.PathSeparatorRe?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.PhaseColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.RevisionColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.TagsColumn?7

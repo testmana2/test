@@ -48,7 +48,7 @@ Module implementing a dialog to browse the log history.
 QWidget, Ui_HgLogBrowserDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>MessageColumn</td></tr><tr><td>PhaseColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
+<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>LargefilesCacheL</td></tr><tr><td>LargefilesCacheW</td></tr><tr><td>MessageColumn</td></tr><tr><td>PathSeparatorRe</td></tr><tr><td>PhaseColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -107,6 +107,9 @@ QWidget, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__lfPullActTriggered">__lfPullActTriggered</a></td>
 <td>Private slot to pull large files of selected revisions.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__modifyForLargeFiles">__modifyForLargeFiles</a></td>
+<td>Private method to convert the displayed file name for a large file.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__phaseActTriggered">__phaseActTriggered</a></td>
 <td>Private slot to handle the Change Phase action.</td>
@@ -468,7 +471,22 @@ list of parent revisions (list of integers)
 <b>__lfPullActTriggered</b>(<i></i>)
 <p>
         Private slot to pull large files of selected revisions.
-</p><a NAME="HgLogBrowserDialog.__phaseActTriggered" ID="HgLogBrowserDialog.__phaseActTriggered"></a>
+</p><a NAME="HgLogBrowserDialog.__modifyForLargeFiles" ID="HgLogBrowserDialog.__modifyForLargeFiles"></a>
+<h4>HgLogBrowserDialog.__modifyForLargeFiles</h4>
+<b>__modifyForLargeFiles</b>(<i>filename</i>)
+<p>
+        Private method to convert the displayed file name for a large file.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+file name to be processed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed file name (string)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__phaseActTriggered" ID="HgLogBrowserDialog.__phaseActTriggered"></a>
 <h4>HgLogBrowserDialog.__phaseActTriggered</h4>
 <b>__phaseActTriggered</b>(<i></i>)
 <p>
