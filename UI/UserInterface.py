@@ -32,6 +32,7 @@ from E5Gui.E5Application import e5App
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5ZoomWidget import E5ZoomWidget
 from E5Gui.E5ProgressDialog import E5ProgressDialog
+from E5Gui.E5ClickableLabel import E5ClickableLabel
 
 import Preferences
 import Utilities
@@ -2705,21 +2706,21 @@ class UserInterface(E5MainWindow):
         self.__statusBar = self.statusBar()
         self.__statusBar.setSizeGripEnabled(True)
 
-        self.sbLanguage = QLabel(self.__statusBar)
+        self.sbLanguage = E5ClickableLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbLanguage)
         self.sbLanguage.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the"""
             """ current editors language.</p>"""
         ))
 
-        self.sbEncoding = QLabel(self.__statusBar)
+        self.sbEncoding = E5ClickableLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbEncoding)
         self.sbEncoding.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the"""
             """ current editors encoding.</p>"""
         ))
 
-        self.sbEol = QLabel(self.__statusBar)
+        self.sbEol = E5ClickableLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbEol)
         self.sbEol.setWhatsThis(self.tr(
             """<p>This part of the status bar displays the"""
