@@ -4937,6 +4937,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsRemove?4(name, project=False, noD
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsRepositoryInfos?4(ppath)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsShutdown?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsStatus?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsSupportCommandOptions?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsSwitch?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsTag?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsUpdate?4(name, noDialog=False, revision=None)
@@ -8834,6 +8835,7 @@ eric5.VCS.VersionControl.VersionControl.vcsStatus?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsStatusChanged?7
 eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorData?7
 eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorStatus?7
+eric5.VCS.VersionControl.VersionControl.vcsSupportCommandOptions?4()
 eric5.VCS.VersionControl.VersionControl.vcsSwitch?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsTag?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsUpdate?4(name, noDialog=False)

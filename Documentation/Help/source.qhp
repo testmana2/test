@@ -5775,6 +5775,7 @@
       <keyword name="Hg.vcsRepositoryInfos" id="Hg.vcsRepositoryInfos" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsRepositoryInfos" />
       <keyword name="Hg.vcsShutdown" id="Hg.vcsShutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsShutdown" />
       <keyword name="Hg.vcsStatus" id="Hg.vcsStatus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsStatus" />
+      <keyword name="Hg.vcsSupportCommandOptions" id="Hg.vcsSupportCommandOptions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSupportCommandOptions" />
       <keyword name="Hg.vcsSwitch" id="Hg.vcsSwitch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSwitch" />
       <keyword name="Hg.vcsTag" id="Hg.vcsTag" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsTag" />
       <keyword name="Hg.vcsUpdate" id="Hg.vcsUpdate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsUpdate" />
@@ -12268,6 +12269,7 @@
       <keyword name="VersionControl.vcsSetOtherData" id="VersionControl.vcsSetOtherData" ref="eric5.VCS.VersionControl.html#VersionControl.vcsSetOtherData" />
       <keyword name="VersionControl.vcsShutdown" id="VersionControl.vcsShutdown" ref="eric5.VCS.VersionControl.html#VersionControl.vcsShutdown" />
       <keyword name="VersionControl.vcsStatus" id="VersionControl.vcsStatus" ref="eric5.VCS.VersionControl.html#VersionControl.vcsStatus" />
+      <keyword name="VersionControl.vcsSupportCommandOptions" id="VersionControl.vcsSupportCommandOptions" ref="eric5.VCS.VersionControl.html#VersionControl.vcsSupportCommandOptions" />
       <keyword name="VersionControl.vcsSwitch" id="VersionControl.vcsSwitch" ref="eric5.VCS.VersionControl.html#VersionControl.vcsSwitch" />
       <keyword name="VersionControl.vcsTag" id="VersionControl.vcsTag" ref="eric5.VCS.VersionControl.html#VersionControl.vcsTag" />
       <keyword name="VersionControl.vcsUpdate" id="VersionControl.vcsUpdate" ref="eric5.VCS.VersionControl.html#VersionControl.vcsUpdate" />
@@ -12396,7 +12398,10 @@
       <keyword name="ViewManager.__showBookmarkedMenu" id="ViewManager.__showBookmarkedMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarkedMenu" />
       <keyword name="ViewManager.__showBookmarksMenu" id="ViewManager.__showBookmarksMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarksMenu" />
       <keyword name="ViewManager.__showEditSpellingMenu" id="ViewManager.__showEditSpellingMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEditSpellingMenu" />
+      <keyword name="ViewManager.__showEncodingsMenu" id="ViewManager.__showEncodingsMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEncodingsMenu" />
+      <keyword name="ViewManager.__showEolMenu" id="ViewManager.__showEolMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEolMenu" />
       <keyword name="ViewManager.__showFileMenu" id="ViewManager.__showFileMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showFileMenu" />
+      <keyword name="ViewManager.__showLanguagesMenu" id="ViewManager.__showLanguagesMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showLanguagesMenu" />
       <keyword name="ViewManager.__showRecentMenu" id="ViewManager.__showRecentMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showRecentMenu" />
       <keyword name="ViewManager.__spellCheck" id="ViewManager.__spellCheck" ref="eric5.ViewManager.ViewManager.html#ViewManager.__spellCheck" />
       <keyword name="ViewManager.__splitOrientation" id="ViewManager.__splitOrientation" ref="eric5.ViewManager.ViewManager.html#ViewManager.__splitOrientation" />
