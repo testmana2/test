@@ -1127,6 +1127,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.py</Source>
+    <Source>E5Gui/E5MapWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

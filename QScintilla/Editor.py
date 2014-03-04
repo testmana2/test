@@ -19,6 +19,7 @@ from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
+from E5Gui.E5MapWidget import E5MapWidget
 
 from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
 
@@ -290,6 +291,8 @@ class Editor(QsciScintillaCompat):
         
         self.changeMarkersMask = (1 << self.__changeMarkerSaved) | \
                                  (1 << self.__changeMarkerUnsaved)
+        
+        self.__markerMap = E5MapWidget(self)
         
         # configure the margins
         self.__setMarginsDisplay()
@@ -1206,7 +1209,7 @@ class Editor(QsciScintillaCompat):
                     self.getLanguage(normalized=False)))
         else:
             self.pygmentsSelAct.setText(self.tr("Alternatives"))
-        self.showMenu.emit("Languages", self.languagesMenu,  self)
+        self.showMenu.emit("Languages", self.languagesMenu, self)
         
     def __selectPygmentsLexer(self):
         """
@@ -1360,7 +1363,7 @@ class Editor(QsciScintillaCompat):
         Private slot handling the aboutToShow signal of the encodings context
         menu.
         """
-        self.showMenu.emit("Encodings", self.encodingsMenu,  self)
+        self.showMenu.emit("Encodings", self.encodingsMenu, self)
         
     def __encodingsMenuTriggered(self, act):
         """
@@ -1410,7 +1413,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the aboutToShow signal of the eol context menu.
         """
-        self.showMenu.emit("Eol", self.eolMenu,  self)
+        self.showMenu.emit("Eol", self.eolMenu, self)
         
     def __eolMenuTriggered(self, act):
         """
@@ -4189,6 +4192,8 @@ class Editor(QsciScintillaCompat):
         
         self.setVirtualSpaceOptions(
             Preferences.getEditor("VirtualSpaceOptions"))
+        
+        self.__markerMap.setEnabled(True)
     
     def __setEolMode(self):
         """
@@ -4474,7 +4479,7 @@ class Editor(QsciScintillaCompat):
                         depth -= 1
                         if depth == 0:
                             break
-                    ch,  pos = self.__getCharacter(pos)
+                    ch, pos = self.__getCharacter(pos)
             elif ch == '(':
                 found = True
                 break
@@ -4718,7 +4723,7 @@ class Editor(QsciScintillaCompat):
         
         self.menuActs["Tools"].setEnabled(not self.toolsMenu.isEmpty())
         
-        self.showMenu.emit("Main", self.menu,  self)
+        self.showMenu.emit("Main", self.menu, self)
         
     def __showContextMenuAutocompletion(self):
         """
@@ -4730,7 +4735,7 @@ class Editor(QsciScintillaCompat):
         self.menuActs["acAPIDocument"].setEnabled(self.acAPI)
         self.menuActs["calltip"].setEnabled(self.acAPI)
         
-        self.showMenu.emit("Autocompletion", self.autocompletionMenu,  self)
+        self.showMenu.emit("Autocompletion", self.autocompletionMenu, self)
         
     def __showContextMenuShow(self):
         """
@@ -4782,7 +4787,7 @@ class Editor(QsciScintillaCompat):
         self.coverageHideAnnotationMenuAct.setEnabled(
             len(self.notcoveredMarkers) > 0)
         
-        self.showMenu.emit("Show", self.menuShow,  self)
+        self.showMenu.emit("Show", self.menuShow, self)
         
     def __showContextMenuGraphics(self):
         """
@@ -4795,7 +4800,7 @@ class Editor(QsciScintillaCompat):
         else:
             self.applicationDiagramMenuAct.setEnabled(False)
         
-        self.showMenu.emit("Graphics", self.graphicsMenu,  self)
+        self.showMenu.emit("Graphics", self.graphicsMenu, self)
         
     def __showContextMenuMargin(self):
         """
@@ -4891,21 +4896,21 @@ class Editor(QsciScintillaCompat):
             self.marginMenuActs["PreviousChangeMarker"].setEnabled(False)
             self.marginMenuActs["NextChangeMarker"].setEnabled(False)
         
-        self.showMenu.emit("Margin", self.sender(),  self)
+        self.showMenu.emit("Margin", self.sender(), self)
         
     def __showContextMenuChecks(self):
         """
         Private slot handling the aboutToShow signal of the checks context
         menu.
         """
-        self.showMenu.emit("Checks", self.checksMenu,  self)
+        self.showMenu.emit("Checks", self.checksMenu, self)
         
     def __showContextMenuTools(self):
         """
         Private slot handling the aboutToShow signal of the tools context
         menu.
         """
-        self.showMenu.emit("Tools", self.toolsMenu,  self)
+        self.showMenu.emit("Tools", self.toolsMenu, self)
         
     def __contextSave(self):
         """
@@ -5077,7 +5082,7 @@ class Editor(QsciScintillaCompat):
                                    isinstance(warning, ImportStarUsed):
                                     continue
                                 
-                                _fn, lineno, messageID,  messageArgs = \
+                                _fn, lineno, messageID, messageArgs = \
                                     warning.getMessageData()
                                 if "__IGNORE_WARNING__" not in \
                                         Utilities.extractLineFlags(
@@ -6230,6 +6235,25 @@ class Editor(QsciScintillaCompat):
                 self.zoomTo(zoom)
             evt.accept()
     
+    def resizeEvent(self, evt):
+        """
+        Protected method handling resize events.
+        
+        @param evt reference to the resize event (QResizeEvent)
+        """
+        super().resizeEvent(evt)
+        self.__markerMap.calculateGeometry()
+    
+    def viewportEvent(self, evt):
+        """
+        Protected method handling event of the viewport.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indiating that the event was handled (boolean)
+        """
+        self.__markerMap.calculateGeometry()
+        return super().viewportEvent(evt)
+    
     def __updateReadOnly(self, bForce=True):
         """
         Private method to update the readOnly information for this editor.
@@ -6434,7 +6458,7 @@ class Editor(QsciScintillaCompat):
         Private slot handling the aboutToShow signal of the resources context
         menu.
         """
-        self.showMenu.emit("Resources", self.resourcesMenu,  self)
+        self.showMenu.emit("Resources", self.resourcesMenu, self)
         
     def __addFileResource(self):
         """
@@ -6878,7 +6902,7 @@ class Editor(QsciScintillaCompat):
         self.spellingMenu.addAction(
             self.tr("Ignore All"), self.__ignoreSpellingAlways)
         
-        self.showMenu.emit("Spelling", self.spellingMenu,  self)
+        self.showMenu.emit("Spelling", self.spellingMenu, self)
     
     def __contextMenuSpellingTriggered(self, action):
         """

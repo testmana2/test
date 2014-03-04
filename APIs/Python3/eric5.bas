@@ -162,6 +162,7 @@ E5LineEditButton QAbstractButton
 E5LineEditSideWidget QWidget
 E5ListView QListView
 E5MainWindow QMainWindow
+E5MapWidget QWidget
 E5MessageBox QMessageBox
 E5MessageBoxWizard QObject
 E5MessageBoxWizardDialog QDialog Ui_E5MessageBoxWizardDialog

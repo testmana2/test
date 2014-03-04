@@ -127,6 +127,7 @@
             <section title="eric5.E5Gui.E5LineEditButton" ref="eric5.E5Gui.E5LineEditButton.html" />
             <section title="eric5.E5Gui.E5ListView" ref="eric5.E5Gui.E5ListView.html" />
             <section title="eric5.E5Gui.E5MainWindow" ref="eric5.E5Gui.E5MainWindow.html" />
+            <section title="eric5.E5Gui.E5MapWidget" ref="eric5.E5Gui.E5MapWidget.html" />
             <section title="eric5.E5Gui.E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html" />
             <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
             <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
@@ -3828,6 +3829,31 @@
       <keyword name="E5MainWindow (Constructor)" id="E5MainWindow (Constructor)" ref="eric5.E5Gui.E5MainWindow.html#E5MainWindow.__init__" />
       <keyword name="E5MainWindow (Module)" id="E5MainWindow (Module)" ref="eric5.E5Gui.E5MainWindow.html" />
       <keyword name="E5MainWindow.setStyle" id="E5MainWindow.setStyle" ref="eric5.E5Gui.E5MainWindow.html#E5MainWindow.setStyle" />
+      <keyword name="E5MapWidget" id="E5MapWidget" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget" />
+      <keyword name="E5MapWidget (Constructor)" id="E5MapWidget (Constructor)" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__init__" />
+      <keyword name="E5MapWidget (Module)" id="E5MapWidget (Module)" ref="eric5.E5Gui.E5MapWidget.html" />
+      <keyword name="E5MapWidget.__generateSliderRange" id="E5MapWidget.__generateSliderRange" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__generateSliderRange" />
+      <keyword name="E5MapWidget.__updateMasterViewportWidth" id="E5MapWidget.__updateMasterViewportWidth" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__updateMasterViewportWidth" />
+      <keyword name="E5MapWidget._paintIt" id="E5MapWidget._paintIt" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget._paintIt" />
+      <keyword name="E5MapWidget.backgroundColor" id="E5MapWidget.backgroundColor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.backgroundColor" />
+      <keyword name="E5MapWidget.calculateGeometry" id="E5MapWidget.calculateGeometry" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.calculateGeometry" />
+      <keyword name="E5MapWidget.generateIndicatorRect" id="E5MapWidget.generateIndicatorRect" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.generateIndicatorRect" />
+      <keyword name="E5MapWidget.isEnabled" id="E5MapWidget.isEnabled" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.isEnabled" />
+      <keyword name="E5MapWidget.lineDimensions" id="E5MapWidget.lineDimensions" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.lineDimensions" />
+      <keyword name="E5MapWidget.mousePressEvent" id="E5MapWidget.mousePressEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.mousePressEvent" />
+      <keyword name="E5MapWidget.paintEvent" id="E5MapWidget.paintEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.paintEvent" />
+      <keyword name="E5MapWidget.position2Value" id="E5MapWidget.position2Value" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.position2Value" />
+      <keyword name="E5MapWidget.scaleFactor" id="E5MapWidget.scaleFactor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.scaleFactor" />
+      <keyword name="E5MapWidget.setBackgroundColor" id="E5MapWidget.setBackgroundColor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setBackgroundColor" />
+      <keyword name="E5MapWidget.setEnabled" id="E5MapWidget.setEnabled" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setEnabled" />
+      <keyword name="E5MapWidget.setLineDimensions" id="E5MapWidget.setLineDimensions" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setLineDimensions" />
+      <keyword name="E5MapWidget.setMaster" id="E5MapWidget.setMaster" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setMaster" />
+      <keyword name="E5MapWidget.setSliderColors" id="E5MapWidget.setSliderColors" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setSliderColors" />
+      <keyword name="E5MapWidget.setWidth" id="E5MapWidget.setWidth" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setWidth" />
+      <keyword name="E5MapWidget.sizeHint" id="E5MapWidget.sizeHint" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.sizeHint" />
+      <keyword name="E5MapWidget.sliderColors" id="E5MapWidget.sliderColors" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.sliderColors" />
+      <keyword name="E5MapWidget.value2Position" id="E5MapWidget.value2Position" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.value2Position" />
+      <keyword name="E5MapWidget.width" id="E5MapWidget.width" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.width" />
       <keyword name="E5MessageBox" id="E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox" />
       <keyword name="E5MessageBox (Constructor)" id="E5MessageBox (Constructor)" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox.__init__" />
       <keyword name="E5MessageBox (Module)" id="E5MessageBox (Module)" ref="eric5.E5Gui.E5MessageBox.html" />
@@ -4559,6 +4585,7 @@
       <keyword name="Editor.refresh" id="Editor.refresh" ref="eric5.QScintilla.Editor.html#Editor.refresh" />
       <keyword name="Editor.refreshCoverageAnnotations" id="Editor.refreshCoverageAnnotations" ref="eric5.QScintilla.Editor.html#Editor.refreshCoverageAnnotations" />
       <keyword name="Editor.removeClone" id="Editor.removeClone" ref="eric5.QScintilla.Editor.html#Editor.removeClone" />
+      <keyword name="Editor.resizeEvent" id="Editor.resizeEvent" ref="eric5.QScintilla.Editor.html#Editor.resizeEvent" />
       <keyword name="Editor.revertToUnmodified" id="Editor.revertToUnmodified" ref="eric5.QScintilla.Editor.html#Editor.revertToUnmodified" />
       <keyword name="Editor.saveFile" id="Editor.saveFile" ref="eric5.QScintilla.Editor.html#Editor.saveFile" />
       <keyword name="Editor.saveFileAs" id="Editor.saveFileAs" ref="eric5.QScintilla.Editor.html#Editor.saveFileAs" />
@@ -4597,6 +4624,7 @@
       <keyword name="Editor.unindentLineOrSelection" id="Editor.unindentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.unindentLineOrSelection" />
       <keyword name="Editor.unsetAutoCompletionHook" id="Editor.unsetAutoCompletionHook" ref="eric5.QScintilla.Editor.html#Editor.unsetAutoCompletionHook" />
       <keyword name="Editor.unsetCallTipHook" id="Editor.unsetCallTipHook" ref="eric5.QScintilla.Editor.html#Editor.unsetCallTipHook" />
+      <keyword name="Editor.viewportEvent" id="Editor.viewportEvent" ref="eric5.QScintilla.Editor.html#Editor.viewportEvent" />
       <keyword name="Editor.wheelEvent" id="Editor.wheelEvent" ref="eric5.QScintilla.Editor.html#Editor.wheelEvent" />
       <keyword name="Editor.writeFile" id="Editor.writeFile" ref="eric5.QScintilla.Editor.html#Editor.writeFile" />
       <keyword name="EditorAPIsPage" id="EditorAPIsPage" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage" />
@@ -13793,6 +13821,7 @@
       <file>eric5.E5Gui.E5LineEditButton.html</file>
       <file>eric5.E5Gui.E5ListView.html</file>
       <file>eric5.E5Gui.E5MainWindow.html</file>
+      <file>eric5.E5Gui.E5MapWidget.html</file>
       <file>eric5.E5Gui.E5MessageBox.html</file>
       <file>eric5.E5Gui.E5ModelMenu.html</file>
       <file>eric5.E5Gui.E5ModelToolBar.html</file>

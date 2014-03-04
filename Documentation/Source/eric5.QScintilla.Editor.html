@@ -992,6 +992,9 @@ QsciScintillaCompat
 <td><a href="#Editor.removeClone">removeClone</a></td>
 <td>Public method to remove a clone from our list.</td>
 </tr><tr>
+<td><a href="#Editor.resizeEvent">resizeEvent</a></td>
+<td>Protected method handling resize events.</td>
+</tr><tr>
 <td><a href="#Editor.revertToUnmodified">revertToUnmodified</a></td>
 <td>Public method to revert back to the last saved state.</td>
 </tr><tr>
@@ -1105,6 +1108,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.unsetCallTipHook">unsetCallTipHook</a></td>
 <td>Public method to unset a calltip hook.</td>
+</tr><tr>
+<td><a href="#Editor.viewportEvent">viewportEvent</a></td>
+<td>Protected method handling event of the viewport.</td>
 </tr><tr>
 <td><a href="#Editor.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
@@ -3625,6 +3631,16 @@ command string (string)
 <dd>
 reference to the cloned editor (Editor)
 </dd>
+</dl><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
+<h4>Editor.resizeEvent</h4>
+<b>resizeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling resize events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the resize event (QResizeEvent)
+</dd>
 </dl><a NAME="Editor.revertToUnmodified" ID="Editor.revertToUnmodified"></a>
 <h4>Editor.revertToUnmodified</h4>
 <b>revertToUnmodified</b>(<i></i>)
@@ -3970,7 +3986,22 @@ type of warning message (integer)
 <b>unsetCallTipHook</b>(<i></i>)
 <p>
         Public method to unset a calltip hook.
-</p><a NAME="Editor.wheelEvent" ID="Editor.wheelEvent"></a>
+</p><a NAME="Editor.viewportEvent" ID="Editor.viewportEvent"></a>
+<h4>Editor.viewportEvent</h4>
+<b>viewportEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling event of the viewport.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indiating that the event was handled (boolean)
+</dd>
+</dl><a NAME="Editor.wheelEvent" ID="Editor.wheelEvent"></a>
 <h4>Editor.wheelEvent</h4>
 <b>wheelEvent</b>(<i>evt</i>)
 <p>
