@@ -597,8 +597,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         # TODO: set status of menu entries according to their conditions
         if self.vcs.isExtensionActive("largefiles"):
             enable = len(self.__getUnversionedItems()) > 0
-            for act in self.lfActions:
-                act.setEnabled(enable)
+        else:
+            enable = False
+        for act in self.lfActions:
+            act.setEnabled(enable)
         self.menu.popup(self.mapToGlobal(coord))
     
     def __commit(self):
