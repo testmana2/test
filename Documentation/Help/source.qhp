@@ -886,6 +886,7 @@
             <section title="eric5.QScintilla.APIsManager" ref="eric5.QScintilla.APIsManager.html" />
             <section title="eric5.QScintilla.Editor" ref="eric5.QScintilla.Editor.html" />
             <section title="eric5.QScintilla.EditorAssembly" ref="eric5.QScintilla.EditorAssembly.html" />
+            <section title="eric5.QScintilla.EditorMarkerMap" ref="eric5.QScintilla.EditorMarkerMap.html" />
             <section title="eric5.QScintilla.GotoDialog" ref="eric5.QScintilla.GotoDialog.html" />
             <section title="eric5.QScintilla.MiniEditor" ref="eric5.QScintilla.MiniEditor.html" />
             <section title="eric5.QScintilla.Printer" ref="eric5.QScintilla.Printer.html" />
@@ -3840,7 +3841,7 @@
       <keyword name="E5MapWidget.generateIndicatorRect" id="E5MapWidget.generateIndicatorRect" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.generateIndicatorRect" />
       <keyword name="E5MapWidget.isEnabled" id="E5MapWidget.isEnabled" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.isEnabled" />
       <keyword name="E5MapWidget.lineDimensions" id="E5MapWidget.lineDimensions" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.lineDimensions" />
-      <keyword name="E5MapWidget.mousePressEvent" id="E5MapWidget.mousePressEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.mousePressEvent" />
+      <keyword name="E5MapWidget.mouseReleaseEvent" id="E5MapWidget.mouseReleaseEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.mouseReleaseEvent" />
       <keyword name="E5MapWidget.paintEvent" id="E5MapWidget.paintEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.paintEvent" />
       <keyword name="E5MapWidget.position2Value" id="E5MapWidget.position2Value" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.position2Value" />
       <keyword name="E5MapWidget.scaleFactor" id="E5MapWidget.scaleFactor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.scaleFactor" />
@@ -4738,6 +4739,11 @@
       <keyword name="EditorKeywordsPage.on_languageCombo_activated" id="EditorKeywordsPage.on_languageCombo_activated" ref="eric5.Preferences.ConfigurationPages.EditorKeywordsPage.html#EditorKeywordsPage.on_languageCombo_activated" />
       <keyword name="EditorKeywordsPage.on_setSpinBox_valueChanged" id="EditorKeywordsPage.on_setSpinBox_valueChanged" ref="eric5.Preferences.ConfigurationPages.EditorKeywordsPage.html#EditorKeywordsPage.on_setSpinBox_valueChanged" />
       <keyword name="EditorKeywordsPage.save" id="EditorKeywordsPage.save" ref="eric5.Preferences.ConfigurationPages.EditorKeywordsPage.html#EditorKeywordsPage.save" />
+      <keyword name="EditorMarkerMap" id="EditorMarkerMap" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap" />
+      <keyword name="EditorMarkerMap (Constructor)" id="EditorMarkerMap (Constructor)" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap.__init__" />
+      <keyword name="EditorMarkerMap (Module)" id="EditorMarkerMap (Module)" ref="eric5.QScintilla.EditorMarkerMap.html" />
+      <keyword name="EditorMarkerMap.__drawIndicator" id="EditorMarkerMap.__drawIndicator" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap.__drawIndicator" />
+      <keyword name="EditorMarkerMap._paintIt" id="EditorMarkerMap._paintIt" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap._paintIt" />
       <keyword name="EditorPropertiesPage" id="EditorPropertiesPage" ref="eric5.Preferences.ConfigurationPages.EditorPropertiesPage.html#EditorPropertiesPage" />
       <keyword name="EditorPropertiesPage (Constructor)" id="EditorPropertiesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorPropertiesPage.html#EditorPropertiesPage.__init__" />
       <keyword name="EditorPropertiesPage (Module)" id="EditorPropertiesPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorPropertiesPage.html" />
@@ -14376,6 +14382,7 @@
       <file>eric5.QScintilla.APIsManager.html</file>
       <file>eric5.QScintilla.Editor.html</file>
       <file>eric5.QScintilla.EditorAssembly.html</file>
+      <file>eric5.QScintilla.EditorMarkerMap.html</file>
       <file>eric5.QScintilla.Exporters.ExporterBase.html</file>
       <file>eric5.QScintilla.Exporters.ExporterHTML.html</file>
       <file>eric5.QScintilla.Exporters.ExporterODT.html</file>

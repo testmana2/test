@@ -19,9 +19,9 @@ from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
-from E5Gui.E5MapWidget import E5MapWidget
 
 from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from .EditorMarkerMap import EditorMarkerMap
 
 import Preferences
 import Utilities
@@ -292,7 +292,7 @@ class Editor(QsciScintillaCompat):
         self.changeMarkersMask = (1 << self.__changeMarkerSaved) | \
                                  (1 << self.__changeMarkerUnsaved)
         
-        self.__markerMap = E5MapWidget(self)
+        self.__markerMap = EditorMarkerMap(self)
         
         # configure the margins
         self.__setMarginsDisplay()
@@ -444,6 +444,9 @@ class Editor(QsciScintillaCompat):
                 self.__projectPropertiesChanged)
         
         self.grabGesture(Qt.PinchGesture)
+        
+        self.SCN_ZOOM.connect(self.__markerMap.update)
+        self.__markerMap.update()
     
     def __registerImages(self):
         """
@@ -1654,6 +1657,9 @@ class Editor(QsciScintillaCompat):
                 pos = self.positionFromLineIndex(self.lastLine, self.lastIndex)
                 self.spell.checkWord(pos)
         
+        if self.lastLine != line:
+            self.__markerMap.update()
+        
         self.lastLine = line
         self.lastIndex = index
         
@@ -1951,6 +1957,7 @@ class Editor(QsciScintillaCompat):
             self.markerDeleteHandle(handle)
         self.__addBreakPoints(
             QModelIndex(), 0, self.breakpointModel.rowCount() - 1)
+        self.__markerMap.update()
         
     def __deleteBreakPoints(self, parentIndex, start, end):
         """
@@ -2027,6 +2034,7 @@ class Editor(QsciScintillaCompat):
         
         del self.breaks[handle]
         self.markerDeleteHandle(handle)
+        self.__markerMap.update()
         
     def newBreakpointWithProperties(self, line, properties):
         """
@@ -2047,6 +2055,7 @@ class Editor(QsciScintillaCompat):
             handle = self.markerAdd(line - 1, marker)
             self.breaks[handle] = (line,) + properties
             self.breakpointToggled.emit(self)
+            self.__markerMap.update()
         
     def __toggleBreakpoint(self, line, temporary=False):
         """
@@ -2270,17 +2279,15 @@ class Editor(QsciScintillaCompat):
         """
         for handle in self.bookmarks:
             if self.markerLine(handle) == line - 1:
+                self.bookmarks.remove(handle)
+                self.markerDeleteHandle(handle)
                 break
         else:
             # set a new bookmark
             handle = self.markerAdd(line - 1, self.bookmark)
             self.bookmarks.append(handle)
-            self.bookmarkToggled.emit(self)
-            return
-        
-        self.bookmarks.remove(handle)
-        self.markerDeleteHandle(handle)
         self.bookmarkToggled.emit(self)
+        self.__markerMap.update()
         
     def getBookmarks(self):
         """
@@ -2373,6 +2380,7 @@ class Editor(QsciScintillaCompat):
             self.markerDeleteHandle(handle)
         self.bookmarks = []
         self.bookmarkToggled.emit(self)
+        self.__markerMap.update()
     
     ###########################################################################
     ## Printing methods below
@@ -2545,6 +2553,7 @@ class Editor(QsciScintillaCompat):
                 if shouldBreak:
                     break
         self.taskMarkersUpdated.emit(self)
+        self.__markerMap.update()
     
     ###########################################################################
     ## Change tracing methods below
@@ -2628,6 +2637,7 @@ class Editor(QsciScintillaCompat):
         
         if self.__hasChangeMarkers:
             self.changeMarkersUpdated.emit(self)
+            self.__markerMap.update()
         
     def __resetOnlineChangeTraceInfo(self):
         """
@@ -2649,6 +2659,7 @@ class Editor(QsciScintillaCompat):
         
         if self.__hasChangeMarkers:
             self.changeMarkersUpdated.emit(self)
+            self.__markerMap.update()
         
     def __deleteAllChangeMarkers(self):
         """
@@ -2658,6 +2669,7 @@ class Editor(QsciScintillaCompat):
         self.markerDeleteAll(self.__changeMarkerSaved)
         self.__hasChangeMarkers = False
         self.changeMarkersUpdated.emit(self)
+        self.__markerMap.update()
         
     def getChangeLines(self):
         """
@@ -5248,7 +5260,8 @@ class Editor(QsciScintillaCompat):
                 for line in missing:
                     handle = self.markerAdd(line - 1, self.notcovered)
                     self.notcoveredMarkers.append(handle)
-                    self.coverageMarkersShown.emit(True)
+                self.coverageMarkersShown.emit(True)
+                self.__markerMap.update()
             else:
                 if not silent:
                     E5MessageBox.information(
@@ -5273,6 +5286,7 @@ class Editor(QsciScintillaCompat):
         self.notcoveredMarkers = []
         self.coverageMarkersShown.emit(False)
         self.showingNotcoveredMarkers = False
+        self.__markerMap.update()
         
     def getCoverageLines(self):
         """
@@ -5449,6 +5463,7 @@ class Editor(QsciScintillaCompat):
                     self.syntaxerrorToggled.emit(self)
         
         self.__setAnnotation(line - 1)
+        self.__markerMap.update()
         
     def getSyntaxErrors(self):
         """
@@ -5576,6 +5591,7 @@ class Editor(QsciScintillaCompat):
                     self.syntaxerrorToggled.emit(self)
         
         self.__setAnnotation(line - 1)
+        self.__markerMap.update()
     
     def getWarnings(self):
         """
@@ -5687,6 +5703,7 @@ class Editor(QsciScintillaCompat):
                 self.__setAnnotation(self.markerLine(handle))
                 self.markerDeleteHandle(handle)
         self.syntaxerrorToggled.emit(self)
+        self.__markerMap.update()
     
     def clearWarnings(self):
         """
@@ -5698,6 +5715,7 @@ class Editor(QsciScintillaCompat):
             self.markerDeleteHandle(handle)
         self.warnings = {}
         self.syntaxerrorToggled.emit(self)
+        self.__markerMap.update()
     
     def __showWarning(self, line=-1):
         """
@@ -6329,6 +6347,8 @@ class Editor(QsciScintillaCompat):
         
         self.editorSaved.emit(self.fileName)
         self.__autoSyntaxCheck(useText=False)
+        
+        self.__markerMap.update()
         
         self.refreshed.emit()
         

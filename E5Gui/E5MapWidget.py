@@ -24,14 +24,14 @@ class E5MapWidget(QWidget):
         super().__init__(parent)
         self.setAttribute(Qt.WA_OpaquePaintEvent)
         
-        self.__width = 12
-        self.__lineBorder = 2
+        self.__width = 14
+        self.__lineBorder = 1
         self.__lineHeight = 2
-        self.__backgroundColor = QColor(Qt.lightGray).lighter(120)
+        self.__backgroundColor = QColor("#e7e7e7")
         self.__sliderBorderColor = QColor(Qt.black)
         self.__sliderBackgroundColor = QColor(Qt.white)
         
-        self.__master = None
+        self._master = None
         self.__enabled = False
         
         if parent is not None and isinstance(parent, QAbstractScrollArea):
@@ -41,12 +41,12 @@ class E5MapWidget(QWidget):
         """
         Private method to update the master's viewport width.
         """
-        if self.__master:
+        if self._master:
             if self.__enabled:
                 width = self.__width
             else:
                 width = 0
-            self.__master.setViewportMargins(0, 0, width, 0)
+            self._master.setViewportMargins(0, 0, width, 0)
     
     def setMaster(self, master):
         """
@@ -54,8 +54,8 @@ class E5MapWidget(QWidget):
         
         @param master map master widget (QAbstractScrollArea)
         """
-        self.__master = master
-        self.__master.verticalScrollBar().valueChanged.connect(self.repaint)
+        self._master = master
+        self._master.verticalScrollBar().valueChanged.connect(self.repaint)
         self.__updateMasterViewportWidth()
     
     def setWidth(self, width):
@@ -64,7 +64,10 @@ class E5MapWidget(QWidget):
         
         @param width widget width (integer)
         """
-        self.__width = width
+        if width != self.__width:
+            self.__width = max(6, width)    # minimum width 6 pixels
+            self.__updateMasterViewportWidth()
+            self.update()
     
     def width(self):
         """
@@ -81,8 +84,10 @@ class E5MapWidget(QWidget):
         @param border border width on each side in x-direction (integer)
         @param height height of the line in pixels (integer)
         """
-        self.__lineBorder = border
-        self.__lineHeight = max(2, height)  # min height is 2 pixels
+        if border != self.__lineBorder or height != self.__lineHeight:
+            self.__lineBorder = max(1, border)  # min border 1 pixel
+            self.__lineHeight = max(1, height)  # min height 1 pixel
+            self.update()
     
     def lineDimensions(self):
         """
@@ -98,9 +103,10 @@ class E5MapWidget(QWidget):
         
         @param enable flag indicating the enabled state (boolean)
         """
-        self.__enabled = enable
-        self.setVisible(enable)
-        self.__updateMasterViewportWidth()
+        if enable != self.__enabled:
+            self.__enabled = enable
+            self.setVisible(enable)
+            self.__updateMasterViewportWidth()
     
     def isEnabled(self):
         """
@@ -116,7 +122,9 @@ class E5MapWidget(QWidget):
         
         @param color color for the background (QColor)
         """
-        self.__backgroundColor = color
+        if color != self.__backgroundColor:
+            self.__backgroundColor = color
+            self.update()
     
     def backgroundColor(self):
         """
@@ -133,8 +141,11 @@ class E5MapWidget(QWidget):
         @param border border color (QColor)
         @param background background color (QColor)
         """
-        self.__sliderBorderColor = border
-        self.__sliderBackgroundColor = background
+        if border != self.__sliderBorderColor or \
+                background != self.__sliderBackgroundColor:
+            self.__sliderBorderColor = border
+            self.__sliderBackgroundColor = background
+            self.update()
     
     def sliderColors(self):
         """
@@ -168,7 +179,7 @@ class E5MapWidget(QWidget):
         self._paintIt(painter)
         
         # step 3: paint the slider
-        if self.__master:
+        if self._master:
             penColor = self.__sliderBorderColor
             penColor.setAlphaF(0.8)
             painter.setPen(penColor)
@@ -176,7 +187,7 @@ class E5MapWidget(QWidget):
             brushColor.setAlphaF(0.5)
             painter.setBrush(QBrush(brushColor))
             painter.drawRect(self.__generateSliderRange(
-                self.__master.verticalScrollBar()))
+                self._master.verticalScrollBar()))
     
     def _paintIt(self, painter):
         """
@@ -188,29 +199,33 @@ class E5MapWidget(QWidget):
         """
         pass
     
-    def mousePressEvent(self, event):
+    def mouseReleaseEvent(self, event):
         """
-        Protected method to handle a mouse button press.
+        Protected method to handle a mouse button release.
         
         @param event mouse event (QMouseEvent)
         """
-        if event.button() == Qt.LeftButton and self.__master:
-            vsb = self.__master.verticalScrollBar()
+        if event.button() == Qt.LeftButton and self._master:
+            vsb = self._master.verticalScrollBar()
             value = self.position2Value(event.pos().y() - 1)
             vsb.setValue(value - 0.5 * vsb.pageStep())  # center on page
+    
+    # TODO: add support for dragging the slider
+    
+    # TODO: add support for mouse wheel
     
     def calculateGeometry(self):
         """
         Public method to recalculate the map widget's geometry.
         """
-        if self.__master:
-            cr = self.__master.contentsRect()
-            vsb = self.__master.verticalScrollBar()
+        if self._master:
+            cr = self._master.contentsRect()
+            vsb = self._master.verticalScrollBar()
             if vsb.isVisible():
                 vsbw = vsb.contentsRect().width()
             else:
                 vsbw = 0
-            left, top, right, bottom = self.__master.getContentsMargins()
+            left, top, right, bottom = self._master.getContentsMargins()
             if right > vsbw:
                 vsbw = 0
             self.setGeometry(QRect(cr.right() - self.__width - vsbw, cr.top(),
@@ -224,9 +239,9 @@ class E5MapWidget(QWidget):
             (boolean)
         @return scale factor (float)
         """
-        if self.__master:
+        if self._master:
             delta = 0 if slider else 2
-            vsb = self.__master.verticalScrollBar()
+            vsb = self._master.verticalScrollBar()
             posHeight = vsb.height() - delta - 1
             valHeight = vsb.maximum() - vsb.minimum() + vsb.pageStep()
             return posHeight / valHeight
@@ -242,9 +257,9 @@ class E5MapWidget(QWidget):
             (boolean)
         @return position (integer)
         """
-        if self.__master:
+        if self._master:
             offset = 0 if slider else 1
-            vsb = self.__master.verticalScrollBar()
+            vsb = self._master.verticalScrollBar()
             return (value - vsb.minimum()) * self.scaleFactor(slider) + offset
         else:
             return value
@@ -258,9 +273,9 @@ class E5MapWidget(QWidget):
             (boolean)
         @return scrollbar value (integer)
         """
-        if self.__master:
+        if self._master:
             offset = 0 if slider else 1
-            vsb = self.__master.verticalScrollBar()
+            vsb = self._master.verticalScrollBar()
             return vsb.minimum() + max(
                 0, (position - offset) / self.scaleFactor(slider))
         else:
@@ -286,5 +301,4 @@ class E5MapWidget(QWidget):
         pos1 = self.value2Position(scrollbar.value(), slider=True)
         pos2 = self.value2Position(scrollbar.value() + scrollbar.pageStep(),
                                    slider=True)
-        return QRect(1, pos1, self.__width - 2, pos2 - pos1 + 1)
-        # TODO: check slider appearance and adjust to self.__width
+        return QRect(0, pos1, self.__width - 1, pos2 - pos1)
