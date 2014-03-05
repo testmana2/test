@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2014 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing a dialog to enter the data for a shelve operation.
+"""
+
+from PyQt4.QtCore import QDateTime
+from PyQt4.QtGui import QDialog
+
+from .Ui_HgShelveDataDialog import Ui_HgShelveDataDialog
+
+
+class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
+    """
+    Class implementing a dialog to enter the data for a shelve operation.
+    """
+    def __init__(self, parent=None):
+        """
+        Constructor
+        
+        @param parent reference to the parent widget (QWidget)
+        """
+        super().__init__(parent)
+        self.setupUi(self)
+        
+        self.__initialDateTime = QDateTime.currentDateTime()
+        self.dateTimeEdit.setDateTime(self.__initialDateTime)
+        
+        self.resize(self.width(), self.minimumSizeHint().height())
+    
+    def getData(self):
+        """
+        Public method to get the user data.
+        
+        @return tuple containing the name (string), date (QDateTime),
+            message (string) and a flag indicating to add/remove
+            new/missing files (boolean)
+        """
+        if self.dateTimeEdit.dateTime() != self.__initialDateTime:
+            dateTime = self.dateTimeEdit.dateTime()
+        else:
+            dateTime = QDateTime()
+        return (
+            self.nameEdit.text(),
+            dateTime,
+            self.messageEdit.text(),
+            self.addRemoveCheckBox.isChecked(),
+        )
