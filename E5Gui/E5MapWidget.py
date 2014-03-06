@@ -7,7 +7,7 @@
 Module implementing a base class for showing a document map.
 """
 
-from PyQt4.QtCore import Qt, QSize, QRect
+from PyQt4.QtCore import Qt, QSize, QRect, QCoreApplication
 from PyQt4.QtGui import QWidget, QAbstractScrollArea, QColor, QBrush, QPainter
 
 
@@ -28,14 +28,24 @@ class E5MapWidget(QWidget):
         self.__lineBorder = 1
         self.__lineHeight = 2
         self.__backgroundColor = QColor("#e7e7e7")
-        self.__sliderBorderColor = QColor(Qt.black)
-        self.__sliderBackgroundColor = QColor(Qt.white)
+        self.__setSliderColor()
         
         self._master = None
         self.__enabled = False
         
         if parent is not None and isinstance(parent, QAbstractScrollArea):
             self.setMaster(parent)
+    
+    def __setSliderColor(self):
+        """
+        Set the slider color depending upon the background color.
+        """
+        if self.__backgroundColor.toHsv().value() < 128:
+            # dark background, use white slider
+            self.__sliderColor = Qt.white
+        else:
+            # light background, use black slider
+            self.__sliderColor = Qt.black
     
     def __updateMasterViewportWidth(self):
         """
@@ -55,6 +65,7 @@ class E5MapWidget(QWidget):
         @param master map master widget (QAbstractScrollArea)
         """
         self._master = master
+        self._master.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self._master.verticalScrollBar().valueChanged.connect(self.repaint)
         self.__updateMasterViewportWidth()
     
@@ -124,6 +135,7 @@ class E5MapWidget(QWidget):
         """
         if color != self.__backgroundColor:
             self.__backgroundColor = color
+            self.__setSliderColor()
             self.update()
     
     def backgroundColor(self):
@@ -133,29 +145,6 @@ class E5MapWidget(QWidget):
         @return background color (QColor)
         """
         return QColor(self.__backgroundColor)
-    
-    def setSliderColors(self, border, background):
-        """
-        Public method to set the slider colors.
-        
-        @param border border color (QColor)
-        @param background background color (QColor)
-        """
-        if border != self.__sliderBorderColor or \
-                background != self.__sliderBackgroundColor:
-            self.__sliderBorderColor = border
-            self.__sliderBackgroundColor = background
-            self.update()
-    
-    def sliderColors(self):
-        """
-        Public method to get the slider colors.
-        
-        @return tuple with the slider's border color (QColor) and
-            background color (QColor)
-        """
-        return (QColor(self.__sliderBorderColor),
-                QColor(self.__sliderBackgroundColor))
     
     def sizeHint(self):
         """
@@ -180,11 +169,9 @@ class E5MapWidget(QWidget):
         
         # step 3: paint the slider
         if self._master:
-            penColor = self.__sliderBorderColor
-            penColor.setAlphaF(0.8)
+            penColor = self.__sliderColor
             painter.setPen(penColor)
-            brushColor = self.__sliderBackgroundColor
-            brushColor.setAlphaF(0.5)
+            brushColor = Qt.transparent
             painter.setBrush(QBrush(brushColor))
             painter.drawRect(self.__generateSliderRange(
                 self._master.verticalScrollBar()))
@@ -199,20 +186,39 @@ class E5MapWidget(QWidget):
         """
         pass
     
-    def mouseReleaseEvent(self, event):
+    def mousePressEvent(self, event):
         """
-        Protected method to handle a mouse button release.
+        Protected method to handle a mouse button press.
         
-        @param event mouse event (QMouseEvent)
+        @param event reference to the mouse event (QMouseEvent)
         """
         if event.button() == Qt.LeftButton and self._master:
             vsb = self._master.verticalScrollBar()
             value = self.position2Value(event.pos().y() - 1)
             vsb.setValue(value - 0.5 * vsb.pageStep())  # center on page
+        self.__mousePressPos = None
     
-    # TODO: add support for dragging the slider
+    def mouseMoveEvent(self, event):
+        """
+        Protected method to handle a mouse moves.
+        
+        @param event reference to the mouse event (QMouseEvent)
+        """
+        if event.buttons() & Qt.LeftButton and self._master:
+            vsb = self._master.verticalScrollBar()
+            value = self.position2Value(event.pos().y() - 1)
+            vsb.setValue(value - 0.5 * vsb.pageStep())  # center on page
     
-    # TODO: add support for mouse wheel
+    def wheelEvent(self, event):
+        """
+        Protected slot handling mouse wheel events.
+        
+        @param event reference to the wheel event (QWheelEvent)
+        """
+        if self._master and \
+            event.modifiers() == Qt.NoModifier and \
+                event.orientation() == Qt.Vertical:
+            QCoreApplication.sendEvent(self._master.verticalScrollBar(), event)
     
     def calculateGeometry(self):
         """

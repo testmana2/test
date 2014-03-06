@@ -44,7 +44,7 @@ class EditorMarkerMap(E5MapWidget):
         @param color color to be used (QColor)
         """
         position = self.value2Position(line)
-        painter.setPen(color.darker(120))
+        painter.setPen(color)
         painter.setBrush(color)
         painter.drawRect(self.generateIndicatorRect(position))
     

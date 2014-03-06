@@ -63,6 +63,9 @@ QWidget
 <td><a href="#E5MapWidget.__generateSliderRange">__generateSliderRange</a></td>
 <td>Private method to generate the slider rectangle.</td>
 </tr><tr>
+<td><a href="#E5MapWidget.__setSliderColor">__setSliderColor</a></td>
+<td>Set the slider color depending upon the background color.</td>
+</tr><tr>
 <td><a href="#E5MapWidget.__updateMasterViewportWidth">__updateMasterViewportWidth</a></td>
 <td>Private method to update the master's viewport width.</td>
 </tr><tr>
@@ -84,8 +87,11 @@ QWidget
 <td><a href="#E5MapWidget.lineDimensions">lineDimensions</a></td>
 <td>Public method to get the line (indicator) dimensions.</td>
 </tr><tr>
-<td><a href="#E5MapWidget.mouseReleaseEvent">mouseReleaseEvent</a></td>
-<td>Protected method to handle a mouse button release.</td>
+<td><a href="#E5MapWidget.mouseMoveEvent">mouseMoveEvent</a></td>
+<td>Protected method to handle a mouse moves.</td>
+</tr><tr>
+<td><a href="#E5MapWidget.mousePressEvent">mousePressEvent</a></td>
+<td>Protected method to handle a mouse button press.</td>
 </tr><tr>
 <td><a href="#E5MapWidget.paintEvent">paintEvent</a></td>
 <td>Protected method to handle a paint event.</td>
@@ -108,20 +114,17 @@ QWidget
 <td><a href="#E5MapWidget.setMaster">setMaster</a></td>
 <td>Public method to set the map master widget.</td>
 </tr><tr>
-<td><a href="#E5MapWidget.setSliderColors">setSliderColors</a></td>
-<td>Public method to set the slider colors.</td>
-</tr><tr>
 <td><a href="#E5MapWidget.setWidth">setWidth</a></td>
 <td>Public method to set the widget width.</td>
 </tr><tr>
 <td><a href="#E5MapWidget.sizeHint">sizeHint</a></td>
 <td>Public method to give an indication about the preferred size.</td>
 </tr><tr>
-<td><a href="#E5MapWidget.sliderColors">sliderColors</a></td>
-<td>Public method to get the slider colors.</td>
-</tr><tr>
 <td><a href="#E5MapWidget.value2Position">value2Position</a></td>
 <td>Public method to convert a scrollbar value into a position.</td>
+</tr><tr>
+<td><a href="#E5MapWidget.wheelEvent">wheelEvent</a></td>
+<td>Protected slot handling mouse wheel events.</td>
 </tr><tr>
 <td><a href="#E5MapWidget.width">width</a></td>
 <td>Public method to get the widget's width.</td>
@@ -156,7 +159,12 @@ reference to the vertical scrollbar (QScrollBar)
 <dd>
 slider rectangle (QRect)
 </dd>
-</dl><a NAME="E5MapWidget.__updateMasterViewportWidth" ID="E5MapWidget.__updateMasterViewportWidth"></a>
+</dl><a NAME="E5MapWidget.__setSliderColor" ID="E5MapWidget.__setSliderColor"></a>
+<h4>E5MapWidget.__setSliderColor</h4>
+<b>__setSliderColor</b>(<i></i>)
+<p>
+        Set the slider color depending upon the background color.
+</p><a NAME="E5MapWidget.__updateMasterViewportWidth" ID="E5MapWidget.__updateMasterViewportWidth"></a>
 <h4>E5MapWidget.__updateMasterViewportWidth</h4>
 <b>__updateMasterViewportWidth</b>(<i></i>)
 <p>
@@ -223,15 +231,25 @@ flag indicating the enabled state (boolean)
 <dd>
 tuple with border width (integer) and line height (integer)
 </dd>
-</dl><a NAME="E5MapWidget.mouseReleaseEvent" ID="E5MapWidget.mouseReleaseEvent"></a>
-<h4>E5MapWidget.mouseReleaseEvent</h4>
-<b>mouseReleaseEvent</b>(<i>event</i>)
+</dl><a NAME="E5MapWidget.mouseMoveEvent" ID="E5MapWidget.mouseMoveEvent"></a>
+<h4>E5MapWidget.mouseMoveEvent</h4>
+<b>mouseMoveEvent</b>(<i>event</i>)
 <p>
-        Protected method to handle a mouse button release.
+        Protected method to handle a mouse moves.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
-mouse event (QMouseEvent)
+reference to the mouse event (QMouseEvent)
+</dd>
+</dl><a NAME="E5MapWidget.mousePressEvent" ID="E5MapWidget.mousePressEvent"></a>
+<h4>E5MapWidget.mousePressEvent</h4>
+<b>mousePressEvent</b>(<i>event</i>)
+<p>
+        Protected method to handle a mouse button press.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+reference to the mouse event (QMouseEvent)
 </dd>
 </dl><a NAME="E5MapWidget.paintEvent" ID="E5MapWidget.paintEvent"></a>
 <h4>E5MapWidget.paintEvent</h4>
@@ -321,19 +339,6 @@ height of the line in pixels (integer)
 <dd>
 map master widget (QAbstractScrollArea)
 </dd>
-</dl><a NAME="E5MapWidget.setSliderColors" ID="E5MapWidget.setSliderColors"></a>
-<h4>E5MapWidget.setSliderColors</h4>
-<b>setSliderColors</b>(<i>border, background</i>)
-<p>
-        Public method to set the slider colors.
-</p><dl>
-<dt><i>border</i></dt>
-<dd>
-border color (QColor)
-</dd><dt><i>background</i></dt>
-<dd>
-background color (QColor)
-</dd>
 </dl><a NAME="E5MapWidget.setWidth" ID="E5MapWidget.setWidth"></a>
 <h4>E5MapWidget.setWidth</h4>
 <b>setWidth</b>(<i>width</i>)
@@ -354,17 +359,6 @@ widget width (integer)
 <dd>
 preferred size (QSize)
 </dd>
-</dl><a NAME="E5MapWidget.sliderColors" ID="E5MapWidget.sliderColors"></a>
-<h4>E5MapWidget.sliderColors</h4>
-<b>sliderColors</b>(<i></i>)
-<p>
-        Public method to get the slider colors.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-tuple with the slider's border color (QColor) and
-            background color (QColor)
-</dd>
 </dl><a NAME="E5MapWidget.value2Position" ID="E5MapWidget.value2Position"></a>
 <h4>E5MapWidget.value2Position</h4>
 <b>value2Position</b>(<i>value, slider=False</i>)
@@ -383,6 +377,16 @@ flag indicating to calculate the result for the slider
 <dt>Returns:</dt>
 <dd>
 position (integer)
+</dd>
+</dl><a NAME="E5MapWidget.wheelEvent" ID="E5MapWidget.wheelEvent"></a>
+<h4>E5MapWidget.wheelEvent</h4>
+<b>wheelEvent</b>(<i>event</i>)
+<p>
+        Protected slot handling mouse wheel events.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+reference to the wheel event (QWheelEvent)
 </dd>
 </dl><a NAME="E5MapWidget.width" ID="E5MapWidget.width"></a>
 <h4>E5MapWidget.width</h4>
