@@ -138,9 +138,9 @@ class HgGpgSignDialog(QDialog, Ui_HgGpgSignDialog):
             signature (string, boolean, string, string, boolean, boolean)
         """
         if self.numberButton.isChecked():
-            rev = str(self.numberSpinBox.value())
+            rev = "rev({0})".format(self.numberSpinBox.value())
         elif self.idButton.isChecked():
-            rev = self.idEdit.text()
+            rev = "id({0})".format(self.idEdit.text())
         elif self.tagButton.isChecked():
             rev = self.tagCombo.currentText()
         elif self.branchButton.isChecked():

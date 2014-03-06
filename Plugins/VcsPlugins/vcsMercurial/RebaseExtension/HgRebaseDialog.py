@@ -246,9 +246,9 @@ class HgRebaseDialog(QDialog, Ui_HgRebaseDialog):
             tipButton = self.tip2Button
         
         if numberButton.isChecked():
-            return str(numberSpinBox.value())
+            return "rev({0})".format(numberSpinBox.value())
         elif idButton.isChecked():
-            return idEdit.text()
+            return "id({0})".format(idEdit.text())
         elif tagButton.isChecked():
             return tagCombo.currentText()
         elif branchButton.isChecked():
