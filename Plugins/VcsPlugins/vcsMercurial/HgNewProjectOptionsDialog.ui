@@ -116,7 +116,7 @@ the repository and be placed in this directory.&lt;/p&gt;</string>
     </widget>
    </item>
    <item row="5" column="0" colspan="3">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="lfNoteLabel">
      <property name="text">
       <string>&lt;b&gt;Note:&lt;/b&gt; This option increases the download time and volume.</string>
      </property>

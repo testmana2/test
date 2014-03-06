@@ -57,14 +57,32 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         self.networkPath = "localhost/"
         self.localProtocol = True
         
+        ipath = Preferences.getMultiProject("Workspace") or \
+            Utilities.getHomeDir()
+        self.__initPaths = [
+            Utilities.fromNativeSeparators(ipath),
+            Utilities.fromNativeSeparators(ipath) + "/",
+        ]
         self.vcsProjectDirEdit.setText(
-            Utilities.toNativeSeparators(
-                Preferences.getMultiProject("Workspace") or
-                Utilities.getHomeDir()))
+            Utilities.toNativeSeparators(self.__initPaths[0]))
         
-        self.largeCheckBox.setEnabled(self.vcs.isExtensionActive("largefiles"))
+        self.lfNoteLabel.setVisible(self.vcs.isExtensionActive("largefiles"))
+        self.largeCheckBox.setVisible(self.vcs.isExtensionActive("largefiles"))
         
         self.resize(self.width(), self.minimumSizeHint().height())
+        
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+    
+    @pyqtSlot(str)
+    def on_vcsProjectDirEdit_textChanged(self, txt):
+        """
+        Private slot to handle a change of the project directory.
+        
+        @param txt name of the project directory (string)
+        """
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
+            bool(txt) and
+            Utilities.fromNativeSeparators(txt) not in self.__initPaths)
     
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
