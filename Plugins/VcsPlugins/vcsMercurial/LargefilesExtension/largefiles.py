@@ -9,6 +9,7 @@ Module implementing the largefiles extension interface.
 
 import os
 
+from PyQt4.QtCore import QTimer
 from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Application import e5App
@@ -87,12 +88,14 @@ class Largefiles(HgExtension):
             
             # step 3: close current project and open new one
             if res:
-                e5App().getObject("Project").openProject(newProjectFile)
                 if direction == 'largefiles':
                     self.vcs.hgEditConfig(newName, largefilesData={
                         "minsize": minSize, "pattern": patterns})
                 else:
                     self.vcs.hgEditConfig(newName, withLargefiles=False)
+                QTimer.singleShot(
+                    0, lambda: e5App().getObject("Project").openProject(
+                        newProjectFile))
     
     def hgAdd(self, names, mode):
         """
