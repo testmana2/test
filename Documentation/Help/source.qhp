@@ -3834,6 +3834,7 @@
       <keyword name="E5MapWidget (Constructor)" id="E5MapWidget (Constructor)" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__init__" />
       <keyword name="E5MapWidget (Module)" id="E5MapWidget (Module)" ref="eric5.E5Gui.E5MapWidget.html" />
       <keyword name="E5MapWidget.__generateSliderRange" id="E5MapWidget.__generateSliderRange" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__generateSliderRange" />
+      <keyword name="E5MapWidget.__setSliderColor" id="E5MapWidget.__setSliderColor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__setSliderColor" />
       <keyword name="E5MapWidget.__updateMasterViewportWidth" id="E5MapWidget.__updateMasterViewportWidth" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.__updateMasterViewportWidth" />
       <keyword name="E5MapWidget._paintIt" id="E5MapWidget._paintIt" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget._paintIt" />
       <keyword name="E5MapWidget.backgroundColor" id="E5MapWidget.backgroundColor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.backgroundColor" />
@@ -3841,7 +3842,8 @@
       <keyword name="E5MapWidget.generateIndicatorRect" id="E5MapWidget.generateIndicatorRect" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.generateIndicatorRect" />
       <keyword name="E5MapWidget.isEnabled" id="E5MapWidget.isEnabled" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.isEnabled" />
       <keyword name="E5MapWidget.lineDimensions" id="E5MapWidget.lineDimensions" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.lineDimensions" />
-      <keyword name="E5MapWidget.mouseReleaseEvent" id="E5MapWidget.mouseReleaseEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.mouseReleaseEvent" />
+      <keyword name="E5MapWidget.mouseMoveEvent" id="E5MapWidget.mouseMoveEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.mouseMoveEvent" />
+      <keyword name="E5MapWidget.mousePressEvent" id="E5MapWidget.mousePressEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.mousePressEvent" />
       <keyword name="E5MapWidget.paintEvent" id="E5MapWidget.paintEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.paintEvent" />
       <keyword name="E5MapWidget.position2Value" id="E5MapWidget.position2Value" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.position2Value" />
       <keyword name="E5MapWidget.scaleFactor" id="E5MapWidget.scaleFactor" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.scaleFactor" />
@@ -3849,11 +3851,10 @@
       <keyword name="E5MapWidget.setEnabled" id="E5MapWidget.setEnabled" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setEnabled" />
       <keyword name="E5MapWidget.setLineDimensions" id="E5MapWidget.setLineDimensions" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setLineDimensions" />
       <keyword name="E5MapWidget.setMaster" id="E5MapWidget.setMaster" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setMaster" />
-      <keyword name="E5MapWidget.setSliderColors" id="E5MapWidget.setSliderColors" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setSliderColors" />
       <keyword name="E5MapWidget.setWidth" id="E5MapWidget.setWidth" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.setWidth" />
       <keyword name="E5MapWidget.sizeHint" id="E5MapWidget.sizeHint" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.sizeHint" />
-      <keyword name="E5MapWidget.sliderColors" id="E5MapWidget.sliderColors" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.sliderColors" />
       <keyword name="E5MapWidget.value2Position" id="E5MapWidget.value2Position" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.value2Position" />
+      <keyword name="E5MapWidget.wheelEvent" id="E5MapWidget.wheelEvent" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.wheelEvent" />
       <keyword name="E5MapWidget.width" id="E5MapWidget.width" ref="eric5.E5Gui.E5MapWidget.html#E5MapWidget.width" />
       <keyword name="E5MessageBox" id="E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox" />
       <keyword name="E5MessageBox (Constructor)" id="E5MessageBox (Constructor)" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox.__init__" />
@@ -6273,6 +6274,7 @@
       <keyword name="HgNewProjectOptionsDialog.getData" id="HgNewProjectOptionsDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.getData" />
       <keyword name="HgNewProjectOptionsDialog.on_projectDirButton_clicked" id="HgNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_projectDirButton_clicked" />
       <keyword name="HgNewProjectOptionsDialog.on_protocolCombo_activated" id="HgNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_protocolCombo_activated" />
+      <keyword name="HgNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" id="HgNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" />
       <keyword name="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="HgOptionsDialog" id="HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog" />
@@ -9277,6 +9279,7 @@
       <keyword name="PropertiesDialog.getPPath" id="PropertiesDialog.getPPath" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.getPPath" />
       <keyword name="PropertiesDialog.getProjectType" id="PropertiesDialog.getProjectType" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.getProjectType" />
       <keyword name="PropertiesDialog.on_dirButton_clicked" id="PropertiesDialog.on_dirButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_dirButton_clicked" />
+      <keyword name="PropertiesDialog.on_dirEdit_textChanged" id="PropertiesDialog.on_dirEdit_textChanged" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_dirEdit_textChanged" />
       <keyword name="PropertiesDialog.on_languageComboBox_currentIndexChanged" id="PropertiesDialog.on_languageComboBox_currentIndexChanged" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_languageComboBox_currentIndexChanged" />
       <keyword name="PropertiesDialog.on_mainscriptButton_clicked" id="PropertiesDialog.on_mainscriptButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_mainscriptButton_clicked" />
       <keyword name="PropertiesDialog.on_spellPropertiesButton_clicked" id="PropertiesDialog.on_spellPropertiesButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_spellPropertiesButton_clicked" />
@@ -10941,6 +10944,8 @@
       <keyword name="SvnNewProjectOptionsDialog.on_projectDirButton_clicked" id="SvnNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_projectDirButton_clicked" />
       <keyword name="SvnNewProjectOptionsDialog.on_protocolCombo_activated" id="SvnNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnNewProjectOptionsDialog.on_protocolCombo_activated" id="SvnNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_protocolCombo_activated" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
