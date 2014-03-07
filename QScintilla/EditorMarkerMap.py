@@ -7,9 +7,9 @@
 Module implementing a class for showing an editor marker map.
 """
 
-from PyQt4.QtGui import QColor
-
 from E5Gui.E5MapWidget import E5MapWidget
+
+import Preferences
 
 
 class EditorMarkerMap(E5MapWidget):
@@ -25,15 +25,24 @@ class EditorMarkerMap(E5MapWidget):
         super().__init__(parent)
         
         # initialize colors for various markers
-        # TODO: make these colors configurable via Preferences
-        self.__bookmarkColor = QColor("#f8c700")
-        self.__errorColor = QColor("#dd0000")
-        self.__warningColor = QColor("#606000")
-        self.__breakpointColor = QColor("#f55c07")
-        self.__taskColor = QColor("#2278f8")
-        self.__coverageColor = QColor("#ad3636")
-        self.__changeColor = QColor("#00b000")
-        self.__currentLineMarker = QColor("#000000")
+        self.initColors()
+    
+    def initColors(self):
+        """
+        Public method to initialize the colors.
+        """
+        self.setBackgroundColor(
+            Preferences.getEditorColour("MarkerMapBackground"))
+        
+        self.__bookmarkColor = Preferences.getEditorColour("BookmarksMap")
+        self.__errorColor = Preferences.getEditorColour("ErrorsMap")
+        self.__warningColor = Preferences.getEditorColour("WarningsMap")
+        self.__breakpointColor = Preferences.getEditorColour("BreakpointsMap")
+        self.__taskColor = Preferences.getEditorColour("TasksMap")
+        self.__coverageColor = Preferences.getEditorColour("CoverageMap")
+        self.__changeColor = Preferences.getEditorColour("ChangesMap")
+        self.__currentLineMarker = Preferences.getEditorColour("CurrentMap")
+        self.update()
     
     def __drawIndicator(self, line, painter, color):
         """

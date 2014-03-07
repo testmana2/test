@@ -4745,6 +4745,7 @@
       <keyword name="EditorMarkerMap (Module)" id="EditorMarkerMap (Module)" ref="eric5.QScintilla.EditorMarkerMap.html" />
       <keyword name="EditorMarkerMap.__drawIndicator" id="EditorMarkerMap.__drawIndicator" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap.__drawIndicator" />
       <keyword name="EditorMarkerMap._paintIt" id="EditorMarkerMap._paintIt" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap._paintIt" />
+      <keyword name="EditorMarkerMap.initColors" id="EditorMarkerMap.initColors" ref="eric5.QScintilla.EditorMarkerMap.html#EditorMarkerMap.initColors" />
       <keyword name="EditorPropertiesPage" id="EditorPropertiesPage" ref="eric5.Preferences.ConfigurationPages.EditorPropertiesPage.html#EditorPropertiesPage" />
       <keyword name="EditorPropertiesPage (Constructor)" id="EditorPropertiesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorPropertiesPage.html#EditorPropertiesPage.__init__" />
       <keyword name="EditorPropertiesPage (Module)" id="EditorPropertiesPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorPropertiesPage.html" />

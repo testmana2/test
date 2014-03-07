@@ -3967,6 +3967,8 @@ class Editor(QsciScintillaCompat):
         
         # refresh the annotations display
         self.__refreshAnnotations()
+        
+        self.__markerMap.initColors()
     
     def __setLineMarkerColours(self):
         """

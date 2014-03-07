@@ -526,6 +526,16 @@ class Prefs(object):
         "WhitespaceBackground": QColor(Qt.white),
         "OnlineChangeTraceMarkerUnsaved": QColor("#ff8888"),
         "OnlineChangeTraceMarkerSaved": QColor("#88ff88"),
+        # colors for the marker map
+        "BookmarksMap": QColor("#f8c700"),
+        "ErrorsMap": QColor("#dd0000"),
+        "WarningsMap": QColor("#606000"),
+        "BreakpointsMap": QColor("#f55c07"),
+        "TasksMap": QColor("#2278f8"),
+        "CoverageMap": QColor("#ad3636"),
+        "ChangesMap": QColor("#00b000"),
+        "CurrentMap": QColor("#000000"),
+        "MarkerMapBackground": QColor("#e7e7e7"),
     }
     
     editorOtherFontsDefaults = {

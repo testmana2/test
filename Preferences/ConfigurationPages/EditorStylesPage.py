@@ -211,6 +211,34 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.initColour("OnlineChangeTraceMarkerSaved",
                         self.changeMarkerSavedColorButton,
                         Preferences.getEditorColour)
+        
+        self.initColour("BookmarksMap",
+                        self.bookmarksMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("ErrorsMap",
+                        self.errorsMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("WarningsMap",
+                        self.warningsMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("BreakpointsMap",
+                        self.breakpointsMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("TasksMap",
+                        self.tasksMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("CoverageMap",
+                        self.coverageMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("ChangesMap",
+                        self.changesMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("CurrentMap",
+                        self.currentMapButton,
+                        Preferences.getEditorColour)
+        self.initColour("MarkerMapBackground",
+                        self.markerMapBackgroundButton,
+                        Preferences.getEditorColour)
     
     def save(self):
         """

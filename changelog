@@ -4,6 +4,8 @@ Version 5.5.0-xxx:
 - bug fixes
 - Checkers
   -- updated pyflakes to version 0.7.3
+- Editor
+  -- added a scrolling map like display showing all markers
 - Multi Project
   -- added support for the categorisation of projects and changed the
      multi project file format
