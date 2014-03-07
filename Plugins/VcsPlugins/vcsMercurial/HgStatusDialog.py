@@ -115,13 +115,17 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.__showContextMenu)
         
         if not mq and self.vcs.version >= (2, 0):
+            self.__lfAddActions = []
             self.__addButtonMenu = QMenu()
             self.__addButtonMenu.addAction(self.tr("Add"), self.__add)
-            self.__addButtonMenu.addAction(self.tr("Add as Large File"),
-                                           lambda: self.__lfAdd("large"))
-            self.__addButtonMenu.addAction(self.tr("Add as Normal File"),
-                                           lambda: self.__lfAdd("normal"))
+            self.__lfAddActions.append(
+                self.__addButtonMenu.addAction(self.tr("Add as Large File"),
+                                               lambda: self.__lfAdd("large")))
+            self.__lfAddActions.append(
+                self.__addButtonMenu.addAction(self.tr("Add as Normal File"),
+                                               lambda: self.__lfAdd("normal")))
             self.addButton.setMenu(self.__addButtonMenu)
+            self.__addButtonMenu.aboutToShow.connect(self.__showAddMenu)
         
         self.modifiedIndicators = [
             self.tr('added'),
@@ -602,6 +606,14 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         for act in self.lfActions:
             act.setEnabled(enable)
         self.menu.popup(self.mapToGlobal(coord))
+    
+    def __showAddMenu(self):
+        """
+        Private slot to prepare the Add button menu before it is shown.
+        """
+        enable = self.vcs.isExtensionActive("largefiles")
+        for act in self.__lfAddActions:
+            act.setEnabled(enable)
     
     def __commit(self):
         """
