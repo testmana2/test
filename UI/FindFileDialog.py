@@ -418,8 +418,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.findList.setUpdatesEnabled(False)
         progress = 0
         breakSearch = False
+        occurrences = 0
+        fileOccurrences = 0
         for file in files:
             self.__lastFileItem = None
+            found = False
             if self.__cancelSearch or breakSearch:
                 break
             
@@ -447,6 +450,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 count += 1
                 contains = search.search(line)
                 if contains:
+                    occurrences += 1
+                    found = True
                     start = contains.start()
                     end = contains.end()
                     if self.__replaceMode:
@@ -473,6 +478,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 QApplication.processEvents()
             
+            if found:
+                fileOccurrences += 1
             progress += 1
             self.findProgress.setValue(progress)
         
@@ -480,7 +487,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findProgress.setMaximum(1)
             self.findProgress.setValue(1)
         
-        self.findProgressLabel.setPath("")
+        resultFormat = self.tr("{0} / {1}", "occurrences / files")
+        self.findProgressLabel.setPath(resultFormat.format(
+            self.tr("%n occurrence(s)", "", occurrences),
+            self.tr("%n file(s)", "", fileOccurrences)))
         
         self.findList.setUpdatesEnabled(True)
         self.findList.sortItems(self.findList.sortColumn(),

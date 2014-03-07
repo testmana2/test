@@ -15406,7 +15406,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="537"/>
+        <location filename="../UI/FindFileDialog.py" line="547"/>
         <source>Select directory</source>
         <translation>Výběr adresáře</translation>
     </message>
@@ -15466,7 +15466,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nahradit</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="648"/>
+        <location filename="../UI/FindFileDialog.py" line="658"/>
         <source>Replace in Files</source>
         <translation>Nahradit v souborech</translation>
     </message>
@@ -15491,12 +15491,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Pocit jako</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="675"/>
+        <location filename="../UI/FindFileDialog.py" line="685"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="676"/>
+        <location filename="../UI/FindFileDialog.py" line="686"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
@@ -15511,17 +15511,17 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>&lt;p&gt;Výraz hledná není platný. &lt;/p&gt;&lt;p&gt;Chyba: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="607"/>
+        <location filename="../UI/FindFileDialog.py" line="617"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze číst ze souboru  &lt;b&gt;{0}&lt;/b&gt;. Přeskočeno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="648"/>
+        <location filename="../UI/FindFileDialog.py" line="658"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze uložit do souboru  &lt;b&gt;{0}&lt;/b&gt;. Přeskočeno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="622"/>
+        <location filename="../UI/FindFileDialog.py" line="632"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15529,6 +15529,30 @@ se zobrazenými položkami.&lt;/p&gt;
         <location filename="../UI/FindFileDialog.ui" line="344"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/FindFileDialog.py" line="491"/>
+        <source>{0} / {1}</source>
+        <comment>occurrences / files</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../UI/FindFileDialog.py" line="492"/>
+        <source>%n occurrence(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../UI/FindFileDialog.py" line="492"/>
+        <source>%n file(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -25844,7 +25868,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgStatusDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="240"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="244"/>
         <source>Mercurial Status</source>
         <translation>Mercurial status</translation>
     </message>
@@ -25940,72 +25964,72 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Přizpůsobit šířky sloupců</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="141"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="145"/>
         <source>added</source>
         <translation>přidáno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="144"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="148"/>
         <source>modified</source>
         <translation>změněno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="145"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="149"/>
         <source>removed</source>
         <translation>odebráno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="146"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="150"/>
         <source>not tracked</source>
         <translation>nesledováno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="142"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="146"/>
         <source>normal</source>
         <translation>normální</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="143"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="147"/>
         <source>ignored</source>
         <translation>ignorováno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="147"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="151"/>
         <source>missing</source>
         <translation>chybějící</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="296"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="300"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="296"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="300"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="616"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="628"/>
         <source>Commit</source>
         <translation>Zapsat měny</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="782"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="794"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Nezapsné změny nejsou dostupné/vybrané.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="680"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="692"/>
         <source>Add</source>
         <translation>Přidat</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="680"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="692"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Položky mimo verzi nejsou dostupné/vybrány.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="744"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="756"/>
         <source>Revert</source>
         <translation>Vrátit</translation>
     </message>
@@ -26015,12 +26039,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Odebrat z repozitáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="703"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="715"/>
         <source>Remove</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="744"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="756"/>
         <source>There are no missing entries available/selected.</source>
         <translation>Chybějící záznamy nejsou dostupné/vybrány.</translation>
     </message>
@@ -26105,7 +26129,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="511"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="515"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26115,12 +26139,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Odlišnosti</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="762"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="774"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="616"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="628"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26135,7 +26159,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="237"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="241"/>
         <source>Mercurial Queue Repository Status</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26150,12 +26174,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="789"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="801"/>
         <source>Side-by-Side Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="789"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="801"/>
         <source>Only one file with uncommitted changes must be selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26165,12 +26189,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="121"/>
         <source>Add as Large File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="122"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="124"/>
         <source>Add as Normal File</source>
         <translation type="unfinished"></translation>
     </message>

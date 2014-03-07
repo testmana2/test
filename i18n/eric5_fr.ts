@@ -16074,7 +16074,7 @@ et le curseurest placé après la parenthèse fermante</translation>
 <context>
     <name>FindFileDialog</name>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="537"/>
+        <location filename="../UI/FindFileDialog.py" line="547"/>
         <source>Select directory</source>
         <translation>Sélection répertoire</translation>
     </message>
@@ -16279,7 +16279,7 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation>Remplacer</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="648"/>
+        <location filename="../UI/FindFileDialog.py" line="658"/>
         <source>Replace in Files</source>
         <translation>Remplacer dans les fichiers</translation>
     </message>
@@ -16304,12 +16304,12 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="675"/>
+        <location filename="../UI/FindFileDialog.py" line="685"/>
         <source>Open</source>
         <translation type="unfinished">Ouvrir</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="676"/>
+        <location filename="../UI/FindFileDialog.py" line="686"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished">Copier chemin dans le Presse-Papiers</translation>
     </message>
@@ -16324,17 +16324,17 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="607"/>
+        <location filename="../UI/FindFileDialog.py" line="617"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="648"/>
+        <location filename="../UI/FindFileDialog.py" line="658"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="622"/>
+        <location filename="../UI/FindFileDialog.py" line="632"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16342,6 +16342,28 @@ et le curseurest placé après la parenthèse fermante</translation>
         <location filename="../UI/FindFileDialog.ui" line="344"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/FindFileDialog.py" line="491"/>
+        <source>{0} / {1}</source>
+        <comment>occurrences / files</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../UI/FindFileDialog.py" line="492"/>
+        <source>%n occurrence(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../UI/FindFileDialog.py" line="492"/>
+        <source>%n file(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -26738,7 +26760,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
 <context>
     <name>HgStatusDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="240"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="244"/>
         <source>Mercurial Status</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26834,72 +26856,72 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished">Ajuster la largeur des colonnes</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="141"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="145"/>
         <source>added</source>
         <translation type="unfinished">ajouté</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="144"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="148"/>
         <source>modified</source>
         <translation type="unfinished">modifié</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="145"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="149"/>
         <source>removed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="146"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="150"/>
         <source>not tracked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="142"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="146"/>
         <source>normal</source>
         <translation type="unfinished">normal</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="143"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="147"/>
         <source>ignored</source>
         <translation type="unfinished">ignoré</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="147"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="151"/>
         <source>missing</source>
         <translation type="unfinished">manquant</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="296"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="300"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Erreur du processus</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="296"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="300"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished">Impossible de lancer le processus {0}. Assurez-vous qu&apos;il est bien dans le chemin de recherche.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="616"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="628"/>
         <source>Commit</source>
         <translation type="unfinished">Commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="782"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="794"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished">Il n&apos;y a pas de modification non commitée disponible/sélectionnée.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="680"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="692"/>
         <source>Add</source>
         <translation type="unfinished">Ajouter</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="680"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="692"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation type="unfinished">Aucune entrée &quot;non-versionnée&quot; disponible/sélectionnée.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="744"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="756"/>
         <source>Revert</source>
         <translation type="unfinished">Recouvrir</translation>
     </message>
@@ -26909,12 +26931,12 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="703"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="715"/>
         <source>Remove</source>
         <translation type="unfinished">Supprimer</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="744"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="756"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26999,7 +27021,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="511"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="515"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27009,12 +27031,12 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="obsolete">Différence</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="762"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="774"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="616"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="628"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27029,7 +27051,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="237"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="241"/>
         <source>Mercurial Queue Repository Status</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27044,12 +27066,12 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="789"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="801"/>
         <source>Side-by-Side Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="789"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="801"/>
         <source>Only one file with uncommitted changes must be selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27059,12 +27081,12 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="121"/>
         <source>Add as Large File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="122"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="124"/>
         <source>Add as Normal File</source>
         <translation type="unfinished"></translation>
     </message>
