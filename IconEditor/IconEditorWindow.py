@@ -812,8 +812,9 @@ class IconEditorWindow(E5MainWindow):
         menu.addAction(self.saveAsAct)
         menu.addSeparator()
         menu.addAction(self.closeAct)
-        menu.addAction(self.closeAllAct)
-        if not self.fromEric:
+        if self.fromEric:
+            menu.addAction(self.closeAllAct)
+        else:
             menu.addSeparator()
             menu.addAction(self.exitAct)
         
