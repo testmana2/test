@@ -373,7 +373,7 @@ class MiniEditor(E5MainWindow):
             """<b>New</b>"""
             """<p>An empty editor window will be created.</p>"""
         ))
-        self.newAct.triggered[()].connect(self.__newFile)
+        self.newAct.triggered.connect(self.__newFile)
         self.fileActions.append(self.newAct)
         
         self.openAct = E5Action(
@@ -387,7 +387,7 @@ class MiniEditor(E5MainWindow):
             """<b>Open a file</b>"""
             """<p>You will be asked for the name of a file to be opened.</p>"""
         ))
-        self.openAct.triggered[()].connect(self.__open)
+        self.openAct.triggered.connect(self.__open)
         self.fileActions.append(self.openAct)
         
         self.saveAct = E5Action(
@@ -401,7 +401,7 @@ class MiniEditor(E5MainWindow):
             """<b>Save File</b>"""
             """<p>Save the contents of current editor window.</p>"""
         ))
-        self.saveAct.triggered[()].connect(self.__save)
+        self.saveAct.triggered.connect(self.__save)
         self.fileActions.append(self.saveAct)
         
         self.saveAsAct = E5Action(
@@ -417,7 +417,7 @@ class MiniEditor(E5MainWindow):
             """<p>Save the contents of current editor window to a new file."""
             """ The file can be entered in a file selection dialog.</p>"""
         ))
-        self.saveAsAct.triggered[()].connect(self.__saveAs)
+        self.saveAsAct.triggered.connect(self.__saveAs)
         self.fileActions.append(self.saveAsAct)
         
         self.closeAct = E5Action(
@@ -431,7 +431,7 @@ class MiniEditor(E5MainWindow):
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
-        self.closeAct.triggered[()].connect(self.close)
+        self.closeAct.triggered.connect(self.close)
         self.fileActions.append(self.closeAct)
         
         self.printAct = E5Action(
@@ -445,7 +445,7 @@ class MiniEditor(E5MainWindow):
             """<b>Print File</b>"""
             """<p>Print the contents of the current file.</p>"""
         ))
-        self.printAct.triggered[()].connect(self.__printFile)
+        self.printAct.triggered.connect(self.__printFile)
         self.fileActions.append(self.printAct)
         
         self.printPreviewAct = E5Action(
@@ -459,7 +459,7 @@ class MiniEditor(E5MainWindow):
             """<b>Print Preview</b>"""
             """<p>Print preview of the current file.</p>"""
         ))
-        self.printPreviewAct.triggered[()].connect(self.__printPreviewFile)
+        self.printPreviewAct.triggered.connect(self.__printPreviewFile)
         self.fileActions.append(self.printPreviewAct)
     
     def __createEditActions(self):
@@ -478,7 +478,7 @@ class MiniEditor(E5MainWindow):
             """<b>Undo</b>"""
             """<p>Undo the last change done in the current editor.</p>"""
         ))
-        self.undoAct.triggered[()].connect(self.__undo)
+        self.undoAct.triggered.connect(self.__undo)
         self.editActions.append(self.undoAct)
         
         self.redoAct = E5Action(
@@ -492,7 +492,7 @@ class MiniEditor(E5MainWindow):
             """<b>Redo</b>"""
             """<p>Redo the last change done in the current editor.</p>"""
         ))
-        self.redoAct.triggered[()].connect(self.__redo)
+        self.redoAct.triggered.connect(self.__redo)
         self.editActions.append(self.redoAct)
         
         self.cutAct = E5Action(
@@ -508,7 +508,7 @@ class MiniEditor(E5MainWindow):
             """<p>Cut the selected text of the current editor to the"""
             """ clipboard.</p>"""
         ))
-        self.cutAct.triggered[()].connect(self.__textEdit.cut)
+        self.cutAct.triggered.connect(self.__textEdit.cut)
         self.editActions.append(self.cutAct)
         
         self.copyAct = E5Action(
@@ -524,7 +524,7 @@ class MiniEditor(E5MainWindow):
             """<p>Copy the selected text of the current editor to the"""
             """ clipboard.</p>"""
         ))
-        self.copyAct.triggered[()].connect(self.__textEdit.copy)
+        self.copyAct.triggered.connect(self.__textEdit.copy)
         self.editActions.append(self.copyAct)
         
         self.pasteAct = E5Action(
@@ -541,7 +541,7 @@ class MiniEditor(E5MainWindow):
             """<p>Paste the last cut/copied text from the clipboard to"""
             """ the current editor.</p>"""
         ))
-        self.pasteAct.triggered[()].connect(self.__textEdit.paste)
+        self.pasteAct.triggered.connect(self.__textEdit.paste)
         self.editActions.append(self.pasteAct)
         
         self.deleteAct = E5Action(
@@ -556,7 +556,7 @@ class MiniEditor(E5MainWindow):
             """<b>Clear</b>"""
             """<p>Delete all text of the current editor.</p>"""
         ))
-        self.deleteAct.triggered[()].connect(self.__textEdit.clear)
+        self.deleteAct.triggered.connect(self.__textEdit.clear)
         self.editActions.append(self.deleteAct)
         
         self.cutAct.setEnabled(False)
@@ -582,7 +582,7 @@ class MiniEditor(E5MainWindow):
         if isMacPlatform():
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+B')))
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -594,7 +594,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+F')))
         self.esm.setMapping(act, QsciScintilla.SCI_CHARRIGHT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -606,7 +606,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+P')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEUP)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -618,7 +618,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+N')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDOWN)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -630,7 +630,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Left')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTLEFT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -642,7 +642,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Right')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTRIGHT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -657,7 +657,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Left')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -672,7 +672,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Right')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -688,7 +688,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOME)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -707,7 +707,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_HOMEDISPLAY)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -726,7 +726,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'End')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -735,7 +735,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Down')),
             0, self.editorActGrp, 'vm_edit_scroll_down_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINESCROLLDOWN)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -744,7 +744,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Up')), 0,
             self.editorActGrp, 'vm_edit_scroll_up_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINESCROLLUP)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -753,7 +753,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Alt+Up')), 0,
             self.editorActGrp, 'vm_edit_move_up_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARAUP)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -762,7 +762,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Alt+Down')), 0,
             self.editorActGrp, 'vm_edit_move_down_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARADOWN)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -771,7 +771,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'PgUp')), 0,
             self.editorActGrp, 'vm_edit_move_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUP)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -783,7 +783,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+V')))
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEDOWN)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -798,7 +798,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTSTART)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -813,7 +813,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+End')))
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -822,7 +822,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Tab')), 0,
             self.editorActGrp, 'vm_edit_indent_one_level')
         self.esm.setMapping(act, QsciScintilla.SCI_TAB)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -831,7 +831,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Shift+Tab')),
             0, self.editorActGrp, 'vm_edit_unindent_one_level')
         self.esm.setMapping(act, QsciScintilla.SCI_BACKTAB)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -846,7 +846,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+B')))
         self.esm.setMapping(act, QsciScintilla.SCI_CHARLEFTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -862,7 +862,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+F')))
         self.esm.setMapping(act, QsciScintilla.SCI_CHARRIGHTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -878,7 +878,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+P')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEUPEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -894,7 +894,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+N')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDOWNEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -910,7 +910,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Left')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTLEFTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -926,7 +926,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Right')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTRIGHTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -943,7 +943,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Left')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -960,7 +960,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Right')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -978,7 +978,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Shift+Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOMEEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -995,7 +995,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Shift+End')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1009,7 +1009,7 @@ class MiniEditor(E5MainWindow):
                                                 'Alt+Shift+Up')),
             0, self.editorActGrp, 'vm_edit_extend_selection_up_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARAUPEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1022,7 +1022,7 @@ class MiniEditor(E5MainWindow):
             0,
             self.editorActGrp, 'vm_edit_extend_selection_down_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARADOWNEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1035,7 +1035,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Shift+PgUp')),
             0, self.editorActGrp, 'vm_edit_extend_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1052,7 +1052,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Shift+V')))
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEDOWNEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1069,7 +1069,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTSTARTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1086,7 +1086,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+End')))
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTENDEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1103,7 +1103,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Shift+Backspace')))
         self.esm.setMapping(act, QsciScintilla.SCI_DELETEBACK)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1116,7 +1116,7 @@ class MiniEditor(E5MainWindow):
             0, 0,
             self.editorActGrp, 'vm_edit_delet_previous_char_not_line_start')
         self.esm.setMapping(act, QsciScintilla.SCI_DELETEBACKNOTLINE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1128,7 +1128,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+D')))
         self.esm.setMapping(act, QsciScintilla.SCI_CLEAR)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1138,7 +1138,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Backspace')),
             0, self.editorActGrp, 'vm_edit_delete_word_left')
         self.esm.setMapping(act, QsciScintilla.SCI_DELWORDLEFT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1147,7 +1147,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Del')), 0,
             self.editorActGrp, 'vm_edit_delete_word_right')
         self.esm.setMapping(act, QsciScintilla.SCI_DELWORDRIGHT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1157,7 +1157,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Shift+Backspace')),
             0, self.editorActGrp, 'vm_edit_delete_line_left')
         self.esm.setMapping(act, QsciScintilla.SCI_DELLINELEFT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1172,7 +1172,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Del')))
         self.esm.setMapping(act, QsciScintilla.SCI_DELLINERIGHT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1182,7 +1182,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Enter')),
             self.editorActGrp, 'vm_edit_insert_line')
         self.esm.setMapping(act, QsciScintilla.SCI_NEWLINE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1192,7 +1192,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Shift+L')),
             0, self.editorActGrp, 'vm_edit_delete_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDELETE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1201,7 +1201,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Ctrl+D')), 0,
             self.editorActGrp, 'vm_edit_duplicate_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDUPLICATE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1214,7 +1214,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Ctrl+T')), 0,
             self.editorActGrp, 'vm_edit_swap_current_previous_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINETRANSPOSE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1223,7 +1223,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+L')),
             0, self.editorActGrp, 'vm_edit_cut_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINECUT)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1233,7 +1233,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Shift+T')),
             0, self.editorActGrp, 'vm_edit_copy_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINECOPY)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1242,7 +1242,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Ins')), 0,
             self.editorActGrp, 'vm_edit_toggle_insert_overtype')
         self.esm.setMapping(act, QsciScintilla.SCI_EDITTOGGLEOVERTYPE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1255,7 +1255,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
             0, self.editorActGrp, 'vm_edit_convert_selection_lower')
         self.esm.setMapping(act, QsciScintilla.SCI_LOWERCASE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1269,7 +1269,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Shift+U')),
             0, self.editorActGrp, 'vm_edit_convert_selection_upper')
         self.esm.setMapping(act, QsciScintilla.SCI_UPPERCASE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1286,7 +1286,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+End')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDDISPLAY)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1302,7 +1302,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Shift+Right')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDDISPLAYEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1311,7 +1311,7 @@ class MiniEditor(E5MainWindow):
             0, 0,
             self.editorActGrp, 'vm_edit_formfeed')
         self.esm.setMapping(act, QsciScintilla.SCI_FORMFEED)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1320,7 +1320,7 @@ class MiniEditor(E5MainWindow):
             QKeySequence(QApplication.translate('ViewManager', 'Esc')), 0,
             self.editorActGrp, 'vm_edit_escape')
         self.esm.setMapping(act, QsciScintilla.SCI_CANCEL)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1337,7 +1337,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+N')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDOWNRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1353,7 +1353,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+P')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEUPRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1370,7 +1370,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+B')))
         self.esm.setMapping(act, QsciScintilla.SCI_CHARLEFTRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1387,7 +1387,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+F')))
         self.esm.setMapping(act, QsciScintilla.SCI_CHARRIGHTRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1406,7 +1406,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOMERECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1425,7 +1425,7 @@ class MiniEditor(E5MainWindow):
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+End')))
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1439,7 +1439,7 @@ class MiniEditor(E5MainWindow):
                                                 'Alt+Shift+PgUp')),
             0, self.editorActGrp, 'vm_edit_extend_rect_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1456,7 +1456,7 @@ class MiniEditor(E5MainWindow):
             act.setAlternateShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Meta+Alt+Shift+V')))
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEDOWNRECTEXTEND)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(
@@ -1470,7 +1470,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Shift+D')),
             0, self.editorActGrp, 'vm_edit_duplicate_current_selection')
         self.esm.setMapping(act, QsciScintilla.SCI_SELECTIONDUPLICATE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_SCROLLTOSTART"):
@@ -1485,7 +1485,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Home')))
             self.esm.setMapping(act, QsciScintilla.SCI_SCROLLTOSTART)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_SCROLLTOEND"):
@@ -1500,7 +1500,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'End')))
             self.esm.setMapping(act, QsciScintilla.SCI_SCROLLTOEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_VERTICALCENTRECARET"):
@@ -1515,7 +1515,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+L')))
             self.esm.setMapping(act, QsciScintilla.SCI_VERTICALCENTRECARET)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDRIGHTEND"):
@@ -1530,7 +1530,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Alt+Right')))
             self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDRIGHTENDEXTEND"):
@@ -1545,7 +1545,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Alt+Shift+Right')))
             self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHTENDEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDLEFTEND"):
@@ -1557,7 +1557,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_move_end_previous_word')
             self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_WORDLEFTENDEXTEND"):
@@ -1569,7 +1569,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_select_end_previous_word')
             self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFTENDEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOME"):
@@ -1584,7 +1584,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+A')))
             self.esm.setMapping(act, QsciScintilla.SCI_HOME)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEEXTEND"):
@@ -1602,7 +1602,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+Shift+A')))
             self.esm.setMapping(act, QsciScintilla.SCI_HOME)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMERECTEXTEND"):
@@ -1619,7 +1619,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Meta+Alt+Shift+A')))
             self.esm.setMapping(act, QsciScintilla.SCI_HOMERECTEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEDISPLAYEXTEND"):
@@ -1637,7 +1637,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Ctrl+Shift+Left')))
             self.esm.setMapping(act, QsciScintilla.SCI_HOMEDISPLAYEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEWRAP"):
@@ -1651,7 +1651,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_move_start_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_HOMEWRAP)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_HOMEWRAPEXTEND"):
@@ -1666,7 +1666,7 @@ class MiniEditor(E5MainWindow):
                 self.editorActGrp,
                 'vm_edit_extend_selection_start_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_HOMEWRAPEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_VCHOMEWRAP"):
@@ -1683,7 +1683,7 @@ class MiniEditor(E5MainWindow):
                 self.editorActGrp,
                 'vm_edit_move_first_visible_char_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_VCHOMEWRAP)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_VCHOMEWRAPEXTEND"):
@@ -1700,7 +1700,7 @@ class MiniEditor(E5MainWindow):
                 self.editorActGrp,
                 'vm_edit_extend_selection_first_visible_char_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_VCHOMEWRAPEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_LINEENDWRAP"):
@@ -1714,7 +1714,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_end_start_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_LINEENDWRAP)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_LINEENDWRAPEXTEND"):
@@ -1729,7 +1729,7 @@ class MiniEditor(E5MainWindow):
                 self.editorActGrp,
                 'vm_edit_extend_selection_end_display_document_line')
             self.esm.setMapping(act, QsciScintilla.SCI_LINEENDWRAPEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEUP"):
@@ -1741,7 +1741,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_stuttered_move_up_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEUP)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEUPEXTEND"):
@@ -1756,7 +1756,7 @@ class MiniEditor(E5MainWindow):
                 self.editorActGrp,
                 'vm_edit_stuttered_extend_selection_up_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEUPEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEDOWN"):
@@ -1768,7 +1768,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_stuttered_move_down_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEDOWN)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_STUTTEREDPAGEDOWNEXTEND"):
@@ -1783,7 +1783,7 @@ class MiniEditor(E5MainWindow):
                 self.editorActGrp,
                 'vm_edit_stuttered_extend_selection_down_page')
             self.esm.setMapping(act, QsciScintilla.SCI_STUTTEREDPAGEDOWNEXTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_DELWORDRIGHTEND"):
@@ -1800,7 +1800,7 @@ class MiniEditor(E5MainWindow):
                 act.setShortcut(QKeySequence(
                     QApplication.translate('ViewManager', 'Alt+Del')))
             self.esm.setMapping(act, QsciScintilla.SCI_DELWORDRIGHTEND)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_MOVESELECTEDLINESUP"):
@@ -1814,7 +1814,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_move_selection_up_one_line')
             self.esm.setMapping(act, QsciScintilla.SCI_MOVESELECTEDLINESUP)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         if hasattr(QsciScintilla, "SCI_MOVESELECTEDLINESDOWN"):
@@ -1828,7 +1828,7 @@ class MiniEditor(E5MainWindow):
                 0, 0,
                 self.editorActGrp, 'vm_edit_move_selection_down_one_line')
             self.esm.setMapping(act, QsciScintilla.SCI_MOVESELECTEDLINESDOWN)
-            act.triggered[()].connect(self.esm.map)
+            act.triggered.connect(self.esm.map)
             self.editActions.append(act)
         
         act = E5Action(
@@ -1842,7 +1842,7 @@ class MiniEditor(E5MainWindow):
                                                 'Ctrl+Shift+D')),
             0, self.editorActGrp, 'vm_edit_duplicate_current_selection')
         self.esm.setMapping(act, QsciScintilla.SCI_SELECTIONDUPLICATE)
-        act.triggered[()].connect(self.esm.map)
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         self.__textEdit.addActions(self.editorActGrp.actions())
@@ -1869,7 +1869,7 @@ class MiniEditor(E5MainWindow):
             """ dialog is shown to enter the searchtext and options"""
             """ for the search.</p>"""
         ))
-        self.searchAct.triggered[()].connect(self.__search)
+        self.searchAct.triggered.connect(self.__search)
         self.searchActions.append(self.searchAct)
         
         self.searchNextAct = E5Action(
@@ -1889,7 +1889,7 @@ class MiniEditor(E5MainWindow):
             """ editor. The previously entered searchtext and options are"""
             """ reused.</p>"""
         ))
-        self.searchNextAct.triggered[()].connect(self.searchDlg.findNext)
+        self.searchNextAct.triggered.connect(self.searchDlg.findNext)
         self.searchActions.append(self.searchNextAct)
         
         self.searchPrevAct = E5Action(
@@ -1909,7 +1909,7 @@ class MiniEditor(E5MainWindow):
             """ current editor. The previously entered searchtext and"""
             """ options are reused.</p>"""
         ))
-        self.searchPrevAct.triggered[()].connect(self.searchDlg.findPrev)
+        self.searchPrevAct.triggered.connect(self.searchDlg.findPrev)
         self.searchActions.append(self.searchPrevAct)
         
         self.searchClearMarkersAct = E5Action(
@@ -1928,7 +1928,7 @@ class MiniEditor(E5MainWindow):
             """<b>Clear search markers</b>"""
             """<p>Clear all displayed search markers.</p>"""
         ))
-        self.searchClearMarkersAct.triggered[()].connect(
+        self.searchClearMarkersAct.triggered.connect(
             self.__searchClearMarkers)
         self.searchActions.append(self.searchClearMarkersAct)
         
@@ -1948,7 +1948,7 @@ class MiniEditor(E5MainWindow):
             """ it. A dialog is shown to enter the searchtext, the"""
             """ replacement text and options for the search and replace.</p>"""
         ))
-        self.replaceAct.triggered[()].connect(self.__replace)
+        self.replaceAct.triggered.connect(self.__replace)
         self.searchActions.append(self.replaceAct)
     
     def __createHelpActions(self):
@@ -1964,7 +1964,7 @@ class MiniEditor(E5MainWindow):
         self.aboutAct.setWhatsThis(self.tr(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         self.helpActions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
@@ -1977,7 +1977,7 @@ class MiniEditor(E5MainWindow):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.helpActions.append(self.aboutQtAct)
         
         self.whatsThisAct = E5Action(
@@ -1996,7 +1996,7 @@ class MiniEditor(E5MainWindow):
             """ accessed using the context help button in the titlebar."""
             """</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
         self.helpActions.append(self.whatsThisAct)
     
     def __createMenus(self):

@@ -193,7 +193,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>New</b>"""
             """<p>This creates a new icon.</p>"""
         ))
-        self.newAct.triggered[()].connect(self.__newIcon)
+        self.newAct.triggered.connect(self.__newIcon)
         self.__actions.append(self.newAct)
         
         self.newWindowAct = E5Action(
@@ -207,7 +207,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>New Window</b>"""
             """<p>This opens a new icon editor window.</p>"""
         ))
-        self.newWindowAct.triggered[()].connect(self.__newWindow)
+        self.newWindowAct.triggered.connect(self.__newWindow)
         self.__actions.append(self.newWindowAct)
         
         self.openAct = E5Action(
@@ -222,7 +222,7 @@ class IconEditorWindow(E5MainWindow):
             """<p>This opens a new icon file for editing."""
             """ It pops up a file selection dialog.</p>"""
         ))
-        self.openAct.triggered[()].connect(self.__openIcon)
+        self.openAct.triggered.connect(self.__openIcon)
         self.__actions.append(self.openAct)
         
         self.saveAct = E5Action(
@@ -236,7 +236,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Save File</b>"""
             """<p>Save the contents of the icon editor window.</p>"""
         ))
-        self.saveAct.triggered[()].connect(self.__saveIcon)
+        self.saveAct.triggered.connect(self.__saveIcon)
         self.__actions.append(self.saveAct)
         
         self.saveAsAct = E5Action(
@@ -251,7 +251,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Save As...</b>"""
             """<p>Saves the current icon to a new file.</p>"""
         ))
-        self.saveAsAct.triggered[()].connect(self.__saveIconAs)
+        self.saveAsAct.triggered.connect(self.__saveIconAs)
         self.__actions.append(self.saveAsAct)
         
         self.closeAct = E5Action(
@@ -266,7 +266,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Close</b>"""
             """<p>Closes the current icon editor window.</p>"""
         ))
-        self.closeAct.triggered[()].connect(self.close)
+        self.closeAct.triggered.connect(self.close)
         self.__actions.append(self.closeAct)
         
         self.closeAllAct = E5Action(
@@ -279,7 +279,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Close All</b>"""
             """<p>Closes all icon editor windows except the first one.</p>"""
         ))
-        self.closeAllAct.triggered[()].connect(self.__closeAll)
+        self.closeAllAct.triggered.connect(self.__closeAll)
         self.__actions.append(self.closeAllAct)
         
         self.exitAct = E5Action(
@@ -294,7 +294,7 @@ class IconEditorWindow(E5MainWindow):
             """<p>Quit the icon editor.</p>"""
         ))
         if not self.fromEric:
-            self.exitAct.triggered[()].connect(self.__closeAll)
+            self.exitAct.triggered.connect(self.__closeAll)
         self.__actions.append(self.exitAct)
     
     def __initEditActions(self):
@@ -313,7 +313,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Undo</b>"""
             """<p>Undo the last change done.</p>"""
         ))
-        self.undoAct.triggered[()].connect(self.__editor.editUndo)
+        self.undoAct.triggered.connect(self.__editor.editUndo)
         self.__actions.append(self.undoAct)
         
         self.redoAct = E5Action(
@@ -327,7 +327,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Redo</b>"""
             """<p>Redo the last change done.</p>"""
         ))
-        self.redoAct.triggered[()].connect(self.__editor.editRedo)
+        self.redoAct.triggered.connect(self.__editor.editRedo)
         self.__actions.append(self.redoAct)
         
         self.cutAct = E5Action(
@@ -342,7 +342,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Cut</b>"""
             """<p>Cut the selected image area to the clipboard.</p>"""
         ))
-        self.cutAct.triggered[()].connect(self.__editor.editCut)
+        self.cutAct.triggered.connect(self.__editor.editCut)
         self.__actions.append(self.cutAct)
         
         self.copyAct = E5Action(
@@ -357,7 +357,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Copy</b>"""
             """<p>Copy the selected image area to the clipboard.</p>"""
         ))
-        self.copyAct.triggered[()].connect(self.__editor.editCopy)
+        self.copyAct.triggered.connect(self.__editor.editCopy)
         self.__actions.append(self.copyAct)
         
         self.pasteAct = E5Action(
@@ -372,7 +372,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Paste</b>"""
             """<p>Paste the clipboard image.</p>"""
         ))
-        self.pasteAct.triggered[()].connect(self.__editor.editPaste)
+        self.pasteAct.triggered.connect(self.__editor.editPaste)
         self.__actions.append(self.pasteAct)
         
         self.pasteNewAct = E5Action(
@@ -385,7 +385,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Paste as New</b>"""
             """<p>Paste the clipboard image replacing the current one.</p>"""
         ))
-        self.pasteNewAct.triggered[()].connect(self.__editor.editPasteAsNew)
+        self.pasteNewAct.triggered.connect(self.__editor.editPasteAsNew)
         self.__actions.append(self.pasteNewAct)
         
         self.deleteAct = E5Action(
@@ -401,7 +401,7 @@ class IconEditorWindow(E5MainWindow):
             """<p>Clear the icon image and set it to be completely"""
             """ transparent.</p>"""
         ))
-        self.deleteAct.triggered[()].connect(self.__editor.editClear)
+        self.deleteAct.triggered.connect(self.__editor.editClear)
         self.__actions.append(self.deleteAct)
         
         self.selectAllAct = E5Action(
@@ -416,7 +416,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Select All</b>"""
             """<p>Selects the complete icon image.</p>"""
         ))
-        self.selectAllAct.triggered[()].connect(self.__editor.editSelectAll)
+        self.selectAllAct.triggered.connect(self.__editor.editSelectAll)
         self.__actions.append(self.selectAllAct)
         
         self.resizeAct = E5Action(
@@ -430,7 +430,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Change Size...</b>"""
             """<p>Changes the icon size.</p>"""
         ))
-        self.resizeAct.triggered[()].connect(self.__editor.editResize)
+        self.resizeAct.triggered.connect(self.__editor.editResize)
         self.__actions.append(self.resizeAct)
         
         self.grayscaleAct = E5Action(
@@ -445,7 +445,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Grayscale</b>"""
             """<p>Changes the icon to grayscale.</p>"""
         ))
-        self.grayscaleAct.triggered[()].connect(self.__editor.grayScale)
+        self.grayscaleAct.triggered.connect(self.__editor.grayScale)
         self.__actions.append(self.grayscaleAct)
         
         self.redoAct.setEnabled(False)
@@ -481,7 +481,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Zoom in</b>"""
             """<p>Zoom in on the icon. This makes the grid bigger.</p>"""
         ))
-        self.zoomInAct.triggered[()].connect(self.__zoomIn)
+        self.zoomInAct.triggered.connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(
@@ -495,7 +495,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>Zoom out</b>"""
             """<p>Zoom out on the icon. This makes the grid smaller.</p>"""
         ))
-        self.zoomOutAct.triggered[()].connect(self.__zoomOut)
+        self.zoomOutAct.triggered.connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
         self.zoomResetAct = E5Action(
@@ -511,7 +511,7 @@ class IconEditorWindow(E5MainWindow):
             """<p>Reset the zoom of the icon. """
             """This sets the zoom factor to 100%.</p>"""
         ))
-        self.zoomResetAct.triggered[()].connect(self.__zoomReset)
+        self.zoomResetAct.triggered.connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
         self.showGridAct = E5Action(
@@ -553,7 +553,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawPencilAct.setCheckable(True)
         self.esm.setMapping(self.drawPencilAct, IconEditorGrid.Pencil)
-        self.drawPencilAct.triggered[()].connect(self.esm.map)
+        self.drawPencilAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawPencilAct)
         
         self.drawColorPickerAct = E5Action(
@@ -570,7 +570,7 @@ class IconEditorWindow(E5MainWindow):
         self.drawColorPickerAct.setCheckable(True)
         self.esm.setMapping(self.drawColorPickerAct,
                             IconEditorGrid.ColorPicker)
-        self.drawColorPickerAct.triggered[()].connect(self.esm.map)
+        self.drawColorPickerAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawColorPickerAct)
         
         self.drawRectangleAct = E5Action(
@@ -585,7 +585,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawRectangleAct.setCheckable(True)
         self.esm.setMapping(self.drawRectangleAct, IconEditorGrid.Rectangle)
-        self.drawRectangleAct.triggered[()].connect(self.esm.map)
+        self.drawRectangleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawRectangleAct)
         
         self.drawFilledRectangleAct = E5Action(
@@ -601,7 +601,7 @@ class IconEditorWindow(E5MainWindow):
         self.drawFilledRectangleAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledRectangleAct,
                             IconEditorGrid.FilledRectangle)
-        self.drawFilledRectangleAct.triggered[()].connect(self.esm.map)
+        self.drawFilledRectangleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFilledRectangleAct)
         
         self.drawCircleAct = E5Action(
@@ -616,7 +616,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawCircleAct.setCheckable(True)
         self.esm.setMapping(self.drawCircleAct, IconEditorGrid.Circle)
-        self.drawCircleAct.triggered[()].connect(self.esm.map)
+        self.drawCircleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawCircleAct)
         
         self.drawFilledCircleAct = E5Action(
@@ -632,7 +632,7 @@ class IconEditorWindow(E5MainWindow):
         self.drawFilledCircleAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledCircleAct,
                             IconEditorGrid.FilledCircle)
-        self.drawFilledCircleAct.triggered[()].connect(self.esm.map)
+        self.drawFilledCircleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFilledCircleAct)
         
         self.drawEllipseAct = E5Action(
@@ -647,7 +647,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawEllipseAct.setCheckable(True)
         self.esm.setMapping(self.drawEllipseAct, IconEditorGrid.Ellipse)
-        self.drawEllipseAct.triggered[()].connect(self.esm.map)
+        self.drawEllipseAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawEllipseAct)
         
         self.drawFilledEllipseAct = E5Action(
@@ -663,7 +663,7 @@ class IconEditorWindow(E5MainWindow):
         self.drawFilledEllipseAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledEllipseAct,
                             IconEditorGrid.FilledEllipse)
-        self.drawFilledEllipseAct.triggered[()].connect(self.esm.map)
+        self.drawFilledEllipseAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFilledEllipseAct)
         
         self.drawFloodFillAct = E5Action(
@@ -679,7 +679,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawFloodFillAct.setCheckable(True)
         self.esm.setMapping(self.drawFloodFillAct, IconEditorGrid.Fill)
-        self.drawFloodFillAct.triggered[()].connect(self.esm.map)
+        self.drawFloodFillAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFloodFillAct)
         
         self.drawLineAct = E5Action(
@@ -694,7 +694,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawLineAct.setCheckable(True)
         self.esm.setMapping(self.drawLineAct, IconEditorGrid.Line)
-        self.drawLineAct.triggered[()].connect(self.esm.map)
+        self.drawLineAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawLineAct)
         
         self.drawEraserAct = E5Action(
@@ -709,7 +709,7 @@ class IconEditorWindow(E5MainWindow):
         ))
         self.drawEraserAct.setCheckable(True)
         self.esm.setMapping(self.drawEraserAct, IconEditorGrid.Rubber)
-        self.drawEraserAct.triggered[()].connect(self.esm.map)
+        self.drawEraserAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawEraserAct)
         
         self.drawRectangleSelectionAct = E5Action(
@@ -726,7 +726,7 @@ class IconEditorWindow(E5MainWindow):
         self.drawRectangleSelectionAct.setCheckable(True)
         self.esm.setMapping(self.drawRectangleSelectionAct,
                             IconEditorGrid.RectangleSelection)
-        self.drawRectangleSelectionAct.triggered[()].connect(self.esm.map)
+        self.drawRectangleSelectionAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawRectangleSelectionAct)
         
         self.drawCircleSelectionAct = E5Action(
@@ -743,7 +743,7 @@ class IconEditorWindow(E5MainWindow):
         self.drawCircleSelectionAct.setCheckable(True)
         self.esm.setMapping(self.drawCircleSelectionAct,
                             IconEditorGrid.CircleSelection)
-        self.drawCircleSelectionAct.triggered[()].connect(self.esm.map)
+        self.drawCircleSelectionAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawCircleSelectionAct)
         
         self.drawPencilAct.setChecked(True)
@@ -761,7 +761,7 @@ class IconEditorWindow(E5MainWindow):
         self.aboutAct.setWhatsThis(self.tr(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
@@ -774,7 +774,7 @@ class IconEditorWindow(E5MainWindow):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
         self.whatsThisAct = E5Action(
@@ -792,7 +792,7 @@ class IconEditorWindow(E5MainWindow):
             """ how to use them. In dialogs, this feature can be accessed"""
             """ using the context help button in the titlebar.</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
     
     def __initMenus(self):
@@ -811,8 +811,9 @@ class IconEditorWindow(E5MainWindow):
         menu.addAction(self.saveAsAct)
         menu.addSeparator()
         menu.addAction(self.closeAct)
-        menu.addAction(self.closeAllAct)
-        if not self.fromEric:
+        if self.fromEric:
+            menu.addAction(self.closeAllAct)
+        else:
             menu.addSeparator()
             menu.addAction(self.exitAct)
         

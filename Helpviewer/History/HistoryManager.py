@@ -9,8 +9,9 @@ Module implementing the history manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QFileInfo, QDateTime, QDate, QTime, \
-    QUrl, QTimer, QFile, QIODevice, QByteArray, QDataStream, QTemporaryFile
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, QFileInfo, QDateTime, QDate, \
+    QTime, QUrl, QTimer, QFile, QIODevice, QByteArray, QDataStream, \
+    QTemporaryFile
 from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
 
 from E5Gui import E5MessageBox
@@ -339,6 +340,7 @@ class HistoryManager(QWebHistoryInterface):
         """
         self.setDaysToExpire(Preferences.getHelp("HistoryLimit"))
     
+    @pyqtSlot()
     def clear(self, period=0):
         """
         Public slot to clear the complete history.

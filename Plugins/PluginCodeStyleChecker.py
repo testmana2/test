@@ -87,7 +87,7 @@ class CodeStyleCheckerPlugin(QObject):
                 """<p>This checks Python files for compliance to the"""
                 """ code style conventions given in various PEPs.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(
+            self.__projectAct.triggered.connect(
                 self.__projectCodeStyleCheck)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
@@ -101,7 +101,7 @@ class CodeStyleCheckerPlugin(QObject):
             """<p>This checks Python files for compliance to the"""
             """ code style conventions given in various PEPs.</p>"""
         ))
-        self.__editorAct.triggered[()].connect(self.__editorCodeStyleCheck)
+        self.__editorAct.triggered.connect(self.__editorCodeStyleCheck)
         
         e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
@@ -181,7 +181,7 @@ class CodeStyleCheckerPlugin(QObject):
                     """<p>This checks Python files for compliance to the"""
                     """ code style conventions given in various PEPs.</p>"""
                 ))
-                self.__projectBrowserAct.triggered[()].connect(
+                self.__projectBrowserAct.triggered.connect(
                     self.__projectBrowserCodeStyleCheck)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)

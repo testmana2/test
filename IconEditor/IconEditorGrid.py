@@ -7,7 +7,7 @@
 Module implementing the icon editor grid.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QPoint, QRect, QSize
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QPoint, QRect, QSize
 from PyQt4.QtGui import QUndoCommand, QImage, QWidget, QColor, QPixmap, \
     QSizePolicy, QUndoStack, qRgba, QPainter, QApplication, QCursor, \
     QBrush, QDialog, qGray, qAlpha
@@ -879,6 +879,7 @@ class IconEditorGrid(QWidget):
             img = self.__getSelectionImage(True)
             QApplication.clipboard().setImage(img)
     
+    @pyqtSlot()
     def editPaste(self, pasting=False):
         """
         Public slot to paste an image from the clipboard.

@@ -30,7 +30,7 @@ class E5LineEditButton(QAbstractButton):
         self.setCursor(Qt.ArrowCursor)
         self.setMinimumSize(16, 16)
         
-        self.clicked[()].connect(self.__clicked)
+        self.clicked.connect(self.__clicked)
     
     def setMenu(self, menu):
         """

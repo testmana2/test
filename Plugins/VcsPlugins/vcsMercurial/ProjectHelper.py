@@ -113,7 +113,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This creates (clones) a new local project from """
             """a Mercurial repository.</p>"""
         ))
-        self.vcsNewAct.triggered[()].connect(self._vcsCheckout)
+        self.vcsNewAct.triggered.connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
         self.hgIncomingAct = E5Action(
@@ -129,7 +129,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This shows the log of changes coming into the"""
             """ repository.</p>"""
         ))
-        self.hgIncomingAct.triggered[()].connect(self.__hgIncoming)
+        self.hgIncomingAct.triggered.connect(self.__hgIncoming)
         self.actions.append(self.hgIncomingAct)
         
         self.hgPullAct = E5Action(
@@ -145,7 +145,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This pulls changes from a remote repository into the """
             """local repository.</p>"""
         ))
-        self.hgPullAct.triggered[()].connect(self.__hgPull)
+        self.hgPullAct.triggered.connect(self.__hgPull)
         self.actions.append(self.hgPullAct)
         
         self.vcsUpdateAct = E5Action(
@@ -161,7 +161,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This updates the local project from the Mercurial"""
             """ repository.</p>"""
         ))
-        self.vcsUpdateAct.triggered[()].connect(self._vcsUpdate)
+        self.vcsUpdateAct.triggered.connect(self._vcsUpdate)
         self.actions.append(self.vcsUpdateAct)
         
         self.vcsCommitAct = E5Action(
@@ -177,7 +177,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This commits changes to the local project to the """
             """Mercurial repository.</p>"""
         ))
-        self.vcsCommitAct.triggered[()].connect(self._vcsCommit)
+        self.vcsCommitAct.triggered.connect(self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
         
         self.hgOutgoingAct = E5Action(
@@ -193,7 +193,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This shows the log of changes outgoing out of the"""
             """ repository.</p>"""
         ))
-        self.hgOutgoingAct.triggered[()].connect(self.__hgOutgoing)
+        self.hgOutgoingAct.triggered.connect(self.__hgOutgoing)
         self.actions.append(self.hgOutgoingAct)
         
         self.hgPushAct = E5Action(
@@ -209,7 +209,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This pushes changes from the local repository to a """
             """remote repository.</p>"""
         ))
-        self.hgPushAct.triggered[()].connect(self.__hgPush)
+        self.hgPushAct.triggered.connect(self.__hgPush)
         self.actions.append(self.hgPushAct)
         
         self.hgPushForcedAct = E5Action(
@@ -225,7 +225,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This pushes changes from the local repository to a """
             """remote repository using the 'force' option.</p>"""
         ))
-        self.hgPushForcedAct.triggered[()].connect(self.__hgPushForced)
+        self.hgPushForcedAct.triggered.connect(self.__hgPushForced)
         self.actions.append(self.hgPushForcedAct)
         
         self.vcsExportAct = E5Action(
@@ -240,7 +240,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Export from repository</b>"""
             """<p>This exports a project from the repository.</p>"""
         ))
-        self.vcsExportAct.triggered[()].connect(self._vcsExport)
+        self.vcsExportAct.triggered.connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
         self.vcsLogAct = E5Action(
@@ -255,7 +255,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show log</b>"""
             """<p>This shows the log of the local project.</p>"""
         ))
-        self.vcsLogAct.triggered[()].connect(self._vcsLog)
+        self.vcsLogAct.triggered.connect(self._vcsLog)
         self.actions.append(self.vcsLogAct)
         
         self.hgLogBrowserAct = E5Action(
@@ -272,7 +272,7 @@ class HgProjectHelper(VcsProjectHelper):
             """ project. A limited number of entries is shown first."""
             """ More can be retrieved later on.</p>"""
         ))
-        self.hgLogBrowserAct.triggered[()].connect(self.__hgLogBrowser)
+        self.hgLogBrowserAct.triggered.connect(self.__hgLogBrowser)
         self.actions.append(self.hgLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
@@ -288,7 +288,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This shows the difference of the local project to the"""
             """ repository.</p>"""
         ))
-        self.vcsDiffAct.triggered[()].connect(self._vcsDiff)
+        self.vcsDiffAct.triggered.connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
         self.hgExtDiffAct = E5Action(
@@ -304,7 +304,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This shows the difference of selectable revisions of the"""
             """ project.</p>"""
         ))
-        self.hgExtDiffAct.triggered[()].connect(self.__hgExtendedDiff)
+        self.hgExtDiffAct.triggered.connect(self.__hgExtendedDiff)
         self.actions.append(self.hgExtDiffAct)
         
         self.vcsStatusAct = E5Action(
@@ -319,7 +319,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show status</b>"""
             """<p>This shows the status of the local project.</p>"""
         ))
-        self.vcsStatusAct.triggered[()].connect(self._vcsStatus)
+        self.vcsStatusAct.triggered.connect(self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
         
         self.hgSummaryAct = E5Action(
@@ -335,7 +335,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This shows some summary information of the working"""
             """ directory status.</p>"""
         ))
-        self.hgSummaryAct.triggered[()].connect(self.__hgSummary)
+        self.hgSummaryAct.triggered.connect(self.__hgSummary)
         self.actions.append(self.hgSummaryAct)
         
         self.hgHeadsAct = E5Action(
@@ -349,7 +349,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show heads</b>"""
             """<p>This shows the heads of the repository.</p>"""
         ))
-        self.hgHeadsAct.triggered[()].connect(self.__hgHeads)
+        self.hgHeadsAct.triggered.connect(self.__hgHeads)
         self.actions.append(self.hgHeadsAct)
         
         self.hgParentsAct = E5Action(
@@ -363,7 +363,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show parents</b>"""
             """<p>This shows the parents of the repository.</p>"""
         ))
-        self.hgParentsAct.triggered[()].connect(self.__hgParents)
+        self.hgParentsAct.triggered.connect(self.__hgParents)
         self.actions.append(self.hgParentsAct)
         
         self.hgTipAct = E5Action(
@@ -377,7 +377,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show tip</b>"""
             """<p>This shows the tip of the repository.</p>"""
         ))
-        self.hgTipAct.triggered[()].connect(self.__hgTip)
+        self.hgTipAct.triggered.connect(self.__hgTip)
         self.actions.append(self.hgTipAct)
         
         self.vcsRevertAct = E5Action(
@@ -392,7 +392,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Revert changes</b>"""
             """<p>This reverts all changes made to the local project.</p>"""
         ))
-        self.vcsRevertAct.triggered[()].connect(self.__hgRevert)
+        self.vcsRevertAct.triggered.connect(self.__hgRevert)
         self.actions.append(self.vcsRevertAct)
         
         self.vcsMergeAct = E5Action(
@@ -408,7 +408,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This merges changes of a revision into the local"""
             """ project.</p>"""
         ))
-        self.vcsMergeAct.triggered[()].connect(self._vcsMerge)
+        self.vcsMergeAct.triggered.connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
         
         self.vcsResolveAct = E5Action(
@@ -423,7 +423,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This marks all conflicts of the local project as"""
             """ resolved.</p>"""
         ))
-        self.vcsResolveAct.triggered[()].connect(self.__hgResolve)
+        self.vcsResolveAct.triggered.connect(self.__hgResolve)
         self.actions.append(self.vcsResolveAct)
         
         self.vcsTagAct = E5Action(
@@ -438,7 +438,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Tag in repository</b>"""
             """<p>This tags the local project in the repository.</p>"""
         ))
-        self.vcsTagAct.triggered[()].connect(self._vcsTag)
+        self.vcsTagAct.triggered.connect(self._vcsTag)
         self.actions.append(self.vcsTagAct)
         
         self.hgTagListAct = E5Action(
@@ -452,7 +452,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>List tags</b>"""
             """<p>This lists the tags of the project.</p>"""
         ))
-        self.hgTagListAct.triggered[()].connect(self.__hgTagList)
+        self.hgTagListAct.triggered.connect(self.__hgTagList)
         self.actions.append(self.hgTagListAct)
         
         self.hgBranchListAct = E5Action(
@@ -466,7 +466,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>List branches</b>"""
             """<p>This lists the branches of the project.</p>"""
         ))
-        self.hgBranchListAct.triggered[()].connect(self.__hgBranchList)
+        self.hgBranchListAct.triggered.connect(self.__hgBranchList)
         self.actions.append(self.hgBranchListAct)
         
         self.hgBranchAct = E5Action(
@@ -482,7 +482,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This creates a new branch for the local project """
             """in the repository.</p>"""
         ))
-        self.hgBranchAct.triggered[()].connect(self.__hgBranch)
+        self.hgBranchAct.triggered.connect(self.__hgBranch)
         self.actions.append(self.hgBranchAct)
         
         self.hgPushBranchAct = E5Action(
@@ -498,7 +498,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This pushes the current branch of the local project"""
             """ as a new named branch.</p>"""
         ))
-        self.hgPushBranchAct.triggered[()].connect(self.__hgPushNewBranch)
+        self.hgPushBranchAct.triggered.connect(self.__hgPushNewBranch)
         self.actions.append(self.hgPushBranchAct)
         
         self.hgCloseBranchAct = E5Action(
@@ -512,7 +512,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Close branch</b>"""
             """<p>This closes the current branch of the local project.</p>"""
         ))
-        self.hgCloseBranchAct.triggered[()].connect(self.__hgCloseBranch)
+        self.hgCloseBranchAct.triggered.connect(self.__hgCloseBranch)
         self.actions.append(self.hgCloseBranchAct)
         
         self.hgShowBranchAct = E5Action(
@@ -526,7 +526,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show current branch</b>"""
             """<p>This shows the current branch of the project.</p>"""
         ))
-        self.hgShowBranchAct.triggered[()].connect(self.__hgShowBranch)
+        self.hgShowBranchAct.triggered.connect(self.__hgShowBranch)
         self.actions.append(self.hgShowBranchAct)
         
         self.vcsSwitchAct = E5Action(
@@ -542,7 +542,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This switches the working directory to another"""
             """ revision.</p>"""
         ))
-        self.vcsSwitchAct.triggered[()].connect(self._vcsSwitch)
+        self.vcsSwitchAct.triggered.connect(self._vcsSwitch)
         self.actions.append(self.vcsSwitchAct)
         
         self.vcsCleanupAct = E5Action(
@@ -556,7 +556,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Cleanup</b>"""
             """<p>This performs a cleanup of the local project.</p>"""
         ))
-        self.vcsCleanupAct.triggered[()].connect(self._vcsCleanup)
+        self.vcsCleanupAct.triggered.connect(self._vcsCleanup)
         self.actions.append(self.vcsCleanupAct)
         
         self.vcsCommandAct = E5Action(
@@ -571,7 +571,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This opens a dialog to enter an arbitrary Mercurial"""
             """ command.</p>"""
         ))
-        self.vcsCommandAct.triggered[()].connect(self._vcsCommand)
+        self.vcsCommandAct.triggered.connect(self._vcsCommand)
         self.actions.append(self.vcsCommandAct)
         
         self.hgConfigAct = E5Action(
@@ -586,7 +586,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>Show the configuration dialog with the Mercurial page"""
             """ selected.</p>"""
         ))
-        self.hgConfigAct.triggered[()].connect(self.__hgConfigure)
+        self.hgConfigAct.triggered.connect(self.__hgConfigure)
         self.actions.append(self.hgConfigAct)
         
         self.hgEditUserConfigAct = E5Action(
@@ -600,7 +600,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Edit user configuration</b>"""
             """<p>Show an editor to edit the user configuration file.</p>"""
         ))
-        self.hgEditUserConfigAct.triggered[()].connect(self.__hgEditUserConfig)
+        self.hgEditUserConfigAct.triggered.connect(self.__hgEditUserConfig)
         self.actions.append(self.hgEditUserConfigAct)
         
         self.hgRepoConfigAct = E5Action(
@@ -615,7 +615,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>Show an editor to edit the repository configuration"""
             """ file.</p>"""
         ))
-        self.hgRepoConfigAct.triggered[()].connect(self.__hgEditRepoConfig)
+        self.hgRepoConfigAct.triggered.connect(self.__hgEditRepoConfig)
         self.actions.append(self.hgRepoConfigAct)
         
         self.hgShowConfigAct = E5Action(
@@ -631,7 +631,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This shows the combined configuration settings"""
             """ from all configuration files.</p>"""
         ))
-        self.hgShowConfigAct.triggered[()].connect(self.__hgShowConfig)
+        self.hgShowConfigAct.triggered.connect(self.__hgShowConfig)
         self.actions.append(self.hgShowConfigAct)
         
         self.hgShowPathsAct = E5Action(
@@ -645,7 +645,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Show paths</b>"""
             """<p>This shows the aliases for remote repositories.</p>"""
         ))
-        self.hgShowPathsAct.triggered[()].connect(self.__hgShowPaths)
+        self.hgShowPathsAct.triggered.connect(self.__hgShowPaths)
         self.actions.append(self.hgShowPathsAct)
         
         self.hgVerifyAct = E5Action(
@@ -659,7 +659,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Verify repository</b>"""
             """<p>This verifies the integrity of the repository.</p>"""
         ))
-        self.hgVerifyAct.triggered[()].connect(self.__hgVerify)
+        self.hgVerifyAct.triggered.connect(self.__hgVerify)
         self.actions.append(self.hgVerifyAct)
         
         self.hgRecoverAct = E5Action(
@@ -673,7 +673,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Recover</b>"""
             """<p>This recovers from an interrupted transaction.</p>"""
         ))
-        self.hgRecoverAct.triggered[()].connect(self.__hgRecover)
+        self.hgRecoverAct.triggered.connect(self.__hgRecover)
         self.actions.append(self.hgRecoverAct)
         
         self.hgIdentifyAct = E5Action(
@@ -687,7 +687,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Identify</b>"""
             """<p>This identifies the project directory.</p>"""
         ))
-        self.hgIdentifyAct.triggered[()].connect(self.__hgIdentify)
+        self.hgIdentifyAct.triggered.connect(self.__hgIdentify)
         self.actions.append(self.hgIdentifyAct)
         
         self.hgCreateIgnoreAct = E5Action(
@@ -701,7 +701,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Create .hgignore</b>"""
             """<p>This creates a .hgignore file with default values.</p>"""
         ))
-        self.hgCreateIgnoreAct.triggered[()].connect(self.__hgCreateIgnore)
+        self.hgCreateIgnoreAct.triggered.connect(self.__hgCreateIgnore)
         self.actions.append(self.hgCreateIgnoreAct)
         
         self.hgBundleAct = E5Action(
@@ -716,7 +716,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This creates a changegroup file collecting selected"""
             """ changesets (hg bundle).</p>"""
         ))
-        self.hgBundleAct.triggered[()].connect(self.__hgBundle)
+        self.hgBundleAct.triggered.connect(self.__hgBundle)
         self.actions.append(self.hgBundleAct)
         
         self.hgPreviewBundleAct = E5Action(
@@ -731,7 +731,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This previews a changegroup file containing a collection"""
             """ of changesets.</p>"""
         ))
-        self.hgPreviewBundleAct.triggered[()].connect(self.__hgPreviewBundle)
+        self.hgPreviewBundleAct.triggered.connect(self.__hgPreviewBundle)
         self.actions.append(self.hgPreviewBundleAct)
         
         self.hgIdentifyBundleAct = E5Action(
@@ -746,7 +746,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This identifies a changegroup file containing a"""
             """ collection of changesets.</p>"""
         ))
-        self.hgIdentifyBundleAct.triggered[()].connect(self.__hgIdentifyBundle)
+        self.hgIdentifyBundleAct.triggered.connect(self.__hgIdentifyBundle)
         self.actions.append(self.hgIdentifyBundleAct)
         
         self.hgUnbundleAct = E5Action(
@@ -761,7 +761,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This applies one or several changegroup files generated by"""
             """ the 'Create changegroup' action (hg unbundle).</p>"""
         ))
-        self.hgUnbundleAct.triggered[()].connect(self.__hgUnbundle)
+        self.hgUnbundleAct.triggered.connect(self.__hgUnbundle)
         self.actions.append(self.hgUnbundleAct)
         
         self.hgBisectGoodAct = E5Action(
@@ -775,7 +775,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Mark as good</b>"""
             """<p>This marks a selectable changeset as good.</p>"""
         ))
-        self.hgBisectGoodAct.triggered[()].connect(self.__hgBisectGood)
+        self.hgBisectGoodAct.triggered.connect(self.__hgBisectGood)
         self.actions.append(self.hgBisectGoodAct)
         
         self.hgBisectBadAct = E5Action(
@@ -789,7 +789,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Mark as bad</b>"""
             """<p>This marks a selectable changeset as bad.</p>"""
         ))
-        self.hgBisectBadAct.triggered[()].connect(self.__hgBisectBad)
+        self.hgBisectBadAct.triggered.connect(self.__hgBisectBad)
         self.actions.append(self.hgBisectBadAct)
         
         self.hgBisectSkipAct = E5Action(
@@ -803,7 +803,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Skip</b>"""
             """<p>This skips a selectable changeset.</p>"""
         ))
-        self.hgBisectSkipAct.triggered[()].connect(self.__hgBisectSkip)
+        self.hgBisectSkipAct.triggered.connect(self.__hgBisectSkip)
         self.actions.append(self.hgBisectSkipAct)
         
         self.hgBisectResetAct = E5Action(
@@ -817,7 +817,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Reset</b>"""
             """<p>This resets the bisect search data.</p>"""
         ))
-        self.hgBisectResetAct.triggered[()].connect(self.__hgBisectReset)
+        self.hgBisectResetAct.triggered.connect(self.__hgBisectReset)
         self.actions.append(self.hgBisectResetAct)
         
         self.hgBackoutAct = E5Action(
@@ -831,7 +831,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Back out changeset</b>"""
             """<p>This backs out changes of an earlier changeset.</p>"""
         ))
-        self.hgBackoutAct.triggered[()].connect(self.__hgBackout)
+        self.hgBackoutAct.triggered.connect(self.__hgBackout)
         self.actions.append(self.hgBackoutAct)
         
         self.hgRollbackAct = E5Action(
@@ -858,7 +858,7 @@ class HgProjectHelper(VcsProjectHelper):
             """</p><p><strong>This command is dangerous. Please use with"""
             """ care. </strong></p>"""
         ))
-        self.hgRollbackAct.triggered[()].connect(self.__hgRollback)
+        self.hgRollbackAct.triggered.connect(self.__hgRollback)
         self.actions.append(self.hgRollbackAct)
         
         self.hgServeAct = E5Action(
@@ -872,7 +872,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Serve project repository</b>"""
             """<p>This serves the project repository.</p>"""
         ))
-        self.hgServeAct.triggered[()].connect(self.__hgServe)
+        self.hgServeAct.triggered.connect(self.__hgServe)
         self.actions.append(self.hgServeAct)
         
         self.hgImportAct = E5Action(
@@ -887,7 +887,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This imports a patch from a patch file into the"""
             """ project.</p>"""
         ))
-        self.hgImportAct.triggered[()].connect(self.__hgImport)
+        self.hgImportAct.triggered.connect(self.__hgImport)
         self.actions.append(self.hgImportAct)
         
         self.hgExportAct = E5Action(
@@ -901,7 +901,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Export Patches</b>"""
             """<p>This exports revisions of the project to patch files.</p>"""
         ))
-        self.hgExportAct.triggered[()].connect(self.__hgExport)
+        self.hgExportAct.triggered.connect(self.__hgExport)
         self.actions.append(self.hgExportAct)
         
         self.hgPhaseAct = E5Action(
@@ -915,7 +915,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Change Phase</b>"""
             """<p>This changes the phase of revisions.</p>"""
         ))
-        self.hgPhaseAct.triggered[()].connect(self.__hgPhase)
+        self.hgPhaseAct.triggered.connect(self.__hgPhase)
         self.actions.append(self.hgPhaseAct)
         
         self.hgGraftAct = E5Action(
@@ -932,7 +932,7 @@ class HgProjectHelper(VcsProjectHelper):
             """ current working directory with the user, date and"""
             """ description of the original changeset.</p>"""
         ))
-        self.hgGraftAct.triggered[()].connect(self.__hgGraft)
+        self.hgGraftAct.triggered.connect(self.__hgGraft)
         self.actions.append(self.hgGraftAct)
         
         self.hgGraftContinueAct = E5Action(
@@ -947,7 +947,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This continues the last copying session after conflicts"""
             """ were resolved.</p>"""
         ))
-        self.hgGraftContinueAct.triggered[()].connect(self.__hgGraftContinue)
+        self.hgGraftContinueAct.triggered.connect(self.__hgGraftContinue)
         self.actions.append(self.hgGraftContinueAct)
         
         self.hgAddSubrepoAct = E5Action(
@@ -962,7 +962,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Add...</b>"""
             """<p>Add a sub-repository to the project.</p>"""
         ))
-        self.hgAddSubrepoAct.triggered[()].connect(self.__hgAddSubrepository)
+        self.hgAddSubrepoAct.triggered.connect(self.__hgAddSubrepository)
         self.actions.append(self.hgAddSubrepoAct)
         
         self.hgRemoveSubreposAct = E5Action(
@@ -977,7 +977,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Remove...</b>"""
             """<p>Remove sub-repositories from the project.</p>"""
         ))
-        self.hgRemoveSubreposAct.triggered[()].connect(
+        self.hgRemoveSubreposAct.triggered.connect(
             self.__hgRemoveSubrepositories)
         self.actions.append(self.hgRemoveSubreposAct)
         
@@ -994,7 +994,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This creates an unversioned archive from the"""
             """ repository.</p>"""
         ))
-        self.hgArchiveAct.triggered[()].connect(self.__hgArchive)
+        self.hgArchiveAct.triggered.connect(self.__hgArchive)
         self.actions.append(self.hgArchiveAct)
     
     def initMenu(self, menu):

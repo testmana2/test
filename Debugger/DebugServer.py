@@ -186,7 +186,7 @@ class DebugServer(QTcpServer):
         
         self.clientClearBreak.connect(self.__clientClearBreakPoint)
         self.clientClearWatch.connect(self.__clientClearWatchPoint)
-        self.newConnection[()].connect(self.__newConnection)
+        self.newConnection.connect(self.__newConnection)
         
         self.breakpointModel.rowsAboutToBeRemoved.connect(
             self.__deleteBreakPoints)

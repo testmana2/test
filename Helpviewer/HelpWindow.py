@@ -442,7 +442,7 @@ class HelpWindow(E5MainWindow):
             """<p>This opens a new help window tab.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.newTabAct.triggered[()].connect(self.newTab)
+            self.newTabAct.triggered.connect(self.newTab)
         self.__actions.append(self.newTabAct)
         
         self.newAct = E5Action(
@@ -457,7 +457,7 @@ class HelpWindow(E5MainWindow):
             """<p>This opens a new help browser window.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.newAct.triggered[()].connect(self.newWindow)
+            self.newAct.triggered.connect(self.newWindow)
         self.__actions.append(self.newAct)
         
         self.openAct = E5Action(
@@ -473,7 +473,7 @@ class HelpWindow(E5MainWindow):
             """ It pops up a file selection dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.openAct.triggered[()].connect(self.__openFile)
+            self.openAct.triggered.connect(self.__openFile)
         self.__actions.append(self.openAct)
         
         self.openTabAct = E5Action(
@@ -490,7 +490,7 @@ class HelpWindow(E5MainWindow):
             """ It pops up a file selection dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.openTabAct.triggered[()].connect(self.__openFileNewTab)
+            self.openTabAct.triggered.connect(self.__openFileNewTab)
         self.__actions.append(self.openTabAct)
         
         self.saveAsAct = E5Action(
@@ -506,7 +506,7 @@ class HelpWindow(E5MainWindow):
             """<p>Saves the current page to disk.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.saveAsAct.triggered[()].connect(self.__savePageAs)
+            self.saveAsAct.triggered.connect(self.__savePageAs)
         self.__actions.append(self.saveAsAct)
         
         self.savePageScreenAct = E5Action(
@@ -521,7 +521,7 @@ class HelpWindow(E5MainWindow):
             """<p>Saves the current page as a screen shot.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.savePageScreenAct.triggered[()].connect(self.__savePageScreen)
+            self.savePageScreenAct.triggered.connect(self.__savePageScreen)
         self.__actions.append(self.savePageScreenAct)
         
         self.saveVisiblePageScreenAct = E5Action(
@@ -538,7 +538,7 @@ class HelpWindow(E5MainWindow):
             """ screen shot.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.saveVisiblePageScreenAct.triggered[()].connect(
+            self.saveVisiblePageScreenAct.triggered.connect(
                 self.__saveVisiblePageScreen)
         self.__actions.append(self.saveVisiblePageScreenAct)
         
@@ -554,7 +554,7 @@ class HelpWindow(E5MainWindow):
             """<p>Import bookmarks from other browsers.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.importBookmarksAct.triggered[()].connect(
+            self.importBookmarksAct.triggered.connect(
                 bookmarksManager.importBookmarks)
         self.__actions.append(self.importBookmarksAct)
         
@@ -569,7 +569,7 @@ class HelpWindow(E5MainWindow):
             """<p>Export the bookmarks into a file.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.exportBookmarksAct.triggered[()].connect(
+            self.exportBookmarksAct.triggered.connect(
                 bookmarksManager.exportBookmarks)
         self.__actions.append(self.exportBookmarksAct)
         
@@ -585,7 +585,7 @@ class HelpWindow(E5MainWindow):
             """<p>Print the displayed help text.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.printAct.triggered[()].connect(self.tabWidget.printBrowser)
+            self.printAct.triggered.connect(self.tabWidget.printBrowser)
         self.__actions.append(self.printAct)
         
         self.printPdfAct = E5Action(
@@ -600,7 +600,7 @@ class HelpWindow(E5MainWindow):
             """<p>Print the displayed help text as a PDF file.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.printPdfAct.triggered[()].connect(
+            self.printPdfAct.triggered.connect(
                 self.tabWidget.printBrowserPdf)
         self.__actions.append(self.printPdfAct)
         
@@ -616,7 +616,7 @@ class HelpWindow(E5MainWindow):
             """<p>Print preview of the displayed help text.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.printPreviewAct.triggered[()].connect(
+            self.printPreviewAct.triggered.connect(
                 self.tabWidget.printPreviewBrowser)
         self.__actions.append(self.printPreviewAct)
         
@@ -633,7 +633,7 @@ class HelpWindow(E5MainWindow):
             """<p>Closes the current help window.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.closeAct.triggered[()].connect(self.tabWidget.closeBrowser)
+            self.closeAct.triggered.connect(self.tabWidget.closeBrowser)
         self.__actions.append(self.closeAct)
         
         self.closeAllAct = E5Action(
@@ -646,7 +646,7 @@ class HelpWindow(E5MainWindow):
             """<p>Closes all help windows except the first one.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.closeAllAct.triggered[()].connect(
+            self.closeAllAct.triggered.connect(
                 self.tabWidget.closeAllBrowsers)
         self.__actions.append(self.closeAllAct)
         
@@ -662,7 +662,7 @@ class HelpWindow(E5MainWindow):
             """ recorded anymore.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.privateBrowsingAct.triggered[()].connect(
+            self.privateBrowsingAct.triggered.connect(
                 self.__privateBrowsing)
         self.privateBrowsingAct.setCheckable(True)
         self.__actions.append(self.privateBrowsingAct)
@@ -680,9 +680,9 @@ class HelpWindow(E5MainWindow):
         ))
         if not self.initShortcutsOnly:
             if self.fromEric:
-                self.exitAct.triggered[()].connect(self.close)
+                self.exitAct.triggered.connect(self.close)
             else:
-                self.exitAct.triggered[()].connect(self.__closeAllWindows)
+                self.exitAct.triggered.connect(self.__closeAllWindows)
         self.__actions.append(self.exitAct)
         
         self.backAct = E5Action(
@@ -699,7 +699,7 @@ class HelpWindow(E5MainWindow):
             """ available, this action is disabled.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.backAct.triggered[()].connect(self.__backward)
+            self.backAct.triggered.connect(self.__backward)
         self.__actions.append(self.backAct)
         
         self.forwardAct = E5Action(
@@ -717,7 +717,7 @@ class HelpWindow(E5MainWindow):
             """ available, this action is disabled.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.forwardAct.triggered[()].connect(self.__forward)
+            self.forwardAct.triggered.connect(self.__forward)
         self.__actions.append(self.forwardAct)
         
         self.homeAct = E5Action(
@@ -733,7 +733,7 @@ class HelpWindow(E5MainWindow):
             """<p>Moves to the initial help screen.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.homeAct.triggered[()].connect(self.__home)
+            self.homeAct.triggered.connect(self.__home)
         self.__actions.append(self.homeAct)
         
         self.reloadAct = E5Action(
@@ -750,7 +750,7 @@ class HelpWindow(E5MainWindow):
             """<p>Reloads the current help screen.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.reloadAct.triggered[()].connect(self.__reload)
+            self.reloadAct.triggered.connect(self.__reload)
         self.__actions.append(self.reloadAct)
         
         self.stopAct = E5Action(
@@ -766,7 +766,7 @@ class HelpWindow(E5MainWindow):
             """<p>Stops loading of the current tab.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.stopAct.triggered[()].connect(self.__stopLoading)
+            self.stopAct.triggered.connect(self.__stopLoading)
         self.__actions.append(self.stopAct)
         
         self.copyAct = E5Action(
@@ -781,7 +781,7 @@ class HelpWindow(E5MainWindow):
             """<p>Copy the selected text to the clipboard.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.copyAct.triggered[()].connect(self.__copy)
+            self.copyAct.triggered.connect(self.__copy)
         self.__actions.append(self.copyAct)
         
         self.findAct = E5Action(
@@ -796,7 +796,7 @@ class HelpWindow(E5MainWindow):
             """<p>Find text in the current page.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.findAct.triggered[()].connect(self.__find)
+            self.findAct.triggered.connect(self.__find)
         self.__actions.append(self.findAct)
         
         self.findNextAct = E5Action(
@@ -812,7 +812,7 @@ class HelpWindow(E5MainWindow):
             """<p>Find the next occurrence of text in the current page.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.findNextAct.triggered[()].connect(self.findDlg.findNext)
+            self.findNextAct.triggered.connect(self.findDlg.findNext)
         self.__actions.append(self.findNextAct)
         
         self.findPrevAct = E5Action(
@@ -829,7 +829,7 @@ class HelpWindow(E5MainWindow):
             """ page.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.findPrevAct.triggered[()].connect(self.findDlg.findPrevious)
+            self.findPrevAct.triggered.connect(self.findDlg.findPrevious)
         self.__actions.append(self.findPrevAct)
         
         self.bookmarksManageAct = E5Action(
@@ -844,7 +844,7 @@ class HelpWindow(E5MainWindow):
             """<p>Open a dialog to manage the bookmarks.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.bookmarksManageAct.triggered[()].connect(
+            self.bookmarksManageAct.triggered.connect(
                 self.__showBookmarksDialog)
         self.__actions.append(self.bookmarksManageAct)
         
@@ -862,7 +862,7 @@ class HelpWindow(E5MainWindow):
             """<p>Open a dialog to add the current URL as a bookmark.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.bookmarksAddAct.triggered[()].connect(self.__addBookmark)
+            self.bookmarksAddAct.triggered.connect(self.__addBookmark)
         self.__actions.append(self.bookmarksAddAct)
         
         self.bookmarksAddFolderAct = E5Action(
@@ -876,7 +876,7 @@ class HelpWindow(E5MainWindow):
             """<p>Open a dialog to add a new bookmarks folder.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.bookmarksAddFolderAct.triggered[()].connect(
+            self.bookmarksAddFolderAct.triggered.connect(
                 self.__addBookmarkFolder)
         self.__actions.append(self.bookmarksAddFolderAct)
         
@@ -892,7 +892,7 @@ class HelpWindow(E5MainWindow):
             """ all open tabs.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.bookmarksAllTabsAct.triggered[()].connect(self.bookmarkAll)
+            self.bookmarksAllTabsAct.triggered.connect(self.bookmarkAll)
         self.__actions.append(self.bookmarksAllTabsAct)
         
         self.whatsThisAct = E5Action(
@@ -911,7 +911,7 @@ class HelpWindow(E5MainWindow):
             """ the context help button in the titlebar.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+            self.whatsThisAct.triggered.connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
         
         self.aboutAct = E5Action(
@@ -925,7 +925,7 @@ class HelpWindow(E5MainWindow):
             """<p>Display some information about this software.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.aboutAct.triggered[()].connect(self.__about)
+            self.aboutAct.triggered.connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
@@ -939,7 +939,7 @@ class HelpWindow(E5MainWindow):
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+            self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
         self.zoomInAct = E5Action(
@@ -955,7 +955,7 @@ class HelpWindow(E5MainWindow):
             """<p>Zoom in on the text. This makes the text bigger.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.zoomInAct.triggered[()].connect(self.__zoomIn)
+            self.zoomInAct.triggered.connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(
@@ -971,7 +971,7 @@ class HelpWindow(E5MainWindow):
             """<p>Zoom out on the text. This makes the text smaller.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.zoomOutAct.triggered[()].connect(self.__zoomOut)
+            self.zoomOutAct.triggered.connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
         self.zoomResetAct = E5Action(
@@ -988,7 +988,7 @@ class HelpWindow(E5MainWindow):
             """This sets the zoom factor to 100%.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.zoomResetAct.triggered[()].connect(self.__zoomReset)
+            self.zoomResetAct.triggered.connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
         if hasattr(QWebSettings, 'ZoomTextOnly'):
@@ -1022,7 +1022,7 @@ class HelpWindow(E5MainWindow):
             """<p>Show the page source in an editor.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.pageSourceAct.triggered[()].connect(self.__showPageSource)
+            self.pageSourceAct.triggered.connect(self.__showPageSource)
         self.__actions.append(self.pageSourceAct)
         self.addAction(self.pageSourceAct)
         
@@ -1033,7 +1033,7 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.tr('F11')), 0,
             self, 'help_view_full_scree')
         if not self.initShortcutsOnly:
-            self.fullScreenAct.triggered[()].connect(self.__viewFullScreen)
+            self.fullScreenAct.triggered.connect(self.__viewFullScreen)
         self.__actions.append(self.fullScreenAct)
         self.addAction(self.fullScreenAct)
         
@@ -1043,7 +1043,7 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.tr('Ctrl+Alt+Tab')), 0,
             self, 'help_view_next_tab')
         if not self.initShortcutsOnly:
-            self.nextTabAct.triggered[()].connect(self.__nextTab)
+            self.nextTabAct.triggered.connect(self.__nextTab)
         self.__actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
@@ -1053,7 +1053,7 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.tr('Shift+Ctrl+Alt+Tab')), 0,
             self, 'help_view_previous_tab')
         if not self.initShortcutsOnly:
-            self.prevTabAct.triggered[()].connect(self.__prevTab)
+            self.prevTabAct.triggered.connect(self.__prevTab)
         self.__actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
@@ -1063,7 +1063,7 @@ class HelpWindow(E5MainWindow):
             QKeySequence(self.tr('Ctrl+1')), 0,
             self, 'help_switch_tabs')
         if not self.initShortcutsOnly:
-            self.switchTabAct.triggered[()].connect(self.__switchTab)
+            self.switchTabAct.triggered.connect(self.__switchTab)
         self.__actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
@@ -1079,7 +1079,7 @@ class HelpWindow(E5MainWindow):
             """ with your prefered values.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.prefAct.triggered[()].connect(self.__showPreferences)
+            self.prefAct.triggered.connect(self.__showPreferences)
         self.__actions.append(self.prefAct)
 
         self.acceptedLanguagesAct = E5Action(
@@ -1094,7 +1094,7 @@ class HelpWindow(E5MainWindow):
             """<p>Configure the accepted languages for web pages.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.acceptedLanguagesAct.triggered[()].connect(
+            self.acceptedLanguagesAct.triggered.connect(
                 self.__showAcceptedLanguages)
         self.__actions.append(self.acceptedLanguagesAct)
         
@@ -1109,7 +1109,7 @@ class HelpWindow(E5MainWindow):
             """<p>Configure cookies handling.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.cookiesAct.triggered[()].connect(
+            self.cookiesAct.triggered.connect(
                 self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
@@ -1125,7 +1125,7 @@ class HelpWindow(E5MainWindow):
             """<p>Opens a dialog to configure offline storage.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.offlineStorageAct.triggered[()].connect(
+            self.offlineStorageAct.triggered.connect(
                 self.__showOfflineStorageConfiguration)
         self.__actions.append(self.offlineStorageAct)
         
@@ -1143,7 +1143,7 @@ class HelpWindow(E5MainWindow):
             """ used for completing form fields.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.personalDataAct.triggered[()].connect(
+            self.personalDataAct.triggered.connect(
                 self.__showPersonalInformationDialog)
         self.__actions.append(self.personalDataAct)
         
@@ -1161,7 +1161,7 @@ class HelpWindow(E5MainWindow):
             """ Scripts.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.greaseMonkeyAct.triggered[()].connect(
+            self.greaseMonkeyAct.triggered.connect(
                 self.__showGreaseMonkeyConfigDialog)
         self.__actions.append(self.greaseMonkeyAct)
         
@@ -1179,7 +1179,7 @@ class HelpWindow(E5MainWindow):
             """ window.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.editMessageFilterAct.triggered[()].connect(
+            self.editMessageFilterAct.triggered.connect(
                 E5ErrorMessage.editMessageFilters)
         self.__actions.append(self.editMessageFilterAct)
 
@@ -1197,7 +1197,7 @@ class HelpWindow(E5MainWindow):
                 """ page.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.syncTocAct.triggered[()].connect(self.__syncTOC)
+                self.syncTocAct.triggered.connect(self.__syncTOC)
             self.__actions.append(self.syncTocAct)
             
             self.showTocAct = E5Action(
@@ -1211,7 +1211,7 @@ class HelpWindow(E5MainWindow):
                 """<p>Shows the table of contents window.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.showTocAct.triggered[()].connect(self.__showTocWindow)
+                self.showTocAct.triggered.connect(self.__showTocWindow)
             self.__actions.append(self.showTocAct)
             
             self.showIndexAct = E5Action(
@@ -1225,7 +1225,7 @@ class HelpWindow(E5MainWindow):
                 """<p>Shows the index window.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
+                self.showIndexAct.triggered.connect(self.__showIndexWindow)
             self.__actions.append(self.showIndexAct)
             
             self.showSearchAct = E5Action(
@@ -1239,7 +1239,7 @@ class HelpWindow(E5MainWindow):
                 """<p>Shows the search window.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.showSearchAct.triggered[()].connect(
+                self.showSearchAct.triggered.connect(
                     self.__showSearchWindow)
             self.__actions.append(self.showSearchAct)
             
@@ -1255,7 +1255,7 @@ class HelpWindow(E5MainWindow):
                 """ set.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.manageQtHelpDocsAct.triggered[()].connect(
+                self.manageQtHelpDocsAct.triggered.connect(
                     self.__manageQtHelpDocumentation)
             self.__actions.append(self.manageQtHelpDocsAct)
             
@@ -1270,7 +1270,7 @@ class HelpWindow(E5MainWindow):
                 """<p>Shows a dialog to manage the QtHelp filters.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.manageQtHelpFiltersAct.triggered[()].connect(
+                self.manageQtHelpFiltersAct.triggered.connect(
                     self.__manageQtHelpFilters)
             self.__actions.append(self.manageQtHelpFiltersAct)
             
@@ -1285,7 +1285,7 @@ class HelpWindow(E5MainWindow):
                 """<p>Reindexes the documentation set.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.reindexDocumentationAct.triggered[()].connect(
+                self.reindexDocumentationAct.triggered.connect(
                     self.__searchEngine.reindexDocumentation)
             self.__actions.append(self.reindexDocumentationAct)
         
@@ -1302,7 +1302,7 @@ class HelpWindow(E5MainWindow):
             """ history or the favicons database.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.clearPrivateDataAct.triggered[()].connect(
+            self.clearPrivateDataAct.triggered.connect(
                 self.__clearPrivateData)
         self.__actions.append(self.clearPrivateDataAct)
         
@@ -1319,7 +1319,7 @@ class HelpWindow(E5MainWindow):
             """ URLs.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.clearIconsAct.triggered[()].connect(self.__clearIconsDatabase)
+            self.clearIconsAct.triggered.connect(self.__clearIconsDatabase)
         self.__actions.append(self.clearIconsAct)
         
         self.searchEnginesAct = E5Action(
@@ -1335,7 +1335,7 @@ class HelpWindow(E5MainWindow):
             """ engines.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.searchEnginesAct.triggered[()].connect(
+            self.searchEnginesAct.triggered.connect(
                 self.__showEnginesConfigurationDialog)
         self.__actions.append(self.searchEnginesAct)
         
@@ -1352,7 +1352,7 @@ class HelpWindow(E5MainWindow):
             """<p>Opens a dialog to manage the saved passwords.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.passwordsAct.triggered[()].connect(self.__showPasswordsDialog)
+            self.passwordsAct.triggered.connect(self.__showPasswordsDialog)
         self.__actions.append(self.passwordsAct)
         
         self.adblockAct = E5Action(
@@ -1369,7 +1369,7 @@ class HelpWindow(E5MainWindow):
             """ rules.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
+            self.adblockAct.triggered.connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
         self.flashblockAct = E5Action(
@@ -1386,7 +1386,7 @@ class HelpWindow(E5MainWindow):
             """ whitelist.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.flashblockAct.triggered[()].connect(
+            self.flashblockAct.triggered.connect(
                 self.__showClickToFlashDialog)
         self.__actions.append(self.flashblockAct)
         
@@ -1405,7 +1405,7 @@ class HelpWindow(E5MainWindow):
                 """ certificates.</p>"""
             ))
             if not self.initShortcutsOnly:
-                self.certificatesAct.triggered[()].connect(
+                self.certificatesAct.triggered.connect(
                     self.__showCertificatesDialog)
             self.__actions.append(self.certificatesAct)
         
@@ -1421,7 +1421,7 @@ class HelpWindow(E5MainWindow):
             """<p>Shows the network monitor dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.toolsMonitorAct.triggered[()].connect(
+            self.toolsMonitorAct.triggered.connect(
                 self.__showNetworkMonitor)
         self.__actions.append(self.toolsMonitorAct)
         
@@ -1436,7 +1436,7 @@ class HelpWindow(E5MainWindow):
             """<p>Shows the downloads window.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.showDownloadManagerAct.triggered[()].connect(
+            self.showDownloadManagerAct.triggered.connect(
                 self.__showDownloadsWindow)
         self.__actions.append(self.showDownloadManagerAct)
         
@@ -1455,7 +1455,7 @@ class HelpWindow(E5MainWindow):
             """ contents.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.feedsManagerAct.triggered[()].connect(self.__showFeedsManager)
+            self.feedsManagerAct.triggered.connect(self.__showFeedsManager)
         self.__actions.append(self.feedsManagerAct)
         
         self.siteInfoAct = E5Action(
@@ -1472,7 +1472,7 @@ class HelpWindow(E5MainWindow):
             """ site.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.siteInfoAct.triggered[()].connect(self.__showSiteinfoDialog)
+            self.siteInfoAct.triggered.connect(self.__showSiteinfoDialog)
         self.__actions.append(self.siteInfoAct)
         
         self.userAgentManagerAct = E5Action(
@@ -1486,7 +1486,7 @@ class HelpWindow(E5MainWindow):
             """<p>Shows a dialog to manage the User Agent settings.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.userAgentManagerAct.triggered[()].connect(
+            self.userAgentManagerAct.triggered.connect(
                 self.__showUserAgentsDialog)
         self.__actions.append(self.userAgentManagerAct)
         
@@ -1503,7 +1503,7 @@ class HelpWindow(E5MainWindow):
             """ network.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.synchronizationAct.triggered[()].connect(
+            self.synchronizationAct.triggered.connect(
                 self.__showSyncDialog)
         self.__actions.append(self.synchronizationAct)
         
@@ -1934,6 +1934,7 @@ class HelpWindow(E5MainWindow):
         self.historyManager().updateHistoryEntry(
             browser.url().toString(), title)
     
+    @pyqtSlot()
     def newTab(self, link=None, requestData=None, addNextTo=None):
         """
         Public slot called to open a new help window tab.
@@ -1949,6 +1950,7 @@ class HelpWindow(E5MainWindow):
         else:
             self.tabWidget.newBrowser(link, requestData)
     
+    @pyqtSlot()
     def newWindow(self, link=None):
         """
         Public slot called to open a new help browser dialog.
@@ -2035,7 +2037,8 @@ class HelpWindow(E5MainWindow):
         browser = self.currentBrowser()
         if browser is not None:
             browser.saveAs()
-        
+    
+    @pyqtSlot()
     def __savePageScreen(self, visibleOnly=False):
         """
         Private slot to save the current page as a screen shot.
@@ -2343,7 +2346,7 @@ class HelpWindow(E5MainWindow):
             QWebSettings.ZoomTextOnly, textOnly)
         self.zoomTextOnlyChanged.emit(textOnly)
     
-    def __viewFullScreen(self,):
+    def __viewFullScreen(self):
         """
         Private slot called to toggle fullscreen mode.
         """

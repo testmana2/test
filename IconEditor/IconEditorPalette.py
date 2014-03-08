@@ -74,7 +74,7 @@ class IconEditorPalette(QWidget):
             """<p>Select the current drawing color via a color selection"""
             """ dialog.</p>"""
         ))
-        self.__colorButton.clicked[()].connect(self.__selectColor)
+        self.__colorButton.clicked.connect(self.__selectColor)
         self.__layout.addWidget(self.__colorButton)
         
         self.__colorAlpha = QSpinBox(self)

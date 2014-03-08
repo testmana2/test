@@ -47,7 +47,7 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
             label.setText(feed[0])
             self.feedsLayout.addWidget(label, row, 0)
             self.feedsLayout.addWidget(button, row, 1)
-            button.clicked[()].connect(self.__addFeed)
+            button.clicked.connect(self.__addFeed)
     
     def __addFeed(self):
         """

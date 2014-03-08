@@ -43,7 +43,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """ largefiles repository. A new project  is created. The"""
             """ current one is kept as a backup.</p>"""
         ))
-        self.hgConvertToLargefilesAct.triggered[()].connect(
+        self.hgConvertToLargefilesAct.triggered.connect(
             lambda: self.__hgLfconvert("largefiles"))
         self.actions.append(self.hgConvertToLargefilesAct)
         
@@ -60,7 +60,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """ normal repository. A new project is created. The current"""
             """ one is kept as a backup.</p>"""
         ))
-        self.hgConvertToNormalAct.triggered[()].connect(
+        self.hgConvertToNormalAct.triggered.connect(
             lambda: self.__hgLfconvert("normal"))
         self.actions.append(self.hgConvertToNormalAct)
         
@@ -77,7 +77,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """<p>This pulls missing large files from a remote repository"""
             """ into the local repository.</p>"""
         ))
-        self.hgLfPullAct.triggered[()].connect(self.__hgLfPull)
+        self.hgLfPullAct.triggered.connect(self.__hgLfPull)
         self.actions.append(self.hgLfPullAct)
         
         self.hgLfSummaryAct = E5Action(
@@ -93,7 +93,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """<p>This shows some summary information of the working"""
             """ directory status.</p>"""
         ))
-        self.hgLfSummaryAct.triggered[()].connect(self.__hgLfSummary)
+        self.hgLfSummaryAct.triggered.connect(self.__hgLfSummary)
         self.actions.append(self.hgLfSummaryAct)
         
         self.hgVerifyLargeAct = E5Action(
@@ -108,7 +108,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """<p>This verifies that all large files in the current"""
             """ revision exist.</p>"""
         ))
-        self.hgVerifyLargeAct.triggered[()].connect(
+        self.hgVerifyLargeAct.triggered.connect(
             lambda: self.__hgLfVerify("large"))
         self.actions.append(self.hgVerifyLargeAct)
         
@@ -124,7 +124,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """<p>This verifies that all large files in all"""
             """ revisions exist.</p>"""
         ))
-        self.hgVerifyLfaAct.triggered[()].connect(
+        self.hgVerifyLfaAct.triggered.connect(
             lambda: self.__hgLfVerify("lfa"))
         self.actions.append(self.hgVerifyLfaAct)
         
@@ -139,7 +139,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
             """<b>Verify large files contents</b>"""
             """<p>This verifies the contents of all large files.</p>"""
         ))
-        self.hgVerifyLfcAct.triggered[()].connect(
+        self.hgVerifyLfcAct.triggered.connect(
             lambda: self.__hgLfVerify("lfc"))
         self.actions.append(self.hgVerifyLfcAct)
     

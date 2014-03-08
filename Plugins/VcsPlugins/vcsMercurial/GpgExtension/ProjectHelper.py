@@ -42,7 +42,7 @@ class GpgProjectHelper(HgExtensionProjectHelper):
             """<b>List Signed Changesets</b>"""
             """<p>This opens a dialog listing all signed changesets.</p>"""
         ))
-        self.hgGpgListAct.triggered[()].connect(self.__hgGpgSignatures)
+        self.hgGpgListAct.triggered.connect(self.__hgGpgSignatures)
         self.actions.append(self.hgGpgListAct)
         
         self.hgGpgVerifyAct = E5Action(
@@ -58,7 +58,7 @@ class GpgProjectHelper(HgExtensionProjectHelper):
             """<p>This verifies all signatures there may be for a particular"""
             """ revision.</p>"""
         ))
-        self.hgGpgVerifyAct.triggered[()].connect(self.__hgGpgVerifySignatures)
+        self.hgGpgVerifyAct.triggered.connect(self.__hgGpgVerifySignatures)
         self.actions.append(self.hgGpgVerifyAct)
         
         self.hgGpgSignAct = E5Action(
@@ -73,7 +73,7 @@ class GpgProjectHelper(HgExtensionProjectHelper):
             """<b>Sign Revision</b>"""
             """<p>This adds a signature for a selected revision.</p>"""
         ))
-        self.hgGpgSignAct.triggered[()].connect(self.__hgGpgSign)
+        self.hgGpgSignAct.triggered.connect(self.__hgGpgSign)
         self.actions.append(self.hgGpgSignAct)
     
     def initMenu(self, mainMenu):

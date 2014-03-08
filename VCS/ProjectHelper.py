@@ -11,7 +11,7 @@ import os
 import shutil
 import copy
 
-from PyQt4.QtCore import QDir, QFileInfo, QObject
+from PyQt4.QtCore import pyqtSlot, QDir, QFileInfo, QObject
 from PyQt4.QtGui import QDialog, QInputDialog
 
 from E5Gui.E5Action import E5Action
@@ -73,7 +73,7 @@ class VcsProjectHelper(QObject):
             """<p>This creates a new local project from the VCS"""
             """ repository.</p>"""
         ))
-        self.vcsNewAct.triggered[()].connect(self._vcsCheckout)
+        self.vcsNewAct.triggered.connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
         self.vcsExportAct = E5Action(
@@ -87,7 +87,7 @@ class VcsProjectHelper(QObject):
             """<b>Export from repository</b>"""
             """<p>This exports a project from the repository.</p>"""
         ))
-        self.vcsExportAct.triggered[()].connect(self._vcsExport)
+        self.vcsExportAct.triggered.connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
         self.vcsAddAct = E5Action(
@@ -102,7 +102,7 @@ class VcsProjectHelper(QObject):
             """<p>This adds (imports) the local project to the VCS"""
             """ repository.</p>"""
         ))
-        self.vcsAddAct.triggered[()].connect(self._vcsImport)
+        self.vcsAddAct.triggered.connect(self._vcsImport)
         self.actions.append(self.vcsAddAct)
     
     def initMenu(self, menu):
@@ -125,7 +125,8 @@ class VcsProjectHelper(QObject):
         """
         if self.vcsAddAct:
             self.vcsAddAct.setEnabled(self.project.isOpen())
-
+    
+    @pyqtSlot()
     def _vcsCheckout(self, export=False):
         """
         Protected slot used to create a local project from the repository.

@@ -47,7 +47,7 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
             """<li>empty directories</li>"""
             """</ul>Note that ignored files will be left untouched.</p>"""
         ))
-        self.hgPurgeAct.triggered[()].connect(self.__hgPurge)
+        self.hgPurgeAct.triggered.connect(self.__hgPurge)
         self.actions.append(self.hgPurgeAct)
         
         self.hgPurgeAllAct = E5Action(
@@ -68,7 +68,7 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
             """<li>ignored files and directories</li>"""
             """</ul></p>"""
         ))
-        self.hgPurgeAllAct.triggered[()].connect(self.__hgPurgeAll)
+        self.hgPurgeAllAct.triggered.connect(self.__hgPurgeAll)
         self.actions.append(self.hgPurgeAllAct)
         
         self.hgPurgeListAct = E5Action(
@@ -84,7 +84,7 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
             """<p>This lists files and directories not known to Mercurial."""
             """ These would be deleted by the "Purge Files" menu entry.</p>"""
         ))
-        self.hgPurgeListAct.triggered[()].connect(self.__hgPurgeList)
+        self.hgPurgeListAct.triggered.connect(self.__hgPurgeList)
         self.actions.append(self.hgPurgeListAct)
         
         self.hgPurgeAllListAct = E5Action(
@@ -101,7 +101,7 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
             """ including ignored ones. These would be deleted by the"""
             """ "Purge All Files" menu entry.</p>"""
         ))
-        self.hgPurgeAllListAct.triggered[()].connect(self.__hgPurgeAllList)
+        self.hgPurgeAllListAct.triggered.connect(self.__hgPurgeAllList)
         self.actions.append(self.hgPurgeAllListAct)
     
     def initMenu(self, mainMenu):

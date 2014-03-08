@@ -9,7 +9,7 @@ Module implementing the central widget showing the web pages.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, Qt, QUrl
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QUrl
 from PyQt4.QtGui import QWidget, QHBoxLayout, QMenu, QToolButton, QPrinter, \
     QPrintDialog, QDialog, QIcon
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
@@ -495,6 +495,7 @@ class HelpTabWidget(E5TabWidget):
             li.append(self.widget(index))
         return li
     
+    @pyqtSlot()
     def printBrowser(self, browser=None):
         """
         Public slot called to print the displayed page.
@@ -545,6 +546,7 @@ class HelpTabWidget(E5TabWidget):
                         """ PyQt4. Please upgrade.</p>"""))
                 return
     
+    @pyqtSlot()
     def printBrowserPdf(self, browser=None):
         """
         Public slot called to print the displayed page to PDF.
@@ -590,6 +592,7 @@ class HelpTabWidget(E5TabWidget):
                         """ PyQt4. Please upgrade.</p>"""))
                 return
     
+    @pyqtSlot()
     def printPreviewBrowser(self, browser=None):
         """
         Public slot called to show a print preview of the displayed file.

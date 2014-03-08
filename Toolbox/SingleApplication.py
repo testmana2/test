@@ -28,7 +28,7 @@ class SingleApplicationServer(QLocalServer):
             self.removeServer(name)
             self.listen(name)
         
-        self.newConnection[()].connect(self.__newConnection)
+        self.newConnection.connect(self.__newConnection)
 
         self.qsock = None
 
@@ -45,8 +45,8 @@ class SingleApplicationServer(QLocalServer):
 
         self.qsock = sock
 
-        self.qsock.readyRead[()].connect(self.__parseLine)
-        self.qsock.disconnected[()].connect(self.__disconnected)
+        self.qsock.readyRead.connect(self.__parseLine)
+        self.qsock.disconnected.connect(self.__disconnected)
 
     def __parseLine(self):
         """
@@ -78,7 +78,7 @@ class SingleApplicationServer(QLocalServer):
         Public method used to shut down the server.
         """
         if self.qsock is not None:
-            self.qsock.readyRead[()].disconnect(self.__parseLine)
+            self.qsock.readyRead.disconnect(self.__parseLine)
             self.qsock.disconnected.disconnect(self.__disconnected)
         
         self.qsock = None

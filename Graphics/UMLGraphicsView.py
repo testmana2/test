@@ -77,86 +77,86 @@ class UMLGraphicsView(E5GraphicsView):
         self.deleteShapeAct = \
             QAction(UI.PixmapCache.getIcon("deleteShape.png"),
                     self.tr("Delete shapes"), self)
-        self.deleteShapeAct.triggered[()].connect(self.__deleteShape)
+        self.deleteShapeAct.triggered.connect(self.__deleteShape)
         
         self.incWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthInc.png"),
                     self.tr("Increase width by {0} points").format(
                         self.deltaSize),
                     self)
-        self.incWidthAct.triggered[()].connect(self.__incWidth)
+        self.incWidthAct.triggered.connect(self.__incWidth)
         
         self.incHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightInc.png"),
                     self.tr("Increase height by {0} points").format(
                         self.deltaSize),
                     self)
-        self.incHeightAct.triggered[()].connect(self.__incHeight)
+        self.incHeightAct.triggered.connect(self.__incHeight)
         
         self.decWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthDec.png"),
                     self.tr("Decrease width by {0} points").format(
                         self.deltaSize),
                     self)
-        self.decWidthAct.triggered[()].connect(self.__decWidth)
+        self.decWidthAct.triggered.connect(self.__decWidth)
         
         self.decHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightDec.png"),
                     self.tr("Decrease height by {0} points").format(
                         self.deltaSize),
                     self)
-        self.decHeightAct.triggered[()].connect(self.__decHeight)
+        self.decHeightAct.triggered.connect(self.__decHeight)
         
         self.setSizeAct = \
             QAction(UI.PixmapCache.getIcon("sceneSize.png"),
                     self.tr("Set size"), self)
-        self.setSizeAct.triggered[()].connect(self.__setSize)
+        self.setSizeAct.triggered.connect(self.__setSize)
         
         self.rescanAct = \
             QAction(UI.PixmapCache.getIcon("rescan.png"),
                     self.tr("Re-Scan"), self)
-        self.rescanAct.triggered[()].connect(self.__rescan)
+        self.rescanAct.triggered.connect(self.__rescan)
         
         self.relayoutAct = \
             QAction(UI.PixmapCache.getIcon("relayout.png"),
                     self.tr("Re-Layout"), self)
-        self.relayoutAct.triggered[()].connect(self.__relayout)
+        self.relayoutAct.triggered.connect(self.__relayout)
         
         self.alignLeftAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignLeft.png"),
                     self.tr("Align Left"), self)
         self.alignMapper.setMapping(self.alignLeftAct, Qt.AlignLeft)
-        self.alignLeftAct.triggered[()].connect(self.alignMapper.map)
+        self.alignLeftAct.triggered.connect(self.alignMapper.map)
         
         self.alignHCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignHCenter.png"),
                     self.tr("Align Center Horizontal"), self)
         self.alignMapper.setMapping(self.alignHCenterAct, Qt.AlignHCenter)
-        self.alignHCenterAct.triggered[()].connect(self.alignMapper.map)
+        self.alignHCenterAct.triggered.connect(self.alignMapper.map)
         
         self.alignRightAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignRight.png"),
                     self.tr("Align Right"), self)
         self.alignMapper.setMapping(self.alignRightAct, Qt.AlignRight)
-        self.alignRightAct.triggered[()].connect(self.alignMapper.map)
+        self.alignRightAct.triggered.connect(self.alignMapper.map)
         
         self.alignTopAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignTop.png"),
                     self.tr("Align Top"), self)
         self.alignMapper.setMapping(self.alignTopAct, Qt.AlignTop)
-        self.alignTopAct.triggered[()].connect(self.alignMapper.map)
+        self.alignTopAct.triggered.connect(self.alignMapper.map)
         
         self.alignVCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignVCenter.png"),
                     self.tr("Align Center Vertical"), self)
         self.alignMapper.setMapping(self.alignVCenterAct, Qt.AlignVCenter)
-        self.alignVCenterAct.triggered[()].connect(self.alignMapper.map)
+        self.alignVCenterAct.triggered.connect(self.alignMapper.map)
         
         self.alignBottomAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignBottom.png"),
                     self.tr("Align Bottom"), self)
         self.alignMapper.setMapping(self.alignBottomAct, Qt.AlignBottom)
-        self.alignBottomAct.triggered[()].connect(self.alignMapper.map)
+        self.alignBottomAct.triggered.connect(self.alignMapper.map)
         
     def __checkSizeActions(self):
         """

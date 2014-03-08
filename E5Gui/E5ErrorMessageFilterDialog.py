@@ -39,8 +39,8 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.filterList.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.filterList.removeAll)
+        self.removeButton.clicked.connect(self.filterList.removeSelected)
+        self.removeAllButton.clicked.connect(self.filterList.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):

@@ -134,11 +134,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__url = self.__reply.url()
         self.__reply.setParent(self)
         self.__reply.setReadBufferSize(16 * 1024 * 1024)
-        self.__reply.readyRead[()].connect(self.__readyRead)
+        self.__reply.readyRead.connect(self.__readyRead)
         self.__reply.error.connect(self.__networkError)
         self.__reply.downloadProgress.connect(self.__downloadProgress)
         self.__reply.metaDataChanged.connect(self.__metaDataChanged)
-        self.__reply.finished[()].connect(self.__finished)
+        self.__reply.finished.connect(self.__finished)
         
         # reset info
         self.infoLabel.clear()
@@ -348,10 +348,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @param checked flag indicating the state of the button (boolean)
         """
         if checked:
-            self.__reply.readyRead[()].disconnect(self.__readyRead)
+            self.__reply.readyRead.disconnect(self.__readyRead)
             self.__reply.setReadBufferSize(16 * 1024)
         else:
-            self.__reply.readyRead[()].connect(self.__readyRead)
+            self.__reply.readyRead.connect(self.__readyRead)
             self.__reply.setReadBufferSize(16 * 1024 * 1024)
             self.__readyRead()
     

@@ -48,17 +48,17 @@ class HgServeDialog(E5MainWindow):
                 os.path.join("VcsPlugins", "vcsMercurial", "icons",
                              "startServer.png")),
             self.tr("Start Server"), self)
-        self.__startAct.triggered[()].connect(self.__startServer)
+        self.__startAct.triggered.connect(self.__startServer)
         self.__stopAct = QAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons",
                              "stopServer.png")),
             self.tr("Stop Server"), self)
-        self.__stopAct.triggered[()].connect(self.__stopServer)
+        self.__stopAct.triggered.connect(self.__stopServer)
         self.__browserAct = QAction(
             UI.PixmapCache.getIcon("home.png"),
             self.tr("Start Browser"), self)
-        self.__browserAct.triggered[()].connect(self.__startBrowser)
+        self.__browserAct.triggered.connect(self.__startBrowser)
         
         self.__portSpin = QSpinBox(self)
         self.__portSpin.setMinimum(2048)

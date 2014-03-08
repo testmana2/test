@@ -80,10 +80,10 @@ class UrlBar(E5LineEdit):
         self.addWidget(self.__clearButton, E5LineEdit.RightSide)
         self.__clearButton.setVisible(False)
         
-        self.__bookmarkButton.clicked[()].connect(self.__showBookmarkInfo)
-        self.__privacyButton.clicked[()].connect(self.__privacyClicked)
-        self.__rssButton.clicked[()].connect(self.__rssClicked)
-        self.__clearButton.clicked[()].connect(self.clear)
+        self.__bookmarkButton.clicked.connect(self.__showBookmarkInfo)
+        self.__privacyButton.clicked.connect(self.__privacyClicked)
+        self.__rssButton.clicked.connect(self.__rssClicked)
+        self.__clearButton.clicked.connect(self.clear)
         self.__mw.privacyChanged.connect(self.__privacyButton.setVisible)
         self.textChanged.connect(self.__textChanged)
         

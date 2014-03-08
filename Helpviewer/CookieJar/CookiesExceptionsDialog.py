@@ -33,9 +33,9 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         
         self.__cookieJar = cookieJar
         
-        self.removeButton.clicked[()].connect(
+        self.removeButton.clicked.connect(
             self.exceptionsTable.removeSelected)
-        self.removeAllButton.clicked[()].connect(
+        self.removeAllButton.clicked.connect(
             self.exceptionsTable.removeAll)
         
         self.exceptionsTable.verticalHeader().hide()

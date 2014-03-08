@@ -171,7 +171,7 @@ class OpenSearchManager(QObject):
         from Helpviewer.HelpWindow import HelpWindow
 
         reply = HelpWindow.networkAccessManager().get(QNetworkRequest(url))
-        reply.finished[()].connect(self.__engineFromUrlAvailable)
+        reply.finished.connect(self.__engineFromUrlAvailable)
         reply.setParent(self)
         self.__replies.append(reply)
         

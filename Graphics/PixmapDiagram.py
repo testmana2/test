@@ -91,17 +91,17 @@ class PixmapDiagram(E5MainWindow):
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
                     self.tr("Close"), self)
-        self.closeAct.triggered[()].connect(self.close)
+        self.closeAct.triggered.connect(self.close)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
                     self.tr("Print"), self)
-        self.printAct.triggered[()].connect(self.__printDiagram)
+        self.printAct.triggered.connect(self.__printDiagram)
         
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
                     self.tr("Print Preview"), self)
-        self.printPreviewAct.triggered[()].connect(self.__printPreviewDiagram)
+        self.printPreviewAct.triggered.connect(self.__printPreviewDiagram)
         
     def __initContextMenu(self):
         """

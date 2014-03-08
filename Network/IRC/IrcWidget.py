@@ -61,7 +61,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             UI.PixmapCache.getIcon("ircCloseChannel.png"))
         self.__leaveButton.setToolTip(
             self.tr("Press to leave the current channel"))
-        self.__leaveButton.clicked[()].connect(self.__leaveChannel)
+        self.__leaveButton.clicked.connect(self.__leaveChannel)
         self.__leaveButton.setEnabled(False)
         self.channelsWidget.setCornerWidget(
             self.__leaveButton, Qt.BottomRightCorner)

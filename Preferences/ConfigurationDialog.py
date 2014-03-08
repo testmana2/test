@@ -781,8 +781,8 @@ class ConfigurationDialog(QDialog):
         self.resize(size)
         self.setWindowTitle(self.cw.windowTitle())
         
-        self.cw.accepted[()].connect(self.accept)
-        self.cw.rejected[()].connect(self.reject)
+        self.cw.accepted.connect(self.accept)
+        self.cw.rejected.connect(self.reject)
         self.cw.preferencesChanged.connect(self.__preferencesChanged)
         self.cw.masterPasswordChanged.connect(self.__masterPasswordChanged)
         
@@ -852,8 +852,8 @@ class ConfigurationWindow(E5MainWindow):
         self.setStyle(Preferences.getUI("Style"),
                       Preferences.getUI("StyleSheet"))
         
-        self.cw.accepted[()].connect(self.accept)
-        self.cw.rejected[()].connect(self.close)
+        self.cw.accepted.connect(self.accept)
+        self.cw.rejected.connect(self.close)
         
     def showConfigurationPageByName(self, pageName):
         """

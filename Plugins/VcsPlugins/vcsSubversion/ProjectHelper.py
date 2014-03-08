@@ -58,7 +58,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This creates a new local project from the VCS"""
             """ repository.</p>"""
         ))
-        self.vcsNewAct.triggered[()].connect(self._vcsCheckout)
+        self.vcsNewAct.triggered.connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
         self.vcsUpdateAct = E5Action(
@@ -74,7 +74,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This updates the local project from the VCS"""
             """ repository.</p>"""
         ))
-        self.vcsUpdateAct.triggered[()].connect(self._vcsUpdate)
+        self.vcsUpdateAct.triggered.connect(self._vcsUpdate)
         self.actions.append(self.vcsUpdateAct)
         
         self.vcsCommitAct = E5Action(
@@ -90,7 +90,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This commits changes to the local project to the VCS"""
             """ repository.</p>"""
         ))
-        self.vcsCommitAct.triggered[()].connect(self._vcsCommit)
+        self.vcsCommitAct.triggered.connect(self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
         
         self.vcsLogAct = E5Action(
@@ -105,7 +105,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Show log</b>"""
             """<p>This shows the log of the local project.</p>"""
         ))
-        self.vcsLogAct.triggered[()].connect(self._vcsLog)
+        self.vcsLogAct.triggered.connect(self._vcsLog)
         self.actions.append(self.vcsLogAct)
         
         self.svnLogBrowserAct = E5Action(
@@ -122,7 +122,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """ project. A limited number of entries is shown first. More"""
             """ can be retrieved later on.</p>"""
         ))
-        self.svnLogBrowserAct.triggered[()].connect(self.__svnLogBrowser)
+        self.svnLogBrowserAct.triggered.connect(self.__svnLogBrowser)
         self.actions.append(self.svnLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
@@ -138,7 +138,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This shows the difference of the local project to the"""
             """ repository.</p>"""
         ))
-        self.vcsDiffAct.triggered[()].connect(self._vcsDiff)
+        self.vcsDiffAct.triggered.connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
         self.svnExtDiffAct = E5Action(
@@ -154,7 +154,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This shows the difference of selectable revisions of"""
             """ the project.</p>"""
         ))
-        self.svnExtDiffAct.triggered[()].connect(self.__svnExtendedDiff)
+        self.svnExtDiffAct.triggered.connect(self.__svnExtendedDiff)
         self.actions.append(self.svnExtDiffAct)
         
         self.svnUrlDiffAct = E5Action(
@@ -170,7 +170,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This shows the difference of the project between"""
             """ two repository URLs.</p>"""
         ))
-        self.svnUrlDiffAct.triggered[()].connect(self.__svnUrlDiff)
+        self.svnUrlDiffAct.triggered.connect(self.__svnUrlDiff)
         self.actions.append(self.svnUrlDiffAct)
         
         self.vcsStatusAct = E5Action(
@@ -185,7 +185,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Show status</b>"""
             """<p>This shows the status of the local project.</p>"""
         ))
-        self.vcsStatusAct.triggered[()].connect(self._vcsStatus)
+        self.vcsStatusAct.triggered.connect(self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
         
         self.svnChangeListsAct = E5Action(
@@ -201,7 +201,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This shows the change lists and associated files of the"""
             """ local project.</p>"""
         ))
-        self.svnChangeListsAct.triggered[()].connect(self.__svnChangeLists)
+        self.svnChangeListsAct.triggered.connect(self.__svnChangeLists)
         self.actions.append(self.svnChangeListsAct)
         
         self.vcsTagAct = E5Action(
@@ -216,7 +216,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Tag in repository</b>"""
             """<p>This tags the local project in the repository.</p>"""
         ))
-        self.vcsTagAct.triggered[()].connect(self._vcsTag)
+        self.vcsTagAct.triggered.connect(self._vcsTag)
         self.actions.append(self.vcsTagAct)
         
         self.vcsExportAct = E5Action(
@@ -231,7 +231,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Export from repository</b>"""
             """<p>This exports a project from the repository.</p>"""
         ))
-        self.vcsExportAct.triggered[()].connect(self._vcsExport)
+        self.vcsExportAct.triggered.connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
         self.vcsPropsAct = E5Action(
@@ -244,7 +244,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Command options...</b>"""
             """<p>This shows a dialog to edit the VCS command options.</p>"""
         ))
-        self.vcsPropsAct.triggered[()].connect(self._vcsCommandOptions)
+        self.vcsPropsAct.triggered.connect(self._vcsCommandOptions)
         self.actions.append(self.vcsPropsAct)
         
         self.vcsRevertAct = E5Action(
@@ -259,7 +259,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Revert changes</b>"""
             """<p>This reverts all changes made to the local project.</p>"""
         ))
-        self.vcsRevertAct.triggered[()].connect(self._vcsRevert)
+        self.vcsRevertAct.triggered.connect(self._vcsRevert)
         self.actions.append(self.vcsRevertAct)
         
         self.vcsMergeAct = E5Action(
@@ -275,7 +275,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This merges changes of a tag/revision into the local"""
             """ project.</p>"""
         ))
-        self.vcsMergeAct.triggered[()].connect(self._vcsMerge)
+        self.vcsMergeAct.triggered.connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
         
         self.vcsSwitchAct = E5Action(
@@ -290,7 +290,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Switch</b>"""
             """<p>This switches the local copy to another tag/branch.</p>"""
         ))
-        self.vcsSwitchAct.triggered[()].connect(self._vcsSwitch)
+        self.vcsSwitchAct.triggered.connect(self._vcsSwitch)
         self.actions.append(self.vcsSwitchAct)
         
         self.vcsResolveAct = E5Action(
@@ -305,7 +305,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This marks all conflicts of the local project as"""
             """ resolved.</p>"""
         ))
-        self.vcsResolveAct.triggered[()].connect(self.__svnResolve)
+        self.vcsResolveAct.triggered.connect(self.__svnResolve)
         self.actions.append(self.vcsResolveAct)
         
         self.vcsCleanupAct = E5Action(
@@ -319,7 +319,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Cleanup</b>"""
             """<p>This performs a cleanup of the local project.</p>"""
         ))
-        self.vcsCleanupAct.triggered[()].connect(self._vcsCleanup)
+        self.vcsCleanupAct.triggered.connect(self._vcsCleanup)
         self.actions.append(self.vcsCleanupAct)
         
         self.vcsCommandAct = E5Action(
@@ -333,7 +333,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Execute command</b>"""
             """<p>This opens a dialog to enter an arbitrary VCS command.</p>"""
         ))
-        self.vcsCommandAct.triggered[()].connect(self._vcsCommand)
+        self.vcsCommandAct.triggered.connect(self._vcsCommand)
         self.actions.append(self.vcsCommandAct)
         
         self.svnTagListAct = E5Action(
@@ -347,7 +347,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>List tags</b>"""
             """<p>This lists the tags of the project.</p>"""
         ))
-        self.svnTagListAct.triggered[()].connect(self.__svnTagList)
+        self.svnTagListAct.triggered.connect(self.__svnTagList)
         self.actions.append(self.svnTagListAct)
         
         self.svnBranchListAct = E5Action(
@@ -361,7 +361,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>List branches</b>"""
             """<p>This lists the branches of the project.</p>"""
         ))
-        self.svnBranchListAct.triggered[()].connect(self.__svnBranchList)
+        self.svnBranchListAct.triggered.connect(self.__svnBranchList)
         self.actions.append(self.svnBranchListAct)
         
         self.svnListAct = E5Action(
@@ -375,7 +375,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>List repository contents</b>"""
             """<p>This lists the contents of the repository.</p>"""
         ))
-        self.svnListAct.triggered[()].connect(self.__svnTagList)
+        self.svnListAct.triggered.connect(self.__svnTagList)
         self.actions.append(self.svnListAct)
         
         self.svnPropSetAct = E5Action(
@@ -389,7 +389,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Set Property</b>"""
             """<p>This sets a property for the project files.</p>"""
         ))
-        self.svnPropSetAct.triggered[()].connect(self.__svnPropSet)
+        self.svnPropSetAct.triggered.connect(self.__svnPropSet)
         self.actions.append(self.svnPropSetAct)
         
         self.svnPropListAct = E5Action(
@@ -403,7 +403,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>List Properties</b>"""
             """<p>This lists the properties of the project files.</p>"""
         ))
-        self.svnPropListAct.triggered[()].connect(self.__svnPropList)
+        self.svnPropListAct.triggered.connect(self.__svnPropList)
         self.actions.append(self.svnPropListAct)
         
         self.svnPropDelAct = E5Action(
@@ -417,7 +417,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Delete Property</b>"""
             """<p>This deletes a property for the project files.</p>"""
         ))
-        self.svnPropDelAct.triggered[()].connect(self.__svnPropDel)
+        self.svnPropDelAct.triggered.connect(self.__svnPropDel)
         self.actions.append(self.svnPropDelAct)
         
         self.svnRelocateAct = E5Action(
@@ -433,7 +433,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>This relocates the working copy to a new repository"""
             """ URL.</p>"""
         ))
-        self.svnRelocateAct.triggered[()].connect(self.__svnRelocate)
+        self.svnRelocateAct.triggered.connect(self.__svnRelocate)
         self.actions.append(self.svnRelocateAct)
         
         self.svnRepoBrowserAct = E5Action(
@@ -448,7 +448,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Repository Browser</b>"""
             """<p>This shows the Repository Browser dialog.</p>"""
         ))
-        self.svnRepoBrowserAct.triggered[()].connect(self.__svnRepoBrowser)
+        self.svnRepoBrowserAct.triggered.connect(self.__svnRepoBrowser)
         self.actions.append(self.svnRepoBrowserAct)
         
         self.svnConfigAct = E5Action(
@@ -463,7 +463,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<p>Show the configuration dialog with the Subversion page"""
             """ selected.</p>"""
         ))
-        self.svnConfigAct.triggered[()].connect(self.__svnConfigure)
+        self.svnConfigAct.triggered.connect(self.__svnConfigure)
         self.actions.append(self.svnConfigAct)
         
         self.svnUpgradeAct = E5Action(
@@ -477,7 +477,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """<b>Upgrade</b>"""
             """<p>Upgrades the working copy to the current format.</p>"""
         ))
-        self.svnUpgradeAct.triggered[()].connect(self.__svnUpgrade)
+        self.svnUpgradeAct.triggered.connect(self.__svnUpgrade)
         self.actions.append(self.svnUpgradeAct)
     
     def initMenu(self, menu):

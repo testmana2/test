@@ -256,7 +256,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         request = QNetworkRequest(QUrl(urlString))
         reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()\
             .get(request)
-        reply.finished[()].connect(self.__feedLoaded)
+        reply.finished.connect(self.__feedLoaded)
         self.__replies[id(reply)] = (reply, itm)
     
     def __feedLoaded(self):

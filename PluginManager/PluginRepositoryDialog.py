@@ -410,7 +410,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
         reply = self.__networkManager.get(request)
-        reply.finished[()].connect(self.__downloadFileDone)
+        reply.finished.connect(self.__downloadFileDone)
         reply.downloadProgress.connect(self.__downloadProgress)
         self.__replies.append(reply)
     
@@ -744,8 +744,8 @@ class PluginRepositoryDialog(QDialog):
         self.resize(size)
         self.setWindowTitle(self.cw.windowTitle())
         
-        self.cw.buttonBox.accepted[()].connect(self.accept)
-        self.cw.buttonBox.rejected[()].connect(self.reject)
+        self.cw.buttonBox.accepted.connect(self.accept)
+        self.cw.buttonBox.rejected.connect(self.reject)
         self.cw.closeAndInstall.connect(self.__closeAndInstall)
         
     def __closeAndInstall(self):
@@ -783,8 +783,8 @@ class PluginRepositoryWindow(E5MainWindow):
         self.setStyle(Preferences.getUI("Style"),
                       Preferences.getUI("StyleSheet"))
         
-        self.cw.buttonBox.accepted[()].connect(self.close)
-        self.cw.buttonBox.rejected[()].connect(self.close)
+        self.cw.buttonBox.accepted.connect(self.close)
+        self.cw.buttonBox.rejected.connect(self.close)
         self.cw.closeAndInstall.connect(self.__startPluginInstall)
     
     def __startPluginInstall(self):

@@ -135,7 +135,7 @@ class DebugViewer(QWidget):
             UI.PixmapCache.getIcon("globalVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.globalsViewer.windowTitle())
         
-        self.setGlobalsFilterButton.clicked[()].connect(
+        self.setGlobalsFilterButton.clicked.connect(
             self.__setGlobalsFilter)
         self.globalsFilterEdit.returnPressed.connect(self.__setGlobalsFilter)
         
@@ -189,10 +189,10 @@ class DebugViewer(QWidget):
             UI.PixmapCache.getIcon("localVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.localsViewer.windowTitle())
         
-        self.sourceButton.clicked[()].connect(self.__showSource)
+        self.sourceButton.clicked.connect(self.__showSource)
         self.stackComboBox.currentIndexChanged[int].connect(
             self.__frameSelected)
-        self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
+        self.setLocalsFilterButton.clicked.connect(self.__setLocalsFilter)
         self.localsFilterEdit.returnPressed.connect(self.__setLocalsFilter)
         
         from .CallStackViewer import CallStackViewer

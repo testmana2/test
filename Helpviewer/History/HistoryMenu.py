@@ -343,10 +343,10 @@ class HistoryMenu(E5ModelMenu):
         
         act = self.addAction(UI.PixmapCache.getIcon("history.png"),
                              self.tr("Show All History..."))
-        act.triggered[()].connect(self.__showHistoryDialog)
+        act.triggered.connect(self.__showHistoryDialog)
         act = self.addAction(UI.PixmapCache.getIcon("historyClear.png"),
                              self.tr("Clear History..."))
-        act.triggered[()].connect(self.__clearHistoryDialog)
+        act.triggered.connect(self.__clearHistoryDialog)
     
     def setInitialActions(self, actions):
         """

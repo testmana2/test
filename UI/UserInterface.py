@@ -11,7 +11,7 @@ import os
 import sys
 import logging
 
-from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, \
+from PyQt4.QtCore import pyqtSlot, QTimer, QFile, QFileInfo, pyqtSignal, \
     PYQT_VERSION_STR, QDate, QIODevice, qVersion, QProcess, QSize, QUrl, \
     QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
@@ -1190,7 +1190,7 @@ class UserInterface(E5MainWindow):
             """ first. Any Python program being debugged will be stopped"""
             """ and the preferences will be written to disc.</p>"""
         ))
-        self.exitAct.triggered[()].connect(self.__quit)
+        self.exitAct.triggered.connect(self.__quit)
         self.exitAct.setMenuRole(QAction.QuitRole)
         self.actions.append(self.exitAct)
 
@@ -1206,7 +1206,7 @@ class UserInterface(E5MainWindow):
             """<b>New Window</b>"""
             """<p>This opens a new instance of the eric5 IDE.</p>"""
         ))
-        self.newWindowAct.triggered[()].connect(self.__newWindow)
+        self.newWindowAct.triggered.connect(self.__newWindow)
         self.actions.append(self.newWindowAct)
         self.newWindowAct.setEnabled(
             not Preferences.getUI("SingleApplicationMode"))
@@ -1227,7 +1227,7 @@ class UserInterface(E5MainWindow):
             """ if this profile is active, may be configured with the"""
             """ "View Profile Configuration" dialog.</p>"""
         ))
-        self.setEditProfileAct.triggered[()].connect(self.__setEditProfile)
+        self.setEditProfileAct.triggered.connect(self.__setEditProfile)
         self.actions.append(self.setEditProfileAct)
         
         self.setDebugProfileAct = E5Action(
@@ -1244,7 +1244,7 @@ class UserInterface(E5MainWindow):
             """ if this profile is active, may be configured with the"""
             """ "View Profile Configuration" dialog.</p>"""
         ))
-        self.setDebugProfileAct.triggered[()].connect(self.setDebugProfile)
+        self.setDebugProfileAct.triggered.connect(self.setDebugProfile)
         self.actions.append(self.setDebugProfileAct)
         
         self.pbActivateAct = E5Action(
@@ -1260,7 +1260,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Project-Viewer"""
             """ window.</p>"""
         ))
-        self.pbActivateAct.triggered[()].connect(self.__activateProjectBrowser)
+        self.pbActivateAct.triggered.connect(self.__activateProjectBrowser)
         self.actions.append(self.pbActivateAct)
         self.addAction(self.pbActivateAct)
 
@@ -1277,7 +1277,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Multiproject-Viewer"""
             """ window.</p>"""
         ))
-        self.mpbActivateAct.triggered[()].connect(
+        self.mpbActivateAct.triggered.connect(
             self.__activateMultiProjectBrowser)
         self.actions.append(self.mpbActivateAct)
         self.addAction(self.mpbActivateAct)
@@ -1295,7 +1295,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Debug-Viewer"""
             """ window.</p>"""
         ))
-        self.debugViewerActivateAct.triggered[()].connect(
+        self.debugViewerActivateAct.triggered.connect(
             self.__activateDebugViewer)
         self.actions.append(self.debugViewerActivateAct)
         self.addAction(self.debugViewerActivateAct)
@@ -1312,7 +1312,7 @@ class UserInterface(E5MainWindow):
             """<b>Activate Shell</b>"""
             """<p>This switches the input focus to the Shell window.</p>"""
         ))
-        self.shellActivateAct.triggered[()].connect(self.__activateShell)
+        self.shellActivateAct.triggered.connect(self.__activateShell)
         self.actions.append(self.shellActivateAct)
         self.addAction(self.shellActivateAct)
 
@@ -1329,7 +1329,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the File-Browser"""
             """ window.</p>"""
         ))
-        self.browserActivateAct.triggered[()].connect(self.__activateBrowser)
+        self.browserActivateAct.triggered.connect(self.__activateBrowser)
         self.actions.append(self.browserActivateAct)
         self.addAction(self.browserActivateAct)
 
@@ -1346,7 +1346,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Log-Viewer"""
             """ window.</p>"""
         ))
-        self.logViewerActivateAct.triggered[()].connect(
+        self.logViewerActivateAct.triggered.connect(
             self.__activateLogViewer)
         self.actions.append(self.logViewerActivateAct)
         self.addAction(self.logViewerActivateAct)
@@ -1364,7 +1364,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Task-Viewer"""
             """ window.</p>"""
         ))
-        self.taskViewerActivateAct.triggered[()].connect(
+        self.taskViewerActivateAct.triggered.connect(
             self.__activateTaskViewer)
         self.actions.append(self.taskViewerActivateAct)
         self.addAction(self.taskViewerActivateAct)
@@ -1382,7 +1382,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Template-Viewer"""
             """ window.</p>"""
         ))
-        self.templateViewerActivateAct.triggered[()].connect(
+        self.templateViewerActivateAct.triggered.connect(
             self.__activateTemplateViewer)
         self.actions.append(self.templateViewerActivateAct)
         self.addAction(self.templateViewerActivateAct)
@@ -1396,7 +1396,7 @@ class UserInterface(E5MainWindow):
             """<p>If the Left Toolbox window is hidden then display it."""
             """ If it is displayed then close it.</p>"""
         ))
-        self.ltAct.triggered[()].connect(self.__toggleLeftToolbox)
+        self.ltAct.triggered.connect(self.__toggleLeftToolbox)
         self.actions.append(self.ltAct)
         
         self.rtAct = E5Action(
@@ -1409,7 +1409,7 @@ class UserInterface(E5MainWindow):
             """<p>If the Right Toolbox window is hidden then display it."""
             """ If it is displayed then close it.</p>"""
         ))
-        self.rtAct.triggered[()].connect(self.__toggleRightToolbox)
+        self.rtAct.triggered.connect(self.__toggleRightToolbox)
         self.actions.append(self.rtAct)
         
         self.htAct = E5Action(
@@ -1423,7 +1423,7 @@ class UserInterface(E5MainWindow):
             """<p>If the Horizontal Toolbox window is hidden then display"""
             """ it. If it is displayed then close it.</p>"""
         ))
-        self.htAct.triggered[()].connect(self.__toggleHorizontalToolbox)
+        self.htAct.triggered.connect(self.__toggleHorizontalToolbox)
         self.actions.append(self.htAct)
         
         self.lsbAct = E5Action(
@@ -1436,7 +1436,7 @@ class UserInterface(E5MainWindow):
             """<p>If the left sidebar window is hidden then display it."""
             """ If it is displayed then close it.</p>"""
         ))
-        self.lsbAct.triggered[()].connect(self.__toggleLeftSidebar)
+        self.lsbAct.triggered.connect(self.__toggleLeftSidebar)
         self.actions.append(self.lsbAct)
         
         self.rsbAct = E5Action(
@@ -1450,7 +1450,7 @@ class UserInterface(E5MainWindow):
             """<p>If the right sidebar window is hidden then display it."""
             """ If it is displayed then close it.</p>"""
         ))
-        self.rsbAct.triggered[()].connect(self.__toggleRightSidebar)
+        self.rsbAct.triggered.connect(self.__toggleRightSidebar)
         self.actions.append(self.rsbAct)
         
         self.bsbAct = E5Action(
@@ -1464,7 +1464,7 @@ class UserInterface(E5MainWindow):
             """<p>If the bottom sidebar window is hidden then display it."""
             """ If it is displayed then close it.</p>"""
         ))
-        self.bsbAct.triggered[()].connect(self.__toggleBottomSidebar)
+        self.bsbAct.triggered.connect(self.__toggleBottomSidebar)
         self.actions.append(self.bsbAct)
         
         self.cooperationViewerActivateAct = E5Action(
@@ -1480,7 +1480,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Cooperation-Viewer"""
             """ window.</p>"""
         ))
-        self.cooperationViewerActivateAct.triggered[()].connect(
+        self.cooperationViewerActivateAct.triggered.connect(
             self.activateCooperationViewer)
         self.actions.append(self.cooperationViewerActivateAct)
         self.addAction(self.cooperationViewerActivateAct)
@@ -1497,7 +1497,7 @@ class UserInterface(E5MainWindow):
             """<b>Activate IRC</b>"""
             """<p>This switches the input focus to the IRC window.</p>"""
         ))
-        self.ircActivateAct.triggered[()].connect(
+        self.ircActivateAct.triggered.connect(
             self.__activateIRC)
         self.actions.append(self.ircActivateAct)
         self.addAction(self.ircActivateAct)
@@ -1515,7 +1515,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Symbols-Viewer"""
             """ window.</p>"""
         ))
-        self.symbolsViewerActivateAct.triggered[()].connect(
+        self.symbolsViewerActivateAct.triggered.connect(
             self.__activateSymbolsViewer)
         self.actions.append(self.symbolsViewerActivateAct)
         self.addAction(self.symbolsViewerActivateAct)
@@ -1533,7 +1533,7 @@ class UserInterface(E5MainWindow):
             """<p>This switches the input focus to the Numbers-Viewer"""
             """ window.</p>"""
         ))
-        self.numbersViewerActivateAct.triggered[()].connect(
+        self.numbersViewerActivateAct.triggered.connect(
             self.__activateNumbersViewer)
         self.actions.append(self.numbersViewerActivateAct)
         self.addAction(self.numbersViewerActivateAct)
@@ -1553,7 +1553,7 @@ class UserInterface(E5MainWindow):
             """ them. In dialogs, this feature can be accessed using the"""
             """ context help button in the titlebar.</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
         self.actions.append(self.whatsThisAct)
 
         self.helpviewerAct = E5Action(
@@ -1573,7 +1573,7 @@ class UserInterface(E5MainWindow):
             """ browse the internet as well</p><p>If called with a word"""
             """ selected, this word is search in the Qt help collection.</p>"""
         ))
-        self.helpviewerAct.triggered[()].connect(self.__helpViewer)
+        self.helpviewerAct.triggered.connect(self.__helpViewer)
         self.actions.append(self.helpviewerAct)
         
         self.__initQtDocActions()
@@ -1591,7 +1591,7 @@ class UserInterface(E5MainWindow):
             """<b>Show Versions</b>"""
             """<p>Display version information.</p>"""
         ))
-        self.versionAct.triggered[()].connect(self.__showVersions)
+        self.versionAct.triggered.connect(self.__showVersions)
         self.actions.append(self.versionAct)
 
         self.checkUpdateAct = E5Action(
@@ -1602,7 +1602,7 @@ class UserInterface(E5MainWindow):
             """<b>Check for Updates...</b>"""
             """<p>Checks the internet for updates of eric5.</p>"""
         ))
-        self.checkUpdateAct.triggered[()].connect(self.performVersionCheck)
+        self.checkUpdateAct.triggered.connect(self.performVersionCheck)
         self.actions.append(self.checkUpdateAct)
     
         self.showVersionsAct = E5Action(
@@ -1616,7 +1616,7 @@ class UserInterface(E5MainWindow):
             """<p>Shows the eric5 versions available for download """
             """from the internet.</p>"""
         ))
-        self.showVersionsAct.triggered[()].connect(
+        self.showVersionsAct.triggered.connect(
             self.showAvailableVersionsInfo)
         self.actions.append(self.showVersionsAct)
 
@@ -1629,7 +1629,7 @@ class UserInterface(E5MainWindow):
             """<b>Show Error Log...</b>"""
             """<p>Opens a dialog showing the most recent error log.</p>"""
         ))
-        self.showErrorLogAct.triggered[()].connect(self.__showErrorLog)
+        self.showErrorLogAct.triggered.connect(self.__showErrorLog)
         self.actions.append(self.showErrorLogAct)
         
         self.reportBugAct = E5Action(
@@ -1641,7 +1641,7 @@ class UserInterface(E5MainWindow):
             """<b>Report Bug...</b>"""
             """<p>Opens a dialog to report a bug.</p>"""
         ))
-        self.reportBugAct.triggered[()].connect(self.__reportBug)
+        self.reportBugAct.triggered.connect(self.__reportBug)
         self.actions.append(self.reportBugAct)
         
         self.requestFeatureAct = E5Action(
@@ -1654,7 +1654,7 @@ class UserInterface(E5MainWindow):
             """<b>Request Feature...</b>"""
             """<p>Opens a dialog to send a feature request.</p>"""
         ))
-        self.requestFeatureAct.triggered[()].connect(self.__requestFeature)
+        self.requestFeatureAct.triggered.connect(self.__requestFeature)
         self.actions.append(self.requestFeatureAct)
 
         self.utActGrp = createActionGroup(self)
@@ -1670,7 +1670,7 @@ class UserInterface(E5MainWindow):
             """<p>Perform unit tests. The dialog gives you the"""
             """ ability to select and run a unittest suite.</p>"""
         ))
-        self.utDialogAct.triggered[()].connect(self.__unittest)
+        self.utDialogAct.triggered.connect(self.__unittest)
         self.actions.append(self.utDialogAct)
 
         self.utRestartAct = E5Action(
@@ -1683,7 +1683,7 @@ class UserInterface(E5MainWindow):
             """<b>Restart Unittest</b>"""
             """<p>Restart the unittest performed last.</p>"""
         ))
-        self.utRestartAct.triggered[()].connect(self.__unittestRestart)
+        self.utRestartAct.triggered.connect(self.__unittestRestart)
         self.utRestartAct.setEnabled(False)
         self.actions.append(self.utRestartAct)
         
@@ -1699,7 +1699,7 @@ class UserInterface(E5MainWindow):
             """<p>Rerun all tests that failed during the last unittest"""
             """ run.</p>"""
         ))
-        self.utRerunFailedAct.triggered[()].connect(self.__unittestRerunFailed)
+        self.utRerunFailedAct.triggered.connect(self.__unittestRerunFailed)
         self.utRerunFailedAct.setEnabled(False)
         self.actions.append(self.utRerunFailedAct)
         
@@ -1714,7 +1714,7 @@ class UserInterface(E5MainWindow):
             """<b>Unittest Script</b>"""
             """<p>Run unittest with current script.</p>"""
         ))
-        self.utScriptAct.triggered[()].connect(self.__unittestScript)
+        self.utScriptAct.triggered.connect(self.__unittestScript)
         self.utScriptAct.setEnabled(False)
         self.actions.append(self.utScriptAct)
         
@@ -1729,7 +1729,7 @@ class UserInterface(E5MainWindow):
             """<b>Unittest Project</b>"""
             """<p>Run unittest with current project.</p>"""
         ))
-        self.utProjectAct.triggered[()].connect(self.__unittestProject)
+        self.utProjectAct.triggered.connect(self.__unittestProject)
         self.utProjectAct.setEnabled(False)
         self.actions.append(self.utProjectAct)
         
@@ -1755,7 +1755,7 @@ class UserInterface(E5MainWindow):
                 """<b>Qt-Designer</b>"""
                 """<p>Start Qt-Designer.</p>"""
             ))
-            self.designer4Act.triggered[()].connect(self.__designer4)
+            self.designer4Act.triggered.connect(self.__designer4)
             self.actions.append(self.designer4Act)
         else:
             self.designer4Act = None
@@ -1781,7 +1781,7 @@ class UserInterface(E5MainWindow):
                 """<b>Qt-Linguist</b>"""
                 """<p>Start Qt-Linguist.</p>"""
             ))
-            self.linguist4Act.triggered[()].connect(self.__linguist4)
+            self.linguist4Act.triggered.connect(self.__linguist4)
             self.actions.append(self.linguist4Act)
         else:
             self.linguist4Act = None
@@ -1796,7 +1796,7 @@ class UserInterface(E5MainWindow):
             """<b>UI Previewer</b>"""
             """<p>Start the UI Previewer.</p>"""
         ))
-        self.uipreviewerAct.triggered[()].connect(self.__UIPreviewer)
+        self.uipreviewerAct.triggered.connect(self.__UIPreviewer)
         self.actions.append(self.uipreviewerAct)
         
         self.trpreviewerAct = E5Action(
@@ -1810,7 +1810,7 @@ class UserInterface(E5MainWindow):
             """<b>Translations Previewer</b>"""
             """<p>Start the Translations Previewer.</p>"""
         ))
-        self.trpreviewerAct.triggered[()].connect(self.__TRPreviewer)
+        self.trpreviewerAct.triggered.connect(self.__TRPreviewer)
         self.actions.append(self.trpreviewerAct)
         
         self.diffAct = E5Action(
@@ -1823,7 +1823,7 @@ class UserInterface(E5MainWindow):
             """<b>Compare Files</b>"""
             """<p>Open a dialog to compare two files.</p>"""
         ))
-        self.diffAct.triggered[()].connect(self.__compareFiles)
+        self.diffAct.triggered.connect(self.__compareFiles)
         self.actions.append(self.diffAct)
 
         self.compareAct = E5Action(
@@ -1837,7 +1837,7 @@ class UserInterface(E5MainWindow):
             """<p>Open a dialog to compare two files and show the result"""
             """ side by side.</p>"""
         ))
-        self.compareAct.triggered[()].connect(self.__compareFilesSbs)
+        self.compareAct.triggered.connect(self.__compareFilesSbs)
         self.actions.append(self.compareAct)
 
         self.sqlBrowserAct = E5Action(
@@ -1850,7 +1850,7 @@ class UserInterface(E5MainWindow):
             """<b>SQL Browser</b>"""
             """<p>Browse a SQL database.</p>"""
         ))
-        self.sqlBrowserAct.triggered[()].connect(self.__sqlBrowser)
+        self.sqlBrowserAct.triggered.connect(self.__sqlBrowser)
         self.actions.append(self.sqlBrowserAct)
 
         self.miniEditorAct = E5Action(
@@ -1863,7 +1863,7 @@ class UserInterface(E5MainWindow):
             """<b>Mini Editor</b>"""
             """<p>Open a dialog with a simplified editor.</p>"""
         ))
-        self.miniEditorAct.triggered[()].connect(self.__openMiniEditor)
+        self.miniEditorAct.triggered.connect(self.__openMiniEditor)
         self.actions.append(self.miniEditorAct)
 
         self.webBrowserAct = E5Action(
@@ -1877,7 +1877,7 @@ class UserInterface(E5MainWindow):
             """<b>eric5 Web Browser</b>"""
             """<p>Browse the Internet with the eric5 Web Browser.</p>"""
         ))
-        self.webBrowserAct.triggered[()].connect(self.__startWebBrowser)
+        self.webBrowserAct.triggered.connect(self.__startWebBrowser)
         self.actions.append(self.webBrowserAct)
 
         self.iconEditorAct = E5Action(
@@ -1891,7 +1891,7 @@ class UserInterface(E5MainWindow):
             """<b>Icon Editor</b>"""
             """<p>Starts the eric5 Icon Editor for editing simple icons.</p>"""
         ))
-        self.iconEditorAct.triggered[()].connect(self.__editPixmap)
+        self.iconEditorAct.triggered.connect(self.__editPixmap)
         self.actions.append(self.iconEditorAct)
 
         self.snapshotAct = E5Action(
@@ -1906,7 +1906,7 @@ class UserInterface(E5MainWindow):
             """<p>This opens a dialog to take snapshots of a screen"""
             """ region.</p>"""
         ))
-        self.snapshotAct.triggered[()].connect(self.__snapshot)
+        self.snapshotAct.triggered.connect(self.__snapshot)
         self.actions.append(self.snapshotAct)
 
         self.prefAct = E5Action(
@@ -1921,7 +1921,7 @@ class UserInterface(E5MainWindow):
             """<p>Set the configuration items of the application"""
             """ with your prefered values.</p>"""
         ))
-        self.prefAct.triggered[()].connect(self.showPreferences)
+        self.prefAct.triggered.connect(self.showPreferences)
         self.prefAct.setMenuRole(QAction.PreferencesRole)
         self.actions.append(self.prefAct)
 
@@ -1936,7 +1936,7 @@ class UserInterface(E5MainWindow):
             """<b>Export Preferences</b>"""
             """<p>Export the current configuration to a file.</p>"""
         ))
-        self.prefExportAct.triggered[()].connect(self.__exportPreferences)
+        self.prefExportAct.triggered.connect(self.__exportPreferences)
         self.actions.append(self.prefExportAct)
 
         self.prefImportAct = E5Action(
@@ -1950,7 +1950,7 @@ class UserInterface(E5MainWindow):
             """<b>Import Preferences</b>"""
             """<p>Import a previously exported configuration.</p>"""
         ))
-        self.prefImportAct.triggered[()].connect(self.__importPreferences)
+        self.prefImportAct.triggered.connect(self.__importPreferences)
         self.actions.append(self.prefImportAct)
 
         self.reloadAPIsAct = E5Action(
@@ -1963,7 +1963,7 @@ class UserInterface(E5MainWindow):
             """<b>Reload APIs</b>"""
             """<p>Reload the API information.</p>"""
         ))
-        self.reloadAPIsAct.triggered[()].connect(self.__reloadAPIs)
+        self.reloadAPIsAct.triggered.connect(self.__reloadAPIs)
         self.actions.append(self.reloadAPIsAct)
 
         self.showExternalToolsAct = E5Action(
@@ -1978,7 +1978,7 @@ class UserInterface(E5MainWindow):
             """<p>Opens a dialog to show the path and versions of all"""
             """ extenal tools used by eric5.</p>"""
         ))
-        self.showExternalToolsAct.triggered[()].connect(
+        self.showExternalToolsAct.triggered.connect(
             self.__showExternalTools)
         self.actions.append(self.showExternalToolsAct)
 
@@ -1995,7 +1995,7 @@ class UserInterface(E5MainWindow):
             """ set the visibility of the various windows for the"""
             """ predetermined view profiles.</p>"""
         ))
-        self.configViewProfilesAct.triggered[()].connect(
+        self.configViewProfilesAct.triggered.connect(
             self.__configViewProfiles)
         self.actions.append(self.configViewProfilesAct)
 
@@ -2011,7 +2011,7 @@ class UserInterface(E5MainWindow):
             """ change the actions shown on the various toolbars and"""
             """ define your own toolbars.</p>"""
         ))
-        self.configToolBarsAct.triggered[()].connect(self.__configToolBars)
+        self.configToolBarsAct.triggered.connect(self.__configToolBars)
         self.actions.append(self.configToolBarsAct)
 
         self.shortcutsAct = E5Action(
@@ -2026,7 +2026,7 @@ class UserInterface(E5MainWindow):
             """<p>Set the keyboard shortcuts of the application"""
             """ with your prefered values.</p>"""
         ))
-        self.shortcutsAct.triggered[()].connect(self.__configShortcuts)
+        self.shortcutsAct.triggered.connect(self.__configShortcuts)
         self.actions.append(self.shortcutsAct)
 
         self.exportShortcutsAct = E5Action(
@@ -2040,7 +2040,7 @@ class UserInterface(E5MainWindow):
             """<b>Export Keyboard Shortcuts</b>"""
             """<p>Export the keyboard shortcuts of the application.</p>"""
         ))
-        self.exportShortcutsAct.triggered[()].connect(self.__exportShortcuts)
+        self.exportShortcutsAct.triggered.connect(self.__exportShortcuts)
         self.actions.append(self.exportShortcutsAct)
 
         self.importShortcutsAct = E5Action(
@@ -2054,7 +2054,7 @@ class UserInterface(E5MainWindow):
             """<b>Import Keyboard Shortcuts</b>"""
             """<p>Import the keyboard shortcuts of the application.</p>"""
         ))
-        self.importShortcutsAct.triggered[()].connect(self.__importShortcuts)
+        self.importShortcutsAct.triggered.connect(self.__importShortcuts)
         self.actions.append(self.importShortcutsAct)
 
         if SSL_AVAILABLE:
@@ -2070,7 +2070,7 @@ class UserInterface(E5MainWindow):
                 """<p>Opens a dialog to manage the saved SSL certificates."""
                 """</p>"""
             ))
-            self.certificatesAct.triggered[()].connect(
+            self.certificatesAct.triggered.connect(
                 self.__showCertificatesDialog)
             self.actions.append(self.certificatesAct)
         
@@ -2087,7 +2087,7 @@ class UserInterface(E5MainWindow):
             """ suppress unwanted messages been shown in an error"""
             """ window.</p>"""
         ))
-        self.editMessageFilterAct.triggered[()].connect(
+        self.editMessageFilterAct.triggered.connect(
             E5ErrorMessage.editMessageFilters)
         self.actions.append(self.editMessageFilterAct)
 
@@ -2096,7 +2096,7 @@ class UserInterface(E5MainWindow):
             self.tr('Activate current editor'),
             QKeySequence(self.tr("Alt+Shift+E")),
             0, self, 'viewmanager_activate', 1)
-        self.viewmanagerActivateAct.triggered[()].connect(
+        self.viewmanagerActivateAct.triggered.connect(
             self.__activateViewmanager)
         self.actions.append(self.viewmanagerActivateAct)
         self.addAction(self.viewmanagerActivateAct)
@@ -2106,7 +2106,7 @@ class UserInterface(E5MainWindow):
             self.tr('Show next'),
             QKeySequence(self.tr('Ctrl+Alt+Tab')), 0,
             self, 'view_next_tab')
-        self.nextTabAct.triggered[()].connect(self.__showNext)
+        self.nextTabAct.triggered.connect(self.__showNext)
         self.actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
@@ -2115,7 +2115,7 @@ class UserInterface(E5MainWindow):
             self.tr('Show previous'),
             QKeySequence(self.tr('Shift+Ctrl+Alt+Tab')), 0,
             self, 'view_previous_tab')
-        self.prevTabAct.triggered[()].connect(self.__showPrevious)
+        self.prevTabAct.triggered.connect(self.__showPrevious)
         self.actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
@@ -2124,7 +2124,7 @@ class UserInterface(E5MainWindow):
             self.tr('Switch between tabs'),
             QKeySequence(self.tr('Ctrl+1')), 0,
             self, 'switch_tabs')
-        self.switchTabAct.triggered[()].connect(self.__switchTab)
+        self.switchTabAct.triggered.connect(self.__switchTab)
         self.actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
@@ -2138,7 +2138,7 @@ class UserInterface(E5MainWindow):
             """<p>This opens a dialog, that show some information about"""
             """ loaded plugins.</p>"""
         ))
-        self.pluginInfoAct.triggered[()].connect(self.__showPluginInfo)
+        self.pluginInfoAct.triggered.connect(self.__showPluginInfo)
         self.actions.append(self.pluginInfoAct)
         
         self.pluginInstallAct = E5Action(
@@ -2151,7 +2151,7 @@ class UserInterface(E5MainWindow):
             """<b>Install Plugins...</b>"""
             """<p>This opens a dialog to install or update plugins.</p>"""
         ))
-        self.pluginInstallAct.triggered[()].connect(self.__installPlugins)
+        self.pluginInstallAct.triggered.connect(self.__installPlugins)
         self.actions.append(self.pluginInstallAct)
         
         self.pluginDeinstallAct = E5Action(
@@ -2164,7 +2164,7 @@ class UserInterface(E5MainWindow):
             """<b>Uninstall Plugin...</b>"""
             """<p>This opens a dialog to uninstall a plugin.</p>"""
         ))
-        self.pluginDeinstallAct.triggered[()].connect(self.__deinstallPlugin)
+        self.pluginDeinstallAct.triggered.connect(self.__deinstallPlugin)
         self.actions.append(self.pluginDeinstallAct)
 
         self.pluginRepoAct = E5Action(
@@ -2179,7 +2179,7 @@ class UserInterface(E5MainWindow):
             """<p>This opens a dialog, that shows a list of plugins """
             """available on the Internet.</p>"""
         ))
-        self.pluginRepoAct.triggered[()].connect(self.showPluginsAvailable)
+        self.pluginRepoAct.triggered.connect(self.showPluginsAvailable)
         self.actions.append(self.pluginRepoAct)
         
         # initialize viewmanager actions
@@ -2209,7 +2209,7 @@ class UserInterface(E5MainWindow):
             """ settings, this will either show the help in Eric's internal"""
             """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
-        self.qt4DocAct.triggered[()].connect(self.__showQt4Doc)
+        self.qt4DocAct.triggered.connect(self.__showQt4Doc)
         self.actions.append(self.qt4DocAct)
       
         self.qt5DocAct = E5Action(
@@ -2223,7 +2223,7 @@ class UserInterface(E5MainWindow):
             """ settings, this will either show the help in Eric's internal"""
             """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
-        self.qt5DocAct.triggered[()].connect(self.__showQt5Doc)
+        self.qt5DocAct.triggered.connect(self.__showQt5Doc)
         self.actions.append(self.qt5DocAct)
       
         self.pyqt4DocAct = E5Action(
@@ -2237,7 +2237,7 @@ class UserInterface(E5MainWindow):
             """ settings, this will either show the help in Eric's internal"""
             """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
-        self.pyqt4DocAct.triggered[()].connect(self.__showPyQt4Doc)
+        self.pyqt4DocAct.triggered.connect(self.__showPyQt4Doc)
         self.actions.append(self.pyqt4DocAct)
         
         try:
@@ -2255,7 +2255,7 @@ class UserInterface(E5MainWindow):
                 """ internal help viewer, or execute a web browser or"""
                 """ Qt Assistant. </p>"""
             ))
-            self.pyqt5DocAct.triggered[()].connect(self.__showPyQt5Doc)
+            self.pyqt5DocAct.triggered.connect(self.__showPyQt5Doc)
             self.actions.append(self.pyqt5DocAct)
         except ImportError:
             self.pyqt5DocAct = None
@@ -2280,7 +2280,7 @@ class UserInterface(E5MainWindow):
             """ <i>/usr/share/doc/packages/python/html</i> on Unix. Set"""
             """ PYTHON3DOCDIR in your environment to override this.</p>"""
         ))
-        self.pythonDocAct.triggered[()].connect(self.__showPythonDoc)
+        self.pythonDocAct.triggered.connect(self.__showPythonDoc)
         self.actions.append(self.pythonDocAct)
         
         self.python2DocAct = E5Action(
@@ -2300,7 +2300,7 @@ class UserInterface(E5MainWindow):
             """ on Unix. Set PYTHON2DOCDIR in your environment to override"""
             """ this. </p>"""
         ))
-        self.python2DocAct.triggered[()].connect(self.__showPython2Doc)
+        self.python2DocAct.triggered.connect(self.__showPython2Doc)
         self.actions.append(self.python2DocAct)
         
     def __initEricDocAction(self):
@@ -2319,7 +2319,7 @@ class UserInterface(E5MainWindow):
             """ documentation is the Documentation/Source subdirectory of"""
             """ the eric5 installation directory.</p>"""
         ))
-        self.ericDocAct.triggered[()].connect(self.__showEricDoc)
+        self.ericDocAct.triggered.connect(self.__showEricDoc)
         self.actions.append(self.ericDocAct)
         
     def __initPySideDocAction(self):
@@ -2341,7 +2341,7 @@ class UserInterface(E5MainWindow):
                 """ internal help viewer, or execute a web browser or"""
                 """ Qt Assistant. </p>"""
             ))
-            self.pysideDocAct.triggered[()].connect(self.__showPySideDoc)
+            self.pysideDocAct.triggered.connect(self.__showPySideDoc)
             self.actions.append(self.pysideDocAct)
         else:
             self.pysideDocAct = None
@@ -2780,7 +2780,7 @@ class UserInterface(E5MainWindow):
                                   tool['menutext'], self)
                     act.setObjectName("{0}@@{1}".format(toolGroup[0],
                                       tool['menutext']))
-                    act.triggered[()].connect(self.__toolActionTriggered)
+                    act.triggered.connect(self.__toolActionTriggered)
                     self.toolGroupActions[act.objectName()] = act
                     
                     self.toolbarManager.addAction(act, category)
@@ -2808,7 +2808,7 @@ class UserInterface(E5MainWindow):
         for key in groupActionKeys:
             if key not in ckeys:
                 self.toolbarManager.removeAction(self.toolGroupActions[key])
-                self.toolGroupActions[key].triggered[()].disconnect(
+                self.toolGroupActions[key].triggered.disconnect(
                     self.__toolActionTriggered)
                 del self.toolGroupActions[key]
         
@@ -2821,7 +2821,7 @@ class UserInterface(E5MainWindow):
                     act = QAction(UI.PixmapCache.getIcon(tool['icon']),
                                   tool['menutext'], self)
                     act.setObjectName(key)
-                    act.triggered[()].connect(self.__toolActionTriggered)
+                    act.triggered.connect(self.__toolActionTriggered)
                     self.toolGroupActions[key] = act
                     
                     self.toolbarManager.addAction(act, category)
@@ -3589,6 +3589,7 @@ class UserInterface(E5MainWindow):
         self.__currentBottomWidget = None
         self.__activateViewmanager()
         
+    @pyqtSlot()
     def __setEditProfile(self, save=True):
         """
         Private slot to activate the edit view profile.
@@ -3599,6 +3600,7 @@ class UserInterface(E5MainWindow):
         self.__activateViewProfile("edit", save)
         self.setEditProfileAct.setChecked(True)
         
+    @pyqtSlot()
     def setDebugProfile(self, save=True):
         """
         Public slot to activate the debug view profile.
@@ -3965,7 +3967,9 @@ class UserInterface(E5MainWindow):
         self.__createUnitTestDialog()
         self.unittestDialog.show()
         self.unittestDialog.raise_()
-
+    
+    @pyqtSlot()
+    @pyqtSlot(str)
     def __unittestScript(self, prog=None):
         """
         Private slot for displaying the unittest dialog and run the current
@@ -4182,7 +4186,9 @@ class UserInterface(E5MainWindow):
                     '<p>Could not start Qt-Linguist.<br>'
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(linguist))
-
+    
+    @pyqtSlot()
+    @pyqtSlot(str)
     def __linguist4(self, fn=None):
         """
         Private slot to start the Qt-Linguist 4 executable.
@@ -4294,6 +4300,8 @@ class UserInterface(E5MainWindow):
                         'Ensure that it is available as <b>hh</b>.</p>'
                     ))
         
+    @pyqtSlot()
+    @pyqtSlot(str)
     def __UIPreviewer(self, fn=None):
         """
         Private slot to start the UI Previewer executable.
@@ -4340,6 +4348,9 @@ class UserInterface(E5MainWindow):
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(viewer))
         
+    @pyqtSlot()
+    @pyqtSlot(str)
+    @pyqtSlot(str, bool)
     def __TRPreviewer(self, fileNames=None, ignore=False):
         """
         Private slot to start the Translation Previewer executable.
@@ -4413,6 +4424,8 @@ class UserInterface(E5MainWindow):
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(browser))
         
+    @pyqtSlot()
+    @pyqtSlot(str)
     def __editPixmap(self, fn=""):
         """
         Private slot to show a pixmap in a dialog.
@@ -4423,6 +4436,8 @@ class UserInterface(E5MainWindow):
         dlg = IconEditorWindow(fn, self, fromEric=True, project=self.project)
         dlg.show()
         
+    @pyqtSlot()
+    @pyqtSlot(str)
     def __showPixmap(self, fn):
         """
         Private slot to show a pixmap in a dialog.
@@ -4434,6 +4449,8 @@ class UserInterface(E5MainWindow):
         if dlg.getStatus():
             dlg.show()
         
+    @pyqtSlot()
+    @pyqtSlot(str)
     def __showSvg(self, fn):
         """
         Private slot to show a SVG file in a dialog.
@@ -5093,6 +5110,8 @@ class UserInterface(E5MainWindow):
         self.helpWindow.raise_()
         return self.helpWindow
     
+    @pyqtSlot()
+    @pyqtSlot(str)
     def showPreferences(self, pageName=None):
         """
         Public slot to set the preferences.
@@ -5580,6 +5599,7 @@ class UserInterface(E5MainWindow):
         self.__pluginInfoDialog = PluginInfoDialog(self.pluginManager, self)
         self.__pluginInfoDialog.show()
         
+    @pyqtSlot()
     def __installPlugins(self, pluginFileNames=[]):
         """
         Private slot to show a dialog to install a new plugin.
@@ -5771,6 +5791,7 @@ class UserInterface(E5MainWindow):
         """
         self.performVersionCheck(manual=True, showVersions=True)
         
+    @pyqtSlot()
     def performVersionCheck(self, manual=True, alternative=0,
                             showVersions=False):
         """
@@ -5825,7 +5846,7 @@ class UserInterface(E5MainWindow):
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
         reply = self.__networkManager.get(request)
-        reply.finished[()].connect(self.__versionsDownloadDone)
+        reply.finished.connect(self.__versionsDownloadDone)
         self.__replies.append(reply)
         
     def __versionsDownloadDone(self):

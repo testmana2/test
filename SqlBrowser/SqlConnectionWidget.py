@@ -49,8 +49,8 @@ class SqlConnectionWidget(QWidget):
         self.__schemaAction = QAction(
             self.tr("Show Schema"), self.__connectionTree)
         
-        refreshAction.triggered[()].connect(self.refresh)
-        self.__schemaAction.triggered[()].connect(self.showSchema)
+        refreshAction.triggered.connect(self.refresh)
+        self.__schemaAction.triggered.connect(self.showSchema)
         
         self.__connectionTree.addAction(refreshAction)
         self.__connectionTree.addAction(self.__schemaAction)

@@ -349,8 +349,8 @@ class DebuggerInterfaceRuby(QObject):
         if self.qsock is not None:
             return False
         
-        sock.disconnected[()].connect(self.debugServer.startClient)
-        sock.readyRead[()].connect(self.__parseClientLine)
+        sock.disconnected.connect(self.debugServer.startClient)
+        sock.readyRead.connect(self.__parseClientLine)
         
         self.qsock = sock
         
@@ -380,7 +380,7 @@ class DebuggerInterfaceRuby(QObject):
         
         # do not want any slots called during shutdown
         self.qsock.disconnected.disconnect(self.debugServer.startClient)
-        self.qsock.readyRead[()].disconnect(self.__parseClientLine)
+        self.qsock.readyRead.disconnect(self.__parseClientLine)
         
         # close down socket, and shut down client as well.
         self.__sendCommand('{0}\n'.format(DebugProtocol.RequestShutdown))

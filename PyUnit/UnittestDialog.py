@@ -632,7 +632,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         # one more button if called from eric
         if self.dbs:
-            ui.showButton.clicked[()].connect(self.__showSource)
+            ui.showButton.clicked.connect(self.__showSource)
         else:
             ui.showButton.hide()
 

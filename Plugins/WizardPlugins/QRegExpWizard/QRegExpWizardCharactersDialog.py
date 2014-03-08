@@ -127,7 +127,7 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
             30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
-        self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
+        self.moreSinglesButton.clicked.connect(self.__addSinglesLine)
         
         # generate dialog part for character ranges
         self.rangesBoxLayout = QVBoxLayout(self.rangesBox)
@@ -162,7 +162,7 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
             30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
-        self.moreRangesButton.clicked[()].connect(self.__addRangesLine)
+        self.moreRangesButton.clicked.connect(self.__addRangesLine)
         
     def __initCharacterSelectors(self):
         """

@@ -42,7 +42,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<b>List bookmarks</b>"""
             """<p>This lists the bookmarks of the project.</p>"""
         ))
-        self.hgBookmarksListAct.triggered[()].connect(self.__hgBookmarksList)
+        self.hgBookmarksListAct.triggered.connect(self.__hgBookmarksList)
         self.actions.append(self.hgBookmarksListAct)
     
         self.hgBookmarkDefineAct = E5Action(
@@ -57,7 +57,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<b>Define bookmark</b>"""
             """<p>This defines a bookmark for the project.</p>"""
         ))
-        self.hgBookmarkDefineAct.triggered[()].connect(self.__hgBookmarkDefine)
+        self.hgBookmarkDefineAct.triggered.connect(self.__hgBookmarkDefine)
         self.actions.append(self.hgBookmarkDefineAct)
     
         self.hgBookmarkDeleteAct = E5Action(
@@ -72,7 +72,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<b>Delete bookmark</b>"""
             """<p>This deletes a bookmark of the project.</p>"""
         ))
-        self.hgBookmarkDeleteAct.triggered[()].connect(self.__hgBookmarkDelete)
+        self.hgBookmarkDeleteAct.triggered.connect(self.__hgBookmarkDelete)
         self.actions.append(self.hgBookmarkDeleteAct)
     
         self.hgBookmarkRenameAct = E5Action(
@@ -87,7 +87,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<b>Rename bookmark</b>"""
             """<p>This renames a bookmark of the project.</p>"""
         ))
-        self.hgBookmarkRenameAct.triggered[()].connect(self.__hgBookmarkRename)
+        self.hgBookmarkRenameAct.triggered.connect(self.__hgBookmarkRename)
         self.actions.append(self.hgBookmarkRenameAct)
     
         self.hgBookmarkMoveAct = E5Action(
@@ -103,7 +103,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This moves a bookmark of the project to another"""
             """ changeset.</p>"""
         ))
-        self.hgBookmarkMoveAct.triggered[()].connect(self.__hgBookmarkMove)
+        self.hgBookmarkMoveAct.triggered.connect(self.__hgBookmarkMove)
         self.actions.append(self.hgBookmarkMoveAct)
         
         self.hgBookmarkIncomingAct = E5Action(
@@ -119,7 +119,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This shows a list of new bookmarks available at the remote"""
             """ repository.</p>"""
         ))
-        self.hgBookmarkIncomingAct.triggered[()].connect(
+        self.hgBookmarkIncomingAct.triggered.connect(
             self.__hgBookmarkIncoming)
         self.actions.append(self.hgBookmarkIncomingAct)
         
@@ -136,7 +136,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This pulls a bookmark from a remote repository into the """
             """local repository.</p>"""
         ))
-        self.hgBookmarkPullAct.triggered[()].connect(self.__hgBookmarkPull)
+        self.hgBookmarkPullAct.triggered.connect(self.__hgBookmarkPull)
         self.actions.append(self.hgBookmarkPullAct)
         
         self.hgBookmarkOutgoingAct = E5Action(
@@ -152,7 +152,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This shows a list of new bookmarks available at the local"""
             """ repository.</p>"""
         ))
-        self.hgBookmarkOutgoingAct.triggered[()].connect(
+        self.hgBookmarkOutgoingAct.triggered.connect(
             self.__hgBookmarkOutgoing)
         self.actions.append(self.hgBookmarkOutgoingAct)
         
@@ -169,7 +169,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes a bookmark from the local repository to a """
             """remote repository.</p>"""
         ))
-        self.hgBookmarkPushAct.triggered[()].connect(self.__hgBookmarkPush)
+        self.hgBookmarkPushAct.triggered.connect(self.__hgBookmarkPush)
         self.actions.append(self.hgBookmarkPushAct)
     
     def initMenu(self, mainMenu):

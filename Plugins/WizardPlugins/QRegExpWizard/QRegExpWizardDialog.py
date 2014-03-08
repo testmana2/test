@@ -679,8 +679,8 @@ class QRegExpWizardDialog(QDialog):
         self.resize(size)
         self.setWindowTitle(self.cw.windowTitle())
         
-        self.cw.buttonBox.accepted[()].connect(self.accept)
-        self.cw.buttonBox.rejected[()].connect(self.reject)
+        self.cw.buttonBox.accepted.connect(self.accept)
+        self.cw.buttonBox.rejected.connect(self.reject)
     
     def getCode(self, indLevel, indString):
         """
@@ -713,5 +713,5 @@ class QRegExpWizardWindow(E5MainWindow):
         self.setStyle(
             Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
-        self.cw.buttonBox.accepted[()].connect(self.close)
-        self.cw.buttonBox.rejected[()].connect(self.close)
+        self.cw.buttonBox.accepted.connect(self.close)
+        self.cw.buttonBox.rejected.connect(self.close)

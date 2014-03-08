@@ -93,7 +93,7 @@ class BookmarksMenu(E5ModelMenu):
         
         self.addSeparator()
         act = self.addAction(self.tr("Open all in Tabs"))
-        act.triggered[()].connect(self.openAll)
+        act.triggered.connect(self.openAll)
     
     def openAll(self):
         """
@@ -276,13 +276,13 @@ class BookmarksMenuBarMenu(BookmarksMenu):
         self.addSeparator()
         act = self.addAction(self.tr("Default Home Page"))
         act.setData("eric:home")
-        act.triggered[()].connect(self.__defaultBookmarkTriggered)
+        act.triggered.connect(self.__defaultBookmarkTriggered)
         act = self.addAction(self.tr("Speed Dial"))
         act.setData("eric:speeddial")
-        act.triggered[()].connect(self.__defaultBookmarkTriggered)
+        act.triggered.connect(self.__defaultBookmarkTriggered)
         self.addSeparator()
         act = self.addAction(self.tr("Open all in Tabs"))
-        act.triggered[()].connect(self.openAll)
+        act.triggered.connect(self.openAll)
     
     def setInitialActions(self, actions):
         """

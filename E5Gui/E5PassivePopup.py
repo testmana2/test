@@ -42,7 +42,7 @@ class E5PassivePopup(QFrame):
         self.setFrameStyle(QFrame.Box | QFrame.Plain)
         self.setLineWidth(2)
         self.__hideTimer.timeout.connect(self.hide)
-        self.clicked[()].connect(self.hide)
+        self.clicked.connect(self.hide)
     
     def setView(self, child):
         """
@@ -133,8 +133,8 @@ class E5PassivePopup(QFrame):
         
         @param evt reference to the mouse event (QMouseEvent)
         """
-        self.clicked[()].emit()
-        self.clicked[(QPoint, )].emit(evt.pos())
+        self.clicked.emit()
+        self.clicked.emit(evt.pos())
     
     def hideEvent(self, evt):
         """

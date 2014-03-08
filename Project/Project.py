@@ -15,8 +15,8 @@ import fnmatch
 import copy
 import zipfile
 
-from PyQt4.QtCore import QFile, QFileInfo, pyqtSignal, QCryptographicHash, \
-    QIODevice, QByteArray, QObject, Qt
+from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, pyqtSignal, \
+    QCryptographicHash, QIODevice, QByteArray, QObject, Qt
 from PyQt4.QtGui import QCursor, QLineEdit, QToolBar, QDialog, QInputDialog, \
     QApplication, QMenu, QAction
 from PyQt4.Qsci import QsciScintilla
@@ -851,6 +851,7 @@ class Project(QObject):
         self.sessActGrp.findChild(
             QAction, "project_delete_session").setEnabled(enable)
         
+    @pyqtSlot()
     def __readSession(self, quiet=False, indicator=""):
         """
         Private method to read in the project session file (.e4s).
@@ -886,6 +887,7 @@ class Project(QObject):
                         "<p>The project session file <b>{0}</b> could not be"
                         " read.</p>").format(fn))
         
+    @pyqtSlot()
     def __writeSession(self, quiet=False, indicator=""):
         """
         Private method to write the session data to an XML file (.e4s).
@@ -1019,6 +1021,7 @@ class Project(QObject):
         self.dbgActGrp.findChild(
             QAction, "project_debugger_properties_delete").setEnabled(enable)
         
+    @pyqtSlot()
     def __readDebugProperties(self, quiet=False):
         """
         Private method to read in the project debugger properties file (.e4d).
@@ -1052,6 +1055,7 @@ class Project(QObject):
                         "<p>The project debugger properties file <b>{0}</b>"
                         " could not be read.</p>").format(fn))
         
+    @pyqtSlot()
     def __writeDebugProperties(self, quiet=False):
         """
         Private method to write the project debugger properties file (.e4d).
@@ -1418,6 +1422,7 @@ class Project(QObject):
         if dirty:
             self.setDirty(True)
         
+    @pyqtSlot()
     def addFiles(self, filter=None, startdir=None):
         """
         Public slot used to add files to the project.
@@ -1566,6 +1571,7 @@ class Project(QObject):
                 nt = os.path.join(target, name)
                 self.__addRecursiveDirectory(filetype, ns, nt)
         
+    @pyqtSlot()
     def addDirectory(self, filter=None, startdir=None):
         """
         Public method used to add all files of a directory to the project.
@@ -2479,6 +2485,8 @@ class Project(QObject):
         # return empty string to signal to use the global setting
         return ""
         
+    @pyqtSlot()
+    @pyqtSlot(str)
     def openProject(self, fn=None, restoreSession=True, reopen=False):
         """
         Public slot to open a project.
@@ -2744,6 +2752,7 @@ class Project(QObject):
         self.applicationDiagram and self.applicationDiagram.close()
         self.loadedDiagram and self.loadedDiagram.close()
         
+    @pyqtSlot()
     def closeProject(self, reopen=False, noSave=False):
         """
         Public slot to close the current project.
@@ -3273,7 +3282,7 @@ class Project(QObject):
             """<p>This opens a dialog for entering the info for a"""
             """ new project.</p>"""
         ))
-        act.triggered[()].connect(self.createNewProject)
+        act.triggered.connect(self.createNewProject)
         self.actions.append(act)
 
         act = E5Action(
@@ -3286,7 +3295,7 @@ class Project(QObject):
             """<b>Open...</b>"""
             """<p>This opens an existing project.</p>"""
         ))
-        act.triggered[()].connect(self.openProject)
+        act.triggered.connect(self.openProject)
         self.actions.append(act)
 
         self.closeAct = E5Action(
@@ -3298,7 +3307,7 @@ class Project(QObject):
             """<b>Close</b>"""
             """<p>This closes the current project.</p>"""
         ))
-        self.closeAct.triggered[()].connect(self.closeProject)
+        self.closeAct.triggered.connect(self.closeProject)
         self.actions.append(self.closeAct)
 
         self.saveAct = E5Action(
@@ -3310,7 +3319,7 @@ class Project(QObject):
             """<b>Save</b>"""
             """<p>This saves the current project.</p>"""
         ))
-        self.saveAct.triggered[()].connect(self.saveProject)
+        self.saveAct.triggered.connect(self.saveProject)
         self.actions.append(self.saveAct)
 
         self.saveasAct = E5Action(
@@ -3323,7 +3332,7 @@ class Project(QObject):
             """<b>Save as</b>"""
             """<p>This saves the current project to a new file.</p>"""
         ))
-        self.saveasAct.triggered[()].connect(self.saveProjectAs)
+        self.saveasAct.triggered.connect(self.saveProjectAs)
         self.actions.append(self.saveasAct)
 
         self.actGrp2 = createActionGroup(self)
@@ -3341,7 +3350,7 @@ class Project(QObject):
             """ to the current project. The place to add is"""
             """ determined by the file extension.</p>"""
         ))
-        self.addFilesAct.triggered[()].connect(self.addFiles)
+        self.addFilesAct.triggered.connect(self.addFiles)
         self.actions.append(self.addFilesAct)
 
         self.addDirectoryAct = E5Action(
@@ -3356,7 +3365,7 @@ class Project(QObject):
             """<p>This opens a dialog for adding a directory"""
             """ to the current project.</p>"""
         ))
-        self.addDirectoryAct.triggered[()].connect(self.addDirectory)
+        self.addDirectoryAct.triggered.connect(self.addDirectory)
         self.actions.append(self.addDirectoryAct)
 
         self.addLanguageAct = E5Action(
@@ -3371,7 +3380,7 @@ class Project(QObject):
             """<p>This opens a dialog for add a translation"""
             """ to the current project.</p>"""
         ))
-        self.addLanguageAct.triggered[()].connect(self.addLanguage)
+        self.addLanguageAct.triggered.connect(self.addLanguage)
         self.actions.append(self.addLanguageAct)
 
         act = E5Action(
@@ -3385,7 +3394,7 @@ class Project(QObject):
             """<p>This searches for new files (sources, *.ui, *.idl) in"""
             """ the project directory and registered subdirectories.</p>"""
         ))
-        act.triggered[()].connect(self.__searchNewFiles)
+        act.triggered.connect(self.__searchNewFiles)
         self.actions.append(act)
 
         self.propsAct = E5Action(
@@ -3398,7 +3407,7 @@ class Project(QObject):
             """<b>Properties...</b>"""
             """<p>This shows a dialog to edit the project properties.</p>"""
         ))
-        self.propsAct.triggered[()].connect(self.__showProperties)
+        self.propsAct.triggered.connect(self.__showProperties)
         self.actions.append(self.propsAct)
 
         self.userPropsAct = E5Action(
@@ -3413,7 +3422,7 @@ class Project(QObject):
             """<p>This shows a dialog to edit the user specific project"""
             """ properties.</p>"""
         ))
-        self.userPropsAct.triggered[()].connect(self.__showUserProperties)
+        self.userPropsAct.triggered.connect(self.__showUserProperties)
         self.actions.append(self.userPropsAct)
 
         self.filetypesAct = E5Action(
@@ -3430,7 +3439,7 @@ class Project(QObject):
             """ pattern. They are used when adding a file to the project"""
             """ and when performing a search for new files.</p>"""
         ))
-        self.filetypesAct.triggered[()].connect(
+        self.filetypesAct.triggered.connect(
             self.__showFiletypeAssociations)
         self.actions.append(self.filetypesAct)
 
@@ -3447,7 +3456,7 @@ class Project(QObject):
             """ associations. Lexers are used to highlight the editor"""
             """ text.</p>"""
         ))
-        self.lexersAct.triggered[()].connect(self.__showLexerAssociations)
+        self.lexersAct.triggered.connect(self.__showLexerAssociations)
         self.actions.append(self.lexersAct)
 
         self.dbgActGrp = createActionGroup(self)
@@ -3462,7 +3471,7 @@ class Project(QObject):
             """<p>This shows a dialog to edit project specific debugger"""
             """ settings.</p>"""
         ))
-        act.triggered[()].connect(self.__showDebugProperties)
+        act.triggered.connect(self.__showDebugProperties)
         self.actions.append(act)
         
         act = E5Action(
@@ -3474,7 +3483,7 @@ class Project(QObject):
             """<b>Load Debugger Properties</b>"""
             """<p>This loads the project specific debugger settings.</p>"""
         ))
-        act.triggered[()].connect(self.__readDebugProperties)
+        act.triggered.connect(self.__readDebugProperties)
         self.actions.append(act)
         
         act = E5Action(
@@ -3486,7 +3495,7 @@ class Project(QObject):
             """<b>Save Debugger Properties</b>"""
             """<p>This saves the project specific debugger settings.</p>"""
         ))
-        act.triggered[()].connect(self.__writeDebugProperties)
+        act.triggered.connect(self.__writeDebugProperties)
         self.actions.append(act)
         
         act = E5Action(
@@ -3499,7 +3508,7 @@ class Project(QObject):
             """<p>This deletes the file containing the project specific"""
             """ debugger settings.</p>"""
         ))
-        act.triggered[()].connect(self.__deleteDebugProperties)
+        act.triggered.connect(self.__deleteDebugProperties)
         self.actions.append(act)
         
         act = E5Action(
@@ -3511,7 +3520,7 @@ class Project(QObject):
             """<b>Reset Debugger Properties</b>"""
             """<p>This resets the project specific debugger settings.</p>"""
         ))
-        act.triggered[()].connect(self.__initDebugProperties)
+        act.triggered.connect(self.__initDebugProperties)
         self.actions.append(act)
         
         self.sessActGrp = createActionGroup(self)
@@ -3531,7 +3540,7 @@ class Project(QObject):
             """- the working directory<br>"""
             """- the exception reporting flag</p>"""
         ))
-        act.triggered[()].connect(self.__readSession)
+        act.triggered.connect(self.__readSession)
         self.actions.append(act)
 
         act = E5Action(
@@ -3549,7 +3558,7 @@ class Project(QObject):
             """- the working directory<br>"""
             """- the exception reporting flag</p>"""
         ))
-        act.triggered[()].connect(self.__writeSession)
+        act.triggered.connect(self.__writeSession)
         self.actions.append(act)
         
         act = E5Action(
@@ -3561,7 +3570,7 @@ class Project(QObject):
             """<b>Delete session</b>"""
             """<p>This deletes the projects session file</p>"""
         ))
-        act.triggered[()].connect(self.__deleteSession)
+        act.triggered.connect(self.__deleteSession)
         self.actions.append(act)
         
         self.chkGrp = createActionGroup(self)
@@ -3577,7 +3586,7 @@ class Project(QObject):
             """<p>This shows some code metrics for all Python files in"""
             """ the project.</p>"""
         ))
-        self.codeMetricsAct.triggered[()].connect(self.__showCodeMetrics)
+        self.codeMetricsAct.triggered.connect(self.__showCodeMetrics)
         self.actions.append(self.codeMetricsAct)
 
         self.codeCoverageAct = E5Action(
@@ -3591,7 +3600,7 @@ class Project(QObject):
             """<p>This shows the code coverage information for all Python"""
             """ files in the project.</p>"""
         ))
-        self.codeCoverageAct.triggered[()].connect(self.__showCodeCoverage)
+        self.codeCoverageAct.triggered.connect(self.__showCodeCoverage)
         self.actions.append(self.codeCoverageAct)
 
         self.codeProfileAct = E5Action(
@@ -3604,7 +3613,7 @@ class Project(QObject):
             """<b>Profile Data...</b>"""
             """<p>This shows the profiling data for the project.</p>"""
         ))
-        self.codeProfileAct.triggered[()].connect(self.__showProfileData)
+        self.codeProfileAct.triggered.connect(self.__showProfileData)
         self.actions.append(self.codeProfileAct)
 
         self.graphicsGrp = createActionGroup(self)
@@ -3619,7 +3628,7 @@ class Project(QObject):
             """<b>Application Diagram...</b>"""
             """<p>This shows a diagram of the project.</p>"""
         ))
-        self.applicationDiagramAct.triggered[()].connect(
+        self.applicationDiagramAct.triggered.connect(
             self.handleApplicationDiagram)
         self.actions.append(self.applicationDiagramAct)
 
@@ -3633,7 +3642,7 @@ class Project(QObject):
             """<b>Load Diagram...</b>"""
             """<p>This loads a diagram from file.</p>"""
         ))
-        self.loadDiagramAct.triggered[()].connect(self.__loadDiagram)
+        self.loadDiagramAct.triggered.connect(self.__loadDiagram)
         self.actions.append(self.loadDiagramAct)
 
         self.pluginGrp = createActionGroup(self)
@@ -3651,7 +3660,7 @@ class Project(QObject):
             """ eric5 plugin archive. The list is created from the project"""
             """ file.</p>"""
         ))
-        self.pluginPkgListAct.triggered[()].connect(self.__pluginCreatePkgList)
+        self.pluginPkgListAct.triggered.connect(self.__pluginCreatePkgList)
         self.actions.append(self.pluginPkgListAct)
 
         self.pluginArchiveAct = E5Action(
@@ -3667,7 +3676,7 @@ class Project(QObject):
             """ of files given in the PKGLIST file. The archive name is"""
             """ built from the main script name.</p>"""
         ))
-        self.pluginArchiveAct.triggered[()].connect(self.__pluginCreateArchive)
+        self.pluginArchiveAct.triggered.connect(self.__pluginCreateArchive)
         self.actions.append(self.pluginArchiveAct)
     
         self.pluginSArchiveAct = E5Action(
@@ -3684,7 +3693,7 @@ class Project(QObject):
             """ built from the main script name. The version entry of the"""
             """ main script is modified to reflect a snapshot release.</p>"""
         ))
-        self.pluginSArchiveAct.triggered[()].connect(
+        self.pluginSArchiveAct.triggered.connect(
             self.__pluginCreateSnapshotArchive)
         self.actions.append(self.pluginSArchiveAct)
 
@@ -4568,6 +4577,7 @@ class Project(QObject):
         if not "PKGLIST" in self.pdata["OTHERS"]:
             self.appendFile("PKGLIST")
         
+    @pyqtSlot()
     def __pluginCreateArchive(self, snapshot=False):
         """
         Private slot to create an eric5 plugin archive.

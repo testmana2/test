@@ -63,9 +63,9 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
             QCompleter.UnfilteredPopupCompletion)
         self.__completer.setWidget(self)
         
-        self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
+        self.__searchButton.clicked.connect(self.__searchButtonClicked)
         self.textEdited.connect(self.__textEdited)
-        self.returnPressed[()].connect(self.__searchNow)
+        self.returnPressed.connect(self.__searchNow)
         self.__completer.activated[QModelIndex].connect(
             self.__completerActivated)
         self.__completer.highlighted[QModelIndex].connect(
@@ -237,7 +237,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
             engine = self.__openSearchManager.engine(engineName)
             action = OpenSearchEngineAction(engine, self.__enginesMenu)
             action.setData(engineName)
-            action.triggered[()].connect(self.__changeCurrentEngine)
+            action.triggered.connect(self.__changeCurrentEngine)
             self.__enginesMenu.addAction(action)
             
             if self.__openSearchManager.currentEngineName() == engineName:

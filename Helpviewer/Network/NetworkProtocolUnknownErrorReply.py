@@ -35,7 +35,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         Private method to send some signals to end the connection.
         """
         self.error.emit(QNetworkReply.ProtocolUnknownError)
-        self.finished[()].emit()
+        self.finished.emit()
     
     def abort(self):
         """

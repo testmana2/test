@@ -180,7 +180,7 @@ class DebugUI(QObject):
             """ the debugger. If the file has unsaved changes it may be"""
             """ saved first.</p>"""
         ))
-        self.runAct.triggered[()].connect(self.__runScript)
+        self.runAct.triggered.connect(self.__runScript)
         self.actions.append(self.runAct)
 
         self.runProjectAct = E5Action(
@@ -196,7 +196,7 @@ class DebugUI(QObject):
             """ If files of the current project have unsaved changes they"""
             """ may be saved first.</p>"""
         ))
-        self.runProjectAct.triggered[()].connect(self.__runProject)
+        self.runProjectAct.triggered.connect(self.__runProject)
         self.actions.append(self.runProjectAct)
 
         self.coverageAct = E5Action(
@@ -212,7 +212,7 @@ class DebugUI(QObject):
             """ the control of a coverage analysis tool. If the file has"""
             """ unsaved changes it may be saved first.</p>"""
         ))
-        self.coverageAct.triggered[()].connect(self.__coverageScript)
+        self.coverageAct.triggered.connect(self.__coverageScript)
         self.actions.append(self.coverageAct)
 
         self.coverageProjectAct = E5Action(
@@ -229,7 +229,7 @@ class DebugUI(QObject):
             """ If files of the current project have unsaved changes"""
             """ they may be saved first.</p>"""
         ))
-        self.coverageProjectAct.triggered[()].connect(self.__coverageProject)
+        self.coverageProjectAct.triggered.connect(self.__coverageProject)
         self.actions.append(self.coverageProjectAct)
 
         self.profileAct = E5Action(
@@ -242,7 +242,7 @@ class DebugUI(QObject):
             """<p>Set the command line arguments and profile the script."""
             """ If the file has unsaved changes it may be saved first.</p>"""
         ))
-        self.profileAct.triggered[()].connect(self.__profileScript)
+        self.profileAct.triggered.connect(self.__profileScript)
         self.actions.append(self.profileAct)
 
         self.profileProjectAct = E5Action(
@@ -258,7 +258,7 @@ class DebugUI(QObject):
             """ project. If files of the current project have unsaved"""
             """ changes they may be saved first.</p>"""
         ))
-        self.profileProjectAct.triggered[()].connect(self.__profileProject)
+        self.profileProjectAct.triggered.connect(self.__profileProject)
         self.actions.append(self.profileProjectAct)
 
         self.debugAct = E5Action(
@@ -274,7 +274,7 @@ class DebugUI(QObject):
             """ editor window. If the file has unsaved changes it may be"""
             """ saved first.</p>"""
         ))
-        self.debugAct.triggered[()].connect(self.__debugScript)
+        self.debugAct.triggered.connect(self.__debugScript)
         self.actions.append(self.debugAct)
 
         self.debugProjectAct = E5Action(
@@ -291,7 +291,7 @@ class DebugUI(QObject):
             """ script of the current project. If files of the current"""
             """ project have unsaved changes they may be saved first.</p>"""
         ))
-        self.debugProjectAct.triggered[()].connect(self.__debugProject)
+        self.debugProjectAct.triggered.connect(self.__debugProject)
         self.actions.append(self.debugProjectAct)
 
         self.restartAct = E5Action(
@@ -307,7 +307,7 @@ class DebugUI(QObject):
             """ that was debugged last. If there are unsaved changes, they"""
             """ may be saved first.</p>"""
         ))
-        self.restartAct.triggered[()].connect(self.__doRestart)
+        self.restartAct.triggered.connect(self.__doRestart)
         self.actions.append(self.restartAct)
 
         self.stopAct = E5Action(
@@ -320,7 +320,7 @@ class DebugUI(QObject):
             """<b>Stop</b>"""
             """<p>This stops the script running in the debugger backend.</p>"""
         ))
-        self.stopAct.triggered[()].connect(self.__stopScript)
+        self.stopAct.triggered.connect(self.__stopScript)
         self.actions.append(self.stopAct)
 
         self.debugActGrp = createActionGroup(self)
@@ -338,7 +338,7 @@ class DebugUI(QObject):
             """ program will stop when it terminates or when a breakpoint"""
             """ is reached.</p>"""
         ))
-        act.triggered[()].connect(self.__continue)
+        act.triggered.connect(self.__continue)
         self.actions.append(act)
 
         act = E5Action(
@@ -354,7 +354,7 @@ class DebugUI(QObject):
             """<p>Continue running the program from the current line to the"""
             """ current cursor position.</p>"""
         ))
-        act.triggered[()].connect(self.__runToCursor)
+        act.triggered.connect(self.__runToCursor)
         self.actions.append(act)
 
         act = E5Action(
@@ -370,7 +370,7 @@ class DebugUI(QObject):
             """ method or function call then control is returned to the"""
             """ debugger at the next statement.</p>"""
         ))
-        act.triggered[()].connect(self.__step)
+        act.triggered.connect(self.__step)
         self.actions.append(act)
 
         act = E5Action(
@@ -389,7 +389,7 @@ class DebugUI(QObject):
             """ control is returned to the debugger after the statement"""
             """ has completed.</p>"""
         ))
-        act.triggered[()].connect(self.__stepOver)
+        act.triggered.connect(self.__stepOver)
         self.actions.append(act)
 
         act = E5Action(
@@ -408,7 +408,7 @@ class DebugUI(QObject):
             """ call then control is returned to the debugger after the"""
             """ current frame has been left.</p>"""
         ))
-        act.triggered[()].connect(self.__stepOut)
+        act.triggered.connect(self.__stepOut)
         self.actions.append(act)
 
         act = E5Action(
@@ -421,7 +421,7 @@ class DebugUI(QObject):
             """<b>Stop</b>"""
             """<p>Stop the running debugging session.</p>"""
         ))
-        act.triggered[()].connect(self.__stepQuit)
+        act.triggered.connect(self.__stepQuit)
         self.actions.append(act)
         
         self.debugActGrp2 = createActionGroup(self)
@@ -437,7 +437,7 @@ class DebugUI(QObject):
             """ debugged program. The result is displayed in the"""
             """ shell window.</p>"""
         ))
-        act.triggered[()].connect(self.__eval)
+        act.triggered.connect(self.__eval)
         self.actions.append(act)
         
         act = E5Action(
@@ -451,7 +451,7 @@ class DebugUI(QObject):
             """<p>Execute a one line statement in the current context"""
             """ of the debugged program.</p>"""
         ))
-        act.triggered[()].connect(self.__exec)
+        act.triggered.connect(self.__exec)
         self.actions.append(act)
         
         self.dbgFilterAct = E5Action(
@@ -466,7 +466,7 @@ class DebugUI(QObject):
             """ that are not selected are displayed in the global or local"""
             """ variables window during a debugging session.</p>"""
         ))
-        self.dbgFilterAct.triggered[()].connect(
+        self.dbgFilterAct.triggered.connect(
             self.__configureVariablesFilters)
         self.actions.append(self.dbgFilterAct)
 
@@ -483,7 +483,7 @@ class DebugUI(QObject):
             """ session.</p><p>Please note, that all unhandled exceptions"""
             """ are highlighted indepent from the filter list.</p>"""
         ))
-        self.excFilterAct.triggered[()].connect(
+        self.excFilterAct.triggered.connect(
             self.__configureExceptionsFilter)
         self.actions.append(self.excFilterAct)
         
@@ -500,7 +500,7 @@ class DebugUI(QObject):
             """ session.</p><p>Please note, that unhandled exceptions"""
             """ cannot be ignored.</p>"""
         ))
-        self.excIgnoreFilterAct.triggered[()].connect(
+        self.excIgnoreFilterAct.triggered.connect(
             self.__configureIgnoredExceptions)
         self.actions.append(self.excIgnoreFilterAct)
 
@@ -518,7 +518,7 @@ class DebugUI(QObject):
             """<p>Toggles a breakpoint at the current line of the"""
             """ current editor.</p>"""
         ))
-        self.dbgToggleBpAct.triggered[()].connect(self.__toggleBreakpoint)
+        self.dbgToggleBpAct.triggered.connect(self.__toggleBreakpoint)
         self.actions.append(self.dbgToggleBpAct)
         
         self.dbgEditBpAct = E5Action(
@@ -533,7 +533,7 @@ class DebugUI(QObject):
             """<p>Opens a dialog to edit the breakpoints properties."""
             """ It works at the current line of the current editor.</p>"""
         ))
-        self.dbgEditBpAct.triggered[()].connect(self.__editBreakpoint)
+        self.dbgEditBpAct.triggered.connect(self.__editBreakpoint)
         self.actions.append(self.dbgEditBpAct)
 
         self.dbgNextBpAct = E5Action(
@@ -548,7 +548,7 @@ class DebugUI(QObject):
             """<b>Next Breakpoint</b>"""
             """<p>Go to next breakpoint of the current editor.</p>"""
         ))
-        self.dbgNextBpAct.triggered[()].connect(self.__nextBreakpoint)
+        self.dbgNextBpAct.triggered.connect(self.__nextBreakpoint)
         self.actions.append(self.dbgNextBpAct)
 
         self.dbgPrevBpAct = E5Action(
@@ -563,7 +563,7 @@ class DebugUI(QObject):
             """<b>Previous Breakpoint</b>"""
             """<p>Go to previous breakpoint of the current editor.</p>"""
         ))
-        self.dbgPrevBpAct.triggered[()].connect(self.__previousBreakpoint)
+        self.dbgPrevBpAct.triggered.connect(self.__previousBreakpoint)
         self.actions.append(self.dbgPrevBpAct)
 
         act = E5Action(
@@ -577,7 +577,7 @@ class DebugUI(QObject):
             """<b>Clear Breakpoints</b>"""
             """<p>Clear breakpoints of all editors.</p>"""
         ))
-        act.triggered[()].connect(self.__clearBreakpoints)
+        act.triggered.connect(self.__clearBreakpoints)
         self.actions.append(act)
 
         self.debugActGrp.setEnabled(False)

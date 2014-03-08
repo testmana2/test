@@ -47,7 +47,7 @@ class FetchProjectHelper(HgExtensionProjectHelper):
             """ the merge is committed. Otherwise, the working directory"""
             """ is updated to include the new changes.</p>"""
         ))
-        self.hgFetchAct.triggered[()].connect(self.__hgFetch)
+        self.hgFetchAct.triggered.connect(self.__hgFetch)
         self.actions.append(self.hgFetchAct)
     
     def initMenu(self, mainMenu):

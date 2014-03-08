@@ -7,7 +7,7 @@
 Module implementing a dialog showing UML like diagrams.
 """
 
-from PyQt4.QtCore import Qt, QFileInfo
+from PyQt4.QtCore import pyqtSlot, Qt, QFileInfo
 from PyQt4.QtGui import QAction, QToolBar, QGraphicsScene
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -75,37 +75,37 @@ class UMLDialog(E5MainWindow):
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
                     self.tr("Close"), self)
-        self.closeAct.triggered[()].connect(self.close)
+        self.closeAct.triggered.connect(self.close)
         
         self.openAct = \
             QAction(UI.PixmapCache.getIcon("open.png"),
                     self.tr("Load"), self)
-        self.openAct.triggered[()].connect(self.load)
+        self.openAct.triggered.connect(self.load)
         
         self.saveAct = \
             QAction(UI.PixmapCache.getIcon("fileSave.png"),
                     self.tr("Save"), self)
-        self.saveAct.triggered[()].connect(self.__save)
+        self.saveAct.triggered.connect(self.__save)
         
         self.saveAsAct = \
             QAction(UI.PixmapCache.getIcon("fileSaveAs.png"),
                     self.tr("Save As..."), self)
-        self.saveAsAct.triggered[()].connect(self.__saveAs)
+        self.saveAsAct.triggered.connect(self.__saveAs)
         
         self.saveImageAct = \
             QAction(UI.PixmapCache.getIcon("fileSavePixmap.png"),
                     self.tr("Save as Image"), self)
-        self.saveImageAct.triggered[()].connect(self.umlView.saveImage)
+        self.saveImageAct.triggered.connect(self.umlView.saveImage)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
                     self.tr("Print"), self)
-        self.printAct.triggered[()].connect(self.umlView.printDiagram)
+        self.printAct.triggered.connect(self.umlView.printDiagram)
         
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
                     self.tr("Print Preview"), self)
-        self.printPreviewAct.triggered[()].connect(
+        self.printPreviewAct.triggered.connect(
             self.umlView.printPreviewDiagram)
     
     def __initToolBars(self):
@@ -208,6 +208,7 @@ class UMLDialog(E5MainWindow):
         """
         self.__saveAs(self.__fileName)
     
+    @pyqtSlot()
     def __saveAs(self, filename=""):
         """
         Private slot to save the diagram.

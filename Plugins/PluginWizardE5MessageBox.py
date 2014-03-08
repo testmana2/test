@@ -78,7 +78,7 @@ class E5MessageBoxWizard(QObject):
             """ needed to create an E5MessageBox. The generated code is"""
             """ inserted at the current cursor position.</p>"""
         ))
-        self.action.triggered[()].connect(self.__handle)
+        self.action.triggered.connect(self.__handle)
         
         self.__ui.addE5Actions([self.action], 'wizards')
 

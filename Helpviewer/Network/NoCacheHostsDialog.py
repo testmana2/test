@@ -40,8 +40,8 @@ class NoCacheHostsDialog(QDialog, Ui_NoCacheHostsDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.noCacheList.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.noCacheList.removeAll)
+        self.removeButton.clicked.connect(self.noCacheList.removeSelected)
+        self.removeAllButton.clicked.connect(self.noCacheList.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):

@@ -137,7 +137,7 @@ class EricdocPlugin(QObject):
                 """<b>Generate documentation</b>"""
                 """<p>Generate API documentation using eric5_doc.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__doEricdoc)
+            self.__projectAct.triggered.connect(self.__doEricdoc)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         

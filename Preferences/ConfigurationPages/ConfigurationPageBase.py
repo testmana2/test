@@ -64,7 +64,7 @@ class ConfigurationPageBase(QWidget):
         button.setIcon(QIcon(pm))
         button.setProperty("colorKey", colourKey)
         button.setProperty("hasAlpha", hasAlpha)
-        button.clicked[()].connect(self.__selectColourSlot)
+        button.clicked.connect(self.__selectColourSlot)
         self.__coloursDict[colourKey] = [colour, byName]
         
     @pyqtSlot()

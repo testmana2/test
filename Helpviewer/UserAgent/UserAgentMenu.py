@@ -51,7 +51,7 @@ class UserAgentMenu(QMenu):
         self.__defaultUserAgent = QAction(self)
         self.__defaultUserAgent.setText(self.tr("Default"))
         self.__defaultUserAgent.setCheckable(True)
-        self.__defaultUserAgent.triggered[()].connect(
+        self.__defaultUserAgent.triggered.connect(
             self.__switchToDefaultUserAgent)
         if self.__url:
             self.__defaultUserAgent.setChecked(
@@ -71,7 +71,7 @@ class UserAgentMenu(QMenu):
         self.__otherUserAgent = QAction(self)
         self.__otherUserAgent.setText(self.tr("Other..."))
         self.__otherUserAgent.setCheckable(True)
-        self.__otherUserAgent.triggered[()].connect(
+        self.__otherUserAgent.triggered.connect(
             self.__switchToOtherUserAgent)
         self.addAction(self.__otherUserAgent)
         self.__actionGroup.addAction(self.__otherUserAgent)
@@ -154,7 +154,7 @@ class UserAgentMenu(QMenu):
                 act.setToolTip(userAgent)
                 act.setCheckable(True)
                 act.setChecked(userAgent == currentUserAgentString)
-                act.triggered[()].connect(self.__changeUserAgent)
+                act.triggered.connect(self.__changeUserAgent)
                 if menuStack:
                     menuStack[-1].addAction(act)
                 else:

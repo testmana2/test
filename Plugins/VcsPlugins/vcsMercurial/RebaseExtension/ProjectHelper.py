@@ -43,7 +43,7 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
             """<b>Rebase Changesets</b>"""
             """<p>This rebases changesets to another branch.</p>"""
         ))
-        self.hgRebaseAct.triggered[()].connect(self.__hgRebase)
+        self.hgRebaseAct.triggered.connect(self.__hgRebase)
         self.actions.append(self.hgRebaseAct)
         
         self.hgRebaseContinueAct = E5Action(
@@ -57,7 +57,7 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
             """<b>Continue Rebase Session</b>"""
             """<p>This continues the last rebase session after repair.</p>"""
         ))
-        self.hgRebaseContinueAct.triggered[()].connect(self.__hgRebaseContinue)
+        self.hgRebaseContinueAct.triggered.connect(self.__hgRebaseContinue)
         self.actions.append(self.hgRebaseContinueAct)
         
         self.hgRebaseAbortAct = E5Action(
@@ -71,7 +71,7 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
             """<b>Abort Rebase Session</b>"""
             """<p>This aborts the last rebase session.</p>"""
         ))
-        self.hgRebaseAbortAct.triggered[()].connect(self.__hgRebaseAbort)
+        self.hgRebaseAbortAct.triggered.connect(self.__hgRebaseAbort)
         self.actions.append(self.hgRebaseAbortAct)
     
     def initMenu(self, mainMenu):

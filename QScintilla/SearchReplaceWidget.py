@@ -143,7 +143,7 @@ and so on.</td></tr>
             self.tr('Find Next'),
             self.tr('Find Next'),
             0, 0, self, 'search_widget_find_next')
-        self.findNextAct.triggered[()].connect(self.on_findNextButton_clicked)
+        self.findNextAct.triggered.connect(self.on_findNextButton_clicked)
         self.findNextAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findNextAct)
         
@@ -151,7 +151,7 @@ and so on.</td></tr>
             self.tr('Find Prev'),
             self.tr('Find Prev'),
             0, 0, self, 'search_widget_find_prev')
-        self.findPrevAct.triggered[()].connect(self.on_findPrevButton_clicked)
+        self.findPrevAct.triggered.connect(self.on_findPrevButton_clicked)
         self.findPrevAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findPrevAct)
         
@@ -921,8 +921,8 @@ class SearchReplaceSlidingWidget(QWidget):
         
         self.__searchReplaceWidget.searchListChanged.connect(
             self.searchListChanged)
-        self.__leftButton.clicked[()].connect(self.__slideLeft)
-        self.__rightButton.clicked[()].connect(self.__slideRight)
+        self.__leftButton.clicked.connect(self.__slideLeft)
+        self.__rightButton.clicked.connect(self.__slideRight)
     
     def findNext(self):
         """

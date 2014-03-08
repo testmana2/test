@@ -358,7 +358,7 @@ class AdBlockSubscription(QObject):
         self.__downloading = FollowRedirectReply(
             self.location(),
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
-        self.__downloading.finished[()].connect(self.__rulesDownloaded)
+        self.__downloading.finished.connect(self.__rulesDownloaded)
     
     def __rulesDownloaded(self):
         """

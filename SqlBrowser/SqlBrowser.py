@@ -106,7 +106,7 @@ class SqlBrowser(E5MainWindow):
             """<p>This opens a dialog to add a new database"""
             """ connection.</p>"""
         ))
-        self.addConnectionAct.triggered[()].connect(
+        self.addConnectionAct.triggered.connect(
             self.__browser.addConnectionByDialog)
         self.__actions.append(self.addConnectionAct)
         
@@ -121,7 +121,7 @@ class SqlBrowser(E5MainWindow):
             """<b>Quit</b>"""
             """<p>Quit the SQL browser.</p>"""
         ))
-        self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+        self.exitAct.triggered.connect(qApp.closeAllWindows)
         
         self.aboutAct = E5Action(
             self.tr('About'),
@@ -133,7 +133,7 @@ class SqlBrowser(E5MainWindow):
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""
         ))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(
@@ -146,7 +146,7 @@ class SqlBrowser(E5MainWindow):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
     
     def __initMenus(self):

@@ -32,9 +32,9 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         self.__hidePasswordsText = self.tr("Hide Passwords")
         self.passwordsButton.setText(self.__showPasswordsText)
         
-        self.removeButton.clicked[()].connect(
+        self.removeButton.clicked.connect(
             self.passwordsTable.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.passwordsTable.removeAll)
+        self.removeAllButton.clicked.connect(self.passwordsTable.removeAll)
         
         import Helpviewer.HelpWindow
         from .PasswordModel import PasswordModel

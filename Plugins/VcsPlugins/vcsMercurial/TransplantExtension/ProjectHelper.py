@@ -59,7 +59,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
             """ of the current working directory with the log of the"""
             """ original changeset.</p>"""
         ))
-        self.hgTransplantAct.triggered[()].connect(self.__hgTransplant)
+        self.hgTransplantAct.triggered.connect(self.__hgTransplant)
         self.actions.append(self.hgTransplantAct)
         
         self.hgTransplantContinueAct = E5Action(
@@ -74,7 +74,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
             """<p>This continues the last transplant session after"""
             """ repair.</p>"""
         ))
-        self.hgTransplantContinueAct.triggered[()].connect(
+        self.hgTransplantContinueAct.triggered.connect(
             self.__hgTransplantContinue)
         self.actions.append(self.hgTransplantContinueAct)
     

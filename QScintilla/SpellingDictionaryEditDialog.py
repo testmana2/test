@@ -44,8 +44,8 @@ class SpellingDictionaryEditDialog(QDialog, Ui_SpellingDictionaryEditDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.wordList.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.wordList.removeAll)
+        self.removeButton.clicked.connect(self.wordList.removeSelected)
+        self.removeAllButton.clicked.connect(self.wordList.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):

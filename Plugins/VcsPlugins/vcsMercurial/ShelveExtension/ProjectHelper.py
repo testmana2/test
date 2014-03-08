@@ -40,7 +40,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """<b>Shelve changes</b>"""
             """<p>This shelves all current changes of the project.</p>"""
         ))
-        self.hgShelveAct.triggered[()].connect(self.__hgShelve)
+        self.hgShelveAct.triggered.connect(self.__hgShelve)
         self.actions.append(self.hgShelveAct)
         
         self.hgShelveBrowserAct = E5Action(
@@ -56,7 +56,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """ Actions on these shelves may be executed via the"""
             """ context menu.</p>"""
         ))
-        self.hgShelveBrowserAct.triggered[()].connect(
+        self.hgShelveBrowserAct.triggered.connect(
             self.__hgShelveBrowser)
         self.actions.append(self.hgShelveBrowserAct)
         
@@ -72,7 +72,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """<p>This restore a shelved change to the project directory."""
             """</p>"""
         ))
-        self.hgUnshelveAct.triggered[()].connect(self.__hgUnshelve)
+        self.hgUnshelveAct.triggered.connect(self.__hgUnshelve)
         self.actions.append(self.hgUnshelveAct)
         
         self.hgUnshelveAbortAct = E5Action(
@@ -87,7 +87,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """<p>This aborts the restore operation in progress and reverts"""
             """ already applied changes.</p>"""
         ))
-        self.hgUnshelveAbortAct.triggered[()].connect(self.__hgUnshelveAbort)
+        self.hgUnshelveAbortAct.triggered.connect(self.__hgUnshelveAbort)
         self.actions.append(self.hgUnshelveAbortAct)
         
         self.hgUnshelveContinueAct = E5Action(
@@ -101,7 +101,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """<b>Continue restore</b>"""
             """<p>This continues the restore operation in progress.</p>"""
         ))
-        self.hgUnshelveContinueAct.triggered[()].connect(
+        self.hgUnshelveContinueAct.triggered.connect(
             self.__hgUnshelveContinue)
         self.actions.append(self.hgUnshelveContinueAct)
         
@@ -114,7 +114,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """<p>This opens a dialog to select the shelved changes to"""
             """ delete and deletes the selected ones.</p>"""
         ))
-        self.hgShelveDeleteAct.triggered[()].connect(
+        self.hgShelveDeleteAct.triggered.connect(
             self.__hgDeleteShelves)
         self.actions.append(self.hgShelveDeleteAct)
         
@@ -126,7 +126,7 @@ class ShelveProjectHelper(HgExtensionProjectHelper):
             """<b>Delete ALL shelved changes</b>"""
             """<p>This deletes all shelved changes.</p>"""
         ))
-        self.hgShelveCleanupAct.triggered[()].connect(
+        self.hgShelveCleanupAct.triggered.connect(
             self.__hgCleanupShelves)
         self.actions.append(self.hgShelveCleanupAct)
     

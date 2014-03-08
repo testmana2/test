@@ -42,8 +42,8 @@ class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.whitelist.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.whitelist.removeAll)
+        self.removeButton.clicked.connect(self.whitelist.removeSelected)
+        self.removeAllButton.clicked.connect(self.whitelist.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):

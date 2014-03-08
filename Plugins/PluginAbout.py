@@ -84,7 +84,7 @@ class AboutPlugin(QObject):
             """<b>About {0}</b>"""
             """<p>Display some information about this software.</p>"""
         ).format(UI.Info.Program))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         self.aboutAct.setMenuRole(QAction.AboutRole)
         acts.append(self.aboutAct)
         
@@ -98,7 +98,7 @@ class AboutPlugin(QObject):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.aboutQtAct.setMenuRole(QAction.AboutQtRole)
         acts.append(self.aboutQtAct)
         

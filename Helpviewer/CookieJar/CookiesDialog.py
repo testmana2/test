@@ -33,8 +33,8 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         
         self.__cookieJar = cookieJar
         
-        self.removeButton.clicked[()].connect(self.cookiesTable.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.cookiesTable.removeAll)
+        self.removeButton.clicked.connect(self.cookiesTable.removeSelected)
+        self.removeAllButton.clicked.connect(self.cookiesTable.removeAll)
         
         self.cookiesTable.verticalHeader().hide()
         model = CookieModel(cookieJar, self)

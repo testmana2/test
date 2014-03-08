@@ -62,9 +62,9 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         self.bookmarksTree.customContextMenuRequested.connect(
             self.__customContextMenuRequested)
         
-        self.removeButton.clicked[()].connect(
+        self.removeButton.clicked.connect(
             self.bookmarksTree.removeSelected)
-        self.addFolderButton.clicked[()].connect(self.__newFolder)
+        self.addFolderButton.clicked.connect(self.__newFolder)
         
         self.__expandNodes(self.__bookmarksManager.bookmarks())
     

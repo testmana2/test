@@ -1078,7 +1078,7 @@ class PluginManager(QObject):
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
         reply = self.__networkManager.get(request)
-        reply.finished[()].connect(self.__downloadRepositoryFileDone)
+        reply.finished.connect(self.__downloadRepositoryFileDone)
         self.__replies.append(reply)
     
     def __downloadRepositoryFileDone(self):

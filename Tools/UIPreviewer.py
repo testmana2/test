@@ -133,7 +133,7 @@ class UIPreviewer(E5MainWindow):
             """<b>Open File</b>"""
             """<p>This opens a new UI file for display.</p>"""
         ))
-        self.openAct.triggered[()].connect(self.__openFile)
+        self.openAct.triggered.connect(self.__openFile)
         
         self.printAct = QAction(
             UI.PixmapCache.getIcon("print.png"),
@@ -145,7 +145,7 @@ class UIPreviewer(E5MainWindow):
             """<b>Print</b>"""
             """<p>Print a screen capture.</p>"""
         ))
-        self.printAct.triggered[()].connect(self.__printImage)
+        self.printAct.triggered.connect(self.__printImage)
         
         self.printPreviewAct = QAction(
             UI.PixmapCache.getIcon("printPreview.png"),
@@ -156,7 +156,7 @@ class UIPreviewer(E5MainWindow):
             """<b>Print Preview</b>"""
             """<p>Print preview a screen capture.</p>"""
         ))
-        self.printPreviewAct.triggered[()].connect(self.__printPreviewImage)
+        self.printPreviewAct.triggered.connect(self.__printPreviewImage)
         
         self.imageAct = QAction(
             UI.PixmapCache.getIcon("screenCapture.png"),
@@ -169,7 +169,7 @@ class UIPreviewer(E5MainWindow):
             """<b>Screen Capture</b>"""
             """<p>Save a screen capture to an image file.</p>"""
         ))
-        self.imageAct.triggered[()].connect(self.__saveImage)
+        self.imageAct.triggered.connect(self.__saveImage)
         
         self.exitAct = QAction(
             UI.PixmapCache.getIcon("exit.png"), self.tr('&Quit'), self)
@@ -180,7 +180,7 @@ class UIPreviewer(E5MainWindow):
             """<b>Quit</b>"""
             """<p>Quit the application.</p>"""
         ))
-        self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+        self.exitAct.triggered.connect(qApp.closeAllWindows)
         
         self.copyAct = QAction(
             UI.PixmapCache.getIcon("editCopy.png"), self.tr('&Copy'), self)
@@ -192,7 +192,7 @@ class UIPreviewer(E5MainWindow):
             """<b>Copy</b>"""
             """<p>Copy screen capture to clipboard.</p>"""
         ))
-        self.copyAct.triggered[()].connect(self.__copyImageToClipboard)
+        self.copyAct.triggered.connect(self.__copyImageToClipboard)
         
         self.whatsThisAct = QAction(
             UI.PixmapCache.getIcon("whatsThis.png"),
@@ -207,7 +207,7 @@ class UIPreviewer(E5MainWindow):
             """ how to use them. In dialogs, this feature can be accessed"""
             """ using the context help button in the titlebar.</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
 
         self.aboutAct = QAction(self.tr('&About'), self)
         self.aboutAct.setStatusTip(self.tr(
@@ -216,7 +216,7 @@ class UIPreviewer(E5MainWindow):
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""
         ))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
                      
         self.aboutQtAct = QAction(self.tr('About &Qt'), self)
         self.aboutQtAct.setStatusTip(
@@ -225,7 +225,7 @@ class UIPreviewer(E5MainWindow):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
 
     def __initMenus(self):
         """

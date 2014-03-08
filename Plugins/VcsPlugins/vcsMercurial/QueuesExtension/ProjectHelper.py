@@ -43,7 +43,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This initializes a new versioned queue repository inside"""
             """ the current repository.</p>"""
         ))
-        self.hgQueueInitAct.triggered[()].connect(self.__hgQueueInit)
+        self.hgQueueInitAct.triggered.connect(self.__hgQueueInit)
         self.actions.append(self.hgQueueInitAct)
         
         self.hgQueueCommitAct = E5Action(
@@ -57,7 +57,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Commit changes...</b>"""
             """<p>This commits changes in the queue repository.</p>"""
         ))
-        self.hgQueueCommitAct.triggered[()].connect(self.__hgQueueCommit)
+        self.hgQueueCommitAct.triggered.connect(self.__hgQueueCommit)
         self.actions.append(self.hgQueueCommitAct)
         
         self.hgQueueNewAct = E5Action(
@@ -71,7 +71,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>New Patch</b>"""
             """<p>This creates a new named patch.</p>"""
         ))
-        self.hgQueueNewAct.triggered[()].connect(self.__hgQueueNewPatch)
+        self.hgQueueNewAct.triggered.connect(self.__hgQueueNewPatch)
         self.actions.append(self.hgQueueNewAct)
         
         self.hgQueueRefreshAct = E5Action(
@@ -85,7 +85,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Update Current Patch</b>"""
             """<p>This updates the current patch.</p>"""
         ))
-        self.hgQueueRefreshAct.triggered[()].connect(
+        self.hgQueueRefreshAct.triggered.connect(
             self.__hgQueueRefreshPatch)
         self.actions.append(self.hgQueueRefreshAct)
         
@@ -101,7 +101,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This updates the current patch after giving the chance"""
             """ to change the current commit message.</p>"""
         ))
-        self.hgQueueRefreshMessageAct.triggered[()].connect(
+        self.hgQueueRefreshMessageAct.triggered.connect(
             self.__hgQueueRefreshPatchMessage)
         self.actions.append(self.hgQueueRefreshMessageAct)
         
@@ -118,7 +118,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """ any changes which have been made in the working directory"""
             """ since the last refresh.</p>"""
         ))
-        self.hgQueueDiffAct.triggered[()].connect(self.__hgQueueShowPatch)
+        self.hgQueueDiffAct.triggered.connect(self.__hgQueueShowPatch)
         self.actions.append(self.hgQueueDiffAct)
         
         self.hgQueueHeaderAct = E5Action(
@@ -132,7 +132,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Show Current Message</b>"""
             """<p>This shows the commit message of the current patch.</p>"""
         ))
-        self.hgQueueHeaderAct.triggered[()].connect(self.__hgQueueShowHeader)
+        self.hgQueueHeaderAct.triggered.connect(self.__hgQueueShowHeader)
         self.actions.append(self.hgQueueHeaderAct)
         
         self.hgQueueListAct = E5Action(
@@ -146,7 +146,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>List Patches</b>"""
             """<p>This lists all applied and unapplied patches.</p>"""
         ))
-        self.hgQueueListAct.triggered[()].connect(self.__hgQueueListPatches)
+        self.hgQueueListAct.triggered.connect(self.__hgQueueListPatches)
         self.actions.append(self.hgQueueListAct)
         
         self.hgQueueFinishAct = E5Action(
@@ -161,7 +161,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This finishes the applied patches by moving them out of"""
             """ mq control into regular repository history.</p>"""
         ))
-        self.hgQueueFinishAct.triggered[()].connect(
+        self.hgQueueFinishAct.triggered.connect(
             self.__hgQueueFinishAppliedPatches)
         self.actions.append(self.hgQueueFinishAct)
         
@@ -176,7 +176,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Rename Patch</b>"""
             """<p>This renames the current or a named patch.</p>"""
         ))
-        self.hgQueueRenameAct.triggered[()].connect(self.__hgQueueRenamePatch)
+        self.hgQueueRenameAct.triggered.connect(self.__hgQueueRenamePatch)
         self.actions.append(self.hgQueueRenameAct)
         
         self.hgQueueDeleteAct = E5Action(
@@ -190,7 +190,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Delete Patch</b>"""
             """<p>This deletes an unapplied patch.</p>"""
         ))
-        self.hgQueueDeleteAct.triggered[()].connect(self.__hgQueueDeletePatch)
+        self.hgQueueDeleteAct.triggered.connect(self.__hgQueueDeletePatch)
         self.actions.append(self.hgQueueDeleteAct)
         
         self.hgQueueFoldAct = E5Action(
@@ -204,7 +204,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Fold Patches</b>"""
             """<p>This folds unapplied patches into the current patch.</p>"""
         ))
-        self.hgQueueFoldAct.triggered[()].connect(
+        self.hgQueueFoldAct.triggered.connect(
             self.__hgQueueFoldUnappliedPatches)
         self.actions.append(self.hgQueueFoldAct)
         
@@ -219,7 +219,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Show Status</b>"""
             """<p>This shows the status of the queue repository.</p>"""
         ))
-        self.hgQueueStatusAct.triggered[()].connect(self.__hgQueueStatus)
+        self.hgQueueStatusAct.triggered.connect(self.__hgQueueStatus)
         self.actions.append(self.hgQueueStatusAct)
         
         # TODO: add support for hg summary --mq
@@ -245,7 +245,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes the next patch onto the stack of applied"""
             """ patches.</p>"""
         ))
-        self.hgQueuePushAct.triggered[()].connect(self.__hgQueuePushPatch)
+        self.hgQueuePushAct.triggered.connect(self.__hgQueuePushPatch)
         self.actions.append(self.hgQueuePushAct)
         
         self.hgQueuePushAllAct = E5Action(
@@ -260,7 +260,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes all patches onto the stack of applied"""
             """ patches.</p>"""
         ))
-        self.hgQueuePushAllAct.triggered[()].connect(
+        self.hgQueuePushAllAct.triggered.connect(
             self.__hgQueuePushAllPatches)
         self.actions.append(self.hgQueuePushAllAct)
         
@@ -276,7 +276,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes patches onto the stack of applied patches"""
             """ until a named patch is at the top of the stack.</p>"""
         ))
-        self.hgQueuePushUntilAct.triggered[()].connect(
+        self.hgQueuePushUntilAct.triggered.connect(
             self.__hgQueuePushPatches)
         self.actions.append(self.hgQueuePushUntilAct)
         
@@ -292,7 +292,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pops the current patch off the stack of applied"""
             """ patches.</p>"""
         ))
-        self.hgQueuePopAct.triggered[()].connect(self.__hgQueuePopPatch)
+        self.hgQueuePopAct.triggered.connect(self.__hgQueuePopPatch)
         self.actions.append(self.hgQueuePopAct)
         
         self.hgQueuePopAllAct = E5Action(
@@ -307,7 +307,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pops all patches off the stack of applied"""
             """ patches.</p>"""
         ))
-        self.hgQueuePopAllAct.triggered[()].connect(
+        self.hgQueuePopAllAct.triggered.connect(
             self.__hgQueuePopAllPatches)
         self.actions.append(self.hgQueuePopAllAct)
         
@@ -323,7 +323,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pops patches off the stack of applied patches"""
             """ until a named patch is at the top of the stack.</p>"""
         ))
-        self.hgQueuePopUntilAct.triggered[()].connect(self.__hgQueuePopPatches)
+        self.hgQueuePopUntilAct.triggered.connect(self.__hgQueuePopPatches)
         self.actions.append(self.hgQueuePopUntilAct)
         
         self.hgQueueGotoAct = E5Action(
@@ -338,7 +338,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes or pops patches until a named patch is at the"""
             """ top of the stack.</p>"""
         ))
-        self.hgQueueGotoAct.triggered[()].connect(self.__hgQueueGotoPatch)
+        self.hgQueueGotoAct.triggered.connect(self.__hgQueueGotoPatch)
         self.actions.append(self.hgQueueGotoAct)
     
     def __initPushPopForceActions(self):
@@ -357,7 +357,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes the next patch onto the stack of applied"""
             """ patches on top of local changes.</p>"""
         ))
-        self.hgQueuePushForceAct.triggered[()].connect(
+        self.hgQueuePushForceAct.triggered.connect(
             self.__hgQueuePushPatchForced)
         self.actions.append(self.hgQueuePushForceAct)
         
@@ -373,7 +373,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes all patches onto the stack of applied patches"""
             """ on top of local changes.</p>"""
         ))
-        self.hgQueuePushAllForceAct.triggered[()].connect(
+        self.hgQueuePushAllForceAct.triggered.connect(
             self.__hgQueuePushAllPatchesForced)
         self.actions.append(self.hgQueuePushAllForceAct)
         
@@ -390,7 +390,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """ until a named patch is at the top of the stack on top of"""
             """ local changes.</p>"""
         ))
-        self.hgQueuePushUntilForceAct.triggered[()].connect(
+        self.hgQueuePushUntilForceAct.triggered.connect(
             self.__hgQueuePushPatchesForced)
         self.actions.append(self.hgQueuePushUntilForceAct)
         
@@ -407,7 +407,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """ patches"""
             """ forgetting local changes.</p>"""
         ))
-        self.hgQueuePopForceAct.triggered[()].connect(
+        self.hgQueuePopForceAct.triggered.connect(
             self.__hgQueuePopPatchForced)
         self.actions.append(self.hgQueuePopForceAct)
         
@@ -423,7 +423,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pops all patches off the stack of applied patches"""
             """  forgetting local changes.</p>"""
         ))
-        self.hgQueuePopAllForceAct.triggered[()].connect(
+        self.hgQueuePopAllForceAct.triggered.connect(
             self.__hgQueuePopAllPatchesForced)
         self.actions.append(self.hgQueuePopAllForceAct)
         
@@ -440,7 +440,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """ a named patch is at the top of the stack forgetting local"""
             """ changes.</p>"""
         ))
-        self.hgQueuePopUntilForceAct.triggered[()].connect(
+        self.hgQueuePopUntilForceAct.triggered.connect(
             self.__hgQueuePopPatchesForced)
         self.actions.append(self.hgQueuePopUntilForceAct)
         
@@ -457,7 +457,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This pushes or pops patches until a named patch is at the"""
             """ top of the stack overwriting any local changes.</p>"""
         ))
-        self.hgQueueGotoForceAct.triggered[()].connect(
+        self.hgQueueGotoForceAct.triggered.connect(
             self.__hgQueueGotoPatchForced)
         self.actions.append(self.hgQueueGotoForceAct)
     
@@ -477,7 +477,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This opens a dialog to define guards for the current"""
             """ or a named patch.</p>"""
         ))
-        self.hgQueueDefineGuardsAct.triggered[()].connect(
+        self.hgQueueDefineGuardsAct.triggered.connect(
             self.__hgQueueGuardsDefine)
         self.actions.append(self.hgQueueDefineGuardsAct)
         
@@ -492,7 +492,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Drop All Guards</b>"""
             """<p>This drops all guards of the current or a named patch.</p>"""
         ))
-        self.hgQueueDropAllGuardsAct.triggered[()].connect(
+        self.hgQueueDropAllGuardsAct.triggered.connect(
             self.__hgQueueGuardsDropAll)
         self.actions.append(self.hgQueueDropAllGuardsAct)
         
@@ -507,7 +507,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>List Guards</b>"""
             """<p>This lists the guards of the current or a named patch.</p>"""
         ))
-        self.hgQueueListGuardsAct.triggered[()].connect(
+        self.hgQueueListGuardsAct.triggered.connect(
             self.__hgQueueGuardsList)
         self.actions.append(self.hgQueueListGuardsAct)
         
@@ -522,7 +522,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>List All Guards</b>"""
             """<p>This lists all guards of all patches.</p>"""
         ))
-        self.hgQueueListAllGuardsAct.triggered[()].connect(
+        self.hgQueueListAllGuardsAct.triggered.connect(
             self.__hgQueueGuardsListAll)
         self.actions.append(self.hgQueueListAllGuardsAct)
         
@@ -537,7 +537,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Set Active Guards</b>"""
             """<p>This opens a dialog to set the active guards.</p>"""
         ))
-        self.hgQueueActivateGuardsAct.triggered[()].connect(
+        self.hgQueueActivateGuardsAct.triggered.connect(
             self.__hgQueueGuardsSetActive)
         self.actions.append(self.hgQueueActivateGuardsAct)
         
@@ -552,7 +552,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Deactivate Guards</b>"""
             """<p>This deactivates all active guards.</p>"""
         ))
-        self.hgQueueDeactivateGuardsAct.triggered[()].connect(
+        self.hgQueueDeactivateGuardsAct.triggered.connect(
             self.__hgQueueGuardsDeactivate)
         self.actions.append(self.hgQueueDeactivateGuardsAct)
         
@@ -567,7 +567,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Identify Active Guards</b>"""
             """<p>This opens a dialog showing a list of active guards.</p>"""
         ))
-        self.hgQueueIdentifyActiveGuardsAct.triggered[()].connect(
+        self.hgQueueIdentifyActiveGuardsAct.triggered.connect(
             self.__hgQueueGuardsIdentifyActive)
         self.actions.append(self.hgQueueIdentifyActiveGuardsAct)
     
@@ -586,7 +586,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Create Queue</b>"""
             """<p>This creates a new patch queue.</p>"""
         ))
-        self.hgQueueCreateQueueAct.triggered[()].connect(
+        self.hgQueueCreateQueueAct.triggered.connect(
             self.__hgQueueCreateQueue)
         self.actions.append(self.hgQueueCreateQueueAct)
         
@@ -601,7 +601,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Rename Queue</b>"""
             """<p>This renames the active patch queue.</p>"""
         ))
-        self.hgQueueRenameQueueAct.triggered[()].connect(
+        self.hgQueueRenameQueueAct.triggered.connect(
             self.__hgQueueRenameQueue)
         self.actions.append(self.hgQueueRenameQueueAct)
         
@@ -616,7 +616,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Delete Queue</b>"""
             """<p>This deletes the reference to a patch queue.</p>"""
         ))
-        self.hgQueueDeleteQueueAct.triggered[()].connect(
+        self.hgQueueDeleteQueueAct.triggered.connect(
             self.__hgQueueDeleteQueue)
         self.actions.append(self.hgQueueDeleteQueueAct)
         
@@ -633,7 +633,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<p>This deletes the reference to a patch queue and removes"""
             """ the patch directory.</p>"""
         ))
-        self.hgQueuePurgeQueueAct.triggered[()].connect(
+        self.hgQueuePurgeQueueAct.triggered.connect(
             self.__hgQueuePurgeQueue)
         self.actions.append(self.hgQueuePurgeQueueAct)
         
@@ -648,7 +648,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>Activate Queue</b>"""
             """<p>This sets the active queue.</p>"""
         ))
-        self.hgQueueActivateQueueAct.triggered[()].connect(
+        self.hgQueueActivateQueueAct.triggered.connect(
             self.__hgQueueActivateQueue)
         self.actions.append(self.hgQueueActivateQueueAct)
         
@@ -663,7 +663,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
             """<b>List Queues</b>"""
             """<p>This opens a dialog showing all available queues.</p>"""
         ))
-        self.hgQueueListQueuesAct.triggered[()].connect(
+        self.hgQueueListQueuesAct.triggered.connect(
             self.__hgQueueListQueues)
         self.actions.append(self.hgQueueListQueuesAct)
     

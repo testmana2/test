@@ -162,7 +162,7 @@ class TRPreviewer(E5MainWindow):
             """<b>Open UI Files</b>"""
             """<p>This opens some UI files for display.</p>"""
         ))
-        self.openUIAct.triggered[()].connect(self.__openWidget)
+        self.openUIAct.triggered.connect(self.__openWidget)
         
         self.openQMAct = QAction(
             UI.PixmapCache.getIcon("openQM.png"),
@@ -173,7 +173,7 @@ class TRPreviewer(E5MainWindow):
             """<b>Open Translation Files</b>"""
             """<p>This opens some translation files for display.</p>"""
         ))
-        self.openQMAct.triggered[()].connect(self.__openTranslation)
+        self.openQMAct.triggered.connect(self.__openTranslation)
         
         self.reloadAct = QAction(
             UI.PixmapCache.getIcon("reload.png"),
@@ -185,7 +185,7 @@ class TRPreviewer(E5MainWindow):
             """<p>This reloads the translations for the loaded"""
             """ languages.</p>"""
         ))
-        self.reloadAct.triggered[()].connect(self.translations.reload)
+        self.reloadAct.triggered.connect(self.translations.reload)
         
         self.exitAct = QAction(
             UI.PixmapCache.getIcon("exit.png"), self.tr('&Quit'), self)
@@ -196,7 +196,7 @@ class TRPreviewer(E5MainWindow):
             """<b>Quit</b>"""
             """<p>Quit the application.</p>"""
         ))
-        self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+        self.exitAct.triggered.connect(qApp.closeAllWindows)
         
         self.whatsThisAct = QAction(
             UI.PixmapCache.getIcon("whatsThis.png"),
@@ -211,7 +211,7 @@ class TRPreviewer(E5MainWindow):
             """ how to use them. In dialogs, this feature can be accessed"""
             """ using the context help button in the titlebar.</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
 
         self.aboutAct = QAction(self.tr('&About'), self)
         self.aboutAct.setStatusTip(self.tr(
@@ -220,7 +220,7 @@ class TRPreviewer(E5MainWindow):
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""
         ))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         
         self.aboutQtAct = QAction(self.tr('About &Qt'), self)
         self.aboutQtAct.setStatusTip(
@@ -229,7 +229,7 @@ class TRPreviewer(E5MainWindow):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         
         self.tileAct = QAction(self.tr('&Tile'), self)
         self.tileAct.setStatusTip(self.tr('Tile the windows'))
@@ -238,7 +238,7 @@ class TRPreviewer(E5MainWindow):
             """<p>Rearrange and resize the windows so that they are"""
             """ tiled.</p>"""
         ))
-        self.tileAct.triggered[()].connect(self.preview.tileSubWindows)
+        self.tileAct.triggered.connect(self.preview.tileSubWindows)
         
         self.cascadeAct = QAction(self.tr('&Cascade'), self)
         self.cascadeAct.setStatusTip(self.tr('Cascade the windows'))
@@ -247,7 +247,7 @@ class TRPreviewer(E5MainWindow):
             """<p>Rearrange and resize the windows so that they are"""
             """ cascaded.</p>"""
         ))
-        self.cascadeAct.triggered[()].connect(self.preview.cascadeSubWindows)
+        self.cascadeAct.triggered.connect(self.preview.cascadeSubWindows)
         
         self.closeAct = QAction(
             UI.PixmapCache.getIcon("close.png"), self.tr('&Close'), self)
@@ -258,7 +258,7 @@ class TRPreviewer(E5MainWindow):
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
-        self.closeAct.triggered[()].connect(self.preview.closeWidget)
+        self.closeAct.triggered.connect(self.preview.closeWidget)
         
         self.closeAllAct = QAction(self.tr('Clos&e All'), self)
         self.closeAllAct.setStatusTip(self.tr('Close all windows'))
@@ -266,7 +266,7 @@ class TRPreviewer(E5MainWindow):
             """<b>Close All Windows</b>"""
             """<p>Close all windows.</p>"""
         ))
-        self.closeAllAct.triggered[()].connect(self.preview.closeAllWidgets)
+        self.closeAllAct.triggered.connect(self.preview.closeAllWidgets)
 
     def __initMenus(self):
         """
