@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1948,8 +1949,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2185,8 +2186,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -15940,8 +15941,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1156"/>
@@ -22554,22 +22555,22 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="394"/>
         <source>Merge</source>
-        <translation>Änderungen einpflegen</translation>
+        <translation>Änderungen zusammenzuführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="394"/>
         <source>Mer&amp;ge changes...</source>
-        <translation>Änderungen ein&amp;pflegen...</translation>
+        <translation>Änderungen &amp;zusammenzuführen...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="399"/>
         <source>Merge changes of a revision into the local project</source>
-        <translation>Pflege Änderungen einer Revision in das lokale Projekt ein</translation>
+        <translation>Führt Änderungen einer Revision mit dem lokalen Projekt zusammen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a revision into the local project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Änderungen einpflegen&lt;/b&gt;&lt;p&gt;Dies pfleget Änderungen einer Revision in das lokale Projekt ein.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Änderungen zusammenzuführen&lt;/b&gt;&lt;p&gt;Dies führt Änderungen einer Revision mit dem lokalen Projekt zusammen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="425"/>
@@ -45658,7 +45659,7 @@ nicht verbunden</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnConst.py" line="88"/>
         <source>merged</source>
-        <translation>fusioniert</translation>
+        <translation>zusammengeführt</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnConst.py" line="90"/>
@@ -47405,7 +47406,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="709"/>
         <source>Merge changes</source>
-        <translation>Änderungen einarbeiten</translation>
+        <translation>Änderungen zusammenzuführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="717"/>
@@ -47748,22 +47749,22 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="281"/>
         <source>Merge</source>
-        <translation>Änderungen einpflegen</translation>
+        <translation>Änderungen zusammenzuführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="281"/>
         <source>Mer&amp;ge changes...</source>
-        <translation>Änderungen ein&amp;pflegen...</translation>
+        <translation>Änderungen &amp;zusammenzuführen...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="286"/>
         <source>Merge changes of a tag/revision into the local project</source>
-        <translation>Pflege Änderungen eines Tags/Zweiges in das lokale Projekt ein</translation>
+        <translation>Führt Änderungen eines Tags/Zweiges mit dem lokalen Projekt zusammen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="289"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a tag/revision into the local project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Änderungen einpflegen&lt;/b&gt;&lt;p&gt;Dies pflegt Änderungen eines Tags/Zweiges in das lokale Projekt ein.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Änderungen zusammenzuführen&lt;/b&gt;&lt;p&gt;Dies führt Änderungen eines Tags/Zweiges mit dem lokalen Projekt zusammen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="297"/>
