@@ -9,7 +9,7 @@ Module implementing the viewmanager base class.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QSignalMapper, QTimer, \
+from PyQt4.QtCore import pyqtSignal, QSignalMapper, QTimer, \
     QFileInfo, QRegExp, QObject, Qt
 from PyQt4.QtGui import QColor, QKeySequence, QLineEdit, QToolBar, \
     QWidgetAction, QDialog, QApplication, QMenu, QPalette, QComboBox, QPixmap
@@ -264,7 +264,7 @@ class ViewManager(QObject):
         self.sbLang = sbLanguage
         self.sbEol = sbEol
         self.sbZoom = sbZoom
-        self.sbZoom.valueChanged.connect(self.__zoom)
+        self.sbZoom.valueChanged.connect(self.__zoomTo)
         self.__setSbFile(zoom=0)
         
         self.sbLang.clicked.connect(self.__showLanguagesMenu)
@@ -593,7 +593,7 @@ class ViewManager(QObject):
             """<p>You will be asked for the name of a file to be opened"""
             """ in an editor window.</p>"""
         ))
-        self.openAct.triggered.connect(self.openFiles)
+        self.openAct.triggered.connect(self.__openFiles)
         self.fileActions.append(self.openAct)
         
         self.closeActGrp = createActionGroup(self)
@@ -3368,7 +3368,7 @@ class ViewManager(QObject):
             """<b>Remove all highlights</b>"""
             """<p>Remove the highlights of all editors.</p>"""
         ))
-        self.unhighlightAct.triggered.connect(self.unhighlight)
+        self.unhighlightAct.triggered.connect(self.__unhighlight)
         self.viewActions.append(self.unhighlightAct)
         
         self.newDocumentViewAct = E5Action(
@@ -4145,34 +4145,34 @@ class ViewManager(QObject):
     ## Methods and slots that deal with file and window handling
     ##################################################################
     
-    @pyqtSlot()
-    def openFiles(self, prog=None):
+    def __openFiles(self):
+        """
+        Private slot to open some files.
+        """
+        # set the cwd of the dialog based on the following search criteria:
+        #     1: Directory of currently active editor
+        #     2: Directory of currently active project
+        #     3: CWD
+        import QScintilla.Lexers
+        filter = self._getOpenFileFilter()
+        progs = E5FileDialog.getOpenFileNamesAndFilter(
+            self.ui,
+            QApplication.translate('ViewManager', "Open files"),
+            self._getOpenStartDir(),
+            QScintilla.Lexers.getOpenFileFiltersList(True, True),
+            filter)[0]
+        for prog in progs:
+            self.openFile(prog)
+    
+    def openFiles(self, prog):
         """
         Public slot to open some files.
         
         @param prog name of file to be opened (string)
         """
-        # Get the file name if one wasn't specified.
-        if prog is None:
-            # set the cwd of the dialog based on the following search criteria:
-            #     1: Directory of currently active editor
-            #     2: Directory of currently active project
-            #     3: CWD
-            import QScintilla.Lexers
-            filter = self._getOpenFileFilter()
-            progs = E5FileDialog.getOpenFileNamesAndFilter(
-                self.ui,
-                QApplication.translate('ViewManager', "Open files"),
-                self._getOpenStartDir(),
-                QScintilla.Lexers.getOpenFileFiltersList(True, True),
-                filter)[0]
-        else:
-            progs = [prog]
-        
-        for prog in progs:
-            prog = Utilities.normabspath(prog)
-            # Open up the new files.
-            self.openSourceFile(prog)
+        prog = Utilities.normabspath(prog)
+        # Open up the new files.
+        self.openSourceFile(prog)
 
     def checkDirty(self, editor, autosave=False):
         """
@@ -4565,10 +4565,16 @@ class ViewManager(QObject):
             pixmap = QPixmap()
         return pixmap
         
-    @pyqtSlot()
+    def __unhighlight(self):
+        """
+        Privat slot to switch of all highlights.
+        """
+        self.unhighlight()
+        
     def unhighlight(self, current=False):
         """
-        Public method to switch off all highlights.
+        Public method to switch off all highlights or the highlight of
+        the current editor.
         
         @param current flag indicating only the current editor should be
             unhighlighted (boolean)
@@ -5584,27 +5590,35 @@ class ViewManager(QObject):
                 aw.zoomTo(0)
                 self.sbZoom.setValue(aw.getZoom())
         
-    @pyqtSlot()
-    @pyqtSlot(int)
-    def __zoom(self, value=None):
+    def __zoom(self):
         """
         Private method to handle the zoom action.
-        
-        @keyparam value zoom value to be set (integer)
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             aw = e5App().getObject("Shell")
         else:
             aw = self.activeWindow()
         if aw:
-            if value is None:
-                from QScintilla.ZoomDialog import ZoomDialog
-                dlg = ZoomDialog(aw.getZoom(), self.ui, None, True)
-                if dlg.exec_() == QDialog.Accepted:
-                    value = dlg.getZoomSize()
+            from QScintilla.ZoomDialog import ZoomDialog
+            dlg = ZoomDialog(aw.getZoom(), self.ui, None, True)
+            if dlg.exec_() == QDialog.Accepted:
+                value = dlg.getZoomSize()
             if value is not None:
-                aw.zoomTo(value)
-                self.sbZoom.setValue(aw.getZoom())
+                self.__zoomTo(value)
+        
+    def __zoomTo(self, value):
+        """
+        Private slot to zoom to a given value.
+        
+        @param value zoom value to be set (integer)
+        """
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            aw = e5App().getObject("Shell")
+        else:
+            aw = self.activeWindow()
+        if aw:
+            aw.zoomTo(value)
+            self.sbZoom.setValue(aw.getZoom())
         
     def zoomValueChanged(self, value):
         """

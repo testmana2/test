@@ -12620,6 +12620,7 @@
       <keyword name="ViewManager.__nextTask" id="ViewManager.__nextTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextTask" />
       <keyword name="ViewManager.__nextUncovered" id="ViewManager.__nextUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextUncovered" />
       <keyword name="ViewManager.__nextWarning" id="ViewManager.__nextWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextWarning" />
+      <keyword name="ViewManager.__openFiles" id="ViewManager.__openFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.__openFiles" />
       <keyword name="ViewManager.__openSourceFile" id="ViewManager.__openSourceFile" ref="eric5.ViewManager.ViewManager.html#ViewManager.__openSourceFile" />
       <keyword name="ViewManager.__previewEditor" id="ViewManager.__previewEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previewEditor" />
       <keyword name="ViewManager.__previousBookmark" id="ViewManager.__previousBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousBookmark" />
@@ -12665,10 +12666,12 @@
       <keyword name="ViewManager.__toggleAllChildren" id="ViewManager.__toggleAllChildren" ref="eric5.ViewManager.ViewManager.html#ViewManager.__toggleAllChildren" />
       <keyword name="ViewManager.__toggleBookmark" id="ViewManager.__toggleBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__toggleBookmark" />
       <keyword name="ViewManager.__toggleCurrent" id="ViewManager.__toggleCurrent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__toggleCurrent" />
+      <keyword name="ViewManager.__unhighlight" id="ViewManager.__unhighlight" ref="eric5.ViewManager.ViewManager.html#ViewManager.__unhighlight" />
       <keyword name="ViewManager.__zoom" id="ViewManager.__zoom" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoom" />
       <keyword name="ViewManager.__zoomIn" id="ViewManager.__zoomIn" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomIn" />
       <keyword name="ViewManager.__zoomOut" id="ViewManager.__zoomOut" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomOut" />
       <keyword name="ViewManager.__zoomReset" id="ViewManager.__zoomReset" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomReset" />
+      <keyword name="ViewManager.__zoomTo" id="ViewManager.__zoomTo" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomTo" />
       <keyword name="ViewManager._addView" id="ViewManager._addView" ref="eric5.ViewManager.ViewManager.html#ViewManager._addView" />
       <keyword name="ViewManager._checkActions" id="ViewManager._checkActions" ref="eric5.ViewManager.ViewManager.html#ViewManager._checkActions" />
       <keyword name="ViewManager._getOpenFileFilter" id="ViewManager._getOpenFileFilter" ref="eric5.ViewManager.ViewManager.html#ViewManager._getOpenFileFilter" />
