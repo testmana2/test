@@ -13,7 +13,7 @@ import re
 import urllib.parse
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
-from PyQt4.QtGui import QApplication, QDialog, QInputDialog
+from PyQt4.QtGui import QApplication, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -426,11 +426,11 @@ class Hg(VersionControl):
             # ensure dialog is shown for a queue commit
             noDialog = False
         
-        if not noDialog and not msg:
+        if not noDialog:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
                 from .HgCommitDialog import HgCommitDialog
-                self.__commitDialog = HgCommitDialog(self, mq, self.__ui)
+                self.__commitDialog = HgCommitDialog(self, msg, mq, self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
@@ -2116,15 +2116,13 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        name, ok = QInputDialog.getItem(
-            None,
-            self.tr("Create Branch"),
-            self.tr("Enter branch name"),
-            sorted(self.hgGetBranchesList(repodir)),
-            0, True)
-        if ok and name:
+        from .HgBranchInputDialog import HgBranchInputDialog
+        dlg = HgBranchInputDialog(self.hgGetBranchesList(repodir))
+        if dlg.exec_() == QDialog.Accepted:
+            name, commit = dlg.getData()
+            name = name.strip().replace(" ", "_")
             args = self.initCommand("branch")
-            args.append(name.strip().replace(" ", "_"))
+            args.append(name)
             
             dia = HgDialog(
                 self.tr('Creating branch in the Mercurial repository'),
@@ -2132,6 +2130,11 @@ class Hg(VersionControl):
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+                if commit:
+                    self.vcsCommit(
+                        repodir,
+                        self.tr("Created new branch <{0}>.").format(
+                            name))
     
     def hgShowBranch(self, name):
         """

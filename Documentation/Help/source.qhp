@@ -557,6 +557,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html" />
@@ -5986,6 +5987,11 @@
       <keyword name="HgBookmarksListDialog.on_passwordCheckBox_toggled" id="HgBookmarksListDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgBookmarksListDialog.on_sendButton_clicked" id="HgBookmarksListDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.on_sendButton_clicked" />
       <keyword name="HgBookmarksListDialog.start" id="HgBookmarksListDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.start" />
+      <keyword name="HgBranchInputDialog" id="HgBranchInputDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog" />
+      <keyword name="HgBranchInputDialog (Constructor)" id="HgBranchInputDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog.__init__" />
+      <keyword name="HgBranchInputDialog (Module)" id="HgBranchInputDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html" />
+      <keyword name="HgBranchInputDialog.getData" id="HgBranchInputDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog.getData" />
+      <keyword name="HgBranchInputDialog.on_branchComboBox_editTextChanged" id="HgBranchInputDialog.on_branchComboBox_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog.on_branchComboBox_editTextChanged" />
       <keyword name="HgBundleDialog" id="HgBundleDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog" />
       <keyword name="HgBundleDialog (Constructor)" id="HgBundleDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.__init__" />
       <keyword name="HgBundleDialog (Module)" id="HgBundleDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html" />
@@ -14149,6 +14155,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html</file>

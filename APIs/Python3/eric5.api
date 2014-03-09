@@ -4478,6 +4478,9 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.HgBackoutDialog.on_noneBut
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.HgBackoutDialog.on_tagButton_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.HgBackoutDialog.on_tagCombo_editTextChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.HgBackoutDialog?1(tagsList, branchesList, bookmarksList=None, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.HgBranchInputDialog.getData?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.HgBranchInputDialog.on_branchComboBox_editTextChanged?4(txt)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.HgBranchInputDialog?1(branches, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog.getParameters?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog.on_bookmarkButton_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog.on_bookmarkCombo_editTextChanged?4(txt)
@@ -4519,7 +4522,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_buttonBox
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_recentComboBox_activated?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.rejected?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.showEvent?4(evt)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog?1(vcs, mq, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog?1(vcs, msg, mq, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.on_dirButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.on_targetEdit_textChanged?4(txt)

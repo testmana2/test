@@ -306,6 +306,7 @@ HgBookmarkDialog QDialog Ui_HgBookmarkDialog
 HgBookmarkRenameDialog QDialog Ui_HgBookmarkRenameDialog
 HgBookmarksInOutDialog QDialog Ui_HgBookmarksInOutDialog
 HgBookmarksListDialog QDialog Ui_HgBookmarksListDialog
+HgBranchInputDialog QDialog Ui_HgBranchInputDialog
 HgBundleDialog QDialog Ui_HgBundleDialog
 HgClient QObject
 HgClientPromptDialog QDialog Ui_HgClientPromptDialog
