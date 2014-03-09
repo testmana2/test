@@ -253,7 +253,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.tr('Show log browser'), self.__SVNLogBrowser)
+            self.tr('Show log browser'), self._VCSLogBrowser)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
@@ -566,7 +566,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.tr('Show log browser'), self.__SVNLogBrowser)
+            self.tr('Show log browser'), self._VCSLogBrowser)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
@@ -867,20 +867,6 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         fn = itm.fileName()
         self.vcs.svnSbsDiff(fn, extended=True)
     
-    def __SVNLogBrowser(self):
-        """
-        Private slot called by the context menu to show the log browser for
-        a file.
-        """
-        itm = self.browser.currentItem()
-        try:
-            fn = itm.fileName()
-            isFile = True
-        except AttributeError:
-            fn = itm.dirName()
-            isFile = False
-        self.vcs.svnLogBrowser(fn, isFile=isFile)
-        
     def __SVNBlame(self):
         """
         Private slot called by the context menu to show the blame of a file.

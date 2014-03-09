@@ -122,7 +122,7 @@ class SvnProjectHelper(VcsProjectHelper):
             """ project. A limited number of entries is shown first. More"""
             """ can be retrieved later on.</p>"""
         ))
-        self.svnLogBrowserAct.triggered.connect(self.__svnLogBrowser)
+        self.svnLogBrowserAct.triggered.connect(self._vcsLogBrowser)
         self.actions.append(self.svnLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
@@ -591,12 +591,6 @@ class SvnProjectHelper(VcsProjectHelper):
         repository URLs.
         """
         self.vcs.svnUrlDiff(self.project.ppath)
-        
-    def __svnLogBrowser(self):
-        """
-        Private slot used to browse the log of the current project.
-        """
-        self.vcs.svnLogBrowser(self.project.ppath)
         
     def __svnRelocate(self):
         """

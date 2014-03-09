@@ -2032,19 +2032,19 @@ class Subversion(VersionControl):
         self.sbsDiff.show()
         self.sbsDiff.compare(output1, output2, name1, name2)
     
-    def svnLogBrowser(self, path, isFile=False):
+    def vcsLogBrowser(self, name, isFile=False):
         """
         Public method used to browse the log of a file/directory from the
         Subversion repository.
         
-        @param path file/directory name to show the log of (string)
+        @param name file/directory name to show the log of (string)
         @param isFile flag indicating log for a file is to be shown (boolean)
         """
         if self.logBrowser is None:
             from .SvnLogBrowserDialog import SvnLogBrowserDialog
             self.logBrowser = SvnLogBrowserDialog(self)
         self.logBrowser.show()
-        self.logBrowser.start(path, isFile=isFile)
+        self.logBrowser.start(name, isFile=isFile)
         
     def svnLock(self, name, stealIt=False, parent=None):
         """

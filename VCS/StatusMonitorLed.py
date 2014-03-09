@@ -11,12 +11,12 @@ thread.
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QColor, QInputDialog, QMenu
 
-from E5Gui.E5Led import E5Led, E5LedRectangular
+from E5Gui.E5Led import E5ClickableLed, E5LedRectangular
 
 import Preferences
 
 
-class StatusMonitorLed(E5Led):
+class StatusMonitorLed(E5ClickableLed):
     """
     Class implementing a LED to indicate the status of the VCS status monitor
     thread.
@@ -28,9 +28,11 @@ class StatusMonitorLed(E5Led):
         @param project reference to the project object (Project.Project)
         @param parent reference to the parent object (QWidget)
         """
-        E5Led.__init__(self, parent, shape=E5LedRectangular, rectRatio=1.0)
+        super().__init__(parent, shape=E5LedRectangular, rectRatio=1.0)
         
+        self.__vcsClean = True
         self.project = project
+        
         self.vcsMonitorLedColors = {
             "off": QColor(Qt.lightGray),
             "ok": QColor(Qt.green),
@@ -72,6 +74,8 @@ class StatusMonitorLed(E5Led):
         self.customContextMenuRequested.connect(self._showContextMenu)
         self.project.vcsStatusMonitorStatus.connect(
             self.__projectVcsMonitorStatus)
+        self.project.getModel().vcsStateChanged.connect(self.__vcsStateChanged)
+        self.clicked.connect(self.__ledClicked)
     
     def __checkActions(self):
         """
@@ -143,3 +147,28 @@ class StatusMonitorLed(E5Led):
         Private slot to switch the status monitor thread to Off.
         """
         self.project.stopStatusMonitor()
+    
+    def __vcsStateChanged(self, state):
+        """
+        Private slot to handle a change in the vcs state.
+        
+        @param state new vcs state (string)
+        """
+        self.__vcsClean = state == " "
+    
+    def __ledClicked(self, pos):
+        """
+        Private slot to react upon clicks on the LED.
+        
+        @param pos position of the click (QPoint)
+        """
+        if self.__on:
+            print(self.__vcsClean)
+            vcs = self.project.getVcs()
+            if vcs:
+                if self.__vcsClean:
+                    # call log browser dialog
+                    vcs.vcsLogBrowser(self.project.getProjectPath())
+                else:
+                    # call status dialog
+                    vcs.vcsStatus(self.project.getProjectPath())

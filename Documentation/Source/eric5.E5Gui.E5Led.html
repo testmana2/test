@@ -32,6 +32,9 @@ It was inspired by KLed.
 <h3>Classes</h3>
 <table>
 <tr>
+<td><a href="#E5ClickableLed">E5ClickableLed</a></td>
+<td>Class implementing a clickable LED widget.</td>
+</tr><tr>
 <td><a href="#E5Led">E5Led</a></td>
 <td>Class implementing a LED widget.</td>
 </tr>
@@ -40,6 +43,78 @@ It was inspired by KLed.
 <table>
 <tr><td>None</td></tr>
 </table>
+<hr /><hr />
+<a NAME="E5ClickableLed" ID="E5ClickableLed"></a>
+<h2>E5ClickableLed</h2>
+<p>
+    Class implementing a clickable LED widget.
+</p><h3>Signals</h3>
+<dl>
+<dt>clicked(QPoint)</dt>
+<dd>
+emitted upon a click on the LED with the
+        left button
+</dd><dt>middleClicked(QPoint)</dt>
+<dd>
+emitted upon a click on the LED with
+        the middle button or CTRL and left button
+</dd>
+</dl>
+<h3>Derived from</h3>
+E5Led
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#E5ClickableLed.__init__">E5ClickableLed</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#E5ClickableLed.mouseReleaseEvent">mouseReleaseEvent</a></td>
+<td>Protected method handling mouse release events.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="E5ClickableLed.__init__" ID="E5ClickableLed.__init__"></a>
+<h4>E5ClickableLed (Constructor)</h4>
+<b>E5ClickableLed</b>(<i>parent=None, color=None, shape=E5LedCircular, rectRatio=1</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to parent widget (QWidget)
+</dd><dt><i>color</i></dt>
+<dd>
+color of the LED (QColor)
+</dd><dt><i>shape</i></dt>
+<dd>
+shape of the LED (E5LedCircular, E5LedRectangular)
+</dd><dt><i>rectRatio</i></dt>
+<dd>
+ratio width to height, if shape is rectangular (float)
+</dd>
+</dl><a NAME="E5ClickableLed.mouseReleaseEvent" ID="E5ClickableLed.mouseReleaseEvent"></a>
+<h4>E5ClickableLed.mouseReleaseEvent</h4>
+<b>mouseReleaseEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling mouse release events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+mouse event (QMouseEvent)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="E5Led" ID="E5Led"></a>
 <h2>E5Led</h2>

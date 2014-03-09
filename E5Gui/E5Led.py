@@ -9,7 +9,7 @@ Module implementing a LED widget.
 It was inspired by KLed.
 """
 
-from PyQt4.QtCore import Qt, QSize
+from PyQt4.QtCore import pyqtSignal, Qt, QSize, QPoint
 from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, \
     QBrush
 
@@ -269,3 +269,45 @@ class E5Led(QWidget):
         @return size hint (QSize)
         """
         return QSize(18, 18)
+
+
+class E5ClickableLed(E5Led):
+    """
+    Class implementing a clickable LED widget.
+    
+    @signal clicked(QPoint) emitted upon a click on the LED with the
+        left button
+    @signal middleClicked(QPoint) emitted upon a click on the LED with
+        the middle button or CTRL and left button
+    """
+    clicked = pyqtSignal(QPoint)
+    middleClicked = pyqtSignal(QPoint)
+    
+    def __init__(self, parent=None, color=None, shape=E5LedCircular,
+                 rectRatio=1):
+        """
+        Constructor
+        
+        @param parent reference to parent widget (QWidget)
+        @param color color of the LED (QColor)
+        @param shape shape of the LED (E5LedCircular, E5LedRectangular)
+        @param rectRatio ratio width to height, if shape is rectangular (float)
+        """
+        super().__init__(parent, color, shape, rectRatio)
+    
+    def mouseReleaseEvent(self, evt):
+        """
+        Protected method handling mouse release events.
+        
+        @param evt mouse event (QMouseEvent)
+        """
+        if evt.button() == Qt.LeftButton and self.rect().contains(evt.pos()):
+            if evt.modifiers() == Qt.ControlModifier:
+                self.middleClicked.emit(evt.globalPos())
+            else:
+                self.clicked.emit(evt.globalPos())
+        elif evt.button() == Qt.MiddleButton and \
+                self.rect().contains(evt.pos()):
+            self.middleClicked.emit(evt.globalPos())
+        else:
+            super().mouseReleaseEvent(evt)

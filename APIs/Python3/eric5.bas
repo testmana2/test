@@ -146,6 +146,7 @@ E5ArrowItem QAbstractGraphicsShapeItem
 E5ClearableComboBox E5ComboBox
 E5ClearableLineEdit E5LineEdit
 E5ClickableLabel QLabel
+E5ClickableLed E5Led
 E5ComboBox QComboBox
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
@@ -642,7 +643,7 @@ StackedUrlBar QStackedWidget
 StackedWidget QStackedWidget
 StandardReport BaseReport
 StartDialog QDialog
-StatusMonitorLed E5Led
+StatusMonitorLed E5ClickableLed
 Subversion VersionControl
 SubversionPage ConfigurationPageBase Ui_SubversionPage
 SvgDiagram E5MainWindow

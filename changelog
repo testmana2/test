@@ -13,6 +13,9 @@ Version 5.5.0-xxx:
   -- extended the plugin repository dialog to allow to hide unwanted entries
      and cleanup the plugin downloads area
 - Version Control System Interfaces
+  -- All
+     --- made the status LED (right lower corner) clickable (depending on
+         overall VCS status it will show the log browser or the status dialog)
   -- Mercurial
      --- enhanced the tag dialog and extended the log browser to allow
          tagging of a specific revision

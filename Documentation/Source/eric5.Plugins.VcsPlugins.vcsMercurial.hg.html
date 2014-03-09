@@ -193,9 +193,6 @@ VersionControl
 <td><a href="#Hg.hgListTagBranch">hgListTagBranch</a></td>
 <td>Public method used to list the available tags or branches.</td>
 </tr><tr>
-<td><a href="#Hg.hgLogBrowser">hgLogBrowser</a></td>
-<td>Public method used to browse the log of a file/directory from the Mercurial repository.</td>
-</tr><tr>
 <td><a href="#Hg.hgNormalizeURL">hgNormalizeURL</a></td>
 <td>Public method to normalize a url for Mercurial.</td>
 </tr><tr>
@@ -312,6 +309,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory from the Mercurial repository.</td>
+</tr><tr>
+<td><a href="#Hg.vcsLogBrowser">vcsLogBrowser</a></td>
+<td>Public method used to browse the log of a file/directory from the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsMerge">vcsMerge</a></td>
 <td>Public method used to merge a URL/revision into the local project.</td>
@@ -871,21 +871,6 @@ directory name of the project (string)
 <dd>
 flag indicating listing of branches or tags
                 (False = branches, True = tags)
-</dd>
-</dl><a NAME="Hg.hgLogBrowser" ID="Hg.hgLogBrowser"></a>
-<h4>Hg.hgLogBrowser</h4>
-<b>hgLogBrowser</b>(<i>path, isFile=False</i>)
-<p>
-        Public method used to browse the log of a file/directory from the
-        Mercurial repository.
-</p><dl>
-<dt><i>path</i></dt>
-<dd>
-file/directory name to show the log of (string)
-</dd><dt><i>isFile=</i></dt>
-<dd>
-flag indicating log for a file is to be shown
-            (boolean)
 </dd>
 </dl><a NAME="Hg.hgNormalizeURL" ID="Hg.hgNormalizeURL"></a>
 <h4>Hg.hgNormalizeURL</h4>
@@ -1462,6 +1447,21 @@ reference to the project (Project)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to show the log of (string)
+</dd>
+</dl><a NAME="Hg.vcsLogBrowser" ID="Hg.vcsLogBrowser"></a>
+<h4>Hg.vcsLogBrowser</h4>
+<b>vcsLogBrowser</b>(<i>name, isFile=False</i>)
+<p>
+        Public method used to browse the log of a file/directory from the
+        Mercurial repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to show the log of (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown
+            (boolean)
 </dd>
 </dl><a NAME="Hg.vcsMerge" ID="Hg.vcsMerge"></a>
 <h4>Hg.vcsMerge</h4>

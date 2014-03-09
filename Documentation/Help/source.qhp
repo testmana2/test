@@ -3707,6 +3707,9 @@
       <keyword name="E5ClickableLabel (Constructor)" id="E5ClickableLabel (Constructor)" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.__init__" />
       <keyword name="E5ClickableLabel (Module)" id="E5ClickableLabel (Module)" ref="eric5.E5Gui.E5ClickableLabel.html" />
       <keyword name="E5ClickableLabel.mouseReleaseEvent" id="E5ClickableLabel.mouseReleaseEvent" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.mouseReleaseEvent" />
+      <keyword name="E5ClickableLed" id="E5ClickableLed" ref="eric5.E5Gui.E5Led.html#E5ClickableLed" />
+      <keyword name="E5ClickableLed (Constructor)" id="E5ClickableLed (Constructor)" ref="eric5.E5Gui.E5Led.html#E5ClickableLed.__init__" />
+      <keyword name="E5ClickableLed.mouseReleaseEvent" id="E5ClickableLed.mouseReleaseEvent" ref="eric5.E5Gui.E5Led.html#E5ClickableLed.mouseReleaseEvent" />
       <keyword name="E5ComboBox" id="E5ComboBox" ref="eric5.E5Gui.E5ComboBox.html#E5ComboBox" />
       <keyword name="E5ComboBox (Constructor)" id="E5ComboBox (Constructor)" ref="eric5.E5Gui.E5ComboBox.html#E5ComboBox.__init__" />
       <keyword name="E5ComboBox (Module)" id="E5ComboBox (Module)" ref="eric5.E5Gui.E5ComboBox.html" />
@@ -5821,7 +5824,6 @@
       <keyword name="Hg.hgIncoming" id="Hg.hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIncoming" />
       <keyword name="Hg.hgInfo" id="Hg.hgInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgInfo" />
       <keyword name="Hg.hgListTagBranch" id="Hg.hgListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgListTagBranch" />
-      <keyword name="Hg.hgLogBrowser" id="Hg.hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgLogBrowser" />
       <keyword name="Hg.hgNormalizeURL" id="Hg.hgNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgNormalizeURL" />
       <keyword name="Hg.hgOutgoing" id="Hg.hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgOutgoing" />
       <keyword name="Hg.hgPhase" id="Hg.hgPhase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPhase" />
@@ -5861,6 +5863,7 @@
       <keyword name="Hg.vcsInit" id="Hg.vcsInit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsInit" />
       <keyword name="Hg.vcsInitConfig" id="Hg.vcsInitConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsInitConfig" />
       <keyword name="Hg.vcsLog" id="Hg.vcsLog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsLog" />
+      <keyword name="Hg.vcsLogBrowser" id="Hg.vcsLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsLogBrowser" />
       <keyword name="Hg.vcsMerge" id="Hg.vcsMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsMerge" />
       <keyword name="Hg.vcsMove" id="Hg.vcsMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsMove" />
       <keyword name="Hg.vcsName" id="Hg.vcsName" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsName" />
@@ -6295,7 +6298,6 @@
       <keyword name="HgProjectBrowserHelper.__HgCopy" id="HgProjectBrowserHelper.__HgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgCopy" />
       <keyword name="HgProjectBrowserHelper.__HgExtendedDiff" id="HgProjectBrowserHelper.__HgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgExtendedDiff" />
       <keyword name="HgProjectBrowserHelper.__HgForget" id="HgProjectBrowserHelper.__HgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgForget" />
-      <keyword name="HgProjectBrowserHelper.__HgLogBrowser" id="HgProjectBrowserHelper.__HgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgLogBrowser" />
       <keyword name="HgProjectBrowserHelper.__HgMove" id="HgProjectBrowserHelper.__HgMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgMove" />
       <keyword name="HgProjectBrowserHelper.__HgResolve" id="HgProjectBrowserHelper.__HgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgResolve" />
       <keyword name="HgProjectBrowserHelper.__HgRevert" id="HgProjectBrowserHelper.__HgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgRevert" />
@@ -6338,7 +6340,6 @@
       <keyword name="HgProjectHelper.__hgIdentifyBundle" id="HgProjectHelper.__hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentifyBundle" />
       <keyword name="HgProjectHelper.__hgImport" id="HgProjectHelper.__hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgImport" />
       <keyword name="HgProjectHelper.__hgIncoming" id="HgProjectHelper.__hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIncoming" />
-      <keyword name="HgProjectHelper.__hgLogBrowser" id="HgProjectHelper.__hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogBrowser" />
       <keyword name="HgProjectHelper.__hgOutgoing" id="HgProjectHelper.__hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgOutgoing" />
       <keyword name="HgProjectHelper.__hgParents" id="HgProjectHelper.__hgParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgParents" />
       <keyword name="HgProjectHelper.__hgPhase" id="HgProjectHelper.__hgPhase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPhase" />
@@ -10469,10 +10470,12 @@
       <keyword name="StatusMonitorLed (Module)" id="StatusMonitorLed (Module)" ref="eric5.VCS.StatusMonitorLed.html" />
       <keyword name="StatusMonitorLed.__checkActions" id="StatusMonitorLed.__checkActions" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__checkActions" />
       <keyword name="StatusMonitorLed.__checkStatus" id="StatusMonitorLed.__checkStatus" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__checkStatus" />
+      <keyword name="StatusMonitorLed.__ledClicked" id="StatusMonitorLed.__ledClicked" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__ledClicked" />
       <keyword name="StatusMonitorLed.__projectVcsMonitorStatus" id="StatusMonitorLed.__projectVcsMonitorStatus" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__projectVcsMonitorStatus" />
       <keyword name="StatusMonitorLed.__setInterval" id="StatusMonitorLed.__setInterval" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__setInterval" />
       <keyword name="StatusMonitorLed.__switchOff" id="StatusMonitorLed.__switchOff" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__switchOff" />
       <keyword name="StatusMonitorLed.__switchOn" id="StatusMonitorLed.__switchOn" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__switchOn" />
+      <keyword name="StatusMonitorLed.__vcsStateChanged" id="StatusMonitorLed.__vcsStateChanged" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__vcsStateChanged" />
       <keyword name="StatusMonitorLed._showContextMenu" id="StatusMonitorLed._showContextMenu" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed._showContextMenu" />
       <keyword name="StatusMonitorThread (Module)" id="StatusMonitorThread (Module)" ref="eric5.VCS.StatusMonitorThread.html" />
       <keyword name="StyleGuide" id="StyleGuide" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#StyleGuide" />
@@ -10540,8 +10543,6 @@
       <keyword name="Subversion.svnListTagBranch" id="Subversion.svnListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnListTagBranch" />
       <keyword name="Subversion.svnLock" id="Subversion.svnLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnLock" />
       <keyword name="Subversion.svnLock" id="Subversion.svnLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnLock" />
-      <keyword name="Subversion.svnLogBrowser" id="Subversion.svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnLogBrowser" />
-      <keyword name="Subversion.svnLogBrowser" id="Subversion.svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnLogBrowser" />
       <keyword name="Subversion.svnNormalizeURL" id="Subversion.svnNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnNormalizeURL" />
       <keyword name="Subversion.svnNormalizeURL" id="Subversion.svnNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnNormalizeURL" />
       <keyword name="Subversion.svnRelocate" id="Subversion.svnRelocate" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnRelocate" />
@@ -10600,6 +10601,8 @@
       <keyword name="Subversion.vcsInitConfig" id="Subversion.vcsInitConfig" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsInitConfig" />
       <keyword name="Subversion.vcsLog" id="Subversion.vcsLog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsLog" />
       <keyword name="Subversion.vcsLog" id="Subversion.vcsLog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsLog" />
+      <keyword name="Subversion.vcsLogBrowser" id="Subversion.vcsLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsLogBrowser" />
+      <keyword name="Subversion.vcsLogBrowser" id="Subversion.vcsLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsLogBrowser" />
       <keyword name="Subversion.vcsMerge" id="Subversion.vcsMerge" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsMerge" />
       <keyword name="Subversion.vcsMerge" id="Subversion.vcsMerge" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsMerge" />
       <keyword name="Subversion.vcsMove" id="Subversion.vcsMove" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsMove" />
@@ -10989,8 +10992,6 @@
       <keyword name="SvnProjectBrowserHelper.__SVNListProps" id="SvnProjectBrowserHelper.__SVNListProps" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNListProps" />
       <keyword name="SvnProjectBrowserHelper.__SVNLock" id="SvnProjectBrowserHelper.__SVNLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLock" />
       <keyword name="SvnProjectBrowserHelper.__SVNLock" id="SvnProjectBrowserHelper.__SVNLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLock" />
-      <keyword name="SvnProjectBrowserHelper.__SVNLogBrowser" id="SvnProjectBrowserHelper.__SVNLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLogBrowser" />
-      <keyword name="SvnProjectBrowserHelper.__SVNLogBrowser" id="SvnProjectBrowserHelper.__SVNLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLogBrowser" />
       <keyword name="SvnProjectBrowserHelper.__SVNMove" id="SvnProjectBrowserHelper.__SVNMove" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNMove" />
       <keyword name="SvnProjectBrowserHelper.__SVNMove" id="SvnProjectBrowserHelper.__SVNMove" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNMove" />
       <keyword name="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" id="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNRemoveFromChangelist" />
@@ -11042,8 +11043,6 @@
       <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
       <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
       <keyword name="SvnProjectHelper.__svnInfo" id="SvnProjectHelper.__svnInfo" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnInfo" />
-      <keyword name="SvnProjectHelper.__svnLogBrowser" id="SvnProjectHelper.__svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnLogBrowser" />
-      <keyword name="SvnProjectHelper.__svnLogBrowser" id="SvnProjectHelper.__svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnLogBrowser" />
       <keyword name="SvnProjectHelper.__svnPropDel" id="SvnProjectHelper.__svnPropDel" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropDel" />
       <keyword name="SvnProjectHelper.__svnPropDel" id="SvnProjectHelper.__svnPropDel" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropDel" />
       <keyword name="SvnProjectHelper.__svnPropList" id="SvnProjectHelper.__svnPropList" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropList" />
@@ -12398,6 +12397,7 @@
       <keyword name="VcsProjectBrowserHelper._VCSDiff" id="VcsProjectBrowserHelper._VCSDiff" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSDiff" />
       <keyword name="VcsProjectBrowserHelper._VCSInfoDisplay" id="VcsProjectBrowserHelper._VCSInfoDisplay" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSInfoDisplay" />
       <keyword name="VcsProjectBrowserHelper._VCSLog" id="VcsProjectBrowserHelper._VCSLog" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSLog" />
+      <keyword name="VcsProjectBrowserHelper._VCSLogBrowser" id="VcsProjectBrowserHelper._VCSLogBrowser" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSLogBrowser" />
       <keyword name="VcsProjectBrowserHelper._VCSMerge" id="VcsProjectBrowserHelper._VCSMerge" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSMerge" />
       <keyword name="VcsProjectBrowserHelper._VCSRemove" id="VcsProjectBrowserHelper._VCSRemove" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSRemove" />
       <keyword name="VcsProjectBrowserHelper._VCSRevert" id="VcsProjectBrowserHelper._VCSRevert" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper._VCSRevert" />
@@ -12421,6 +12421,7 @@
       <keyword name="VcsProjectHelper._vcsImport" id="VcsProjectHelper._vcsImport" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsImport" />
       <keyword name="VcsProjectHelper._vcsInfoDisplay" id="VcsProjectHelper._vcsInfoDisplay" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsInfoDisplay" />
       <keyword name="VcsProjectHelper._vcsLog" id="VcsProjectHelper._vcsLog" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsLog" />
+      <keyword name="VcsProjectHelper._vcsLogBrowser" id="VcsProjectHelper._vcsLogBrowser" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsLogBrowser" />
       <keyword name="VcsProjectHelper._vcsMerge" id="VcsProjectHelper._vcsMerge" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsMerge" />
       <keyword name="VcsProjectHelper._vcsRemove" id="VcsProjectHelper._vcsRemove" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsRemove" />
       <keyword name="VcsProjectHelper._vcsRevert" id="VcsProjectHelper._vcsRevert" ref="eric5.VCS.ProjectHelper.html#VcsProjectHelper._vcsRevert" />
@@ -12508,6 +12509,7 @@
       <keyword name="VersionControl.vcsInit" id="VersionControl.vcsInit" ref="eric5.VCS.VersionControl.html#VersionControl.vcsInit" />
       <keyword name="VersionControl.vcsInitConfig" id="VersionControl.vcsInitConfig" ref="eric5.VCS.VersionControl.html#VersionControl.vcsInitConfig" />
       <keyword name="VersionControl.vcsLog" id="VersionControl.vcsLog" ref="eric5.VCS.VersionControl.html#VersionControl.vcsLog" />
+      <keyword name="VersionControl.vcsLogBrowser" id="VersionControl.vcsLogBrowser" ref="eric5.VCS.VersionControl.html#VersionControl.vcsLogBrowser" />
       <keyword name="VersionControl.vcsMerge" id="VersionControl.vcsMerge" ref="eric5.VCS.VersionControl.html#VersionControl.vcsMerge" />
       <keyword name="VersionControl.vcsMove" id="VersionControl.vcsMove" ref="eric5.VCS.VersionControl.html#VersionControl.vcsMove" />
       <keyword name="VersionControl.vcsName" id="VersionControl.vcsName" ref="eric5.VCS.VersionControl.html#VersionControl.vcsName" />

@@ -253,6 +253,19 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
+    def vcsLogBrowser(self, name, isFile=False):
+        """
+        Public method used to view the log of a file/directory in the vcs
+        with a log browser dialog.
+        
+        @param name file/directory name to show the log for (string)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
+        """
+        raise RuntimeError('Not implemented')
+        
     def vcsDiff(self, name):
         """
         Public method used to view the diff of a file/directory in the vcs.

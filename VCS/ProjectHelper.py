@@ -449,6 +449,13 @@ class VcsProjectHelper(QObject):
         """
         self.vcs.vcsLog(self.project.ppath)
         
+    def _vcsLogBrowser(self):
+        """
+        Protected slot used to show the log of the local project with a
+        log browser dialog.
+        """
+        self.vcs.vcsLogBrowser(self.project.ppath)
+        
     def _vcsDiff(self):
         """
         Protected slot used to show the difference of the local project to

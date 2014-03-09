@@ -193,6 +193,9 @@ QObject
 <td><a href="#VersionControl.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory in the vcs.</td>
 </tr><tr>
+<td><a href="#VersionControl.vcsLogBrowser">vcsLogBrowser</a></td>
+<td>Public method used to view the log of a file/directory in the vcs with a log browser dialog.</td>
+</tr><tr>
 <td><a href="#VersionControl.vcsMerge">vcsMerge</a></td>
 <td>Public method used to merge a tag/branch into the local project.</td>
 </tr><tr>
@@ -895,6 +898,27 @@ reference to the project (Project)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to show the log for (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
+</dd>
+</dl><a NAME="VersionControl.vcsLogBrowser" ID="VersionControl.vcsLogBrowser"></a>
+<h4>VersionControl.vcsLogBrowser</h4>
+<b>vcsLogBrowser</b>(<i>name, isFile=False</i>)
+<p>
+        Public method used to view the log of a file/directory in the vcs
+        with a log browser dialog.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to show the log for (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>

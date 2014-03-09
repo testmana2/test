@@ -313,7 +313,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.tr('Show log browser'), self.__HgLogBrowser)
+            self.tr('Show log browser'), self._VCSLogBrowser)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
@@ -531,7 +531,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsLog.png"),
-            self.tr('Show log browser'), self.__HgLogBrowser)
+            self.tr('Show log browser'), self._VCSLogBrowser)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
@@ -738,20 +738,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         itm = self.browser.currentItem()
         fn = itm.fileName()
         self.vcs.hgAnnotate(fn)
-    
-    def __HgLogBrowser(self):
-        """
-        Private slot called by the context menu to show the log browser for a
-        file.
-        """
-        itm = self.browser.currentItem()
-        try:
-            fn = itm.fileName()
-            isFile = True
-        except AttributeError:
-            fn = itm.dirName()
-            isFile = False
-        self.vcs.hgLogBrowser(fn, isFile=isFile)
     
     def __HgResolve(self):
         """

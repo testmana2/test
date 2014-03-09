@@ -272,7 +272,7 @@ class HgProjectHelper(VcsProjectHelper):
             """ project. A limited number of entries is shown first."""
             """ More can be retrieved later on.</p>"""
         ))
-        self.hgLogBrowserAct.triggered.connect(self.__hgLogBrowser)
+        self.hgLogBrowserAct.triggered.connect(self._vcsLogBrowser)
         self.actions.append(self.hgLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
@@ -1211,12 +1211,6 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to perform a hg diff with the selection of revisions.
         """
         self.vcs.hgExtendedDiff(self.project.ppath)
-    
-    def __hgLogBrowser(self):
-        """
-        Private slot used to browse the log of the current project.
-        """
-        self.vcs.hgLogBrowser(self.project.ppath)
     
     def __hgIncoming(self):
         """

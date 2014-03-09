@@ -314,6 +314,20 @@ class VcsProjectBrowserHelper(QObject):
         except AttributeError:
             fn = itm.dirName()
         self.vcs.vcsLog(fn)
+    
+    def _VCSLogBrowser(self):
+        """
+        Protected slot called by the context menu to show the log browser for a
+        file.
+        """
+        itm = self.browser.currentItem()
+        try:
+            fn = itm.fileName()
+            isFile = True
+        except AttributeError:
+            fn = itm.dirName()
+            isFile = False
+        self.vcs.vcsLogBrowser(fn, isFile=isFile)
         
     def _VCSDiff(self):
         """
