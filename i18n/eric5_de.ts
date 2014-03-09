@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -22602,22 +22602,22 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="398"/>
         <source>Merge</source>
-        <translation>Änderungen einpflegen</translation>
+        <translation>Änderungen zusammenführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="398"/>
         <source>Mer&amp;ge changes...</source>
-        <translation>Änderungen ein&amp;pflegen...</translation>
+        <translation>Änderungen &amp;zusammenführen...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="403"/>
         <source>Merge changes of a revision into the local project</source>
-        <translation>Pflege Änderungen einer Revision in das lokale Projekt ein</translation>
+        <translation>Änderungen einer Revision mit dem lokalen Projekt zusammenführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="406"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a revision into the local project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Änderungen einpflegen&lt;/b&gt;&lt;p&gt;Dies pfleget Änderungen einer Revision in das lokale Projekt ein.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Änderungen zusammenführen&lt;/b&gt;&lt;p&gt;Dies führt Änderungen einer Revision mit dem lokalen Projekt zusammen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="429"/>
@@ -25261,7 +25261,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="390"/>
         <source>Merge needed</source>
-        <translation>Vereinigung notwendig</translation>
+        <translation>Zusammenführung notwendig</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="392"/>
@@ -31266,7 +31266,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="232"/>
         <source>Merge</source>
-        <translation>Änderungen einpflegen</translation>
+        <translation>Änderungen zusammenführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="238"/>
@@ -46797,7 +46797,7 @@ nicht verbunden</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnConst.py" line="88"/>
         <source>merged</source>
-        <translation>fusioniert</translation>
+        <translation>zusammengeführt</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnConst.py" line="90"/>
@@ -48524,7 +48524,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="709"/>
         <source>Merge changes</source>
-        <translation>Änderungen einarbeiten</translation>
+        <translation>Änderungen zusammenführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="717"/>
@@ -48867,22 +48867,22 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="281"/>
         <source>Merge</source>
-        <translation>Änderungen einpflegen</translation>
+        <translation>Änderungen zusammenführen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="281"/>
         <source>Mer&amp;ge changes...</source>
-        <translation>Änderungen ein&amp;pflegen...</translation>
+        <translation>Änderungen &amp;zusammenführen...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="286"/>
         <source>Merge changes of a tag/revision into the local project</source>
-        <translation>Pflege Änderungen eines Tags/Zweiges in das lokale Projekt ein</translation>
+        <translation>Führe Änderungen eines Tags/Zweiges mit dem lokalen Projekt zusammen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="289"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a tag/revision into the local project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Änderungen einpflegen&lt;/b&gt;&lt;p&gt;Dies pflegt Änderungen eines Tags/Zweiges in das lokale Projekt ein.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Änderungen zusammenführen&lt;/b&gt;&lt;p&gt;Dies führt Änderungen eines Tags/Zweiges mit dem lokalen Projekt zusammen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="297"/>
