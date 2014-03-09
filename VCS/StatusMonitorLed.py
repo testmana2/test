@@ -163,7 +163,6 @@ class StatusMonitorLed(E5ClickableLed):
         @param pos position of the click (QPoint)
         """
         if self.__on:
-            print(self.__vcsClean)
             vcs = self.project.getVcs()
             if vcs:
                 if self.__vcsClean:
