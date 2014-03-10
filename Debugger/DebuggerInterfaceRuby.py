@@ -19,6 +19,7 @@ from . import DebugClientCapabilities
 
 import Preferences
 import Utilities
+from Globals import isWindowsPlatform
 
 from eric5config import getConfig
 
@@ -142,8 +143,15 @@ class DebuggerInterfaceRuby(QObject):
             a network connection (boolean)
         """
         interpreter = Preferences.getDebugger("RubyInterpreter")
-        if interpreter == "":
+        if interpreter == "" and not isWindowsPlatform():
             interpreter = "/usr/bin/ruby"
+        if interpreter == "":
+            E5MessageBox.critical(
+                None,
+                self.tr("Start Debugger"),
+                self.tr("""<p>No Ruby interpreter configured.</p>"""))
+            return None, False
+        
         debugClient = os.path.join(
             getConfig('ericDir'), "DebugClients", "Ruby", "DebugClient.rb")
         

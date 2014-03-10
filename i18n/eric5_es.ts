@@ -6222,14 +6222,19 @@ Not connected
 <context>
     <name>DebuggerInterfaceRuby</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="325"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="333"/>
         <source>Start Debugger</source>
         <translation>Comenzar Depurador</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="325"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="333"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No ha sido posible lanzar el extremo del depurador.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="149"/>
+        <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

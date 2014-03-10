@@ -6226,14 +6226,19 @@ Nicht verbunden
 <context>
     <name>DebuggerInterfaceRuby</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="325"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="333"/>
         <source>Start Debugger</source>
         <translation>Debugger starten</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="325"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="333"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Debugger konnte nicht gestartet werden.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="149"/>
+        <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Kein Ruby-Interpreter gefunden.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

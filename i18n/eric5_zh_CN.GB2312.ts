@@ -6740,14 +6740,19 @@ Not connected
 <context>
     <name>DebuggerInterfaceRuby</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="325"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="333"/>
         <source>Start Debugger</source>
         <translation>启动调试器</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="325"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="333"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;调试器后端无法启动。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="149"/>
+        <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
