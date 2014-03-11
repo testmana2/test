@@ -67,7 +67,7 @@ class Prefs(object):
         "PythonInterpreter": "",
         "Python3Interpreter": "",
         "CustomPython3Interpreter": False,
-        "RubyInterpreter": "/usr/bin/ruby",
+        "RubyInterpreter": "",
         "DebugClientType": "standard",
         # supported "standard", "threaded", "custom"
         "DebugClient": "",

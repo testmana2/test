@@ -39,7 +39,10 @@ def getRegistryData():
     @return list of the following data. Client type (string), client
         capabilities (integer), client type association (list of strings)
     """
-    return ["Ruby", ClientDefaultCapabilities, ClientTypeAssociations]
+    if Preferences.getDebugger("RubyInterpreter"):
+        return ["Ruby", ClientDefaultCapabilities, ClientTypeAssociations]
+    else:
+        return ["", 0, []]
 
 
 class DebuggerInterfaceRuby(QObject):
@@ -143,7 +146,11 @@ class DebuggerInterfaceRuby(QObject):
         """
         interpreter = Preferences.getDebugger("RubyInterpreter")
         if interpreter == "":
-            interpreter = "/usr/bin/ruby"
+            E5MessageBox.critical(
+                None,
+                self.tr("Start Debugger"),
+                self.tr("""<p>No Ruby interpreter configured.</p>"""))
+            return None, False
         debugClient = os.path.join(
             getConfig('ericDir'), "DebugClients", "Ruby", "DebugClient.rb")
         
