@@ -19,7 +19,6 @@ from . import DebugClientCapabilities
 
 import Preferences
 import Utilities
-from Globals import isWindowsPlatform
 
 from eric5config import getConfig
 
@@ -40,7 +39,10 @@ def getRegistryData():
     @return list of the following data. Client type (string), client
         capabilities (integer), client type association (list of strings)
     """
-    return ["Ruby", ClientDefaultCapabilities, ClientTypeAssociations]
+    if Preferences.getDebugger("RubyInterpreter"):
+        return ["Ruby", ClientDefaultCapabilities, ClientTypeAssociations]
+    else:
+        return ["", 0, []]
 
 
 class DebuggerInterfaceRuby(QObject):
@@ -143,8 +145,6 @@ class DebuggerInterfaceRuby(QObject):
             a network connection (boolean)
         """
         interpreter = Preferences.getDebugger("RubyInterpreter")
-        if interpreter == "" and not isWindowsPlatform():
-            interpreter = "/usr/bin/ruby"
         if interpreter == "":
             E5MessageBox.critical(
                 None,

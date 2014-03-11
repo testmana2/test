@@ -1454,6 +1454,14 @@ class Shell(QsciScintillaCompat):
                 self.dbs.clientProcessStderr.disconnect(self.__writeStdErr)
             self.__showStdOutErr = showStdOutErr
         
+        # recreate the languages menu
+        self.lmenu.clear()
+        self.clientLanguages = self.dbs.getSupportedLanguages(shellOnly=True)
+        self.clientLanguages.sort()
+        for language in self.clientLanguages:
+            act = self.lmenu.addAction(language)
+            act.setData(language)
+        
     def __showCompletions(self, completions, text):
         """
         Private method to display the possible completions.

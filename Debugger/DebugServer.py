@@ -405,17 +405,16 @@ class DebugServer(QTcpServer):
                 self.clientProcess.readyReadStandardOutput.connect(
                     self.__clientProcessOutput)
                 
-                if not isNetworked:
-                    # the client is connected through stdin and stdout
-                    # Perform actions necessary, if client type has changed
-                    if self.lastClientType != self.clientType:
-                        self.lastClientType = self.clientType
-                        self.remoteBanner()
-                    elif self.__autoClearShell:
-                        self.__autoClearShell = False
-                        self.remoteBanner()
-                    
-                    self.debuggerInterface.flush()
+                # Perform actions necessary, if client type has changed
+                if self.lastClientType != self.clientType:
+                    self.lastClientType = self.clientType
+                    self.remoteBanner()
+                elif self.__autoClearShell:
+                    self.__autoClearShell = False
+                    self.remoteBanner()
+            else:
+                if clType and self.lastClientType:
+                    self.__setClientType(self.lastClientType)
         else:
             self.__createDebuggerInterface("None")
 
