@@ -49,6 +49,9 @@ class BrowserModel(QAbstractItemModel):
         self.watcher = QFileSystemWatcher(self)
         self.watcher.directoryChanged.connect(self.directoryChanged)
         
+        self.__sysPathInterpreter = ""
+        self.__sysPathItem = None
+        
         if not nopopulate:
             rootData = QApplication.translate("BrowserModel", "Name")
             self.rootItem = BrowserItem(None, rootData)
@@ -350,8 +353,6 @@ class BrowserModel(QAbstractItemModel):
         """
         Private method to populate the browser model.
         """
-        self._addItem(BrowserSysPathItem(self.rootItem), self.rootItem)
-        
         self.toplevelDirs = []
         tdp = Preferences.Prefs.settings.value('BrowserModel/ToplevelDirs')
         if tdp:
@@ -366,6 +367,41 @@ class BrowserModel(QAbstractItemModel):
         for d in self.toplevelDirs:
             itm = BrowserDirectoryItem(self.rootItem, d)
             self._addItem(itm, self.rootItem)
+    
+    def interpreterChanged(self, interpreter):
+        """
+        Public method to handle a change of the debug client's interpreter.
+        
+        @param interpreter interpreter of the debug client (string)
+        """
+        if interpreter and "python" in interpreter.lower():
+            if interpreter.endswith("w.exe"):
+                interpreter = interpreter.replace("w.exe", ".exe")
+            if self.__sysPathInterpreter != interpreter:
+                self.__sysPathInterpreter = interpreter
+                # step 1: remove sys.path entry
+                if self.__sysPathItem is not None:
+                    self.beginRemoveRows(
+                        QModelIndex(), self.__sysPathItem.row(),
+                        self.__sysPathItem.row())
+                    self.rootItem.removeChild(self.__sysPathItem)
+                    self.endRemoveRows()
+                    self.__sysPathItem = None
+                
+                if self.__sysPathInterpreter:
+                    # step 2: add a new one
+                    self.__sysPathItem = BrowserSysPathItem(self.rootItem)
+                    self.addItem(self.__sysPathItem)
+        else:
+            # remove sys.path entry
+            if self.__sysPathItem is not None:
+                self.beginRemoveRows(
+                    QModelIndex(), self.__sysPathItem.row(),
+                    self.__sysPathItem.row())
+                self.rootItem.removeChild(self.__sysPathItem)
+                self.endRemoveRows()
+                self.__sysPathItem = None
+            self.__sysPathInterpreter = ""
     
     def programChange(self, dirname):
         """
@@ -522,17 +558,16 @@ class BrowserModel(QAbstractItemModel):
         @param parentItem reference to the sys.path item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
+        # TODO: make this dynamic depending on interpreter
         if len(sys.path) > 0:
             if repopulate:
                 self.beginInsertRows(
                     self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(sys.path) - 1)
             for p in sys.path:
-                if p == '':
-                    p = os.getcwd()
-                
-                node = BrowserDirectoryItem(parentItem, p)
-                self._addItem(node, parentItem)
+                if p:
+                    node = BrowserDirectoryItem(parentItem, p)
+                    self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
 

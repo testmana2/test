@@ -544,6 +544,14 @@ class Browser(QTreeView):
         """
         self.__model.programChange(os.path.dirname(fn))
         
+    def handleInterpreterChanged(self, interpreter):
+        """
+        Public slot to handle a change of the debug client's interpreter.
+        
+        @param interpreter interpreter of the debug client (string)
+        """
+        self.__model.interpreterChanged(interpreter)
+        
     def wantedItem(self, itm, filter=None):
         """
         Public method to check type of an item.

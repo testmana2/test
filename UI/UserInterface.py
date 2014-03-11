@@ -363,6 +363,8 @@ class UserInterface(E5MainWindow):
             self.debugViewer.breakpointViewer.highlightBreakpoint)
         debugServer.clientProcessStdout.connect(self.appendToStdout)
         debugServer.clientProcessStderr.connect(self.appendToStderr)
+        debugServer.clientInterpreterChanged.connect(
+            self.browser.handleInterpreterChanged)
         
         self.stdout.appendStdout.connect(self.appendToStdout)
         self.stderr.appendStderr.connect(self.appendToStderr)

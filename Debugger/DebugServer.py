@@ -84,6 +84,8 @@ class DebugServer(QTcpServer):
         connected in passive debug mode
     @signal clientGone(bool) emitted if the client went away (planned or
         unplanned)
+    @signal clientInterpreterChanged(str) emitted to signal a change of the
+        client interpreter
     @signal utPrepared(nrTests, exc_type, exc_value) emitted after the client
         has loaded a unittest suite
     @signal utFinished() emitted after the client signalled the end of the
@@ -128,6 +130,7 @@ class DebugServer(QTcpServer):
     clientBanner = pyqtSignal(str, str, str)
     clientCapabilities = pyqtSignal(int, str)
     clientCompletionList = pyqtSignal(list, str)
+    clientInterpreterChanged = pyqtSignal(str)
     utPrepared = pyqtSignal(int, str, str)
     utStartTest = pyqtSignal(str, str)
     utStopTest = pyqtSignal()
@@ -179,6 +182,7 @@ class DebugServer(QTcpServer):
         self.debugging = False
         self.running = False
         self.clientProcess = None
+        self.clientInterpreter = ""
         self.clientType = \
             Preferences.Prefs.settings.value('DebugClient/Type', 'Python3')
         self.lastClientType = ''
@@ -387,15 +391,15 @@ class DebugServer(QTcpServer):
             if forProject:
                 project = e5App().getObject("Project")
                 if not project.isDebugPropertiesLoaded():
-                    self.clientProcess, isNetworked = \
+                    self.clientProcess, isNetworked, clientInterpreter = \
                         self.debuggerInterface.startRemote(self.serverPort(),
                                                            runInConsole)
                 else:
-                    self.clientProcess, isNetworked = \
+                    self.clientProcess, isNetworked, clientInterpreter = \
                         self.debuggerInterface.startRemoteForProject(
                             self.serverPort(), runInConsole)
             else:
-                self.clientProcess, isNetworked = \
+                self.clientProcess, isNetworked, clientInterpreter = \
                     self.debuggerInterface.startRemote(
                         self.serverPort(), runInConsole)
             
@@ -417,6 +421,11 @@ class DebugServer(QTcpServer):
                     self.__setClientType(self.lastClientType)
         else:
             self.__createDebuggerInterface("None")
+            clientInterpreter = ""
+        
+        if clientInterpreter != self.clientInterpreter:
+            self.clientInterpreter = clientInterpreter
+            self.clientInterpreterChanged.emit(clientInterpreter)
 
     def __clientProcessOutput(self):
         """
@@ -622,6 +631,14 @@ class DebugServer(QTcpServer):
             return self.__clientCapabilities[type]
         except KeyError:
             return 0    # no capabilities
+        
+    def getClientInterpreter(self):
+        """
+        Public method to get the interpreter of the debug client.
+        
+        @return interpreter of the debug client (string)
+        """
+        return self.clientInterpreter
         
     def __newConnection(self):
         """

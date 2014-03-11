@@ -150,8 +150,9 @@ class DebuggerInterfacePython(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "":
@@ -160,7 +161,7 @@ class DebuggerInterfacePython(QObject):
                 self.tr("Start Debugger"),
                 self.tr(
                     """<p>No Python2 interpreter configured.</p>"""))
-            return None, False
+            return None, False, ""
         
         debugClientType = Preferences.getDebugger("DebugClientType")
         if debugClientType == "standard":
@@ -211,7 +212,7 @@ class DebuggerInterfacePython(QObject):
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
-                return process, self.__isNetworked
+                return process, self.__isNetworked, ""
         
         # set translation function
         self.translate = self.__identityTranslation
@@ -248,7 +249,7 @@ class DebuggerInterfacePython(QObject):
                         self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
-                return process, self.__isNetworked
+                return process, self.__isNetworked, interpreter
         
         process = self.__startProcess(
             interpreter,
@@ -260,7 +261,7 @@ class DebuggerInterfacePython(QObject):
                 self.tr("Start Debugger"),
                 self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
-        return process, self.__isNetworked
+        return process, self.__isNetworked, interpreter
 
     def startRemoteForProject(self, port, runInConsole):
         """
@@ -269,12 +270,13 @@ class DebuggerInterfacePython(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
         project = e5App().getObject("Project")
         if not project.isDebugPropertiesLoaded():
-            return None, self.__isNetworked
+            return None, self.__isNetworked, ""
         
         # start debugger with project specific settings
         interpreter = project.getDebugProperty("INTERPRETER")
@@ -312,7 +314,7 @@ class DebuggerInterfacePython(QObject):
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
-                return process, self.__isNetworked
+                return process, self.__isNetworked, ""
         
         # set translation function
         self.translate = self.__identityTranslation
@@ -350,7 +352,7 @@ class DebuggerInterfacePython(QObject):
                         self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
-                return process, self.__isNetworked
+                return process, self.__isNetworked, interpreter
         
         process = self.__startProcess(
             interpreter,
@@ -362,7 +364,7 @@ class DebuggerInterfacePython(QObject):
                 self.tr("Start Debugger"),
                 self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
-        return process, self.__isNetworked
+        return process, self.__isNetworked, interpreter
 
     def getClientCapabilities(self):
         """
