@@ -47,7 +47,7 @@ class Largefiles(HgExtension):
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if os.path.splitdrive(repodir)[1] == os.sep:
-                return False
+                return
         
         from .LfConvertDataDialog import LfConvertDataDialog
         dlg = LfConvertDataDialog(projectDir, direction)
@@ -101,7 +101,7 @@ class Largefiles(HgExtension):
         """
         Public method used to add a file to the Mercurial repository.
         
-        @param name file name(s) to be added (string or list of string)
+        @param names file name(s) to be added (string or list of string)
         @param mode add mode (string one of 'normal' or 'large')
         """
         args = self.vcs.initCommand("add")

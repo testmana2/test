@@ -34,7 +34,7 @@ class ShelveProjectBrowserHelper(HgExtensionProjectBrowserHelper):
         
         @return dictionary of populated menu (dict of QMenu). The dict
             must have the keys 'mainMenu', 'multiMenu', 'backMenu', 'dirMenu'
-            and 'dirMultiMenu'. 
+            and 'dirMultiMenu'.
         """
         self.__menus = {}
         

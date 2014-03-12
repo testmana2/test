@@ -786,7 +786,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                     process.waitForFinished(30000)
             
             if self.commandMode != "incoming" or \
-                (self.vcs.bundleFile and 
+                (self.vcs.bundleFile and
                  os.path.exists(self.vcs.bundleFile)) or \
                     self.__bundle:
                 self.process.start('hg', args)

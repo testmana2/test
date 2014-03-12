@@ -65,8 +65,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         
         @param path path name of the working directory (string)
         @param mq flag indicating to show the queue status as well (boolean)
-        @param mq flag indicating to show the largefiles status as well
-            (boolean)
+        @param largefiles flag indicating to show the largefiles status as
+            well (boolean)
         """
         self.errorGroup.hide()
         self.__path = path

@@ -140,7 +140,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
             bool(self.dirEdit.text()) and
-            Utilities.fromNativeSeparators(self.dirEdit.text()) not in 
+            Utilities.fromNativeSeparators(self.dirEdit.text()) not in
             self.__initPaths)
     
     @pyqtSlot(str)

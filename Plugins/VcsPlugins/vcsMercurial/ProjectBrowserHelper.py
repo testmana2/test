@@ -240,7 +240,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         """
         act = None
         if key in ['mainMenu', 'multiMenu', 'backMenu', 'dirMenu',
-                'dirMultiMenu']:
+                   'dirMultiMenu']:
             extensionsMenu = QMenu(self.tr("Extensions"), menu)
             extensionsMenu.setTearOffEnabled(True)
             for extensionMenuTitle in sorted(self.__extensionMenuTitles):

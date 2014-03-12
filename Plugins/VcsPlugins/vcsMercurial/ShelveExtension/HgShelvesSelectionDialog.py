@@ -18,6 +18,8 @@ class HgShelvesSelectionDialog(QDialog, Ui_HgShelvesSelectionDialog):
         """
         Constructor
         
+        @param message message to be shown (string)
+        @param shelveNames list of shelve names (list of string)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)

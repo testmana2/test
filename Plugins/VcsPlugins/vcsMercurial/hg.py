@@ -886,8 +886,8 @@ class Hg(VersionControl):
         working directory state.
         
         @param mq flag indicating to show the queue status as well (boolean)
-        @param mq flag indicating to show the largefiles status as well
-            (boolean)
+        @param largefiles flag indicating to show the largefiles status as
+            well (boolean)
         """
         from .HgSummaryDialog import HgSummaryDialog
         self.summary = HgSummaryDialog(self)
@@ -2221,7 +2221,7 @@ class Hg(VersionControl):
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if not os.path.exists(cfgFile):
             # open dialog to enter the initial data
-            withLargefiles = (self.isExtensionActive("largefiles") and 
+            withLargefiles = (self.isExtensionActive("largefiles") and
                               withLargefiles)
             from .HgRepoConfigDataDialog import HgRepoConfigDataDialog
             dlg = HgRepoConfigDataDialog(withLargefiles=withLargefiles,

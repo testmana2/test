@@ -332,7 +332,8 @@ class SvnLogBrowserDialog(QWidget, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         Public slot to start the svn log command.
         
         @param fn filename to show the log for (string)
-        @keyparam isFile flag indicating log for a file is to be shown (boolean)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
         """
         self.sbsCheckBox.setEnabled(isFile)
         self.sbsCheckBox.setVisible(isFile)

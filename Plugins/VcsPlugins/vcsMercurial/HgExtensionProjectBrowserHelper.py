@@ -41,7 +41,7 @@ class HgExtensionProjectBrowserHelper(QObject):
         
         @ireturn dictionary of populated menu (dict of QMenu). The dict
             must have the keys 'mainMenu', 'multiMenu', 'backMenu', 'dirMenu'
-            and 'dirMultiMenu'. 
+            and 'dirMultiMenu'.
         @exception NotImplementedError raised if the class has not been
             reimplemented
         """
