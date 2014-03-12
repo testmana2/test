@@ -5,6 +5,9 @@ Version 5.4.2:
 
 Version 5.4.1:
 - bug fixes
+- General
+  -- changed the eric mascot to be a Python (i.e. the snake). New icons
+     and pixmaps provided by Thimo Kraemer.
 
 Version 5.4.0:
 - bug fixes
