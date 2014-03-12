@@ -1796,6 +1796,7 @@
       <keyword name="Browser.getSelectedItems" id="Browser.getSelectedItems" ref="eric5.UI.Browser.html#Browser.getSelectedItems" />
       <keyword name="Browser.getSelectedItemsCount" id="Browser.getSelectedItemsCount" ref="eric5.UI.Browser.html#Browser.getSelectedItemsCount" />
       <keyword name="Browser.getSelectedItemsCountCategorized" id="Browser.getSelectedItemsCountCategorized" ref="eric5.UI.Browser.html#Browser.getSelectedItemsCountCategorized" />
+      <keyword name="Browser.handleInterpreterChanged" id="Browser.handleInterpreterChanged" ref="eric5.UI.Browser.html#Browser.handleInterpreterChanged" />
       <keyword name="Browser.handlePreferencesChanged" id="Browser.handlePreferencesChanged" ref="eric5.UI.Browser.html#Browser.handlePreferencesChanged" />
       <keyword name="Browser.handleProgramChange" id="Browser.handleProgramChange" ref="eric5.UI.Browser.html#Browser.handleProgramChange" />
       <keyword name="Browser.handleUnittest" id="Browser.handleUnittest" ref="eric5.UI.Browser.html#Browser.handleUnittest" />
@@ -1899,6 +1900,7 @@
       <keyword name="BrowserModel.hasChildren" id="BrowserModel.hasChildren" ref="eric5.UI.BrowserModel.html#BrowserModel.hasChildren" />
       <keyword name="BrowserModel.headerData" id="BrowserModel.headerData" ref="eric5.UI.BrowserModel.html#BrowserModel.headerData" />
       <keyword name="BrowserModel.index" id="BrowserModel.index" ref="eric5.UI.BrowserModel.html#BrowserModel.index" />
+      <keyword name="BrowserModel.interpreterChanged" id="BrowserModel.interpreterChanged" ref="eric5.UI.BrowserModel.html#BrowserModel.interpreterChanged" />
       <keyword name="BrowserModel.item" id="BrowserModel.item" ref="eric5.UI.BrowserModel.html#BrowserModel.item" />
       <keyword name="BrowserModel.parent" id="BrowserModel.parent" ref="eric5.UI.BrowserModel.html#BrowserModel.parent" />
       <keyword name="BrowserModel.populateClassAttributesItem" id="BrowserModel.populateClassAttributesItem" ref="eric5.UI.BrowserModel.html#BrowserModel.populateClassAttributesItem" />
@@ -3020,6 +3022,7 @@
       <keyword name="DebugServer.clientUtTestSucceededUnexpected" id="DebugServer.clientUtTestSucceededUnexpected" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestSucceededUnexpected" />
       <keyword name="DebugServer.getBreakPointModel" id="DebugServer.getBreakPointModel" ref="eric5.Debugger.DebugServer.html#DebugServer.getBreakPointModel" />
       <keyword name="DebugServer.getClientCapabilities" id="DebugServer.getClientCapabilities" ref="eric5.Debugger.DebugServer.html#DebugServer.getClientCapabilities" />
+      <keyword name="DebugServer.getClientInterpreter" id="DebugServer.getClientInterpreter" ref="eric5.Debugger.DebugServer.html#DebugServer.getClientInterpreter" />
       <keyword name="DebugServer.getExtensions" id="DebugServer.getExtensions" ref="eric5.Debugger.DebugServer.html#DebugServer.getExtensions" />
       <keyword name="DebugServer.getHostAddress" id="DebugServer.getHostAddress" ref="eric5.Debugger.DebugServer.html#DebugServer.getHostAddress" />
       <keyword name="DebugServer.getSupportedLanguages" id="DebugServer.getSupportedLanguages" ref="eric5.Debugger.DebugServer.html#DebugServer.getSupportedLanguages" />

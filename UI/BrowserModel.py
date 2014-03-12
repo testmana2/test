@@ -7,12 +7,12 @@
 Module implementing the browser model.
 """
 
-import sys
 import os
 import fnmatch
+import json
 
 from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, \
-    QFileSystemWatcher, Qt
+    QFileSystemWatcher, Qt, QProcess
 from PyQt4.QtGui import QImageReader, QApplication, QFont
 
 import UI.PixmapCache
@@ -558,18 +558,31 @@ class BrowserModel(QAbstractItemModel):
         @param parentItem reference to the sys.path item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
-        # TODO: make this dynamic depending on interpreter
-        if len(sys.path) > 0:
-            if repopulate:
-                self.beginInsertRows(
-                    self.createIndex(parentItem.row(), 0, parentItem),
-                    0, len(sys.path) - 1)
-            for p in sys.path:
-                if p:
-                    node = BrowserDirectoryItem(parentItem, p)
-                    self._addItem(node, parentItem)
-            if repopulate:
-                self.endInsertRows()
+        if self.__sysPathInterpreter:
+            script = "import sys, json; print(json.dumps(sys.path))"
+            proc = QProcess()
+            proc.start(self.__sysPathInterpreter, ["-c", script])
+            finished = proc.waitForFinished(3000)
+            if finished:
+                procOutput = str(proc.readAllStandardOutput(),
+                                 Preferences.getSystem("IOEncoding"),
+                                 'replace')
+                syspath = [p for p in json.loads(procOutput) if p]
+                if len(syspath) > 0:
+                    if repopulate:
+                        self.beginInsertRows(
+                            self.createIndex(parentItem.row(), 0, parentItem),
+                            0, len(syspath) - 1)
+                    for p in syspath:
+                        if os.path.isdir(p):
+                            node = BrowserDirectoryItem(parentItem, p)
+                        else:
+                            node = BrowserFileItem(parentItem, p)
+                        self._addItem(node, parentItem)
+                    if repopulate:
+                        self.endInsertRows()
+            else:
+                proc.kill()
 
     def populateFileItem(self, parentItem, repopulate=False):
         """

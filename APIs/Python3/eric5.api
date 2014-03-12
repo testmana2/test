@@ -675,6 +675,7 @@ eric5.Debugger.DebugServer.DebugServer.clientCompletionList?7
 eric5.Debugger.DebugServer.DebugServer.clientException?7
 eric5.Debugger.DebugServer.DebugServer.clientExit?7
 eric5.Debugger.DebugServer.DebugServer.clientGone?7
+eric5.Debugger.DebugServer.DebugServer.clientInterpreterChanged?7
 eric5.Debugger.DebugServer.DebugServer.clientLine?7
 eric5.Debugger.DebugServer.DebugServer.clientOutput?7
 eric5.Debugger.DebugServer.DebugServer.clientProcessStderr?7
@@ -700,6 +701,7 @@ eric5.Debugger.DebugServer.DebugServer.clientVariables?7
 eric5.Debugger.DebugServer.DebugServer.clientWatchConditionError?7
 eric5.Debugger.DebugServer.DebugServer.getBreakPointModel?4()
 eric5.Debugger.DebugServer.DebugServer.getClientCapabilities?4(type)
+eric5.Debugger.DebugServer.DebugServer.getClientInterpreter?4()
 eric5.Debugger.DebugServer.DebugServer.getExtensions?4(language)
 eric5.Debugger.DebugServer.DebugServer.getHostAddress?4(localhost)
 eric5.Debugger.DebugServer.DebugServer.getSupportedLanguages?4(shellOnly=False)
@@ -7813,6 +7815,7 @@ eric5.UI.Browser.Browser.designerFile?7
 eric5.UI.Browser.Browser.getSelectedItems?4(filter=None)
 eric5.UI.Browser.Browser.getSelectedItemsCount?4(filter=None)
 eric5.UI.Browser.Browser.getSelectedItemsCountCategorized?4(filter=None)
+eric5.UI.Browser.Browser.handleInterpreterChanged?4(interpreter)
 eric5.UI.Browser.Browser.handlePreferencesChanged?4()
 eric5.UI.Browser.Browser.handleProgramChange?4(fn)
 eric5.UI.Browser.Browser.handleUnittest?4()
@@ -7923,6 +7926,7 @@ eric5.UI.BrowserModel.BrowserModel.flags?4(index)
 eric5.UI.BrowserModel.BrowserModel.hasChildren?4(parent=QModelIndex())
 eric5.UI.BrowserModel.BrowserModel.headerData?4(section, orientation, role=Qt.DisplayRole)
 eric5.UI.BrowserModel.BrowserModel.index?4(row, column, parent=QModelIndex())
+eric5.UI.BrowserModel.BrowserModel.interpreterChanged?4(interpreter)
 eric5.UI.BrowserModel.BrowserModel.item?4(index)
 eric5.UI.BrowserModel.BrowserModel.parent?4(index)
 eric5.UI.BrowserModel.BrowserModel.populateClassAttributesItem?4(parentItem, repopulate=False)
