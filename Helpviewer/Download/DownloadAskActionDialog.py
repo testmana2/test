@@ -37,6 +37,9 @@ class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
         if not Preferences.getHelp("VirusTotalEnabled") or \
            Preferences.getHelp("VirusTotalServiceKey") == "":
             self.scanButton.setHidden(True)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getAction(self):
         """

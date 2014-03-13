@@ -36,6 +36,9 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         
         self.font = None
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def on_buttonBox_clicked(self, button):
         """
         Private slot called by a button of the button box clicked.

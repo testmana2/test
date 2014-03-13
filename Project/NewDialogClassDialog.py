@@ -48,6 +48,9 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         self.filenameEdit.setText(defaultFile)
         self.pathnameEdit.setText(QDir.toNativeSeparators(defaultPath))
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_pathButton_clicked(self):
         """

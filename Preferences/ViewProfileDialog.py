@@ -52,6 +52,9 @@ class ViewProfileDialog(QDialog):
             self.ui.dpltCheckBox.setChecked(debugVisibilities[0])
             self.ui.dphtCheckBox.setChecked(debugVisibilities[1])
             self.ui.dprtCheckBox.setChecked(debugVisibilities[2])
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getVisibilities(self):
         """

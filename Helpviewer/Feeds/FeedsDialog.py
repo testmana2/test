@@ -48,6 +48,9 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
             self.feedsLayout.addWidget(label, row, 0)
             self.feedsLayout.addWidget(button, row, 1)
             button.clicked.connect(self.__addFeed)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __addFeed(self):
         """

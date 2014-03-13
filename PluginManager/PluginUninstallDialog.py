@@ -60,6 +60,9 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             self.pluginDirectoryCombo.addItem(
                 self.tr("Global plugins directory"),
                 globalDir)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(int)
     def on_pluginDirectoryCombo_currentIndexChanged(self, index):

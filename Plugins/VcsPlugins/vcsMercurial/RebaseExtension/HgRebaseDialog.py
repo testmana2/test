@@ -42,6 +42,9 @@ class HgRebaseDialog(QDialog, Ui_HgRebaseDialog):
             self.bookmark1Combo.setHidden(True)
             self.bookmark2Button.setHidden(True)
             self.bookmark2Combo.setHidden(True)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """

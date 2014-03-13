@@ -116,6 +116,9 @@ class StartDialog(QDialog):
         
         self.__clearHistoryLists = False
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """

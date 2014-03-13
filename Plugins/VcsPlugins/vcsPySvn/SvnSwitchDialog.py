@@ -38,6 +38,9 @@ class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
         if not standardLayout:
             self.TagTypeGroup.setEnabled(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getParameters(self):
         """
         Public method to retrieve the tag data.

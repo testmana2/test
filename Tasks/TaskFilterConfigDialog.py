@@ -91,6 +91,9 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
                 1 in taskFilter.prioritiesFilter)
             self.priorityLowCheckBox.setChecked(
                 2 in taskFilter.prioritiesFilter)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def configureTaskFilter(self, taskFilter):
         """

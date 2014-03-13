@@ -36,6 +36,9 @@ class GotoDialog(QDialog, Ui_GotoDialog):
         self.linenumberSpinBox.setValue(curLine)
         self.linenumberSpinBox.selectAll()
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getLinenumber(self):
         """
         Public method to retrieve the linenumber.

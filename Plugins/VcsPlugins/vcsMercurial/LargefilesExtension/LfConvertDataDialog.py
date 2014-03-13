@@ -52,7 +52,8 @@ class LfConvertDataDialog(QDialog, Ui_LfConvertDataDialog):
             self.lfFileSizeSpinBox.setEnabled(False)
             self.lfFilePatternsEdit.setEnabled(False)
         
-        self.resize(self.width(), self.minimumSizeHint().height())
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_newProjectEdit_textChanged(self, txt):

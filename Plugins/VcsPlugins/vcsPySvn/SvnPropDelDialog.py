@@ -31,6 +31,9 @@ class SvnPropDelDialog(QDialog, Ui_SvnPropDelDialog):
         
         self.recurseCheckBox.setChecked(recursive)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def on_propNameEdit_textChanged(self, text):
         """
         Private method used to enable/disable the OK-button.

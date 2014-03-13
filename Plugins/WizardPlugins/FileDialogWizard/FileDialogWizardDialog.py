@@ -69,6 +69,9 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         self.bTest = self.buttonBox.addButton(
             self.tr("Test"), QDialogButtonBox.ActionRole)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __adjustOptions(self, options):
         """

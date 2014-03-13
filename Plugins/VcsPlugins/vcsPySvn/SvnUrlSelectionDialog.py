@@ -92,6 +92,9 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
             self.labelCombo2.addItems([reposURL] + sorted(self.vcs.tagsList))
             self.labelCombo2.setEnabled(True)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def __changeLabelCombo(self, labelCombo, type_):
         """
         Private method used to change the label combo depending on the

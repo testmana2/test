@@ -53,6 +53,9 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         self.sourceEdit.setText(source)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """

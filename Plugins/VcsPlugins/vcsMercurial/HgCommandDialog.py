@@ -47,6 +47,9 @@ class HgCommandDialog(QDialog, Ui_HgCommandDialog):
         if t:
             t += Utilities.getPercentReplacementHelp()
             self.commandCombo.setWhatsThis(t)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def on_commandCombo_editTextChanged(self, text):
         """

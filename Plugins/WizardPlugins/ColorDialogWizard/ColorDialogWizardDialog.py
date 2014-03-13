@@ -35,6 +35,9 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         
         self.bTest = self.buttonBox.addButton(
             self.tr("Test"), QDialogButtonBox.ActionRole)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def on_buttonBox_clicked(self, button):
         """

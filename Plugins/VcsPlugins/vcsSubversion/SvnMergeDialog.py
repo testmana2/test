@@ -48,6 +48,9 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def __enableOkButton(self):
         """
         Private method used to enable/disable the OK-button.

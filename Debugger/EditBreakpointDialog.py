@@ -113,6 +113,9 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             if not fn:
                 self.okButton.setEnabled(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_fileButton_clicked(self):
         """

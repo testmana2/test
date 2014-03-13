@@ -69,6 +69,9 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         self.resize(self.width(), self.minimumSizeHint().height())
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_vcsProjectDirEdit_textChanged(self, txt):

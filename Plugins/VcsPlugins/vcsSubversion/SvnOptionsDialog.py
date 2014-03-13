@@ -57,6 +57,9 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         self.networkPath = "localhost/"
         self.localProtocol = True
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
         """

@@ -28,6 +28,9 @@ class IconSizeDialog(QDialog, Ui_IconSizeDialog):
         self.heightSpin.setValue(height)
         
         self.widthSpin.selectAll()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """

@@ -39,6 +39,9 @@ class IrcChannelEditDialog(QDialog, Ui_IrcChannelEditDialog):
         self.nameEdit.setReadOnly(edit)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(name != "")
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_nameEdit_textChanged(self, txt):

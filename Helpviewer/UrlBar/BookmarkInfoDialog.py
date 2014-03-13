@@ -42,6 +42,9 @@ class BookmarkInfoDialog(QDialog, Ui_BookmarkInfoDialog):
         else:
             self.titleEdit.setText(bookmark.title)
             self.titleEdit.setFocus()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot()
     def on_removeButton_clicked(self):

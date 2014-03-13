@@ -37,6 +37,9 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         if not may_save:
             self.saveCheckBox.setChecked(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getData(self):
         """
         Public method to retrieve the login data.

@@ -70,6 +70,9 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
             if index == -1:
                 index = 0
             self.vcsInterfaceCombo.setCurrentIndex(index)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
 
     def storeData(self):
         """

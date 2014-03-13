@@ -59,6 +59,9 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
                 self.deleteTagButton.setChecked(True)
             else:
                 self.tagCombo.setEditText(tagName)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_tagCombo_editTextChanged(self, text):

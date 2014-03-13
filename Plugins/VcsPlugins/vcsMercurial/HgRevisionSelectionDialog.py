@@ -46,6 +46,9 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
             self.tipButton.setText(self.tr("No revision selected"))
             self.tipButton.setToolTip(self.tr(
                 "Select to not specify a specific revision"))
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """

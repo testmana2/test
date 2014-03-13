@@ -53,6 +53,9 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         
         if not new:
             self.initDialog()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def initDialog(self):
         """

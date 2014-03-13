@@ -32,6 +32,9 @@ class FeedEditDialog(QDialog, Ui_FeedEditDialog):
         
         self.titleEdit.setText(title)
         self.urlEdit.setText(urlString)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __setOkButton(self):
         """

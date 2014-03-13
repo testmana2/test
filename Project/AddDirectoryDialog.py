@@ -79,6 +79,9 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
                 self.tr("Other Files (*)"), "OTHERS")
         self.filterComboBox.setCurrentIndex(0)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot(str)
     def on_filterComboBox_highlighted(self, fileType):
         """

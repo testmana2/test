@@ -62,6 +62,9 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
             t += Utilities.getPercentReplacementHelp()
             self.commandCombo.setWhatsThis(t)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """

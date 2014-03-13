@@ -33,6 +33,9 @@ class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
         self.imageEdit.setText(engine.imageUrl())
         self.searchEdit.setText(engine.searchUrlTemplate())
         self.suggestionsEdit.setText(engine.suggestionsUrlTemplate())
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def accept(self):
         """

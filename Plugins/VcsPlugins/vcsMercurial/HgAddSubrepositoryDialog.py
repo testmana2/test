@@ -44,6 +44,9 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         self.typeCombo.addItem("Mercurial", "hg")
         self.typeCombo.addItem("GIT", "git")
         self.typeCombo.addItem("Subversion", "svn")
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOk(self):
         """

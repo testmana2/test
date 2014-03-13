@@ -39,6 +39,9 @@ class HgMergeDialog(QDialog, Ui_HgMergeDialog):
         else:
             self.bookmarkButton.setHidden(True)
             self.bookmarkCombo.setHidden(True)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """

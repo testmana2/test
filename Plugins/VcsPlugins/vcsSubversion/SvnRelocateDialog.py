@@ -29,6 +29,9 @@ class SvnRelocateDialog(QDialog, Ui_SvnRelocateDialog):
         self.currUrlLabel.setText(currUrl)
         self.newUrlEdit.setText(currUrl)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getData(self):
         """
         Public slot used to retrieve the data entered into the dialog.

@@ -41,6 +41,9 @@ class SvnTagDialog(QDialog, Ui_SvnTagDialog):
         if not standardLayout:
             self.TagActionGroup.setEnabled(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def on_tagCombo_editTextChanged(self, text):
         """
         Private method used to enable/disable the OK-button.

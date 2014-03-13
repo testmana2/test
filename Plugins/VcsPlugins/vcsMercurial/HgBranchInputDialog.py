@@ -33,7 +33,8 @@ class HgBranchInputDialog(QDialog, Ui_HgBranchInputDialog):
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
-        self.resize(self.width(), self.minimumSizeHint().height())
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_branchComboBox_editTextChanged(self, txt):

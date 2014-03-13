@@ -24,6 +24,9 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """

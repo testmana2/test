@@ -57,6 +57,9 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         if self.filter is not None:
             self.sourcecodeCheckBox.hide()
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_targetDirButton_clicked(self):
         """

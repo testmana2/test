@@ -34,7 +34,8 @@ class HgUnshelveDataDialog(QDialog, Ui_HgUnshelveDataDialog):
             self.nameComboBox.setCurrentIndex(
                 self.nameComboBox.findText(shelveName))
         
-        self.resize(self.width(), self.minimumSizeHint().height())
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """

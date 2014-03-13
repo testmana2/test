@@ -58,6 +58,9 @@ class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
         else:
             self.__sdAction = self.AddSpeeddial
             self.speeddialPushButton.setText(self.tr("Add to Speed Dial"))
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot()
     def on_bookmarkPushButton_clicked(self):

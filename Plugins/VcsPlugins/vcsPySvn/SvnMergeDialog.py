@@ -48,6 +48,9 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         self.targetCombo.clear()
         self.targetCombo.addItems(targetlist)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def __enableOkButton(self):
         """
         Private method used to enable/disable the OK-button.

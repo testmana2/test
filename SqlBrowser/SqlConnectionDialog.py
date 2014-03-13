@@ -56,6 +56,9 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         self.driverCombo.addItems(drivers)
         
         self.__updateDialog()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateDialog(self):
         """

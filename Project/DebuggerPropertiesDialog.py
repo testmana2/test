@@ -105,6 +105,9 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         self.noEncodingCheckBox.setChecked(
             self.project.debugProperties["NOENCODING"])
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_interpreterButton_clicked(self):
         """

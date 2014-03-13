@@ -56,6 +56,9 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getData(self):
         """
         Public method to retrieve the copy data.

@@ -1282,7 +1282,6 @@
     <Form>Preferences/ConfigurationPages/EditorFilePage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSearchPage.ui</Form>
     <Form>Plugins/VcsPlugins/vcsSubversion/SvnRelocateDialog.ui</Form>
-    <Form>Helpviewer/DownloadDialog.ui</Form>
     <Form>UI/AuthenticationDialog.ui</Form>
     <Form>QScintilla/ShellHistoryDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpAppearancePage.ui</Form>

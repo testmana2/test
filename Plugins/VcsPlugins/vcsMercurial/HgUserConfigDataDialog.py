@@ -28,7 +28,8 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
         if version >= (2, 3):
             self.transplantCheckBox.setEnabled(False)
         
-        self.resize(self.width(), self.minimumSizeHint().height())
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """

@@ -87,6 +87,9 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         
         self.__projectPath = \
             vcs.getPlugin().getProjectHelper().getProject().getProjectPath()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_archiveEdit_textChanged(self, archive):

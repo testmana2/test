@@ -50,6 +50,9 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
         self.tagCombo.addItems(sorted(tagsList))
         self.branchCombo.addItems(["default"] + sorted(branchesList))
         self.bookmarkCombo.addItems(sorted(bookmarksList))
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """
