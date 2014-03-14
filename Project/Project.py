@@ -2265,6 +2265,9 @@ class Project(QObject):
         
         @param mainscript name of the mainscript (string)
         """
+        # Show the file type associations for the user to change
+        self.__showFiletypeAssociations()
+        
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         QApplication.processEvents()
         
