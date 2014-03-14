@@ -9024,6 +9024,7 @@
       <keyword name="ProjectBrowser.__setBrowsersAvailable" id="ProjectBrowser.__setBrowsersAvailable" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.__setBrowsersAvailable" />
       <keyword name="ProjectBrowser.__setSourcesIcon" id="ProjectBrowser.__setSourcesIcon" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.__setSourcesIcon" />
       <keyword name="ProjectBrowser.__vcsStateChanged" id="ProjectBrowser.__vcsStateChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.__vcsStateChanged" />
+      <keyword name="ProjectBrowser.__vcsStatusIndicatorClicked" id="ProjectBrowser.__vcsStatusIndicatorClicked" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.__vcsStatusIndicatorClicked" />
       <keyword name="ProjectBrowser.getProjectBrowser" id="ProjectBrowser.getProjectBrowser" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowser" />
       <keyword name="ProjectBrowser.getProjectBrowsers" id="ProjectBrowser.getProjectBrowsers" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowsers" />
       <keyword name="ProjectBrowser.handleEditorChanged" id="ProjectBrowser.handleEditorChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.handleEditorChanged" />

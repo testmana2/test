@@ -13,7 +13,7 @@ from PyQt4.QtGui import QColor, QApplication
 from UI.Browser import Browser
 
 from E5Gui.E5TabWidget import E5TabWidget
-from E5Gui.E5Led import E5Led
+from E5Gui.E5Led import E5ClickableLed
 
 import UI.PixmapCache
 import Preferences
@@ -52,8 +52,10 @@ class ProjectBrowser(E5TabWidget):
         
         self.setUsesScrollButtons(True)
         
-        self.vcsStatusIndicator = E5Led(self)
+        self.vcsStatusIndicator = E5ClickableLed(self)
         self.setCornerWidget(self.vcsStatusIndicator, Qt.TopLeftCorner)
+        self.vcsStatusIndicator.clicked.connect(
+            self.__vcsStatusIndicatorClicked)
         self.vcsStatusColorNames = {
             "A": "VcsAdded",
             "M": "VcsModified",
@@ -382,3 +384,18 @@ class ProjectBrowser(E5TabWidget):
             self.vcsStatusIndicator.setToolTip(self.tr("unknown status"))
         else:
             self.vcsStatusIndicator.setToolTip(self.vcsStatusText[state])
+    
+    def __vcsStatusIndicatorClicked(self, pos):
+        """
+        Private slot to react upon clicks on the VCS indicator LED.
+        
+        @param pos position of the click (QPoint)
+        """
+        vcs = self.project.getVcs()
+        if vcs:
+            if self.currentVcsStatus == " ":
+                # call log browser dialog
+                vcs.vcsLogBrowser(self.project.getProjectPath())
+            else:
+                # call status dialog
+                vcs.vcsStatus(self.project.getProjectPath())
