@@ -306,7 +306,7 @@ class E5ClickableLed(E5Led):
                 self.middleClicked.emit(evt.globalPos())
             else:
                 self.clicked.emit(evt.globalPos())
-        elif evt.button() == Qt.MiddleButton and \
+        elif evt.button() == Qt.MidButton and \
                 self.rect().contains(evt.pos()):
             self.middleClicked.emit(evt.globalPos())
         else:
