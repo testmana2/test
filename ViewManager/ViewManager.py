@@ -5603,7 +5603,6 @@ class ViewManager(QObject):
             dlg = ZoomDialog(aw.getZoom(), self.ui, None, True)
             if dlg.exec_() == QDialog.Accepted:
                 value = dlg.getZoomSize()
-            if value is not None:
                 self.__zoomTo(value)
         
     def __zoomTo(self, value):
