@@ -4162,7 +4162,7 @@ class ViewManager(QObject):
             QScintilla.Lexers.getOpenFileFiltersList(True, True),
             filter)[0]
         for prog in progs:
-            self.openFile(prog)
+            self.openFiles(prog)
     
     def openFiles(self, prog):
         """
